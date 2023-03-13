@@ -1,0 +1,1718 @@
+<!-- 
+  Military Buffs & Effects
+-->
+
+<ModOps>
+
+  <!-- *************************** ITEMEFFECTTARGETFPOOLS *************************** -->
+
+  <!-- START ALL MILITARY RESIDENCES TO ItemEffectTargetPool -->
+  <ModOp GUID='194019' Type="addNextSibling">
+    <Asset>
+      <Template>ItemEffectTargetPool</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100019</GUID>
+          <Name>All Military Residences</Name>
+        </Standard>
+        <ItemEffectTargetPool>
+          <EffectTargetGUIDs>
+            <Item>
+              <GUID>1742100001</GUID>              <!-- Soldiers Residence - Encampment - Building -->
+            </Item>
+            <Item>
+              <GUID>1742100003</GUID>              <!-- Soldiers Residence - Barracks - Building -->
+            </Item>
+            <Item>
+              <GUID>1742100007</GUID>              <!-- Officers Residence - Building -->
+            </Item>
+            <Item>
+              <GUID>1742100011</GUID>              <!-- Military Engineers Residence - Building -->
+            </Item>
+          </EffectTargetGUIDs>
+        </ItemEffectTargetPool>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END ALL MILITARY RESIDENCES TO ItemEffectTargetPool -->
+
+  <!-- START ALL MILITARY PRODUCTION BUILDINGS TO ItemEffectTargetPool -->
+  <ModOp GUID='194019' Type="addNextSibling">
+    <Asset>
+      <Template>ItemEffectTargetPool</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100045</GUID>
+          <Name>All Military Production Buildings</Name>
+        </Standard>
+        <ItemEffectTargetPool>
+          <EffectTargetGUIDs>
+          </EffectTargetGUIDs>
+        </ItemEffectTargetPool>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END ALL MILITARY PRODUCTION BUILDINGS TO ItemEffectTargetPool -->
+
+  <!-- *************************** POLICY BUFFS *************************** -->
+
+  <!-- START MH POLICY 1 - BUFF -->
+  <ModOp GUID='25623' Type="addNextSibling">
+    <Asset>
+      <Template>TownhallBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100041</GUID>
+          <Name>Military Headquarters - Policy 1 - Rations</Name>
+          <IconFilename>data/graphics/icons/icon_policy_rations_0.png</IconFilename>
+          <InfoDescription>1742100042</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742100001</GUID>              <!-- Soldiers Residence - Encampment - Building -->
+            </Item>
+            <Item>
+              <GUID>1742100003</GUID>              <!-- Soldiers Residence - Barracks - Building -->
+            </Item>
+            <Item>
+              <GUID>1742100007</GUID>              <!-- Officers Residence - Building -->
+            </Item>
+            <Item>
+              <GUID>1742100011</GUID>              <!-- Military Engineers Residence - Building -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <Text />
+        <BuildingUpgrade />
+        <Buff />
+        <PopulationUpgrade />
+        <ResidenceUpgrade>
+          <GoodConsumptionUpgrade>
+            <Item>
+              <ProvidedNeed>1010213</ProvidedNeed>              <!-- Bread - Product -->
+              <AmountInPercent>-50</AmountInPercent>
+            </Item>
+            <Item>
+              <ProvidedNeed>1010217</ProvidedNeed>              <!-- Canned Food - Product -->
+              <AmountInPercent>-30</AmountInPercent>
+            </Item>
+            <Item>
+              <ProvidedNeed>1010238</ProvidedNeed>              <!-- Sausages - Product -->
+              <AmountInPercent>-30</AmountInPercent>
+            </Item>
+            <Item>
+              <ProvidedNeed>1010203</ProvidedNeed>              <!-- Soap - Product -->
+              <AmountInPercent>-30</AmountInPercent>
+            </Item>
+            <Item>
+              <ProvidedNeed>112701</ProvidedNeed>              <!-- Sleeping Bags - Product -->
+              <AmountInPercent>-25</AmountInPercent>
+            </Item>
+            <Item>
+              <ProvidedNeed>120032</ProvidedNeed>              <!-- Coffee - Product -->
+              <AmountInPercent>-25</AmountInPercent>
+            </Item>
+            <Item>
+              <ProvidedNeed>1742100058</ProvidedNeed>              <!-- Cigarettes - Product -->
+              <AmountInPercent>-20</AmountInPercent>
+            </Item>
+          </GoodConsumptionUpgrade>
+        </ResidenceUpgrade>
+        <IncidentInfectableUpgrade />
+        <CultureUpgrade />
+        <InfluenceSourceUpgrade />
+        <WarehouseUpgrade />
+        <DistributionUpgrade />
+        <ItemContainerUpgrade />
+        <FactoryUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- START MH POLICY 1 - BUFF - INFOTIP -->
+  <ModOp GUID='25623' Type="addNextSibling">
+    <Asset>
+      <Template>TownhallBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100043</GUID>
+          <Name>Military Headquarters - Rations - Infotip</Name>
+          <IconFilename>data/graphics/icons/icon_policy_rations_0.png</IconFilename>
+          <InfoDescription>1742100044</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742100019</GUID>              <!-- All Military Residences - ItemEffectTargetPool -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <Text />
+        <BuildingUpgrade />
+        <Buff />
+        <PopulationUpgrade />
+        <ResidenceUpgrade>
+          <GoodConsumptionUpgrade>
+            <Item>
+              <ProvidedNeed>1010213</ProvidedNeed>              <!-- Bread - Product -->
+              <AmountInPercent>-50</AmountInPercent>
+            </Item>
+            <Item>
+              <ProvidedNeed>1010217</ProvidedNeed>              <!-- Canned Food - Product -->
+              <AmountInPercent>-30</AmountInPercent>
+            </Item>
+            <Item>
+              <ProvidedNeed>1010238</ProvidedNeed>              <!-- Sausages - Product -->
+              <AmountInPercent>-30</AmountInPercent>
+            </Item>
+            <Item>
+              <ProvidedNeed>1010203</ProvidedNeed>              <!-- Soap - Product -->
+              <AmountInPercent>-30</AmountInPercent>
+            </Item>
+            <Item>
+              <ProvidedNeed>112701</ProvidedNeed>              <!-- Sleeping Bags - Product -->
+              <AmountInPercent>-25</AmountInPercent>
+            </Item>
+            <Item>
+              <ProvidedNeed>120032</ProvidedNeed>              <!-- Coffee - Product -->
+              <AmountInPercent>-25</AmountInPercent>
+            </Item>
+            <Item>
+              <ProvidedNeed>1742100058</ProvidedNeed>              <!-- Cigarettes - Product -->
+              <AmountInPercent>-20</AmountInPercent>
+            </Item>
+          </GoodConsumptionUpgrade>
+        </ResidenceUpgrade>
+        <IncidentInfectableUpgrade />
+        <CultureUpgrade />
+        <InfluenceSourceUpgrade />
+        <WarehouseUpgrade />
+        <DistributionUpgrade />
+        <ItemContainerUpgrade />
+        <FactoryUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- START MH POLICY 2 - BUFF -->
+  <ModOp GUID='25623' Type="addNextSibling">
+    <Asset>
+      <Template>TownhallBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100046</GUID>
+          <Name>Military Headquarters - Policy 2 - Weapon efficiency</Name>
+          <IconFilename>data/graphics/icons/icon_policy_war_effort_production_0.png</IconFilename>
+          <InfoDescription>1742100047</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742100001</GUID>              <!-- Soldiers Residence - Encampment - Building -->
+            </Item>
+            <Item>
+              <GUID>1742100003</GUID>              <!-- Soldiers Residence - Barracks - Building -->
+            </Item>
+            <Item>
+              <GUID>1742100007</GUID>              <!-- Officers Residence - Building -->
+            </Item>
+            <Item>
+              <GUID>1742100011</GUID>              <!-- Military Engineers Residence - Building -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <Text />
+        <BuildingUpgrade />
+        <Buff />
+        <PopulationUpgrade />
+        <ResidenceUpgrade>
+          <GoodConsumptionUpgrade>
+            <Item>
+              <ProvidedNeed>1010221</ProvidedNeed>              <!-- Weapons - Product -->
+              <AmountInPercent>-25</AmountInPercent>
+            </Item>
+            <Item>
+              <ProvidedNeed>1010223</ProvidedNeed>              <!-- Advanced Weapons - Product -->
+              <AmountInPercent>-25</AmountInPercent>
+            </Item>
+          </GoodConsumptionUpgrade>
+        </ResidenceUpgrade>
+        <IncidentInfectableUpgrade />
+        <CultureUpgrade />
+        <InfluenceSourceUpgrade />
+        <WarehouseUpgrade />
+        <DistributionUpgrade />
+        <ItemContainerUpgrade />
+        <FactoryUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- START MH POLICY 2 - BUFF - INFOTIP -->
+  <ModOp GUID='25623' Type="addNextSibling">
+    <Asset>
+      <Template>TownhallBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100048</GUID>
+          <Name>Military Headquarters - Weapon efficiency - Infotip</Name>
+          <IconFilename>data/graphics/icons/icon_policy_war_effort_production_0.png</IconFilename>
+          <InfoDescription>1742100049</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742100019</GUID>              <!-- All Military Residences - ItemEffectTargetPool -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <Text />
+        <BuildingUpgrade />
+        <Buff />
+        <PopulationUpgrade />
+        <ResidenceUpgrade>
+          <GoodConsumptionUpgrade>
+            <Item>
+              <ProvidedNeed>1010221</ProvidedNeed>              <!-- Weapons - Product -->
+              <AmountInPercent>-25</AmountInPercent>
+            </Item>
+            <Item>
+              <ProvidedNeed>1010223</ProvidedNeed>              <!-- Advanced Weapons - Product -->
+              <AmountInPercent>-25</AmountInPercent>
+            </Item>
+          </GoodConsumptionUpgrade>
+        </ResidenceUpgrade>
+        <IncidentInfectableUpgrade />
+        <CultureUpgrade />
+        <InfluenceSourceUpgrade />
+        <WarehouseUpgrade />
+        <DistributionUpgrade />
+        <ItemContainerUpgrade />
+        <FactoryUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- START MH POLICY 3 - BUFF -->
+  <ModOp GUID='25623' Type="addNextSibling">
+    <Asset>
+      <Template>TownhallBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100050</GUID>
+          <Name>Military Headquarters - Policy 3 - Equipment efficiency</Name>
+          <IconFilename>data/graphics/icons/icon_policy_war_effort_ships_0.png</IconFilename>
+          <InfoDescription>1742100051</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742100001</GUID>              <!-- Soldiers Residence - Encampment - Building -->
+            </Item>
+            <Item>
+              <GUID>1742100003</GUID>              <!-- Soldiers Residence - Barracks - Building -->
+            </Item>
+            <Item>
+              <GUID>1742100007</GUID>              <!-- Officers Residence - Building -->
+            </Item>
+            <Item>
+              <GUID>1742100011</GUID>              <!-- Military Engineers Residence - Building -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <Text />
+        <BuildingUpgrade />
+        <Buff />
+        <PopulationUpgrade />
+        <ResidenceUpgrade>
+          <GoodConsumptionUpgrade>
+            <Item>
+              <ProvidedNeed>1742100064</ProvidedNeed>              <!-- Military Uniforms - Product -->
+              <AmountInPercent>-50</AmountInPercent>
+            </Item>
+            <Item>
+              <ProvidedNeed>1414</ProvidedNeed>              <!-- Industrial Lubricant - Product -->
+              <AmountInPercent>-20</AmountInPercent>
+            </Item>
+            <Item>
+              <ProvidedNeed>1010246</ProvidedNeed>              <!-- Pocket Watches - Product -->
+              <AmountInPercent>-20</AmountInPercent>
+            </Item>
+            <Item>
+              <ProvidedNeed>5393</ProvidedNeed>              <!-- Fire Extinguishers - Product -->
+              <AmountInPercent>-20</AmountInPercent>
+            </Item>
+            <Item>
+              <ProvidedNeed>114431</ProvidedNeed>              <!-- Telephones - Product -->
+              <AmountInPercent>-20</AmountInPercent>
+            </Item>
+            <Item>
+              <ProvidedNeed>6280</ProvidedNeed>              <!-- Electric Cables - Product -->
+              <AmountInPercent>-20</AmountInPercent>
+            </Item>
+          </GoodConsumptionUpgrade>
+        </ResidenceUpgrade>
+        <IncidentInfectableUpgrade />
+        <CultureUpgrade />
+        <InfluenceSourceUpgrade />
+        <WarehouseUpgrade />
+        <DistributionUpgrade />
+        <ItemContainerUpgrade />
+        <FactoryUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- START MH POLICY 3 - BUFF - INFOTIP -->
+  <ModOp GUID='25623' Type="addNextSibling">
+    <Asset>
+      <Template>TownhallBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100052</GUID>
+          <Name>Military Headquarters - Equipment efficiency - Infotip</Name>
+          <IconFilename>data/graphics/icons/icon_policy_war_effort_ships_0.png</IconFilename>
+          <InfoDescription>1742100053</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742100019</GUID>              <!-- All Military Residences - ItemEffectTargetPool -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <Text />
+        <BuildingUpgrade />
+        <Buff />
+        <PopulationUpgrade />
+        <ResidenceUpgrade>
+          <GoodConsumptionUpgrade>
+            <Item>
+              <ProvidedNeed>1742100064</ProvidedNeed>              <!-- Military Uniforms - Product -->
+              <AmountInPercent>-50</AmountInPercent>
+            </Item>
+            <Item>
+              <ProvidedNeed>1414</ProvidedNeed>              <!-- Industrial Lubricant - Product -->
+              <AmountInPercent>-20</AmountInPercent>
+            </Item>
+            <Item>
+              <ProvidedNeed>1010246</ProvidedNeed>              <!-- Pocket Watches - Product -->
+              <AmountInPercent>-20</AmountInPercent>
+            </Item>
+            <Item>
+              <ProvidedNeed>5393</ProvidedNeed>              <!-- Fire Extinguishers - Product -->
+              <AmountInPercent>-20</AmountInPercent>
+            </Item>
+            <Item>
+              <ProvidedNeed>114431</ProvidedNeed>              <!-- Telephones - Product -->
+              <AmountInPercent>-20</AmountInPercent>
+            </Item>
+            <Item>
+              <ProvidedNeed>6280</ProvidedNeed>              <!-- Electric Cables - Product -->
+              <AmountInPercent>-20</AmountInPercent>
+            </Item>
+          </GoodConsumptionUpgrade>
+        </ResidenceUpgrade>
+        <IncidentInfectableUpgrade />
+        <CultureUpgrade />
+        <InfluenceSourceUpgrade />
+        <WarehouseUpgrade />
+        <DistributionUpgrade />
+        <ItemContainerUpgrade />
+        <FactoryUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- START MA ITEMSET 1 - Ship Production - SetBuff -->
+  <ModOp GUID='142519' Type="addNextSibling">
+    <Asset>
+      <Template>FestivalBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100088</GUID>
+          <Name>Ship Production</Name>
+          <IconFilename>data/graphics/icons/icon_academy_ship_production.png</IconFilename>
+          <InfoDescription>1742100089</InfoDescription>
+        </Standard>
+        <Text />
+        <PopulationUpgrade />
+        <ResidenceUpgrade />
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>190783</GUID>              <!-- All Shipyards - ItemEffectTargetPool -->
+            </Item>
+            <Item>
+              <GUID>1742100305</GUID>              <!-- All Airship Shipyards - ItemEffectTargetPool -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <Buff />
+        <CultureUpgrade />
+        <KontorUpgrade />
+        <AttackableUpgrade />
+        <AttackerUpgrade />
+        <BuildingUpgrade />
+        <FactoryUpgrade />
+        <PassiveTradeGoodGenUpgrade />
+        <ShipyardUpgrade>
+          <ConstructionCostInPercent>-20</ConstructionCostInPercent>
+          <ConstructionTimeInPercent>-40</ConstructionTimeInPercent>
+        </ShipyardUpgrade>
+        <VisitorHarborUpgrade />
+        <VisitorUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- START MA ITEMSET 2 - Military Consumption Goods Production - SetBuff -->
+  <ModOp GUID='142519' Type="addNextSibling">
+    <Asset>
+      <Template>FestivalBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100097</GUID>
+          <Name>Military Consumption Goods Production</Name>
+          <IconFilename>data/graphics/icons/icon_academy_consumption_goods.png</IconFilename>
+          <InfoDescription>1742100098</InfoDescription>
+        </Standard>
+        <Text />
+        <PopulationUpgrade />
+        <ResidenceUpgrade />
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1010291</GUID>              <!-- Bakery - Building -->
+            </Item>
+            <Item>
+              <GUID>1010295</GUID>              <!-- Cannery - Building -->
+            </Item>
+            <Item>
+              <GUID>1742100306</GUID>              <!-- All Sleeping Bag Factories - ItemEffectTargetPool -->
+            </Item>
+            <Item>
+              <GUID>1742100056</GUID>              <!-- Cigarettes Factory - Building -->
+            </Item>
+            <Item>
+              <GUID>101252</GUID>              <!-- Coffee Roaster - Building -->
+            </Item>
+            <Item>
+              <GUID>124738</GUID>              <!-- Advanced Coffee Roaster - Building -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <Buff />
+        <CultureUpgrade />
+        <KontorUpgrade />
+        <AttackableUpgrade />
+        <AttackerUpgrade />
+        <FactoryUpgrade>
+          <ProductivityUpgrade>
+            <Value>25</Value>
+            <Percental>1</Percental>
+          </ProductivityUpgrade>
+        </FactoryUpgrade>
+        <BuildingUpgrade>
+          <MaintenanceUpgrade>
+            <Value>-10</Value>
+            <Percental>1</Percental>
+          </MaintenanceUpgrade>
+          <WorkforceAmountUpgrade>
+            <Value>-15</Value>
+            <Percental>1</Percental>
+          </WorkforceAmountUpgrade>
+        </BuildingUpgrade>
+        <PassiveTradeGoodGenUpgrade />
+        <ShipyardUpgrade />
+        <VisitorHarborUpgrade />
+        <VisitorUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- START MA ITEMSET 3 - Military Equipment Goods Production - SetBuff -->
+  <ModOp GUID='142519' Type="addNextSibling">
+    <Asset>
+      <Template>FestivalBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100101</GUID>
+          <Name>Military Equipment Goods Production</Name>
+          <IconFilename>data/graphics/icons/icon_academy_equipment_production.png</IconFilename>
+          <InfoDescription>1742100102</InfoDescription>
+        </Standard>
+        <Text />
+        <PopulationUpgrade />
+        <ResidenceUpgrade />
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742100062</GUID> <!-- Military Uniform Factory - Building -->
+            </Item>
+            <Item>
+              <GUID>1742100068</GUID> <!-- Sleeping Bag Factory OW - Building -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <Buff />
+        <CultureUpgrade />
+        <KontorUpgrade />
+        <AttackableUpgrade />
+        <AttackerUpgrade />
+        <FactoryUpgrade>
+          <ProductivityUpgrade>
+            <Value>20</Value>
+            <Percental>1</Percental>
+          </ProductivityUpgrade>
+        </FactoryUpgrade>
+        <BuildingUpgrade>
+          <MaintenanceUpgrade>
+            <Value>-20</Value>
+            <Percental>1</Percental>
+          </MaintenanceUpgrade>
+          <WorkforceAmountUpgrade>
+            <Value>-10</Value>
+            <Percental>1</Percental>
+          </WorkforceAmountUpgrade>
+        </BuildingUpgrade>
+        <PassiveTradeGoodGenUpgrade />
+        <ShipyardUpgrade />
+        <VisitorHarborUpgrade />
+        <VisitorUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- START MA ITEMSET 4 - Military Weapon Goods Production - SetBuff -->
+  <ModOp GUID='142519' Type="addNextSibling">
+    <Asset>
+      <Template>FestivalBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100105</GUID>
+          <Name>Military Weapon Goods Production</Name>
+          <IconFilename>data/graphics/icons/icon_academy_military_goods_consumption.png</IconFilename>
+          <InfoDescription>1742100106</InfoDescription>
+        </Standard>
+        <Text />
+        <PopulationUpgrade />
+        <ResidenceUpgrade />
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742100291</GUID> <!-- Gunpowder Factory - Building -->
+            </Item>
+            <Item>
+              <GUID>1010299</GUID> <!-- Weapon Factory - Building -->
+            </Item>
+            <Item>
+              <GUID>1010300</GUID> <!-- Dynamite Factory - Building -->
+            </Item>
+            <Item>
+              <GUID>1010301</GUID> <!-- Heavy Weapons Factory - Building -->
+            </Item>
+            <Item>
+              <GUID>1742100199</GUID> <!-- Ammunition Factory Basic Ammunition - Building -->
+            </Item>
+            <Item>
+              <GUID>1742100246</GUID> <!-- Ammunition Factory Shell Ammunition - Building -->
+            </Item>
+            <Item>
+              <GUID>1742100201</GUID> <!-- Ammunition Factory Bombs Ammunition - Building -->
+            </Item>
+            <Item>
+              <GUID>924</GUID> <!-- Bomb Factory - Building -->
+            </Item>
+            <Item>
+              <GUID>934</GUID> <!-- Sea Mine Factory - Building -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <Buff />
+        <CultureUpgrade />
+        <KontorUpgrade />
+        <AttackableUpgrade />
+        <AttackerUpgrade />
+        <FactoryUpgrade>
+          <ProductivityUpgrade>
+            <Value>15</Value>
+            <Percental>1</Percental>
+          </ProductivityUpgrade>
+        </FactoryUpgrade>
+        <BuildingUpgrade>
+          <MaintenanceUpgrade>
+            <Value>-15</Value>
+            <Percental>1</Percental>
+          </MaintenanceUpgrade>
+          <WorkforceAmountUpgrade>
+            <Value>-10</Value>
+            <Percental>1</Percental>
+          </WorkforceAmountUpgrade>
+        </BuildingUpgrade>
+        <PassiveTradeGoodGenUpgrade />
+        <ShipyardUpgrade />
+        <VisitorHarborUpgrade />
+        <VisitorUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- START MA ITEMSET 5 - Advanced Ship Blueprints - SetBuff -->
+  <ModOp GUID='142519' Type="addNextSibling">
+    <Asset>
+      <Template>FestivalBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100109</GUID>
+          <Name>Advanced Ship Blueprints</Name>
+          <IconFilename>data/graphics/icons/icon_academy_shipplans.png</IconFilename>
+          <InfoDescription>1742100110</InfoDescription>
+        </Standard>
+        <Text />
+        <PopulationUpgrade />
+        <ResidenceUpgrade />
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>190783</GUID>      <!-- All Shipyards - ItemEffectTargetPool -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <Buff />
+        <CultureUpgrade />
+        <KontorUpgrade />
+        <AttackableUpgrade />
+        <AttackerUpgrade />
+        <BuildingUpgrade />
+        <FactoryUpgrade />
+        <PassiveTradeGoodGenUpgrade />
+        <ShipyardUpgrade>
+          <AddAssemblyOptions>
+            <Item>
+              <NewOption>102420</NewOption>
+            </Item>
+            <Item>
+              <NewOption>102422</NewOption>
+            </Item>
+            <Item>
+              <NewOption>102421</NewOption>
+            </Item>
+            <Item>
+              <NewOption>102419</NewOption>
+            </Item>
+            <Item>
+              <NewOption>102427</NewOption>
+            </Item>
+            <Item>
+              <NewOption>132404</NewOption>
+            </Item>
+            <Item>
+              <NewOption>102455</NewOption>
+            </Item>
+          </AddAssemblyOptions>
+        </ShipyardUpgrade>
+        <VisitorHarborUpgrade />
+        <VisitorUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- START MA ITEMSET 6 - Pyrphorian Ship Blueprints - SetBuff -->
+  <ModOp GUID='142519' Type="addNextSibling">
+    <Asset>
+      <Template>FestivalBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100113</GUID>
+          <Name>Pyrphorian Ship Blueprints</Name>
+          <IconFilename>data/graphics/icons/icon_academy_pyrphorian_shipplans.png</IconFilename>
+          <InfoDescription>1742100114</InfoDescription>
+        </Standard>
+        <Text />
+        <PopulationUpgrade />
+        <ResidenceUpgrade />
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>190783</GUID>      <!-- All Shipyards - ItemEffectTargetPool -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <Buff />
+        <CultureUpgrade />
+        <KontorUpgrade />
+        <AttackableUpgrade />
+        <AttackerUpgrade />
+        <BuildingUpgrade />
+        <FactoryUpgrade />
+        <PassiveTradeGoodGenUpgrade />
+        <ShipyardUpgrade>
+          <AddAssemblyOptions>
+            <Item>
+              <NewOption>102428</NewOption>
+            </Item>
+            <Item>
+              <NewOption>102423</NewOption>
+            </Item>
+            <Item>
+              <NewOption>102425</NewOption>
+            </Item>
+          </AddAssemblyOptions>
+        </ShipyardUpgrade>
+        <VisitorHarborUpgrade />
+        <VisitorUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- START MA ITEMSET 7 - Speed Improvements Ships - SetBuff -->
+  <ModOp GUID='142519' Type="addNextSibling">
+    <Asset>
+      <Template>VehicleBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100117</GUID>
+          <Name>Speed Improvements Ships</Name>
+          <IconFilename>data/graphics/icons/icon_academy_speed_improvement_ship.png</IconFilename>
+          <InfoDescription>1742100118</InfoDescription>
+        </Standard>
+        <Text />
+        <VehicleUpgrade>
+          <ForwardSpeedUpgrade>
+            <Value>15</Value>
+            <Percental>1</Percental>
+          </ForwardSpeedUpgrade>
+          <IgnoreWeightFactorUpgrade>
+            <Value>-50</Value>
+            <Percental>1</Percental>
+          </IgnoreWeightFactorUpgrade>
+        </VehicleUpgrade>
+        <Buff />
+        <AttackerUpgrade />
+        <AttackableUpgrade />
+        <ProjectileUpgrade />
+        <TradeShipUpgrade />
+        <UpgradeList />
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>191454</GUID> <!-- All Ships - ItemEffectTargetPool -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <DivingBellUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- START MA ITEMSET 8 - War Improvement Ships - SetBuff -->
+  <ModOp GUID='142519' Type="addNextSibling">
+    <Asset>
+      <Template>VehicleBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100121</GUID>
+          <Name>War Improvement Ships</Name>
+          <IconFilename>data/graphics/icons/icon_academy_war_improvement_ship.png</IconFilename>
+          <InfoDescription>1742100122</InfoDescription>
+        </Standard>
+        <Text />
+        <VehicleUpgrade />
+        <Buff />
+        <AttackerUpgrade>
+          <BaseDamageUpgrade>
+            <Value>10</Value>
+            <Percental>1</Percental>
+          </BaseDamageUpgrade>
+          <AttackRangeUpgrade>
+            <Value>10</Value>
+            <Percental>1</Percental>
+          </AttackRangeUpgrade>
+          <AttackSpeedUpgrade>15</AttackSpeedUpgrade>
+        </AttackerUpgrade>
+        <AttackableUpgrade />
+        <ProjectileUpgrade />
+        <TradeShipUpgrade />
+        <UpgradeList />
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>191458</GUID>      <!-- All Warships - ItemEffectTargetPool -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <DivingBellUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- START MA ITEMSET 9 - Defense Improvement Ships - SetBuff -->
+  <ModOp GUID='142519' Type="addNextSibling">
+    <Asset>
+      <Template>VehicleBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100125</GUID>
+          <Name>Defense Improvement Ships</Name>
+          <IconFilename>data/graphics/icons/icon_academy_defense_improvement_ship.png</IconFilename>
+          <InfoDescription>1742100126</InfoDescription>
+        </Standard>
+        <Text />
+        <VehicleUpgrade>
+          <IgnoreDamageFactorUpgrade>
+            <Value>-50</Value>
+            <Percental>1</Percental>
+          </IgnoreDamageFactorUpgrade>
+        </VehicleUpgrade>
+        <Buff />
+        <AttackerUpgrade />
+        <AttackableUpgrade>
+          <MaxHitpointsUpgrade>
+            <Value>500</Value>
+          </MaxHitpointsUpgrade>
+        </AttackableUpgrade>
+        <ProjectileUpgrade />
+        <TradeShipUpgrade />
+        <UpgradeList />
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>191454</GUID>      <!-- All Ships - ItemEffectTargetPool -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <DivingBellUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- START MA ITEMSET 10 - Speed Improvements Airships - SetBuff -->
+  <ModOp GUID='142519' Type="addNextSibling">
+    <Asset>
+      <Template>VehicleBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100129</GUID>
+          <Name>Speed Improvements Airships</Name>
+          <IconFilename>data/graphics/icons/icon_academy_speed_improvement_airship.png</IconFilename>
+          <InfoDescription>1742100130</InfoDescription>
+        </Standard>
+        <Text />
+        <VehicleUpgrade>
+          <ForwardSpeedUpgrade>
+            <Value>25</Value>
+            <Percental>1</Percental>
+          </ForwardSpeedUpgrade>
+          <IgnoreWeightFactorUpgrade>
+            <Value>-75</Value>
+            <Percental>1</Percental>
+          </IgnoreWeightFactorUpgrade>
+        </VehicleUpgrade>
+        <Buff />
+        <AttackerUpgrade />
+        <AttackableUpgrade />
+        <ProjectileUpgrade />
+        <TradeShipUpgrade />
+        <UpgradeList />
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>102492</GUID>      <!-- All Airships - ItemEffectTargetPool -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <DivingBellUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- START MA ITEMSET 11 - War Improvement Airships - SetBuff -->
+  <ModOp GUID='142519' Type="addNextSibling">
+    <Asset>
+      <Template>VehicleBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100133</GUID>
+          <Name>War Improvement Airships</Name>
+          <IconFilename>data/graphics/icons/icon_academy_war_improvement_airship.png</IconFilename>
+          <InfoDescription>1742100134</InfoDescription>
+        </Standard>
+        <Text />
+        <VehicleUpgrade />
+        <Buff />
+        <AttackerUpgrade>
+          <BaseDamageUpgrade>
+            <Value>10</Value>
+            <Percental>1</Percental>
+          </BaseDamageUpgrade>
+          <AttackRangeUpgrade>
+            <Value>10</Value>
+            <Percental>1</Percental>
+          </AttackRangeUpgrade>
+          <AttackSpeedUpgrade>25</AttackSpeedUpgrade>
+        </AttackerUpgrade>
+        <AttackableUpgrade />
+        <ProjectileUpgrade />
+        <TradeShipUpgrade />
+        <UpgradeList />
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>102492</GUID>      <!-- All Airships - ItemEffectTargetPool -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <DivingBellUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- START MA ITEMSET 12 - Defense Improvement Airships - SetBuff -->
+  <ModOp GUID='142519' Type="addNextSibling">
+    <Asset>
+      <Template>VehicleBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100137</GUID>
+          <Name>Defense Improvement Airships</Name>
+          <IconFilename>data/graphics/icons/icon_academy_defense_improvement_airship.png</IconFilename>
+          <InfoDescription>1742100138</InfoDescription>
+        </Standard>
+        <Text />
+        <VehicleUpgrade>
+          <IgnoreDamageFactorUpgrade>
+            <Value>-75</Value>
+            <Percental>1</Percental>
+          </IgnoreDamageFactorUpgrade>
+        </VehicleUpgrade>
+        <Buff />
+        <AttackerUpgrade />
+        <AttackableUpgrade>
+          <MaxHitpointsUpgrade>
+            <Value>750</Value>
+          </MaxHitpointsUpgrade>
+        </AttackableUpgrade>
+        <ProjectileUpgrade />
+        <TradeShipUpgrade />
+        <UpgradeList />
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>102492</GUID>      <!-- All Airships - ItemEffectTargetPool -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <DivingBellUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- START MA ITEMSET 13 - Improved Defenses - SetBuff -->
+  <ModOp GUID='142519' Type="addNextSibling">
+    <Asset>
+      <Template>HarbourOfficeBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100141</GUID>
+          <Name>Improved Defenses</Name>
+          <IconFilename>data/graphics/icons/icon_academy_improved_defenses.png</IconFilename>
+          <InfoDescription>1742100142</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742100228</GUID>      <!-- All Defense Buildings - ItemEffectTargetPool -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <Text />
+        <FactoryUpgrade />
+        <BuildingUpgrade />
+        <Buff />
+        <AttackerUpgrade>
+          <AttackRangeUpgrade>
+            <Value>10</Value>
+            <Percental>1</Percental>
+          </AttackRangeUpgrade>
+          <LineOfSightRangeUpgrade>
+            <Value>10</Value>
+            <Percental>1</Percental>
+          </LineOfSightRangeUpgrade>
+          <BaseDamageUpgrade>
+            <Value>10</Value>
+            <Percental>1</Percental>
+          </BaseDamageUpgrade>
+          <ReloadTimeUpgrade>
+            <Value>-20</Value>
+            <Percental>1</Percental>
+          </ReloadTimeUpgrade>
+          <AttackSpeedUpgrade>20</AttackSpeedUpgrade>
+        </AttackerUpgrade>
+        <VisitorHarborUpgrade />
+        <VisitorUpgrade />
+        <PassiveTradeGoodGenUpgrade />
+        <KontorUpgrade />
+        <AttackableUpgrade>
+          <MaxHitpointsUpgrade>
+            <Value>500</Value>
+          </MaxHitpointsUpgrade>
+        </AttackableUpgrade>
+        <PierUpgrade />
+        <CultureUpgrade />
+        <WarehouseUpgrade />
+        <ItemContainerUpgrade />
+        <ResourceUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- START MA ITEMSET 14 - Improved Reparations - SetBuff -->
+  <ModOp GUID='142519' Type="addNextSibling">
+    <Asset>
+      <Template>HarbourOfficeBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100145</GUID>
+          <Name>Improved Reparations</Name>
+          <IconFilename>data/graphics/icons/icon_academy_improved_reparations.png</IconFilename>
+          <InfoDescription>1742100146</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>191508</GUID>              <!-- All Harbour Buildings - ItemEffectPool -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <Text />
+        <FactoryUpgrade />
+        <BuildingUpgrade />
+        <Buff />
+        <AttackerUpgrade />
+        <VisitorHarborUpgrade />
+        <VisitorUpgrade />
+        <PassiveTradeGoodGenUpgrade />
+        <KontorUpgrade />
+        <AttackableUpgrade>
+          <SelfHealUpgrade>
+            <Value>100</Value>
+            <Percental>1</Percental>
+          </SelfHealUpgrade>
+          <SelfHealPausedTimeIfAttackedUpgrade>
+            <Value>-100</Value>
+            <Percental>1</Percental>
+          </SelfHealPausedTimeIfAttackedUpgrade>
+        </AttackableUpgrade>
+        <PierUpgrade />
+        <CultureUpgrade />
+        <WarehouseUpgrade />
+        <ItemContainerUpgrade />
+        <ResourceUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- START MA ITEMSET 15 - Improved Logistics - SetBuff -->
+  <ModOp GUID='142519' Type="addNextSibling">
+    <Asset>
+      <Template>HarbourOfficeBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100149</GUID>
+          <Name>Improved Logistics</Name>
+          <IconFilename>data/graphics/icons/icon_academy_improved_logistics.png</IconFilename>
+          <InfoDescription>1742100150</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>191508</GUID>            <!-- All Harbour Buildings - ItemEffectPool -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <Text />
+        <FactoryUpgrade />
+        <BuildingUpgrade />
+        <Buff />
+        <AttackerUpgrade />
+        <VisitorHarborUpgrade />
+        <VisitorUpgrade />
+        <PassiveTradeGoodGenUpgrade />
+        <KontorUpgrade />
+        <AttackableUpgrade />
+        <PierUpgrade>
+          <PierSpeedUpgrade>
+            <Value>100</Value>
+            <Percental>1</Percental>
+          </PierSpeedUpgrade>
+        </PierUpgrade>
+        <CultureUpgrade />
+        <WarehouseUpgrade />
+        <ItemContainerUpgrade />
+        <ResourceUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- START MA ITEMSET 16 - Compulsory Military Service - SetBuff -->
+  <ModOp GUID='142519' Type="addNextSibling">
+    <Asset>
+      <Template>TownhallBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100153</GUID>
+          <Name>Compulsory Military Service</Name>
+          <IconFilename>data/graphics/icons/icon_academy_compulsary_military_service.png</IconFilename>
+          <InfoDescription>1742100154</InfoDescription>
+        </Standard>
+        <Text />
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742100019</GUID>              <!-- All Military Residences - ItemEffectPool -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <BuildingUpgrade />
+        <Buff />
+        <PopulationUpgrade />
+        <ResidenceUpgrade>
+          <WorkforceModifierInPercent>25</WorkforceModifierInPercent>
+        </ResidenceUpgrade>
+        <IncidentInfectableUpgrade />
+        <CultureUpgrade />
+        <InfluenceSourceUpgrade />
+        <WarehouseUpgrade />
+        <DistributionUpgrade />
+        <ItemContainerUpgrade />
+        <FactoryUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- START MA ITEMSET 17 - Efficient Military Maintenance - SetBuff -->
+  <ModOp GUID='142519' Type="addNextSibling">
+    <Asset>
+      <Template>TownhallBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100157</GUID>
+          <Name>Efficient Military Maintenance</Name>
+          <IconFilename>data/graphics/icons/icon_academy_efficient_military_maintenance.png</IconFilename>
+          <InfoDescription>1742100158</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742100045</GUID>              <!-- All Military Production - ItemEffectPool -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <Text />
+        <BuildingUpgrade>
+          <MaintenanceUpgrade>
+            <Value>-25</Value>
+            <Percental>1</Percental>
+          </MaintenanceUpgrade>
+        </BuildingUpgrade>
+        <Buff />
+        <PopulationUpgrade />
+        <ResidenceUpgrade />
+        <IncidentInfectableUpgrade />
+        <CultureUpgrade />
+        <InfluenceSourceUpgrade />
+        <WarehouseUpgrade />
+        <DistributionUpgrade />
+        <ItemContainerUpgrade />
+        <FactoryUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- START MA ITEMSET 18 - Letters from home - SetBuff -->
+  <ModOp GUID='142519' Type="addNextSibling">
+    <Asset>
+      <Template>TownhallBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100161</GUID>
+          <Name>Letters from home</Name>
+          <IconFilename>data/graphics/icons/icon_academy_letters_from_home.png</IconFilename>
+          <InfoDescription>1742100162</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742100019</GUID>              <!-- All Military Residences - ItemEffectPool -->
+            </Item>
+            <Item>
+              <GUID>190762</GUID>              <!-- All Residences - ItemEffectPool -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <Text />
+        <BuildingUpgrade />
+        <Buff />
+        <PopulationUpgrade />
+        <ResidenceUpgrade>
+          <GoodConsumptionUpgrade>
+            <Item>
+              <ProvidedNeed>536</ProvidedNeed>              <!-- Regional Mail -->
+              <AmountInPercent>-20</AmountInPercent>
+            </Item>
+            <Item>
+              <ProvidedNeed>2524</ProvidedNeed>              <!-- Overseas Mail -->
+              <AmountInPercent>-10</AmountInPercent>
+            </Item>
+          </GoodConsumptionUpgrade>
+        </ResidenceUpgrade>
+        <IncidentInfectableUpgrade />
+        <CultureUpgrade />
+        <InfluenceSourceUpgrade />
+        <WarehouseUpgrade />
+        <DistributionUpgrade />
+        <ItemContainerUpgrade />
+        <FactoryUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- START BASIC AMMUNITION DEBUFF -->
+  <ModOp GUID="192176" Type="addNextSibling">
+    <Asset>
+      <Template>HarbourOfficeBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100222</GUID>
+          <Name>Basic Ammunition Debuff</Name>
+          <IconFilename>data/graphics/icons/icon_basic_ammunition_disabled.png</IconFilename>
+          <InfoDescription>1742100223</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742100252</GUID>              <!-- All Basic Ammunition Defense Buildings - ItemEffectTargetPool -->
+            </Item>
+          </EffectTargets>
+          <AllowStacking>0</AllowStacking>
+        </ItemEffect>
+        <Text />
+        <FactoryUpgrade />
+        <BuildingUpgrade />
+        <Buff />
+        <AttackerUpgrade>
+          <AttackRangeUpgrade>
+            <Value>-1000</Value>
+            <Percental>1</Percental>
+          </AttackRangeUpgrade>
+          <BaseDamageUpgrade>
+            <Value>-1000</Value>
+            <Percental>1</Percental>
+          </BaseDamageUpgrade>
+        </AttackerUpgrade>
+        <VisitorHarborUpgrade />
+        <VisitorUpgrade />
+        <PassiveTradeGoodGenUpgrade />
+        <KontorUpgrade />
+        <AttackableUpgrade />
+        <PierUpgrade />
+        <CultureUpgrade />
+        <WarehouseUpgrade />
+        <ItemContainerUpgrade />
+        <ResourceUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BASIC AMMUNITION DEBUFF -->
+
+  <!-- START BASIC AMMUNITION BUFF -->
+  <ModOp GUID="192176" Type="addNextSibling">
+    <Asset>
+      <Template>HarbourOfficeBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100224</GUID>
+          <Name>Basic Ammunition Buff</Name>
+          <IconFilename>data/graphics/icons/icon_basic_ammunition.png</IconFilename>
+          <InfoDescription>1742100225</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742100252</GUID>              <!-- All Basic Ammunition Defense Buildings - ItemEffectTargetPool -->
+            </Item>
+          </EffectTargets>
+          <AllowStacking>0</AllowStacking>
+        </ItemEffect>
+        <Text />
+        <FactoryUpgrade />
+        <BuildingUpgrade />
+        <Buff />
+        <AttackerUpgrade>
+          <AttackRangeUpgrade>
+            <Value>1000</Value>
+            <Percental>1</Percental>
+          </AttackRangeUpgrade>
+          <BaseDamageUpgrade>
+            <Value>1000</Value>
+            <Percental>1</Percental>
+          </BaseDamageUpgrade>
+        </AttackerUpgrade>
+        <VisitorHarborUpgrade />
+        <VisitorUpgrade />
+        <PassiveTradeGoodGenUpgrade />
+        <KontorUpgrade />
+        <AttackableUpgrade />
+        <PierUpgrade />
+        <CultureUpgrade />
+        <WarehouseUpgrade />
+        <ItemContainerUpgrade />
+        <ResourceUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BASIC AMMUNITION BUFF -->
+
+  <!-- START SHELL AMMUNITION DEBUFF -->
+  <ModOp GUID="192176" Type="addNextSibling">
+    <Asset>
+      <Template>HarbourOfficeBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100254</GUID>
+          <Name>Shell Ammunition Debuff</Name>
+          <IconFilename>data/graphics/icons/icon_shell_ammunition_disabled.png</IconFilename>
+          <InfoDescription>1742100255</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742100253</GUID>              <!-- All Shell Ammunition Defense Buildings - ItemEffectTargetPool -->
+            </Item>
+          </EffectTargets>
+          <AllowStacking>0</AllowStacking>
+        </ItemEffect>
+        <Text />
+        <FactoryUpgrade />
+        <BuildingUpgrade />
+        <Buff />
+        <AttackerUpgrade>
+          <AttackRangeUpgrade>
+            <Value>-1000</Value>
+            <Percental>1</Percental>
+          </AttackRangeUpgrade>
+          <BaseDamageUpgrade>
+            <Value>-1000</Value>
+            <Percental>1</Percental>
+          </BaseDamageUpgrade>
+        </AttackerUpgrade>
+        <VisitorHarborUpgrade />
+        <VisitorUpgrade />
+        <PassiveTradeGoodGenUpgrade />
+        <KontorUpgrade />
+        <AttackableUpgrade />
+        <PierUpgrade />
+        <CultureUpgrade />
+        <WarehouseUpgrade />
+        <ItemContainerUpgrade />
+        <ResourceUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END SHELL AMMUNITION DEBUFF -->
+
+  <!-- START SHELL AMMUNITION BUFF -->
+  <ModOp GUID="192176" Type="addNextSibling">
+    <Asset>
+      <Template>HarbourOfficeBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100256</GUID>
+          <Name>Shell Ammunition Buff</Name>
+          <IconFilename>data/graphics/icons/icon_shell_ammunition.png</IconFilename>
+          <InfoDescription>1742100257</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742100253</GUID>              <!-- All Shell Ammunition Defense Buildings - ItemEffectTargetPool -->
+            </Item>
+          </EffectTargets>
+          <AllowStacking>0</AllowStacking>
+        </ItemEffect>
+        <Text />
+        <FactoryUpgrade />
+        <BuildingUpgrade />
+        <Buff />
+        <AttackerUpgrade>
+          <AttackRangeUpgrade>
+            <Value>1000</Value>
+            <Percental>1</Percental>
+          </AttackRangeUpgrade>
+          <BaseDamageUpgrade>
+            <Value>1000</Value>
+            <Percental>1</Percental>
+          </BaseDamageUpgrade>
+        </AttackerUpgrade>
+        <VisitorHarborUpgrade />
+        <VisitorUpgrade />
+        <PassiveTradeGoodGenUpgrade />
+        <KontorUpgrade />
+        <AttackableUpgrade />
+        <PierUpgrade />
+        <CultureUpgrade />
+        <WarehouseUpgrade />
+        <ItemContainerUpgrade />
+        <ResourceUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END SHELL AMMUNITION BUFF -->
+
+  <!-- START GAS AMMUNITION DEBUFF -->
+  <ModOp GUID="192176" Type="addNextSibling">
+    <Asset>
+      <Template>HarbourOfficeBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100258</GUID>
+          <Name>Gas Ammunition Debuff</Name>
+          <IconFilename>data/graphics/icons/icon_gas_ammunition_disabled.png</IconFilename>
+          <InfoDescription>1742100259</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742100218</GUID>              <!-- Fire Tower (OW) - Building -->
+            </Item>
+          </EffectTargets>
+          <AllowStacking>0</AllowStacking>
+        </ItemEffect>
+        <Text />
+        <FactoryUpgrade />
+        <BuildingUpgrade />
+        <Buff />
+        <AttackerUpgrade>
+          <AttackRangeUpgrade>
+            <Value>-1000</Value>
+            <Percental>1</Percental>
+          </AttackRangeUpgrade>
+          <BaseDamageUpgrade>
+            <Value>-1000</Value>
+            <Percental>1</Percental>
+          </BaseDamageUpgrade>
+        </AttackerUpgrade>
+        <VisitorHarborUpgrade />
+        <VisitorUpgrade />
+        <PassiveTradeGoodGenUpgrade />
+        <KontorUpgrade />
+        <AttackableUpgrade />
+        <PierUpgrade />
+        <CultureUpgrade />
+        <WarehouseUpgrade />
+        <ItemContainerUpgrade />
+        <ResourceUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END GAS AMMUNITION DEBUFF -->
+
+  <!-- START GAS AMMUNITION BUFF -->
+  <ModOp GUID="192176" Type="addNextSibling">
+    <Asset>
+      <Template>HarbourOfficeBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100260</GUID>
+          <Name>Gas Ammunition Buff</Name>
+          <IconFilename>data/graphics/icons/icon_gas_ammunition.png</IconFilename>
+          <InfoDescription>1742100261</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742100218</GUID>              <!-- Fire Tower (OW) - Building -->
+            </Item>
+          </EffectTargets>
+          <AllowStacking>0</AllowStacking>
+        </ItemEffect>
+        <Text />
+        <FactoryUpgrade />
+        <BuildingUpgrade />
+        <Buff />
+        <AttackerUpgrade>
+          <AttackRangeUpgrade>
+            <Value>1000</Value>
+            <Percental>1</Percental>
+          </AttackRangeUpgrade>
+          <BaseDamageUpgrade>
+            <Value>1000</Value>
+            <Percental>1</Percental>
+          </BaseDamageUpgrade>
+        </AttackerUpgrade>
+        <VisitorHarborUpgrade />
+        <VisitorUpgrade />
+        <PassiveTradeGoodGenUpgrade />
+        <KontorUpgrade />
+        <AttackableUpgrade />
+        <PierUpgrade />
+        <CultureUpgrade />
+        <WarehouseUpgrade />
+        <ItemContainerUpgrade />
+        <ResourceUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END GAS AMMUNITION BUFF -->
+
+  <!-- START BOMBS AMMUNITION DEBUFF -->
+  <ModOp GUID="192176" Type="addNextSibling">
+    <Asset>
+      <Template>HarbourOfficeBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100262</GUID>
+          <Name>Bombs Ammunition Debuff</Name>
+          <IconFilename>data/graphics/icons/icon_bombs_ammunition_disabled.png</IconFilename>
+          <InfoDescription>1742100263</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742100220</GUID>              <!-- Monster Gun (OW) - Building -->
+            </Item>
+          </EffectTargets>
+          <AllowStacking>0</AllowStacking>
+        </ItemEffect>
+        <Text />
+        <FactoryUpgrade />
+        <BuildingUpgrade />
+        <Buff />
+        <AttackerUpgrade>
+          <AttackRangeUpgrade>
+            <Value>-1000</Value>
+            <Percental>1</Percental>
+          </AttackRangeUpgrade>
+          <BaseDamageUpgrade>
+            <Value>-1000</Value>
+            <Percental>1</Percental>
+          </BaseDamageUpgrade>
+        </AttackerUpgrade>
+        <VisitorHarborUpgrade />
+        <VisitorUpgrade />
+        <PassiveTradeGoodGenUpgrade />
+        <KontorUpgrade />
+        <AttackableUpgrade />
+        <PierUpgrade />
+        <CultureUpgrade />
+        <WarehouseUpgrade />
+        <ItemContainerUpgrade />
+        <ResourceUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BOMBS AMMUNITION DEBUFF -->
+
+  <!-- START BOMBS AMMUNITION BUFF -->
+  <ModOp GUID="192176" Type="addNextSibling">
+    <Asset>
+      <Template>HarbourOfficeBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100264</GUID>
+          <Name>Bombs Ammunition Buff</Name>
+          <IconFilename>data/graphics/icons/icon_bombs_ammunition.png</IconFilename>
+          <InfoDescription>1742100265</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742100220</GUID>              <!-- Monster Gun (OW) - Building -->
+            </Item>
+            <Item>
+              <GUID>1742100284</GUID>              <!-- Fort (OW) - Building -->
+            </Item>
+          </EffectTargets>
+          <AllowStacking>0</AllowStacking>
+        </ItemEffect>
+        <Text />
+        <FactoryUpgrade />
+        <BuildingUpgrade />
+        <Buff />
+        <AttackerUpgrade>
+          <AttackRangeUpgrade>
+            <Value>1000</Value>
+            <Percental>1</Percental>
+          </AttackRangeUpgrade>
+          <BaseDamageUpgrade>
+            <Value>1000</Value>
+            <Percental>1</Percental>
+          </BaseDamageUpgrade>
+        </AttackerUpgrade>
+        <VisitorHarborUpgrade />
+        <VisitorUpgrade />
+        <PassiveTradeGoodGenUpgrade />
+        <KontorUpgrade />
+        <AttackableUpgrade />
+        <PierUpgrade />
+        <CultureUpgrade />
+        <WarehouseUpgrade />
+        <ItemContainerUpgrade />
+        <ResourceUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BOMBS AMMUNITION BUFF -->
+
+  <!-- START COLLECTING DUNG BUFF -->
+  <ModOp GUID="192176" Type="addNextSibling">
+    <Asset>
+      <Template>GuildhouseBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100295</GUID>
+          <Name>Collecting Dung</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_dung.png</IconFilename>
+          <InfoDescription>1742100296</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>190872</GUID>
+            </Item>
+          </EffectTargets>
+          <AllowStacking>0</AllowStacking>
+        </ItemEffect>
+        <Text />
+        <FactoryUpgrade>
+          <ProductivityUpgrade>
+            <Percental>1</Percental>
+          </ProductivityUpgrade>
+          <AdditionalOutput>
+            <Item>
+              <Product>24807</Product>
+              <AdditionalOutputCycle>2</AdditionalOutputCycle>
+              <Amount>1</Amount>
+            </Item>
+          </AdditionalOutput>
+        </FactoryUpgrade>
+        <BuildingUpgrade />
+        <Buff />
+        <CultureUpgrade />
+        <ModuleOwnerUpgrade />
+        <IncidentInfectableUpgrade />
+        <PowerplantUpgrade />
+        <IndustrializableUpgrade />
+        <ItemContainerUpgrade />
+        <IncidentInfluencerUpgrade />
+        <IrrigationUpgrade />
+        <EcoSystemProviderUpgrade />
+        <ResourceUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BOMBS AMMUNITION BUFF -->
+
+</ModOps>
