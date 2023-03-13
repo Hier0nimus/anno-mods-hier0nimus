@@ -1,0 +1,2745 @@
+<!-- 
+  Military Defenses
+-->
+
+<ModOps>
+
+  <!-- START Miilitary Defenses -->
+  <ModOp GUID='601891' Type="addNextSibling">
+    <!-- START Mounted Guns (OW) - Miilitary Defenses -->
+    <Asset>
+      <Template>HarborBuildingAttacker</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100215</GUID>
+          <Name>Mounted Guns</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_defense_tower_pucklegun.png</IconFilename>
+          <InfoDescription>3063</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11150</BuildingCategoryName>
+          <AssociatedRegions>Moderate</AssociatedRegions>
+        </Building>
+        <Blocking>
+          <GroundDecalAsset>100446</GroundDecalAsset>
+          <GroundDecalInvisible>101008</GroundDecalInvisible>
+          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+          <RemoveGrass>0</RemoveGrass>
+        </Blocking>
+        <Mesh />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/special/harbor_04/harbor_04.cfg</Filename>
+            </Item>
+          </Variations>
+          <Skins>
+            <DefaultSkinDescription>23853</DefaultSkinDescription>
+          </Skins>
+        </Object>
+        <AmbientMoodProvider />
+        <Constructable />
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+        </Selection>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Mounted Guns</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>7018</LineID>
+        </Text>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <Amount>2000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>
+            </Item>
+            <Item>
+              <Ingredient>1010202</Ingredient>
+            </Item>
+            <Item>
+              <Ingredient>1010221</Ingredient>
+              <Amount>5</Amount>
+            </Item>
+          </Costs>
+          <InfluenceCostType>DefenseBuilding</InfluenceCostType>
+          <InfluenceCostPoints>3</InfluenceCostPoints>
+        </Cost>
+        <Attackable>
+          <AttackableType>HarbourBuilding</AttackableType>
+          <MaximumHitPoints>3200</MaximumHitPoints>
+          <DefenseByAIFactor>200</DefenseByAIFactor>
+          <MilitaryDefensePoints>2</MilitaryDefensePoints>
+          <MoralePower>50</MoralePower>
+          <IslandWarFlag>102307</IslandWarFlag>
+          <ExplosionEffects>
+            <Item>
+              <ExplosionEffectFilePath>data/graphics/effects/military/explosions/harbor_generic_xpl_03.cfg</ExplosionEffectFilePath>
+            </Item>
+          </ExplosionEffects>
+          <ExplosionEffectsMin>1</ExplosionEffectsMin>
+          <ExplosionEffectsMax>1</ExplosionEffectsMax>
+          <SelfHealPerHealTick>5</SelfHealPerHealTick>
+        </Attackable>
+        <Attacker>
+          <BasicAttackType>HarbourTower</BasicAttackType>
+          <BaseDamage>23</BaseDamage>
+          <AttackRange>72</AttackRange>
+          <LineOfSightRange>72</LineOfSightRange>
+          <Turrets>
+            <Item>
+              <TurnSpan>360</TurnSpan>
+              <TurretCfg>data/graphics/buildings/special/harbor_04/harbor_04_turret.cfg</TurretCfg>
+            </Item>
+          </Turrets>
+          <ProjectileAsset>102217</ProjectileAsset>
+          <MuzzleEffectAssets>
+            <Item>
+              <MuzzleEffectAsset>101975</MuzzleEffectAsset>
+            </Item>
+          </MuzzleEffectAssets>
+          <AccuracyBase>21</AccuracyBase>
+          <AccuracyIncreaseOverDistance>20</AccuracyIncreaseOverDistance>
+          <AccuracyByDistance>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>0</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>HarborBuildingAttacker</TemplateName>
+                    <Index>0</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+              <AccuracyByDistancePair>
+                <CorrespondingAccuracy>5</CorrespondingAccuracy>
+              </AccuracyByDistancePair>
+            </Item>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>1</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>HarborBuildingAttacker</TemplateName>
+                    <Index>1</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+              <AccuracyByDistancePair>
+                <EnemyDistanceRelToAttackRange>40</EnemyDistanceRelToAttackRange>
+                <CorrespondingAccuracy>5</CorrespondingAccuracy>
+              </AccuracyByDistancePair>
+            </Item>
+            <Item>
+              <AccuracyByDistancePair>
+                <EnemyDistanceRelToAttackRange>55</EnemyDistanceRelToAttackRange>
+                <CorrespondingAccuracy>20</CorrespondingAccuracy>
+              </AccuracyByDistancePair>
+            </Item>
+            <Item>
+              <AccuracyByDistancePair>
+                <EnemyDistanceRelToAttackRange>70</EnemyDistanceRelToAttackRange>
+                <CorrespondingAccuracy>25</CorrespondingAccuracy>
+              </AccuracyByDistancePair>
+            </Item>
+            <Item>
+              <AccuracyByDistancePair>
+                <EnemyDistanceRelToAttackRange>100</EnemyDistanceRelToAttackRange>
+              </AccuracyByDistancePair>
+            </Item>
+          </AccuracyByDistance>
+        </Attacker>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>10</Amount>
+              <InactiveAmount>5</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100005</Product>              <!-- Soldiers Workforce -->
+              <Amount>20</Amount>
+            </Item>
+          </Maintenances>
+          <ConsumerPriority>1</ConsumerPriority>
+        </Maintenance>
+        <Locked />
+        <DelayedConstruction />
+        <Pausable />
+        <Infolayer />
+        <SoundEmitter>
+          <DestroySounds>
+            <Item>
+              <Sound>9818756</Sound>
+            </Item>
+          </DestroySounds>
+          <ConstructionSounds>
+            <BuildSuccessful>
+              <Item>
+                <Sound>206544</Sound>
+              </Item>
+            </BuildSuccessful>
+            <BuildFailed>
+              <Item>
+                <Sound>9818387</Sound>
+              </Item>
+            </BuildFailed>
+            <BuildMoveStart>
+              <Item>
+                <Sound>9818755</Sound>
+              </Item>
+            </BuildMoveStart>
+            <BuildMoveEnd>
+              <Item>
+                <Sound>200141</Sound>
+              </Item>
+            </BuildMoveEnd>
+          </ConstructionSounds>
+          <IncidentSounds>
+            <InfectedFire>
+              <Item>
+                <Sound>214659</Sound>
+              </Item>
+            </InfectedFire>
+          </IncidentSounds>
+          <BuildingRuined>
+            <Item>
+              <Sound>203848</Sound>
+            </Item>
+          </BuildingRuined>
+          <BuildingRepaired>
+            <Item>
+              <Sound>203866</Sound>
+            </Item>
+          </BuildingRepaired>
+        </SoundEmitter>
+        <CommandQueue />
+        <Culture>
+          <Attractiveness>0</Attractiveness>
+        </Culture>
+        <UpgradeList>
+          <DefaultBuff>1742100222</DefaultBuff>          <!-- Basic Ammunition Debuff - Buff -->
+        </UpgradeList>
+      </Values>
+    </Asset>
+    <!-- END Mounted Guns (OW) - Miilitary Defenses -->
+    <!-- START Cannon Tower (OW) - Miilitary Defenses -->
+    <Asset>
+      <Template>HarborBuildingAttacker</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100216</GUID>
+          <Name>Cannon Tower</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_defense_tower_cannon.png</IconFilename>
+          <InfoDescription>3062</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11150</BuildingCategoryName>
+          <AssociatedRegions>Moderate</AssociatedRegions>
+        </Building>
+        <Blocking>
+          <GroundDecalAsset>100446</GroundDecalAsset>
+          <GroundDecalInvisible>101008</GroundDecalInvisible>
+          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+          <RemoveGrass>0</RemoveGrass>
+        </Blocking>
+        <Mesh />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/special/harbor_05/harbor_05.cfg</Filename>
+            </Item>
+          </Variations>
+          <Skins>
+            <DefaultSkinDescription>23853</DefaultSkinDescription>
+          </Skins>
+        </Object>
+        <AmbientMoodProvider />
+        <Constructable />
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+        </Selection>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Cannon Tower</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>7019</LineID>
+        </Text>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <Amount>4000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>
+              <Amount>8</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>
+            </Item>
+            <Item>
+              <Ingredient>1010202</Ingredient>
+            </Item>
+            <Item>
+              <Ingredient>1010221</Ingredient>
+              <Amount>10</Amount>
+            </Item>
+          </Costs>
+          <InfluenceCostType>DefenseBuilding</InfluenceCostType>
+          <InfluenceCostPoints>7</InfluenceCostPoints>
+        </Cost>
+        <Attackable>
+          <AttackableType>HarbourBuilding</AttackableType>
+          <MaximumHitPoints>4800</MaximumHitPoints>
+          <DefenseByAIFactor>301</DefenseByAIFactor>
+          <MilitaryDefensePoints>3.5</MilitaryDefensePoints>
+          <MoralePower>50</MoralePower>
+          <IslandWarFlag>102307</IslandWarFlag>
+          <ExplosionEffects>
+            <Item>
+              <ExplosionEffectFilePath>data/graphics/effects/military/explosions/harbor_generic_xpl_02.cfg</ExplosionEffectFilePath>
+            </Item>
+          </ExplosionEffects>
+          <ExplosionEffectsMin>1</ExplosionEffectsMin>
+          <ExplosionEffectsMax>1</ExplosionEffectsMax>
+          <SelfHealPerHealTick>5</SelfHealPerHealTick>
+        </Attackable>
+        <Attacker>
+          <BasicAttackType>HarbourTower</BasicAttackType>
+          <BaseDamage>150</BaseDamage>
+          <ReloadTime>50</ReloadTime>
+          <AttackRange>92</AttackRange>
+          <LineOfSightRange>92</LineOfSightRange>
+          <Turrets>
+            <Item>
+              <TurnSpan>360</TurnSpan>
+              <TurretCfg>data/graphics/buildings/special/harbor_05/harbor_05_turret.cfg</TurretCfg>
+            </Item>
+          </Turrets>
+          <ProjectileAsset>101974</ProjectileAsset>
+          <MuzzleEffectAssets>
+            <Item>
+              <MuzzleEffectAsset>102220</MuzzleEffectAsset>
+            </Item>
+          </MuzzleEffectAssets>
+          <EmitProjectileTimeAfterStartAnimation>0.3</EmitProjectileTimeAfterStartAnimation>
+          <AccuracyBase>1</AccuracyBase>
+          <AccuracyIncreaseOverDistance>100</AccuracyIncreaseOverDistance>
+          <AccuracyByDistance>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>0</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>HarborBuildingAttacker</TemplateName>
+                    <Index>0</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+            </Item>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>1</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>HarborBuildingAttacker</TemplateName>
+                    <Index>1</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+              <AccuracyByDistancePair>
+                <CorrespondingAccuracy>100</CorrespondingAccuracy>
+              </AccuracyByDistancePair>
+            </Item>
+          </AccuracyByDistance>
+        </Attacker>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>30</Amount>
+              <InactiveAmount>15</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100005</Product>              <!-- Soldiers Workforce -->
+              <Amount>20</Amount>
+            </Item>
+          </Maintenances>
+          <ConsumerPriority>1</ConsumerPriority>
+        </Maintenance>
+        <Locked />
+        <DelayedConstruction />
+        <Pausable />
+        <Infolayer />
+        <SoundEmitter>
+          <DestroySounds>
+            <Item>
+              <Sound>9818756</Sound>
+            </Item>
+          </DestroySounds>
+          <ConstructionSounds>
+            <BuildSuccessful>
+              <Item>
+                <Sound>206544</Sound>
+              </Item>
+            </BuildSuccessful>
+            <BuildFailed>
+              <Item>
+                <Sound>9818387</Sound>
+              </Item>
+            </BuildFailed>
+            <BuildMoveStart>
+              <Item>
+                <Sound>9818755</Sound>
+              </Item>
+            </BuildMoveStart>
+            <BuildMoveEnd>
+              <Item>
+                <Sound>200141</Sound>
+              </Item>
+            </BuildMoveEnd>
+          </ConstructionSounds>
+          <IncidentSounds>
+            <InfectedFire>
+              <Item>
+                <Sound>214659</Sound>
+              </Item>
+            </InfectedFire>
+          </IncidentSounds>
+          <BuildingRuined>
+            <Item>
+              <Sound>203848</Sound>
+            </Item>
+          </BuildingRuined>
+          <BuildingRepaired>
+            <Item>
+              <Sound>203866</Sound>
+            </Item>
+          </BuildingRepaired>
+        </SoundEmitter>
+        <CommandQueue />
+        <Culture>
+          <Attractiveness>0</Attractiveness>
+        </Culture>
+        <UpgradeList>
+          <DefaultBuff>1742100254</DefaultBuff>          <!-- Shell Ammunition Debuff - Buff -->
+        </UpgradeList>
+      </Values>
+    </Asset>
+    <!-- END Cannon Tower (OW) - Miilitary Defenses -->
+
+    <!-- START Flak Emplacement (OW) - Miilitary Defenses -->
+    <Asset>
+      <Template>HarborBuildingAttacker</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100217</GUID>
+          <Name>Flak Emplacement</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/military_building/icon_flak_tower.png</IconFilename>
+          <InfoDescription>740</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11150</BuildingCategoryName>
+          <AssociatedRegions>Moderate</AssociatedRegions>
+        </Building>
+        <Blocking>
+          <GroundDecalAsset>100446</GroundDecalAsset>
+          <GroundDecalInvisible>101008</GroundDecalInvisible>
+          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+          <RemoveGrass>0</RemoveGrass>
+        </Blocking>
+        <Mesh />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/dlc11/graphics/buildings/special/flak_cannon_tower/flak_cannon_tower_platform_moderate.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <AmbientMoodProvider />
+        <Constructable />
+        <Selection>
+          <StaticHelpEntryPoint>EmpireOfTheSkies_War_Defense</StaticHelpEntryPoint>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+        </Selection>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Flak Emplacement</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>56045</LineID>
+        </Text>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <Amount>4500</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>
+              <Amount>20</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>
+              <Amount>15</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>
+            </Item>
+            <Item>
+              <Ingredient>1010202</Ingredient>
+            </Item>
+            <Item>
+              <Ingredient>1010221</Ingredient>
+              <Amount>10</Amount>
+            </Item>
+          </Costs>
+          <InfluenceCostType>DefenseBuilding</InfluenceCostType>
+          <InfluenceCostPoints>5</InfluenceCostPoints>
+        </Cost>
+        <Attackable>
+          <AttackableType>HarbourBuilding</AttackableType>
+          <MaximumHitPoints>2800</MaximumHitPoints>
+          <DefenseByAIFactor>200</DefenseByAIFactor>
+          <MilitaryDefensePoints>2</MilitaryDefensePoints>
+          <MilitaryAirDefensePoints>3</MilitaryAirDefensePoints>
+          <MoralePower>50</MoralePower>
+          <IslandWarFlag>102307</IslandWarFlag>
+          <ExplosionEffects>
+            <Item>
+              <ExplosionEffectFilePath>data/graphics/effects/military/explosions/harbor_generic_xpl_03.cfg</ExplosionEffectFilePath>
+            </Item>
+          </ExplosionEffects>
+          <ExplosionEffectsMin>1</ExplosionEffectsMin>
+          <ExplosionEffectsMax>1</ExplosionEffectsMax>
+          <SelfHealPerHealTick>5</SelfHealPerHealTick>
+        </Attackable>
+        <Attacker>
+          <BasicAttackType>Flak</BasicAttackType>
+          <BaseDamage>22</BaseDamage>
+          <ReloadTime>3</ReloadTime>
+          <AttackRange>52</AttackRange>
+          <LineOfSightRange>100</LineOfSightRange>
+          <Turrets>
+            <Item>
+              <TurnSpan>360</TurnSpan>
+              <TurretCfg>data/dlc11/graphics/buildings/special/flak_cannon_tower/flak_cannon_tower.cfg</TurretCfg>
+            </Item>
+          </Turrets>
+          <ProjectileAsset>2037</ProjectileAsset>
+          <TurretExplosionEffectAsset>101975</TurretExplosionEffectAsset>
+          <MuzzleEffectAssets>
+            <Item>
+              <MuzzleEffectAsset>2581</MuzzleEffectAsset>
+            </Item>
+          </MuzzleEffectAssets>
+          <AccuracyBase>27</AccuracyBase>
+          <AccuracyIncreaseOverDistance>0</AccuracyIncreaseOverDistance>
+          <AccuracySpeedDecay>0</AccuracySpeedDecay>
+          <AccuracyByDistance>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>0</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>HarborBuildingAttacker</TemplateName>
+                    <Index>0</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+            </Item>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>1</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>HarborBuildingAttacker</TemplateName>
+                    <Index>1</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+              <AccuracyByDistancePair>
+                <EnemyDistanceRelToAttackRange>16</EnemyDistanceRelToAttackRange>
+                <CorrespondingAccuracy>40</CorrespondingAccuracy>
+              </AccuracyByDistancePair>
+            </Item>
+            <Item>
+              <AccuracyByDistancePair>
+                <EnemyDistanceRelToAttackRange>100</EnemyDistanceRelToAttackRange>
+                <CorrespondingAccuracy>10</CorrespondingAccuracy>
+              </AccuracyByDistancePair>
+            </Item>
+          </AccuracyByDistance>
+        </Attacker>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>60</Amount>
+              <InactiveAmount>30</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100005</Product>              <!-- Soldiers Workforce -->
+              <Amount>20</Amount>
+            </Item>
+          </Maintenances>
+          <ConsumerPriority>1</ConsumerPriority>
+        </Maintenance>
+        <Locked>
+          <DLCDependency>24962</DLCDependency>
+        </Locked>
+        <DelayedConstruction />
+        <Pausable />
+        <Infolayer />
+        <SoundEmitter>
+          <DestroySounds>
+            <Item>
+              <Sound>9818756</Sound>
+            </Item>
+          </DestroySounds>
+          <ConstructionSounds>
+            <BuildSuccessful>
+              <Item>
+                <Sound>206544</Sound>
+              </Item>
+            </BuildSuccessful>
+            <BuildFailed>
+              <Item>
+                <Sound>9818387</Sound>
+              </Item>
+            </BuildFailed>
+            <BuildMoveStart>
+              <Item>
+                <Sound>9818755</Sound>
+              </Item>
+            </BuildMoveStart>
+            <BuildMoveEnd>
+              <Item>
+                <Sound>200141</Sound>
+              </Item>
+            </BuildMoveEnd>
+          </ConstructionSounds>
+          <IncidentSounds>
+            <InfectedFire>
+              <Item>
+                <Sound>214659</Sound>
+              </Item>
+            </InfectedFire>
+          </IncidentSounds>
+          <BuildingRuined>
+            <Item>
+              <Sound>203848</Sound>
+            </Item>
+          </BuildingRuined>
+          <BuildingRepaired>
+            <Item>
+              <Sound>203866</Sound>
+            </Item>
+          </BuildingRepaired>
+        </SoundEmitter>
+        <CommandQueue />
+        <Culture>
+          <Attractiveness>0</Attractiveness>
+        </Culture>
+        <UpgradeList>
+          <DefaultBuff>1742100222</DefaultBuff>          <!-- Basic Ammunition Debuff - Buff -->
+        </UpgradeList>
+      </Values>
+    </Asset>
+    <!-- END Flak Emplacement (OW) - Miilitary Defenses -->
+
+    <!-- START Flak Emplacement (OW Land) - Miilitary Defenses -->
+    <Asset>
+      <Template>HarborBuildingAttacker</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100221</GUID>
+          <Name>Flak Emplacement (Land)</Name>
+          <IconFilename>data/graphics/icons/icon_flak_tower_land.png</IconFilename>
+          <InfoDescription>740</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11151</BuildingCategoryName>
+          <BuildModeRandomRotation>90</BuildModeRandomRotation>
+          <TerrainType>Terrain</TerrainType>
+          <AssociatedRegions>Moderate</AssociatedRegions>
+        </Building>
+        <Blocking>
+          <RemoveGrass>1</RemoveGrass>
+        </Blocking>
+        <Mesh />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/special/harbor_04_land/harbor_04.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <AmbientMoodProvider />
+        <Constructable />
+        <Selection>
+          <StaticHelpEntryPoint>EmpireOfTheSkies_War_Defense</StaticHelpEntryPoint>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+        </Selection>
+        <Text />
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <Amount>4500</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>
+              <Amount>20</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>
+              <Amount>15</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>
+            </Item>
+            <Item>
+              <Ingredient>1010202</Ingredient>
+            </Item>
+            <Item>
+              <Ingredient>1010221</Ingredient>
+              <Amount>10</Amount>
+            </Item>
+          </Costs>
+          <InfluenceCostType>DefenseBuilding</InfluenceCostType>
+          <InfluenceCostPoints>5</InfluenceCostPoints>
+        </Cost>
+        <Attackable>
+          <MaximumHitPoints>2800</MaximumHitPoints>
+          <SelfHealPerHealTick>5</SelfHealPerHealTick>
+          <DefenseByAIFactor>200</DefenseByAIFactor>
+          <MoralePower>0</MoralePower>
+          <IslandWarFlag>102307</IslandWarFlag>
+          <TakeOverEffect>OnDeath</TakeOverEffect>
+          <ExplosionEffects>
+            <Item>
+              <ExplosionEffectFilePath>data/graphics/effects/military/explosions/harbor_generic_xpl_03.cfg</ExplosionEffectFilePath>
+            </Item>
+          </ExplosionEffects>
+          <ExplosionEffectsMin>1</ExplosionEffectsMin>
+          <ExplosionEffectsMax>1</ExplosionEffectsMax>
+          <MilitaryDefensePoints>2</MilitaryDefensePoints>
+          <MilitaryAirDefensePoints>3</MilitaryAirDefensePoints>
+        </Attackable>
+        <Attacker>
+          <BasicAttackType>Flak</BasicAttackType>
+          <BaseDamage>22</BaseDamage>
+          <ReloadTime>3</ReloadTime>
+          <AttackRange>52</AttackRange>
+          <LineOfSightRange>100</LineOfSightRange>
+          <Turrets>
+            <Item>
+              <TurnSpan>360</TurnSpan>
+              <TurretCfg>data/dlc11/graphics/buildings/special/flak_cannon_tower/flak_cannon_tower.cfg</TurretCfg>
+            </Item>
+          </Turrets>
+          <ProjectileAsset>2037</ProjectileAsset>
+          <TurretExplosionEffectAsset>101975</TurretExplosionEffectAsset>
+          <MuzzleEffectAssets>
+            <Item>
+              <MuzzleEffectAsset>2581</MuzzleEffectAsset>
+            </Item>
+          </MuzzleEffectAssets>
+          <AccuracyBase>27</AccuracyBase>
+          <AccuracyIncreaseOverDistance>0</AccuracyIncreaseOverDistance>
+          <AccuracySpeedDecay>0</AccuracySpeedDecay>
+          <AccuracyByDistance>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>0</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>HarborBuildingAttacker</TemplateName>
+                    <Index>0</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+            </Item>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>1</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>HarborBuildingAttacker</TemplateName>
+                    <Index>1</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+              <AccuracyByDistancePair>
+                <EnemyDistanceRelToAttackRange>16</EnemyDistanceRelToAttackRange>
+                <CorrespondingAccuracy>40</CorrespondingAccuracy>
+              </AccuracyByDistancePair>
+            </Item>
+            <Item>
+              <AccuracyByDistancePair>
+                <EnemyDistanceRelToAttackRange>100</EnemyDistanceRelToAttackRange>
+                <CorrespondingAccuracy>10</CorrespondingAccuracy>
+              </AccuracyByDistancePair>
+            </Item>
+          </AccuracyByDistance>
+        </Attacker>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>60</Amount>
+              <InactiveAmount>30</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100005</Product>              <!-- Soldiers Workforce -->
+              <Amount>20</Amount>
+            </Item>
+          </Maintenances>
+          <ConsumerPriority>1</ConsumerPriority>
+        </Maintenance>
+        <Locked>
+          <DLCDependency>24962</DLCDependency>
+        </Locked>
+        <DelayedConstruction>
+          <ConstructionDelay>0</ConstructionDelay>
+        </DelayedConstruction>
+        <Pausable />
+        <Infolayer />
+        <SoundEmitter>
+          <DestroySounds>
+            <Item>
+              <Sound>9818756</Sound>
+            </Item>
+          </DestroySounds>
+          <BuildingRuined>
+            <Item>
+              <Sound>203848</Sound>
+            </Item>
+          </BuildingRuined>
+        </SoundEmitter>
+        <CommandQueue />
+        <Culture />
+        <UpgradeList>
+          <DefaultBuff>1742100222</DefaultBuff>          <!-- Basic Ammunition Debuff - Buff -->
+        </UpgradeList>
+      </Values>
+    </Asset>
+    <!-- END Flak Emplacement (OW Land) - Miilitary Defenses -->
+
+    <!-- START Fire Tower (OW) - Miilitary Defenses -->
+    <Asset>
+      <Template>HarborBuildingAttacker</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100218</GUID>
+          <Name>Fire Tower</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/military_building/icon_flame_tower.png</IconFilename>
+          <InfoDescription>630</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11150</BuildingCategoryName>
+          <AssociatedRegions>Moderate</AssociatedRegions>
+        </Building>
+        <Blocking>
+          <GroundDecalAsset>100446</GroundDecalAsset>
+          <GroundDecalInvisible>101008</GroundDecalInvisible>
+          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+          <RemoveGrass>0</RemoveGrass>
+        </Blocking>
+        <Mesh />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/special/harbor_05/harbor_05.cfg</Filename>
+            </Item>
+          </Variations>
+          <Skins>
+            <DefaultSkinDescription>23853</DefaultSkinDescription>
+          </Skins>
+        </Object>
+        <AmbientMoodProvider />
+        <Constructable />
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+        </Selection>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Flame Tower</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>56105</LineID>
+        </Text>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <Amount>6000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>
+              <Amount>5</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>
+              <Amount>20</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>
+              <Amount>15</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>
+            </Item>
+            <Item>
+              <Ingredient>1010202</Ingredient>
+            </Item>
+            <Item>
+              <Ingredient>1010221</Ingredient>
+              <Amount>25</Amount>
+            </Item>
+          </Costs>
+          <InfluenceCostType>DefenseBuilding</InfluenceCostType>
+          <InfluenceCostPoints>15</InfluenceCostPoints>
+        </Cost>
+        <Attackable>
+          <AttackableType>HarbourBuilding</AttackableType>
+          <MaximumHitPoints>1701</MaximumHitPoints>
+          <DefenseByAIFactor>301</DefenseByAIFactor>
+          <MilitaryDefensePoints>3.5</MilitaryDefensePoints>
+          <MoralePower>45</MoralePower>
+          <IslandWarFlag>102307</IslandWarFlag>
+          <ExplosionEffects>
+            <Item>
+              <ExplosionEffectFilePath>data/graphics/effects/military/explosions/harbor_generic_xpl_02.cfg</ExplosionEffectFilePath>
+            </Item>
+          </ExplosionEffects>
+          <ExplosionEffectsMin>1</ExplosionEffectsMin>
+          <ExplosionEffectsMax>1</ExplosionEffectsMax>
+          <SelfHealPerHealTick>5</SelfHealPerHealTick>
+        </Attackable>
+        <Attacker>
+          <BasicAttackType>HarbourTower</BasicAttackType>
+          <BaseDamage>19</BaseDamage>
+          <ReloadTime>3</ReloadTime>
+          <AttackRange>70</AttackRange>
+          <LineOfSightRange>100</LineOfSightRange>
+          <Turrets>
+            <Item>
+              <TurnSpan>360</TurnSpan>
+              <TurretCfg>data/dlc11/graphics/buildings/special/flame_thrower_tower/flame_thrower_tower.cfg</TurretCfg>
+            </Item>
+          </Turrets>
+          <ProjectileAsset>628</ProjectileAsset>
+          <EmitProjectileTimeAfterStartAnimation>0.3</EmitProjectileTimeAfterStartAnimation>
+          <AccuracyBase>1</AccuracyBase>
+          <AccuracyIncreaseOverDistance>100</AccuracyIncreaseOverDistance>
+          <AccuracyByDistance>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>0</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>HarborBuildingAttacker</TemplateName>
+                    <Index>0</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+            </Item>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>1</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>HarborBuildingAttacker</TemplateName>
+                    <Index>1</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+              <AccuracyByDistancePair>
+                <CorrespondingAccuracy>100</CorrespondingAccuracy>
+              </AccuracyByDistancePair>
+            </Item>
+          </AccuracyByDistance>
+        </Attacker>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>120</Amount>
+              <InactiveAmount>60</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100005</Product>              <!-- Soldiers Workforce -->
+              <Amount>20</Amount>
+            </Item>
+          </Maintenances>
+          <ConsumerPriority>1</ConsumerPriority>
+        </Maintenance>
+        <Locked />
+        <DelayedConstruction />
+        <Pausable />
+        <Infolayer />
+        <SoundEmitter>
+          <DestroySounds>
+            <Item>
+              <Sound>9818756</Sound>
+            </Item>
+          </DestroySounds>
+          <ConstructionSounds>
+            <BuildSuccessful>
+              <Item>
+                <Sound>206544</Sound>
+              </Item>
+            </BuildSuccessful>
+            <BuildFailed>
+              <Item>
+                <Sound>9818387</Sound>
+              </Item>
+            </BuildFailed>
+            <BuildMoveStart>
+              <Item>
+                <Sound>9818755</Sound>
+              </Item>
+            </BuildMoveStart>
+            <BuildMoveEnd>
+              <Item>
+                <Sound>200141</Sound>
+              </Item>
+            </BuildMoveEnd>
+          </ConstructionSounds>
+          <IncidentSounds>
+            <InfectedFire>
+              <Item>
+                <Sound>214659</Sound>
+              </Item>
+            </InfectedFire>
+          </IncidentSounds>
+          <BuildingRuined>
+            <Item>
+              <Sound>203848</Sound>
+            </Item>
+          </BuildingRuined>
+          <BuildingRepaired>
+            <Item>
+              <Sound>203866</Sound>
+            </Item>
+          </BuildingRepaired>
+        </SoundEmitter>
+        <CommandQueue />
+        <Culture>
+          <Attractiveness>0</Attractiveness>
+        </Culture>
+        <UpgradeList>
+          <DefaultBuff>1742100258</DefaultBuff>          <!-- Gas Ammunition Debuff - Buff -->
+        </UpgradeList>
+      </Values>
+    </Asset>
+    <!-- END Fire Tower (OW) - Miilitary Defenses -->
+
+    <!-- START Armor Pierce Tower (OW) - Miilitary Defenses -->
+    <Asset>
+      <Template>HarborBuildingAttacker</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100219</GUID>
+          <Name>Armor Pierce Tower</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/military_building/icon_he_guntower.png</IconFilename>
+          <InfoDescription>3724</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11150</BuildingCategoryName>
+          <AssociatedRegions>Moderate</AssociatedRegions>
+        </Building>
+        <Blocking>
+          <GroundDecalAsset>100446</GroundDecalAsset>
+          <GroundDecalInvisible>101008</GroundDecalInvisible>
+          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+          <RemoveGrass>0</RemoveGrass>
+        </Blocking>
+        <Mesh />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/special/harbor_05/harbor_05.cfg</Filename>
+            </Item>
+          </Variations>
+          <Skins>
+            <DefaultSkinDescription>23853</DefaultSkinDescription>
+          </Skins>
+        </Object>
+        <AmbientMoodProvider />
+        <Constructable />
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+        </Selection>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Anti-Armour Gun</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>56795</LineID>
+        </Text>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <Amount>7500</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>
+              <Amount>5</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>
+              <Amount>15</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>
+            </Item>
+            <Item>
+              <Ingredient>1010202</Ingredient>
+              <Amount>45</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010223</Ingredient>
+              <Amount>20</Amount>
+            </Item>
+          </Costs>
+          <InfluenceCostType>DefenseBuilding</InfluenceCostType>
+          <InfluenceCostPoints>11</InfluenceCostPoints>
+        </Cost>
+        <Attackable>
+          <AttackableType>HarbourBuilding</AttackableType>
+          <MaximumHitPoints>3750</MaximumHitPoints>
+          <DefenseByAIFactor>190</DefenseByAIFactor>
+          <MilitaryDefensePoints>4</MilitaryDefensePoints>
+          <MoralePower>60</MoralePower>
+          <IslandWarFlag>102307</IslandWarFlag>
+          <ExplosionEffects>
+            <Item>
+              <ExplosionEffectFilePath>data/graphics/effects/military/explosions/harbor_generic_xpl_02.cfg</ExplosionEffectFilePath>
+            </Item>
+          </ExplosionEffects>
+          <ExplosionEffectsMin>1</ExplosionEffectsMin>
+          <ExplosionEffectsMax>1</ExplosionEffectsMax>
+          <SelfHealPerHealTick>5</SelfHealPerHealTick>
+        </Attackable>
+        <Attacker>
+          <BasicAttackType>HarbourTower</BasicAttackType>
+          <BaseDamage>500</BaseDamage>
+          <ReloadTime>93</ReloadTime>
+          <AttackRange>65</AttackRange>
+          <LineOfSightRange>108</LineOfSightRange>
+          <Turrets>
+            <Item>
+              <TurnSpan>360</TurnSpan>
+              <TurretCfg>data/dlc11/graphics/buildings/special/armor_piercing_cannon/armor_piercing_cannon.cfg</TurretCfg>
+            </Item>
+          </Turrets>
+          <ProjectileAsset>3702</ProjectileAsset>
+          <TurretExplosionEffectAsset>102183</TurretExplosionEffectAsset>
+          <MuzzleEffectAssets>
+            <Item>
+              <MuzzleEffectAsset>102183</MuzzleEffectAsset>
+            </Item>
+          </MuzzleEffectAssets>
+          <EmitProjectileTimeAfterStartAnimation>0.3</EmitProjectileTimeAfterStartAnimation>
+          <AccuracyBase>1</AccuracyBase>
+          <AccuracyIncreaseOverDistance>100</AccuracyIncreaseOverDistance>
+          <AccuracyByDistance />
+        </Attacker>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>320</Amount>
+              <InactiveAmount>160</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100005</Product>              <!-- Soldiers Workforce -->
+              <Amount>20</Amount>
+            </Item>
+          </Maintenances>
+          <ConsumerPriority>1</ConsumerPriority>
+        </Maintenance>
+        <Locked />
+        <DelayedConstruction />
+        <Pausable />
+        <Infolayer />
+        <SoundEmitter>
+          <DestroySounds>
+            <Item>
+              <Sound>9818756</Sound>
+            </Item>
+          </DestroySounds>
+          <ConstructionSounds>
+            <BuildSuccessful>
+              <Item>
+                <Sound>206544</Sound>
+              </Item>
+            </BuildSuccessful>
+            <BuildFailed>
+              <Item>
+                <Sound>9818387</Sound>
+              </Item>
+            </BuildFailed>
+            <BuildMoveStart>
+              <Item>
+                <Sound>9818755</Sound>
+              </Item>
+            </BuildMoveStart>
+            <BuildMoveEnd>
+              <Item>
+                <Sound>200141</Sound>
+              </Item>
+            </BuildMoveEnd>
+          </ConstructionSounds>
+          <IncidentSounds>
+            <InfectedFire>
+              <Item>
+                <Sound>214659</Sound>
+              </Item>
+            </InfectedFire>
+          </IncidentSounds>
+          <BuildingRuined>
+            <Item>
+              <Sound>203848</Sound>
+            </Item>
+          </BuildingRuined>
+          <BuildingRepaired>
+            <Item>
+              <Sound>203866</Sound>
+            </Item>
+          </BuildingRepaired>
+        </SoundEmitter>
+        <CommandQueue />
+        <Culture>
+          <Attractiveness>0</Attractiveness>
+        </Culture>
+        <UpgradeList>
+          <DefaultBuff>1742100254</DefaultBuff>          <!-- Shell Ammunition Debuff - Buff -->
+        </UpgradeList>
+      </Values>
+    </Asset>
+    <!-- END Armor Pierce Tower (OW) - Miilitary Defenses -->
+
+    <!-- START Monster Gun (OW) - Miilitary Defenses -->
+    <Asset>
+      <Template>HarborBuildingAttacker</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100220</GUID>
+          <Name>Monster Gun</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_defense_tower_monstergun.png</IconFilename>
+          <InfoDescription>3064</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11150</BuildingCategoryName>
+          <SnapRadius>10</SnapRadius>
+          <TerrainType>Coast</TerrainType>
+          <AssociatedRegions>Moderate</AssociatedRegions>
+        </Building>
+        <Blocking>
+          <GroundDecalAsset>100446</GroundDecalAsset>
+          <GroundDecalInvisible>101008</GroundDecalInvisible>
+          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+          <RemoveGrass>0</RemoveGrass>
+        </Blocking>
+        <Mesh />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/special/harbor_06/harbor_06.cfg</Filename>
+            </Item>
+          </Variations>
+          <Skins>
+            <DefaultSkinDescription>23853</DefaultSkinDescription>
+          </Skins>
+        </Object>
+        <AmbientMoodProvider />
+        <Constructable />
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+        </Selection>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Big Betty</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>7020</LineID>
+        </Text>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <Amount>22000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>
+              <Amount>40</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>
+              <Amount>75</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>
+              <Amount>60</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>
+              <Amount>60</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010202</Ingredient>
+              <Amount>50</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010223</Ingredient>
+              <Amount>20</Amount>
+            </Item>
+          </Costs>
+          <InfluenceCostType>DefenseBuilding</InfluenceCostType>
+          <InfluenceCostPoints>14</InfluenceCostPoints>
+        </Cost>
+        <Attackable>
+          <AttackableType>HarbourBuilding</AttackableType>
+          <MaximumHitPoints>7000</MaximumHitPoints>
+          <DefenseByAIFactor>401</DefenseByAIFactor>
+          <MilitaryDefensePoints>10</MilitaryDefensePoints>
+          <MoralePower>100</MoralePower>
+          <IslandWarFlag>102307</IslandWarFlag>
+          <ExplosionEffects>
+            <Item>
+              <ExplosionEffectFilePath>data/graphics/effects/military/explosions/harbor_generic_xpl_02.cfg</ExplosionEffectFilePath>
+            </Item>
+          </ExplosionEffects>
+          <ExplosionEffectsMin>1</ExplosionEffectsMin>
+          <ExplosionEffectsMax>1</ExplosionEffectsMax>
+          <SelfHealPerHealTick>5</SelfHealPerHealTick>
+        </Attackable>
+        <Attacker>
+          <BasicAttackType>HarbourTower</BasicAttackType>
+          <BaseDamage>850</BaseDamage>
+          <ReloadTime>150</ReloadTime>
+          <AttackRange>108</AttackRange>
+          <LineOfSightRange>108</LineOfSightRange>
+          <Turrets>
+            <Item>
+              <TurnSpan>360</TurnSpan>
+              <TurretCfg>data/graphics/buildings/special/harbor_06/harbor_06_turret.cfg</TurretCfg>
+            </Item>
+          </Turrets>
+          <ProjectileAsset>101955</ProjectileAsset>
+          <MuzzleEffectAssets>
+            <Item>
+              <MuzzleEffectAsset>101972</MuzzleEffectAsset>
+            </Item>
+          </MuzzleEffectAssets>
+          <EmitProjectileTimeAfterStartAnimation>0.35</EmitProjectileTimeAfterStartAnimation>
+          <AccuracyBase>1</AccuracyBase>
+          <AccuracyIncreaseOverDistance>100</AccuracyIncreaseOverDistance>
+          <AccuracyByDistance>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>0</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>HarborBuildingAttacker</TemplateName>
+                    <Index>0</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+            </Item>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>1</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>HarborBuildingAttacker</TemplateName>
+                    <Index>1</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+              <AccuracyByDistancePair>
+                <CorrespondingAccuracy>100</CorrespondingAccuracy>
+              </AccuracyByDistancePair>
+            </Item>
+          </AccuracyByDistance>
+        </Attacker>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>350</Amount>
+              <InactiveAmount>175</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100005</Product>              <!-- Soldiers Workforce -->
+              <Amount>20</Amount>
+            </Item>
+          </Maintenances>
+          <ConsumerPriority>1</ConsumerPriority>
+        </Maintenance>
+        <Locked />
+        <DelayedConstruction />
+        <Pausable />
+        <Infolayer />
+        <SoundEmitter>
+          <DestroySounds>
+            <Item>
+              <Sound>9818756</Sound>
+            </Item>
+          </DestroySounds>
+          <ConstructionSounds>
+            <BuildSuccessful>
+              <Item>
+                <Sound>206544</Sound>
+              </Item>
+            </BuildSuccessful>
+            <BuildFailed>
+              <Item>
+                <Sound>9818387</Sound>
+              </Item>
+            </BuildFailed>
+            <BuildMoveStart>
+              <Item>
+                <Sound>9818755</Sound>
+              </Item>
+            </BuildMoveStart>
+            <BuildMoveEnd>
+              <Item>
+                <Sound>200141</Sound>
+              </Item>
+            </BuildMoveEnd>
+          </ConstructionSounds>
+          <IncidentSounds>
+            <InfectedFire>
+              <Item>
+                <Sound>214659</Sound>
+              </Item>
+            </InfectedFire>
+          </IncidentSounds>
+          <BuildingRuined>
+            <Item>
+              <Sound>203848</Sound>
+            </Item>
+          </BuildingRuined>
+          <BuildingRepaired>
+            <Item>
+              <Sound>203866</Sound>
+            </Item>
+          </BuildingRepaired>
+        </SoundEmitter>
+        <CommandQueue />
+        <Culture>
+          <Attractiveness>0</Attractiveness>
+        </Culture>
+        <UpgradeList>
+          <DefaultBuff>1742100262</DefaultBuff>          <!-- Bombs Ammunition Debuff - Buff -->
+        </UpgradeList>
+      </Values>
+    </Asset>
+    <!-- END Monster Gun (OW) - Miilitary Defenses -->
+
+    <!-- START FORT (Ow) - Miilitary Defenses -->
+    <Asset>
+      <Template>HarborBuildingAttackerFort</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100284</GUID>
+          <Name>Fort</Name>
+          <IconFilename>data/graphics/icons/icon_fort.png</IconFilename>
+          <InfoDescription>1742100285</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11150</BuildingCategoryName>
+          <SnapRadius>10</SnapRadius>
+          <TerrainType>Coast</TerrainType>
+          <AssociatedRegions>Moderate</AssociatedRegions>
+        </Building>
+        <Blocking>
+          <GroundDecalAsset>100446</GroundDecalAsset>
+          <GroundDecalInvisible>101008</GroundDecalInvisible>
+          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+          <RemoveGrass>0</RemoveGrass>
+        </Blocking>
+        <Mesh />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/special/harbor_06/harbor_06.cfg</Filename>
+            </Item>
+          </Variations>
+          <Skins>
+            <DefaultSkinDescription>23853</DefaultSkinDescription>
+          </Skins>
+        </Object>
+        <AmbientMoodProvider />
+        <Constructable />
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+        </Selection>
+        <Text />
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <Amount>100</Amount>
+            </Item>
+          </Costs>
+          <InfluenceCostType>DefenseBuilding</InfluenceCostType>
+          <InfluenceCostPoints>150</InfluenceCostPoints>
+        </Cost>
+        <Attackable>
+          <AttackableType>HarbourBuilding</AttackableType>
+          <MaximumHitPoints>20000</MaximumHitPoints>
+          <DefenseByAIFactor>401</DefenseByAIFactor>
+          <MilitaryDefensePoints>80</MilitaryDefensePoints>
+          <MoralePower>1000</MoralePower>
+          <IslandWarFlag>102307</IslandWarFlag>
+          <ExplosionEffects>
+            <Item>
+              <ExplosionEffectFilePath>data/graphics/effects/military/explosions/harbor_generic_xpl_02.cfg</ExplosionEffectFilePath>
+            </Item>
+          </ExplosionEffects>
+          <ExplosionEffectsMin>1</ExplosionEffectsMin>
+          <ExplosionEffectsMax>1</ExplosionEffectsMax>
+          <SelfHealPerHealTick>5</SelfHealPerHealTick>
+        </Attackable>
+        <Attacker>
+          <BasicAttackType>HarbourTower</BasicAttackType>
+          <BaseDamage>400</BaseDamage>
+          <ReloadTime>10</ReloadTime>
+          <AttackRange>150</AttackRange>
+          <LineOfSightRange>108</LineOfSightRange>
+          <Turrets>
+            <Item>
+              <TurnSpan>360</TurnSpan>
+              <TurretCfg>data/graphics/buildings/special/harbor_06/harbor_06_turret.cfg</TurretCfg>
+            </Item>
+          </Turrets>
+          <ProjectileAsset>101955</ProjectileAsset>
+          <MuzzleEffectAssets>
+            <Item>
+              <MuzzleEffectAsset>101972</MuzzleEffectAsset>
+            </Item>
+          </MuzzleEffectAssets>
+          <EmitProjectileTimeAfterStartAnimation>0.35</EmitProjectileTimeAfterStartAnimation>
+          <AccuracyBase>1</AccuracyBase>
+          <AccuracyIncreaseOverDistance>100</AccuracyIncreaseOverDistance>
+          <AccuracyByDistance>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>0</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>HarborBuildingAttacker</TemplateName>
+                    <Index>0</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+            </Item>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>1</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>HarborBuildingAttacker</TemplateName>
+                    <Index>1</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+              <AccuracyByDistancePair>
+                <CorrespondingAccuracy>100</CorrespondingAccuracy>
+              </AccuracyByDistancePair>
+            </Item>
+          </AccuracyByDistance>
+        </Attacker>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>10000</Amount>
+            </Item>
+            <Item>
+              <Product>1742100005</Product>              <!-- Soldiers Workforce -->
+              <Amount>150</Amount>
+            </Item>
+          </Maintenances>
+          <ConsumerPriority>1</ConsumerPriority>
+        </Maintenance>
+        <Locked />
+        <DelayedConstruction />
+        <Pausable />
+        <Infolayer />
+        <BuildingUnique>
+          <Uniques>
+            <Item>
+              <UniqueType>AirshipPlatformWorkforceTransferModule</UniqueType>
+              <UniqueScope>Game</UniqueScope>
+            </Item>
+          </Uniques>
+        </BuildingUnique>
+        <SoundEmitter>
+          <DestroySounds>
+            <Item>
+              <Sound>9818756</Sound>
+            </Item>
+          </DestroySounds>
+          <ConstructionSounds>
+            <BuildSuccessful>
+              <Item>
+                <Sound>206544</Sound>
+              </Item>
+            </BuildSuccessful>
+            <BuildFailed>
+              <Item>
+                <Sound>9818387</Sound>
+              </Item>
+            </BuildFailed>
+            <BuildMoveStart>
+              <Item>
+                <Sound>9818755</Sound>
+              </Item>
+            </BuildMoveStart>
+            <BuildMoveEnd>
+              <Item>
+                <Sound>200141</Sound>
+              </Item>
+            </BuildMoveEnd>
+          </ConstructionSounds>
+          <IncidentSounds>
+            <InfectedFire>
+              <Item>
+                <Sound>214659</Sound>
+              </Item>
+            </InfectedFire>
+          </IncidentSounds>
+          <BuildingRuined>
+            <Item>
+              <Sound>203848</Sound>
+            </Item>
+          </BuildingRuined>
+          <BuildingRepaired>
+            <Item>
+              <Sound>203866</Sound>
+            </Item>
+          </BuildingRepaired>
+        </SoundEmitter>
+        <CommandQueue />
+        <Culture>
+          <Attractiveness>0</Attractiveness>
+        </Culture>
+        <UpgradeList>
+          <DefaultBuff>1742100262</DefaultBuff>          <!-- Bombs Ammunition Debuff - Buff -->
+        </UpgradeList>
+      </Values>
+    </Asset>
+    <!-- END FORT (OW) - Miilitary Defenses -->
+
+    <!-- START Mounted Guns (AR) - Miilitary Defenses -->
+    <Asset>
+      <BaseAssetGUID>1742100215</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742100356</GUID>
+          <Name>Mounted Guns</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_defense_tower_pucklegun.png</IconFilename>
+          <InfoDescription>3063</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11150</BuildingCategoryName>
+          <AssociatedRegions>Arctic</AssociatedRegions>
+        </Building>
+        <Blocking />
+        <Mesh />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/special/harbor_04/harbor_04.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <AmbientMoodProvider />
+        <Constructable />
+        <Selection />
+        <Text />
+        <Cost />
+        <Attackable />
+        <Attacker />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>10</Amount>
+              <InactiveAmount>5</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100309</Product>              <!-- Arctic Soldiers Workforce -->
+              <Amount>20</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Locked />
+        <DelayedConstruction />
+        <Pausable />
+        <Infolayer />
+        <SoundEmitter />
+        <CommandQueue />
+        <Culture />
+        <UpgradeList />
+      </Values>
+    </Asset>
+    <!-- END Mounted Guns (AR) - Miilitary Defenses -->
+
+    <!-- START Mounted Guns (NW) - Miilitary Defenses -->
+    <Asset>
+      <BaseAssetGUID>1742100215</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742100362</GUID>
+          <Name>Mounted Guns</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_defense_tower_pucklegun.png</IconFilename>
+          <InfoDescription>3063</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11150</BuildingCategoryName>
+          <AssociatedRegions>Colony01</AssociatedRegions>
+        </Building>
+        <Blocking />
+        <Mesh />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/special/harbor_04/harbor_04.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <AmbientMoodProvider />
+        <Constructable />
+        <Selection />
+        <Text />
+        <Cost />
+        <Attackable />
+        <Attacker />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>10</Amount>
+              <InactiveAmount>5</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100317</Product>              <!-- New World Soldiers Workforce -->
+              <Amount>20</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Locked />
+        <DelayedConstruction />
+        <Pausable />
+        <Infolayer />
+        <SoundEmitter />
+        <CommandQueue />
+        <Culture />
+        <UpgradeList />
+      </Values>
+    </Asset>
+    <!-- END Mounted Guns (NW) - Miilitary Defenses -->
+
+    <!-- START Mounted Guns (EN) - Miilitary Defenses -->
+    <Asset>
+      <BaseAssetGUID>1742100215</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742100368</GUID>
+          <Name>Mounted Guns</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_defense_tower_pucklegun.png</IconFilename>
+          <InfoDescription>3063</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11150</BuildingCategoryName>
+          <AssociatedRegions>Africa</AssociatedRegions>
+        </Building>
+        <Blocking />
+        <Mesh />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/special/harbor_04/harbor_04.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <AmbientMoodProvider />
+        <Constructable />
+        <Selection />
+        <Text />
+        <Cost />
+        <Attackable />
+        <Attacker />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>10</Amount>
+              <InactiveAmount>5</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100318</Product>              <!-- Enbesa Soldiers Workforce -->
+              <Amount>20</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Locked />
+        <DelayedConstruction />
+        <Pausable />
+        <Infolayer />
+        <SoundEmitter />
+        <CommandQueue />
+        <Culture />
+        <UpgradeList />
+      </Values>
+    </Asset>
+    <!-- END Mounted Guns (EN) - Miilitary Defenses -->
+
+    <!-- START Cannon Tower (AR) - Miilitary Defenses -->
+    <Asset>
+      <BaseAssetGUID>1742100216</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742100357</GUID>
+          <Name>Cannon Tower</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_defense_tower_cannon.png</IconFilename>
+          <InfoDescription>3062</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11150</BuildingCategoryName>
+          <AssociatedRegions>Arctic</AssociatedRegions>
+        </Building>
+        <Blocking />
+        <Mesh />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/special/harbor_05/harbor_05.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <AmbientMoodProvider />
+        <Constructable />
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+        </Selection>
+        <Tex />
+        <Cost />
+        <Attackable />
+        <Attacker />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>30</Amount>
+              <InactiveAmount>15</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100309</Product>          <!-- Arctic Soldiers Workforce -->
+              <Amount>20</Amount>
+            </Item>
+          </Maintenances>
+          <ConsumerPriority>1</ConsumerPriority>
+        </Maintenance>
+        <Locked />
+        <DelayedConstruction />
+        <Pausable />
+        <Infolayer />
+        <SoundEmitter />
+        <CommandQueue />
+        <Cultur />
+        <UpgradeList />
+      </Values>
+    </Asset>
+    <!-- END Cannon Tower (AR) - Miilitary Defenses -->
+
+    <!-- START Cannon Tower (NW) - Miilitary Defenses -->
+    <Asset>
+      <BaseAssetGUID>1742100216</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742100363</GUID>
+          <Name>Cannon Tower</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_defense_tower_cannon.png</IconFilename>
+          <InfoDescription>3062</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11150</BuildingCategoryName>
+          <AssociatedRegions>Colony01</AssociatedRegions>
+        </Building>
+        <Blocking />
+        <Mesh />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/special/harbor_05/harbor_05.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <AmbientMoodProvider />
+        <Constructable />
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+        </Selection>
+        <Tex />
+        <Cost />
+        <Attackable />
+        <Attacker />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>30</Amount>
+              <InactiveAmount>15</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100317</Product>          <!-- New World Soldiers Workforce -->
+              <Amount>20</Amount>
+            </Item>
+          </Maintenances>
+          <ConsumerPriority>1</ConsumerPriority>
+        </Maintenance>
+        <Locked />
+        <DelayedConstruction />
+        <Pausable />
+        <Infolayer />
+        <SoundEmitter />
+        <CommandQueue />
+        <Cultur />
+        <UpgradeList />
+      </Values>
+    </Asset>
+    <!-- END Cannon Tower (NW) - Miilitary Defenses -->
+
+    <!-- START Cannon Tower (EN) - Miilitary Defenses -->
+    <Asset>
+      <BaseAssetGUID>1742100216</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742100369</GUID>
+          <Name>Cannon Tower</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_defense_tower_cannon.png</IconFilename>
+          <InfoDescription>3062</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11150</BuildingCategoryName>
+          <AssociatedRegions>Africa</AssociatedRegions>
+        </Building>
+        <Blocking />
+        <Mesh />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/special/harbor_05/harbor_05.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <AmbientMoodProvider />
+        <Constructable />
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+        </Selection>
+        <Tex />
+        <Cost />
+        <Attackable />
+        <Attacker />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>30</Amount>
+              <InactiveAmount>15</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100318</Product>          <!-- Enbesa Soldiers Workforce -->
+              <Amount>20</Amount>
+            </Item>
+          </Maintenances>
+          <ConsumerPriority>1</ConsumerPriority>
+        </Maintenance>
+        <Locked />
+        <DelayedConstruction />
+        <Pausable />
+        <Infolayer />
+        <SoundEmitter />
+        <CommandQueue />
+        <Cultur />
+        <UpgradeList />
+      </Values>
+    </Asset>
+    <!-- END Cannon Tower (EN) - Miilitary Defenses -->
+
+    <!-- START Flak Emplacement (AR) - Miilitary Defenses -->
+    <Asset>
+      <BaseAssetGUID>1742100217</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742100358</GUID>
+          <Name>Flak Emplacement</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/military_building/icon_flak_tower.png</IconFilename>
+          <InfoDescription>740</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11150</BuildingCategoryName>
+          <AssociatedRegions>Arctic</AssociatedRegions>
+        </Building>
+        <Blocking />
+        <Mesh />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/dlc11/graphics/buildings/special/flak_cannon_tower/flak_cannon_tower_platform_moderate.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <AmbientMoodProvider />
+        <Constructable />
+        <Selection />
+        <Text />
+        <Cost />
+        <Attackable />
+        <Attacker />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>60</Amount>
+              <InactiveAmount>30</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100309</Product>          <!-- Arctic Soldiers Workforce -->
+              <Amount>20</Amount>
+            </Item>
+          </Maintenances>
+          <ConsumerPriority>1</ConsumerPriority>
+        </Maintenance>
+        <Locked />
+        <DelayedConstruction />
+        <Pausable />
+        <Infolayer />
+        <SoundEmitter />
+        <CommandQueue />
+        <Culture />
+        <UpgradeList />
+      </Values>
+    </Asset>
+    <!-- END Flak Emplacement (AR) - Miilitary Defenses -->
+
+    <!-- START Flak Emplacement (NW) - Miilitary Defenses -->
+    <Asset>
+      <BaseAssetGUID>1742100217</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742100364</GUID>
+          <Name>Flak Emplacement</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/military_building/icon_flak_tower.png</IconFilename>
+          <InfoDescription>740</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11150</BuildingCategoryName>
+          <AssociatedRegions>Colony01</AssociatedRegions>
+        </Building>
+        <Blocking />
+        <Mesh />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/dlc11/graphics/buildings/special/flak_cannon_tower/flak_cannon_tower_platform_moderate.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <AmbientMoodProvider />
+        <Constructable />
+        <Selection />
+        <Text />
+        <Cost />
+        <Attackable />
+        <Attacker />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>60</Amount>
+              <InactiveAmount>30</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100317</Product>          <!-- New World Soldiers Workforce -->
+              <Amount>20</Amount>
+            </Item>
+          </Maintenances>
+          <ConsumerPriority>1</ConsumerPriority>
+        </Maintenance>
+        <Locked />
+        <DelayedConstruction />
+        <Pausable />
+        <Infolayer />
+        <SoundEmitter />
+        <CommandQueue />
+        <Culture />
+        <UpgradeList />
+      </Values>
+    </Asset>
+    <!-- END Flak Emplacement (NW) - Miilitary Defenses -->
+
+    <!-- START Flak Emplacement (EN) - Miilitary Defenses -->
+    <Asset>
+      <BaseAssetGUID>1742100217</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742100370</GUID>
+          <Name>Flak Emplacement</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/military_building/icon_flak_tower.png</IconFilename>
+          <InfoDescription>740</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11150</BuildingCategoryName>
+          <AssociatedRegions>Africa</AssociatedRegions>
+        </Building>
+        <Blocking />
+        <Mesh />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/dlc11/graphics/buildings/special/flak_cannon_tower/flak_cannon_tower_platform_moderate.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <AmbientMoodProvider />
+        <Constructable />
+        <Selection />
+        <Text />
+        <Cost />
+        <Attackable />
+        <Attacker />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>60</Amount>
+              <InactiveAmount>30</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100318</Product>          <!-- Enbesa Soldiers Workforce -->
+              <Amount>20</Amount>
+            </Item>
+          </Maintenances>
+          <ConsumerPriority>1</ConsumerPriority>
+        </Maintenance>
+        <Locked />
+        <DelayedConstruction />
+        <Pausable />
+        <Infolayer />
+        <SoundEmitter />
+        <CommandQueue />
+        <Culture />
+        <UpgradeList />
+      </Values>
+    </Asset>
+    <!-- END Flak Emplacement (EN) - Miilitary Defenses -->
+
+    <!-- START Flak Emplacement (AR Land) - Miilitary Defenses -->
+    <Asset>
+      <BaseAssetGUID>1742100221</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742100361</GUID>
+          <Name>Flak Emplacement (Land)</Name>
+          <IconFilename>data/graphics/icons/icon_flak_tower_land.png</IconFilename>
+          <InfoDescription>740</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11151</BuildingCategoryName>
+          <BuildModeRandomRotation>90</BuildModeRandomRotation>
+          <TerrainType>Terrain</TerrainType>
+          <AssociatedRegions>Arctic</AssociatedRegions>
+        </Building>
+        <Blocking />
+        <Mesh />
+        <Object />
+        <AmbientMoodProvider />
+        <Constructable />
+        <Selection />
+        <Text />
+        <Cost />
+        <Attackable />
+        <Attacker />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>60</Amount>
+              <InactiveAmount>30</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100309</Product>          <!-- Arctic Soldiers Workforce -->
+              <Amount>20</Amount>
+            </Item>
+          </Maintenances>
+          <ConsumerPriority>1</ConsumerPriority>
+        </Maintenance>
+        <Locked />
+        <DelayedConstruction />
+        <Pausable />
+        <Infolayer />
+        <SoundEmitter />
+        <CommandQueue />
+        <Culture />
+        <UpgradeList />
+      </Values>
+    </Asset>
+    <!-- END Flak Emplacement (AR Land) - Miilitary Defenses -->
+
+    <!-- START Flak Emplacement (NW Land) - Miilitary Defenses -->
+    <Asset>
+      <BaseAssetGUID>1742100221</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742100367</GUID>
+          <Name>Flak Emplacement (Land)</Name>
+          <IconFilename>data/graphics/icons/icon_flak_tower_land.png</IconFilename>
+          <InfoDescription>740</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11151</BuildingCategoryName>
+          <BuildModeRandomRotation>90</BuildModeRandomRotation>
+          <TerrainType>Terrain</TerrainType>
+          <AssociatedRegions>Colony01</AssociatedRegions>
+        </Building>
+        <Blocking />
+        <Mesh />
+        <Object />
+        <AmbientMoodProvider />
+        <Constructable />
+        <Selection />
+        <Text />
+        <Cost />
+        <Attackable />
+        <Attacker />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>60</Amount>
+              <InactiveAmount>30</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100317</Product>          <!-- New World Soldiers Workforce -->
+              <Amount>20</Amount>
+            </Item>
+          </Maintenances>
+          <ConsumerPriority>1</ConsumerPriority>
+        </Maintenance>
+        <Locked />
+        <DelayedConstruction />
+        <Pausable />
+        <Infolayer />
+        <SoundEmitter />
+        <CommandQueue />
+        <Culture />
+        <UpgradeList />
+      </Values>
+    </Asset>
+    <!-- END Flak Emplacement (NW Land) - Miilitary Defenses -->
+
+    <!-- START Flak Emplacement (EN Land) - Miilitary Defenses -->
+    <Asset>
+      <BaseAssetGUID>1742100221</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742100373</GUID>
+          <Name>Flak Emplacement (Land)</Name>
+          <IconFilename>data/graphics/icons/icon_flak_tower_land.png</IconFilename>
+          <InfoDescription>740</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11151</BuildingCategoryName>
+          <BuildModeRandomRotation>90</BuildModeRandomRotation>
+          <TerrainType>Terrain</TerrainType>
+          <AssociatedRegions>Africa</AssociatedRegions>
+        </Building>
+        <Blocking />
+        <Mesh />
+        <Object />
+        <AmbientMoodProvider />
+        <Constructable />
+        <Selection />
+        <Text />
+        <Cost />
+        <Attackable />
+        <Attacker />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>60</Amount>
+              <InactiveAmount>30</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100318</Product>          <!-- Enbesa Soldiers Workforce -->
+              <Amount>20</Amount>
+            </Item>
+          </Maintenances>
+          <ConsumerPriority>1</ConsumerPriority>
+        </Maintenance>
+        <Locked />
+        <DelayedConstruction />
+        <Pausable />
+        <Infolayer />
+        <SoundEmitter />
+        <CommandQueue />
+        <Culture />
+        <UpgradeList />
+      </Values>
+    </Asset>
+    <!-- END Flak Emplacement (EN Land) - Miilitary Defenses -->
+
+    <!-- START Fire Tower (AR) - Miilitary Defenses -->
+    <Asset>
+      <BaseAssetGUID>1742100218</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742100359</GUID>
+          <Name>Fire Tower</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/military_building/icon_flame_tower.png</IconFilename>
+          <InfoDescription>630</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11150</BuildingCategoryName>
+          <AssociatedRegions>Arctic</AssociatedRegions>
+        </Building>
+        <Blocking />
+        <Mesh />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/special/harbor_05/harbor_05.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <AmbientMoodProvider />
+        <Constructable />
+        <Selection />
+        <Text />
+        <Cost />
+        <Attackable />
+        <Attacker />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>120</Amount>
+              <InactiveAmount>60</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100309</Product>          <!-- Arctic Soldiers Workforce -->
+              <Amount>20</Amount>
+            </Item>
+          </Maintenances>
+          <ConsumerPriority>1</ConsumerPriority>
+        </Maintenance>
+        <Locked />
+        <DelayedConstruction />
+        <Pausable />
+        <Infolayer />
+        <SoundEmitter />
+        <CommandQueue />
+        <Culture />
+        <UpgradeList />
+      </Values>
+    </Asset>
+    <!-- END Fire Tower (AR) - Miilitary Defenses -->
+
+    <!-- START Fire Tower (NW) - Miilitary Defenses -->
+    <Asset>
+      <BaseAssetGUID>1742100218</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742100365</GUID>
+          <Name>Fire Tower</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/military_building/icon_flame_tower.png</IconFilename>
+          <InfoDescription>630</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11150</BuildingCategoryName>
+          <AssociatedRegions>Colony01</AssociatedRegions>
+        </Building>
+        <Blocking />
+        <Mesh />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/special/harbor_05/harbor_05.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <AmbientMoodProvider />
+        <Constructable />
+        <Selection />
+        <Text />
+        <Cost />
+        <Attackable />
+        <Attacker />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>120</Amount>
+              <InactiveAmount>60</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100317</Product>          <!-- New World Soldiers Workforce -->
+              <Amount>20</Amount>
+            </Item>
+          </Maintenances>
+          <ConsumerPriority>1</ConsumerPriority>
+        </Maintenance>
+        <Locked />
+        <DelayedConstruction />
+        <Pausable />
+        <Infolayer />
+        <SoundEmitter />
+        <CommandQueue />
+        <Culture />
+        <UpgradeList />
+      </Values>
+    </Asset>
+    <!-- END Fire Tower (NW) - Miilitary Defenses -->
+
+    <!-- START Fire Tower (EN) - Miilitary Defenses -->
+    <Asset>
+      <BaseAssetGUID>1742100218</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742100371</GUID>
+          <Name>Fire Tower</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/military_building/icon_flame_tower.png</IconFilename>
+          <InfoDescription>630</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11150</BuildingCategoryName>
+          <AssociatedRegions>Africa</AssociatedRegions>
+        </Building>
+        <Blocking />
+        <Mesh />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/special/harbor_05/harbor_05.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <AmbientMoodProvider />
+        <Constructable />
+        <Selection />
+        <Text />
+        <Cost />
+        <Attackable />
+        <Attacker />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>120</Amount>
+              <InactiveAmount>60</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100318</Product>          <!-- Enbesa Soldiers Workforce -->
+              <Amount>20</Amount>
+            </Item>
+          </Maintenances>
+          <ConsumerPriority>1</ConsumerPriority>
+        </Maintenance>
+        <Locked />
+        <DelayedConstruction />
+        <Pausable />
+        <Infolayer />
+        <SoundEmitter />
+        <CommandQueue />
+        <Culture />
+        <UpgradeList />
+      </Values>
+    </Asset>
+    <!-- END Fire Tower (EN) - Miilitary Defenses -->
+
+    <!-- START Armor Pierce Tower (AR) - Miilitary Defenses -->
+    <Asset>
+      <BaseAssetGUID>1742100219</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742100360</GUID>
+          <Name>Armor Pierce Tower</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/military_building/icon_he_guntower.png</IconFilename>
+          <InfoDescription>3724</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11150</BuildingCategoryName>
+          <AssociatedRegions>Arctic</AssociatedRegions>
+        </Building>
+        <Blocking />
+        <Mesh />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/special/harbor_05/harbor_05.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <AmbientMoodProvider />
+        <Constructable />
+        <Selection />
+        <Text />
+        <Cost />
+        <Attackable />
+        <Attacker />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>320</Amount>
+              <InactiveAmount>160</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100309</Product>          <!-- Arctic Soldiers Workforce -->
+              <Amount>20</Amount>
+            </Item>
+          </Maintenances>
+          <ConsumerPriority>1</ConsumerPriority>
+        </Maintenance>
+        <Locked />
+        <DelayedConstruction />
+        <Pausable />
+        <Infolayer />
+        <SoundEmitter />
+        <CommandQueue />
+        <Culture />
+        <UpgradeList />
+      </Values>
+    </Asset>
+    <!-- END Armor Pierce Tower (AR) - Miilitary Defenses -->
+
+    <!-- START Armor Pierce Tower (NW) - Miilitary Defenses -->
+    <Asset>
+      <BaseAssetGUID>1742100219</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742100366</GUID>
+          <Name>Armor Pierce Tower</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/military_building/icon_he_guntower.png</IconFilename>
+          <InfoDescription>3724</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11150</BuildingCategoryName>
+          <AssociatedRegions>Colony01</AssociatedRegions>
+        </Building>
+        <Blocking />
+        <Mesh />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/special/harbor_05/harbor_05.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <AmbientMoodProvider />
+        <Constructable />
+        <Selection />
+        <Text />
+        <Cost />
+        <Attackable />
+        <Attacker />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>320</Amount>
+              <InactiveAmount>160</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100317</Product>          <!-- New World Soldiers Workforce -->
+              <Amount>20</Amount>
+            </Item>
+          </Maintenances>
+          <ConsumerPriority>1</ConsumerPriority>
+        </Maintenance>
+        <Locked />
+        <DelayedConstruction />
+        <Pausable />
+        <Infolayer />
+        <SoundEmitter />
+        <CommandQueue />
+        <Culture />
+        <UpgradeList />
+      </Values>
+    </Asset>
+    <!-- END Armor Pierce Tower (NW) - Miilitary Defenses -->
+
+    <!-- START Armor Pierce Tower (EN) - Miilitary Defenses -->
+    <Asset>
+      <BaseAssetGUID>1742100219</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742100372</GUID>
+          <Name>Armor Pierce Tower</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/military_building/icon_he_guntower.png</IconFilename>
+          <InfoDescription>3724</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11150</BuildingCategoryName>
+          <AssociatedRegions>Africa</AssociatedRegions>
+        </Building>
+        <Blocking />
+        <Mesh />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/special/harbor_05/harbor_05.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <AmbientMoodProvider />
+        <Constructable />
+        <Selection />
+        <Text />
+        <Cost />
+        <Attackable />
+        <Attacker />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>320</Amount>
+              <InactiveAmount>160</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100318</Product>          <!-- Enbesa Soldiers Workforce -->
+              <Amount>20</Amount>
+            </Item>
+          </Maintenances>
+          <ConsumerPriority>1</ConsumerPriority>
+        </Maintenance>
+        <Locked />
+        <DelayedConstruction />
+        <Pausable />
+        <Infolayer />
+        <SoundEmitter />
+        <CommandQueue />
+        <Culture />
+        <UpgradeList />
+      </Values>
+    </Asset>
+    <!-- END Armor Pierce Tower (EN) - Miilitary Defenses -->
+
+  </ModOp>
+  <!-- END Military Defenses -->
+
+</ModOps>

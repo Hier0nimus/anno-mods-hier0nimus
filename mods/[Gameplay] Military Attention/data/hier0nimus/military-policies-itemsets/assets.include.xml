@@ -1,0 +1,914 @@
+<!-- 
+  Military Policies
+-->
+
+<ModOps>
+  <!-- START MH - POLICIES -->
+  <ModOp GUID='25650' Type="addNextSibling">
+
+    <!-- START MH - POLICY 1 - Rations -->
+    <Asset>
+      <Template>EffectContainer</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100034</GUID>
+          <Name>Rations</Name>
+          <IconFilename>data/graphics/icons/icon_policy_rations_0.png</IconFilename>
+          <InfoDescription>1742100035</InfoDescription>
+        </Standard>
+        <Text />
+        <EffectContainer>
+          <Effects>
+            <Item>
+              <Effect>1742100041</Effect>              <!-- Military Headquarters - Policy 1 - Rations -->
+            </Item>
+          </Effects>
+          <EffectUsedForInfoTip>1742100043</EffectUsedForInfoTip>
+        </EffectContainer>
+      </Values>
+    </Asset>
+    <!-- END MH - POLICY 1 - Rations -->
+
+    <!-- START MH - POLICY 2 - Weapon efficiency -->
+    <Asset>
+      <Template>EffectContainer</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100036</GUID>
+          <Name>Weapon efficiency</Name>
+          <IconFilename>data/graphics/icons/icon_policy_war_effort_production_0.png</IconFilename>
+          <InfoDescription>1742100037</InfoDescription>
+        </Standard>
+        <Text />
+        <EffectContainer>
+          <Effects>
+            <Item>
+              <Effect>1742100046</Effect>              <!-- Military Headquarters - Policy 2 - Weapon efficiency -->
+            </Item>
+          </Effects>
+          <EffectUsedForInfoTip>1742100048</EffectUsedForInfoTip>
+        </EffectContainer>
+      </Values>
+    </Asset>
+    <!-- END MH - POLICY 2 - Weapon efficiency -->
+
+    <!-- END MH - POLICY 3 - Equipment efficiency -->
+    <Asset>
+      <Template>EffectContainer</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100038</GUID>
+          <Name>Equipment efficiency</Name>
+          <IconFilename>data/graphics/icons/icon_policy_war_effort_ships_0.png</IconFilename>
+          <InfoDescription>1742100039</InfoDescription>
+        </Standard>
+        <Text />
+        <EffectContainer>
+          <Effects>
+            <Item>
+              <Effect>1742100050</Effect>              <!-- Military Headquarters - Policy 3 - Equipment efficiency -->
+            </Item>
+          </Effects>
+          <EffectUsedForInfoTip>1742100052</EffectUsedForInfoTip>
+        </EffectContainer>
+      </Values>
+    </Asset>
+    <!-- START MH - POLICY 3 - Equipment efficiency -->
+  </ModOp>
+  <!-- END MH - POLICIES -->
+
+  <!-- START MA ITEMSET 1 - Ship Production -->
+  <ModOp GUID='124907' Type="addNextSibling">
+    <Asset>
+      <Template>ItemSet</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100086</GUID>
+          <Name>War Effort Production Ships</Name>
+          <IconFilename>data/graphics/icons/icon_academy_ship_production.png</IconFilename>
+          <InfoDescription>1742100087</InfoDescription>
+        </Standard>
+        <ItemSocketSet>
+          <SetBuff>1742100088</SetBuff> <!-- Ship Production - SetBuff -->
+          <BuffScope>Area</BuffScope>
+        </ItemSocketSet>
+        <Text />
+        <Locked />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- START MA ITEMSET 1 - Ship Production - Adding Items to set -->
+
+  <!-- 190695 - TEMPORARY - Ship Builder -->
+  <ModOp GUID="190695" Path="Values/Item" Type="add">
+    <ItemSet>1742100086</ItemSet>
+  </ModOp>
+
+  <!-- 190696 - Naval Architect -->
+  <ModOp GUID="190696" Path="Values/Item" Type="add">
+    <ItemSet>1742100086</ItemSet>
+  </ModOp>
+
+  <!-- 190697 - Mr. Swell, the Hydrodynamist -->
+  <ModOp GUID="190697" Path="Values/Item" Type="add">
+    <ItemSet>1742100086</ItemSet>
+  </ModOp>
+
+  <!-- 192036 - Hydraulic Crane -->
+  <ModOp GUID="192036" Path="Values/Item" Type="add">
+    <ItemSet>1742100086</ItemSet>
+  </ModOp>
+
+  <!-- 190698 - Rohit Bhargava -->
+  <ModOp GUID="190698" Path="Values/Item" Type="add">
+    <ItemSet>1742100086</ItemSet>
+  </ModOp>
+  
+<!-- 1742100167 - New Item: Pirate Naval Architect Blueprints -->
+<ModOp GUID="1742100167" Path="Values/Item" Type="add">
+  <ItemSet>1742100095</ItemSet>
+</ModOp>
+
+<!-- START MA ITEMSET 2 - Military Consumption Goods Production -->
+<ModOp GUID='124907' Type="addNextSibling">
+  <Asset>
+    <Template>ItemSet</Template>
+    <Values>
+      <Standard>
+        <GUID>1742100095</GUID>
+        <Name>Military Consumption Goods Production</Name>
+        <IconFilename>data/graphics/icons/icon_academy_consumption_goods.png</IconFilename>
+        <InfoDescription>1742100096</InfoDescription>
+      </Standard>
+      <ItemSocketSet>
+        <SetBuff>1742100097</SetBuff> <!-- Military Consumption Goods Production - SetBuff -->
+        <BuffScope>Area</BuffScope>
+      </ItemSocketSet>
+      <Text />
+      <Locked />
+    </Values>
+  </Asset>
+</ModOp>
+
+<!-- START MA ITEMSET 2 - Adding Items to set -->
+
+<!-- 190826 - Oxford Electrical Bell -->
+<ModOp GUID="190826" Path="Values/Item" Type="add">
+  <ItemSet>1742100095</ItemSet>
+</ModOp>
+
+<!-- 112373 - Human IncarN8 Nr. 9 -->
+<ModOp GUID="112373" Path="Values/Item" Type="add">
+  <ItemSet>1742100095</ItemSet>
+</ModOp>
+
+<!-- 1742100169 - Jean's Best Whisky -->
+<ModOp GUID="1742100169" Path="Values/Item" Type="add">
+  <ItemSet>1742100086</ItemSet>
+</ModOp>
+
+<!-- START MA ITEMSET 3 - Military Equipment Production -->
+<ModOp GUID='124907' Type="addNextSibling">
+  <Asset>
+    <Template>ItemSet</Template>
+    <Values>
+      <Standard>
+        <GUID>1742100099</GUID>
+        <Name>Military Equipment Production</Name>
+        <IconFilename>data/graphics/icons/icon_academy_equipment_production.png</IconFilename>
+        <InfoDescription>1742100100</InfoDescription>
+      </Standard>
+      <ItemSocketSet>
+        <SetBuff>1742100101</SetBuff> <!-- Military Equipment Production - SetBuff -->
+        <BuffScope>Area</BuffScope>
+      </ItemSocketSet>
+      <Text />
+      <Locked />
+    </Values>
+  </Asset>
+</ModOp>
+
+<!-- START MA ITEMSET 3 - Adding Items to set -->
+
+<!-- 192305 - Extremely Loud Bell -->
+<ModOp GUID="192305" Path="Values/Item" Type="add">
+  <ItemSet>1742100099</ItemSet>
+</ModOp>
+
+<!-- 112385 - RacioN8d Super Spinner -->
+<ModOp GUID="112385" Path="Values/Item" Type="add">
+  <ItemSet>1742100099</ItemSet>
+</ModOp>
+
+<!-- 1742100171 - New Item: Anne's Eagle -->
+<ModOp GUID="1742100171" Path="Values/Item" Type="add">
+  <ItemSet>1742100099</ItemSet>
+</ModOp>
+
+<!-- START MA ITEMSET 4 - Military Weapon Goods Production -->
+<ModOp GUID='124907' Type="addNextSibling">
+  <Asset>
+    <Template>ItemSet</Template>
+    <Values>
+      <Standard>
+        <GUID>1742100103</GUID>
+        <Name>Military Weapon Goods Production</Name>
+        <IconFilename>data/graphics/icons/icon_academy_military_goods_consumption.png</IconFilename>
+        <InfoDescription>1742100104</InfoDescription>
+      </Standard>
+      <ItemSocketSet>
+        <SetBuff>1742100105</SetBuff> <!-- Military Weapon Goods Production - SetBuff -->
+        <BuffScope>Area</BuffScope>
+      </ItemSocketSet>
+      <Text />
+      <Locked />
+    </Values>
+  </Asset>
+</ModOp>
+
+<!-- START MA ITEMSET 4 - Adding Items to set -->
+
+<!-- 190888 - Assembly Line -->
+<ModOp GUID="190888" Path="Values/Item" Type="add">
+  <ItemSet>1742100103</ItemSet>
+</ModOp>
+
+<!-- 190829 - Pertwee's Turbo Generator -->
+<ModOp GUID="190829" Path="Values/Item" Type="add">
+  <ItemSet>1742100103</ItemSet>
+</ModOp>
+
+<!-- 190907 -Oriel's Automatic Blowing Machine -->
+<ModOp GUID="190907" Path="Values/Item" Type="add">
+  <ItemSet>1742100103</ItemSet>
+</ModOp>
+
+<!-- 112376 - UltiN8 Power Matrix -->
+<ModOp GUID="112376" Path="Values/Item" Type="add">
+  <ItemSet>1742100103</ItemSet>
+</ModOp>
+
+<!-- 112367 - ForkTuN8 Mk.3 -->
+<ModOp GUID="112367" Path="Values/Item" Type="add">
+  <ItemSet>1742100103</ItemSet>
+</ModOp>
+
+<!-- 192236 - Anne's Gramophone -->
+<ModOp GUID="192236" Path="Values/Item" Type="add">
+  <ItemSet>1742100103</ItemSet>
+</ModOp>
+
+<!-- START MA ITEMSET 5 - Advanced Ship Blueprints -->
+<ModOp GUID='124907' Type="addNextSibling">
+  <Asset>
+    <Template>ItemSet</Template>
+    <Values>
+      <Standard>
+        <GUID>1742100107</GUID>
+        <Name>Advanced Ship Blueprints</Name>
+        <IconFilename>data/graphics/icons/icon_academy_shipplans.png</IconFilename>
+        <InfoDescription>1742100108</InfoDescription>
+      </Standard>
+      <ItemSocketSet>
+        <SetBuff>1742100109</SetBuff> <!-- Advanced Ship Blueprints - SetBuff -->
+        <BuffScope>Area</BuffScope>
+      </ItemSocketSet>
+      <Text />
+      <Locked />
+    </Values>
+  </Asset>
+</ModOp>
+
+<!-- START MA ITEMSET 5 - Adding Items to set -->
+
+<!-- 192465 - Anna Union, Engineer of Extravagant Steamers -->
+<ModOp GUID="192465" Path="Values/Item" Type="add">
+  <ItemSet>1742100107</ItemSet>
+</ModOp>
+
+<!-- 192457 - Gideon Small, Guru of Pirate Gunboats -->
+<ModOp GUID="192457" Path="Values/Item" Type="add">
+  <ItemSet>1742100107</ItemSet>
+</ModOp>
+
+<!-- 192460 - Maria Pizarro, Maker of Pirate Monitors -->
+<ModOp GUID="192460" Path="Values/Item" Type="add">
+  <ItemSet>1742100107</ItemSet>
+</ModOp>
+
+<!-- 192458 - Petra Piper, Fashioner of Pirate Frigates -->
+<ModOp GUID="192458" Path="Values/Item" Type="add">
+  <ItemSet>1742100107</ItemSet>
+</ModOp>
+
+<!-- 192459 - Shih Yang, Sirer of Pirate Ships-of-the-Line -->
+<ModOp GUID="192459" Path="Values/Item" Type="add">
+  <ItemSet>1742100107</ItemSet>
+</ModOp>
+
+<!-- 192464 - Sir Milfoy Credenza-Belfry-Guscott, HM Ship Architect -->
+<ModOp GUID="192464" Path="Values/Item" Type="add">
+  <ItemSet>1742100107</ItemSet>
+</ModOp>
+
+<!-- START MA ITEMSET 6 - Pyrphorian Ship Blueprints -->
+<ModOp GUID='124907' Type="addNextSibling">
+  <Asset>
+    <Template>ItemSet</Template>
+    <Values>
+      <Standard>
+        <GUID>1742100111</GUID>
+        <Name>Pyrphorian Ship Blueprints</Name>
+        <IconFilename>data/graphics/icons/icon_academy_pyrphorian_shipplans.png</IconFilename>
+        <InfoDescription>1742100112</InfoDescription>
+      </Standard>
+      <ItemSocketSet>
+        <SetBuff>1742100113</SetBuff> <!-- Pyrphorian Ship Blueprints - SetBuff -->
+        <BuffScope>Area</BuffScope>
+      </ItemSocketSet>
+      <Text />
+      <Locked />
+    </Values>
+  </Asset>
+</ModOp>
+
+<!-- START MA ITEMSET 6 - Adding Items to set -->
+
+<!-- 192462 - Suspicia Slyhood, Begetter of Pyrphorian Battle Cruisers -->
+<ModOp GUID="192462" Path="Values/Item" Type="add">
+  <ItemSet>1742100111</ItemSet>
+</ModOp>
+
+<!-- 192461 - Stilton Snood, Purveyor of Pyrphorian Monitors -->
+<ModOp GUID="192461" Path="Values/Item" Type="add">
+  <ItemSet>1742100111</ItemSet>
+</ModOp>
+
+<!-- 192463 - Slinky Sinistra, Warlock of Pyrphorian Warships -->
+<ModOp GUID="192463" Path="Values/Item" Type="add">
+  <ItemSet>1742100111</ItemSet>
+</ModOp>
+
+<!-- START MA ITEMSET 7 - Speed Improvements Ships -->
+<ModOp GUID='124907' Type="addNextSibling">
+  <Asset>
+    <Template>ItemSet</Template>
+    <Values>
+      <Standard>
+        <GUID>1742100115</GUID>
+        <Name>Speed Improvements Ships</Name>
+        <IconFilename>data/graphics/icons/icon_academy_speed_improvement_ship.png</IconFilename>
+        <InfoDescription>1742100116</InfoDescription>
+      </Standard>
+      <ItemSocketSet>
+        <SetBuff>1742100117</SetBuff>        <!-- Speed Improvements Ships - SetBuff -->
+        <BuffScope>Area</BuffScope>
+      </ItemSocketSet>
+      <Text />
+      <Locked />
+    </Values>
+  </Asset>
+</ModOp>
+
+<!-- START MA ITEMSET 7 - Adding Items to set -->
+
+<!-- 191824 - Square Rig -->
+<ModOp GUID="191824" Path="Values/Item" Type="add">
+  <ItemSet>1742100115</ItemSet>
+</ModOp>
+
+<!-- 191857 - Heat Exchanger -->
+<ModOp GUID="191857" Path="Values/Item" Type="add">
+  <ItemSet>1742100115</ItemSet>
+</ModOp>
+
+<!-- 191825 - Fore-and-Aft Rig Sails -->
+<ModOp GUID="191825" Path="Values/Item" Type="add">
+  <ItemSet>1742100115</ItemSet>
+</ModOp>
+
+<!-- 191831 - Controllable-Pitch Propeller -->
+<ModOp GUID="191831" Path="Values/Item" Type="add">
+  <ItemSet>1742100115</ItemSet>
+</ModOp>
+
+<!-- 112379 - Jet Propeller — "Hurricane" -->
+<ModOp GUID="112379" Path="Values/Item" Type="add">
+  <ItemSet>1742100115</ItemSet>
+</ModOp>
+
+<!-- 192237 - Anne's Message in A Bottle -->
+<ModOp GUID="192237" Path="Values/Item" Type="add">
+  <ItemSet>1742100115</ItemSet>
+</ModOp>
+
+<!-- START MA ITEMSET 8 - War Improvement Ships -->
+<ModOp GUID='124907' Type="addNextSibling">
+  <Asset>
+    <Template>ItemSet</Template>
+    <Values>
+      <Standard>
+        <GUID>1742100119</GUID>
+        <Name>War Improvement Ships</Name>
+        <IconFilename>data/graphics/icons/icon_academy_war_improvement_ship.png</IconFilename>
+        <InfoDescription>1742100120</InfoDescription>
+      </Standard>
+      <ItemSocketSet>
+        <SetBuff>1742100121</SetBuff>        <!-- War Improvement Ships - SetBuff -->
+        <BuffScope>Area</BuffScope>
+      </ItemSocketSet>
+      <Text />
+      <Locked />
+    </Values>
+  </Asset>
+</ModOp>
+
+<!-- START MA ITEMSET 8 - Adding Items to set -->
+
+<!-- 192002 - Incendiary Grenades -->
+<ModOp GUID="192002" Path="Values/Item" Type="add">
+  <ItemSet>1742100119</ItemSet>
+</ModOp>
+
+<!-- 192433 - Flame Thrower -->
+<ModOp GUID="192433" Path="Values/Item" Type="add">
+  <ItemSet>1742100119</ItemSet>
+</ModOp>
+
+<!-- 192166 - Grapeshot Cast Mortar -->
+<ModOp GUID="192166" Path="Values/Item" Type="add">
+  <ItemSet>1742100119</ItemSet>
+</ModOp>
+
+<!-- 112370 - DomiN8r -->
+<ModOp GUID="112370" Path="Values/Item" Type="add">
+  <ItemSet>1742100119</ItemSet>
+</ModOp>
+
+<!-- 191607 - Wilma the Wild, Bearer of Barracudas -->
+<ModOp GUID="191607" Path="Values/Item" Type="add">
+  <ItemSet>1742100119</ItemSet>
+</ModOp>
+
+<!-- 192239 - Tattered White Flag -->
+<ModOp GUID="192239" Path="Values/Item" Type="add">
+  <ItemSet>1742100119</ItemSet>
+</ModOp>
+
+<!-- START MA ITEMSET 9 - Defense Improvement Ships -->
+<ModOp GUID='124907' Type="addNextSibling">
+  <Asset>
+    <Template>ItemSet</Template>
+    <Values>
+      <Standard>
+        <GUID>1742100123</GUID>
+        <Name>Defense Improvement Ships</Name>
+        <IconFilename>data/graphics/icons/icon_academy_defense_improvement_ship.png</IconFilename>
+        <InfoDescription>1742100124</InfoDescription>
+      </Standard>
+      <ItemSocketSet>
+        <SetBuff>1742100125</SetBuff>        <!-- Defense Improvement Ships - SetBuff -->
+        <BuffScope>Area</BuffScope>
+      </ItemSocketSet>
+      <Text />
+      <Locked />
+    </Values>
+  </Asset>
+</ModOp>
+
+<!-- START MA ITEMSET 9 - Adding Items to set -->
+
+<!-- 191992 - Royal Letter of Immunity -->
+<ModOp GUID="191992" Path="Values/Item" Type="add">
+  <ItemSet>1742100123</ItemSet>
+</ModOp>
+
+<!-- 191851 - Singh's Steel Double-Hull -->
+<ModOp GUID="191851" Path="Values/Item" Type="add">
+  <ItemSet>1742100123</ItemSet>
+</ModOp>
+
+<!-- 192235 - Standard Pirate Flag -->
+<ModOp GUID="192235" Path="Values/Item" Type="add">
+  <ItemSet>1742100123</ItemSet>
+</ModOp>
+
+<!-- START MA ITEMSET 10 - Speed Improvements Airships -->
+<ModOp GUID='124907' Type="addNextSibling">
+  <Asset>
+    <Template>ItemSet</Template>
+    <Values>
+      <Standard>
+        <GUID>1742100127</GUID>
+        <Name>Speed Improvements Airships</Name>
+        <IconFilename>data/graphics/icons/icon_academy_speed_improvement_airship.png</IconFilename>
+        <InfoDescription>1742100128</InfoDescription>
+      </Standard>
+      <ItemSocketSet>
+        <SetBuff>1742100129</SetBuff>        <!-- Speed Improvements Airships - SetBuff -->
+        <BuffScope>Area</BuffScope>
+      </ItemSocketSet>
+      <Text />
+      <Locked />
+    </Values>
+  </Asset>
+</ModOp>
+
+<!-- START MA ITEMSET 10 - Adding Items to set -->
+
+<!-- 4133 - Airship Cargo Loader -->
+<ModOp GUID="4133" Path="Values/Item" Type="add">
+  <ItemSet>1742100127</ItemSet>
+</ModOp>
+
+<!-- 116174 - Particularly Pull-y Pulley -->
+<ModOp GUID="116174" Path="Values/Item" Type="add">
+  <ItemSet>1742100127</ItemSet>
+</ModOp>
+
+<!-- 192240 - A Child's Letter -->
+<ModOp GUID="192240" Path="Values/Item" Type="add">
+  <ItemSet>1742100127</ItemSet>
+</ModOp>
+
+<!-- START MA ITEMSET 11 - War Improvement Airships -->
+<ModOp GUID='124907' Type="addNextSibling">
+  <Asset>
+    <Template>ItemSet</Template>
+    <Values>
+      <Standard>
+        <GUID>1742100131</GUID>
+        <Name>War Improvements Airships</Name>
+        <IconFilename>data/graphics/icons/icon_academy_war_improvement_airship.png</IconFilename>
+        <InfoDescription>1742100132</InfoDescription>
+      </Standard>
+      <ItemSocketSet>
+        <SetBuff>1742100133</SetBuff>        <!-- War Improvements Airships - SetBuff -->
+        <BuffScope>Area</BuffScope>
+      </ItemSocketSet>
+      <Text />
+      <Locked />
+    </Values>
+  </Asset>
+</ModOp>
+
+<!-- START MA ITEMSET 11 - Adding Items to set -->
+
+<!-- 4132 - Airship Engine Mechanic -->
+<ModOp GUID="4132" Path="Values/Item" Type="add">
+  <ItemSet>1742100131</ItemSet>
+</ModOp>
+
+<!-- 4134 - Amelia Coleman, Expert Aviator -->
+<ModOp GUID="4134" Path="Values/Item" Type="add">
+  <ItemSet>1742100131</ItemSet>
+</ModOp>
+
+<!-- 2232 - Airship Munitions Loader -->
+<ModOp GUID="2232" Path="Values/Item" Type="add">
+  <ItemSet>1742100131</ItemSet>
+</ModOp>
+
+<!-- 112553 - N.8.D.A.R -->
+<ModOp GUID="112553" Path="Values/Item" Type="add">
+  <ItemSet>1742100131</ItemSet>
+</ModOp>
+
+<!-- 2226 - Elite Airship Gunner -->
+<ModOp GUID="2226" Path="Values/Item" Type="add">
+  <ItemSet>1742100131</ItemSet>
+</ModOp>
+
+<!-- 192238 - Strange Talisman -->
+<ModOp GUID="192238" Path="Values/Item" Type="add">
+  <ItemSet>1742100131</ItemSet>
+</ModOp>
+
+<!-- START MA ITEMSET 12 - Defense Improvement Airships -->
+<ModOp GUID='124907' Type="addNextSibling">
+  <Asset>
+    <Template>ItemSet</Template>
+    <Values>
+      <Standard>
+        <GUID>1742100135</GUID>
+        <Name>Defense Improvements Airships</Name>
+        <IconFilename>data/graphics/icons/icon_academy_defense_improvement_airship.png</IconFilename>
+        <InfoDescription>1742100136</InfoDescription>
+      </Standard>
+      <ItemSocketSet>
+        <SetBuff>1742100137</SetBuff>        <!-- Defense Improvements Airships - SetBuff -->
+        <BuffScope>Area</BuffScope>
+      </ItemSocketSet>
+      <Text />
+      <Locked />
+    </Values>
+  </Asset>
+</ModOp>
+
+<!-- START MA ITEMSET 12 - Adding Items to set -->
+
+<!-- 4117 - Airship Technician -->
+<ModOp GUID="4117" Path="Values/Item" Type="add">
+  <ItemSet>1742100135</ItemSet>
+</ModOp>
+
+<!-- 4135 - Willa Cochran, Ace Pilot -->
+<ModOp GUID="4135" Path="Values/Item" Type="add">
+  <ItemSet>1742100135</ItemSet>
+</ModOp>
+
+<!-- 192241 - Jean's Little Helper -->
+<ModOp GUID="192241" Path="Values/Item" Type="add">
+  <ItemSet>1742100135</ItemSet>
+</ModOp>
+
+<!-- START MA ITEMSET 13 - Improved Defenses -->
+<ModOp GUID='124907' Type="addNextSibling">
+  <Asset>
+    <Template>ItemSet</Template>
+    <Values>
+      <Standard>
+        <GUID>1742100139</GUID>
+        <Name>Improved Defenses</Name>
+        <IconFilename>data/graphics/icons/icon_academy_improved_defenses.png</IconFilename>
+        <InfoDescription>1742100140</InfoDescription>
+      </Standard>
+      <ItemSocketSet>
+        <SetBuff>1742100141</SetBuff>        <!-- Improved Defenses - SetBuff -->
+        <BuffScope>Area</BuffScope>
+      </ItemSocketSet>
+      <Text />
+      <Locked />
+    </Values>
+  </Asset>
+</ModOp>
+
+<!-- START MA ITEMSET 12 - Adding Items to set -->
+
+<!-- 191433 - Artillerywoman -->
+<ModOp GUID="191433" Path="Values/Item" Type="add">
+  <ItemSet>1742100139</ItemSet>
+</ModOp>
+
+<!-- 191434 - Cannoneer -->
+<ModOp GUID="191434" Path="Values/Item" Type="add">
+  <ItemSet>1742100139</ItemSet>
+</ModOp>
+
+<!-- 192177 - Thundering Loudspeaker Network -->
+<ModOp GUID="192177" Path="Values/Item" Type="add">
+  <ItemSet>1742100139</ItemSet>
+</ModOp>
+
+<!-- 112388 - Evil ExsanguiN8r -->
+<ModOp GUID="112388" Path="Values/Item" Type="add">
+  <ItemSet>1742100139</ItemSet>
+</ModOp>
+
+<!-- 191442 - General Ewing Thomson, Planter of Flags -->
+<ModOp GUID="191442" Path="Values/Item" Type="add">
+  <ItemSet>1742100139</ItemSet>
+</ModOp>
+
+<!-- 192234 - The Old Pirate Hat -->
+<ModOp GUID="192234" Path="Values/Item" Type="add">
+  <ItemSet>1742100139</ItemSet>
+</ModOp>
+
+<!-- START MA ITEMSET 14 - Improved Reparations -->
+<ModOp GUID='124907' Type="addNextSibling">
+  <Asset>
+    <Template>ItemSet</Template>
+    <Values>
+      <Standard>
+        <GUID>1742100143</GUID>
+        <Name>Improved Reparations</Name>
+        <IconFilename>data/graphics/icons/icon_academy_improved_reparations.png</IconFilename>
+        <InfoDescription>1742100144</InfoDescription>
+      </Standard>
+      <ItemSocketSet>
+        <SetBuff>1742100145</SetBuff>        <!-- Improved Reparations - SetBuff -->
+        <BuffScope>Area</BuffScope>
+      </ItemSocketSet>
+      <Text />
+      <Locked />
+    </Values>
+  </Asset>
+</ModOp>
+
+<!-- START MA ITEMSET 14 - Adding Items to set -->
+
+<!-- 191884 - Gantry Repair Crane -->
+<ModOp GUID="191884" Path="Values/Item" Type="add">
+  <ItemSet>1742100143</ItemSet>
+</ModOp>
+
+<!-- 191885 - Railway Repair Crane -->
+<ModOp GUID="191885" Path="Values/Item" Type="add">
+  <ItemSet>1742100143</ItemSet>
+</ModOp>
+
+<!-- 191881 - Dockyard Tool System -->
+<ModOp GUID="191881" Path="Values/Item" Type="add">
+  <ItemSet>1742100143</ItemSet>
+</ModOp>
+
+<!-- 191436 - Field Marshall Matravers, Conductor of Armies -->
+<ModOp GUID="191436" Path="Values/Item" Type="add">
+  <ItemSet>1742100143</ItemSet>
+</ModOp>
+
+<!-- 191882 - Deke's Indispensible Dockyard Crate -->
+<ModOp GUID="191882" Path="Values/Item" Type="add">
+  <ItemSet>1742100143</ItemSet>
+</ModOp>
+
+<!-- 1742100173 - New item: Pirate Repair Tools -->
+<ModOp GUID="1742100173" Path="Values/Item" Type="add">
+  <ItemSet>1742100143</ItemSet>
+</ModOp>
+
+<!-- START MA ITEMSET 15 - Improved Logistics -->
+<ModOp GUID='124907' Type="addNextSibling">
+  <Asset>
+    <Template>ItemSet</Template>
+    <Values>
+      <Standard>
+        <GUID>1742100147</GUID>
+        <Name>Improved Logistics</Name>
+        <IconFilename>data/graphics/icons/icon_academy_improved_logistics.png</IconFilename>
+        <InfoDescription>1742100148</InfoDescription>
+      </Standard>
+      <ItemSocketSet>
+        <SetBuff>1742100149</SetBuff>        <!-- Improved Logistics - SetBuff -->
+        <BuffScope>Area</BuffScope>
+      </ItemSocketSet>
+      <Text />
+      <Locked />
+    </Values>
+  </Asset>
+</ModOp>
+
+<!-- START MA ITEMSET 15 - Adding Items to set -->
+
+<!-- 190666 - Savvy Customs Officer -->
+<ModOp GUID="190666" Path="Values/Item" Type="add">
+  <ItemSet>1742100147</ItemSet>
+</ModOp>
+
+<!-- 191880 - Dockyard Toolchest -->
+<ModOp GUID="191880" Path="Values/Item" Type="add">
+  <ItemSet>1742100147</ItemSet>
+</ModOp>
+
+<!-- 190667 - Taxman Tim -->
+<ModOp GUID="190667" Path="Values/Item" Type="add">
+  <ItemSet>1742100147</ItemSet>
+</ModOp>
+
+<!-- 190668 - Lady Banes, Proponent of Protectionism -->
+<ModOp GUID="190668" Path="Values/Item" Type="add">
+  <ItemSet>1742100147</ItemSet>
+</ModOp>
+
+<!-- 113792 - Hogarth the Harbourmaster, Veteran Of Trelawney -->
+<ModOp GUID="113792" Path="Values/Item" Type="add">
+  <ItemSet>1742100147</ItemSet>
+</ModOp>
+
+<!-- 1742100175 - New Item: Pirate Taxman -->
+<ModOp GUID="1742100175" Path="Values/Item" Type="add">
+  <ItemSet>1742100147</ItemSet>
+</ModOp>
+
+<!-- START MA ITEMSET 16 - Compulsory Military Service -->
+<ModOp GUID='124907' Type="addNextSibling">
+  <Asset>
+    <Template>ItemSet</Template>
+    <Values>
+      <Standard>
+        <GUID>1742100151</GUID>
+        <Name>Compulsory Military Service</Name>
+        <IconFilename>data/graphics/icons/icon_academy_compulsary_military_service.png</IconFilename>
+        <InfoDescription>1742100152</InfoDescription>
+      </Standard>
+      <ItemSocketSet>
+        <SetBuff>1742100153</SetBuff>        <!-- Compulsory Military Service - SetBuff -->
+        <BuffScope>Area</BuffScope>
+      </ItemSocketSet>
+      <Text />
+      <Locked />
+    </Values>
+  </Asset>
+</ModOp>
+
+<!-- START MA ITEMSET 16 - Adding Items to set -->
+
+<!-- 191804 - Statutory Twelve Hour Day Act -->
+<ModOp GUID="191804" Path="Values/Item" Type="add">
+  <ItemSet>1742100151</ItemSet>
+</ModOp>
+
+<!-- 191010 - Sir Charles Rafferty, Metropolitan Commissioner -->
+<ModOp GUID="191010" Path="Values/Item" Type="add">
+  <ItemSet>1742100151</ItemSet>
+</ModOp>
+
+<!-- 1742100177 - New Item: Pirate Wanted Poster -->
+<ModOp GUID="1742100177" Path="Values/Item" Type="add">
+  <ItemSet>1742100151</ItemSet>
+</ModOp>
+
+<!-- START MA ITEMSET 17 - Efficient Military Maintenance -->
+<ModOp GUID='124907' Type="addNextSibling">
+  <Asset>
+    <Template>ItemSet</Template>
+    <Values>
+      <Standard>
+        <GUID>1742100155</GUID>
+        <Name>Efficient Military Maintenance</Name>
+        <IconFilename>data/graphics/icons/icon_academy_efficient_military_maintenance.png</IconFilename>
+        <InfoDescription>1742100156</InfoDescription>
+      </Standard>
+      <ItemSocketSet>
+        <SetBuff>1742100157</SetBuff>        <!-- Efficient Military Maintenance - SetBuff -->
+        <BuffScope>Area</BuffScope>
+      </ItemSocketSet>
+      <Text />
+      <Locked />
+    </Values>
+  </Asset>
+</ModOp>
+
+<!-- START MA ITEMSET 17 - Adding Items to set -->
+
+<!-- 191578 - Eduardo the Expert Broker -->
+<ModOp GUID="191578" Path="Values/Item" Type="add">
+  <ItemSet>1742100155</ItemSet>
+</ModOp>
+
+<!-- 191579 - Jakob Sokow, The Charitable Banker -->
+<ModOp GUID="191579" Path="Values/Item" Type="add">
+  <ItemSet>1742100155</ItemSet>
+</ModOp>
+
+<!-- 1742100179 - New Item: Pirate Treasure Chest -->
+<ModOp GUID="1742100179" Path="Values/Item" Type="add">
+  <ItemSet>1742100155</ItemSet>
+</ModOp>
+
+<!-- START MA ITEMSET 18 - Letters from home -->
+<ModOp GUID='124907' Type="addNextSibling">
+  <Asset>
+    <Template>ItemSet</Template>
+    <Values>
+      <Standard>
+        <GUID>1742100159</GUID>
+        <Name>Letters from home</Name>
+        <IconFilename>data/graphics/icons/icon_academy_letters_from_home.png</IconFilename>
+        <InfoDescription>1742100160</InfoDescription>
+      </Standard>
+      <ItemSocketSet>
+        <SetBuff>1742100161</SetBuff>        <!-- Letters from home - SetBuff -->
+        <BuffScope>Area</BuffScope>
+      </ItemSocketSet>
+      <Text />
+      <Locked />
+    </Values>
+  </Asset>
+</ModOp>
+
+<!-- START MA ITEMSET 18 - Adding Items to set -->
+
+<!-- 111013 - The Exquisite -->
+<ModOp GUID="111013" Path="Values/Item" Type="add">
+  <ItemSet>1742100159</ItemSet>
+</ModOp>
+
+<!-- 4270 - New World Science Reporter -->
+<ModOp GUID="4270" Path="Values/Item" Type="add">
+  <ItemSet>1742100159</ItemSet>
+</ModOp>
+
+<!-- 4272 - Arctic Science Reporter -->
+<ModOp GUID="4272" Path="Values/Item" Type="add">
+  <ItemSet>1742100159</ItemSet>
+</ModOp>
+
+<!-- 104518 - Poetry Subscription -->
+<ModOp GUID="104518" Path="Values/Item" Type="add">
+  <ItemSet>1742100159</ItemSet>
+</ModOp>
+
+<!-- 125132	- Aesop, the Fabled Storyteller -->
+<ModOp GUID="125132" Path="Values/Item" Type="add">
+  <ItemSet>1742100159</ItemSet>
+</ModOp>
+
+<!-- 1742100181 - New Item: Jean's Private Messenger -->
+<ModOp GUID="1742100181" Path="Values/Item" Type="add">
+  <ItemSet>1742100159</ItemSet>
+</ModOp>
+
+</ModOps>

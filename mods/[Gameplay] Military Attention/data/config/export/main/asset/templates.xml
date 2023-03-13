@@ -1,0 +1,82 @@
+<ModOps>
+	<ModOp Type="addNextSibling" Path="//Template[Name='HarborBuildingAttacker']">
+		<Template>
+			<Name>HarborBuildingAttackerFort</Name>
+			<Properties>
+				<Standard />
+				<Building>
+					<TerrainType>Water_Including_Coast</TerrainType>
+				</Building>
+				<Blocking />
+				<Mesh />
+				<Object />
+				<AmbientMoodProvider />
+				<Constructable />
+				<Selection>
+					<GUIType>Generic</GUIType>
+					<OnSelection>
+						<IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+						<Values>
+							<ActionList />
+						</Values>
+					</OnSelection>
+				</Selection>
+				<Text />
+				<Cost />
+				<Attackable>
+					<PausedTimeIfAttacked>0</PausedTimeIfAttacked>
+					<HasRuinState>1</HasRuinState>
+					<RuinSmokeParticles>
+						<Item>
+							<SmokeParticleFilePath>data/graphics/effects/military/explosions/damage_smoke_01.cfg</SmokeParticleFilePath>
+						</Item>
+					</RuinSmokeParticles>
+					<RuinSmokeParticlesMin>1</RuinSmokeParticlesMin>
+					<RuinSmokeParticlesMax>3</RuinSmokeParticlesMax>
+					<RuinSmokeParticleRectBorderPercent>0.2</RuinSmokeParticleRectBorderPercent>
+					<SelfHealPerHealTick>300</SelfHealPerHealTick>
+				</Attackable>
+				<Attacker>
+					<ShootingTracking>TurretFixed</ShootingTracking>
+					<BaseDamage>50</BaseDamage>
+					<TargetAngleVariation>360</TargetAngleVariation>
+					<AttackRange>40</AttackRange>
+					<ProjectileAsset>100501</ProjectileAsset>
+					<TurretExplosionEffectAsset>101994</TurretExplosionEffectAsset>
+					<AccuracyByDistance>
+						<Item />
+						<Item>
+							<AccuracyByDistancePair>
+								<EnemyDistanceRelToAttackRange>100</EnemyDistanceRelToAttackRange>
+								<CorrespondingAccuracy>50</CorrespondingAccuracy>
+							</AccuracyByDistancePair>
+						</Item>
+					</AccuracyByDistance>
+				</Attacker>
+				<Maintenance>
+					<IncomeCategory>HarbourBuildings</IncomeCategory>
+				</Maintenance>
+				<Locked />
+				<DelayedConstruction />
+				<Pausable />
+				<Infolayer />
+				<BuildingUnique />
+				<SoundEmitter>
+					<ConstructionSounds>
+						<BuildMoveSuccess>
+							<Item>
+								<Sound>203995</Sound>
+							</Item>
+						</BuildMoveSuccess>
+					</ConstructionSounds>
+				</SoundEmitter>
+				<CommandQueue />
+				<Culture>
+					<Attractiveness>-5</Attractiveness>
+					<CultureType>Military</CultureType>
+				</Culture>
+				<UpgradeList />
+			</Properties>
+		</Template>
+	</ModOp>
+</ModOps>
