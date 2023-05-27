@@ -1,0 +1,55 @@
+<ModOps>
+
+    <ImyaTweaks Title="TU - Dennis Black, Pump it up" />
+
+    <!-- Dennis Black, Pump it up 1742000068-1742000069 -->
+
+    <ModOp GUID="1742000068" Type="replace" Path="/Values/FactoryUpgrade/ProductivityUpgrade/Value" ModOpID="1742000068_Productivity" Skip="1">
+        <Value>50</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000068_Productivity" Kind="Slider" ExposeID="Productivity (%)">
+        <SliderDefinition Min="0" Max="200" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000068" Type="replace" Path="/Values/FactoryUpgrade/AdditionalOutput/Item[Product='1010566']/AdditionalOutputCycle" ModOpID="1742000068_AdditionalOutputCycleOil">
+        <AdditionalOutputCycle>2</AdditionalOutputCycle>
+    </ModOp>
+
+    <ImyaExpose Path="self::AdditionalOutputCycle" ModOpID="1742000068_AdditionalOutputCycleOil" Kind="Slider" ExposeID="Oil (1/x)">
+        <SliderDefinition Min="1" Max="20" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000068" Type="replace" Path="/Values/BuildingUpgrade/WorkforceAmountUpgrade/Value" ModOpID="1742000068_WorkforceAmountUpgrade">
+        <Value>-30</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000068_WorkforceAmountUpgrade" Kind="Slider" ExposeID="Workforce Needed (%)">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000068" Type="replace" Path="/Values/CultureUpgrade/AttractivenessUpgrade/Value" ModOpID="1742000068_AttractivenessUpgrade">
+        <Value>30</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000068_AttractivenessUpgrade" Kind="Slider" ExposeID="Attractiveness">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000068" Type="replace" Path="/Values/IncidentInfectableUpgrade/IncidentExplosionIncreaseUpgrade/Value" ModOpID="1742000068_IncidentExplosionIncreaseUpgrade">
+        <Value>-10</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000068_IncidentExplosionIncreaseUpgrade" Kind="Slider" ExposeID="Chance Of Explosions (x10%)">
+        <SliderDefinition Min="-10" Max="10" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000068" Type="replace" Path="/Values/IncidentInfectableUpgrade/IncidentFireIncreaseUpgrade/Value" ModOpID="1742000068_IncidentFireIncreaseUpgrade">
+        <Value>-10</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000068_IncidentFireIncreaseUpgrade" Kind="Slider" ExposeID="Chance Of Fire (x10%)">
+        <SliderDefinition Min="-10" Max="10" Stepping="1" />
+    </ImyaExpose>
+
+</ModOps>

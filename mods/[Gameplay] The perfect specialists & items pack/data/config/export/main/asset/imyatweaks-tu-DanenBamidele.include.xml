@@ -1,0 +1,31 @@
+<ModOps>
+
+    <ImyaTweaks Title="TU - Danen Bamidele, These boots are made for walking" />
+
+    <!-- Danen Bamidele, These boots are made for walking 1742000108-1742000109 -->
+
+    <ModOp GUID="1742000108" Type="replace" Path="/Values/FactoryUpgrade/ProductivityUpgrade/Value" ModOpID="1742000108_Productivity" Skip="1">
+        <Value>50</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000108_Productivity" Kind="Slider" ExposeID="Productivity (%)">
+        <SliderDefinition Min="0" Max="200" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000108" Type="replace" Path="/Values/FactoryUpgrade/AdditionalOutput/Item[Product='114428']/AdditionalOutputCycle" ModOpID="1742000108_AdditionalOutputCycleLeatherBoots">
+        <AdditionalOutputCycle>5</AdditionalOutputCycle>
+    </ModOp>
+
+    <ImyaExpose Path="self::AdditionalOutputCycle" ModOpID="1742000108_AdditionalOutputCycleLeatherBoots" Kind="Slider" ExposeID="Leather Boots (1/x)">
+        <SliderDefinition Min="1" Max="20" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000108" Type="replace" Path="/Values/BuildingUpgrade/WorkforceAmountUpgrade/Value" ModOpID="1742000108_WorkforceAmountUpgrade">
+        <Value>-25</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000108_WorkforceAmountUpgrade" Kind="Slider" ExposeID="Workforce Needed (%)">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+</ModOps>

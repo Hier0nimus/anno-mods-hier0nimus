@@ -1,0 +1,31 @@
+<ModOps>
+
+    <ImyaTweaks Title="AS - Philipa Sky, Fast, Faster, Fastest" />
+
+    <!-- Philipa Sky, Fast, Faster, Fastest 1742000042-1742000043 -->
+
+    <ModOp GUID="1742000042" Type="replace" Path="/Values/VehicleUpgrade/ForwardSpeedUpgrade/Value" ModOpID="1742000042_ForwardSpeedUpgrade" Skip="1">
+        <Value>20</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000042_ForwardSpeedUpgrade" Kind="Slider" ExposeID="Movement Speed (%)">
+        <SliderDefinition Min="-100" Max="200" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000042" Type="replace" Path="/Values/TradeShipUpgrade/LoadingSpeedUpgrade/Value" ModOpID="1742000042_LoadingSpeedUpgrade" Skip="1">
+        <Value>100</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000042_LoadingSpeedUpgrade" Kind="Slider" ExposeID="Loading Speed (%)">
+        <SliderDefinition Min="0" Max="200" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000042" Type="replace" Path="/Values/VehicleUpgrade/IgnoreWeightFactorUpgrade/Value" ModOpID="1742000042_IgnoreWeightFactorUpgrade" Skip="1">
+        <Value>20</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000042_IgnoreWeightFactorUpgrade" Kind="Slider" ExposeID="Cargo Slowdown (%)" Description="% of Cargo Slowdown. 20% will be ingame Cargo Slowdown reduced with -20%.">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+</ModOps>

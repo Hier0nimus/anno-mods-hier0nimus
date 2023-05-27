@@ -1,0 +1,71 @@
+<ModOps>
+
+    <ImyaTweaks Title="TH - Rupert Flanders, Homeschooling" />
+
+    <!-- Rupert Flanders, Homeschooling 1742000134-1742000135 -->
+
+    <ModOp GUID="1742000134" Type="replace" Path="/Values/PopulationUpgrade/InputBenefitModifier/Item[Product='1010350']/AdditionalSupply" ModOpID="1742000134_AdditionalSupplyChurch">
+        <AdditionalSupply>5</AdditionalSupply>
+    </ModOp>
+
+    <ImyaExpose Path="self::AdditionalSupply" ModOpID="1742000134_AdditionalSupplyChurch" Kind="Slider" ExposeID="Additional residents for Church">
+        <SliderDefinition Min="0" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000134" Type="replace" Path="/Values/PopulationUpgrade/InputBenefitModifier/Item[Product='1010351']/AdditionalSupply" ModOpID="1742000134_AdditionalSupplySchool">
+        <AdditionalSupply>5</AdditionalSupply>
+    </ModOp>
+
+    <ImyaExpose Path="self::AdditionalSupply" ModOpID="1742000134_AdditionalSupplySchool" Kind="Slider" ExposeID="Additional residents for School">
+        <SliderDefinition Min="0" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000134" Type="replace" Path="/Values/PopulationUpgrade/InputBenefitModifier/Item[Product='1010353']/AdditionalSupply" ModOpID="1742000134_AdditionalSupplyUniversity">
+        <AdditionalSupply>5</AdditionalSupply>
+    </ModOp>
+
+    <ImyaExpose Path="self::AdditionalSupply" ModOpID="1742000134_AdditionalSupplyUniversity" Kind="Slider" ExposeID="Additional residents for University">
+        <SliderDefinition Min="0" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000134" Type="replace" Path="/Values/ResidenceUpgrade/AdditionalHappiness" ModOpID="1742000134_AdditionalHappiness">
+        <AmountInPercent>10</AmountInPercent>
+    </ModOp>
+
+    <ImyaExpose Path="self::AmountInPercent" ModOpID="1742000134_AdditionalHappiness" Kind="Slider" ExposeID="Happiness">
+        <SliderDefinition Min="0" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000134" Type="replace" Path="/Values/ResidenceUpgrade/GoodConsumptionUpgrade/Item[ProvidedNeed='1010350']/AmountInPercent" ModOpID="1742000134_ProvidedNeedChurch">
+        <AmountInPercent>-100</AmountInPercent>
+    </ModOp>
+
+    <ImyaExpose Path="self::AmountInPercent" ModOpID="1742000134_ProvidedNeedChurch" Kind="Slider" ExposeID="Church (%)">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000134" Type="replace" Path="/Values/ResidenceUpgrade/GoodConsumptionUpgrade/Item[ProvidedNeed='1010351']/AmountInPercent" ModOpID="1742000134_ProvidedNeedSchool">
+        <AmountInPercent>-100</AmountInPercent>
+    </ModOp>
+
+    <ImyaExpose Path="self::AmountInPercent" ModOpID="1742000134_ProvidedNeedSchool" Kind="Slider" ExposeID="School (%)">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000134" Type="replace" Path="/Values/ResidenceUpgrade/GoodConsumptionUpgrade/Item[ProvidedNeed='1010353']/AmountInPercent" ModOpID="1742000134_ProvidedNeedUniversity">
+        <AmountInPercent>-100</AmountInPercent>
+    </ModOp>
+
+    <ImyaExpose Path="self::AmountInPercent" ModOpID="1742000134_ProvidedNeedUniversity" Kind="Slider" ExposeID="University (%)">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000134" Type="replace" Path="/Values/IncidentInfectableUpgrade/IncidentRiotIncreaseUpgrade/Value" ModOpID="1742000134_IncidentRiotIncreaseUpgrade">
+        <Value>-5</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000134_IncidentRiotIncreaseUpgrade" Kind="Slider" ExposeID="Chance Of Riots (x10%)">
+        <SliderDefinition Min="-10" Max="10" Stepping="1" />
+    </ImyaExpose>
+
+</ModOps>

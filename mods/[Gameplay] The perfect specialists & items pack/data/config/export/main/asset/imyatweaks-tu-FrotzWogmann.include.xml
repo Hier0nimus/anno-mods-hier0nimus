@@ -1,0 +1,31 @@
+<ModOps>
+
+    <ImyaTweaks Title="TU - Frotz Wogmann, Inventor Of Synthetic Rubber" />
+
+    <!-- Frotz Wogmann, Inventor Of Synthetic Rubber 1742000415-1742000416 -->
+
+    <ModOp GUID="1742000415" Type="replace" Path="/Values/FactoryUpgrade/ProductivityUpgrade/Value" ModOpID="1742000415_Productivity" Skip="1">
+        <Value>50</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000415_Productivity" Kind="Slider" ExposeID="Productivity (%)">
+        <SliderDefinition Min="0" Max="200" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000415" Type="replace" Path="/Values/FactoryUpgrade/AdditionalOutput/Item[Product='1010255']/AdditionalOutputCycle" ModOpID="1742000415_AdditionalOutputCycleCaoutchouc">
+        <AdditionalOutputCycle>6</AdditionalOutputCycle>
+    </ModOp>
+
+    <ImyaExpose Path="self::AdditionalOutputCycle" ModOpID="1742000415_AdditionalOutputCycleCaoutchouc" Kind="Slider" ExposeID="Caoutchouc (1/x)">
+        <SliderDefinition Min="1" Max="20" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000415" Type="replace" Path="/Values/BuildingUpgrade/MaintenanceUpgrade/Value" ModOpID="1742000415_MaintenanceUpgrade">
+        <Value>-50</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000415_MaintenanceUpgrade" Kind="Slider" ExposeID="Maintenance (%)">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+</ModOps>

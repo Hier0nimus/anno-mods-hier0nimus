@@ -1,0 +1,25 @@
+<ModOps>
+
+    <ImyaTweaks Title="SH - Lola Mazigh, Persuader of the sea" />
+
+    <!-- Lola Mazigh, Persuader of the sea 1742000172-1742000173 -->
+
+    <ModOp GUID="1742000172" Type="replace" Path="/Values/VehicleUpgrade/ForwardSpeedUpgrade/Value" ModOpID="1742000172_ForwardSpeedUpgrade" Skip="1">
+        <Value>20</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000172_ForwardSpeedUpgrade" Kind="Slider" ExposeID="Movement Speed (%)">
+        <SliderDefinition Min="-100" Max="200" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000014" Type="replace" Path="/Values/VehicleUpgrade/ActivateWhiteFlag" ModOpID="1742000014_ActivateWhiteFlag" Skip="1">
+        <ActivateWhiteFlag></ActivateWhiteFlag>
+    </ModOp>
+
+    <ImyaExpose Path="self::ActivateWhiteFlag" ModOpID="1742000014_ActivateWhiteFlag" ExposeID="Remove Peace Mode" Kind="Toggle" Description="Peace Mode is provided. Toggle to active to remove.">
+        <AltValue>
+            <ActivateWhiteFlag>1</ActivateWhiteFlag>
+        </AltValue>
+    </ImyaExpose>
+
+</ModOps>

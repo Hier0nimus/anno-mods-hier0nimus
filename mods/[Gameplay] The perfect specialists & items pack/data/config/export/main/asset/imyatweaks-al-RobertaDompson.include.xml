@@ -1,0 +1,31 @@
+<ModOps>
+
+    <ImyaTweaks Title="AL - Roberta Dompson, Layered Storage Solutions" />
+
+    <!-- Roberta Dompson, Layered Storage Solutions 1742000410-1742000411 -->
+
+    <ModOp GUID="1742000410" Type="replace" Path="/Values/BuildingUpgrade/MaintenanceUpgrade/Value" ModOpID="1742000410_MaintenanceUpgrade">
+        <Value>400</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000410_MaintenanceUpgrade" Kind="Slider" ExposeID="Maintenance (%)">
+        <SliderDefinition Min="-100" Max="1000" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000410" Type="replace" Path="/Values/AttackableUpgrade/MaxHitpointsUpgrade/Value" ModOpID="1742000410_MaxHitpointsUpgrade">
+        <Value>1800</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000410_MaxHitpointsUpgrade" Kind="Slider" ExposeID="Hitpoints">
+        <SliderDefinition Min="0" Max="10000" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000410" Type="replace" Path="/Values/WarehouseUpgrade/StorageCapacityModifier" ModOpID="1742000410_StorageCapacityModifier">
+        <StorageCapacityModifier>150</StorageCapacityModifier>
+    </ModOp>
+
+    <ImyaExpose Path="self::StorageCapacityModifier" ModOpID="1742000410_StorageCapacityModifier" Kind="Slider" ExposeID="Storage">
+        <SliderDefinition Min="0" Max="1000" Stepping="1" />
+    </ImyaExpose>
+
+</ModOps>

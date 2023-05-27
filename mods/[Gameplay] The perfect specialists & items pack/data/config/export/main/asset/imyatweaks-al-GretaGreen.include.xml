@@ -1,0 +1,31 @@
+<ModOps>
+
+    <ImyaTweaks Title="AL - Greta Green, Guardian of the Arctic Forests" />
+
+    <!-- Greta Green, Guardian of the Arctic Forests - 1742000008 -->
+
+    <ModOp GUID="1742000008" Type="replace" Path="/Values/FactoryUpgrade/ProductivityUpgrade/Value" ModOpID="1742000008_Productivity" Skip="1">
+        <Value>50</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000008_Productivity" Kind="Slider" ExposeID="Productivity(%)">
+        <SliderDefinition Min="0" Max="200" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000008" Type="replace" Path="/Values/FactoryUpgrade/AdditionalOutput/Item[Product='1010216']/AdditionalOutputCycle" ModOpID="1742000008_AdditionalOutputCycleSchnapps">
+        <AdditionalOutputCycle>5</AdditionalOutputCycle>
+    </ModOp>
+
+    <ImyaExpose Path="self::AdditionalOutputCycle" ModOpID="1742000008_AdditionalOutputCycleSchnapps" Kind="Slider" ExposeID="Schnapps (1/x)">
+        <SliderDefinition Min="1" Max="20" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000008" Type="replace" Path="/Values/BuildingUpgrade/WorkforceAmountUpgrade/Value" ModOpID="1742000008_WorkforceAmountUpgrade">
+        <Value>-25</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000008_WorkforceAmountUpgrade" Kind="Slider" ExposeID="Workforce Needed (%)">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+</ModOps>

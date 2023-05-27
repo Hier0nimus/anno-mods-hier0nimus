@@ -1,0 +1,31 @@
+<ModOps>
+
+    <ImyaTweaks Title="AL - Jumoke Okoro, The Enbesian light" />
+
+    <!-- Jumoke Okoro, The Enbesian light 1742000034-1742000035 -->
+
+    <ModOp GUID="1742000034" Type="replace" Path="/Values/FactoryUpgrade/ProductivityUpgrade/Value" ModOpID="1742000034_Productivity" Skip="1">
+        <Value>40</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000034_Productivity" Kind="Slider" ExposeID="Productivity(%)">
+        <SliderDefinition Min="0" Max="200" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000034" Type="replace" Path="/Values/FactoryUpgrade/AdditionalOutput/Item[Product='117699']/AdditionalOutputCycle" ModOpID="1742000034_AdditionalOutputCycleLanterns">
+        <AdditionalOutputCycle>4</AdditionalOutputCycle>
+    </ModOp>
+
+    <ImyaExpose Path="self::AdditionalOutputCycle" ModOpID="1742000034_AdditionalOutputCycleLanterns" Kind="Slider" ExposeID="Lanterns (1/x)">
+        <SliderDefinition Min="1" Max="20" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000034" Type="replace" Path="/Values/BuildingUpgrade/WorkforceAmountUpgrade/Value" ModOpID="1742000034_WorkforceAmountUpgrade">
+        <Value>-40</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000034_WorkforceAmountUpgrade" Kind="Slider" ExposeID="Workforce Needed (%)">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+</ModOps>

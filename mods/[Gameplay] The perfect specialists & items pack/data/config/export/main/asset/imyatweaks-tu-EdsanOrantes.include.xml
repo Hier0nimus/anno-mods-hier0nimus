@@ -1,0 +1,39 @@
+<ModOps>
+
+    <ImyaTweaks Title="TU - Edsan Orantes, Play With The Ball" />
+
+    <!-- Edsan Orantes, Play With The Ball 1742000219-1742000220 -->
+
+    <ModOp GUID="1742000219" Type="replace" Path="/Values/FactoryUpgrade/ProductivityUpgrade/Value" ModOpID="1742000219_Productivity" Skip="1">
+        <Value>50</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000219_Productivity" Kind="Slider" ExposeID="Productivity (%)">
+        <SliderDefinition Min="0" Max="200" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000219" Type="replace" Path="/Values/FactoryUpgrade/AdditionalOutput/Item[Product='135231']/AdditionalOutputCycle" ModOpID="1742000219_AdditionalOutputCycleToys">
+        <AdditionalOutputCycle>8</AdditionalOutputCycle>
+    </ModOp>
+
+    <ImyaExpose Path="self::AdditionalOutputCycle" ModOpID="1742000219_AdditionalOutputCycleToys" Kind="Slider" ExposeID="Toys (1/x)">
+        <SliderDefinition Min="1" Max="20" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000219" Type="replace" Path="/Values/BuildingUpgrade/MaintenanceUpgrade/Value" ModOpID="1742000219_MaintenanceUpgrade">
+        <Value>200</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000219_MaintenanceUpgrade" Kind="Slider" ExposeID="Maintenance (%)">
+        <SliderDefinition Min="-100" Max="300" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000219" Type="replace" Path="/Values/BuildingUpgrade/WorkforceAmountUpgrade/Value" ModOpID="1742000219_WorkforceAmountUpgrade">
+        <Value>-30</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000219_WorkforceAmountUpgrade" Kind="Slider" ExposeID="Workforce Needed (%)">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+</ModOps>

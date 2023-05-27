@@ -1,0 +1,39 @@
+<ModOps>
+
+    <ImyaTweaks Title="TU - Floppy, Herder of animals" />
+
+    <!-- Floppy, Herder of animals 1742000180-1742000181 -->
+
+    <ModOp GUID="1742000180" Type="replace" Path="/Values/FactoryUpgrade/ProductivityUpgrade/Value" ModOpID="1742000180_Productivity" Skip="1">
+        <Value>25</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000180_Productivity" Kind="Slider" ExposeID="Productivity (%)">
+        <SliderDefinition Min="0" Max="200" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000180" Type="replace" Path="/Values/ModuleOwnerUpgrade/ModuleLimitPercent" ModOpID="1742000180_ModuleLimitPercent">
+        <ModuleLimitPercent>-25</ModuleLimitPercent>
+    </ModOp>
+
+    <ImyaExpose Path="self::ModuleLimitPercent" ModOpID="1742000180_ModuleLimitPercent" Kind="Slider" ExposeID="Modules (%)">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000180" Type="replace" Path="/Values/BuildingUpgrade/WorkforceAmountUpgrade/Value" ModOpID="1742000180_WorkforceAmountUpgrade">
+        <Value>-25</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000180_WorkforceAmountUpgrade" Kind="Slider" ExposeID="Workforce Needed (%)">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000180" Type="replace" Path="/Values/BuildingUpgrade/MaintenanceUpgrade/Value" ModOpID="1742000180_MaintenanceUpgrade">
+        <Value>100</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000180_MaintenanceUpgrade" Kind="Slider" ExposeID="Maintenance (%)">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+</ModOps>

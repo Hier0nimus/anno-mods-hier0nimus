@@ -1,0 +1,39 @@
+<ModOps>
+
+    <ImyaTweaks Title="TU - Gretl Brown, Mother of the Forests" />
+
+    <!-- Gretl Brown, Mother of the Forests - 1742000004 -->
+
+    <ModOp GUID="1742000004" Type="replace" Path="/Values/FactoryUpgrade/ProductivityUpgrade/Value" ModOpID="1742000004_Productivity" Skip="1">
+        <Value>40</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000004_Productivity" Kind="Slider" ExposeID="Productivity(%)">
+        <SliderDefinition Min="0" Max="200" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000004" Type="replace" Path="/Values/FactoryUpgrade/AdditionalOutput/Item[Product='133183']/AdditionalOutputCycle" ModOpID="1742000004_AdditionalOutputCycleJam">
+        <AdditionalOutputCycle>5</AdditionalOutputCycle>
+    </ModOp>
+
+    <ImyaExpose Path="self::AdditionalOutputCycle" ModOpID="1742000004_AdditionalOutputCycleJam" Kind="Slider" ExposeID="Jam (1/x)">
+        <SliderDefinition Min="1" Max="20" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000004" Type="replace" Path="/Values/FactoryUpgrade/AdditionalOutput/Item[Product='114370']/AdditionalOutputCycle" ModOpID="1742000004_AdditionalOutputCycleBeeswax">
+        <AdditionalOutputCycle>6</AdditionalOutputCycle>
+    </ModOp>
+
+    <ImyaExpose Path="self::AdditionalOutputCycle" ModOpID="1742000004_AdditionalOutputCycleBeeswax" Kind="Slider" ExposeID="Beeswax (1/x)">
+        <SliderDefinition Min="1" Max="20" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000004" Type="replace" Path="/Values/FactoryUpgrade/NeededAreaPercentUpgrade/Value" ModOpID="1742000004_NeededAreaPercentUpgrade">
+        <Value>-20</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000004_NeededAreaPercentUpgrade" Kind="Slider" ExposeID="Needed Area (%)" Description="Forest density %. Negative amount (Reduction) in needed area translates into the game to positive % for forest density.">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+</ModOps>

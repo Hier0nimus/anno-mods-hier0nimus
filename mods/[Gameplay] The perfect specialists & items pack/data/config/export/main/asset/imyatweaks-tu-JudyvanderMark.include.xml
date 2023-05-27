@@ -1,0 +1,31 @@
+<ModOps>
+
+    <ImyaTweaks Title="TU - Judy van der Mark, Sheep and goat lover" />
+
+    <!-- Judy van der Mark, Sheep and goat lover 1742000056-1742000057 -->
+
+    <ModOp GUID="1742000056" Type="replace" Path="/Values/FactoryUpgrade/AdditionalOutput/Item[Product='114371']/AdditionalOutputCycle" ModOpID="1742000056_AdditionalOutputCycleGoatMilk">
+        <AdditionalOutputCycle>4</AdditionalOutputCycle>
+    </ModOp>
+
+    <ImyaExpose Path="self::AdditionalOutputCycle" ModOpID="1742000056_AdditionalOutputCycleGoatMilk" Kind="Slider" ExposeID="Goat Milk (1/x)">
+        <SliderDefinition Min="1" Max="20" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000056" Type="replace" Path="/Values/FactoryUpgrade/AdditionalOutput/Item[Product='1010197']/AdditionalOutputCycle" ModOpID="1742000056_AdditionalOutputCycleWool">
+        <AdditionalOutputCycle>4</AdditionalOutputCycle>
+    </ModOp>
+
+    <ImyaExpose Path="self::AdditionalOutputCycle" ModOpID="1742000056_AdditionalOutputCycleWool" Kind="Slider" ExposeID="Wool (1/x)">
+        <SliderDefinition Min="1" Max="20" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000056" Type="replace" Path="/Values/BuildingUpgrade/WorkforceAmountUpgrade/Value" ModOpID="1742000056_WorkforceAmountUpgrade">
+        <Value>-40</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000056_WorkforceAmountUpgrade" Kind="Slider" ExposeID="Workforce Needed (%)">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+</ModOps>

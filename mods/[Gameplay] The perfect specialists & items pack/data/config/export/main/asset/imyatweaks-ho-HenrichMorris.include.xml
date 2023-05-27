@@ -1,0 +1,31 @@
+<ModOps>
+
+    <ImyaTweaks Title="HO - Henrich Morris, Space Efficient Storage" />
+
+    <!-- Henrich Morris, Space Efficient Storage 1742000408-1742000409 -->
+
+    <ModOp GUID="1742000408" Type="replace" Path="/Values/BuildingUpgrade/MaintenanceUpgrade/Value" ModOpID="1742000408_MaintenanceUpgrade">
+        <Value>500</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000408_MaintenanceUpgrade" Kind="Slider" ExposeID="Maintenance (%)">
+        <SliderDefinition Min="-100" Max="1000" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000408" Type="replace" Path="/Values/AttackableUpgrade/MaxHitpointsUpgrade/Value" ModOpID="1742000408_MaxHitpointsUpgrade">
+        <Value>2000</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000408_MaxHitpointsUpgrade" Kind="Slider" ExposeID="Hitpoints">
+        <SliderDefinition Min="0" Max="10000" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000408" Type="replace" Path="/Values/WarehouseUpgrade/StorageCapacityModifier" ModOpID="1742000408_StorageCapacityModifier">
+        <StorageCapacityModifier>100</StorageCapacityModifier>
+    </ModOp>
+
+    <ImyaExpose Path="self::StorageCapacityModifier" ModOpID="1742000408_StorageCapacityModifier" Kind="Slider" ExposeID="Storage">
+        <SliderDefinition Min="0" Max="1000" Stepping="1" />
+    </ImyaExpose>
+
+</ModOps>

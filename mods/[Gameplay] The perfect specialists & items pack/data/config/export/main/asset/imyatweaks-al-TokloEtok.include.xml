@@ -1,0 +1,31 @@
+<ModOps>
+
+    <ImyaTweaks Title="AL - Toklo Etok, More then a sled" />
+
+    <!-- Toklo Etok, More then a sled 1742000030-1742000031 -->
+
+    <ModOp GUID="1742000030" Type="replace" Path="/Values/FactoryUpgrade/ProductivityUpgrade/Value" ModOpID="1742000030_Productivity" Skip="1">
+        <Value>40</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000030_Productivity" Kind="Slider" ExposeID="Productivity(%)">
+        <SliderDefinition Min="0" Max="200" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000030" Type="replace" Path="/Values/FactoryUpgrade/AdditionalOutput/Item[Product='1010211']/AdditionalOutputCycle" ModOpID="1742000030_AdditionalOutputCycleChassis">
+        <AdditionalOutputCycle>5</AdditionalOutputCycle>
+    </ModOp>
+
+    <ImyaExpose Path="self::AdditionalOutputCycle" ModOpID="1742000030_AdditionalOutputCycleChassis" Kind="Slider" ExposeID="Chassis (1/x)">
+        <SliderDefinition Min="1" Max="20" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000030" Type="replace" Path="/Values/BuildingUpgrade/WorkforceAmountUpgrade/Value" ModOpID="1742000030_WorkforceAmountUpgrade">
+        <Value>-25</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000030_WorkforceAmountUpgrade" Kind="Slider" ExposeID="Workforce Needed (%)">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+</ModOps>

@@ -1,0 +1,47 @@
+<ModOps>
+
+    <ImyaTweaks Title="AL - Oliver Thorlof, The Happiest Cool Postman" />
+
+    <!-- Oliver Thorlof, The Happiest Cool Postman  1742000206-1742000207 -->
+
+    <ModOp GUID="1742000206" Type="replace" Path="/Values/FactoryUpgrade/ProductivityUpgrade/Value" ModOpID="1742000206_Productivity" Skip="1">
+        <Value>100</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000206_Productivity" Kind="Slider" ExposeID="Productivity(%)">
+        <SliderDefinition Min="0" Max="200" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000206" Type="replace" Path="/Values/FactoryUpgrade/AdditionalOutput/Item[Product='4268']/AdditionalOutputCycle" ModOpID="1742000206_AdditionalOutputCycleArcticReports">
+        <AdditionalOutputCycle>6</AdditionalOutputCycle>
+    </ModOp>
+
+    <ImyaExpose Path="self::AdditionalOutputCycle" ModOpID="1742000206_AdditionalOutputCycleArcticReports" Kind="Slider" ExposeID="Arctic Reports (1/x)">
+        <SliderDefinition Min="1" Max="20" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000206" Type="replace" Path="/Values/FactoryUpgrade/AdditionalOutput/Item[Product='535']/AdditionalOutputCycle" ModOpID="1742000206_AdditionalOutputCycleArcticLocalMail">
+        <AdditionalOutputCycle>3</AdditionalOutputCycle>
+    </ModOp>
+
+    <ImyaExpose Path="self::AdditionalOutputCycle" ModOpID="1742000206_AdditionalOutputCycleArcticLocalMail" Kind="Slider" ExposeID="Local Mail (1/x)">
+        <SliderDefinition Min="1" Max="20" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000206" Type="replace" Path="/Values/WarehouseUpgrade/StorageCapacityModifier" ModOpID="1742000206_StorageCapacityModifier">
+        <StorageCapacityModifier>100</StorageCapacityModifier>
+    </ModOp>
+
+    <ImyaExpose Path="self::StorageCapacityModifier" ModOpID="1742000206_StorageCapacityModifier" Kind="Slider" ExposeID="Mail Storage">
+        <SliderDefinition Min="0" Max="300" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000206" Type="replace" Path="/Values/BuildingUpgrade/MaintenanceUpgrade/Value" ModOpID="1742000206_MaintenanceUpgrade">
+        <Value>200</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000206_MaintenanceUpgrade" Kind="Slider" ExposeID="Maintenance (%)">
+        <SliderDefinition Min="-100" Max="300" Stepping="1" />
+    </ImyaExpose>
+
+</ModOps>

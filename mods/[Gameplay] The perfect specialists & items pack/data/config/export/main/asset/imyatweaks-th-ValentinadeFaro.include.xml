@@ -1,0 +1,48 @@
+<ModOps>
+
+    <ImyaTweaks Title="TH - Valentina de Faro, Chocolate, Coffee and biscuits" />
+
+    <!-- Valentina de Faro, Chocolate, Coffee and biscuits 1742000166-1742000167 -->
+
+
+    <ModOp GUID="1742000166" Type="replace" Path="/Values/ResidenceUpgrade/AdditionalHappiness" ModOpID="1742000166_AdditionalHappiness">
+        <AdditionalHappiness>20</AdditionalHappiness>
+    </ModOp>
+
+    <ImyaExpose Path="self::AdditionalHappiness" ModOpID="1742000166_AdditionalHappiness" Kind="Slider" ExposeID="Happiness">
+        <SliderDefinition Min="0" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000166" Type="replace" Path="/Values/ResidenceUpgrade/GoodConsumptionUpgrade/Item[ProvidedNeed='120032']/AmountInPercent" ModOpID="1742000166_ProvidedNeedCoffee">
+        <AmountInPercent>-50</AmountInPercent>
+    </ModOp>
+
+    <ImyaExpose Path="self::AmountInPercent" ModOpID="1742000166_ProvidedNeedCoffee" Kind="Slider" ExposeID="Coffee (%)">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000166" Type="replace" Path="/Values/ResidenceUpgrade/GoodConsumptionUpgrade/Item[ProvidedNeed='1010258']/AmountInPercent" ModOpID="1742000166_ProvidedNeedChocolate">
+        <AmountInPercent>-50</AmountInPercent>
+    </ModOp>
+
+    <ImyaExpose Path="self::AmountInPercent" ModOpID="1742000166_ProvidedNeedChocolate" Kind="Slider" ExposeID="Chocolate (%)">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000166" Type="replace" Path="/Values/ResidenceUpgrade/GoodConsumptionUpgrade/Item[ProvidedNeed='135229']/AmountInPercent" ModOpID="1742000166_ProvidedNeedBiscuits">
+        <AmountInPercent>-50</AmountInPercent>
+    </ModOp>
+
+    <ImyaExpose Path="self::AmountInPercent" ModOpID="1742000166_ProvidedNeedBiscuits" Kind="Slider" ExposeID="Biscuits (%)">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000166" Type="replace" Path="/Values/ResidenceUpgrade/TaxModifierInPercent" ModOpID="1742000166_TaxModifierInPercent">
+        <TaxModifierInPercent>15</TaxModifierInPercent>
+    </ModOp>
+
+    <ImyaExpose Path="self::TaxModifierInPercent" ModOpID="1742000166_TaxModifierInPercent" Kind="Slider" ExposeID="Income per house (%)">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+</ModOps>

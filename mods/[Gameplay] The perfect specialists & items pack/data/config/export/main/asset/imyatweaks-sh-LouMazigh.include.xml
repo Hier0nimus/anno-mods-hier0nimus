@@ -1,0 +1,39 @@
+<ModOps>
+
+    <ImyaTweaks Title="SH - Lou Mazigh, Perfect trading routes" />
+
+    <!-- Lou Mazigh, Perfect trading routes 1742000174-1742000175 -->
+
+    <ModOp GUID="1742000174" Type="replace" Path="/Values/VehicleUpgrade/ForwardSpeedUpgrade/Value" ModOpID="1742000174_ForwardSpeedUpgrade" Skip="1">
+        <Value>25</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000174_ForwardSpeedUpgrade" Kind="Slider" ExposeID="Movement Speed (%)">
+        <SliderDefinition Min="-100" Max="200" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000174" Type="replace" Path="/Values/TradeShipUpgrade/LoadingSpeedUpgrade/Value" ModOpID="1742000174_LoadingSpeedUpgrade" Skip="1">
+        <Value>50</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000174_LoadingSpeedUpgrade" Kind="Slider" ExposeID="Loading Speed (%)">
+        <SliderDefinition Min="0" Max="200" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000174" Type="replace" Path="/Values/TradeShipUpgrade/ActiveTradePriceInPercent" ModOpID="1742000174_ActiveTradePriceInPercent" Skip="1">
+        <ActiveTradePriceInPercent>90</ActiveTradePriceInPercent>
+    </ModOp>
+
+    <ImyaExpose Path="self::ActiveTradePriceInPercent" ModOpID="1742000174_ActiveTradePriceInPercent" Kind="Slider" ExposeID="Trade Prices (%)" Description="Set the % the item will still cost. Setting the value to 90% will result in a 10% discount.">
+        <SliderDefinition Min="0" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000174" Type="replace" Path="/Values/VehicleUpgrade/IgnoreWeightFactorUpgrade/Value" ModOpID="1742000174_IgnoreWeightFactorUpgrade" Skip="1">
+        <Value>75</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000174_IgnoreWeightFactorUpgrade" Kind="Slider" ExposeID="Cargo Slowdown (%)" Description="% of Cargo Slowdown. 20% will be ingame Cargo Slowdown reduced with -20%.">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+</ModOps>

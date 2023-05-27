@@ -1,0 +1,39 @@
+<ModOps>
+
+    <ImyaTweaks Title="TU - Marco Paulo, Spicing things up" />
+
+    <!-- Marco Paulo, Spicing things up 1742000158-1742000159 -->
+
+    <ModOp GUID="1742000158" Type="replace" Path="/Values/FactoryUpgrade/ProductivityUpgrade/Value" ModOpID="1742000158_Productivity" Skip="1">
+        <Value>150</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000158_Productivity" Kind="Slider" ExposeID="Productivity (%)">
+        <SliderDefinition Min="0" Max="300" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000158" Type="replace" Path="/Values/FactoryUpgrade/AdditionalOutput/Item[Product='1010215']/AdditionalOutputCycle" ModOpID="1742000158_AdditionalOutputCycleGoulash">
+        <AdditionalOutputCycle>4</AdditionalOutputCycle>
+    </ModOp>
+
+    <ImyaExpose Path="self::AdditionalOutputCycle" ModOpID="1742000158_AdditionalOutputCycleGoulash" Kind="Slider" ExposeID="Goulash (1/x)">
+        <SliderDefinition Min="1" Max="20" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000158" Type="replace" Path="/Values/FactoryUpgrade/AdditionalOutput/Item[Product='1010217']/AdditionalOutputCycle" ModOpID="1742000158_AdditionalOutputCycleCannedFood">
+        <AdditionalOutputCycle>6</AdditionalOutputCycle>
+    </ModOp>
+
+    <ImyaExpose Path="self::AdditionalOutputCycle" ModOpID="1742000158_AdditionalOutputCycleCannedFood" Kind="Slider" ExposeID="Canned Food (1/x)">
+        <SliderDefinition Min="1" Max="20" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000158" Type="replace" Path="/Values/BuildingUpgrade/WorkforceAmountUpgrade/Value" ModOpID="1742000158_WorkforceAmountUpgrade">
+        <Value>-25</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000158_WorkforceAmountUpgrade" Kind="Slider" ExposeID="Workforce Needed (%)">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+</ModOps>
