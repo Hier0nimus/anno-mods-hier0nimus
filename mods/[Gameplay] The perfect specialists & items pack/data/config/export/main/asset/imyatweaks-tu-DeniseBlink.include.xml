@@ -1,0 +1,63 @@
+<ModOps>
+
+    <ImyaTweaks Title="TU - Denise Blink, Lacquer efficiency" />
+
+    <!-- Denise Blink, Lacquer efficiency 1742000150-1742000151 -->
+
+    <ModOp GUID="1742000150" Type="replace" Path="/Values/FactoryUpgrade/ProductivityUpgrade/Value" ModOpID="1742000150_Productivity" Skip="1">
+        <Value>75</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000150_Productivity" Kind="Slider" ExposeID="Productivity (%)">
+        <SliderDefinition Min="0" Max="200" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000150" Type="replace" Path="/Values/FactoryUpgrade/AdditionalOutput/Item[Product='1010228']/AdditionalOutputCycle" ModOpID="1742000150_AdditionalOutputCycleQuartzSand">
+        <AdditionalOutputCycle>2</AdditionalOutputCycle>
+    </ModOp>
+
+    <ImyaExpose Path="self::AdditionalOutputCycle" ModOpID="1742000150_AdditionalOutputCycleQuartzSand" Kind="Slider" ExposeID="Quartz Sand (1/x)">
+        <SliderDefinition Min="1" Max="20" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000150" Type="replace" Path="/Values/FactoryUpgrade/AdditionalOutput/Item[Product='135086']/AdditionalOutputCycle" ModOpID="1742000150_AdditionalOutputCycleResin">
+        <AdditionalOutputCycle>2</AdditionalOutputCycle>
+    </ModOp>
+
+    <ImyaExpose Path="self::AdditionalOutputCycle" ModOpID="1742000150_AdditionalOutputCycleResin" Kind="Slider" ExposeID="Resin (1/x)">
+        <SliderDefinition Min="1" Max="20" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000150" Type="replace" Path="/Values/FactoryUpgrade/AdditionalOutput/Item[Product='135130']/AdditionalOutputCycle" ModOpID="1742000150_AdditionalOutputCycleEthanol">
+        <AdditionalOutputCycle>2</AdditionalOutputCycle>
+    </ModOp>
+
+    <ImyaExpose Path="self::AdditionalOutputCycle" ModOpID="1742000150_AdditionalOutputCycleEthanol" Kind="Slider" ExposeID="Ethanol (1/x)">
+        <SliderDefinition Min="1" Max="20" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000150" Type="replace" Path="/Values/BuildingUpgrade/WorkforceAmountUpgrade/Value" ModOpID="1742000150_WorkforceAmountUpgrade">
+        <Value>-30</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000150_WorkforceAmountUpgrade" Kind="Slider" ExposeID="Workforce Needed (%)">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000150" Type="replace" Path="/Values/IncidentInfectableUpgrade/IncidentExplosionIncreaseUpgrade/Value" ModOpID="1742000150_IncidentExplosionIncreaseUpgrade">
+        <Value>-5</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000150_IncidentExplosionIncreaseUpgrade" Kind="Slider" ExposeID="Chance Of Explosions (x10%)">
+        <SliderDefinition Min="-10" Max="10" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000150" Type="replace" Path="/Values/IncidentInfectableUpgrade/IncidentFireIncreaseUpgrade/Value" ModOpID="1742000150_IncidentFireIncreaseUpgrade">
+        <Value>-5</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000150_IncidentFireIncreaseUpgrade" Kind="Slider" ExposeID="Chance Of Fire (x10%)">
+        <SliderDefinition Min="-10" Max="10" Stepping="1" />
+    </ImyaExpose>
+
+</ModOps>

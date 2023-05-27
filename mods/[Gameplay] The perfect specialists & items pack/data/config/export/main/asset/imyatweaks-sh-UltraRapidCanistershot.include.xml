@@ -1,0 +1,23 @@
+<ModOps>
+
+    <ImyaTweaks Title="SH - Ultra Rapid Canister shot" />
+
+    <!-- Ultra Rapid Canister shot 1742000193-1742000187 + 1742000193 -->
+
+    <ModOp GUID="1742000193" Type="replace" Path="/Values/AttackerUpgrade/BaseDamageUpgrade/Value" ModOpID="1742000193_BaseDamageUpgrade" Skip="1">
+        <Value>-30</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000193_BaseDamageUpgrade" Kind="Slider" ExposeID="Damage Per Shot (%)">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000193" Type="replace" Path="/Values/AttackerUpgrade/AttackSpeedUpgrade" ModOpID="1742000193_AttackSpeedUpgrade" Skip="1">
+        <AttackSpeedUpgrade>300</AttackSpeedUpgrade>
+    </ModOp>
+
+    <ImyaExpose Path="self::AttackSpeedUpgrade" ModOpID="1742000193_AttackSpeedUpgrade" Kind="Slider" ExposeID="Attack Speed (%)">
+        <SliderDefinition Min="-100" Max="500" Stepping="1" />
+    </ImyaExpose>
+
+</ModOps>

@@ -1,0 +1,31 @@
+<ModOps>
+
+    <ImyaTweaks Title="TU - Raveena Bhargava, The Airship Architect" />
+
+    <!-- Raveena Bhargava, The Airship Architect 1742000212-1742000213 -->
+
+    <ModOp GUID="1742000212" Type="replace" Path="/Values/BuildingUpgrade/WorkforceAmountUpgrade/Value" ModOpID="1742000212_WorkforceAmountUpgrade">
+        <Value>-40</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000212_WorkforceAmountUpgrade" Kind="Slider" ExposeID="Workforce Needed (%)">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000212" Type="replace" Path="/Values/BuildingUpgrade/MaintenanceUpgrade/Value" ModOpID="1742000212_MaintenanceUpgrade">
+        <Value>-60</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000212_MaintenanceUpgrade" Kind="Slider" ExposeID="Maintenance (%)">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000212" Type="replace" Path="/Values/ShipyardUpgrade/ConstructionCostInPercent" ModOpID="1742000212_ConstructionCostInPercent">
+        <ConstructionCostInPercent>-35</ConstructionCostInPercent>
+    </ModOp>
+
+    <ImyaExpose Path="self::ConstructionCostInPercent" ModOpID="1742000212_ConstructionCostInPercent" Kind="Slider" ExposeID="Construction costs (%)">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+</ModOps>

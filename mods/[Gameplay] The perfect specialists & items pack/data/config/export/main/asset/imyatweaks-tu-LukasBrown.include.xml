@@ -1,0 +1,39 @@
+<ModOps>
+
+    <ImyaTweaks Title="TU - Lukas Brown, Collector of dung" />
+
+    <!-- Lukas Brown, Collector of dung 1742000164-1742000165 -->
+
+    <ModOp GUID="1742000164" Type="replace" Path="/Values/FactoryUpgrade/ProductivityUpgrade/Value" ModOpID="1742000164_Productivity" Skip="1">
+        <Value>50</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000164_Productivity" Kind="Slider" ExposeID="Productivity (%)">
+        <SliderDefinition Min="-100" Max="200" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000164" Type="replace" Path="/Values/FactoryUpgrade/AdditionalOutput/Item[Product='24808']/AdditionalOutputCycle" ModOpID="1742000164_AdditionalOutputCycleFertiliser">
+        <AdditionalOutputCycle>5</AdditionalOutputCycle>
+    </ModOp>
+
+    <ImyaExpose Path="self::AdditionalOutputCycle" ModOpID="1742000164_AdditionalOutputCycleFertiliser" Kind="Slider" ExposeID="Fertiliser (1/x)">
+        <SliderDefinition Min="1" Max="20" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000164" Type="replace" Path="/Values/BuildingUpgrade/WorkforceAmountUpgrade/Value" ModOpID="1742000164_WorkforceAmountUpgrade">
+        <Value>-30</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000164_WorkforceAmountUpgrade" Kind="Slider" ExposeID="Workforce Needed (%)">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000164" Type="replace" Path="/Values/CultureUpgrade/AttractivenessUpgrade/Value" ModOpID="1742000164_AttractivenessUpgrade">
+        <Value>25</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000164_AttractivenessUpgrade" Kind="Slider" ExposeID="Attractiveness">
+        <SliderDefinition Min="0" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+</ModOps>

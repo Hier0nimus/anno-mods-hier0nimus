@@ -1,0 +1,39 @@
+<ModOps>
+
+    <ImyaTweaks Title="AL - Amka Etok, Carve to slide" />
+
+    <!-- Amka Etok, Carve to slide 1742000028-1742000029 -->
+
+    <ModOp GUID="1742000028" Type="replace" Path="/Values/FactoryUpgrade/ProductivityUpgrade/Value" ModOpID="1742000028_Productivity" Skip="1">
+        <Value>40</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000028_Productivity" Kind="Slider" ExposeID="Productivity(%)">
+        <SliderDefinition Min="0" Max="200" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000028" Type="replace" Path="/Values/FactoryUpgrade/AdditionalOutput/Item[Product='1010242']/AdditionalOutputCycle" ModOpID="1742000028_AdditionalOutputCycleWoodVeneers">
+        <AdditionalOutputCycle>5</AdditionalOutputCycle>
+    </ModOp>
+
+    <ImyaExpose Path="self::AdditionalOutputCycle" ModOpID="1742000028_AdditionalOutputCycleWoodVeneers" Kind="Slider" ExposeID="Wood Veneers (1/x)">
+        <SliderDefinition Min="1" Max="20" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000028" Type="replace" Path="/Values/FactoryUpgrade/AdditionalOutput/Item[Product='1010210']/AdditionalOutputCycle" ModOpID="1742000028_AdditionalOutputCycleSails">
+        <AdditionalOutputCycle>5</AdditionalOutputCycle>
+    </ModOp>
+
+    <ImyaExpose Path="self::AdditionalOutputCycle" ModOpID="1742000028_AdditionalOutputCycleSails" Kind="Slider" ExposeID="Sails (1/x)">
+        <SliderDefinition Min="1" Max="20" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000028" Type="replace" Path="/Values/BuildingUpgrade/WorkforceAmountUpgrade/Value" ModOpID="1742000028_WorkforceAmountUpgrade">
+        <Value>-20</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000028_WorkforceAmountUpgrade" Kind="Slider" ExposeID="Workforce Needed (%)">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+</ModOps>

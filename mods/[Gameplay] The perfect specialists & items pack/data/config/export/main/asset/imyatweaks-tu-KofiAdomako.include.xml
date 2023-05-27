@@ -1,0 +1,31 @@
+<ModOps>
+
+    <ImyaTweaks Title="TU - Kofi Adomako, Cigars and Pipes" />
+
+    <!-- Kofi Adomako, Cigars and Pipes 1742000088-1742000089 -->
+
+    <ModOp GUID="1742000088" Type="replace" Path="/Values/FactoryUpgrade/ProductivityUpgrade/Value" ModOpID="1742000088_Productivity" Skip="1">
+        <Value>50</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000088_Productivity" Kind="Slider" ExposeID="Productivity (%)">
+        <SliderDefinition Min="0" Max="200" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000088" Type="replace" Path="/Values/FactoryUpgrade/AdditionalOutput/Item[Product='114414']/AdditionalOutputCycle" ModOpID="1742000088_AdditionalOutputCycleClayPipe">
+        <AdditionalOutputCycle>4</AdditionalOutputCycle>
+    </ModOp>
+
+    <ImyaExpose Path="self::AdditionalOutputCycle" ModOpID="1742000088_AdditionalOutputCycleClayPipe" Kind="Slider" ExposeID="Clay Pipe (1/x)">
+        <SliderDefinition Min="1" Max="20" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000034" Type="replace" Path="/Values/BuildingUpgrade/WorkforceAmountUpgrade/Value" ModOpID="1742000088_WorkforceAmountUpgrade">
+        <Value>-25</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000088_WorkforceAmountUpgrade" Kind="Slider" ExposeID="Workforce Needed (%)">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+</ModOps>

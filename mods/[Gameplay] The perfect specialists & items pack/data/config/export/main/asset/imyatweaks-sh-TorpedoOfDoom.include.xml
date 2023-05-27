@@ -1,0 +1,23 @@
+<ModOps>
+
+    <ImyaTweaks Title="SH - Torpedo Of Doom" />
+
+    <!-- Torpedo Of Doom 1742000192-1742000185 + 1742000192 -->
+
+    <ModOp GUID="1742000192" Type="replace" Path="/Values/Exploder/InnerDamage" ModOpID="1742000192_InnerDamage" Skip="1">
+        <InnerDamage>5000</InnerDamage>
+    </ModOp>
+
+    <ImyaExpose Path="self::InnerDamage" ModOpID="1742000192_InnerDamage" Kind="Slider" ExposeID="Damage">
+        <SliderDefinition Min="0" Max="20000" Stepping="500" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000192" Type="replace" Path="/Values/Exploder/MinimumDamage" ModOpID="1742000192_MinimumDamage" Skip="1">
+        <MinimumDamage>2500</MinimumDamage>
+    </ModOp>
+
+    <ImyaExpose Path="self::MinimumDamage" ModOpID="1742000192_MinimumDamage" Kind="Slider" ExposeID="Minimum Damage">
+        <SliderDefinition Min="0" Max="20000" Stepping="500" />
+    </ImyaExpose>
+
+</ModOps>

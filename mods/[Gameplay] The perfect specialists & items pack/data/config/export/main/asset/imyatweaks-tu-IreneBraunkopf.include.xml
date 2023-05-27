@@ -1,0 +1,55 @@
+<ModOps>
+
+    <ImyaTweaks Title="TU - Irene Braunkopf, Curly fresh hair" />
+
+    <!-- Irene Braunkopf, Curly fresh hair 1742000144-1742000145 -->
+
+    <ModOp GUID="1742000144" Type="replace" Path="/Values/FactoryUpgrade/ProductivityUpgrade/Value" ModOpID="1742000144_Productivity" Skip="1">
+        <Value>50</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000144_Productivity" Kind="Slider" ExposeID="Productivity (%)">
+        <SliderDefinition Min="0" Max="200" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000144" Type="replace" Path="/Values/FactoryUpgrade/AdditionalOutput/Item[Product='1414']/AdditionalOutputCycle" ModOpID="1742000144_AdditionalOutputCycleIndustrialLubricant">
+        <AdditionalOutputCycle>18</AdditionalOutputCycle>
+    </ModOp>
+
+    <ImyaExpose Path="self::AdditionalOutputCycle" ModOpID="1742000144_AdditionalOutputCycleIndustrialLubricant" Kind="Slider" ExposeID="Industrial Lubricant (1/x)">
+        <SliderDefinition Min="1" Max="20" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000144" Type="replace" Path="/Values/FactoryUpgrade/AdditionalOutput/Item[Product='5388']/AdditionalOutputCycle" ModOpID="1742000144_AdditionalOutputCyclePerfumes">
+        <AdditionalOutputCycle>18</AdditionalOutputCycle>
+    </ModOp>
+
+    <ImyaExpose Path="self::AdditionalOutputCycle" ModOpID="1742000144_AdditionalOutputCyclePerfumes" Kind="Slider" ExposeID="Perfumes (1/x)">
+        <SliderDefinition Min="1" Max="20" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000144" Type="replace" Path="/Values/BuildingUpgrade/WorkforceAmountUpgrade/Value" ModOpID="1742000144_WorkforceAmountUpgrade">
+        <Value>-40</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000144_WorkforceAmountUpgrade" Kind="Slider" ExposeID="Workforce Needed (%)">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000144" Type="replace" Path="/Values/IncidentInfectableUpgrade/IncidentExplosionIncreaseUpgrade/Value" ModOpID="1742000144_IncidentExplosionIncreaseUpgrade">
+        <Value>-8</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000144_IncidentExplosionIncreaseUpgrade" Kind="Slider" ExposeID="Chance Of Explosions (x10%)">
+        <SliderDefinition Min="-10" Max="10" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000144" Type="replace" Path="/Values/IncidentInfectableUpgrade/IncidentFireIncreaseUpgrade/Value" ModOpID="1742000144_IncidentFireIncreaseUpgrade">
+        <Value>-8</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000144_IncidentFireIncreaseUpgrade" Kind="Slider" ExposeID="Chance Of Fire (x10%)">
+        <SliderDefinition Min="-10" Max="10" Stepping="1" />
+    </ImyaExpose>
+
+</ModOps>

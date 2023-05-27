@@ -1,0 +1,63 @@
+<ModOps>
+
+    <ImyaTweaks Title="SH - Kulwa Mto Wa Bluu, Less damage more speed and cargo" />
+
+    <!-- Kulwa Mto Wa Bluu, Less damage more speed & cargo 1742000182-1742000183 -->
+
+    <ModOp GUID="1742000182" Type="replace" Path="/Values/VehicleUpgrade/ForwardSpeedUpgrade/Value" ModOpID="1742000182_ForwardSpeedUpgrade" Skip="1">
+        <Value>25</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000182_ForwardSpeedUpgrade" Kind="Slider" ExposeID="Movement Speed (%)">
+        <SliderDefinition Min="-100" Max="200" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000182" Type="replace" Path="/Values/VehicleUpgrade/IgnoreWeightFactorUpgrade/Value" ModOpID="1742000182_IgnoreWeightFactorUpgrade" Skip="1">
+        <Value>100</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000182_IgnoreWeightFactorUpgrade" Kind="Slider" ExposeID="Cargo Slowdown (%)" Description="% of Cargo Slowdown. 20% will be ingame Cargo Slowdown reduced with -20%.">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000182" Type="replace" Path="/Values/VehicleUpgrade/IgnoreDamageFactorUpgrade/Value" ModOpID="1742000182_IgnoreDamageFactorUpgrade" Skip="1">
+        <Value>100</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000182_IgnoreDamageFactorUpgrade" Kind="Slider" ExposeID="Damage Slowdown (%)" Description="% of Damage Slowdown. 20% will be ingame Damange Slowdown reduced with -20%.">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000182" Type="replace" Path="/Values/AttackerUpgrade/BaseDamageUpgrade/Value" ModOpID="1742000182_BaseDamageUpgrade" Skip="1">
+        <Value>-15</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000182_BaseDamageUpgrade" Kind="Slider" ExposeID="Damage (%)">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000182" Type="replace" Path="/Values/AttackerUpgrade/AttackRangeUpgrade/Value" ModOpID="1742000182_AttackRangeUpgrade" Skip="1">
+        <Value>-15</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000182_AttackRangeUpgrade" Kind="Slider" ExposeID="Range (%)">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000182" Type="replace" Path="/Values/AttackerUpgrade/LineOfSightRangeUpgrade/Value" ModOpID="1742000182_LineOfSightRangeUpgrade" Skip="1">
+        <Value>-15</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000182_LineOfSightRangeUpgrade" Kind="Slider" ExposeID="Line Of Sight (%)">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000182" Type="replace" Path="/Values/AttackerUpgrade/AttackSpeedUpgrade" ModOpID="1742000182_AttackSpeedUpgrade" Skip="1">
+        <AttackSpeedUpgrade>-15</AttackSpeedUpgrade>
+    </ModOp>
+
+    <ImyaExpose Path="self::AttackSpeedUpgrade" ModOpID="1742000182_AttackSpeedUpgrade" Kind="Slider" ExposeID="Attack Speed (%)">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+</ModOps>
