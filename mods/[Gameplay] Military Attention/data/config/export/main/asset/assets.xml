@@ -117,6 +117,8 @@ MILITARY BUILDINGS
 1742100271 - Bombs Ammunition Depot - Building - Description
 1742100272 - Ammunition Depot (Empty) - Building
 1742100273 - Ammunition Depot (Empty) - Building - Description
+1742100284 - Fort - Defense - Building
+1742100285 - Fort - Defense - Building - Description
 1742100287 - Dung Collector - Building
 1742100288 - Dung Collector - Building - Description
 1742100289 - Nitrary - Building
@@ -208,7 +210,7 @@ MILITARY PRODUCTS
 ********************
 1742100005 - Soldiers Workforce - Product
 1742100009 - Officers Workforce - Product
-1742100013 - Military Engineers Workforce - Product
+// NOT USED ANYMORE // 1742100013 - Military Engineers Workforce - Product
 1742100309 - Arctic Soldiers Workforce - Product
 1742100317 - New World Soldiers Workforce - Product
 1742100318 - Enbesa Soldiers Workforce - Product
@@ -363,6 +365,8 @@ POOLS
 1742100252 - All Basic Ammunition Defense Buildings - ItemEffectTargetPool
 1742100253 - All Shell Ammunition Defense Buildings - ItemEffectTargetPool
 1742100305 - All Airship Shipyards - ItemEffectTargetPool
+1742100389 - Expedition - Military Expedition Easy - Reward Pool
+1742100390 - All New Military Character Items - RewardPool
 
 ITEMSETS
 ***********
@@ -424,6 +428,24 @@ RECIPES + LISTS
 1742100282 - Bombs Ammunition Depot - Recipe
 1742100283 - Bombs Ammunition Depot - Recipe - Description
 
+EXPEDITIONS
+********************
+1742100382 - Expedition - Military Expedition
+1742100383 - Expedition - Military Expedition - Description
+1742100384 - Expedition - Military Expedition
+1742100385 - Expedition - Military Expedition - Description
+1742100386 - Expedition - Military Expedition - Military Events Pool
+1742100387 - Expedition - Military Expedition - Military Card Background
+1742100388 - Expedition - Military Expedition - Reward
+
+NEWSPAPERS
+********************
+1742100393 - Newspaper - War is upon us
+1742100394 - Newspaper - War is upon us - SpecialEditionHeadline
+1742100395 - Newspaper - War is upon us - SpecialEditionSubline
+1742100396 - Newspaper - War is upon us - SpecialEditionImage
+
+
 TRIGGERS
 ********************
 1742120000 - Global Unhide - 1 Workers
@@ -439,6 +461,8 @@ TRIGGERS
 1742120010 - Artista 4000 - Artista 4000
 1742120011 - Artisans 1 - Artisans 1
 1742120012 - Workers 10 - Workers 10
+1742100391 - Military Expedition Unlock Delay - Workers 300
+1742100392 - Military Expedition Unlock - Workers 300
 
 
 
@@ -448,6 +472,8 @@ TRIGGERS
 1742187711
 1742187720
 1742187730
+1742187740
+1742187750
 
 -->
 
@@ -462,7 +488,9 @@ TRIGGERS
   <Include File="../../../../hier0nimus/military-policies-itemsets/assets.include.xml" />
   <Include File="../../../../hier0nimus/military-buffs-effects/assets.include.xml" />
   <Include File="../../../../hier0nimus/military-pools/assets.include.xml" />
-  <!--<Include File="../../../../hier0nimus/quests/assets.include.xml" />-->
+  <!--<Include File="../../../../hier0nimus/quests/assets.include.xml" />
+  <Include File="../../../../hier0nimus/expeditions/assets.include.xml" />-->
+  <Include File="../../../../hier0nimus/newspapers/assets.include.xml" />
   <Include File="../../../../hier0nimus/military-construction-menu/assets.include.xml" />
   <Include File="../../../../hier0nimus/triggers/assets.include.xml" />
 </ModOps>

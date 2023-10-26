@@ -140,7 +140,7 @@
               <GUID>112675</GUID>              <!-- Sleeping Bag Factory - Building -->
             </Item>
             <Item>
-              <GUID>1742100068</GUID> <!-- Sleeping Bag Factory OW - Building -->
+              <GUID>1742100068</GUID>              <!-- Sleeping Bag Factory OW - Building -->
             </Item>
           </EffectTargetGUIDs>
         </ItemEffectTargetPool>
@@ -148,5 +148,89 @@
     </Asset>
   </ModOp>
   <!-- END All Sleeping Bag Factories - ItemEffectTargetPool -->
+
+  <!-- START - All New Military Character Items - RewardPool -->
+  <ModOp GUID="192956" Type="addNextSibling" Path="/">
+    <Asset>
+      <Template>RewardPool</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100390</GUID>
+          <Name>All New Military Character Items reward pool</Name>
+        </Standard>
+        <RewardPool>
+          <ItemsPool>
+            <Item>
+              <ItemLink>1742100167</ItemLink>
+            </Item>
+            <Item>
+              <ItemLink>1742100169</ItemLink>
+            </Item>
+            <Item>
+              <ItemLink>1742100171</ItemLink>
+            </Item>
+            <Item>
+              <ItemLink>1742100173</ItemLink>
+            </Item>
+            <Item>
+              <ItemLink>1742100175</ItemLink>
+            </Item>
+            <Item>
+              <ItemLink>1742100177</ItemLink>
+            </Item>
+            <Item>
+              <ItemLink>1742100179</ItemLink>
+            </Item>
+            <Item>
+              <ItemLink>1742100181</ItemLink>
+            </Item>
+          </ItemsPool>
+        </RewardPool>
+        <Locked />
+        <Text />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - All New Military Character Items - RewardPool -->
+
+  <!-- START - ADD MILITARY EXPEDITION EASY REWARD POOL -->
+  <ModOp GUID='193416' Type="addNextSibling" Path="/">
+    <Asset>
+      <Template>RewardPool</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100389</GUID>
+          <Name>Reward pool Military Expedition</Name>
+        </Standard>
+        <RewardPool>
+          <ItemsPool>
+            <Item>
+              <ItemLink>1742100390</ItemLink>
+              <Weight>40</Weight>
+            </Item>
+            <Item>
+              <ItemLink>192641</ItemLink>
+              <Weight>10</Weight>
+            </Item>
+            <Item>
+              <ItemLink>192707</ItemLink>
+              <Weight>10</Weight>
+            </Item>
+            <Item>
+              <ItemLink>192756</ItemLink>
+              <Weight>30</Weight>
+            </Item>
+            <Item>
+              <ItemLink>192757</ItemLink>
+              <Weight>10</Weight>
+            </Item>
+          </ItemsPool>
+        </RewardPool>
+        <Locked />
+        <Text />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - ADD MILITARY EXPEDITION EASY REWARD POOL -->
 
 </ModOps>
