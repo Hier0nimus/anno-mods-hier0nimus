@@ -2,7 +2,65 @@
   Military Pools
 -->
 
+
 <ModOps>
+
+  <!-- *************************** ITEMEFFECTTARGETFPOOLS *************************** -->
+
+  <!-- START ALL MILITARY RESIDENCES TO ItemEffectTargetPool -->
+  <ModOp GUID='194019' Type="addNextSibling">
+    <Asset>
+      <Template>ItemEffectTargetPool</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100019</GUID>
+          <Name>All Military Residences</Name>
+        </Standard>
+        <ItemEffectTargetPool>
+          <EffectTargetGUIDs>
+            <Item>
+              <GUID>1742100001</GUID>              <!-- Soldiers Residence - Encampment - Building -->
+            </Item>
+            <Item>
+              <GUID>1742100003</GUID>              <!-- Soldiers Residence - Barracks - Building -->
+            </Item>
+            <Item>
+              <GUID>1742100011</GUID>              <!-- Military Engineers Residence - Building -->
+            </Item>
+            <Item>
+              <GUID>1742100333</GUID>              <!-- New World Soldiers Residence - Encampment - Building -->
+            </Item>
+            <Item>
+              <GUID>1742100335</GUID>              <!-- Enbesa Soldiers Residence - Encampment - Building -->
+            </Item>
+            <Item>
+              <GUID>1742100307</GUID>              <!-- Arctic Soldiers Residence - Encampment - Building -->
+            </Item>
+          </EffectTargetGUIDs>
+        </ItemEffectTargetPool>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END ALL MILITARY RESIDENCES TO ItemEffectTargetPool -->
+
+  <!-- START ALL MILITARY PRODUCTION BUILDINGS TO ItemEffectTargetPool -->
+  <ModOp GUID='194019' Type="addNextSibling">
+    <Asset>
+      <Template>ItemEffectTargetPool</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100045</GUID>
+          <Name>All Military Production Buildings</Name>
+        </Standard>
+        <ItemEffectTargetPool>
+          <EffectTargetGUIDs>
+          </EffectTargetGUIDs>
+        </ItemEffectTargetPool>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END ALL MILITARY PRODUCTION BUILDINGS TO ItemEffectTargetPool -->
+
   <!-- START All Defense Buildings - ItemEffectTargetPool -->
   <ModOp GUID="6000018" Type="addNextSibling" Path="/">
     <Asset>

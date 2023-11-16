@@ -446,193 +446,6 @@
   <!-- END BUILDING SOLDIERS Residence - BARRACKS -->
   <!-- END BUILDING SOLDIERS Residences -->
 
-  <!-- START BUILDING OFFICERS Residence -->
-  <ModOp GUID='601891' Type="addNextSibling">
-    <Asset>
-      <Template>ResidenceBuilding</Template>
-      <Values>
-        <Standard>
-          <GUID>1742100007</GUID>          <!-- Officers Residence - Building -->
-          <Name>Officers Residence</Name>
-          <IconFilename>data/graphics/icons/icon_resident_officers_0.png</IconFilename>
-          <InfoDescription>1742100008</InfoDescription>          <!-- Officers Residence - Building - Description -->
-        </Standard>
-        <Blocking />
-        <Building>
-          <BuildingType>Residence</BuildingType>
-          <PickingAsset>1742100007</PickingAsset>          <!-- Officers Residence - Building -->
-          <SkipUnlockMessage>1</SkipUnlockMessage>
-          <BuildModeRandomRotation>90</BuildModeRandomRotation>
-          <AssociatedRegions>Moderate</AssociatedRegions>
-        </Building>
-        <Cost>
-          <Costs>
-            <Item>
-              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
-              <Amount>6</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010205</Ingredient>              <!-- Bricks - Product -->
-              <Amount>5</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product -->
-              <Amount>2</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010207</Ingredient>              <!-- Windows - Product -->
-              <Amount>2</Amount>
-            </Item>
-          </Costs>
-        </Cost>
-        <Mesh />
-        <Object>
-          <Variations>
-            <Item>
-              <Filename>data/graphics/buildings/residence/residence_military_officers/residence_military_officers_01_01.cfg</Filename>
-            </Item>
-          </Variations>
-        </Object>
-        <Selection>
-          <OnSelection>
-            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
-            <Values>
-              <ActionList />
-            </Values>
-          </OnSelection>
-          <ParticipantMessageArcheType>Captain</ParticipantMessageArcheType>
-        </Selection>
-        <Text />
-        <Constructable />
-        <Locked>
-          <DefaultLockedState>1</DefaultLockedState>
-        </Locked>
-        <Upgradable />
-        <SoundEmitter>
-          <ConstructionSounds>
-            <BuildSuccessful>
-              <Item>
-                <VectorElement>
-                  <InheritanceMapV2>
-                    <Entry>
-                      <TemplateName>ResidenceBuilding7</TemplateName>
-                      <Index>0</Index>
-                    </Entry>
-                  </InheritanceMapV2>
-                </VectorElement>
-                <Sound>200776</Sound>
-              </Item>
-            </BuildSuccessful>
-            <BuildUpgradeFailed>
-              <Item>
-                <Sound>9818387</Sound>
-              </Item>
-            </BuildUpgradeFailed>
-          </ConstructionSounds>
-          <IncidentSounds>
-            <InfectedFire>
-              <Item>
-                <Sound>214659</Sound>
-              </Item>
-            </InfectedFire>
-            <InfectedIllness>
-              <Item>
-                <Sound>214756</Sound>
-              </Item>
-            </InfectedIllness>
-            <InfectedRiot>
-              <Item>
-                <Sound>222229</Sound>
-              </Item>
-            </InfectedRiot>
-            <ExplosionOneShots>
-              <Item>
-                <Sound>203849</Sound>
-              </Item>
-            </ExplosionOneShots>
-          </IncidentSounds>
-          <BuildingRepaired>
-            <Item>
-              <Sound>203866</Sound>
-            </Item>
-          </BuildingRepaired>
-          <MaterialType>Stone</MaterialType>
-        </SoundEmitter>
-        <Infolayer />
-        <FeedbackController />
-        <Residence7>
-          <ResidenceStorage>
-            <InputStorageMax>1</InputStorageMax>
-          </ResidenceStorage>
-          <PopulationLevel7>1742100006</PopulationLevel7>          <!-- Officers PopulationLevel7 -->
-          <ResidentMax>5</ResidentMax>
-        </Residence7>
-        <LogisticNode />
-        <AmbientMoodProvider>
-          <DynamicEnvironmentType>ResidenceT5</DynamicEnvironmentType>
-        </AmbientMoodProvider>
-        <UpgradeList />
-        <Attackable>
-          <AttackableType>IslandBuilding</AttackableType>
-          <MaximumHitPoints>1500</MaximumHitPoints>
-        </Attackable>
-        <IncidentInfectable>
-          <Infectable>
-            <Explosion>
-              <Base>0</Base>
-              <Escalated>0</Escalated>
-            </Explosion>
-          </Infectable>
-          <Explosion>
-            <ExplosionCoreDamage>1000</ExplosionCoreDamage>
-          </Explosion>
-          <IncidentInfectionChanceFactors>
-            <Fire>
-              <DensityFactor>0.025</DensityFactor>
-              <DensityDistance>15</DensityDistance>
-            </Fire>
-            <Riot>
-              <ResidenceHappinessFactor>0.4</ResidenceHappinessFactor>
-              <HappinessThreshold>10</HappinessThreshold>
-            </Riot>
-            <Illness>
-              <BaseChance>4</BaseChance>
-              <HitpointFactor>0.1</HitpointFactor>
-              <DensityFactor>0.025</DensityFactor>
-              <DensityDistance>15</DensityDistance>
-              <DilapidatedFactor>10</DilapidatedFactor>
-              <FactoryOvertimeFactor>0.3</FactoryOvertimeFactor>
-              <FactoryUndertimeFactor>0.15</FactoryUndertimeFactor>
-              <ResidenceFullOvertimeChance>20</ResidenceFullOvertimeChance>
-              <ResidenceFullUndertimeChance>-15</ResidenceFullUndertimeChance>
-            </Illness>
-            <Explosion>
-              <ResidenceFullOvertimeChance>20</ResidenceFullOvertimeChance>
-              <ResidenceFullUndertimeChance>-15</ResidenceFullUndertimeChance>
-            </Explosion>
-          </IncidentInfectionChanceFactors>
-        </IncidentInfectable>
-        <Pausable />
-        <Culture />
-        <StreetActivation />
-        <InfluenceSource />
-        <FloorStackOwner />
-        <Maintenance>
-          <IncomeCategory>Skyscrapers</IncomeCategory>
-        </Maintenance>
-        <Audio>
-          <ClusterEvent>
-            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
-            <Values>
-              <AudioLink />
-            </Values>
-          </ClusterEvent>
-        </Audio>
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END BUILDING OFFICERS Residence -->
-
   <!-- START BUILDING MILITARY ENGINEERS Residence -->
   <ModOp GUID='601891' Type="addNextSibling">
     <Asset>
@@ -1509,7 +1322,7 @@
             </Item>
             <Item>
               <Product>1742100005</Product>              <!-- Soldiers Workforce -->
-              <Amount>20</Amount>
+              <Amount>10</Amount>
             </Item>
           </Maintenances>
         </Maintenance>
@@ -1831,6 +1644,12 @@
             <WeakSelectionColorType>NoColor</WeakSelectionColorType>
           </Colors>
         </Selection>
+        <BuffFactory>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <BaseBuff>1742100467</BaseBuff>
+          <BaseBuffScope>Radius</BaseBuffScope>
+          <BaseBuffDistance>25</BaseBuffDistance>
+        </BuffFactory>
         <Object>
           <Variations>
             <Item>
@@ -1880,7 +1699,7 @@
         </Warehouse>
         <LogisticNode>
           <QueueConfiguration>
-            <ProcessingQueueParallelCount>4</ProcessingQueueParallelCount>
+            <ProcessingQueueParallelCount>8</ProcessingQueueParallelCount>
           </QueueConfiguration>
         </LogisticNode>
         <UpgradeList />
@@ -1894,8 +1713,8 @@
               <Amount>50</Amount>
             </Item>
             <Item>
-              <Product>1742100005</Product>              <!-- Enbesa Soldiers Workforce -->
-              <Amount>20</Amount>
+              <Product>1742100005</Product>              <!-- Soldiers Workforce - Product -->
+              <Amount>5</Amount>
             </Item>
           </Maintenances>
         </Maintenance>
@@ -2031,7 +1850,7 @@
             </Item>
             <Item>
               <Product>1742100005</Product>              <!-- Soldiers Workforce -->
-              <Amount>100</Amount>
+              <Amount>50</Amount>
             </Item>
           </Maintenances>
         </Maintenance>
@@ -2059,9 +1878,6 @@
           <ConstructionOptions>
             <Item>
               <ModuleGUID>1742100001</ModuleGUID>              <!-- Soldiers Residence - Encampment - Building -->
-            </Item>
-            <Item>
-              <ModuleGUID>1742100007</ModuleGUID>              <!-- Officers Residence - Building -->
             </Item>
             <Item>
               <ModuleGUID>1742100011</ModuleGUID>              <!-- Military Engineers Residence - Building -->
@@ -2227,11 +2043,11 @@
           <Maintenances>
             <Item>
               <Product>1010017</Product>              <!-- Coins -->
-              <Amount>250</Amount>
+              <Amount>150</Amount>
             </Item>
             <Item>
               <Product>1742100309</Product>              <!-- Arctic Soldiers Workforce -->
-              <Amount>30</Amount>
+              <Amount>20</Amount>
             </Item>
           </Maintenances>
         </Maintenance>
@@ -2348,11 +2164,11 @@
           <Maintenances>
             <Item>
               <Product>1010017</Product>              <!-- Coins -->
-              <Amount>250</Amount>
+              <Amount>150</Amount>
             </Item>
             <Item>
               <Product>1742100317</Product>              <!-- New World Soldiers Workforce -->
-              <Amount>30</Amount>
+              <Amount>20</Amount>
             </Item>
           </Maintenances>
         </Maintenance>
@@ -2411,10 +2227,10 @@
               <Ingredient>114402</Ingredient>              <!-- Mud Bricks - Product -->
               <Amount>20</Amount>
             </Item>
-            <!--<Item>
-              <Ingredient>1010218</Ingredient>              Steel Beams - Product
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product -->
               <Amount>5</Amount>
-            </Item>-->
+            </Item>
           </Costs>
         </Cost>
         <Object>
@@ -2469,11 +2285,11 @@
           <Maintenances>
             <Item>
               <Product>1010017</Product>              <!-- Coins -->
-              <Amount>250</Amount>
+              <Amount>150</Amount>
             </Item>
             <Item>
               <Product>1742100318</Product>              <!-- Enbesa Soldiers Workforce -->
-              <Amount>30</Amount>
+              <Amount>20</Amount>
             </Item>
           </Maintenances>
         </Maintenance>
@@ -3444,7 +3260,7 @@
         <Object>
           <Variations>
             <Item>
-              <Filename>data/graphics/buildings/public/service_01/service_01.cfg</Filename>
+              <Filename>data/graphics/buildings/military/recreation_centre/recreation_centre_01.cfg</Filename>
             </Item>
           </Variations>
           <DefaultParticipant>Mercier_DeserterWorker</DefaultParticipant>
@@ -3530,7 +3346,7 @@
         <Object>
           <Variations>
             <Item>
-              <Filename>data/graphics/buildings/public/cultural_02/cultural_02_main/cultural_02_main.cfg</Filename>
+              <Filename>data/graphics/buildings/military/military_academy/military_academy_01.cfg</Filename>
             </Item>
           </Variations>
         </Object>
@@ -3667,7 +3483,7 @@
               <Amount>25000</Amount>
             </Item>
             <Item>
-              <Product>1010117</Product>              <!-- Engineer Workforce - Procuct - Military Engineers Workforce - Product 1742100013 -->
+              <Product>1010117</Product>              <!-- Engineer Workforce - Product -->
               <Amount>1000</Amount>
             </Item>
           </Maintenances>
@@ -3723,7 +3539,10 @@
         <Object>
           <Variations>
             <Item>
-              <Filename>data/graphics/buildings/public/cultural_02/cultural_02_module_01/cultural_02_module_01.cfg</Filename>
+              <Filename>data/graphics/buildings/military/military_academy/military_academy_module_01.cfg</Filename>
+            </Item>
+            <Item>
+              <Filename>data/graphics/buildings/military/military_academy/military_academy_module_02.cfg</Filename>
             </Item>
           </Variations>
         </Object>
@@ -4310,8 +4129,8 @@
               <InactiveAmount>1000</InactiveAmount>
             </Item>
             <Item>
-              <Product>1742100009</Product>              <!-- Officers Workforce -->
-              <Amount>200</Amount>
+              <Product>1742100005</Product>              <!-- Soldiers Workforce -->
+              <Amount>100</Amount>
             </Item>
           </Maintenances>
         </Maintenance>
@@ -4384,6 +4203,7 @@
   <!-- END BUILDING - MILITARY TRAINING COMPLEX -->
 
   <!-- START BUILDING - AMMUNITION FACTORY -->
+
   <!-- START BUILDING - AMMUNITION FACTORY - Empty -->
   <ModOp Type="addNextSibling" GUID='1010284'>
     <Asset>
@@ -4404,7 +4224,7 @@
         <Object>
           <Variations>
             <Item>
-              <Filename>data/dlc11/graphics/buildings/production/dropgoods_factory/dropgoods_factory_01_empty.cfg</Filename>
+              <Filename>data\graphics\buildings\production\ammunition_factory\ammunition_factory_basic_01.cfg</Filename>
             </Item>
           </Variations>
         </Object>
@@ -4511,7 +4331,7 @@
         <Object>
           <Variations>
             <Item>
-              <Filename>data/dlc11/graphics/buildings/production/dropgoods_factory/dropgoods_factory_06_bombs.cfg</Filename>
+              <Filename>data\graphics\buildings\production\ammunition_factory\ammunition_factory_basic_01.cfg</Filename>
             </Item>
           </Variations>
         </Object>
@@ -4581,7 +4401,7 @@
               <StorageAmount>10</StorageAmount>
             </Item>
             <Item>
-              <Product>1010219</Product>              <!-- Steel - Product -->
+              <Product>1742100435</Product>              <!-- Lead - Product -->
               <Amount>1</Amount>
               <StorageAmount>10</StorageAmount>
             </Item>
@@ -4653,7 +4473,7 @@
         <Object>
           <Variations>
             <Item>
-              <Filename>data/dlc11/graphics/buildings/production/dropgoods_factory/dropgoods_factory_06_bombs.cfg</Filename>
+              <Filename>data\graphics\buildings\production\ammunition_factory\ammunition_factory_shell_01.cfg</Filename>
             </Item>
           </Variations>
         </Object>
@@ -4795,7 +4615,7 @@
         <Object>
           <Variations>
             <Item>
-              <Filename>data/dlc11/graphics/buildings/production/dropgoods_factory/dropgoods_factory_06_bombs.cfg</Filename>
+              <Filename>data\graphics\buildings\production\ammunition_factory\ammunition_factory_bombs_01.cfg</Filename>
             </Item>
           </Variations>
         </Object>
@@ -4893,7 +4713,7 @@
               <InactiveAmount>200</InactiveAmount>
             </Item>
             <Item>
-              <Product>1742100013</Product>              <!-- Military Engineers Workforce -->
+              <Product>1010117</Product>              <!-- Engineer Workforce - Product -->
               <Amount>100</Amount>
             </Item>
           </Maintenances>
@@ -5178,14 +4998,14 @@
   </ModOp>
   <!-- END FARMFIELD - STABLE -->
 
-  <!-- START EMPTY AMMUNITION DEPOT -->
+  <!-- START EMPTY AMMUNITION DEPOT (OW) -->
   <ModOp Type="addNextSibling" GUID='1010263'>
     <Asset>
       <Template>Mall</Template>
       <Values>
         <Standard>
           <GUID>1742100272</GUID>
-          <Name>Ammunition Depot (Empty)</Name>
+          <Name>Ammunition Depot (Empty)</Name>          <!-- Ammunition Depot (Empty) - Building -->
           <IconFilename>data/graphics/icons/icon_ammunition_depot.png</IconFilename>
           <InfoDescription>1742100273</InfoDescription>
         </Standard>
@@ -5198,7 +5018,7 @@
         <Object>
           <Variations>
             <Item>
-              <Filename>data/dlc12/graphics/buildings/public/laboratory_pigments/laboratory_pigments.cfg</Filename>
+              <Filename>data\graphics\buildings\public\ammunition_depot\ammunition_depot_ow_01.cfg</Filename>
             </Item>
           </Variations>
         </Object>
@@ -5284,7 +5104,115 @@
       </Values>
     </Asset>
   </ModOp>
-  <!-- END EMPTY AMMUNITION DEPOT -->
+  <!-- END EMPTY AMMUNITION DEPOT (OW) -->
+
+  <!-- START SMALL EMPTY AMMUNITION DEPOT (OW) -->
+  <ModOp Type="addNextSibling" GUID='1010263'>
+    <Asset>
+      <Template>Mall</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100401</GUID>          <!-- Small Ammunition Depot (Empty) - Building -->
+          <Name>Small Ammunition Depot (Empty)</Name>
+          <IconFilename>data/graphics/icons/icon_ammunition_depot.png</IconFilename>
+          <InfoDescription>1742100273</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11151</BuildingCategoryName>
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <AssociatedRegions>Moderate;Colony01;Arctic;Africa</AssociatedRegions>
+        </Building>
+        <Blocking />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data\graphics\buildings\public\ammunition_depot\ammunition_depot_ow_01_small.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>10000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!-- Bricks - Product -->
+              <Amount>15</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product -->
+              <Amount>8</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Mesh />
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>Mercier_DeserterWorker</ParticipantMessageArcheType>
+        </Selection>
+        <Text />
+        <Constructable />
+        <Locked>
+          <DLCDependency>410085</DLCDependency>
+        </Locked>
+        <SoundEmitter />
+        <FactoryBase>
+          <CycleTime>180</CycleTime>
+          <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+          <ClampedMaxTransporterLogisticCost>85</ClampedMaxTransporterLogisticCost>
+        </FactoryBase>
+        <LogisticNode>
+          <TransporterCountMax>0</TransporterCountMax>
+        </LogisticNode>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>50</Amount>
+              <InactiveAmount>25</InactiveAmount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Industrializable />
+        <IncidentInfectable />
+        <Electrifiable>
+          <ElectricityBoost>0</ElectricityBoost>
+          <ElectrifiedEffect>0</ElectrifiedEffect>
+          <ShowPowerInObjectMenu>0</ShowPowerInObjectMenu>
+        </Electrifiable>
+        <AmbientMoodProvider>
+          <Murmur>Factory</Murmur>
+        </AmbientMoodProvider>
+        <Attackable />
+        <UpgradeList />
+        <Pausable>
+          <CanPauseManually>0</CanPauseManually>
+        </Pausable>
+        <FeedbackController />
+        <Infolayer />
+        <BuffFactory>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <ProvidesPublicServiceNeed>0</ProvidesPublicServiceNeed>
+        </BuffFactory>
+        <RecipeBuilding>
+          <RecipeList>1742100402</RecipeList>          <!-- Ammunition Depot - Recipe - List -->
+          <IsBlank>1</IsBlank>
+        </RecipeBuilding>
+        <Culture />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END SMALL EMPTY AMMUNITION DEPOT (OW) -->
 
   <!-- START BASIC AMMUNITION DEPOT -->
   <ModOp Type="addNextSibling" GUID='1010263'>
@@ -5304,7 +5232,7 @@
         <Object>
           <Variations>
             <Item>
-              <Filename>data/dlc12/graphics/buildings/public/laboratory_pigments/laboratory_pigments.cfg</Filename>
+              <Filename>data\graphics\buildings\public\ammunition_depot\ammunition_depot_basic_ow_01.cfg</Filename>
             </Item>
           </Variations>
         </Object>
@@ -5418,6 +5346,138 @@
   </ModOp>
   <!-- END BASIC AMMUNITION DEPOT -->
 
+  <!-- START SMALL BASIC AMMUNITION DEPOT -->
+  <ModOp Type="addNextSibling" GUID='1010263'>
+    <Asset>
+      <Template>Mall</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100397</GUID>          <!-- Small Basic Ammunition Depot - Building -->
+          <Name>Small Basic Ammunition Depot</Name>
+          <IconFilename>data/graphics/icons/icon_basic_ammunition_depot.png</IconFilename>
+          <InfoDescription>1742100227</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11151</BuildingCategoryName>
+        </Building>
+        <Blocking />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data\graphics\buildings\public\ammunition_depot\ammunition_depot_basic_ow_01_small.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>10000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>20</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!-- Bricks - Product -->
+              <Amount>30</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product -->
+              <Amount>15</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Mesh />
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>Mercier_DeserterWorker</ParticipantMessageArcheType>
+        </Selection>
+        <Text />
+        <Constructable />
+        <Locked>
+          <DLCDependency>410085</DLCDependency>
+        </Locked>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>280018</Sound>
+            </Item>
+          </ActiveSounds>
+        </SoundEmitter>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1742100203</Product>              <!-- Basic Ammunition - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <CycleTime>180</CycleTime>
+          <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+          <ClampedMaxTransporterLogisticCost>85</ClampedMaxTransporterLogisticCost>
+        </FactoryBase>
+        <LogisticNode />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>100</Amount>
+              <InactiveAmount>50</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100005</Product>              <!-- Soldiers Workforce -->
+              <Amount>100</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Industrializable />
+        <IncidentInfectable />
+        <Electrifiable>
+          <ElectricityBoost>0</ElectricityBoost>
+          <ElectrifiedEffect>0</ElectrifiedEffect>
+          <ShowPowerInObjectMenu>0</ShowPowerInObjectMenu>
+        </Electrifiable>
+        <AmbientMoodProvider>
+          <Murmur>Factory</Murmur>
+        </AmbientMoodProvider>
+        <Attackable />
+        <UpgradeList />
+        <Pausable />
+        <FeedbackController />
+        <Infolayer />
+        <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742100224</ProductivityBuff>              <!-- Basic Ammunition Buff - Buff -->
+            </Item>
+          </ProductionBuffs>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <ProductionBuffDistance>30</ProductionBuffDistance>
+          <PublicServiceData>
+            <PublicServices>
+              <Item>
+                <PublicService>1742100286</PublicService>                <!-- Ammunition (Global fake) - Product -->
+              </Item>
+            </PublicServices>
+            <FullSatisfactionDistance>1</FullSatisfactionDistance>
+            <NoSatisfactionDistance>2</NoSatisfactionDistance>
+          </PublicServiceData>
+        </BuffFactory>
+        <RecipeBuilding>
+          <RecipeList>1742100402</RecipeList>          <!-- Ammunition Depot - Recipe - List -->
+        </RecipeBuilding>
+        <Culture />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END SMALL BASIC AMMUNITION DEPOT -->
+
   <!-- START SHELL AMMUNITION DEPOT -->
   <ModOp Type="addNextSibling" GUID='1010263'>
     <Asset>
@@ -5436,7 +5496,7 @@
         <Object>
           <Variations>
             <Item>
-              <Filename>data/dlc12/graphics/buildings/public/laboratory_pigments/laboratory_pigments.cfg</Filename>
+              <Filename>data\graphics\buildings\public\ammunition_depot\ammunition_depot_shell_ow_01.cfg</Filename>
             </Item>
           </Variations>
         </Object>
@@ -5550,6 +5610,138 @@
   </ModOp>
   <!-- END SHELL AMMUNITION DEPOT -->
 
+  <!-- START SMALL SHELL AMMUNITION DEPOT -->
+  <ModOp Type="addNextSibling" GUID='1010263'>
+    <Asset>
+      <Template>Mall</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100398</GUID>          <!-- Small Shell Ammunition Depot - Building -->
+          <Name>Small Shell Ammunition Depot</Name>
+          <IconFilename>data/graphics/icons/icon_shell_ammunition_depot.png</IconFilename>
+          <InfoDescription>1742100267</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11151</BuildingCategoryName>
+        </Building>
+        <Blocking />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data\graphics\buildings\public\ammunition_depot\ammunition_depot_shell_ow_01_small.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>10000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>20</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!-- Bricks - Product -->
+              <Amount>30</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product -->
+              <Amount>15</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Mesh />
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>Mercier_DeserterWorker</ParticipantMessageArcheType>
+        </Selection>
+        <Text />
+        <Constructable />
+        <Locked>
+          <DLCDependency>410085</DLCDependency>
+        </Locked>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>280018</Sound>
+            </Item>
+          </ActiveSounds>
+        </SoundEmitter>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1742100248</Product>              <!-- Shell Ammunition - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <CycleTime>180</CycleTime>
+          <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+          <ClampedMaxTransporterLogisticCost>85</ClampedMaxTransporterLogisticCost>
+        </FactoryBase>
+        <LogisticNode />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>200</Amount>
+              <InactiveAmount>100</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100005</Product>              <!-- Soldiers Workforce -->
+              <Amount>150</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Industrializable />
+        <IncidentInfectable />
+        <Electrifiable>
+          <ElectricityBoost>0</ElectricityBoost>
+          <ElectrifiedEffect>0</ElectrifiedEffect>
+          <ShowPowerInObjectMenu>0</ShowPowerInObjectMenu>
+        </Electrifiable>
+        <AmbientMoodProvider>
+          <Murmur>Factory</Murmur>
+        </AmbientMoodProvider>
+        <Attackable />
+        <UpgradeList />
+        <Pausable />
+        <FeedbackController />
+        <Infolayer />
+        <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742100256</ProductivityBuff>              <!-- Shell Ammunition Buff - Buff -->
+            </Item>
+          </ProductionBuffs>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <ProductionBuffDistance>30</ProductionBuffDistance>
+          <PublicServiceData>
+            <PublicServices>
+              <Item>
+                <PublicService>1742100286</PublicService>                <!-- Ammunition (Global fake) - Product -->
+              </Item>
+            </PublicServices>
+            <FullSatisfactionDistance>1</FullSatisfactionDistance>
+            <NoSatisfactionDistance>2</NoSatisfactionDistance>
+          </PublicServiceData>
+        </BuffFactory>
+        <RecipeBuilding>
+          <RecipeList>1742100402</RecipeList>          <!-- Ammunition Depot - Recipe - List -->
+        </RecipeBuilding>
+        <Culture />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END SMALL SHELL AMMUNITION DEPOT -->
+
   <!-- START GAS AMMUNITION DEPOT -->
   <ModOp Type="addNextSibling" GUID='1010263'>
     <Asset>
@@ -5568,7 +5760,7 @@
         <Object>
           <Variations>
             <Item>
-              <Filename>data/dlc12/graphics/buildings/public/laboratory_pigments/laboratory_pigments.cfg</Filename>
+              <Filename>data\graphics\buildings\public\ammunition_depot\ammunition_depot_gas_ow_01.cfg</Filename>
             </Item>
           </Variations>
         </Object>
@@ -5682,6 +5874,138 @@
   </ModOp>
   <!-- END GAS AMMUNITION DEPOT -->
 
+  <!-- START SMALL GAS AMMUNITION DEPOT -->
+  <ModOp Type="addNextSibling" GUID='1010263'>
+    <Asset>
+      <Template>Mall</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100399</GUID>
+          <Name>Small Gas Ammunition Depot</Name>          <!-- Small Gas Ammunition Depot - Building -->
+          <IconFilename>data/graphics/icons/icon_gas_ammunition_depot.png</IconFilename>
+          <InfoDescription>1742100269</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11151</BuildingCategoryName>
+        </Building>
+        <Blocking />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data\graphics\buildings\public\ammunition_depot\ammunition_depot_gas_ow_01_small.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>10000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>20</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!-- Bricks - Product -->
+              <Amount>30</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product -->
+              <Amount>15</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Mesh />
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>Mercier_DeserterWorker</ParticipantMessageArcheType>
+        </Selection>
+        <Text />
+        <Constructable />
+        <Locked>
+          <DLCDependency>410085</DLCDependency>
+        </Locked>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>280018</Sound>
+            </Item>
+          </ActiveSounds>
+        </SoundEmitter>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>112706</Product>              <!-- Arctic Gas - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <CycleTime>300</CycleTime>
+          <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+          <ClampedMaxTransporterLogisticCost>85</ClampedMaxTransporterLogisticCost>
+        </FactoryBase>
+        <LogisticNode />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>300</Amount>
+              <InactiveAmount>150</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100005</Product>              <!-- Soldiers Workforce -->
+              <Amount>200</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Industrializable />
+        <IncidentInfectable />
+        <Electrifiable>
+          <ElectricityBoost>0</ElectricityBoost>
+          <ElectrifiedEffect>0</ElectrifiedEffect>
+          <ShowPowerInObjectMenu>0</ShowPowerInObjectMenu>
+        </Electrifiable>
+        <AmbientMoodProvider>
+          <Murmur>Factory</Murmur>
+        </AmbientMoodProvider>
+        <Attackable />
+        <UpgradeList />
+        <Pausable />
+        <FeedbackController />
+        <Infolayer />
+        <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742100260</ProductivityBuff>              <!-- Gas Ammunition Buff - Buff -->
+            </Item>
+          </ProductionBuffs>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <ProductionBuffDistance>30</ProductionBuffDistance>
+          <PublicServiceData>
+            <PublicServices>
+              <Item>
+                <PublicService>1742100286</PublicService>                <!-- Ammunition (Global fake) - Product -->
+              </Item>
+            </PublicServices>
+            <FullSatisfactionDistance>1</FullSatisfactionDistance>
+            <NoSatisfactionDistance>2</NoSatisfactionDistance>
+          </PublicServiceData>
+        </BuffFactory>
+        <RecipeBuilding>
+          <RecipeList>1742100402</RecipeList>          <!-- Ammunition Depot - Recipe - List -->
+        </RecipeBuilding>
+        <Culture />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END SMALL GAS AMMUNITION DEPOT -->
+
   <!-- START BOMBS AMMUNITION DEPOT -->
   <ModOp Type="addNextSibling" GUID='1010263'>
     <Asset>
@@ -5700,7 +6024,7 @@
         <Object>
           <Variations>
             <Item>
-              <Filename>data/dlc12/graphics/buildings/public/laboratory_pigments/laboratory_pigments.cfg</Filename>
+              <Filename>data\graphics\buildings\public\ammunition_depot\ammunition_depot_bombs_ow_01.cfg</Filename>
             </Item>
           </Variations>
         </Object>
@@ -5767,7 +6091,7 @@
               <InactiveAmount>250</InactiveAmount>
             </Item>
             <Item>
-              <Product>1742100013</Product>              <!-- Military Engineers Workforce -->
+              <Product>1010117</Product>              <!-- Engineer Workforce - Product -->
               <Amount>400</Amount>
             </Item>
           </Maintenances>
@@ -5812,6 +6136,137 @@
     </Asset>
   </ModOp>
   <!-- END BOMBS AMMUNITION DEPOT -->
+
+  <!-- START SMALL BOMBS AMMUNITION DEPOT -->
+  <ModOp Type="addNextSibling" GUID='1010263'>
+    <Asset>
+      <Template>Mall</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100400</GUID>          <!-- Small Bombs Ammunition Depot - Building -->
+          <Name>Small Bombs Ammunition Depot</Name>
+          <IconFilename>data/graphics/icons/icon_bombs_ammunition_depot.png</IconFilename>
+          <InfoDescription>1742100271</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11151</BuildingCategoryName>
+        </Building>
+        <Blocking />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data\graphics\buildings\public\ammunition_depot\ammunition_depot_bombs_ow_01_small.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>10000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>20</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!-- Bricks - Product -->
+              <Amount>30</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product -->
+              <Amount>15</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Mesh />
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>Mercier_DeserterWorker</ParticipantMessageArcheType>
+        </Selection>
+        <Text />
+        <Constructable />
+        <Locked>
+          <DLCDependency>410085</DLCDependency>
+        </Locked>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>280018</Sound>
+            </Item>
+          </ActiveSounds>
+        </SoundEmitter>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>846</Product>              <!-- Bombs - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <CycleTime>300</CycleTime>
+          <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+          <ClampedMaxTransporterLogisticCost>85</ClampedMaxTransporterLogisticCost>
+        </FactoryBase>
+        <LogisticNode />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>500</Amount>
+              <InactiveAmount>250</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1010117</Product>              <!-- Engineer Workforce - Product -->
+              <Amount>400</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Industrializable>
+          <MandatoryIndustrialization>1</MandatoryIndustrialization>
+          <TransporterIndustrializationFactory>1010104</TransporterIndustrializationFactory>
+        </Industrializable>
+        <IncidentInfectable />
+        <Electrifiable />
+        <AmbientMoodProvider>
+          <Murmur>Factory</Murmur>
+        </AmbientMoodProvider>
+        <Attackable />
+        <UpgradeList />
+        <Pausable />
+        <FeedbackController />
+        <Infolayer />
+        <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742100264</ProductivityBuff>              <!-- Bombs Ammunition Buff - Buff -->
+            </Item>
+          </ProductionBuffs>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <ProductionBuffDistance>30</ProductionBuffDistance>
+          <PublicServiceData>
+            <PublicServices>
+              <Item>
+                <PublicService>1742100286</PublicService>                <!-- Ammunition (Global fake) - Product -->
+              </Item>
+            </PublicServices>
+            <FullSatisfactionDistance>1</FullSatisfactionDistance>
+            <NoSatisfactionDistance>2</NoSatisfactionDistance>
+          </PublicServiceData>
+        </BuffFactory>
+        <RecipeBuilding>
+          <RecipeList>1742100402</RecipeList>          <!-- Ammunition Depot - Recipe - List -->
+        </RecipeBuilding>
+        <Culture />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END SMALL BOMBS AMMUNITION DEPOT -->
 
   <!-- START BUILDING - DUNG COLLECTOR -->
   <ModOp Type="addNextSibling" GUID='1010284'>
@@ -5957,7 +6412,6 @@
     </Asset>
   </ModOp>
   <!-- END BUILDING - DUNG COLLECTOR -->
-
 
   <!-- START BUILDING - GUNPOWDER FACTORY -->
   <ModOp Type="addNextSibling" GUID='1010284'>
@@ -6593,5 +7047,1909 @@
     </Asset>
   </ModOp>
   <!-- END MODULE HORSE TRAINING GROUND -->
+
+  <!-- START BUILDING - GALENA MINE -->
+  <ModOp Type="addNextSibling" GUID='1010305'>
+    <Asset>
+      <Template>SlotFactoryBuilding7</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100407</GUID>
+          <Name>Galena Mine</Name>
+          <IconFilename>data\graphics\icons\icon_galena.png</IconFilename>
+          <InfoDescription>1742100408</InfoDescription>
+        </Standard>
+        <Building>
+          <AssociatedRegions>Moderate</AssociatedRegions>
+        </Building>
+        <Blocking/>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!--Money-->
+              <Amount>800</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!--timber-->
+              <Amount>4</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!--bricks-->
+              <Amount>5</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/production/mining_02/mining_02.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Mesh/>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>Resident_tier02_atWork</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Galena Mine</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>3724</LineID>
+        </Text>
+        <Constructable/>
+        <Locked/>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>202274</Sound>              <!--wwe_sfx_bld_mining_cart_lp-->
+            </Item>
+          </ActiveSounds>
+          <IncidentSounds>
+            <InfectedFire>
+              <Item>
+                <Sound>214659</Sound>                <!--wwe_sfx_bld_inc_burn-->
+              </Item>
+            </InfectedFire>
+          </IncidentSounds>
+          <BuildingRepaired>
+            <Item>
+              <Sound>203866</Sound>              <!--wwe_sfx_aui_bld_3d_renovate-->
+            </Item>
+          </BuildingRepaired>
+          <MaterialType>Wood</MaterialType>
+        </SoundEmitter>
+        <FeedbackController/>
+        <Infolayer/>
+        <UpgradeList/>
+        <Factory7/>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1591</Product>              <!--FakeInputMineralResource-->
+              <StorageAmount>12</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <FactoryOutputs>
+            <Item>
+              <Product>1742100433</Product>              <!--Galena - Product-->
+              <Amount>1</Amount>
+              <StorageAmount>8</StorageAmount>
+            </Item>
+          </FactoryOutputs>
+          <CycleTime>15</CycleTime>
+          <IsMainFactory>1</IsMainFactory>
+        </FactoryBase>
+        <LogisticNode/>
+        <Slot>
+          <SlotType>Iron</SlotType>
+          <WorkArea>1010543</WorkArea>          <!--mining_02_workarea (Iron)-->
+        </Slot>
+        <AmbientMoodProvider>
+          <Murmur>Mine</Murmur>
+        </AmbientMoodProvider>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>              <!--Money-->
+              <Amount>50</Amount>
+              <InactiveAmount>25</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1010115</Product>              <!--moderate workforce 2-->
+              <Amount>25</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+          <MaximumHitPoints>1500</MaximumHitPoints>
+          <SelfHealPerHealTick>4</SelfHealPerHealTick>
+        </Attackable>
+        <Pausable/>
+        <IncidentInfectable>
+          <Infectable>
+            <Illness>
+              <Escalated>0</Escalated>
+            </Illness>
+          </Infectable>
+          <Explosion>
+            <ExplosionCoreDamage>1000</ExplosionCoreDamage>
+          </Explosion>
+          <IncidentInfectionChanceFactors>
+            <Fire>
+              <DensityDistance>20</DensityDistance>
+              <FactoryProductivityFactor>0.1</FactoryProductivityFactor>
+              <FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
+            </Fire>
+            <Riot>
+              <FactoryOvertimeFactor>0.4</FactoryOvertimeFactor>
+              <FactoryUndertimeFactor>0.2</FactoryUndertimeFactor>
+              <FactoryHappinessFactor>0.2</FactoryHappinessFactor>
+              <HappinessThreshold>20</HappinessThreshold>
+            </Riot>
+            <Illness>
+              <BaseChance>1</BaseChance>
+            </Illness>
+            <Explosion>
+              <BaseChance>4</BaseChance>
+              <FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
+            </Explosion>
+          </IncidentInfectionChanceFactors>
+        </IncidentInfectable>
+        <Culture>
+          <CultureType>Culture</CultureType>
+        </Culture>
+        <Industrializable/>
+        <Electrifiable/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - GALENA MINE -->
+
+  <!-- START BUILDING - LEAD SMELTER -->
+  <ModOp Type="addNextSibling" GUID='1010297'>
+    <Asset>
+      <Template>HeavyFactoryBuilding</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100409</GUID>
+          <Name>Lead Smelter</Name>
+          <IconFilename>data\graphics\icons\icon_lead.png</IconFilename>
+          <InfoDescription>1742100410</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <AssociatedRegions>Moderate</AssociatedRegions>
+        </Building>
+        <Blocking/>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!--Money-->
+              <Amount>500</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!--timber-->
+              <Amount>4</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!--bricks-->
+              <Amount>5</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/production/heavy_02/heavy_02.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Mesh/>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>Resident_tier02_atWork</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Galena Smelter</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>5265</LineID>
+        </Text>
+        <Constructable/>
+        <Locked/>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>214813</Sound>              <!--wwe_sfx_bld_heavy_typeCluster_tag-->
+            </Item>
+            <Item>
+              <Sound>202247</Sound>              <!--wwe_sfx_bld_heavy_02_lp-->
+            </Item>
+          </ActiveSounds>
+          <ConstructionSounds>
+            <BuildSuccessful>
+              <Item>
+                <VectorElement>
+                  <InheritedIndex>0</InheritedIndex>
+                  <InheritanceMapV2>
+                    <Entry>
+                      <TemplateName>FarmBuilding</TemplateName>
+                      <Index>0</Index>
+                    </Entry>
+                    <Entry>
+                      <TemplateName>HeavyFactoryBuilding</TemplateName>
+                      <Index>0</Index>
+                    </Entry>
+                  </InheritanceMapV2>
+                </VectorElement>
+                <Sound>203830</Sound>                <!--wwe_sfx_aui_bld_place_metal-->
+              </Item>
+            </BuildSuccessful>
+          </ConstructionSounds>
+          <IncidentSounds>
+            <InfectedFire>
+              <Item>
+                <Sound>214659</Sound>                <!--wwe_sfx_bld_inc_burn-->
+              </Item>
+            </InfectedFire>
+          </IncidentSounds>
+          <BuildingRepaired>
+            <Item>
+              <Sound>203866</Sound>              <!--wwe_sfx_aui_bld_3d_renovate-->
+            </Item>
+          </BuildingRepaired>
+          <MaterialType>Metal</MaterialType>
+        </SoundEmitter>
+        <FeedbackController>
+          <UpdateMeshSequence>0</UpdateMeshSequence>
+        </FeedbackController>
+        <Infolayer/>
+        <UpgradeList/>
+        <Factory7/>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1742100433</Product>              <!--Galena - Product-->
+              <Amount>1</Amount>
+              <StorageAmount>8</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1010226</Product>              <!-- Coal - Prodcut -->
+              <Amount>1</Amount>
+              <StorageAmount>6</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <FactoryOutputs>
+            <Item>
+              <Product>1742100435</Product>              <!--Lead - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+          </FactoryOutputs>
+          <IsMainFactory>1</IsMainFactory>
+        </FactoryBase>
+        <LogisticNode/>
+        <AmbientMoodProvider>
+          <AmbientMood>IndustryHeavy</AmbientMood>
+          <Murmur>Factory</Murmur>
+        </AmbientMoodProvider>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>              <!--Money-->
+              <Amount>100</Amount>
+              <InactiveAmount>50</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1010115</Product>              <!--moderate workforce 2-->
+              <Amount>40</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+          <MaximumHitPoints>3500</MaximumHitPoints>
+          <SelfHealPerHealTick>6</SelfHealPerHealTick>
+        </Attackable>
+        <Pausable/>
+        <IncidentInfectable>
+          <Infectable>
+            <Illness>
+              <Escalated>0</Escalated>
+            </Illness>
+          </Infectable>
+          <Explosion>
+            <ExplosionCoreDamage>2000</ExplosionCoreDamage>
+          </Explosion>
+          <IncidentInfectionChanceFactors>
+            <Fire>
+              <DensityDistance>20</DensityDistance>
+              <FactoryProductivityFactor>0.1</FactoryProductivityFactor>
+              <FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
+            </Fire>
+            <Riot>
+              <FactoryOvertimeFactor>0.4</FactoryOvertimeFactor>
+              <FactoryUndertimeFactor>0.2</FactoryUndertimeFactor>
+              <FactoryHappinessFactor>0.2</FactoryHappinessFactor>
+              <HappinessThreshold>20</HappinessThreshold>
+            </Riot>
+            <Explosion>
+              <BaseChance>4</BaseChance>
+              <FactoryProductivityFactor>0.1</FactoryProductivityFactor>
+              <FactoryOvertimeFactor>0.1</FactoryOvertimeFactor>
+              <FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
+            </Explosion>
+          </IncidentInfectionChanceFactors>
+        </IncidentInfectable>
+        <Culture>
+          <HasPollution>1</HasPollution>
+        </Culture>
+        <IncidentInfluencer>
+          <Influence>
+            <Illness>
+              <Distance>10</Distance>
+            </Illness>
+          </Influence>
+        </IncidentInfluencer>
+        <Industrializable/>
+        <QuestObject/>
+        <Electrifiable/>
+        <EcoSystemProvider/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - LEAD SMELTER -->
+
+  <!-- START BUILDING - SILVER SMELTER -->
+  <ModOp Type="addNextSibling" GUID='1010263'>
+    <Asset>
+      <Template>FarmBuilding</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100451</GUID>
+          <Name>Silver Smelter</Name>
+          <IconFilename>data\ui\2kimages\main\3dicons\scenario\goods\icon_silver_smelter.png</IconFilename>
+          <InfoDescription>1742100452</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <AssociatedRegions>Moderate</AssociatedRegions>
+        </Building>
+        <Blocking />
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>400</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>4</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/production/heavy_02/heavy_02.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Mesh />
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>Resident_tier01_atWork</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Text />
+        <Constructable />
+        <Locked />
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>214800</Sound>
+            </Item>
+            <Item>
+              <Sound>206307</Sound>
+            </Item>
+          </ActiveSounds>
+          <ConstructionSounds>
+            <BuildMoveSuccess>
+              <Item>
+                <VectorElement>
+                  <InheritedIndex>0</InheritedIndex>
+                  <InheritanceMapV2>
+                    <Entry>
+                      <TemplateName>FarmBuilding</TemplateName>
+                      <Index>0</Index>
+                    </Entry>
+                  </InheritanceMapV2>
+                </VectorElement>
+                <Sound>214783</Sound>
+              </Item>
+            </BuildMoveSuccess>
+          </ConstructionSounds>
+          <IncidentSounds>
+            <InfectedFire>
+              <Item>
+                <Sound>214659</Sound>
+              </Item>
+            </InfectedFire>
+          </IncidentSounds>
+          <MaterialType>Wood</MaterialType>
+        </SoundEmitter>
+        <FeedbackController />
+        <Infolayer />
+        <UpgradeList>
+          <DefaultBuff>1742100455</DefaultBuff>          <!-- Silver Smelter Debuff - GuildhouseBuff -->
+        </UpgradeList>
+        <Factory7>
+          <IsAgriculture>0</IsAgriculture>
+        </Factory7>
+        <FactoryBase>
+          <FactoryOutputs>
+            <Item>
+              <Product>1742100437</Product>              <!-- Silver - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>20</StorageAmount>
+            </Item>
+          </FactoryOutputs>
+          <CycleTime>30</CycleTime>
+          <IsMainFactory>1</IsMainFactory>
+        </FactoryBase>
+        <LogisticNode />
+        <ModuleOwner>
+          <ModuleLimits>
+            <Main>
+              <Limit>4</Limit>
+            </Main>
+          </ModuleLimits>
+          <ConstructionOptions>
+            <Item>
+              <ModuleGUID>1742100411</ModuleGUID>              <!-- Oxidation Pools - Farmfield -->
+            </Item>
+          </ConstructionOptions>
+          <AdditionalModule>1742100453</AdditionalModule>          <!-- Silver Smelter Shed - Module -->
+          <ModuleBuildRadius>12</ModuleBuildRadius>
+          <FarmType>AnimalFarm</FarmType>
+        </ModuleOwner>
+        <AmbientMoodProvider>
+          <AmbientMood>AgricultureBuildingsEurope</AmbientMood>
+        </AmbientMoodProvider>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>30</Amount>
+              <InactiveAmount>0</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1010052</Product>
+              <Amount>50</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+          <MaximumHitPoints>1500</MaximumHitPoints>
+          <SelfHealPerHealTick>4</SelfHealPerHealTick>
+        </Attackable>
+        <IncidentInfectable>
+          <Infectable>
+            <Illness>
+              <Escalated>0</Escalated>
+            </Illness>
+            <Explosion>
+              <Base>0</Base>
+              <Escalated>0</Escalated>
+            </Explosion>
+          </Infectable>
+          <Explosion>
+            <ExplosionCoreDamage>1000</ExplosionCoreDamage>
+          </Explosion>
+          <IncidentInfectionChanceFactors>
+            <Fire>
+              <DensityFactor>0.025</DensityFactor>
+              <DensityDistance>20</DensityDistance>
+              <FactoryProductivityFactor>0.1</FactoryProductivityFactor>
+              <FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
+            </Fire>
+            <Riot>
+              <FactoryOvertimeFactor>0.4</FactoryOvertimeFactor>
+              <FactoryUndertimeFactor>0.2</FactoryUndertimeFactor>
+              <FactoryHappinessFactor>0.2</FactoryHappinessFactor>
+              <HappinessThreshold>20</HappinessThreshold>
+            </Riot>
+          </IncidentInfectionChanceFactors>
+        </IncidentInfectable>
+        <Pausable />
+        <Culture>
+          <Attractiveness>-50</Attractiveness>
+          <HasPollution>1</HasPollution>
+        </Culture>
+        <QuestObject />
+        <Industrializable>
+          <BoostedByIndustrialization>0</BoostedByIndustrialization>
+        </Industrializable>
+        <Motorizable>
+          <MotorizableType>Silo</MotorizableType>
+        </Motorizable>
+        <EcoSystemProvider />
+        <MonoCulture />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - SILVER SMELTER -->
+
+  <!-- START FIELD OXIDATION POOLS - SILVER SMELTER -->
+  <ModOp Type="addNextSibling" GUID='1010271'>
+    <Asset>
+      <Template>Farmfield</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100411</GUID>
+          <Name>Oxidation Pools</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_general_module_01.png</IconFilename>
+          <InfoDescription>1742100412</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11175</BuildingCategoryName>
+          <AssociatedRegions>Moderate</AssociatedRegions>
+        </Building>
+        <Blocking>
+          <GroundDecalAsset>0</GroundDecalAsset>
+          <GroundDecalInvisible>0</GroundDecalInvisible>
+        </Blocking>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <Amount>40</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/dlc10/graphics/buildings/production/aqua_farm_module/aqua_farm_module_colony01_01.cfg</Filename>
+            </Item>
+            <Item>
+              <Filename>data/dlc10/graphics/buildings/production/aqua_farm_module/aqua_farm_module_colony01_02.cfg</Filename>
+            </Item>
+            <Item>
+              <Filename>data/dlc10/graphics/buildings/production/aqua_farm_module/aqua_farm_module_colony01_03.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Mesh />
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+        </Selection>
+        <Text />
+        <Constructable />
+        <Locked />
+        <SoundEmitter />
+        <FeedbackController />
+        <Infolayer />
+        <BuildingModule />
+        <AmbientMoodProvider>
+          <DynamicEnvironmentType>None</DynamicEnvironmentType>
+        </AmbientMoodProvider>
+        <ModuleIrrigation />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END FIELD OXIDATION POOLS - SILVER SMELTER -->
+
+  <!-- START MODULE OXIDATION POOLS SHED - SILVER SMELTER -->
+  <ModOp Type="addNextSibling" GUID='1010271'>
+    <Asset>
+      <Template>BuffFactoryModule</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100453</GUID>
+          <Name>Silver Smelter Shed</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_silo.png</IconFilename>
+          <InfoDescription>1742100454</InfoDescription>
+        </Standard>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Silo</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>36881</LineID>
+        </Text>
+        <Building>
+          <BuildingType>BuildingModule</BuildingType>
+          <BuildingCategoryName>269960</BuildingCategoryName>
+          <SkipUnlockMessage>1</SkipUnlockMessage>
+          <AssociatedRegions>Moderate</AssociatedRegions>
+        </Building>
+        <Blocking />
+        <Mesh />
+        <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742100456</ProductivityBuff>
+            </Item>
+          </ProductionBuffs>
+        </BuffFactory>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1742100433</Product>              <!-- Galena - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1010226</Product>              <!-- Coal - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1010232</Product>              <!-- Saltpetre - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <CycleTime>60</CycleTime>
+          <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+          <ClampedMaxTransporterLogisticCost>60</ClampedMaxTransporterLogisticCost>
+        </FactoryBase>
+        <FeedbackController />
+        <Pausable />
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+        </Selection>
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+          <HasRuinState>1</HasRuinState>
+        </Attackable>
+        <Maintenance />
+        <AmbientMoodProvider />
+        <LogisticNode />
+        <Constructable />
+        <Locked />
+        <IncidentInfectable />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/production/nitrary/nitrary_shed_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>270121</Sound>
+            </Item>
+          </ActiveSounds>
+          <DestroySounds>
+            <Item>
+              <Sound>9818756</Sound>
+            </Item>
+          </DestroySounds>
+        </SoundEmitter>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>100</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>2</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <BuildingModule>
+          <ModuleType>AdditionalModule</ModuleType>
+        </BuildingModule>
+        <Infolayer />
+        <UpgradeList />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END MODULE OXIDATION POOLS SHED - SILVER SMELTER -->
+
+  <!-- START BUILDING - MINT (Empty) -->
+  <ModOp Type="addNextSibling" GUID='1010284'>
+    <Asset>
+      <Template>Multifactory</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100413</GUID>
+          <Name>Mint (Empty)</Name>
+          <IconFilename>data\ui\2kimages\main\3dicons\museum\icon_coin_rare.png</IconFilename>
+          <InfoDescription>1742100414</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>132773</BuildingCategoryName>
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <AssociatedRegions>Moderate</AssociatedRegions>
+        </Building>
+        <Blocking />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/production/workshop_06/workshop_06.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>1000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>28</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!-- Bricks - Product -->
+              <Amount>14</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product -->
+              <Amount>8</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Mesh />
+        <Selection>
+          <GUIType>Production</GUIType>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>Mercier_DeserterWorker</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Text />
+        <Constructable />
+        <Locked>
+          <DLCDependency>24962</DLCDependency>
+        </Locked>
+        <SoundEmitter />
+        <Factory7 />
+        <FactoryBase>
+          <CycleTime>60</CycleTime>
+        </FactoryBase>
+        <LogisticNode>
+          <TransporterCountMax>0</TransporterCountMax>
+        </LogisticNode>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>100</Amount>
+              <InactiveAmount>50</InactiveAmount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Industrializable />
+        <IncidentInfectable>
+          <IncidentInfectionChanceFactors>
+            <Explosion>
+              <BaseChance>0</BaseChance>
+            </Explosion>
+          </IncidentInfectionChanceFactors>
+        </IncidentInfectable>
+        <Electrifiable />
+        <AmbientMoodProvider>
+          <Murmur>Factory</Murmur>
+        </AmbientMoodProvider>
+        <Attackable />
+        <UpgradeList />
+        <Pausable>
+          <CanPauseManually>0</CanPauseManually>
+        </Pausable>
+        <FeedbackController />
+        <Infolayer />
+        <RecipeBuilding>
+          <RecipeList>1742100423</RecipeList>          <!-- Coins - Recipe - List -->
+          <IsBlank>1</IsBlank>
+        </RecipeBuilding>
+        <Culture />
+      </Values>
+    </Asset>
+    <!-- END BUILDING - MINT (Empty) -->
+
+    <!-- START BUILDING - MINT (LEAD COINS) -->
+    <Asset>
+      <Template>Multifactory</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100415</GUID>
+          <Name>Mint (Lead Coins)</Name>
+          <IconFilename>data\ui\2kimages\main\3dicons\museum\icon_lined_stone.png</IconFilename>
+          <InfoDescription>1742100416</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>132773</BuildingCategoryName>
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <AssociatedRegions>Moderate</AssociatedRegions>
+        </Building>
+        <Blocking />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/production/workshop_06/workshop_06.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>1000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>28</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!-- Bricks - Product -->
+              <Amount>14</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product -->
+              <Amount>8</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Mesh />
+        <Selection>
+          <GUIType>Production</GUIType>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>Mercier_DeserterWorker</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Text />
+        <Constructable />
+        <Locked>
+          <DLCDependency>24962</DLCDependency>
+        </Locked>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>0</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>Multifactory</TemplateName>
+                    <Index>0</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+            </Item>
+            <Item>
+              <Sound>201059</Sound>
+            </Item>
+          </ActiveSounds>
+        </SoundEmitter>
+        <Factory7 />
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1742100435</Product>              <!-- Lead - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>20</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <FactoryOutputs>
+            <Item>
+              <Product>1742100439</Product>              <!-- Lead Coins - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>20</StorageAmount>
+            </Item>
+          </FactoryOutputs>
+          <CycleTime>30</CycleTime>
+        </FactoryBase>
+        <LogisticNode />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>125</Amount>
+              <InactiveAmount>50</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1010115</Product>              <!-- Workers Workforce -->
+              <Amount>30</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Industrializable />
+        <IncidentInfectable>
+          <Explosion>
+            <DamageExplosionCheckMax>75</DamageExplosionCheckMax>
+          </Explosion>
+        </IncidentInfectable>
+        <Electrifiable />
+        <AmbientMoodProvider>
+          <Murmur>Factory</Murmur>
+        </AmbientMoodProvider>
+        <Attackable />
+        <UpgradeList />
+        <Pausable />
+        <FeedbackController />
+        <Infolayer />
+        <RecipeBuilding>
+          <RecipeList>1742100423</RecipeList>          <!-- Coins - Recipe - List -->
+        </RecipeBuilding>
+        <Culture>
+          <HasPollution>1</HasPollution>
+        </Culture>
+      </Values>
+    </Asset>
+    <!-- END BUILDING - MINT (LEAD COINS) -->
+
+    <!-- START BUILDING - MINT (BRASS COINS) -->
+    <Asset>
+      <Template>Multifactory</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100417</GUID>
+          <Name>Mint (Brass Coins)</Name>
+          <IconFilename>data\ui\2kimages\main\3dicons\museum\icon_coin_common.png</IconFilename>
+          <InfoDescription>1742100418</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>132773</BuildingCategoryName>
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <AssociatedRegions>Moderate</AssociatedRegions>
+        </Building>
+        <Blocking />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/production/workshop_06/workshop_06.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>1000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>28</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!-- Bricks - Product -->
+              <Amount>14</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product -->
+              <Amount>8</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Mesh />
+        <Selection>
+          <GUIType>Production</GUIType>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>Mercier_DeserterWorker</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Text />
+        <Constructable />
+        <Locked>
+          <DLCDependency>24962</DLCDependency>
+        </Locked>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>0</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>Multifactory</TemplateName>
+                    <Index>0</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+            </Item>
+            <Item>
+              <Sound>201059</Sound>
+            </Item>
+          </ActiveSounds>
+        </SoundEmitter>
+        <Factory7 />
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1010204</Product>              <!-- Brass - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>20</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <FactoryOutputs>
+            <Item>
+              <Product>1742100441</Product>              <!-- Brass Coins - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>20</StorageAmount>
+            </Item>
+          </FactoryOutputs>
+          <CycleTime>30</CycleTime>
+        </FactoryBase>
+        <LogisticNode />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>125</Amount>
+              <InactiveAmount>50</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1010115</Product>              <!-- Workers Workforce -->
+              <Amount>30</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Industrializable />
+        <IncidentInfectable>
+          <Explosion>
+            <DamageExplosionCheckMax>75</DamageExplosionCheckMax>
+          </Explosion>
+        </IncidentInfectable>
+        <Electrifiable />
+        <AmbientMoodProvider>
+          <Murmur>Factory</Murmur>
+        </AmbientMoodProvider>
+        <Attackable />
+        <UpgradeList />
+        <Pausable />
+        <FeedbackController />
+        <Infolayer />
+        <RecipeBuilding>
+          <RecipeList>1742100423</RecipeList>          <!-- Coins - Recipe - List -->
+        </RecipeBuilding>
+        <Culture>
+          <HasPollution>1</HasPollution>
+        </Culture>
+      </Values>
+    </Asset>
+    <!-- END BUILDING - MINT (BRASS COINS) -->
+
+    <!-- START BUILDING - MINT (SILVER COINS) -->
+    <Asset>
+      <Template>Multifactory</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100419</GUID>
+          <Name>Mint (Silver Coins)</Name>
+          <IconFilename>data\ui\2kimages\main\3dicons\scenario\goods\icon_silver_coin_good.png</IconFilename>
+          <InfoDescription>1742100420</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>132773</BuildingCategoryName>
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <AssociatedRegions>Moderate</AssociatedRegions>
+        </Building>
+        <Blocking />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/production/workshop_06/workshop_06.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>1000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>28</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!-- Bricks - Product -->
+              <Amount>14</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product -->
+              <Amount>8</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Mesh />
+        <Selection>
+          <GUIType>Production</GUIType>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>Mercier_DeserterWorker</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Text />
+        <Constructable />
+        <Locked>
+          <DLCDependency>24962</DLCDependency>
+        </Locked>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>0</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>Multifactory</TemplateName>
+                    <Index>0</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+            </Item>
+            <Item>
+              <Sound>201059</Sound>
+            </Item>
+          </ActiveSounds>
+        </SoundEmitter>
+        <Factory7 />
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1742100437</Product>              <!-- Silver - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>20</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <FactoryOutputs>
+            <Item>
+              <Product>1742100443</Product>              <!-- Silver Coins - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>20</StorageAmount>
+            </Item>
+          </FactoryOutputs>
+          <CycleTime>30</CycleTime>
+        </FactoryBase>
+        <LogisticNode />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>125</Amount>
+              <InactiveAmount>50</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1010115</Product>              <!-- Workers Workforce -->
+              <Amount>30</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Industrializable />
+        <IncidentInfectable>
+          <Explosion>
+            <DamageExplosionCheckMax>75</DamageExplosionCheckMax>
+          </Explosion>
+        </IncidentInfectable>
+        <Electrifiable />
+        <AmbientMoodProvider>
+          <Murmur>Factory</Murmur>
+        </AmbientMoodProvider>
+        <Attackable />
+        <UpgradeList />
+        <Pausable />
+        <FeedbackController />
+        <Infolayer />
+        <RecipeBuilding>
+          <RecipeList>1742100423</RecipeList>          <!-- Coins - Recipe - List -->
+        </RecipeBuilding>
+        <Culture>
+          <HasPollution>1</HasPollution>
+        </Culture>
+      </Values>
+    </Asset>
+    <!-- END BUILDING - MINT (SILVER COINS) -->
+
+    <!-- START BUILDING - MINT (GOLD COINS) -->
+    <Asset>
+      <Template>Multifactory</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100421</GUID>
+          <Name>Mint (Gold Coins)</Name>
+          <IconFilename>data\ui\2kimages\main\3dicons\museum\icon_coin_rare.png</IconFilename>
+          <InfoDescription>1742100422</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>132773</BuildingCategoryName>
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <AssociatedRegions>Moderate</AssociatedRegions>
+        </Building>
+        <Blocking />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/production/workshop_06/workshop_06.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>1000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>28</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!-- Bricks - Product -->
+              <Amount>14</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product -->
+              <Amount>8</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Mesh />
+        <Selection>
+          <GUIType>Production</GUIType>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>Mercier_DeserterWorker</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Text />
+        <Constructable />
+        <Locked>
+          <DLCDependency>24962</DLCDependency>
+        </Locked>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>0</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>Multifactory</TemplateName>
+                    <Index>0</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+            </Item>
+            <Item>
+              <Sound>201059</Sound>
+            </Item>
+          </ActiveSounds>
+        </SoundEmitter>
+        <Factory7 />
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1010249</Product>              <!-- Gold - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>20</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <FactoryOutputs>
+            <Item>
+              <Product>1742100445</Product>              <!-- Gold Coins - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>20</StorageAmount>
+            </Item>
+          </FactoryOutputs>
+          <CycleTime>30</CycleTime>
+        </FactoryBase>
+        <LogisticNode />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>125</Amount>
+              <InactiveAmount>50</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1010115</Product>              <!-- Workers Workforce -->
+              <Amount>30</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Industrializable />
+        <IncidentInfectable>
+          <Explosion>
+            <DamageExplosionCheckMax>75</DamageExplosionCheckMax>
+          </Explosion>
+        </IncidentInfectable>
+        <Electrifiable />
+        <AmbientMoodProvider>
+          <Murmur>Factory</Murmur>
+        </AmbientMoodProvider>
+        <Attackable />
+        <UpgradeList />
+        <Pausable />
+        <FeedbackController />
+        <Infolayer />
+        <RecipeBuilding>
+          <RecipeList>1742100423</RecipeList>          <!-- Coins - Recipe - List -->
+        </RecipeBuilding>
+        <Culture>
+          <HasPollution>1</HasPollution>
+        </Culture>
+      </Values>
+    </Asset>
+    <!-- END BUILDING - MINT (SILVER COINS) -->
+  </ModOp>
+
+  <!-- START BUILDING - MILITARY PRISON -->
+  <ModOp Type="addNextSibling" GUID='1010284'>
+    <Asset>
+      <Template>BuffFactoryCulture</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100457</GUID>
+          <Name>Military Prison</Name>
+          <IconFilename>data\graphics\icons\icon_military_prison.png</IconFilename>
+          <InfoDescription>1742100458</InfoDescription>
+        </Standard>
+        <Text />
+        <Building>
+          <BuildingCategoryName>100000</BuildingCategoryName>
+          <SkipUnlockMessage>1</SkipUnlockMessage>
+          <BuildModeRandomRotation>90</BuildModeRandomRotation>
+          <AssociatedRegions>Moderate</AssociatedRegions>
+          <SecondPartyRelevant>0</SecondPartyRelevant>
+        </Building>
+        <Blocking />
+        <Mesh />
+        <BuffFactory>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <BaseBuff>1742100461</BaseBuff>
+          <BaseBuffScope>Radius</BaseBuffScope>
+          <BaseBuffDistance>25</BaseBuffDistance>
+        </BuffFactory>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1010203</Product>              <!-- Soap - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1010213</Product>              <!-- Bread - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <FactoryOutputs>
+            <Item>
+              <Product>1742100466</Product>              <!-- Military Prison - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+          </FactoryOutputs>
+          <CycleTime>120</CycleTime>
+          <IsMainFactory>1</IsMainFactory>
+        </FactoryBase>
+        <FeedbackController />
+        <Pausable />
+        <Selection>
+          <ParticipantMessageArcheType>Resident_tier02_atWork</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Attackable />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>50</Amount>
+              <InactiveAmount>25</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100005</Product>              <!-- Soldiers Workforce -->
+              <Amount>50</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <AmbientMoodProvider />
+        <LogisticNode />
+        <Constructable />
+        <Locked />
+        <IncidentInfectable>
+          <Infectable>
+            <Fire>
+              <Base>1</Base>
+            </Fire>
+            <Riot>
+              <Base>1</Base>
+            </Riot>
+            <Illness>
+              <Base>1</Base>
+              <Communication>FireDefault</Communication>
+            </Illness>
+            <Explosion>
+              <Base>1</Base>
+            </Explosion>
+          </Infectable>
+          <IncidentInfectionChanceFactors>
+            <Fire>
+              <DensityFactor>0.0025</DensityFactor>
+              <DensityDistance>20</DensityDistance>
+              <FactoryProductivityFactor>0.1</FactoryProductivityFactor>
+              <FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
+            </Fire>
+          </IncidentInfectionChanceFactors>
+        </IncidentInfectable>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/military/military_prison/military_prison_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>282231</Sound>
+            </Item>
+          </ActiveSounds>
+          <DestroySounds>
+            <Item>
+              <Sound>9818756</Sound>
+            </Item>
+          </DestroySounds>
+          <ConstructionSounds>
+            <BuildSuccessful />
+            <BuildUpgrade />
+          </ConstructionSounds>
+          <ProductionSounds>
+            <UI />
+          </ProductionSounds>
+        </SoundEmitter>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <Amount>100</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Infolayer />
+        <UpgradeList />
+        <Culture>
+          <Attractiveness>-20</Attractiveness>
+        </Culture>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - MILITARY PRISON -->
+
+  <!-- START BUILDING - PROPAGANDA FACILITY -->
+  <ModOp Type="addNextSibling" GUID='1010284'>
+    <Asset>
+      <Template>BuffFactoryCulture</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100459</GUID>
+          <Name>Propaganda Facility</Name>
+          <IconFilename>data\graphics\icons\icon_propaganda_facility.png</IconFilename>
+          <InfoDescription>1742100460</InfoDescription>
+        </Standard>
+        <Text />
+        <Building>
+          <BuildingCategoryName>100000</BuildingCategoryName>
+          <SkipUnlockMessage>1</SkipUnlockMessage>
+          <BuildModeRandomRotation>90</BuildModeRandomRotation>
+          <AssociatedRegions>Moderate</AssociatedRegions>
+          <SecondPartyRelevant>0</SecondPartyRelevant>
+        </Building>
+        <Blocking />
+        <Mesh />
+        <BuffFactory>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <BaseBuff>1742100463</BaseBuff>
+          <BaseBuffScope>Radius</BaseBuffScope>
+          <BaseBuffDistance>25</BaseBuffDistance>
+        </BuffFactory>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>848</Product>              <!-- Pamphlets - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <FactoryOutputs>
+            <Item>
+              <Product>1742100465</Product>              <!-- Propaganda Facility - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+          </FactoryOutputs>
+          <CycleTime>180</CycleTime>
+          <IsMainFactory>1</IsMainFactory>
+        </FactoryBase>
+        <FeedbackController />
+        <Pausable />
+        <Selection>
+          <ParticipantMessageArcheType>Resident_tier02_atWork</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Attackable />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>50</Amount>
+              <InactiveAmount>25</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100005</Product>              <!-- Soldiers Workforce -->
+              <Amount>50</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <AmbientMoodProvider />
+        <LogisticNode />
+        <Constructable />
+        <Locked />
+        <IncidentInfectable>
+          <Infectable>
+            <Fire>
+              <Base>1</Base>
+            </Fire>
+            <Riot>
+              <Base>1</Base>
+            </Riot>
+            <Illness>
+              <Base>1</Base>
+              <Communication>FireDefault</Communication>
+            </Illness>
+            <Explosion>
+              <Base>1</Base>
+            </Explosion>
+          </Infectable>
+          <IncidentInfectionChanceFactors>
+            <Fire>
+              <DensityFactor>0.0025</DensityFactor>
+              <DensityDistance>20</DensityDistance>
+              <FactoryProductivityFactor>0.1</FactoryProductivityFactor>
+              <FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
+            </Fire>
+          </IncidentInfectionChanceFactors>
+        </IncidentInfectable>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/military/propaganda_facility/propaganda_facility_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>282231</Sound>
+            </Item>
+          </ActiveSounds>
+          <DestroySounds>
+            <Item>
+              <Sound>9818756</Sound>
+            </Item>
+          </DestroySounds>
+          <ConstructionSounds>
+            <BuildSuccessful />
+            <BuildUpgrade />
+          </ConstructionSounds>
+          <ProductionSounds>
+            <UI />
+          </ProductionSounds>
+        </SoundEmitter>4
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <Amount>100</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Infolayer />
+        <UpgradeList />
+        <Culture />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - PROPAGANDA FACILITY -->
+
+  <!-- START BUILDING - BASIC WEAPONS FACTORY -->
+  <ModOp Type="addNextSibling" GUID='1010284'>
+    <Asset>
+      <Template>HeavyFactoryBuilding</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100469</GUID>
+          <Name>Basic Weapons Factory</Name>
+          <IconFilename>data\graphics\icons\icon_basic_weapons.png</IconFilename>
+          <InfoDescription>1742100460</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <AssociatedRegions>Moderate</AssociatedRegions>
+        </Building>
+        <Blocking/>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <!--Money-->
+              <Amount>700</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>
+              <!--timber-->
+              <Amount>8</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>
+              <!--bricks-->
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>
+              <!--beams-->
+              <Amount>8</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/production/heavy_04/heavy_04.cfg</Filename>
+            </Item>
+          </Variations>
+          <Skins>
+            <DefaultSkinName>1010299</DefaultSkinName>
+            <DefaultSkinDescription>23853</DefaultSkinDescription>
+            <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>
+          </Skins>
+        </Object>
+        <Mesh/>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>Resident_tier02_atWork</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Text />
+        <Constructable/>
+        <Locked/>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>214813</Sound>
+            </Item>
+            <Item>
+              <Sound>206298</Sound>
+            </Item>
+          </ActiveSounds>
+          <ConstructionSounds>
+            <BuildSuccessful>
+              <Item>
+                <VectorElement>
+                  <InheritedIndex>0</InheritedIndex>
+                  <InheritanceMapV2>
+                    <Entry>
+                      <TemplateName>FarmBuilding</TemplateName>
+                      <Index>0</Index>
+                    </Entry>
+                    <Entry>
+                      <TemplateName>HeavyFactoryBuilding</TemplateName>
+                      <Index>0</Index>
+                    </Entry>
+                  </InheritanceMapV2>
+                </VectorElement>
+                <Sound>203830</Sound>
+              </Item>
+            </BuildSuccessful>
+          </ConstructionSounds>
+          <IncidentSounds>
+            <InfectedFire>
+              <Item>
+                <Sound>214659</Sound>
+              </Item>
+            </InfectedFire>
+          </IncidentSounds>
+          <BuildingRepaired>
+            <Item>
+              <Sound>203866</Sound>
+            </Item>
+          </BuildingRepaired>
+          <MaterialType>Metal</MaterialType>
+        </SoundEmitter>
+        <FeedbackController/>
+        <Infolayer/>
+        <UpgradeList/>
+        <Factory7/>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1010219</Product>
+              <!--steel-->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>120008</Product>
+              <!--wood-->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <FactoryOutputs>
+            <Item>
+              <Product>1742100471</Product>
+              <!--Basic Weapons-->
+              <Amount>1</Amount>
+              <StorageAmount>20</StorageAmount>
+            </Item>
+          </FactoryOutputs>
+          <CycleTime>60</CycleTime>
+          <IsMainFactory>1</IsMainFactory>
+        </FactoryBase>
+        <LogisticNode/>
+        <AmbientMoodProvider>
+          <Murmur>Factory</Murmur>
+        </AmbientMoodProvider>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <!--Money-->
+              <Amount>150</Amount>
+              <InactiveAmount>75</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1010115</Product>
+              <!--moderate workforce 2-->
+              <Amount>50</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+          <MaximumHitPoints>3500</MaximumHitPoints>
+          <SelfHealPerHealTick>6</SelfHealPerHealTick>
+        </Attackable>
+        <Pausable/>
+        <IncidentInfectable>
+          <Infectable>
+            <Illness>
+              <Escalated>0</Escalated>
+            </Illness>
+          </Infectable>
+          <Explosion>
+            <ExplosionCoreDamage>2000</ExplosionCoreDamage>
+            <DamageExplosionChance>38</DamageExplosionChance>
+            <DamageExplosionCheckMax>50</DamageExplosionCheckMax>
+          </Explosion>
+          <IncidentInfectionChanceFactors>
+            <Fire>
+              <BaseChance>10</BaseChance>
+              <DensityDistance>20</DensityDistance>
+              <FactoryProductivityFactor>0.1</FactoryProductivityFactor>
+              <FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
+            </Fire>
+            <Riot>
+              <FactoryOvertimeFactor>0.4</FactoryOvertimeFactor>
+              <FactoryUndertimeFactor>0.2</FactoryUndertimeFactor>
+              <FactoryHappinessFactor>0.2</FactoryHappinessFactor>
+              <HappinessThreshold>20</HappinessThreshold>
+            </Riot>
+            <Explosion>
+              <BaseChance>8</BaseChance>
+              <FactoryProductivityFactor>0.1</FactoryProductivityFactor>
+              <FactoryOvertimeFactor>0.1</FactoryOvertimeFactor>
+              <FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
+            </Explosion>
+          </IncidentInfectionChanceFactors>
+        </IncidentInfectable>
+        <Culture>
+          <HasPollution>1</HasPollution>
+        </Culture>
+        <IncidentInfluencer>
+          <Influence>
+            <Illness>
+              <Distance>10</Distance>
+            </Illness>
+          </Influence>
+        </IncidentInfluencer>
+        <Industrializable/>
+        <QuestObject/>
+        <Electrifiable/>
+        <EcoSystemProvider/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - BASIC WEAPONS FACTORY -->
 
 </ModOps>

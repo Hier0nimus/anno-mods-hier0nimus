@@ -4,56 +4,6 @@
 
 <ModOps>
 
-  <!-- *************************** ITEMEFFECTTARGETFPOOLS *************************** -->
-
-  <!-- START ALL MILITARY RESIDENCES TO ItemEffectTargetPool -->
-  <ModOp GUID='194019' Type="addNextSibling">
-    <Asset>
-      <Template>ItemEffectTargetPool</Template>
-      <Values>
-        <Standard>
-          <GUID>1742100019</GUID>
-          <Name>All Military Residences</Name>
-        </Standard>
-        <ItemEffectTargetPool>
-          <EffectTargetGUIDs>
-            <Item>
-              <GUID>1742100001</GUID>              <!-- Soldiers Residence - Encampment - Building -->
-            </Item>
-            <Item>
-              <GUID>1742100003</GUID>              <!-- Soldiers Residence - Barracks - Building -->
-            </Item>
-            <Item>
-              <GUID>1742100007</GUID>              <!-- Officers Residence - Building -->
-            </Item>
-            <Item>
-              <GUID>1742100011</GUID>              <!-- Military Engineers Residence - Building -->
-            </Item>
-          </EffectTargetGUIDs>
-        </ItemEffectTargetPool>
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END ALL MILITARY RESIDENCES TO ItemEffectTargetPool -->
-
-  <!-- START ALL MILITARY PRODUCTION BUILDINGS TO ItemEffectTargetPool -->
-  <ModOp GUID='194019' Type="addNextSibling">
-    <Asset>
-      <Template>ItemEffectTargetPool</Template>
-      <Values>
-        <Standard>
-          <GUID>1742100045</GUID>
-          <Name>All Military Production Buildings</Name>
-        </Standard>
-        <ItemEffectTargetPool>
-          <EffectTargetGUIDs>
-          </EffectTargetGUIDs>
-        </ItemEffectTargetPool>
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END ALL MILITARY PRODUCTION BUILDINGS TO ItemEffectTargetPool -->
-
   <!-- *************************** POLICY BUFFS *************************** -->
 
   <!-- START MH POLICY 1 - BUFF -->
@@ -70,16 +20,7 @@
         <ItemEffect>
           <EffectTargets>
             <Item>
-              <GUID>1742100001</GUID>              <!-- Soldiers Residence - Encampment - Building -->
-            </Item>
-            <Item>
-              <GUID>1742100003</GUID>              <!-- Soldiers Residence - Barracks - Building -->
-            </Item>
-            <Item>
-              <GUID>1742100007</GUID>              <!-- Officers Residence - Building -->
-            </Item>
-            <Item>
-              <GUID>1742100011</GUID>              <!-- Military Engineers Residence - Building -->
+              <GUID>1742100019</GUID>              <!-- All Military Residences - ItemEffectTargetPool -->
             </Item>
           </EffectTargets>
         </ItemEffect>
@@ -215,9 +156,6 @@
               <GUID>1742100003</GUID>              <!-- Soldiers Residence - Barracks - Building -->
             </Item>
             <Item>
-              <GUID>1742100007</GUID>              <!-- Officers Residence - Building -->
-            </Item>
-            <Item>
               <GUID>1742100011</GUID>              <!-- Military Engineers Residence - Building -->
             </Item>
           </EffectTargets>
@@ -308,16 +246,7 @@
         <ItemEffect>
           <EffectTargets>
             <Item>
-              <GUID>1742100001</GUID>              <!-- Soldiers Residence - Encampment - Building -->
-            </Item>
-            <Item>
-              <GUID>1742100003</GUID>              <!-- Soldiers Residence - Barracks - Building -->
-            </Item>
-            <Item>
-              <GUID>1742100007</GUID>              <!-- Officers Residence - Building -->
-            </Item>
-            <Item>
-              <GUID>1742100011</GUID>              <!-- Military Engineers Residence - Building -->
+              <GUID>1742100019</GUID>              <!-- All Military Residences - ItemEffectPool  -->
             </Item>
           </EffectTargets>
         </ItemEffect>
@@ -1786,5 +1715,387 @@
     </Asset>
   </ModOp>
   <!-- END NITRARY BUFF -->
+
+  <!-- START SILVER SMELTER DEBUFF -->
+  <ModOp GUID="269978" Type="addNextSibling">
+    <Asset>
+      <Template>GuildhouseBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100455</GUID>
+          <Name>Silver Smelter Debuff</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_silo.png</IconFilename>
+        </Standard>
+        <ItemEffect />
+        <Text />
+        <FactoryUpgrade>
+          <ProductivityUpgrade>
+            <Value>-1000</Value>
+            <Percental>1</Percental>
+          </ProductivityUpgrade>
+          <AdditionalOutput />
+        </FactoryUpgrade>
+        <BuildingUpgrade />
+        <Buff />
+        <CultureUpgrade />
+        <ModuleOwnerUpgrade />
+        <IncidentInfectableUpgrade />
+        <PowerplantUpgrade />
+        <IndustrializableUpgrade />
+        <ItemContainerUpgrade />
+        <IncidentInfluencerUpgrade />
+        <IrrigationUpgrade />
+        <EcoSystemProviderUpgrade />
+        <ResourceUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END SILVER SMELTER DEBUFF -->
+
+  <!-- START SILVER SMELTER BUFF -->
+  <ModOp GUID="269978" Type="addNextSibling">
+    <Asset>
+      <Template>GuildhouseBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100456</GUID>
+          <Name>Silver Smelter Shed Buff</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_silo.png</IconFilename>
+        </Standard>
+        <ItemEffect />
+        <Text />
+        <FactoryUpgrade>
+          <ProductivityUpgrade>
+            <Value>1000</Value>
+            <Percental>1</Percental>
+          </ProductivityUpgrade>
+          <AdditionalOutput />
+        </FactoryUpgrade>
+        <BuildingUpgrade />
+        <Buff />
+        <CultureUpgrade />
+        <ModuleOwnerUpgrade />
+        <IncidentInfectableUpgrade />
+        <PowerplantUpgrade />
+        <IndustrializableUpgrade />
+        <ItemContainerUpgrade />
+        <IncidentInfluencerUpgrade />
+        <IrrigationUpgrade />
+        <EcoSystemProviderUpgrade />
+        <ResourceUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END SILVER SMELTER BUFF -->
+
+  <!-- START MILITARY PRISON BUFF - BUFF -->
+  <ModOp GUID='25623' Type="addNextSibling">
+    <Asset>
+      <Template>TownhallBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100461</GUID>
+          <Name>Military Prison Buff</Name>
+          <IconFilename>data/graphics/icons/icon_military_prison.png</IconFilename>
+          <InfoDescription>1742100462</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>190041</GUID>              <!-- All Old World Residences - ItemEffectTargetPool -->
+            </Item>
+            <Item>
+              <GUID>1742100001</GUID>              <!-- Soldiers Residence - Encampment - Building -->
+            </Item>
+            <Item>
+              <GUID>1742100003</GUID>              <!-- Soldiers Residence - Barracks - Building -->
+            </Item>
+            <Item>
+              <GUID>1742100011</GUID>              <!-- Military Engineers Residence - Building -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <Text />
+        <BuildingUpgrade />
+        <Buff />
+        <PopulationUpgrade />
+        <ResidenceUpgrade>
+          <WorkforceModifierInPercent>15</WorkforceModifierInPercent>
+        </ResidenceUpgrade>
+        <IncidentInfectableUpgrade>
+          <IncidentRiotIncreaseUpgrade>
+            <Value>-2</Value>
+          </IncidentRiotIncreaseUpgrade>
+        </IncidentInfectableUpgrade>
+        <CultureUpgrade>
+          <AttractivenessUpgrade>
+            <Value>-10</Value>
+          </AttractivenessUpgrade>
+        </CultureUpgrade>
+        <InfluenceSourceUpgrade />
+        <WarehouseUpgrade />
+        <DistributionUpgrade />
+        <ItemContainerUpgrade />
+        <FactoryUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END MILITARY PRISON BUFF - BUFF -->
+
+  <!-- START PROPAGANDA FACILITY BUFF - BUFF -->
+  <ModOp GUID='25623' Type="addNextSibling">
+    <Asset>
+      <Template>TownhallBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100463</GUID>
+          <Name>Propagande Facility Buff</Name>
+          <IconFilename>data/graphics/icons/icon_propaganda_facility.png</IconFilename>
+          <InfoDescription>1742100464</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>190041</GUID>              <!-- All Old World Residences - ItemEffectTargetPool -->
+            </Item>
+            <Item>
+              <GUID>1742100001</GUID>              <!-- Soldiers Residence - Encampment - Building -->
+            </Item>
+            <Item>
+              <GUID>1742100003</GUID>              <!-- Soldiers Residence - Barracks - Building -->
+            </Item>
+            <Item>
+              <GUID>1742100011</GUID>              <!-- Military Engineers Residence - Building -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <Text />
+        <BuildingUpgrade />
+        <Buff />
+        <PopulationUpgrade />
+        <ResidenceUpgrade>
+          <AdditionalHappiness>10</AdditionalHappiness>
+          <TaxModifierInPercent>15</TaxModifierInPercent>
+          <WorkforceModifierInPercent>15</WorkforceModifierInPercent>
+        </ResidenceUpgrade>
+        <IncidentInfectableUpgrade />
+        <CultureUpgrade />
+        <InfluenceSourceUpgrade />
+        <WarehouseUpgrade />
+        <DistributionUpgrade />
+        <ItemContainerUpgrade />
+        <FactoryUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PROPAGANDA FACILITY BUFF - BUFF -->
+
+  <!-- START MILITARY LOGISTICS - BUFF -->
+  <ModOp GUID="269978" Type="addNextSibling">
+    <Asset>
+      <Template>GuildhouseBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100467</GUID>
+          <Name>Military Logistics</Name>
+          <IconFilename>data\ui\2kimages\main\3dicons\consumables\item_survey_shipscargo.png</IconFilename>
+          <InfoDescription>1742100468</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742100062</GUID>              <!-- Military Uniform Factpry - ItemEffectTargetPool -->
+            </Item>
+            <Item>
+              <GUID>1742100331</GUID>              <!-- Heated Military Uniform Factpry - ItemEffectTargetPool -->
+            </Item>
+            <Item>
+              <GUID>1742100469</GUID>              <!-- Basic Weapons Factory - ItemEffectTargetPool -->
+            </Item>
+            <Item>
+              <GUID>1010299</GUID>              <!-- Weapon Factory - ItemEffectTargetPool -->
+            </Item>
+            <Item>
+              <GUID>1010301</GUID>              <!-- Heavy Weapons Factory - Building -->
+            </Item>
+            <Item>
+              <GUID>924</GUID>              <!-- Bomb Factory - Building -->
+            </Item>
+            <Item>
+              <GUID>934</GUID>              <!-- Sea Mine Factory - Building -->
+            </Item>
+            <Item>
+              <GUID>1010300</GUID>              <!-- Dynamite Factory - Building -->
+            </Item>
+            <Item>
+              <GUID>1742100199</GUID>              <!-- Basic Ammunition Factory - Building -->
+            </Item>
+            <Item>
+              <GUID>1742100246</GUID>              <!-- Shell Ammunition Factory - Building -->
+            </Item>
+            <Item>
+              <GUID>1742100201</GUID>              <!-- Bombs Ammunition Factory - Building -->
+            </Item>
+          </EffectTargets>
+          <AllowStacking>0</AllowStacking>
+        </ItemEffect>
+        <Text />
+        <FactoryUpgrade>
+          <ProductivityUpgrade>
+            <Value>50</Value>
+            <Percental>1</Percental>
+          </ProductivityUpgrade>
+          <AdditionalOutput />
+        </FactoryUpgrade>
+        <BuildingUpgrade />
+        <Buff />
+        <CultureUpgrade />
+        <ModuleOwnerUpgrade />
+        <IncidentInfectableUpgrade />
+        <PowerplantUpgrade />
+        <IndustrializableUpgrade />
+        <ItemContainerUpgrade />
+        <IncidentInfluencerUpgrade />
+        <IrrigationUpgrade />
+        <EcoSystemProviderUpgrade />
+        <ResourceUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END MILITARY LOGISTICS - BUFF -->
+
+  <!-- START MILITARY PARADE RESIDENCE BUFF - BUFF -->
+  <ModOp GUID="141896" Type="addNextSibling">
+    <Asset>
+      <Template>FestivalBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100476</GUID>
+          <Name>Military Parade Residence Buff</Name>
+          <IconFilename>data/graphics/icons/icon_military_training_complex.png</IconFilename>
+          <InfoDescription>1742100477</InfoDescription>
+        </Standard>
+        <Text />
+        <PopulationUpgrade/>
+        <ResidenceUpgrade>
+          <AdditionalHappiness>25</AdditionalHappiness>
+          <GoodConsumptionUpgrade>
+            <Item>
+              <ProvidedNeed>1742100064</ProvidedNeed>
+              <AmountInPercent>-100</AmountInPercent>
+            </Item>
+            <Item>
+              <ProvidedNeed>1742100471</ProvidedNeed>
+              <AmountInPercent>-100</AmountInPercent>
+            </Item>
+            <Item>
+              <ProvidedNeed>1010221</ProvidedNeed>
+              <AmountInPercent>-100</AmountInPercent>
+            </Item>
+            <Item>
+              <ProvidedNeed>1010223</ProvidedNeed>
+              <AmountInPercent>-100</AmountInPercent>
+            </Item>
+          </GoodConsumptionUpgrade>
+        </ResidenceUpgrade>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742100019</GUID>
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <Buff/>
+        <CultureUpgrade/>
+        <KontorUpgrade/>
+        <AttackableUpgrade/>
+        <AttackerUpgrade/>
+        <BuildingUpgrade/>
+        <FactoryUpgrade/>
+        <PassiveTradeGoodGenUpgrade/>
+        <ShipyardUpgrade/>
+        <VisitorHarborUpgrade/>
+        <VisitorUpgrade/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END MILITARY PARADE RESIDENCE BUFF - BUFF -->
+
+  <!-- START MILITARY PARADE PRODUCTION BUFF - BUFF -->
+  <ModOp GUID="142449" Type="addNextSibling">
+    <Asset>
+      <Template>FestivalBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100478</GUID>
+          <Name>Military Parade Production Buff</Name>
+          <IconFilename>data/graphics/icons/icon_military_training_complex.png</IconFilename>
+          <InfoDescription>1742100479</InfoDescription>
+        </Standard>
+        <Text />
+        <PopulationUpgrade/>
+        <ResidenceUpgrade />
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742100062</GUID>              <!-- Military Uniform Factpry - ItemEffectTargetPool -->
+            </Item>
+            <Item>
+              <GUID>1742100331</GUID>              <!-- Heated Military Uniform Factpry - ItemEffectTargetPool -->
+            </Item>
+            <Item>
+              <GUID>1742100469</GUID>              <!-- Basic Weapons Factory - ItemEffectTargetPool -->
+            </Item>
+            <Item>
+              <GUID>1010299</GUID>              <!-- Weapon Factory - ItemEffectTargetPool -->
+            </Item>
+            <Item>
+              <GUID>1010301</GUID>              <!-- Heavy Weapons Factory - Building -->
+            </Item>
+            <Item>
+              <GUID>924</GUID>              <!-- Bomb Factory - Building -->
+            </Item>
+            <Item>
+              <GUID>934</GUID>              <!-- Sea Mine Factory - Building -->
+            </Item>
+            <Item>
+              <GUID>1010300</GUID>              <!-- Dynamite Factory - Building -->
+            </Item>
+            <Item>
+              <GUID>1742100199</GUID>              <!-- Basic Ammunition Factory - Building -->
+            </Item>
+            <Item>
+              <GUID>1742100246</GUID>              <!-- Shell Ammunition Factory - Building -->
+            </Item>
+            <Item>
+              <GUID>1742100201</GUID>              <!-- Bombs Ammunition Factory - Building -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <Buff/>
+        <CultureUpgrade/>
+        <KontorUpgrade/>
+        <AttackableUpgrade/>
+        <AttackerUpgrade/>
+        <BuildingUpgrade>
+          <WorkforceAmountUpgrade>
+            <Value>-20</Value>
+            <Percental>1</Percental>
+          </WorkforceAmountUpgrade>
+        </BuildingUpgrade>
+        <FactoryUpgrade>
+          <ProductivityUpgrade>
+            <Value>100</Value>
+            <Percental>1</Percental>
+          </ProductivityUpgrade>
+        </FactoryUpgrade>
+        <PassiveTradeGoodGenUpgrade/>
+        <ShipyardUpgrade/>
+        <VisitorHarborUpgrade/>
+        <VisitorUpgrade/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END MILITARY PARADE PRODUCTION BUFF - BUFF -->
 
 </ModOps>

@@ -26,9 +26,6 @@
               <Building>1742100001</Building>              <!-- Soldiers Residence - Encampment - Building -->
             </Item>
             <Item>
-              <Building>1742100007</Building>              <!-- Officers Residence - Building -->
-            </Item>
-            <Item>
               <Building>1742100011</Building>              <!-- Military Engineers Residence - Building -->
             </Item>
             <Item>
@@ -38,10 +35,25 @@
               <Building>1742100020</Building>              <!-- Canteen - Building -->
             </Item>
             <Item>
+              <Building>1742100473</Building>              <!-- Basic Weapons - Chain -->
+            </Item>
+            <Item>
               <Building>500145</Building>              <!-- Weapons - Chain -->
             </Item>
             <Item>
               <Building>1742100066</Building>              <!-- Military Uniforms - Chain -->
+            </Item>
+            <Item>
+              <Building>1742100447</Building>              <!-- Lead Coins - Menu Production Chain -->
+            </Item>
+            <Item>
+              <Building>1742100448</Building>              <!-- Brass Coins - Menu Production Chain -->
+            </Item>
+            <Item>
+              <Building>1742100449</Building>              <!-- Silver Coins - Menu Production Chain -->
+            </Item>
+            <Item>
+              <Building>1742100450</Building>              <!-- Gold Coins - Menu Production Chain -->
             </Item>
             <Item>
               <Building>1742100187</Building>              <!-- Cardgames - Chain -->
@@ -72,6 +84,12 @@
             </Item>
             <Item>
               <Building>1742100209</Building>              <!-- Stable - Building -->
+            </Item>
+            <Item>
+              <Building>1742100457</Building>              <!-- Military Prison - Building -->
+            </Item>
+            <Item>
+              <Building>1742100459</Building>              <!-- Propaganda Facility - Building -->
             </Item>
             <Item>
               <Building>1742100082</Building>              <!-- Military Academy - Building -->
@@ -240,6 +258,9 @@
               <Building>1742100272</Building>              <!-- Empty Ammunition Depot - Building -->
             </Item>
             <Item>
+              <Building>1742100401</Building>              <!-- Small Empty Ammunition Depot - Building -->
+            </Item>
+            <Item>
               <Building>1742100215</Building>              <!-- Mounted Guns (OW) - Defense -->
             </Item>
             <Item>
@@ -286,6 +307,9 @@
               <Building>1742100272</Building>              <!-- Empty Ammunition Depot - Building -->
             </Item>
             <Item>
+              <Building>1742100401</Building>              <!-- Small Empty Ammunition Depot - Building -->
+            </Item>
+            <Item>
               <Building>1742100356</Building>              <!-- Mounted Guns (AR) - Defense -->
             </Item>
             <Item>
@@ -329,6 +353,9 @@
               <Building>1742100272</Building>              <!-- Empty Ammunition Depot - Building -->
             </Item>
             <Item>
+              <Building>1742100401</Building>              <!-- Small Empty Ammunition Depot - Building -->
+            </Item>
+            <Item>
               <Building>1742100362</Building>              <!-- Mounted Guns (NW) - Defense -->
             </Item>
             <Item>
@@ -370,6 +397,9 @@
           <BuildingList>
             <Item>
               <Building>1742100272</Building>              <!-- Empty Ammunition Depot - Building -->
+            </Item>
+            <Item>
+              <Building>1742100401</Building>              <!-- Small Empty Ammunition Depot - Building -->
             </Item>
             <Item>
               <Building>1742100368</Building>              <!-- Mounted Guns (EN) - Defense -->
@@ -818,15 +848,12 @@
                   </Tier3>
                 </Item>
                 <Item>
-                  <Building>1010297</Building>                  <!-- Furnace - Building -->
-                  <Tier3>
+                  <Building>1742100409</Building>                  <!-- Galena Smelter - Building -->
+                  <Tier2>
                     <Item>
-                      <Building>1742100163</Building>                      <!-- Open Pit Iron Mine - Building -->
+                      <Building>1742100407</Building>                      <!-- Galena Mine - Building -->
                     </Item>
-                    <Item>
-                      <Building>1742100165</Building>                      <!-- Open Pit Coal Mine - Building -->
-                    </Item>
-                  </Tier3>
+                  </Tier2>
                 </Item>
               </Tier2>
             </Item>
@@ -910,13 +937,13 @@
               </Tier2>
             </Item>
             <Item>
-              <Building>1010297</Building>              <!-- Furnace - Building -->
+              <Building>1742100409</Building>              <!-- Galena Smelter - Building -->
               <Tier2>
                 <Item>
-                  <Building>1742100163</Building>                  <!-- Open Pit Iron Mine - Building -->
+                  <Building>1742100407</Building>                  <!-- Galena Mine - Building -->
                 </Item>
                 <Item>
-                  <Building>1742100165</Building>                  <!-- Open Pit Coal Mine - Building -->
+                  <Building>1010304</Building>                  <!-- Coal Mine - Building -->
                 </Item>
               </Tier2>
             </Item>
@@ -1034,5 +1061,183 @@
     </Asset>
   </ModOp>
   <!-- END PRODUCTION CHAIN - BOMBS AMMUNITION -->
+
+  <!-- START PRODUCTION CHAIN - LEAD COINS -->
+  <ModOp Type="addNextSibling" GUID='500091'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100447</GUID>
+          <Name>Lead Coins</Name>
+          <IconFilename>data\ui\2kimages\main\3dicons\museum\icon_lined_stone.png</IconFilename>
+          <InfoDescription>1742100304</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742100415</Building>          <!-- Mint (Lead) - Building -->
+          <Tier1>
+            <Item>
+              <Building>1742100409</Building>              <!-- Lead Smelter - Building -->
+              <Tier2>
+                <Item>
+                  <Building>1010304</Building>                  <!-- Coal Mine - Building -->
+                </Item>
+                <Item>
+                  <Building>1742100407</Building>                  <!-- Galena Mine - Building -->
+                </Item>
+              </Tier2>
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+        <Text />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PRODUCTION CHAIN - LEAD COINS -->
+
+  <!-- START PRODUCTION CHAIN - BRASS COINS -->
+  <ModOp Type="addNextSibling" GUID='500091'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100448</GUID>
+          <Name>Brass Coins</Name>
+          <IconFilename>data\ui\2kimages\main\3dicons\museum\icon_coin_common.png</IconFilename>
+          <InfoDescription>1742100304</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742100417</Building>          <!-- Mint (Brass) - Building -->
+          <Tier1>
+            <Item>
+              <Building>1010282</Building>              <!-- Brass Smelter - Building -->
+              <Tier2>
+                <Item>
+                  <Building>1010307</Building>                  <!-- Zinc Mine - Building -->
+                </Item>
+                <Item>
+                  <Building>1010308</Building>                  <!-- Copper Mine - Building -->
+                </Item>
+              </Tier2>
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+        <Text />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PRODUCTION CHAIN - BRASS COINS -->
+
+  <!-- START PRODUCTION CHAIN - SILVER COINS -->
+  <ModOp Type="addNextSibling" GUID='500091'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100449</GUID>
+          <Name>Silver Coins</Name>
+          <IconFilename>data\ui\2kimages\main\3dicons\scenario\goods\icon_silver_coin_good.png</IconFilename>
+          <InfoDescription>1742100304</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742100419</Building>          <!-- Mint (Silver) - Building -->
+          <Tier1>
+            <Item>
+              <Building>1742100451</Building>              <!-- Silver Smelter - Building -->
+              <Tier2>
+                <Item>
+                  <Building>1742100407</Building>                  <!-- Galena Mine - Building -->
+                </Item>
+                <Item>
+                  <Building>1010304</Building>                  <!-- Coal Mine - Building -->
+                </Item>
+                <Item>
+                  <Building>1010310</Building>                  <!-- Saltpetre Works - Building -->
+                </Item>
+              </Tier2>
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+        <Text />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PRODUCTION CHAIN - SILVER COINS -->
+
+  <!-- START PRODUCTION CHAIN - GOLD COINS -->
+  <ModOp Type="addNextSibling" GUID='500091'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100450</GUID>
+          <Name>Gold Coins</Name>
+          <IconFilename>data\ui\2kimages\main\3dicons\museum\icon_coin_rare.png</IconFilename>
+          <InfoDescription>1742100304</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742100421</Building>          <!-- Mint (Gold) - Building -->
+          <Tier1>
+            <Item>
+              <Building>1010327</Building>              <!-- Goldsmiths - Building -->
+              <Tier2>
+                <Item>
+                  <Building>1010304</Building>                  <!-- Coal Mine - Building -->
+                </Item>
+                <Item>
+                  <Building>101311</Building>                  <!-- Gold Mine - Building -->
+                </Item>
+              </Tier2>
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+        <Text />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PRODUCTION CHAIN - GOLD COINS -->
+
+  <!-- START PRODUCTION CHAIN - BASIC WEAPONS -->
+  <ModOp Type="addNextSibling" GUID='500091'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100473</GUID>
+          <Name>Basic Weapons Chain</Name>
+          <IconFilename>data\graphics\icons\icon_basic_weapons.png</IconFilename>
+          <InfoDescription>1742100474</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742100469</Building>          <!-- Basic Weapons Factory - Building -->
+          <Tier1>
+            <Item>
+              <Building>1010266</Building>              <!-- Lumberjack OW - Building -->
+            </Item>
+            <Item>
+              <Building>1010297</Building>              <!-- Furnace - Building -->
+              <Tier2>
+                <Item>
+                  <Building>1742100163</Building>                  <!-- Open Pit Iron Mine - Building -->
+                </Item>
+                <Item>
+                  <Building>1742100165</Building>                  <!-- Open Pit Coal Mine - Building -->
+                </Item>
+              </Tier2>
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked>
+          <DefaultLockedState>1</DefaultLockedState>
+        </Locked>
+        <Text />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PRODUCTION CHAIN - BASIC WEAPONS -->
 
 </ModOps>

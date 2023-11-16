@@ -1,0 +1,130 @@
+<!-- 
+  Festivals
+-->
+
+<ModOps>
+  <!-- ****************** START FESTIVALS ******************  -->
+
+  <!-- GUID 141893 - FestivalConfig -->
+
+  <ModOp Type="addnextSibling" GUID='20106'>
+    <Asset>
+      <Template>Text</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100475</GUID>
+          <Name>Military Parade</Name>
+          <IconFilename>data/graphics/icons/icon_military_training_complex.png</IconFilename>
+        </Standard>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Military Parade</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>28628</LineID>
+        </Text>
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- ****************** START Military Parade - Adding to FestivalTypes ******************  -->
+  <ModOp Type="add" GUID='141893' Path="Values/IncidentFestival/FestivalTypes/">
+    <MilitaryParade>
+      <StartNotification>501208</StartNotification>
+      <EndNotification>501210</EndNotification>
+      <AboutToEndNotification>501211</AboutToEndNotification>
+      <IncidentProtection>
+        <Fire>
+          <Protected>1</Protected>
+        </Fire>
+        <Riot>
+          <Protected>1</Protected>
+        </Riot>
+        <Illness>
+          <Protected>1</Protected>
+        </Illness>
+        <Explosion>
+          <Protected>1</Protected>
+        </Explosion>
+      </IncidentProtection>
+      <Effects>
+        <Item>
+          <Effect>1742100476</Effect>          <!-- Military Parade Residence Buff -->
+        </Item>
+        <Item>
+          <Effect>1742100478</Effect>          <!-- Military Parade Production Buff -->
+        </Item>
+      </Effects>
+      <FestivalName>1742100475</FestivalName>
+      <FestivalIcon>1742100475</FestivalIcon>
+      <ParadeWagons>
+        <Item>
+          <Wagon>MountedSingleGuard</Wagon>
+        </Item>
+        <Item>
+          <Wagon>MountedGuards</Wagon>
+        </Item>
+        <Item>
+          <Wagon>MountedGuards</Wagon>
+        </Item>
+        <Item>
+          <Wagon>MountedGuards</Wagon>
+        </Item>
+        <Item>
+          <Wagon>WalkingGuards</Wagon>
+        </Item>
+        <Item>
+          <Wagon>WalkingGuards</Wagon>
+        </Item>
+        <Item>
+          <Wagon>WalkingGuards</Wagon>
+        </Item>
+        <Item>
+          <Wagon>WalkingGuards</Wagon>
+        </Item>
+        <Item>
+          <Wagon>WalkingGuards</Wagon>
+        </Item>
+        <Item>
+          <Wagon>WalkingGuards</Wagon>
+        </Item>
+        <Item>
+          <Wagon>MountedGuards</Wagon>
+        </Item>
+        <Item>
+          <Wagon>MountedGuards</Wagon>
+        </Item>
+        <Item>
+          <Wagon>MountedGuards</Wagon>
+        </Item>
+        <Item>
+          <Wagon>MountedGuards</Wagon>
+        </Item>
+        <Item>
+          <Wagon>MountedGuards</Wagon>
+        </Item>
+        <Item>
+          <Wagon>MountedSingleGuard</Wagon>
+        </Item>
+      </ParadeWagons>
+      <MinParadeDistance>30</MinParadeDistance>
+      <MaxParadeDistance>50</MaxParadeDistance>
+      <ParadeSoundEvent>200735</ParadeSoundEvent>
+      <CrowdSoundEvent>200733</CrowdSoundEvent>
+      <FestivalDecoration>142997</FestivalDecoration>
+    </MilitaryParade>
+  </ModOp>
+  <!-- ****************** END Military Parade - Adding to FestivalTypes ******************  -->
+
+  <!-- ****************** START Military Parade - Adding to FestivalsPerRegion ******************  -->
+  <ModOp Type="merge" GUID="141893" Path="/Values/IncidentFestival/FestivalsPerRegion/Moderate/AllowedFestivals[not(contains(.,'     (MilitaryParade)'))]" Content="@141893/IncidentFestival/FestivalsPerRegion/Moderate/AllowedFestivals/text()">
+    <AllowedFestivals>
+      <ModOpContent/>
+;MilitaryParade</AllowedFestivals>
+  </ModOp>
+  <!-- ****************** END Military Parade - Adding to FestivalsPerRegion ******************  -->
+
+  <!-- ****************** END FESTIVALS ******************  -->
+</ModOps>
