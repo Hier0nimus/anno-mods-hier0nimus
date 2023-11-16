@@ -13,7 +13,7 @@ Feel free to contribute!
 The perfect specialists and items pack is a set of 118 specialists and items for all regions. Some buildings or items did not got the love they deserve and did not recieve a specialist or legendary streat. This mod wants to change this by giving almost every building and item a specialist or legendary variant.
 
 Current version 17.0 (27/05/2023)
-- Download on Mod.io: [https://www.nexusmods.com/anno1800/mods/270](https://mod.io/g/anno-1800/m/the-perfect-specialists-items-pack-v170)
+- Download on Mod.io: https://mod.io/g/anno-1800/m/the-perfect-specialists-items-pack-v170
 
 ## Christmas Special Christmas Trees
 
