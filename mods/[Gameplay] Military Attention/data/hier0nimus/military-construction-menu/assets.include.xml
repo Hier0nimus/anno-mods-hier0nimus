@@ -47,13 +47,7 @@
               <Building>1742100447</Building>              <!-- Lead Coins - Menu Production Chain -->
             </Item>
             <Item>
-              <Building>1742100448</Building>              <!-- Brass Coins - Menu Production Chain -->
-            </Item>
-            <Item>
               <Building>1742100449</Building>              <!-- Silver Coins - Menu Production Chain -->
-            </Item>
-            <Item>
-              <Building>1742100450</Building>              <!-- Gold Coins - Menu Production Chain -->
             </Item>
             <Item>
               <Building>1742100187</Building>              <!-- Cardgames - Chain -->
@@ -98,7 +92,7 @@
               <Building>500029</Building>              <!-- Advanced Weapons - Chain -->
             </Item>
             <Item>
-              <Building>1742100284</Building>              <!-- Fort - Building -->
+              <Building>1742100484</Building>              <!-- Fort: Preparations - Building -->
             </Item>
           </BuildingList>
           <Text />
@@ -255,9 +249,6 @@
         <ConstructionCategory>
           <BuildingList>
             <Item>
-              <Building>1742100272</Building>              <!-- Empty Ammunition Depot - Building -->
-            </Item>
-            <Item>
               <Building>1742100401</Building>              <!-- Small Empty Ammunition Depot - Building -->
             </Item>
             <Item>
@@ -280,6 +271,9 @@
             </Item>
             <Item>
               <Building>1742100221</Building>              <!-- Flak Emplacement (OW Land) - Building -->
+            </Item>
+            <Item>
+              <Building>1742100226</Building>              <!-- Large Ammunition Depot - All ammunition - Building -->
             </Item>
           </BuildingList>
           <CategoryDescription>19173</CategoryDescription>
@@ -851,7 +845,20 @@
                   <Building>1742100409</Building>                  <!-- Galena Smelter - Building -->
                   <Tier2>
                     <Item>
-                      <Building>1742100407</Building>                      <!-- Galena Mine - Building -->
+                      <Building>1742100407</Building>                      <!-- Galena Module - Building -->
+                      <Tier3>
+                        <Item>
+                          <Building>100451</Building>                          <!-- Sawmill OW - Building -->
+                          <Tier4>
+                            <Item>
+                              <Building>1010266</Building>                              <!-- Lumberjack OW - Building -->
+                            </Item>
+                          </Tier4>
+                        </Item>
+                      </Tier3>
+                    </Item>
+                    <Item>
+                      <Building>1010304</Building>                      <!-- Coal Mine - Building -->
                     </Item>
                   </Tier2>
                 </Item>
@@ -940,7 +947,17 @@
               <Building>1742100409</Building>              <!-- Galena Smelter - Building -->
               <Tier2>
                 <Item>
-                  <Building>1742100407</Building>                  <!-- Galena Mine - Building -->
+                  <Building>1742100407</Building>                  <!-- Galena Module - Building -->
+                  <Tier3>
+                    <Item>
+                      <Building>100451</Building>                      <!-- Sawmill OW - Building -->
+                      <Tier4>
+                        <Item>
+                          <Building>1010266</Building>                          <!-- Lumberjack OW - Building -->
+                        </Item>
+                      </Tier4>
+                    </Item>
+                  </Tier3>
                 </Item>
                 <Item>
                   <Building>1010304</Building>                  <!-- Coal Mine - Building -->
@@ -1070,7 +1087,7 @@
         <Standard>
           <GUID>1742100447</GUID>
           <Name>Lead Coins</Name>
-          <IconFilename>data\ui\2kimages\main\3dicons\museum\icon_lined_stone.png</IconFilename>
+          <IconFilename>data/graphics/icons/icon_coin_lead.png</IconFilename>
           <InfoDescription>1742100304</InfoDescription>
         </Standard>
         <ProductionChain>
@@ -1083,7 +1100,17 @@
                   <Building>1010304</Building>                  <!-- Coal Mine - Building -->
                 </Item>
                 <Item>
-                  <Building>1742100407</Building>                  <!-- Galena Mine - Building -->
+                  <Building>1742100407</Building>                  <!-- Galena Module - Building -->
+                  <Tier3>
+                    <Item>
+                      <Building>100451</Building>                      <!-- Sawmill OW - Building -->
+                      <Tier4>
+                        <Item>
+                          <Building>1010266</Building>                          <!-- Lumberjack OW - Building -->
+                        </Item>
+                      </Tier4>
+                    </Item>
+                  </Tier3>
                 </Item>
               </Tier2>
             </Item>
@@ -1095,40 +1122,6 @@
     </Asset>
   </ModOp>
   <!-- END PRODUCTION CHAIN - LEAD COINS -->
-
-  <!-- START PRODUCTION CHAIN - BRASS COINS -->
-  <ModOp Type="addNextSibling" GUID='500091'>
-    <Asset>
-      <Template>ProductionChain</Template>
-      <Values>
-        <Standard>
-          <GUID>1742100448</GUID>
-          <Name>Brass Coins</Name>
-          <IconFilename>data\ui\2kimages\main\3dicons\museum\icon_coin_common.png</IconFilename>
-          <InfoDescription>1742100304</InfoDescription>
-        </Standard>
-        <ProductionChain>
-          <Building>1742100417</Building>          <!-- Mint (Brass) - Building -->
-          <Tier1>
-            <Item>
-              <Building>1010282</Building>              <!-- Brass Smelter - Building -->
-              <Tier2>
-                <Item>
-                  <Building>1010307</Building>                  <!-- Zinc Mine - Building -->
-                </Item>
-                <Item>
-                  <Building>1010308</Building>                  <!-- Copper Mine - Building -->
-                </Item>
-              </Tier2>
-            </Item>
-          </Tier1>
-        </ProductionChain>
-        <Locked />
-        <Text />
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END PRODUCTION CHAIN - BRASS COINS -->
 
   <!-- START PRODUCTION CHAIN - SILVER COINS -->
   <ModOp Type="addNextSibling" GUID='500091'>
@@ -1148,7 +1141,17 @@
               <Building>1742100451</Building>              <!-- Silver Smelter - Building -->
               <Tier2>
                 <Item>
-                  <Building>1742100407</Building>                  <!-- Galena Mine - Building -->
+                  <Building>1742100407</Building>                  <!-- Galena Module - Building -->
+                  <Tier3>
+                    <Item>
+                      <Building>100451</Building>                      <!-- Sawmill OW - Building -->
+                      <Tier4>
+                        <Item>
+                          <Building>1010266</Building>                          <!-- Lumberjack OW - Building -->
+                        </Item>
+                      </Tier4>
+                    </Item>
+                  </Tier3>
                 </Item>
                 <Item>
                   <Building>1010304</Building>                  <!-- Coal Mine - Building -->
@@ -1166,40 +1169,6 @@
     </Asset>
   </ModOp>
   <!-- END PRODUCTION CHAIN - SILVER COINS -->
-
-  <!-- START PRODUCTION CHAIN - GOLD COINS -->
-  <ModOp Type="addNextSibling" GUID='500091'>
-    <Asset>
-      <Template>ProductionChain</Template>
-      <Values>
-        <Standard>
-          <GUID>1742100450</GUID>
-          <Name>Gold Coins</Name>
-          <IconFilename>data\ui\2kimages\main\3dicons\museum\icon_coin_rare.png</IconFilename>
-          <InfoDescription>1742100304</InfoDescription>
-        </Standard>
-        <ProductionChain>
-          <Building>1742100421</Building>          <!-- Mint (Gold) - Building -->
-          <Tier1>
-            <Item>
-              <Building>1010327</Building>              <!-- Goldsmiths - Building -->
-              <Tier2>
-                <Item>
-                  <Building>1010304</Building>                  <!-- Coal Mine - Building -->
-                </Item>
-                <Item>
-                  <Building>101311</Building>                  <!-- Gold Mine - Building -->
-                </Item>
-              </Tier2>
-            </Item>
-          </Tier1>
-        </ProductionChain>
-        <Locked />
-        <Text />
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END PRODUCTION CHAIN - GOLD COINS -->
 
   <!-- START PRODUCTION CHAIN - BASIC WEAPONS -->
   <ModOp Type="addNextSibling" GUID='500091'>

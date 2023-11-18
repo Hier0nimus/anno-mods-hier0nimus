@@ -145,28 +145,19 @@
     </Asset>
     <!-- END - BOMBS AMMUNITION - Recipe -->
 
-    <!-- START - AMMUNITION DEPOT (OW) - Recipelist -->
+    <!-- START - LARGE AMMUNITION DEPOT (OW) - Recipelist -->
     <Asset>
       <Template>RecipeList</Template>
       <Values>
         <Standard>
           <GUID>1742100274</GUID>
-          <Name>Ammunition Depot</Name>
+          <Name>Large Ammunition Depot</Name>
           <IconFilename>data/graphics/icons/icon_ammunition_depot.png</IconFilename>
         </Standard>
         <RecipeList>
           <Recipes>
             <Item>
-              <Recipe>1742100276</Recipe>              <!-- Basic Ammunition - Recipe -->
-            </Item>
-            <Item>
-              <Recipe>1742100278</Recipe>              <!-- Shell Ammunition - Recipe -->
-            </Item>
-            <Item>
-              <Recipe>1742100280</Recipe>              <!-- Gas Ammunition - Recipe -->
-            </Item>
-            <Item>
-              <Recipe>1742100282</Recipe>              <!-- Bombs Ammunition - Recipe -->
+              <Recipe>1742100276</Recipe>              <!-- All Ammunition - Recipe -->
             </Item>
           </Recipes>
           <RecipeListType>Factory</RecipeListType>
@@ -176,7 +167,7 @@
         <Text />
       </Values>
     </Asset>
-    <!-- END - AMMUNITION DEPOT (OW) - Recipelist -->
+    <!-- END - LARGE AMMUNITION DEPOT (OW) - Recipelist -->
 
     <!-- START - SMALL AMMUNITION DEPOT (OW) - Recipelist -->
     <Asset>
@@ -211,25 +202,38 @@
     </Asset>
     <!-- END - SMALL AMMUNITION DEPOT (OW) - Recipelist -->
 
-    <!-- START - BASIC AMMUNITION DEPOT (OW) - Recipe -->
+    <!-- START - LARGE AMMUNITION DEPOT - ALL AMMUNITION (OW) - Recipe -->
     <Asset>
       <Template>Recipe</Template>
       <Values>
         <Standard>
           <GUID>1742100276</GUID>
-          <Name>Basic Ammunition Depot</Name>
+          <Name>Large Ammunition Depot - All ammunition</Name>
           <IconFilename>data/graphics/icons/icon_basic_ammunition.png</IconFilename>
         </Standard>
         <Text />
         <Recipe>
           <RecipeBuilding>1742100226</RecipeBuilding>
-          <RecipeDescriptionText>1742100277</RecipeDescriptionText>
+          <RecipeDescriptionText>1742100275</RecipeDescriptionText>
           <RecipeImage>data/ui/2kimages/main/assets/recipebook/drop_goods_magazine/recipebook_dropgoods_bombs.png</RecipeImage>
           <RecipeIngredientUIData>
             <Item>
-              <PosX>60</PosX>
-              <PosY>70</PosY>
+              <PosY>50</PosY>
               <UICirclePointer>SouthEast</UICirclePointer>
+            </Item>
+            <Item>
+              <PosX>380</PosX>
+              <PosY>30</PosY>
+              <UICirclePointer>SouthWest</UICirclePointer>
+            </Item>
+            <Item>
+              <PosY>280</PosY>
+              <UICirclePointer>NorthEast</UICirclePointer>
+            </Item>
+            <Item>
+              <PosX>380</PosX>
+              <PosY>320</PosY>
+              <UICirclePointer>NorthWest</UICirclePointer>
             </Item>
           </RecipeIngredientUIData>
           <RecipeUnlockConditionText>135017</RecipeUnlockConditionText>
@@ -237,7 +241,7 @@
         <Locked />
       </Values>
     </Asset>
-    <!-- END - BASIC AMMUNITION DEPOT (OW) - Recipe -->
+    <!-- END - LARGE AMMUNITION DEPOT - ALL AMMUNITION (OW) - Recipe -->
 
     <!-- START - SMALL BASIC AMMUNITION DEPOT (OW) - Recipe -->
     <Asset>
@@ -267,34 +271,6 @@
     </Asset>
     <!-- END - SMALL BASIC AMMUNITION DEPOT (OW) - Recipe -->
 
-    <!-- START - SHELL AMMUNITION DEPOT (OW) - Recipe -->
-    <Asset>
-      <Template>Recipe</Template>
-      <Values>
-        <Standard>
-          <GUID>1742100278</GUID>
-          <Name>Shell Ammunition Depot</Name>
-          <IconFilename>data/graphics/icons/icon_shell_ammunition.png</IconFilename>
-        </Standard>
-        <Text />
-        <Recipe>
-          <RecipeBuilding>1742100266</RecipeBuilding>
-          <RecipeDescriptionText>1742100279</RecipeDescriptionText>
-          <RecipeImage>data/ui/2kimages/main/assets/recipebook/drop_goods_magazine/recipebook_dropgoods_bombs.png</RecipeImage>
-          <RecipeIngredientUIData>
-            <Item>
-              <PosX>60</PosX>
-              <PosY>70</PosY>
-              <UICirclePointer>SouthEast</UICirclePointer>
-            </Item>
-          </RecipeIngredientUIData>
-          <RecipeUnlockConditionText>135017</RecipeUnlockConditionText>
-        </Recipe>
-        <Locked />
-      </Values>
-    </Asset>
-    <!-- END - SHELL AMMUNITION DEPOT (OW) - Recipe -->
-
     <!-- START - SMALL SHELL AMMUNITION DEPOT (OW) - Recipe -->
     <Asset>
       <Template>Recipe</Template>
@@ -323,34 +299,6 @@
     </Asset>
     <!-- END - SMALL SHELL AMMUNITION DEPOT (OW) - Recipe -->
 
-    <!-- START - GAS AMMUNITION DEPOT (OW) - Recipe -->
-    <Asset>
-      <Template>Recipe</Template>
-      <Values>
-        <Standard>
-          <GUID>1742100280</GUID>
-          <Name>Gas Ammunition Depot</Name>
-          <IconFilename>data/graphics/icons/icon_gas_ammunition.png</IconFilename>
-        </Standard>
-        <Text />
-        <Recipe>
-          <RecipeBuilding>1742100268</RecipeBuilding>
-          <RecipeDescriptionText>1742100281</RecipeDescriptionText>
-          <RecipeImage>data/ui/2kimages/main/assets/recipebook/drop_goods_magazine/recipebook_dropgoods_bombs.png</RecipeImage>
-          <RecipeIngredientUIData>
-            <Item>
-              <PosX>60</PosX>
-              <PosY>70</PosY>
-              <UICirclePointer>SouthEast</UICirclePointer>
-            </Item>
-          </RecipeIngredientUIData>
-          <RecipeUnlockConditionText>135017</RecipeUnlockConditionText>
-        </Recipe>
-        <Locked />
-      </Values>
-    </Asset>
-    <!-- END - GAS AMMUNITION DEPOT (OW) - Recipe -->
-
     <!-- START - SMALL GAS AMMUNITION DEPOT (OW) - Recipe -->
     <Asset>
       <Template>Recipe</Template>
@@ -378,34 +326,6 @@
       </Values>
     </Asset>
     <!-- END - SMALL GAS AMMUNITION DEPOT (OW) - Recipe -->
-
-    <!-- START - BOMBS AMMUNITION DEPOT (OW) - Recipe -->
-    <Asset>
-      <Template>Recipe</Template>
-      <Values>
-        <Standard>
-          <GUID>1742100282</GUID>
-          <Name>Bombs Ammunition Depot</Name>
-          <IconFilename>data/graphics/icons/icon_bombs_ammunition.png</IconFilename>
-        </Standard>
-        <Text />
-        <Recipe>
-          <RecipeBuilding>1742100270</RecipeBuilding>
-          <RecipeDescriptionText>1742100283</RecipeDescriptionText>
-          <RecipeImage>data/ui/2kimages/main/assets/recipebook/drop_goods_magazine/recipebook_dropgoods_bombs.png</RecipeImage>
-          <RecipeIngredientUIData>
-            <Item>
-              <PosX>60</PosX>
-              <PosY>70</PosY>
-              <UICirclePointer>SouthEast</UICirclePointer>
-            </Item>
-          </RecipeIngredientUIData>
-          <RecipeUnlockConditionText>135017</RecipeUnlockConditionText>
-        </Recipe>
-        <Locked />
-      </Values>
-    </Asset>
-    <!-- END - BOMBS AMMUNITION DEPOT (OW) - Recipe -->
 
     <!-- START - SMALL BOMBS AMMUNITION DEPOT (OW) - Recipe -->
     <Asset>
@@ -442,7 +362,7 @@
         <Standard>
           <GUID>1742100423</GUID>
           <Name>Coins</Name>
-          <IconFilename>data\ui\2kimages\main\3dicons\museum\icon_coin_rare.png</IconFilename>
+          <IconFilename>data/graphics/icons/icon_coin_set.png</IconFilename>
         </Standard>
         <RecipeList>
           <Recipes>
@@ -450,13 +370,7 @@
               <Recipe>1742100425</Recipe>              <!-- Lead Coins - Recipe -->
             </Item>
             <Item>
-              <Recipe>1742100427</Recipe>              <!-- Brass Coins - Recipe -->
-            </Item>
-            <Item>
               <Recipe>1742100429</Recipe>              <!-- Silver Coins - Recipe -->
-            </Item>
-            <Item>
-              <Recipe>1742100431</Recipe>              <!-- Gold Coins - Recipe -->
             </Item>
           </Recipes>
           <RecipeListType>Factory</RecipeListType>
@@ -475,7 +389,7 @@
         <Standard>
           <GUID>1742100425</GUID>
           <Name>Lead Coins</Name>
-          <IconFilename>data\ui\2kimages\main\3dicons\museum\icon_lined_stone.png</IconFilename>
+          <IconFilename>data/graphics/icons/icon_coin_lead.png</IconFilename>
         </Standard>
         <Text />
         <Recipe>
@@ -495,34 +409,6 @@
       </Values>
     </Asset>
     <!-- END - LEAD COINS - Recipe -->
-
-    <!-- START - BRASS COINS - Recipe -->
-    <Asset>
-      <Template>Recipe</Template>
-      <Values>
-        <Standard>
-          <GUID>1742100427</GUID>
-          <Name>Brass Coins</Name>
-          <IconFilename>data\ui\2kimages\main\3dicons\museum\icon_coin_common.png</IconFilename>
-        </Standard>
-        <Text />
-        <Recipe>
-          <RecipeBuilding>1742100417</RecipeBuilding>          <!-- Mint (Brass) - Building -->
-          <RecipeDescriptionText>1742100428</RecipeDescriptionText>
-          <RecipeImage>data/ui/2kimages/main/assets/recipebook/drop_goods_magazine/recipebook_dropgoods_bombs.png</RecipeImage>
-          <RecipeIngredientUIData>
-            <Item>
-              <PosX>60</PosX>
-              <PosY>70</PosY>
-              <UICirclePointer>SouthEast</UICirclePointer>
-            </Item>
-          </RecipeIngredientUIData>
-          <RecipeUnlockConditionText>135017</RecipeUnlockConditionText>
-        </Recipe>
-        <Locked />
-      </Values>
-    </Asset>
-    <!-- END - BRASS COINS - Recipe -->
 
     <!-- START - SILVER COINS - Recipe -->
     <Asset>
@@ -551,34 +437,6 @@
       </Values>
     </Asset>
     <!-- END - SILVER COINS - Recipe -->
-
-    <!-- START - GOLD COINS - Recipe -->
-    <Asset>
-      <Template>Recipe</Template>
-      <Values>
-        <Standard>
-          <GUID>1742100431</GUID>
-          <Name>Gold Coins</Name>
-          <IconFilename>data\ui\2kimages\main\3dicons\museum\icon_coin_rare.png</IconFilename>
-        </Standard>
-        <Text />
-        <Recipe>
-          <RecipeBuilding>1742100421</RecipeBuilding>          <!-- Mint (Gold) - Building -->
-          <RecipeDescriptionText>1742100432</RecipeDescriptionText>
-          <RecipeImage>data/ui/2kimages/main/assets/recipebook/drop_goods_magazine/recipebook_dropgoods_bombs.png</RecipeImage>
-          <RecipeIngredientUIData>
-            <Item>
-              <PosX>60</PosX>
-              <PosY>70</PosY>
-              <UICirclePointer>SouthEast</UICirclePointer>
-            </Item>
-          </RecipeIngredientUIData>
-          <RecipeUnlockConditionText>135017</RecipeUnlockConditionText>
-        </Recipe>
-        <Locked />
-      </Values>
-    </Asset>
-    <!-- END - GOLD COINS - Recipe -->
 
   </ModOp>
 

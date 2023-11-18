@@ -23,5 +23,33 @@
   </ModOp>
   <!-- ****************** END Old Nate sellingprice gold reduction ******************  -->
 
+  <!-- ****************** START Add Cigarettes to luxury goods for other population ******************  -->
+  <!-- ****************** Arctic - Explorers and Technicians ******************  -->
+  <ModOp Type="add" GUID='112642,112643' Path="/Values/PopulationLevel7/PopulationInputs/">
+    <Item>
+      <Product>1742100058</Product>      <!-- Cigarettes - Product -->
+      <Amount>0.0001166667</Amount>
+      <HeatValue>5</HeatValue>
+      <FullWeightPopulationCount>100</FullWeightPopulationCount>
+      <NoWeightPopulationCount>0</NoWeightPopulationCount>
+    </Item>
+  </ModOp>
+  <!-- ****************** Old World - Workers, Artisans and Scholars ******************  -->
+  <ModOp Type="add" GUID='15000001,15000002,118745' Path="/Values/PopulationLevel7/PopulationInputs/">
+    <Item>
+      <Product>1742100058</Product>      <!-- Cigarettes - Product -->
+      <Amount>0.000233334</Amount>
+      <HappinessValue>5</HappinessValue>
+      <MoneyValue>30</MoneyValue>
+      <FullWeightPopulationCount>100</FullWeightPopulationCount>
+      <NoWeightPopulationCount>0</NoWeightPopulationCount>
+      <AdditionalGlobalUnlockRequirement>
+        <Population>15000001</Population>        <!-- Workers -->
+        <MinPopulationAmount>500</MinPopulationAmount>
+      </AdditionalGlobalUnlockRequirement>
+    </Item>
+  </ModOp>
+  <!-- ****************** END Add Cigarettes to luxury goods for other population ******************  -->
+
   <!-- ****************** END TWEAKS ******************  -->
 </ModOps>

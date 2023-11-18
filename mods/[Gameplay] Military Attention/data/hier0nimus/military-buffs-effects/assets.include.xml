@@ -419,7 +419,7 @@
               <GUID>1010295</GUID>              <!-- Cannery - Building -->
             </Item>
             <Item>
-              <GUID>1742100306</GUID>              <!-- All Sleeping Bag Factories - ItemEffectTargetPool -->
+              <GUID>1742100280</GUID>              <!-- All Sleeping Bag Factories - ItemEffectTargetPool -->
             </Item>
             <Item>
               <GUID>1742100056</GUID>              <!-- Cigarettes Factory - Building -->
@@ -1595,6 +1595,39 @@
   </ModOp>
   <!-- END BOMBS AMMUNITION BUFF -->
 
+  <!-- START ALL AMMUNITION BUFF - EFFECTCONTAINER -->
+  <ModOp GUID="269978" Type="addNextSibling">
+    <Asset>
+      <Template>EffectContainer</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100492</GUID>
+          <Name>Providing All Ammunition</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/scenario/policies_hacienda/icon_dietary_education.png</IconFilename>
+          <InfoDescription>1742100493</InfoDescription>
+        </Standard>
+        <Text />
+        <EffectContainer>
+          <Effects>
+            <Item>
+              <Effect>1742100224</Effect>
+            </Item>
+            <Item>
+              <Effect>1742100256</Effect>
+            </Item>
+            <Item>
+              <Effect>1742100260</Effect>
+            </Item>
+            <Item>
+              <Effect>1742100264</Effect>
+            </Item>
+          </Effects>
+        </EffectContainer>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END ALL AMMUNITION BUFF - EFFECTCONTAINER -->
+
   <!-- START COLLECTING DUNG BUFF -->
   <ModOp GUID="192176" Type="addNextSibling">
     <Asset>
@@ -1642,7 +1675,7 @@
       </Values>
     </Asset>
   </ModOp>
-  <!-- END BOMBS AMMUNITION BUFF -->
+  <!-- END COLLECTING DUNG BUFF -->
 
   <!-- START NITRARY DEBUFF -->
   <ModOp GUID="269978" Type="addNextSibling">
@@ -2097,5 +2130,134 @@
     </Asset>
   </ModOp>
   <!-- END MILITARY PARADE PRODUCTION BUFF - BUFF -->
+
+  <!-- START FORT HARBOUR BUFF - BUFF -->
+  <ModOp GUID="110956" Type="addNextSibling">
+    <Asset>
+      <Template>VehicleBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100480</GUID>
+          <Name>Fort Harbour Buff</Name>
+          <IconFilename>data/graphics/icons/icon_fort.png</IconFilename>
+          <InfoDescription>1742100481</InfoDescription>
+        </Standard>
+        <Text />
+        <VehicleUpgrade>
+          <ForwardSpeedUpgrade>
+            <Value>10</Value>
+            <Percental>1</Percental>
+          </ForwardSpeedUpgrade>
+          <MaintainanceUpgrade>
+            <Value>-50</Value>
+            <Percental>1</Percental>
+          </MaintainanceUpgrade>
+          <IgnoreDamageFactorUpgrade>
+            <Value>10</Value>
+            <Percental>1</Percental>
+          </IgnoreDamageFactorUpgrade>
+        </VehicleUpgrade>
+        <Buff/>
+        <AttackerUpgrade>
+          <AttackRangeUpgrade>
+            <Value>10</Value>
+            <Percental>1</Percental>
+          </AttackRangeUpgrade>
+          <BaseDamageUpgrade>
+            <Value>10</Value>
+            <Percental>1</Percental>
+          </BaseDamageUpgrade>
+          <ReloadTimeUpgrade>
+            <Value>-10</Value>
+            <Percental>1</Percental>
+          </ReloadTimeUpgrade>
+          <LineOfSightRangeUpgrade>
+            <Value>10</Value>
+            <Percental>1</Percental>
+          </LineOfSightRangeUpgrade>
+          <AttackSpeedUpgrade>100</AttackSpeedUpgrade>
+        </AttackerUpgrade>
+        <AttackableUpgrade>
+          <MaxHitpointsUpgrade>
+            <Value>1000</Value>
+          </MaxHitpointsUpgrade>
+        </AttackableUpgrade>
+        <ProjectileUpgrade/>
+        <TradeShipUpgrade>
+          <ActiveTradePriceInPercent>50</ActiveTradePriceInPercent>
+          <LoadingSpeedUpgrade>
+            <Value>20</Value>
+            <Percental>1</Percental>
+          </LoadingSpeedUpgrade>
+        </TradeShipUpgrade>
+        <UpgradeList/>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>191454</GUID>
+            </Item>
+            <Item>
+              <GUID>102492</GUID>
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <DivingBellUpgrade/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END FORT HARBOUR BUFF - BUFF -->
+
+  <!-- START GALENA MINES BUFF - BUFF -->
+  <ModOp Type="addNextSibling" GUID="25623">
+    <Asset>
+      <Template>GuildhouseBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100494</GUID>
+          <Name>Digging deeper for Galena</Name>
+          <IconFilename>data\graphics\icons\icon_galena.png</IconFilename>
+          <InfoDescription>1742100495</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1010305</GUID>
+            </Item>
+            <Item>
+              <GUID>1010308</GUID>
+            </Item>
+            <Item>
+              <GUID>1010307</GUID>
+            </Item>
+          </EffectTargets>
+          <AllowStacking>0</AllowStacking>
+        </ItemEffect>
+        <BuildingUpgrade>
+          <WorkforceAmountUpgrade>
+            <Percental>1</Percental>
+            <Value>25</Value>
+          </WorkforceAmountUpgrade>
+        </BuildingUpgrade>
+        <Buff />
+        <FactoryUpgrade>
+          <AdditionalOutput>
+            <Item>
+              <Product>1742100433</Product>
+              <Amount>1</Amount>
+              <AdditionalOutputCycle>2</AdditionalOutputCycle>
+            </Item>
+          </AdditionalOutput>
+        </FactoryUpgrade>
+        <PopulationUpgrade />
+        <ResidenceUpgrade />
+        <IncidentInfectableUpgrade />
+        <CultureUpgrade />
+        <InfluenceSourceUpgrade />
+        <DistributionUpgrade />
+        <ItemContainerUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END GALENA MINES BUFF - BUFF -->
 
 </ModOps>
