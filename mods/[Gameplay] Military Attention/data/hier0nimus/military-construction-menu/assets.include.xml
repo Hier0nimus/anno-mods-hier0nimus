@@ -10,29 +10,20 @@
       <Template>ConstructionCategory</Template>
       <Values>
         <Standard>
-          <GUID>1742100026</GUID>          <!-- Military Construction Category menu (OW) -->
+          <GUID>1742100026</GUID>          <!-- Old World Military Construction Category menu (OW) -->
           <Name>Military</Name>
           <IconFilename>data/graphics/icons/icon_menu_military_basic_0.png</IconFilename>
         </Standard>
         <ConstructionCategory>
           <BuildingList>
             <Item>
-              <Building>1742100024</Building>              <!-- Military Warehouse - Building -->
-            </Item>
-            <Item>
-              <Building>1742100028</Building>              <!-- Military Headquarters - Building -->
-            </Item>
-            <Item>
               <Building>1742100001</Building>              <!-- Soldiers Residence - Encampment - Building -->
             </Item>
             <Item>
-              <Building>1742100011</Building>              <!-- Military Engineers Residence - Building -->
-            </Item>
-            <Item>
-              <Building>1742100027</Building>              <!-- Defenses - Construction Menu (OW) -->
-            </Item>
-            <Item>
               <Building>1742100020</Building>              <!-- Canteen - Building -->
+            </Item>
+            <Item>
+              <Building>1742100066</Building>              <!-- Military Uniforms - Chain -->
             </Item>
             <Item>
               <Building>1742100473</Building>              <!-- Basic Weapons - Chain -->
@@ -41,7 +32,13 @@
               <Building>500145</Building>              <!-- Weapons - Chain -->
             </Item>
             <Item>
-              <Building>1742100066</Building>              <!-- Military Uniforms - Chain -->
+              <Building>1742100027</Building>              <!-- Defenses - Construction Menu (OW) -->
+            </Item>
+            <Item>
+              <Building>1742100028</Building>              <!-- Military Headquarters - Building -->
+            </Item>
+            <Item>
+              <Building>1742100496</Building>              <!-- Care Package Factory - Empty (OW) - Building -->
             </Item>
             <Item>
               <Building>1742100447</Building>              <!-- Lead Coins - Menu Production Chain -->
@@ -54,6 +51,12 @@
             </Item>
             <Item>
               <Building>1742100078</Building>              <!-- Recreation Centre - Building -->
+            </Item>
+            <Item>
+              <Building>1742100238</Building>              <!-- Military Workforce Office - Building -->
+            </Item>
+            <Item>
+              <Building>1742100417</Building>              <!-- Military Post Category - Building -->
             </Item>
             <Item>
               <Building>1742100299</Building>              <!-- Basic Ammunition - Chain -->
@@ -74,6 +77,9 @@
               <Building>1742100070</Building>              <!-- Sleeping Bag - Chain -->
             </Item>
             <Item>
+              <Building>1742100024</Building>              <!-- Military Warehouse - Building -->
+            </Item>
+            <Item>
               <Building>1742100348</Building>              <!-- Heated Military Uniforms - Chain -->
             </Item>
             <Item>
@@ -83,7 +89,7 @@
               <Building>1742100457</Building>              <!-- Military Prison - Building -->
             </Item>
             <Item>
-              <Building>1742100459</Building>              <!-- Propaganda Facility - Building -->
+              <Building>1742100074</Building>              <!-- Propaganda Facility - Production Chain -->
             </Item>
             <Item>
               <Building>1742100082</Building>              <!-- Military Academy - Building -->
@@ -97,7 +103,9 @@
           </BuildingList>
           <Text />
         </ConstructionCategory>
-        <Locked />
+        <Locked>
+          <DefaultLockedState>1</DefaultLockedState>
+        </Locked>
       </Values>
     </Asset>
   </ModOp>
@@ -175,7 +183,7 @@
       <Template>ConstructionCategory</Template>
       <Values>
         <Standard>
-          <GUID>1742100352</GUID>          <!-- Enbesa Military Construction Category menu (NW) -->
+          <GUID>1742100352</GUID>          <!-- Enbesa Military Construction Category menu (EN) -->
           <Name>Military</Name>
           <IconFilename>data/graphics/icons/icon_menu_military_basic_0.png</IconFilename>
         </Standard>
@@ -252,13 +260,19 @@
               <Building>1742100401</Building>              <!-- Small Empty Ammunition Depot - Building -->
             </Item>
             <Item>
+              <Building>1742100226</Building>              <!-- Large Ammunition Depot - All ammunition - Building -->
+            </Item>
+            <Item>
               <Building>1742100215</Building>              <!-- Mounted Guns (OW) - Defense -->
             </Item>
             <Item>
-              <Building>1742100216</Building>              <!-- Cannon Tower (OW) - Building -->
+              <Building>1742100217</Building>              <!-- Flak Emplacement (OW) - Building -->
             </Item>
             <Item>
-              <Building>1742100217</Building>              <!-- Flak Emplacement (OW) - Building -->
+              <Building>1742100221</Building>              <!-- Flak Emplacement (OW Land) - Building -->
+            </Item>
+            <Item>
+              <Building>1742100216</Building>              <!-- Cannon Tower (OW) - Building -->
             </Item>
             <Item>
               <Building>1742100218</Building>              <!-- Fire Tower (OW) - Building -->
@@ -268,12 +282,6 @@
             </Item>
             <Item>
               <Building>1742100220</Building>              <!-- Monster Gun (OW) - Building -->
-            </Item>
-            <Item>
-              <Building>1742100221</Building>              <!-- Flak Emplacement (OW Land) - Building -->
-            </Item>
-            <Item>
-              <Building>1742100226</Building>              <!-- Large Ammunition Depot - All ammunition - Building -->
             </Item>
           </BuildingList>
           <CategoryDescription>19173</CategoryDescription>
@@ -547,9 +555,7 @@
             </Item>
           </Tier1>
         </ProductionChain>
-        <Locked>
-          <DefaultLockedState>1</DefaultLockedState>
-        </Locked>
+        <Locked />
         <Text />
       </Values>
     </Asset>
@@ -592,9 +598,7 @@
             </Item>
           </Tier1>
         </ProductionChain>
-        <Locked>
-          <DefaultLockedState>1</DefaultLockedState>
-        </Locked>
+        <Locked />
         <Text />
       </Values>
     </Asset>
@@ -628,9 +632,7 @@
             </Item>
           </Tier1>
         </ProductionChain>
-        <Locked>
-          <DLCDependency>410071 </DLCDependency>          <!-- Land Of Lions  -->
-        </Locked>
+        <Locked />
         <Text />
       </Values>
     </Asset>
@@ -667,106 +669,43 @@
             </Item>
           </Tier1>
         </ProductionChain>
-        <Locked>
-          <DLCDependency>410042</DLCDependency>          <!-- The Passage -->
-        </Locked>
+        <Locked />
       </Values>
     </Asset>
   </ModOp>
   <!-- END PRODUCTION CHAIN - Sleeping Bags OW -->
 
-  <!-- START PRODUCTION CHAIN - Industrial Lubricant -->
-  <ModOp Type="addNextSibling" GUID='500091'>
-    <Asset>
-      <Template>ProductionChain</Template>
-      <Values>
-        <Standard>
-          <GUID>1742100072</GUID>
-          <Name>Industrial Lubricant</Name>
-          <IconFilename>data/ui/2kimages/main/3dicons/icon_industrial_lubricant_a.png</IconFilename>
-          <InfoDescription>1742100073</InfoDescription>
-        </Standard>
-        <ProductionChain>
-          <Building>1418</Building>          <!-- Industrial Oil Press - Building -->
-          <Tier1>
-            <Item>
-              <Building>101262</Building>              <!-- Fish Oil Factory - Building -->
-            </Item>
-            <Item>
-              <Building>1010310</Building>              <!-- Saltpetre Works - Building -->
-            </Item>
-          </Tier1>
-        </ProductionChain>
-        <Locked>
-          <DLCDependency>24962</DLCDependency>          <!-- Empire Of The Skies -->
-        </Locked>
-        <Text />
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END PRODUCTION CHAIN - Industrial Lubricant -->
-
-  <!-- START PRODUCTION CHAIN - Pamphlets OW -->
+  <!-- START PRODUCTION CHAIN - Propaganda Facility -->
   <ModOp Type="addNextSibling" GUID='500091'>
     <Asset>
       <Template>ProductionChain</Template>
       <Values>
         <Standard>
           <GUID>1742100074</GUID>
-          <Name>Pamphlets</Name>
-          <IconFilename>data/ui/2kimages/main/3dicons/drop_goods/icon_dropgood_pamphlets.png</IconFilename>
+          <Name>Propaganda Facility</Name>
+          <IconFilename>data\graphics\icons\icon_propaganda_facility.png</IconFilename>
           <InfoDescription>1742100075</InfoDescription>
         </Standard>
         <ProductionChain>
-          <Building>935</Building>          <!-- Pamphlet Printer - Building -->
+          <Building>1742100459</Building>          <!-- Propaganda Facility - Building -->
           <Tier1>
-            <Item>
-              <Building>1010331</Building>              <!-- Cotton Plantation - Building -->
-            </Item>
-            <Item>
-              <Building>1010266</Building>              <!-- Lumberjack OW - Building -->
-            </Item>
+            <Building>935</Building>            <!-- Pamphlet Printer - Building -->
+            <Tier2>
+              <Item>
+                <Building>1010331</Building>                <!-- Cotton Plantation - Building -->
+              </Item>
+              <Item>
+                <Building>1010266</Building>                <!-- Lumberjack OW - Building -->
+              </Item>
+            </Tier2>
           </Tier1>
         </ProductionChain>
-        <Locked>
-          <DLCDependency>24962</DLCDependency>          <!-- Empire Of The Skies -->
-        </Locked>
+        <Locked />
         <Text />
       </Values>
     </Asset>
   </ModOp>
   <!-- END PRODUCTION CHAIN - Pamphlets OW -->
-
-  <!-- START PRODUCTION CHAIN - Cables OW -->
-  <ModOp Type="addNextSibling" GUID='500091'>
-    <Asset>
-      <Template>ProductionChain</Template>
-      <Values>
-        <Standard>
-          <GUID>1742100076</GUID>
-          <Name>Cables</Name>
-          <IconFilename>data/ui/2kimages/main/3dicons/scenario/goods/icon_electric_cable_3.png</IconFilename>
-          <InfoDescription>1742100077</InfoDescription>
-        </Standard>
-        <ProductionChain>
-          <Building>6279</Building>          <!-- Cable Factory - Building -->
-          <Tier1>
-            <Item>
-              <Building>1010308</Building>              <!-- Copper Mine - Building -->
-            </Item>
-            <Item>
-              <Building>1010333</Building>              <!-- Caoutchouc Plantation - Building -->
-            </Item>
-          </Tier1>
-        </ProductionChain>
-        <Locked>
-          <DLCDependency>24963</DLCDependency>          <!-- New World Rising -->
-        </Locked>
-        <Text />
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END PRODUCTION CHAIN - Cables OW -->
 
   <!-- START PRODUCTION CHAIN - Cardgames Factory -->
   <ModOp Type="addNextSibling" GUID='500091'>
@@ -843,24 +782,24 @@
                 </Item>
                 <Item>
                   <Building>1742100409</Building>                  <!-- Galena Smelter - Building -->
-                  <Tier2>
+                  <Tier3>
                     <Item>
                       <Building>1742100407</Building>                      <!-- Galena Module - Building -->
-                      <Tier3>
+                      <Tier4>
                         <Item>
                           <Building>100451</Building>                          <!-- Sawmill OW - Building -->
-                          <Tier4>
+                          <Tier5>
                             <Item>
                               <Building>1010266</Building>                              <!-- Lumberjack OW - Building -->
                             </Item>
-                          </Tier4>
+                          </Tier5>
                         </Item>
-                      </Tier3>
+                      </Tier4>
                     </Item>
                     <Item>
-                      <Building>1010304</Building>                      <!-- Coal Mine - Building -->
+                      <Building>1742100165</Building>                      <!-- Open Pit Coal Mine - Building -->
                     </Item>
-                  </Tier2>
+                  </Tier3>
                 </Item>
               </Tier2>
             </Item>
@@ -872,43 +811,6 @@
     </Asset>
   </ModOp>
   <!-- END PRODUCTION CHAIN - Military Training Complex -->
-
-  <!-- START PRODUCTION CHAIN - GUNPOWDER -->
-  <ModOp Type="addNextSibling" GUID='500091'>
-    <Asset>
-      <Template>ProductionChain</Template>
-      <Values>
-        <Standard>
-          <GUID>1742100297</GUID>
-          <Name>Gunpowder</Name>
-          <IconFilename>data/graphics/icons/icon_gunpowder.png</IconFilename>
-          <InfoDescription>1742100298</InfoDescription>
-        </Standard>
-        <ProductionChain>
-          <Building>1742100291</Building>          <!-- Gunpowder Factory - Building -->
-          <Tier1>
-            <Item>
-              <Building>1742100165</Building>              <!-- Open Pit Coal Mine - Building -->
-            </Item>
-            <Item>
-              <Building>1742100289</Building>              <!-- Saltpetre Bed - Building -->
-              <Tier2>
-                <Item>
-                  <Building>1010266</Building>                  <!-- Lumberjack OW - Building -->
-                </Item>
-                <Item>
-                  <Building>1742100287</Building>                  <!-- Dung Collector - Building -->
-                </Item>
-              </Tier2>
-            </Item>
-          </Tier1>
-        </ProductionChain>
-        <Locked />
-        <Text />
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END PRODUCTION CHAIN - GUNPOWDER -->
 
   <!-- START PRODUCTION CHAIN - BASIC AMMUNITION -->
   <ModOp Type="addNextSibling" GUID='500091'>
@@ -960,7 +862,7 @@
                   </Tier3>
                 </Item>
                 <Item>
-                  <Building>1010304</Building>                  <!-- Coal Mine - Building -->
+                  <Building>1742100165</Building>                  <!-- Open Pit Coal Mine - Building -->
                 </Item>
               </Tier2>
             </Item>
@@ -1097,7 +999,7 @@
               <Building>1742100409</Building>              <!-- Lead Smelter - Building -->
               <Tier2>
                 <Item>
-                  <Building>1010304</Building>                  <!-- Coal Mine - Building -->
+                  <Building>1742100165</Building>                  <!-- Open Pit Coal Mine - Building -->
                 </Item>
                 <Item>
                   <Building>1742100407</Building>                  <!-- Galena Module - Building -->
@@ -1154,7 +1056,7 @@
                   </Tier3>
                 </Item>
                 <Item>
-                  <Building>1010304</Building>                  <!-- Coal Mine - Building -->
+                  <Building>1742100165</Building>                  <!-- Open Pit Coal Mine - Building -->
                 </Item>
                 <Item>
                   <Building>1010310</Building>                  <!-- Saltpetre Works - Building -->
@@ -1208,5 +1110,34 @@
     </Asset>
   </ModOp>
   <!-- END PRODUCTION CHAIN - BASIC WEAPONS -->
+
+  <!-- START POST CHAIN -->
+  <ModOp Type="addNextSibling" GUID='500091'>
+    <Asset>
+      <Template>ConstructionCategory</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100417</GUID>
+          <Name>Military Post Chain</Name>
+          <IconFilename>data\graphics\icons\icon_military_postoffice.png</IconFilename>
+          <InfoDescription>1742100418</InfoDescription>
+        </Standard>
+        <ConstructionCategory>
+          <BuildingList>
+            <Item>
+              <Building>1742100007</Building>              <!-- Military Post Box - Building -->
+            </Item>
+            <Item>
+              <Building>1742100284</Building>              <!-- Military Post Office - Building -->
+            </Item>
+          </BuildingList>
+          <CategoryDescription>1742100418</CategoryDescription>
+        </ConstructionCategory>
+        <Text />
+        <Locked />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END POST CHAIN -->
 
 </ModOps>

@@ -18,10 +18,6 @@
           <PopulationInputs>
             <!-- BASIC PRODUCTS-->
             <Item>
-              <Product>1742100030</Product>              <!-- Military Headquarters - Product -->
-              <SupplyWeight>5</SupplyWeight>
-            </Item>
-            <Item>
               <Product>1742100022</Product>              <!-- Canteen - Product -->
               <SupplyWeight>5</SupplyWeight>
             </Item>
@@ -33,7 +29,7 @@
               <NoWeightPopulationCount>0</NoWeightPopulationCount>
               <AdditionalGlobalUnlockRequirement>
                 <Population>15000001</Population>
-                <MinPopulationAmount>500</MinPopulationAmount>
+                <MinPopulationAmount>300</MinPopulationAmount>
               </AdditionalGlobalUnlockRequirement>
             </Item>
             <Item>
@@ -70,22 +66,10 @@
               </AdditionalGlobalUnlockRequirement>
             </Item>
             <Item>
-              <Product>1010238</Product>              <!-- Sausages - Product -->
-              <Amount>0.000333334</Amount>
-              <SupplyWeight>2</SupplyWeight>
-              <FullWeightPopulationCount>100</FullWeightPopulationCount>
-              <NoWeightPopulationCount>0</NoWeightPopulationCount>
-              <AdditionalGlobalUnlockRequirement>
-                <Population>15000001</Population>
-                <MinPopulationAmount>500</MinPopulationAmount>
-              </AdditionalGlobalUnlockRequirement>
-              <RequiredFloorLevel>1</RequiredFloorLevel>
-            </Item>
-            <Item>
               <Product>1742100439</Product>              <!-- Lead Coins - Product -->
               <Amount>0.000233334</Amount>
               <SupplyWeight>2</SupplyWeight>
-              <MoneyValue>50</MoneyValue>
+              <MoneyValue>60</MoneyValue>
               <FullWeightPopulationCount>100</FullWeightPopulationCount>
               <NoWeightPopulationCount>0</NoWeightPopulationCount>
               <AdditionalGlobalUnlockRequirement>
@@ -97,8 +81,32 @@
               <Product>1742100191</Product>              <!-- Military Training Complex - Product -->
               <SupplyWeight>5</SupplyWeight>
               <AdditionalGlobalUnlockRequirement>
-                <Population>1742100000</Population>                <!-- Soldiers -->
-                <MinPopulationAmount>600</MinPopulationAmount>
+                <Population>15000001</Population>
+                <MinPopulationAmount>500</MinPopulationAmount>
+              </AdditionalGlobalUnlockRequirement>
+            </Item>
+            <Item>
+              <Product>1010193</Product>              <!-- Beef - Product -->
+              <Amount>0.000333334</Amount>
+              <SupplyWeight>2</SupplyWeight>
+              <FullWeightPopulationCount>100</FullWeightPopulationCount>
+              <NoWeightPopulationCount>0</NoWeightPopulationCount>
+              <AdditionalGlobalUnlockRequirement>
+                <Population>15000001</Population>
+                <MinPopulationAmount>500</MinPopulationAmount>
+              </AdditionalGlobalUnlockRequirement>
+              <RequiredBuildings>
+                <Item>
+                  <RequiredBuilding>1742100003</RequiredBuilding>
+                </Item>
+              </RequiredBuildings>
+            </Item>
+            <Item>
+              <Product>1742100030</Product>              <!-- Military Headquarters - Product -->
+              <SupplyWeight>5</SupplyWeight>
+              <AdditionalGlobalUnlockRequirement>
+                <Population>15000002</Population>
+                <MinPopulationAmount>1</MinPopulationAmount>
               </AdditionalGlobalUnlockRequirement>
             </Item>
             <Item>
@@ -111,7 +119,11 @@
                 <Population>15000002</Population>                <!-- Artisans -->
                 <MinPopulationAmount>1</MinPopulationAmount>
               </AdditionalGlobalUnlockRequirement>
-              <RequiredFloorLevel>1</RequiredFloorLevel>
+              <RequiredBuildings>
+                <Item>
+                  <RequiredBuilding>1742100003</RequiredBuilding>
+                </Item>
+              </RequiredBuildings>
             </Item>
             <Item>
               <Product>120032</Product>              <!-- Coffee - Product -->
@@ -123,22 +135,30 @@
                 <Population>15000006</Population>                <!-- Obreros -->
                 <MinPopulationAmount>300</MinPopulationAmount>
               </AdditionalGlobalUnlockRequirement>
-              <RequiredFloorLevel>1</RequiredFloorLevel>
+              <RequiredBuildings>
+                <Item>
+                  <RequiredBuilding>1742100003</RequiredBuilding>
+                </Item>
+              </RequiredBuildings>
             </Item>
             <Item>
               <Product>1742100084</Product>              <!-- Military Academy - Product -->
-              <HappinessValue>15</HappinessValue>
+              <SupplyWeight>10</SupplyWeight>
               <AdditionalGlobalUnlockRequirement>
                 <Population>1742100000</Population>                <!-- Soldiers -->
                 <MinPopulationAmount>2000</MinPopulationAmount>
               </AdditionalGlobalUnlockRequirement>
-              <RequiredFloorLevel>1</RequiredFloorLevel>
+              <RequiredBuildings>
+                <Item>
+                  <RequiredBuilding>1742100003</RequiredBuilding>
+                </Item>
+              </RequiredBuildings>
             </Item>
             <!-- HAPPINESS NEEDS-->
             <Item>
               <Product>1010203</Product>              <!-- Soap - Product -->
-              <Amount>0.000333334</Amount>
-              <HappinessValue>5</HappinessValue>
+              <Amount>0.000233334</Amount>
+              <HappinessValue>10</HappinessValue>
               <FullWeightPopulationCount>100</FullWeightPopulationCount>
               <NoWeightPopulationCount>0</NoWeightPopulationCount>
               <AdditionalGlobalUnlockRequirement>
@@ -156,6 +176,17 @@
               </AdditionalGlobalUnlockRequirement>
             </Item>
             <Item>
+              <Product>849</Product>              <!-- Care Packages - Product -->
+              <Amount>0.0001166667</Amount>
+              <HappinessValue>20</HappinessValue>
+              <FullWeightPopulationCount>100</FullWeightPopulationCount>
+              <NoWeightPopulationCount>0</NoWeightPopulationCount>
+              <AdditionalGlobalUnlockRequirement>
+                <Population>15000002</Population>                <!-- Artisans-->
+                <MinPopulationAmount>1</MinPopulationAmount>
+              </AdditionalGlobalUnlockRequirement>
+            </Item>
+            <Item>
               <Product>1742100211</Product>              <!-- Horses - Product -->
               <Amount>0.0001166667</Amount>
               <HappinessValue>5</HappinessValue>
@@ -165,12 +196,11 @@
                 <Population>15000001</Population>                <!-- Workers -->
                 <MinPopulationAmount>500</MinPopulationAmount>
               </AdditionalGlobalUnlockRequirement>
-              <RequiredFloorLevel>1</RequiredFloorLevel>
             </Item>
             <Item>
               <Product>1742100058</Product>              <!-- Cigarettes - Product -->
               <Amount>0.000333334</Amount>
-              <HappinessValue>5</HappinessValue>
+              <HappinessValue>8</HappinessValue>
               <MoneyValue>20</MoneyValue>
               <FullWeightPopulationCount>100</FullWeightPopulationCount>
               <NoWeightPopulationCount>0</NoWeightPopulationCount>
@@ -190,10 +220,21 @@
                 <MinPopulationAmount>600</MinPopulationAmount>
               </AdditionalGlobalUnlockRequirement>
             </Item>
+            <Item>
+              <Product>5803</Product>              <!-- Soccer Balls - Product -->
+              <Amount>0.0001166667</Amount>
+              <HappinessValue>10</HappinessValue>
+              <FullWeightPopulationCount>100</FullWeightPopulationCount>
+              <NoWeightPopulationCount>0</NoWeightPopulationCount>
+              <AdditionalGlobalUnlockRequirement>
+                <Population>5403</Population>                <!-- Artista -->
+                <MinPopulationAmount>1</MinPopulationAmount>
+              </AdditionalGlobalUnlockRequirement>
+            </Item>
             <!-- MAIL-->
             <Item>
               <Product>535</Product>
-              <Amount>0.000266667</Amount>
+              <Amount>0.000166667</Amount>
               <SupplyWeight>1</SupplyWeight>
               <AdditionalGlobalUnlockRequirement>
                 <Population>15000002</Population>
@@ -204,7 +245,7 @@
             </Item>
             <Item>
               <Product>536</Product>
-              <Amount>0.000133333</Amount>
+              <Amount>0.000053333</Amount>
               <SupplyWeight>3</SupplyWeight>
               <AdditionalGlobalUnlockRequirement>
                 <Population>15000006</Population>
@@ -215,7 +256,7 @@
             </Item>
             <Item>
               <Product>2524</Product>
-              <Amount>0.00005</Amount>
+              <Amount>0.00003</Amount>
               <SupplyWeight>9</SupplyWeight>
               <AdditionalGlobalUnlockRequirement>
                 <Population>15000006</Population>
@@ -273,18 +314,6 @@
               </AdditionalGlobalUnlockRequirement>
               <IsBonusNeed>1</IsBonusNeed>
             </Item>
-            <Item>
-              <Product>849</Product>              <!-- Care Packages - Product -->
-              <Amount>0.0001166667</Amount>
-              <MoneyValue>40</MoneyValue>
-              <FullWeightPopulationCount>100</FullWeightPopulationCount>
-              <NoWeightPopulationCount>0</NoWeightPopulationCount>
-              <AdditionalGlobalUnlockRequirement>
-                <Population>15000006</Population>                <!-- Obreros -->
-                <MinPopulationAmount>600</MinPopulationAmount>
-              </AdditionalGlobalUnlockRequirement>
-              <IsBonusNeed>1</IsBonusNeed>
-            </Item>
           </PopulationInputs>
           <DefaultResidence>1742100001</DefaultResidence>          <!-- Soldiers Residence - Encampment - Building -->
           <PopulationOutputs>
@@ -334,16 +363,16 @@
             <!-- BASIC PRODUCTS-->
             <Item>
               <Product>1742100030</Product>              <!-- Military Headquarters - Product -->
-              <SupplyWeight>5</SupplyWeight>
+              <SupplyWeight>10</SupplyWeight>
             </Item>
             <Item>
               <Product>1742100022</Product>              <!-- Canteen - Product -->
-              <SupplyWeight>5</SupplyWeight>
+              <SupplyWeight>10</SupplyWeight>
             </Item>
             <Item>
               <Product>1742100064</Product>              <!-- Military Uniforms - Product -->
               <Amount>0.0008333334</Amount>
-              <SupplyWeight>2</SupplyWeight>
+              <SupplyWeight>8</SupplyWeight>
               <FullWeightPopulationCount>100</FullWeightPopulationCount>
               <NoWeightPopulationCount>0</NoWeightPopulationCount>
               <AdditionalGlobalUnlockRequirement>
@@ -354,7 +383,7 @@
             <Item>
               <Product>1010217</Product>              <!-- Canned Food - Product -->
               <Amount>0.000233334</Amount>
-              <SupplyWeight>2</SupplyWeight>
+              <SupplyWeight>4</SupplyWeight>
               <FullWeightPopulationCount>100</FullWeightPopulationCount>
               <NoWeightPopulationCount>0</NoWeightPopulationCount>
               <AdditionalGlobalUnlockRequirement>
@@ -365,19 +394,23 @@
             <Item>
               <Product>1742100443</Product>              <!-- Silver Coins - Product -->
               <Amount>0.000233334</Amount>
-              <SupplyWeight>2</SupplyWeight>
-              <MoneyValue>100</MoneyValue>
+              <SupplyWeight>4</SupplyWeight>
+              <MoneyValue>150</MoneyValue>
               <FullWeightPopulationCount>100</FullWeightPopulationCount>
               <NoWeightPopulationCount>0</NoWeightPopulationCount>
               <AdditionalGlobalUnlockRequirement>
                 <Population>15000003</Population>
-                <MinPopulationAmount>300</MinPopulationAmount>
+                <MinPopulationAmount> 500</MinPopulationAmount>
               </AdditionalGlobalUnlockRequirement>
+            </Item>
+            <Item>
+              <Product>1742100009</Product>              <!-- Military Warehouse - Product -->
+              <SupplyWeight>10</SupplyWeight>
             </Item>
             <Item>
               <Product>1010223</Product>              <!-- Advanced Weapons - Product -->
               <Amount>0.000222224</Amount>
-              <SupplyWeight>2</SupplyWeight>
+              <SupplyWeight>3</SupplyWeight>
               <FullWeightPopulationCount>100</FullWeightPopulationCount>
               <NoWeightPopulationCount>0</NoWeightPopulationCount>
               <AdditionalGlobalUnlockRequirement>
@@ -386,14 +419,45 @@
               </AdditionalGlobalUnlockRequirement>
             </Item>
             <Item>
+              <Product>120032</Product>              <!-- Coffee - Product -->
+              <Amount>0.0001166667</Amount>
+              <SupplyWeight>4</SupplyWeight>
+              <FullWeightPopulationCount>100</FullWeightPopulationCount>
+              <NoWeightPopulationCount>0</NoWeightPopulationCount>
+              <AdditionalGlobalUnlockRequirement>
+                <Population>15000006</Population>                <!-- Obreros -->
+                <MinPopulationAmount>300</MinPopulationAmount>
+              </AdditionalGlobalUnlockRequirement>
+            </Item>
+            <Item>
               <Product>1414</Product>              <!-- Industrial Lubricant - Product -->
               <Amount>0.0001166667</Amount>
-              <SupplyWeight>2</SupplyWeight>
+              <SupplyWeight>4</SupplyWeight>
               <FullWeightPopulationCount>100</FullWeightPopulationCount>
               <NoWeightPopulationCount>0</NoWeightPopulationCount>
               <AdditionalGlobalUnlockRequirement>
                 <Population>15000006</Population>                <!-- Obreros -->
                 <MinPopulationAmount>600</MinPopulationAmount>
+              </AdditionalGlobalUnlockRequirement>
+            </Item>
+            <Item>
+              <Product>6280</Product>              <!-- Cables - Product -->
+              <Amount>0.0001166667</Amount>
+              <SupplyWeight>6</SupplyWeight>
+              <FullWeightPopulationCount>100</FullWeightPopulationCount>
+              <NoWeightPopulationCount>0</NoWeightPopulationCount>
+              <AdditionalGlobalUnlockRequirement>
+                <Population>5403</Population>                <!-- Artista -->
+                <MinPopulationAmount>4000</MinPopulationAmount>
+              </AdditionalGlobalUnlockRequirement>
+            </Item>
+            <Item>
+              <Product>5393</Product>              <!-- Fire Extinguishers  - Product -->
+              <Amount>0.0001166667</Amount>
+              <SupplyWeight>2</SupplyWeight>
+              <AdditionalGlobalUnlockRequirement>
+                <Population>15000004</Population>                <!-- Investors -->
+                <MinPopulationAmount>5000</MinPopulationAmount>
               </AdditionalGlobalUnlockRequirement>
             </Item>
             <!-- HAPPINESS NEEDS-->
@@ -403,6 +467,29 @@
               <AdditionalGlobalUnlockRequirement>
                 <Population>1742100000</Population>                <!-- Soldiers -->
                 <MinPopulationAmount>300</MinPopulationAmount>
+              </AdditionalGlobalUnlockRequirement>
+            </Item>
+            <Item>
+              <Product>849</Product>              <!-- Care Packages - Product -->
+              <Amount>0.0001166667</Amount>
+              <HappinessValue>20</HappinessValue>
+              <FullWeightPopulationCount>100</FullWeightPopulationCount>
+              <NoWeightPopulationCount>0</NoWeightPopulationCount>
+              <AdditionalGlobalUnlockRequirement>
+                <Population>15000002</Population>                <!-- Artisans-->
+                <MinPopulationAmount>1</MinPopulationAmount>
+              </AdditionalGlobalUnlockRequirement>
+            </Item>
+            <Item>
+              <Product>1742100058</Product>              <!-- Cigarettes - Product -->
+              <Amount>0.000333334</Amount>
+              <HappinessValue>5</HappinessValue>
+              <MoneyValue>20</MoneyValue>
+              <FullWeightPopulationCount>100</FullWeightPopulationCount>
+              <NoWeightPopulationCount>0</NoWeightPopulationCount>
+              <AdditionalGlobalUnlockRequirement>
+                <Population>15000001</Population>                <!-- Workers -->
+                <MinPopulationAmount>500</MinPopulationAmount>
               </AdditionalGlobalUnlockRequirement>
             </Item>
             <Item>
@@ -419,33 +506,45 @@
             <Item>
               <Product>114431</Product>              <!-- Telephones - Product -->
               <Amount>0.0001166667</Amount>
-              <SupplyWeight>2</SupplyWeight>
+              <HappinessValue>5</HappinessValue>
               <FullWeightPopulationCount>100</FullWeightPopulationCount>
               <NoWeightPopulationCount>0</NoWeightPopulationCount>
               <AdditionalGlobalUnlockRequirement>
-                <Population>122785</Population>                <!-- Scholars -->
+                <Population>118745</Population>                <!-- Scholars -->
                 <MinPopulationAmount>4000</MinPopulationAmount>
               </AdditionalGlobalUnlockRequirement>
             </Item>
             <Item>
-              <Product>5393</Product>              <!-- Fire Extinguishers  - Product -->
-              <Amount>0.0001166667</Amount>
+              <Product>1010248</Product>              <!-- Gramophones - Product -->
+              <Amount>0.000133334</Amount>
               <HappinessValue>5</HappinessValue>
-              <AdditionalGlobalUnlockRequirement>
-                <Population>15000004</Population>                <!-- Investors -->
-                <MinPopulationAmount>5000</MinPopulationAmount>
-              </AdditionalGlobalUnlockRequirement>
-            </Item>
-            <Item>
-              <Product>1742100058</Product>              <!-- Cigarettes - Product -->
-              <Amount>0.000333334</Amount>
-              <HappinessValue>5</HappinessValue>
-              <MoneyValue>20</MoneyValue>
               <FullWeightPopulationCount>100</FullWeightPopulationCount>
               <NoWeightPopulationCount>0</NoWeightPopulationCount>
               <AdditionalGlobalUnlockRequirement>
-                <Population>15000001</Population>                <!-- Workers -->
-                <MinPopulationAmount>500</MinPopulationAmount>
+                <Population>15000004</Population>                <!-- Investors -->
+                <MinPopulationAmount>3000</MinPopulationAmount>
+              </AdditionalGlobalUnlockRequirement>
+            </Item>
+            <Item>
+              <Product>135234</Product>              <!-- Cognac - Product -->
+              <Amount>0.0001166667</Amount>
+              <HappinessValue>5</HappinessValue>
+              <FullWeightPopulationCount>100</FullWeightPopulationCount>
+              <NoWeightPopulationCount>0</NoWeightPopulationCount>
+              <AdditionalGlobalUnlockRequirement>
+                <Population>15000004</Population>                <!-- Investors -->
+                <MinPopulationAmount>3000</MinPopulationAmount>
+              </AdditionalGlobalUnlockRequirement>
+            </Item>
+            <Item>
+              <Product>135230</Product>              <!-- Typewriters - Product -->
+              <Amount>0.0001166667</Amount>
+              <HappinessValue>5</HappinessValue>
+              <FullWeightPopulationCount>100</FullWeightPopulationCount>
+              <NoWeightPopulationCount>0</NoWeightPopulationCount>
+              <AdditionalGlobalUnlockRequirement>
+                <Population>15000004</Population>                <!-- Engineers -->
+                <MinPopulationAmount>1000</MinPopulationAmount>
               </AdditionalGlobalUnlockRequirement>
             </Item>
             <Item>
@@ -459,7 +558,7 @@
             <!-- MAIL-->
             <Item>
               <Product>535</Product>
-              <Amount>0.000266667</Amount>
+              <Amount>0.000166667</Amount>
               <SupplyWeight>1</SupplyWeight>
               <AdditionalGlobalUnlockRequirement>
                 <Population>15000002</Population>
@@ -470,7 +569,7 @@
             </Item>
             <Item>
               <Product>536</Product>
-              <Amount>0.000133333</Amount>
+              <Amount>0.000053333</Amount>
               <SupplyWeight>3</SupplyWeight>
               <AdditionalGlobalUnlockRequirement>
                 <Population>15000006</Population>
@@ -481,7 +580,7 @@
             </Item>
             <Item>
               <Product>2524</Product>
-              <Amount>0.00005</Amount>
+              <Amount>0.00003</Amount>
               <SupplyWeight>9</SupplyWeight>
               <AdditionalGlobalUnlockRequirement>
                 <Population>15000006</Population>
@@ -504,14 +603,14 @@
               <IsBonusNeed>1</IsBonusNeed>
             </Item>
             <Item>
-              <Product>135230</Product>              <!-- Typewriters - Product -->
+              <Product>1010258</Product>              <!-- Chocolate - Product -->
               <Amount>0.0001166667</Amount>
-              <MoneyValue>70</MoneyValue>
+              <MoneyValue>60</MoneyValue>
               <FullWeightPopulationCount>100</FullWeightPopulationCount>
               <NoWeightPopulationCount>0</NoWeightPopulationCount>
               <AdditionalGlobalUnlockRequirement>
-                <Population>15000004</Population>                <!-- Engineers -->
-                <MinPopulationAmount>1000</MinPopulationAmount>
+                <Population>15000006</Population>                <!-- Obreros -->
+                <MinPopulationAmount>1500</MinPopulationAmount>
               </AdditionalGlobalUnlockRequirement>
               <IsBonusNeed>1</IsBonusNeed>
             </Item>
@@ -687,6 +786,17 @@
               <FullWeightPopulationCount>200</FullWeightPopulationCount>
               <NoWeightPopulationCount>99</NoWeightPopulationCount>
             </Item>
+            <Item>
+              <Product>849</Product>              <!-- Care Packages - Product -->
+              <Amount>0.0001166667</Amount>
+              <SupplyWeight>10</SupplyWeight>
+              <FullWeightPopulationCount>100</FullWeightPopulationCount>
+              <NoWeightPopulationCount>0</NoWeightPopulationCount>
+              <AdditionalGlobalUnlockRequirement>
+                <Population>15000002</Population>                <!-- Artisans -->
+                <MinPopulationAmount>1</MinPopulationAmount>
+              </AdditionalGlobalUnlockRequirement>
+            </Item>
             <!-- HEAT NEEDS-->
             <Item>
               <Product>120008</Product>              <!-- Wood - Product -->
@@ -728,7 +838,7 @@
             <!-- MAIL-->
             <Item>
               <Product>535</Product>
-              <Amount>0.000266667</Amount>
+              <Amount>0.000166667</Amount>
               <SupplyWeight>1</SupplyWeight>
               <AdditionalGlobalUnlockRequirement>
                 <Population>15000002</Population>
@@ -739,7 +849,7 @@
             </Item>
             <Item>
               <Product>536</Product>
-              <Amount>0.000133333</Amount>
+              <Amount>0.000053333</Amount>
               <SupplyWeight>3</SupplyWeight>
               <AdditionalGlobalUnlockRequirement>
                 <Population>15000006</Population>
@@ -750,7 +860,7 @@
             </Item>
             <Item>
               <Product>2524</Product>
-              <Amount>0.00005</Amount>
+              <Amount>0.00003</Amount>
               <SupplyWeight>9</SupplyWeight>
               <AdditionalGlobalUnlockRequirement>
                 <Population>15000006</Population>
@@ -793,18 +903,6 @@
               <AdditionalGlobalUnlockRequirement>
                 <Population>15000004</Population>                <!-- Investors - PopulationLevel7 -->
                 <MinPopulationAmount>3000</MinPopulationAmount>
-              </AdditionalGlobalUnlockRequirement>
-              <IsBonusNeed>1</IsBonusNeed>
-            </Item>
-            <Item>
-              <Product>849</Product>              <!-- Care Packages - Product -->
-              <Amount>0.0001166667</Amount>
-              <MoneyValue>40</MoneyValue>
-              <FullWeightPopulationCount>100</FullWeightPopulationCount>
-              <NoWeightPopulationCount>0</NoWeightPopulationCount>
-              <AdditionalGlobalUnlockRequirement>
-                <Population>15000006</Population>                <!-- Obreros -->
-                <MinPopulationAmount>600</MinPopulationAmount>
               </AdditionalGlobalUnlockRequirement>
               <IsBonusNeed>1</IsBonusNeed>
             </Item>
@@ -992,10 +1090,21 @@
                 <MinPopulationAmount>100</MinPopulationAmount>
               </AdditionalGlobalUnlockRequirement>
             </Item>
+            <Item>
+              <Product>849</Product>              <!-- Care Packages - Product -->
+              <Amount>0.0001166667</Amount>
+              <HappinessValue>20</HappinessValue>
+              <FullWeightPopulationCount>100</FullWeightPopulationCount>
+              <NoWeightPopulationCount>0</NoWeightPopulationCount>
+              <AdditionalGlobalUnlockRequirement>
+                <Population>15000002</Population>                <!-- Artisans-->
+                <MinPopulationAmount>1</MinPopulationAmount>
+              </AdditionalGlobalUnlockRequirement>
+            </Item>
             <!-- MAIL-->
             <Item>
               <Product>535</Product>
-              <Amount>0.000266667</Amount>
+              <Amount>0.000166667</Amount>
               <SupplyWeight>1</SupplyWeight>
               <AdditionalGlobalUnlockRequirement>
                 <Population>15000002</Population>
@@ -1006,7 +1115,7 @@
             </Item>
             <Item>
               <Product>536</Product>
-              <Amount>0.000133333</Amount>
+              <Amount>0.000053333</Amount>
               <SupplyWeight>3</SupplyWeight>
               <AdditionalGlobalUnlockRequirement>
                 <Population>15000006</Population>
@@ -1017,7 +1126,7 @@
             </Item>
             <Item>
               <Product>2524</Product>
-              <Amount>0.00005</Amount>
+              <Amount>0.00003</Amount>
               <SupplyWeight>9</SupplyWeight>
               <AdditionalGlobalUnlockRequirement>
                 <Population>15000006</Population>
@@ -1060,18 +1169,6 @@
               <AdditionalGlobalUnlockRequirement>
                 <Population>5403</Population>                <!-- Artisa - PopulationLevel7  -->
                 <MinPopulationAmount>1800</MinPopulationAmount>
-              </AdditionalGlobalUnlockRequirement>
-              <IsBonusNeed>1</IsBonusNeed>
-            </Item>
-            <Item>
-              <Product>849</Product>              <!-- Care Packages - Product -->
-              <Amount>0.0001166667</Amount>
-              <MoneyValue>40</MoneyValue>
-              <FullWeightPopulationCount>100</FullWeightPopulationCount>
-              <NoWeightPopulationCount>0</NoWeightPopulationCount>
-              <AdditionalGlobalUnlockRequirement>
-                <Population>15000006</Population>                <!-- Obreros -->
-                <MinPopulationAmount>600</MinPopulationAmount>
               </AdditionalGlobalUnlockRequirement>
               <IsBonusNeed>1</IsBonusNeed>
             </Item>
@@ -1274,11 +1371,21 @@
                 <MinPopulationAmount>300</MinPopulationAmount>
               </AdditionalGlobalUnlockRequirement>
             </Item>
-
+            <Item>
+              <Product>849</Product>              <!-- Care Packages - Product -->
+              <Amount>0.0001166667</Amount>
+              <HappinessValue>20</HappinessValue>
+              <FullWeightPopulationCount>100</FullWeightPopulationCount>
+              <NoWeightPopulationCount>0</NoWeightPopulationCount>
+              <AdditionalGlobalUnlockRequirement>
+                <Population>15000002</Population>                <!-- Artisans-->
+                <MinPopulationAmount>1</MinPopulationAmount>
+              </AdditionalGlobalUnlockRequirement>
+            </Item>
             <!-- MAIL-->
             <Item>
               <Product>535</Product>
-              <Amount>0.000266667</Amount>
+              <Amount>0.000166667</Amount>
               <SupplyWeight>1</SupplyWeight>
               <AdditionalGlobalUnlockRequirement>
                 <Population>15000002</Population>
@@ -1289,7 +1396,7 @@
             </Item>
             <Item>
               <Product>536</Product>
-              <Amount>0.000133333</Amount>
+              <Amount>0.000053333</Amount>
               <SupplyWeight>3</SupplyWeight>
               <AdditionalGlobalUnlockRequirement>
                 <Population>15000006</Population>
@@ -1300,7 +1407,7 @@
             </Item>
             <Item>
               <Product>2524</Product>
-              <Amount>0.00005</Amount>
+              <Amount>0.00003</Amount>
               <SupplyWeight>9</SupplyWeight>
               <AdditionalGlobalUnlockRequirement>
                 <Population>15000006</Population>
@@ -1343,18 +1450,6 @@
               <AdditionalGlobalUnlockRequirement>
                 <Population>5403</Population>                <!-- Artistas - PopulationLevel7 -->
                 <MinPopulationAmount>4000</MinPopulationAmount>
-              </AdditionalGlobalUnlockRequirement>
-              <IsBonusNeed>1</IsBonusNeed>
-            </Item>
-            <Item>
-              <Product>849</Product>              <!-- Care Packages - Product -->
-              <Amount>0.0001166667</Amount>
-              <MoneyValue>40</MoneyValue>
-              <FullWeightPopulationCount>100</FullWeightPopulationCount>
-              <NoWeightPopulationCount>0</NoWeightPopulationCount>
-              <AdditionalGlobalUnlockRequirement>
-                <Population>15000006</Population>                <!-- Obreros -->
-                <MinPopulationAmount>600</MinPopulationAmount>
               </AdditionalGlobalUnlockRequirement>
               <IsBonusNeed>1</IsBonusNeed>
             </Item>
@@ -1501,6 +1596,74 @@
     </Item>
   </ModOp>
   <!-- END ADD POPULATION PRODUCT WORKFORCE MENU -->
+
+  <!-- START ADD PRODUCTION BUILDINGS TO WORKFORCE MENU -->
+  <ModOp Type="add" GUID="25000087" Path="/Values/WorkforceMenu/BoostableFactories">
+    <Item>
+      <Factory>1742100054</Factory>
+    </Item>
+    <Item>
+      <Factory>1742100056</Factory>
+    </Item>
+    <Item>
+      <Factory>1742100163</Factory>
+    </Item>
+    <Item>
+      <Factory>1742100165</Factory>
+    </Item>
+    <Item>
+      <Factory>1742100183</Factory>
+    </Item>
+    <Item>
+      <Factory>1742100287</Factory>
+    </Item>
+    <Item>
+      <Factory>1742100289</Factory>
+    </Item>
+    <Item>
+      <Factory>1742100407</Factory>
+    </Item>
+    <Item>
+      <Factory>1742100409</Factory>
+    </Item>
+    <Item>
+      <Factory>1742100415</Factory>
+    </Item>
+    <Item>
+      <Factory>1742100419</Factory>
+    </Item>
+    <Item>
+      <Factory>1742100451</Factory>
+    </Item>
+    <Item>
+      <Factory>1742100062</Factory>
+    </Item>
+    <Item>
+      <Factory>1742100068</Factory>
+    </Item>
+    <Item>
+      <Factory>1742100209</Factory>
+    </Item>
+    <Item>
+      <Factory>1742100291</Factory>
+    </Item>
+    <Item>
+      <Factory>1742100331</Factory>
+    </Item>
+    <Item>
+      <Factory>1742100469</Factory>
+    </Item>
+    <Item>
+      <Factory>1742100199</Factory>
+    </Item>
+    <Item>
+      <Factory>1742100246</Factory>
+    </Item>
+    <Item>
+      <Factory>1742100201</Factory>
+    </Item>
+  </ModOp>
+  <!-- END ADD PRODUCTION BUILDINGS TO WORKFORCE MENU -->
 
   <!-- START ADD SOLDIERS CONSUMER GOODS LISTS TO AllConsumerGoods -->
   <ModOp Type="addNextSibling" GUID="502031" Path="/Values/ProductList/List/Item[Product='501999']">

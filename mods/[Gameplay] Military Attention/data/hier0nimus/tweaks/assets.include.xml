@@ -6,24 +6,137 @@
   <!-- ****************** START TWEAKS ******************  -->
 
   <!-- ****************** START Eli sellingprice soap and potatoes reduction ******************  -->
+
   <ModOp Type="replace" GUID='46' Path="/Values/Trader/Progression/*/PreferedGoods/Item[Product='1010195' or Product='1010203']/PriceMultiplier">
     <PriceMultiplier>1</PriceMultiplier>
   </ModOp>
+
   <!-- ****************** END Eli sellingprice soap and potatoes reduction ******************  -->
 
   <!-- ****************** START Ketema sellingprice pocketwatches and grammophones reduction ******************  -->
+
   <ModOp Type="replace" GUID='119051' Path="/Values/Trader/Progression/*/PreferedGoods/Item[Product='1010246' or Product='1010245' or Product='1010248' or Product='1010225']/PriceMultiplier">
     <PriceMultiplier>1</PriceMultiplier>
   </ModOp>
+
   <!-- ****************** END Ketema sellingprice pocketwatches and grammophones reduction ******************  -->
 
   <!-- ****************** START Old Nate sellingprice gold reduction ******************  -->
+
   <ModOp Type="replace" GUID='77' Path="/Values/Trader/Progression/*/PreferedGoods/Item[Product='1010249']/PriceMultiplier">
     <PriceMultiplier>1</PriceMultiplier>
   </ModOp>
+
   <!-- ****************** END Old Nate sellingprice gold reduction ******************  -->
 
-  <!-- ****************** START Add Cigarettes to luxury goods for other population ******************  -->
+  <!-- ****************** START Production costs reduction for vanilla buildings ******************  -->
+
+  <!-- ****************** Furnace ******************  -->
+  <ModOp Type="replace" GUID='1010297' Path="/Values/Maintenance/Maintenances">
+    <Maintenances>
+      <Item>
+        <Product>1010017</Product>
+        <!--Money-->
+        <Amount>40</Amount>
+        <InactiveAmount>20</InactiveAmount>
+      </Item>
+      <Item>
+        <Product>1010115</Product>
+        <!--moderate workforce 2-->
+        <Amount>40</Amount>
+      </Item>
+    </Maintenances>
+  </ModOp>
+
+  <!-- ****************** Steelworks ******************  -->
+  <ModOp Type="replace" GUID='1010296' Path="/Values/Maintenance/Maintenances">
+    <Maintenances>
+      <Item>
+        <Product>1010017</Product>
+        <!--Money-->
+        <Amount>80</Amount>
+        <InactiveAmount>40</InactiveAmount>
+      </Item>
+      <Item>
+        <Product>1010115</Product>
+        <!--moderate workforce 2-->
+        <Amount>60</Amount>
+      </Item>
+    </Maintenances>
+  </ModOp>
+
+  <!-- ****************** Weapon Factory ******************  -->
+  <ModOp Type="replace" GUID='1010299' Path="/Values/Maintenance/Maintenances">
+    <Maintenances>
+      <Item>
+        <Product>1010017</Product>
+        <!--Money-->
+        <Amount>80</Amount>
+        <InactiveAmount>40</InactiveAmount>
+      </Item>
+      <Item>
+        <Product>1010115</Product>
+        <!--moderate workforce 2-->
+        <Amount>40</Amount>
+      </Item>
+    </Maintenances>
+  </ModOp>
+
+  <!-- ****************** Sand Mine ******************  -->
+  <ModOp Type="replace" GUID='1010560' Path="/Values/Maintenance/Maintenances">
+    <Maintenances>
+      <Item>
+        <Product>1010017</Product>
+        <!--Money-->
+        <Amount>50</Amount>
+        <InactiveAmount>25</InactiveAmount>
+      </Item>
+      <Item>
+        <Product>1010115</Product>
+        <!--moderate workforce 2-->
+        <Amount>25</Amount>
+      </Item>
+    </Maintenances>
+  </ModOp>
+
+  <!-- ****************** Glassmakers ******************  -->
+  <ModOp Type="replace" GUID='1010319' Path="/Values/Maintenance/Maintenances">
+    <Maintenances>
+      <Item>
+        <Product>1010017</Product>
+        <!--Money-->
+        <Amount>50</Amount>
+        <InactiveAmount>30</InactiveAmount>
+      </Item>
+      <Item>
+        <Product>1010116</Product>
+        <!--moderate workforce 3-->
+        <Amount>40</Amount>
+      </Item>
+    </Maintenances>
+  </ModOp>
+
+  <!-- ****************** Window Makers ******************  -->
+  <ModOp Type="replace" GUID='1010285' Path="/Values/Maintenance/Maintenances">
+    <Maintenances>
+      <Item>
+        <Product>1010017</Product>
+        <!--Money-->
+        <Amount>80</Amount>
+        <InactiveAmount>40</InactiveAmount>
+      </Item>
+      <Item>
+        <Product>1010116</Product>
+        <!--moderate workforce 3-->
+        <Amount>30</Amount>
+      </Item>
+    </Maintenances>
+  </ModOp>
+
+  <!-- ****************** END Production costs reduction for vanilla buildings ******************  -->
+
+  <!-- ****************** START Add Products for other population ******************  -->
+
   <!-- ****************** Arctic - Explorers and Technicians ******************  -->
   <ModOp Type="add" GUID='112642,112643' Path="/Values/PopulationLevel7/PopulationInputs/">
     <Item>
@@ -34,13 +147,26 @@
       <NoWeightPopulationCount>0</NoWeightPopulationCount>
     </Item>
   </ModOp>
-  <!-- ****************** Old World - Workers, Artisans and Scholars ******************  -->
-  <ModOp Type="add" GUID='15000001,15000002,118745' Path="/Values/PopulationLevel7/PopulationInputs/">
+
+  <!-- ****************** Old World - Farmers ******************  -->
+  <ModOp Type="add" GUID='15000000' Path="/Values/PopulationLevel7/PopulationInputs">
     <Item>
-      <Product>1742100058</Product>      <!-- Cigarettes - Product -->
-      <Amount>0.000233334</Amount>
-      <HappinessValue>5</HappinessValue>
-      <MoneyValue>30</MoneyValue>
+      <Product>1010195</Product>      <!-- Potatoes - Product -->
+      <Amount>0.0001166667</Amount>
+      <SupplyWeight>2</SupplyWeight>
+      <MoneyValue>5</MoneyValue>
+      <FullWeightPopulationCount>100</FullWeightPopulationCount>
+      <NoWeightPopulationCount>0</NoWeightPopulationCount>
+      <AdditionalGlobalUnlockRequirement>
+        <Population>15000000</Population>        <!-- Farmers -->
+        <MinPopulationAmount>100</MinPopulationAmount>
+      </AdditionalGlobalUnlockRequirement>
+    </Item>
+    <Item>
+      <Product>1742100211</Product>      <!-- Horses - Product -->
+      <Amount>0.0001166667</Amount>
+      <SupplyWeight>3</SupplyWeight>
+      <MoneyValue>20</MoneyValue>
       <FullWeightPopulationCount>100</FullWeightPopulationCount>
       <NoWeightPopulationCount>0</NoWeightPopulationCount>
       <AdditionalGlobalUnlockRequirement>
@@ -49,7 +175,76 @@
       </AdditionalGlobalUnlockRequirement>
     </Item>
   </ModOp>
-  <!-- ****************** END Add Cigarettes to luxury goods for other population ******************  -->
+
+  <!-- ****************** Old World - Workers ******************  -->
+  <ModOp Type="add" GUID='15000001' Path="/Values/PopulationLevel7/PopulationInputs/">
+    <Item>
+      <Product>1010195</Product>      <!-- Potatoes - Product -->
+      <Amount>0.0001166667</Amount>
+      <SupplyWeight>2</SupplyWeight>
+      <MoneyValue>5</MoneyValue>
+      <FullWeightPopulationCount>100</FullWeightPopulationCount>
+      <NoWeightPopulationCount>0</NoWeightPopulationCount>
+      <AdditionalGlobalUnlockRequirement>
+        <Population>15000000</Population>        <!-- Farmers -->
+        <MinPopulationAmount>100</MinPopulationAmount>
+      </AdditionalGlobalUnlockRequirement>
+    </Item>
+    <Item>
+      <Product>1742100058</Product>      <!-- Cigarettes - Product -->
+      <Amount>0.000233334</Amount>
+      <SupplyWeight>4</SupplyWeight>
+      <MoneyValue>20</MoneyValue>
+      <FullWeightPopulationCount>100</FullWeightPopulationCount>
+      <NoWeightPopulationCount>0</NoWeightPopulationCount>
+      <AdditionalGlobalUnlockRequirement>
+        <Population>15000001</Population>        <!-- Workers -->
+        <MinPopulationAmount>500</MinPopulationAmount>
+      </AdditionalGlobalUnlockRequirement>
+    </Item>
+  </ModOp>
+
+  <!-- ****************** Old World - Artisans and Scholars ******************  -->
+  <ModOp Type="add" GUID='15000002,118745' Path="/Values/PopulationLevel7/PopulationInputs/">
+    <Item>
+      <Product>1742100058</Product>      <!-- Cigarettes - Product -->
+      <Amount>0.000233334</Amount>
+      <HappinessValue>5</HappinessValue>
+      <MoneyValue>20</MoneyValue>
+      <FullWeightPopulationCount>100</FullWeightPopulationCount>
+      <NoWeightPopulationCount>0</NoWeightPopulationCount>
+      <AdditionalGlobalUnlockRequirement>
+        <Population>15000001</Population>        <!-- Workers -->
+        <MinPopulationAmount>500</MinPopulationAmount>
+      </AdditionalGlobalUnlockRequirement>
+    </Item>
+  </ModOp>
+
+
+  <!-- ****************** END Add Products for other population ******************  -->
+
+  <!-- ****************** START Farmfields reduction ******************  -->
+
+  <!-- ****************** Potato Farm ******************  -->
+  <ModOp Type="replace" GUID='1010265' Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
+    <Limit>48</Limit>
+  </ModOp>
+
+  <!-- ****************** Grain Farm ******************  -->
+  <ModOp Type="replace" GUID='1010262' Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
+    <Limit>120</Limit>
+  </ModOp>
+
+  <!-- ****************** END Farmfields reduction ******************  -->
+
+  <!-- ****************** START Farmer more needs by ParticipantMessageArcheType ******************  -->
+
+  <ModOp Type="replace" GUID="15000000" Path="/Values/PopulationLevel7/PopulationParticipant">
+    <PopulationParticipant>Resident_tier01_atWork</PopulationParticipant>
+  </ModOp>
+
+  <!-- ****************** END Farmer more needs by ParticipantMessageArcheType ******************  -->
+
 
   <!-- ****************** END TWEAKS ******************  -->
 </ModOps>
