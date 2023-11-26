@@ -1,0 +1,238 @@
+<!-- 
+  Ships
+-->
+
+
+<ModOps>
+
+  <!-- START - HOT-AIR BALLOON -->
+
+  <ModOp GUID="1737" Type="addnextSibling">
+    <Asset>
+      <Template>AirShip</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100532</GUID>
+          <Name>Hot-air Balloon</Name>
+          <IconFilename>data/graphics/icons/icon_hot_air_balloon.png</IconFilename>
+          <InfoDescription>1742100533</InfoDescription>
+          <!--AirshipCargo_Large_fluff-->
+        </Standard>
+        <Object>
+          <Variations>
+            <Item>
+              <VectorElement>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>TradeShip</TemplateName>
+                    <Index>0</Index>
+                    <!--[ empty field / noname ]-->
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+              <Filename>data/graphics/vehicle/hot_air_balloon/hot_air_balloon_01.cfg</Filename>
+            </Item>
+          </Variations>
+          <Skins>
+            <SkinList>
+              <Item>
+                <SkinAssetGuid>4699</SkinAssetGuid>
+                <!--GG_Queens_ModernAirship_Skin-->
+              </Item>
+            </SkinList>
+          </Skins>
+        </Object>
+        <Mesh/>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+        </Selection>
+        <Walking>
+          <TurnAroundRadius>12</TurnAroundRadius>
+          <Acceleration>0.3</Acceleration>
+          <Deceleration>0.5</Deceleration>
+          <TurnRadius>10</TurnRadius>
+          <TurnSpeed>100</TurnSpeed>
+          <TurnSpeedInPlace>80</TurnSpeedInPlace>
+          <LeaningMaxAngle>0</LeaningMaxAngle>
+          <!--[ empty field / noname ]-->
+          <ForwardSpeed>10</ForwardSpeed>
+          <WindMinSlowdownFactor>0.7</WindMinSlowdownFactor>
+          <WindSlowdownEffectOnTurningSpeed>0.75</WindSlowdownEffectOnTurningSpeed>
+          <WindMaxSpeedupFactor>1.3</WindMaxSpeedupFactor>
+          <CargoFullFactor>0.8</CargoFullFactor>
+          <MinSlowdownFactor>0.3</MinSlowdownFactor>
+          <SessionTransferSpeedFactor>1.7</SessionTransferSpeedFactor>
+        </Walking>
+        <Text />
+        <CommandQueue>
+          <TradeShipPoints>8</TradeShipPoints>
+          <AirShipPoints>200</AirShipPoints>
+        </CommandQueue>
+        <Drifting>
+          <Length>7</Length>
+          <Width>3.5</Width>
+        </Drifting>
+        <Collector/>
+        <Attackable>
+          <MaximumHitPoints>3500</MaximumHitPoints>
+        </Attackable>
+        <MinimapToken>
+          <StrategicMapAsset>117300</StrategicMapAsset>
+          <!--Steam Ships-->
+        </MinimapToken>
+        <SoundEmitter>
+          <VehicleSounds>
+            <MovementStart>
+              <Item>
+                <Sound>200988</Sound>
+                <!--wwe_sfx_veh_eots_airship_large_lp-->
+              </Item>
+            </MovementStart>
+          </VehicleSounds>
+        </SoundEmitter>
+        <UpgradeList>
+          <DefaultBuff>1751</DefaultBuff>
+          <!--PassageGasEffect-AirshipCargo_Large_Passage(Trade)-->
+        </UpgradeList>
+        <QuestObject/>
+        <Infolayer/>
+        <ItemContainer>
+          <SlotCount>8</SlotCount>
+        </ItemContainer>
+        <FeedbackController/>
+        <Draggable>
+          <DraggableOnDrag>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </DraggableOnDrag>
+          <DraggableOnDrop>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </DraggableOnDrop>
+        </Draggable>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <!--Money-->
+              <Amount>500</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>
+              <!--timber-->
+              <Amount>5</Amount>
+            </Item>
+          </Costs>
+          <InfluenceCostPoints>1</InfluenceCostPoints>
+        </Cost>
+        <Craftable>
+          <CraftingTime>1080000</CraftingTime>
+        </Craftable>
+        <TradeRouteVehicle>
+          <LoadingSpeedFactor>0.9</LoadingSpeedFactor>
+        </TradeRouteVehicle>
+        <Locked>
+          <DLCDependency>24962</DLCDependency>
+          <!--Anno 1800 DLC - Empire of the Skies-->
+        </Locked>
+        <Nameable/>
+        <MetaPersistent/>
+        <ExpeditionAttribute/>
+        <ShipMaintenance>
+          <Maintenance>1800</Maintenance>
+          <DisableEscort>0</DisableEscort>
+          <!--[ empty field / noname ]-->
+        </ShipMaintenance>
+        <Sellable>
+          <Baseprice>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>0</InheritedIndex>
+                <!--[ empty field / noname ]-->
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>AirShip</TemplateName>
+                    <Index>0</Index>
+                    <!--[ empty field / noname ]-->
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+              <Amount>1750000</Amount>
+            </Item>
+          </Baseprice>
+        </Sellable>
+        <Stance/>
+        <Rentable/>
+        <WorldMapSound/>
+        <Pausable/>
+        <ShipIncident>
+          <InfectableByIncident>
+            <Illness>
+              <Infectable>0</Infectable>
+              <!--[ empty field / noname ]-->
+            </Illness>
+          </InfectableByIncident>
+        </ShipIncident>
+        <SoundEmitterCommandBarks>
+          <BarkMapping>
+            <Selection>
+              <AudioPool>4806</AudioPool>
+              <!--TransportAirship_SelectShip_Pool-->
+            </Selection>
+            <SelectionDamaged>
+              <AudioPool>4808</AudioPool>
+              <!--TransportAirship_Damage_Pool-->
+            </SelectionDamaged>
+            <AttackCommand>
+              <AudioPool>0</AudioPool>
+              <!--[ empty field / noname ]-->
+            </AttackCommand>
+            <MoveCommand>
+              <AudioPool>4807</AudioPool>
+              <!--TransportAirship_Move_Pool-->
+            </MoveCommand>
+            <EscortCommand>
+              <AudioPool>4811</AudioPool>
+              <!--TransportAirship_Escort_Pool-->
+            </EscortCommand>
+            <PatrolCommand>
+              <AudioPool>4807</AudioPool>
+              <!--TransportAirship_Move_Pool-->
+            </PatrolCommand>
+            <DropCommand>
+              <AudioPool>4812</AudioPool>
+              <!--TransportAirship_Drop_Pool-->
+            </DropCommand>
+          </BarkMapping>
+        </SoundEmitterCommandBarks>
+        <ItemReplacer>
+          <ItemReplacementPools>193855</ItemReplacementPools>
+          <!--AirShipReplacementPool-->
+        </ItemReplacer>
+        <Bombarder>
+          <Shafts>5</Shafts>
+        </Bombarder>
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- START - ADDING SHIPS TO RIGID AIRSHIP HANGAR SHIPS LIST -->
+  <ModOp Type="add" GUID='636' Path="/Values/Shipyard/AssemblyOptions/">
+    <Item>
+      <Vehicle>1742100532</Vehicle>
+    </Item>
+  </ModOp>
+
+</ModOps>
+
+  
+
