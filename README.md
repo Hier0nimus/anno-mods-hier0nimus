@@ -24,6 +24,8 @@ You will need ALL DLC's to play this mod. There are new goods in every region fr
 
 Explore the world of musical instruments with new production chains and a lategame Music hall to boost your New world population.
 
+Current version 1.5 (26/12/2023)
+
 ## Military Attention
 
 Centered around military infrastructure and adding new military residence tiers for all regions with a focus on the Old World.
