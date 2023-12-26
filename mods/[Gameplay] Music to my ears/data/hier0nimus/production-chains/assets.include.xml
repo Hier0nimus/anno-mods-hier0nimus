@@ -1,0 +1,402 @@
+<!-- 
+  Production Chains
+-->
+
+<ModOps>
+
+    <!-- START ADD - Djembé Chain -->
+    <ModOp Type="addNextSibling" GUID='114553,119024' Path="/Values/ConstructionCategory/BuildingList/Item[Building='114556']">
+        <Item>
+            <Building>1742110035</Building>
+        </Item>
+    </ModOp>
+    <!-- END ADD - Djembé Chain -->
+
+    <!-- START ADD - Qilaut Chain -->
+    <ModOp Type="addNextSibling" GUID='112790,116344' Path="/Values/ConstructionCategory/BuildingList/Item[Building='112710']">
+        <Item>
+            <Building>1742110037</Building>
+        </Item>
+    </ModOp>
+    <!-- END ADD - Qilaut Chain -->
+
+    <!-- START ADD - Guitar/Banjo/Music Hall -->
+    <ModOp Type="addNextSibling" GUID='25000194' Path="/Values/ConstructionCategory/BuildingList/Item[Building='500909']">
+        <Item>
+            <Building>1742110092</Building>
+        </Item>
+        <Item>
+            <Building>1742110094</Building>
+        </Item>
+        <Item>
+            <Building>1742110051</Building>
+        </Item>
+    </ModOp>
+    <!-- END ADD - Guitar/Banjo -->
+
+    <!-- START ADD - Saxophone & Flute -->
+    <ModOp Type="addNextSibling" GUID='25000191,500945' Path="/Values/ConstructionCategory/BuildingList/Item[Building='500008']">
+        <Item>
+            <Building>1742110104</Building>
+        </Item>
+    </ModOp>
+    <!-- END ADD - Saxophone & Flute -->
+
+    <!-- START ADD - Saxophone & Flute -->
+    <ModOp Type="addNextSibling" GUID='25000192,500945' Path="/Values/ConstructionCategory/BuildingList/Item[Building='500901']">
+        <Item>
+            <Building>1742110086</Building>
+        </Item>
+    </ModOp>
+    <!-- END ADD - Saxophone & Flute -->
+
+    <!-- START ADD - Harp/Piano -->
+    <ModOp Type="addNextSibling" GUID='500447,500945' Path="/Values/ConstructionCategory/BuildingList/Item[Building='137598']">
+        <Item>
+            <Building>1742110088</Building>
+        </Item>
+        <Item>
+            <Building>1742110090</Building>
+        </Item>
+    </ModOp>
+    <!-- END ADD - Harp/Piano -->
+
+    <!-- START PRODUCTION CHAIN - Djembé -->
+    <ModOp Type="addNextSibling" GUID='500091'>
+        <Asset>
+            <Template>ProductionChain</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742110035</GUID>
+                    <Name>Djembé</Name>
+                    <IconFilename>data\graphics\icons\icon_djembe.png</IconFilename>
+                    <InfoDescription>1742110036</InfoDescription>
+                </Standard>
+                <ProductionChain>
+                    <Building>1742110001</Building>
+                    <Tier1>
+                        <Item>
+                            <Building>114444</Building>
+                        </Item>
+                        <Item>
+                            <Building>122963</Building>
+                        </Item>
+                    </Tier1>
+                </ProductionChain>
+                <Locked />
+                <Text />
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END PRODUCTION CHAIN - Djembé -->
+
+    <!-- START PRODUCTION CHAIN - Qilaut -->
+    <ModOp Type="addNextSibling" GUID='500091'>
+        <Asset>
+            <Template>ProductionChain</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742110037</GUID>
+                    <Name>Qilaut</Name>
+                    <IconFilename>data\graphics\icons\icon_qilaut.png</IconFilename>
+                    <InfoDescription>1742110036</InfoDescription>
+                </Standard>
+                <ProductionChain>
+                    <Building>1742110013</Building>
+                    <Tier1>
+                        <Item>
+                            <Building>112667</Building>
+                        </Item>
+                        <Item>
+                            <Building>114703</Building>
+                        </Item>
+                    </Tier1>
+                </ProductionChain>
+                <Locked />
+                <Text />
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END PRODUCTION CHAIN - Qilaut -->
+
+    <!-- START PRODUCTION CHAIN - Saxophone -->
+    <ModOp Type="addNextSibling" GUID='500091'>
+        <Asset>
+            <Template>ProductionChain</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742110086</GUID>
+                    <Name>Saxophone</Name>
+                    <IconFilename>data\graphics\icons\icon_saxophone.png</IconFilename>
+                    <InfoDescription>1742110087</InfoDescription>
+                </Standard>
+                <ProductionChain>
+                    <Building>1742110003</Building>
+                    <Tier1>
+                        <Item>
+                            <Building>1010282</Building>
+                            <Tier2>
+                                <Item>
+                                    <Building>1010307</Building>
+                                </Item>
+                                <Item>
+                                    <Building>1010308</Building>
+                                </Item>
+                            </Tier2>
+                        </Item>
+                    </Tier1>
+                </ProductionChain>
+                <Locked />
+                <Text />
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END PRODUCTION CHAIN - Saxophone -->
+
+    <!-- START PRODUCTION CHAIN - Flute -->
+    <ModOp Type="addNextSibling" GUID='500091'>
+        <Asset>
+            <Template>ProductionChain</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742110104</GUID>
+                    <Name>Flute</Name>
+                    <IconFilename>data\graphics\icons\icon_flute.png</IconFilename>
+                    <InfoDescription>1742110087</InfoDescription>
+                </Standard>
+                <ProductionChain>
+                    <Building>1742110100</Building>
+                    <Tier1>
+                        <Item>
+                            <Building>1010266</Building>
+                        </Item>
+                    </Tier1>
+                </ProductionChain>
+                <Locked />
+                <Text />
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END PRODUCTION CHAIN - Flute -->
+
+    <!-- START PRODUCTION CHAIN - Harp -->
+    <ModOp Type="addNextSibling" GUID='500091'>
+        <Asset>
+            <Template>ProductionChain</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742110088</GUID>
+                    <Name>Harp</Name>
+                    <IconFilename>data\graphics\icons\icon_harp.png</IconFilename>
+                    <InfoDescription>1742110089</InfoDescription>
+                </Standard>
+                <ProductionChain>
+                    <Building>1742110005</Building>
+                    <Tier1>
+                        <Item>
+                            <Building>122963</Building>
+                        </Item>
+                        <Item>
+                            <Building>1010297</Building>
+                            <Tier2>
+                                <Item>
+                                    <Building>1010305</Building>
+                                </Item>
+                                <Item>
+                                    <Building>1010304</Building>
+                                </Item>
+                            </Tier2>
+                        </Item>
+                        <Item>
+                            <Building>1010311</Building>
+                        </Item>
+                        <Item>
+                            <Building>1742110085</Building>
+                        </Item>
+                    </Tier1>
+                </ProductionChain>
+                <Locked />
+                <Text />
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END PRODUCTION CHAIN - Harp -->
+
+    <!-- START PRODUCTION CHAIN - Piano -->
+    <ModOp Type="addNextSibling" GUID='500091'>
+        <Asset>
+            <Template>ProductionChain</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742110090</GUID>
+                    <Name>Piano</Name>
+                    <IconFilename>data\graphics\icons\icon_piano.png</IconFilename>
+                    <InfoDescription>1742110091</InfoDescription>
+                </Standard>
+                <ProductionChain>
+                    <Building>1742110007</Building>
+                    <Tier1>
+                        <Item>
+                            <Building>135088</Building>
+                        </Item>
+                        <Item>
+                            <Building>1010297</Building>
+                            <Tier2>
+                                <Item>
+                                    <Building>1010305</Building>
+                                </Item>
+                                <Item>
+                                    <Building>1010304</Building>
+                                </Item>
+                            </Tier2>
+                        </Item>
+                        <Item>
+                            <Building>135224</Building>
+                            <Tier2>
+                                <Item>
+                                    <Building>1010331</Building>
+                                </Item>
+                                <Item>
+                                    <Building>134614</Building>
+                                </Item>
+                                <Item>
+                                    <Building>135134</Building>
+                                    <Tier3>
+                                        <Item>
+                                            <Building>101260</Building>
+                                        </Item>
+                                        <Item>
+                                            <Building>101270</Building>
+                                        </Item>
+                                    </Tier3>
+                                </Item>
+                            </Tier2>
+                        </Item>
+                        <Item>
+                            <Building>1742110085</Building>
+                        </Item>
+                    </Tier1>
+                </ProductionChain>
+                <Locked />
+                <Text />
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END PRODUCTION CHAIN - Piano -->
+
+    <!-- START PRODUCTION CHAIN - Guitar -->
+    <ModOp Type="addNextSibling" GUID='500091'>
+        <Asset>
+            <Template>ProductionChain</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742110092</GUID>
+                    <Name>Guitar</Name>
+                    <IconFilename>data\graphics\icons\icon_guitar.png</IconFilename>
+                    <InfoDescription>1742110093</InfoDescription>
+                </Standard>
+                <ProductionChain>
+                    <Building>1742110009</Building>
+                    <Tier1>
+                        <Item>
+                            <Building>101296</Building>
+                            <Tier2>
+                                <Item>
+                                    <Building>101260</Building>
+                                </Item>
+                            </Tier2>
+                        </Item>
+                        <Item>
+                            <Building>1010297</Building>
+                            <Tier2>
+                                <Item>
+                                    <Building>1010305</Building>
+                                </Item>
+                                <Item>
+                                    <Building>1010304</Building>
+                                </Item>
+                            </Tier2>
+                        </Item>
+                        <Item>
+                            <Building>135133</Building>
+                            <Tier2>
+                                <Item>
+                                    <Building>1010560</Building>
+                                </Item>
+                                <Item>
+                                    <Building>135085</Building>
+                                </Item>
+                                <Item>
+                                    <Building>135134</Building>
+                                    <Tier3>
+                                        <Item>
+                                            <Building>101260</Building>
+                                        </Item>
+                                        <Item>
+                                            <Building>101270</Building>
+                                        </Item>
+                                    </Tier3>
+                                </Item>
+                            </Tier2>
+                        </Item>
+                        <Item>
+                            <Building>1742110085</Building>
+                        </Item>
+                    </Tier1>
+                </ProductionChain>
+                <Locked />
+                <Text />
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END PRODUCTION CHAIN - Guitar -->
+
+    <!-- START PRODUCTION CHAIN - Banjo -->
+    <ModOp Type="addNextSibling" GUID='500091'>
+        <Asset>
+            <Template>ProductionChain</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742110094</GUID>
+                    <Name>Banjo</Name>
+                    <IconFilename>data\graphics\icons\icon_banjo.png</IconFilename>
+                    <InfoDescription>1742110095</InfoDescription>
+                </Standard>
+                <ProductionChain>
+                    <Building>1742110011</Building>
+                    <Tier1>
+                        <Item>
+                            <Building>101261</Building>
+                            <Tier2>
+                                <Item>
+                                    <Building>101260</Building>
+                                </Item>
+                            </Tier2>
+                        </Item>
+                        <Item>
+                            <Building>835</Building>
+                            <Tier2>
+                                <Item>
+                                    <Building>1308</Building>
+                                </Item>
+                                <Item>
+                                    <Building>1345</Building>
+                                </Item>
+                            </Tier2>
+                        </Item>
+                        <Item>
+                            <Building>112673</Building>
+                        </Item>
+                        <Item>
+                            <Building>1742110085</Building>
+                        </Item>
+                    </Tier1>
+                </ProductionChain>
+                <Locked />
+                <Text />
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END PRODUCTION CHAIN - Banjo -->
+
+</ModOps>

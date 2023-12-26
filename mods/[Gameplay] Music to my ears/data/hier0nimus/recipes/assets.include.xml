@@ -1,0 +1,491 @@
+<!-- 
+  Recipes
+-->
+
+<ModOps>
+    <!-- *********************** START ADD Recipes Old World *********************** -->
+
+    <!-- Add Saxophone before Cognac -->
+    <ModOp Type="AddPrevSibling" GUID='135415' Path="/Values/RecipeList/Recipes/Item[Recipe='135419']">
+        <Item>
+            <Recipe>1742110102</Recipe>
+        </Item>
+        <Item>
+            <Recipe>1742110039</Recipe>
+        </Item>
+    </ModOp>
+
+    <!-- Add Harp after Cognac -->
+    <ModOp Type="AddNextSibling" GUID='135415' Path="/Values/RecipeList/Recipes/Item[Recipe='135417']">
+        <Item>
+            <Recipe>1742110041</Recipe>
+        </Item>
+        <Item>
+            <Recipe>1742110043</Recipe>
+        </Item>
+    </ModOp>
+
+    <!-- START ADD Saxophone - Recipe -->
+    <ModOp Type="AddNextSibling" GUID='135416'>
+        <Asset>
+            <Template>Recipe</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742110039</GUID>
+                    <Name>Saxophone</Name>
+                    <IconFilename>data\graphics\icons\icon_saxophone.png</IconFilename>
+                </Standard>
+                <Text />
+                <Recipe>
+                    <RecipeBuilding>1742110003</RecipeBuilding>
+                    <RecipeDescriptionText>1742110040</RecipeDescriptionText>
+                    <RecipeImage>data\graphics\recipebook\recipebook_artisans_workshop_saxophone.png</RecipeImage>
+                    <RecipeIngredientUIData>
+                        <Item>
+                            <PosX>50</PosX>
+                            <PosY>60</PosY>
+                            <UICirclePointer>East</UICirclePointer>
+                        </Item>
+                    </RecipeIngredientUIData>
+                    <RecipeUnlockConditionText>137486</RecipeUnlockConditionText>
+                </Recipe>
+                <Locked/>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END ADD Saxophone - Recipe -->
+
+    <!-- START ADD Flute - Recipe -->
+    <ModOp Type="AddNextSibling" GUID='135416'>
+        <Asset>
+            <Template>Recipe</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742110102</GUID>
+                    <Name>Flute</Name>
+                    <IconFilename>data\graphics\icons\icon_flute.png</IconFilename>
+                </Standard>
+                <Text />
+                <Recipe>
+                    <RecipeBuilding>1742110100</RecipeBuilding>
+                    <RecipeDescriptionText>1742110103</RecipeDescriptionText>
+                    <RecipeImage>data\graphics\recipebook\recipebook_artisans_workshop_flute.png</RecipeImage>
+                    <RecipeIngredientUIData>
+                        <Item>
+                            <PosX>50</PosX>
+                            <PosY>60</PosY>
+                            <UICirclePointer>East</UICirclePointer>
+                        </Item>
+                    </RecipeIngredientUIData>
+                    <RecipeUnlockConditionText>137486</RecipeUnlockConditionText>
+                </Recipe>
+                <Locked/>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END ADD Saxophone - Recipe -->
+
+    <!-- START ADD Harp - Recipe -->
+    <ModOp Type="AddNextSibling" GUID='135416'>
+        <Asset>
+            <Template>Recipe</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742110041</GUID>
+                    <Name>Harp</Name>
+                    <IconFilename>data\graphics\icons\icon_harp.png</IconFilename>
+                </Standard>
+                <Text />
+                <Recipe>
+                    <RecipeBuilding>1742110005</RecipeBuilding>
+                    <RecipeDescriptionText>1742110042</RecipeDescriptionText>
+                    <RecipeImage>data\graphics\recipebook\recipebook_artisans_workshop_harp.png</RecipeImage>
+                    <RecipeIngredientUIData>
+                        <Item>
+                            <PosX>370</PosX>
+                            <PosY>200</PosY>
+                            <UICirclePointer>West</UICirclePointer>
+                        </Item>
+                        <Item>
+                            <PosX>320</PosX>
+                            <PosY>360</PosY>
+                            <UICirclePointer>NorthWest</UICirclePointer>
+                        </Item>
+                        <Item>
+                            <PosX>30</PosX>
+                            <PosY>70</PosY>
+                            <UICirclePointer>East</UICirclePointer>
+                        </Item>
+                        <Item>
+                            <PosX>300</PosX>
+                            <PosY>10</PosY>
+                            <UICirclePointer>SouthWest</UICirclePointer>
+                        </Item>
+                    </RecipeIngredientUIData>
+                    <RecipeUnlockConditionText>137486</RecipeUnlockConditionText>
+                </Recipe>
+                <Locked/>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END ADD Harp - Recipe -->
+
+    <!-- START ADD Piano - Recipe -->
+    <ModOp Type="AddNextSibling" GUID='135416'>
+        <Asset>
+            <Template>Recipe</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742110043</GUID>
+                    <Name>Piano</Name>
+                    <IconFilename>data\graphics\icons\icon_piano.png</IconFilename>
+                </Standard>
+                <Text />
+                <Recipe>
+                    <RecipeBuilding>1742110007</RecipeBuilding>
+                    <RecipeDescriptionText>1742110044</RecipeDescriptionText>
+                    <RecipeImage>data\graphics\recipebook\recipebook_artisans_workshop_piano.png</RecipeImage>
+                    <RecipeIngredientUIData>
+                        <Item>
+                            <PosX>20</PosX>
+                            <PosY>-10</PosY>
+                            <UICirclePointer>SouthEast</UICirclePointer>
+                        </Item>
+                        <Item>
+                            <PosX>180</PosX>
+                            <PosY>-70</PosY>
+                            <UICirclePointer>South</UICirclePointer>
+                        </Item>
+                        <Item>
+                            <PosX>380</PosX>
+                            <PosY>160</PosY>
+                            <UICirclePointer>West</UICirclePointer>
+                        </Item>
+                        <Item>
+                            <PosX>320</PosX>
+                            <PosY>-20</PosY>
+                            <UICirclePointer>South</UICirclePointer>
+                        </Item>
+                    </RecipeIngredientUIData>
+                    <RecipeUnlockConditionText>137486</RecipeUnlockConditionText>
+                </Recipe>
+                <Locked/>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END ADD Piano - Recipe -->
+
+    <!-- ****************** END ADD Recipes Old World *********************** -->
+
+    <!-- ****************** START ADD Recipes New World *********************** -->
+
+    <ModOp GUID="135415" Type="addNextSibling">
+
+        <!-- START - Workshop - Recipelist -->
+        <Asset>
+            <Template>RecipeList</Template>
+            <Values>
+                <RecipeList>
+                    <Recipes>
+                        <Item>
+                            <Recipe>1742110045</Recipe>
+                        </Item>
+                        <Item>
+                            <Recipe>1742110047</Recipe>
+                        </Item>
+                    </Recipes>
+                    <RecipeListType>Manufacture</RecipeListType>
+                    <RecipeListMoodImage>data/ui/2kimages/main/assets/recipebook/mood_images/recipebook_moodimages_artisans_workshop.png</RecipeListMoodImage>
+                    <RecipeListDescription>1742110050</RecipeListDescription>
+                </RecipeList>
+                <Standard>
+                    <GUID>1742110049</GUID>
+                    <Name>Workshop</Name>
+                    <IconFilename>data/ui/2kimages/main/3dicons/icon_highlife_manufactory.png</IconFilename>
+                </Standard>
+                <Text />
+            </Values>
+        </Asset>
+        <!-- END - Workshop - Recipelist -->
+    </ModOp>
+
+    <!-- START ADD Guitar - Recipe -->
+    <ModOp Type="AddNextSibling" GUID='135416'>
+        <Asset>
+            <Template>Recipe</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742110045</GUID>
+                    <Name>Guitar</Name>
+                    <IconFilename>data\graphics\icons\icon_guitar.png</IconFilename>
+                </Standard>
+                <Text />
+                <Recipe>
+                    <RecipeBuilding>1742110009</RecipeBuilding>
+                    <RecipeDescriptionText>1742110046</RecipeDescriptionText>
+                    <RecipeImage>data\graphics\recipebook\recipebook_artistas_workshop_guitar.png</RecipeImage>
+                    <RecipeIngredientUIData>
+                        <Item>
+                            <PosX>30</PosX>
+                            <PosY>160</PosY>
+                            <UICirclePointer>East</UICirclePointer>
+                        </Item>
+                        <Item>
+                            <PosX>210</PosX>
+                            <PosY>40</PosY>
+                            <UICirclePointer>South</UICirclePointer>
+                        </Item>
+                        <Item>
+                            <PosX>100</PosX>
+                            <PosY>340</PosY>
+                            <UICirclePointer>NorthEast</UICirclePointer>
+                        </Item>
+                        <Item>
+                            <PosX>360</PosX>
+                            <PosY>130</PosY>
+                            <UICirclePointer>SouthWest</UICirclePointer>
+                        </Item>
+                    </RecipeIngredientUIData>
+                    <RecipeUnlockConditionText>137486</RecipeUnlockConditionText>
+                </Recipe>
+                <Locked/>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END ADD Guitar - Recipe -->
+
+    <!-- START ADD Banjo - Recipe -->
+    <ModOp Type="AddNextSibling" GUID='135416'>
+        <Asset>
+            <Template>Recipe</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742110047</GUID>
+                    <Name>Banjo</Name>
+                    <IconFilename>data\graphics\icons\icon_banjo.png</IconFilename>
+                </Standard>
+                <Text />
+                <Recipe>
+                    <RecipeBuilding>1742110011</RecipeBuilding>
+                    <RecipeDescriptionText>1742110048</RecipeDescriptionText>
+                    <RecipeImage>data\graphics\recipebook\recipebook_artistas_workshop_banjo.png</RecipeImage>
+                    <RecipeIngredientUIData>
+                        <Item>
+                            <PosX>70</PosX>
+                            <PosY>100</PosY>
+                            <UICirclePointer>SouthEast</UICirclePointer>
+                        </Item>
+                        <Item>
+                            <PosX>200</PosX>
+                            <PosY>20</PosY>
+                            <UICirclePointer>SouthEast</UICirclePointer>
+                        </Item>
+                        <Item>
+                            <PosX>280</PosX>
+                            <PosY>350</PosY>
+                            <UICirclePointer>NorthWest</UICirclePointer>
+                        </Item>
+                        <Item>
+                            <PosX>350</PosX>
+                            <PosY>240</PosY>
+                            <UICirclePointer>NorthWest</UICirclePointer>
+                        </Item>
+                    </RecipeIngredientUIData>
+                    <RecipeUnlockConditionText>137486</RecipeUnlockConditionText>
+                </Recipe>
+                <Locked/>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END ADD Banjo - Recipe -->
+
+    <!-- START - Music Hall - Recipelist -->
+    <ModOp GUID="135415" Type="addNextSibling">
+
+        <Asset>
+            <Template>RecipeList</Template>
+            <Values>
+                <RecipeList>
+                    <Recipes>
+                        <Item>
+                            <Recipe>1742110063</Recipe>
+                        </Item>
+                        <Item>
+                            <Recipe>1742110065</Recipe>
+                        </Item>
+                        <Item>
+                            <Recipe>1742110067</Recipe>
+                        </Item>
+                        <Item>
+                            <Recipe>1742110069</Recipe>
+                        </Item>
+                    </Recipes>
+                    <RecipeListType>Manufacture</RecipeListType>
+                    <RecipeListMoodImage>data/ui/2kimages/main/assets/recipebook/mood_images/recipebook_moodimages_artisans_workshop.png</RecipeListMoodImage>
+                    <RecipeListDescription>1742110062</RecipeListDescription>
+                </RecipeList>
+                <Standard>
+                    <GUID>1742110061</GUID>
+                    <Name>Music Hall</Name>
+                    <IconFilename>data/ui/2kimages/main/3dicons/icon_highlife_manufactory.png</IconFilename>
+                </Standard>
+                <Text />
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END - Music Hall - Recipelist -->
+
+    <!-- START ADD Epic Sax - Recipe -->
+    <ModOp Type="AddNextSibling" GUID='135416'>
+        <Asset>
+            <Template>Recipe</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742110063</GUID>
+                    <Name>Epic Sax</Name>
+                    <IconFilename>data\graphics\icons\icon_music_epic_sax.png</IconFilename>
+                </Standard>
+                <Text />
+                <Recipe>
+                    <RecipeBuilding>1742110053</RecipeBuilding>
+                    <RecipeDescriptionText>1742110064</RecipeDescriptionText>
+                    <RecipeImage>data\graphics\recipebook\recipebook_music_hall_01.png</RecipeImage>
+                    <RecipeIngredientUIData>
+                        <Item>
+                            <PosX>30</PosX>
+                            <PosY>30</PosY>
+                            <UICirclePointer>SouthEast</UICirclePointer>
+                        </Item>
+                    </RecipeIngredientUIData>
+                    <RecipeUnlockConditionText>137486</RecipeUnlockConditionText>
+                </Recipe>
+                <Locked/>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END ADD Epic Sax - Recipe -->
+
+    <!-- START ADD Common Sounds - Recipe -->
+    <ModOp Type="AddNextSibling" GUID='135416'>
+        <Asset>
+            <Template>Recipe</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742110065</GUID>
+                    <Name>Common Sounds</Name>
+                    <IconFilename>data\graphics\icons\icon_music_common_sounds.png</IconFilename>
+                </Standard>
+                <Text />
+                <Recipe>
+                    <RecipeBuilding>1742110055</RecipeBuilding>
+                    <RecipeDescriptionText>1742110066</RecipeDescriptionText>
+                    <RecipeImage>data\graphics\recipebook\recipebook_music_hall_02.png</RecipeImage>
+                    <RecipeIngredientUIData>
+                        <Item>
+                            <PosX>370</PosX>
+                            <PosY>250</PosY>
+                            <UICirclePointer>NorthWest</UICirclePointer>
+                        </Item>
+                        <Item>
+                            <PosX>30</PosX>
+                            <PosY>30</PosY>
+                            <UICirclePointer>SouthEast</UICirclePointer>
+                        </Item>
+                    </RecipeIngredientUIData>
+                    <RecipeUnlockConditionText>137486</RecipeUnlockConditionText>
+                </Recipe>
+                <Locked/>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END ADD Common Sounds - Recipe -->
+
+    <!-- START ADD Epic Sounds - Recipe -->
+    <ModOp Type="AddNextSibling" GUID='135416'>
+        <Asset>
+            <Template>Recipe</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742110067</GUID>
+                    <Name>Epic Sounds</Name>
+                    <IconFilename>data\graphics\icons\icon_music_epic_sounds.png</IconFilename>
+                </Standard>
+                <Text />
+                <Recipe>
+                    <RecipeBuilding>1742110057</RecipeBuilding>
+                    <RecipeDescriptionText>1742110068</RecipeDescriptionText>
+                    <RecipeImage>data\graphics\recipebook\recipebook_music_hall_03.png</RecipeImage>
+                    <RecipeIngredientUIData>
+                        <Item>
+                            <PosX>370</PosX>
+                            <PosY>250</PosY>
+                            <UICirclePointer>NorthWest</UICirclePointer>
+                        </Item>
+                        <Item>
+                            <PosX>370</PosX>
+                            <PosY>30</PosY>
+                            <UICirclePointer>SouthWest</UICirclePointer>
+                        </Item>
+                        <Item>
+                            <PosX>30</PosX>
+                            <PosY>30</PosY>
+                            <UICirclePointer>SouthEast</UICirclePointer>
+                        </Item>
+                    </RecipeIngredientUIData>
+                    <RecipeUnlockConditionText>137486</RecipeUnlockConditionText>
+                </Recipe>
+                <Locked/>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END ADD Epic Sounds - Recipe -->
+
+    <!-- START ADD Legendary Sounds - Recipe -->
+    <ModOp Type="AddNextSibling" GUID='135416'>
+        <Asset>
+            <Template>Recipe</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742110069</GUID>
+                    <Name>Legendary Sounds</Name>
+                    <IconFilename>data\graphics\icons\icon_music_legendary_sounds.png</IconFilename>
+                </Standard>
+                <Text />
+                <Recipe>
+                    <RecipeBuilding>1742110059</RecipeBuilding>
+                    <RecipeDescriptionText>1742110070</RecipeDescriptionText>
+                    <RecipeImage>data\graphics\recipebook\recipebook_music_hall_04.png</RecipeImage>
+                    <RecipeIngredientUIData>
+                        <Item>
+                            <PosX>370</PosX>
+                            <PosY>250</PosY>
+                            <UICirclePointer>NorthWest</UICirclePointer>
+                        </Item>
+                        <Item>
+                            <PosX>370</PosX>
+                            <PosY>30</PosY>
+                            <UICirclePointer>SouthWest</UICirclePointer>
+                        </Item>
+                        <Item>
+                            <PosX>30</PosX>
+                            <PosY>30</PosY>
+                            <UICirclePointer>SouthEast</UICirclePointer>
+                        </Item>
+                        <Item>
+                            <PosX>30</PosX>
+                            <PosY>250</PosY>
+                            <UICirclePointer>NorthEast</UICirclePointer>
+                        </Item>
+                    </RecipeIngredientUIData>
+                    <RecipeUnlockConditionText>137486</RecipeUnlockConditionText>
+                </Recipe>
+                <Locked/>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END ADD Legendary Sounds - Recipe -->
+
+    <!-- ****************** END ADD Recipes New World *********************** -->
+
+
+</ModOps>

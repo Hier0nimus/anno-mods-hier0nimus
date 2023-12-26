@@ -1,0 +1,75 @@
+<!-- 
+  Tweaks
+-->
+
+<ModOps>
+
+    <!-- ****************** START Old Nate - Removing iron to make room for Strings - max 8 goods to not have scroll ******************  -->
+
+    <ModOp Type="remove" GUID='77' Path="/Values/Trader/Progression/*/OfferingGoods/Item/GoodSets/Item[Good='1010227']" />
+
+    <!-- ****************** START Old Nate - Adding strings ******************  -->
+    <ModOp Type="add" GUID='77' Path="/Values/Trader/Progression/*[self::MidGame or self::LateMidGame or self::LateGame or self::EndGame]/GoodsProduction/">
+        <Item>
+            <Good>1440231</Good>
+            <ProductionPerMinute>60</ProductionPerMinute>
+        </Item>
+    </ModOp>
+
+    <ModOp Type="add" GUID='77' Path="/Values/Trader/Progression/*[self::MidGame or self::LateMidGame or self::LateGame or self::EndGame]/OfferingGoods/Item/GoodSets/">
+        <Item>
+            <Good>1440231</Good>
+        </Item>
+    </ModOp>
+
+    <!-- ****************** START Old Nate - Increasing storage ******************  -->
+
+    <ModOp Type="replace" GUID='101117' Path="/Values/Warehouse/WarehouseStorage/StorageMax">
+        <StorageMax>200</StorageMax>
+    </ModOp>
+
+    <!-- ****************** START Inuit Trader - Bying Qilauts ******************  -->
+
+    <ModOp Type="add" GUID='237' Path="/Values/Trader/Progression/*/">
+        <PreferedGoods>
+            <Item>
+                <Product>1742110029</Product>                <!-- Qilauts -->
+                <PriceMultiplier>0.1</PriceMultiplier>
+                <ReputationMultiplier>4</ReputationMultiplier>
+            </Item>
+        </PreferedGoods>
+    </ModOp>
+
+    <!-- ****************** START Ketema Trader - Bying Djembés ******************  -->
+
+    <ModOp Type="add" GUID='119051' Path="/Values/Trader/Progression/*/PreferedGoods/">
+        <Item>
+            <Product>1742110017</Product>            <!-- Djembés -->
+            <PriceMultiplier>0.1</PriceMultiplier>
+            <ReputationMultiplier>4</ReputationMultiplier>
+        </Item>
+    </ModOp>
+
+    <!-- ****************** START Adding infotip for strings ******************  -->
+
+    <ModOp Type="addNextSibling" GUID='3718'>
+        <Asset>
+            <Template>BuildMenuInfoTip</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742110085</GUID>
+                    <Name>Infotip Strings</Name>
+                    <IconFilename>data/graphics/icons/icon_instrument_strings.png</IconFilename>
+                </Standard>
+                <Locked>
+                    <DefaultLockedState>0</DefaultLockedState>
+                </Locked>
+                <Building>
+                    <AssociatedRegions>Moderate;Colony01</AssociatedRegions>
+                </Building>
+                <BuildingUnique />
+            </Values>
+        </Asset>
+    </ModOp>
+
+</ModOps>

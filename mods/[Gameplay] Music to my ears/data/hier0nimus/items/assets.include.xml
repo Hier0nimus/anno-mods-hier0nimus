@@ -1,0 +1,255 @@
+<!-- 
+  Tweaks
+-->
+
+<ModOps>
+
+    <ModOp Type="add" GUID="192975,192840,193963,192909" Path="/Values/RewardPool/ItemsPool">
+        <Item>
+            <ItemLink>1742110081</ItemLink>
+        </Item>
+        <Item>
+            <ItemLink>1742110111</ItemLink>
+        </Item>
+        <Item>
+            <ItemLink>1742110113</ItemLink>
+        </Item>
+    </ModOp>
+
+    <!-- START SPECIALIST - Antoine-Joseph Sax, Inventor of the Saxophone - GuildhouseItem -->
+    <ModOp GUID="191431" Type="addNextSibling">
+        <Asset>
+            <Template>GuildhouseItem</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742110081</GUID>
+                    <Name>Antoine-Joseph Sax, Inventor of the Saxophone</Name>
+                    <IconFilename>data/graphics/icons/icon_items_adolphe_sax.png</IconFilename>
+                    <InfoDescription>1742110082</InfoDescription>
+                </Standard>
+                <Text />
+                <Item>
+                    <MaxStackSize>1</MaxStackSize>
+                    <Rarity>Legendary</Rarity>
+                    <ItemType>Specialist</ItemType>
+                    <Allocation>GuildHouse</Allocation>
+                    <TradePrice>1250000</TradePrice>
+                    <TradePriceOnlineCurrency>1250000</TradePriceOnlineCurrency>
+                </Item>
+                <FactoryUpgrade>
+                    <ProductivityUpgrade>
+                        <Value>100</Value>
+                        <Percental>1</Percental>
+                    </ProductivityUpgrade>
+                    <ReplaceInputs>
+                        <Item>
+                            <OldInput>1010204</OldInput>                            <!-- Brass -->
+                            <NewInput>838</NewInput>                            <!--Aluminium -->
+                        </Item>
+                    </ReplaceInputs>
+                    <AdditionalOutput>
+                        <Item>
+                            <Product>1742110019</Product>                            <!-- Saxophones -->
+                            <AdditionalOutputCycle>1</AdditionalOutputCycle>
+                            <Amount>1</Amount>
+                        </Item>
+                    </AdditionalOutput>
+                </FactoryUpgrade>
+                <ItemEffect>
+                    <EffectTargets>
+                        <Item>
+                            <GUID>1742110003</GUID>
+                        </Item>
+                    </EffectTargets>
+                </ItemEffect>
+                <ExpeditionAttribute>
+                    <BaseMorale>0</BaseMorale>
+                    <ExpeditionAttributes>
+                        <Item>
+                            <Attribute>PerkMale</Attribute>
+                            <Amount>1</Amount>
+                        </Item>
+                        <Item>
+                            <Attribute>Crafting</Attribute>
+                            <Amount>50</Amount>
+                        </Item>
+                        <Item>
+                            <Attribute>Diplomacy</Attribute>
+                            <Amount>10</Amount>
+                        </Item>
+                    </ExpeditionAttributes>
+                    <ItemDifficulties>Hard</ItemDifficulties>
+                </ExpeditionAttribute>
+                <BuildingUpgrade>
+                    <WorkforceAmountUpgrade>
+                        <Value>75</Value>
+                        <Percental>1</Percental>
+                    </WorkforceAmountUpgrade>
+                </BuildingUpgrade>
+                <IncidentInfectableUpgrade>
+                    <IncidentFireIncreaseUpgrade>
+                        <Value>-3</Value>
+                    </IncidentFireIncreaseUpgrade>
+                    <IncidentExplosionIncreaseUpgrade>
+                        <Value>-3</Value>
+                    </IncidentExplosionIncreaseUpgrade>
+                </IncidentInfectableUpgrade>
+                <IndustrializableUpgrade>
+                    <ProvideIndustrialization>1</ProvideIndustrialization>
+                </IndustrializableUpgrade>
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- START SPECIALIST - Clown Fizboo, Street Performer - TownhallItem -->
+    <ModOp GUID="191388" Type="addNextSibling">
+        <Asset>
+            <Template>TownhallItem</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742110111</GUID>                    <!-- GUID 0 -->
+                    <Name>Clown Fizboo, Street Performer</Name>
+                    <IconFilename>data/graphics/icons/icon_items_clown_fizboo.png</IconFilename>
+                    <InfoDescription>1742110112</InfoDescription>                    <!-- GUID 1 -->
+                </Standard>
+                <Text />
+                <Locked>
+                    <DLCDependency>24963</DLCDependency>  New World Rising 
+                </Locked>
+                <Item>
+                    <MaxStackSize>1</MaxStackSize>
+                    <Rarity>Legendary</Rarity>
+                    <ItemType>Specialist</ItemType>
+                    <TradePrice>1650000</TradePrice>
+                    <TradePriceOnlineCurrency>1650000</TradePriceOnlineCurrency>
+                </Item>
+                <ItemEffect>
+                    <EffectTargets>
+                        <Item>
+                            <GUID>25677</GUID>                            <!-- All New World Residences -->
+                        </Item>
+                    </EffectTargets>
+                </ItemEffect>
+                <ItemAction />
+                <ExpeditionAttribute>
+                    <BaseMorale>0</BaseMorale>
+                    <ExpeditionAttributes>
+                        <Item>
+                            <Attribute>PerkMale</Attribute>
+                            <Amount>1</Amount>
+                        </Item>
+                        <Item>
+                            <Attribute>Diplomacy</Attribute>
+                            <Amount>50</Amount>
+                        </Item>
+                        <Item>
+                            <Attribute>Faith</Attribute>
+                            <Amount>30</Amount>
+                        </Item>
+                        <Item>
+                            <Attribute>PerkHypnotist</Attribute>
+                            <Amount>1</Amount>
+                        </Item>
+                    </ExpeditionAttributes>
+                    <ItemDifficulties>Hard</ItemDifficulties>
+                    <FluffText>1742110112</FluffText>                    <!-- GUID 1 -->
+                </ExpeditionAttribute>
+                <ResidenceUpgrade>
+                    <AdditionalHappiness>10</AdditionalHappiness>
+                    <TaxModifierInPercent>15</TaxModifierInPercent>
+                    <GoodConsumptionUpgrade>
+                        <Item>
+                            <ProvidedNeed>1742110071</ProvidedNeed>                            <!--Music Hall-->
+                            <AmountInPercent>-100</AmountInPercent>
+                        </Item>
+                    </GoodConsumptionUpgrade>
+                </ResidenceUpgrade>
+                <IncidentInfectableUpgrade>
+                    <IncidentRiotIncreaseUpgrade>
+                        <Value>-4</Value>
+                    </IncidentRiotIncreaseUpgrade>
+                    <IncidentIllnessIncreaseUpgrade>
+                        <Value>-4</Value>
+                    </IncidentIllnessIncreaseUpgrade>
+                </IncidentInfectableUpgrade>
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- START SPECIALIST - Giorgio Pirazzi, Theory of strings - GuildhouseItem -->
+    <ModOp GUID="191431" Type="addNextSibling">
+        <Asset>
+            <Template>GuildhouseItem</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742110113</GUID>
+                    <Name>Giorgio Pirazzi, Theory of strings</Name>
+                    <IconFilename>data/graphics/icons/icon_items_giorgio_pirazzi.png</IconFilename>
+                    <InfoDescription>1742110114</InfoDescription>
+                </Standard>
+                <Text />
+                <Item>
+                    <MaxStackSize>1</MaxStackSize>
+                    <Rarity>Legendary</Rarity>
+                    <ItemType>Specialist</ItemType>
+                    <Allocation>GuildHouse</Allocation>
+                    <TradePrice>1250000</TradePrice>
+                    <TradePriceOnlineCurrency>1250000</TradePriceOnlineCurrency>
+                </Item>
+                <FactoryUpgrade>
+                    <ProductivityUpgrade>
+                        <Value>50</Value>
+                        <Percental>1</Percental>
+                    </ProductivityUpgrade>
+                    <AdditionalOutput>
+                        <Item>
+                            <Product>1440231</Product>                            <!-- Strings (New Horizons) -->
+                            <AdditionalOutputCycle>3</AdditionalOutputCycle>
+                            <Amount>1</Amount>
+                        </Item>
+                    </AdditionalOutput>
+                </FactoryUpgrade>
+                <ItemEffect>
+                    <EffectTargets>
+                        <Item>
+                            <GUID>6279</GUID>
+                        </Item>
+                    </EffectTargets>
+                </ItemEffect>
+                <ExpeditionAttribute>
+                    <BaseMorale>0</BaseMorale>
+                    <ExpeditionAttributes>
+                        <Item>
+                            <Attribute>PerkMale</Attribute>
+                            <Amount>1</Amount>
+                        </Item>
+                        <Item>
+                            <Attribute>Crafting</Attribute>
+                            <Amount>60</Amount>
+                        </Item>
+                    </ExpeditionAttributes>
+                    <ItemDifficulties>Hard</ItemDifficulties>
+                </ExpeditionAttribute>
+                <BuildingUpgrade>
+                    <MaintenanceUpgrade>
+                        <Value>50</Value>
+                        <Percental>1</Percental>
+                    </MaintenanceUpgrade>
+                    <WorkforceAmountUpgrade>
+                        <Value>50</Value>
+                        <Percental>1</Percental>
+                    </WorkforceAmountUpgrade>
+                </BuildingUpgrade>
+                <IncidentInfectableUpgrade>
+                    <IncidentFireIncreaseUpgrade>
+                        <Value>-2</Value>
+                    </IncidentFireIncreaseUpgrade>
+                    <IncidentExplosionIncreaseUpgrade>
+                        <Value>-2</Value>
+                    </IncidentExplosionIncreaseUpgrade>
+                </IncidentInfectableUpgrade>
+            </Values>
+        </Asset>
+    </ModOp>
+
+</ModOps>
