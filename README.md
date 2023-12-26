@@ -25,6 +25,7 @@ You will need ALL DLC's to play this mod. There are new goods in every region fr
 Explore the world of musical instruments with new production chains and a lategame Music hall to boost your New world population.
 
 Current version 1.5 (26/12/2023)
+- Download on Mod.io: https://mod.io/g/anno-1800/m/music-to-my-ears
 
 ## Military Attention
 
