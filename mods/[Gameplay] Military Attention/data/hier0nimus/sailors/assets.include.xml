@@ -1,0 +1,224 @@
+<!-- 
+  Sailors
+-->
+
+<ModOps>
+  <!-- ****************** START SAILORS ******************  -->
+
+  <!-- ****************** START SAILORS - Productstoragelist ******************  -->
+  <ModOp Type="addNextSibling" GUID='4269'>
+    <Asset>
+      <Template>ProductStorageList</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100532</GUID>
+          <Name>Sailors</Name>
+        </Standard>
+        <ProductStorageList>
+          <ProductList>
+            <Item>
+              <Product>1742100533</Product>
+            </Item>
+          </ProductList>
+        </ProductStorageList>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- ****************** END SAILORS - Productstoragelist ******************  -->
+
+  <!-- ****************** START SAILORS - Product ******************  -->
+  <ModOp Type="addNextSibling" GUID='535'>
+    <Asset>
+      <Template>Product</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100533</GUID>
+          <Name>Sailors</Name>
+          <IconFilename>data/graphics/icons/icon_sailors.png</IconFilename>
+          <InfoDescription>1742100533</InfoDescription>
+        </Standard>
+        <Locked/>
+        <Product>
+          <StorageLevel>Building</StorageLevel>
+          <ProductCategory>11702</ProductCategory>
+          <IsStrategicResource>1</IsStrategicResource>
+          <BasePrice>1500</BasePrice>
+          <CivLevel>2</CivLevel>
+          <AssociatedRegion>Moderate</AssociatedRegion>
+          <ProductionRegions>
+            <Item>
+              <RegionType>Moderate</RegionType>
+            </Item>
+          </ProductionRegions>
+        </Product>
+        <ExpeditionAttribute>
+          <BaseMorale>10</BaseMorale>
+        </ExpeditionAttribute>
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- Add to strategic goods -->
+  <ModOp Type="add" GUID="501961" Path="/Values/ProductList/List">
+    <Item>
+      <Product>1742100533</Product>
+    </Item>
+  </ModOp>
+
+  <!-- ****************** END SAILORS - Product ******************  -->
+
+
+  <!-- ****************** START NAVY RECRUITMENT OFFICE - Building ******************  -->
+  <ModOp Type="addNextSibling" GUID='1010284'>
+    <Asset>
+      <Template>NavyRecruitmentOffice</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100534</GUID>
+          <Name>Navy Recruitment Office</Name>
+          <IconFilename>data/graphics/icons/icon_navy_recruitment_office.png</IconFilename>
+          <InfoDescription>1742100535</InfoDescription>
+        </Standard>
+        <Building />
+        <Blocking />
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <Amount>5000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>
+              <Amount>18</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>
+              <Amount>5</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/special/guild_house/guild_house.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Selection>
+          <GUIType>Production</GUIType>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+        </Selection>
+        <FactoryBase>
+          <FactoryOutputs>
+            <Item>
+              <Product>1742100533</Product>
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+          </FactoryOutputs>
+          <CycleTime>120</CycleTime>
+          <WarehouseTransporterAsset>829</WarehouseTransporterAsset>
+          <MissingConnectionInfolayer>0</MissingConnectionInfolayer>
+          <IsMainFactory>1</IsMainFactory>
+        </FactoryBase>
+        <LogisticNode>
+          <TransporterAsset>829</TransporterAsset>
+          <TransporterCountMax>2</TransporterCountMax>
+          <NeedsTransporterQueue>1</NeedsTransporterQueue>
+          <HideTransportersBeforeTheyMove>1</HideTransportersBeforeTheyMove>
+        </LogisticNode>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>              <!-- Coins -->
+              <Amount>50</Amount>
+              <InactiveAmount>10</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1010115</Product>              <!-- Looks like it does not want to use 1742100005 Soldiers Workforce WHY? -->
+              <Amount>5</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Pausable />
+        <UpgradeList />
+        <ItemContainer>
+          <SocketAllocation>Mod11</SocketAllocation>
+          <SocketCount>1</SocketCount>
+          <SocketScope>Radius</SocketScope>
+          <SocketScopeRadius>20</SocketScopeRadius>
+          <SocketScopeRadiusOverlapCategory>Mod11</SocketScopeRadiusOverlapCategory>
+        </ItemContainer>
+        <BuffFactory />
+        <PublicService />
+        <Postbox />
+        <Warehouse>
+          <WarehouseStorage>
+            <StorageMax>50</StorageMax>
+          </WarehouseStorage>
+          <StorageType>Warehouse</StorageType>
+        </Warehouse>
+        <StorageBase>
+          <ProductStorageList>1742100532</ProductStorageList>
+        </StorageBase>
+        <BuildingModule>
+          <ModuleType>Main</ModuleType>
+        </BuildingModule>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- ****************** END NAVY RECRUITMENT OFFICE - Building ******************  -->
+
+  <!-- ****************** START NAVY RECRUITMENT - EconomyFeature ******************  -->
+  <ModOp Type="addNextSibling" GUID="1010000">
+    <Asset>
+      <Template>EconomyFeature</Template>
+      <Values>
+        <EconomyFeature7>
+          <MetropolisFactor>
+            <ConfigPerPopulation>
+              <Item>
+                <PopulationLevel>1742100000</PopulationLevel>                <!-- Soldiers Population -->
+                <StartOffset>1</StartOffset>                <!-- Start at 1 solider population -->
+                <Interval>100</Interval>
+                <EffectPerInterval>1</EffectPerInterval>
+                <EffectMaximum>40</EffectMaximum>
+              </Item>
+            </ConfigPerPopulation>
+          </MetropolisFactor>
+          <SaturationTrackerSharpnessDivisor>6</SaturationTrackerSharpnessDivisor>
+          <MissingWorkforce>
+            <AreaNotification>501310</AreaNotification>
+            <PoolNotification>112114</PoolNotification>
+            <WorkforceThresholdInPercent>10</WorkforceThresholdInPercent>
+            <Interval>360000</Interval>
+            <MaxTriggers>3</MaxTriggers>
+          </MissingWorkforce>
+          <ConsumptionWaste>
+            <Item>
+              <ConsumedNeed>1742100439</ConsumedNeed>
+              <CreatesWaste>1742100533</CreatesWaste>
+            </Item>
+          </ConsumptionWaste>
+        </EconomyFeature7>
+        <Standard>
+          <GUID>1742100536</GUID>
+          <Name>NavyRecruitment</Name>
+          <ID>NavyRecruitment</ID>
+        </Standard>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- ****************** END NAVY RECRUITMENT - EconomyFeature ******************  -->
+
+  <!-- ****************** END SAILORS ******************  -->
+</ModOps>

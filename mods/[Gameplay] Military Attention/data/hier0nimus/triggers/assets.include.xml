@@ -36,9 +36,6 @@
                     <UnhideAssets>
                     </UnhideAssets>
                     <UnlockAssets>
-                      <Item>
-                        <Asset>1742100532</Asset>
-                      </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>
                 </Values>
@@ -60,7 +57,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742100991</GUID>
+          <GUID>1742187795</GUID>
           <Name>Other Regions</Name>
         </Standard>
         <Trigger>
@@ -216,6 +213,18 @@
                       </Item>
                       <Item>
                         <Asset>1742100373</Asset>                        <!-- Flak Emplacement (EN Land) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100532</Asset>                        <!-- Sailors - ProductStorageList -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100533</Asset>                        <!-- Sailors - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100534</Asset>                        <!-- Navy Recruitment Office - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100536</Asset>                        <!-- Navy Recruitment Office - Building -->
                       </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>
@@ -687,13 +696,7 @@
                     </UnhideAssets>
                     <UnlockAssets>
                       <Item>
-                        <Asset>1742100417</Asset>                        <!-- Military Post Box - Building -->
-                      </Item>
-                      <Item>
                         <Asset>1742100007</Asset>                        <!-- Military Post Box - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100284</Asset>                        <!-- Military Post Office - Building -->
                       </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>
@@ -905,7 +908,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742100988</GUID>
+          <GUID>1742100979</GUID>
           <Name>MOD Trigger</Name>
         </Standard>
         <Trigger>
@@ -1117,7 +1120,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742100994</GUID>
+          <GUID>1742187796</GUID>
           <Name>MOD Trigger</Name>
         </Standard>
         <Trigger>
@@ -1370,7 +1373,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742100981</GUID>
+          <GUID>1742187797</GUID>
           <Name>MOD Trigger</Name>
         </Standard>
         <Trigger>
@@ -1396,7 +1399,7 @@
                     </UnhideAssets>
                     <UnlockAssets>
                       <Item>
-                        <Asset>1742100238</Asset>                        <!-- Military Workforce Office - Building -->
+                        <Asset>1742100238</Asset>                        <!-- Small Military Warehouse - Building -->
                       </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>
@@ -1416,7 +1419,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742100996</GUID>
+          <GUID>1742187798</GUID>
           <Name>MOD Trigger</Name>
         </Standard>
         <Trigger>
@@ -1455,121 +1458,6 @@
       </Values>
     </Asset>
   </ModOp>
-
-  <!-- *********************** EXPEDITIONS *********************** -->
-
-  <!--UNLOCK - Artisans 1 
-  <ModOp Type="addnextSibling" GUID="130248">
-    <Asset>
-      <Template>FeatureUnlock</Template>
-      <Values>
-        <Standard>
-          <GUID>1742100391</GUID>
-          <Name>Military Expedition Unlock Delay</Name>
-        </Standard>
-        <Locked />
-        <Trigger>
-          <TriggerCondition>
-            <Template>ConditionPlayerCounter</Template>
-            <Values>
-              <Condition />
-              <ConditionPlayerCounter>
-                <PlayerCounter>PopulationByLevel</PlayerCounter>
-                <Context>15000001</Context>
-                <CounterAmount>300</CounterAmount>
-              </ConditionPlayerCounter>
-            </Values>
-          </TriggerCondition>
-          <TriggerActions>
-            <Item>
-              <TriggerAction>
-                <Template>ActionDelayedActions</Template>
-                <Values>
-                  <Action />
-                  <ActionDelayedActions>
-                    <ExecutionDelay>10000</ExecutionDelay>
-                    <DelayedActions>
-                      <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
-                      <Values>
-                        <ActionList>
-                          <Actions>
-                            <Item>
-                              <Action>
-                                <Template>ActionRegisterTrigger</Template>
-                                <Values>
-                                  <Action />
-                                  <ActionRegisterTrigger>
-                                    <TriggerAsset>1742100392</TriggerAsset>
-                                  </ActionRegisterTrigger>
-                                </Values>
-                              </Action>
-                            </Item>
-                          </Actions>
-                        </ActionList>
-                      </Values>
-                    </DelayedActions>
-                  </ActionDelayedActions>
-                </Values>
-              </TriggerAction>
-            </Item>
-          </TriggerActions>
-          <ResetTrigger>
-            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
-            <Values>
-              <EmptyAutoCreateValue />
-            </Values>
-          </ResetTrigger>
-        </Trigger>
-        <TriggerSetup />
-      </Values>
-    </Asset>
-    <Asset>
-      <Template>FeatureUnlock</Template>
-      <Values>
-        <Standard>
-          <GUID>1742100392</GUID>
-          <Name>Military Expedition Unlock</Name>
-        </Standard>
-        <Locked />
-        <Trigger>
-          <TriggerCondition>
-            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
-            <Values>
-              <Condition />
-              <ConditionAlwaysTrue />
-            </Values>
-          </TriggerCondition>
-          <TriggerActions>
-            <Item>
-              <TriggerAction>
-                <Template>ActionUnlockAsset</Template>
-                <Values>
-                  <Action />
-                  <ActionUnlockAsset>
-                    <UnlockAssets>
-                      <Item>
-                        <Asset>1742100382</Asset>
-                      </Item>
-                    </UnlockAssets>
-                  </ActionUnlockAsset>
-                </Values>
-              </TriggerAction>
-            </Item>
-          </TriggerActions>
-          <ResetTrigger>
-            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
-            <Values>
-              <EmptyAutoCreateValue />
-            </Values>
-          </ResetTrigger>
-        </Trigger>
-        <TriggerSetup>
-          <AutoRegisterTrigger>0</AutoRegisterTrigger>
-        </TriggerSetup>
-      </Values>
-    </Asset>
-  </ModOp>
--->
 
   <!--UNLOCK - Farmers 1 - TESTUNLOCK NEWSPAPER -->
   <ModOp Type="addnextSibling" GUID="130248">

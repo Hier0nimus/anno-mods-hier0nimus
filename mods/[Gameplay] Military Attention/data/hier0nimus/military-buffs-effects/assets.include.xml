@@ -1522,6 +1522,9 @@
             <Item>
               <GUID>1742100220</GUID>              <!-- Monster Gun (OW) - Building -->
             </Item>
+            <Item>
+              <GUID>1742100490</GUID>              <!-- Fort - Building -->
+            </Item>
           </EffectTargets>
           <AllowStacking>0</AllowStacking>
         </ItemEffect>
@@ -1571,7 +1574,7 @@
               <GUID>1742100220</GUID>              <!-- Monster Gun (OW) - Building -->
             </Item>
             <Item>
-              <GUID>1742100284</GUID>              <!-- Fort (OW) - Building -->
+              <GUID>1742100490</GUID>              <!-- Fort - Building -->
             </Item>
           </EffectTargets>
           <AllowStacking>0</AllowStacking>
@@ -1665,7 +1668,7 @@
           <AdditionalOutput>
             <Item>
               <Product>24807</Product>
-              <AdditionalOutputCycle>4</AdditionalOutputCycle>
+              <AdditionalOutputCycle>2</AdditionalOutputCycle>
               <Amount>1</Amount>
             </Item>
           </AdditionalOutput>
@@ -1875,37 +1878,7 @@
         <ItemEffect>
           <EffectTargets>
             <Item>
-              <GUID>1742100062</GUID>              <!-- Military Uniform Factpry - ItemEffectTargetPool -->
-            </Item>
-            <Item>
-              <GUID>1742100331</GUID>              <!-- Heated Military Uniform Factpry - ItemEffectTargetPool -->
-            </Item>
-            <Item>
-              <GUID>1742100469</GUID>              <!-- Basic Weapons Factory - ItemEffectTargetPool -->
-            </Item>
-            <Item>
-              <GUID>1010299</GUID>              <!-- Weapon Factory - ItemEffectTargetPool -->
-            </Item>
-            <Item>
-              <GUID>1010301</GUID>              <!-- Heavy Weapons Factory - Building -->
-            </Item>
-            <Item>
-              <GUID>924</GUID>              <!-- Bomb Factory - Building -->
-            </Item>
-            <Item>
-              <GUID>934</GUID>              <!-- Sea Mine Factory - Building -->
-            </Item>
-            <Item>
-              <GUID>1010300</GUID>              <!-- Dynamite Factory - Building -->
-            </Item>
-            <Item>
-              <GUID>1742100199</GUID>              <!-- Basic Ammunition Factory - Building -->
-            </Item>
-            <Item>
-              <GUID>1742100246</GUID>              <!-- Shell Ammunition Factory - Building -->
-            </Item>
-            <Item>
-              <GUID>1742100201</GUID>              <!-- Bombs Ammunition Factory - Building -->
+              <GUID>6000018</GUID>
             </Item>
           </EffectTargets>
           <AllowStacking>0</AllowStacking>
@@ -1913,19 +1886,19 @@
         <Text />
         <FactoryUpgrade>
           <ProductivityUpgrade>
-            <Value>20</Value>
+            <Value>50</Value>
             <Percental>1</Percental>
           </ProductivityUpgrade>
           <AdditionalOutput />
         </FactoryUpgrade>
         <BuildingUpgrade>
           <MaintenanceUpgrade>
-            <Value>-20</Value>
+            <Value>15</Value>
             <Percental>1</Percental>
           </MaintenanceUpgrade>
           <WorkforceAmountUpgrade>
             <Percental>1</Percental>
-            <Value>-20</Value>
+            <Value>15</Value>
           </WorkforceAmountUpgrade>
           <ReplacingWorkforce>1742100005</ReplacingWorkforce>
         </BuildingUpgrade>
@@ -2082,7 +2055,7 @@
   <!-- START FORT HARBOUR BUFF - BUFF -->
   <ModOp GUID="110956" Type="addNextSibling">
     <Asset>
-      <Template>VehicleBuff</Template>
+      <Template>HarbourOfficeBuff</Template>
       <Values>
         <Standard>
           <GUID>1742100480</GUID>
@@ -2090,66 +2063,74 @@
           <IconFilename>data/graphics/icons/icon_fort.png</IconFilename>
           <InfoDescription>1742100481</InfoDescription>
         </Standard>
-        <Text />
-        <VehicleUpgrade>
-          <ForwardSpeedUpgrade>
-            <Value>10</Value>
-            <Percental>1</Percental>
-          </ForwardSpeedUpgrade>
-          <MaintainanceUpgrade>
-            <Value>-50</Value>
-            <Percental>1</Percental>
-          </MaintainanceUpgrade>
-          <IgnoreDamageFactorUpgrade>
-            <Value>10</Value>
-            <Percental>1</Percental>
-          </IgnoreDamageFactorUpgrade>
-        </VehicleUpgrade>
-        <Buff/>
-        <AttackerUpgrade>
-          <AttackRangeUpgrade>
-            <Value>10</Value>
-            <Percental>1</Percental>
-          </AttackRangeUpgrade>
-          <BaseDamageUpgrade>
-            <Value>10</Value>
-            <Percental>1</Percental>
-          </BaseDamageUpgrade>
-          <ReloadTimeUpgrade>
-            <Value>-10</Value>
-            <Percental>1</Percental>
-          </ReloadTimeUpgrade>
-          <LineOfSightRangeUpgrade>
-            <Value>10</Value>
-            <Percental>1</Percental>
-          </LineOfSightRangeUpgrade>
-          <AttackSpeedUpgrade>100</AttackSpeedUpgrade>
-        </AttackerUpgrade>
-        <AttackableUpgrade>
-          <MaxHitpointsUpgrade>
-            <Value>1000</Value>
-          </MaxHitpointsUpgrade>
-        </AttackableUpgrade>
-        <ProjectileUpgrade/>
-        <TradeShipUpgrade>
-          <ActiveTradePriceInPercent>50</ActiveTradePriceInPercent>
-          <LoadingSpeedUpgrade>
-            <Value>20</Value>
-            <Percental>1</Percental>
-          </LoadingSpeedUpgrade>
-        </TradeShipUpgrade>
-        <UpgradeList/>
         <ItemEffect>
           <EffectTargets>
             <Item>
-              <GUID>191454</GUID>
-            </Item>
-            <Item>
-              <GUID>102492</GUID>
+              <GUID>191443</GUID>
             </Item>
           </EffectTargets>
         </ItemEffect>
-        <DivingBellUpgrade/>
+        <Text />
+        <FactoryUpgrade />
+        <BuildingUpgrade>
+          <WorkforceAmountUpgrade>
+            <Value>-50</Value>
+            <Percental>1</Percental>
+          </WorkforceAmountUpgrade>
+          <MaintenanceUpgrade>
+            <Value>-50</Value>
+            <Percental>1</Percental>
+          </MaintenanceUpgrade>
+          <ReplacingWorkforce>1742100005</ReplacingWorkforce>
+        </BuildingUpgrade>
+        <Buff />
+        <AttackerUpgrade>
+          <BaseDamageUpgrade>
+            <Percental>1</Percental>
+          </BaseDamageUpgrade>
+          <ReloadTimeUpgrade>
+            <Value>-17</Value>
+            <Percental>1</Percental>
+          </ReloadTimeUpgrade>
+          <AttackSpeedUpgrade>20</AttackSpeedUpgrade>
+        </AttackerUpgrade>
+        <VisitorHarborUpgrade />
+        <VisitorUpgrade />
+        <PassiveTradeGoodGenUpgrade>
+          <GenProbability>100</GenProbability>
+          <GenPool>190803</GenPool>
+        </PassiveTradeGoodGenUpgrade>
+        <KontorUpgrade />
+        <AttackableUpgrade>
+          <SelfHealUpgrade>
+            <Value>200</Value>
+            <Percental>1</Percental>
+          </SelfHealUpgrade>
+          <SelfHealPausedTimeIfAttackedUpgrade>
+            <Value>-100</Value>
+            <Percental>1</Percental>
+          </SelfHealPausedTimeIfAttackedUpgrade>
+          <MoralePowerUpgrade>
+            <Value>50</Value>
+            <Percental>1</Percental>
+          </MoralePowerUpgrade>
+        </AttackableUpgrade>
+        <PierUpgrade>
+          <PierSpeedUpgrade>
+            <Value>50</Value>
+            <Percental>1</Percental>
+          </PierSpeedUpgrade>
+        </PierUpgrade>
+        <CultureUpgrade />
+        <WarehouseUpgrade>
+          <StorageCapacityModifier>75</StorageCapacityModifier>
+        </WarehouseUpgrade>
+        <ItemContainerUpgrade>
+          <SocketCountUpgrade>
+            <Value>1</Value>
+          </SocketCountUpgrade>
+        </ItemContainerUpgrade>
+        <ResourceUpgrade />
       </Values>
     </Asset>
   </ModOp>
@@ -2210,54 +2191,5 @@
     </Asset>
   </ModOp>
   <!-- END GALENA MINES BUFF - BUFF -->
-
-  <!-- START REPLACING WORKFORCE WITH SOLDIERS - BUFF -->
-  <ModOp Type="addNextSibling" GUID="25623">
-    <Asset>
-      <Template>GuildhouseBuff</Template>
-      <Values>
-        <Standard>
-          <GUID>1742100236</GUID>
-          <Name>Replace workforce with soldiers</Name>
-          <IconFilename>data/graphics/icons/icon_soldiers_0.png</IconFilename>
-          <InfoDescription>1742100237</InfoDescription>
-        </Standard>
-        <ItemEffect>
-          <EffectTargets>
-            <Item>
-              <GUID>6000018</GUID>
-            </Item>
-          </EffectTargets>
-          <AllowStacking>0</AllowStacking>
-        </ItemEffect>
-        <BuildingUpgrade>
-          <MaintenanceUpgrade>
-            <Value>-20</Value>
-            <Percental>1</Percental>
-          </MaintenanceUpgrade>
-          <WorkforceAmountUpgrade>
-            <Percental>1</Percental>
-            <Value>-20</Value>
-          </WorkforceAmountUpgrade>
-          <ReplacingWorkforce>1742100005</ReplacingWorkforce>
-        </BuildingUpgrade>
-        <Buff />
-        <FactoryUpgrade>
-          <ProductivityUpgrade>
-            <Value>20</Value>
-            <Percental>1</Percental>
-          </ProductivityUpgrade>
-        </FactoryUpgrade>
-        <PopulationUpgrade />
-        <ResidenceUpgrade />
-        <IncidentInfectableUpgrade />
-        <CultureUpgrade />
-        <InfluenceSourceUpgrade />
-        <DistributionUpgrade />
-        <ItemContainerUpgrade />
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END REPLACING WORKFORCE WITH SOLDIERS - BUFF -->
 
 </ModOps>

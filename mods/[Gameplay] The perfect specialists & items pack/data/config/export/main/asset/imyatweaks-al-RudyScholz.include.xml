@@ -1,0 +1,39 @@
+<ModOps>
+
+    <ImyaTweaks Title="AL - Rudy Scholz, Scraps from the sea" />
+
+    <!-- Rudy Scholz, Scraps from the sea -  1742000435-1742000436 -->
+
+    <ModOp GUID="1742000435" Type="replace" Path="/Values/FactoryUpgrade/ProductivityUpgrade/Value" ModOpID="1742000435_Productivity" Skip="1">
+        <Value>-50</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000435_Productivity" Kind="Slider" ExposeID="Productivity(%)">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000435" Type="replace" Path="/Values/FactoryUpgrade/AdditionalOutput/Item[Product='115980']/AdditionalOutputCycle" ModOpID="1742000435_AdditionalOutputCycleLostcrap">
+        <AdditionalOutputCycle>10</AdditionalOutputCycle>
+    </ModOp>
+
+    <ImyaExpose Path="self::AdditionalOutputCycle" ModOpID="1742000435_AdditionalOutputCycleLostcrap" Kind="Slider" ExposeID="Lost Expedition Scrap (1/x)">
+        <SliderDefinition Min="1" Max="20" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000435" Type="replace" Path="/Values/BuildingUpgrade/MaintenanceUpgrade/Value" ModOpID="1742000435_MaintenanceUpgrade">
+        <Value>100</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000435_MaintenanceUpgrade" Kind="Slider" ExposeID="Maintenance (%)">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000435" Type="replace" Path="/Values/BuildingUpgrade/WorkforceAmountUpgrade/Value" ModOpID="1742000435_WorkforceAmountUpgrade">
+        <Value>100</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000435_WorkforceAmountUpgrade" Kind="Slider" ExposeID="Workforce Needed (%)">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+</ModOps>

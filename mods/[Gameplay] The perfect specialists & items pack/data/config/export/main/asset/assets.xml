@@ -1,7 +1,7 @@
 <!-- 
   
-  [Gameplay] The perfect specialists & items pack v18.0 (118)
-  GUID Range: 1742000000-1742000235 + 1742000408-1742000429
+  [Gameplay] The perfect specialists & items pack v18.1 (125)
+  GUID Range: 1742000000-1742000235 + 1742000408-1742000444
   
   Created by Hier0nimus
   Thanks to Taludas for translating to German
@@ -88,6 +88,15 @@
     <Item>
       <ItemLink>1742000180</ItemLink>      <!-- Floppy, Herder of animals 1742000180-1742000181 -->
     </Item>
+    <Item>
+      <ItemLink>1742000430</ItemLink>      <!-- Julie Black, Pump it up 1742000430-1742000431 -->
+    </Item>
+    <Item>
+      <ItemLink>1742000437</ItemLink>      <!-- Herbert Scholz, Scraps from steel 1742000437-1742000438 -->
+    </Item>
+    <Item>
+      <ItemLink>1742000439</ItemLink>      <!-- Heidi Scholz, Scraps from weapons 1742000439-1742000440 -->
+    </Item>
   </ModOp>
 
   <!-- LEGENDARY - EU - Public Buildings & City Institutions -->
@@ -150,6 +159,9 @@
     <Item>
       <ItemLink>1742000212</ItemLink>      <!-- Raveena Bhargava, The Airship Architect 1742000212-1742000213 -->
     </Item>
+    <Item>
+      <ItemLink>1742000432</ItemLink>      <!-- Olivier Levassier, You shall not pass without paying -  1742000432-1742000433 -->
+    </Item>
   </ModOp>
 
   <!-- LEGENDARY - Ships -->
@@ -211,6 +223,12 @@
     </Item>
     <Item>
       <ItemLink>1742000410</ItemLink>      <!-- Roberta Dompson, Layered Storage Solutions 1742000410-1742000411 -->
+    </Item>
+    <Item>
+      <ItemLink>1742000435</ItemLink>      <!-- Rudy Scholz, Scraps from the sea 1742000435-1742000436 -->
+    </Item>
+    <Item>
+      <ItemLink>1742000443</ItemLink>      <!-- Marie-Antoinette Montagne, Rich gases 1742000443-1742000444 -->
     </Item>
   </ModOp>
 
@@ -399,6 +417,9 @@
     </Item>
     <Item>
       <ItemLink>1742000415</ItemLink>      <!-- Frotz Wogmann, Inventor Of Synthetic Rubber 1742000415-1742000416 -->
+    </Item>
+    <Item>
+      <ItemLink>1742000441</ItemLink>      <!-- Regina Scholz, Scraps from advanced weapons 1742000441-1742000442 -->
     </Item>
   </ModOp>
 
@@ -900,6 +921,27 @@
                       <Item>
                         <Asset>1742000415</Asset>                        <!-- Frotz Wogmann, Inventor Of Synthetic Rubber 1742000415-1742000416 -->
                       </Item>
+                      <Item>
+                        <Asset>1742000430</Asset>                        <!-- Julie Black, Pump it up 1742000430-1742000431 -->
+                      </Item>
+                      <Item>
+                        <Asset>1742000432</Asset>                        <!-- Olivier Levassier, You shall not pass without paying 1742000432-1742000433 -->
+                      </Item>
+                      <Item>
+                        <Asset>1742000435</Asset>                        <!-- Rudy Scholz, Scraps from the sea -  1742000435-1742000436 -->
+                      </Item>
+                      <Item>
+                        <Asset>1742000437</Asset>                        <!-- Herbert Scholz, Scraps from steel -  1742000437-1742000438 -->
+                      </Item>
+                      <Item>
+                        <Asset>1742000439</Asset>                        <!-- Heidi Scholz, Scraps from weapons -  1742000439-1742000440 -->
+                      </Item>
+                      <Item>
+                        <Asset>1742000441</Asset>                        <!-- Regina Scholz, Scraps from advanced weapons -  1742000441-1742000442 -->
+                      </Item>
+                      <Item>
+                        <Asset>1742000443</Asset>                        <!-- Marie-Antoinette Montagne, Rich gases 1742000443-1742000444 -->
+                      </Item>
                     </UnhideAssets>
                   </ActionUnlockAsset>
                 </Values>
@@ -1299,6 +1341,27 @@
                       </Item>
                       <Item>
                         <Asset>1742000415</Asset>                        <!-- Frotz Wogmann, Inventor Of Synthetic Rubber 1742000415-1742000416 -->
+                      </Item>
+                      <Item>
+                        <Asset>1742000430</Asset>                        <!-- Julie Black, Pump it up 1742000430-1742000431 -->
+                      </Item>
+                      <Item>
+                        <Asset>1742000432</Asset>                        <!-- Olivier Levassier, You shall not pass without paying 1742000432-1742000433 -->
+                      </Item>
+                      <Item>
+                        <Asset>1742000435</Asset>                        <!-- Rudy Scholz, Scraps from the sea -  1742000435-1742000436 -->
+                      </Item>
+                      <Item>
+                        <Asset>1742000437</Asset>                        <!-- Herbert Scholz, Scraps from steel -  1742000437-1742000438 -->
+                      </Item>
+                      <Item>
+                        <Asset>1742000439</Asset>                        <!-- Heidi Scholz, Scraps from weapons -  1742000439-1742000440 -->
+                      </Item>
+                      <Item>
+                        <Asset>1742000441</Asset>                        <!-- Regina Scholz, Scraps from advanced weapons -  1742000441-1742000442 -->
+                      </Item>
+                      <Item>
+                        <Asset>1742000443</Asset>                        <!-- Marie-Antoinette Montagne, Rich gases 1742000443-1742000444 -->
                       </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>
@@ -8697,20 +8760,51 @@
           <OuterDamageRadius>8</OuterDamageRadius>
           <HitSuccessNotification>
             <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <Action />
+              <ActionNotification />
+            </Values>
           </HitSuccessNotification>
           <HitFailNotification>
             <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <Action />
+              <ActionNotification />
+            </Values>
           </HitFailNotification>
         </Exploder>
         <Projectile>
           <ProjectileSpeed>2</ProjectileSpeed>
+          <StatusEffects>
+            <Item>
+              <StatusEffectChain>
+                <Item>
+                  <StatusEffect>1903</StatusEffect>
+                  <StatusDuration>40000</StatusDuration>
+                </Item>
+                <Item>
+                  <StatusEffect>1905</StatusEffect>
+                  <StatusDuration>140000</StatusDuration>
+                </Item>
+              </StatusEffectChain>
+              <StatusEffectExclusiveGroup>1906</StatusEffectExclusiveGroup>
+            </Item>
+          </StatusEffects>
+          <StatusEffectChainDescription>4423</StatusEffectChainDescription>
         </Projectile>
         <Selection>
           <GUIType>Generic</GUIType>
           <OnSelection>
             <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
           </OnSelection>
         </Selection>
+        <Text />
+        <Attackable>
+          <AttackableType>Seamine</AttackableType>
+        </Attackable>
       </Values>
     </Asset>
     <Asset>
@@ -9705,35 +9799,6 @@
     </Asset>
   </ModOp>
   <!-- END Brenda Ironbright, The War Must Go On -->
-  <!-- START All Old World and New World Bomb Factories and Sea Mine Factories 1742000218 -->
-  <ModOp GUID="4455" Type="addNextSibling">
-    <Asset>
-      <Template>ItemEffectTargetPool</Template>
-      <Values>
-        <Standard>
-          <GUID>1742000218</GUID>
-          <Name>All Old World and New World Bomb Factories and Sea Mine Factories</Name>
-        </Standard>
-        <ItemEffectTargetPool>
-          <EffectTargetGUIDs>
-            <Item>
-              <GUID>907</GUID>              <!-- New World Sea Mine Factory -->
-            </Item>
-            <Item>
-              <GUID>906</GUID>              <!-- All New World Bomb Factory -->
-            </Item>
-            <Item>
-              <GUID>934</GUID>              <!-- Old World Sea Mine Factory -->
-            </Item>
-            <Item>
-              <GUID>924</GUID>              <!-- Old World Bomb Factory -->
-            </Item>
-          </EffectTargetGUIDs>
-        </ItemEffectTargetPool>
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END All Old World and New World Bomb Factories and Sea Mine Factories-->
   <!-- START Edsan Orantes, Play With The Ball 1742000219-1742000220 -->
   <ModOp GUID="191388" Type="addNextSibling">
     <Asset>
@@ -10660,766 +10725,536 @@
     </Asset>
   </ModOp>
   <!-- END Frotz Wogmann, Inventor Of Synthetic Rubber -->
-
-  <!-- START LIST OF ALL EXTRA POOLS -->
-
-  <!-- START All DEPOTS ADD -->
-  <ModOp GUID="193866" Type="add" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
-    <Item>
-      <GUID>117870</GUID>      <!-- Enbesa Depot -->
-    </Item>
-    <Item>
-      <GUID>101278</GUID>      <!-- NW Depot -->
-    </Item>
-    <Item>
-      <GUID>902296</GUID>      <!-- SPI - Cargostorage - Citystorage_moderate (small) -->
-    </Item>
-    <Item>
-      <GUID>902297</GUID>      <!-- SPI - Cargostorage - Citystorage_moderate (big) -->
-    </Item>
-    <Item>
-      <GUID>902298</GUID>      <!-- SPI - Cargostorage - Citystorage_colony01 (small) -->
-    </Item>
-    <Item>
-      <GUID>902299</GUID>      <!-- SPI - Cargostorage - Citystorage_colony01 (big) -->
-    </Item>
-    <Item>
-      <GUID>901004</GUID>      <!-- SPI - Cargostorage - Citystorage_moderate (Depot) -->
-    </Item>
-    <Item>
-      <GUID>901005</GUID>      <!-- SPI - Cargostorage - Citystorage_colony01 (Depot) -->
-    </Item>
-    <Item>
-      <GUID>2084100210</GUID>      <!-- Depot 200 ton storage (Fasul2k) - Depot OW (Land) (Fasul2k) -->
-    </Item>
-    <Item>
-      <GUID>2084100220</GUID>      <!-- Depot 200 ton storage (Fasul2k) - Depot NW (Land) (Fasul2k) -->
-    </Item>
-    <Item>
-      <GUID>2084100230</GUID>      <!-- Depot 200 ton storage (Fasul2k) - Depot EN (Land) (Fasul2k) -->
-    </Item>
-    <Item>
-      <GUID>850037</GUID>      <!-- Historic Harbour || Depot -->
-    </Item>
-    <Item>
-      <GUID>8855001</GUID>
-    </Item>
-    <!-- WH Depot OW T1-->
-    <Item>
-      <GUID>8855002</GUID>
-    </Item>
-    <!-- WH Depot OW T2-->
-    <Item>
-      <GUID>8855004</GUID>
-    </Item>
-    <!-- WH Depot OW T3-->
-    <Item>
-      <GUID>8855005</GUID>
-    </Item>
-    <!-- WH Depot SA T1-->
-    <Item>
-      <GUID>8855006</GUID>
-    </Item>
-    <!-- WH Depot SA T2-->
-    <Item>
-      <GUID>8855007</GUID>
-    </Item>
-    <!-- WH Depot SA T3-->
-    <Item>
-      <GUID>8855008</GUID>
-    </Item>
-    <!-- WH OW T1 -->
-    <Item>
-      <GUID>8855009</GUID>
-    </Item>
-    <!-- WH OW T2 -->
-    <Item>
-      <GUID>8855010</GUID>
-    </Item>
-    <!-- WH OW T3 -->
-    <Item>
-      <GUID>8855011</GUID>
-    </Item>
-    <Item>
-      <GUID>1440133082</GUID>
-    </Item>
-    <!-- WH SA T1 -->
-    <Item>
-      <GUID>8855012</GUID>
-    </Item>
-    <!-- WH SA T2 -->
-    <Item>
-      <GUID>8855013</GUID>
-    </Item>
-    <!-- WH SA T3 -->
-    <Item>
-      <GUID>1440133083</GUID>
-    </Item>
-    <!-- Med. Depot OW -->
-    <Item>
-      <GUID>8855015</GUID>
-    </Item>
-    <!-- Med. Depot SA -->
-    <Item>
-      <GUID>8855016</GUID>
-    </Item>
-    <!-- Sm. Depot OW -->
-    <Item>
-      <GUID>8855017</GUID>
-    </Item>
-    <!-- Sm. Depot SA -->
-    <Item>
-      <GUID>8855018</GUID>
-    </Item>
-    <!-- Sm. Storage OW -->
-    <Item>
-      <GUID>8855019</GUID>
-    </Item>
-    <!-- Sm. Storage SA -->
-  </ModOp>
-  <!-- END ALL DEPOTS ADD-->
-
-  <!-- START ADD ALL ARCTIC DEPOTS 1742000421 -->
-  <ModOp GUID="4455" Type="addNextSibling">
+  <!-- START Julie Black 1742000430-174200431 -->
+  <ModOp GUID="191388" Type="addNextSibling">
     <Asset>
-      <Template>ItemEffectTargetPool</Template>
+      <Template>GuildhouseItem</Template>
       <Values>
         <Standard>
-          <GUID>1742000421</GUID>
-          <Name>All Arctic Depots</Name>
+          <GUID>1742000430</GUID>          <!-- GUID 0 -->
+          <Name>Julie Black, Gas and oil can work together</Name>
+          <IconFilename>data/graphics/icons/icon_julie_black.png</IconFilename>
+          <InfoDescription>1742000431</InfoDescription>          <!-- GUID 1 -->
         </Standard>
-        <ItemEffectTargetPool>
-          <EffectTargetGUIDs>
+        <Text />
+        <Item>
+          <MaxStackSize>1</MaxStackSize>
+          <Rarity>Epic</Rarity>
+          <ItemType>Specialist</ItemType>
+          <Allocation>GuildHouse</Allocation>
+          <TradePrice>362500</TradePrice>
+          <TradePriceOnlineCurrency>362500</TradePriceOnlineCurrency>
+        </Item>
+        <FactoryUpgrade>
+          <AdditionalOutput>
             <Item>
-              <GUID>112670</GUID>              <!-- Depot (Arctic)	-->
+              <Product>112706</Product>              <!-- Arctic Gas -->
+              <AdditionalOutputCycle>30</AdditionalOutputCycle>
+              <Amount>1</Amount>
+            </Item>
+          </AdditionalOutput>
+        </FactoryUpgrade>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>191042</GUID>              <!-- Oil Wells -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <ExpeditionAttribute>
+          <BaseMorale>0</BaseMorale>
+          <ExpeditionAttributes>
+            <Item>
+              <Attribute>PerkFemale</Attribute>
+              <Amount>1</Amount>
             </Item>
             <Item>
-              <GUID>2084100240</GUID>              <!-- Depot 200 ton storage (Fasul2k) - Depot AR (Land) (Fasul2k) -->
+              <Attribute>Medicine</Attribute>
+              <Amount>30</Amount>
             </Item>
-          </EffectTargetGUIDs>
-        </ItemEffectTargetPool>
+            <Item>
+              <Attribute>PerkArcheologist</Attribute>
+              <Amount>1</Amount>
+            </Item>
+          </ExpeditionAttributes>
+          <ItemDifficulties>Hard</ItemDifficulties>
+          <FluffText>1742000431</FluffText>          <!-- GUID 1 -->
+        </ExpeditionAttribute>
+        <BuildingUpgrade>
+          <WorkforceAmountUpgrade>
+            <Value>50</Value>
+            <Percental>1</Percental>
+          </WorkforceAmountUpgrade>
+        </BuildingUpgrade>
+        <CultureUpgrade>
+          <AttractivenessUpgrade>
+            <Value>-50</Value>
+          </AttractivenessUpgrade>
+        </CultureUpgrade>
+        <IncidentInfectableUpgrade>
+          <IncidentFireIncreaseUpgrade>
+            <Value>3</Value>
+          </IncidentFireIncreaseUpgrade>
+          <IncidentExplosionIncreaseUpgrade>
+            <Value>3</Value>
+          </IncidentExplosionIncreaseUpgrade>
+        </IncidentInfectableUpgrade>
       </Values>
     </Asset>
   </ModOp>
-  <!-- END ALL ARCTIC DEPOTS -->
-
-  <!-- START All Monuments 1742000414 -->
-  <ModOp GUID="4455" Type="addNextSibling">
+  <!-- END Julie Black -->
+  <!-- START - Olivier Levassier, You shall not pass without paying -  1742000432-1742000433 -->
+  <ModOp GUID="191388" Type="addNextSibling">
     <Asset>
-      <Template>ItemEffectTargetPool</Template>
+      <Template>HarborOfficeItem</Template>
       <Values>
         <Standard>
-          <GUID>
-            1742000414</GUID>
-          <Name>All Monument Building Phases</Name>
+          <GUID>1742000432</GUID>          <!-- GUID 0 -->
+          <Name>Olivier Levassier, You shall not pass without paying</Name>
+          <IconFilename>data/graphics/icons/icon_olivier_levassier.png</IconFilename>
+          <InfoDescription>1742000433</InfoDescription>          <!-- GUID 1 -->
         </Standard>
-        <ItemEffectTargetPool>
-          <EffectTargetGUIDs>
-            <Item>
-              <GUID>1010489</GUID>              <!-- OW - WF - 00 -->
-            </Item>
-            <Item>
-              <GUID>1010490</GUID>              <!-- OW - WF - 01 -->
-            </Item>
-            <Item>
-              <GUID>101336</GUID>              <!-- OW - WF - 02 -->
-            </Item>
-            <Item>
-              <GUID>1010491</GUID>              <!-- OW - WF - 03 -->
-            </Item>
-            <Item>
-              <GUID>1010492</GUID>              <!-- OW - WF - 04 -->
-            </Item>
-            <Item>
-              <GUID>101040</GUID>              <!-- OW - TUNNEL - 01 -->
-            </Item>
-            <Item>
-              <GUID>101186</GUID>              <!-- OW - TUNNEL - 02 -->
-            </Item>
-            <Item>
-              <GUID>101135</GUID>              <!-- OW - TUNNEL - Final -->
-            </Item>
-            <Item>
-              <GUID>101951</GUID>              <!-- OW - COURTHOUSE - 01 -->
-            </Item>
-            <Item>
-              <GUID>101953</GUID>              <!-- OW - COURTHOUSE - 02 -->
-            </Item>
-            <Item>
-              <GUID>102035</GUID>              <!-- OW - COURTHOUSE - 03 -->
-            </Item>
-            <Item>
-              <GUID>101952</GUID>              <!-- OW - COURTHOUSE - 04 -->
-            </Item>
-            <Item>
-              <GUID>112685</GUID>              <!-- AR - AIRSHIP HANGAR - 00 -->
-            </Item>
-            <Item>
-              <GUID>112687</GUID>              <!-- AR - AIRSHIP HANGAR - 01 -->
-            </Item>
-            <Item>
-              <GUID>112688</GUID>              <!-- AR - AIRSHIP HANGAR - 02 -->
-            </Item>
-            <Item>
-              <GUID>112689</GUID>              <!-- AR - AIRSHIP HANGAR - 03 -->
-            </Item>
-            <Item>
-              <GUID>132765</GUID>              <!-- OW - TOURIST - 00 -->
-            </Item>
-            <Item>
-              <GUID>132766</GUID>              <!-- OW - TOURIST - 01 -->
-            </Item>
-            <Item>
-              <GUID>403</GUID>              <!-- OW - HIGHLIFE - 00 -->
-            </Item>
-            <Item>
-              <GUID>404</GUID>              <!-- OW - HIGHLIFE - 01 -->
-            </Item>
-            <Item>
-              <GUID>135709</GUID>              <!-- OW - HIGHLIFE - 02 -->
-            </Item>
-            <Item>
-              <GUID>648</GUID>              <!-- OW - AIRSHIP HANGAR - 00 -->
-            </Item>
-            <Item>
-              <GUID>649</GUID>              <!-- OW - AIRSHIP HANGAR - 01 -->
-            </Item>
-            <Item>
-              <GUID>651</GUID>              <!-- OW - AIRSHIP HANGAR - 02 -->
-            </Item>
-            <Item>
-              <GUID>636</GUID>              <!-- OW - AIRSHIP HANGAR - 03 -->
-            </Item>
-            <Item>
-              <GUID>692</GUID>              <!-- NW - AIRSHIP HANGAR - 00 -->
-            </Item>
-            <Item>
-              <GUID>693</GUID>              <!-- NW - AIRSHIP HANGAR - 01 -->
-            </Item>
-            <Item>
-              <GUID>695</GUID>              <!-- NW - AIRSHIP HANGAR - 02 -->
-            </Item>
-            <Item>
-              <GUID>635</GUID>              <!-- NW - AIRSHIP HANGAR - 03 -->
-            </Item>
-            <Item>
-              <GUID>6117</GUID>              <!-- NW - STADIUM - 00 -->
-            </Item>
-            <Item>
-              <GUID>6118</GUID>              <!-- NW - STADIUM - 01 -->
-            </Item>
-            <Item>
-              <GUID>6121</GUID>              <!-- NW - STADIUM - 02 -->
-            </Item>
-            <Item>
-              <GUID>6003</GUID>              <!-- NW - DAM - 00 -->
-            </Item>
-            <Item>
-              <GUID>6004</GUID>              <!-- NW - DAM - 01 -->
-            </Item>
-            <Item>
-              <GUID>6005</GUID>              <!-- NW - DAM - 02 -->
-            </Item>
-            <Item>
-              <GUID>1440134430</GUID>              <!-- NW TOURISM - Christo_Phase1 - 01 -->
-            </Item>
-            <Item>
-              <GUID>1440134431</GUID>              <!-- NW TOURISM - Christo_Phase1 - 02 -->
-            </Item>
-            <Item>
-              <GUID>1440134432</GUID>              <!-- NW TOURISM - Christo_Phase1 - 03 -->
-            </Item>
-            <Item>
-              <GUID>850026</GUID>              <!-- Townhall Monument - 01 -->
-            </Item>
-            <Item>
-              <GUID>850027</GUID>              <!-- Townhall Monument - 02 -->
-            </Item>
-            <Item>
-              <GUID>850028</GUID>              <!-- Townhall Monument - 03 -->
-            </Item>
-            <Item>
-              <GUID>850029</GUID>              <!-- Townhall Monument - 04 -->
-            </Item>
-            <Item>
-              <GUID>850078</GUID>              <!-- Metropolic Skyline || City Hall - 01 -->
-            </Item>
-            <Item>
-              <GUID>850079</GUID>              <!-- Metropolic Skyline || City Hall - 02 -->
-            </Item>
-            <Item>
-              <GUID>850080</GUID>              <!-- Metropolic Skyline || City Hall - 03 -->
-            </Item>
-            <Item>
-              <GUID>850082</GUID>              <!-- Metropolic Skyline || Garnisson - 01 -->
-            </Item>
-            <Item>
-              <GUID>850083</GUID>              <!-- Metropolic Skyline || Garnisson - 02 -->
-            </Item>
-            <Item>
-              <GUID>850084</GUID>              <!-- Metropolic Skyline || Garnisson - 03 -->
-            </Item>
-            <Item>
-              <GUID>850088</GUID>              <!-- Metropolic Skyline || Palace of Justice - 01 -->
-            </Item>
-            <Item>
-              <GUID>850089</GUID>              <!-- Metropolic Skyline || Palace of Justice - 02 -->
-            </Item>
-            <Item>
-              <GUID>850093</GUID>              <!-- Metropolic Skyline || Monumental Opera - 01 -->
-            </Item>
-            <Item>
-              <GUID>850094</GUID>              <!-- Metropolic Skyline || Monumental Opera - 02 -->
-            </Item>
-            <Item>
-              <GUID>850095</GUID>              <!-- Metropolic Skyline || Monumental Opera - 03 -->
-            </Item>
-            <Item>
-              <GUID>850096</GUID>              <!-- Metropolic Skyline || Monumental Opera - 04 -->
-            </Item>
-            <Item>
-              <GUID>850099</GUID>              <!-- Metropolic Skyline || Tax Office Monument - 01 -->
-            </Item>
-            <Item>
-              <GUID>850100</GUID>              <!-- Metropolic Skyline || Tax Office Monument - 02 -->
-            </Item>
-            <Item>
-              <GUID>850101</GUID>              <!-- Metropolic Skyline || Tax Office Monument - 03 -->
-            </Item>
-            <Item>
-              <GUID>850102</GUID>              <!-- Metropolic Skyline || Tax Office Monument - 04 -->
-            </Item>
-            <Item>
-              <GUID>850106</GUID>              <!-- Metropolic Skyline || Monarch Cathedral - 01 -->
-            </Item>
-            <Item>
-              <GUID>850107</GUID>              <!-- Metropolic Skyline || Monarch Cathedral - 02 -->
-            </Item>
-            <Item>
-              <GUID>850108</GUID>              <!-- Metropolic Skyline || Monarch Cathedral - 03 -->
-            </Item>
-            <Item>
-              <GUID>850057</GUID>              <!-- Metropolic Skyline || Administration Of Seafearing - 01 -->
-            </Item>
-            <Item>
-              <GUID>850058</GUID>              <!-- Metropolic Skyline || Administration Of Seafearing - 02 -->
-            </Item>
-            <Item>
-              <GUID>850059</GUID>              <!-- Metropolic Skyline || Administration Of Seafearing - 03 -->
-            </Item>
-            <Item>
-              <GUID>850122</GUID>              <!-- Metropolic Skyline || Imperial Institute - 01 -->
-            </Item>
-            <Item>
-              <GUID>850123</GUID>              <!-- Metropolic Skyline || Imperial Institute - 02 -->
-            </Item>
-            <Item>
-              <GUID>850124</GUID>              <!-- Metropolic Skyline || Imperial Institute - 03 -->
-            </Item>
-            <Item>
-              <GUID>850031</GUID>              <!-- Old Town || Imperial Cathedral - 01 -->
-            </Item>
-            <Item>
-              <GUID>850032</GUID>              <!-- Old Town || Imperial Cathedral - 02 -->
-            </Item>
-            <Item>
-              <GUID>850033</GUID>              <!-- Old Town || Imperial Cathedral - 03 -->
-            </Item>
-            <Item>
-              <GUID>850034</GUID>              <!-- Old Town || Imperial Cathedral - 04 -->
-            </Item>
-          </EffectTargetGUIDs>
-        </ItemEffectTargetPool>
+        <Text />
+        <Item>
+          <MaxStackSize>1</MaxStackSize>
+          <Rarity>Legendary</Rarity>
+          <ItemType>Specialist</ItemType>
+          <TradePrice>1500000</TradePrice>
+          <TradePriceOnlineCurrency>10</TradePriceOnlineCurrency>
+        </Item>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>193480</GUID>
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <ItemAction/>
+        <ExpeditionAttribute>
+          <BaseMorale>0</BaseMorale>
+          <ExpeditionAttributes>
+            <Item>
+              <Attribute>PerkMale</Attribute>
+              <Amount>1</Amount>
+            </Item>
+            <Item>
+              <Attribute>Diplomacy</Attribute>
+              <Amount>60</Amount>
+            </Item>
+          </ExpeditionAttributes>
+          <ItemDifficulties>Hard</ItemDifficulties>
+          <FluffText>1742000433</FluffText>
+        </ExpeditionAttribute>
+        <CultureUpgrade/>
+        <BuildingUpgrade/>
+        <AttackerUpgrade/>
+        <VisitorHarborUpgrade/>
+        <PassiveTradeGoodGenUpgrade>
+          <GenProbability>75</GenProbability>
+          <GenPool>1742000434</GenPool>
+        </PassiveTradeGoodGenUpgrade>
+        <ShipyardUpgrade/>
+        <Locked />
+        <AttackableUpgrade/>
+        <ProjectileUpgrade/>
+        <IncidentInfectableUpgrade/>
+        <VehicleUpgrade/>
+        <RepairCraneUpgrade/>
+        <KontorUpgrade/>
+        <CraftableItem/>
+        <PierUpgrade />
+        <WarehouseUpgrade/>
+        <ItemContainerUpgrade/>
+        <ResourceUpgrade/>
       </Values>
     </Asset>
   </ModOp>
-  <!-- END All Monuments-->
-
-  <!-- START ALL OW AND NW POST OFFICES AND POST BOXES 1742000199 -->
-  <ModOp GUID="4455" Type="addNextSibling">
+  <!-- END Olivier Levassier, You shall not pass without paying -  1742000432-1742000433 -->
+  <!-- START - Rudy Scholz, Scraps from the sea -  1742000435-1742000436 -->
+  <ModOp GUID="191388" Type="addNextSibling">
     <Asset>
-      <Template>
-        ItemEffectTargetPool</Template>
+      <Template>GuildhouseItem</Template>
       <Values>
         <Standard>
-          <GUID>1742000199</GUID>
-          <Name>All Old World and New World post offices and post boxes</Name>
+          <GUID>1742000435</GUID>          <!-- GUID 0 -->
+          <Name>Rudy Scholz, Scraps from the sea</Name>
+          <IconFilename>data/graphics/icons/icon_rudy_scholz.png</IconFilename>
+          <InfoDescription>1742000436</InfoDescription>          <!-- GUID 1 -->
+          <Version>dlc03</Version>
         </Standard>
-        <ItemEffectTargetPool>
-          <EffectTargetGUIDs>
+        <Text />
+        <Locked>
+          <DLCDependency>410042</DLCDependency>
+        </Locked>
+        <Item>
+          <MaxStackSize>1</MaxStackSize>
+          <Rarity>Legendary</Rarity>
+          <ItemType>Specialist</ItemType>
+          <Allocation>Lodge</Allocation>
+          <TradePrice>1250000</TradePrice>
+          <TradePriceOnlineCurrency>1250000</TradePriceOnlineCurrency>
+        </Item>
+        <FactoryUpgrade>
+          <ProductivityUpgrade>
+            <Value>-50</Value>
+            <Percental>1</Percental>
+          </ProductivityUpgrade>
+          <AdditionalOutput>
             <Item>
-              <GUID>3761</GUID>              <!-- New World post office -->
+              <Product>115980</Product>
+              <AdditionalOutputCycle>10</AdditionalOutputCycle>
+              <Amount>1</Amount>
+            </Item>
+          </AdditionalOutput>
+        </FactoryUpgrade>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>112674</GUID>              <!-- Seal Hunting Docks -->
             </Item>
             <Item>
-              <GUID>3661</GUID>              <!-- All New World post box -->
+              <GUID>112666</GUID>              <!-- Whaling Station -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <ExpeditionAttribute>
+          <BaseMorale>0</BaseMorale>
+          <ExpeditionAttributes>
+            <Item>
+              <Attribute>PerkMale</Attribute>
+              <Amount>1</Amount>
             </Item>
             <Item>
-              <GUID>3741</GUID>              <!-- Old World post office -->
+              <Attribute>Navigation</Attribute>
+              <Amount>60</Amount>
             </Item>
-            <Item>
-              <GUID>538</GUID>              <!-- Old World post box -->
-            </Item>
-            <Item>
-              <GUID>4455</GUID>              <!-- Old World post box -->
-            </Item>
-            <Item>
-              <GUID>1500010817</GUID>              <!-- Pescaterians || Small Post Office (Jakob) -->
-            </Item>
-            <Item>
-              <GUID>1440137100</GUID>              <!-- Harborlife || Post Office (OW) -->
-            </Item>
-            <Item>
-              <GUID>1440137101</GUID>              <!-- Harborlife || Mailbox (OW) -->
-            </Item>
-            <Item>
-              <GUID>1440137110</GUID>              <!-- Harborlife || Post Office (NW) -->
-            </Item>
-            <Item>
-              <GUID>1440137111</GUID>              <!-- Harborlife || Mailbox (NW) -->
-            </Item>
-          </EffectTargetGUIDs>
-        </ItemEffectTargetPool>
+          </ExpeditionAttributes>
+          <ItemDifficulties>Hard</ItemDifficulties>
+          <FluffText>1742000436</FluffText>          <!-- GUID 1 -->
+        </ExpeditionAttribute>
+        <BuildingUpgrade>
+          <MaintenanceUpgrade>
+            <Value>100</Value>
+            <Percental>1</Percental>
+          </MaintenanceUpgrade>
+          <WorkforceAmountUpgrade>
+            <Value>100</Value>
+            <Percental>1</Percental>
+          </WorkforceAmountUpgrade>
+        </BuildingUpgrade>
       </Values>
     </Asset>
   </ModOp>
-  <!-- END ALL OW AND NW POST OFFICES AND POST BOXES -->
-
-  <!-- START ALL GLASSMAKERS 1742000417 -->
-  <ModOp GUID="4455" Type="addNextSibling">
+  <!-- END - Rudy Scholz, Scraps from the sea -  1742000435-1742000436 -->
+  <!-- START - Herbert Scholz, Scraps from steel -  1742000435-1742000436 -->
+  <ModOp GUID="191388" Type="addNextSibling">
     <Asset>
-      <Template>ItemEffectTargetPool</Template>
+      <Template>GuildhouseItem</Template>
       <Values>
         <Standard>
-          <GUID>1742000417</GUID>
-          <Name>All Glassmakers</Name>
+          <GUID>1742000437</GUID>          <!-- GUID 0 -->
+          <Name>Herbert Scholz, Scraps from steel</Name>
+          <IconFilename>data/graphics/icons/icon_herbert_scholz.png</IconFilename>
+          <InfoDescription>1742000438</InfoDescription>          <!-- GUID 1 -->
         </Standard>
-        <ItemEffectTargetPool>
-          <EffectTargetGUIDs>
+        <Text />
+        <Item>
+          <MaxStackSize>1</MaxStackSize>
+          <Rarity>Rare</Rarity>
+          <ItemType>Specialist</ItemType>
+          <Allocation>GuildHouse</Allocation>
+          <TradePrice>80000</TradePrice>
+          <TradePriceOnlineCurrency>80000</TradePriceOnlineCurrency>
+        </Item>
+        <FactoryUpgrade>
+          <ProductivityUpgrade>
+            <Value>-25</Value>
+            <Percental>1</Percental>
+          </ProductivityUpgrade>
+          <AdditionalOutput>
             <Item>
-              <GUID>1010319</GUID>              <!-- OW Glassmakers -->
+              <Product>112518</Product>
+              <AdditionalOutputCycle>10</AdditionalOutputCycle>
+              <Amount>1</Amount>
+            </Item>
+          </AdditionalOutput>
+        </FactoryUpgrade>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742000419</GUID>
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <ExpeditionAttribute>
+          <BaseMorale>0</BaseMorale>
+          <ExpeditionAttributes>
+            <Item>
+              <Attribute>PerkMale</Attribute>
+              <Amount>1</Amount>
             </Item>
             <Item>
-              <GUID>1500010707</GUID>              <!-- New World Cities - NW Glassmakers (Jakob) -->
+              <Attribute>Crafting</Attribute>
+              <Amount>25</Amount>
             </Item>
-          </EffectTargetGUIDs>
-        </ItemEffectTargetPool>
+          </ExpeditionAttributes>
+          <ItemDifficulties>Hard</ItemDifficulties>
+          <FluffText>1742000438</FluffText>          <!-- GUID 1 -->
+        </ExpeditionAttribute>
+        <BuildingUpgrade>
+          <MaintenanceUpgrade>
+            <Value>25</Value>
+            <Percental>1</Percental>
+          </MaintenanceUpgrade>
+          <WorkforceAmountUpgrade>
+            <Value>50</Value>
+            <Percental>1</Percental>
+          </WorkforceAmountUpgrade>
+        </BuildingUpgrade>
+        <CultureUpgrade />
+        <IncidentInfectableUpgrade />
       </Values>
     </Asset>
   </ModOp>
-  <!-- END ALL GLASSWORKS -->
-
-  <!-- START OTHER KITCHENS 1742000418 -->
-  <ModOp GUID="4455" Type="addNextSibling">
+  <!-- END Herbert Scholz, Scraps from steel -  1742000436-1742000437 -->
+  <!-- START - Heidi Scholz, Scraps from weapons -  1742000439-1742000440 -->
+  <ModOp GUID="191388" Type="addNextSibling">
     <Asset>
-      <Template>ItemEffectTargetPool</Template>
+      <Template>GuildhouseItem</Template>
       <Values>
         <Standard>
-          <GUID>1742000418</GUID>
-          <Name>Other Kitchens</Name>
+          <GUID>1742000439</GUID>          <!-- GUID 0 -->
+          <Name>Heidi Scholz, Scraps from weapons</Name>
+          <IconFilename>data/graphics/icons/icon_heidi_scholz.png</IconFilename>
+          <InfoDescription>1742000440</InfoDescription>          <!-- GUID 1 -->
         </Standard>
-        <ItemEffectTargetPool>
-          <EffectTargetGUIDs>
+        <Text />
+        <Item>
+          <MaxStackSize>1</MaxStackSize>
+          <Rarity>Epic</Rarity>
+          <ItemType>Specialist</ItemType>
+          <Allocation>GuildHouse</Allocation>
+          <TradePrice>1850000</TradePrice>
+          <TradePriceOnlineCurrency>1850000</TradePriceOnlineCurrency>
+        </Item>
+        <FactoryUpgrade>
+          <ProductivityUpgrade>
+            <Value>-25</Value>
+            <Percental>1</Percental>
+          </ProductivityUpgrade>
+          <AdditionalOutput>
             <Item>
-              <GUID>1500010835</GUID>              <!-- Pescatarians - Kitchen (Pickled Vegetables) (Jakob) -->
+              <Product>112520</Product>
+              <AdditionalOutputCycle>10</AdditionalOutputCycle>
+              <Amount>1</Amount>
             </Item>
-          </EffectTargetGUIDs>
-        </ItemEffectTargetPool>
+          </AdditionalOutput>
+        </FactoryUpgrade>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1010299</GUID>
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <ExpeditionAttribute>
+          <BaseMorale>0</BaseMorale>
+          <ExpeditionAttributes>
+            <Item>
+              <Attribute>PerkFemale</Attribute>
+              <Amount>1</Amount>
+            </Item>
+            <Item>
+              <Attribute>Crafting</Attribute>
+              <Amount>40</Amount>
+            </Item>
+          </ExpeditionAttributes>
+          <ItemDifficulties>Hard</ItemDifficulties>
+          <FluffText>1742000440</FluffText>          <!-- GUID 1 -->
+        </ExpeditionAttribute>
+        <BuildingUpgrade>
+          <MaintenanceUpgrade>
+            <Value>50</Value>
+            <Percental>1</Percental>
+          </MaintenanceUpgrade>
+          <WorkforceAmountUpgrade>
+            <Value>75</Value>
+            <Percental>1</Percental>
+          </WorkforceAmountUpgrade>
+        </BuildingUpgrade>
+        <CultureUpgrade />
+        <IncidentInfectableUpgrade>
+          <IncidentExplosionIncreaseUpgrade>
+            <Value>5</Value>
+          </IncidentExplosionIncreaseUpgrade>
+          <IncidentFireIncreaseUpgrade>
+            <Value>5</Value>
+          </IncidentFireIncreaseUpgrade>
+        </IncidentInfectableUpgrade>
       </Values>
     </Asset>
   </ModOp>
-  <!-- END OTHER KITCHENS -->
-
-  <!-- START ALL HOTELS -->
-  <ModOp GUID="194016" Type="add" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
-    <Item>
-      <GUID>1500010500</GUID>      <!-- Small Hotel - OW (Jakob) -->
-    </Item>
-    <Item>
-      <GUID>1500010529</GUID>      <!-- Small Hotel - NW (Jakob) -->
-    </Item>
-    <Item>
-      <GUID>1440134300</GUID>      <!-- NW Tourism - Hotel (New World) -->
-    </Item>
-  </ModOp>
-  <!-- END ALL HOTELS-->
-
-  <!-- START ALL STEEL INDUSTRY 1742000419 -->
-  <ModOp GUID="4455" Type="addNextSibling">
+  <!-- END Heidi Scholz, Scraps from weapons -  1742000439-1742000440 -->
+  <!-- START - Regina Scholz, Scraps from advanced weapons -  1742000441-1742000442 -->
+  <ModOp GUID="191388" Type="addNextSibling">
     <Asset>
-      <Template>ItemEffectTargetPool</Template>
+      <Template>GuildhouseItem</Template>
       <Values>
         <Standard>
-          <GUID>1742000419</GUID>
-          <Name>All Steel Industry</Name>
+          <GUID>1742000441</GUID>          <!-- GUID 0 -->
+          <Name>Regina Scholz, Scraps from advanced weapons</Name>
+          <IconFilename>data/graphics/icons/icon_regina_scholz.png</IconFilename>
+          <InfoDescription>1742000442</InfoDescription>          <!-- GUID 1 -->
         </Standard>
-        <ItemEffectTargetPool>
-          <EffectTargetGUIDs>
+        <Text />
+        <Item>
+          <MaxStackSize>1</MaxStackSize>
+          <Rarity>Legendary</Rarity>
+          <ItemType>Specialist</ItemType>
+          <Allocation>GuildHouse</Allocation>
+          <TradePrice>1850000</TradePrice>
+          <TradePriceOnlineCurrency>1850000</TradePriceOnlineCurrency>
+        </Item>
+        <FactoryUpgrade>
+          <ProductivityUpgrade>
+            <Value>-50</Value>
+            <Percental>1</Percental>
+          </ProductivityUpgrade>
+          <AdditionalOutput>
             <Item>
-              <GUID>1010297</GUID>              <!-- Furnace -->
+              <Product>112523</Product>
+              <AdditionalOutputCycle>20</AdditionalOutputCycle>
+              <Amount>1</Amount>
+            </Item>
+          </AdditionalOutput>
+        </FactoryUpgrade>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1010301</GUID>
             </Item>
             <Item>
-              <GUID>1010296</GUID>              <!-- Steelworks -->
+              <GUID>1742000218</GUID>
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <ExpeditionAttribute>
+          <BaseMorale>0</BaseMorale>
+          <ExpeditionAttributes>
+            <Item>
+              <Attribute>PerkFemale</Attribute>
+              <Amount>1</Amount>
             </Item>
             <Item>
-              <GUID>835</GUID>              <!-- Aluminium Smelter -->
+              <Attribute>Diplomacy</Attribute>
+              <Amount>60</Amount>
             </Item>
-            <Item>
-              <GUID>1404423040</GUID>              <!-- advanced Steel Heavy Industry) -->
-            </Item>
-            <Item>
-              <GUID>1404423045</GUID>              <!-- advanced Beams Heavy Industry) -->
-            </Item>
-          </EffectTargetGUIDs>
-        </ItemEffectTargetPool>
+          </ExpeditionAttributes>
+          <ItemDifficulties>Hard</ItemDifficulties>
+          <FluffText>1742000442</FluffText>          <!-- GUID 1 -->
+        </ExpeditionAttribute>
+        <BuildingUpgrade>
+          <MaintenanceUpgrade>
+            <Value>100</Value>
+            <Percental>1</Percental>
+          </MaintenanceUpgrade>
+          <WorkforceAmountUpgrade>
+            <Value>100</Value>
+            <Percental>1</Percental>
+          </WorkforceAmountUpgrade>
+        </BuildingUpgrade>
+        <CultureUpgrade />
+        <IncidentInfectableUpgrade>
+          <IncidentExplosionIncreaseUpgrade>
+            <Value>5</Value>
+          </IncidentExplosionIncreaseUpgrade>
+          <IncidentFireIncreaseUpgrade>
+            <Value>5</Value>
+          </IncidentFireIncreaseUpgrade>
+        </IncidentInfectableUpgrade>
       </Values>
     </Asset>
   </ModOp>
-  <!-- END  ALL STEEL INDUSTRY -->
-
-  <!-- START ALL FILAMENT AND CALBE FACTORIES 1742000420 -->
-  <ModOp GUID="4455" Type="addNextSibling">
+  <!-- END Regina Scholz, Scraps from advanced weapons -  1742000441-1742000442 -->
+  <!-- START Marie-Antoinette Montagne, Rich gases 1742000443-1742000444 -->
+  <ModOp GUID="191388" Type="addNextSibling">
     <Asset>
-      <Template>ItemEffectTargetPool</Template>
+      <Template>GuildhouseItem</Template>
       <Values>
         <Standard>
-          <GUID>1742000420</GUID>
-          <Name>All Filament And Cable Factories</Name>
+          <GUID>1742000443</GUID>          <!-- GUID 0 -->
+          <Name>Marie-Antoinette Montagne, Rich gases</Name>
+          <IconFilename>data/graphics/icons/icon_marie_antoinne_montagne.png</IconFilename>
+          <InfoDescription>1742000444</InfoDescription>          <!-- GUID 1 -->
+          <Version>dlc03</Version>
         </Standard>
-        <ItemEffectTargetPool>
-          <EffectTargetGUIDs>
+        <Text />
+        <Locked>
+          <DLCDependency>410042</DLCDependency>
+        </Locked>
+        <Item>
+          <MaxStackSize>1</MaxStackSize>
+          <Rarity>Legendary</Rarity>
+          <ItemType>Specialist</ItemType>
+          <Allocation>Lodge</Allocation>
+          <TradePrice>1370000</TradePrice>
+          <TradePriceOnlineCurrency>1370000</TradePriceOnlineCurrency>
+        </Item>
+        <FactoryUpgrade>
+          <ProductivityUpgrade>
+            <Value>40</Value>
+            <Percental>1</Percental>
+          </ProductivityUpgrade>
+          <AdditionalOutput>
             <Item>
-              <GUID>1010321</GUID>              <!-- Filament Factory -->
+              <Product>840</Product>              <!-- Helium -->
+              <AdditionalOutputCycle>6</AdditionalOutputCycle>
+              <Amount>1</Amount>
+            </Item>
+          </AdditionalOutput>
+        </FactoryUpgrade>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>112690</GUID>              <!-- Gas mine -->
             </Item>
             <Item>
-              <GUID>6279</GUID>              <!-- Cable Factory -->
+              <GUID>116029</GUID>              <!-- Deep Gold Mine -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <ExpeditionAttribute>
+          <BaseMorale>0</BaseMorale>
+          <ExpeditionAttributes>
+            <Item>
+              <Attribute>PerkFemale</Attribute>
+              <Amount>1</Amount>
             </Item>
             <Item>
-              <GUID>1500300077</GUID>              <!-- Cables Extended || Cable Factory OW (Kurila) -->
+              <Attribute>Medicine</Attribute>
+              <Amount>60</Amount>
             </Item>
-          </EffectTargetGUIDs>
-        </ItemEffectTargetPool>
+            <Item>
+              <Attribute>PerkArchaeologist</Attribute>
+              <Amount>1</Amount>
+            </Item>
+          </ExpeditionAttributes>
+          <ItemDifficulties>Hard</ItemDifficulties>
+          <FluffText>1742000444</FluffText>          <!-- GUID 1 -->
+        </ExpeditionAttribute>
+        <BuildingUpgrade>
+          <WorkforceAmountUpgrade>
+            <Value>40</Value>
+            <Percental>1</Percental>
+          </WorkforceAmountUpgrade>
+        </BuildingUpgrade>
+        <IncidentInfectableUpgrade />
       </Values>
     </Asset>
   </ModOp>
-  <!-- END ALL FILAMENT AND CALBE FACTORIES HOTELS -->
+  <!-- END Marie-Antoinette Montagne, Rich gases  -->
 
-  <!-- START ALL FERTILISER WORKS 1742000422 -->
-  <ModOp GUID="4455" Type="addNextSibling">
-    <Asset>
-      <Template>ItemEffectTargetPool</Template>
-      <Values>
-        <Standard>
-          <GUID>1742000422</GUID>
-          <Name>All Fertiliser Works And Dung Plants</Name>
-        </Standard>
-        <ItemEffectTargetPool>
-          <EffectTargetGUIDs>
-            <Item>
-              <GUID>24805</GUID>              <!-- Hacienda Fertiliser Works	 -->
-            </Item>
-            <Item>
-              <GUID>1500200628</GUID>              <!-- Chemical Fertiliser (GenshoTheGreat) -->
-            </Item>
-            <Item>
-              <GUID>1500010010</GUID>              <!-- Biogas Plant OW - Biogas Production (Jakob) -->
-            </Item>
-            <Item>
-              <GUID>1500010450</GUID>              <!-- Biogas Plant NW - Biogas Production (Jakob) -->
-            </Item>
-          </EffectTargetGUIDs>
-        </ItemEffectTargetPool>
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END ALL FERTILISER WORKS -->
-
-  <!-- START ALL TEA PRODUCTION 1742000423 -->
-  <ModOp GUID="4455" Type="addNextSibling">
-    <Asset>
-      <Template>ItemEffectTargetPool</Template>
-      <Values>
-        <Standard>
-          <GUID>1742000423</GUID>
-          <Name>All Tea Production</Name>
-        </Standard>
-        <ItemEffectTargetPool>
-          <EffectTargetGUIDs>
-            <Item>
-              <GUID>114468</GUID>              <!-- Tea Spicer	 -->
-            </Item>
-            <Item>
-              <GUID>1500010940</GUID>              <!-- Shared Goods - Tea Maker (Jakob)  -->
-            </Item>
-          </EffectTargetGUIDs>
-        </ItemEffectTargetPool>
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END ALL TEA PRODUCTION -->
-
-  <!-- START ALL CHEMICAL PLANTS LACQUER 1742000424 -->
-  <ModOp GUID="4455" Type="addNextSibling">
-    <Asset>
-      <Template>ItemEffectTargetPool</Template>
-      <Values>
-        <Standard>
-          <GUID>1742000424</GUID>
-          <Name>All Chemical Plants: Lacquer</Name>
-        </Standard>
-        <ItemEffectTargetPool>
-          <EffectTargetGUIDs>
-            <Item>
-              <GUID>135133</GUID>              <!-- Chemical Plant: Lacquer	 -->
-            </Item>
-            <Item>
-              <GUID>1999002117</GUID>              <!-- Hacienda Overhaul || Chemical Factory: Lacquer   -->
-            </Item>
-          </EffectTargetGUIDs>
-        </ItemEffectTargetPool>
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END ALL CHEMICAL PLANTS LACQUER -->
-
-  <!-- START All ANIMAL FARMS -->
-  <ModOp GUID="190872" Type="add" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
-    <Item>
-      <GUID>1404423055</GUID>      <!-- advanced agriculture_08 (Pig Farm) -->
-    </Item>
-    <Item>
-      <GUID>1404423065</GUID>      <!-- advanced agriculture_08 (Cattle Farm) -->
-    </Item>
-  </ModOp>
-  <!-- END ALL ANIMAL FARMS-->
-
-  <!-- START ALL VIOLIN PRODUCTION 1742000425 -->
-  <ModOp GUID="4455" Type="addNextSibling">
-    <Asset>
-      <Template>ItemEffectTargetPool</Template>
-      <Values>
-        <Standard>
-          <GUID>1742000425</GUID>
-          <Name>All Violin Production</Name>
-        </Standard>
-        <ItemEffectTargetPool>
-          <EffectTargetGUIDs>
-            <Item>
-              <GUID>135397</GUID>              <!-- Artisan workshop - Violins (Violins)	 -->
-            </Item>
-            <Item>
-              <GUID>1999002123</GUID>              <!-- Hacienda Overhaul || Violin Manufactory -->
-            </Item>
-          </EffectTargetGUIDs>
-        </ItemEffectTargetPool>
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END ALL VIOLIN PRODUCTION -->
-
-  <!-- START ALL SAILMAKERS 1742000426 -->
-  <ModOp GUID="4455" Type="addNextSibling">
-    <Asset>
-      <Template>ItemEffectTargetPool</Template>
-      <Values>
-        <Standard>
-          <GUID>1742000426</GUID>
-          <Name>All Sailmakers</Name>
-        </Standard>
-        <ItemEffectTargetPool>
-          <EffectTargetGUIDs>
-            <Item>
-              <GUID>1010288</GUID>              <!-- OW Sailmakers -->
-            </Item>
-            <Item>
-              <GUID>101265</GUID>              <!-- NW Sailmakers -->
-            </Item>
-            <Item>
-              <GUID>1404423030</GUID>              <!-- advanced factory_09 (Sailcloth Factory) -->
-            </Item>
-          </EffectTargetGUIDs>
-        </ItemEffectTargetPool>
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END ALL SAILMAKERS -->
-
-  <!-- START ALL FLOUR MILLS 1742000427 -->
-  <ModOp GUID="4455" Type="addNextSibling">
-    <Asset>
-      <Template>ItemEffectTargetPool</Template>
-      <Values>
-        <Standard>
-          <GUID>1742000427</GUID>
-          <Name>All Flour Mills</Name>
-        </Standard>
-        <ItemEffectTargetPool>
-          <EffectTargetGUIDs>
-            <Item>
-              <GUID>1010313</GUID>              <!-- Flour Mill	 -->
-            </Item>
-            <Item>
-              <GUID>1404423010</GUID>              <!-- Electrical Flour Mill -->
-            </Item>
-          </EffectTargetGUIDs>
-        </ItemEffectTargetPool>
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END ALL FLOUR MILLS -->
-
-  <!-- START ALL TALLOW PROCESSING 1742000428 -->
-  <ModOp GUID="4455" Type="addNextSibling">
-    <Asset>
-      <Template>ItemEffectTargetPool</Template>
-      <Values>
-        <Standard>
-          <GUID>1742000428</GUID>
-          <Name>All Tallow Processing</Name>
-        </Standard>
-        <ItemEffectTargetPool>
-          <EffectTargetGUIDs>
-            <Item>
-              <GUID>1010312</GUID>              <!-- Rendering Works	 -->
-            </Item>
-            <Item>
-              <GUID>1010300</GUID>              <!-- Dynamite Factory -->
-            </Item>
-            <Item>
-              <GUID>1404423051</GUID>              <!-- processing_01 advanced (Tallow Processing)  -->
-            </Item>
-          </EffectTargetGUIDs>
-        </ItemEffectTargetPool>
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END ALL TALLOW PROCESSING -->
-
-  <!-- START ALL SLAUGHTERHOUSES 1742000429 -->
-  <ModOp GUID="4455" Type="addNextSibling">
-    <Asset>
-      <Template>ItemEffectTargetPool</Template>
-      <Values>
-        <Standard>
-          <GUID>1742000429</GUID>
-          <Name>All Slaughterhouses</Name>
-        </Standard>
-        <ItemEffectTargetPool>
-          <EffectTargetGUIDs>
-            <Item>
-              <GUID>1010316</GUID>              <!-- Slaughterhouse -->
-            </Item>
-            <Item>
-              <GUID>1404423035</GUID>              <!-- advanced food_07 (Sausage Maker) -->
-            </Item>
-          </EffectTargetGUIDs>
-        </ItemEffectTargetPool>
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END ALL SLAUGHTERHOUSES -->
-
-  <!-- END LIST OF ALL EXTRA POOLS -->
-
+  <Include File="./assets-pools.include.xml" />
   <Include File="./imyatweaks.include.xml" />
 
 </ModOps>

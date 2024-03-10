@@ -3,7 +3,6 @@
 -->
 
 <ModOps>
-
   <!-- START BUILDING SOLDIERS Residences -->
 
   <!-- START BUILDING SOLDIERS Residence - ENCAMPMENT -->
@@ -588,7 +587,7 @@
               <ActionList />
             </Values>
           </OnSelection>
-          <ParticipantMessageArcheType>Scenario3_Challenger10</ParticipantMessageArcheType>
+          <ParticipantMessageArcheType>Scenario3_Editor</ParticipantMessageArcheType>
         </Selection>
         <Text />
         <Constructable />
@@ -1656,6 +1655,156 @@
   </ModOp>
   <!-- END BUILDING - CANTEEN (NW) -->
 
+  <!-- START BUILDING - SMALL MILITARY WAREHOUSE -->
+  <ModOp Type="addNextSibling" GUID='1010371'>
+    <Asset>
+      <Template>Warehouse</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100238</GUID>
+          <Name>Small Military Warehouse</Name>
+          <IconFilename>data/graphics/icons/icon_military_warehouse.png</IconFilename>
+          <InfoDescription>1742100239</InfoDescription>
+        </Standard>
+        <Text />
+        <Blocking>
+          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+        </Blocking>
+        <Building>
+          <BuildingType>Logistic</BuildingType>
+          <BuildingCategoryName>11151</BuildingCategoryName>
+          <SkipUnlockMessage>1</SkipUnlockMessage>
+          <BuildModeRandomRotation>90</BuildModeRandomRotation>
+          <AssociatedRegions>Moderate</AssociatedRegions>
+        </Building>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>1000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>20</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!-- Bricks - Product -->
+              <Amount>5</Amount>
+            </Item>
+          </Costs>
+          <InfluenceCostType>DefenseBuilding</InfluenceCostType>
+          <InfluenceCostPoints>10</InfluenceCostPoints>
+        </Cost>
+        <Selection>
+          <GUIType>Warehouse</GUIType>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <ParticipantMessageTrigger>ClickKontor</ParticipantMessageTrigger>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <BuffFactory>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <BaseBuff>1742100467</BaseBuff>
+          <BaseBuffScope>Radius</BaseBuffScope>
+          <BaseBuffDistance>10</BaseBuffDistance>
+        </BuffFactory>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/public/logistic_02/logistic_02.cfg</Filename>
+            </Item>
+          </Variations>
+          <Skins>
+            <DefaultSkinDescription>23853</DefaultSkinDescription>
+          </Skins>
+        </Object>
+        <Constructable />
+        <Mesh>
+          <LogoMode>CorporationLogoFromPlayer</LogoMode>
+          <SetCompanyLogo>1</SetCompanyLogo>
+        </Mesh>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>200834</Sound>
+            </Item>
+          </ActiveSounds>
+          <DestroySounds>
+            <Item>
+              <Sound>9818756</Sound>
+            </Item>
+          </DestroySounds>
+          <IncidentSounds>
+            <InfectedFire>
+              <Item>
+                <Sound>214659</Sound>
+              </Item>
+            </InfectedFire>
+          </IncidentSounds>
+          <BuildingRepaired>
+            <Item>
+              <Sound>203866</Sound>
+            </Item>
+          </BuildingRepaired>
+        </SoundEmitter>
+        <Locked />
+        <Infolayer />
+        <FeedbackController />
+        <Warehouse>
+          <WarehouseStorage>
+            <StorageMax>0</StorageMax>
+          </WarehouseStorage>
+        </Warehouse>
+        <LogisticNode>
+          <QueueConfiguration>
+            <ProcessingQueueParallelCount>3</ProcessingQueueParallelCount>
+          </QueueConfiguration>
+        </LogisticNode>
+        <PublicService>
+          <FullSatisfactionDistance>35</FullSatisfactionDistance>
+          <NoSatisfactionDistance>70</NoSatisfactionDistance>
+          <PublicServiceOutputs>
+            <Item>
+              <Product>1742100009</Product>              <!-- Military Warehouse - Product -->
+            </Item>
+          </PublicServiceOutputs>
+          <FunctionDescription>100364</FunctionDescription>          <!--Provides Service-->
+        </PublicService>
+        <UpgradeList />
+        <AmbientMoodProvider>
+          <AmbientMood>ResidenceTier1</AmbientMood>
+        </AmbientMoodProvider>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>50</Amount>
+            </Item>
+            <Item>
+              <Product>1742100005</Product>              <!-- Soldiers Workforce - Product -->
+              <Amount>10</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <StorageBase />
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+          <MaximumHitPoints>3000</MaximumHitPoints>
+          <SelfHealPerHealTick>4</SelfHealPerHealTick>
+        </Attackable>
+        <Upgradable />
+        <Pausable />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - SMALL MILITARY WAREHOUSE -->
+
   <!-- START BUILDING - MILITARY WAREHOUSE -->
   <ModOp Type="addNextSibling" GUID='1010371'>
     <Asset>
@@ -1701,6 +1850,8 @@
               <Amount>15</Amount>
             </Item>
           </Costs>
+          <InfluenceCostType>DefenseBuilding</InfluenceCostType>
+          <InfluenceCostPoints>100</InfluenceCostPoints>
         </Cost>
         <Selection>
           <GUIType>Warehouse</GUIType>
@@ -1765,12 +1916,12 @@
         <FeedbackController />
         <Warehouse>
           <WarehouseStorage>
-            <StorageMax>100</StorageMax>
+            <StorageMax>250</StorageMax>
           </WarehouseStorage>
         </Warehouse>
         <LogisticNode>
           <QueueConfiguration>
-            <ProcessingQueueParallelCount>6</ProcessingQueueParallelCount>
+            <ProcessingQueueParallelCount>16</ProcessingQueueParallelCount>
           </QueueConfiguration>
         </LogisticNode>
         <PublicService>
@@ -1791,18 +1942,18 @@
           <Maintenances>
             <Item>
               <Product>1010017</Product>
-              <Amount>250</Amount>
+              <Amount>1000</Amount>
             </Item>
             <Item>
               <Product>1010117</Product>              <!-- Engineer Workforce - Product -->
-              <Amount>50</Amount>
+              <Amount>100</Amount>
             </Item>
           </Maintenances>
         </Maintenance>
         <StorageBase />
         <Attackable>
           <AttackableType>IslandBuilding</AttackableType>
-          <MaximumHitPoints>4000</MaximumHitPoints>
+          <MaximumHitPoints>8000</MaximumHitPoints>
           <SelfHealPerHealTick>4</SelfHealPerHealTick>
         </Attackable>
         <Upgradable />
@@ -3807,7 +3958,8 @@
           </IncidentInfectionChanceFactors>
         </IncidentInfectable>
         <Culture>
-          <CultureType>Culture</CultureType>
+          <Attractiveness>-10</Attractiveness>
+          <HasPollution>1</HasPollution>
         </Culture>
         <QuestObject />
         <EcoSystemProvider />
@@ -3955,7 +4107,8 @@
         </IncidentInfectable>
         <Industrializable />
         <Culture>
-          <CultureType>Culture</CultureType>
+          <Attractiveness>-10</Attractiveness>
+          <HasPollution>1</HasPollution>
         </Culture>
         <QuestObject />
         <Electrifiable />
@@ -5957,7 +6110,7 @@
   <!-- START BUILDING - DUNG COLLECTOR -->
   <ModOp Type="addNextSibling" GUID='1010284'>
     <Asset>
-      <Template>BuffFactoryCulture</Template>
+      <Template>FreeAreaBuilding</Template>
       <Values>
         <Standard>
           <GUID>1742100287</GUID>
@@ -5965,7 +6118,6 @@
           <IconFilename>data/ui/2kimages/main/3dicons/icon_dung.png</IconFilename>
           <InfoDescription>1742100288</InfoDescription>
         </Standard>
-        <Text />
         <Building>
           <BuildingCategoryName>100000</BuildingCategoryName>
           <SkipUnlockMessage>1</SkipUnlockMessage>
@@ -5973,44 +6125,119 @@
           <AssociatedRegions>Moderate</AssociatedRegions>
           <SecondPartyRelevant>0</SecondPartyRelevant>
         </Building>
-        <Blocking />
-        <Mesh />
-        <BuffFactory>
-          <ProductionBuffScope>Radius</ProductionBuffScope>
-          <BaseBuff>1742100295</BaseBuff>
-          <BaseBuffScope>Radius</BaseBuffScope>
-          <BaseBuffDistance>25</BaseBuffDistance>
-        </BuffFactory>
-        <FactoryBase>
-          <FactoryOutputs>
+        <Blocking>
+          <DeletePropsRadius>1</DeletePropsRadius>
+        </Blocking>
+        <Cost>
+          <Costs>
             <Item>
-              <Product>24807</Product>
-              <Amount>1</Amount>
-              <StorageAmount>8</StorageAmount>
+              <Ingredient>1010017</Ingredient>
+              <!--Money-->
+              <Amount>100</Amount>
             </Item>
-          </FactoryOutputs>
-          <IsMainFactory>0</IsMainFactory>
-        </FactoryBase>
-        <FeedbackController />
-        <Pausable />
+            <Item>
+              <Ingredient>1010196</Ingredient>
+              <!--timber-->
+              <Amount>12</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>
+              <!--bricks-->
+              <Amount>2</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/production/processing_dung/processing_dung.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Mesh/>
         <Selection>
-          <StaticHelpEntryPoint>SeedsOfChangeFertilizer</StaticHelpEntryPoint>
           <OnSelection>
             <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
             <Values>
-              <ActionList />
+              <ActionList/>
             </Values>
           </OnSelection>
-          <ParticipantMessageArcheType>Resident_tier02_atWork</ParticipantMessageArcheType>
+          <ParticipantMessageArcheType>Resident_tier01_atWork</ParticipantMessageArcheType>
           <Colors>
             <WeakSelectionColorType>NoColor</WeakSelectionColorType>
           </Colors>
         </Selection>
-        <Attackable>
-          <AttackableType>IslandBuilding</AttackableType>
-          <MaximumHitPoints>3000</MaximumHitPoints>
-          <HasRuinState>1</HasRuinState>
-        </Attackable>
+        <Text />
+        <Constructable/>
+        <Locked/>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>214800</Sound>
+              <!--wwe_sfx_bld_agriculture_typeCluster_tag-->
+            </Item>
+            <Item>
+              <Sound>206315</Sound>
+              <!--wwe_bld_agriculture_05_lp-->
+            </Item>
+          </ActiveSounds>
+          <ConstructionSounds>
+            <BuildSuccessful>
+              <Item>
+                <Sound>202404</Sound>
+                <!--wwe_sfx_aui_bld_place_woodfarm-->
+              </Item>
+            </BuildSuccessful>
+            <BuildMoveSuccess>
+              <Item>
+                <Sound>202404</Sound>
+                <!--wwe_sfx_aui_bld_place_woodfarm-->
+              </Item>
+            </BuildMoveSuccess>
+          </ConstructionSounds>
+          <IncidentSounds>
+            <InfectedFire>
+              <Item>
+                <Sound>214659</Sound>
+                <!--wwe_sfx_bld_inc_burn-->
+              </Item>
+            </InfectedFire>
+          </IncidentSounds>
+          <BuildingRepaired>
+            <Item>
+              <Sound>203866</Sound>
+              <!--wwe_sfx_aui_bld_3d_renovate-->
+            </Item>
+          </BuildingRepaired>
+          <MaterialType>Wood</MaterialType>
+        </SoundEmitter>
+        <FeedbackController/>
+        <Infolayer/>
+        <UpgradeList/>
+        <Factory7/>
+        <BuffFactory>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <BaseBuff>1742100295</BaseBuff>
+          <BaseBuffScope>Radius</BaseBuffScope>
+          <BaseBuffDistance>18</BaseBuffDistance>
+        </BuffFactory>
+        <FactoryBase>
+          <FactoryOutputs>
+            <Item>
+              <Product>24807</Product>              <!--Dung-->
+              <Amount>1</Amount>
+              <StorageAmount>8</StorageAmount>
+            </Item>
+          </FactoryOutputs>
+          <CycleTime>60</CycleTime>
+          <IsMainFactory>0</IsMainFactory>
+        </FactoryBase>
+        <LogisticNode/>
+        <AmbientMoodProvider>
+          <AmbientMood>AgricultureBuildingsEurope</AmbientMood>
+          <Murmur>Farm</Murmur>
+          <DynamicEnvironmentType>None</DynamicEnvironmentType>
+        </AmbientMoodProvider>
         <Maintenance>
           <Maintenances>
             <Item>
@@ -6020,80 +6247,58 @@
             </Item>
             <Item>
               <Product>1010052</Product>              <!-- Farmer Workforce -->
-              <Amount>30</Amount>
+              <Amount>25</Amount>
             </Item>
           </Maintenances>
         </Maintenance>
-        <AmbientMoodProvider />
-        <LogisticNode />
-        <Constructable />
-        <Locked>
-          <DLCDependency>24961</DLCDependency>
-        </Locked>
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+          <MaximumHitPoints>1800</MaximumHitPoints>
+          <SelfHealPerHealTick>4</SelfHealPerHealTick>
+        </Attackable>
+        <FreeAreaProductivity>
+          <InfluenceRadius>5</InfluenceRadius>
+          <NeededAreaPercent>40</NeededAreaPercent>
+          <MaxWorkerAmount>3</MaxWorkerAmount>
+          <AdditionalWorkerForForestation>9</AdditionalWorkerForForestation>
+          <WorkerPause>10000</WorkerPause>
+          <ShowCollectFeedback>1</ShowCollectFeedback>
+          <AdditionalTreePropPercent>50</AdditionalTreePropPercent>
+          <AdditionalTreeProp>data/graphics/props/storage/basket_pile_v1.prp</AdditionalTreeProp>
+        </FreeAreaProductivity>
+        <Pausable/>
         <IncidentInfectable>
           <Infectable>
-            <Fire>
-              <Base>1</Base>
-            </Fire>
-            <Riot>
-              <Base>1</Base>
-            </Riot>
             <Illness>
-              <Base>1</Base>
-              <Communication>FireDefault</Communication>
+              <Escalated>0</Escalated>
             </Illness>
             <Explosion>
-              <Base>1</Base>
+              <Base>0</Base>
+              <Escalated>0</Escalated>
             </Explosion>
           </Infectable>
+          <Explosion>
+            <ExplosionCoreDamage>1000</ExplosionCoreDamage>
+          </Explosion>
           <IncidentInfectionChanceFactors>
             <Fire>
-              <DensityFactor>0.0025</DensityFactor>
+              <DensityFactor>0.025</DensityFactor>
               <DensityDistance>20</DensityDistance>
               <FactoryProductivityFactor>0.1</FactoryProductivityFactor>
               <FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
             </Fire>
+            <Riot>
+              <FactoryOvertimeFactor>0.4</FactoryOvertimeFactor>
+              <FactoryUndertimeFactor>0.2</FactoryUndertimeFactor>
+              <FactoryHappinessFactor>0.2</FactoryHappinessFactor>
+              <HappinessThreshold>20</HappinessThreshold>
+            </Riot>
           </IncidentInfectionChanceFactors>
         </IncidentInfectable>
-        <Object>
-          <Variations>
-            <Item>
-              <Filename>data/graphics/buildings/production/processing_dung/processing_dung.cfg</Filename>
-            </Item>
-          </Variations>
-        </Object>
-        <SoundEmitter>
-          <ActiveSounds>
-            <Item>
-              <Sound>282231</Sound>
-            </Item>
-          </ActiveSounds>
-          <DestroySounds>
-            <Item>
-              <Sound>9818756</Sound>
-            </Item>
-          </DestroySounds>
-          <ConstructionSounds>
-            <BuildSuccessful />
-            <BuildUpgrade />
-          </ConstructionSounds>
-          <ProductionSounds>
-            <UI />
-          </ProductionSounds>
-        </SoundEmitter>
-        <Cost>
-          <Costs>
-            <Item>
-              <Ingredient>1010017</Ingredient>
-              <Amount>100</Amount>
-            </Item>
-          </Costs>
-        </Cost>
-        <Infolayer />
-        <UpgradeList />
         <Culture>
-          <Attractiveness>-20</Attractiveness>
+          <Attractiveness>-3</Attractiveness>
         </Culture>
+        <EcoSystemProvider/>
       </Values>
     </Asset>
   </ModOp>
@@ -6429,7 +6634,7 @@
         </IncidentInfectable>
         <Pausable />
         <Culture>
-          <Attractiveness>-50</Attractiveness>
+          <Attractiveness>-10</Attractiveness>
           <HasPollution>1</HasPollution>
         </Culture>
         <QuestObject />
@@ -7326,10 +7531,13 @@
         <Blocking />
         <Mesh />
         <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742100461</ProductivityBuff>
+            </Item>
+          </ProductionBuffs>
           <ProductionBuffScope>Radius</ProductionBuffScope>
-          <BaseBuff>1742100461</BaseBuff>
-          <BaseBuffScope>Radius</BaseBuffScope>
-          <BaseBuffDistance>25</BaseBuffDistance>
+          <ProductionBuffDistance>45</ProductionBuffDistance>
         </BuffFactory>
         <FactoryBase>
           <FactoryInputs>
@@ -7476,10 +7684,13 @@
         <Blocking />
         <Mesh />
         <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742100463</ProductivityBuff>
+            </Item>
+          </ProductionBuffs>
           <ProductionBuffScope>Radius</ProductionBuffScope>
-          <BaseBuff>1742100463</BaseBuff>
-          <BaseBuffScope>Radius</BaseBuffScope>
-          <BaseBuffDistance>25</BaseBuffDistance>
+          <ProductionBuffDistance>45</ProductionBuffDistance>
         </BuffFactory>
         <FactoryBase>
           <FactoryInputs>
@@ -8039,7 +8250,7 @@
               <StorageAmount>5</StorageAmount>
             </Item>
             <Item>
-              <Product>1010200</Product>              <!--Fish-->
+              <Product>1010238</Product>              <!-- Sausage -->
               <Amount>1</Amount>
               <StorageAmount>5</StorageAmount>
             </Item>
@@ -9204,124 +9415,6 @@
   </ModOp>
   <!-- END BUILDING - CARE PACKAGE FACTORY - DRINKS (OW) -->
 
-  <!-- START BUILDING - MILITARY WORKFORCE OFFICE -->
-  <ModOp Type="addNextSibling" GUID='1010305'>
-    <Asset>
-      <Template>BuffFactoryModule</Template>
-      <Values>
-        <Standard>
-          <GUID>1742100238</GUID>
-          <Name>Military Workforce Office</Name>
-          <IconFilename>data\graphics\icons\icon_military_workforce_office.png</IconFilename>
-          <InfoDescription>1742100239</InfoDescription>
-        </Standard>
-        <Building>
-          <BuildingCategoryName>100000</BuildingCategoryName>
-          <SecondPartyRelevant>0</SecondPartyRelevant>
-        </Building>
-        <Blocking />
-        <Object>
-          <Variations>
-            <Item>
-              <Filename>data/graphics/buildings/special/guild_house/guild_house.cfg</Filename>
-            </Item>
-          </Variations>
-        </Object>
-        <Cost>
-          <Costs>
-            <Item>
-              <Ingredient>1010017</Ingredient>              <!--Money-->
-              <Amount>5000</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010196</Ingredient>              <!--timber-->
-              <Amount>20</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010205</Ingredient>              <!--bricks-->
-              <Amount>15</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010218</Ingredient>              <!--beams-->
-              <Amount>5</Amount>
-            </Item>
-          </Costs>
-        </Cost>
-        <Mesh />
-        <Selection>
-          <GUIType>Production</GUIType>
-          <ParticipantMessageArcheType>Mercier_DeserterWorker</ParticipantMessageArcheType>
-        </Selection>
-        <Constructable />
-        <SoundEmitter>
-          <ActiveSounds>
-            <Item>
-              <Sound>279511</Sound>
-            </Item>
-            <Item>
-              <Sound>216871</Sound>
-            </Item>
-          </ActiveSounds>
-        </SoundEmitter>
-        <FactoryBase>
-          <FactoryInputs>
-            <Item>
-              <Product>1742100439</Product>
-              <Amount>1</Amount>
-              <StorageAmount>8</StorageAmount>
-            </Item>
-          </FactoryInputs>
-          <CycleTime>180</CycleTime>
-          <MissingConnectionInfolayer>500449</MissingConnectionInfolayer>
-          <IsMainFactory>0</IsMainFactory>
-          <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
-          <ClampedMaxTransporterLogisticCost>67</ClampedMaxTransporterLogisticCost>
-        </FactoryBase>
-        <LogisticNode/>
-        <Maintenance>
-          <Maintenances>
-            <Item>
-              <Product>1010017</Product>
-              <Amount>50</Amount>
-              <InactiveAmount>25</InactiveAmount>
-            </Item>
-            <Item>
-              <Product>1742100005</Product>
-              <Amount>5</Amount>
-            </Item>
-          </Maintenances>
-        </Maintenance>
-        <Industrializable>
-          <BoostedByIndustrialization>0</BoostedByIndustrialization>
-        </Industrializable>
-        <IncidentInfectable />
-        <Electrifiable>
-          <ElectricityBoost>0</ElectricityBoost>
-        </Electrifiable>
-        <AmbientMoodProvider />
-        <Attackable />
-        <UpgradeList />
-        <Pausable />
-        <FeedbackController />
-        <Infolayer />
-        <BuffFactory>
-          <ProductionBuffs>
-            <Item>
-              <ProductivityBuff>1742100236</ProductivityBuff>
-            </Item>
-          </ProductionBuffs>
-          <ProductionBuffScope>Radius</ProductionBuffScope>
-          <ProductionBuffDistance>10</ProductionBuffDistance>
-        </BuffFactory>
-        <BuildingModule>
-          <ModuleType>AdditionalModule</ModuleType>
-        </BuildingModule>
-        <Culture />
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END BUILDING - MILITARY WORKFORCE OFFICE -->
-
   <!-- START BUILDING - MILITARY POST BOX -->
   <ModOp Type="addNextSibling" GUID='538'>
     <Asset>
@@ -9426,7 +9519,7 @@
               <StorageAmount>15</StorageAmount>
             </Item>
           </FactoryOutputs>
-          <CycleTime>30</CycleTime>
+          <CycleTime>45</CycleTime>
           <WarehouseTransporterAsset>829</WarehouseTransporterAsset>
           <!--MailTransporter-->
           <MissingConnectionInfolayer>0</MissingConnectionInfolayer>
@@ -9457,7 +9550,7 @@
         </Pausable>
         <UpgradeList/>
         <ItemContainer>
-          <SocketScopeRadius>8</SocketScopeRadius>
+          <SocketScopeRadius>12</SocketScopeRadius>
           <SocketScopeRadiusOverlapCategory>Postbox</SocketScopeRadiusOverlapCategory>
         </ItemContainer>
         <Postbox>
@@ -9596,7 +9689,7 @@
         </StorageBase>
         <Warehouse>
           <WarehouseStorage>
-            <StorageMax>20</StorageMax>
+            <StorageMax>15</StorageMax>
           </WarehouseStorage>
         </Warehouse>
         <FeedbackController/>
@@ -9604,304 +9697,5 @@
     </Asset>
   </ModOp>
   <!-- END BUILDING - MILITARY POST BOX -->
-
-  <!-- START BUILDING - MILITARY POST OFFICE -->
-  <ModOp Type="addNextSibling" GUID='3741'>
-    <Asset>
-      <Template>PostBoxBuildingWithDepot</Template>
-      <Values>
-        <Standard>
-          <GUID>1742100284</GUID>
-          <Name>Military Post Office</Name>
-          <IconFilename>data\graphics\icons\icon_military_postoffice.png</IconFilename>
-          <InfoDescription>1742100285</InfoDescription>
-        </Standard>
-        <Building>
-          <AssociatedRegions>Moderate</AssociatedRegions>
-          <SecondPartyRelevant>0</SecondPartyRelevant>
-          <!--[ empty field / noname ]-->
-        </Building>
-        <Blocking/>
-        <Cost>
-          <Costs>
-            <Item>
-              <Ingredient>1010017</Ingredient>              <!--Money-->
-              <Amount>2000</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010196</Ingredient>              <!--timber-->
-              <Amount>40</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010205</Ingredient>              <!--bricks-->
-              <Amount>30</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010218</Ingredient>              <!--beams-->
-              <Amount>10</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010207</Ingredient>              <!--windows-->
-              <Amount>5</Amount>
-            </Item>
-          </Costs>
-        </Cost>
-        <Object>
-          <Variations>
-            <Item>
-              <Filename>data/dlc11/graphics/buildings/public/postoffice/postoffice_01.cfg</Filename>
-            </Item>
-          </Variations>
-          <Skins>
-            <DefaultSkinName>3741</DefaultSkinName>
-            <DefaultSkinDescription>23853</DefaultSkinDescription>
-            <!--ChangeBuildingSkin_toDefaultSkinDesc-->
-            <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>
-            <!--Classic-->
-          </Skins>
-        </Object>
-        <Mesh/>
-        <Selection>
-          <StaticHelpEntryPoint>EmpireOfTheSkies_Post_GatherMail</StaticHelpEntryPoint>
-          <OnSelection>
-            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
-            <Values>
-              <ActionList/>
-            </Values>
-          </OnSelection>
-        </Selection>
-        <Text />
-        <Constructable/>
-        <Locked>
-          <DLCDependency>24962</DLCDependency>
-          <!--Anno 1800 DLC - Empire of the Skies-->
-        </Locked>
-        <SoundEmitter/>
-        <Infolayer/>
-        <Factory7/>
-        <FactoryBase>
-          <FactoryOutputs>
-            <Item>
-              <Product>535</Product>
-              <!--Local Mail-->
-              <Amount>1</Amount>
-              <StorageAmount>20</StorageAmount>
-            </Item>
-          </FactoryOutputs>
-          <CycleTime>30</CycleTime>
-          <WarehouseTransporterAsset>829</WarehouseTransporterAsset>
-          <!--MailTransporter-->
-          <MissingConnectionInfolayer>0</MissingConnectionInfolayer>
-          <!--[ empty field / noname ]-->
-          <IsMainFactory>0</IsMainFactory>
-        </FactoryBase>
-        <LogisticNode>
-          <TransporterCountMax>0</TransporterCountMax>
-          <!--[ empty field / noname ]-->
-          <NeedsTransporterQueue>0</NeedsTransporterQueue>
-          <!--[ empty field / noname ]-->
-        </LogisticNode>
-        <Maintenance>
-          <Maintenances>
-            <Item>
-              <Product>1010017</Product>
-              <!--Money-->
-              <Amount>100</Amount>
-              <InactiveAmount>50</InactiveAmount>
-            </Item>
-            <Item>
-              <Product>1742100005</Product>
-              <Amount>5</Amount>
-            </Item>
-          </Maintenances>
-        </Maintenance>
-        <Pausable>
-          <CanPauseManually>1</CanPauseManually>
-        </Pausable>
-        <UpgradeList/>
-        <ItemContainer>
-          <SocketScopeRadius>18</SocketScopeRadius>
-          <SocketScopeRadiusOverlapCategory>Postbox</SocketScopeRadiusOverlapCategory>
-        </ItemContainer>
-        <Postbox>
-          <ProductivityFactorByResidents>
-            <Item>
-              <VectorElement>
-                <InheritedIndex>0</InheritedIndex>
-                <!--[ empty field / noname ]-->
-                <InheritanceMapV2>
-                  <Entry>
-                    <TemplateName>PostBoxBuildingWithDepot</TemplateName>
-                    <Index>0</Index>
-                    <!--[ empty field / noname ]-->
-                  </Entry>
-                </InheritanceMapV2>
-              </VectorElement>
-            </Item>
-            <Item>
-              <VectorElement>
-                <InheritedIndex>1</InheritedIndex>
-                <InheritanceMapV2>
-                  <Entry>
-                    <TemplateName>PostBoxBuildingWithDepot</TemplateName>
-                    <Index>1</Index>
-                  </Entry>
-                </InheritanceMapV2>
-              </VectorElement>
-              <ResidentAmount>500</ResidentAmount>
-            </Item>
-            <Item>
-              <VectorElement>
-                <InheritedIndex>2</InheritedIndex>
-                <InheritanceMapV2>
-                  <Entry>
-                    <TemplateName>PostBoxBuildingWithDepot</TemplateName>
-                    <Index>2</Index>
-                  </Entry>
-                </InheritanceMapV2>
-              </VectorElement>
-              <ResidentAmount>1000</ResidentAmount>
-            </Item>
-            <Item>
-              <VectorElement>
-                <InheritedIndex>3</InheritedIndex>
-                <InheritanceMapV2>
-                  <Entry>
-                    <TemplateName>PostBoxBuildingWithDepot</TemplateName>
-                    <Index>3</Index>
-                  </Entry>
-                </InheritanceMapV2>
-              </VectorElement>
-              <ResidentAmount>1500</ResidentAmount>
-            </Item>
-            <Item>
-              <ResidentAmount>2000</ResidentAmount>
-              <ProductivityFactor>4</ProductivityFactor>
-            </Item>
-            <Item>
-              <ResidentAmount>2500</ResidentAmount>
-              <ProductivityFactor>5</ProductivityFactor>
-            </Item>
-            <Item>
-              <ResidentAmount>3000</ResidentAmount>
-              <ProductivityFactor>6</ProductivityFactor>
-            </Item>
-            <Item>
-              <ResidentAmount>3500</ResidentAmount>
-              <ProductivityFactor>7</ProductivityFactor>
-            </Item>
-            <Item>
-              <ResidentAmount>4000</ResidentAmount>
-              <ProductivityFactor>8</ProductivityFactor>
-            </Item>
-            <Item>
-              <ResidentAmount>4500</ResidentAmount>
-              <ProductivityFactor>9</ProductivityFactor>
-            </Item>
-            <Item>
-              <ResidentAmount>5000</ResidentAmount>
-              <ProductivityFactor>10</ProductivityFactor>
-            </Item>
-            <Item>
-              <ResidentAmount>5500</ResidentAmount>
-              <ProductivityFactor>11</ProductivityFactor>
-            </Item>
-            <Item>
-              <ResidentAmount>6000</ResidentAmount>
-              <ProductivityFactor>12</ProductivityFactor>
-            </Item>
-            <Item>
-              <ResidentAmount>6500</ResidentAmount>
-              <ProductivityFactor>13</ProductivityFactor>
-            </Item>
-            <Item>
-              <ResidentAmount>7000</ResidentAmount>
-              <ProductivityFactor>14</ProductivityFactor>
-            </Item>
-            <Item>
-              <ResidentAmount>7500</ResidentAmount>
-              <ProductivityFactor>15</ProductivityFactor>
-            </Item>
-            <Item>
-              <ResidentAmount>8000</ResidentAmount>
-              <ProductivityFactor>16</ProductivityFactor>
-            </Item>
-            <Item>
-              <ResidentAmount>8500</ResidentAmount>
-              <ProductivityFactor>17</ProductivityFactor>
-            </Item>
-            <Item>
-              <ResidentAmount>9000</ResidentAmount>
-              <ProductivityFactor>18</ProductivityFactor>
-            </Item>
-            <Item>
-              <ResidentAmount>9500</ResidentAmount>
-              <ProductivityFactor>19</ProductivityFactor>
-            </Item>
-            <Item>
-              <ResidentAmount>10000</ResidentAmount>
-              <ProductivityFactor>20</ProductivityFactor>
-            </Item>
-            <Item>
-              <ResidentAmount>10500</ResidentAmount>
-              <ProductivityFactor>21</ProductivityFactor>
-            </Item>
-            <Item>
-              <ResidentAmount>11000</ResidentAmount>
-              <ProductivityFactor>22</ProductivityFactor>
-            </Item>
-            <Item>
-              <ResidentAmount>11500</ResidentAmount>
-              <ProductivityFactor>23</ProductivityFactor>
-            </Item>
-            <Item>
-              <ResidentAmount>12000</ResidentAmount>
-              <ProductivityFactor>24</ProductivityFactor>
-            </Item>
-            <Item>
-              <ResidentAmount>12500</ResidentAmount>
-              <ProductivityFactor>25</ProductivityFactor>
-            </Item>
-            <Item>
-              <ResidentAmount>13000</ResidentAmount>
-              <ProductivityFactor>26</ProductivityFactor>
-            </Item>
-            <Item>
-              <ResidentAmount>13500</ResidentAmount>
-              <ProductivityFactor>27</ProductivityFactor>
-            </Item>
-            <Item>
-              <ResidentAmount>14000</ResidentAmount>
-              <ProductivityFactor>28</ProductivityFactor>
-            </Item>
-            <Item>
-              <ResidentAmount>14500</ResidentAmount>
-              <ProductivityFactor>29</ProductivityFactor>
-            </Item>
-            <Item>
-              <ResidentAmount>15000</ResidentAmount>
-              <ProductivityFactor>30</ProductivityFactor>
-            </Item>
-            <Item>
-              <ResidentAmount>15500</ResidentAmount>
-              <ProductivityFactor>31</ProductivityFactor>
-            </Item>
-          </ProductivityFactorByResidents>
-          <HasMailmanFeedback>1</HasMailmanFeedback>
-        </Postbox>
-        <StorageBase>
-          <ProductStorageList>745</ProductStorageList>
-          <!--AllModerateMails-->
-        </StorageBase>
-        <Warehouse>
-          <WarehouseStorage>
-            <StorageMax>150</StorageMax>
-          </WarehouseStorage>
-        </Warehouse>
-        <FeedbackController/>
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END BUILDING - MILITARY POSTBOX -->
 
 </ModOps>

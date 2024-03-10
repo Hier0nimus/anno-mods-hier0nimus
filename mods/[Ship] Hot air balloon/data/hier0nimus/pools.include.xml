@@ -1,0 +1,160 @@
+<!--
+
+POOLS
+
+-->
+
+<ModOps>
+    <!-- START - Add airships to ItemEffectTargetPool - AllTradeAirships,all airships -->
+    <ModOp Type="Add" GUID='7087,102492' Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
+        <Item>
+            <GUID>1742110200</GUID>
+        </Item>
+        <Item>
+            <GUID>1742110202</GUID>
+        </Item>
+        <Item>
+            <GUID>1742110204</GUID>
+        </Item>
+    </ModOp>
+    <!-- END-Add airships to ItemEffectTargetPool - AllTradeAirships -->
+
+    <!-- START - Add airships to AllAirshipPool -->
+    <ModOp Type="Add" GUID='102180' Path="/Values/AssetPool/AssetList/">
+        <Item>
+            <Asset>1742110200</Asset>
+        </Item>
+        <Item>
+            <Asset>1742110202</Asset>
+        </Item>
+        <Item>
+            <Asset>1742110204</Asset>
+        </Item>
+    </ModOp>
+    <!-- END- Add airships to AllAirshipPool -->
+
+    <!-- START - Add airships to PlayerCounterContextPool - AP - Airships -->
+    <ModOp Type="Add" GUID='103085,104750' Path="/Values/PlayerCounterContextPool/Contexts/">
+        <Item>
+            <Asset>1742110200</Asset>
+        </Item>
+        <Item>
+            <Asset>1742110202</Asset>
+        </Item>
+        <Item>
+            <Asset>1742110204</Asset>
+        </Item>
+    </ModOp>
+    <!-- END- Add airships to PlayerCounterContextPool - AP - Airships -->
+
+    <!-- START - Add specialisyts to pools - LEGENDARY - Harbour Pool -->
+    <ModOp GUID="193964,192840,193089" Type="add" Path="/Values/RewardPool/ItemsPool">
+        <Item>
+            <ItemLink>1742110204</ItemLink>            <!-- Joseph-Étienne Gontmolfier - HarborOfficeItem -->
+        </Item>
+    </ModOp>
+    <!-- END - Add specialisyts to pools - LEGENDARY - Harbour Pool -->
+
+    <!-- START - All common specialists - RewardPool -->
+    <ModOp GUID="193089" Type="AddNextSibling">
+        <Asset>
+            <Template>RewardPool</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742110219</GUID>
+                    <Name>All common specialists</Name>
+                </Standard>
+                <RewardPool>
+                    <ItemsPool>
+                        <Item>
+                            <ItemLink>190700</ItemLink>                            <!--Specialists - Welder -->
+                        </Item>
+                        <Item>
+                            <ItemLink>191325</ItemLink>                            <!--Specialists - Weaver -->
+                        </Item>
+                        <Item>
+                            <ItemLink>191336</ItemLink>                            <!--Specialists - Tanner -->
+                        </Item>
+                        <Item>
+                            <ItemLink>191580</ItemLink>                            <!--Specialists - Shepherd -->
+                        </Item>
+                        <Item>
+                            <ItemLink>190734</ItemLink>                            <!--Specialists - Poacher -->
+                        </Item>
+                        <Item>
+                            <ItemLink>190744</ItemLink>                            <!--Specialists - Ploughman -->
+                        </Item>
+                        <Item>
+                            <ItemLink>191459</ItemLink>                            <!--Specialists - Moulder -->
+                        </Item>
+                        <Item>
+                            <ItemLink>191379</ItemLink>                            <!--Specialists - Moonshiner -->
+                        </Item>
+                        <Item>
+                            <ItemLink>190755</ItemLink>                            <!--Specialists - Miner -->
+                        </Item>
+                        <Item>
+                            <ItemLink>190733</ItemLink>                            <!--Specialists - Lumberjack -->
+                        </Item>
+                        <Item>
+                            <ItemLink>191586</ItemLink>                            <!--Specialists - Digger -->
+                        </Item>
+                        <Item>
+                            <ItemLink>191315</ItemLink>                            <!--Specialists - Chandler -->
+                        </Item>
+                        <Item>
+                            <ItemLink>191425</ItemLink>                            <!--Specialists - Carpenter -->
+                        </Item>
+                        <Item>
+                            <ItemLink>191384</ItemLink>                            <!--Specialists - Butcher -->
+                        </Item>
+                        <Item>
+                            <ItemLink>190740</ItemLink>                            <!--Specialists - Burner -->
+                        </Item>
+                        <Item>
+                            <ItemLink>190699</ItemLink>                            <!--Specialists - Boilermaker -->
+                        </Item>
+                        <Item>
+                            <ItemLink>190628</ItemLink>                            <!--Specialists - Baker -->
+                        </Item>
+                    </ItemsPool>
+                </RewardPool>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END - All common specialists - RewardPool -->
+
+    <!-- START - All rare and epic airship trade specialists - RewardPool -->
+    <ModOp GUID="193089" Type="AddNextSibling">
+        <Asset>
+            <Template>RewardPool</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742110220</GUID>
+                    <Name>All rare and epic airship trade specialists</Name>
+                </Standard>
+                <RewardPool>
+                    <ItemsPool>
+                        <Item>
+                            <ItemLink>4133</ItemLink>                            <!--Specialists - Airship Cargo Loader -->
+                        </Item>
+                        <Item>
+                            <ItemLink>4132</ItemLink>                            <!--Specialists - Airship Engine Mechanic -->
+                        </Item>
+                        <Item>
+                            <ItemLink>4117</ItemLink>                            <!--Specialists - Airship Technician -->
+                        </Item>
+                        <Item>
+                            <ItemLink>116173</ItemLink>                            <!--VehicleItem - Fjordbuster -->
+                        </Item>
+                        <Item>
+                            <ItemLink>117303</ItemLink>                            <!--VehicleItem - Dedicated Airship Hoist -->
+                        </Item>
+                    </ItemsPool>
+                </RewardPool>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END - All rare and epic airship trade specialists - RewardPool -->
+
+</ModOps>

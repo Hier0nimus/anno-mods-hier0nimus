@@ -1,0 +1,31 @@
+<ModOps>
+
+    <ImyaTweaks Title="AL - Marie-Antoinette Montagne, Rich gases" />
+
+    <!-- Marie-Antoinette Montagne, Rich gases 1742000443-1742000444 -->
+
+    <ModOp GUID="1742000443" Type="replace" Path="/Values/FactoryUpgrade/ProductivityUpgrade/Value" ModOpID="1742000443_Productivity" Skip="1">
+        <Value>40</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000443_Productivity" Kind="Slider" ExposeID="Productivity(%)">
+        <SliderDefinition Min="0" Max="200" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000443" Type="replace" Path="/Values/FactoryUpgrade/AdditionalOutput/Item[Product='840']/AdditionalOutputCycle" ModOpID="1742000443_AdditionalOutputCycleHelium">
+        <AdditionalOutputCycle>6</AdditionalOutputCycle>
+    </ModOp>
+
+    <ImyaExpose Path="self::AdditionalOutputCycle" ModOpID="1742000443_AdditionalOutputCycleHelium" Kind="Slider" ExposeID="Helium (1/x)">
+        <SliderDefinition Min="1" Max="20" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000443" Type="replace" Path="/Values/BuildingUpgrade/WorkforceAmountUpgrade/Value" ModOpID="1742000443_WorkforceAmountUpgrade">
+        <Value>40</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000443_WorkforceAmountUpgrade" Kind="Slider" ExposeID="Workforce Needed (%)">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+</ModOps>

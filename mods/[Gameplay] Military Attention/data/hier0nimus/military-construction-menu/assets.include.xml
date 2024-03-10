@@ -32,6 +32,9 @@
               <Building>500145</Building>              <!-- Weapons - Chain -->
             </Item>
             <Item>
+              <Building>1742100534</Building>              <!-- Navy Recruitment Office - Building -->
+            </Item>
+            <Item>
               <Building>1742100027</Building>              <!-- Defenses - Construction Menu (OW) -->
             </Item>
             <Item>
@@ -50,10 +53,10 @@
               <Building>1742100078</Building>              <!-- Recreation Centre - Building -->
             </Item>
             <Item>
-              <Building>1742100238</Building>              <!-- Military Workforce Office - Building -->
+              <Building>1742100238</Building>              <!-- ?????? Small Military Warehouse - Building -->
             </Item>
             <Item>
-              <Building>1742100417</Building>              <!-- Military Post Category - Building -->
+              <Building>1742100007</Building>              <!-- Military Post Box - Building -->
             </Item>
             <Item>
               <Building>1742100299</Building>              <!-- Basic Ammunition - Chain -->
@@ -86,7 +89,7 @@
               <Building>1742100457</Building>              <!-- Military Prison - Building -->
             </Item>
             <Item>
-              <Building>1742100074</Building>              <!-- Propaganda Facility - Production Chain -->
+              <Building>1742100459</Building>              <!-- Propaganda Facility - Building -->
             </Item>
             <Item>
               <Building>1742100082</Building>              <!-- Military Academy - Building -->
@@ -672,38 +675,6 @@
   </ModOp>
   <!-- END PRODUCTION CHAIN - Sleeping Bags OW -->
 
-  <!-- START PRODUCTION CHAIN - Propaganda Facility -->
-  <ModOp Type="addNextSibling" GUID='500091'>
-    <Asset>
-      <Template>ProductionChain</Template>
-      <Values>
-        <Standard>
-          <GUID>1742100074</GUID>
-          <Name>Propaganda Facility</Name>
-          <IconFilename>data\graphics\icons\icon_propaganda_facility.png</IconFilename>
-          <InfoDescription>1742100075</InfoDescription>
-        </Standard>
-        <ProductionChain>
-          <Building>1742100459</Building>          <!-- Propaganda Facility - Building -->
-          <Tier1>
-            <Building>935</Building>            <!-- Pamphlet Printer - Building -->
-            <Tier2>
-              <Item>
-                <Building>1010331</Building>                <!-- Cotton Plantation - Building -->
-              </Item>
-              <Item>
-                <Building>1010266</Building>                <!-- Lumberjack OW - Building -->
-              </Item>
-            </Tier2>
-          </Tier1>
-        </ProductionChain>
-        <Locked />
-        <Text />
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END PRODUCTION CHAIN - Pamphlets OW -->
-
   <!-- START PRODUCTION CHAIN - Cardgames Factory -->
   <ModOp Type="addNextSibling" GUID='500091'>
     <Asset>
@@ -1060,34 +1031,5 @@
     </Asset>
   </ModOp>
   <!-- END PRODUCTION CHAIN - BASIC WEAPONS -->
-
-  <!-- START POST CHAIN -->
-  <ModOp Type="addNextSibling" GUID='500091'>
-    <Asset>
-      <Template>ConstructionCategory</Template>
-      <Values>
-        <Standard>
-          <GUID>1742100417</GUID>
-          <Name>Military Post Chain</Name>
-          <IconFilename>data\graphics\icons\icon_military_postoffice.png</IconFilename>
-          <InfoDescription>1742100418</InfoDescription>
-        </Standard>
-        <ConstructionCategory>
-          <BuildingList>
-            <Item>
-              <Building>1742100007</Building>              <!-- Military Post Box - Building -->
-            </Item>
-            <Item>
-              <Building>1742100284</Building>              <!-- Military Post Office - Building -->
-            </Item>
-          </BuildingList>
-          <CategoryDescription>1742100418</CategoryDescription>
-        </ConstructionCategory>
-        <Text />
-        <Locked />
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END POST CHAIN -->
 
 </ModOps>
