@@ -58,12 +58,22 @@
     </Asset>
   </ModOp>
 
-  <!-- Add to strategic goods -->
+  <!-- START ADD TO STRATEGIC GOODS -->
   <ModOp Type="add" GUID="501961" Path="/Values/ProductList/List">
     <Item>
       <Product>1742100533</Product>
     </Item>
   </ModOp>
+  <!-- END ADD TO STRATEGIC GOODS -->
+
+  <!-- START ADD GOOD VALUE BALANCING  -->
+  <ModOp GUID='142977' Type="addNextSibling" Path="/Values/GoodValueBalancing/WorkforceData/Moderate/Tiers/Item[WorkforceGUID='1010116']">
+    <Item>
+      <WorkforceValue>3.333079</WorkforceValue>
+      <WorkforceGUID>1742100005</WorkforceGUID>
+    </Item>
+  </ModOp>
+  <!-- END ADD GOOD VALUE BALANCING  -->
 
   <!-- ****************** END SAILORS - Product ******************  -->
 
@@ -144,8 +154,8 @@
               <InactiveAmount>10</InactiveAmount>
             </Item>
             <Item>
-              <Product>1010115</Product>              <!-- Looks like it does not want to use 1742100005 Soldiers Workforce WHY? -->
-              <Amount>5</Amount>
+              <Product>1742100005</Product>              <!-- Soldiers Workforce -->
+              <Amount>15</Amount>
             </Item>
           </Maintenances>
         </Maintenance>
