@@ -1274,7 +1274,7 @@
         <Standard>
           <GUID>1742100224</GUID>
           <Name>Basic Ammunition Buff</Name>
-          <IconFilename>data/graphics/icons/icon_basic_ammunition.png</IconFilename>
+          <IconFilename>data/graphics/icons/icon_basic_ammunition_depot.png</IconFilename>
           <InfoDescription>1742100225</InfoDescription>
         </Standard>
         <ItemEffect>
@@ -1370,7 +1370,7 @@
         <Standard>
           <GUID>1742100256</GUID>
           <Name>Shell Ammunition Buff</Name>
-          <IconFilename>data/graphics/icons/icon_shell_ammunition.png</IconFilename>
+          <IconFilename>data/graphics/icons/icon_shell_ammunition_depot.png</IconFilename>
           <InfoDescription>1742100257</InfoDescription>
         </Standard>
         <ItemEffect>
@@ -1424,7 +1424,7 @@
         <ItemEffect>
           <EffectTargets>
             <Item>
-              <GUID>1742100218</GUID>              <!-- Fire Tower (OW) - Building -->
+              <GUID>1742100413</GUID>              <!-- All Gas Ammunition Defense Buildings - ItemEffectTargetPool -->
             </Item>
           </EffectTargets>
           <AllowStacking>0</AllowStacking>
@@ -1466,13 +1466,13 @@
         <Standard>
           <GUID>1742100260</GUID>
           <Name>Gas Ammunition Buff</Name>
-          <IconFilename>data/graphics/icons/icon_gas_ammunition.png</IconFilename>
+          <IconFilename>data/graphics/icons/icon_gas_ammunition_depot.png</IconFilename>
           <InfoDescription>1742100261</InfoDescription>
         </Standard>
         <ItemEffect>
           <EffectTargets>
             <Item>
-              <GUID>1742100218</GUID>              <!-- Fire Tower (OW) - Building -->
+              <GUID>1742100413</GUID>              <!-- All Gas Ammunition Defense Buildings - ItemEffectTargetPool -->
             </Item>
           </EffectTargets>
           <AllowStacking>0</AllowStacking>
@@ -1520,10 +1520,7 @@
         <ItemEffect>
           <EffectTargets>
             <Item>
-              <GUID>1742100220</GUID>              <!-- Monster Gun (OW) - Building -->
-            </Item>
-            <Item>
-              <GUID>1742100490</GUID>              <!-- Fort - Building -->
+              <GUID>1742100414</GUID>              <!-- All Bombs Ammunition Defense Buildings - ItemEffectTargetPool -->
             </Item>
           </EffectTargets>
           <AllowStacking>0</AllowStacking>
@@ -1565,16 +1562,13 @@
         <Standard>
           <GUID>1742100264</GUID>
           <Name>Bombs Ammunition Buff</Name>
-          <IconFilename>data/graphics/icons/icon_bombs_ammunition.png</IconFilename>
+          <IconFilename>data/graphics/icons/icon_bombs_ammunition_depot.png</IconFilename>
           <InfoDescription>1742100265</InfoDescription>
         </Standard>
         <ItemEffect>
           <EffectTargets>
             <Item>
-              <GUID>1742100220</GUID>              <!-- Monster Gun (OW) - Building -->
-            </Item>
-            <Item>
-              <GUID>1742100490</GUID>              <!-- Fort - Building -->
+              <GUID>1742100414</GUID>              <!-- All Bombs Ammunition Defense Buildings - ItemEffectTargetPool -->
             </Item>
           </EffectTargets>
           <AllowStacking>0</AllowStacking>
@@ -1616,9 +1610,17 @@
         <Standard>
           <GUID>1742100492</GUID>
           <Name>Providing All Ammunition</Name>
-          <IconFilename>data/ui/2kimages/main/3dicons/scenario/policies_hacienda/icon_dietary_education.png</IconFilename>
+          <IconFilename>data/graphics/icons/icon_ammunition_depot_large.png</IconFilename>
           <InfoDescription>1742100493</InfoDescription>
         </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742100228</GUID>              <!-- All Defense buildings - ItemEffectTargetPool -->
+            </Item>
+          </EffectTargets>
+          <AllowStacking>0</AllowStacking>
+        </ItemEffect>
         <Text />
         <EffectContainer>
           <Effects>
