@@ -723,7 +723,7 @@
   <!-- START BUILDING ARCTIC SOLDIERS Residence - ENCAMPMENT -->
   <ModOp GUID='601891' Type="addNextSibling">
     <Asset>
-      <Template>ResidenceBuilding</Template>
+      <Template>ResidenceBuilding7_Arctic</Template>
       <Values>
         <Standard>
           <GUID>1742100307</GUID>          <!-- Arctic Soldiers Residence - Encampment - Building -->
@@ -777,12 +777,12 @@
           </OnSelection>
           <ParticipantMessageArcheType>Mercier_DeserterWorker</ParticipantMessageArcheType>
         </Selection>
-        <Text />
         <Constructable />
         <Locked>
           <DLCDependency>410042</DLCDependency>          <!-- The Passage DLC -->
         </Locked>
         <Upgradable />
+
         <SoundEmitter>
           <ConstructionSounds>
             <BuildSuccessful>
@@ -835,74 +835,24 @@
         </SoundEmitter>
         <Infolayer />
         <FeedbackController />
+        <RandomDummySpawner />
         <Residence7>
           <ResidenceStorage>
             <InputStorageMax>1</InputStorageMax>
           </ResidenceStorage>
           <PopulationLevel7>1742100306</PopulationLevel7>          <!-- Arctic Soldiers - PopulationLevel7 -->
-          <ResidentMax>5</ResidentMax>
+          <ResidentMax>10</ResidentMax>
         </Residence7>
         <LogisticNode />
         <AmbientMoodProvider>
+          <Murmur>Arctic_BasicTundra</Murmur>
+          <GlacierMurmur>Arctic_BasicGlacier</GlacierMurmur>
           <DynamicEnvironmentType>ResidenceT1</DynamicEnvironmentType>
         </AmbientMoodProvider>
         <UpgradeList />
-        <Attackable>
-          <AttackableType>IslandBuilding</AttackableType>
-          <MaximumHitPoints>1500</MaximumHitPoints>
-        </Attackable>
-        <IncidentInfectable>
-          <Infectable>
-            <Explosion>
-              <Base>0</Base>
-              <Escalated>0</Escalated>
-            </Explosion>
-          </Infectable>
-          <Explosion>
-            <ExplosionCoreDamage>1000</ExplosionCoreDamage>
-          </Explosion>
-          <IncidentInfectionChanceFactors>
-            <Fire>
-              <DensityFactor>0.025</DensityFactor>
-              <DensityDistance>15</DensityDistance>
-            </Fire>
-            <Riot>
-              <ResidenceHappinessFactor>0.4</ResidenceHappinessFactor>
-              <HappinessThreshold>10</HappinessThreshold>
-            </Riot>
-            <Illness>
-              <BaseChance>4</BaseChance>
-              <HitpointFactor>0.1</HitpointFactor>
-              <DensityFactor>0.025</DensityFactor>
-              <DensityDistance>15</DensityDistance>
-              <DilapidatedFactor>10</DilapidatedFactor>
-              <FactoryOvertimeFactor>0.3</FactoryOvertimeFactor>
-              <FactoryUndertimeFactor>0.15</FactoryUndertimeFactor>
-              <ResidenceFullOvertimeChance>20</ResidenceFullOvertimeChance>
-              <ResidenceFullUndertimeChance>-15</ResidenceFullUndertimeChance>
-            </Illness>
-            <Explosion>
-              <ResidenceFullOvertimeChance>20</ResidenceFullOvertimeChance>
-              <ResidenceFullUndertimeChance>-15</ResidenceFullUndertimeChance>
-            </Explosion>
-          </IncidentInfectionChanceFactors>
-        </IncidentInfectable>
         <Pausable />
         <Culture />
         <StreetActivation />
-        <InfluenceSource />
-        <FloorStackOwner />
-        <Maintenance>
-          <IncomeCategory>Skyscrapers</IncomeCategory>
-        </Maintenance>
-        <Audio>
-          <ClusterEvent>
-            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
-            <Values>
-              <AudioLink />
-            </Values>
-          </ClusterEvent>
-        </Audio>
       </Values>
     </Asset>
   </ModOp>
