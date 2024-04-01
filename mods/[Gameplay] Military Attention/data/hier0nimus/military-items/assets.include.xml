@@ -318,4 +318,84 @@
     </Asset>
   </ModOp>
 
+  <!-- START - ADD NEW ITEMS - THEODORE VON WOUDENBURG -->
+  <ModOp GUID="192190" Type="addNextSibling">
+    <Asset>
+      <Template>GuildhouseItem</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100455</GUID>
+          <Name>Theodore Von Woudenburg</Name>
+          <IconFilename>data/graphics/icons/icon_theodore_von_woudenburg.png</IconFilename>
+          <InfoDescription>1742100456</InfoDescription>
+        </Standard>
+        <Text />
+        <Item>
+          <MaxStackSize>1</MaxStackSize>
+          <Rarity>Epic</Rarity>
+          <ItemType>Specialist</ItemType>
+          <TradePrice>225000</TradePrice>
+          <TradePriceOnlineCurrency>10</TradePriceOnlineCurrency>
+        </Item>
+        <FactoryUpgrade>
+          <ProductivityUpgrade>
+            <Value>20</Value>
+            <Percental>1</Percental>
+          </ProductivityUpgrade>
+          <AdditionalOutput>
+            <Item>
+              <Product>1010207</Product>              <!-- Windows - Product -->
+              <AdditionalOutputCycle>1</AdditionalOutputCycle>
+              <Amount>5</Amount>
+            </Item>
+          </AdditionalOutput>
+          <ReplaceInputs>
+            <Item>
+              <OldInput>120008</OldInput>              <!-- Wood - Product -->
+              <NewInput>1742100435</NewInput>              <!-- Lead - Product -->
+            </Item>
+          </ReplaceInputs>
+        </FactoryUpgrade>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1010285</GUID>              <!-- Window Makers - Building -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <ItemAction />
+        <ExpeditionAttribute>
+          <BaseMorale>0</BaseMorale>
+          <ExpeditionAttributes>
+            <Item>
+              <Attribute>PerkMale</Attribute>
+              <Amount>1</Amount>
+            </Item>
+            <Item>
+              <Attribute>Crafting</Attribute>
+              <Amount>40</Amount>
+            </Item>
+          </ExpeditionAttributes>
+          <ItemDifficulties>Easy</ItemDifficulties>
+          <FluffText>8357</FluffText>
+        </ExpeditionAttribute>
+        <CultureUpgrade />
+        <BuildingUpgrade />
+        <ModuleOwnerUpgrade />
+        <IncidentInfluencerUpgrade />
+        <IncidentInfectableUpgrade />
+        <ResidenceUpgrade />
+        <PopulationUpgrade />
+        <IndustrializableUpgrade />
+        <Locked />
+        <Buff />
+        <CraftableItem />
+        <HeaterUpgrade />
+        <PowerplantUpgrade />
+        <IrrigationUpgrade />
+        <EcoSystemProviderUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+
 </ModOps>

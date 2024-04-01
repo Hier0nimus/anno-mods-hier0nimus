@@ -4,6 +4,51 @@
 
 <ModOps>
 
+  <!-- START ADD HORSES TO FARMER BUILDING MENU -->
+  <ModOp Type="addNextSibling" GUID='25000189' Path="/Values/ConstructionCategory/BuildingList/Item[Building='500505']">
+    <Item>
+      <Building>1742100209</Building>      <!-- Stable - Building -->
+    </Item>
+  </ModOp>
+  <!-- END ADD HORSES TO FARMER BUILDING MENU -->
+
+  <!-- START ADD CIGARETTES TO WORKERS BUILDING MENU -->
+  <ModOp Type="addNextSibling" GUID='25000190' Path="/Values/ConstructionCategory/BuildingList/Item[Building='500006']">
+    <Item>
+      <Building>1742100060</Building>      <!-- Cigarettes - Chain -->
+    </Item>
+  </ModOp>
+  <!-- END ADD CIGARETTES TO WORKERS BUILDING MENU -->
+
+  <!-- START ADD SAILING SHIPYARD OW (PLAYER) TO WORKERS BUILDING MENU -->
+  <ModOp Type="addNextSibling" GUID='500952,500111' Path="/Values/ConstructionCategory/BuildingList/Item[Building='1010519']">
+    <Item>
+      <Building>1742100537</Building>      <!-- Sailing Shipyard OW (Player) - Building -->
+    </Item>
+  </ModOp>
+  <!-- END ADD SAILING SHIPYARD OW (PLAYER) TO WORKERS BUILDING MENU -->
+
+  <!-- START ADD SAILING SHIPYARD NW (PLAYER) TO JORNALEROS BUILDING MENU -->
+  <ModOp Type="addNextSibling" GUID='501007,500149' Path="/Values/ConstructionCategory/BuildingList/Item[Building='101278']">
+    <Item>
+      <Building>1742100538</Building>      <!-- Sailing Shipyard NW (Player) - Building -->
+    </Item>
+  </ModOp>
+  <!-- END ADD SAILING SHIPYARD NW (PLAYER) TO JORNALEROS BUILDING MENU -->
+
+  <!-- START ADD STEAM SHIPYARD OW (PLAYER) TO ENGINEERS BUILDING MENU -->
+  <ModOp Type="addNextSibling" GUID='500954' Path="/Values/ConstructionCategory/BuildingList/Item[Building='101642']">
+    <Item>
+      <Building>1742100539</Building>      <!-- Steam Shipyard OW (Player) - Building -->
+    </Item>
+  </ModOp>
+  <ModOp Type="addNextSibling" GUID='500111' Path="/Values/ConstructionCategory/BuildingList/Item[Building='1010519']">
+    <Item>
+      <Building>1742100539</Building>      <!-- Steam Shipyard OW (Player) - Building -->
+    </Item>
+  </ModOp>
+  <!-- END ADD STEAM SHIPYARD OW (PLAYER) TO ENGINEERS BUILDING MENU -->
+
   <!-- START MILITARY CONSTRUCTION CATEGORY (OW) -->
   <ModOp Type="addNextSibling" GUID='500447'>
     <Asset>
@@ -74,9 +119,6 @@
               <Building>1742100193</Building>              <!-- Military Training Complex - Chain -->
             </Item>
             <Item>
-              <Building>1742100060</Building>              <!-- Cigarettes - Chain -->
-            </Item>
-            <Item>
               <Building>1742100070</Building>              <!-- Sleeping Bag - Chain -->
             </Item>
             <Item>
@@ -84,9 +126,6 @@
             </Item>
             <Item>
               <Building>1742100348</Building>              <!-- Heated Military Uniforms - Chain -->
-            </Item>
-            <Item>
-              <Building>1742100209</Building>              <!-- Stable - Building -->
             </Item>
             <Item>
               <Building>1742100457</Building>              <!-- Military Prison - Building -->
@@ -442,100 +481,6 @@
     </Asset>
   </ModOp>
   <!-- END DEFENSES CONSTRUCTION MENU (EN) -->
-
-  <!-- START REMOVE DEFENSES FROM OLD CONSTRUCTION MENU -->
-  <ModOp Type="replace" GUID='500952' Path="/Values/ConstructionCategory/BuildingList/">
-    <BuildingList>
-      <Item>
-        <Building>1010567</Building>
-      </Item>
-      <Item>
-        <Building>1010520</Building>
-      </Item>
-      <Item>
-        <Building>1010519</Building>
-      </Item>
-      <Item>
-        <Building>100586</Building>
-      </Item>
-    </BuildingList>
-  </ModOp>
-  <ModOp Type="replace" GUID='500953' Path="/Values/ConstructionCategory/BuildingList/">
-    <BuildingList>
-      <Item>
-        <Building>100429</Building>
-      </Item>
-      <Item>
-        <Building>100519</Building>
-      </Item>
-    </BuildingList>
-  </ModOp>
-  <ModOp Type="replace" GUID='500954' Path="/Values/ConstructionCategory/BuildingList/">
-    <BuildingList>
-      <Item>
-        <Building>101642</Building>
-      </Item>
-      <Item>
-        <Building>1010521</Building>
-      </Item>
-    </BuildingList>
-  </ModOp>
-  <ModOp Type="replace" GUID='500111' Path="/Values/ConstructionCategory/BuildingList/">
-    <BuildingList>
-      <Item>
-        <Building>1010567</Building>
-      </Item>
-      <Item>
-        <Building>1010519</Building>
-      </Item>
-      <Item>
-        <Building>1010520</Building>
-      </Item>
-      <Item>
-        <Building>1010521</Building>
-      </Item>
-      <Item>
-        <Building>100519</Building>
-      </Item>
-      <Item>
-        <Building>7291</Building>
-      </Item>
-      <Item>
-        <Building>101642</Building>
-      </Item>
-      <Item>
-        <Building>133890</Building>
-      </Item>
-      <Item>
-        <Building>1010278</Building>
-      </Item>
-      <Item>
-        <Building>1010560</Building>
-      </Item>
-      <Item>
-        <Building>1742100215</Building>        <!-- Mounted Guns (OW) - Defense -->
-      </Item>
-      <Item>
-        <Building>1742100216</Building>        <!-- Cannon Tower (OW) - Building -->
-      </Item>
-      <Item>
-        <Building>1742100217</Building>        <!-- Flak Emplacement (OW) - Building -->
-      </Item>
-      <Item>
-        <Building>1742100218</Building>        <!-- Fire Tower (OW) - Building -->
-      </Item>
-      <Item>
-        <Building>1742100219</Building>        <!-- Armor Pierce Tower (OW) - Building -->
-      </Item>
-      <Item>
-        <Building>1742100220</Building>        <!-- Monster Gun (OW) - Building -->
-      </Item>
-      <Item>
-        <Building>1742100221</Building>        <!-- Flak Emplacement (OW Land) - Building -->
-      </Item>
-    </BuildingList>
-  </ModOp>
-  <!-- END REMOVE DEFENSES FROM OLD CONSTRUCTION MENU -->
 
   <!-- START PRODUCTION CHAIN - Military Uniforms -->
   <ModOp Type="addNextSibling" GUID='500091'>
