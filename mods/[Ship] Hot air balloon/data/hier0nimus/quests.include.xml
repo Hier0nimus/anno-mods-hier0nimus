@@ -180,6 +180,16 @@ QUESTS
                     <QuestActivation>ManualActivation</QuestActivation>
                     <DelayTimer>5000</DelayTimer>
                     <ConfirmOnReached>1</ConfirmOnReached>
+                    <QuestSessionDependencies>
+                        <Item>
+                            <SessionOrRegion>180023</SessionOrRegion>
+                            <!--Europe_Session-->
+                        </Item>
+                    </QuestSessionDependencies>
+                    <CanBeActiveForMultipleParticipants>1</CanBeActiveForMultipleParticipants>
+                    <ReputationQuestFail>
+                        <ReputationFailList />
+                    </ReputationQuestFail>
                     <ConfirmOnReachedCondition>
                         <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
                         <Values>
@@ -188,16 +198,7 @@ QUESTS
                             <ConditionQuestObjective/>
                         </Values>
                     </ConfirmOnReachedCondition>
-                    <QuestSessionDependencies>
-                        <Item>
-                            <SessionOrRegion>180023</SessionOrRegion>
-                            <!--Europe_Session-->
-                        </Item>
-                    </QuestSessionDependencies>
                     <KeepCheckingPreconditionsWhenRunning>1</KeepCheckingPreconditionsWhenRunning>
-                    <ReputationQuestFail>
-                        <ReputationFailList />
-                    </ReputationQuestFail>
                     <QuestHints>
                         <Item>
                             <VectorElement>
@@ -212,7 +213,6 @@ QUESTS
                             <Text>1742110224</Text>
                         </Item>
                     </QuestHints>
-                    <CanBeActiveForMultipleParticipants>1</CanBeActiveForMultipleParticipants>
                 </Quest>
                 <PreConditionList>
                     <Condition>
@@ -266,7 +266,6 @@ QUESTS
                     </SubConditions>
                 </PreConditionList>
                 <Text/>
-
                 <QuestOptional>
                     <HasStarterObject>Specific</HasStarterObject>
                     <StarterObject>

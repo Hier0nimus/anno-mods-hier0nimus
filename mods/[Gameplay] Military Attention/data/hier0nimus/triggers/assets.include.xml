@@ -4,15 +4,16 @@
 
 <ModOps>
 
-  <!--UNLOCK - TEMP -->
+  <!-- *********************** TEST UNLOCKS - STARTING AT 1742200000 *********************** -->
 
+  <!--UNLOCK - Farmers 1 - TESTUNLOCK NEWSPAPER -->
   <ModOp Type="addnextSibling" GUID="130248">
     <Asset>
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742187793</GUID>
-          <Name>Quick Test</Name>
+          <GUID>1742200000</GUID>
+          <Name>MOD Trigger</Name>
         </Standard>
         <Trigger>
           <TriggerCondition>
@@ -29,15 +30,38 @@
           <TriggerActions>
             <Item>
               <TriggerAction>
-                <Template>ActionUnlockAsset</Template>
+                <Template>ActionDelayedActions</Template>
                 <Values>
-                  <Action />
-                  <ActionUnlockAsset>
-                    <UnhideAssets>
-                    </UnhideAssets>
-                    <UnlockAssets>
-                    </UnlockAssets>
-                  </ActionUnlockAsset>
+                  <Action/>
+                  <ActionDelayedActions>
+                    <ExecutionDelay>1000</ExecutionDelay>
+                    <DelayedActions>
+                      <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                      <Values>
+                        <ActionList>
+                          <Actions>
+                            <Item>
+                              <Action>
+                                <Template>ActionForceNewspaper</Template>
+                                <Values>
+                                  <Action/>
+                                  <ActionForceNewspaper>
+                                    <Articles>
+                                      <Item>
+                                        <Article>1742100393</Article>
+                                      </Item>
+                                    </Articles>
+                                    <OpenNewspaperUI>1</OpenNewspaperUI>
+                                    <OpenNewspaperType>SpecialEdition</OpenNewspaperType>
+                                  </ActionForceNewspaper>
+                                </Values>
+                              </Action>
+                            </Item>
+                          </Actions>
+                        </ActionList>
+                      </Values>
+                    </DelayedActions>
+                  </ActionDelayedActions>
                 </Values>
               </TriggerAction>
             </Item>
@@ -48,6 +72,7 @@
     </Asset>
   </ModOp>
 
+  <!-- *********************** TRIGGERS STARTING AT 1742100600 *********************** -->
 
   <!-- *********************** OTHER REGIONS GLOBAL CHECK *********************** -->
 
@@ -57,7 +82,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742187795</GUID>
+          <GUID>1742100700</GUID>
           <Name>Other Regions</Name>
         </Standard>
         <Trigger>
@@ -149,9 +174,6 @@
                         <Asset>1742100318</Asset>                        <!-- Enbesa Workforce - Product -->
                       </Item>
                       <Item>
-                        <Asset>1742100027</Asset>                        <!-- Defenses Construction Menu (OW) -->
-                      </Item>
-                      <Item>
                         <Asset>1742100353</Asset>                        <!-- Defenses Construction Menu (AR) -->
                       </Item>
                       <Item>
@@ -214,6 +236,115 @@
                       <Item>
                         <Asset>1742100373</Asset>                        <!-- Flak Emplacement (EN Land) - Building -->
                       </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- *********************** OW *********************** -->
+
+  <!--UNLOCK - FARMERS 100 -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100701</GUID>
+          <Name>MOD Trigger</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>15000000</Context>                <!-- Farmers PopulationLevel7 -->
+                <CounterAmount>100</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
+                    </UnhideAssets>
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>1742100211</Asset>                        <!-- Horses - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100209</Asset>                        <!-- Stable - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100380</Asset>                        <!-- Horse Training Ground - Module -->
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!--UNLOCK - WORKERS 300 -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100702</GUID>
+          <Name>MOD Trigger</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>15000001</Context>                <!-- Workers PopulationLevel7 -->
+                <CounterAmount>150</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
+                    </UnhideAssets>
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>1742100537</Asset>                        <!-- Sailing Shipyard OW (Player) -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100540</Asset>                        <!-- Schooner (Player) -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100541</Asset>                        <!-- Gunboat (Player) -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100026</Asset>                        <!-- Old World Military Construction Category menu -->
+                      </Item>
                       <Item>
                         <Asset>1742100532</Asset>                        <!-- Sailors - ProductStorageList -->
                       </Item>
@@ -231,75 +362,6 @@
                       </Item>
                       <Item>
                         <Asset>1742100236</Asset>                        <!-- Sanitation Facility - Product -->
-                      </Item>
-                    </UnlockAssets>
-                  </ActionUnlockAsset>
-                </Values>
-              </TriggerAction>
-            </Item>
-          </TriggerActions>
-        </Trigger>
-        <TriggerSetup />
-      </Values>
-    </Asset>
-  </ModOp>
-
-  <!-- *********************** OW *********************** -->
-
-  <!--UNLOCK - WORKERS 300 -->
-  <ModOp Type="addnextSibling" GUID="130248">
-    <Asset>
-      <Template>Trigger</Template>
-      <Values>
-        <Standard>
-          <GUID>1742100997</GUID>
-          <Name>MOD Trigger</Name>
-        </Standard>
-        <Trigger>
-          <TriggerCondition>
-            <Template>ConditionPlayerCounter</Template>
-            <Values>
-              <Condition />
-              <ConditionPlayerCounter>
-                <PlayerCounter>PopulationByLevel</PlayerCounter>
-                <Context>15000001</Context>                <!-- Workers PopulationLevel7 -->
-                <CounterAmount>300</CounterAmount>
-              </ConditionPlayerCounter>
-            </Values>
-          </TriggerCondition>
-          <TriggerActions>
-            <Item>
-              <TriggerAction>
-                <Template>ActionUnlockAsset</Template>
-                <Values>
-                  <Action />
-                  <ActionUnlockAsset>
-                    <UnhideAssets>
-                      <Item>
-                        <Asset>1742100510</Asset>                        <!-- Care Package: Entertainment - Recipe -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100508</Asset>                        <!-- Care Package: Fruit - Recipe -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100504</Asset>                        <!-- Care Package: Meat - Recipe -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100512</Asset>                        <!-- Care Package: Fish - Recipe -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100514</Asset>                        <!-- Care Package: Sweets - Recipe -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100526</Asset>                        <!-- Care Package: Vegetables - Recipe -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100528</Asset>                        <!-- Care Package: Drinks - Recipe -->
-                      </Item>
-                    </UnhideAssets>
-                    <UnlockAssets>
-                      <Item>
-                        <Asset>1742100026</Asset>                        <!-- Old World Military Construction Category menu -->
                       </Item>
                       <Item>
                         <Asset>1742100000</Asset>                        <!-- Soldiers - PopulationLevel7 -->
@@ -332,22 +394,7 @@
                         <Asset>1742100165</Asset>                        <!-- Open Pit Coal Mine - Building -->
                       </Item>
                       <Item>
-                        <Asset>1742100496</Asset>                        <!-- Care Package Factory - Empty (OW) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100502</Asset>                        <!-- Care Package Factory: Basics - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100500</Asset>                        <!-- Care Package: Basics - Recipe -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100469</Asset>                        <!-- Basic Weapons Factory - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100471</Asset>                        <!-- Basic Weapons - Product -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100473</Asset>                        <!-- Basic Weapons - Production Chain -->
+                        <Asset>140051</Asset>                        <!-- Weapons - Asset pool -->
                       </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>
@@ -367,7 +414,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742100998</GUID>
+          <GUID>1742100703</GUID>
           <Name>MOD Trigger</Name>
         </Standard>
         <Trigger>
@@ -390,9 +437,6 @@
                   <Action />
                   <ActionUnlockAsset>
                     <UnhideAssets>
-                      <Item>
-                        <Asset>1742100229</Asset>                        <!-- James Fondrick - Item -->
-                      </Item>
                     </UnhideAssets>
                     <UnlockAssets>
                       <Item>
@@ -408,13 +452,7 @@
                         <Asset>1742100060</Asset>                        <!-- Cigarettes - Chain -->
                       </Item>
                       <Item>
-                        <Asset>1742100211</Asset>                        <!-- Horses - Product -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100209</Asset>                        <!-- Stable - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100380</Asset>                        <!-- Horse Training Ground - Module -->
+                        <Asset>1742100056</Asset>                        <!-- Cigarettes Factory - Building -->
                       </Item>
                       <Item>
                         <Asset>1742100286</Asset>                        <!-- Ammunition (Global fake) - Product -->
@@ -430,120 +468,6 @@
                       </Item>
                       <Item>
                         <Asset>1742100075</Asset>                        <!-- Bombs Ammunition (Global fake) - Product -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100195</Asset>                        <!-- Ammunition Factory Empty - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100199</Asset>                        <!-- Ammunition Factory Basic Ammunition - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100205</Asset>                        <!-- Basic Ammunition - Recipe -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100299</Asset>                        <!-- Basic Ammunition - Chain -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100203</Asset>                        <!-- Basic Ammunition - Product -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100293</Asset>                        <!-- Gunpowder - Product -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100287</Asset>                        <!-- Dung Collector - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100289</Asset>                        <!-- Nitrary - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100374</Asset>                        <!-- Saltpetre Bed - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100376</Asset>                        <!-- Nitrary Shed - Module -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100291</Asset>                        <!-- Gunpowder Factory - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100297</Asset>                        <!-- Gunpowder - Chain -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100433</Asset>                        <!-- Galena - Product -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100435</Asset>                        <!-- Lead - Product -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100407</Asset>                        <!-- Galena Mine - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100409</Asset>                        <!-- Lead Smelter - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100191</Asset>                        <!-- Military Training Complex - Product -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100189</Asset>                        <!-- Military Training Complex - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100193</Asset>                        <!-- Military Training Complex - Menu Production Chain -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100439</Asset>                        <!-- Coins - Product -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100447</Asset>                        <!-- Coins - Chain -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100415</Asset>                        <!-- Mint - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100027</Asset>                        <!-- Defenses Construction Menu (OW) -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100215</Asset>                        <!-- Mounted Guns (OW) - Defense -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100217</Asset>                        <!-- Flak Emplacement (OW) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100221</Asset>                        <!-- Flak Emplacement (OW Land) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100401</Asset>                        <!-- Small Empty Ammunition Depot - Empty (OW) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100423</Asset>                        <!-- Small Empty Ammunition Depot - Empty (AR) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100424</Asset>                        <!-- Small Empty Ammunition Depot - Empty (NW) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100425</Asset>                        <!-- Small Empty Ammunition Depot - Empty (EN) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100397</Asset>                        <!-- Small Basic Ammunition Depot (OW) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100403</Asset>                        <!-- Small Basic Ammunition Depot (OW) - Recipe -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100418</Asset>                        <!-- Small Basic Ammunition Depot (AR) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100417</Asset>                        <!-- Small Basic Ammunition Depot (AR) - Recipe -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100420</Asset>                        <!-- Small Basic Ammunition Depot (NW) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100419</Asset>                        <!-- Small Basic Ammunition Depot (NW) - Recipe -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100422</Asset>                        <!-- Small Basic Ammunition Depot (EN) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100421</Asset>                        <!-- Small Basic Ammunition Depot (EN) - Recipe -->
                       </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>
@@ -563,7 +487,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742100999</GUID>
+          <GUID>1742100704</GUID>
           <Name>MOD Trigger</Name>
         </Standard>
         <Trigger>
@@ -588,6 +512,9 @@
                     <UnhideAssets>
                     </UnhideAssets>
                     <UnlockAssets>
+                      <Item>
+                        <Asset>1742100542</Asset>                        <!-- Frigate (Player) -->
+                      </Item>
                       <Item>
                         <Asset>1742100028</Asset>                        <!-- Military Headquarters - Building -->
                       </Item>
@@ -678,6 +605,61 @@
                       <Item>
                         <Asset>1742100445</Asset>                        <!-- Small Gas Ammunition Depot (EN) - Recipe -->
                       </Item>
+                      <Item>
+                        <Asset>1742100007</Asset>                        <!-- Military Post Box - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100455</Asset>                        <!-- Theodore Von Woudenburg - Item -->
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!--UNLOCK - ARTISANS  750 -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100705</GUID>
+          <Name>MOD Trigger</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>15000002</Context>                <!-- Artisans PopulationLevel7 -->
+                <CounterAmount>750</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
+                    </UnhideAssets>
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>1742100543</Asset>                        <!-- Clipper (Player) -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100544</Asset>                        <!-- SOTL (Player) -->
+                      </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>
                 </Values>
@@ -696,7 +678,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742100995</GUID>
+          <GUID>1742100705</GUID>
           <Name>MOD Trigger</Name>
         </Standard>
         <Trigger>
@@ -736,59 +718,13 @@
     </Asset>
   </ModOp>
 
-  <!--UNLOCK - ARTISANS  500 -->
-  <ModOp Type="addnextSibling" GUID="130248">
-    <Asset>
-      <Template>Trigger</Template>
-      <Values>
-        <Standard>
-          <GUID>1742100980</GUID>
-          <Name>MOD Trigger</Name>
-        </Standard>
-        <Trigger>
-          <TriggerCondition>
-            <Template>ConditionPlayerCounter</Template>
-            <Values>
-              <Condition />
-              <ConditionPlayerCounter>
-                <PlayerCounter>PopulationByLevel</PlayerCounter>
-                <Context>15000002</Context>                <!-- Artisans PopulationLevel7 -->
-                <CounterAmount>500</CounterAmount>
-              </ConditionPlayerCounter>
-            </Values>
-          </TriggerCondition>
-          <TriggerActions>
-            <Item>
-              <TriggerAction>
-                <Template>ActionUnlockAsset</Template>
-                <Values>
-                  <Action />
-                  <ActionUnlockAsset>
-                    <UnhideAssets>
-                    </UnhideAssets>
-                    <UnlockAssets>
-                      <Item>
-                        <Asset>1742100007</Asset>                        <!-- Military Post Box - Building -->
-                      </Item>
-                    </UnlockAssets>
-                  </ActionUnlockAsset>
-                </Values>
-              </TriggerAction>
-            </Item>
-          </TriggerActions>
-        </Trigger>
-        <TriggerSetup />
-      </Values>
-    </Asset>
-  </ModOp>
-
   <!--UNLOCK - ENGINEERS  1 -->
   <ModOp Type="addnextSibling" GUID="130248">
     <Asset>
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742101000</GUID>
+          <GUID>1742100706</GUID>
           <Name>MOD Trigger</Name>
         </Standard>
         <Trigger>
@@ -855,7 +791,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742100990</GUID>
+          <GUID>1742100707</GUID>
           <Name>MOD Trigger</Name>
         </Standard>
         <Trigger>
@@ -929,9 +865,6 @@
                         <Asset>1742100437</Asset>                        <!-- Small Bombs Ammunition Depot (EN) - Recipe -->
                       </Item>
                       <Item>
-                        <Asset>1742100272</Asset>                        <!-- Large Ammunition Depot - All ammunition - Empty (OW) - Building -->
-                      </Item>
-                      <Item>
                         <Asset>1742100226</Asset>                        <!-- Large Ammunition Depot - All ammunition (OW) - Building -->
                       </Item>
                       <Item>
@@ -942,6 +875,24 @@
                       </Item>
                       <Item>
                         <Asset>1742100282</Asset>                        <!-- Large Ammunition Depot - All ammunition (EN) - Recipe -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100539</Asset>                        <!-- Steam Shipyard OW (Player) -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100545</Asset>                        <!-- Cargo Ship (Player) -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100546</Asset>                        <!-- Battle Cruiser (Player) -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100548</Asset>                        <!-- Flame Monitor (Player) -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100550</Asset>                        <!-- Oil Tanker (Player) -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100551</Asset>                        <!-- Monitor Flak (Player) -->
                       </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>
@@ -961,7 +912,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742100993</GUID>
+          <GUID>1742100708</GUID>
           <Name>MOD Trigger</Name>
         </Standard>
         <Trigger>
@@ -1013,7 +964,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742100979</GUID>
+          <GUID>1742100709</GUID>
           <Name>MOD Trigger</Name>
         </Standard>
         <Trigger>
@@ -1056,6 +1007,12 @@
                       <Item>
                         <Asset>1742100518</Asset>                        <!-- Care Package Factory: Entertainment - Building -->
                       </Item>
+                      <Item>
+                        <Asset>1742100547</Asset>                        <!-- Monitor (Player) -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100549</Asset>                        <!-- Blue Flame Monitor (Player) -->
+                      </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>
                 </Values>
@@ -1074,7 +1031,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742100986</GUID>
+          <GUID>1742100710</GUID>
           <Name>MOD Trigger</Name>
         </Standard>
         <Trigger>
@@ -1125,7 +1082,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742100994</GUID>
+          <GUID>1742100711</GUID>
           <Name>MOD Trigger</Name>
         </Standard>
         <Trigger>
@@ -1174,7 +1131,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742100983</GUID>
+          <GUID>1742100712</GUID>
           <Name>MOD Trigger</Name>
         </Standard>
         <Trigger>
@@ -1219,13 +1176,59 @@
 
   <!-- *********************** NW *********************** -->
 
+  <!--UNLOCK - Jornaleros 100 -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100722</GUID>
+          <Name>MOD Trigger</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>15000005</Context>                <!-- Jornaleros PopulationLevel7 -->
+                <CounterAmount>100</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
+                    </UnhideAssets>
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>1742100538</Asset>                        <!-- Sailing Shipyard NW (Player) -->
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+
   <!--UNLOCK - Obreros 600 -->
   <ModOp Type="addnextSibling" GUID="130248">
     <Asset>
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742187796</GUID>
+          <GUID>1742100713</GUID>
           <Name>MOD Trigger</Name>
         </Standard>
         <Trigger>
@@ -1251,9 +1254,6 @@
                     </UnhideAssets>
                     <UnlockAssets>
                       <Item>
-                        <Asset>1742100074</Asset>                        <!-- Propaganda Facility - Chain -->
-                      </Item>
-                      <Item>
                         <Asset>1742100465</Asset>                        <!-- Propagande Facility - Product -->
                       </Item>
                       <Item>
@@ -1277,7 +1277,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742100989</GUID>
+          <GUID>1742100714</GUID>
           <Name>MOD Trigger</Name>
         </Standard>
         <Trigger>
@@ -1323,7 +1323,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742100985</GUID>
+          <GUID>1742100715</GUID>
           <Name>MOD Trigger</Name>
         </Standard>
         <Trigger>
@@ -1378,7 +1378,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742100984</GUID>
+          <GUID>1742100716</GUID>
           <Name>MOD Trigger</Name>
         </Standard>
         <Trigger>
@@ -1429,7 +1429,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742100992</GUID>
+          <GUID>1742100717</GUID>
           <Name>MOD Trigger</Name>
         </Standard>
         <Trigger>
@@ -1453,13 +1453,62 @@
                   <ActionUnlockAsset>
                     <UnhideAssets>
                       <Item>
-                        <Asset>1742100457</Asset>                        <!-- Military Prison - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100074</Asset>                        <!-- Propaganda Facility - Chain -->
+                        <Asset>1742100496</Asset>                        <!-- Care Package Factory - Empty (OW) - Building -->
                       </Item>
                     </UnhideAssets>
                     <UnlockAssets>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!--UNLOCK - SOLDIERS 100 -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100718</GUID>
+          <Name>MOD Trigger</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>1742100000</Context>                <!-- Soldiers PopulationLevel7 -->
+                <CounterAmount>100</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
+                    </UnhideAssets>
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>1742100469</Asset>                        <!-- Basic Weapons Factory - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100471</Asset>                        <!-- Basic Weapons - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100473</Asset>                        <!-- Basic Weapons - Production Chain -->
+                      </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>
                 </Values>
@@ -1478,7 +1527,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742187797</GUID>
+          <GUID>1742100719</GUID>
           <Name>MOD Trigger</Name>
         </Standard>
         <Trigger>
@@ -1504,7 +1553,176 @@
                     </UnhideAssets>
                     <UnlockAssets>
                       <Item>
+                        <Asset>1742100027</Asset>                        <!-- Defenses Construction Menu (OW) -->
+                      </Item>
+                      <Item>
                         <Asset>1742100238</Asset>                        <!-- Small Military Warehouse - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100496</Asset>                        <!-- Care Package Factory - Empty (OW) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100502</Asset>                        <!-- Care Package Factory: Basics - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100500</Asset>                        <!-- Care Package: Basics - Recipe -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100195</Asset>                        <!-- Ammunition Factory Empty - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100199</Asset>                        <!-- Ammunition Factory Basic Ammunition - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100205</Asset>                        <!-- Basic Ammunition - Recipe -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100299</Asset>                        <!-- Basic Ammunition - Chain -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100203</Asset>                        <!-- Basic Ammunition - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100293</Asset>                        <!-- Gunpowder - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100287</Asset>                        <!-- Dung Collector - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100289</Asset>                        <!-- Nitrary - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100374</Asset>                        <!-- Saltpetre Bed - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100376</Asset>                        <!-- Nitrary Shed - Module -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100291</Asset>                        <!-- Gunpowder Factory - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100297</Asset>                        <!-- Gunpowder - Chain -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100433</Asset>                        <!-- Galena - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100435</Asset>                        <!-- Lead - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100407</Asset>                        <!-- Galena Mine - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100409</Asset>                        <!-- Lead Smelter - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100191</Asset>                        <!-- Military Training Complex - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100189</Asset>                        <!-- Military Training Complex - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100193</Asset>                        <!-- Military Training Complex - Menu Production Chain -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100027</Asset>                        <!-- Defenses Construction Menu (OW) -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100215</Asset>                        <!-- Mounted Guns (OW) - Defense -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100217</Asset>                        <!-- Flak Emplacement (OW) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100221</Asset>                        <!-- Flak Emplacement (OW Land) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100401</Asset>                        <!-- Small Empty Ammunition Depot - Empty (OW) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100423</Asset>                        <!-- Small Empty Ammunition Depot - Empty (AR) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100424</Asset>                        <!-- Small Empty Ammunition Depot - Empty (NW) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100425</Asset>                        <!-- Small Empty Ammunition Depot - Empty (EN) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100397</Asset>                        <!-- Small Basic Ammunition Depot (OW) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100403</Asset>                        <!-- Small Basic Ammunition Depot (OW) - Recipe -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100418</Asset>                        <!-- Small Basic Ammunition Depot (AR) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100417</Asset>                        <!-- Small Basic Ammunition Depot (AR) - Recipe -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100420</Asset>                        <!-- Small Basic Ammunition Depot (NW) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100419</Asset>                        <!-- Small Basic Ammunition Depot (NW) - Recipe -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100422</Asset>                        <!-- Small Basic Ammunition Depot (EN) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100421</Asset>                        <!-- Small Basic Ammunition Depot (EN) - Recipe -->
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!--UNLOCK - SOLDIERS 500 -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100720</GUID>
+          <Name>MOD Trigger</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>1742100000</Context>                <!-- Soldiers PopulationLevel7 -->
+                <CounterAmount>500</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
+                    </UnhideAssets>
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>1742100439</Asset>                        <!-- Coins - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100447</Asset>                        <!-- Coins - Chain -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100415</Asset>                        <!-- Mint - Building -->
                       </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>
@@ -1524,7 +1742,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742187798</GUID>
+          <GUID>1742100721</GUID>
           <Name>MOD Trigger</Name>
         </Standard>
         <Trigger>
@@ -1554,72 +1772,6 @@
                       </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>
-                </Values>
-              </TriggerAction>
-            </Item>
-          </TriggerActions>
-        </Trigger>
-        <TriggerSetup />
-      </Values>
-    </Asset>
-  </ModOp>
-
-  <!--UNLOCK - Farmers 1 - TESTUNLOCK NEWSPAPER -->
-  <ModOp Type="addnextSibling" GUID="130248">
-    <Asset>
-      <Template>Trigger</Template>
-      <Values>
-        <Standard>
-          <GUID>1742187750</GUID>
-          <Name>MOD Trigger</Name>
-        </Standard>
-        <Trigger>
-          <TriggerCondition>
-            <Template>ConditionPlayerCounter</Template>
-            <Values>
-              <Condition />
-              <ConditionPlayerCounter>
-                <PlayerCounter>PopulationByLevel</PlayerCounter>
-                <Context>15000000</Context>                <!-- Farmers PopulationLevel7 -->
-                <CounterAmount>1</CounterAmount>
-              </ConditionPlayerCounter>
-            </Values>
-          </TriggerCondition>
-          <TriggerActions>
-            <Item>
-              <TriggerAction>
-                <Template>ActionDelayedActions</Template>
-                <Values>
-                  <Action/>
-                  <ActionDelayedActions>
-                    <ExecutionDelay>1000</ExecutionDelay>
-                    <DelayedActions>
-                      <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
-                      <Values>
-                        <ActionList>
-                          <Actions>
-                            <Item>
-                              <Action>
-                                <Template>ActionForceNewspaper</Template>
-                                <Values>
-                                  <Action/>
-                                  <ActionForceNewspaper>
-                                    <Articles>
-                                      <Item>
-                                        <Article>1742100393</Article>
-                                      </Item>
-                                    </Articles>
-                                    <OpenNewspaperUI>1</OpenNewspaperUI>
-                                    <OpenNewspaperType>SpecialEdition</OpenNewspaperType>
-                                  </ActionForceNewspaper>
-                                </Values>
-                              </Action>
-                            </Item>
-                          </Actions>
-                        </ActionList>
-                      </Values>
-                    </DelayedActions>
-                  </ActionDelayedActions>
                 </Values>
               </TriggerAction>
             </Item>

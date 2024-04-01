@@ -313,6 +313,8 @@ ITEMS
 1742100182 - Jean's Private Messenger - Item - Description
 1742100229 - James Fondrick - Item
 1742100230 - James Fondrick - Item - Description
+1742100455 - Theodore Von Woudenburg - Item
+1742100456 - Theodore Von Woudenburg - Item - Description
 
 POLICIES
 ********************
@@ -375,8 +377,6 @@ BUFFS & EFFECTS
 1742100162 - Letters from home - SetBuff - Description
 1742100378 - Nitrary Debuff - GuildhouseBuff
 1742100379 - Nitrary Shed Buff - GuildhouseBuff
-NOT USED ANYMORE // 1742100455 - Silver Smelter Debuff - GuildhouseBuff
-NOT USED ANYMORE // 1742100456 - Silver Smelter Shed Buff - GuildhouseBuff
 1742100461 - Military Prison Buff - TownhallBuff
 1742100462 - Military Prison Buff - TownhallBuff - Description
 1742100463 - Propagande Facility Buff - TownhallBuff
@@ -599,70 +599,61 @@ DOCKLANDS
 1742100007 - Sinchester - Docklands Trader
 1742100008 - Sinchester - Docklands Trader - Description
 
+COPY ASSETS TO MAKE AI WORK
+********************
+1742100537 - Sailing Shipyard OW (Player) - Building
+1742100538 - Sailing Shipyard NW (Player) - Building
+1742100539 - Steam Shipyard OW (Player) - Building
+
+1742100540 - Schooner (Player) - Ship
+1742100541 - Gunboat (Player) - Ship
+1742100542 - Frigate (Player) - Ship
+1742100543 - Clipper (Player) - Ship
+1742100544 - SOTL (Player) - Ship
+
+1742100545 - Cargo Ship (Player) - Ship
+1742100546 - Battle Cruiser (Player) - Ship
+1742100547 - Monitor (Player) - Ship
+1742100548 - Flame Monitor (Player) - Ship
+1742100549 - Blue Flame Monitor (Player) - Ship
+1742100550 - Oil Tanker (Player) - Ship
+1742100551 - Monitor Flak (Player) - Ship
+
 TRIGGERS
 ********************
-1742120000 - Global Unhide - 1 Workers
-1742120001 - Global Unlock - 300 Workers
-1742120002 - Soldiers Unhide - 1 Soldiers
-1742120003 - Soldiers Unlock - 300 Soldiers
-1742120004 - Soldiers Unlock 1000 - 1000 Soldiers
-1742120005 - Soldiers Unlock 2500 - 2500 Soldiers
-1742120006 - Soldiers Unlock 5000 - 5000 Soldiers
-// NOT USED ANYMORE // 1742120007 - Officers Unlock 500 - 500 Officers
-1742120008 - Military Engineers Unlock 2500 - 2500 Military Engineers
-1742120009 - Obreros 600 - 600 Obreros
-1742120010 - Artista 4000 - Artista 4000
-1742120011 - Artisans 1 - Artisans 1
-1742120012 - Workers 10 - Workers 10
-1742100391 - Military Expedition Unlock Delay - Workers 300
-1742100392 - Military Expedition Unlock - Workers 300
 
+HOOGSTE - 1742100551 
+Triggers: 1742100700
 
+1742100700 - Other regions - unlock
 
+1742100701 - Farmers 100 - unlock
 
-1742187795 - Other regions - unlock
-1742100992 - Soldiers 1 - unhide
-1742187797 - Soldiers 300 - unlock
-1742187798 - Soldiers 1000 - unlock
+1742100702 - Workers 150 - unlock
+1742100703 - Workers 500 - unlock
+1742100704 - Artisans 1 - unlock
+1742100723 - Artisans 750 - unlock
+1742100705 - Artisans 900 - unlock
+1742100706 - Engineers 1 - unlock
+1742100707 - Engineers 500 - unlock
+1742100708 - Engineers 2000 - unlock
+1742100709 - Investors 1 - unlock
+1742100710 - Tourists 300 - unlock
 
-1742100997 - Workers 300 - unlock
-1742100998 - Workers 500 - unlock
-1742100999 - Artisans 1 - unlock
-1742100980 - Artisans 500 - unlock
-1742100995 - Artisans 900 - unlock
-1742101000 - Engineers 1 - unlock
-1742100990 - Engineers 500 - unlock
-1742100993 - Engineers 2000 - unlock
-1742100979 - Investors 1 - unlock
-1742100986 - Tourists 300 - unlock
+1742100711 - Shephards 300 - unlock
+1742100712 - Elders 300 - unlock
 
-1742187796 - Obreros 600 - unlock
-1742100989 - Obreros 1000 - unlock
-1742100985 - Artista 900 - unlock
-1742100984 - Artista 1800 - unlock
+1742100722 - Jormaleros 100 - unlock
+1742100713 - Obreros 600 - unlock
+1742100714 - Obreros 1000 - unlock
+1742100715 - Artista 900 - unlock
+1742100716 - Artista 1800 - unlock
 
-1742100987 - Shephards 300 - unlock
-1742100983 - Elders 300 - unlock
-
-
-1742188000
-1742187700
-1742187710
-1742187711
-1742187720
-1742187730
-1742187740
-1742187750
-1742187760
-1742187770
-1742187780
-1742187790
-1742187793
-
-1742187791
-1742187792
-1742187794
-1742187795
+1742100717 - Soldiers 1 - unlock
+1742100718 - Soldiers 100 - unlock
+1742100719 - Soldiers 300 - unlock
+1742100720 - Soldiers 500 - unlock
+1742100721 - Soldiers 1000 - unlock
 
 -->
 
@@ -682,9 +673,9 @@ TRIGGERS
   <Include File="../../../../hier0nimus/quests/assets.include.xml" />
   <Include File="../../../../hier0nimus/newspapers/assets.include.xml" />
   <Include File="../../../../hier0nimus/military-construction-menu/assets.include.xml" />
-  <!--<Include File="../../../../hier0nimus/festivals/assets.include.xml" />-->
   <Include File="../../../../hier0nimus/monument/assets.include.xml" />
   <Include File="../../../../hier0nimus/docklands/assets.include.xml" />
+  <Include File="../../../../hier0nimus/ai/assets.include.xml" />
   <Include File="../../../../hier0nimus/tweaks/assets.include.xml" />
   <Include File="../../../../hier0nimus/triggers/assets.include.xml" />
 </ModOps>
