@@ -1,0 +1,138 @@
+<!-- 
+  AI Tweaks
+-->
+
+
+<ModOps>
+    <!-- START - AI TWEAKS -->
+
+    <!-- START AI CHEAT GOODS BUFF -->
+    <ModOp GUID='142519' Type="addNextSibling">
+        <Asset>
+            <Template>GuildhouseBuff</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742100537</GUID>
+                    <Name>AI Cheats Buff GuildhouseBuff</Name>
+                    <IconFilename>data/graphics/icons/icon_cargo_supplies.png</IconFilename>
+                </Standard>
+                <Text />
+                <PopulationUpgrade />
+                <ResidenceUpgrade />
+                <ItemEffect>
+                    <EffectTargets>
+                        <Item>
+                            <GUID>6000018</GUID>                            <!-- All Production Buildings - ItemEffectTargetPool -->
+                        </Item>
+                    </EffectTargets>
+                    <AllowStacking>0</AllowStacking>
+                </ItemEffect>
+                <Buff />
+                <CultureUpgrade />
+                <KontorUpgrade />
+                <AttackableUpgrade />
+                <AttackerUpgrade />
+                <BuildingUpgrade />
+                <FactoryUpgrade>
+                    <AdditionalOutput>
+                        <Item>
+                            <Product>1010196</Product>                            <!-- Timber - Product -->
+                            <AdditionalOutputCycle>1</AdditionalOutputCycle>
+                            <Amount>1</Amount>
+                        </Item>
+                        <Item>
+                            <Product>1010205</Product>                            <!-- Bricks - Product -->
+                            <AdditionalOutputCycle>1</AdditionalOutputCycle>
+                            <Amount>1</Amount>
+                        </Item>
+                        <Item>
+                            <Product>1010200</Product>                            <!-- Fish - Product -->
+                            <AdditionalOutputCycle>1</AdditionalOutputCycle>
+                            <Amount>1</Amount>
+                        </Item>
+                        <Item>
+                            <Product>1010237</Product>                            <!-- Working Clothes - Product -->
+                            <AdditionalOutputCycle>1</AdditionalOutputCycle>
+                            <Amount>1</Amount>
+                        </Item>
+                        <Item>
+                            <Product>849</Product>                            <!-- Care Packages - Product -->
+                            <AdditionalOutputCycle>1</AdditionalOutputCycle>
+                            <Amount>1</Amount>
+                        </Item>
+                        <Item>
+                            <Product>1742100203</Product>                            <!-- Basic Ammunition - Product -->
+                            <AdditionalOutputCycle>1</AdditionalOutputCycle>
+                            <Amount>1</Amount>
+                        </Item>
+                        <Item>
+                            <Product>1742100248</Product>                            <!-- Shell Ammunition - Product -->
+                            <AdditionalOutputCycle>1</AdditionalOutputCycle>
+                            <Amount>1</Amount>
+                        </Item>
+                        <Item>
+                            <Product>112706</Product>                            <!-- Arctic Gas - Product -->
+                            <AdditionalOutputCycle>1</AdditionalOutputCycle>
+                            <Amount>1</Amount>
+                        </Item>
+                        <Item>
+                            <Product>846</Product>                            <!-- Bombs - Product -->
+                            <AdditionalOutputCycle>1</AdditionalOutputCycle>
+                            <Amount>1</Amount>
+                        </Item>
+                        <Item>
+                            <Product>1742100471</Product>                            <!-- Basic Weapons - Product -->
+                            <AdditionalOutputCycle>1</AdditionalOutputCycle>
+                            <Amount>1</Amount>
+                        </Item>
+                        <Item>
+                            <Product>1742100533</Product>                            <!-- Sailors - Product -->
+                            <AdditionalOutputCycle>1</AdditionalOutputCycle>
+                            <Amount>1</Amount>
+                        </Item>
+                    </AdditionalOutput>
+                </FactoryUpgrade>
+                <PassiveTradeGoodGenUpgrade />
+                <ShipyardUpgrade/>
+                <VisitorHarborUpgrade />
+                <VisitorUpgrade />
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END AI CHEAT GOODS BUFF -->
+
+    <!--  START - **************  ************** -->
+    <ModOp GUID='8032' Type="addNextSibling">
+        <Asset>
+            <Template>ForwardBuff</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742100538</GUID>
+                    <Name>AI Cheats Buff FowwardBuff</Name>
+                    <IconFilename>data/graphics/icons/icon_cargo_supplies.png</IconFilename>
+                </Standard>
+                <Buff />
+                <ItemEffect />
+                <Text />
+                <EffectForward>
+                    <ForwardEffect>1742100537</ForwardEffect>
+                    <ForwardEffectRange>150</ForwardEffectRange>
+                </EffectForward>
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- ALL AI-->
+    <ModOp GUID="100549,100700,100701,110669,100702,100704,100518,100703,100705,100706,100550" Type="add" Path="Values/">
+        <UpgradeList>
+            <DefaultBuff>1742100538</DefaultBuff>
+        </UpgradeList>
+        <LogisticNode />
+    </ModOp>
+
+    <!--  END - **************  ************** -->
+
+    <!-- END - AI TWEAKS -->
+
+</ModOps>
+
