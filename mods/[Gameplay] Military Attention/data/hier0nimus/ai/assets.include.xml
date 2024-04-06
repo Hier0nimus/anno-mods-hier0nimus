@@ -1,1930 +1,1257 @@
 <!-- 
   AI Tweaks
-
-Add copy of shipyards with copies of list 
-Add copies of all ships so AI can still use vanilla ships but player needs other ships
-
 -->
 
 
 <ModOps>
   <!-- START - AI TWEAKS -->
 
-  <!-- ****************** START Add extra goods to ships ******************  -->
-
-  <!-- Great White -->
-  <ModOp Type="add" GUID="132706,132404" Path="/Values/Cost/Costs">
-    <Item>
-      <Ingredient>849</Ingredient>      <!-- Care Packages - Product -->
-      <Amount>30</Amount>
-    </Item>
-    <Item>
-      <Ingredient>1742100533</Ingredient>      <!-- Sailors - Product -->
-      <Amount>30</Amount>
-    </Item>
-  </ModOp>
-
-  <!-- Anno Union Ship -->
-  <ModOp Type="add" GUID="102455" Path="/Values/Cost/Costs">
-    <Item>
-      <Ingredient>849</Ingredient>      <!-- Care Packages - Product -->
-      <Amount>50</Amount>
-    </Item>
-    <Item>
-      <Ingredient>1742100533</Ingredient>      <!-- Sailors - Product -->
-      <Amount>50</Amount>
-    </Item>
-  </ModOp>
-
-  <!-- The Great Eastern -->
-  <ModOp Type="add" GUID="118718" Path="/Values/Cost/Costs">
-    <Item>
-      <Ingredient>849</Ingredient>      <!-- Care Packages - Product -->
-      <Amount>80</Amount>
-    </Item>
-    <Item>
-      <Ingredient>1742100533</Ingredient>      <!-- Sailors - Product -->
-      <Amount>80</Amount>
-    </Item>
-  </ModOp>
-
-  <!-- Pirate Gunboat -->
-  <ModOp Type="replace" GUID="102429" Path="/Values/Cost">
-    <Cost>
-      <Costs>
-        <Item>
-          <Ingredient>1010196</Ingredient>          <!--timber-->
-          <Amount>10</Amount>
-        </Item>
-        <Item>
-          <Ingredient>1010210</Ingredient>          <!--sailcloth-->
-          <Amount>20</Amount>
-        </Item>
-        <Item>
-          <Ingredient>1010221</Ingredient>          <!--weapons-->
-          <Amount>7</Amount>
-        </Item>
-        <Item>
-          <Ingredient>849</Ingredient>          <!-- Care Packages - Product -->
-          <Amount>8</Amount>
-        </Item>
-        <Item>
-          <Ingredient>1742100533</Ingredient>          <!-- Sailors - Product -->
-          <Amount>8</Amount>
-        </Item>
-        <Item>
-          <Ingredient>1742100203</Ingredient>          <!-- Basic Ammunition - Product -->
-          <Amount>10</Amount>
-        </Item>
-        <Item>
-          <Ingredient>1742100471</Ingredient>          <!-- Basic Weapons - Product -->
-          <Amount>5</Amount>
-        </Item>
-      </Costs>
-      <InfluenceCostType>WarShip</InfluenceCostType>
-      <InfluenceCostPoints>4</InfluenceCostPoints>
-    </Cost>
-  </ModOp>
-
-  <!-- Flagship -->
-  <ModOp Type="add" GUID="101121" Path="/Values/Cost/Costs">
-    <Item>
-      <Ingredient>849</Ingredient>      <!-- Care Packages - Product -->
-      <Amount>20</Amount>
-    </Item>
-    <Item>
-      <Ingredient>1742100533</Ingredient>      <!-- Sailors - Product -->
-      <Amount>20</Amount>
-    </Item>
-    <Item>
-      <Ingredient>1742100203</Ingredient>      <!-- Basic Ammunition - Product -->
-      <Amount>18</Amount>
-    </Item>
-    <Item>
-      <Ingredient>1742100471</Ingredient>      <!-- Basic Weapons - Product -->
-      <Amount>12</Amount>
-    </Item>
-  </ModOp>
-
-  <!-- Pirate Frigate -->
-  <ModOp Type="replace" GUID="102430" Path="/Values/Cost">
-    <Cost>
-      <Costs>
-        <Item>
-          <Ingredient>1010196</Ingredient>          <!--timber-->
-          <Amount>40</Amount>
-        </Item>
-        <Item>
-          <Ingredient>1010210</Ingredient>          <!--sailcloth-->
-          <Amount>20</Amount>
-        </Item>
-        <Item>
-          <Ingredient>1010221</Ingredient>          <!--weapons-->
-          <Amount>15</Amount>
-        </Item>
-        <Item>
-          <Ingredient>849</Ingredient>          <!-- Care Packages - Product -->
-          <Amount>20</Amount>
-        </Item>
-        <Item>
-          <Ingredient>1742100533</Ingredient>          <!-- Sailors - Product -->
-          <Amount>20</Amount>
-        </Item>
-        <Item>
-          <Ingredient>1742100203</Ingredient>          <!-- Basic Ammunition - Product -->
-          <Amount>18</Amount>
-        </Item>
-        <Item>
-          <Ingredient>1742100471</Ingredient>          <!-- Basic Weapons - Product -->
-          <Amount>12</Amount>
-        </Item>
-      </Costs>
-      <InfluenceCostType>WarShip</InfluenceCostType>
-      <InfluenceCostPoints>8</InfluenceCostPoints>
-    </Cost>
-  </ModOp>
-
-  <!-- PIRATE SOTL + ROYAL SOTL -->
-  <ModOp Type="replace" GUID="102431,102427" Path="/Values/Cost">
-    <Cost>
-      <Costs>
-        <Item>
-          <Ingredient>1010196</Ingredient>          <!--timber-->
-          <Amount>60</Amount>
-        </Item>
-        <Item>
-          <Ingredient>1010210</Ingredient>          <!--sailcloth-->
-          <Amount>30</Amount>
-        </Item>
-        <Item>
-          <Ingredient>1010221</Ingredient>          <!--weapons-->
-          <Amount>30</Amount>
-        </Item>
-        <Item>
-          <Ingredient>849</Ingredient>          <!-- Care Packages - Product -->
-          <Amount>40</Amount>
-        </Item>
-        <Item>
-          <Ingredient>1742100533</Ingredient>          <!-- Sailors - Product -->
-          <Amount>40</Amount>
-        </Item>
-        <Item>
-          <Ingredient>1742100203</Ingredient>          <!-- Basic Ammunition - Product -->
-          <Amount>50</Amount>
-        </Item>
-        <Item>
-          <Ingredient>1742100471</Ingredient>          <!-- Basic Weapons - Product -->
-          <Amount>25</Amount>
-        </Item>
-        <Item>
-          <Ingredient>1742100248</Ingredient>          <!-- Shell Ammunition - Product -->
-          <Amount>25</Amount>
-        </Item>
-      </Costs>
-      <InfluenceCostType>WarShip</InfluenceCostType>
-      <InfluenceCostPoints>16</InfluenceCostPoints>
-    </Cost>
-  </ModOp>
-
-  <!-- PIRATE MONITOR -->
-  <ModOp Type="replace" GUID="102432" Path="/Values/Cost">
-    <Cost>
-      <Costs>
-        <Item>
-          <Ingredient>1010218</Ingredient>          <!--beams-->
-          <Amount>40</Amount>
-        </Item>
-        <Item>
-          <Ingredient>1010224</Ingredient>          <!--steam motors-->
-          <Amount>10</Amount>
-        </Item>
-        <Item>
-          <Ingredient>1010223</Ingredient>          <!--advanced weapons-->
-          <Amount>10</Amount>
-        </Item>
-        <Item>
-          <Ingredient>849</Ingredient>          <!-- Care Packages - Product -->
-          <Amount>35</Amount>
-        </Item>
-        <Item>
-          <Ingredient>1742100533</Ingredient>          <!-- Sailors - Product -->
-          <Amount>35</Amount>
-        </Item>
-        <Item>
-          <Ingredient>1742100203</Ingredient>          <!-- Basic Ammunition - Product -->
-          <Amount>40</Amount>
-        </Item>
-        <Item>
-          <Ingredient>1742100471</Ingredient>          <!-- Basic Weapons - Product -->
-          <Amount>20</Amount>
-        </Item>
-      </Costs>
-      <InfluenceCostType>WarShip</InfluenceCostType>
-      <InfluenceCostPoints>12</InfluenceCostPoints>
-    </Cost>
-  </ModOp>
-
-  <!-- Phyphorian Monitor -->
-  <ModOp Type="replace" GUID="102423" Path="/Values/Cost">
-    <Cost>
-      <Costs>
-        <Item>
-          <Ingredient>1010218</Ingredient>          <!--beams-->
-          <Amount>45</Amount>
-        </Item>
-        <Item>
-          <Ingredient>1010224</Ingredient>          <!--steam motors-->
-          <Amount>10</Amount>
-        </Item>
-        <Item>
-          <Ingredient>1010223</Ingredient>          <!--advanced weapons-->
-          <Amount>15</Amount>
-        </Item>
-        <Item>
-          <Ingredient>849</Ingredient>          <!-- Care Packages - Product -->
-          <Amount>35</Amount>
-        </Item>
-        <Item>
-          <Ingredient>1742100533</Ingredient>          <!-- Sailors - Product -->
-          <Amount>35</Amount>
-        </Item>
-        <Item>
-          <Ingredient>1742100203</Ingredient>          <!-- Basic Ammunition - Product -->
-          <Amount>15</Amount>
-        </Item>
-        <Item>
-          <Ingredient>1742100471</Ingredient>          <!-- Basic Weapons - Product -->
-          <Amount>20</Amount>
-        </Item>
-      </Costs>
-      <InfluenceCostType>WarShip</InfluenceCostType>
-      <InfluenceCostPoints>12</InfluenceCostPoints>
-    </Cost>
-  </ModOp>
-
-  <!-- Pyrphorian Battle Cruiser + Warship -->
-  <ModOp Type="add" GUID="102425,102428" Path="/Values/Cost/Costs">
-    <Item>
-      <Ingredient>849</Ingredient>      <!-- Care Packages - Product -->
-      <Amount>85</Amount>
-    </Item>
-    <Item>
-      <Ingredient>1742100533</Ingredient>      <!-- Sailors - Product -->
-      <Amount>85</Amount>
-    </Item>
-    <Item>
-      <Ingredient>1742100203</Ingredient>      <!-- Basic Ammunition - Product -->
-      <Amount>50</Amount>
-    </Item>
-    <Item>
-      <Ingredient>1742100471</Ingredient>      <!-- Basic Weapons - Product -->
-      <Amount>40</Amount>
-    </Item>
-    <Item>
-      <Ingredient>1742100248</Ingredient>      <!-- Shell Ammunition - Product -->
-      <Amount>20</Amount>
-    </Item>
-    <Item>
-      <Ingredient>846</Ingredient>      <!-- Bombs - Product -->
-      <Amount>10</Amount>
-    </Item>
-    <Item>
-      <Ingredient>112706</Ingredient>      <!-- Arctic Gas - Product -->
-      <Amount>50</Amount>
-    </Item>
-  </ModOp>
-
-  <!-- SALVAGER -->
-  <ModOp Type="add" GUID="15831" Path="/Values/Cost/Costs">
-    <Item>
-      <Ingredient>849</Ingredient>      <!-- Care Packages - Product -->
-      <Amount>25</Amount>
-    </Item>
-    <Item>
-      <Ingredient>1742100533</Ingredient>      <!-- Sailors - Product -->
-      <Amount>25</Amount>
-    </Item>
-  </ModOp>
-
-  <!-- ****************** END Add extra goods to ships ******************  -->
-
-  <!-- START - ************** ALL SHIPYARDS ************** -->
-
-  <!-- START - COPY SAILING SHIPYARD OW (PLAYER) -->
-  <ModOp GUID="1010519" Type="addNextSibling">
+  <!-- START AI EXTRA BUILDINGS -->
+  <ModOp GUID='1010284' Type="addNextSibling">
     <Asset>
-      <Template>Shipyard</Template>
+      <BaseAssetGUID>1010266</BaseAssetGUID>
       <Values>
         <Standard>
           <GUID>1742100537</GUID>
-          <Name>Sailing Shipyard OW (Player)</Name>
-          <IconFilename>data/ui/2kimages/main/3dicons/icon_sail_shipyard.png</IconFilename>
-          <InfoDescription>1090</InfoDescription>
-          <!--Sailing Shipyard InfoCornerText-->
+          <Name>Fake AI Care Packages Factory</Name>
         </Standard>
-        <Building>
-          <BuildingCategoryName>11150</BuildingCategoryName>
-          <!--Harbor Building-->
-          <SnapRadius>10</SnapRadius>
-          <TerrainType>Water_Including_Coast</TerrainType>
-          <AssociatedRegions>Moderate</AssociatedRegions>
-        </Building>
-        <Blocking>
-          <GroundDecalAsset>100446</GroundDecalAsset>
-          <!--Quay System Base-->
-          <GroundDecalInvisible>101008</GroundDecalInvisible>
-          <!--Quay System Base Invisible-->
-          <GroundDecalAssetExtra>100691</GroundDecalAssetExtra>
-          <!--invisible quay (dummyblocker)-->
-          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
-          <HarbourAreaExpand>1</HarbourAreaExpand>
-        </Blocking>
-        <Mesh/>
+        <Building />
+        <Blocking/>
+        <Cost />
         <Object>
           <Variations>
             <Item>
-              <Filename>data/graphics/buildings/special/harbor_02/harbor_02.cfg</Filename>
+              <Filename>data/graphics/buildings/production/care_package_factory/care_package_factory_01.cfg</Filename>
             </Item>
           </Variations>
-          <Skins>
-            <DefaultSkinName>1010520</DefaultSkinName>
-            <DefaultSkinDescription>23853</DefaultSkinDescription>
-            <!--ChangeBuildingSkin_toDefaultSkinDesc-->
-            <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>
-            <!--Classic-->
-          </Skins>
         </Object>
-        <AmbientMoodProvider>
-          <Murmur>Harbor</Murmur>
-        </AmbientMoodProvider>
+        <Mesh/>
+        <Selection />
+        <Text />
         <Constructable/>
-        <Selection>
-          <OnSelection>
-            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
-            <Values>
-              <ActionList/>
-            </Values>
-          </OnSelection>
-          <ParticipantMessageArcheType>Resident_tier02_atWork</ParticipantMessageArcheType>
-        </Selection>
-        <Text>
-          <LocaText>
-            <English>
-              <Text>Sailing Shipyard</Text>
-              <Status>Exported</Status>
-            </English>
-          </LocaText>
-          <LineID>7016</LineID>
-        </Text>
-        <Shipyard>
-          <AssemblyOptions>
-            <Item>
-              <Vehicle>1742100540</Vehicle>              <!--Schooner (Player)-->
-            </Item>
-            <Item>
-              <Vehicle>1742100541</Vehicle>              <!--Gunboat (Player)-->
-            </Item>
-            <Item>
-              <Vehicle>1742100542</Vehicle>              <!--Frigate (Player)-->
-            </Item>
-            <Item>
-              <Vehicle>1742100543</Vehicle>              <!--Clipper (Player)-->
-            </Item>
-            <Item>
-              <Vehicle>1742100544</Vehicle>              <!--SOTL (Player)-->
-            </Item>
-          </AssemblyOptions>
-        </Shipyard>
-        <Cost>
-          <Costs>
-            <Item>
-              <Ingredient>1010017</Ingredient>
-              <!--Money-->
-              <Amount>10000</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010196</Ingredient>
-              <!--timber-->
-              <Amount>20</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010205</Ingredient>
-              <!--bricks-->
-              <Amount>25</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010218</Ingredient>
-              <!--beams-->
-            </Item>
-            <Item>
-              <Ingredient>1010207</Ingredient>
-              <!--window-->
-            </Item>
-            <Item>
-              <Ingredient>1010202</Ingredient>
-              <!--concrete-->
-            </Item>
-          </Costs>
-        </Cost>
         <Locked/>
-        <Maintenance>
-          <Maintenances>
-            <Item>
-              <Product>1010017</Product>
-              <!--Money-->
-              <Amount>100</Amount>
-              <InactiveAmount>50</InactiveAmount>
-            </Item>
-            <Item>
-              <Product>1010115</Product>
-              <!--moderate workforce 2-->
-              <Amount>100</Amount>
-            </Item>
-          </Maintenances>
-          <ConsumerPriorityAlarmed>2</ConsumerPriorityAlarmed>
-        </Maintenance>
-        <Infolayer/>
-        <Attackable>
-          <AttackableType>HarbourBuilding</AttackableType>
-          <MaximumHitPoints>4000</MaximumHitPoints>
-          <PausedTimeIfAttacked>0</PausedTimeIfAttacked>
-          <HPBarOffset>4.5</HPBarOffset>
-          <DefenseByAIFactor>700</DefenseByAIFactor>
-          <MoralePower>50</MoralePower>
-          <IslandWarFlag>102303</IslandWarFlag>
-          <!--island_war_flag1-->
-          <ExplosionEffects>
-            <Item>
-              <VectorElement>
-                <InheritedIndex>0</InheritedIndex>
-                <InheritanceMapV2>
-                  <Entry>
-                    <TemplateName>Shipyard</TemplateName>
-                    <Index>0</Index>
-                  </Entry>
-                </InheritanceMapV2>
-              </VectorElement>
-              <ExplosionEffectFilePath>data/graphics/effects/military/explosions/harbor_generic_xpl_02.cfg</ExplosionEffectFilePath>
-            </Item>
-            <Item>
-              <ExplosionEffectFilePath>data/graphics/effects/military/explosions/harbor_generic_xpl_03.cfg</ExplosionEffectFilePath>
-            </Item>
-          </ExplosionEffects>
-          <ExplosionEffectsMin>1</ExplosionEffectsMin>
-          <ExplosionEffectsMax>2</ExplosionEffectsMax>
-          <SelfHealPerHealTick>5</SelfHealPerHealTick>
-        </Attackable>
-        <Pausable/>
-        <SoundEmitter>
-          <ActiveSounds>
-            <Item>
-              <Sound>200896</Sound>
-              <!--wwe_sfx_bld_harbor_typeCluster_tag-->
-            </Item>
-          </ActiveSounds>
-          <IncidentSounds>
-            <InfectedFire>
-              <Item>
-                <Sound>214659</Sound>
-                <!--wwe_sfx_bld_inc_burn-->
-              </Item>
-            </InfectedFire>
-          </IncidentSounds>
-          <BuildingRuined>
-            <Item>
-              <Sound>203848</Sound>
-              <!--wwe_sfx_aui_destroy_big-->
-            </Item>
-          </BuildingRuined>
-          <BuildingRepaired>
-            <Item>
-              <Sound>203866</Sound>
-              <!--wwe_sfx_aui_bld_3d_renovate-->
-            </Item>
-          </BuildingRepaired>
-        </SoundEmitter>
-        <IncidentInfectable/>
+        <SoundEmitter />
         <FeedbackController/>
-        <Industrializable/>
+        <Infolayer/>
         <UpgradeList/>
+        <Factory7/>
+        <FactoryBase>
+          <FactoryOutputs>
+            <Item>
+              <Product>849</Product>              <!-- Care Packages - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>8</StorageAmount>
+            </Item>
+          </FactoryOutputs>
+          <CycleTime>10</CycleTime>
+          <IsMainFactory>0</IsMainFactory>
+        </FactoryBase>
         <LogisticNode/>
-        <StreetActivation/>
-        <QuestObject/>
-        <Electrifiable/>
+        <AmbientMoodProvide />
+        <Maintenance />
+        <Attackable/>
+        <FreeAreaProductivity/>
+        <Pausable/>
+        <IncidentInfectable/>
+        <Culture/>
+        <EcoSystemProvider/>
       </Values>
     </Asset>
-  </ModOp>
-  <!-- END - COPY SAILING SHIPYARD OW (PLAYER) -->
-
-  <!-- START - COPY SAILING SHIPYARD NW (PLAYER) -->
-  <ModOp GUID="1010519" Type="addNextSibling">
     <Asset>
-      <BaseAssetGUID>1010520</BaseAssetGUID>
-      <!--harbor_02 (Sailing Shipyard)-->
+      <BaseAssetGUID>1010266</BaseAssetGUID>
       <Values>
         <Standard>
           <GUID>1742100538</GUID>
-          <Name>Sailing Shipyard NW (Player)</Name>
+          <Name>Fake AI Sailors Factory</Name>
         </Standard>
-        <Building>
-          <AssociatedRegions>Colony01</AssociatedRegions>
-        </Building>
-        <Blocking>
-          <GroundDecalAsset>102460</GroundDecalAsset>
-          <!--Quay System Colony01 Base-->
-          <GroundDecalInvisible>102459</GroundDecalInvisible>
-          <!--Quay System Colony01 Base Invisible-->
-        </Blocking>
-        <Mesh/>
+        <Building />
+        <Blocking/>
+        <Cost />
         <Object>
           <Variations>
             <Item>
-              <VectorElement>
-                <InheritedIndex>0</InheritedIndex>
-                <InheritanceMapV2>
-                  <Entry>
-                    <TemplateName>Shipyard</TemplateName>
-                    <Index>0</Index>
-                  </Entry>
-                </InheritanceMapV2>
-              </VectorElement>
-              <Filename>data/graphics/buildings/special/harbor_02_colony01/harbor_02_colony01.cfg</Filename>
+              <Filename>data/graphics/buildings/military/naval_recruitment_office/naval_recruitment_office_01.cfg</Filename>
             </Item>
           </Variations>
         </Object>
-        <AmbientMoodProvider/>
+        <Mesh/>
+        <Selection />
+        <Text />
         <Constructable/>
-        <Selection>
-          <OnSelection>
-            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
-            <Values>
-              <ActionList/>
-            </Values>
-          </OnSelection>
-          <ParticipantMessageArcheType>SA_Resident_tier01_atWork</ParticipantMessageArcheType>
-        </Selection>
-        <Text>
-          <LineID>8507</LineID>
-        </Text>
-        <Shipyard>
-          <AssemblyOptions>
-            <Item>
-              <Vehicle>1742100540</Vehicle>              <!--Schooner (Player)-->
-            </Item>
-            <Item>
-              <Vehicle>1742100541</Vehicle>              <!--Gunboat (Player)-->
-            </Item>
-            <Item>
-              <Vehicle>1742100542</Vehicle>              <!--Frigate (Player)-->
-            </Item>
-            <Item>
-              <Vehicle>1742100543</Vehicle>              <!--Clipper (Player)-->
-            </Item>
-            <Item>
-              <Vehicle>1742100544</Vehicle>              <!--SOTL (Player)-->
-            </Item>
-          </AssemblyOptions>
-        </Shipyard>
-        <Cost>
-          <Costs>
-            <Item>
-              <VectorElement>
-                <InheritedIndex>0</InheritedIndex>
-                <InheritanceMapV2>
-                  <Entry>
-                    <TemplateName>Shipyard</TemplateName>
-                    <Index>0</Index>
-                  </Entry>
-                </InheritanceMapV2>
-              </VectorElement>
-            </Item>
-            <Item>
-              <VectorElement>
-                <InheritedIndex>1</InheritedIndex>
-                <InheritanceMapV2>
-                  <Entry>
-                    <TemplateName>Shipyard</TemplateName>
-                    <Index>1</Index>
-                  </Entry>
-                </InheritanceMapV2>
-              </VectorElement>
-            </Item>
-            <Item>
-              <VectorElement>
-                <InheritedIndex>2</InheritedIndex>
-                <InheritanceMapV2>
-                  <Entry>
-                    <TemplateName>Shipyard</TemplateName>
-                    <Index>2</Index>
-                  </Entry>
-                </InheritanceMapV2>
-              </VectorElement>
-              <Amount>0</Amount>
-            </Item>
-            <Item>
-              <VectorElement>
-                <InheritedIndex>3</InheritedIndex>
-                <InheritanceMapV2>
-                  <Entry>
-                    <TemplateName>Shipyard</TemplateName>
-                    <Index>3</Index>
-                  </Entry>
-                </InheritanceMapV2>
-              </VectorElement>
-            </Item>
-            <Item>
-              <VectorElement>
-                <InheritedIndex>4</InheritedIndex>
-                <InheritanceMapV2>
-                  <Entry>
-                    <TemplateName>Shipyard</TemplateName>
-                    <Index>4</Index>
-                  </Entry>
-                </InheritanceMapV2>
-              </VectorElement>
-            </Item>
-            <Item>
-              <VectorElement>
-                <InheritedIndex>5</InheritedIndex>
-                <InheritanceMapV2>
-                  <Entry>
-                    <TemplateName>Shipyard</TemplateName>
-                    <Index>5</Index>
-                  </Entry>
-                </InheritanceMapV2>
-              </VectorElement>
-            </Item>
-          </Costs>
-        </Cost>
         <Locked/>
-        <Maintenance>
-          <Maintenances>
-            <Item>
-              <VectorElement>
-                <InheritedIndex>0</InheritedIndex>
-                <InheritanceMapV2>
-                  <Entry>
-                    <TemplateName>Shipyard</TemplateName>
-                    <Index>0</Index>
-                  </Entry>
-                </InheritanceMapV2>
-              </VectorElement>
-            </Item>
-            <Item>
-              <VectorElement>
-                <InheritedIndex>1</InheritedIndex>
-                <InheritanceMapV2>
-                  <Entry>
-                    <TemplateName>Shipyard</TemplateName>
-                    <Index>1</Index>
-                  </Entry>
-                </InheritanceMapV2>
-              </VectorElement>
-              <Product>1010366</Product>
-              <!--colony workforce 1-->
-            </Item>
-          </Maintenances>
-        </Maintenance>
-        <Infolayer/>
-        <Attackable/>
-        <Pausable/>
-        <SoundEmitter/>
-        <IncidentInfectable/>
+        <SoundEmitter />
         <FeedbackController/>
-        <Industrializable/>
+        <Infolayer/>
         <UpgradeList/>
+        <Factory7/>
+        <FactoryBase>
+          <FactoryOutputs>
+            <Item>
+              <Product>1742100533</Product>              <!-- Sailors - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>8</StorageAmount>
+            </Item>
+          </FactoryOutputs>
+          <CycleTime>10</CycleTime>
+          <IsMainFactory>0</IsMainFactory>
+        </FactoryBase>
         <LogisticNode/>
-        <StreetActivation/>
-        <QuestObject/>
-        <Electrifiable/>
+        <AmbientMoodProvide />
+        <Maintenance />
+        <Attackable/>
+        <FreeAreaProductivity/>
+        <Pausable/>
+        <IncidentInfectable/>
+        <Culture/>
+        <EcoSystemProvider/>
+        <Warehouse>
+          <WarehouseStorage>
+            <StorageMax>250</StorageMax>
+          </WarehouseStorage>
+          <StorageType>Warehouse</StorageType>
+        </Warehouse>
+        <StorageBase>
+          <ProductStorageList>1742100532</ProductStorageList>
+        </StorageBase>
+        <BuildingModule>
+          <ModuleType>Main</ModuleType>
+        </BuildingModule>
       </Values>
     </Asset>
-  </ModOp>
-  <!-- END - COPY SAILING SHIPYARD NW (PLAYER) -->
-
-  <!-- START - COPY STEAM SHIPYARD OW (PLAYER) -->
-  <ModOp GUID="1010521" Type="addNextSibling">
     <Asset>
-      <Template>Shipyard</Template>
+      <BaseAssetGUID>1010266</BaseAssetGUID>
       <Values>
         <Standard>
           <GUID>1742100539</GUID>
-          <Name>Steam Shipyard OW (Player)</Name>
-          <IconFilename>data/ui/2kimages/main/3dicons/icon_steam_shipyard.png</IconFilename>
-          <InfoDescription>1091</InfoDescription>
-          <!--Steam Shipyard InfoCornerText-->
+          <Name>Fake AI Basic Ammunition Factory</Name>
         </Standard>
-        <Building>
-          <BuildingCategoryName>11150</BuildingCategoryName>
-          <!--Harbor Building-->
-          <SnapRadius>10</SnapRadius>
-          <TerrainType>Water_Including_Coast</TerrainType>
-          <AssociatedRegions>Moderate</AssociatedRegions>
-        </Building>
-        <Blocking>
-          <GroundDecalAsset>100446</GroundDecalAsset>
-          <!--Quay System Base-->
-          <GroundDecalInvisible>101008</GroundDecalInvisible>
-          <!--Quay System Base Invisible-->
-          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
-          <HarbourAreaExpand>1</HarbourAreaExpand>
-        </Blocking>
-        <Mesh/>
+        <Building />
+        <Blocking/>
+        <Cost />
         <Object>
           <Variations>
             <Item>
-              <Filename>data/graphics/buildings/special/harbor_03/harbor_03.cfg</Filename>
+              <Filename>data\graphics\buildings\production\ammunition_factory\ammunition_factory_basic_01.cfg</Filename>
             </Item>
           </Variations>
-          <Skins>
-            <DefaultSkinName>1010521</DefaultSkinName>
-            <DefaultSkinDescription>23853</DefaultSkinDescription>
-            <!--ChangeBuildingSkin_toDefaultSkinDesc-->
-            <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>
-            <!--Classic-->
-          </Skins>
         </Object>
-        <AmbientMoodProvider>
-          <Murmur>Harbor</Murmur>
-        </AmbientMoodProvider>
+        <Mesh/>
+        <Selection />
+        <Text />
         <Constructable/>
-        <Selection>
-          <OnSelection>
-            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
-            <Values>
-              <ActionList/>
-            </Values>
-          </OnSelection>
-          <ParticipantMessageArcheType>Resident_tier04_atWork</ParticipantMessageArcheType>
-        </Selection>
-        <Text>
-          <LocaText>
-            <English>
-              <Text>Steam Shipyard</Text>
-              <Status>Exported</Status>
-            </English>
-          </LocaText>
-          <LineID>7017</LineID>
-        </Text>
-        <Shipyard>
-          <AssemblyOptions>
-            <Item>
-              <Vehicle>1742100545</Vehicle>              <!--Collier (Trade)-->
-            </Item>
-            <Item>
-              <Vehicle>1742100546</Vehicle>              <!--Battle Cruiser (Military)-->
-            </Item>
-            <Item>
-              <Vehicle>1742100547</Vehicle>              <!--Monitor (Military)-->
-            </Item>
-            <Item>
-              <Vehicle>1742100548</Vehicle>              <!--Monitor Crocodile (Military)-->
-            </Item>
-            <Item>
-              <Vehicle>1742100549</Vehicle>              <!--Monitor Arctic Crocodile (Military)-->
-            </Item>
-            <Item>
-              <Vehicle>1742100550</Vehicle>              <!--Oil Tanker (Trade - Special)-->
-            </Item>
-            <Item>
-              <Vehicle>118718</Vehicle>              <!--Great Eatern (Trade)-->
-            </Item>
-            <Item>
-              <Vehicle>1742100551</Vehicle>              <!--Monitor FlaK (Military)-->
-            </Item>
-            <Item>
-              <Vehicle>112084</Vehicle>              <!--Free Diving Vessel -->
-            </Item>
-            <Item>
-              <Vehicle>15836</Vehicle>
-              <!--Great Eatern (Trade-Creative-Mode)-->
-            </Item>
-          </AssemblyOptions>
-        </Shipyard>
-        <Cost>
-          <Costs>
-            <Item>
-              <Ingredient>1010017</Ingredient>
-              <!--Money-->
-              <Amount>90000</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010196</Ingredient>
-              <!--timber-->
-              <Amount>50</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010205</Ingredient>
-              <!--bricks-->
-              <Amount>100</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010218</Ingredient>
-              <!--beams-->
-              <Amount>80</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010207</Ingredient>
-              <!--window-->
-              <Amount>75</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010202</Ingredient>
-              <!--concrete-->
-              <Amount>75</Amount>
-            </Item>
-          </Costs>
-        </Cost>
         <Locked/>
-        <Maintenance>
-          <Maintenances>
-            <Item>
-              <Product>1010017</Product>
-              <!--Money-->
-              <Amount>400</Amount>
-              <InactiveAmount>200</InactiveAmount>
-            </Item>
-            <Item>
-              <Product>1010117</Product>
-              <!--moderate workforce 4-->
-              <Amount>200</Amount>
-            </Item>
-          </Maintenances>
-          <ConsumerPriorityAlarmed>2</ConsumerPriorityAlarmed>
-        </Maintenance>
-        <Infolayer/>
-        <Attackable>
-          <AttackableType>HarbourBuilding</AttackableType>
-          <MaximumHitPoints>6000</MaximumHitPoints>
-          <PausedTimeIfAttacked>0</PausedTimeIfAttacked>
-          <DefenseByAIFactor>500</DefenseByAIFactor>
-          <MoralePower>100</MoralePower>
-          <IslandWarFlag>102303</IslandWarFlag>
-          <!--island_war_flag1-->
-          <ExplosionEffects>
-            <Item>
-              <VectorElement>
-                <InheritedIndex>0</InheritedIndex>
-                <InheritanceMapV2>
-                  <Entry>
-                    <TemplateName>Shipyard</TemplateName>
-                    <Index>0</Index>
-                  </Entry>
-                </InheritanceMapV2>
-              </VectorElement>
-            </Item>
-            <Item>
-              <ExplosionEffectFilePath>data/graphics/effects/military/explosions/harbor_generic_xpl_02.cfg</ExplosionEffectFilePath>
-            </Item>
-          </ExplosionEffects>
-          <ExplosionEffectsMin>3</ExplosionEffectsMin>
-          <ExplosionEffectsMax>3</ExplosionEffectsMax>
-          <SelfHealPerHealTick>5</SelfHealPerHealTick>
-        </Attackable>
-        <Pausable/>
-        <SoundEmitter>
-          <ActiveSounds>
-            <Item>
-              <Sound>200896</Sound>
-              <!--wwe_sfx_bld_harbor_typeCluster_tag-->
-            </Item>
-          </ActiveSounds>
-          <IncidentSounds>
-            <InfectedFire>
-              <Item>
-                <Sound>214659</Sound>
-                <!--wwe_sfx_bld_inc_burn-->
-              </Item>
-            </InfectedFire>
-          </IncidentSounds>
-          <BuildingRuined>
-            <Item>
-              <Sound>203848</Sound>
-              <!--wwe_sfx_aui_destroy_big-->
-            </Item>
-          </BuildingRuined>
-          <BuildingRepaired>
-            <Item>
-              <Sound>203866</Sound>
-              <!--wwe_sfx_aui_bld_3d_renovate-->
-            </Item>
-          </BuildingRepaired>
-        </SoundEmitter>
-        <IncidentInfectable/>
+        <SoundEmitter />
         <FeedbackController/>
-        <Industrializable>
-          <MandatoryIndustrialization>1</MandatoryIndustrialization>
-        </Industrializable>
+        <Infolayer/>
         <UpgradeList/>
+        <Factory7/>
+        <FactoryBase>
+          <FactoryOutputs>
+            <Item>
+              <Product>1742100203</Product>              <!-- Basic Ammunition - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>8</StorageAmount>
+            </Item>
+          </FactoryOutputs>
+          <CycleTime>10</CycleTime>
+          <IsMainFactory>0</IsMainFactory>
+        </FactoryBase>
         <LogisticNode/>
-        <StreetActivation/>
-        <QuestObject/>
-        <Electrifiable>
-          <ElectricityBoost>0</ElectricityBoost>
-        </Electrifiable>
+        <AmbientMoodProvide />
+        <Maintenance />
+        <Attackable/>
+        <FreeAreaProductivity/>
+        <Pausable/>
+        <IncidentInfectable/>
+        <Culture/>
+        <EcoSystemProvider/>
       </Values>
     </Asset>
-  </ModOp>
-  <!-- END - COPY STEAM SHIPYARD OW (PLAYER) -->
 
-  <!-- END - ************** ALL SHIPYARDS ************** -->
-
-  <!-- START - ************** ALL SHIPS - SAILING ************** -->
-
-  <!-- START - COPY SCHOONER (PLAYER) -->
-  <ModOp GUID="100438" Type="addNextSibling">
     <Asset>
-      <BaseAssetGUID>100438</BaseAssetGUID>
+      <BaseAssetGUID>1010266</BaseAssetGUID>
       <Values>
         <Standard>
           <GUID>1742100540</GUID>
-          <Name>Schooner (Player)</Name>
+          <Name>Fake AI Shell Ammunition Factory</Name>
         </Standard>
-        <Object />
-        <Mesh />
+        <Building />
+        <Blocking/>
+        <Cost />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data\graphics\buildings\production\ammunition_factory\ammunition_factory_shell_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Mesh/>
         <Selection />
-        <Walking />
         <Text />
-        <CommandQueue />
-        <Drifting />
-        <Collector/>
-        <Attackable />
-        <MinimapToken />
-        <SoundEmitter />
-        <UpgradeList/>
-        <QuestObject/>
-        <Infolayer/>
-        <ItemContainer />
-        <FeedbackController/>
-        <Draggable />
-        <Cost>
-          <Costs>
-            <Item>
-              <Ingredient>1010196</Ingredient>              <!--timber-->
-              <Amount>20</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010210</Ingredient>              <!--sailcloth-->
-              <Amount>10</Amount>
-            </Item>
-            <Item>
-              <Ingredient>849</Ingredient>              <!-- Care Packages - Product -->
-              <Amount>5</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1742100533</Ingredient>              <!-- Sailors - Product -->
-              <Amount>5</Amount>
-            </Item>
-          </Costs>
-          <InfluenceCostType>TradeShip</InfluenceCostType>
-          <InfluenceCostPoints>2</InfluenceCostPoints>
-        </Cost>
-        <Craftable />
-        <TradeRouteVehicle/>
+        <Constructable/>
         <Locked/>
-        <Nameable/>
-        <MetaPersistent/>
-        <ExpeditionAttribute />
-        <ShipMaintenance />
-        <Sellable/>
-        <Stance/>
-        <Rentable/>
-        <WorldMapSound/>
+        <SoundEmitter />
+        <FeedbackController/>
+        <Infolayer/>
+        <UpgradeList/>
+        <Factory7/>
+        <FactoryBase>
+          <FactoryOutputs>
+            <Item>
+              <Product>1742100248</Product>              <!-- Shell Ammunition - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>8</StorageAmount>
+            </Item>
+          </FactoryOutputs>
+          <CycleTime>10</CycleTime>
+          <IsMainFactory>0</IsMainFactory>
+        </FactoryBase>
+        <LogisticNode/>
+        <AmbientMoodProvide />
+        <Maintenance />
+        <Attackable/>
+        <FreeAreaProductivity/>
         <Pausable/>
-        <ShipIncident/>
-        <SoundEmitterCommandBarks />
+        <IncidentInfectable/>
+        <Culture/>
+        <EcoSystemProvider/>
       </Values>
     </Asset>
-  </ModOp>
-  <!-- END - COPY SCHOONER (PLAYER) -->
-
-  <!-- START - COPY GUNBOAT (PLAYER) -->
-  <ModOp GUID="100437" Type="addNextSibling">
     <Asset>
-      <BaseAssetGUID>100437</BaseAssetGUID>
+      <BaseAssetGUID>1010266</BaseAssetGUID>
       <Values>
         <Standard>
           <GUID>1742100541</GUID>
-          <Name>Gunboat (Player)</Name>
+          <Name>Fake AI Bombs Factory</Name>
         </Standard>
-        <Object />
-        <Mesh />
-        <Selection />
-        <Walking />
-        <Text />
-        <CommandQueue />
-        <Drifting />
-        <Collector/>
-        <Attackable />
-        <Attacker />
-        <MinimapToken />
-        <SoundEmitter />
-        <UpgradeList/>
-        <QuestObject/>
-        <Infolayer/>
-        <ItemContainer />
-        <FeedbackController/>
-        <Draggable />
-        <Cost>
-          <Costs>
+        <Building />
+        <Blocking/>
+        <Cost />
+        <Object>
+          <Variations>
             <Item>
-              <Ingredient>1010196</Ingredient>              <!--timber-->
-              <Amount>10</Amount>
+              <Filename>data\graphics\buildings\production\ammunition_factory\ammunition_factory_bombs_01.cfg</Filename>
             </Item>
-            <Item>
-              <Ingredient>1010210</Ingredient>              <!--sailcloth-->
-              <Amount>20</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010221</Ingredient>              <!--weapons-->
-              <Amount>7</Amount>
-            </Item>
-            <Item>
-              <Ingredient>849</Ingredient>              <!-- Care Packages - Product -->
-              <Amount>8</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1742100533</Ingredient>              <!-- Sailors - Product -->
-              <Amount>8</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1742100203</Ingredient>              <!-- Basic Ammunition - Product -->
-              <Amount>10</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1742100471</Ingredient>              <!-- Basic Weapons - Product -->
-              <Amount>5</Amount>
-            </Item>
-          </Costs>
-          <InfluenceCostType>WarShip</InfluenceCostType>
-          <InfluenceCostPoints>4</InfluenceCostPoints>
-        </Cost>
-        <Craftable />
-        <TradeRouteVehicle/>
-        <Locked/>
-        <Nameable/>
-        <MetaPersistent/>
-        <ExpeditionAttribute />
-        <ShipMaintenance />
-        <Sellable />
-        <Stance/>
-        <Rentable/>
-        <WorldMapSound/>
-        <Pausable/>
-        <ShipIncident/>
-        <SoundEmitterCommandBarks/>
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END - COPY GUNBOAT (PLAYER) -->
-
-  <!-- START - COPY FRIGATE (PLAYER) -->
-  <ModOp GUID="100439" Type="addNextSibling">
-    <Asset>
-      <BaseAssetGUID>100439</BaseAssetGUID>
-      <Values>
-        <Standard>
-          <GUID>1742100542</GUID>
-          <Name>Frigate (Player)</Name>
-        </Standard>
-        <Object />
-        <Mesh />
-        <Selection />
-        <Walking />
-        <Text />
-        <CommandQueue />
-        <Drifting />
-        <Collector/>
-        <Attackable />
-        <Attacker />
-        <MinimapToken />
-        <SoundEmitter />
-        <UpgradeList/>
-        <QuestObject/>
-        <Infolayer/>
-        <ItemContainer />
-        <FeedbackController/>
-        <Draggable />
-        <Cost>
-          <Costs>
-            <Item>
-              <Ingredient>1010196</Ingredient>              <!--timber-->
-              <Amount>40</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010210</Ingredient>              <!--sailcloth-->
-              <Amount>20</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010221</Ingredient>              <!--weapons-->
-              <Amount>15</Amount>
-            </Item>
-            <Item>
-              <Ingredient>849</Ingredient>              <!-- Care Packages - Product -->
-              <Amount>20</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1742100533</Ingredient>              <!-- Sailors - Product -->
-              <Amount>20</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1742100203</Ingredient>              <!-- Basic Ammunition - Product -->
-              <Amount>18</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1742100471</Ingredient>              <!-- Basic Weapons - Product -->
-              <Amount>12</Amount>
-            </Item>
-          </Costs>
-          <InfluenceCostType>WarShip</InfluenceCostType>
-          <InfluenceCostPoints>8</InfluenceCostPoints>
-        </Cost>
-        <Craftable />
-        <TradeRouteVehicle/>
-        <Locked/>
-        <Nameable/>
-        <MetaPersistent/>
-        <ExpeditionAttribute />
-        <ShipMaintenance />
-        <Sellable />
-        <Stance/>
-        <Rentable/>
-        <WorldMapSound/>
-        <Pausable/>
-        <ShipIncident/>
-        <SoundEmitterCommandBarks/>
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END - COPY FRIGATE (PLAYER) -->
-
-  <!-- START - COPY CLIPPER (PLAYER) -->
-  <ModOp GUID="100441" Type="addNextSibling">
-    <Asset>
-      <BaseAssetGUID>100441</BaseAssetGUID>
-      <Values>
-        <Standard>
-          <GUID>1742100543</GUID>
-          <Name>Clipper (Player)</Name>
-        </Standard>
-        <Object />
-        <Mesh />
-        <Selection />
-        <Walking />
-        <Text />
-        <CommandQueue />
-        <Drifting />
-        <Collector/>
-        <Attackable />
-        <MinimapToken />
-        <SoundEmitter />
-        <UpgradeList/>
-        <QuestObject/>
-        <Infolayer/>
-        <ItemContainer />
-        <FeedbackController/>
-        <Draggable />
-        <Cost>
-          <Costs>
-            <Item>
-              <Ingredient>1010196</Ingredient>              <!--timber-->
-              <Amount>40</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010210</Ingredient>              <!--sailcloth-->
-              <Amount>30</Amount>
-            </Item>
-            <Item>
-              <Ingredient>849</Ingredient>              <!-- Care Packages - Product -->
-              <Amount>15</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1742100533</Ingredient>              <!-- Sailors - Product -->
-              <Amount>15</Amount>
-            </Item>
-          </Costs>
-          <InfluenceCostType>TradeShip</InfluenceCostType>
-          <InfluenceCostPoints>4</InfluenceCostPoints>
-        </Cost>
-        <Craftable />
-        <TradeRouteVehicle/>
-        <Locked/>
-        <Nameable/>
-        <MetaPersistent/>
-        <ExpeditionAttribute />
-        <ShipMaintenance />
-        <Sellable/>
-        <Stance/>
-        <Rentable/>
-        <WorldMapSound/>
-        <Pausable/>
-        <ShipIncident/>
-        <SoundEmitterCommandBarks />
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END - COPY CLIPPER (PLAYER) -->
-
-  <!-- START - COPY SOTL (PLAYER) -->
-  <ModOp GUID="100440" Type="addNextSibling">
-    <Asset>
-      <BaseAssetGUID>100440</BaseAssetGUID>
-      <Values>
-        <Standard>
-          <GUID>1742100544</GUID>
-          <Name>SOTL (Player)</Name>
-        </Standard>
-        <Object />
-        <Mesh />
-        <Selection />
-        <Walking />
-        <Text />
-        <CommandQueue />
-        <Drifting />
-        <Collector/>
-        <Attackable />
-        <Attacker />
-        <MinimapToken />
-        <SoundEmitter />
-        <UpgradeList/>
-        <QuestObject/>
-        <Infolayer/>
-        <ItemContainer />
-        <FeedbackController/>
-        <Draggable />
-        <Cost>
-          <Costs>
-            <Item>
-              <Ingredient>1010196</Ingredient>              <!--timber-->
-              <Amount>60</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010210</Ingredient>              <!--sailcloth-->
-              <Amount>30</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010221</Ingredient>              <!--weapons-->
-              <Amount>30</Amount>
-            </Item>
-            <Item>
-              <Ingredient>849</Ingredient>              <!-- Care Packages - Product -->
-              <Amount>40</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1742100533</Ingredient>              <!-- Sailors - Product -->
-              <Amount>40</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1742100203</Ingredient>              <!-- Basic Ammunition - Product -->
-              <Amount>50</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1742100471</Ingredient>              <!-- Basic Weapons - Product -->
-              <Amount>25</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1742100248</Ingredient>              <!-- Shell Ammunition - Product -->
-              <Amount>25</Amount>
-            </Item>
-          </Costs>
-          <InfluenceCostType>WarShip</InfluenceCostType>
-          <InfluenceCostPoints>16</InfluenceCostPoints>
-        </Cost>
-        <Craftable />
-        <TradeRouteVehicle/>
-        <Locked/>
-        <Nameable/>
-        <MetaPersistent/>
-        <ExpeditionAttribute />
-        <ShipMaintenance />
-        <Sellable />
-        <Stance/>
-        <Rentable/>
-        <WorldMapSound/>
-        <Pausable/>
-        <ShipIncident/>
-        <SoundEmitterCommandBarks/>
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END - COPY SOTL (PLAYER) -->
-
-  <!--  END - ************** ALL SHIPS - SAILING ************** -->
-
-  <!--  START - ************** ALL SHIPS - STEAM ************** -->
-
-  <!-- START - COPY CARGO SHIP (PLAYER) -->
-  <ModOp GUID="1010062" Type="addNextSibling">
-    <Asset>
-      <BaseAssetGUID>1010062</BaseAssetGUID>
-      <Values>
-        <Standard>
-          <GUID>1742100545</GUID>
-          <Name>Cargo Ship (Trade)</Name>
-        </Standard>
-        <Object/>
+          </Variations>
+        </Object>
         <Mesh/>
-        <Selection/>
-        <Walking/>
-        <Text/>
-        <CommandQueue/>
-        <Drifting/>
-        <Collector/>
+        <Selection />
+        <Text />
+        <Constructable/>
+        <Locked/>
+        <SoundEmitter />
+        <FeedbackController/>
+        <Infolayer/>
+        <UpgradeList/>
+        <Factory7/>
+        <FactoryBase>
+          <FactoryOutputs>
+            <Item>
+              <Product>846</Product>              <!-- Bombs - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>8</StorageAmount>
+            </Item>
+          </FactoryOutputs>
+          <CycleTime>10</CycleTime>
+          <IsMainFactory>0</IsMainFactory>
+        </FactoryBase>
+        <LogisticNode/>
+        <AmbientMoodProvide />
+        <Maintenance />
         <Attackable/>
-        <MinimapToken/>
-        <SoundEmitter/>
-        <UpgradeList/>
-        <QuestObject/>
-        <Infolayer/>
-        <ItemContainer />
-        <FeedbackController/>
-        <Draggable />
-        <Cost>
-          <Costs>
-            <Item>
-              <Ingredient>1010218</Ingredient>              <!--beams-->
-              <Amount>20</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010224</Ingredient>              <!--steam motors-->
-              <Amount>20</Amount>
-            </Item>
-            <Item>
-              <Ingredient>849</Ingredient>              <!-- Care Packages - Product -->
-              <Amount>30</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1742100533</Ingredient>              <!-- Sailors - Product -->
-              <Amount>30</Amount>
-            </Item>
-          </Costs>
-          <InfluenceCostType>TradeShip</InfluenceCostType>
-          <InfluenceCostPoints>6</InfluenceCostPoints>
-        </Cost>
-        <Craftable />
-        <TradeRouteVehicle/>
-        <Locked/>
-        <Nameable/>
-        <MetaPersistent/>
-        <ExpeditionAttribute />
-        <ShipMaintenance />
-        <Sellable />
-        <Stance/>
-        <Rentable/>
-        <WorldMapSound/>
+        <FreeAreaProductivity/>
         <Pausable/>
-        <ShipIncident/>
-        <SoundEmitterCommandBarks />
+        <IncidentInfectable/>
+        <Culture/>
+        <EcoSystemProvider/>
       </Values>
     </Asset>
-  </ModOp>
-  <!-- END - COPY CARGO SHIP (PLAYER) -->
+  </Asset>
+  <Asset>
+    <BaseAssetGUID>1010266</BaseAssetGUID>
+    <Values>
+      <Standard>
+        <GUID>1742100542</GUID>
+        <Name>Fake AI Basic Weapons Factory</Name>
+      </Standard>
+      <Building />
+      <Blocking/>
+      <Cost />
+      <Object>
+        <Variations>
+          <Item>
+            <Filename>data/graphics/buildings/production/basic_weapons_factory/basic_weapons_factory_01.cfg</Filename>
+          </Item>
+        </Variations>
+      </Object>
+      <Mesh/>
+      <Selection />
+      <Text />
+      <Constructable/>
+      <Locked/>
+      <SoundEmitter />
+      <FeedbackController/>
+      <Infolayer/>
+      <UpgradeList/>
+      <Factory7/>
+      <FactoryBase>
+        <FactoryOutputs>
+          <Item>
+            <Product>1742100471</Product>            <!-- Basic Weapons - Product -->
+            <Amount>1</Amount>
+            <StorageAmount>8</StorageAmount>
+          </Item>
+        </FactoryOutputs>
+        <CycleTime>10</CycleTime>
+        <IsMainFactory>0</IsMainFactory>
+      </FactoryBase>
+      <LogisticNode/>
+      <AmbientMoodProvide />
+      <Maintenance />
+      <Attackable/>
+      <FreeAreaProductivity/>
+      <Pausable/>
+      <IncidentInfectable/>
+      <Culture/>
+      <EcoSystemProvider/>
+    </Values>
+  </Asset>
+</ModOp>
+<!-- END AI EXTRA BUILDINGS -->
 
-  <!-- START - COPY BATTLECRUISER (PLAYER) -->
-  <ModOp GUID="100442" Type="addNextSibling">
-    <Asset>
-      <BaseAssetGUID>100442</BaseAssetGUID>
-      <Values>
-        <Standard>
-          <GUID>1742100546</GUID>
-          <Name>Battle Cruiser (Player)</Name>
-        </Standard>
-        <Object/>
-        <Mesh/>
-        <Selection/>
-        <Walking/>
-        <Text/>
-        <CommandQueue/>
-        <Drifting/>
-        <Collector/>
-        <Attackable/>
-        <Attacker/>
-        <MinimapToken/>
-        <SoundEmitter/>
-        <UpgradeList/>
-        <QuestObject/>
-        <Infolayer/>
-        <ItemContainer/>
-        <FeedbackController/>
-        <Draggable/>
-        <Cost>
-          <Costs>
-            <Item>
-              <Ingredient>1010218</Ingredient>              <!--beams-->
-              <Amount>60</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010224</Ingredient>              <!--steam motors-->
-              <Amount>20</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010223</Ingredient>              <!--advanced weapons-->
-              <Amount>25</Amount>
-            </Item>
-            <Item>
-              <Ingredient>849</Ingredient>              <!-- Care Packages - Product -->
-              <Amount>75</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1742100533</Ingredient>              <!-- Sailors - Product -->
-              <Amount>75</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1742100203</Ingredient>              <!-- Basic Ammunition - Product -->
-              <Amount>50</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1742100471</Ingredient>              <!-- Basic Weapons - Product -->
-              <Amount>40</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1742100248</Ingredient>              <!-- Shell Ammunition - Product -->
-              <Amount>25</Amount>
-            </Item>
-            <Item>
-              <Ingredient>846</Ingredient>              <!-- Bombs - Product -->
-              <Amount>50</Amount>
-            </Item>
-          </Costs>
-          <InfluenceCostType>WarShip</InfluenceCostType>
-          <InfluenceCostPoints>24</InfluenceCostPoints>
-        </Cost>
-        <Craftable/>
-        <TradeRouteVehicle/>
-        <Locked/>
-        <Nameable/>
-        <MetaPersistent/>
-        <ExpeditionAttribute/>
-        <ShipMaintenance/>
-        <Sellable/>
-        <Stance/>
-        <Rentable/>
-        <WorldMapSound/>
-        <Pausable/>
-        <ShipIncident/>
-        <SoundEmitterCommandBarks/>
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END - COPY BATTLECRUISER (PLAYER) -->
-
-  <!-- START - COPY MONITOR (PLAYER) -->
-  <ModOp GUID="100443" Type="addNextSibling">
-    <Asset>
-      <BaseAssetGUID>100443</BaseAssetGUID>
-      <Values>
-        <Standard>
-          <GUID>1742100547</GUID>
-          <Name>Monitor (Player)</Name>
-        </Standard>
-        <Object />
-        <Mesh />
-        <Selection />
-        <Walking />
-        <Text />
-        <CommandQueue />
-        <Drifting />
-        <Collector/>
-        <Attackable />
-        <Attacker />
-        <MinimapToken />
-        <SoundEmitter />
-        <UpgradeList/>
-        <QuestObject/>
-        <Infolayer/>
-        <ItemContainer />
-        <FeedbackController/>
-        <Draggable />
-        <Cost>
-          <Costs>
-            <Item>
-              <Ingredient>1010218</Ingredient>              <!--beams-->
-              <Amount>40</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010224</Ingredient>              <!--steam motors-->
-              <Amount>10</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010223</Ingredient>              <!--advanced weapons-->
-              <Amount>10</Amount>
-            </Item>
-            <Item>
-              <Ingredient>849</Ingredient>              <!-- Care Packages - Product -->
-              <Amount>35</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1742100533</Ingredient>              <!-- Sailors - Product -->
-              <Amount>35</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1742100203</Ingredient>              <!-- Basic Ammunition - Product -->
-              <Amount>40</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1742100471</Ingredient>              <!-- Basic Weapons - Product -->
-              <Amount>20</Amount>
-            </Item>
-          </Costs>
-          <InfluenceCostType>WarShip</InfluenceCostType>
-          <InfluenceCostPoints>12</InfluenceCostPoints>
-        </Cost>
-        <Craftable />
-        <TradeRouteVehicle/>
-        <Locked/>
-        <Nameable/>
-        <MetaPersistent/>
-        <ExpeditionAttribute />
-        <ShipMaintenance />
-        <Sellable />
-        <Stance/>
-        <Rentable/>
-        <WorldMapSound/>
-        <Pausable/>
-        <ShipIncident/>
-        <SoundEmitterCommandBarks/>
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END - COPY MONITOR (PLAYER) -->
-
-  <!-- START - COPY MONITOR FLAMETHROWER (PLAYER) -->
-  <ModOp GUID="968" Type="addNextSibling">
-    <Asset>
-      <BaseAssetGUID>968</BaseAssetGUID>
-      <Values>
-        <Standard>
-          <GUID>1742100548</GUID>
-          <Name>Flame Monitor (Player)</Name>
-        </Standard>
-        <Object />
-        <Mesh />
-        <Selection />
-        <Walking />
-        <Text />
-        <CommandQueue />
-        <Drifting />
-        <Collector/>
-        <Attackable />
-        <Attacker />
-        <MinimapToken />
-        <SoundEmitter />
-        <UpgradeList/>
-        <QuestObject/>
-        <Infolayer/>
-        <ItemContainer />
-        <FeedbackController/>
-        <Draggable />
-        <Cost>
-          <Costs>
-            <Item>
-              <Ingredient>1010218</Ingredient>              <!--beams-->
-              <Amount>45</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010224</Ingredient>              <!--steam motors-->
-              <Amount>10</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010223</Ingredient>              <!--advanced weapons-->
-              <Amount>15</Amount>
-            </Item>
-            <Item>
-              <Ingredient>849</Ingredient>              <!-- Care Packages - Product -->
-              <Amount>35</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1742100533</Ingredient>              <!-- Sailors - Product -->
-              <Amount>35</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1742100203</Ingredient>              <!-- Basic Ammunition - Product -->
-              <Amount>15</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1742100471</Ingredient>              <!-- Basic Weapons - Product -->
-              <Amount>20</Amount>
-            </Item>
-          </Costs>
-          <InfluenceCostType>WarShip</InfluenceCostType>
-          <InfluenceCostPoints>12</InfluenceCostPoints>
-        </Cost>
-        <Craftable />
-        <TradeRouteVehicle/>
-        <Locked/>
-        <Nameable/>
-        <MetaPersistent/>
-        <ExpeditionAttribute />
-        <ShipMaintenance />
-        <Sellable />
-        <Stance/>
-        <Rentable/>
-        <WorldMapSound/>
-        <Pausable/>
-        <ShipIncident/>
-        <SoundEmitterCommandBarks/>
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END - COPY MONITOR FLAMETHROWER (PLAYER) -->
-
-  <!-- START - COPY MONITOR BLUE FLAMETHROWER (PLAYER) -->
-  <ModOp GUID="1537" Type="addNextSibling">
-    <Asset>
-      <BaseAssetGUID>1537</BaseAssetGUID>
-      <Values>
-        <Standard>
-          <GUID>1742100549</GUID>
-          <Name>Blue Flame Monitor (Player)</Name>
-        </Standard>
-        <Object />
-        <Mesh />
-        <Selection />
-        <Walking />
-        <Text />
-        <CommandQueue />
-        <Drifting />
-        <Collector/>
-        <Attackable />
-        <Attacker />
-        <MinimapToken />
-        <SoundEmitter />
-        <UpgradeList/>
-        <QuestObject/>
-        <Infolayer/>
-        <ItemContainer />
-        <FeedbackController/>
-        <Draggable />
-        <Cost>
-          <Costs>
-            <Item>
-              <Ingredient>1010218</Ingredient>              <!--beams-->
-              <Amount>45</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010224</Ingredient>              <!--steam motors-->
-              <Amount>10</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010223</Ingredient>              <!--advanced weapons-->
-              <Amount>15</Amount>
-            </Item>
-            <Item>
-              <Ingredient>112706</Ingredient>              <!--gas-->
-              <Amount>40</Amount>
-            </Item>
-            <Item>
-              <Ingredient>849</Ingredient>              <!-- Care Packages - Product -->
-              <Amount>35</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1742100533</Ingredient>              <!-- Sailors - Product -->
-              <Amount>35</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1742100203</Ingredient>              <!-- Basic Ammunition - Product -->
-              <Amount>15</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1742100471</Ingredient>              <!-- Basic Weapons - Product -->
-              <Amount>20</Amount>
-            </Item>
-          </Costs>
-          <InfluenceCostType>WarShip</InfluenceCostType>
-          <InfluenceCostPoints>15</InfluenceCostPoints>
-        </Cost>
-        <Craftable />
-        <TradeRouteVehicle/>
-        <Locked/>
-        <Nameable/>
-        <MetaPersistent/>
-        <ExpeditionAttribute />
-        <ShipMaintenance />
-        <Sellable />
-        <Stance/>
-        <Rentable/>
-        <WorldMapSound/>
-        <Pausable/>
-        <ShipIncident/>
-        <SoundEmitterCommandBarks/>
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END - COPY MONITOR BLUE FLAMETHROWER (PLAYER) -->
-
-  <!-- START - COPY OIL TANKER (PLAYER) -->
-  <ModOp GUID="100853" Type="addNextSibling">
-    <Asset>
-      <BaseAssetGUID>100853</BaseAssetGUID>
-      <Values>
-        <Standard>
-          <GUID>1742100550</GUID>
-          <Name>Oil Tanker (Player)</Name>
-        </Standard>
-        <Object/>
-        <Mesh/>
-        <Selection/>
-        <Walking/>
-        <Text/>
-        <CommandQueue/>
-        <Drifting/>
-        <Collector/>
-        <Attackable/>
-        <MinimapToken/>
-        <SoundEmitter/>
-        <UpgradeList/>
-        <QuestObject/>
-        <Infolayer/>
-        <ItemContainer/>
-        <FeedbackController/>
-        <Draggable/>
-        <Cost>
-          <Costs>
-            <Item>
-              <Ingredient>1010218</Ingredient>              <!--beams-->
-              <Amount>20</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010224</Ingredient>              <!--steam motors-->
-              <Amount>20</Amount>
-            </Item>
-            <Item>
-              <Ingredient>849</Ingredient>              <!-- Care Packages - Product -->
-              <Amount>50</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1742100533</Ingredient>              <!-- Sailors - Product -->
-              <Amount>50</Amount>
-            </Item>
-          </Costs>
-          <InfluenceCostType>TradeShip</InfluenceCostType>
-          <InfluenceCostPoints>10</InfluenceCostPoints>
-        </Cost>
-        <Craftable/>
-        <TradeRouteVehicle/>
-        <Locked/>
-        <Nameable/>
-        <MetaPersistent/>
-        <ExpeditionAttribute/>
-        <ShipMaintenance/>
-        <Sellable/>
-        <Stance/>
-        <Rentable/>
-        <WorldMapSound/>
-        <Pausable/>
-        <ShipIncident/>
-        <SoundEmitterCommandBarks/>
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END - COPY OIL TANKER (PLAYER) -->
-
-  <!-- START - COPY MONITOR FLAK (PLAYER) -->
-  <ModOp GUID="720" Type="addNextSibling">
-    <Asset>
-      <BaseAssetGUID>720</BaseAssetGUID>
-      <Values>
-        <Standard>
-          <GUID>1742100551</GUID>
-          <Name>Monitor Flak (Player)</Name>
-        </Standard>
-        <Object />
-        <Mesh />
-        <Selection />
-        <Walking />
-        <Text />
-        <CommandQueue />
-        <Drifting />
-        <Collector/>
-        <Attackable />
-        <Attacker />
-        <MinimapToken />
-        <SoundEmitter />
-        <UpgradeList/>
-        <QuestObject/>
-        <Infolayer/>
-        <ItemContainer />
-        <FeedbackController/>
-        <Draggable />
-        <Cost>
-          <Costs>
-            <Item>
-              <Ingredient>1010218</Ingredient>              <!--beams-->
-              <Amount>35</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010224</Ingredient>              <!--steam motors-->
-              <Amount>25</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010223</Ingredient>              <!--advanced weapons-->
-              <Amount>10</Amount>
-            </Item>
-            <Item>
-              <Ingredient>849</Ingredient>              <!-- Care Packages - Product -->
-              <Amount>35</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1742100533</Ingredient>              <!-- Sailors - Product -->
-              <Amount>35</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1742100203</Ingredient>              <!-- Basic Ammunition - Product -->
-              <Amount>40</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1742100471</Ingredient>              <!-- Basic Weapons - Product -->
-              <Amount>20</Amount>
-            </Item>
-          </Costs>
-          <InfluenceCostType>WarShip</InfluenceCostType>
-          <InfluenceCostPoints>20</InfluenceCostPoints>
-        </Cost>
-        <Craftable />
-        <TradeRouteVehicle/>
-        <Locked/>
-        <Nameable/>
-        <MetaPersistent/>
-        <ExpeditionAttribute />
-        <ShipMaintenance />
-        <Sellable />
-        <Stance/>
-        <Rentable/>
-        <WorldMapSound/>
-        <Pausable/>
-        <ShipIncident/>
-        <SoundEmitterCommandBarks/>
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END - COPY MONITOR FLAK (PLAYER) -->
-
-  <!--  END - ************** ALL SHIPS - STEAM ************** -->
-
-  <!--  START - ************** ALL SHIPS - AIRSHIPS ************** -->
-
-
-  <!--  END - ************** ALL SHIPS - AIRSHIPS ************** -->
-
-  <!-- END - ************** ALL SHIPS ************** -->
-
-  <!--  START - ************** SWAPPING BUILDINGS TO VANILLA BUILDINGS ************** -->
-
-  <!-- REMOVE VANILLA SHIPYARDS FROM BUILDING MENU -->
-
-  <!-- START REMOVE TRIGGER SAILING SHIPYARD OW FROM BUILDING MENU -->
-  <ModOp Type="remove" GUID='130252,11824' Path="/Values/Trigger/TriggerActions/Item/TriggerAction/Values/ActionUnlockAsset/UnhideAssets/Item[Asset='130050']" />
-  <ModOp Type="remove" GUID='130253,11825' Path="/Values/Trigger/TriggerActions/Item/TriggerAction/Values/ActionUnlockAsset/UnlockAssets/Item[Asset='130050']" />
-  <!-- END REMOVE TRIGGER SAILING SHIPYARD OW FROM BUILDING MENU -->
-
-  <!-- START REMOVE TRIGGER SAILING SHIPYARD NW (PLAYER) FROM BUILDING MENU -->
-  <ModOp Type="remove" GUID='11946,130237' Path="/Values/Trigger/TriggerActions/Item/TriggerAction/Values/ActionUnlockAsset/UnhideAssets/Item[Asset='130106']" />
-  <ModOp Type="remove" GUID='11951,130238' Path="/Values/Trigger/TriggerActions/Item/TriggerAction/Values/ActionUnlockAsset/UnlockAssets/Item[Asset='130106']" />
-  <!-- END REMOVE TRIGGER SAILING SHIPYARD NW (PLAYER) FROM BUILDING MENU -->
-
-  <!-- START REMOVE TRIGGER STEAM SHIPYARD OW (PLAYER) FROM BUILDING MENU -->
-  <ModOp Type="remove" GUID='11854,130221' Path="/Values/Trigger/TriggerActions/Item/TriggerAction/Values/ActionUnlockAsset/UnhideAssets/Item[Asset='130051']" />
-  <ModOp Type="remove" GUID='11881,130222' Path="/Values/Trigger/TriggerActions/Item/TriggerAction/Values/ActionUnlockAsset/UnlockAssets/Item[Asset='130051']" />
-  <!-- END REMOVE TRIGGER STEAM SHIPYARD OW (PLAYER) FROM BUILDING MENU -->
-
-  <!-- ALL OTHER AI -->
-  <ModOp GUID="47,79,80,11,81,82,83,48,84,85" Type="add" Path="Values/ConstructionAI/">
-    <BuildingReplacements>
-      <Item>
-        <Building>1742100537</Building>        <!--Sailing Shipyard OW (Player) - Building-->
-        <Replacement>1010520</Replacement>        <!--harbor_02 (Sailing Shipyard)-->
-      </Item>
-      <Item>
-        <Building>1742100538</Building>        <!--Sailing Shipyard NW (Player) - Building-->
-        <Replacement>101277</Replacement>        <!--harbor_colony01_02 (Sailing Shipyard)-->
-      </Item>
-      <Item>
-        <Building>1742100539</Building>        <!--Steam Shipyard OW (Player) - Building-->
-        <Replacement>1010521</Replacement>        <!--harbor_03 (Steam Shipyard)-->
-      </Item>
-    </BuildingReplacements>
-  </ModOp>
-
-  <!-- MERCIER -->
-  <ModOp GUID="220" Type="add" Path="Values/ConstructionAI/BuildingReplacements">
+<!-- START AI - EASY - EXTRA BUILDINGS MATERIALINFO -->
+<ModOp GUID="47,79,80" Type="add" Path="Values/ConstructionAI/EconomyRules/ConstructionMaterials">
+  <MainMaterialInfos>
     <Item>
-      <Building>1742100537</Building>      <!--Sailing Shipyard OW (Player) - Building-->
-      <Replacement>1010520</Replacement>      <!--harbor_02 (Sailing Shipyard)-->
+      <Product>1010196</Product>      <!--0-timber-->
+      <PerProgressLevelInfos>
+        <EarlyGame>
+          <ProducerBuildingCountMain>1</ProducerBuildingCountMain>
+        </EarlyGame>
+        <EarlyMidGame>
+          <ProducerBuildingCountMain>1</ProducerBuildingCountMain>
+        </EarlyMidGame>
+        <MidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </MidGame>
+        <LateMidGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </EndGame>
+      </PerProgressLevelInfos>
     </Item>
     <Item>
-      <Building>1742100538</Building>      <!--Sailing Shipyard NW (Player) - Building-->
-      <Replacement>101277</Replacement>      <!--harbor_colony01_02 (Sailing Shipyard)-->
+      <Product>1010205</Product>      <!--1-bricks-->
+      <PerProgressLevelInfos>
+        <EarlyMidGame>
+          <ProducerBuildingCountMain>1</ProducerBuildingCountMain>
+        </EarlyMidGame>
+        <MidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </MidGame>
+        <LateMidGame>
+          <ProducerBuildingCountMain>5</ProducerBuildingCountMain>
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>5</ProducerBuildingCountMain>
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>5</ProducerBuildingCountMain>
+        </EndGame>
+      </PerProgressLevelInfos>
     </Item>
     <Item>
-      <Building>1742100539</Building>      <!--Steam Shipyard OW (Player) - Building-->
-      <Replacement>1010521</Replacement>      <!--harbor_03 (Steam Shipyard)-->
+      <Product>1010218</Product>      <!--2-beams-->
+      <PerProgressLevelInfos>
+        <MidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </MidGame>
+        <LateMidGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>4</ProducerBuildingCountMain>
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>5</ProducerBuildingCountMain>
+        </EndGame>
+      </PerProgressLevelInfos>
     </Item>
-  </ModOp>
-  <!--  END - ************** SWAPPING BUILDINGS TO VANILLA BUILDINGS ************** -->
+    <Item>
+      <Product>1010207</Product>      <!--3-window-->
+      <PerProgressLevelInfos>
+        <LateMidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>4</ProducerBuildingCountMain>
+        </EndGame>
+      </PerProgressLevelInfos>
+    </Item>
+    <Item>
+      <Product>1010202</Product>      <!--4-concrete-->
+      <PerProgressLevelInfos>
+        <LateGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </EndGame>
+      </PerProgressLevelInfos>
+    </Item>
+    <Item>
+      <Product>1010221</Product>      <!--5-weapons-->
+      <PerProgressLevelInfos>
+        <EarlyMidGame>
+          <ProducerBuildingCountMain>1</ProducerBuildingCountMain>
+        </EarlyMidGame>
+        <MidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </MidGame>
+        <LateMidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </EndGame>
+      </PerProgressLevelInfos>
+    </Item>
+    <Item>
+      <Product>1010223</Product>      <!--6-advanced weapons-->
+      <PerProgressLevelInfos>
+        <EarlyGame>
+          <ProducerBuildingCountMain>0</ProducerBuildingCountMain>
+        </EarlyGame>
+        <EarlyMidGame>
+          <ProducerBuildingCountMain>1</ProducerBuildingCountMain>
+        </EarlyMidGame>
+        <MidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </MidGame>
+        <LateMidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </EndGame>
+      </PerProgressLevelInfos>
+    </Item>
+    <Item>
+      <Product>1010210</Product>      <!--7-sailcloth-->
+      <PerProgressLevelInfos>
+        <EarlyGame>
+          <ProducerBuildingCountMain>1</ProducerBuildingCountMain>
+        </EarlyGame>
+        <EarlyMidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </EarlyMidGame>
+        <MidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </MidGame>
+        <LateMidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </EndGame>
+      </PerProgressLevelInfos>
+    </Item>
+    <Item>
+      <Product>112706</Product>      <!--8-gas-->
+      <SmallIslandFactor>1</SmallIslandFactor>
+    </Item>
+    <Item>
+      <Product>849</Product>      <!-- Care Packages - Product -->
+      <PerProgressLevelInfos>
+        <EarlyGame>
+          <ProducerBuildingCountMain>1</ProducerBuildingCountMain>
+        </EarlyGame>
+        <EarlyMidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </EarlyMidGame>
+        <MidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </MidGame>
+        <LateMidGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>4</ProducerBuildingCountMain>
+        </EndGame>
+      </PerProgressLevelInfos>
+    </Item>
+    <Item>
+      <Product>1742100533</Product>      <!-- Sailors - Product -->
+      <PerProgressLevelInfos>
+        <EarlyGame>
+          <ProducerBuildingCountMain>1</ProducerBuildingCountMain>
+        </EarlyGame>
+        <EarlyMidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </EarlyMidGame>
+        <MidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </MidGame>
+        <LateMidGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>4</ProducerBuildingCountMain>
+        </EndGame>
+      </PerProgressLevelInfos>
+    </Item>
+    <Item>
+      <Product>1742100203</Product>      <!-- Basic Ammunition - Product -->
+      <PerProgressLevelInfos>
+        <EarlyGame>
+          <ProducerBuildingCountMain>1</ProducerBuildingCountMain>
+        </EarlyGame>
+        <EarlyMidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </EarlyMidGame>
+        <MidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </MidGame>
+        <LateMidGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>4</ProducerBuildingCountMain>
+        </EndGame>
+      </PerProgressLevelInfos>
+    </Item>
+    <Item>
+      <Product>1742100248</Product>      <!-- Shell Ammunition - Product -->
+      <PerProgressLevelInfos>
+        <EarlyGame>
+          <ProducerBuildingCountMain>1</ProducerBuildingCountMain>
+        </EarlyGame>
+        <EarlyMidGame>
+          <ProducerBuildingCountMain>1</ProducerBuildingCountMain>
+        </EarlyMidGame>
+        <MidGame>
+          <ProducerBuildingCountMain>1</ProducerBuildingCountMain>
+        </MidGame>
+        <LateMidGame>
+          <ProducerBuildingCountMain>1</ProducerBuildingCountMain>
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </EndGame>
+      </PerProgressLevelInfos>
+    </Item>
+    <Item>
+      <Product>846</Product>      <!-- Bombs Ammunition - Product -->
+      <PerProgressLevelInfos>
+        <EarlyGame>
+          <ProducerBuildingCountMain>1</ProducerBuildingCountMain>
+        </EarlyGame>
+        <EarlyMidGame>
+          <ProducerBuildingCountMain>1</ProducerBuildingCountMain>
+        </EarlyMidGame>
+        <MidGame>
+          <ProducerBuildingCountMain>1</ProducerBuildingCountMain>
+        </MidGame>
+        <LateMidGame>
+          <ProducerBuildingCountMain>1</ProducerBuildingCountMain>
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </EndGame>
+      </PerProgressLevelInfos>
+    </Item>
+    <Item>
+      <Product>1742100471</Product>      <!-- Basic Weapons - Product -->
+      <PerProgressLevelInfos>
+        <EarlyGame>
+          <ProducerBuildingCountMain>1</ProducerBuildingCountMain>
+        </EarlyGame>
+        <EarlyMidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </EarlyMidGame>
+        <MidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </MidGame>
+        <LateMidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>4</ProducerBuildingCountMain>
+        </EndGame>
+      </PerProgressLevelInfos>
+    </Item>
+  </MainMaterialInfos>
+</ModOp>
+<!-- START AI - EASY - EXTRA BUILDINGS MATERIALINFO -->
 
+<!-- START AI - MEDIUM - EXTRA BUILDINGS MATERIALINFO -->
+<ModOp GUID="11,81,82,83,220" Type="add" Path="Values/ConstructionAI/EconomyRules/ConstructionMaterials">
+  <MainMaterialInfos>
+    <Item>
+      <Product>1010196</Product>      <!--0-timber-->
+      <PerProgressLevelInfos>
+        <EarlyMidGame>
+          <ProducerBuildingCountMain>4</ProducerBuildingCountMain>
+        </EarlyMidGame>
+        <MidGame>
+          <ProducerBuildingCountMain>5</ProducerBuildingCountMain>
+        </MidGame>
+        <LateMidGame>
+          <ProducerBuildingCountMain>5</ProducerBuildingCountMain>
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>6</ProducerBuildingCountMain>
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>6</ProducerBuildingCountMain>
+        </EndGame>
+      </PerProgressLevelInfos>
+    </Item>
+    <Item>
+      <Product>1010205</Product>      <!--1-bricks-->
+      <PerProgressLevelInfos>
+        <EarlyMidGame>
+          <ProducerBuildingCountMain>6</ProducerBuildingCountMain>
+        </EarlyMidGame>
+        <MidGame>
+          <ProducerBuildingCountMain>6</ProducerBuildingCountMain>
+        </MidGame>
+        <LateMidGame>
+          <ProducerBuildingCountMain>6</ProducerBuildingCountMain>
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>6</ProducerBuildingCountMain>
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>6</ProducerBuildingCountMain>
+        </EndGame>
+      </PerProgressLevelInfos>
+    </Item>
+    <Item>
+      <Product>1010218</Product>      <!--2-beams-->
+      <PerProgressLevelInfos>
+        <EarlyMidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </EarlyMidGame>
+        <MidGame>
+          <ProducerBuildingCountMain>4</ProducerBuildingCountMain>
+        </MidGame>
+        <LateMidGame>
+          <ProducerBuildingCountMain>6</ProducerBuildingCountMain>
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>6</ProducerBuildingCountMain>
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>6</ProducerBuildingCountMain>
+        </EndGame>
+      </PerProgressLevelInfos>
+    </Item>
+    <Item>
+      <Product>1010207</Product>      <!--3-window-->
+      <PerProgressLevelInfos>
+        <MidGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </MidGame>
+        <LateMidGame>
+          <ProducerBuildingCountMain>4</ProducerBuildingCountMain>
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>5</ProducerBuildingCountMain>
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>6</ProducerBuildingCountMain>
+        </EndGame>
+      </PerProgressLevelInfos>
+    </Item>
+    <Item>
+      <Product>1010202</Product>      <!--4-concrete-->
+      <PerProgressLevelInfos>
+        <LateMidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>4</ProducerBuildingCountMain>
+        </EndGame>
+      </PerProgressLevelInfos>
+    </Item>
+    <Item>
+      <Product>1010221</Product>      <!--5-weapons-->
+      <PerProgressLevelInfos>
+        <EarlyMidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </EarlyMidGame>
+        <MidGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </MidGame>
+        <LateMidGame>
+          <ProducerBuildingCountMain>4</ProducerBuildingCountMain>
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>5</ProducerBuildingCountMain>
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>6</ProducerBuildingCountMain>
+        </EndGame>
+      </PerProgressLevelInfos>
+    </Item>
+    <Item>
+      <Product>1010223</Product>      <!--6-advanced weapons-->
+      <PerProgressLevelInfos>
+        <EarlyGame>
+          <ProducerBuildingCountMain>0</ProducerBuildingCountMain>
+        </EarlyGame>
+        <EarlyMidGame>
+          <ProducerBuildingCountMain>1</ProducerBuildingCountMain>
+        </EarlyMidGame>
+        <MidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </MidGame>
+        <LateMidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </EndGame>
+      </PerProgressLevelInfos>
+    </Item>
+    <Item>
+      <Product>1010210</Product>      <!--7-sailcloth-->
+      <PerProgressLevelInfos>
+        <EarlyGame>
+          <ProducerBuildingCountMain>1</ProducerBuildingCountMain>
+        </EarlyGame>
+        <EarlyMidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </EarlyMidGame>
+        <MidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </MidGame>
+        <LateMidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </EndGame>
+      </PerProgressLevelInfos>
+    </Item>
+    <Item>
+      <Product>112706</Product>      <!--8-gas-->
+      <SmallIslandFactor>1</SmallIslandFactor>
+    </Item>
+    <Item>
+      <Product>849</Product>      <!-- Care Packages - Product -->
+      <PerProgressLevelInfos>
+        <EarlyGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </EarlyGame>
+        <EarlyMidGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </EarlyMidGame>
+        <MidGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </MidGame>
+        <LateMidGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>4</ProducerBuildingCountMain>
+        </EndGame>
+      </PerProgressLevelInfos>
+    </Item>
+    <Item>
+      <Product>1742100533</Product>      <!-- Sailors - Product -->
+      <PerProgressLevelInfos>
+        <EarlyGame>
+          <ProducerBuildingCountMain>1</ProducerBuildingCountMain>
+        </EarlyGame>
+        <EarlyMidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </EarlyMidGame>
+        <MidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </MidGame>
+        <LateMidGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </EndGame>
+      </PerProgressLevelInfos>
+    </Item>
+    <Item>
+      <Product>1742100203</Product>      <!-- Basic Ammunition - Product -->
+      <PerProgressLevelInfos>
+        <EarlyGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </EarlyGame>
+        <EarlyMidGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </EarlyMidGame>
+        <MidGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </MidGame>
+        <LateMidGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>4</ProducerBuildingCountMain>
+        </EndGame>
+      </PerProgressLevelInfos>
+    </Item>
+    <Item>
+      <Product>1742100248</Product>      <!-- Shell Ammunition - Product -->
+      <PerProgressLevelInfos>
+        <EarlyGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </EarlyGame>
+        <EarlyMidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </EarlyMidGame>
+        <MidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </MidGame>
+        <LateMidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </EndGame>
+      </PerProgressLevelInfos>
+    </Item>
+    <Item>
+      <Product>846</Product>      <!-- Bombs Ammunition - Product -->
+      <PerProgressLevelInfos>
+        <EarlyGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </EarlyGame>
+        <EarlyMidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </EarlyMidGame>
+        <MidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </MidGame>
+        <LateMidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </EndGame>
+      </PerProgressLevelInfos>
+    </Item>
+    <Item>
+      <Product>1742100471</Product>      <!-- Basic Weapons - Product -->
+      <PerProgressLevelInfos>
+        <EarlyGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </EarlyGame>
+        <EarlyMidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </EarlyMidGame>
+        <MidGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </MidGame>
+        <LateMidGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>4</ProducerBuildingCountMain>
+        </EndGame>
+      </PerProgressLevelInfos>
+    </Item>
+  </MainMaterialInfos>
+</ModOp>
+<!-- START AI - MEDIUM - EXTRA BUILDINGS MATERIALINFO -->
 
+<!-- START AI - HARD - EXTRA BUILDINGS MATERIALINFO -->
+<ModOp GUID="48,84,85" Type="add" Path="Values/ConstructionAI/EconomyRules/ConstructionMaterials">
+  <MainMaterialInfos>
+    <Item>
+      <Product>1010196</Product>      <!--0-timber-->
+      <PerProgressLevelInfos>
+        <EarlyMidGame>
+          <ProducerBuildingCountMain>4</ProducerBuildingCountMain>
+        </EarlyMidGame>
+        <MidGame>
+          <ProducerBuildingCountMain>5</ProducerBuildingCountMain>
+        </MidGame>
+        <LateMidGame>
+          <ProducerBuildingCountMain>5</ProducerBuildingCountMain>
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>6</ProducerBuildingCountMain>
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>6</ProducerBuildingCountMain>
+        </EndGame>
+      </PerProgressLevelInfos>
+    </Item>
+    <Item>
+      <Product>1010205</Product>      <!--1-bricks-->
+      <PerProgressLevelInfos>
+        <EarlyMidGame>
+          <ProducerBuildingCountMain>8</ProducerBuildingCountMain>
+        </EarlyMidGame>
+        <MidGame>
+          <ProducerBuildingCountMain>8</ProducerBuildingCountMain>
+        </MidGame>
+        <LateMidGame>
+          <ProducerBuildingCountMain>8</ProducerBuildingCountMain>
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>8</ProducerBuildingCountMain>
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>8</ProducerBuildingCountMain>
+        </EndGame>
+      </PerProgressLevelInfos>
+    </Item>
+    <Item>
+      <Product>1010218</Product>      <!--2-beams-->
+      <PerProgressLevelInfos>
+        <EarlyMidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </EarlyMidGame>
+        <MidGame>
+          <ProducerBuildingCountMain>4</ProducerBuildingCountMain>
+        </MidGame>
+        <LateMidGame>
+          <ProducerBuildingCountMain>6</ProducerBuildingCountMain>
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>6</ProducerBuildingCountMain>
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>6</ProducerBuildingCountMain>
+        </EndGame>
+      </PerProgressLevelInfos>
+    </Item>
+    <Item>
+      <Product>1010207</Product>      <!--3-window-->
+      <PerProgressLevelInfos>
+        <MidGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </MidGame>
+        <LateMidGame>
+          <ProducerBuildingCountMain>4</ProducerBuildingCountMain>
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>5</ProducerBuildingCountMain>
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>6</ProducerBuildingCountMain>
+        </EndGame>
+      </PerProgressLevelInfos>
+    </Item>
+    <Item>
+      <Product>1010202</Product>      <!--4-concrete-->
+      <PerProgressLevelInfos>
+        <LateMidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>4</ProducerBuildingCountMain>
+        </EndGame>
+      </PerProgressLevelInfos>
+    </Item>
+    <Item>
+      <Product>1010221</Product>      <!--5-weapons-->
+      <PerProgressLevelInfos>
+        <EarlyMidGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </EarlyMidGame>
+        <MidGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </MidGame>
+        <LateMidGame>
+          <ProducerBuildingCountMain>5</ProducerBuildingCountMain>
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>6</ProducerBuildingCountMain>
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>6</ProducerBuildingCountMain>
+        </EndGame>
+      </PerProgressLevelInfos>
+    </Item>
+    <Item>
+      <Product>1010223</Product>      <!--6-advanced weapons-->
+      <PerProgressLevelInfos>
+        <EarlyGame>
+          <ProducerBuildingCountMain>0</ProducerBuildingCountMain>
+        </EarlyGame>
+        <EarlyMidGame>
+          <ProducerBuildingCountMain>1</ProducerBuildingCountMain>
+        </EarlyMidGame>
+        <MidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </MidGame>
+        <LateMidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>5</ProducerBuildingCountMain>
+        </EndGame>
+      </PerProgressLevelInfos>
+    </Item>
+    <Item>
+      <Product>1010210</Product>      <!--7-sailcloth-->
+      <PerProgressLevelInfos>
+        <EarlyMidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </EarlyMidGame>
+        <MidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </MidGame>
+        <LateMidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </EndGame>
+      </PerProgressLevelInfos>
+    </Item>
+    <Item>
+      <Product>112706</Product>      <!--8-gas-->
+      <SmallIslandFactor>1</SmallIslandFactor>
+    </Item>
+    <Item>
+      <Product>849</Product>      <!-- Care Packages - Product -->
+      <PerProgressLevelInfos>
+        <EarlyGame>
+          <ProducerBuildingCountMain>1</ProducerBuildingCountMain>
+        </EarlyGame>
+        <EarlyMidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </EarlyMidGame>
+        <MidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </MidGame>
+        <LateMidGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>4</ProducerBuildingCountMain>
+        </EndGame>
+      </PerProgressLevelInfos>
+    </Item>
+    <Item>
+      <Product>1742100533</Product>      <!-- Sailors - Product -->
+      <PerProgressLevelInfos>
+        <EarlyGame>
+          <ProducerBuildingCountMain>1</ProducerBuildingCountMain>
+        </EarlyGame>
+        <EarlyMidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </EarlyMidGame>
+        <MidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </MidGame>
+        <LateMidGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>4</ProducerBuildingCountMain>
+        </EndGame>
+      </PerProgressLevelInfos>
+    </Item>
+    <Item>
+      <Product>1742100203</Product>      <!-- Basic Ammunition - Product -->
+      <PerProgressLevelInfos>
+        <EarlyGame>
+          <ProducerBuildingCountMain>1</ProducerBuildingCountMain>
+        </EarlyGame>
+        <EarlyMidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </EarlyMidGame>
+        <MidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </MidGame>
+        <LateMidGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>4</ProducerBuildingCountMain>
+        </EndGame>
+      </PerProgressLevelInfos>
+    </Item>
+    <Item>
+      <Product>1742100248</Product>      <!-- Shell Ammunition - Product -->
+      <PerProgressLevelInfos>
+        <EarlyGame>
+          <ProducerBuildingCountMain>1</ProducerBuildingCountMain>
+        </EarlyGame>
+        <EarlyMidGame>
+          <ProducerBuildingCountMain>1</ProducerBuildingCountMain>
+        </EarlyMidGame>
+        <MidGame>
+          <ProducerBuildingCountMain>1</ProducerBuildingCountMain>
+        </MidGame>
+        <LateMidGame>
+          <ProducerBuildingCountMain>1</ProducerBuildingCountMain>
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </EndGame>
+      </PerProgressLevelInfos>
+    </Item>
+    <Item>
+      <Product>846</Product>      <!-- Bombs Ammunition - Product -->
+      <PerProgressLevelInfos>
+        <EarlyGame>
+          <ProducerBuildingCountMain>1</ProducerBuildingCountMain>
+        </EarlyGame>
+        <EarlyMidGame>
+          <ProducerBuildingCountMain>1</ProducerBuildingCountMain>
+        </EarlyMidGame>
+        <MidGame>
+          <ProducerBuildingCountMain>1</ProducerBuildingCountMain>
+        </MidGame>
+        <LateMidGame>
+          <ProducerBuildingCountMain>1</ProducerBuildingCountMain>
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </EndGame>
+      </PerProgressLevelInfos>
+    </Item>
+    <Item>
+      <Product>1742100471</Product>      <!-- Basic Weapons - Product -->
+      <PerProgressLevelInfos>
+        <EarlyGame>
+          <ProducerBuildingCountMain>1</ProducerBuildingCountMain>
+        </EarlyGame>
+        <EarlyMidGame>
+          <ProducerBuildingCountMain>1</ProducerBuildingCountMain>
+        </EarlyMidGame>
+        <MidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </MidGame>
+        <LateMidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>4</ProducerBuildingCountMain>
+        </EndGame>
+      </PerProgressLevelInfos>
+    </Item>
+  </MainMaterialInfos>
+</ModOp>
+<!-- START AI - HARD - EXTRA BUILDINGS MATERIALINFO -->
 
-  <!-- END - AI TWEAKS -->
+<!-- START ADD FAKE BUILDINGS TO FARMER BUILDING MENU -->
+<ModOp Type="add" GUID='25000189' Path="/Values/ConstructionCategory/BuildingList/">
+  <Item>
+    <Building>1742100537</Building>    <!-- Fake AI Care Packages Factory - Building -->
+  </Item>
+  <Item>
+    <Building>1742100538</Building>    <!-- Fake AI Sailors Factory - Building -->
+  </Item>
+  <Item>
+    <Building>1742100539</Building>    <!-- Fake AI Basic Ammunition Factory - Building -->
+  </Item>
+  <Item>
+    <Building>1742100540</Building>    <!-- Fake AI Shell Ammunition Factory - Building -->
+  </Item>
+  <Item>
+    <Building>1742100541</Building>    <!-- Fake AI Bombs Ammunition Factory - Building -->
+  </Item>
+  <Item>
+    <Building>1742100542</Building>    <!-- Basic Weapons Factory - Building -->
+  </Item>
+</ModOp>
+<!-- START ADD FAKE BUILDINGS TO FARMER BUILDING MENU -->
+
+<!-- END - AI TWEAKS -->
 
 </ModOps>
 

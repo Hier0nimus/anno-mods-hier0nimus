@@ -46,10 +46,10 @@ Add ParticipantMessageArcheType for farmers to show more needs
   <!-- ****************** START Production costs reduction for vanilla buildings ******************  -->
 
   <!-- ****************** Sailmakers ******************  -->
-  <ModOp Type="remove" GUID='1010288' Path="/Values/Cost/Costs/Item[Ingredient='1010205']" />
+  <ModOp Type="remove" GUID="1010288" Path="/Values/Cost/Costs/Item[Ingredient='1010205']" />
 
   <!-- ****************** Furnace ******************  -->
-  <ModOp Type="replace" GUID='1010297' Path="/Values/Maintenance/Maintenances">
+  <ModOp Type="replace" GUID="1010297" Path="/Values/Maintenance/Maintenances">
     <Maintenances>
       <Item>
         <Product>1010017</Product>
@@ -66,7 +66,7 @@ Add ParticipantMessageArcheType for farmers to show more needs
   </ModOp>
 
   <!-- ****************** Steelworks ******************  -->
-  <ModOp Type="replace" GUID='1010296' Path="/Values/Maintenance/Maintenances">
+  <ModOp Type="replace" GUID="1010296" Path="/Values/Maintenance/Maintenances">
     <Maintenances>
       <Item>
         <Product>1010017</Product>
@@ -83,7 +83,7 @@ Add ParticipantMessageArcheType for farmers to show more needs
   </ModOp>
 
   <!-- ****************** Weapon Factory ******************  -->
-  <ModOp Type="replace" GUID='1010299' Path="/Values/Maintenance/Maintenances">
+  <ModOp Type="replace" GUID="1010299" Path="/Values/Maintenance/Maintenances">
     <Maintenances>
       <Item>
         <Product>1010017</Product>
@@ -100,7 +100,7 @@ Add ParticipantMessageArcheType for farmers to show more needs
   </ModOp>
 
   <!-- ****************** Sand Mine ******************  -->
-  <ModOp Type="replace" GUID='1010560' Path="/Values/Maintenance/Maintenances">
+  <ModOp Type="replace" GUID="1010560" Path="/Values/Maintenance/Maintenances">
     <Maintenances>
       <Item>
         <Product>1010017</Product>
@@ -117,7 +117,7 @@ Add ParticipantMessageArcheType for farmers to show more needs
   </ModOp>
 
   <!-- ****************** Glassmakers ******************  -->
-  <ModOp Type="replace" GUID='1010319' Path="/Values/Maintenance/Maintenances">
+  <ModOp Type="replace" GUID="1010319" Path="/Values/Maintenance/Maintenances">
     <Maintenances>
       <Item>
         <Product>1010017</Product>
@@ -134,7 +134,7 @@ Add ParticipantMessageArcheType for farmers to show more needs
   </ModOp>
 
   <!-- ****************** Window Makers ******************  -->
-  <ModOp Type="replace" GUID='1010285' Path="/Values/Maintenance/Maintenances">
+  <ModOp Type="replace" GUID="1010285" Path="/Values/Maintenance/Maintenances">
     <Maintenances>
       <Item>
         <Product>1010017</Product>
@@ -155,7 +155,7 @@ Add ParticipantMessageArcheType for farmers to show more needs
   <!-- ****************** START Add Change production ******************  -->
 
   <!-- ****************** Weapon Factory - Add wood to production ******************  -->
-  <ModOp Type="add" GUID='1010299' Path="/Values/FactoryBase/FactoryInputs">
+  <ModOp Type="add" GUID="1010299" Path="/Values/FactoryBase/FactoryInputs">
     <Item>
       <Product>120008</Product>
       <!--Wood-->
@@ -165,24 +165,24 @@ Add ParticipantMessageArcheType for farmers to show more needs
   </ModOp>
 
   <!-- ****************** Weapon Factory - Add wood to production to menu chain ******************  -->
-  <ModOp Type="add" GUID='500145' Path="/Values/ProductionChain/Tier1">
+  <ModOp Type="add" GUID="500145" Path="/Values/ProductionChain/Tier1">
     <Item>
       <Building>1010266</Building>      <!-- Lumberjack OW - Building -->
     </Item>
   </ModOp>
 
   <!-- ****************** Weapon Factory - Remove from workers construction menu ******************  -->
-  <ModOp Type="remove" GUID='25000190' Path="/Values/ConstructionCategory/BuildingList/Item[Building='500145']" />
+  <ModOp Type="remove" GUID="25000190" Path="/Values/ConstructionCategory/BuildingList/Item[Building='500145']" />
 
   <!-- ****************** Weapon Factory - Remove unhide from 150 workers trigger ******************  -->
-  <ModOp Type="remove" GUID='130253' Path="/Values/Trigger/TriggerActions/Item/TriggerAction/Values/ActionUnlockAsset/UnhideAssets/Item[Asset='140051']" />
+  <ModOp Type="remove" GUID="130253" Path="/Values/Trigger/TriggerActions/Item/TriggerAction/Values/ActionUnlockAsset/UnhideAssets/Item[Asset='140051']" />
 
   <!-- ****************** END Add Change production ******************  -->
 
   <!-- ****************** START Add Products for other population ******************  -->
 
   <!-- ****************** Old World - Farmers ******************  -->
-  <ModOp Type="add" GUID='15000000' Path="/Values/PopulationLevel7/PopulationInputs">
+  <ModOp Type="add" GUID="15000000" Path="/Values/PopulationLevel7/PopulationInputs">
     <Item>
       <Product>1010195</Product>      <!-- Potatoes - Product -->
       <Amount>0.0001166667</Amount>
@@ -210,7 +210,7 @@ Add ParticipantMessageArcheType for farmers to show more needs
   </ModOp>
 
   <!-- ****************** Old World - Workers ******************  -->
-  <ModOp Type="addNextSibling" GUID='15000001' Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='1010237']">
+  <ModOp Type="addNextSibling" GUID="15000001" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='1010237']">
     <Item>
       <Product>1010195</Product>      <!-- Potatoes - Product -->
       <Amount>0.0001166667</Amount>
@@ -224,7 +224,7 @@ Add ParticipantMessageArcheType for farmers to show more needs
       </AdditionalGlobalUnlockRequirement>
     </Item>
   </ModOp>
-  <ModOp Type="addNextSibling" GUID='15000001' Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='1010214']">
+  <ModOp Type="addNextSibling" GUID="15000001" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='1010214']">
     <Item>
       <Product>1742100058</Product>      <!-- Cigarettes - Product -->
       <Amount>0.000233334</Amount>
@@ -240,7 +240,7 @@ Add ParticipantMessageArcheType for farmers to show more needs
   </ModOp>
 
   <!-- ****************** Old World - Artisans and Scholars ******************  -->
-  <ModOp Type="add" GUID='15000002,118745' Path="/Values/PopulationLevel7/PopulationInputs/">
+  <ModOp Type="add" GUID="15000002,118745" Path="/Values/PopulationLevel7/PopulationInputs/">
     <Item>
       <Product>1742100058</Product>      <!-- Cigarettes - Product -->
       <Amount>0.000233334</Amount>
@@ -256,7 +256,7 @@ Add ParticipantMessageArcheType for farmers to show more needs
   </ModOp>
 
   <!-- ****************** Arctic - Explorers and Technicians ******************  -->
-  <ModOp Type="add" GUID='112642,112643' Path="/Values/PopulationLevel7/PopulationInputs/">
+  <ModOp Type="add" GUID="112642,112643" Path="/Values/PopulationLevel7/PopulationInputs/">
     <Item>
       <Product>1742100058</Product>      <!-- Cigarettes - Product -->
       <Amount>0.0001166667</Amount>
@@ -271,22 +271,22 @@ Add ParticipantMessageArcheType for farmers to show more needs
   <!-- ****************** START Farmfields reduction ******************  -->
 
   <!-- ****************** Potato Farm ******************  -->
-  <ModOp Type="replace" GUID='1010265' Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
+  <ModOp Type="replace" GUID="1010265" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
     <Limit>42</Limit>    <!-- 72 -->
   </ModOp>
 
   <!-- ****************** Grain Farm ******************  -->
-  <ModOp Type="replace" GUID='1010262' Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
+  <ModOp Type="replace" GUID="1010262" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
     <Limit>90</Limit>    <!-- 144 -->
   </ModOp>
 
   <!-- ****************** Hop Farm ******************  -->
-  <ModOp Type="replace" GUID='1010264' Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
+  <ModOp Type="replace" GUID="1010264" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
     <Limit>66</Limit>    <!-- 96 -->
   </ModOp>
 
   <!-- ****************** Red Pepper Farm ******************  -->
-  <ModOp Type="replace" GUID='100654' Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
+  <ModOp Type="replace" GUID="100654" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
     <Limit>78</Limit>    <!-- 108 -->
   </ModOp>
 
@@ -299,78 +299,6 @@ Add ParticipantMessageArcheType for farmers to show more needs
   </ModOp>
 
   <!-- ****************** END Farmer more needs by ParticipantMessageArcheType ******************  -->
-
-  <!-- ****************** START Add extra goods to ship building ******************  -->
-
-  <!-- Airship Small Trade -->
-  <ModOp Type="add" GUID="1733,1654,1058,1735" Path="/Values/Cost/Costs">
-    <Item>
-      <Ingredient>849</Ingredient>      <!-- Care Packages - Product -->
-      <Amount>25</Amount>
-    </Item>
-    <Item>
-      <Ingredient>1742100533</Ingredient>      <!-- Sailors - Product -->
-      <Amount>25</Amount>
-    </Item>
-  </ModOp>
-
-  <!-- Airship Medium Trade -->
-  <ModOp Type="add" GUID="1734,1655,114166,1755,1059,1736" Path="/Values/Cost/Costs">
-    <Item>
-      <Ingredient>849</Ingredient>      <!-- Care Packages - Product -->
-      <Amount>50</Amount>
-    </Item>
-    <Item>
-      <Ingredient>1742100533</Ingredient>      <!-- Sailors - Product -->
-      <Amount>50</Amount>
-    </Item>
-  </ModOp>
-
-  <!-- Airship Large Trade -->
-  <ModOp Type="add" GUID="1737,1060" Path="/Values/Cost/Costs">
-    <Item>
-      <Ingredient>849</Ingredient>      <!-- Care Packages - Product -->
-      <Amount>75</Amount>
-    </Item>
-    <Item>
-      <Ingredient>1742100533</Ingredient>      <!-- Sailors - Product -->
-      <Amount>75</Amount>
-    </Item>
-  </ModOp>
-
-  <!-- Airship Small War -->
-  <ModOp Type="add" GUID="1731,1054" Path="/Values/Cost/Costs">
-    <Item>
-      <Ingredient>849</Ingredient>      <!-- Care Packages - Product -->
-      <Amount>25</Amount>
-    </Item>
-    <Item>
-      <Ingredient>1742100533</Ingredient>      <!-- Sailors - Product -->
-      <Amount>25</Amount>
-    </Item>
-    <Item>
-      <Ingredient>1742100203</Ingredient>      <!-- Basic Ammunition - Product -->
-      <Amount>15</Amount>
-    </Item>
-  </ModOp>
-
-  <!-- Airship Medium War -->
-  <ModOp Type="add" GUID="1732,1056" Path="/Values/Cost/Costs">
-    <Item>
-      <Ingredient>849</Ingredient>      <!-- Care Packages - Product -->
-      <Amount>50</Amount>
-    </Item>
-    <Item>
-      <Ingredient>1742100533</Ingredient>      <!-- Sailors - Product -->
-      <Amount>50</Amount>
-    </Item>
-    <Item>
-      <Ingredient>1742100203</Ingredient>      <!-- Basic Ammunition - Product -->
-      <Amount>30</Amount>
-    </Item>
-  </ModOp>
-
-  <!-- ****************** END Add extra goods to ship building ******************  -->
 
   <!-- ****************** END TWEAKS ******************  -->
 </ModOps>
