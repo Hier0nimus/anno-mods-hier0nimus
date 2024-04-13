@@ -196,6 +196,59 @@
 
   <!-- START - ADD NEW CHARACTERS ITEMS - ADD ITEMS TO POOL ANNE & JEAN -->
 
+  <!-- START - SERP CODE ADDING ITEMS BACK IN CASE COMBAT OVERHAUL IS LOADED -->
+
+  <Group Condition="#[Gameplay] 01 Combat Overhaul Ships">
+    <!-- add ItemsPool back (merge does not replace with empty list in case it already exists) -->
+    <ModOp Type="merge" GUID="192809,192810,192811,192812,192813,192814,192815,192816,192817,192818,192819,192820,193321" Path="/Values/RewardPool">
+      <ItemsPool />
+    </ModOp>
+    <!-- adding vanilla items back one by one. not using replace the whole list, to stay compatible to other mods adding stuff here. and checking if another mod maybe already added them via condition -->
+    <ModOp Type="add" GUID="192819" Path="/Values/RewardPool/ItemsPool" Condition="!/Values//RewardPool/ItemsPool/Item[ItemLink='192234']">
+      <Item>
+        <ItemLink>192234</ItemLink>
+      </Item>
+    </ModOp>
+    <ModOp Type="add" GUID="192819" Path="/Values/RewardPool/ItemsPool" Condition="!/Values//RewardPool/ItemsPool/Item[ItemLink='192235']">
+      <Item>
+        <ItemLink>192235</ItemLink>
+      </Item>
+    </ModOp>
+    <ModOp Type="add" GUID="192819" Path="/Values/RewardPool/ItemsPool" Condition="!/Values//RewardPool/ItemsPool/Item[ItemLink='192236']">
+      <Item>
+        <ItemLink>192236</ItemLink>
+      </Item>
+    </ModOp>
+    <ModOp Type="add" GUID="192819" Path="/Values/RewardPool/ItemsPool" Condition="!/Values//RewardPool/ItemsPool/Item[ItemLink='192237']">
+      <Item>
+        <ItemLink>192237</ItemLink>
+      </Item>
+    </ModOp>
+
+    <ModOp Type="add" GUID="192820" Path="/Values/RewardPool/ItemsPool" Condition="!/Values//RewardPool/ItemsPool/Item[ItemLink='192238']">
+      <Item>
+        <ItemLink>192238</ItemLink>
+      </Item>
+    </ModOp>
+    <ModOp Type="add" GUID="192820" Path="/Values/RewardPool/ItemsPool" Condition="!/Values//RewardPool/ItemsPool/Item[ItemLink='192239']">
+      <Item>
+        <ItemLink>192239</ItemLink>
+      </Item>
+    </ModOp>
+    <ModOp Type="add" GUID="192820" Path="/Values/RewardPool/ItemsPool" Condition="!/Values//RewardPool/ItemsPool/Item[ItemLink='192240']">
+      <Item>
+        <ItemLink>192240</ItemLink>
+      </Item>
+    </ModOp>
+    <ModOp Type="add" GUID="192820" Path="/Values/RewardPool/ItemsPool" Condition="!/Values//RewardPool/ItemsPool/Item[ItemLink='192241']">
+      <Item>
+        <ItemLink>192241</ItemLink>
+      </Item>
+    </ModOp>
+  </Group>
+
+  <!-- END - SERP CODE ADDING ITEMS BACK IN CASE COMBAT OVERHAUL IS LOADED -->
+
   <!-- ANNE -->
   <ModOp GUID="192819" Path="Values/RewardPool/ItemsPool" Type="add">
     <Item>
