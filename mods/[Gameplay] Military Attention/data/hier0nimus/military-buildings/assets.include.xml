@@ -1610,7 +1610,7 @@
   <!-- START BUILDING - SMALL MILITARY WAREHOUSE -->
   <ModOp Type="addNextSibling" GUID='1010371'>
     <Asset>
-      <Template>Warehouse</Template>
+      <BaseAssetGUID>1010371</BaseAssetGUID>
       <Values>
         <Standard>
           <GUID>1742100238</GUID>
@@ -1618,17 +1618,6 @@
           <IconFilename>data/graphics/icons/icon_military_warehouse.png</IconFilename>
           <InfoDescription>1742100239</InfoDescription>
         </Standard>
-        <Text />
-        <Blocking>
-          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
-        </Blocking>
-        <Building>
-          <BuildingType>Logistic</BuildingType>
-          <BuildingCategoryName>11151</BuildingCategoryName>
-          <SkipUnlockMessage>1</SkipUnlockMessage>
-          <BuildModeRandomRotation>90</BuildModeRandomRotation>
-          <AssociatedRegions>Moderate</AssociatedRegions>
-        </Building>
         <Cost>
           <Costs>
             <Item>
@@ -1647,19 +1636,6 @@
           <InfluenceCostType>DefenseBuilding</InfluenceCostType>
           <InfluenceCostPoints>10</InfluenceCostPoints>
         </Cost>
-        <Selection>
-          <GUIType>Warehouse</GUIType>
-          <OnSelection>
-            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
-            <Values>
-              <ActionList />
-            </Values>
-          </OnSelection>
-          <ParticipantMessageTrigger>ClickKontor</ParticipantMessageTrigger>
-          <Colors>
-            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
-          </Colors>
-        </Selection>
         <BuffFactory>
           <ProductionBuffScope>Radius</ProductionBuffScope>
           <BaseBuff>1742100467</BaseBuff>
@@ -1676,51 +1652,14 @@
             <DefaultSkinDescription>23853</DefaultSkinDescription>
           </Skins>
         </Object>
-        <Constructable />
-        <Mesh>
-          <LogoMode>CorporationLogoFromPlayer</LogoMode>
-          <SetCompanyLogo>1</SetCompanyLogo>
-        </Mesh>
-        <SoundEmitter>
-          <ActiveSounds>
-            <Item>
-              <Sound>200834</Sound>
-            </Item>
-          </ActiveSounds>
-          <DestroySounds>
-            <Item>
-              <Sound>9818756</Sound>
-            </Item>
-          </DestroySounds>
-          <IncidentSounds>
-            <InfectedFire>
-              <Item>
-                <Sound>214659</Sound>
-              </Item>
-            </InfectedFire>
-          </IncidentSounds>
-          <BuildingRepaired>
-            <Item>
-              <Sound>203866</Sound>
-            </Item>
-          </BuildingRepaired>
-        </SoundEmitter>
-        <Locked />
-        <Infolayer />
-        <FeedbackController />
-        <Warehouse>
-          <WarehouseStorage>
-            <StorageMax>0</StorageMax>
-          </WarehouseStorage>
-        </Warehouse>
         <LogisticNode>
           <QueueConfiguration>
-            <ProcessingQueueParallelCount>3</ProcessingQueueParallelCount>
+            <ProcessingQueueParallelCount>2</ProcessingQueueParallelCount>
           </QueueConfiguration>
         </LogisticNode>
         <PublicService>
-          <FullSatisfactionDistance>35</FullSatisfactionDistance>
-          <NoSatisfactionDistance>70</NoSatisfactionDistance>
+          <FullSatisfactionDistance>18</FullSatisfactionDistance>
+          <NoSatisfactionDistance>36</NoSatisfactionDistance>
           <PublicServiceOutputs>
             <Item>
               <Product>1742100009</Product>              <!-- Military Warehouse - Product -->
@@ -1728,10 +1667,6 @@
           </PublicServiceOutputs>
           <FunctionDescription>100364</FunctionDescription>          <!--Provides Service-->
         </PublicService>
-        <UpgradeList />
-        <AmbientMoodProvider>
-          <AmbientMood>ResidenceTier1</AmbientMood>
-        </AmbientMoodProvider>
         <Maintenance>
           <Maintenances>
             <Item>
@@ -1744,14 +1679,7 @@
             </Item>
           </Maintenances>
         </Maintenance>
-        <StorageBase />
-        <Attackable>
-          <AttackableType>IslandBuilding</AttackableType>
-          <MaximumHitPoints>3000</MaximumHitPoints>
-          <SelfHealPerHealTick>4</SelfHealPerHealTick>
-        </Attackable>
         <Upgradable />
-        <Pausable />
       </Values>
     </Asset>
   </ModOp>
