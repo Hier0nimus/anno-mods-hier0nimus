@@ -413,6 +413,30 @@ In newer versions we maybe would tackle more AI advancements and buildings but f
 - We removed all the vanilla defense buildings from the building menu
 - Because AI can still use the vanilla defense buildings, they do not use the ammunition depot mechanic. Defense buildings of the AI work without it.
 
+## Tweaks for other mods
+
+To be able to play this mod together with other mods and also strengthen eachother, I added some compatibility between a couple of mods.
+
+### Combat Overhaul
+[Combat Overhaul on mod.io](https://mod.io/g/anno-1800?_q=Combat+Overhaul)
+
+One of the most and liked mods for Anno 1800. The new ships made from this mod now need the additional building costs.
+
+### World War Ships
+[World War Ships on Patreon](https://www.patreon.com/WorldWarShip)
+
+When shown in preview people were getting crazy. Those massive ships added a whole new level of combat. This mod is compatible and new building costs are added to the ships.
+
+### Safari to Old Enbesa
+[Safari to Old Enbesa on mod.io](https://mod.io/g/anno-1800/m/safari-to-old-enbesa-lion053)
+
+Ships in Enbesa! Made them compatible and added the extra costs. I also had to make sure sailors could reach Enbesa because this is a different type of product that normally is not transportable to Enbesa.
+
+### Imperio Shipyard
+[Imperio Shipyard on mod.io](https://mod.io/g/anno-1800/m/imperio-shipyard)
+
+A huge collection of ships based on existing models. All those ships now need additional building costs.
+
 ## Still on the to do list
 - Translations for all languages
 - Adding feedback units and animations to all new buildings
@@ -421,6 +445,7 @@ In newer versions we maybe would tackle more AI advancements and buildings but f
 - More military items for military production buildings or add buildings to existing itempools
 - Festivals
 - Newspaper additions when unlocking something or being at a certain stage
+### Nice to haves that probably will never be done...
 - Expeditions
 - Quests
 
@@ -449,5 +474,8 @@ When reporting a bug please provide the following information:
 Land combat is not something easily modded into the game. When modding we bend the already existing mechanics from the game into new gameplay of functions. Land combat is a mechanic we can not implement without some functionality from the game itself. That functionality is not there. So we can not really implement land combat into something that is not existing.
 
 ### Why no land defenses for all defenses?
-Land defenses can create troubles. The most important problem occurs when they are put inland. Ships from AI will try to attack them, resulting in ships getting bugged out and stuck on shores. If we disable this so ships do not attack them, that is even worse because then there is no counter to those cannons and they can not be destroyed by ships, but those cannons can shoot on ships. We only choose to do this for the flak cannon because that cannon can only attack airships and so, not bugging out normal ships. We can set the building to only be attackable by bombing them which can only be done by airships who are in the end also the only ships those flak cannons can attack. 
+Land defenses can create troubles. The most important problem occurs when they are put inland. Ships from AI will try to attack them, resulting in ships getting bugged out and stuck on shores. If we disable this so ships do not attack them, that is even worse because then there is no counter to those cannons and they can not be destroyed by ships, but those cannons can shoot on ships. We only choose to do this for the flak cannon because that cannon can only attack airships and so, not bugging out normal ships. We can set the building to only be attackable by bombing them which can only be done by airships who are in the end also the only ships those flak cannons can attack.
+
+### Why are there no new ships?
+At first I was planning to make some new ships for this mod, after all, this is a military centered mod. But this mod took a while to make and at a certain stage other people were starting to make amazing new shipmods and even at a level I would never be able to top. So, I decided not to make any new ships. If you want extra ships use the other amazing already existing shipmods. **Combal Overhaul**, **World War ships**, **Imperio Shipyard** and even the **Enbesa Safari** mod have amazing ships ready to use. Those are some of the mods I also added compatibility for so you have extra costs to build them.  
 
