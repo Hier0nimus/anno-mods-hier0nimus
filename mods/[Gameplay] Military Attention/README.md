@@ -438,7 +438,8 @@ Ships in Enbesa! Made them compatible and added the extra costs. I also had to m
 A huge collection of ships based on existing models. All those ships now need additional building costs.
 
 ## Still on the to do list
-- Translations for all languages
+- Translations for all languages. If anyone wants to translate! Would be amazing!
+- Models for Navy Recruitment Offices other regions
 - Adding feedback units and animations to all new buildings
 - Redoing a lot of the materials of the new buildings so they are not so shiny
 - Cleanup ammunition depot code
@@ -477,5 +478,5 @@ Land combat is not something easily modded into the game. When modding we bend t
 Land defenses can create troubles. The most important problem occurs when they are put inland. Ships from AI will try to attack them, resulting in ships getting bugged out and stuck on shores. If we disable this so ships do not attack them, that is even worse because then there is no counter to those cannons and they can not be destroyed by ships, but those cannons can shoot on ships. We only choose to do this for the flak cannon because that cannon can only attack airships and so, not bugging out normal ships. We can set the building to only be attackable by bombing them which can only be done by airships who are in the end also the only ships those flak cannons can attack.
 
 ### Why are there no new ships?
-At first I was planning to make some new ships for this mod, after all, this is a military centered mod. But this mod took a while to make and at a certain stage other people were starting to make amazing new shipmods and even at a level I would never be able to top. So, I decided not to make any new ships. If you want extra ships use the other amazing already existing shipmods. **Combal Overhaul**, **World War ships**, **Imperio Shipyard** and even the **Enbesa Safari** mod have amazing ships ready to use. Those are some of the mods I also added compatibility for so you have extra costs to build them.  
+At first I was planning to make some new ships for this mod, after all, this is a military centered mod. But this mod took a while to make and at a certain stage other people were starting to make amazing new shipmods and even at a level I would never be able to top. So, I decided not to make any new ships. If you want extra ships use the other amazing already existing shipmods. **Combal Overhaul**, **World War ships**, **Imperio Shipyard** and even the **Enbesa Safari** mod has amazing ships ready to use. Those are some of the mods I also added compatibility for so you have extra costs to build them.  
 

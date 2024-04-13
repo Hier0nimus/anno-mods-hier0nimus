@@ -8715,14 +8715,14 @@
   </ModOp>
   <!-- END BUILDING - MILITARY POST BOX -->
 
-  <!-- ****************** START NAVY RECRUITMENT OFFICE - Building ******************  -->
+  <!-- ****************** START NAVY RECRUITMENT OFFICE (OW) - Building ******************  -->
   <ModOp Type="addNextSibling" GUID='1010284'>
     <Asset>
       <Template>NavyRecruitmentOffice</Template>
       <Values>
         <Standard>
           <GUID>1742100534</GUID>
-          <Name>Navy Recruitment Office</Name>
+          <Name>Navy Recruitment Office (OW)</Name>
           <IconFilename>data/graphics/icons/icon_navy_recruitment_office.png</IconFilename>
           <InfoDescription>1742100535</InfoDescription>
         </Standard>
@@ -8810,7 +8810,7 @@
         <Postbox />
         <Warehouse>
           <WarehouseStorage>
-            <StorageMax>100</StorageMax>
+            <StorageMax>200</StorageMax>
           </WarehouseStorage>
           <StorageType>Warehouse</StorageType>
         </Warehouse>
@@ -8823,7 +8823,290 @@
       </Values>
     </Asset>
   </ModOp>
-  <!-- ****************** END NAVY RECRUITMENT OFFICE - Building ******************  -->
+  <!-- ****************** END NAVY RECRUITMENT OFFICE (OW) - Building ******************  -->
+
+  <!-- ****************** START NAVY RECRUITMENT OFFICE (NW) - Building ******************  -->
+  <ModOp Type="addNextSibling" GUID='1742100534'>
+    <Asset>
+      <BaseAssetGUID>1742100534</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742100549</GUID>
+          <Name>Navy Recruitment Office (NW)</Name>
+        </Standard>
+        <Building>
+          <AssociatedRegions>Colony01</AssociatedRegions>
+        </Building>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/military/naval_recruitment_office/naval_recruitment_office_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <FactoryBase>
+          <IsMainFactory>0</IsMainFactory>
+        </FactoryBase>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>              <!-- Coins -->
+              <Amount>50</Amount>
+              <InactiveAmount>10</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100317</Product>              <!-- Soldiers Workforce NW -->
+              <Amount>10</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <ItemContainer>
+          <SocketScopeRadius>30</SocketScopeRadius>
+        </ItemContainer>
+        <Warehouse>
+          <WarehouseStorage>
+            <StorageMax>250</StorageMax>
+          </WarehouseStorage>
+          <StorageType>Warehouse</StorageType>
+        </Warehouse>
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- ****************** END NAVY RECRUITMENT OFFICE (NW) - Building ******************  -->
+
+  <!-- ****************** START NAVY RECRUITMENT OFFICE (EN) - Building ******************  -->
+  <ModOp Type="addNextSibling" GUID='1742100534'>
+    <Asset>
+      <BaseAssetGUID>1742100534</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742100550</GUID>
+          <Name>Navy Recruitment Office (EN)</Name>
+        </Standard>
+        <Building>
+          <AssociatedRegions>Africa</AssociatedRegions>
+        </Building>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <Amount>5000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>114356</Ingredient>
+              <Amount>18</Amount>
+            </Item>s
+            <Item>
+              <Ingredient>114402</Ingredient>
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>
+              <Amount>5</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/military/naval_recruitment_office/naval_recruitment_office_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <FactoryBase>
+          <IsMainFactory>0</IsMainFactory>
+        </FactoryBase>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>              <!-- Coins -->
+              <Amount>50</Amount>
+              <InactiveAmount>10</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100318</Product>              <!-- Soldiers Workforce EN -->
+              <Amount>10</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <ItemContainer>
+          <SocketScopeRadius>40</SocketScopeRadius>
+        </ItemContainer>
+        <Postbox>
+          <ProductivityFactorByResidents>
+            <Item>
+              <ResidentAmount>0</ResidentAmount>
+              <ProductivityFactor>0</ProductivityFactor>
+            </Item>
+            <Item>
+              <ResidentAmount>100</ResidentAmount>
+              <ProductivityFactor>1</ProductivityFactor>
+            </Item>
+            <Item>
+              <ResidentAmount>250</ResidentAmount>
+              <ProductivityFactor>2</ProductivityFactor>
+            </Item>
+            <Item>
+              <ResidentAmount>500</ResidentAmount>
+              <ProductivityFactor>3</ProductivityFactor>
+            </Item>
+            <Item>
+              <ResidentAmount>1000</ResidentAmount>
+              <ProductivityFactor>4</ProductivityFactor>
+            </Item>
+            <Item>
+              <ResidentAmount>1500</ResidentAmount>
+              <ProductivityFactor>5</ProductivityFactor>
+            </Item>
+            <Item>
+              <ResidentAmount>2000</ResidentAmount>
+              <ProductivityFactor>6</ProductivityFactor>
+            </Item>
+            <Item>
+              <ResidentAmount>3000</ResidentAmount>
+              <ProductivityFactor>7</ProductivityFactor>
+            </Item>
+            <Item>
+              <ResidentAmount>4000</ResidentAmount>
+              <ProductivityFactor>8</ProductivityFactor>
+            </Item>
+            <Item>
+              <ResidentAmount>5000</ResidentAmount>
+              <ProductivityFactor>9</ProductivityFactor>
+            </Item>
+            <Item>
+              <ResidentAmount>6000</ResidentAmount>
+              <ProductivityFactor>10</ProductivityFactor>
+            </Item>
+            <Item>
+              <ResidentAmount>7000</ResidentAmount>
+              <ProductivityFactor>11</ProductivityFactor>
+            </Item>
+            <Item>
+              <ResidentAmount>8000</ResidentAmount>
+              <ProductivityFactor>12</ProductivityFactor>
+            </Item>
+          </ProductivityFactorByResidents>
+          <HasMailmanFeedback>0</HasMailmanFeedback>
+        </Postbox>
+        <Warehouse>
+          <WarehouseStorage>
+            <StorageMax>300</StorageMax>
+          </WarehouseStorage>
+          <StorageType>Warehouse</StorageType>
+        </Warehouse>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- ****************** END NAVY RECRUITMENT OFFICE (EN) - Building ******************  -->
+
+  <!-- ****************** START NAVY RECRUITMENT OFFICE (AR) - Building ******************  -->
+  <ModOp Type="addNextSibling" GUID='1742100534'>
+    <Asset>
+      <BaseAssetGUID>1742100534</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742100551</GUID>
+          <Name>Navy Recruitment Office (NW)</Name>
+        </Standard>
+        <Building>
+          <AssociatedRegions>Arctic</AssociatedRegions>
+        </Building>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/military/naval_recruitment_office/naval_recruitment_office_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <FactoryBase>
+          <IsMainFactory>0</IsMainFactory>
+        </FactoryBase>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>              <!-- Coins -->
+              <Amount>50</Amount>
+              <InactiveAmount>10</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100309</Product>              <!-- Soldiers Workforce NW -->
+              <Amount>10</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <ItemContainer>
+          <SocketScopeRadius>40</SocketScopeRadius>
+        </ItemContainer>
+        <Postbox>
+          <ProductivityFactorByResidents>
+            <Item>
+              <ResidentAmount>0</ResidentAmount>
+              <ProductivityFactor>0</ProductivityFactor>
+            </Item>
+            <Item>
+              <ResidentAmount>50</ResidentAmount>
+              <ProductivityFactor>1</ProductivityFactor>
+            </Item>
+            <Item>
+              <ResidentAmount>100</ResidentAmount>
+              <ProductivityFactor>2</ProductivityFactor>
+            </Item>
+            <Item>
+              <ResidentAmount>200</ResidentAmount>
+              <ProductivityFactor>3</ProductivityFactor>
+            </Item>
+            <Item>
+              <ResidentAmount>300</ResidentAmount>
+              <ProductivityFactor>4</ProductivityFactor>
+            </Item>
+            <Item>
+              <ResidentAmount>500</ResidentAmount>
+              <ProductivityFactor>5</ProductivityFactor>
+            </Item>
+            <Item>
+              <ResidentAmount>750</ResidentAmount>
+              <ProductivityFactor>6</ProductivityFactor>
+            </Item>
+            <Item>
+              <ResidentAmount>1000</ResidentAmount>
+              <ProductivityFactor>7</ProductivityFactor>
+            </Item>
+            <Item>
+              <ResidentAmount>1500</ResidentAmount>
+              <ProductivityFactor>8</ProductivityFactor>
+            </Item>
+            <Item>
+              <ResidentAmount>1750</ResidentAmount>
+              <ProductivityFactor>9</ProductivityFactor>
+            </Item>
+            <Item>
+              <ResidentAmount>2000</ResidentAmount>
+              <ProductivityFactor>10</ProductivityFactor>
+            </Item>
+            <Item>
+              <ResidentAmount>3000</ResidentAmount>
+              <ProductivityFactor>11</ProductivityFactor>
+            </Item>
+            <Item>
+              <ResidentAmount>5000</ResidentAmount>
+              <ProductivityFactor>12</ProductivityFactor>
+            </Item>
+          </ProductivityFactorByResidents>
+          <HasMailmanFeedback>0</HasMailmanFeedback>
+        </Postbox>
+        <Warehouse>
+          <WarehouseStorage>
+            <StorageMax>300</StorageMax>
+          </WarehouseStorage>
+          <StorageType>Warehouse</StorageType>
+        </Warehouse>
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- ****************** END NAVY RECRUITMENT OFFICE (AR) - Building ******************  -->
 
   <!-- ****************** START SANITATION FACILITY - Building ******************  -->
 
