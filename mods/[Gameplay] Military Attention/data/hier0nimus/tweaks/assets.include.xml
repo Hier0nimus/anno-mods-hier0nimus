@@ -38,6 +38,8 @@ Reduction amount of farmfields
 
 Add ParticipantMessageArcheType for farmers to show more needs
 
+Reduction of danage of flame towers to wooden ships
+
 -->
 
 <ModOps>
@@ -299,6 +301,17 @@ Add ParticipantMessageArcheType for farmers to show more needs
   </ModOp>
 
   <!-- ****************** END Farmer more needs by ParticipantMessageArcheType ******************  -->
+
+  <!-- ****************** START Reduction damage Flame towers ******************  -->
+
+  <ModOp Type="merge" GUID='628' Path="/Values/Projectile/Effectivities/Item[GUID='1398']">
+    <Factor>1.4</Factor>
+  </ModOp>
+  <ModOp Type="merge" GUID='628' Path="/Values/Projectile/Effectivities/Item[GUID='1404']">
+    <Factor>0.5</Factor>
+  </ModOp>
+
+  <!-- ****************** END Reduction damage Flame towers ******************  -->
 
   <!-- ****************** END TWEAKS ******************  -->
 </ModOps>
