@@ -1610,7 +1610,7 @@
   <!-- START BUILDING - SMALL MILITARY WAREHOUSE -->
   <ModOp Type="addNextSibling" GUID='1010371'>
     <Asset>
-      <BaseAssetGUID>1010371</BaseAssetGUID>
+      <Template>Warehouse</Template>
       <Values>
         <Standard>
           <GUID>1742100238</GUID>
@@ -1618,6 +1618,17 @@
           <IconFilename>data/graphics/icons/icon_military_warehouse.png</IconFilename>
           <InfoDescription>1742100239</InfoDescription>
         </Standard>
+        <Text />
+        <Blocking>
+          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+        </Blocking>
+        <Building>
+          <BuildingType>Logistic</BuildingType>
+          <BuildingCategoryName>11151</BuildingCategoryName>
+          <SkipUnlockMessage>1</SkipUnlockMessage>
+          <BuildModeRandomRotation>90</BuildModeRandomRotation>
+          <AssociatedRegions>Moderate</AssociatedRegions>
+        </Building>
         <Cost>
           <Costs>
             <Item>
@@ -1634,14 +1645,27 @@
             </Item>
           </Costs>
           <InfluenceCostType>DefenseBuilding</InfluenceCostType>
-          <InfluenceCostPoints>10</InfluenceCostPoints>
+          <InfluenceCostPoints>8</InfluenceCostPoints>
         </Cost>
         <BuffFactory>
           <ProductionBuffScope>Radius</ProductionBuffScope>
           <BaseBuff>1742100467</BaseBuff>
           <BaseBuffScope>Radius</BaseBuffScope>
-          <BaseBuffDistance>12</BaseBuffDistance>
+          <BaseBuffDistance>14</BaseBuffDistance>
         </BuffFactory>
+        <Selection>
+          <GUIType>Warehouse</GUIType>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <ParticipantMessageTrigger>ClickKontor</ParticipantMessageTrigger>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
         <Object>
           <Variations>
             <Item>
@@ -1652,9 +1676,46 @@
             <DefaultSkinDescription>23853</DefaultSkinDescription>
           </Skins>
         </Object>
+        <Constructable />
+        <Mesh>
+          <LogoMode>CorporationLogoFromPlayer</LogoMode>
+          <SetCompanyLogo>1</SetCompanyLogo>
+        </Mesh>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>200834</Sound>
+            </Item>
+          </ActiveSounds>
+          <DestroySounds>
+            <Item>
+              <Sound>9818756</Sound>
+            </Item>
+          </DestroySounds>
+          <IncidentSounds>
+            <InfectedFire>
+              <Item>
+                <Sound>214659</Sound>
+              </Item>
+            </InfectedFire>
+          </IncidentSounds>
+          <BuildingRepaired>
+            <Item>
+              <Sound>203866</Sound>
+            </Item>
+          </BuildingRepaired>
+        </SoundEmitter>
+        <Locked />
+        <Infolayer />
+        <FeedbackController />
+        <Warehouse>
+          <WarehouseStorage>
+            <StorageMax>0</StorageMax>
+          </WarehouseStorage>
+        </Warehouse>
         <LogisticNode>
           <QueueConfiguration>
-            <ProcessingQueueParallelCount>2</ProcessingQueueParallelCount>
+            <ProcessingQueueParallelCount>4</ProcessingQueueParallelCount>
           </QueueConfiguration>
         </LogisticNode>
         <PublicService>
@@ -1667,6 +1728,10 @@
           </PublicServiceOutputs>
           <FunctionDescription>100364</FunctionDescription>          <!--Provides Service-->
         </PublicService>
+        <UpgradeList />
+        <AmbientMoodProvider>
+          <AmbientMood>ResidenceTier1</AmbientMood>
+        </AmbientMoodProvider>
         <Maintenance>
           <Maintenances>
             <Item>
@@ -1679,7 +1744,13 @@
             </Item>
           </Maintenances>
         </Maintenance>
-        <Upgradable />
+        <StorageBase />
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+          <MaximumHitPoints>2500</MaximumHitPoints>
+          <SelfHealPerHealTick>4</SelfHealPerHealTick>
+        </Attackable>
+        <Pausable />
       </Values>
     </Asset>
   </ModOp>
@@ -1735,7 +1806,7 @@
             </Item>
           </Costs>
           <InfluenceCostType>DefenseBuilding</InfluenceCostType>
-          <InfluenceCostPoints>100</InfluenceCostPoints>
+          <InfluenceCostPoints>50</InfluenceCostPoints>
         </Cost>
         <Selection>
           <GUIType>Warehouse</GUIType>
@@ -1754,7 +1825,7 @@
           <ProductionBuffScope>Radius</ProductionBuffScope>
           <BaseBuff>1742100467</BaseBuff>
           <BaseBuffScope>Radius</BaseBuffScope>
-          <BaseBuffDistance>25</BaseBuffDistance>
+          <BaseBuffDistance>30</BaseBuffDistance>
         </BuffFactory>
         <Object>
           <Variations>
@@ -3728,11 +3799,7 @@
             </Item>
             <Item>
               <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
-              <Amount>20</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010205</Ingredient>              <!-- Bricks - Product -->
-              <Amount>10</Amount>
+              <Amount>25</Amount>
             </Item>
           </Costs>
         </Cost>
@@ -3788,7 +3855,7 @@
               <StorageAmount>10</StorageAmount>
             </Item>
           </FactoryOutputs>
-          <CycleTime>60</CycleTime>
+          <CycleTime>30</CycleTime>
           <IsMainFactory>0</IsMainFactory>
         </FactoryBase>
         <LogisticNode />
@@ -3876,11 +3943,7 @@
             </Item>
             <Item>
               <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
-              <Amount>20</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010205</Ingredient>              <!-- Bricks - Product -->
-              <Amount>10</Amount>
+              <Amount>25</Amount>
             </Item>
           </Costs>
         </Cost>
@@ -3936,7 +3999,7 @@
               <StorageAmount>8</StorageAmount>
             </Item>
           </FactoryOutputs>
-          <CycleTime>30</CycleTime>
+          <CycleTime>15</CycleTime>
           <IsMainFactory>0</IsMainFactory>
         </FactoryBase>
         <LogisticNode />
@@ -4238,7 +4301,7 @@
             </Item>
             <Item>
               <Product>1742100005</Product>              <!-- Soldiers Workforce -->
-              <Amount>100</Amount>
+              <Amount>20</Amount>
             </Item>
           </Maintenances>
         </Maintenance>

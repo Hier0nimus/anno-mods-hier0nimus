@@ -1,8 +1,25 @@
-# Military Attention | BETA 0.1!
+# Military Attention | BETA 0.2!
 
 A mod centered around military infrastructure and adding new military residence tiers for all regions with a focus on the Old World.
 
 ![ma-img-01.jpg](./banner.jpg)
+
+## Changelog
+
+### Beta v0.2
+- Removed not needed material .png files which reduces the total file size of the mod a lot
+- Changed GUID for trigger 300 soldiers to make sure changes of Flak Emplacement are triggered
+- Galena output from 1/2 to 1/1 to make sure there is enough output early game
+- Fix Small Military Warehouse, now working correct. Crashes the game before
+- Removed building costs of bricks and increased the cost of timer from 20 to 25 for Iron and Coal Open Pit mines to make it easier and more accessible to build
+- Reduced the output cylce time for Open Pit Coal Mine from 30s to 15s
+- Reduced the output cycle time for Open Pit Iron Mine from 60s to 30s
+- Reduced workforce from 100 to 20 soldiers for the Military Training Complex 
+- Changed adding all defense buildings different way
+- Fixed the Flak Emplacement and Land Flak Emplacement
+- Added Care Package Factories to All Military Production Buildings pool which is used by different pools and buildings
+- Add Lead Smelter to the All Ironworks and Foundries 
+- Reduced the damage done by the Flame Tower to wooden ships
 
 ## New population tiers
 
@@ -244,11 +261,10 @@ Upgraded version of soldier residences. Military engineers are added to the norm
 - Added extra costs to **build ships**
     - Tradeships need care packages and sailors. Warships also need ammunition and basic weapons.
     - AI is also able to build ships with the new goods and also produces those new goods.
-    - **!!!! TO DO !!!!**: Add compatibility with other ship mods so they also require the extra goods to build ships. List the mods that are supported.
 - Added **ammunition mechanic to defense buildings** with an ammunition depot
-    - Add the corresponding (Small Basic, Small Shell, Small Gas, Small Bombs or the large) ammunition depot next to the defense buildings so the debuff of -100% damage and range is countered by the depot ammunition buff.
+    - Add the corresponding (Small Basic, Small Shell, Small Gas, Small Bombs or the large) ammunition depot next to the defense buildings so the debuff of -1000% damage and range is countered by the depot ammunition buff.
     - AI does not use this mechanic and will not build those depots. Forcing them to use this mechanic would be impossible. They use the regular way of defense buildings.
-    - In an existing savegame the regular defenses will still be there and work, and you will be able to copy them via the pipet. They will nog longer be in the building menu. If you want to play it fair, replace your existing defenses with the new versions in existing games.
+    - In an existing savegame the regular defenses will still be there and work, and you will be able to copy them via the pipet. They will no longer be in the building menu. If you want to play it fair, replace your existing defenses with the new versions in existing games.
 
 ## Sailors
 
@@ -357,6 +373,12 @@ We also have a new building where you can collect sets of items. Like the zoo, m
 | ![Pirate Treasure Chest](./data/graphics/icons/icon_pirate_treasure_chest.png) | Pirate Treasure Chest  |
 | ![Jean's Private Messenger](./data/graphics/icons/icon_jeans_private_messenger.png) | Jean's Private Messenger  |
 
+## Replacing workforce with soldiers
+
+![Military Warehouse](./data/graphics/icons/icon_military_warehouse.png)
+
+A key mechanic of this mod is replacing workforce with military workforce of soldiers. This can be done by using the **Military warhouse**. This can be the small one or the large one. In every building that outputs a good the workforce is replaced with soldiers workforce. This is a powerful mechanic! 
+
 ## New monument, the Fort
 
 ![Large Ammunition Depot](./data/graphics/icons/icon_fort.png)
@@ -396,7 +418,7 @@ The model and animations and feedback for this building still need a lot of impr
 
 ## AI tweaks
 
-It is a military mod, and because we added some additional mechanics we had to make sure the AI could still build everything and progress to the next tier. At the moment AI does not build all the new buildings. For example, they do not make encampments fom soldiers. Because of that we had to find some workarounds so they would actually keep progressing and still were able to build everything and still being a thread for the player. You will see the AI build some of the new buildings, but not all of them. 
+It is a military mod, and because we added some additional mechanics we had to make sure the AI could still build everything and progress to the next tier. At the moment AI does not build all the new buildings. For example, they do not make encampments for soldiers. Because of that we had to find some workarounds so they would actually keep progressing and still were able to build everything and still being a thread for the player. You will see the AI build some of the new buildings, but not all of them. 
 
 In newer versions we maybe would tackle more AI advancements and buildings but for now they still progress and be a thread. Testing this and reporting bugs with the AI is appreciated! Do not hesitate to report problems you encounter with the AI!
 
