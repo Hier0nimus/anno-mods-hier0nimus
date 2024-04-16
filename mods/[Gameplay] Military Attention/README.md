@@ -1,10 +1,22 @@
-# Military Attention | BETA 0.2!
+# Military Attention | BETA 0.3!
 
 A mod centered around military infrastructure and adding new military residence tiers for all regions with a focus on the Old World.
 
 ![ma-img-01.jpg](./banner.jpg)
 
 ## Changelog
+
+### Beta v0.3
+- Increased service range stables so it can be reached further for a warehouse
+- Reduced building costs, cycletime and workforce maintenance for Care packages factories
+- Added building costs for Military Prison and Propaganda Facility
+- Increased cycletime for Military Prison and Propaganda Facility
+- Balanced Maintenance costs Military Prison and Propaganda Facility
+- Added additional description for Military Prison and Propaganda Facility to make it more clear what they do
+- Moved Enbesa Soldiers mail to compatibility file. Now only loaded when Hackner's Enbesa Mail mod is installed. Otherwise no mail possible in Enbesa.
+- Added all SocketAllocation types for Military Academy module
+- Removed negative attractiveness for military encampments
+- Fixed radius when placing empty small ammunition depot
 
 ### Beta v0.2
 - Removed not needed material .png files which reduces the total file size of the mod a lot
@@ -20,6 +32,7 @@ A mod centered around military infrastructure and adding new military residence 
 - Added Care Package Factories to All Military Production Buildings pool which is used by different pools and buildings
 - Add Lead Smelter to the All Ironworks and Foundries 
 - Reduced the damage done by the Flame Tower to wooden ships
+- Fixed status icon for Military Prison in the model
 
 ## New population tiers
 
