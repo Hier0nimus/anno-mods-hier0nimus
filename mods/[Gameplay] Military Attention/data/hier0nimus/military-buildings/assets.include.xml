@@ -3758,7 +3758,7 @@
         </BuildingModule>
         <ItemContainer>
           <SocketCount>1</SocketCount>
-          <SocketAllocation>RadiusBuilding;GuildHouse;TownHall;HarborOffice;Dockland;Lodge;Ship;SailShip;SteamShip;Warship;Tradeship</SocketAllocation>
+          <SocketAllocation>RadiusBuilding;GuildHouse;TownHall;HarborOffice;Dockland;Lodge;Ship;SailShip;SteamShip;Warship;Tradeship;AirShip;Culture;Museum;Zoo;BotanicGarden;DivingVessel</SocketAllocation>
           <SocketScope>Radius</SocketScope>
           <SocketScopeRadius>0</SocketScopeRadius>
         </ItemContainer>
@@ -5007,7 +5007,7 @@
             <Item>
               <Product>1742100211</Product>              <!-- Horses - Product -->
               <Amount>1</Amount>
-              <StorageAmount>1</StorageAmount>
+              <StorageAmount>2</StorageAmount>
             </Item>
           </FactoryOutputs>
           <CycleTime>60</CycleTime>
@@ -6669,7 +6669,7 @@
               <StorageAmount>10</StorageAmount>
             </Item>
           </FactoryOutputs>
-          <CycleTime>240</CycleTime>
+          <CycleTime>300</CycleTime>
           <IsMainFactory>1</IsMainFactory>
         </FactoryBase>
         <FeedbackController />
@@ -6685,8 +6685,8 @@
           <Maintenances>
             <Item>
               <Product>1010017</Product>
-              <Amount>50</Amount>
-              <InactiveAmount>25</InactiveAmount>
+              <Amount>200</Amount>
+              <InactiveAmount>100</InactiveAmount>
             </Item>
             <Item>
               <Product>1742100005</Product>              <!-- Soldiers Workforce -->
@@ -6752,8 +6752,24 @@
         <Cost>
           <Costs>
             <Item>
-              <Ingredient>1010017</Ingredient>
-              <Amount>100</Amount>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>50</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!-- Bricks - Product -->
+              <Amount>40</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product -->
+              <Amount>30</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>              <!-- Windows - Product -->
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010202</Ingredient>              <!-- Reinforced Concrete - Product -->
+              <Amount>40</Amount>
             </Item>
           </Costs>
         </Cost>
@@ -6811,7 +6827,7 @@
               <StorageAmount>10</StorageAmount>
             </Item>
           </FactoryOutputs>
-          <CycleTime>240</CycleTime>
+          <CycleTime>300</CycleTime>
           <IsMainFactory>1</IsMainFactory>
         </FactoryBase>
         <FeedbackController />
@@ -6827,12 +6843,12 @@
           <Maintenances>
             <Item>
               <Product>1010017</Product>
-              <Amount>50</Amount>
-              <InactiveAmount>25</InactiveAmount>
+              <Amount>150</Amount>
+              <InactiveAmount>75</InactiveAmount>
             </Item>
             <Item>
               <Product>1742100005</Product>              <!-- Soldiers Workforce -->
-              <Amount>50</Amount>
+              <Amount>5</Amount>
             </Item>
           </Maintenances>
         </Maintenance>
@@ -6890,12 +6906,24 @@
           <ProductionSounds>
             <UI />
           </ProductionSounds>
-        </SoundEmitter>4
+        </SoundEmitter>
         <Cost>
           <Costs>
             <Item>
-              <Ingredient>1010017</Ingredient>
-              <Amount>100</Amount>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>25</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!-- Bricks - Product -->
+              <Amount>15</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product -->
+              <Amount>15</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>              <!-- Windows - Product -->
+              <Amount>10</Amount>
             </Item>
           </Costs>
         </Cost>
@@ -7161,15 +7189,15 @@
             </Item>
             <Item>
               <Ingredient>1010196</Ingredient>              <!--timber-->
-              <Amount>20</Amount>
+              <Amount>24</Amount>
             </Item>
             <Item>
               <Ingredient>1010205</Ingredient>              <!--bricks-->
-              <Amount>15</Amount>
+              <Amount>6</Amount>
             </Item>
             <Item>
               <Ingredient>1010218</Ingredient>              <!--beams-->
-              <Amount>10</Amount>
+              <Amount>3</Amount>
             </Item>
           </Costs>
         </Cost>
@@ -7218,7 +7246,7 @@
             </Item>
             <Item>
               <Product>1010115</Product>              <!--moderate workforce 2-->
-              <Amount>100</Amount>
+              <Amount>30</Amount>
             </Item>
           </Maintenances>
         </Maintenance>
@@ -7290,15 +7318,15 @@
             </Item>
             <Item>
               <Ingredient>1010196</Ingredient>              <!--timber-->
-              <Amount>20</Amount>
+              <Amount>24</Amount>
             </Item>
             <Item>
               <Ingredient>1010205</Ingredient>              <!--bricks-->
-              <Amount>15</Amount>
+              <Amount>6</Amount>
             </Item>
             <Item>
               <Ingredient>1010218</Ingredient>              <!--beams-->
-              <Amount>10</Amount>
+              <Amount>3</Amount>
             </Item>
           </Costs>
         </Cost>
@@ -7361,7 +7389,7 @@
               <StorageAmount>10</StorageAmount>
             </Item>
           </FactoryOutputs>
-          <CycleTime>100</CycleTime>
+          <CycleTime>60</CycleTime>
         </FactoryBase>
         <LogisticNode/>
         <Maintenance>
@@ -7373,7 +7401,7 @@
             </Item>
             <Item>
               <Product>1010115</Product>              <!--moderate workforce 2-->
-              <Amount>100</Amount>
+              <Amount>30</Amount>
             </Item>
           </Maintenances>
         </Maintenance>
@@ -7440,15 +7468,15 @@
             </Item>
             <Item>
               <Ingredient>1010196</Ingredient>              <!--timber-->
-              <Amount>20</Amount>
+              <Amount>24</Amount>
             </Item>
             <Item>
               <Ingredient>1010205</Ingredient>              <!--bricks-->
-              <Amount>15</Amount>
+              <Amount>6</Amount>
             </Item>
             <Item>
               <Ingredient>1010218</Ingredient>              <!--beams-->
-              <Amount>10</Amount>
+              <Amount>3</Amount>
             </Item>
           </Costs>
         </Cost>
@@ -7528,8 +7556,8 @@
           <Maintenances>
             <Item>
               <Product>1010017</Product>              <!--Money-->
-              <Amount>150</Amount>
-              <InactiveAmount>50</InactiveAmount>
+              <Amount>50</Amount>
+              <InactiveAmount>25</InactiveAmount>
             </Item>
             <Item>
               <Product>1010115</Product>              <!--moderate workforce 2-->
@@ -7600,15 +7628,15 @@
             </Item>
             <Item>
               <Ingredient>1010196</Ingredient>              <!--timber-->
-              <Amount>20</Amount>
+              <Amount>24</Amount>
             </Item>
             <Item>
               <Ingredient>1010205</Ingredient>              <!--bricks-->
-              <Amount>15</Amount>
+              <Amount>6</Amount>
             </Item>
             <Item>
               <Ingredient>1010218</Ingredient>              <!--beams-->
-              <Amount>10</Amount>
+              <Amount>3</Amount>
             </Item>
           </Costs>
         </Cost>
@@ -7683,8 +7711,8 @@
           <Maintenances>
             <Item>
               <Product>1010017</Product>              <!--Money-->
-              <Amount>150</Amount>
-              <InactiveAmount>50</InactiveAmount>
+              <Amount>50</Amount>
+              <InactiveAmount>25</InactiveAmount>
             </Item>
             <Item>
               <Product>1010115</Product>              <!--moderate workforce 2-->
@@ -7755,15 +7783,15 @@
             </Item>
             <Item>
               <Ingredient>1010196</Ingredient>              <!--timber-->
-              <Amount>20</Amount>
+              <Amount>24</Amount>
             </Item>
             <Item>
               <Ingredient>1010205</Ingredient>              <!--bricks-->
-              <Amount>15</Amount>
+              <Amount>6</Amount>
             </Item>
             <Item>
               <Ingredient>1010218</Ingredient>              <!--beams-->
-              <Amount>10</Amount>
+              <Amount>3</Amount>
             </Item>
           </Costs>
         </Cost>
@@ -7833,8 +7861,8 @@
           <Maintenances>
             <Item>
               <Product>1010017</Product>              <!--Money-->
-              <Amount>150</Amount>
-              <InactiveAmount>50</InactiveAmount>
+              <Amount>50</Amount>
+              <InactiveAmount>25</InactiveAmount>
             </Item>
             <Item>
               <Product>1010115</Product>              <!--moderate workforce 2-->
@@ -7905,15 +7933,15 @@
             </Item>
             <Item>
               <Ingredient>1010196</Ingredient>              <!--timber-->
-              <Amount>20</Amount>
+              <Amount>24</Amount>
             </Item>
             <Item>
               <Ingredient>1010205</Ingredient>              <!--bricks-->
-              <Amount>15</Amount>
+              <Amount>6</Amount>
             </Item>
             <Item>
               <Ingredient>1010218</Ingredient>              <!--beams-->
-              <Amount>10</Amount>
+              <Amount>3</Amount>
             </Item>
           </Costs>
         </Cost>
@@ -7988,8 +8016,8 @@
           <Maintenances>
             <Item>
               <Product>1010017</Product>              <!--Money-->
-              <Amount>150</Amount>
-              <InactiveAmount>50</InactiveAmount>
+              <Amount>50</Amount>
+              <InactiveAmount>25</InactiveAmount>
             </Item>
             <Item>
               <Product>1010115</Product>              <!--moderate workforce 2-->
@@ -8060,15 +8088,15 @@
             </Item>
             <Item>
               <Ingredient>1010196</Ingredient>              <!--timber-->
-              <Amount>20</Amount>
+              <Amount>24</Amount>
             </Item>
             <Item>
               <Ingredient>1010205</Ingredient>              <!--bricks-->
-              <Amount>15</Amount>
+              <Amount>6</Amount>
             </Item>
             <Item>
               <Ingredient>1010218</Ingredient>              <!--beams-->
-              <Amount>10</Amount>
+              <Amount>3</Amount>
             </Item>
           </Costs>
         </Cost>
@@ -8143,8 +8171,8 @@
           <Maintenances>
             <Item>
               <Product>1010017</Product>              <!--Money-->
-              <Amount>100</Amount>
-              <InactiveAmount>50</InactiveAmount>
+              <Amount>50</Amount>
+              <InactiveAmount>25</InactiveAmount>
             </Item>
             <Item>
               <Product>1010116</Product>              <!--Artisan workforce 2-->
@@ -8215,15 +8243,15 @@
             </Item>
             <Item>
               <Ingredient>1010196</Ingredient>              <!--timber-->
-              <Amount>20</Amount>
+              <Amount>24</Amount>
             </Item>
             <Item>
               <Ingredient>1010205</Ingredient>              <!--bricks-->
-              <Amount>15</Amount>
+              <Amount>6</Amount>
             </Item>
             <Item>
               <Ingredient>1010218</Ingredient>              <!--beams-->
-              <Amount>10</Amount>
+              <Amount>3</Amount>
             </Item>
           </Costs>
         </Cost>
@@ -8303,12 +8331,12 @@
           <Maintenances>
             <Item>
               <Product>1010017</Product>              <!--Money-->
-              <Amount>150</Amount>
-              <InactiveAmount>50</InactiveAmount>
+              <Amount>50</Amount>
+              <InactiveAmount>25</InactiveAmount>
             </Item>
             <Item>
               <Product>1010116</Product>              <!--Artisan workforce 2-->
-              <Amount>40</Amount>
+              <Amount>20</Amount>
             </Item>
           </Maintenances>
         </Maintenance>
@@ -8377,15 +8405,15 @@
             </Item>
             <Item>
               <Ingredient>1010196</Ingredient>              <!--timber-->
-              <Amount>20</Amount>
+              <Amount>24</Amount>
             </Item>
             <Item>
               <Ingredient>1010205</Ingredient>              <!--bricks-->
-              <Amount>15</Amount>
+              <Amount>6</Amount>
             </Item>
             <Item>
               <Ingredient>1010218</Ingredient>              <!--beams-->
-              <Amount>10</Amount>
+              <Amount>3</Amount>
             </Item>
           </Costs>
         </Cost>
@@ -8460,12 +8488,12 @@
           <Maintenances>
             <Item>
               <Product>1010017</Product>              <!--Money-->
-              <Amount>150</Amount>
-              <InactiveAmount>50</InactiveAmount>
+              <Amount>50</Amount>
+              <InactiveAmount>25</InactiveAmount>
             </Item>
             <Item>
               <Product>1010116</Product>              <!--Artisan workforce 2-->
-              <Amount>40</Amount>
+              <Amount>20</Amount>
             </Item>
           </Maintenances>
         </Maintenance>
@@ -8880,9 +8908,6 @@
         <StorageBase>
           <ProductStorageList>1742100532</ProductStorageList>
         </StorageBase>
-        <BuildingModule>
-          <ModuleType>Main</ModuleType>
-        </BuildingModule>
       </Values>
     </Asset>
   </ModOp>
