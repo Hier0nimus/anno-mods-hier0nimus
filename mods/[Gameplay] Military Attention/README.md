@@ -1,10 +1,19 @@
-# Military Attention | BETA 0.3!
+# Military Attention | BETA 0.4!
 
 A mod centered around military infrastructure and adding new military residence tiers for all regions with a focus on the Old World.
 
 ![ma-img-01.jpg](./banner.jpg)
 
 ## Changelog
+
+### Beta v0.4
+- Added compatibility for ships Old Town (Fishboss)
+- Added compatibility for Almost 100 hot air balloons (Hier0nimus)
+- Added Stables to all animal farms pool
+- Added Military Uniform Factory, Sleeping Bag Factory and Heated Military Uniform Factory to All Cloth Industries pool
+- Added residences in all regions to residences pools
+- Change the order of some buildings in the construction menu
+- Increased radius for small and large ammunition depots
 
 ### Beta v0.3
 - Increased service range stables so it can be reached further for a warehouse
@@ -17,6 +26,7 @@ A mod centered around military infrastructure and adding new military residence 
 - Added all SocketAllocation types for Military Academy module
 - Removed negative attractiveness for military encampments
 - Fixed radius when placing empty small ammunition depot
+- Fixed upgrade arrow for Navy Recruitment Center
 
 ### Beta v0.2
 - Removed not needed material .png files which reduces the total file size of the mod a lot

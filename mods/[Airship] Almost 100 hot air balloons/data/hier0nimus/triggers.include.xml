@@ -1,0 +1,232 @@
+<!--
+TRIGGERS
+-->
+
+<ModOps>
+    <!--UNLOCK - Workers 300 - Uwe -->
+    <ModOp Type="addnextSibling" GUID="130248">
+        <Asset>
+            <Template>Trigger</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742000290</GUID>
+                    <Name>MOD Trigger</Name>
+                </Standard>
+                <Trigger>
+                    <TriggerCondition>
+                        <Template>ConditionPlayerCounter</Template>
+                        <Values>
+                            <Condition />
+                            <ConditionPlayerCounter>
+                                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                                <Context>15000001</Context>                                <!-- Workers PopulationLevel7 -->
+                                <CounterAmount>300</CounterAmount>
+                            </ConditionPlayerCounter>
+                        </Values>
+                    </TriggerCondition>
+                    <TriggerActions>
+                        <Item>
+                            <TriggerAction>
+                                <Template>ActionDelayedActions</Template>
+                                <Values>
+                                    <Action/>
+                                    <ActionDelayedActions>
+                                        <ExecutionDelay>6000</ExecutionDelay>
+                                        <DelayedActions>
+                                            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                                            <Values>
+                                                <ActionList>
+                                                    <Actions>
+                                                        <Item>
+                                                            <Action>
+                                                                <Template>ActionForceNewspaper</Template>
+                                                                <Values>
+                                                                    <Action/>
+                                                                    <ActionForceNewspaper>
+                                                                        <Articles>
+                                                                            <Item>
+                                                                                <Article>1742000281</Article>
+                                                                            </Item>
+                                                                        </Articles>
+                                                                        <OpenNewspaperUI>1</OpenNewspaperUI>
+                                                                        <OpenNewspaperType>SpecialEdition</OpenNewspaperType>
+                                                                    </ActionForceNewspaper>
+                                                                </Values>
+                                                            </Action>
+                                                        </Item>
+                                                    </Actions>
+                                                </ActionList>
+                                            </Values>
+                                        </DelayedActions>
+                                    </ActionDelayedActions>
+                                </Values>
+                            </TriggerAction>
+                        </Item>
+                        <Item>
+                            <TriggerAction>
+                                <Template>ActionUnlockAsset</Template>
+                                <Values>
+                                    <Action />
+                                    <ActionUnlockAsset>
+                                        <UnhideAssets>
+                                            <Item>
+                                                <Asset>1742000271</Asset>                                                <!-- Uwe hot air balloon - Airship -->
+                                            </Item>
+                                        </UnhideAssets>
+                                        <UnlockAssets>
+                                            <Item>
+                                                <Asset>1742000269</Asset>                                                <!-- Uwe hot air balloon - Airship -->
+                                            </Item>
+                                        </UnlockAssets>
+                                    </ActionUnlockAsset>
+                                </Values>
+                            </TriggerAction>
+                        </Item>
+                    </TriggerActions>
+                </Trigger>
+                <TriggerSetup />
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!--UNLOCK - Artisan 300 - Carlo -->
+    <ModOp Type="addnextSibling" GUID="130248">
+        <Asset>
+            <Template>Trigger</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742000291</GUID>
+                    <Name>MOD Trigger</Name>
+                </Standard>
+                <Trigger>
+                    <TriggerCondition>
+                        <Template>ConditionPlayerCounter</Template>
+                        <Values>
+                            <Condition />
+                            <ConditionPlayerCounter>
+                                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                                <Context>15000002</Context>                                <!-- Artisans PopulationLevel7 -->
+                                <CounterAmount>300</CounterAmount>
+                            </ConditionPlayerCounter>
+                        </Values>
+                    </TriggerCondition>
+                    <TriggerActions>
+                        <Item>
+                            <TriggerAction>
+                                <Template>ActionUnlockAsset</Template>
+                                <Values>
+                                    <Action />
+                                    <ActionUnlockAsset>
+                                        <UnhideAssets>
+                                            <Item>
+                                                <Asset>1742000273</Asset>                                                <!-- Nena hot air balloon - Airship -->
+                                            </Item>
+                                        </UnhideAssets>
+                                        <UnlockAssets>
+                                            <Item>
+                                                <Asset>1742000271</Asset>                                                <!-- Uwe hot air balloon - Airship -->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742000275</Asset>                                                <!-- Joseph-Étienne Gontmolfier -->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742000277</Asset>                                                <!-- Jacques-Michel Gontmolfier -->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742000279</Asset>                                                <!-- Special Gas Mixture -->
+                                            </Item>
+                                        </UnlockAssets>
+                                    </ActionUnlockAsset>
+                                </Values>
+                            </TriggerAction>
+                        </Item>
+                    </TriggerActions>
+                </Trigger>
+                <TriggerSetup />
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!--UNLOCK - Nena - 99 Balloon built -->
+    <ModOp Type="addnextSibling" GUID="130248">
+        <Asset>
+            <Template>Trigger</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742000292</GUID>
+                    <Name>MOD Trigger</Name>
+                </Standard>
+                <Trigger>
+                    <TriggerCondition>
+                        <Template>ConditionPlayerCounter</Template>
+                        <Values>
+                            <Condition />
+                            <ConditionPlayerCounter>
+                                <PlayerCounter>ObjectBuilt</PlayerCounter>
+                                <Context>1742000289</Context>
+                                <CounterAmount>99</CounterAmount>
+                            </ConditionPlayerCounter>
+                        </Values>
+                    </TriggerCondition>
+                    <TriggerActions>
+                        <Item>
+                            <TriggerAction>
+                                <Template>ActionDelayedActions</Template>
+                                <Values>
+                                    <Action/>
+                                    <ActionDelayedActions>
+                                        <ExecutionDelay>6000</ExecutionDelay>
+                                        <DelayedActions>
+                                            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                                            <Values>
+                                                <ActionList>
+                                                    <Actions>
+                                                        <Item>
+                                                            <Action>
+                                                                <Template>ActionForceNewspaper</Template>
+                                                                <Values>
+                                                                    <Action/>
+                                                                    <ActionForceNewspaper>
+                                                                        <Articles>
+                                                                            <Item>
+                                                                                <Article>1742000285</Article>
+                                                                            </Item>
+                                                                        </Articles>
+                                                                        <OpenNewspaperUI>1</OpenNewspaperUI>
+                                                                        <OpenNewspaperType>SpecialEdition</OpenNewspaperType>
+                                                                    </ActionForceNewspaper>
+                                                                </Values>
+                                                            </Action>
+                                                        </Item>
+                                                    </Actions>
+                                                </ActionList>
+                                            </Values>
+                                        </DelayedActions>
+                                    </ActionDelayedActions>
+                                </Values>
+                            </TriggerAction>
+                        </Item>
+                        <Item>
+                            <TriggerAction>
+                                <Template>ActionUnlockAsset</Template>
+                                <Values>
+                                    <Action />
+                                    <ActionUnlockAsset>
+                                        <UnhideAssets>
+                                        </UnhideAssets>
+                                        <UnlockAssets>
+                                            <Item>
+                                                <Asset>1742000273</Asset>                                                <!-- Nena hot air balloon - Airship -->
+                                            </Item>
+                                        </UnlockAssets>
+                                    </ActionUnlockAsset>
+                                </Values>
+                            </TriggerAction>
+                        </Item>
+                    </TriggerActions>
+                </Trigger>
+                <TriggerSetup />
+            </Values>
+        </Asset>
+    </ModOp>
+</ModOps>

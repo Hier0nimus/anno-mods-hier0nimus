@@ -4,6 +4,18 @@
 
 <ModOps>
 
+  <!-- START ADD BUILDINGS TO VANILLA ITEMS -->
+
+  <!-- START ADD BASIC WEAPONS FACTORY to items -->
+  <ModOp GUID="190700,190701,190702,190703,190704,190705" Type="add" Path="Values/ItemEffect/EffectTargets/">
+    <Item>
+      <GUID>1742100469</GUID>
+    </Item>
+  </ModOp>
+  <!-- END ADD BASIC WEAPONS FACTORY to items -->
+
+  <!-- END ADD BUILDINGS TO VANILLA ITEMS -->
+
   <!-- START CHANGE CHARACTER ITEMS TO BE ABLE TO BE SLOTTED AT MILITARY ACADEMY -->
   <ModOp GUID="192241,192236,192237,192239,192235,192235,192240,192238,192241,192234" Path="Values/Item" Type="add">
     <Allocation>Ship</Allocation>
@@ -299,7 +311,6 @@
           <IconFilename>data/graphics/icons/icon_james_fondrick.png</IconFilename>
           <InfoDescription>1742100230</InfoDescription>
         </Standard>
-        <Text />
         <Item>
           <MaxStackSize>1</MaxStackSize>
           <Rarity>Legendary</Rarity>
@@ -316,7 +327,7 @@
             <Item>
               <Product>1742100058</Product>              <!-- Cigarettes - Product -->
               <AdditionalOutputCycle>2</AdditionalOutputCycle>
-              <Amount>1</Amount>
+              <Amount>5</Amount>
             </Item>
           </AdditionalOutput>
           <ReplaceInputs>
@@ -333,7 +344,6 @@
             </Item>
           </EffectTargets>
         </ItemEffect>
-        <ItemAction />
         <ExpeditionAttribute>
           <BaseMorale>0</BaseMorale>
           <ExpeditionAttributes>
@@ -345,28 +355,10 @@
               <Attribute>Crafting</Attribute>
               <Amount>80</Amount>
             </Item>
-            <Item />
-            <Item />
-            <Item />
           </ExpeditionAttributes>
           <ItemDifficulties>Easy</ItemDifficulties>
           <FluffText>8357</FluffText>
         </ExpeditionAttribute>
-        <CultureUpgrade />
-        <BuildingUpgrade />
-        <ModuleOwnerUpgrade />
-        <IncidentInfluencerUpgrade />
-        <IncidentInfectableUpgrade />
-        <ResidenceUpgrade />
-        <PopulationUpgrade />
-        <IndustrializableUpgrade />
-        <Locked />
-        <Buff />
-        <CraftableItem />
-        <HeaterUpgrade />
-        <PowerplantUpgrade />
-        <IrrigationUpgrade />
-        <EcoSystemProviderUpgrade />
       </Values>
     </Asset>
   </ModOp>
@@ -382,12 +374,11 @@
           <IconFilename>data/graphics/icons/icon_theodore_von_woudenburg.png</IconFilename>
           <InfoDescription>1742100456</InfoDescription>
         </Standard>
-        <Text />
         <Item>
           <MaxStackSize>1</MaxStackSize>
           <Rarity>Epic</Rarity>
           <ItemType>Specialist</ItemType>
-          <TradePrice>225000</TradePrice>
+          <TradePrice>1025000</TradePrice>
           <TradePriceOnlineCurrency>10</TradePriceOnlineCurrency>
         </Item>
         <FactoryUpgrade>
@@ -398,8 +389,8 @@
           <AdditionalOutput>
             <Item>
               <Product>1010207</Product>              <!-- Windows - Product -->
-              <AdditionalOutputCycle>1</AdditionalOutputCycle>
-              <Amount>5</Amount>
+              <AdditionalOutputCycle>2</AdditionalOutputCycle>
+              <Amount>4</Amount>
             </Item>
           </AdditionalOutput>
           <ReplaceInputs>
@@ -416,7 +407,6 @@
             </Item>
           </EffectTargets>
         </ItemEffect>
-        <ItemAction />
         <ExpeditionAttribute>
           <BaseMorale>0</BaseMorale>
           <ExpeditionAttributes>
@@ -432,21 +422,6 @@
           <ItemDifficulties>Easy</ItemDifficulties>
           <FluffText>8357</FluffText>
         </ExpeditionAttribute>
-        <CultureUpgrade />
-        <BuildingUpgrade />
-        <ModuleOwnerUpgrade />
-        <IncidentInfluencerUpgrade />
-        <IncidentInfectableUpgrade />
-        <ResidenceUpgrade />
-        <PopulationUpgrade />
-        <IndustrializableUpgrade />
-        <Locked />
-        <Buff />
-        <CraftableItem />
-        <HeaterUpgrade />
-        <PowerplantUpgrade />
-        <IrrigationUpgrade />
-        <EcoSystemProviderUpgrade />
       </Values>
     </Asset>
   </ModOp>

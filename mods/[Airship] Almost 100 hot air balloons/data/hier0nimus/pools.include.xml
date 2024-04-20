@@ -1,0 +1,145 @@
+<!--
+POOLS
+-->
+
+<ModOps>
+    <!-- START - Add airships and balloons to PlayerCounterContextPool -->
+    <ModOp Type="AddNextSibling" GUID='700008'>
+        <Asset>
+            <Template>PlayerCounterContextPool</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742000289</GUID>
+                    <Name>Airships and balloons</Name>
+                    <IconFilename>data/graphics/icons/icon_hot_air_balloon_02_01.png</IconFilename>
+                </Standard>
+                <PlayerCounterContextPool>
+                    <Contexts>
+                        <Item>
+                            <Asset>1742000269</Asset>
+                        </Item>
+                        <Item>
+                            <Asset>1742000271</Asset>
+                        </Item>
+                        <Item>
+                            <Asset>1742000273</Asset>
+                        </Item>
+                        <Item>
+                            <Asset>114166</Asset>
+                        </Item>
+                        <Item>
+                            <Asset>1654</Asset>
+                        </Item>
+                        <Item>
+                            <Asset>1054</Asset>
+                        </Item>
+                        <Item>
+                            <Asset>1655</Asset>
+                        </Item>
+                        <Item>
+                            <Asset>1056</Asset>
+                        </Item>
+                        <Item>
+                            <Asset>1058</Asset>
+                        </Item>
+                        <Item>
+                            <Asset>1059</Asset>
+                        </Item>
+                        <Item>
+                            <Asset>1060</Asset>
+                        </Item>
+                        <Item>
+                            <Asset>1755</Asset>
+                        </Item>
+                        <Item>
+                            <Asset>1733</Asset>
+                        </Item>
+                        <Item>
+                            <Asset>1733</Asset>
+                        </Item>
+                        <Item>
+                            <Asset>1731</Asset>
+                        </Item>
+                        <Item>
+                            <Asset>1734</Asset>
+                        </Item>
+                        <Item>
+                            <Asset>1732</Asset>
+                        </Item>
+                        <Item>
+                            <Asset>1735</Asset>
+                        </Item>
+                        <Item>
+                            <Asset>1736</Asset>
+                        </Item>
+                        <Item>
+                            <Asset>1737</Asset>
+                        </Item>
+                    </Contexts>
+                </PlayerCounterContextPool>
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- START - Add airships to ItemEffectTargetPool - AllTradeAirships, all airships -->
+    <ModOp Type="Add" GUID='7087,102492' Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
+        <Item>
+            <GUID>1742000269</GUID>
+        </Item>
+        <Item>
+            <GUID>1742000271</GUID>
+        </Item>
+        <Item>
+            <GUID>1742000273</GUID>
+        </Item>
+    </ModOp>
+    <!-- END-Add airships to ItemEffectTargetPool - AllTradeAirships -->
+
+    <!-- START - Add airships to AllAirshipPool -->
+    <ModOp Type="Add" GUID='102180' Path="/Values/AssetPool/AssetList/">
+        <Item>
+            <Asset>1742000269</Asset>
+        </Item>
+        <Item>
+            <Asset>1742000271</Asset>
+        </Item>
+        <Item>
+            <Asset>1742000273</Asset>
+        </Item>
+    </ModOp>
+    <!-- END- Add airships to AllAirshipPool -->
+
+    <!-- START - Add airships to PlayerCounterContextPool - AP - Airships -->
+    <ModOp Type="Add" GUID='103085,104750' Path="/Values/PlayerCounterContextPool/Contexts/">
+        <Item>
+            <Asset>1742000269</Asset>
+        </Item>
+        <Item>
+            <Asset>1742000271</Asset>
+        </Item>
+        <Item>
+            <Asset>1742000273</Asset>
+        </Item>
+    </ModOp>
+    <!-- END- Add airships to PlayerCounterContextPool - AP - Airships -->
+
+    <!-- START - Add specialists to pools - LEGENDARY -->
+    <ModOp GUID="192757,193089,192980" Type="add" Path="/Values/RewardPool/ItemsPool">
+        <Item>
+            <ItemLink>1742000275</ItemLink>            <!-- Joseph-Étienne Gontmolfier -->
+        </Item>
+        <Item>
+            <ItemLink>1742000277</ItemLink>            <!-- Jacques-Michel Gontmolfier -->
+        </Item>
+    </ModOp>
+    <!-- END - Add specialists to pools - LEGENDARY -->
+
+    <!-- START - Add items to CraftableItems Nate Arctic - Special Gas Mixture - LEGENDARY -->
+    <ModOp GUID="117422" Type="add" Path="/Values/ItemCrafter/CraftableItemsInRegion/Arctic/CraftableItems/">
+        <Item>
+            <Item>1742000279</Item>            <!-- Special Gas Mixture -->
+        </Item>
+    </ModOp>
+    <!-- END- Add items to CraftableItems Nate Arctic - Special Gas Mixture -->
+
+</ModOps>
