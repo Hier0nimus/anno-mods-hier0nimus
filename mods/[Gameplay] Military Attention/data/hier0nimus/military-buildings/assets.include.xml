@@ -9363,4 +9363,174 @@
 
   <!-- ****************** END SANITATION FACILITY - Building ******************  -->
 
+  <!-- START BUILDING - LOCAL CEMETERY -->
+  <ModOp Type="addNextSibling" GUID='1010358'>
+    <Asset>
+      <Template>PublicServiceBuilding</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100558</GUID>          <!-- Local cemetery - Building -->
+          <Name>Local cemetery</Name>
+          <IconFilename>data/graphics/icons/icon_cemetery.png</IconFilename>
+          <InfoDescription>1742100559</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingType>Logistic</BuildingType>
+          <AssociatedRegions>Moderate</AssociatedRegions>
+          <AllowChangeVariation>1</AllowChangeVariation>
+        </Building>
+        <Blocking />
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>100</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/public/cemetery/cemetery_02_01.cfg</Filename>
+            </Item>
+            <Item>
+              <Filename>data/graphics/buildings/public/cemetery/cemetery_02_02.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Selection>
+          <GUIType>PublicService</GUIType>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+        </Selection>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>242785</Sound>
+            </Item>
+          </ActiveSounds>
+          <IncidentSounds>
+            <InfectedFire>
+              <Item>
+                <Sound>214659</Sound>
+              </Item>
+            </InfectedFire>
+          </IncidentSounds>
+        </SoundEmitter>
+        <PublicService>
+          <FullSatisfactionDistance>40</FullSatisfactionDistance>
+          <NoSatisfactionDistance>32</NoSatisfactionDistance>
+          <PublicServiceOutputs>
+            <Item>
+              <Product>1742100556</Product>              <!-- Cemetery - Product -->
+            </Item>
+          </PublicServiceOutputs>
+        </PublicService>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>              <!-- Coins -->
+              <Amount>25</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Culture>
+          <Attractiveness>10</Attractiveness>
+        </Culture>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - LOCAL CEMETERY -->
+
+  <!-- START BUILDING - CEMETERY -->
+  <ModOp Type="addNextSibling" GUID='1010358'>
+    <Asset>
+      <Template>PublicServiceBuilding</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100560</GUID>          <!-- Local cemetery - Building -->
+          <Name>Cemetery</Name>
+          <IconFilename>data/graphics/icons/icon_cemetery.png</IconFilename>
+          <InfoDescription>1742100561</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingType>Logistic</BuildingType>
+          <AssociatedRegions>Moderate</AssociatedRegions>
+          <AllowChangeVariation>1</AllowChangeVariation>
+        </Building>
+        <Blocking />
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>5000</Amount>
+            </Item>
+
+          </Costs>
+        </Cost>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/public/cemetery/cemetery_01_01.cfg</Filename>
+            </Item>
+            <Item>
+              <Filename>data/graphics/buildings/public/cemetery/cemetery_01_02.cfg</Filename>
+            </Item>
+            <Item>
+              <Filename>data/graphics/buildings/public/cemetery/cemetery_01_03.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Selection>
+          <GUIType>PublicService</GUIType>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+        </Selection>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>242785</Sound>
+            </Item>
+          </ActiveSounds>
+          <IncidentSounds>
+            <InfectedFire>
+              <Item>
+                <Sound>214659</Sound>
+              </Item>
+            </InfectedFire>
+          </IncidentSounds>
+        </SoundEmitter>
+        <PublicService>
+          <FullSatisfactionDistance>90</FullSatisfactionDistance>
+          <NoSatisfactionDistance>80</NoSatisfactionDistance>
+          <PublicServiceOutputs>
+            <Item>
+              <Product>1742100556</Product>              <!-- Cemetery - Product -->
+            </Item>
+          </PublicServiceOutputs>
+        </PublicService>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>              <!-- Coins -->
+              <Amount>150</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Culture>
+          <Attractiveness>40</Attractiveness>
+        </Culture>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - LOCAL CEMETERY -->
+
 </ModOps>

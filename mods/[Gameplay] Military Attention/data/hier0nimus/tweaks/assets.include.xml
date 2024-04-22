@@ -1,6 +1,10 @@
 <!-- 
   Tweaks
 
+Add Basic ammunition to OfferingGoods Archibald and Isabel
+Add Add Basic weapons and Basic ammunition to OfferingGoods Anne and Jean
+Add Galena to OfferingGoods Eli
+
 Changes (building/maintenance) costs vanilla buildings
 - Sailmakers
 - Furnace
@@ -16,12 +20,13 @@ Change input production vanilla chain
 
 Add needs to vanilla population
 - Farmers
-> Potatoes
+> Cemetery
 > Horses
 - Workers
-> Potatoes
+> Cemetery
 > Cigarettes
 - Artisans
+> Cemetery
 > Cigarettes
 - Scholars
 > Cigarettes
@@ -38,12 +43,64 @@ Reduction amount of farmfields
 
 Add ParticipantMessageArcheType for farmers to show more needs
 
-Reduction of danage of flame towers to wooden ships
+Reduction of damage of flame towers to wooden ships
 
 -->
 
 <ModOps>
   <!-- ****************** START TWEAKS ******************  -->
+
+  <!-- ****************** START Add Basic weapons to OfferingGoods Anne and Jean ******************  -->
+  <ModOp Type="add" GUID='73,76' Path="/Values/Trader/Progression/*[self::EarlyGame or self::EarlyMidGame or self::MidGame or self::LateMidGame or self::LateGame or self::EndGame]/GoodsProduction/">
+    <Item>
+      <Good>1742100471</Good>
+      <ProductionPerMinute>6</ProductionPerMinute>
+    </Item>
+    <Item>
+      <Good>1742100203</Good>
+      <ProductionPerMinute>6</ProductionPerMinute>
+    </Item>
+  </ModOp>
+
+  <ModOp Type="add" GUID='73,76' Path="/Values/Trader/Progression/*[self::EarlyGame or self::EarlyMidGame or self::MidGame or self::LateMidGame or self::LateGame or self::EndGame]/OfferingGoods/Item/GoodSets/">
+    <Item>
+      <Good>1742100471</Good>
+    </Item>
+    <Item>
+      <Good>1742100203</Good>
+    </Item>
+  </ModOp>
+  <!-- ****************** END Add Basic weapons to OfferingGoods Anne and Jean ******************  -->
+
+  <!-- ****************** START Add Galena to OfferingGoods Eli ******************  -->
+  <ModOp Type="add" GUID='46' Path="/Values/Trader/Progression/*[self::EarlyGame or self::EarlyMidGame or self::MidGame or self::LateMidGame or self::LateGame or self::EndGame]/GoodsProduction/">
+    <Item>
+      <Good>1742100433</Good>
+      <ProductionPerMinute>8</ProductionPerMinute>
+    </Item>
+  </ModOp>
+
+  <ModOp Type="add" GUID='46' Path="/Values/Trader/Progression/*[self::EarlyGame or self::EarlyMidGame or self::MidGame or self::LateMidGame or self::LateGame or self::EndGame]/OfferingGoods/Item/GoodSets/">
+    <Item>
+      <Good>1742100433</Good>
+    </Item>
+  </ModOp>
+  <!-- ****************** END Add Galena to OfferingGoods Eli ******************  -->
+
+  <!-- ****************** START Add Basic ammunition to OfferingGoods Archibald and Isabel ******************  -->
+  <ModOp Type="add" GUID='29,45' Path="/Values/Trader/Progression/*[self::EarlyGame or self::EarlyMidGame or self::MidGame or self::LateMidGame or self::LateGame or self::EndGame]/GoodsProduction/">
+    <Item>
+      <Good>1742100203</Good>
+      <ProductionPerMinute>6</ProductionPerMinute>
+    </Item>
+  </ModOp>
+
+  <ModOp Type="add" GUID='29,45' Path="/Values/Trader/Progression/*[self::EarlyGame or self::EarlyMidGame or self::MidGame or self::LateMidGame or self::LateGame or self::EndGame]/OfferingGoods/Item/GoodSets/">
+    <Item>
+      <Good>1742100203</Good>
+    </Item>
+  </ModOp>
+  <!-- ****************** END Add Basic ammunition to OfferingGoods Archibald and Isabel ******************  -->
 
   <!-- ****************** START Production costs reduction for vanilla buildings ******************  -->
 
@@ -186,10 +243,8 @@ Reduction of danage of flame towers to wooden ships
   <!-- ****************** Old World - Farmers ******************  -->
   <ModOp Type="add" GUID="15000000" Path="/Values/PopulationLevel7/PopulationInputs">
     <Item>
-      <Product>1010195</Product>      <!-- Potatoes - Product -->
-      <Amount>0.0001166667</Amount>
-      <SupplyWeight>2</SupplyWeight>
-      <MoneyValue>10</MoneyValue>
+      <Product>1742100556</Product>      <!-- Cemetery - Product -->
+      <SupplyWeight>4</SupplyWeight>
       <FullWeightPopulationCount>100</FullWeightPopulationCount>
       <NoWeightPopulationCount>0</NoWeightPopulationCount>
       <AdditionalGlobalUnlockRequirement>
@@ -214,16 +269,10 @@ Reduction of danage of flame towers to wooden ships
   <!-- ****************** Old World - Workers ******************  -->
   <ModOp Type="addNextSibling" GUID="15000001" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='1010237']">
     <Item>
-      <Product>1010195</Product>      <!-- Potatoes - Product -->
-      <Amount>0.0001166667</Amount>
-      <SupplyWeight>5</SupplyWeight>
-      <MoneyValue>30</MoneyValue>
+      <Product>1742100556</Product>      <!-- Cemetery - Product -->
+      <SupplyWeight>8</SupplyWeight>
       <FullWeightPopulationCount>100</FullWeightPopulationCount>
       <NoWeightPopulationCount>0</NoWeightPopulationCount>
-      <AdditionalGlobalUnlockRequirement>
-        <Population>15000000</Population>        <!-- Farmers -->
-        <MinPopulationAmount>100</MinPopulationAmount>
-      </AdditionalGlobalUnlockRequirement>
     </Item>
   </ModOp>
   <ModOp Type="addNextSibling" GUID="15000001" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='1010214']">
@@ -238,6 +287,16 @@ Reduction of danage of flame towers to wooden ships
         <Population>15000001</Population>        <!-- Workers -->
         <MinPopulationAmount>500</MinPopulationAmount>
       </AdditionalGlobalUnlockRequirement>
+    </Item>
+  </ModOp>
+
+  <!-- ****************** Old World - Artisans ******************  -->
+  <ModOp Type="add" GUID="15000002,118745" Path="/Values/PopulationLevel7/PopulationInputs/">
+    <Item>
+      <Product>1742100556</Product>      <!-- Cemetery - Product -->
+      <SupplyWeight>8</SupplyWeight>
+      <FullWeightPopulationCount>100</FullWeightPopulationCount>
+      <NoWeightPopulationCount>0</NoWeightPopulationCount>
     </Item>
   </ModOp>
 

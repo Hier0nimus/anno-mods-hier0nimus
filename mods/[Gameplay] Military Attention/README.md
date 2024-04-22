@@ -1,10 +1,20 @@
-# Military Attention | BETA 0.4!
+# Military Attention | BETA 0.5!
 
 A mod centered around military infrastructure and adding new military residence tiers for all regions with a focus on the Old World.
 
 ![ma-img-01.jpg](./banner.jpg)
 
 ## Changelog
+
+### Beta v0.5
+- Added ormaments (Memorial status (2 variations), Cannon statue)
+- Removed Potatoes from needs Farmers and Workers
+- Added Cemetery need for Farmers, Workers and Artisans
+- Added Local cemetery and Cemetary public service building (2 variations Local cemetery, 3 variations Cemetery)
+- Add Basic ammunition to OfferingGoods Archibald and Isabel
+- Add Basic weapons and Basic ammunition to OfferingGoods Anne and Jean
+- Add Galena to OfferingGoods Eli
+- Changed BasePrice and ExpeditionAttributes for some of the products that I forgot.
 
 ### Beta v0.4
 - Added compatibility for ships Old Town (Fishboss)
