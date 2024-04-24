@@ -1,10 +1,22 @@
-# Military Attention | BETA 0.5!
+# Military Attention | BETA 0.6!
 
 A mod centered around military infrastructure and adding new military residence tiers for all regions with a focus on the Old World.
 
 ![ma-img-01.jpg](./banner.jpg)
 
 ## Changelog
+
+### Beta v0.6
+- Added correct costs and maintenance for Fort monument
+- Reduced the range from 90 to 80 for the Cemetery
+- Made Open Pit mines unavailable for AI because they take to much space and AI does not build any normal mines anymore
+- Added compatibility for Nate's Airship (Spice It Up)
+- Added Field Hospital building
+- Added Field Hospital as a need for Soldiers
+- Balanced the SupplyWeight of soldiers for certain products
+- Moved Military Headquarters to barracks residence
+- Fixed output for Military Prison
+- Fixed output for Propaganda Facility
 
 ### Beta v0.5
 - Added ormaments (Memorial status (2 variations), Cannon statue)

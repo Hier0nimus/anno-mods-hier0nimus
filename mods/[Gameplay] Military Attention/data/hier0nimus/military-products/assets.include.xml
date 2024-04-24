@@ -1131,12 +1131,40 @@
   </ModOp>
   <!-- END PRODUCT - CEMETERY -->
 
+  <!-- START PRODUCT - MILITARY FIELD HOSPITAL -->
+  <ModOp Type="addNextSibling" GUID='5392'>
+    <Asset>
+      <Template>Product</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100564</GUID>          <!-- Field Hospital - Product -->
+          <Name>Field Hospital</Name>
+          <IconFilename>data/graphics/icons/icon_military_hospital.png</IconFilename>
+          <InfoDescription>1742100565</InfoDescription>
+        </Standard>
+        <Text />
+        <Locked />
+        <Product>
+          <StorageLevel>Building</StorageLevel>
+          <ProductCategory>11708</ProductCategory>
+          <IsAbstract>1</IsAbstract>
+          <AssociatedRegion>Moderate</AssociatedRegion>
+        </Product>
+        <ExpeditionAttribute />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PRODUCT - MILITARY FIELD HOSPITAL -->
+
   <!-- ****************** START ADDING ALL PRODUCTS TO PRODUCTS LISTS ****************** -->
 
   <!-- START ADD GOODS TO PRODUCTSTORAGELIST -->
   <ModOp Type="add" GUID='120057' Path="/Values/ProductStorageList/ProductList">
     <Item>
       <Product>1742100022</Product>      <!-- Canteen - Product -->
+    </Item>
+    <Item>
+      <Product>1742100564</Product>      <!-- Field Hospital - Product -->
     </Item>
     <Item>
       <Product>1742100009</Product>      <!-- Military Warehouse - Product -->
@@ -1203,6 +1231,9 @@
           <List>
             <Item>
               <Product>1742100022</Product>              <!-- Canteen - Product -->
+            </Item>
+            <Item>
+              <Product>1742100564</Product>              <!-- Field Hospital - Product -->
             </Item>
             <Item>
               <Product>1742100064</Product>              <!-- Military Uniforms - Product -->
@@ -1328,7 +1359,7 @@
   </ModOp>
   <!-- END CREATE PRODUCTLIST - SOLDIERSWORKFORCEGOODS (EN) -->
 
-  <!-- START CREATE PRODUCTLIST - MILIATERYENGINEERSWORKFORCEGOODS -->
+  <!-- START CREATE PRODUCTLIST - MILITARYENGINEERSWORKFORCEGOODS -->
   <ModOp Type="addNextSibling" GUID='502007'>
     <Asset>
       <Template>ProductList</Template>

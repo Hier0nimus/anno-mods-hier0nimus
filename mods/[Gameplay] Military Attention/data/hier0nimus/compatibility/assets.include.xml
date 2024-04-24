@@ -44,6 +44,23 @@
   </Group>
   <!-- END ENBESA SOLDIERS MAIL ADDITION -->
 
+  <Group Condition="#Spice_Airship">
+    <!-- START COMPATIBILITY NATES AIRSHIP SIU -->
+    <ModOp GUID="901999" Type="add" Path="/Values/Cost/Costs">
+      <!-- 901999 - Nate's Airship -->
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>5</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>5</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- END COMPATIBILITY NATES AIRSHIP SIU -->
+  </Group>
+
   <Group Condition="#almost_100_hot_air_balloons">
     <!-- START COMPATIBILITY ALMOST 100 HOT AIR BALLOONS -->
     <!-- 
@@ -102,7 +119,7 @@
     -->
 
     <!-- 850156 + 850158 - Flag Ship -->
-    <ModOp GUID="850156" Type="add" Path="/Values/Cost/Costs">
+    <ModOp GUID="850156,850158" Type="add" Path="/Values/Cost/Costs">
       <Item>
         <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
         <Amount>20</Amount>

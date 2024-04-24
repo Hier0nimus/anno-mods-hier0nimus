@@ -1,0 +1,36 @@
+<!-- 
+  Compatibility
+-->
+
+<ModOps>
+
+    <Group Condition="#Imperio Schiffswerft">
+        <!-- START COMPATIBILITY IMPERIO SHIPYARD -->
+        <!-- 
+    ******* SHIPS ******* 
+    2130020017 - Paloma's Flagship
+    2130020018 - Queen
+    -->
+        <ModOp GUID="1742000289" Type="add" Path="/Values/PlayerCounterContextPool/Contexts">
+            <Item>
+                <Asset>2130020017</Asset>                <!-- Paloma's Flagship -->
+            </Item>
+            <Item>
+                <Asset>2130020018</Asset>                <!-- Queen -->
+            </Item>
+        </ModOp>
+        <!-- END COMPATIBILITY IMPERIO SHIPYARD -->
+    </Group>
+
+    <Group Condition="#Spice_Airship">
+        <!-- START COMPATIBILITY NATES AIRSHIP SIU -->
+        <ModOp GUID="1742000289" Type="add" Path="/Values/PlayerCounterContextPool/Contexts">
+            <Item>
+                <Asset>901999</Asset>                <!-- Nates airship -->
+            </Item>
+        </ModOp>
+        <!-- END COMPATIBILITY NATES AIRSHIP SIU -->
+    </Group>
+
+</ModOps>
+  

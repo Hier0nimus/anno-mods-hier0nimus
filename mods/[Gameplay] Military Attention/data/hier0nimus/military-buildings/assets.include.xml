@@ -3787,6 +3787,7 @@
         <Building>
           <BuildModeRandomRotation>180</BuildModeRandomRotation>
           <AssociatedRegions>Moderate</AssociatedRegions>
+          <SecondPartyRelevant>0</SecondPartyRelevant >
         </Building>
         <Blocking>
           <BlockWater>1</BlockWater>
@@ -3931,6 +3932,7 @@
         <Building>
           <BuildModeRandomRotation>180</BuildModeRandomRotation>
           <AssociatedRegions>Moderate</AssociatedRegions>
+          <SecondPartyRelevant>0</SecondPartyRelevant >
         </Building>
         <Blocking>
           <BlockWater>1</BlockWater>
@@ -6662,13 +6664,6 @@
               <StorageAmount>10</StorageAmount>
             </Item>
           </FactoryInputs>
-          <FactoryOutputs>
-            <Item>
-              <Product>1742100466</Product>              <!-- Military Prison - Product -->
-              <Amount>1</Amount>
-              <StorageAmount>10</StorageAmount>
-            </Item>
-          </FactoryOutputs>
           <CycleTime>300</CycleTime>
           <IsMainFactory>1</IsMainFactory>
         </FactoryBase>
@@ -6820,13 +6815,6 @@
               <StorageAmount>10</StorageAmount>
             </Item>
           </FactoryInputs>
-          <FactoryOutputs>
-            <Item>
-              <Product>1742100465</Product>              <!-- Propaganda Facility - Product -->
-              <Amount>1</Amount>
-              <StorageAmount>10</StorageAmount>
-            </Item>
-          </FactoryOutputs>
           <CycleTime>300</CycleTime>
           <IsMainFactory>1</IsMainFactory>
         </FactoryBase>
@@ -9509,8 +9497,8 @@
           </IncidentSounds>
         </SoundEmitter>
         <PublicService>
-          <FullSatisfactionDistance>90</FullSatisfactionDistance>
-          <NoSatisfactionDistance>80</NoSatisfactionDistance>
+          <FullSatisfactionDistance>80</FullSatisfactionDistance>
+          <NoSatisfactionDistance>70</NoSatisfactionDistance>
           <PublicServiceOutputs>
             <Item>
               <Product>1742100556</Product>              <!-- Cemetery - Product -->
@@ -9531,6 +9519,131 @@
       </Values>
     </Asset>
   </ModOp>
-  <!-- END BUILDING - LOCAL CEMETERY -->
+  <!-- END BUILDING - CEMETERY -->
+
+  <!-- START BUILDING - FIELD HOSPITAL -->
+  <ModOp Type="addNextSibling" GUID='1010358'>
+    <Asset>
+      <Template>PublicServiceBuilding</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100562</GUID>          <!-- Field Hospital - Building -->
+          <Name>Field Hospital</Name>
+          <IconFilename>data/graphics/icons/icon_military_hospital.png</IconFilename>
+          <InfoDescription>1742100563</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingType>Logistic</BuildingType>
+          <AssociatedRegions>Moderate</AssociatedRegions>
+        </Building>
+        <Blocking />
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>1000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>15</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010210</Ingredient>              <!-- Sails - Product-->
+              <Amount>12</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/military/military_field_hospital/military_field_hospital_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Mesh />
+        <Selection>
+          <GUIType>PublicService</GUIType>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+        </Selection>
+        <Text />
+        <Constructable />
+        <Locked />
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>242785</Sound>
+            </Item>
+          </ActiveSounds>
+          <IncidentSounds>
+            <InfectedFire>
+              <Item>
+                <Sound>214659</Sound>
+              </Item>
+            </InfectedFire>
+          </IncidentSounds>
+        </SoundEmitter>
+        <FeedbackController />
+        <Infolayer />
+        <UpgradeList />
+        <LogisticNode />
+        <PublicService>
+          <FullSatisfactionDistance>40</FullSatisfactionDistance>
+          <NoSatisfactionDistance>50</NoSatisfactionDistance>
+          <PublicServiceOutputs>
+            <Item>
+              <Product>1742100564</Product>              <!-- Field Hospital - Product -->
+            </Item>
+          </PublicServiceOutputs>
+        </PublicService>
+        <AmbientMoodProvider />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>              <!-- Coins -->
+              <Amount>100</Amount>
+            </Item>
+            <Item>
+              <Product>1742100005</Product>              <!-- Soldiers Workforce -->
+              <Amount>15</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Attackable />
+        <Pausable />
+        <IncidentInfluencer>
+          <Influence>
+            <Illness>
+              <Influence>-7</Influence>
+              <Distance>20</Distance>
+            </Illness>
+          </Influence>
+        </IncidentInfluencer>
+        <IncidentInfectable>
+          <Infectable>
+            <Fire>
+              <Base>0</Base>
+            </Fire>
+            <Riot>
+              <Escalated>0</Escalated>
+            </Riot>
+            <Illness>
+              <Escalated>0</Escalated>
+            </Illness>
+            <Explosion>
+              <Base>0</Base>
+              <Escalated>0</Escalated>
+            </Explosion>
+          </Infectable>
+        </IncidentInfectable>
+        <Culture />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - FIELD HOSPITAL -->
 
 </ModOps>
