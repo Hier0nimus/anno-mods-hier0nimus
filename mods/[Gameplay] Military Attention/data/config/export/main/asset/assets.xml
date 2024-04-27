@@ -1,6 +1,6 @@
 <!-- 
 
-[Gameplay] Military Attention - v0.6
+[Gameplay] Military Attention - v0.7
   
 Created by Hier0nimus
 And help of A LOT of people. Big thank you all!
@@ -122,7 +122,7 @@ BUILDINGS
 1742100381 - Horse Training Ground - Module - Description
 1742100407 - Galena Module - Building
 1742100408 - Galena Module - Building - Description
-1742100016 - GELANA production DUMMY - Building
+1742100016 - Galena production DUMMY - Building
 1742100409 - Lead Smelter - Building
 1742100410 - Lead Smelter - Building - Description
 1742100411 - Oxidation Pools - Building
@@ -230,16 +230,14 @@ CONSTRUCTION MENU CHAINS
 MILITARY PRODUCTS
 ********************
 1742100005 - Soldiers Workforce - Product
-REUSED // NOT USED ANYMORE // 1742100009 - Officers Workforce - Product
-REUSED // NOT USED ANYMORE // 1742100013 - Military Engineers Workforce - Product
 1742100309 - Arctic Soldiers Workforce - Product
 1742100317 - New World Soldiers Workforce - Product
 1742100318 - Enbesa Soldiers Workforce - Product
-1742100015 - Soldiers (OW) - ProductList
-1742100345 - Soldiers (AR) ProductList
-1742100346 - Soldiers (NW) ProductList
-1742100347 - Soldiers (EN) ProductList
-1742100017 - Military Engineers - ProductList
+1742100015 - SoldiersConsumerGoods (OW) - ProductList
+1742100345 - SoldiersConsumerGoods (AR) ProductList
+1742100346 - SoldiersConsumerGoods (NW) ProductList
+1742100347 - SoldiersConsumerGoods (EN) ProductList
+1742100017 - MilitaryEngineersConsumerGoods - ProductList
 1742100022 - Canteen (OW) - Product
 1742100023 - Canteen (OW) - Product - Description
 1742100339 - Canteen (NW) - Product
@@ -390,10 +388,16 @@ BUFFS & EFFECTS
 1742100464 - Propagande Facility Buff - TownhallBuff - Description
 1742100467 - Military Logistics - GuildhouseBuff
 1742100468 - Military Logistics - GuildhouseBuff - Description
-1742100480 - Fort Harbour Buff - VehicleBuff
-1742100481 - Fort Harbour Buff - VehicleBuff - Description
 1742100494 - Digging deeper for Galena - Buff
 1742100495 - Digging deeper for Galena - Buff - Description
+1742100567 - Fort Effect Container - EffectContainer
+1742100480 - Fort Defense - HarbourOfficeBuff
+1742100481 - Fort Defense - HarbourOfficeBuff - Description
+1742100568 - Fort Defense - HarbourOfficeBuff
+1742100569 - Fort Defense - HarbourOfficeBuff - Description
+1742100570 - Fort Reparations - HarbourOfficeBuff
+1742100571 - Fort Reparations - HarbourOfficeBuff - Description
+
 
 POOLS
 ********
@@ -629,41 +633,49 @@ ORNAMENETS
 1742100554 - Memorial 02 - OrnamentalBuilding
 1742100555 - Memorial 02 - OrnamentalBuilding - Description
 
+SPECIAL
+*************
+1742100566 - FloorUpgradeInAllRegions - FeatureUnlock
+
 TRIGGERS
 ********************
 
-HIGHEST - 1742100561
+HIGHEST - 1742100571
 Triggers: 1742100700+
 
-1742100724 - Other regions - unlock
+1742100724 - Other regions - Trigger
 
-1742100726 - Farmers 100 - unlock
+1742100726 - Farmers 100 - Trigger
 
-1742100702 - Workers 150 - unlock
-1742100703 - Workers 500 - unlock
-1742100704 - Artisans 1 - unlock
-1742100723 - Artisans 750 - unlock
-1742100705 - Artisans 900 - unlock
-1742100727 - Engineers 1 - unlock
-1742100707 - Engineers 500 - unlock
-1742100708 - Engineers 2000 - unlock
-1742100709 - Investors 1 - unlock
-1742100710 - Tourists 300 - unlock
+1742100702 - Workers 150 - Trigger
+1742100703 - Workers 500 - Trigger
+1742100704 - Artisans 1 - Trigger
+1742100723 - Artisans 750 - Trigger
+1742100705 - Artisans 900 - Trigger
+1742100727 - Engineers 1 - Trigger
+1742100707 - Engineers 500 - Trigger
+1742100708 - Engineers 2000 - Trigger
+1742100709 - Investors 1 - Trigger
+1742100710 - Tourists 300 - Trigger
 
-1742100711 - Shephards 300 - unlock
-1742100712 - Elders 300 - unlock
+1742100711 - Shephards 300 - Trigger
+1742100712 - Elders 300 - Trigger
 
-1742100722 - Jormaleros 100 - unlock
-1742100713 - Obreros 600 - unlock
-1742100714 - Obreros 1000 - unlock
-1742100715 - Artista 900 - unlock
-1742100716 - Artista 1800 - unlock
+1742100722 - Jormaleros 100 - Trigger
+1742100713 - Obreros 600 - Trigger
+1742100714 - Obreros 1000 - Trigger
+1742100715 - Artista 900 - Trigger
+1742100716 - Artista 1800 - Trigger
 
-1742100729 - Soldiers 1 - unlock
-1742100728 - Soldiers 100 - unlock
-1742100725 - Soldiers 300 - unlock
-1742100720 - Soldiers 500 - unlock
-1742100721 - Soldiers 1000 - unlock
+1742100729 - Soldiers 1 - Trigger
+1742100728 - Soldiers 100 - Trigger
+1742100725 - Soldiers 300 - Trigger
+1742100720 - Soldiers 500 - Trigger
+1742100721 - Soldiers 1000 - Trigger
+
+
+1742100999 - TEMP - Trigger
+
 
 -->
 
@@ -676,20 +688,20 @@ Triggers: 1742100700+
   <Include File="../../../../hier0nimus/military-products/assets.include.xml" />
   <Include File="../../../../hier0nimus/military-recipes/assets.include.xml" />
   <Include File="../../../../hier0nimus/military-items/assets.include.xml" />
+  <Include File="../../../../hier0nimus/military-pools/assets.include.xml" />
   <Include File="../../../../hier0nimus/military-policies-itemsets/assets.include.xml" />
   <Include File="../../../../hier0nimus/military-buffs-effects/assets.include.xml" />
-  <Include File="../../../../hier0nimus/military-pools/assets.include.xml" />
   <Include File="../../../../hier0nimus/sailors/assets.include.xml" />
   <Include File="../../../../hier0nimus/quests/assets.include.xml" />
   <Include File="../../../../hier0nimus/newspapers/assets.include.xml" />
   <Include File="../../../../hier0nimus/ornaments/assets.include.xml" />
-  <Include File="../../../../hier0nimus/military-construction-menu/assets.include.xml" />
   <Include File="../../../../hier0nimus/monument/assets.include.xml" />
   <Include File="../../../../hier0nimus/docklands/assets.include.xml" />
   <Include File="../../../../hier0nimus/vehicles/assets.include.xml" />
   <Include File="../../../../hier0nimus/festivals/assets.include.xml" />
   <Include File="../../../../hier0nimus/ai/assets.include.xml" />
   <Include File="../../../../hier0nimus/tweaks/assets.include.xml" />
+  <Include File="../../../../hier0nimus/military-construction-menu/assets.include.xml" />
   <Include File="../../../../hier0nimus/compatibility/assets.include.xml" />
   <Include File="../../../../hier0nimus/triggers/assets.include.xml" />
 </ModOps>

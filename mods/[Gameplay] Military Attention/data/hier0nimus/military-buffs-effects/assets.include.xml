@@ -39,10 +39,6 @@
               <AmountInPercent>-15</AmountInPercent>
             </Item>
             <Item>
-              <ProvidedNeed>1010193</ProvidedNeed>              <!-- Beef - Product -->
-              <AmountInPercent>-15</AmountInPercent>
-            </Item>
-            <Item>
               <ProvidedNeed>120032</ProvidedNeed>              <!-- Coffee - Product -->
               <AmountInPercent>-10</AmountInPercent>
             </Item>
@@ -97,10 +93,6 @@
             </Item>
             <Item>
               <ProvidedNeed>1010203</ProvidedNeed>              <!-- Soap - Product -->
-              <AmountInPercent>-15</AmountInPercent>
-            </Item>
-            <Item>
-              <ProvidedNeed>1010193</ProvidedNeed>              <!-- Beef - Product -->
               <AmountInPercent>-15</AmountInPercent>
             </Item>
             <Item>
@@ -435,9 +427,6 @@
               <GUID>1742100056</GUID>              <!-- Cigarettes Factory - Building -->
             </Item>
             <Item>
-              <GUID>101252</GUID>              <!-- Coffee Roaster - Building -->
-            </Item>
-            <Item>
               <GUID>124738</GUID>              <!-- Advanced Coffee Roaster - Building -->
             </Item>
           </EffectTargets>
@@ -491,6 +480,9 @@
               <GUID>1742100062</GUID>              <!-- Military Uniform Factory - Building -->
             </Item>
             <Item>
+              <GUID>1742100331</GUID>              <!-- Heated Military Uniform Factory - Building -->
+            </Item>
+            <Item>
               <GUID>1742100068</GUID>              <!-- Sleeping Bag Factory OW - Building -->
             </Item>
           </EffectTargets>
@@ -542,6 +534,9 @@
           <EffectTargets>
             <Item>
               <GUID>1742100291</GUID>              <!-- Gunpowder Factory - Building -->
+            </Item>
+            <Item>
+              <GUID>1742100469</GUID>              <!-- Basic Weapons Factory - Building -->
             </Item>
             <Item>
               <GUID>1010299</GUID>              <!-- Weapon Factory - Building -->
@@ -724,7 +719,7 @@
             <Percental>1</Percental>
           </ForwardSpeedUpgrade>
           <IgnoreWeightFactorUpgrade>
-            <Value>-50</Value>
+            <Value>50</Value>
             <Percental>1</Percental>
           </IgnoreWeightFactorUpgrade>
         </VehicleUpgrade>
@@ -845,7 +840,7 @@
             <Percental>1</Percental>
           </ForwardSpeedUpgrade>
           <IgnoreWeightFactorUpgrade>
-            <Value>-75</Value>
+            <Value>50</Value>
             <Percental>1</Percental>
           </IgnoreWeightFactorUpgrade>
         </VehicleUpgrade>
@@ -922,7 +917,7 @@
         <Text />
         <VehicleUpgrade>
           <IgnoreDamageFactorUpgrade>
-            <Value>-75</Value>
+            <Value>50</Value>
             <Percental>1</Percental>
           </IgnoreDamageFactorUpgrade>
         </VehicleUpgrade>
@@ -2054,90 +2049,6 @@
   </ModOp>
   <!-- END MILITARY PARADE PRODUCTION BUFF - BUFF -->
 
-  <!-- START FORT HARBOUR BUFF - BUFF -->
-  <ModOp GUID="110956" Type="addNextSibling">
-    <Asset>
-      <Template>HarbourOfficeBuff</Template>
-      <Values>
-        <Standard>
-          <GUID>1742100480</GUID>
-          <Name>Fort Harbour Buff</Name>
-          <IconFilename>data/graphics/icons/icon_fort.png</IconFilename>
-          <InfoDescription>1742100481</InfoDescription>
-        </Standard>
-        <ItemEffect>
-          <EffectTargets>
-            <Item>
-              <GUID>191443</GUID>
-            </Item>
-          </EffectTargets>
-        </ItemEffect>
-        <Text />
-        <FactoryUpgrade />
-        <BuildingUpgrade>
-          <WorkforceAmountUpgrade>
-            <Value>-50</Value>
-            <Percental>1</Percental>
-          </WorkforceAmountUpgrade>
-          <MaintenanceUpgrade>
-            <Value>-50</Value>
-            <Percental>1</Percental>
-          </MaintenanceUpgrade>
-          <ReplacingWorkforce>1742100005</ReplacingWorkforce>
-        </BuildingUpgrade>
-        <Buff />
-        <AttackerUpgrade>
-          <BaseDamageUpgrade>
-            <Percental>1</Percental>
-          </BaseDamageUpgrade>
-          <ReloadTimeUpgrade>
-            <Value>-17</Value>
-            <Percental>1</Percental>
-          </ReloadTimeUpgrade>
-          <AttackSpeedUpgrade>20</AttackSpeedUpgrade>
-        </AttackerUpgrade>
-        <VisitorHarborUpgrade />
-        <VisitorUpgrade />
-        <PassiveTradeGoodGenUpgrade>
-          <GenProbability>100</GenProbability>
-          <GenPool>190803</GenPool>
-        </PassiveTradeGoodGenUpgrade>
-        <KontorUpgrade />
-        <AttackableUpgrade>
-          <SelfHealUpgrade>
-            <Value>200</Value>
-            <Percental>1</Percental>
-          </SelfHealUpgrade>
-          <SelfHealPausedTimeIfAttackedUpgrade>
-            <Value>-100</Value>
-            <Percental>1</Percental>
-          </SelfHealPausedTimeIfAttackedUpgrade>
-          <MoralePowerUpgrade>
-            <Value>50</Value>
-            <Percental>1</Percental>
-          </MoralePowerUpgrade>
-        </AttackableUpgrade>
-        <PierUpgrade>
-          <PierSpeedUpgrade>
-            <Value>50</Value>
-            <Percental>1</Percental>
-          </PierSpeedUpgrade>
-        </PierUpgrade>
-        <CultureUpgrade />
-        <WarehouseUpgrade>
-          <StorageCapacityModifier>75</StorageCapacityModifier>
-        </WarehouseUpgrade>
-        <ItemContainerUpgrade>
-          <SocketCountUpgrade>
-            <Value>1</Value>
-          </SocketCountUpgrade>
-        </ItemContainerUpgrade>
-        <ResourceUpgrade />
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END FORT HARBOUR BUFF - BUFF -->
-
   <!-- START GALENA MINES BUFF - BUFF -->
   <ModOp Type="addNextSibling" GUID="25623">
     <Asset>
@@ -2193,5 +2104,222 @@
     </Asset>
   </ModOp>
   <!-- END GALENA MINES BUFF - BUFF -->
+
+  <ModOp GUID="142449" Type="addNextSibling">
+    <!-- START FORT DEFENSE - BUFF -->
+    <Asset>
+      <Template>HarbourOfficeBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100480</GUID>
+          <Name>Fort Defense</Name>
+          <IconFilename>data/graphics/icons/icon_fort.png</IconFilename>
+          <InfoDescription>1742100481</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742100252</GUID>
+            </Item>
+            <Item>
+              <GUID>1742100253</GUID>
+            </Item>
+            <Item>
+              <GUID>1742100413</GUID>
+            </Item>
+            <Item>
+              <GUID>1742100220</GUID>              <!-- Monster Gun (OW) - Building -->
+            </Item>
+          </EffectTargets>
+          <AllowStacking>0</AllowStacking>
+        </ItemEffect>
+        <Text />
+        <FactoryUpgrade />
+        <BuildingUpgrade>
+          <WorkforceAmountUpgrade>
+            <Value>-50</Value>
+            <Percental>1</Percental>
+          </WorkforceAmountUpgrade>
+          <MaintenanceUpgrade>
+            <Value>-50</Value>
+            <Percental>1</Percental>
+          </MaintenanceUpgrade>
+        </BuildingUpgrade>
+        <Buff />
+        <AttackerUpgrade>
+          <BaseDamageUpgrade>
+            <Percental>1</Percental>
+          </BaseDamageUpgrade>
+          <ReloadTimeUpgrade>
+            <Value>-17</Value>
+            <Percental>1</Percental>
+          </ReloadTimeUpgrade>
+          <AttackSpeedUpgrade>20</AttackSpeedUpgrade>
+        </AttackerUpgrade>
+        <VisitorHarborUpgrade />
+        <VisitorUpgrade />
+        <PassiveTradeGoodGenUpgrade />
+        <KontorUpgrade />
+        <AttackableUpgrade>
+          <SelfHealUpgrade>
+            <Value>200</Value>
+            <Percental>1</Percental>
+          </SelfHealUpgrade>
+          <SelfHealPausedTimeIfAttackedUpgrade>
+            <Value>-100</Value>
+            <Percental>1</Percental>
+          </SelfHealPausedTimeIfAttackedUpgrade>
+          <MoralePowerUpgrade>
+            <Value>50</Value>
+            <Percental>1</Percental>
+          </MoralePowerUpgrade>
+        </AttackableUpgrade>
+        <CultureUpgrade>
+          <HideBuff>0</HideBuff>
+        </CultureUpgrade>
+        <ResourceUpgrade />
+      </Values>
+    </Asset>
+    <!-- END FORT DEFENSE - BUFF -->
+    <!-- START FORT LOGISTICS - BUFF -->
+    <Asset>
+      <Template>HarbourOfficeBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100568</GUID>
+          <Name>Fort Logistics</Name>
+          <IconFilename>data/graphics/icons/icon_fort.png</IconFilename>
+          <InfoDescription>1742100569</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>193480</GUID>
+            </Item>
+          </EffectTargets>
+          <AllowStacking>0</AllowStacking>
+        </ItemEffect>
+        <Text />
+        <FactoryUpgrade />
+        <BuildingUpgrade>
+          <MaintenanceUpgrade>
+            <Value>-50</Value>
+            <Percental>1</Percental>
+          </MaintenanceUpgrade>
+        </BuildingUpgrade>
+        <Buff />
+        <AttackerUpgrade />
+        <VisitorHarborUpgrade />
+        <VisitorUpgrade />
+        <PassiveTradeGoodGenUpgrade />
+        <KontorUpgrade />
+        <AttackableUpgrade>
+          <SelfHealUpgrade>
+            <Value>100</Value>
+            <Percental>1</Percental>
+          </SelfHealUpgrade>
+          <SelfHealPausedTimeIfAttackedUpgrade>
+            <Value>-100</Value>
+            <Percental>1</Percental>
+          </SelfHealPausedTimeIfAttackedUpgrade>
+          <MoralePowerUpgrade>
+            <Value>100</Value>
+            <Percental>1</Percental>
+          </MoralePowerUpgrade>
+        </AttackableUpgrade>
+        <CultureUpgrade>
+          <HideBuff>0</HideBuff>
+        </CultureUpgrade>
+        <ResourceUpgrade />
+        <PierUpgrade>
+          <PierSpeedUpgrade>
+            <Value>50</Value>
+            <Percental>1</Percental>
+          </PierSpeedUpgrade>
+        </PierUpgrade>
+      </Values>
+    </Asset>
+    <!-- END FORT LOGISTICS BUFF - BUFF -->
+    <!-- START FORT REPARATIONS - BUFF -->
+    <Asset>
+      <Template>HarbourOfficeBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100570</GUID>
+          <Name>Fort Reparations</Name>
+          <IconFilename>data/graphics/icons/icon_fort.png</IconFilename>
+          <InfoDescription>1742100571</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>191887</GUID>
+            </Item>
+          </EffectTargets>
+          <AllowStacking>0</AllowStacking>
+        </ItemEffect>
+        <Text />
+        <FactoryUpgrade />
+        <BuildingUpgrade>
+          <MaintenanceUpgrade>
+            <Value>-25</Value>
+            <Percental>1</Percental>
+          </MaintenanceUpgrade>
+        </BuildingUpgrade>
+        <Buff />
+        <AttackerUpgrade />
+        <VisitorHarborUpgrade />
+        <VisitorUpgrade />
+        <RepairCraneUpgrade>
+          <HealRadiusUpgrade>
+            <Value>25</Value>
+            <Percental>1</Percental>
+          </HealRadiusUpgrade>
+          <HealPerMinuteUpgrade>
+            <Value>25</Value>
+            <Percental>1</Percental>
+          </HealPerMinuteUpgrade>
+          <HealBuildingsPerMinuteUpgrade>
+            <Value>25</Value>
+            <Percental>1</Percental>
+          </HealBuildingsPerMinuteUpgrade>
+        </RepairCraneUpgrade>
+        <PassiveTradeGoodGenUpgrade />
+        <KontorUpgrade />
+        <AttackableUpgrade />
+        <CultureUpgrade>
+          <HideBuff>0</HideBuff>
+        </CultureUpgrade>
+        <ResourceUpgrade />
+        <PierUpgrade />
+      </Values>
+    </Asset>
+    <!-- END FORT REPARATIONS BUFF - BUFF -->
+    <!--  START - FORT - FORWARDBUFF -->
+    <Asset>
+      <Template>EffectContainer</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100567</GUID>
+          <Name>Fort Effect Container</Name>
+          <IconFilename>data/graphics/icons/icon_cargo_supplies.png</IconFilename>
+        </Standard>
+        <EffectContainer>
+          <Effects>
+            <Item>
+              <Effect>1742100480</Effect>              <!-- Fort Defense - HarbourOfficeBuff -->
+            </Item>
+            <Item>
+              <Effect>1742100568</Effect>              <!-- Fort Logistics - HarbourOfficeBuff -->
+            </Item>
+            <Item>
+              <Effect>1742100570</Effect>              <!-- Fort Reparations - HarbourOfficeBuff -->
+            </Item>
+          </Effects>
+        </EffectContainer>
+      </Values>
+    </Asset>
+    <!--  END - FORT - FORWARDBUFF -->
+  </ModOp>
 
 </ModOps>

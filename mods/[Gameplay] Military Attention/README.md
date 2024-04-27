@@ -1,10 +1,36 @@
-# Military Attention | BETA 0.6!
+# Military Attention | BETA 0.7!
 
 A mod centered around military infrastructure and adding new military residence tiers for all regions with a focus on the Old World.
 
 ![ma-img-01.jpg](./banner.jpg)
 
 ## Changelog
+
+### Beta v0.7
+- Added jakob-skyscraper-button to make the skyscraper unlock button available earlier for the barracks instead of at 5000 investors
+- Check all itemsets from Academy and fixed some bugs with it
+    - Itemset 1 - Ship Production - Correctly added Pirate Naval Architect Blueprints
+    - Itemset 2 - Military Consumption Goods Production 
+        - changed Pirate Naval Architect Blueprints to correct item Jean's Best Whisky
+        - Removed not needed Coffee roaster from region that is not affected
+    - Itemset 3 - Military Equipment Production - Added Heated Military Uniform Factory
+    - Itemset 4 - Military Weapon Goods Production - Added Basic Weapons Factory to Military Weapon Goods Production pool
+    - Itemset 7 - Speed Improvements Ships - Corrected the Cargo slowdown from +50% to -50%
+    - Itemset 10 - Speed Improvements Airships - Corrected the Cargo slowdown from +75% to -50%
+    - Itemset 12 - Defense Improvement Airships - Corrected the Damage slowdown from +75% to -50%
+- Fixed Buff given by Fort to surrounding harbour buildings - If you already have build this, you probably need to make a move action for all buildings affected by this to reset the buff.
+- Added defense turrets from the mod to vanilla all defense turrets pool
+- Changed icon Jean's Private Messenger
+- Changed standard workforce for ammunition factories to workers and not soldiers
+- Changed Soldiers workforce goods product list that was actually not used to SoldiersConsumerGoods for every region
+- Changed workforce for Mint from workers to artisans
+- Moved Meat from Needs to Lifestyle needs for Old World soldiers
+- Added Pocket Watches to upgraded Old World Soldiers as happiness need
+- Moved Military Academy from Luxury needs to normal needs for Military Engineers
+- Cleaned up and restructured a lot of the ProductLists
+- Fixed double amount in storage for some products
+- Moved Military Training Complex in the construction menu
+- Removed the bus icons from Military Academy and Fort monument in the construction menu by changing the templates for Military Academy and Fort preparations
 
 ### Beta v0.6
 - Added correct costs and maintenance for Fort monument
@@ -17,6 +43,7 @@ A mod centered around military infrastructure and adding new military residence 
 - Moved Military Headquarters to barracks residence
 - Fixed output for Military Prison
 - Fixed output for Propaganda Facility
+- Made the Cemetery model a bit wider
 
 ### Beta v0.5
 - Added ormaments (Memorial status (2 variations), Cannon statue)

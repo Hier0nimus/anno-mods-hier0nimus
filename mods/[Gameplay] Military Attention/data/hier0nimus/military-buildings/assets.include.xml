@@ -2073,10 +2073,31 @@
               <ModuleGUID>1742100020</ModuleGUID>              <!-- Canteen - Building -->
             </Item>
             <Item>
+              <ModuleGUID>1742100562</ModuleGUID>              <!-- Field Hospital - Building -->
+            </Item>
+            <Item>
+              <ModuleGUID>1742100076</ModuleGUID>              <!-- Sanitation Facility - Building -->
+            </Item>
+            <Item>
+              <ModuleGUID>1742100238</ModuleGUID>              <!-- Small Military Warehouse - Buildings -->
+            </Item>
+            <Item>
+              <ModuleGUID>1742100007</ModuleGUID>              <!-- Military Post Box - Building -->
+            </Item>
+            <Item>
               <ModuleGUID>1742100078</ModuleGUID>              <!-- Recreation Centre - Building -->
             </Item>
             <Item>
               <ModuleGUID>1742100189</ModuleGUID>              <!-- Military Training Complex - Building -->
+            </Item>
+            <Item>
+              <ModuleGUID>1742100457</ModuleGUID>              <!-- Military Prison - Building -->
+            </Item>
+            <Item>
+              <ModuleGUID>1742100459</ModuleGUID>              <!-- Propaganda Facility - Building -->
+            </Item>
+            <Item>
+              <ModuleGUID>1742100024</ModuleGUID>              <!-- Military Warehouse - Building -->
             </Item>
             <Item>
               <ModuleGUID>1742100082</ModuleGUID>              <!-- Military Academy - Building -->
@@ -3425,7 +3446,7 @@
             </Item>
             <Item>
               <Product>1742100005</Product>              <!-- Soldiers Workforce -->
-              <Amount>20</Amount>
+              <Amount>5</Amount>
             </Item>
           </Maintenances>
         </Maintenance>
@@ -3487,7 +3508,7 @@
   <!-- START BUILDING - MILITARY ACADEMY -->
   <ModOp GUID="1010358" Type="addNextSibling">
     <Asset>
-      <Template>CultureBuilding</Template>
+      <Template>MilitaryAcademy</Template>
       <Values>
         <Standard>
           <GUID>1742100082</GUID>
@@ -3659,6 +3680,15 @@
           <DynamicEnvironmentType>Fog</DynamicEnvironmentType>
         </AmbientMoodProvider>
         <LogisticNode />
+        <PublicService>
+          <FullSatisfactionDistance>80</FullSatisfactionDistance>
+          <NoSatisfactionDistance>70</NoSatisfactionDistance>
+          <PublicServiceOutputs>
+            <Item>
+              <Product>1742100084</Product>              <!-- Military Academy - Product -->
+            </Item>
+          </PublicServiceOutputs>
+        </PublicService>
         <Factory7 />
         <FactoryBase />
         <Maintenance>
@@ -3687,7 +3717,6 @@
         <StreetActivation />
         <QuestObject />
         <InfluenceSource />
-        <BusActivation />
       </Values>
     </Asset>
   </ModOp>
@@ -4590,8 +4619,8 @@
               <InactiveAmount>50</InactiveAmount>
             </Item>
             <Item>
-              <Product>1742100005</Product>              <!-- Soldiers Workforce -->
-              <Amount>100</Amount>
+              <Product>1010115</Product>              <!-- Workers Workforce -->
+              <Amount>50</Amount>
             </Item>
           </Maintenances>
         </Maintenance>
@@ -4733,8 +4762,8 @@
               <InactiveAmount>100</InactiveAmount>
             </Item>
             <Item>
-              <Product>1742100005</Product>              <!-- Soldiers Workforce -->
-              <Amount>150</Amount>
+              <Product>1010115</Product>              <!-- Workers Workforce -->
+              <Amount>80</Amount>
             </Item>
           </Maintenances>
         </Maintenance>
@@ -6205,7 +6234,7 @@
               <InactiveAmount>100</InactiveAmount>
             </Item>
             <Item>
-              <Product>1742100005</Product>
+              <Product>1010115</Product>
               <Amount>20</Amount>
             </Item>
           </Maintenances>
@@ -6570,7 +6599,7 @@
               <InactiveAmount>50</InactiveAmount>
             </Item>
             <Item>
-              <Product>1010115</Product>              <!-- Workers Workforce -->
+              <Product>1010116</Product>              <!-- Artisans Workforce -->
               <Amount>30</Amount>
             </Item>
           </Maintenances>

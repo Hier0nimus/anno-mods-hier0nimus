@@ -8,7 +8,7 @@
   <!-- START MONUMENT - Fort: Preparations - Building -->
   <ModOp Type="addNextSibling" GUID='1010343'>
     <Asset>
-      <Template>Monument</Template>
+      <Template>FortStages</Template>
       <Values>
         <Standard>
           <GUID>1742100484</GUID>
@@ -170,7 +170,7 @@
   <!-- START MONUMENT - Fort: Foundations - Building -->
   <ModOp Type="addNextSibling" GUID='1010343'>
     <Asset>
-      <Template>Monument</Template>
+      <Template>FortStages</Template>
       <Values>
         <Standard>
           <GUID>1742100486</GUID>
@@ -332,7 +332,7 @@
   <!-- START MONUMENT - Fort: Lower part - Building -->
   <ModOp Type="addNextSibling" GUID='1010343'>
     <Asset>
-      <Template>Monument</Template>
+      <Template>FortStages</Template>
       <Values>
         <Standard>
           <GUID>1742100488</GUID>
@@ -502,7 +502,7 @@
   </ModOp>
   <!-- END MONUMENT - Fort: Lower part - Building -->
 
-  <!-- END MONUMENT - FORT (OW) - Military Defenses -->
+  <!-- START MONUMENT - FORT (OW) - Military Defenses -->
   <ModOp Type="addNextSibling" GUID='1010343'>
     <Asset>
       <Template>HarborBuildingAttackerFort</Template>
@@ -571,14 +571,14 @@
           <InfluenceCostType>DefenseBuilding</InfluenceCostType>
           <InfluenceCostPoints>100</InfluenceCostPoints>
         </Cost>
-        <!--
         <BuffFactory>
-          <ProductionBuffDistance>30</ProductionBuffDistance>
-          <BaseBuff>1742100480</BaseBuff>
+          <BaseBuff>1742100567</BaseBuff>
           <BaseBuffScope>Radius</BaseBuffScope>
-          <BaseBuffDistance>30</BaseBuffDistance>
+          <BaseBuffDistance>80</BaseBuffDistance>
         </BuffFactory>
-        -->
+        <LogisticNode>
+          <TransporterCountMax>2</TransporterCountMax>
+        </LogisticNode>
         <Attackable>
           <AttackableType>HarbourBuilding</AttackableType>
           <MaximumHitPoints>20000</MaximumHitPoints>
@@ -652,7 +652,7 @@
             </Item>
             <Item>
               <Product>1742100005</Product>              <!-- Soldiers Workforce -->
-              <Amount>1000</Amount>
+              <Amount>500</Amount>
             </Item>
           </Maintenances>
           <ConsumerPriority>1</ConsumerPriority>
