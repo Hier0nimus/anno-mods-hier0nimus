@@ -1,10 +1,17 @@
-# Military Attention | BETA 0.7!
+# Military Attention | BETA 0.8!
 
 A mod centered around military infrastructure and adding new military residence tiers for all regions with a focus on the Old World.
 
 ![ma-img-01.jpg](./banner.jpg)
 
 ## Changelog
+
+### Beta v0.8
+- Corrected NoSatisfactionDistance and NoSatisfactionDistance for depots and other public services
+- Added feedbackunits to all Old World Encampments for soldiers
+- Revamped some aspects of the Old World Encampments (Tents, props,...)
+- Added extra pallisade and non pallisade variations for Old World Encampments
+- Added a wall with gate pallisade system to beauty build in the Old World and the New World
 
 ### Beta v0.7
 - Added jakob-skyscraper-button to make the skyscraper unlock button available earlier for the barracks instead of at 5000 investors
@@ -46,7 +53,7 @@ A mod centered around military infrastructure and adding new military residence 
 - Made the Cemetery model a bit wider
 
 ### Beta v0.5
-- Added ormaments (Memorial status (2 variations), Cannon statue)
+- Added ormaments (Memorial statues (2 variations), Cannon statue)
 - Removed Potatoes from needs Farmers and Workers
 - Added Cemetery need for Farmers, Workers and Artisans
 - Added Local cemetery and Cemetary public service building (2 variations Local cemetery, 3 variations Cemetery)
