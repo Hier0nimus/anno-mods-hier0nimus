@@ -219,7 +219,13 @@ Reduction of damage of flame towers to wooden ships
       <Product>120008</Product>
       <!--Wood-->
       <Amount>1</Amount>
-      <StorageAmount>4</StorageAmount>
+      <StorageAmount>6</StorageAmount>
+    </Item>
+    <Item>
+      <Product>1742100293</Product>
+      <!--Gunpowder-->
+      <Amount>1</Amount>
+      <StorageAmount>6</StorageAmount>
     </Item>
   </ModOp>
 
@@ -227,6 +233,25 @@ Reduction of damage of flame towers to wooden ships
   <ModOp Type="add" GUID="500145" Path="/Values/ProductionChain/Tier1">
     <Item>
       <Building>1010266</Building>      <!-- Lumberjack OW - Building -->
+    </Item>
+    <Item>
+      <Building>1742100291</Building>      <!-- Gunpowder Factory - Building -->
+      <Tier2>
+        <Item>
+          <Building>1742100165</Building>          <!-- Open Pit Coal Mine - Building -->
+        </Item>
+        <Item>
+          <Building>1742100289</Building>          <!-- Saltpetre Bed - Building -->
+          <Tier3>
+            <Item>
+              <Building>1010266</Building>              <!-- Lumberjack OW - Building -->
+            </Item>
+            <Item>
+              <Building>1742100287</Building>              <!-- Dung Collector - Building -->
+            </Item>
+          </Tier3>
+        </Item>
+      </Tier2>
     </Item>
   </ModOp>
 
