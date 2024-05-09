@@ -1,10 +1,45 @@
-# Military Attention | BETA 0.8!
+# Military Attention | BETA 0.9!
 
 A mod centered around military infrastructure and adding new military residence tiers for all regions with a focus on the Old World.
 
 ![ma-img-01.jpg](./banner.jpg)
 
 ## Changelog
+
+### Beta v0.9
+- Rebalance Military Logistics Buff from 50% productivitey to 40%. Increased extra workforce and maintenance from 15% to 20%.
+- Added Gunpowder as input for weapons
+- Added Mod1 to socket allocation for Military Academy Module items so there is compatibility with Items Sockets mod from Kurila
+- Cemetery is moved and unlockable at Artisans now instead of engineers. 
+- Small fix for adapt to terrain height for pallisade gate
+- Added new model/visual and materials for standard military soldiers thanks to S1LV3R-p0tat0.
+- Cleanup, fixing materials and adding feedbackunits for:
+    - Galena Module
+    - Dung Collector
+    - Stables + Training ground
+    - Nitrary + Shed + Fields
+    - Canteen (OW, NW, EN)
+    - Recreation Center
+    - Propaganda Facility
+    - Naval Recruitment Office
+    - Sanitaion Facility
+    - (Small) Military Warehouse
+    - Military Prison
+    - Military Postbox
+    - Military Training Complex
+    - Military Field Hospital
+    - Military Uniform Factory
+    - Heated Military Uniform Factory
+    - Military Mailbox
+    - Military Outpost (NW, EN, AR)
+    - Mint
+    - Cardgames Factory
+    - Cigarettes Factory
+    - Sleeping Bag Factory
+    - Gunpowder Factory
+    - Basic Weapons Factory
+    - Basic Ammunition Factory
+    - Encampments (OW, NW, EN, AR)
 
 ### Beta v0.8
 - Corrected NoSatisfactionDistance and NoSatisfactionDistance for depots and other public services

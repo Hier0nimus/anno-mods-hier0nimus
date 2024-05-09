@@ -628,6 +628,51 @@
       </Values>
     </Asset>
   </ModOp>
+  <!--UNLOCK - ARTISANS  300 -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100730</GUID>
+          <Name>MOD Trigger</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>15000002</Context>                <!-- Artisans PopulationLevel7 -->
+                <CounterAmount>300</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
+                    </UnhideAssets>
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>1742100560</Asset>                        <!-- Cemetery - Building -->
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
 
   <!--UNLOCK - ARTISANS  750 -->
   <ModOp Type="addnextSibling" GUID="130248">
@@ -749,9 +794,6 @@
                     <UnhideAssets>
                     </UnhideAssets>
                     <UnlockAssets>
-                      <Item>
-                        <Asset>1742100560</Asset>                        <!-- Cemetery - Building -->
-                      </Item>
                       <Item>
                         <Asset>1742100024</Asset>                        <!-- Military Warehouse - Building -->
                       </Item>
