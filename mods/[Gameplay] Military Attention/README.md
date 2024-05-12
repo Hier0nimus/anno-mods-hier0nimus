@@ -1,10 +1,45 @@
-# Military Attention | BETA 0.9!
+# Military Attention | BETA 0.10!
 
 A mod centered around military infrastructure and adding new military residence tiers for all regions with a focus on the Old World.
 
 ![ma-img-01.jpg](./banner.jpg)
 
 ## Changelog
+
+### Beta v0.10
+- Added horse sound to stables, horse training ground and fields
+- Fixed some feedback from the Propaganda Facility
+- Barracks
+    - Added feedback
+    - Added more lod's foor zoom levels
+    - Upgrading to barracks is now like upgrading to the next tier, not via skyscraper mechanic
+- Removed Military Engineers and all its additional things like pools, assets,...
+- Changed and inscreased workforce from engineers to soldiers for
+    - Small Bombs Ammunition Depot (OW)
+    - Large Ammunition Depot (OW)
+    - Military Warehouse
+    - Military Academy
+    - Ammunition Factory - Bombs
+- Corrected Military Prison buff
+- Military ornament 1
+    - Removed grass variation
+    - Fixed material of sign
+- Ammunition Depots
+    - Added feedback
+    - Fixed adjust to terrain
+    - Fixed decals
+- Nerfed soldiers and income for soldier needs, happiness needs and lifestyle needs
+    - Coins from 60 to 30
+    - Cigarettes from 20 to 15
+    - Recreation Center from 50 to 30
+    - Beef from 25 to 15
+    - Jam from 25 to 10
+    - Cardgames from 40 to 30
+    - Huskies from 20 to 15
+- Nerfed amount of happiness for all Soldiers goods to balance it more with the vanilla values of max 20
+- Added Barracks for soldiers to the Arctic as upgrade for Arctic encampments
+- Changed some of the Arctic Soldier needs/heat/lifestyle to balance with the new arctic barracks
+- Small temporary fix for compatibility with Extended Traktors (Kurila)
 
 ### Beta v0.9
 - Rebalance Military Logistics Buff from 50% productivitey to 40%. Increased extra workforce and maintenance from 15% to 20%.
@@ -39,6 +74,8 @@ A mod centered around military infrastructure and adding new military residence 
     - Gunpowder Factory
     - Basic Weapons Factory
     - Basic Ammunition Factory
+    - Shell Ammunition Factory
+    - Bombs Ammunition Factory
     - Encampments (OW, NW, EN, AR)
 
 ### Beta v0.8
@@ -294,8 +331,7 @@ Upgraded version of soldier residences. Military engineers are added to the norm
 ![ma-img-01.jpg](./data/graphics/icons/icon_resident_soldiers_0.png)
 
 - Encampment (Old World, New World, Enbesa, Arctic)
-- Barracks (Skyscraper variant of encampment for soldiers)
-- Engineers Quarters
+- Barracks (Upgraded variant of encampment for Old World and Arctic soldiers)
 
 ### Public Services
 
