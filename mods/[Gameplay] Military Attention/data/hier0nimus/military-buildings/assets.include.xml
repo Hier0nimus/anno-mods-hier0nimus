@@ -115,7 +115,7 @@
           <DefaultLockedState>1</DefaultLockedState>
         </Locked>
         <Upgradable>
-          <NextGUID>1742100011</NextGUID>
+          <NextGUID>1742100003</NextGUID>
           <UpgradeCost>
             <Item>
               <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
@@ -245,31 +245,6 @@
         <Culture />
         <StreetActivation />
         <InfluenceSource />
-        <FloorStackOwner>
-          <UpgradeTargetGUID>1742100003</UpgradeTargetGUID>
-          <AddFloorCost>
-            <Item>
-              <Ingredient>1010017</Ingredient>              <!-- Coins - Product -->
-              <Amount>500</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
-              <Amount>10</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010205</Ingredient>              <!-- Bricks - Product -->
-              <Amount>4</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product -->
-              <Amount>1</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010207</Ingredient>              <!-- Windows - Product -->
-              <Amount>1</Amount>
-            </Item>
-          </AddFloorCost>
-        </FloorStackOwner>
         <Maintenance>
           <IncomeCategory>Skyscrapers</IncomeCategory>
         </Maintenance>
@@ -304,6 +279,48 @@
           <SkipUnlockMessage>1</SkipUnlockMessage>
           <BuildModeRandomRotation>90</BuildModeRandomRotation>
           <AssociatedRegions>Moderate</AssociatedRegions>
+          <BuildingBlockPool>
+            <DontCare>
+              <Pool>
+                <Item>
+                </Item>
+                <Item>
+                  <DirectionOffet>1</DirectionOffet>
+                  <Variation>1</Variation>
+                </Item>
+              </Pool>
+            </DontCare>
+            <Mid>
+              <Pool>
+                <Item>
+                  <Variation>2</Variation>
+                </Item>
+                <Item>
+                  <Variation>3</Variation>
+                </Item>
+                <Item>
+                  <Variation>4</Variation>
+                </Item>
+                <Item>
+                  <Variation>8</Variation>
+                </Item>
+              </Pool>
+            </Mid>
+            <End>
+              <Pool>
+                <Item>
+                  <DirectionOffet>3</DirectionOffet>
+                  <Variation>5</Variation>
+                </Item>
+                <Item>
+                  <Variation>6</Variation>
+                </Item>
+                <Item>
+                  <Variation>7</Variation>
+                </Item>
+              </Pool>
+            </End>
+          </BuildingBlockPool>
         </Building>
         <Cost>
           <Costs>
@@ -381,27 +398,7 @@
           <DefaultLockedState>1</DefaultLockedState>
           <DLCDependency>410085</DLCDependency>
         </Locked>
-        <Upgradable>
-          <NextGUID>1742100011</NextGUID>
-          <UpgradeCost>
-            <Item>
-              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
-              <Amount>12</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010205</Ingredient>              <!-- Bricks - Product -->
-              <Amount>8</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product -->
-              <Amount>4</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010207</Ingredient>              <!-- Windows - Product -->
-              <Amount>4</Amount>
-            </Item>
-          </UpgradeCost>
-        </Upgradable>
+        <Upgradable />
         <SoundEmitter>
           <ConstructionSounds>
             <BuildSuccessful>
@@ -529,223 +526,6 @@
   <!-- END BUILDING SOLDIERS Residence - BARRACKS -->
   <!-- END BUILDING SOLDIERS Residences -->
 
-  <!-- START BUILDING MILITARY ENGINEERS Residence -->
-  <ModOp GUID='601891' Type="addNextSibling">
-    <Asset>
-      <Template>ResidenceBuilding</Template>
-      <Values>
-        <Standard>
-          <GUID>1742100011</GUID>          <!-- Military Engineers Residence - Building -->
-          <Name>Military Engineers Residence</Name>
-          <IconFilename>data/graphics/icons/icon_resident_military_engineers_0.png</IconFilename>
-          <InfoDescription>1742100012</InfoDescription>          <!-- Military Engineers Residence - Building - Description -->
-        </Standard>
-        <Blocking />
-        <Building>
-          <BuildingType>Residence</BuildingType>
-          <PickingAsset>1742100011</PickingAsset>          <!-- Military Engineers Residence - Building -->
-          <SkipUnlockMessage>1</SkipUnlockMessage>
-          <BuildModeRandomRotation>90</BuildModeRandomRotation>
-          <AssociatedRegions>Moderate</AssociatedRegions>
-        </Building>
-        <Cost>
-          <Costs>
-            <Item>
-              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
-              <Amount>5</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010205</Ingredient>              <!-- Bricks - Product -->
-              <Amount>10</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product -->
-              <Amount>4</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010207</Ingredient>              <!-- Windows - Product -->
-              <Amount>3</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010202</Ingredient>              <!-- Reinforced Concrete - Product -->
-              <Amount>1</Amount>
-            </Item>
-          </Costs>
-        </Cost>
-        <Mesh />
-        <Object>
-          <Variations>
-            <Item>
-              <Filename>data/graphics/buildings/residence/residence_military_engineers/residence_military_engineers_01_01.cfg</Filename>
-            </Item>
-            <Item>
-              <Filename>data/graphics/buildings/residence/residence_military_engineers/residence_military_engineers_01_02.cfg</Filename>
-            </Item>
-            <Item>
-              <Filename>data/graphics/buildings/residence/residence_military_engineers/residence_military_engineers_02_01.cfg</Filename>
-            </Item>
-            <Item>
-              <Filename>data/graphics/buildings/residence/residence_military_engineers/residence_military_engineers_02_02.cfg</Filename>
-            </Item>
-            <Item>
-              <Filename>data/graphics/buildings/residence/residence_military_engineers/residence_military_engineers_02_03.cfg</Filename>
-            </Item>
-            <Item>
-              <Filename>data/graphics/buildings/residence/residence_military_engineers/residence_military_engineers_02_04.cfg</Filename>
-            </Item>
-            <Item>
-              <Filename>data/graphics/buildings/residence/residence_military_engineers/residence_military_engineers_03_01.cfg</Filename>
-            </Item>
-            <Item>
-              <Filename>data/graphics/buildings/residence/residence_military_engineers/residence_military_engineers_03_02.cfg</Filename>
-            </Item>
-          </Variations>
-          <Skins>
-            <DefaultSkinName>1742100011</DefaultSkinName>
-            <DefaultSkinDescription>23853</DefaultSkinDescription>
-            <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>
-          </Skins>
-        </Object>
-        <Selection>
-          <OnSelection>
-            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
-            <Values>
-              <ActionList />
-            </Values>
-          </OnSelection>
-          <ParticipantMessageArcheType>Scenario3_Editor</ParticipantMessageArcheType>
-        </Selection>
-        <Text />
-        <Constructable />
-        <Locked>
-          <DefaultLockedState>1</DefaultLockedState>
-        </Locked>
-        <Upgradable />
-        <SoundEmitter>
-          <ConstructionSounds>
-            <BuildSuccessful>
-              <Item>
-                <VectorElement>
-                  <InheritanceMapV2>
-                    <Entry>
-                      <TemplateName>ResidenceBuilding7</TemplateName>
-                      <Index>0</Index>
-                    </Entry>
-                  </InheritanceMapV2>
-                </VectorElement>
-                <Sound>200776</Sound>
-              </Item>
-            </BuildSuccessful>
-            <BuildUpgradeFailed>
-              <Item>
-                <Sound>9818387</Sound>
-              </Item>
-            </BuildUpgradeFailed>
-          </ConstructionSounds>
-          <IncidentSounds>
-            <InfectedFire>
-              <Item>
-                <Sound>214659</Sound>
-              </Item>
-            </InfectedFire>
-            <InfectedIllness>
-              <Item>
-                <Sound>214756</Sound>
-              </Item>
-            </InfectedIllness>
-            <InfectedRiot>
-              <Item>
-                <Sound>222229</Sound>
-              </Item>
-            </InfectedRiot>
-            <ExplosionOneShots>
-              <Item>
-                <Sound>203849</Sound>
-              </Item>
-            </ExplosionOneShots>
-          </IncidentSounds>
-          <BuildingRepaired>
-            <Item>
-              <Sound>203866</Sound>
-            </Item>
-          </BuildingRepaired>
-          <MaterialType>Stone</MaterialType>
-        </SoundEmitter>
-        <Infolayer />
-        <FeedbackController />
-        <Residence7>
-          <ResidenceStorage>
-            <InputStorageMax>1</InputStorageMax>
-          </ResidenceStorage>
-          <PopulationLevel7>1742100010</PopulationLevel7>          <!-- Military Engineers PopulationLevel7 -->
-          <ResidentMax>5</ResidentMax>
-        </Residence7>
-        <LogisticNode />
-        <AmbientMoodProvider>
-          <DynamicEnvironmentType>ResidenceT1</DynamicEnvironmentType>
-        </AmbientMoodProvider>
-        <UpgradeList />
-        <Attackable>
-          <AttackableType>IslandBuilding</AttackableType>
-          <MaximumHitPoints>1500</MaximumHitPoints>
-        </Attackable>
-        <IncidentInfectable>
-          <Infectable>
-            <Explosion>
-              <Base>0</Base>
-              <Escalated>0</Escalated>
-            </Explosion>
-          </Infectable>
-          <Explosion>
-            <ExplosionCoreDamage>1000</ExplosionCoreDamage>
-          </Explosion>
-          <IncidentInfectionChanceFactors>
-            <Fire>
-              <DensityFactor>0.025</DensityFactor>
-              <DensityDistance>15</DensityDistance>
-            </Fire>
-            <Riot>
-              <ResidenceHappinessFactor>0.4</ResidenceHappinessFactor>
-              <HappinessThreshold>10</HappinessThreshold>
-            </Riot>
-            <Illness>
-              <BaseChance>4</BaseChance>
-              <HitpointFactor>0.1</HitpointFactor>
-              <DensityFactor>0.025</DensityFactor>
-              <DensityDistance>15</DensityDistance>
-              <DilapidatedFactor>10</DilapidatedFactor>
-              <FactoryOvertimeFactor>0.3</FactoryOvertimeFactor>
-              <FactoryUndertimeFactor>0.15</FactoryUndertimeFactor>
-              <ResidenceFullOvertimeChance>20</ResidenceFullOvertimeChance>
-              <ResidenceFullUndertimeChance>-15</ResidenceFullUndertimeChance>
-            </Illness>
-            <Explosion>
-              <ResidenceFullOvertimeChance>20</ResidenceFullOvertimeChance>
-              <ResidenceFullUndertimeChance>-15</ResidenceFullUndertimeChance>
-            </Explosion>
-          </IncidentInfectionChanceFactors>
-        </IncidentInfectable>
-        <Pausable />
-        <Culture />
-        <StreetActivation />
-        <InfluenceSource />
-        <FloorStackOwner />
-        <Maintenance>
-          <IncomeCategory>Skyscrapers</IncomeCategory>
-        </Maintenance>
-        <Audio>
-          <ClusterEvent>
-            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
-            <Values>
-              <AudioLink />
-            </Values>
-          </ClusterEvent>
-        </Audio>
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END BUILDING MILITARY ENGINEERS Residence -->
-
   <!-- START BUILDING ARCTIC SOLDIERS Residence - ENCAMPMENT -->
   <ModOp GUID='601891' Type="addNextSibling">
     <Asset>
@@ -807,8 +587,35 @@
         <Locked>
           <DLCDependency>410042</DLCDependency>          <!-- The Passage DLC -->
         </Locked>
-        <Upgradable />
-
+        <Upgradable>
+          <NextGUID>1742100011</NextGUID>
+          <UpgradeCost>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins - Product -->
+              <Amount>500</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!-- Bricks - Product -->
+              <Amount>4</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product -->
+              <Amount>2</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>              <!-- Windows - Product -->
+              <Amount>2</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010202</Ingredient>              <!-- Reinforced Concrete - Product -->
+              <Amount>2</Amount>
+            </Item>
+          </UpgradeCost>
+        </Upgradable>
         <SoundEmitter>
           <ConstructionSounds>
             <BuildSuccessful>
@@ -883,6 +690,156 @@
     </Asset>
   </ModOp>
   <!-- END BUILDING ARCTIC SOLDIERS Residence - ENCAMPMENT -->
+
+  <!-- START BUILDING ARCTIC SOLDIERS Residence - BARRACKS -->
+  <ModOp GUID='601891' Type="addNextSibling">
+    <Asset>
+      <Template>ResidenceBuilding7_Arctic</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100011</GUID>          <!-- Arctic Soldiers Residence - Encampment - Building -->
+          <Name>Arctic Barracks</Name>
+          <IconFilename>data/graphics/icons/icon_resident_soldiers_0.png</IconFilename>
+          <InfoDescription>1742100012</InfoDescription>          <!-- Arctic Soldiers Residence - Encampment - Building - Description -->
+        </Standard>
+        <Blocking />
+        <Building>
+          <BuildingType>Residence</BuildingType>
+          <PickingAsset>1742100307</PickingAsset>          <!-- Arctic Soldiers Residence - Encampment - Building -->
+          <SkipUnlockMessage>1</SkipUnlockMessage>
+          <BuildModeRandomRotation>90</BuildModeRandomRotation>
+          <AssociatedRegions>Arctic</AssociatedRegions>
+        </Building>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins - Product -->
+              <Amount>500</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!-- Bricks - Product -->
+              <Amount>4</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product -->
+              <Amount>2</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>              <!-- Windows - Product -->
+              <Amount>2</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010202</Ingredient>              <!-- Reinforced Concrete - Product -->
+              <Amount>2</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Mesh />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/residence/residence_military_soldiers/soldiers_barracks_ar_01-01.cfg</Filename>
+            </Item>
+            <Item>
+              <Filename>data/graphics/buildings/residence/residence_military_soldiers/soldiers_barracks_ar_01-02.cfg</Filename>
+            </Item>
+            <Item>
+              <Filename>data/graphics/buildings/residence/residence_military_soldiers/soldiers_barracks_ar_01-03.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>Mercier_DeserterWorker</ParticipantMessageArcheType>
+        </Selection>
+        <Constructable />
+        <Locked>
+          <DLCDependency>410042</DLCDependency>          <!-- The Passage DLC -->
+        </Locked>
+        <Upgradable />
+        <SoundEmitter>
+          <ConstructionSounds>
+            <BuildSuccessful>
+              <Item>
+                <VectorElement>
+                  <InheritanceMapV2>
+                    <Entry>
+                      <TemplateName>ResidenceBuilding7</TemplateName>
+                      <Index>0</Index>
+                    </Entry>
+                  </InheritanceMapV2>
+                </VectorElement>
+                <Sound>200776</Sound>
+              </Item>
+            </BuildSuccessful>
+            <BuildUpgradeFailed>
+              <Item>
+                <Sound>9818387</Sound>
+              </Item>
+            </BuildUpgradeFailed>
+          </ConstructionSounds>
+          <IncidentSounds>
+            <InfectedFire>
+              <Item>
+                <Sound>214659</Sound>
+              </Item>
+            </InfectedFire>
+            <InfectedIllness>
+              <Item>
+                <Sound>214756</Sound>
+              </Item>
+            </InfectedIllness>
+            <InfectedRiot>
+              <Item>
+                <Sound>222229</Sound>
+              </Item>
+            </InfectedRiot>
+            <ExplosionOneShots>
+              <Item>
+                <Sound>203849</Sound>
+              </Item>
+            </ExplosionOneShots>
+          </IncidentSounds>
+          <BuildingRepaired>
+            <Item>
+              <Sound>203866</Sound>
+            </Item>
+          </BuildingRepaired>
+          <MaterialType>Wood</MaterialType>
+        </SoundEmitter>
+        <Infolayer />
+        <FeedbackController />
+        <RandomDummySpawner />
+        <Residence7>
+          <ResidenceStorage>
+            <InputStorageMax>1</InputStorageMax>
+          </ResidenceStorage>
+          <PopulationLevel7>1742100306</PopulationLevel7>          <!-- Arctic Soldiers - PopulationLevel7 -->
+          <ResidentMax>10</ResidentMax>
+        </Residence7>
+        <LogisticNode />
+        <AmbientMoodProvider>
+          <Murmur>Arctic_BasicTundra</Murmur>
+          <GlacierMurmur>Arctic_BasicGlacier</GlacierMurmur>
+          <DynamicEnvironmentType>ResidenceT1</DynamicEnvironmentType>
+        </AmbientMoodProvider>
+        <UpgradeList />
+        <Pausable />
+        <Culture />
+        <StreetActivation />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING ARCTIC SOLDIERS Residence - BARRACKS -->
 
   <!-- START BUILDING NEW WORLD SOLDIERS Residence - ENCAMPMENT -->
   <ModOp GUID='601891' Type="addNextSibling">
@@ -1924,8 +1881,8 @@
               <Amount>1000</Amount>
             </Item>
             <Item>
-              <Product>1010117</Product>              <!-- Engineer Workforce - Product -->
-              <Amount>100</Amount>
+              <Product>1742100005</Product>              <!-- Soldiers Workforce - Product -->
+              <Amount>250</Amount>
             </Item>
           </Maintenances>
         </Maintenance>
@@ -3722,8 +3679,8 @@
               <Amount>25000</Amount>
             </Item>
             <Item>
-              <Product>1010117</Product>              <!-- Engineer Workforce - Product -->
-              <Amount>1000</Amount>
+              <Product>1742100005</Product>              <!-- Soldiers Workforce - Product -->
+              <Amount>1500</Amount>
             </Item>
           </Maintenances>
           <ConsumerPriorityAlarmed>2</ConsumerPriorityAlarmed>
@@ -4935,7 +4892,7 @@
             </Item>
             <Item>
               <Product>1010117</Product>              <!-- Engineer Workforce - Product -->
-              <Amount>100</Amount>
+              <Amount>150</Amount>
             </Item>
           </Maintenances>
         </Maintenance>
@@ -4962,7 +4919,7 @@
         </Culture>
       </Values>
     </Asset>
-    <!-- END BUILDING - AMMUNITION FACTORY -Bombs -->
+    <!-- END BUILDING - AMMUNITION FACTORY - Bombs -->
   </ModOp>
   <!-- END BUILDING - AMMUNITION FACTORY -->
 
@@ -5020,10 +4977,7 @@
         <SoundEmitter>
           <ActiveSounds>
             <Item>
-              <Sound>214800</Sound>
-            </Item>
-            <Item>
-              <Sound>206307</Sound>
+              <Sound>203427</Sound>              <!--wwc_sfx_anm_zoo_wild_horses-->
             </Item>
           </ActiveSounds>
           <ConstructionSounds>
@@ -5082,7 +5036,7 @@
           </ConstructionOptions>
           <AdditionalModule>1742100380</AdditionalModule>          <!-- Horse Training Ground -->
           <ModuleBuildRadius>15</ModuleBuildRadius>
-          <FarmType>AnimalFarm</FarmType>
+          <!--<FarmType>AnimalFarm</FarmType>-->
         </ModuleOwner>
         <AmbientMoodProvider>
           <AmbientMood>AgricultureBuildingsEurope</AmbientMood>
@@ -5206,7 +5160,13 @@
         <Text />
         <Constructable />
         <Locked />
-        <SoundEmitter />
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>203427</Sound>              <!--wwc_sfx_anm_zoo_wild_horses-->
+            </Item>
+          </ActiveSounds>
+        </SoundEmitter>
         <FeedbackController />
         <Infolayer />
         <BuildingModule />
@@ -5692,7 +5652,7 @@
           </ConstructionOptions>
           <AdditionalModule>1742100376</AdditionalModule>          <!-- Nitrary Shed -->
           <ModuleBuildRadius>12</ModuleBuildRadius>
-          <FarmType>AnimalFarm</FarmType>
+          <!--<FarmType>AnimalFarm</FarmType>-->
         </ModuleOwner>
         <AmbientMoodProvider>
           <AmbientMood>AgricultureBuildingsEurope</AmbientMood>
@@ -6017,7 +5977,7 @@
         <SoundEmitter>
           <ActiveSounds>
             <Item>
-              <Sound>270121</Sound>
+              <Sound>203427</Sound>              <!--wwc_sfx_anm_zoo_wild_horses-->
             </Item>
           </ActiveSounds>
           <DestroySounds>
