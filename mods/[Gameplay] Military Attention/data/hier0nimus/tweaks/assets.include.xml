@@ -21,15 +21,19 @@ Change input production vanilla chain
 Add needs to vanilla population
 - Farmers
 > Cemetery
+> Clean Water
 > Horses
 - Workers
 > Cemetery
+> Clean Water
 > Cigarettes
 - Artisans
 > Cemetery
 > Cigarettes
 - Scholars
 > Cigarettes
+- Jornaleros
+> Clean Water
 - Explorers
 > Cigarettes
 -Technicians
@@ -269,7 +273,19 @@ Reduction of damage of flame towers to wooden ships
   <ModOp Type="add" GUID="15000000" Path="/Values/PopulationLevel7/PopulationInputs">
     <Item>
       <Product>1742100556</Product>      <!-- Cemetery - Product -->
-      <SupplyWeight>4</SupplyWeight>
+      <SupplyWeight>2</SupplyWeight>
+      <FullWeightPopulationCount>100</FullWeightPopulationCount>
+      <NoWeightPopulationCount>0</NoWeightPopulationCount>
+      <AdditionalGlobalUnlockRequirement>
+        <Population>15000000</Population>        <!-- Farmers -->
+        <MinPopulationAmount>100</MinPopulationAmount>
+      </AdditionalGlobalUnlockRequirement>
+    </Item>
+    <Item>
+      <Product>1742100242</Product>      <!-- Clean Water - Product -->
+      <Amount>0.0001166667</Amount>
+      <SupplyWeight>2</SupplyWeight>
+      <MoneyValue>10</MoneyValue>
       <FullWeightPopulationCount>100</FullWeightPopulationCount>
       <NoWeightPopulationCount>0</NoWeightPopulationCount>
       <AdditionalGlobalUnlockRequirement>
@@ -295,7 +311,15 @@ Reduction of damage of flame towers to wooden ships
   <ModOp Type="addNextSibling" GUID="15000001" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='1010237']">
     <Item>
       <Product>1742100556</Product>      <!-- Cemetery - Product -->
-      <SupplyWeight>8</SupplyWeight>
+      <SupplyWeight>4</SupplyWeight>
+      <FullWeightPopulationCount>100</FullWeightPopulationCount>
+      <NoWeightPopulationCount>0</NoWeightPopulationCount>
+    </Item>
+    <Item>
+      <Product>1742100242</Product>      <!-- Clean Water - Product -->
+      <Amount>0.0001166667</Amount>
+      <SupplyWeight>4</SupplyWeight>
+      <MoneyValue>10</MoneyValue>
       <FullWeightPopulationCount>100</FullWeightPopulationCount>
       <NoWeightPopulationCount>0</NoWeightPopulationCount>
     </Item>
@@ -337,6 +361,22 @@ Reduction of damage of flame towers to wooden ships
       <AdditionalGlobalUnlockRequirement>
         <Population>15000001</Population>        <!-- Workers -->
         <MinPopulationAmount>500</MinPopulationAmount>
+      </AdditionalGlobalUnlockRequirement>
+    </Item>
+  </ModOp>
+
+  <!-- ****************** New World - Jornaleros ******************  -->
+  <ModOp Type="add" GUID="15000005" Path="/Values/PopulationLevel7/PopulationInputs/">
+    <Item>
+      <Product>1742100242</Product>      <!-- Clean Water - Product -->
+      <Amount>0.0001166667</Amount>
+      <SupplyWeight>2</SupplyWeight>
+      <MoneyValue>10</MoneyValue>
+      <FullWeightPopulationCount>100</FullWeightPopulationCount>
+      <NoWeightPopulationCount>0</NoWeightPopulationCount>
+      <AdditionalGlobalUnlockRequirement>
+        <Population>15000005</Population>        <!-- Jornaleros -->
+        <MinPopulationAmount>100</MinPopulationAmount>
       </AdditionalGlobalUnlockRequirement>
     </Item>
   </ModOp>
