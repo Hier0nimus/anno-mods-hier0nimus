@@ -265,7 +265,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742100726</GUID>
+          <GUID>1742100733</GUID>
           <Name>MOD Trigger</Name>
         </Standard>
         <Trigger>
@@ -295,6 +295,12 @@
                       </Item>
                       <Item>
                         <Asset>1742100558</Asset>                        <!-- Local cemetery - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100242</Asset>                        <!-- Clean Water - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100240</Asset>                        <!-- Clean Water Pump (OW) - Building -->
                       </Item>
                       <Item>
                         <Asset>1742100211</Asset>                        <!-- Horses - Product -->
@@ -634,7 +640,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742100730</GUID>
+          <GUID>1742100737</GUID>
           <Name>MOD Trigger</Name>
         </Standard>
         <Trigger>
@@ -661,6 +667,12 @@
                     <UnlockAssets>
                       <Item>
                         <Asset>1742100560</Asset>                        <!-- Cemetery - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100504</Asset>                        <!-- Care Package: Medium (OW) - Recipe -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100506</Asset>                        <!-- Care Package Factory: Medium (OW) - Building -->
                       </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>
@@ -769,7 +781,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742100727</GUID>
+          <GUID>1742100736</GUID>
           <Name>MOD Trigger</Name>
         </Standard>
         <Trigger>
@@ -1022,11 +1034,54 @@
                       <Item>
                         <Asset>1742100490</Asset>                        <!-- Fort - Building -->
                       </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!--UNLOCK - INVESTORS  5000 -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100735</GUID>
+          <Name>MOD Trigger</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>15000004</Context>                <!-- Investors PopulationLevel7 -->
+                <CounterAmount>5000</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
+                    </UnhideAssets>
+                    <UnlockAssets>
                       <Item>
-                        <Asset>1742100510</Asset>                        <!-- Care Package: Entertainment - Recipe -->
+                        <Asset>1742100508</Asset>                        <!-- Care Package: Big - Recipe -->
                       </Item>
                       <Item>
-                        <Asset>1742100518</Asset>                        <!-- Care Package Factory: Entertainment - Building -->
+                        <Asset>1742100516</Asset>                        <!-- Care Package Factory: Big - Building -->
                       </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>
@@ -1071,12 +1126,6 @@
                     <UnhideAssets>
                     </UnhideAssets>
                     <UnlockAssets>
-                      <Item>
-                        <Asset>1742100508</Asset>                        <!-- Care Package: Fruit - Recipe -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100516</Asset>                        <!-- Care Package Factory: Fruit - Building -->
-                      </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>
                 </Values>
@@ -1091,7 +1140,7 @@
 
   <!-- *********************** EN *********************** -->
 
-  <!--UNLOCK - Shephards 300 -->
+  <!--UNLOCK - Shephards 300 --> 
   <ModOp Type="addnextSibling" GUID="130248">
     <Asset>
       <Template>Trigger</Template>
@@ -1122,12 +1171,6 @@
                     <UnhideAssets>
                     </UnhideAssets>
                     <UnlockAssets>
-                      <Item>
-                        <Asset>1742100504</Asset>                        <!-- Care Package: Meat - Recipe -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100506</Asset>                        <!-- Care Package Factory: Meat - Building -->
-                      </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>
                 </Values>
@@ -1171,12 +1214,6 @@
                     <UnhideAssets>
                     </UnhideAssets>
                     <UnlockAssets>
-                      <Item>
-                        <Asset>1742100526</Asset>                        <!-- Care Package: Vegetables - Recipe -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100524</Asset>                        <!-- Care Package Factory: Vegetables - Building -->
-                      </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>
                 </Values>
@@ -1197,7 +1234,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742100722</GUID>
+          <GUID>1742100734</GUID>
           <Name>MOD Trigger</Name>
         </Standard>
         <Trigger>
@@ -1222,6 +1259,9 @@
                     <UnhideAssets>
                     </UnhideAssets>
                     <UnlockAssets>
+                      <Item>
+                        <Asset>1742100244</Asset>                        <!-- Clean Water Pump (NW) - Building -->
+                      </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>
                 </Values>
@@ -1360,18 +1400,6 @@
                     <UnhideAssets>
                     </UnhideAssets>
                     <UnlockAssets>
-                      <Item>
-                        <Asset>1742100512</Asset>                        <!-- Care Package: Fish - Recipe -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100520</Asset>                        <!-- Care Package Factory: Fish - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100528</Asset>                        <!-- Care Package: Drinks - Recipe -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100530</Asset>                        <!-- Care Package Factory: Drinks - Building -->
-                      </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>
                 </Values>
@@ -1415,12 +1443,6 @@
                     <UnhideAssets>
                     </UnhideAssets>
                     <UnlockAssets>
-                      <Item>
-                        <Asset>1742100514</Asset>                        <!-- Care Package: Sweets - Recipe -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100522</Asset>                        <!-- Care Package Factory: Sweets - Building -->
-                      </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>
                 </Values>
@@ -1586,10 +1608,10 @@
                         <Asset>1742100496</Asset>                        <!-- Care Package Factory - Empty (OW) - Building -->
                       </Item>
                       <Item>
-                        <Asset>1742100502</Asset>                        <!-- Care Package Factory: Basics - Building -->
+                        <Asset>1742100502</Asset>                        <!-- Care Package Factory: Basics (OW) - Building -->
                       </Item>
                       <Item>
-                        <Asset>1742100500</Asset>                        <!-- Care Package: Basics - Recipe -->
+                        <Asset>1742100500</Asset>                        <!-- Care Package: Basics (OW) - Recipe -->
                       </Item>
                       <Item>
                         <Asset>1742100195</Asset>                        <!-- Ammunition Factory Empty - Building -->

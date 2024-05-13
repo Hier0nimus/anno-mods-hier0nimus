@@ -2565,7 +2565,7 @@
               <ActionList />
             </Values>
           </OnSelection>
-          <ParticipantMessageArcheType>Mercier_DeserterWorker</ParticipantMessageArcheType>
+          <ParticipantMessageArcheType>Resident_tier02_atWork</ParticipantMessageArcheType>
           <Colors>
             <WeakSelectionColorType>NoColor</WeakSelectionColorType>
           </Colors>
@@ -2725,7 +2725,7 @@
               <ActionList />
             </Values>
           </OnSelection>
-          <ParticipantMessageArcheType>Mercier_DeserterWorker</ParticipantMessageArcheType>
+          <ParticipantMessageArcheType>Resident_tier02_atWork</ParticipantMessageArcheType>
           <Colors>
             <WeakSelectionColorType>NoColor</WeakSelectionColorType>
           </Colors>
@@ -2886,7 +2886,7 @@
               <ActionList />
             </Values>
           </OnSelection>
-          <ParticipantMessageArcheType>Mercier_DeserterWorker</ParticipantMessageArcheType>
+          <ParticipantMessageArcheType>Resident_tier02_atWork</ParticipantMessageArcheType>
           <Colors>
             <WeakSelectionColorType>NoColor</WeakSelectionColorType>
           </Colors>
@@ -3055,7 +3055,7 @@
               <ActionList />
             </Values>
           </OnSelection>
-          <ParticipantMessageArcheType>Mercier_DeserterWorker</ParticipantMessageArcheType>
+          <ParticipantMessageArcheType>Resident_tier02_atWork</ParticipantMessageArcheType>
           <Colors>
             <WeakSelectionColorType>NoColor</WeakSelectionColorType>
           </Colors>
@@ -3234,7 +3234,7 @@
               <ActionList />
             </Values>
           </OnSelection>
-          <ParticipantMessageArcheType>Mercier_DeserterWorker</ParticipantMessageArcheType>
+          <ParticipantMessageArcheType>Resident_tier02_atWork</ParticipantMessageArcheType>
           <Colors>
             <WeakSelectionColorType>NoColor</WeakSelectionColorType>
           </Colors>
@@ -3829,7 +3829,7 @@
               <ActionList />
             </Values>
           </OnSelection>
-          <ParticipantMessageArcheType>Mercier_DeserterWorker</ParticipantMessageArcheType>
+          <ParticipantMessageArcheType>Resident_tier02_atWork</ParticipantMessageArcheType>
           <Colors>
             <WeakSelectionColorType>NoColor</WeakSelectionColorType>
           </Colors>
@@ -3974,7 +3974,7 @@
               <ActionList />
             </Values>
           </OnSelection>
-          <ParticipantMessageArcheType>Mercier_DeserterWorker</ParticipantMessageArcheType>
+          <ParticipantMessageArcheType>Resident_tier02_atWork</ParticipantMessageArcheType>
           <Colors>
             <WeakSelectionColorType>NoColor</WeakSelectionColorType>
           </Colors>
@@ -4539,7 +4539,7 @@
               <ActionList />
             </Values>
           </OnSelection>
-          <ParticipantMessageArcheType>Mercier_DeserterWorker</ParticipantMessageArcheType>
+          <ParticipantMessageArcheType>Resident_tier02_atWork</ParticipantMessageArcheType>
           <Colors>
             <WeakSelectionColorType>NoColor</WeakSelectionColorType>
           </Colors>
@@ -4682,7 +4682,7 @@
               <ActionList />
             </Values>
           </OnSelection>
-          <ParticipantMessageArcheType>Mercier_DeserterWorker</ParticipantMessageArcheType>
+          <ParticipantMessageArcheType>Resident_tier02_atWork</ParticipantMessageArcheType>
           <Colors>
             <WeakSelectionColorType>NoColor</WeakSelectionColorType>
           </Colors>
@@ -5036,7 +5036,7 @@
           </ConstructionOptions>
           <AdditionalModule>1742100380</AdditionalModule>          <!-- Horse Training Ground -->
           <ModuleBuildRadius>15</ModuleBuildRadius>
-          <!--<FarmType>AnimalFarm</FarmType>-->
+          <FarmType>AnimalFarm</FarmType>
         </ModuleOwner>
         <AmbientMoodProvider>
           <AmbientMood>AgricultureBuildingsEurope</AmbientMood>
@@ -5424,7 +5424,7 @@
               <ActionList />
             </Values>
           </OnSelection>
-          <ParticipantMessageArcheType>Mercier_DeserterWorker</ParticipantMessageArcheType>
+          <ParticipantMessageArcheType>Resident_tier02_atWork</ParticipantMessageArcheType>
           <Colors>
             <WeakSelectionColorType>NoColor</WeakSelectionColorType>
           </Colors>
@@ -5652,7 +5652,7 @@
           </ConstructionOptions>
           <AdditionalModule>1742100376</AdditionalModule>          <!-- Nitrary Shed -->
           <ModuleBuildRadius>12</ModuleBuildRadius>
-          <!--<FarmType>AnimalFarm</FarmType>-->
+          <FarmType>AnimalFarm</FarmType>
         </ModuleOwner>
         <AmbientMoodProvider>
           <AmbientMood>AgricultureBuildingsEurope</AmbientMood>
@@ -7276,7 +7276,9 @@
           <RecipeList>1742100498</RecipeList>
           <IsBlank>1</IsBlank>
         </RecipeBuilding>
-        <Culture/>
+        <Culture>
+          <Attractiveness>0</Attractiveness>
+        </Culture>
       </Values>
     </Asset>
   </ModOp>
@@ -7289,7 +7291,7 @@
       <Values>
         <Standard>
           <GUID>1742100502</GUID>
-          <Name>Care Package Factory: Basics</Name>
+          <Name>Care Package Factory: Basics (OW)</Name>
           <IconFilename>data\graphics\icons\icon_care_packages.png</IconFilename>
           <InfoDescription>1742100503</InfoDescription>
         </Standard>
@@ -7373,24 +7375,24 @@
         <FactoryBase>
           <FactoryInputs>
             <Item>
-              <Product>1010238</Product>              <!-- Sausage -->
+              <Product>1742100242</Product>              <!-- Clean Water -->
               <Amount>1</Amount>
               <StorageAmount>5</StorageAmount>
             </Item>
             <Item>
-              <Product>1010216</Product>              <!--Schnapps-->
+              <Product>1010238</Product>              <!-- Sausage -->
               <Amount>1</Amount>
               <StorageAmount>5</StorageAmount>
             </Item>
           </FactoryInputs>
           <FactoryOutputs>
             <Item>
-              <Product>849</Product>              <!--Care Packages-->
+              <Product>849</Product>              <!-- Care Packages -->
               <Amount>1</Amount>
               <StorageAmount>10</StorageAmount>
             </Item>
           </FactoryOutputs>
-          <CycleTime>60</CycleTime>
+          <CycleTime>90</CycleTime>
         </FactoryBase>
         <LogisticNode/>
         <Maintenance>
@@ -7426,20 +7428,22 @@
         <RecipeBuilding>
           <RecipeList>1742100498</RecipeList>
         </RecipeBuilding>
-        <Culture />
+        <Culture>
+          <Attractiveness>0</Attractiveness>
+        </Culture>
       </Values>
     </Asset>
   </ModOp>
   <!-- END BUILDING - CARE PACKAGE FACTORY - BASICS (OW) -->
 
-  <!-- START BUILDING - CARE PACKAGE FACTORY - MEAT (OW) -->
+  <!-- START BUILDING - CARE PACKAGE FACTORY - MEDIUM (OW) -->
   <ModOp Type="addNextSibling" GUID='923'>
     <Asset>
       <Template>Multifactory</Template>
       <Values>
         <Standard>
           <GUID>1742100506</GUID>
-          <Name>Care Package Factory: Meat</Name>
+          <Name>Care Package Factory: Medium (OW)</Name>
           <IconFilename>data\graphics\icons\icon_care_packages.png</IconFilename>
           <InfoDescription>1742100507</InfoDescription>
         </Standard>
@@ -7523,34 +7527,34 @@
         <FactoryBase>
           <FactoryInputs>
             <Item>
-              <Product>1010238</Product>              <!--Sausages-->
+              <Product>1742100242</Product>              <!-- Clean Water -->
+              <Amount>1</Amount>
+              <StorageAmount>5</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1010195</Product>              <!--Potatoes-->
               <Amount>1</Amount>
               <StorageAmount>10</StorageAmount>
             </Item>
             <Item>
-              <Product>1010193</Product>              <!--Meat-->
+              <Product>1010193</Product>              <!--Beef-->
               <Amount>1</Amount>
               <StorageAmount>10</StorageAmount>
             </Item>
             <Item>
-              <Product>112694</Product>              <!--Caribou Meat-->
-              <Amount>1</Amount>
-              <StorageAmount>10</StorageAmount>
-            </Item>
-            <Item>
-              <Product>114359</Product>              <!--Dried Meat-->
+              <Product>1010235</Product>              <!--Flour-->
               <Amount>1</Amount>
               <StorageAmount>10</StorageAmount>
             </Item>
           </FactoryInputs>
           <FactoryOutputs>
             <Item>
-              <Product>849</Product>              <!--Care Packages-->
+              <Product>849</Product>              <!-- Care Packages -->
               <Amount>1</Amount>
               <StorageAmount>10</StorageAmount>
             </Item>
           </FactoryOutputs>
-          <CycleTime>20</CycleTime>
+          <CycleTime>45</CycleTime>
         </FactoryBase>
         <LogisticNode/>
         <Maintenance>
@@ -7586,20 +7590,22 @@
         <RecipeBuilding>
           <RecipeList>1742100498</RecipeList>
         </RecipeBuilding>
-        <Culture />
+        <Culture>
+          <Attractiveness>0</Attractiveness>
+        </Culture>
       </Values>
     </Asset>
   </ModOp>
-  <!-- END BUILDING - CARE PACKAGE FACTORY - MEAT (OW) -->
+  <!-- END BUILDING - CARE PACKAGE FACTORY - MEDIUM (OW) -->
 
-  <!-- START BUILDING - CARE PACKAGE FACTORY - FRUIT (OW) -->
+  <!-- START BUILDING - CARE PACKAGE FACTORY - BIG (OW) -->
   <ModOp Type="addNextSibling" GUID='923'>
     <Asset>
       <Template>Multifactory</Template>
       <Values>
         <Standard>
           <GUID>1742100516</GUID>
-          <Name>Care Package Factory: Fruit</Name>
+          <Name>Care Package Factory: Big (OW)</Name>
           <IconFilename>data\graphics\icons\icon_care_packages.png</IconFilename>
           <InfoDescription>1742100517</InfoDescription>
         </Standard>
@@ -7683,467 +7689,7 @@
         <FactoryBase>
           <FactoryInputs>
             <Item>
-              <Product>120014</Product>              <!--Grapes-->
-              <Amount>1</Amount>
-              <StorageAmount>10</StorageAmount>
-            </Item>
-            <Item>
-              <Product>120041</Product>              <!--Bananas-->
-              <Amount>1</Amount>
-              <StorageAmount>10</StorageAmount>
-            </Item>
-            <Item>
-              <Product>133097</Product>              <!--Citrus-->
-              <Amount>1</Amount>
-              <StorageAmount>10</StorageAmount>
-            </Item>
-          </FactoryInputs>
-          <FactoryOutputs>
-            <Item>
-              <Product>849</Product>              <!--Care Packages-->
-              <Amount>1</Amount>
-              <StorageAmount>10</StorageAmount>
-            </Item>
-          </FactoryOutputs>
-          <CycleTime>20</CycleTime>
-        </FactoryBase>
-        <LogisticNode/>
-        <Maintenance>
-          <Maintenances>
-            <Item>
-              <Product>1010017</Product>              <!--Money-->
-              <Amount>50</Amount>
-              <InactiveAmount>25</InactiveAmount>
-            </Item>
-            <Item>
-              <Product>1010115</Product>              <!--moderate workforce 2-->
-              <Amount>30</Amount>
-            </Item>
-          </Maintenances>
-        </Maintenance>
-        <Industrializable/>
-        <IncidentInfectable>
-          <Explosion>
-            <DamageExplosionCheckMax>75</DamageExplosionCheckMax>
-          </Explosion>
-        </IncidentInfectable>
-        <Electrifiable/>
-        <AmbientMoodProvider>
-          <Murmur>Factory</Murmur>
-        </AmbientMoodProvider>
-        <Attackable>
-          <AttackableType>IslandBuilding</AttackableType>
-        </Attackable>
-        <UpgradeList/>
-        <Pausable/>
-        <FeedbackController/>
-        <Infolayer/>
-        <RecipeBuilding>
-          <RecipeList>1742100498</RecipeList>
-        </RecipeBuilding>
-        <Culture />
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END BUILDING - CARE PACKAGE FACTORY - FRUIT (OW) -->
-
-  <!-- START BUILDING - CARE PACKAGE FACTORY - ENTERTAINMENT (OW) -->
-  <ModOp Type="addNextSibling" GUID='923'>
-    <Asset>
-      <Template>Multifactory</Template>
-      <Values>
-        <Standard>
-          <GUID>1742100518</GUID>
-          <Name>Care Package Factory: Entertainment</Name>
-          <IconFilename>data\graphics\icons\icon_care_packages.png</IconFilename>
-          <InfoDescription>1742100519</InfoDescription>
-        </Standard>
-        <Building>
-          <BuildingCategoryName>132773</BuildingCategoryName>
-          <BuildModeRandomRotation>180</BuildModeRandomRotation>
-          <AssociatedRegions>Moderate</AssociatedRegions>
-        </Building>
-        <Blocking/>
-        <Object>
-          <Variations>
-            <Item>
-              <Filename>data/graphics/buildings/production/care_package_factory/care_package_factory_01.cfg</Filename>
-            </Item>
-          </Variations>
-          <Skins>
-            <DefaultSkinName>923</DefaultSkinName>
-            <DefaultSkinDescription>23853</DefaultSkinDescription>
-            <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>
-          </Skins>
-        </Object>
-        <Cost>
-          <Costs>
-            <Item>
-              <Ingredient>1010017</Ingredient>              <!--Money-->
-              <Amount>5000</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010196</Ingredient>              <!--timber-->
-              <Amount>24</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010205</Ingredient>              <!--bricks-->
-              <Amount>6</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010218</Ingredient>              <!--beams-->
-              <Amount>3</Amount>
-            </Item>
-          </Costs>
-        </Cost>
-        <Mesh/>
-        <Selection>
-          <GUIType>Production</GUIType>
-          <StaticHelpEntryPoint>EmpireOfTheSkies_War_Drops_Intro</StaticHelpEntryPoint>
-          <OnSelection>
-            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
-            <Values>
-              <ActionList/>
-            </Values>
-          </OnSelection>
-          <ParticipantMessageArcheType>Resident_tier02_atWork</ParticipantMessageArcheType>
-          <Colors>
-            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
-          </Colors>
-        </Selection>
-        <Text />
-        <Constructable/>
-        <Locked>
-          <DLCDependency>24962</DLCDependency>          <!--Anno 1800 DLC - Empire of the Skies-->
-        </Locked>
-        <SoundEmitter>
-          <ActiveSounds>
-            <Item>
-              <VectorElement>
-                <InheritedIndex>0</InheritedIndex>
-                <InheritanceMapV2>
-                  <Entry>
-                    <TemplateName>Multifactory</TemplateName>
-                    <Index>0</Index>
-                  </Entry>
-                </InheritanceMapV2>
-              </VectorElement>
-            </Item>
-            <Item>
-              <Sound>201067</Sound>
-            </Item>
-          </ActiveSounds>
-        </SoundEmitter>
-        <Factory7/>
-        <FactoryBase>
-          <FactoryInputs>
-            <Item>
-              <Product>135233</Product>              <!--Violins-->
-              <Amount>1</Amount>
-              <StorageAmount>10</StorageAmount>
-            </Item>
-            <Item>
-              <Product>1010245</Product>              <!--Penny Farthings-->
-              <Amount>1</Amount>
-              <StorageAmount>10</StorageAmount>
-            </Item>
-          </FactoryInputs>
-          <FactoryOutputs>
-            <Item>
-              <Product>849</Product>              <!--Care Packages-->
-              <Amount>1</Amount>
-              <StorageAmount>10</StorageAmount>
-            </Item>
-          </FactoryOutputs>
-          <CycleTime>20</CycleTime>
-        </FactoryBase>
-        <LogisticNode/>
-        <Maintenance>
-          <Maintenances>
-            <Item>
-              <Product>1010017</Product>              <!--Money-->
-              <Amount>50</Amount>
-              <InactiveAmount>25</InactiveAmount>
-            </Item>
-            <Item>
-              <Product>1010115</Product>              <!--moderate workforce 2-->
-              <Amount>30</Amount>
-            </Item>
-          </Maintenances>
-        </Maintenance>
-        <Industrializable/>
-        <IncidentInfectable>
-          <Explosion>
-            <DamageExplosionCheckMax>75</DamageExplosionCheckMax>
-          </Explosion>
-        </IncidentInfectable>
-        <Electrifiable/>
-        <AmbientMoodProvider>
-          <Murmur>Factory</Murmur>
-        </AmbientMoodProvider>
-        <Attackable>
-          <AttackableType>IslandBuilding</AttackableType>
-        </Attackable>
-        <UpgradeList/>
-        <Pausable/>
-        <FeedbackController/>
-        <Infolayer/>
-        <RecipeBuilding>
-          <RecipeList>1742100498</RecipeList>
-        </RecipeBuilding>
-        <Culture />
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END BUILDING - CARE PACKAGE FACTORY - ENTERTAINMENT (OW) -->
-
-  <!-- START BUILDING - CARE PACKAGE FACTORY - FISH (OW) -->
-  <ModOp Type="addNextSibling" GUID='923'>
-    <Asset>
-      <Template>Multifactory</Template>
-      <Values>
-        <Standard>
-          <GUID>1742100520</GUID>
-          <Name>Care Package Factory: Fish</Name>
-          <IconFilename>data\graphics\icons\icon_care_packages.png</IconFilename>
-          <InfoDescription>1742100521</InfoDescription>
-        </Standard>
-        <Building>
-          <BuildingCategoryName>132773</BuildingCategoryName>
-          <BuildModeRandomRotation>180</BuildModeRandomRotation>
-          <AssociatedRegions>Moderate</AssociatedRegions>
-        </Building>
-        <Blocking/>
-        <Object>
-          <Variations>
-            <Item>
-              <Filename>data/graphics/buildings/production/care_package_factory/care_package_factory_01.cfg</Filename>
-            </Item>
-          </Variations>
-          <Skins>
-            <DefaultSkinName>923</DefaultSkinName>
-            <DefaultSkinDescription>23853</DefaultSkinDescription>
-            <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>
-          </Skins>
-        </Object>
-        <Cost>
-          <Costs>
-            <Item>
-              <Ingredient>1010017</Ingredient>              <!--Money-->
-              <Amount>5000</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010196</Ingredient>              <!--timber-->
-              <Amount>24</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010205</Ingredient>              <!--bricks-->
-              <Amount>6</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010218</Ingredient>              <!--beams-->
-              <Amount>3</Amount>
-            </Item>
-          </Costs>
-        </Cost>
-        <Mesh/>
-        <Selection>
-          <GUIType>Production</GUIType>
-          <StaticHelpEntryPoint>EmpireOfTheSkies_War_Drops_Intro</StaticHelpEntryPoint>
-          <OnSelection>
-            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
-            <Values>
-              <ActionList/>
-            </Values>
-          </OnSelection>
-          <ParticipantMessageArcheType>Resident_tier02_atWork</ParticipantMessageArcheType>
-          <Colors>
-            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
-          </Colors>
-        </Selection>
-        <Text />
-        <Constructable/>
-        <Locked>
-          <DLCDependency>24962</DLCDependency>          <!--Anno 1800 DLC - Empire of the Skies-->
-        </Locked>
-        <SoundEmitter>
-          <ActiveSounds>
-            <Item>
-              <VectorElement>
-                <InheritedIndex>0</InheritedIndex>
-                <InheritanceMapV2>
-                  <Entry>
-                    <TemplateName>Multifactory</TemplateName>
-                    <Index>0</Index>
-                  </Entry>
-                </InheritanceMapV2>
-              </VectorElement>
-            </Item>
-            <Item>
-              <Sound>201067</Sound>
-            </Item>
-          </ActiveSounds>
-        </SoundEmitter>
-        <Factory7/>
-        <FactoryBase>
-          <FactoryInputs>
-            <Item>
-              <Product>1010200</Product>              <!--Fish-->
-              <Amount>1</Amount>
-              <StorageAmount>10</StorageAmount>
-            </Item>
-            <Item>
-              <Product>118728</Product>              <!--Lobster-->
-              <Amount>1</Amount>
-              <StorageAmount>10</StorageAmount>
-            </Item>
-            <Item>
-              <Product>5380</Product>              <!--Calamari-->
-              <Amount>1</Amount>
-              <StorageAmount>10</StorageAmount>
-            </Item>
-          </FactoryInputs>
-          <FactoryOutputs>
-            <Item>
-              <Product>849</Product>              <!--Care Packages-->
-              <Amount>1</Amount>
-              <StorageAmount>10</StorageAmount>
-            </Item>
-          </FactoryOutputs>
-          <CycleTime>20</CycleTime>
-        </FactoryBase>
-        <LogisticNode/>
-        <Maintenance>
-          <Maintenances>
-            <Item>
-              <Product>1010017</Product>              <!--Money-->
-              <Amount>50</Amount>
-              <InactiveAmount>25</InactiveAmount>
-            </Item>
-            <Item>
-              <Product>1010115</Product>              <!--moderate workforce 2-->
-              <Amount>30</Amount>
-            </Item>
-          </Maintenances>
-        </Maintenance>
-        <Industrializable/>
-        <IncidentInfectable>
-          <Explosion>
-            <DamageExplosionCheckMax>75</DamageExplosionCheckMax>
-          </Explosion>
-        </IncidentInfectable>
-        <Electrifiable/>
-        <AmbientMoodProvider>
-          <Murmur>Factory</Murmur>
-        </AmbientMoodProvider>
-        <Attackable>
-          <AttackableType>IslandBuilding</AttackableType>
-        </Attackable>
-        <UpgradeList/>
-        <Pausable/>
-        <FeedbackController/>
-        <Infolayer/>
-        <RecipeBuilding>
-          <RecipeList>1742100498</RecipeList>
-        </RecipeBuilding>
-        <Culture />
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END BUILDING - CARE PACKAGE FACTORY - FISH (OW) -->
-
-  <!-- START BUILDING - CARE PACKAGE FACTORY - SWEETS (OW) -->
-  <ModOp Type="addNextSibling" GUID='923'>
-    <Asset>
-      <Template>Multifactory</Template>
-      <Values>
-        <Standard>
-          <GUID>1742100522</GUID>
-          <Name>Care Package Factory: Sweets</Name>
-          <IconFilename>data\graphics\icons\icon_care_packages.png</IconFilename>
-          <InfoDescription>1742100523</InfoDescription>
-        </Standard>
-        <Building>
-          <BuildingCategoryName>132773</BuildingCategoryName>
-          <BuildModeRandomRotation>180</BuildModeRandomRotation>
-          <AssociatedRegions>Moderate</AssociatedRegions>
-        </Building>
-        <Blocking/>
-        <Object>
-          <Variations>
-            <Item>
-              <Filename>data/graphics/buildings/production/care_package_factory/care_package_factory_01.cfg</Filename>
-            </Item>
-          </Variations>
-          <Skins>
-            <DefaultSkinName>923</DefaultSkinName>
-            <DefaultSkinDescription>23853</DefaultSkinDescription>
-            <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>
-          </Skins>
-        </Object>
-        <Cost>
-          <Costs>
-            <Item>
-              <Ingredient>1010017</Ingredient>              <!--Money-->
-              <Amount>5000</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010196</Ingredient>              <!--timber-->
-              <Amount>24</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010205</Ingredient>              <!--bricks-->
-              <Amount>6</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010218</Ingredient>              <!--beams-->
-              <Amount>3</Amount>
-            </Item>
-          </Costs>
-        </Cost>
-        <Mesh/>
-        <Selection>
-          <GUIType>Production</GUIType>
-          <StaticHelpEntryPoint>EmpireOfTheSkies_War_Drops_Intro</StaticHelpEntryPoint>
-          <OnSelection>
-            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
-            <Values>
-              <ActionList/>
-            </Values>
-          </OnSelection>
-          <ParticipantMessageArcheType>Resident_tier02_atWork</ParticipantMessageArcheType>
-          <Colors>
-            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
-          </Colors>
-        </Selection>
-        <Text />
-        <Constructable/>
-        <Locked>
-          <DLCDependency>24962</DLCDependency>          <!--Anno 1800 DLC - Empire of the Skies-->
-        </Locked>
-        <SoundEmitter>
-          <ActiveSounds>
-            <Item>
-              <VectorElement>
-                <InheritedIndex>0</InheritedIndex>
-                <InheritanceMapV2>
-                  <Entry>
-                    <TemplateName>Multifactory</TemplateName>
-                    <Index>0</Index>
-                  </Entry>
-                </InheritanceMapV2>
-              </VectorElement>
-            </Item>
-            <Item>
-              <Sound>201067</Sound>
-            </Item>
-          </ActiveSounds>
-        </SoundEmitter>
-        <Factory7/>
-        <FactoryBase>
-          <FactoryInputs>
-            <Item>
-              <Product>5382</Product>              <!--Ice Cream-->
+              <Product>120032</Product>              <!--Coffee-->
               <Amount>1</Amount>
               <StorageAmount>10</StorageAmount>
             </Item>
@@ -8157,163 +7703,8 @@
               <Amount>1</Amount>
               <StorageAmount>10</StorageAmount>
             </Item>
-          </FactoryInputs>
-          <FactoryOutputs>
             <Item>
-              <Product>849</Product>              <!--Care Packages-->
-              <Amount>1</Amount>
-              <StorageAmount>10</StorageAmount>
-            </Item>
-          </FactoryOutputs>
-          <CycleTime>10</CycleTime>
-        </FactoryBase>
-        <LogisticNode/>
-        <Maintenance>
-          <Maintenances>
-            <Item>
-              <Product>1010017</Product>              <!--Money-->
-              <Amount>50</Amount>
-              <InactiveAmount>25</InactiveAmount>
-            </Item>
-            <Item>
-              <Product>1010116</Product>              <!--Artisan workforce 2-->
-              <Amount>20</Amount>
-            </Item>
-          </Maintenances>
-        </Maintenance>
-        <Industrializable/>
-        <IncidentInfectable>
-          <Explosion>
-            <DamageExplosionCheckMax>75</DamageExplosionCheckMax>
-          </Explosion>
-        </IncidentInfectable>
-        <Electrifiable/>
-        <AmbientMoodProvider>
-          <Murmur>Factory</Murmur>
-        </AmbientMoodProvider>
-        <Attackable>
-          <AttackableType>IslandBuilding</AttackableType>
-        </Attackable>
-        <UpgradeList/>
-        <Pausable/>
-        <FeedbackController/>
-        <Infolayer/>
-        <RecipeBuilding>
-          <RecipeList>1742100498</RecipeList>
-        </RecipeBuilding>
-        <Culture />
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END BUILDING - CARE PACKAGE FACTORY - SWEETS (OW) -->
-
-  <!-- START BUILDING - CARE PACKAGE FACTORY - VEGETABLES (OW) -->
-  <ModOp Type="addNextSibling" GUID='923'>
-    <Asset>
-      <Template>Multifactory</Template>
-      <Values>
-        <Standard>
-          <GUID>1742100524</GUID>
-          <Name>Care Package Factory: Vegetables</Name>
-          <IconFilename>data\graphics\icons\icon_care_packages.png</IconFilename>
-          <InfoDescription>1742100525</InfoDescription>
-        </Standard>
-        <Building>
-          <BuildingCategoryName>132773</BuildingCategoryName>
-          <BuildModeRandomRotation>180</BuildModeRandomRotation>
-          <AssociatedRegions>Moderate</AssociatedRegions>
-        </Building>
-        <Blocking/>
-        <Object>
-          <Variations>
-            <Item>
-              <Filename>data/graphics/buildings/production/care_package_factory/care_package_factory_01.cfg</Filename>
-            </Item>
-          </Variations>
-          <Skins>
-            <DefaultSkinName>923</DefaultSkinName>
-            <DefaultSkinDescription>23853</DefaultSkinDescription>
-            <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>
-          </Skins>
-        </Object>
-        <Cost>
-          <Costs>
-            <Item>
-              <Ingredient>1010017</Ingredient>              <!--Money-->
-              <Amount>5000</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010196</Ingredient>              <!--timber-->
-              <Amount>24</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010205</Ingredient>              <!--bricks-->
-              <Amount>6</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010218</Ingredient>              <!--beams-->
-              <Amount>3</Amount>
-            </Item>
-          </Costs>
-        </Cost>
-        <Mesh/>
-        <Selection>
-          <GUIType>Production</GUIType>
-          <StaticHelpEntryPoint>EmpireOfTheSkies_War_Drops_Intro</StaticHelpEntryPoint>
-          <OnSelection>
-            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
-            <Values>
-              <ActionList/>
-            </Values>
-          </OnSelection>
-          <ParticipantMessageArcheType>Resident_tier02_atWork</ParticipantMessageArcheType>
-          <Colors>
-            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
-          </Colors>
-        </Selection>
-        <Text />
-        <Constructable/>
-        <Locked>
-          <DLCDependency>24962</DLCDependency>          <!--Anno 1800 DLC - Empire of the Skies-->
-        </Locked>
-        <SoundEmitter>
-          <ActiveSounds>
-            <Item>
-              <VectorElement>
-                <InheritedIndex>0</InheritedIndex>
-                <InheritanceMapV2>
-                  <Entry>
-                    <TemplateName>Multifactory</TemplateName>
-                    <Index>0</Index>
-                  </Entry>
-                </InheritanceMapV2>
-              </VectorElement>
-            </Item>
-            <Item>
-              <Sound>201067</Sound>
-            </Item>
-          </ActiveSounds>
-        </SoundEmitter>
-        <Factory7/>
-        <FactoryBase>
-          <FactoryInputs>
-            <Item>
-              <Product>151172</Product>              <!-- Potatoes -->
-              <Amount>1</Amount>
-              <StorageAmount>10</StorageAmount>
-            </Item>
-            <Item>
-              <Product>1010198</Product>              <!--Red Peppers-->
-              <Amount>1</Amount>
-              <StorageAmount>10</StorageAmount>
-            </Item>
-            <Item>
-              <Product>120034</Product>              <!--Corn-->
-              <Amount>1</Amount>
-              <StorageAmount>10</StorageAmount>
-            </Item>
-            <Item>
-              <Product>114369</Product>              <!--Spices-->
+              <Product>1010258</Product>              <!--Chocolate-->
               <Amount>1</Amount>
               <StorageAmount>10</StorageAmount>
             </Item>
@@ -8336,8 +7727,8 @@
               <InactiveAmount>25</InactiveAmount>
             </Item>
             <Item>
-              <Product>1010116</Product>              <!--Artisan workforce 2-->
-              <Amount>20</Amount>
+              <Product>1010115</Product>              <!--moderate workforce 2-->
+              <Amount>30</Amount>
             </Item>
           </Maintenances>
         </Maintenance>
@@ -8362,169 +7753,12 @@
           <RecipeList>1742100498</RecipeList>
         </RecipeBuilding>
         <Culture>
-          <HasPollution>1</HasPollution>
+          <Attractiveness>0</Attractiveness>
         </Culture>
       </Values>
     </Asset>
   </ModOp>
-  <!-- END BUILDING - CARE PACKAGE FACTORY - VEGETABLES (OW) -->
-
-  <!-- START BUILDING - CARE PACKAGE FACTORY - DRINKS (OW) -->
-  <ModOp Type="addNextSibling" GUID='923'>
-    <Asset>
-      <Template>Multifactory</Template>
-      <Values>
-        <Standard>
-          <GUID>1742100530</GUID>
-          <Name>Care Package Factory: Drinks</Name>
-          <IconFilename>data\graphics\icons\icon_care_packages.png</IconFilename>
-          <InfoDescription>1742100531</InfoDescription>
-        </Standard>
-        <Building>
-          <BuildingCategoryName>132773</BuildingCategoryName>
-          <BuildModeRandomRotation>180</BuildModeRandomRotation>
-          <AssociatedRegions>Moderate</AssociatedRegions>
-        </Building>
-        <Blocking/>
-        <Object>
-          <Variations>
-            <Item>
-              <Filename>data/graphics/buildings/production/care_package_factory/care_package_factory_01.cfg</Filename>
-            </Item>
-          </Variations>
-          <Skins>
-            <DefaultSkinName>923</DefaultSkinName>
-            <DefaultSkinDescription>23853</DefaultSkinDescription>
-            <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>
-          </Skins>
-        </Object>
-        <Cost>
-          <Costs>
-            <Item>
-              <Ingredient>1010017</Ingredient>              <!--Money-->
-              <Amount>5000</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010196</Ingredient>              <!--timber-->
-              <Amount>24</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010205</Ingredient>              <!--bricks-->
-              <Amount>6</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010218</Ingredient>              <!--beams-->
-              <Amount>3</Amount>
-            </Item>
-          </Costs>
-        </Cost>
-        <Mesh/>
-        <Selection>
-          <GUIType>Production</GUIType>
-          <StaticHelpEntryPoint>EmpireOfTheSkies_War_Drops_Intro</StaticHelpEntryPoint>
-          <OnSelection>
-            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
-            <Values>
-              <ActionList/>
-            </Values>
-          </OnSelection>
-          <ParticipantMessageArcheType>Resident_tier02_atWork</ParticipantMessageArcheType>
-          <Colors>
-            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
-          </Colors>
-        </Selection>
-        <Text />
-        <Constructable/>
-        <Locked>
-          <DLCDependency>24962</DLCDependency>          <!--Anno 1800 DLC - Empire of the Skies-->
-        </Locked>
-        <SoundEmitter>
-          <ActiveSounds>
-            <Item>
-              <VectorElement>
-                <InheritedIndex>0</InheritedIndex>
-                <InheritanceMapV2>
-                  <Entry>
-                    <TemplateName>Multifactory</TemplateName>
-                    <Index>0</Index>
-                  </Entry>
-                </InheritanceMapV2>
-              </VectorElement>
-            </Item>
-            <Item>
-              <Sound>201067</Sound>
-            </Item>
-          </ActiveSounds>
-        </SoundEmitter>
-        <Factory7/>
-        <FactoryBase>
-          <FactoryInputs>
-            <Item>
-              <Product>1010257</Product>              <!-- Rum -->
-              <Amount>1</Amount>
-              <StorageAmount>10</StorageAmount>
-            </Item>
-            <Item>
-              <Product>120016</Product>              <!--Champagne-->
-              <Amount>1</Amount>
-              <StorageAmount>10</StorageAmount>
-            </Item>
-            <Item>
-              <Product>6600</Product>              <!--Mezcal-->
-              <Amount>1</Amount>
-              <StorageAmount>10</StorageAmount>
-            </Item>
-          </FactoryInputs>
-          <FactoryOutputs>
-            <Item>
-              <Product>849</Product>              <!--Care Packages-->
-              <Amount>1</Amount>
-              <StorageAmount>10</StorageAmount>
-            </Item>
-          </FactoryOutputs>
-          <CycleTime>20</CycleTime>
-        </FactoryBase>
-        <LogisticNode/>
-        <Maintenance>
-          <Maintenances>
-            <Item>
-              <Product>1010017</Product>              <!--Money-->
-              <Amount>50</Amount>
-              <InactiveAmount>25</InactiveAmount>
-            </Item>
-            <Item>
-              <Product>1010116</Product>              <!--Artisan workforce 2-->
-              <Amount>20</Amount>
-            </Item>
-          </Maintenances>
-        </Maintenance>
-        <Industrializable/>
-        <IncidentInfectable>
-          <Explosion>
-            <DamageExplosionCheckMax>75</DamageExplosionCheckMax>
-          </Explosion>
-        </IncidentInfectable>
-        <Electrifiable/>
-        <AmbientMoodProvider>
-          <Murmur>Factory</Murmur>
-        </AmbientMoodProvider>
-        <Attackable>
-          <AttackableType>IslandBuilding</AttackableType>
-        </Attackable>
-        <UpgradeList/>
-        <Pausable/>
-        <FeedbackController/>
-        <Infolayer/>
-        <RecipeBuilding>
-          <RecipeList>1742100498</RecipeList>
-        </RecipeBuilding>
-        <Culture>
-          <HasPollution>1</HasPollution>
-        </Culture>
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END BUILDING - CARE PACKAGE FACTORY - DRINKS (OW) -->
+  <!-- END BUILDING - CARE PACKAGE FACTORY - BIG (OW) -->
 
   <!-- START BUILDING - MILITARY POST BOX -->
   <ModOp Type="addNextSibling" GUID='538'>
@@ -9361,10 +8595,9 @@
       </Values>
     </Asset>
   </ModOp>
-
   <!-- ****************** END SANITATION FACILITY - Building ******************  -->
 
-  <!-- START BUILDING - LOCAL CEMETERY -->
+  <!-- ****************** START BUILDING - LOCAL CEMETERY - Building ******************  -->
   <ModOp Type="addNextSibling" GUID='1010358'>
     <Asset>
       <Template>PublicServiceBuilding</Template>
@@ -9445,9 +8678,9 @@
       </Values>
     </Asset>
   </ModOp>
-  <!-- END BUILDING - LOCAL CEMETERY -->
+  <!-- ****************** END BUILDING - LOCAL CEMETERY - Building ******************  -->
 
-  <!-- START BUILDING - CEMETERY -->
+  <!-- ****************** START BUILDING - CEMETERY - Building ******************  -->
   <ModOp Type="addNextSibling" GUID='1010358'>
     <Asset>
       <Template>PublicServiceBuilding</Template>
@@ -9532,9 +8765,9 @@
       </Values>
     </Asset>
   </ModOp>
-  <!-- END BUILDING - CEMETERY -->
+  <!-- ****************** END BUILDING - CEMETERY - Building ******************  -->
 
-  <!-- START BUILDING - FIELD HOSPITAL -->
+  <!-- ****************** START BUILDING - FIELD HOSPITAL - Building ******************  -->
   <ModOp Type="addNextSibling" GUID='1010358'>
     <Asset>
       <Template>PublicServiceBuilding</Template>
@@ -9657,6 +8890,207 @@
       </Values>
     </Asset>
   </ModOp>
-  <!-- END BUILDING - FIELD HOSPITAL -->
+  <!-- ****************** END BUILDING - FIELD HOSPITAL - Building ******************  -->
+
+  <!-- ****************** START BUILDING - CLEAN WATER PUMP (OW) - Building ******************  -->
+  <ModOp Type="addNextSibling" GUID='1010284'>
+    <Asset>
+      <Template>FactoryBuilding7</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100240</GUID>
+          <Name>Clean Water Pump (OW)</Name>
+          <IconFilename>data\ui\2kimages\main\3dicons\icon_water_pump.png</IconFilename>
+          <Description>1742100241</Description>
+        </Standard> 
+        <Building>
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <AssociatedRegions>Moderate</AssociatedRegions>
+          <SecondPartyRelevant>0</SecondPartyRelevant >
+        </Building>
+        <Blocking>
+          <BlockWater>1</BlockWater>
+        </Blocking>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>1000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>15</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/production/water_pump/water_pump_ow_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Mesh />
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>Resident_tier01_atWork</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Text />
+        <Constructable />
+        <Locked />
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>239444</Sound>
+            </Item>
+            <Item>
+              <Sound>239332</Sound>
+            </Item>
+          </ActiveSounds>
+          <IncidentSounds>
+            <InfectedFire>
+              <Item>
+                <Sound>214659</Sound>
+              </Item>
+            </InfectedFire>
+          </IncidentSounds>
+        </SoundEmitter>
+        <FeedbackController />
+        <Infolayer />
+        <UpgradeList />
+        <Factory7 />
+        <FactoryBase>
+          <FactoryOutputs>
+            <Item>
+              <Product>1742100242</Product>              <!-- Clean Water -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+          </FactoryOutputs>
+          <CycleTime>60</CycleTime>
+          <IsMainFactory>1</IsMainFactory>
+        </FactoryBase>
+        <LogisticNode />
+        <AmbientMoodProvider>
+          <Murmur>Factory</Murmur>
+          <DynamicEnvironmentType>None</DynamicEnvironmentType>
+        </AmbientMoodProvider>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>20</Amount>
+              <InactiveAmount>10</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1010052</Product>              <!-- Farmers Workforce -->
+              <Amount>10</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+          <MaximumHitPoints>5000</MaximumHitPoints>
+          <SelfHealPerHealTick>6</SelfHealPerHealTick>
+        </Attackable>
+        <Pausable />
+        <IncidentInfectable>
+          <Infectable>
+            <Explosion>
+              <Base>0</Base>
+              <Escalated>0</Escalated>
+            </Explosion>
+          </Infectable>
+          <Explosion>
+            <ExplosionCoreDamage>1000</ExplosionCoreDamage>
+          </Explosion>
+          <IncidentInfectionChanceFactors>
+            <Illness>
+              <BaseChance>3</BaseChance>
+              <HitpointFactor>0.1</HitpointFactor>
+              <DensityFactor>0.025</DensityFactor>
+              <DensityDistance>15</DensityDistance>
+              <DilapidatedFactor>10</DilapidatedFactor>
+              <FactoryOvertimeFactor>0.3</FactoryOvertimeFactor>
+              <FactoryUndertimeFactor>0.15</FactoryUndertimeFactor>
+              <ResidenceFullOvertimeChance>20</ResidenceFullOvertimeChance>
+              <ResidenceFullUndertimeChance>-15</ResidenceFullUndertimeChance>
+            </Illness>
+            <Riot>
+              <FactoryOvertimeFactor>0.4</FactoryOvertimeFactor>
+              <FactoryUndertimeFactor>0.2</FactoryUndertimeFactor>
+              <FactoryHappinessFactor>0.2</FactoryHappinessFactor>
+              <HappinessThreshold>20</HappinessThreshold>
+            </Riot>
+          </IncidentInfectionChanceFactors>
+        </IncidentInfectable>
+        <Culture />
+        <QuestObject />
+        <EcoSystemProvider />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- ****************** END BUILDING - CLEAN WATER PUMP (OW) - Building ******************  -->
+
+  <!-- ****************** START BUILDING - CLEAN WATER PUMP (NW) - Building ******************  -->
+  <ModOp Type="addNextSibling" GUID='1742100534'>
+    <Asset>
+      <BaseAssetGUID>1742100240</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742100244</GUID>
+          <Name>Clean Water Pump (NW)</Name>
+        </Standard>
+        <Building>
+          <AssociatedRegions>Colony01</AssociatedRegions>
+        </Building>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/production/water_pump/water_pump_nw_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>SA_Resident_tier01_atWork</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <FactoryBase>
+          <IsMainFactory>0</IsMainFactory>
+        </FactoryBase>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>              <!-- Coins -->
+              <Amount>20</Amount>
+              <InactiveAmount>10</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1010366</Product>              <!-- Jornalero Workforce -->
+              <Amount>10</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- ****************** END BUILDING - CLEAN WATER PUMP (NW) - Building ******************  -->
 
 </ModOps>

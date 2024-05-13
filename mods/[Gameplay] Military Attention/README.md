@@ -1,10 +1,24 @@
-# Military Attention | BETA 0.10!
+# Military Attention | BETA 0.11!
 
 A mod centered around military infrastructure and adding new military residence tiers for all regions with a focus on the Old World.
 
 ![ma-img-01.jpg](./banner.jpg)
 
 ## Changelog
+
+### Beta v0.11
+- Moved compatibility for Extended traktors (Kurila) to compatibility file
+- Added compatibility for Pet needs for residents
+- Added horses as a lifestyle need for New World ann Enbesa Soldiers
+- Moved Coffee to happiness needs for Soldiers Old World
+- Added Advanced Weapons to needs Soldiers Old World
+- Added Clean Water production for Old World and New World
+- Added Clean Water as a need for Farmers, Workers and Jornaleros
+- Removed Beef and Jam from Lifestyle needs Old World Soldiers
+- Changed and big cleanup recipes for Care Package Factory with other inputs and more balanced production and added feedback
+- Added feedback units and extra assets to Open Pit iron and coal mine and some cleanup.
+- Fixed some correct portraits for production buildings to worker portrait instead of soldier portrait
+- Added Open Pits to Mines and Quarries pool
 
 ### Beta v0.10
 - Added horse sound to stables, horse training ground and fields
@@ -608,6 +622,14 @@ Ships in Enbesa! Made them compatible and added the extra costs. I also had to m
 [Imperio Shipyard on mod.io](https://mod.io/g/anno-1800/m/imperio-shipyard)
 
 A huge collection of ships based on existing models. All those ships now need additional building costs.
+
+### Extended Traktors (Kurila)
+
+The modules of the Stables and Nitrary are working correctly. The extended traktors mod changes the modules but this change is not affecting those buildings anymore.
+
+### Pet needs for residents
+
+Only add the Huskies lifestyle need to the delight category when Pet needs for residents is not installed.
 
 ## Still on the to do list
 - Translations for all languages. If anyone wants to translate! Would be amazing!

@@ -1156,6 +1156,57 @@
   </ModOp>
   <!-- END PRODUCT - MILITARY FIELD HOSPITAL -->
 
+  <!-- START PRODUCT - CLEAN WATER -->
+  <ModOp Type="addNextSibling" GUID='5392'>
+    <Asset>
+      <Template>Product</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100242</GUID>
+          <Name>Clean Water</Name>
+          <IconFilename>data\ui\2kimages\main\3dicons\icon_water_drop.png</IconFilename>
+          <InfoDescription>1742100243</InfoDescription>
+        </Standard>
+        <Text />
+        <Locked />
+        <Product>
+          <StorageLevel>Building</StorageLevel>
+          <ProductCategory>11703</ProductCategory>
+          <BasePrice>10</BasePrice>
+          <CivLevel>1</CivLevel>
+          <AssociatedRegion>Moderate;Colony01;Africa</AssociatedRegion>
+          <ProductionRegions>
+            <Item>
+              <RegionType>Moderate</RegionType>
+            </Item>
+            <Item>
+              <RegionType>Colony01</RegionType>
+            </Item>
+            <Item>
+              <RegionType>Africa</RegionType>
+              <RequiredDLCs>
+                <Item>
+                  <RequiredDLC>410071</RequiredDLC>
+                </Item>
+              </RequiredDLCs>
+            </Item>
+          </ProductionRegions>
+        </Product>
+        <ExpeditionAttribute>
+          <BaseMorale>0</BaseMorale>
+          <ExpeditionAttributes>
+            <Item>
+              <Attribute>Medicine</Attribute>
+              <Amount>1</Amount>
+            </Item>
+          </ExpeditionAttributes>
+          <FluffText />
+        </ExpeditionAttribute>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PRODUCT - CLEAN WATER -->
+
   <!-- ****************** START ADDING ALL PRODUCTS TO PRODUCTS LISTS ****************** -->
 
   <!-- START ADD GOODS TO StandardProductStorageList + StandardMarketplaceREGIONStorageList   -->
@@ -1166,6 +1217,13 @@
   <ModOp Type="addNextSibling" GUID="120055,120057" Path="/Values/ProductStorageList/ProductList/Item[Product='1010237']">
     <Item>
       <Product>1742100211</Product>      <!-- Horses - Product -->
+    </Item>
+  </ModOp>
+
+  <!-- Clean Water > After Work Clothes -->
+  <ModOp Type="addNextSibling" GUID="120055,120057" Path="/Values/ProductStorageList/ProductList/Item[Product='1010237']">
+    <Item>
+      <Product>1742100242</Product>      <!-- Clean Water - Product -->
     </Item>
   </ModOp>
 
@@ -1237,6 +1295,13 @@
 
   <!-- ************ COLONY REGION ************ -->
 
+  <!-- Clean Water > After Ponchos -->
+  <ModOp Type="addNextSibling" GUID="120058" Path="/Values/ProductStorageList/ProductList/Item[Product='120043']">
+    <Item>
+      <Product>1742100242</Product>      <!-- Clean Water - Product -->
+    </Item>
+  </ModOp>
+
   <!-- Basic Weapons > After Ponchos -->
   <ModOp Type="addNextSibling" GUID="120058" Path="/Values/ProductStorageList/ProductList/Item[Product='120043']">
     <Item>
@@ -1303,6 +1368,13 @@
   </ModOp>
 
   <!-- ************ ENBESA REGION ************ -->
+
+  <!-- Clean Water > After Woven Clothes -->
+  <ModOp Type="addNextSibling" GUID="122362" Path="/Values/ProductStorageList/ProductList/Item[Product='114401']">
+    <Item>
+      <Product>1742100242</Product>      <!-- Clean Water - Product -->
+    </Item>
+  </ModOp>
 
   <!-- Basic Weapons > After Woven Clothes -->
   <ModOp Type="addNextSibling" GUID="122362" Path="/Values/ProductStorageList/ProductList/Item[Product='114401']">
@@ -1589,6 +1661,9 @@
     <Item>
       <Product>1742100211</Product>      <!-- Horses - Product -->
     </Item>
+    <Item>
+      <Product>1742100242</Product>      <!-- Clean Water - Product -->
+    </Item>
   </ModOp>
   <!-- END ADD TO WORKFORCEGOODS - FarmerWorkforceGoods -->
 
@@ -1638,6 +1713,9 @@
   <!-- START ADD GOODS TO OTHER ProductList - ALL PRODUCTS -->
   <ModOp Type="add" GUID='502016,502065' Path="/Values/ProductList/List">
     <Item>
+      <Product>1742100242</Product>      <!-- Clean Water - Product -->
+    </Item>
+    <Item>
       <Product>1742100064</Product>      <!-- Military Uniforms - Product -->
     </Item>
     <Item>
@@ -1678,6 +1756,9 @@
 
   <!-- START ADD GOODS TO OTHER ProductList - CONSUMER -->
   <ModOp Type="add" GUID='501993' Path="/Values/ProductList/List">
+    <Item>
+      <Product>1742100242</Product>      <!-- Clean Water - Product -->
+    </Item>
     <Item>
       <Product>1742100064</Product>      <!-- Military Uniforms - Product -->
     </Item>
@@ -1796,13 +1877,18 @@
       <BonusNeed>135233</BonusNeed>      <!-- Violins -->
     </Item>
     <Item>
-      <BonusNeed>112698</BonusNeed>      <!-- Huskies -->
-    </Item>
-    <Item>
       <BonusNeed>1742100185</BonusNeed>      <!-- Cardgames -->
     </Item>
   </ModOp>
   <!-- ****************** END TO DELIGHT ****************** -->
+
+  <!-- ****************** START TO WEALTH ****************** -->
+  <ModOp Type="add" GUID='25000118' Path="/Values/ObjectmenuResidenceScene/BonusNeeds/BonusNeeds/Item[Category='2361']/Needs/">
+    <Item>
+      <BonusNeed>1742100211</BonusNeed>      <!-- Horses -->
+    </Item>
+  </ModOp>
+  <!-- ****************** END TO WEALTH ****************** -->
 
 
   <!-- ****************** END ADDING PRODUCTS TO BONUS NEEDS ****************** -->

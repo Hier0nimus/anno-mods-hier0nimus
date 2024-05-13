@@ -28,6 +28,27 @@
         <StorageMax>200</StorageMax>
     </ModOp>
 
+    <!-- START ADDING TO ARCHI INSTEAD OF NATE WHEN CAPE IS NOT AVAILABLE -->
+    <Group Condition="#NoSunkenTreasureSession_Serp">
+        <ModOp Type="add" GUID='45' Path="/Values/Trader/Progression/*[self::MidGame or self::LateMidGame or self::LateGame or self::EndGame]/GoodsProduction/">
+            <Item>
+                <Good>1440231</Good>
+                <ProductionPerMinute>60</ProductionPerMinute>
+            </Item>
+        </ModOp>
+
+        <ModOp Type="add" GUID='45' Path="/Values/Trader/Progression/*[self::MidGame or self::LateMidGame or self::LateGame or self::EndGame]/OfferingGoods/Item/GoodSets/">
+            <Item>
+                <Good>1440231</Good>
+            </Item>
+        </ModOp>
+
+        <ModOp Type="replace" GUID='119425,100680' Path="/Values/Warehouse/WarehouseStorage/StorageMax">
+            <StorageMax>200</StorageMax>
+        </ModOp>
+    </Group>
+    <!-- END ADDING TO ARCHI INSTEAD OF NATE WHEN CAPE IS NOT AVAILABLE -->
+
     <!-- ****************** START Inuit Trader - Bying Qilauts ******************  -->
 
     <ModOp Type="add" GUID='237' Path="/Values/Trader/Progression/*/">
