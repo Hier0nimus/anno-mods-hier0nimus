@@ -71,26 +71,53 @@
         </Item>
     </ModOp>
 
-    <!-- ****************** START Adding infotip for strings ******************  -->
+    <!-- ****************** START Add Strings to Violins ******************  -->
 
-    <ModOp Type="addNextSibling" GUID='3718'>
-        <Asset>
-            <Template>BuildMenuInfoTip</Template>
-            <Values>
-                <Standard>
-                    <GUID>1742110085</GUID>
-                    <Name>Infotip Strings</Name>
-                    <IconFilename>data/graphics/icons/icon_instrument_strings.png</IconFilename>
-                </Standard>
-                <Locked>
-                    <DefaultLockedState>0</DefaultLockedState>
-                </Locked>
-                <Building>
-                    <AssociatedRegions>Moderate;Colony01</AssociatedRegions>
-                </Building>
-                <BuildingUnique />
-            </Values>
-        </Asset>
+    <!-- ****************** START Add Strings to Recipe Violins ******************  -->
+
+    <ModOp Type="add" GUID='135417' Path="/Values/Recipe/RecipeIngredientUIData/">
+        <Item>
+            <PosX>330</PosX>
+            <PosY>0</PosY>
+            <UICirclePointer>SouthWest</UICirclePointer>
+        </Item>
+    </ModOp>
+
+    <!-- ****************** START Add Strings to Chain Violins ******************  -->
+
+    <ModOp Type="add" GUID='137598' Path="/Values/ProductionChain/Tier1/">
+        <Item>
+            <Building>1742200004</Building>
+            <Tier2>
+                <Item>
+                    <Building>1010331</Building>                    <!-- Cotton Plantation - Building -->
+                </Item>
+                <Item>
+                    <Building>1010308</Building>                    <!-- Copper Mine - Building -->
+                </Item>
+                <Item>
+                    <Building>1010297</Building>                    <!--heavy_02 (Steel Heavy Industry)-->
+                    <Tier3>
+                        <Item>
+                            <Building>1010305</Building>                            <!-- Iron Mine - Building -->
+                        </Item>
+                        <Item>
+                            <Building>1010304</Building>                            <!-- Coal Mine - Building -->
+                        </Item>
+                    </Tier3>
+                </Item>
+            </Tier2>
+        </Item>
+    </ModOp>
+
+    <!-- ****************** START Add Strings to Building Violins ******************  -->
+
+    <ModOp Type="add" GUID='135397' Path="/Values/FactoryBase/FactoryInputs/">
+        <Item>
+            <Product>1440231</Product>            <!--Strings - Product-->
+            <Amount>1</Amount>
+            <StorageAmount>4</StorageAmount>
+        </Item>
     </ModOp>
 
 </ModOps>

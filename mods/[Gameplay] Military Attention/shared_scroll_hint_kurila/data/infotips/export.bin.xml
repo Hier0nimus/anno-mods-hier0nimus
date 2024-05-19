@@ -1,0 +1,85 @@
+<ModOps>
+    <!-- Vorhandene InfoElements für 'Scroll down' Produkt deaktivieren -->
+    <ModOp Type="addNextSibling" Path="//InfoTipData[Guid='25000205']/InfoElement/VisibilityElement/VisibilityElement[VisibilityElement/VisibilityElement/ExpectedValueInt='114436' and VisibilityElement/CompareOperator/CompareOperator='1']">
+        <VisibilityElement>
+        <ElementType>
+            <ElementType>1</ElementType>
+        </ElementType>
+        <CompareOperator>
+            <CompareOperator>1</CompareOperator>
+        </CompareOperator>
+        <ResultType>
+            <ResultType>1</ResultType>
+        </ResultType>
+        <ExpectedValueInt>1500302152</ExpectedValueInt>
+        <Condition>[RefGuid]</Condition>
+        </VisibilityElement>
+    </ModOp>
+    <ModOp Type="addNextSibling" Path="//InfoTipData[Guid='25000205']/InfoElement/VisibilityElement/VisibilityElement[ExpectedValueBool='False' and Condition='[Selection Object Area Economy NeedLocked({PopulationGuid}, [RefGuid])]']">
+        <VisibilityElement>
+        <ElementType>
+            <ElementType>1</ElementType>
+        </ElementType>
+        <CompareOperator>
+            <CompareOperator>1</CompareOperator>
+        </CompareOperator>
+        <ResultType>
+            <ResultType>1</ResultType>
+        </ResultType>
+        <ExpectedValueInt>1500302152</ExpectedValueInt>
+        <Condition>[RefGuid]</Condition>
+        </VisibilityElement>
+    </ModOp>
+    <ModOp Type="addNextSibling" Path="//InfoTipData[Guid='25000205']/InfoElement/VisibilityElement/VisibilityElement[ExpectedValueInt='5858' and Condition='[Scenarios ScenarioGUID]']">
+        <VisibilityElement>
+        <ElementType>
+            <ElementType>1</ElementType>
+        </ElementType>
+        <CompareOperator>
+            <CompareOperator>1</CompareOperator>
+        </CompareOperator>
+        <ResultType>
+            <ResultType>1</ResultType>
+        </ResultType>
+        <ExpectedValueInt>1500302152</ExpectedValueInt>
+        <Condition>[RefGuid]</Condition>
+        </VisibilityElement>
+    </ModOp>
+    <ModOp Type="addNextSibling" Path="//InfoTipData[Guid='25000205']/InfoElement/VisibilityElement/VisibilityElement[not(CompareOperator='1') and not(ExpectedValueBool='False') and Condition='[Selection Object Area Economy NeedLocked({PopulationGuid}, [RefGuid])]']">
+        <VisibilityElement>
+        <ElementType>
+            <ElementType>1</ElementType>
+        </ElementType>
+        <CompareOperator>
+            <CompareOperator>1</CompareOperator>
+        </CompareOperator>
+        <ResultType>
+            <ResultType>1</ResultType>
+        </ResultType>
+        <ExpectedValueInt>1500302152</ExpectedValueInt>
+        <Condition>[RefGuid]</Condition>
+        </VisibilityElement>
+    </ModOp>
+    <!-- Neue InfoElements hinzufügen -->
+    <ModOp Type="addPrevSibling" Path="//InfoTipData[Guid='25000205']/Variables">
+        <InfoElement>
+        <ElementType>9</ElementType>
+        <VisibilityElement>
+            <ElementType>
+            <ElementType>1</ElementType>
+            </ElementType>
+            <CompareOperator />
+            <ResultType>
+            <ResultType>1</ResultType>
+            </ResultType>
+            <ExpectedValueInt>1500302152</ExpectedValueInt>
+            <Condition>[RefGuid]</Condition>
+        </VisibilityElement>
+        <Text>
+            <TextGUID>1500302152</TextGUID>
+            <Style />
+        </Text>
+        <BackgroundType />
+        </InfoElement>
+    </ModOp>
+</ModOps>

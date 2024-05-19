@@ -1,10 +1,14 @@
-# Military Attention | BETA 0.11!
+# Military Attention | BETA 0.12!
 
 A mod centered around military infrastructure and adding new military residence tiers for all regions with a focus on the Old World.
 
 ![ma-img-01.jpg](./banner.jpg)
 
 ## Changelog
+
+### Beta v0.12
+- Added fort feedback units and optimised the models for the different stages
+- 
 
 ### Beta v0.11
 - Moved compatibility for Extended traktors (Kurila) to compatibility file
@@ -225,7 +229,6 @@ Adds a new soldiers population tier as extra workforce in every region.
 - Socces Balls
 
 ##### Lifestyle needs
-- Jam
 - Shampoo
 - Chewing Gum
 - Lemonade
@@ -304,40 +307,6 @@ Adds a new soldiers population tier as extra workforce in every region.
 - Violins
 - Fans
 
-### Military Engineers (Old World)
-
-![ma-img-01.jpg](./data/graphics/icons/icon_menu_military_engineers_0.png)
-
-Upgraded version of soldier residences. Military engineers are added to the normal engineers workforce pool.
-
-##### Needs
-- Military Headquarters
-- Canteen
-- Canned Food
-- Coins
-- Advanced Weapons
-- Coffee
-- Industrial Lubricant
-- Cables
-- Fire Extinguishers
-
-##### Luxury Needs
-- Recreation Center
-- Care Packages
-- Cigarettes
-- Pocket Watches
-- Telephones
-- Gramophones
-- Cognac
-- Typewriters
-- Military Academy
-
-##### Lifestyle needs
-- Spectacles
-- Chocolate
-- Fans
-- Scooters
-
 ## New (military) buildings
 
 ### Residence Buildings
@@ -351,7 +320,9 @@ Upgraded version of soldier residences. Military engineers are added to the norm
 
 |     |  |
 | -------- | ------- |
+| ![Cemetery](./data/graphics/icons/icon_cemetery.png)  | Cemetery |
 | ![Canteen](./data/graphics/icons/icon_canteen.png)  | Canteen (New World, Enbesa) |
+| ![Field Hospital](./data/graphics/icons/icon_military_hospital.png)  | Field Hospital |
 | ![Sanitation Facility](./data/graphics/icons/icon_sanitation_facility.png)  | Sanitation Facility |
 | ![Navy Recruitment Office](./data/graphics/icons/icon_navy_recruitment_office.png) | Navy Recruitment Office  |
 | ![Military Headquarters](./data/graphics/icons/icon_military_headquarters.png) | Military Headquarters  |
@@ -367,6 +338,7 @@ Upgraded version of soldier residences. Military engineers are added to the norm
 |     |  |
 | -------- | ------- |
 | ![Stables](./data/graphics/icons/icon_horse.png) | Stables  |
+| ![Clean Water Pump](./data/graphics/icons/icon_water_pump.png) | Clean Water Pump  |
 | ![Open Pit Iron Mine](./data/graphics/icons/icon_iron.png) | Open Pit Iron Mine  |
 | ![Open Pit Coal Mine](./data/graphics/icons/icon_coal.png) | Open Pit Coal Mine  |
 | ![Military Uniform Factory](./data/graphics/icons/icon_military_uniforms_0.png) | Military Uniform Factory  |
@@ -407,6 +379,7 @@ Upgraded version of soldier residences. Military engineers are added to the norm
 |     |  |
 | -------- | ------- |
 | ![Horses](./data/graphics/icons/icon_horse.png) | Horses  |
+| ![Clean Water](./data/graphics/icons/icon_water_drop.png) | Clean Water  |
 | ![Military Uniforms](./data/graphics/icons/icon_military_uniforms_0.png) | Military Uniforms (Wool + Steel) |
 | ![Basic Weapons](./data/graphics/icons/icon_basic_weapons.png) | Basic Weapons  (Wood + Steel) |
 | ![Sailors](./data/graphics/icons/icon_sailors.png) | Sailors |
@@ -567,9 +540,9 @@ The model and animations and feedback for this building still need a lot of impr
     - Weapon Factory (Add wood)
 
 - Add needs to vanilla **population**
-    - Farmers (Potatoes, Horses)
-    - Workers (Potatoes, Cigarettes)
-    - Artisans (Cigarettes)
+    - Farmers (Cemetery, Clean Water, Horses)
+    - Workers (Cemetery, Clean Water, Cigarettes)
+    - Artisans (Cemetery, Cigarettes)
     - Scholars (Cigarettes)
     - Explorers (Cigarettes)
     - Technicians (Cigarettes)
