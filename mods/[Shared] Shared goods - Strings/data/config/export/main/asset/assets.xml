@@ -1,6 +1,6 @@
 <!-- 
   
-  v1.0
+  v1.1
   [Shared] Shared Goods - Strings
   Created by Taubenangriff and Hier0nimus
   Enjoy!
@@ -64,7 +64,7 @@ Add building to construction menu where you want it
     <!-- END - RECIPE - Strings (Cotton) -->
   </ModOp>
 
-  <ModOp GUID = '1441286' Type = "add" Path = "/Values/RecipeList/Recipes">
+  <ModOp GUID='1441286' Type="add" Path="/Values/RecipeList/Recipes">
     <Item>
       <Recipe>1742200002</Recipe>
     </Item>
@@ -227,6 +227,12 @@ Add building to construction menu where you want it
     </Asset>
   </ModOp>
   <!-- END - BUILDING - STRINGS - MULTIFACTORY -->
+
+  <!-- START - REPLACE ISMAINFACTORY IF OTHER FACTORY IS PRESENT WITH THE SAME OUTPUT THAT ALREADY HAS ISMAINFACTORY 1 -->
+  <ModOp Type="merge" GUID="1742200004" Path="/Values/FactoryBase" Condition="//Values/FactoryBase[FactoryOutputs/Item/Product='1440231' and IsMainFactory='1']">
+    <IsMainFactory>0</IsMainFactory>
+  </ModOp>
+  <!-- END- REPLACE ISMAINFACTORY IF OTHER FACTORY IS PRESENT WITH THE SAME OUTPUT THAT ALREADY HAS ISMAINFACTORY 1 -->
 
   <!-- START - ADD PRODUCTION BUILDINGS TO WORKFORCE MENU -->
   <ModOp Type="add" GUID="25000087" Path="/Values/WorkforceMenu/BoostableFactories">
