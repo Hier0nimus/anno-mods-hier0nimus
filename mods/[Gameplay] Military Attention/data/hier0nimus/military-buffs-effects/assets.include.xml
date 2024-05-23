@@ -1760,7 +1760,7 @@
         </ResidenceUpgrade>
         <IncidentInfectableUpgrade>
           <IncidentRiotIncreaseUpgrade>
-            <Value>-2</Value>
+            <Value>-3</Value>
           </IncidentRiotIncreaseUpgrade>
         </IncidentInfectableUpgrade>
         <CultureUpgrade />
@@ -1803,9 +1803,9 @@
         <Buff />
         <PopulationUpgrade />
         <ResidenceUpgrade>
-          <AdditionalHappiness>10</AdditionalHappiness>
+          <AdditionalHappiness>5</AdditionalHappiness>
           <TaxModifierInPercent>15</TaxModifierInPercent>
-          <WorkforceModifierInPercent>15</WorkforceModifierInPercent>
+          <WorkforceModifierInPercent>10</WorkforceModifierInPercent>
         </ResidenceUpgrade>
         <IncidentInfectableUpgrade />
         <CultureUpgrade />
@@ -1826,14 +1826,17 @@
       <Values>
         <Standard>
           <GUID>1742100467</GUID>
-          <Name>Military Logistics</Name>
+          <Name>Military Logistics (OW)</Name>
           <IconFilename>data\ui\2kimages\main\3dicons\consumables\item_survey_shipscargo.png</IconFilename>
           <InfoDescription>1742100468</InfoDescription>
         </Standard>
         <ItemEffect>
           <EffectTargets>
             <Item>
-              <GUID>6000018</GUID>
+              <GUID>193856</GUID>
+            </Item>
+            <Item>
+              <GUID>194027</GUID>
             </Item>
           </EffectTargets>
           <AllowStacking>0</AllowStacking>
@@ -1841,19 +1844,19 @@
         <Text />
         <FactoryUpgrade>
           <ProductivityUpgrade>
-            <Value>40</Value>
+            <Value>30</Value>
             <Percental>1</Percental>
           </ProductivityUpgrade>
           <AdditionalOutput />
         </FactoryUpgrade>
         <BuildingUpgrade>
           <MaintenanceUpgrade>
-            <Value>20</Value>
+            <Value>15</Value>
             <Percental>1</Percental>
           </MaintenanceUpgrade>
           <WorkforceAmountUpgrade>
             <Percental>1</Percental>
-            <Value>20</Value>
+            <Value>15</Value>
           </WorkforceAmountUpgrade>
           <ReplacingWorkforce>1742100005</ReplacingWorkforce>
         </BuildingUpgrade>
@@ -1870,6 +1873,63 @@
         <ResourceUpgrade />
       </Values>
     </Asset>
+
+    <Asset>
+      <BaseAssetGUID>1742100467</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742100530</GUID>
+          <Name>Military Logistics (EN)</Name>
+        </Standard>
+        <Building>
+          <AssociatedRegions>Africa</AssociatedRegions>
+        </Building>
+        <BuildingUpgrade>
+          <ReplacingWorkforce>1742100318</ReplacingWorkforce>
+        </BuildingUpgrade>
+      </Values>
+    </Asset>
+
+    <Asset>
+      <BaseAssetGUID>1742100467</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742100531</GUID>
+          <Name>Military Logistics (AR)</Name>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>193770</GUID>
+            </Item>
+          </EffectTargets>
+          <AllowStacking>0</AllowStacking>
+        </ItemEffect>
+        <Building>
+          <AssociatedRegions>Arctic</AssociatedRegions>
+        </Building>
+        <BuildingUpgrade>
+          <ReplacingWorkforce>1742100309</ReplacingWorkforce>
+        </BuildingUpgrade>
+      </Values>
+    </Asset>
+
+    <Asset>
+      <BaseAssetGUID>1742100467</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742100510</GUID>
+          <Name>Military Logistics (NW)</Name>
+        </Standard>
+        <Building>
+          <AssociatedRegions>Colony01</AssociatedRegions>
+        </Building>
+        <BuildingUpgrade>
+          <ReplacingWorkforce>1742100317</ReplacingWorkforce>
+        </BuildingUpgrade>
+      </Values>
+    </Asset>
+
   </ModOp>
   <!-- END MILITARY LOGISTICS - BUFF -->
 
@@ -2253,7 +2313,8 @@
       </Values>
     </Asset>
     <!-- END FORT REPARATIONS BUFF - BUFF -->
-    <!--  START - FORT - FORWARDBUFF -->
+
+    <!--  START - FORT - EFFECTCONTAINER -->
     <Asset>
       <Template>EffectContainer</Template>
       <Values>
@@ -2277,7 +2338,147 @@
         </EffectContainer>
       </Values>
     </Asset>
-    <!--  END - FORT - FORWARDBUFF -->
+    <!--  END - FORT - EFFECTCONTAINER -->
+  </ModOp>
+  <!--  START - MILITARY CAMPUS - EFFECTCONTAINER AND BUFFS -->
+
+  <!-- MILITARY CAMPUS - Military Campus - GuildhouseBuff -->
+  <ModOp GUID="269978" Type="addNextSibling">
+    <Asset>
+      <Template>GuildhouseBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100520</GUID>
+          <Name>Campus Production Research</Name>
+          <IconFilename>data\ui\2kimages\main\3dicons\consumables\item_survey_shipscargo.png</IconFilename>
+          <InfoDescription>1742100521</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>6000018</GUID>
+            </Item>
+          </EffectTargets>
+          <AllowStacking>0</AllowStacking>
+        </ItemEffect>
+        <Text />
+        <FactoryUpgrade>
+          <ProductivityUpgrade>
+            <Value>20</Value>
+            <Percental>1</Percental>
+          </ProductivityUpgrade>
+          <AdditionalOutput />
+        </FactoryUpgrade>
+        <BuildingUpgrade>
+          <MaintenanceUpgrade>
+            <Value>10</Value>
+            <Percental>1</Percental>
+          </MaintenanceUpgrade>
+          <WorkforceAmountUpgrade>
+            <Percental>1</Percental>
+            <Value>10</Value>
+          </WorkforceAmountUpgrade>
+        </BuildingUpgrade>
+        <Buff />
+        <CultureUpgrade />
+        <ModuleOwnerUpgrade />
+        <IncidentInfectableUpgrade />
+        <PowerplantUpgrade />
+        <IndustrializableUpgrade />
+        <ItemContainerUpgrade />
+        <IncidentInfluencerUpgrade />
+        <IrrigationUpgrade />
+        <EcoSystemProviderUpgrade />
+        <ResourceUpgrade />
+      </Values>
+    </Asset>
+
+    <!-- MILITARY CAMPUS - Campus Production Research - GuildhouseBuff -->
+    <Asset>
+      <Template>GuildhouseBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100522</GUID>
+          <Name>Campus Citizen Research</Name>
+          <IconFilename>data\ui\2kimages\main\3dicons\consumables\item_survey_shipscargo.png</IconFilename>
+          <InfoDescription>1742100523</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1010346</GUID>
+            </Item>
+            <Item>
+              <GUID>114445</GUID>
+            </Item>
+          </EffectTargets>
+          <AllowStacking>0</AllowStacking>
+        </ItemEffect>
+        <Text />
+        <BuildingUpgrade />
+        <Buff />
+        <PopulationUpgrade>
+          <InputBenefitModifier>
+            <Item>
+              <Product>1010353</Product>
+              <!--University-->
+              <AdditionalResearch>1</AdditionalResearch>
+            </Item>
+            <Item>
+              <Product>1010354</Product>
+              <!--Electricity-->
+              <AdditionalResearch>1</AdditionalResearch>
+            </Item>
+          </InputBenefitModifier>
+        </PopulationUpgrade>
+        <ResidenceUpgrade />
+        <IncidentInfectableUpgrade />
+        <CultureUpgrade />
+        <InfluenceSourceUpgrade />
+        <WarehouseUpgrade />
+        <DistributionUpgrade />
+        <ItemContainerUpgrade />
+        <FactoryUpgrade />
+      </Values>
+    </Asset>
+
+    <!-- MILITARY CAMPUS - EFFECTCONTAINER -->
+    <Asset>
+      <Template>EffectContainer</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100245</GUID>
+          <Name>Military Campus</Name>
+          <IconFilename>data/graphics/icons/icon_cargo_supplies.png</IconFilename>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1010346</GUID>
+            </Item>
+            <Item>
+              <GUID>114445</GUID>
+            </Item>
+            <Item>
+              <GUID>6000018</GUID>
+            </Item>
+          </EffectTargets>
+          <AllowStacking>0</AllowStacking>
+        </ItemEffect>
+        <Text />
+        <EffectContainer>
+          <Effects>
+            <Item>
+              <Effect>1742100520</Effect>              <!-- Campus Production Research - GuildhouseBuff -->
+            </Item>
+            <Item>
+              <Effect>1742100522</Effect>              <!-- Campus Citizen Research - TownHallBuff -->
+            </Item>
+          </Effects>
+        </EffectContainer>
+      </Values>
+    </Asset>
+    <!--  END - MILITARY CAMPUS - EFFECTCONTAINER AND BUFFS -->
   </ModOp>
 
 </ModOps>

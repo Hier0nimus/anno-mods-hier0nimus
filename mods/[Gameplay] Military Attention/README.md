@@ -8,7 +8,22 @@ A mod centered around military infrastructure and adding new military residence 
 
 ### Beta v0.12
 - Added fort feedback units and optimised the models for the different stages
-- 
+- Added shared scroll hint (Kurila) to be compatible with other mods adding goods that could overflow the ui for residents
+- Changed name of Weapons and corresponding buildings and chain to Cannons.
+- Replaced additional output for Master Craftsman Franke with Military Uniforms
+- Replaced additional output for Mariana the Master Stylist with Military Uniforms
+- Changed additional output for Bruno Ironbright, Engineering Giant and added Basic Weapons
+- Add Open Pit Mines to All Old World Mines pool
+- Open Pit Mines can no longer be affected by electricity
+- The cycletime for Open Pit Mines has been increased to nerf them a bit
+- Balanced Military Logistics buff
+- The cycletime for Military Prison and Propaganda Center is now lower
+- Now actually fixed Nitrary module so it is compatible with Extended Tractors (Kurila)
+- Military Academy
+    - Reduced the maintenance costs
+    - New model with feedback
+    - Modules have a complete rework. They are now campuses you can place all around your island to boost productivity and increase researchpoints for Engineers and scholars. You can also slot 3 items in there! Only one is shown in the Academy UI sadly because the UI does not allow it.
+- Added Military Warehouse for New World, Enbesa and Arctic regions
 
 ### Beta v0.11
 - Moved compatibility for Extended traktors (Kurila) to compatibility file

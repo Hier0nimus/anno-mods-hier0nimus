@@ -1588,14 +1588,14 @@
   </ModOp>
   <!-- END BUILDING - CANTEEN (NW) -->
 
-  <!-- START BUILDING - SMALL MILITARY WAREHOUSE -->
+  <!-- START BUILDING - SMALL MILITARY WAREHOUSE (OW) -->
   <ModOp Type="addNextSibling" GUID='1010371'>
     <Asset>
       <Template>Warehouse</Template>
       <Values>
         <Standard>
           <GUID>1742100238</GUID>
-          <Name>Small Military Warehouse</Name>
+          <Name>Small Military Warehouse (OW)</Name>
           <IconFilename>data/graphics/icons/icon_military_warehouse.png</IconFilename>
           <InfoDescription>1742100239</InfoDescription>
         </Standard>
@@ -1734,8 +1734,147 @@
         <Pausable />
       </Values>
     </Asset>
+    <!-- END BUILDING - SMALL MILITARY WAREHOUSE (OW) -->
+
+    <!-- START BUILDING - SMALL MILITARY WAREHOUSE (EN) -->
+    <Asset>
+      <BaseAssetGUID>1742100238</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742100525</GUID>
+          <Name>Small Military Warehouse (EN)</Name>
+        </Standard>
+        <Building>
+          <AssociatedRegions>Africa</AssociatedRegions>
+        </Building>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <Amount>100</Amount>
+            </Item>
+            <Item>
+              <Ingredient>114356</Ingredient>
+              <Amount>20</Amount>
+            </Item>
+            <Item>
+              <Ingredient>114402</Ingredient>
+              <Amount>5</Amount>
+            </Item>
+          </Costs>
+          <InfluenceCostType>DefenseBuilding</InfluenceCostType>
+          <InfluenceCostPoints>14</InfluenceCostPoints>
+        </Cost>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/public/logistic_military/small_logistic_military_en_01_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <BuffFactory>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <BaseBuff>1742100530</BaseBuff>
+          <BaseBuffScope>Radius</BaseBuffScope>
+          <BaseBuffDistance>15</BaseBuffDistance>
+        </BuffFactory>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>50</Amount>
+            </Item>
+            <Item>
+              <Product>1742100318</Product>              <!-- Soldiers Workforce (EN) - Product -->
+              <Amount>10</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+      </Values>
+    </Asset>
+    <!-- END BUILDING - SMALL MILITARY WAREHOUSE (EN) -->
+
+    <!-- START BUILDING - SMALL MILITARY WAREHOUSE (AR) -->
+    <Asset>
+      <BaseAssetGUID>1742100238</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742100017</GUID>
+          <Name>Small Military Warehouse (AR)</Name>
+        </Standard>
+        <Building>
+          <AssociatedRegions>Arctic</AssociatedRegions>
+        </Building>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/public/logistic_military/small_logistic_military_ar_01_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <BuffFactory>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <BaseBuff>1742100531</BaseBuff>
+          <BaseBuffScope>Radius</BaseBuffScope>
+          <BaseBuffDistance>15</BaseBuffDistance>
+        </BuffFactory>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>50</Amount>
+            </Item>
+            <Item>
+              <Product>1742100309</Product>              <!-- Soldiers Workforce (AR) - Product -->
+              <Amount>10</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+      </Values>
+    </Asset>
+    <!-- END BUILDING - SMALL MILITARY WAREHOUSE (AR) -->
+
+    <!-- START BUILDING - SMALL MILITARY WAREHOUSE (NW) -->
+    <Asset>
+      <BaseAssetGUID>1742100238</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742100524</GUID>
+          <Name>Small Military Warehouse (NW)</Name>
+        </Standard>
+        <Building>
+          <AssociatedRegions>Colony01</AssociatedRegions>
+        </Building>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/public/logistic_military/small_logistic_military_nw_01_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <BuffFactory>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <BaseBuff>1742100510</BaseBuff>
+          <BaseBuffScope>Radius</BaseBuffScope>
+          <BaseBuffDistance>15</BaseBuffDistance>
+        </BuffFactory>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>50</Amount>
+            </Item>
+            <Item>
+              <Product>1742100317</Product>              <!-- Soldiers Workforce (NW) - Product -->
+              <Amount>10</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+      </Values>
+    </Asset>
+    <!-- END BUILDING - SMALL MILITARY WAREHOUSE (NW) -->
+
   </ModOp>
-  <!-- END BUILDING - SMALL MILITARY WAREHOUSE -->
 
   <!-- START BUILDING - MILITARY WAREHOUSE -->
   <ModOp Type="addNextSibling" GUID='1010371'>
@@ -3533,7 +3672,7 @@
         <Object>
           <Variations>
             <Item>
-              <Filename>data/graphics/buildings/military/military_academy/military_academy_01.cfg</Filename>
+              <Filename>data/graphics/buildings/military/military_academy/military_academy_01_01.cfg</Filename>
             </Item>
           </Variations>
         </Object>
@@ -3641,7 +3780,7 @@
               <ModuleGUID>114435</ModuleGUID>
             </Item>
           </ConstructionOptions>
-          <ModuleBuildRadius>22</ModuleBuildRadius>
+          <ModuleBuildRadius>300</ModuleBuildRadius>
         </ModuleOwner>
         <AmbientMoodProvider>
           <AttractivityDependentMurmur>
@@ -3676,11 +3815,11 @@
           <Maintenances>
             <Item>
               <Product>1010017</Product>
-              <Amount>25000</Amount>
+              <Amount>10000</Amount>
             </Item>
             <Item>
               <Product>1742100005</Product>              <!-- Soldiers Workforce - Product -->
-              <Amount>1500</Amount>
+              <Amount>1000</Amount>
             </Item>
           </Maintenances>
           <ConsumerPriorityAlarmed>2</ConsumerPriorityAlarmed>
@@ -3706,11 +3845,11 @@
   <!-- START BUILDING - MILITARY ACADEMY MODULE -->
   <ModOp GUID="100454" Type="addNextSibling">
     <Asset>
-      <Template>CultureModule</Template>
+      <Template>AcademyModule</Template>
       <Values>
         <Standard>
           <GUID>1742100090</GUID>
-          <Name>Military Academy Module</Name>
+          <Name>Military Campus</Name>
           <IconFilename>data/graphics/icons/icon_military_academy_module.png</IconFilename>
           <InfoDescription>1742100091</InfoDescription>
         </Standard>
@@ -3736,27 +3875,16 @@
             <Item>
               <Filename>data/graphics/buildings/military/military_academy/military_academy_module_01.cfg</Filename>
             </Item>
-            <Item>
-              <Filename>data/graphics/buildings/military/military_academy/military_academy_module_02.cfg</Filename>
-            </Item>
           </Variations>
         </Object>
         <Mesh />
         <Selection>
+          <GUIType>Guildhouse</GUIType>
           <Colors>
             <WeakSelectionColorType>NoColor</WeakSelectionColorType>
           </Colors>
         </Selection>
-        <Text>
-          <LocaText>
-            <English>
-              <Text>Empty Module</Text>
-              <Status>Exported</Status>
-              <ExportCount>2</ExportCount>
-            </English>
-          </LocaText>
-          <LineID>15195</LineID>
-        </Text>
+        <Text />
         <Constructable />
         <Locked />
         <SoundEmitter />
@@ -3767,7 +3895,7 @@
           <ModuleMoodImage>data/ui/2kimages/main/assets/cultural_building_mood_bg/bg_empty_museum.png</ModuleMoodImage>
         </BuildingModule>
         <ItemContainer>
-          <SocketCount>1</SocketCount>
+          <SocketCount>3</SocketCount>
           <SocketAllocation>RadiusBuilding;GuildHouse;TownHall;HarborOffice;Dockland;Lodge;Ship;SailShip;SteamShip;Warship;Tradeship;AirShip;Culture;Museum;Zoo;BotanicGarden;DivingVessel;Mod1</SocketAllocation>
           <SocketScope>Radius</SocketScope>
           <SocketScopeRadius>0</SocketScopeRadius>
@@ -3778,6 +3906,37 @@
         </Attackable>
         <QuestObject />
         <AmbientMoodProvider />
+        <PublicService>
+          <FullSatisfactionDistance>80</FullSatisfactionDistance>
+          <NoSatisfactionDistance>90</NoSatisfactionDistance>
+          <PublicServiceOutputs>
+            <Item>
+              <Product>1010353</Product>              <!--university-->
+            </Item>
+          </PublicServiceOutputs>
+        </PublicService>
+        <UpgradeList />
+        <Factory7/>
+        <LogisticNode/>
+        <Pausable />
+        <FactoryBase />
+        <BuffFactory>
+          <BaseBuff>1742100245</BaseBuff>
+          <BaseBuffScope>Radius</BaseBuffScope>
+          <BaseBuffDistance>24</BaseBuffDistance>
+        </BuffFactory>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>250</Amount>
+            </Item>
+            <Item>
+              <Product>1742100005</Product>              <!-- Soldiers Workforce - Product -->
+              <Amount>50</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
       </Values>
     </Asset>
   </ModOp>
@@ -3866,7 +4025,7 @@
               <StorageAmount>10</StorageAmount>
             </Item>
           </FactoryOutputs>
-          <CycleTime>30</CycleTime>
+          <CycleTime>45</CycleTime>
           <IsMainFactory>0</IsMainFactory>
         </FactoryBase>
         <LogisticNode />
@@ -3917,6 +4076,9 @@
             </Riot>
           </IncidentInfectionChanceFactors>
         </IncidentInfectable>
+        <Industrializable>
+          <BoostedByIndustrialization>0</BoostedByIndustrialization>
+        </Industrializable>
         <Culture>
           <Attractiveness>-10</Attractiveness>
           <HasPollution>1</HasPollution>
@@ -4011,7 +4173,7 @@
               <StorageAmount>8</StorageAmount>
             </Item>
           </FactoryOutputs>
-          <CycleTime>15</CycleTime>
+          <CycleTime>45</CycleTime>
           <IsMainFactory>0</IsMainFactory>
         </FactoryBase>
         <LogisticNode />
@@ -4062,7 +4224,9 @@
             </Riot>
           </IncidentInfectionChanceFactors>
         </IncidentInfectable>
-        <Industrializable />
+        <Industrializable>
+          <BoostedByIndustrialization>0</BoostedByIndustrialization>
+        </Industrializable>
         <Culture>
           <Attractiveness>-10</Attractiveness>
           <HasPollution>1</HasPollution>
@@ -4073,7 +4237,7 @@
       </Values>
     </Asset>
   </ModOp>
-  <!-- END BUILDING - OPEN PIT IRON MINE -->
+  <!-- END BUILDING - OPEN PIT COAL MINE -->
 
   <!-- START BUILDING - CARDGAMES FACTORY -->
   <ModOp Type="addNextSibling" GUID='1010284'>
@@ -5287,7 +5451,6 @@
         <UpgradeList/>
         <Factory7/>
         <BuffFactory>
-          <ProductionBuffScope>Radius</ProductionBuffScope>
           <BaseBuff>1742100295</BaseBuff>
           <BaseBuffScope>Radius</BaseBuffScope>
           <BaseBuffDistance>18</BaseBuffDistance>
@@ -6677,7 +6840,7 @@
               <StorageAmount>10</StorageAmount>
             </Item>
           </FactoryInputs>
-          <CycleTime>300</CycleTime>
+          <CycleTime>240</CycleTime>
           <IsMainFactory>1</IsMainFactory>
         </FactoryBase>
         <FeedbackController />
@@ -6828,7 +6991,7 @@
               <StorageAmount>10</StorageAmount>
             </Item>
           </FactoryInputs>
-          <CycleTime>300</CycleTime>
+          <CycleTime>180</CycleTime>
           <IsMainFactory>1</IsMainFactory>
         </FactoryBase>
         <FeedbackController />
@@ -8195,7 +8358,6 @@
       </Values>
     </Asset>
   </ModOp>
-
   <!-- ****************** END NAVY RECRUITMENT OFFICE (NW) - Building ******************  -->
 
   <!-- ****************** START NAVY RECRUITMENT OFFICE (EN) - Building ******************  -->
@@ -8902,7 +9064,7 @@
           <Name>Clean Water Pump (OW)</Name>
           <IconFilename>data\ui\2kimages\main\3dicons\icon_water_pump.png</IconFilename>
           <Description>1742100241</Description>
-        </Standard> 
+        </Standard>
         <Building>
           <BuildModeRandomRotation>180</BuildModeRandomRotation>
           <AssociatedRegions>Moderate</AssociatedRegions>

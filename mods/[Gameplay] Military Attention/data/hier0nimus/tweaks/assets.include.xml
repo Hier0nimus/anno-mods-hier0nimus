@@ -49,6 +49,8 @@ Add ParticipantMessageArcheType for farmers to show more needs
 
 Reduction of damage of flame towers to wooden ships
 
+192039 Master Craftsman Franke extra output Military Uniforms
+
 -->
 
 <ModOps>
@@ -436,6 +438,64 @@ Reduction of damage of flame towers to wooden ships
   </ModOp>
 
   <!-- ****************** END Reduction damage Flame towers ******************  -->
+
+  <!-- ****************** START Master Craftsman Franke Military Uniforms ******************  -->
+
+  <ModOp Type="replace" GUID='192039' Path="/Values/FactoryUpgrade/AdditionalOutput">
+    <AdditionalOutput>
+      <Item>
+        <Product>1742100064</Product>
+        <!--Military Uniforms-->
+        <AdditionalOutputCycle>10</AdditionalOutputCycle>
+        <Amount>1</Amount>
+      </Item>
+    </AdditionalOutput>
+  </ModOp>
+
+  <!-- ****************** END Master Craftsman Franke Military Uniforms ******************  -->
+
+  <!-- ****************** START Mariana the Master Stylist Military Uniforms ******************  -->
+
+  <ModOp Type="replace" GUID='191346' Path="/Values/FactoryUpgrade/AdditionalOutput">
+    <AdditionalOutput>
+      <Item>
+        <Product>1742100064</Product>
+        <!--Military Uniforms-->
+        <AdditionalOutputCycle>8</AdditionalOutputCycle>
+        <Amount>1</Amount>
+      </Item>
+    </AdditionalOutput>
+  </ModOp>
+
+  <!-- ****************** END Mariana the Master Stylist Uniforms ******************  -->
+
+  <!-- ****************** START Bruno Ironbright, Engineering Giant - Balance + Basic Weapons ******************  -->
+
+  <ModOp Type="merge" GUID='191422' Path="/Values/FactoryUpgrade/AdditionalOutput">
+    <AdditionalOutput>
+      <Item>
+        <Product>1742100471</Product>
+        <!--basic weapons-->
+        <AdditionalOutputCycle>8</AdditionalOutputCycle>
+        <Amount>1</Amount>
+      </Item>
+      <Item>
+        <Product>1010223</Product>
+        <!--advanced weapons-->
+        <AdditionalOutputCycle>12</AdditionalOutputCycle>
+        <Amount>1</Amount>
+      </Item>
+      <Item>
+        <Product>1010224</Product>
+        <!--steam motors-->
+        <AdditionalOutputCycle>10</AdditionalOutputCycle>
+        <Amount>1</Amount>
+      </Item>
+    </AdditionalOutput>
+  </ModOp>
+
+  <!-- ****************** END Bruno Ironbright, Engineering Giant - Balance + Basic Weapons ******************  -->
+
 
   <!-- ****************** END TWEAKS ******************  -->
 </ModOps>

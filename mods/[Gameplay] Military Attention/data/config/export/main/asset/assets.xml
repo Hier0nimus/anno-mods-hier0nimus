@@ -27,7 +27,6 @@ SOLDIERS POPULATION TIER
 1742100233 - Soldiers Neutral - Moodtext
 1742100234 - Soldiers Happy - Moodtext
 1742100235 - Soldiers Euphoric - Moodtext
-// NOT USED ANYMORE // 1742100245 - Military Engineers Euphoric - Moodtext
 
 BUILDINGS
 ********************
@@ -49,7 +48,10 @@ BUILDINGS
 1742100338 - Canteen (NW) - Description
 1742100341 - Canteen (EN) - Building
 1742100342 - Canteen (EN) - Description
-1742100238 - Small Military Warehouse - Buildings
+1742100238 - Small Military Warehouse (OW) - Building
+1742100524 - Small Military Warehouse (NW) - Building
+1742100525 - Small Military Warehouse (EN) - Building
+1742100017 - Small Military Warehouse (AR) - Building
 1742100239 - Small Military Warehouse - Description
 1742100024 - Military Warehouse - Building
 1742100025 - Military Warehouse - Description
@@ -138,14 +140,6 @@ BUILDINGS
 1742100507 - Care Package Factory: Medium (OW) - Building - Description
 1742100516 - Care Package Factory: Big (OW) - Building
 1742100517 - Care Package Factory: Big (OW) - Building - Description
-// NOT USED ANYMORE // 1742100520 - Care Package Factory: Fish - Building
-// NOT USED ANYMORE // 1742100521 - Care Package Factory: Fish - Building - Description
-// NOT USED ANYMORE // 1742100522 - Care Package Factory: Sweets - Building
-// NOT USED ANYMORE // 1742100523 - Care Package Factory: Sweets - Building - Description
-// NOT USED ANYMORE // 1742100524 - Care Package Factory: Vegetables - Building
-// NOT USED ANYMORE // 1742100525 - Care Package Factory: Vegetables - Building - Description
-// NOT USED ANYMORE // 1742100530 - Care Package Factory: Drinks - Building
-// NOT USED ANYMORE // 1742100531 - Care Package Factory: Drinks - Building - Description
 1742100007 - Military Post Box - Building
 1742100008 - Military Post Box - Building - Description
 1742100076 - Sanitation Facility - Building
@@ -233,7 +227,6 @@ MILITARY PRODUCTS
 1742100345 - SoldiersConsumerGoods (AR) ProductList
 1742100346 - SoldiersConsumerGoods (NW) ProductList
 1742100347 - SoldiersConsumerGoods (EN) ProductList
-// NOT USED ANYMORE // 1742100017 - MilitaryEngineersConsumerGoods - ProductList
 1742100022 - Canteen (OW) - Product
 1742100023 - Canteen (OW) - Product - Description
 1742100339 - Canteen (NW) - Product
@@ -384,7 +377,10 @@ BUFFS & EFFECTS
 1742100462 - Military Prison Buff - TownhallBuff - Description
 1742100463 - Propagande Facility Buff - TownhallBuff
 1742100464 - Propagande Facility Buff - TownhallBuff - Description
-1742100467 - Military Logistics - GuildhouseBuff
+1742100467 - Military Logistics (OW) - GuildhouseBuff
+1742100530 - Military Logistics (EN) - GuildhouseBuff
+1742100531 - Military Logistics (AR) - GuildhouseBuff
+1742100510 - Military Logistics (NW) - GuildhouseBuff
 1742100468 - Military Logistics - GuildhouseBuff - Description
 1742100494 - Digging deeper for Galena - Buff
 1742100495 - Digging deeper for Galena - Buff - Description
@@ -395,6 +391,11 @@ BUFFS & EFFECTS
 1742100569 - Fort Defense - HarbourOfficeBuff - Description
 1742100570 - Fort Reparations - HarbourOfficeBuff
 1742100571 - Fort Reparations - HarbourOfficeBuff - Description
+1742100245 - Military Campus - EffectContainer
+1742100520 - Campus Production Research - GuildhouseBuff
+1742100521 - Campus Production Research - GuildhouseBuff - Description
+1742100522 - Campus Citizen Research - TownHallBuff
+1742100523 - Campus Citizen Research - TownHallBuff - Description
 
 POOLS
 ********
@@ -470,7 +471,6 @@ RECIPES + LISTS
 1742100505 - Care Package: Medium (OW) - Recipe - Description
 1742100508 - Care Package: Big (OW) - Recipe
 1742100509 - Care Package: Big (OW) - Recipe - Description
-// NOT USED ANYMORE // 1742100510 - Care Package: Entertainment - Recipe
 // NOT USED ANYMORE // 1742100511 - Care Package: Entertainment - Recipe - Description
 // NOT USED ANYMORE // 1742100512 - Care Package: Fish - Recipe
 // NOT USED ANYMORE // 1742100513 - Care Package: Fish - Recipe - Description
@@ -640,7 +640,7 @@ TRIGGERS
 ********************
 HIGHEST: 1742100738
 
-1742100724 - Other regions - Trigger
+1742100739 - Other regions - Trigger
 
 1742100738 - Farmers 100 - Trigger
 
@@ -677,6 +677,7 @@ HIGHEST: 1742100738
 <ModOps>
   <!-- ************* INCLUDES ************* -->
   <Include File="../../../../hier0nimus/military-tiers/assets.include.xml" />
+  <Include File="../../../../hier0nimus/military-buffs-effects/assets.include.xml" />
   <Include File="../../../../hier0nimus/military-buildings/assets.include.xml" />
   <Include File="../../../../hier0nimus/ammunition-depot/assets.include.xml" />
   <Include File="../../../../hier0nimus/military-defenses/assets.include.xml" />
@@ -685,7 +686,6 @@ HIGHEST: 1742100738
   <Include File="../../../../hier0nimus/military-items/assets.include.xml" />
   <Include File="../../../../hier0nimus/military-pools/assets.include.xml" />
   <Include File="../../../../hier0nimus/military-policies-itemsets/assets.include.xml" />
-  <Include File="../../../../hier0nimus/military-buffs-effects/assets.include.xml" />
   <Include File="../../../../hier0nimus/sailors/assets.include.xml" />
   <Include File="../../../../hier0nimus/quests/assets.include.xml" />
   <Include File="../../../../hier0nimus/newspapers/assets.include.xml" />
