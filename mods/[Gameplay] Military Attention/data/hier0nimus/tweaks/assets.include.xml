@@ -1,6 +1,8 @@
 <!-- 
   Tweaks
 
+Fixed quest campaign "Come What May" where normal cannons need to be build. Switched to new cannons
+
 Add Basic ammunition to OfferingGoods Archibald and Isabel
 Add Add Basic weapons and Basic ammunition to OfferingGoods Anne and Jean
 Add Galena to OfferingGoods Eli
@@ -49,12 +51,20 @@ Add ParticipantMessageArcheType for farmers to show more needs
 
 Reduction of damage of flame towers to wooden ships
 
-192039 Master Craftsman Franke extra output Military Uniforms
+Adaptations to vanilla items
 
 -->
 
 <ModOps>
   <!-- ****************** START TWEAKS ******************  -->
+
+  <!-- ****************** START Changing "Come What May" building assest from normal defense buildings to new defense buildings ******************  -->
+  <ModOp Type="merge" GUID='151411' Path="Values/Objectives/WinConditions/Item/Objective/Values/ConditionPlayerCounter[Context='1010522']">
+    <Context>1742100215</Context>
+  </ModOp>
+  <ModOp Type="merge" GUID='151411' Path="Values/Objectives/WinConditions/Item/Objective/Values/ConditionPlayerCounter[Context='1010523']">
+    <Context>1742100216</Context>
+  </ModOp>
 
   <!-- ****************** START Add Basic weapons to OfferingGoods Anne and Jean ******************  -->
   <ModOp Type="add" GUID='73,76' Path="/Values/Trader/Progression/*[self::EarlyGame or self::EarlyMidGame or self::MidGame or self::LateMidGame or self::LateGame or self::EndGame]/GoodsProduction/">
@@ -393,7 +403,6 @@ Reduction of damage of flame towers to wooden ships
       <NoWeightPopulationCount>0</NoWeightPopulationCount>
     </Item>
   </ModOp>
-
   <!-- ****************** END Add Products for other population ******************  -->
 
   <!-- ****************** START Farmfields reduction ******************  -->
@@ -417,30 +426,56 @@ Reduction of damage of flame towers to wooden ships
   <ModOp Type="replace" GUID="100654" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
     <Limit>78</Limit>    <!-- 108 -->
   </ModOp>
-
   <!-- ****************** END Farmfields reduction ******************  -->
 
   <!-- ****************** START Farmer more needs by ParticipantMessageArcheType ******************  -->
-
   <ModOp Type="replace" GUID="15000000" Path="/Values/PopulationLevel7/PopulationParticipant">
     <PopulationParticipant>Resident_tier01_atWork</PopulationParticipant>
   </ModOp>
-
   <!-- ****************** END Farmer more needs by ParticipantMessageArcheType ******************  -->
 
   <!-- ****************** START Reduction damage Flame towers ******************  -->
-
   <ModOp Type="merge" GUID='628' Path="/Values/Projectile/Effectivities/Item[GUID='1398']">
     <Factor>1.4</Factor>
   </ModOp>
   <ModOp Type="merge" GUID='628' Path="/Values/Projectile/Effectivities/Item[GUID='1404']">
     <Factor>0.5</Factor>
   </ModOp>
-
   <!-- ****************** END Reduction damage Flame towers ******************  -->
 
-  <!-- ****************** START Master Craftsman Franke Military Uniforms ******************  -->
+  <!-- ****************** START Weaver, Tailor, Fine Couturier, Lady Jane Smythe add Military Uniforms Factory ******************  -->
+  <ModOp Type="add" GUID='191325,191326,191327,191329' Path="Values/ItemEffect/EffectTargets/">
+    <Item>
+      <GUID>1742100062</GUID>      <!-- Military Uniform Factory -->
+    </Item>
+  </ModOp>
+  <!-- ****************** END Weaver, Tailor, Fine Couturier, Lady Jane Smythe add Military Uniforms Factory ******************  -->
 
+  <!-- ****************** START Driller, Dredger, Quarry Foreman, Grigor The Geologist,Steven MacLeod add Nitrary ******************  -->
+  <ModOp Type="add" GUID='191585,191587,191589,191590,191591' Path="Values/ItemEffect/EffectTargets/">
+    <Item>
+      <GUID>1742100289</GUID>      <!-- Nitrary -->
+    </Item>
+  </ModOp>
+  <!-- ****************** END Driller, Dredger, Quarry Foreman, Grigor The Geologist,Steven MacLeod add Nitrary ******************  -->
+
+  <!-- ****************** START Jeweller, Magnifying Glasses, Lapidary, Magnifying Glass, The Watchmaker's Loupe, Susannah Brightwoman add Mint ******************  -->
+  <ModOp Type="add" GUID='190623,190898,190624,190899,190900,113799' Path="Values/ItemEffect/EffectTargets/">
+    <Item>
+      <GUID>1742100415</GUID>      <!-- Mint -->
+    </Item>
+  </ModOp>
+  <!-- ****************** END  Jeweller, Magnifying Glasses, Lapidary, Magnifying Glass, The Watchmaker's Loupe, Susannah Brightwoman add Mint ******************  -->
+
+  <!-- ****************** START Millstone, Burrstone, Lovelyman's Grinding Machine add Paper Factory ******************  -->
+  <ModOp Type="add" GUID='190843,190844,190845' Path="Values/ItemEffect/EffectTargets/">
+    <Item>
+      <GUID>1742100054</GUID>      <!-- Paper Factory -->
+    </Item>
+  </ModOp>
+  <!-- ****************** END  Millstone, Burrstone, Lovelyman's Grinding Machine add Paper Factory ******************  -->
+
+  <!-- ****************** START Master Craftsman Franke Military Uniforms ******************  -->
   <ModOp Type="replace" GUID='192039' Path="/Values/FactoryUpgrade/AdditionalOutput">
     <AdditionalOutput>
       <Item>
@@ -451,26 +486,68 @@ Reduction of damage of flame towers to wooden ships
       </Item>
     </AdditionalOutput>
   </ModOp>
-
   <!-- ****************** END Master Craftsman Franke Military Uniforms ******************  -->
 
-  <!-- ****************** START Mariana the Master Stylist Military Uniforms ******************  -->
+  <!-- ****************** START Hervé Savonne,Chandler,Mercury Thermometer,Thielemann's Tube,Melting Point Apparatus,Herbal Hygienist add Gunpowder Factory ******************  -->
+  <ModOp Type="add" GUID='191319,191315,190847,190849,190848,191317' Path="Values/ItemEffect/EffectTargets/">
+    <Item>
+      <GUID>1742100291</GUID>      <!-- Gunpowder Factory -->
+    </Item>
+  </ModOp>
+  <!-- ****************** END Hervé Savonne,Chandler,Mercury Thermometer,Thielemann's Tube,Melting Point Apparatus,Herbal Hygienist add Gunpowder Factory  ******************  -->
 
-  <ModOp Type="replace" GUID='191346' Path="/Values/FactoryUpgrade/AdditionalOutput">
+  <!-- ****************** START Lily The Fashion Designer ******************  -->
+  <ModOp Type="replace" GUID='191328' Path="/Values/FactoryUpgrade/AdditionalOutput">
     <AdditionalOutput>
       <Item>
-        <Product>1742100064</Product>
-        <!--Military Uniforms-->
+        <Product>1010237</Product>        <!-- Basic Clothes -->
         <AdditionalOutputCycle>8</AdditionalOutputCycle>
         <Amount>1</Amount>
       </Item>
     </AdditionalOutput>
   </ModOp>
+  <!-- ****************** END Lily The Fashion Designer ******************  -->
 
+  <!-- ****************** START Mechanical Drill, Drill, Prospector, Driller, Refiner,Fine Handheld Power Auger add All Clean Water Pumps ******************  -->
+  <ModOp Type="add" GUID='190880,190879,190756,191585,190758,190881' Path="Values/ItemEffect/EffectTargets/">
+    <Item>
+      <GUID>1742100511</GUID>      <!-- All Clean Water Pumps -->
+    </Item>
+  </ModOp>
+  <!-- ****************** END Mechanical Drill, Drill, Prospector, Driller, Refiner,Fine Handheld Power Auger add All Clean Water Pumps  ******************  -->
+
+  <!-- ****************** START Tobacco Blender,Lector,Millstone, Burrstone, Lovelyman's Grinding Machine,Cigar Afficionado add Cigarettes Factory  ******************  -->
+  <ModOp Type="add" GUID='190640,190639,190843,190844,190845,190641' Path="Values/ItemEffect/EffectTargets/">
+    <Item>
+      <GUID>1742100056</GUID>      <!-- Cigarettes Factory -->
+    </Item>
+  </ModOp>
+  <!-- ****************** END Tobacco Blender,Lector,Millstone, Burrstone, Lovelyman's Grinding Machine,Cigar Afficionado add Cigarettes Factory  ******************  -->
+
+  <!-- ****************** START Mariana the Master Stylist,Weaver, Tailor, Fine Couturier,Cristobal Taffeta add Sleeping Bag Factory + Heated Military Uniform Factory  ******************  -->
+  <ModOp Type="add" GUID='191346,191325,191326,191327,191347' Path="Values/ItemEffect/EffectTargets/">
+    <Item>
+      <GUID>1742100068</GUID>      <!-- Sleeping Bag Factory OW -->
+    </Item>
+    <Item>
+      <GUID>1742100331</GUID>      <!-- Heated Military Uniform Factory -->
+    </Item>
+  </ModOp>
+  <!-- ****************** END Mariana the Master Stylist,Weaver, Tailor, Fine Couturier,Cristobal Taffeta add Sleeping Bag Factory + Heated Military Uniform Factory  ******************  -->
+
+  <!-- ****************** START Mariana the Master Stylist Military Uniforms ******************  -->
+  <ModOp Type="replace" GUID='191346' Path="/Values/FactoryUpgrade/AdditionalOutput">
+    <AdditionalOutput>
+      <Item>
+        <Product>1742100064</Product>        <!--Military Uniforms-->
+        <AdditionalOutputCycle>8</AdditionalOutputCycle>
+        <Amount>1</Amount>
+      </Item>
+    </AdditionalOutput>
+  </ModOp>
   <!-- ****************** END Mariana the Master Stylist Uniforms ******************  -->
 
   <!-- ****************** START Bruno Ironbright, Engineering Giant - Balance + Basic Weapons ******************  -->
-
   <ModOp Type="merge" GUID='191422' Path="/Values/FactoryUpgrade/AdditionalOutput">
     <AdditionalOutput>
       <Item>
@@ -493,7 +570,6 @@ Reduction of damage of flame towers to wooden ships
       </Item>
     </AdditionalOutput>
   </ModOp>
-
   <!-- ****************** END Bruno Ironbright, Engineering Giant - Balance + Basic Weapons ******************  -->
 
 

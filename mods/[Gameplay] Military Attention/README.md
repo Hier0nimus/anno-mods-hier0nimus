@@ -1,10 +1,24 @@
-# Military Attention | BETA 0.12!
+# Military Attention | BETA 0.13!
 
 A mod centered around military infrastructure and adding new military residence tiers for all regions with a focus on the Old World.
 
 ![ma-img-01.jpg](./banner.jpg)
 
 ## Changelog
+
+### Beta v0.13
+- Now full support for Creative mode
+- Fix for "Come What May" campaign quest
+- Fix for description text nitrary bed
+- Added  Paper, Sleeping Bags and Advanced weapons to docklands traders
+- Fixed some feedback for the Fort
+- Models for Navy Recruitment Offices for Enbesa and Arctic
+- Reduced the radius for Enbesa, New World and Arctic Navy Recruitment Office
+- Finalised model with feedback for Military Headquarters and added extra variation
+- Added multiple buildings to multiple effect pools so most of the buildings can be influenced by items from the game
+- Added 4 new items. One for Cardgames Factory, All food production, Dynamite Factory and Mint
+- Added German translations thanks to f0kx
+- Added Chinese translations thanks to hanthe2th
 
 ### Beta v0.12
 - Added fort feedback units and optimised the models for the different stages

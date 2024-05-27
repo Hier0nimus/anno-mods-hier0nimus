@@ -1315,10 +1315,6 @@
               <Product>1010017</Product>              <!-- Coins -->
               <Amount>50</Amount>
             </Item>
-            <Item>
-              <Product>1742100005</Product>              <!-- Soldiers Workforce -->
-              <Amount>10</Amount>
-            </Item>
           </Maintenances>
         </Maintenance>
         <Attackable />
@@ -1436,10 +1432,6 @@
               <Product>1010017</Product>              <!-- Coins -->
               <Amount>50</Amount>
             </Item>
-            <Item>
-              <Product>1742100317</Product>              <!-- New World Soldiers Workforce -->
-              <Amount>20</Amount>
-            </Item>
           </Maintenances>
         </Maintenance>
         <Attackable />
@@ -1497,10 +1489,10 @@
               <Ingredient>114402</Ingredient>              <!-- Mud Bricks - Product -->
               <Amount>10</Amount>
             </Item>
-            <!--<Item>
+            <Item>
               <Ingredient>1010218</Ingredient>               Steel Beams - Product
               <Amount>2</Amount>
-            </Item>-->
+            </Item>
           </Costs>
         </Cost>
         <Object>
@@ -1557,10 +1549,6 @@
               <Product>1010017</Product>              <!-- Coins -->
               <Amount>50</Amount>
             </Item>
-            <Item>
-              <Product>1742100318</Product>              <!-- Enbesa Soldiers Workforce -->
-              <Amount>20</Amount>
-            </Item>
           </Maintenances>
         </Maintenance>
         <Attackable />
@@ -1586,7 +1574,7 @@
       </Values>
     </Asset>
   </ModOp>
-  <!-- END BUILDING - CANTEEN (NW) -->
+  <!-- END BUILDING - CANTEEN (EN) -->
 
   <!-- START BUILDING - SMALL MILITARY WAREHOUSE (OW) -->
   <ModOp Type="addNextSibling" GUID='1010371'>
@@ -2047,18 +2035,16 @@
           <GUID>1742100028</GUID>
           <Name>Military Headquarters</Name>
           <IconFilename>data/graphics/icons/icon_military_headquarters.png</IconFilename>
-          <!--<ID>Hacienda</ID>-->
           <InfoDescription>1742100029</InfoDescription>
         </Standard>
         <Text />
-        <Blocking>
-          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
-        </Blocking>
+        <Blocking />
         <Building>
           <BuildingType>Logistic</BuildingType>
           <BuildingCategoryName>11151</BuildingCategoryName>
           <BuildModeRandomRotation>180</BuildModeRandomRotation>
           <AssociatedRegions>Moderate</AssociatedRegions>
+          <AllowChangeVariation>1</AllowChangeVariation>
         </Building>
         <Cost>
           <Costs>
@@ -2100,7 +2086,10 @@
         <Object>
           <Variations>
             <Item>
-              <Filename>data/graphics/buildings/military/military_headquarters/military_hq.cfg</Filename>
+              <Filename>data/graphics/buildings/military/military_headquarters/military_hq_01.cfg</Filename>
+            </Item>
+            <Item>
+              <Filename>data/graphics/buildings/military/military_headquarters/military_hq_02.cfg</Filename>
             </Item>
           </Variations>
         </Object>
@@ -3801,8 +3790,8 @@
         </AmbientMoodProvider>
         <LogisticNode />
         <PublicService>
-          <FullSatisfactionDistance>80</FullSatisfactionDistance>
-          <NoSatisfactionDistance>70</NoSatisfactionDistance>
+          <FullSatisfactionDistance>70</FullSatisfactionDistance>
+          <NoSatisfactionDistance>80</NoSatisfactionDistance>
           <PublicServiceOutputs>
             <Item>
               <Product>1742100084</Product>              <!-- Military Academy - Product -->
@@ -5894,7 +5883,7 @@
           <GUID>1742100374</GUID>
           <Name>Saltpetre Bed</Name>
           <IconFilename>data/ui/2kimages/main/3dicons/icon_general_module_01.png</IconFilename>
-          <InfoDescription>1742100214</InfoDescription>
+          <InfoDescription>1742100375</InfoDescription>
         </Standard>
         <Building>
           <BuildingCategoryName>11175</BuildingCategoryName>
@@ -8395,7 +8384,7 @@
         <Object>
           <Variations>
             <Item>
-              <Filename>data/graphics/buildings/military/naval_recruitment_office/naval_recruitment_office_01.cfg</Filename>
+              <Filename>data/graphics/buildings/military/naval_recruitment_office/naval_recruitment_office_en_01.cfg</Filename>
             </Item>
           </Variations>
         </Object>
@@ -8416,7 +8405,7 @@
           </Maintenances>
         </Maintenance>
         <ItemContainer>
-          <SocketScopeRadius>40</SocketScopeRadius>
+          <SocketScopeRadius>30</SocketScopeRadius>
         </ItemContainer>
         <Postbox>
           <ProductivityFactorByResidents>
@@ -8501,7 +8490,7 @@
         <Object>
           <Variations>
             <Item>
-              <Filename>data/graphics/buildings/military/naval_recruitment_office/naval_recruitment_office_01.cfg</Filename>
+              <Filename>data/graphics/buildings/military/naval_recruitment_office/naval_recruitment_office_ar_01.cfg</Filename>
             </Item>
           </Variations>
         </Object>
@@ -8522,7 +8511,7 @@
           </Maintenances>
         </Maintenance>
         <ItemContainer>
-          <SocketScopeRadius>40</SocketScopeRadius>
+          <SocketScopeRadius>30</SocketScopeRadius>
         </ItemContainer>
         <Postbox>
           <ProductivityFactorByResidents>
