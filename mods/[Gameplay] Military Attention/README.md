@@ -1,13 +1,10 @@
-# Military Attention | BETA 0.14!
+# Military Attention | BETA 0.13!
 
 A mod centered around military infrastructure and adding new military residence tiers for all regions with a focus on the Old World.
 
 ![ma-img-01.jpg](./banner.jpg)
 
 ## Changelog
-
-### Beta v0.14
-- 
 
 ### Beta v0.13
 - Now full support for Creative mode
