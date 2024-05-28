@@ -1,10 +1,13 @@
-# Military Attention | BETA 0.13!
+# Military Attention | BETA 0.14!
 
 A mod centered around military infrastructure and adding new military residence tiers for all regions with a focus on the Old World.
 
 ![ma-img-01.jpg](./banner.jpg)
 
 ## Changelog
+
+### Beta v0.14
+- 
 
 ### Beta v0.13
 - Now full support for Creative mode
@@ -239,16 +242,16 @@ Adds a new soldiers population tier as extra workforce in every region.
 
 ##### Needs
 - Canteen
+- Field Hospital
 - Bread
 - Military Uniforms
 - Basic Weapons
 - Weapons
 - Military Training Complex
 - Coins
-- Beef
 - Military Headquarters
 - Canned Food
-- Coffee
+- Advanced Weapons
 - Military Academy
 
 ##### Luxury Needs
@@ -259,6 +262,8 @@ Adds a new soldiers population tier as extra workforce in every region.
 - Cigarettes
 - Recreation Center
 - Sleeping Bags
+- Coffee
+- Pocket Watches
 - Socces Balls
 
 ##### Lifestyle needs
@@ -284,8 +289,10 @@ Adds a new soldiers population tier as extra workforce in every region.
 - Baxing Arena
 - Rum
 - Care Packages
+- Coffee
 
 ##### Lifestyle needs
+- Horses
 - Beer
 - Socces Balls
 - Ice Cream
@@ -299,8 +306,12 @@ Adds a new soldiers population tier as extra workforce in every region.
 - Weapons
 - Coins
 - Canned Food
-- Post Office
 - Care Packagaes
+- Soap
+- Post Office
+- Coffee
+- Pocket Watches
+- Gramophones
 
 ##### Heating Needs
 - Canteen
@@ -313,7 +324,6 @@ Adds a new soldiers population tier as extra workforce in every region.
 ##### Lifestyle needs
 - Cardgames
 - Huskies
-- Gramophones
 
 #### Enbesa
 
@@ -331,11 +341,12 @@ Adds a new soldiers population tier as extra workforce in every region.
 - Cigarettes
 - Cardgames
 - Musicians' Court
-- Coffee
 - Care Packages
 - Canned Food
+- Coffee
 
 ##### Lifestyle needs
+- Horses
 - Seafood Stew
 - Violins
 - Fans
