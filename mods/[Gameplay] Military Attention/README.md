@@ -10,8 +10,8 @@ A mod centered around military infrastructure and adding new military residence 
 - Now full support for Creative mode
 - Fix for "Come What May" campaign quest
 - Fix for description text nitrary bed
-- Added  Paper, Sleeping Bags and Advanced weapons to docklands traders
 - Fixed some feedback for the Fort
+- Fixed multiple norm maps for new military buildings so buildings now have a better visual representation
 - Models for Navy Recruitment Offices for Enbesa and Arctic
 - Reduced the radius for Enbesa, New World and Arctic Navy Recruitment Office
 - Finalised model with feedback for Military Headquarters and added extra variation
@@ -19,6 +19,10 @@ A mod centered around military infrastructure and adding new military residence 
 - Added 4 new items. One for Cardgames Factory, All food production, Dynamite Factory and Mint
 - Added German translations thanks to f0kx
 - Added Chinese translations thanks to hanthe2th
+- Removed some basic code for Expeditions. Will never be developed in the end
+- Added Clean Water, Paper, Sleeping Bags and Advanced Weapons to Docklands traders
+- Fixed descriptions for ornaments
+- Added Military street you can build via the military headquarters like haciends paving
 
 ### Beta v0.12
 - Added fort feedback units and optimised the models for the different stages

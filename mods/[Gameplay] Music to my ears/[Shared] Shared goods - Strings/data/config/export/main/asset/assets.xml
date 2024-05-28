@@ -1,0 +1,302 @@
+<!-- 
+  
+  v1.1
+  [Shared] Shared Goods - Strings
+  Created by Taubenangriff and Hier0nimus
+  Enjoy!
+
+Add triggers for product, building to unlock when you want it
+Add building to construction menu where you want it
+
+1440231 - Strings - Product (New Horizons GUID Range)
+1742200000 - Strings - Product - Description
+1441286 - Strings - RecipeList (New Horizons GUID Range)
+1742200001 - Strings - RecipeList - Description
+1742200002 - Strings (Cotton) - Recipe
+1742200003 - Strings (Cotton) - Recipe - Description
+1742200004 - Strings (Cotton) - Building
+1742200005 - Strings (Cotton) - Building - Description
+1742200006 - Strings (Cotton) - ProductionChain
+1742200007 - Strings (Cotton) - ProductionChain - Description
+-->
+
+<ModOps>
+  <Include File="./strings.include.xml"/>
+
+  <!-- START - RECIPE - Strings (Cotton) -->
+  <ModOp Type="addNextSibling" GUID='132743'>
+    <Asset>
+      <Template>Recipe</Template>
+      <Values>
+        <Standard>
+          <GUID>1742200002</GUID>
+          <Name>Strings (Cotton)</Name>
+          <IconFilename>data/graphics/ui/icons/goods/icon_instrument_strings.png</IconFilename>
+        </Standard>
+        <Text />
+        <Recipe>
+          <RecipeBuilding>1742200004</RecipeBuilding>
+          <RecipeDescriptionText>1742200003</RecipeDescriptionText>
+          <RecipeImage>data/graphics/ui/recipebook/recipe_strings.png</RecipeImage>
+          <RecipeIngredientUIData>
+            <Item>
+              <PosX>70</PosX>
+              <PosY>10</PosY>
+              <UICirclePointer>SouthEast</UICirclePointer>
+            </Item>
+            <Item>
+              <PosX>360</PosX>
+              <PosY>300</PosY>
+              <UICirclePointer>NorthWest</UICirclePointer>
+            </Item>
+            <Item>
+              <PosX>220</PosX>
+              <PosY>220</PosY>
+              <UICirclePointer>SouthEast</UICirclePointer>
+            </Item>
+          </RecipeIngredientUIData>
+        </Recipe>
+        <Locked>
+          <DefaultLockedState>0</DefaultLockedState>
+        </Locked>
+      </Values>
+    </Asset>
+    <!-- END - RECIPE - Strings (Cotton) -->
+  </ModOp>
+
+  <ModOp GUID='1441286' Type="add" Path="/Values/RecipeList/Recipes">
+    <Item>
+      <Recipe>1742200002</Recipe>
+    </Item>
+  </ModOp>
+
+  <!-- START - BUILDING - STRINGS - MULTIFACTORY -->
+  <ModOp GUID='135224' Type="addNextSibling">
+    <Asset>
+      <Template>Multifactory</Template>
+      <Values>
+        <Standard>
+          <GUID>1742200004</GUID>
+          <Name>String Factory (Cotton)</Name>
+          <InfoDescription>1742200005</InfoDescription>
+          <IconFilename>data/graphics/ui/icons/goods/icon_instrument_strings.png</IconFilename>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>132773</BuildingCategoryName>
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <AssociatedRegions>Moderate</AssociatedRegions>
+          <SecondPartyRelevant>0</SecondPartyRelevant>
+        </Building>
+        <Blocking />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/production/multifactory_nh/strings.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <Amount>120000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>
+              <Amount>25</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>
+              <Amount>25</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>
+              <Amount>30</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>
+              <Amount>20</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Mesh />
+        <Selection>
+          <GUIType>Production</GUIType>
+          <ParticipantMessageArcheType>Resident_tier04_atWork</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Text />
+        <Constructable />
+        <Locked />
+        <SoundEmitter />
+        <Factory7 />
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1010253</Product>              <!-- Cotton - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>4</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1010230</Product>              <!-- Copper - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>4</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1010219</Product>              <!-- Steel - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>4</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <FactoryOutputs>
+            <Item>
+              <Product>1440231</Product>              <!-- Strings - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>4</StorageAmount>
+            </Item>
+          </FactoryOutputs>
+          <IsMainFactory>1</IsMainFactory>
+          <CycleTime>60</CycleTime>
+        </FactoryBase>
+        <LogisticNode />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>1000</Amount>
+              <InactiveAmount>500</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1010117</Product>
+              <Amount>125</Amount>
+            </Item>
+          </Maintenances>
+          <ConsumerPriority>1</ConsumerPriority>
+        </Maintenance>
+        <Industrializable>
+          <MandatoryIndustrialization>1</MandatoryIndustrialization>
+        </Industrializable>
+        <IncidentInfectable>
+          <Infectable>
+            <Explosion>
+              <Base>0</Base>
+              <Escalated>0</Escalated>
+            </Explosion>
+          </Infectable>
+          <Explosion>
+            <ExplosionCoreDamage>1000</ExplosionCoreDamage>
+          </Explosion>
+          <IncidentInfectionChanceFactors>
+            <Fire>
+              <DensityDistance>20</DensityDistance>
+              <FactoryProductivityFactor>0.1</FactoryProductivityFactor>
+              <FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
+            </Fire>
+            <Riot>
+              <FactoryOvertimeFactor>0.4</FactoryOvertimeFactor>
+              <FactoryUndertimeFactor>0.2</FactoryUndertimeFactor>
+              <FactoryHappinessFactor>0.2</FactoryHappinessFactor>
+              <HappinessThreshold>20</HappinessThreshold>
+            </Riot>
+            <Explosion>
+              <BaseChance>4</BaseChance>
+              <FactoryProductivityFactor>0.1</FactoryProductivityFactor>
+              <FactoryOvertimeFactor>0.1</FactoryOvertimeFactor>
+              <FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
+            </Explosion>
+          </IncidentInfectionChanceFactors>
+        </IncidentInfectable>
+        <Electrifiable />
+        <AmbientMoodProvider>
+          <DynamicEnvironmentType>None</DynamicEnvironmentType>
+        </AmbientMoodProvider>
+        <Attackable />
+        <UpgradeList />
+        <Pausable />
+        <FeedbackController />
+        <Infolayer />
+        <RecipeBuilding>
+          <RecipeList>1441286</RecipeList>
+        </RecipeBuilding>
+        <Culture>
+          <HasPollution>1</HasPollution>
+        </Culture>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - BUILDING - STRINGS - MULTIFACTORY -->
+
+  <!-- START - REPLACE ISMAINFACTORY IF OTHER FACTORY IS PRESENT WITH THE SAME OUTPUT THAT ALREADY HAS ISMAINFACTORY 1 -->
+  <ModOp Type="merge" GUID="1742200004" Path="/Values/FactoryBase" Condition="//Values/FactoryBase[FactoryOutputs/Item/Product='1440231' and IsMainFactory='1']">
+    <IsMainFactory>0</IsMainFactory>
+  </ModOp>
+  <!-- END- REPLACE ISMAINFACTORY IF OTHER FACTORY IS PRESENT WITH THE SAME OUTPUT THAT ALREADY HAS ISMAINFACTORY 1 -->
+
+  <!-- START - ADD PRODUCTION BUILDINGS TO WORKFORCE MENU -->
+  <ModOp Type="add" GUID="25000087" Path="/Values/WorkforceMenu/BoostableFactories">
+    <Item>
+      <Factory>1742200004</Factory>
+    </Item>
+  </ModOp>
+  <!-- END - ADD PRODUCTION BUILDINGS TO WORKFORCE MENU -->
+
+  <!-- START - ADD BUILDING TO ALL ENGINEERS,HEAVY,ALL,BOOSTED BY ELECTRICITY,ALL EXCEPT POWER PLANT PRODUCTION -->
+  <ModOp GUID='192423,193771,6000018,193875,193856,25599' Type="add" Path="Values/ItemEffectTargetPool/EffectTargetGUIDs/">
+    <Item>
+      <GUID>1742200004</GUID>
+    </Item>
+  </ModOp>
+  <!-- END - ADD BUILDING TO ALL ENGINEERS PRODUCTION -->
+
+  <!-- START - DOCKLANDS - Add strings to existing trader - The Promise Trust -->
+  <ModOp Type = "add" GUID='131764' Path="/Values/TradeContractFeature/Traders/Item[TraderName = '131817']/TradeLevels/Item[Unlock = '131847']/Trades">
+    <Item>
+      <Level>Epic</Level>
+      <Good>1440231</Good>      <!-- Strings - Product -->
+    </Item>
+  </ModOp>
+  <!-- END - DOCKLANDS - Add strings to existing trader - The Promise Trust -->
+
+  <!-- START - PRODUCTION CHAIN - Strings Factory (Cotton) -->
+  <ModOp Type="addNextSibling" GUID='500091'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742200006</GUID>
+          <Name>Strings</Name>
+          <IconFilename>data/graphics/ui/icons/goods/icon_instrument_strings.png</IconFilename>
+          <InfoDescription>1742200007</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742200004</Building>          <!-- Strings Factory (Cotton) - Building -->
+          <Tier1>
+            <Item>
+              <Building>1010331</Building>              <!-- Cotton Plantation - Building -->
+            </Item>
+            <Item>
+              <Building>1010308</Building>              <!-- Copper Mine - Building -->
+            </Item>
+            <Item>
+              <Building>1010297</Building>              <!--heavy_02 (Steel Heavy Industry)-->
+              <Tier2>
+                <Item>
+                  <Building>1010305</Building>                  <!-- Iron Mine - Building -->
+                </Item>
+                <Item>
+                  <Building>1010304</Building>                  <!-- Coal Mine - Building -->
+                </Item>
+              </Tier2>
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+        <Text />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - PRODUCTION CHAIN - Strings Factory (Cotton) -->
+
+</ModOps>
