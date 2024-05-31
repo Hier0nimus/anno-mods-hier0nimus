@@ -105,6 +105,15 @@
                   <Action />
                   <ActionUnlockAsset>
                     <UnhideAssets>
+                      <Item>
+                        <Asset>1742100359</Asset>                        <!-- Fire Tower (AR) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100365</Asset>                        <!-- Fire Tower (NW) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100371</Asset>                        <!-- Fire Tower (EN) - Building -->
+                      </Item>
                     </UnhideAssets>
                     <UnlockAssets>
                       <Item>
@@ -208,15 +217,6 @@
                       </Item>
                       <Item>
                         <Asset>1742100370</Asset>                        <!-- Flak Emplacement (EN) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100359</Asset>                        <!-- Fire Tower (AR) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100365</Asset>                        <!-- Fire Tower (NW) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100371</Asset>                        <!-- Fire Tower (EN) - Building -->
                       </Item>
                       <Item>
                         <Asset>1742100360</Asset>                        <!-- Armor Pierce Tower (AR) - Building -->
@@ -534,6 +534,9 @@
                   <Action />
                   <ActionUnlockAsset>
                     <UnhideAssets>
+                      <Item>
+                        <Asset>1742100218</Asset>                        <!-- Fire Tower (OW) - Building -->
+                      </Item>
                     </UnhideAssets>
                     <UnlockAssets>
                       <Item>
@@ -574,9 +577,6 @@
                       </Item>
                       <Item>
                         <Asset>1742100216</Asset>                        <!-- Cannon Tower (OW) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100218</Asset>                        <!-- Fire Tower (OW) - Building -->
                       </Item>
                       <Item>
                         <Asset>1742100398</Asset>                        <!-- Small Shell Ammunition Depot (OW) - Building -->
@@ -813,6 +813,9 @@
                   <Action />
                   <ActionUnlockAsset>
                     <UnhideAssets>
+                      <Item>
+                        <Asset>1742100457</Asset>                        <!-- Military Prison - Building -->
+                      </Item>
                     </UnhideAssets>
                     <UnlockAssets>
                       <Item>
@@ -874,6 +877,18 @@
                   <Action />
                   <ActionUnlockAsset>
                     <UnhideAssets>
+                      <Item>
+                        <Asset>1742100226</Asset>                        <!-- Large Ammunition Depot - All ammunition (OW) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100274</Asset>                        <!-- Large Ammunition Depot - All ammunition (AR) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100276</Asset>                        <!-- Large Ammunition Depot - All ammunition (NW) - Recipe -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100282</Asset>                        <!-- Large Ammunition Depot - All ammunition (EN) - Recipe -->
+                      </Item>
                     </UnhideAssets>
                     <UnlockAssets>
                       <Item>
@@ -925,16 +940,7 @@
                         <Asset>1742100437</Asset>                        <!-- Small Bombs Ammunition Depot (EN) - Recipe -->
                       </Item>
                       <Item>
-                        <Asset>1742100226</Asset>                        <!-- Large Ammunition Depot - All ammunition (OW) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100274</Asset>                        <!-- Large Ammunition Depot - All ammunition (AR) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100276</Asset>                        <!-- Large Ammunition Depot - All ammunition (NW) - Recipe -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100282</Asset>                        <!-- Large Ammunition Depot - All ammunition (EN) - Recipe -->
+                        <Asset>1742100457</Asset>                        <!-- Military Prison - Building -->
                       </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>
@@ -1464,6 +1470,73 @@
     </Asset>
   </ModOp>
 
+  <!--UNLOCK - Technicians 750 -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100741</GUID>
+          <Name>MOD Trigger</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>112643</Context>                <!-- Technicians PopulationLevel7 -->
+                <CounterAmount>750</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
+                    </UnhideAssets>
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>1742100218</Asset>                        <!-- Fire Tower (OW) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100359</Asset>                        <!-- Fire Tower (AR) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100365</Asset>                        <!-- Fire Tower (NW) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100371</Asset>                        <!-- Fire Tower (EN) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100226</Asset>                        <!-- Large Ammunition Depot - All ammunition (OW) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100274</Asset>                        <!-- Large Ammunition Depot - All ammunition (AR) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100276</Asset>                        <!-- Large Ammunition Depot - All ammunition (NW) - Recipe -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100282</Asset>                        <!-- Large Ammunition Depot - All ammunition (EN) - Recipe -->
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+
   <!-- *********************** MILITARY *********************** -->
 
   <!--UNLOCK - SOLDIERS 1 -->
@@ -1822,9 +1895,6 @@
                     <UnhideAssets>
                     </UnhideAssets>
                     <UnlockAssets>
-                      <Item>
-                        <Asset>1742100457</Asset>                        <!-- Military Prison - Building -->
-                      </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>
                 </Values>

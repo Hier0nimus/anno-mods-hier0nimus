@@ -783,22 +783,26 @@
     <!-- 
   
     ******* SHIPS ******* 
-    6700071 - Cargo Boat
-    6800040 - Ironclad
-    6800030 - Battleship
-    6799986 - Dreadnought
-    6700110 - Royal Galleon
-    6700050 - Royal Warship
-    6700047 - Reefer Ship
-    6700060 - Huge Collier
-    6700107 - Petrolier
+
+    6700071 - Cargo Boat (trade)
+    6800040 - Ironclad (war)
+    6800030 - Battleship (war)
+    6799986 - Dreadnought Permit (war)
+    6700110 - Royal Galleon (trade - war)
+    6700050 - Royal Warship (war)
+    6700047 - Reefer Ship (trade)
+    6700060 - Huge Collier (trade)
+    6700107 - Petrolier (trade - oil)
 
     CO Replaced vanilla so we need to add those also if CO is loaded
-    102420 - Improved Gunboat - For Sale
-    102421 - Improved Frigate - For Sale
-    102427 - Improved Royal Galleon - For Sale
-    102419 - Improved Royal Warship - For Sale
-    102422 - Improved Monitor - For Sale
+    102427 - ROYAL SHIP-OF-THE-LINE(for sale & build with specialist) to IMPROVED ROYAL GALLEON (trade - war)
+    102420 - PIRATE GUNBOAT(for sale & build with specialist) to IMPROVED GUNBOAT (war)
+    102421 - PIRATE FRIGATE(for sale & build with specialist) to IMPROVED FRIGATE (war)
+    102419 - PIRATE LINER(for sale & build with specialist) to IMPROVED ROYAL WARSHIP (war)
+    102422 - PIRATE MONITOR(for sale & build with specialist) to IMPROVED MONITOR (trade - war)
+
+    6800020 - Armored Cargo Ship (trade)
+    6799962 - Pyrphorian Cruiser (war)
 
     -->
 
@@ -930,15 +934,27 @@
       </Item>
     </ModOp>
 
-    <!-- 6700071 - Cargo Boat -->
+    <!-- 6700071 + 6800020 - Cargo Boat -->
     <ModOp GUID="6700071" Type="add" Path="/Values/Cost/Costs">
       <Item>
         <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
-        <Amount>20</Amount>
+        <Amount>12</Amount>
       </Item>
       <Item>
         <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
-        <Amount>20</Amount>
+        <Amount>12</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- 6800020 - Armored Cargo Ship -->
+    <ModOp GUID="6800020" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>30</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>30</Amount>
       </Item>
     </ModOp>
 
@@ -1059,6 +1075,38 @@
       <Item>
         <Ingredient>846</Ingredient>        <!-- Bombs - Product -->
         <Amount>200</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- 6799962 - Pyrphorian Cruiser -->
+    <ModOp GUID="6799962" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>85</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>85</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100203</Ingredient>        <!-- Basic Ammunition - Product -->
+        <Amount>50</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100471</Ingredient>        <!-- Basic Weapons - Product -->
+        <Amount>40</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100248</Ingredient>        <!-- Shell Ammunition - Product -->
+        <Amount>20</Amount>
+      </Item>
+      <Item>
+        <Ingredient>846</Ingredient>        <!-- Bombs - Product -->
+        <Amount>10</Amount>
+      </Item>
+      <Item>
+        <Ingredient>112706</Ingredient>        <!-- Arctic Gas - Product -->
+        <Amount>50</Amount>
       </Item>
     </ModOp>
 

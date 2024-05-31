@@ -1,10 +1,23 @@
-# Military Attention | BETA 0.13!
+# Military Attention | BETA 0.14!
 
 A mod centered around military infrastructure and adding new military residence tiers for all regions with a focus on the Old World.
 
 ![ma-img-01.jpg](./banner.jpg)
 
 ## Changelog
+
+### Beta v0.14 (Ongoing)
+- Changed menu icon for Clean water pump
+- Changed name of Militairy contstruction menu to soldiers contrusction menu to be in line with the other categories focused on the population tier
+- Fire towers and large ammunition depots in all regions can now only be build when reaching Arctic gas with 750 technicians.
+- Military Prison is now unlocked at 500 engineers and not at 1000 soldiers because you need concrete for it
+- Rearranged some buildings in the soldiers building menu
+- Added extra compatibility for Combat Overhaul
+- Reduced the cycletime for open pit mines again to 30s
+- Reduced the cycletime for clean water pump to 30s
+- Reduced the cycletime for the basic care package factory a bit from 90s to 60s
+- Fixed a bug where the Sanitation facility could make the game crash when a cart from the Nitrary shed was picking up dung there
+- Added recipe background visuals for ammunition factories and depots
 
 ### Beta v0.13
 - Now full support for Creative mode
@@ -379,7 +392,7 @@ Adds a new soldiers population tier as extra workforce in every region.
 |     |  |
 | -------- | ------- |
 | ![Stables](./data/graphics/icons/icon_horse.png) | Stables  |
-| ![Clean Water Pump](./data/graphics/icons/icon_water_pump.png) | Clean Water Pump  |
+| ![Clean Water Pump](./data/graphics/icons/icon_water_drop.png) | Clean Water Pump  |
 | ![Open Pit Iron Mine](./data/graphics/icons/icon_iron.png) | Open Pit Iron Mine  |
 | ![Open Pit Coal Mine](./data/graphics/icons/icon_coal.png) | Open Pit Coal Mine  |
 | ![Military Uniform Factory](./data/graphics/icons/icon_military_uniforms_0.png) | Military Uniform Factory  |
@@ -645,18 +658,16 @@ The modules of the Stables and Nitrary are working correctly. The extended trakt
 
 Only add the Huskies lifestyle need to the delight category when Pet needs for residents is not installed.
 
+## Other mods tested and work together:
+- [Subway Network 2.0 (Lion053) on mod.io](https://mod.io/g/anno-1800/m/subway-network)
+- [Endless Waves Approaching on mod.io](https://mod.io/g/anno-1800/m/endless-waves-approaching)
+- 
+
+
 ## Still on the to do list
 - Translations for all languages. If anyone wants to translate! Would be amazing!
-- Models for Navy Recruitment Offices other regions
-- Adding feedback units and animations to all new buildings
-- Redoing a lot of the materials of the new buildings so they are not so shiny
 - Cleanup ammunition depot code
-- More military items for military production buildings or add buildings to existing itempools
-- Festivals
-- Newspaper additions when unlocking something or being at a certain stage
-### Nice to haves that probably will never be done...
-- Expeditions
-- Quests
+
 
 ## What if you want to test?
 
