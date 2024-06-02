@@ -1,6 +1,109 @@
 <ModOps>
 
 
+	<ModOp Type="addNextSibling" Path="//Template[Name='Hacienda']">
+		<Template>
+			<Name>MilitaryHQ</Name>
+			<Properties>
+				<Standard />
+				<Text />
+				<Blocking />
+				<Building>
+					<BuildingType>Factory</BuildingType>
+				</Building>
+				<Cost />
+				<Selection>
+					<GUIType>Generic</GUIType>
+					<OnSelection>
+						<IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+						<Values>
+							<ActionList />
+						</Values>
+					</OnSelection>
+				</Selection>
+				<Object>
+					<IgnoreForMinimapGeneration>1</IgnoreForMinimapGeneration>
+				</Object>
+				<Constructable>
+					<DestructionCategory>Production</DestructionCategory>
+				</Constructable>
+				<Mesh />
+				<SoundEmitter>
+					<ConstructionSounds>
+						<BuildFailed>
+							<Item>
+								<Sound>9818387</Sound>
+							</Item>
+						</BuildFailed>
+						<BuildMoveStart>
+							<Item>
+								<Sound>9818755</Sound>
+							</Item>
+						</BuildMoveStart>
+						<BuildMoveSuccess>
+							<Item>
+								<Sound>203995</Sound>
+							</Item>
+						</BuildMoveSuccess>
+						<BuildMoveEnd>
+							<Item>
+								<Sound>200141</Sound>
+							</Item>
+						</BuildMoveEnd>
+					</ConstructionSounds>
+				</SoundEmitter>
+				<Locked />
+				<Infolayer />
+				<FeedbackController>
+					<NightBehavior>HideNone</NightBehavior>
+				</FeedbackController>
+				<Warehouse>
+					<WarehouseStorage>
+						<StorageMax>100</StorageMax>
+					</WarehouseStorage>
+					<StorageType>Warehouse</StorageType>
+				</Warehouse>
+				<LogisticNode>
+					<TransporterCountMax>0</TransporterCountMax>
+					<QueueConfiguration>
+						<ProcessingQueueParallelCount>2</ProcessingQueueParallelCount>
+					</QueueConfiguration>
+				</LogisticNode>
+				<UpgradeList />
+				<AmbientMoodProvider />
+				<Maintenance>
+					<IncomeCategory>InfrastructureBuildings</IncomeCategory>
+				</Maintenance>
+				<StorageBase>
+					<ProductStorageList>120055</ProductStorageList>
+				</StorageBase>
+				<Attackable>
+					<HasRuinState>1</HasRuinState>
+				</Attackable>
+				<Pausable />
+				<BuildingUnique />
+				<ModuleOwner />
+				<Hacienda>
+					<HaciendaRadius>15</HaciendaRadius>
+				</Hacienda>
+				<IncidentInfectable>
+					<Infectable>
+						<Illness>
+							<Base>0</Base>
+							<Escalated>0</Escalated>
+						</Illness>
+						<Explosion>
+							<Base>0</Base>
+							<Escalated>0</Escalated>
+						</Explosion>
+					</Infectable>
+				</IncidentInfectable>
+				<PublicService />
+				<Culture />
+			</Properties>
+		</Template>
+	</ModOp>
+
 	<ModOp Type="addNextSibling" Path="//Template[Name='Monument']">
 		<Template>
 			<Name>FortStages</Name>

@@ -8,44 +8,12 @@ Add Add Basic weapons and Basic ammunition to OfferingGoods Anne and Jean
 Add Galena to OfferingGoods Eli
 
 Changes (building/maintenance) costs vanilla buildings
-- Sailmakers
-- Furnace
-- Steelworks
-- Weapon Factory
-- Sand Mine
-- Glassmakers
-- Window Makers
 
 Change input production vanilla chain
-- Weapon Factory
-> Add wood
 
 Add needs to vanilla population
-- Farmers
-> Cemetery
-> Clean Water
-> Horses
-- Workers
-> Cemetery
-> Clean Water
-> Cigarettes
-- Artisans
-> Cemetery
-> Cigarettes
-- Scholars
-> Cigarettes
-- Jornaleros
-> Clean Water
-- Explorers
-> Cigarettes
--Technicians
-> Cigarettes
 
 Reduction amount of farmfields
-- Potato Farm
-- Hop Farm
-- Grain Farm
-- Red Pepper Farm
 
 Add ParticipantMessageArcheType for farmers to show more needs
 
@@ -295,7 +263,7 @@ Adaptations to vanilla items
     </Item>
     <Item>
       <Product>1742100242</Product>      <!-- Clean Water - Product -->
-      <Amount>0.0001166667</Amount>
+      <Amount>0.0000166667</Amount>
       <SupplyWeight>2</SupplyWeight>
       <MoneyValue>10</MoneyValue>
       <FullWeightPopulationCount>100</FullWeightPopulationCount>
@@ -307,7 +275,7 @@ Adaptations to vanilla items
     </Item>
     <Item>
       <Product>1742100211</Product>      <!-- Horses - Product -->
-      <Amount>0.0001166667</Amount>
+      <Amount>0.0000166667</Amount>
       <SupplyWeight>4</SupplyWeight>
       <MoneyValue>50</MoneyValue>
       <FullWeightPopulationCount>100</FullWeightPopulationCount>
@@ -329,7 +297,7 @@ Adaptations to vanilla items
     </Item>
     <Item>
       <Product>1742100242</Product>      <!-- Clean Water - Product -->
-      <Amount>0.0001166667</Amount>
+      <Amount>0.0000166667</Amount>
       <SupplyWeight>4</SupplyWeight>
       <MoneyValue>10</MoneyValue>
       <FullWeightPopulationCount>100</FullWeightPopulationCount>
@@ -339,7 +307,7 @@ Adaptations to vanilla items
   <ModOp Type="addNextSibling" GUID="15000001" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='1010214']">
     <Item>
       <Product>1742100058</Product>      <!-- Cigarettes - Product -->
-      <Amount>0.000233334</Amount>
+      <Amount>0.000033334</Amount>
       <HappinessValue>5</HappinessValue>
       <MoneyValue>50</MoneyValue>
       <FullWeightPopulationCount>100</FullWeightPopulationCount>
@@ -365,7 +333,7 @@ Adaptations to vanilla items
   <ModOp Type="add" GUID="15000002,118745" Path="/Values/PopulationLevel7/PopulationInputs/">
     <Item>
       <Product>1742100058</Product>      <!-- Cigarettes - Product -->
-      <Amount>0.000233334</Amount>
+      <Amount>0.000033334</Amount>
       <HappinessValue>5</HappinessValue>
       <MoneyValue>50</MoneyValue>
       <FullWeightPopulationCount>100</FullWeightPopulationCount>
@@ -381,7 +349,7 @@ Adaptations to vanilla items
   <ModOp Type="add" GUID="15000005" Path="/Values/PopulationLevel7/PopulationInputs/">
     <Item>
       <Product>1742100242</Product>      <!-- Clean Water - Product -->
-      <Amount>0.0001166667</Amount>
+      <Amount>0.0000166667</Amount>
       <SupplyWeight>2</SupplyWeight>
       <MoneyValue>10</MoneyValue>
       <FullWeightPopulationCount>100</FullWeightPopulationCount>
@@ -397,7 +365,7 @@ Adaptations to vanilla items
   <ModOp Type="add" GUID="112642,112643" Path="/Values/PopulationLevel7/PopulationInputs/">
     <Item>
       <Product>1742100058</Product>      <!-- Cigarettes - Product -->
-      <Amount>0.0001166667</Amount>
+      <Amount>0.0000166667</Amount>
       <HeatValue>5</HeatValue>
       <FullWeightPopulationCount>100</FullWeightPopulationCount>
       <NoWeightPopulationCount>0</NoWeightPopulationCount>
@@ -426,6 +394,67 @@ Adaptations to vanilla items
   <ModOp Type="replace" GUID="100654" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
     <Limit>78</Limit>    <!-- 108 -->
   </ModOp>
+
+  <!-- ****************** Plantains Plantation ******************  -->
+  <ModOp Type="replace" GUID="101263" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
+    <Limit>100</Limit>    <!-- 128 -->
+  </ModOp>
+
+  <!-- ****************** Sugar Cane Plantation ******************  -->
+  <ModOp Type="replace" GUID="1010329" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
+    <Limit>100</Limit>    <!-- 128 -->
+  </ModOp>
+
+  <!-- ****************** Cotton Plantation ******************  -->
+  <ModOp Type="replace" GUID="1010331" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
+    <Limit>120</Limit>    <!-- 144 -->
+  </ModOp>
+
+  <!-- ****************** Corn Farm ******************  -->
+  <ModOp Type="replace" GUID="101270" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
+    <Limit>132</Limit>    <!-- 168 -->
+  </ModOp>
+
+  <!-- ****************** Tobacco Farm ******************  -->
+  <ModOp Type="replace" GUID="1010330" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
+    <Limit>158</Limit>    <!-- 192 -->
+  </ModOp>
+
+  <!-- ****************** Cocoa Farm ******************  -->
+  <ModOp Type="replace" GUID="1010332" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
+    <Limit>100</Limit>    <!-- 128 -->
+  </ModOp>
+
+  <!-- ****************** Coffee Plantation ******************  -->
+  <ModOp Type="replace" GUID="101251" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
+    <Limit>132</Limit>    <!-- 168 -->
+  </ModOp>
+
+  <!-- ****************** Hibiscus Farm ******************  -->
+  <ModOp Type="replace" GUID="114447" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
+    <Limit>112</Limit>    <!-- 144 -->
+  </ModOp>
+
+  <!-- ****************** Indigo Farm ******************  -->
+  <ModOp Type="replace" GUID="114451" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
+    <Limit>112</Limit>    <!-- 144 -->
+  </ModOp>
+
+  <!-- ****************** Linseed Farm ******************  -->
+  <ModOp Type="replace" GUID="114448" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
+    <Limit>72</Limit>    <!-- 96 -->
+  </ModOp>
+
+  <!-- ****************** Teff Farm ******************  -->
+  <ModOp Type="replace" GUID="114450" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
+    <Limit>132</Limit>    <!-- 168 -->
+  </ModOp>
+
+  <!-- ****************** Apiary ******************  -->
+  <ModOp Type="replace" GUID="114453" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
+    <Limit>156</Limit>    <!-- 192 -->
+  </ModOp>
+
   <!-- ****************** END Farmfields reduction ******************  -->
 
   <!-- ****************** START Farmer more needs by ParticipantMessageArcheType ******************  -->

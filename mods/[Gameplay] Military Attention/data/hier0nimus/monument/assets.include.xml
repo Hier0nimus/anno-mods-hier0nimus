@@ -581,7 +581,7 @@
         </LogisticNode>
         <Attackable>
           <AttackableType>HarbourBuilding</AttackableType>
-          <MaximumHitPoints>20000</MaximumHitPoints>
+          <MaximumHitPoints>17500</MaximumHitPoints>
           <DefenseByAIFactor>401</DefenseByAIFactor>
           <MilitaryDefensePoints>80</MilitaryDefensePoints>
           <MoralePower>1000</MoralePower>
@@ -597,11 +597,27 @@
         </Attackable>
         <Attacker>
           <BasicAttackType>HarbourTower</BasicAttackType>
-          <BaseDamage>700</BaseDamage>
-          <ReloadTime>50</ReloadTime>
+          <BaseDamage>2000</BaseDamage>
+          <ReloadTime>150</ReloadTime>
           <AttackRange>125</AttackRange>
           <LineOfSightRange>125</LineOfSightRange>
           <Turrets>
+            <Item>
+              <TurnSpan>360</TurnSpan>
+              <TurretCfg>data/graphics/buildings/special/harbor_06/harbor_06_turret.cfg</TurretCfg>
+            </Item>
+            <Item>
+              <TurnSpan>360</TurnSpan>
+              <TurretCfg>data/graphics/buildings/special/harbor_06/harbor_06_turret.cfg</TurretCfg>
+            </Item>
+            <Item>
+              <TurnSpan>360</TurnSpan>
+              <TurretCfg>data/graphics/buildings/special/harbor_06/harbor_06_turret.cfg</TurretCfg>
+            </Item>
+            <Item>
+              <TurnSpan>360</TurnSpan>
+              <TurretCfg>data/graphics/buildings/special/harbor_06/harbor_06_turret.cfg</TurretCfg>
+            </Item>
             <Item>
               <TurnSpan>360</TurnSpan>
               <TurretCfg>data/graphics/buildings/special/harbor_06/harbor_06_turret.cfg</TurretCfg>
@@ -612,9 +628,24 @@
             <Item>
               <MuzzleEffectAsset>101972</MuzzleEffectAsset>
             </Item>
+            <Item>
+              <MuzzleEffectAsset>101972</MuzzleEffectAsset>
+            </Item>
+            <Item>
+              <MuzzleEffectAsset>101972</MuzzleEffectAsset>
+            </Item>
+            <Item>
+              <MuzzleEffectAsset>101972</MuzzleEffectAsset>
+            </Item>
+            <Item>
+              <MuzzleEffectAsset>101972</MuzzleEffectAsset>
+            </Item>
           </MuzzleEffectAssets>
+          <FullVolleyTimeMin>0.8</FullVolleyTimeMin>
+          <FullVolleyTimeMax>3.2</FullVolleyTimeMax>
+          <VolleyMaxPerBulletRandomOffset>0.2</VolleyMaxPerBulletRandomOffset>
           <EmitProjectileTimeAfterStartAnimation>0.35</EmitProjectileTimeAfterStartAnimation>
-          <AccuracyBase>1</AccuracyBase>
+          <AccuracyBase>5</AccuracyBase>
           <AccuracyIncreaseOverDistance>100</AccuracyIncreaseOverDistance>
           <AccuracyByDistance>
             <Item>
@@ -648,11 +679,11 @@
           <Maintenances>
             <Item>
               <Product>1010017</Product>
-              <Amount>10000</Amount>
+              <Amount>50000</Amount>
             </Item>
             <Item>
               <Product>1742100005</Product>              <!-- Soldiers Workforce -->
-              <Amount>500</Amount>
+              <Amount>750</Amount>
             </Item>
           </Maintenances>
           <ConsumerPriority>1</ConsumerPriority>

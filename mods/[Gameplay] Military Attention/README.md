@@ -1,4 +1,4 @@
-# Military Attention | BETA 0.14!
+# Military Attention | BETA 0.15!
 
 A mod centered around military infrastructure and adding new military residence tiers for all regions with a focus on the Old World.
 
@@ -6,18 +6,30 @@ A mod centered around military infrastructure and adding new military residence 
 
 ## Changelog
 
-### Beta v0.14 (Ongoing)
+### Beta v0.15 (Ongoing)
+- Fixed compatibility for Old Town (Fishboss)
+- Fixed decal for Military Training Facility
+
+### Beta v0.14
 - Changed menu icon for Clean water pump
 - Changed name of Militairy contstruction menu to soldiers contrusction menu to be in line with the other categories focused on the population tier
 - Fire towers and large ammunition depots in all regions can now only be build when reaching Arctic gas with 750 technicians.
 - Military Prison is now unlocked at 500 engineers and not at 1000 soldiers because you need concrete for it
 - Rearranged some buildings in the soldiers building menu
 - Added extra compatibility for Combat Overhaul
-- Reduced the cycletime for open pit mines again to 30s
-- Reduced the cycletime for clean water pump to 30s
-- Reduced the cycletime for the basic care package factory a bit from 90s to 60s
 - Fixed a bug where the Sanitation facility could make the game crash when a cart from the Nitrary shed was picking up dung there
+- Fixed some floating props for the stable fields
+- Fixed Enbesa encampment which was incorrectly a New World encampment
 - Added recipe background visuals for ammunition factories and depots
+- Balanced maintenance costs for a lot of buildings
+- Balanced cycletime for a lot of buildings
+- Balanced consumption for all soldier tiers
+- Added/changed lifestyle needs for soldiers in all regions
+- Reduction of farmfields all farms in all regions to make some more space for soldier residences and extra production buildings
+- Unlocked bombs together with Old World Bombs factory
+- Rearranged order of workforce for soldiers in top menu to be the same for all regions
+- Added a radius to the Clean Water Pump so you can not build them next to eachoter. Thanks to hanthe2th for the idea
+- Fixed the shooting of the fort and balanced it a bit more
 
 ### Beta v0.13
 - Now full support for Creative mode
@@ -248,119 +260,6 @@ Within those menus a lot of new buildings are available. With a focus on the Old
 
 Adds a new soldiers population tier as extra workforce in every region.
 
-#### Old World
-
-##### Needs
-- Canteen
-- Field Hospital
-- Bread
-- Military Uniforms
-- Basic Weapons
-- Weapons
-- Military Training Complex
-- Coins
-- Military Headquarters
-- Canned Food
-- Advanced Weapons
-- Military Academy
-
-##### Luxury Needs
-- Soap
-- Horses
-- Sanitation Facility
-- Care Packages
-- Cigarettes
-- Recreation Center
-- Sleeping Bags
-- Coffee
-- Pocket Watches
-- Socces Balls
-
-##### Lifestyle needs
-- Shampoo
-- Chewing Gum
-- Lemonade
-
-#### New World
-
-##### Needs
-- New World Outpost
-- Canteen
-- Military Uniforms
-- Friend Plantains
-- Basic Weapons
-- Weapons
-- Coins
-- Canned Food
-
-##### Luxury Needs
-- Cigarettes
-- Cardgames
-- Baxing Arena
-- Rum
-- Care Packages
-- Coffee
-
-##### Lifestyle needs
-- Horses
-- Beer
-- Socces Balls
-- Ice Cream
-
-#### Arctic
-
-##### Needs
-- Arctic Outpost
-- Caribou Meat
-- Basic Weapons
-- Weapons
-- Coins
-- Canned Food
-- Care Packagaes
-- Soap
-- Post Office
-- Coffee
-- Pocket Watches
-- Gramophones
-
-##### Heating Needs
-- Canteen
-- Wood
-- Heated Military Uniforms
-- Sleeping Bags
-- Rum
-- Cigarettes
-
-##### Lifestyle needs
-- Cardgames
-- Huskies
-
-#### Enbesa
-
-##### Needs
-- Enbesa Outpot
-- Canteen
-- Military Uniforms
-- Dried Meat
-- Basic Weapons
-- Weapons
-- Coins
-- Goat Milk
-
-##### Luxury Needs
-- Cigarettes
-- Cardgames
-- Musicians' Court
-- Care Packages
-- Canned Food
-- Coffee
-
-##### Lifestyle needs
-- Horses
-- Seafood Stew
-- Violins
-- Fans
-
 ## New (military) buildings
 
 ### Residence Buildings
@@ -576,7 +475,37 @@ A key mechanic of this mod is replacing workforce with military workforce of sol
 
 At the moment there is 1 new monument you will be able to build in multiple stages with this mod, the **Fort**. This is a unique massive coastal defense building for the Old World. You can only build it on 1 island and only in the moderate region (Old World or Cape Trelawney). 
 
-The model and animations and feedback for this building still need a lot of improvement, but the basic mechanics should already work.
+## Military Academy witn campuses
+
+![Military Academy](./data/graphics/icons/icon_military_academy.png)
+
+A military building where you collect itemsets to boost logistics and military. Just like the museum, zoo and botanical garden you place items in the modules to combine them into sets.
+
+### Campuses
+
+The module has some special perks. Every module is a campus of the academy. Compared to normal cultural modules who can only store 1 item, the campus can store 3 items. Do be aware that the UI of the Academy only shows the first item in the list at the bottom.
+
+The campus can be placed next to production building to boost production in a radius or can be placed next to engineer residences or scholar residences to get extra research points.
+
+## Early military postbox
+
+![Military Postbox](./data/graphics/icons/icon_military_postbox.png)
+
+Compared to the existing postboxes that require aluminium, there is now a more early postbox that requires the new good lead instead of aluminium, so you can have some mail earlier in the game.
+
+## (Local) Cemetery
+
+![Cemetery](./data/graphics/icons/icon_cemetery.png)
+
+Some of the vanilla population tier have additional needs. Farmers, workers and Artisans now have a cemetery need that can be fullfilled with the local cemetery that is available at farmer level or the bigger cemetery that is available at artisans.
+
+## Clean Water
+
+![Clean Water](./data/graphics/icons/icon_water_drop.png)
+
+Like the cemetery another new good farmers and workers need is clean water. You can pump this up from the group using the Clean water pump. But be aware, you can not build them to close to eachoter to not drain the ground completly from water. 
+
+Clean water is also needed to mass produce care packages.
 
 ## Vanilla tweaks
 
@@ -661,13 +590,9 @@ Only add the Huskies lifestyle need to the delight category when Pet needs for r
 ## Other mods tested and work together:
 - [Subway Network 2.0 (Lion053) on mod.io](https://mod.io/g/anno-1800/m/subway-network)
 - [Endless Waves Approaching on mod.io](https://mod.io/g/anno-1800/m/endless-waves-approaching)
-- 
-
 
 ## Still on the to do list
 - Translations for all languages. If anyone wants to translate! Would be amazing!
-- Cleanup ammunition depot code
-
 
 ## What if you want to test?
 

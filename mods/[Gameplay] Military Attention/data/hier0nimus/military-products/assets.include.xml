@@ -1184,6 +1184,17 @@
   </ModOp>
   <!-- END PRODUCT - CLEAN WATER -->
 
+  <!-- START PRODUCT - SLEEPING BAGS -->
+  <ModOp Type="replace" GUID='1742100242' Path="Values/Product/AssociatedRegion">
+    <AssociatedRegion>Moderate;Colony01;Arctic</AssociatedRegion>
+  </ModOp>
+  <ModOp Type="add" GUID='1742100242' Path="Values/Product/ProductionRegions/">
+    <Item>
+      <RegionType>Moderate</RegionType>
+    </Item>
+  </ModOp>
+  <!-- END PRODUCT - SLEEPING BAGS -->
+
   <!-- ****************** START ADDING ALL PRODUCTS TO PRODUCTS LISTS ****************** -->
 
   <!-- START ADD GOODS TO StandardProductStorageList + StandardMarketplaceREGIONStorageList   -->
@@ -1839,14 +1850,23 @@
     <Item>
       <BonusNeed>114410</BonusNeed>      <!-- Seafood Stew -->
     </Item>
+    <Item>
+      <BonusNeed>1010200</BonusNeed>      <!-- Fish -->
+    </Item>
+    <Item>
+      <BonusNeed>25506</BonusNeed>      <!-- Hot Sauce -->
+    </Item>
+    <Item>
+      <BonusNeed>114390</BonusNeed>      <!-- Hibiscus Tea -->
+    </Item>
+    <Item>
+      <BonusNeed>114358</BonusNeed>      <!-- Salt -->
+    </Item>
   </ModOp>
   <!-- ****************** END TO FOOD AND DRINK ****************** -->
 
   <!-- ****************** START TO DELIGHT ****************** -->
   <ModOp Type="add" GUID='25000118' Path="/Values/ObjectmenuResidenceScene/BonusNeeds/BonusNeeds/Item[Category='6364']/Needs/">
-    <Item>
-      <BonusNeed>135186</BonusNeed>      <!-- Chewing Gum -->
-    </Item>
     <Item>
       <BonusNeed>118728</BonusNeed>      <!-- Lobster -->
     </Item>
@@ -1856,6 +1876,21 @@
     <Item>
       <BonusNeed>1742100185</BonusNeed>      <!-- Cardgames -->
     </Item>
+    <Item>
+      <BonusNeed>114369</BonusNeed>      <!-- Spices -->
+    </Item>
+    <Item>
+      <BonusNeed>112702</BonusNeed>      <!-- Oil Lamps -->
+    </Item>
+    <Item>
+      <BonusNeed>135186</BonusNeed>      <!-- Chewing Gum -->
+    </Item>
+    <Item>
+      <BonusNeed>1010239</BonusNeed>      <!-- Sugar -->
+    </Item>
+    <Item>
+      <BonusNeed>5803</BonusNeed>      <!-- Soccer Balls -->
+    </Item>
   </ModOp>
   <!-- ****************** END TO DELIGHT ****************** -->
 
@@ -1864,8 +1899,23 @@
     <Item>
       <BonusNeed>1742100211</BonusNeed>      <!-- Horses -->
     </Item>
+    <Item>
+      <BonusNeed>1010259</BonusNeed>      <!-- Cigars -->
+    </Item>
+    <Item>
+      <BonusNeed>135234</BonusNeed>      <!-- Cognac -->
+    </Item>
+    <Item>
+      <BonusNeed>135230</BonusNeed>      <!-- Typewriters -->
+    </Item>
   </ModOp>
   <!-- ****************** END TO WEALTH ****************** -->
+
+  <!-- ****************** START TO RESEARCH ****************** -->
+  <ModOp Type="add" GUID='25000118' Path="/Values/ObjectmenuResidenceScene/BonusNeeds/BonusNeeds/Item[Category='4275']/Needs/">
+
+  </ModOp>
+  <!-- ****************** END TO RESEARCH ****************** -->
 
 
   <!-- ****************** END ADDING PRODUCTS TO BONUS NEEDS ****************** -->

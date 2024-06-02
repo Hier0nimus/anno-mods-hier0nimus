@@ -5,6 +5,83 @@
 
 <ModOps>
 
+  <!-- START MUSIC TO MY EARS -->
+  <Group Condition="#music_to_my_ears">
+    <ModOp Type="add" GUID='1742100000' Path="/Values/PopulationLevel7/PopulationInputs/">
+      <Item>
+        <Product>1742110098</Product>        <!-- Flute - Product -->
+        <Amount>0.0000066667</Amount>
+        <MoneyValue>10</MoneyValue>
+        <FullWeightPopulationCount>100</FullWeightPopulationCount>
+        <NoWeightPopulationCount>0</NoWeightPopulationCount>
+        <AdditionalGlobalUnlockRequirement>
+          <Population>15000002</Population>          <!-- Artisans -->
+          <MinPopulationAmount>1</MinPopulationAmount>
+        </AdditionalGlobalUnlockRequirement>
+        <IsBonusNeed>1</IsBonusNeed>
+      </Item>
+    </ModOp>
+    <ModOp Type="add" GUID='1742100315' Path="/Values/PopulationLevel7/PopulationInputs/">
+      <Item>
+        <Product>1742110027</Product>        <!-- Banjo - Product -->
+        <Amount>0.0000066667</Amount>
+        <MoneyValue>80</MoneyValue>
+        <FullWeightPopulationCount>100</FullWeightPopulationCount>
+        <NoWeightPopulationCount>0</NoWeightPopulationCount>
+        <AdditionalGlobalUnlockRequirement>
+          <Population>15000006</Population>          <!-- Obreros -->
+          <MinPopulationAmount>1000</MinPopulationAmount>
+        </AdditionalGlobalUnlockRequirement>
+        <IsBonusNeed>1</IsBonusNeed>
+      </Item>
+    </ModOp>
+    <ModOp Type="add" GUID='1742100306' Path="/Values/PopulationLevel7/PopulationInputs/">
+      <Item>
+        <Product>1742110025</Product>        <!-- Guitar - Product -->
+        <Amount>0.0000066667</Amount>
+        <MoneyValue>80</MoneyValue>
+        <FullWeightPopulationCount>100</FullWeightPopulationCount>
+        <NoWeightPopulationCount>0</NoWeightPopulationCount>
+        <AdditionalGlobalUnlockRequirement>
+          <Population>15000006</Population>          <!-- Obreros -->
+          <MinPopulationAmount>1000</MinPopulationAmount>
+        </AdditionalGlobalUnlockRequirement>
+        <IsBonusNeed>1</IsBonusNeed>
+      </Item>
+    </ModOp>
+    <ModOp Type="add" GUID='1742100316' Path="/Values/PopulationLevel7/PopulationInputs/">
+      <Item>
+        <Product>1742110017</Product>        <!-- Djembe - Product -->
+        <Amount>0.0000066667</Amount>
+        <MoneyValue>30</MoneyValue>
+        <FullWeightPopulationCount>100</FullWeightPopulationCount>
+        <NoWeightPopulationCount>0</NoWeightPopulationCount>
+        <AdditionalGlobalUnlockRequirement>
+          <Population>15000003</Population>          <!-- Obreros -->
+          <MinPopulationAmount>1</MinPopulationAmount>
+        </AdditionalGlobalUnlockRequirement>
+        <IsBonusNeed>1</IsBonusNeed>
+      </Item>
+    </ModOp>
+    <!-- ****************** START TO DELIGHT ****************** -->
+    <ModOp Type="add" GUID='25000118' Path="/Values/ObjectmenuResidenceScene/BonusNeeds/BonusNeeds/Item[Category='6364']/Needs/">
+      <Item>
+        <BonusNeed>1742110098</BonusNeed>        <!-- Flute -->
+      </Item>
+      <Item>
+        <BonusNeed>1742110025</BonusNeed>        <!-- Guitar -->
+      </Item>
+      <Item>
+        <BonusNeed>1742110027</BonusNeed>        <!-- Banjo -->
+      </Item>
+      <Item>
+        <BonusNeed>1742110017</BonusNeed>        <!-- Djembe -->
+      </Item>
+    </ModOp>
+    <!-- ****************** END TO DELIGHT ****************** -->
+  </Group>
+  <!-- END MUSIC TO MY EARS -->
+
   <!-- START HUSKY PET NEEDS FOR RESIDENTS -->
   <Group Condition="!#Pet_Needs_For_Residents">
     <ModOp Type="add" GUID='25000118' Path="/Values/ObjectmenuResidenceScene/BonusNeeds/BonusNeeds/Item[Category='6364']/Needs/">
@@ -124,58 +201,6 @@
     </ModOp>
 
     <!-- END COMPATIBILITY ALMOST 100 HOT AIR BALLOONS -->
-  </Group>
-
-  <Group Condition="#Fishboss_Oldtown">
-    <!-- START COMPATIBILITY OLD TOWN -->
-    <!-- 
-    ******* SHIPS ******* 
-    850156 - Flag Ship
-    850157 - Flag Ship
-    850158 - Flag Ship
-    -->
-
-    <!-- 850156 + 850158 - Flag Ship -->
-    <ModOp GUID="850156,850158" Type="add" Path="/Values/Cost/Costs">
-      <Item>
-        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
-        <Amount>20</Amount>
-      </Item>
-      <Item>
-        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
-        <Amount>20</Amount>
-      </Item>
-      <Item>
-        <Ingredient>1742100203</Ingredient>        <!-- Basic Ammunition - Product -->
-        <Amount>18</Amount>
-      </Item>
-      <Item>
-        <Ingredient>1742100471</Ingredient>        <!-- Basic Weapons - Product -->
-        <Amount>12</Amount>
-      </Item>
-    </ModOp>
-
-    <!-- 850157 - Flag Ship -->
-    <ModOp GUID="850157" Type="add" Path="/Values/Cost/Costs">
-      <Item>
-        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
-        <Amount>15</Amount>
-      </Item>
-      <Item>
-        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
-        <Amount>15</Amount>
-      </Item>
-      <Item>
-        <Ingredient>1742100203</Ingredient>        <!-- Basic Ammunition - Product -->
-        <Amount>12</Amount>
-      </Item>
-      <Item>
-        <Ingredient>1742100471</Ingredient>        <!-- Basic Weapons - Product -->
-        <Amount>8</Amount>
-      </Item>
-    </ModOp>
-
-    <!-- END COMPATIBILITY OLD TOWN -->
   </Group>
 
   <Group Condition="#Imperio Schiffswerft">
@@ -1111,6 +1136,78 @@
     </ModOp>
 
     <!-- END COMPATIBILITY COMBAT OVERHAUL -->
+  </Group>
+
+  <Group Condition="#Fishboss_Oldtown">
+    <!-- START COMPATIBILITY OLD TOWN -->
+    <!-- 
+    ******* SHIPS ******* 
+    850156 - Flag Ship
+    850157 - Flag Ship
+    850158 - Flag Ship
+    850171 - Flag Ship
+    -->
+
+    <!-- 850156 + 850158 - Flag Ship -->
+    <ModOp GUID="850156,850158" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>20</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>20</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100203</Ingredient>        <!-- Basic Ammunition - Product -->
+        <Amount>18</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100471</Ingredient>        <!-- Basic Weapons - Product -->
+        <Amount>12</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- 850157 - Flag Ship -->
+    <ModOp GUID="850157" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>15</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>15</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100203</Ingredient>        <!-- Basic Ammunition - Product -->
+        <Amount>12</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100471</Ingredient>        <!-- Basic Weapons - Product -->
+        <Amount>8</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- 850171 - Flag Ship -->
+    <ModOp GUID="850171" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>24</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>24</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100203</Ingredient>        <!-- Basic Ammunition - Product -->
+        <Amount>20</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100471</Ingredient>        <!-- Basic Weapons - Product -->
+        <Amount>15</Amount>
+      </Item>
+    </ModOp>
+    <!-- END COMPATIBILITY OLD TOWN -->
   </Group>
 
 </ModOps>
