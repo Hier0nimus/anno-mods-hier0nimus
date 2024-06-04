@@ -6,7 +6,7 @@ A mod centered around military infrastructure and adding new military residence 
 
 ## Changelog
 
-### Beta v0.15 (Ongoing)
+### Beta v0.15
 - Fixed compatibility for Old Town (Fishboss)
 - Fixed decal for Military Training Facility
 - Added Buildings to pool of all weapons production
