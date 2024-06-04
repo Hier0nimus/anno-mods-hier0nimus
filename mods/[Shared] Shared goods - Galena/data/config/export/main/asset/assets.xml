@@ -1,0 +1,454 @@
+<!-- 
+  
+  [Shared] Shared Goods - Galena - v1.0
+  Created by Hier0nimus
+  Enjoy!
+
+  Add triggers for product, building to unlock when you want it
+  Add building to construction menu where you want it
+
+  1742100433 - Galena - Product
+  1742100434 - Galena - Product - Description
+  1742100407 - Galena Module - Building
+  1742100408 - Galena Module - Building - Description
+  1742100016 - Galena production DUMMY - Building
+  1742100494 - Digging deeper for Galena - Buff
+  1742100495 - Digging deeper for Galena - Buff - Description
+
+-->
+
+<ModOps>
+
+  <!-- START PRODUCT - GALENA -->
+  <ModOp Type="addNextSibling" GUID='5392'>
+    <Asset>
+      <Template>Product</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100433</GUID>
+          <Name>Galena</Name>
+          <IconFilename>data\graphics\icons\icon_galena.png</IconFilename>
+          <InfoDescription>1742100434</InfoDescription>
+        </Standard>
+        <Text />
+        <Locked />
+        <Product>
+          <StorageLevel>Building</StorageLevel>
+          <ProductCategory>11703</ProductCategory>
+          <BasePrice>15</BasePrice>
+          <CivLevel>2</CivLevel>
+          <AssociatedRegion>Moderate</AssociatedRegion>
+          <ProductionRegions>
+            <Item>
+              <RegionType>Moderate</RegionType>
+            </Item>
+          </ProductionRegions>
+        </Product>
+        <ExpeditionAttribute>
+          <BaseMorale>0</BaseMorale>
+          <ExpeditionAttributes>
+            <Item>
+              <Attribute>Crafting</Attribute>
+              <Amount>5</Amount>
+            </Item>
+          </ExpeditionAttributes>
+          <FluffText />
+        </ExpeditionAttribute>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PRODUCT - GALENA -->
+
+  <!-- START - ADD PRODUCT TO PRODUCTSTORAGELISTS -->
+  <!-- GALENA > AFTER IRON -->
+  <ModOp Type="addNextSibling" GUID="120055" Path="/Values/ProductStorageList/ProductList/Item[Product='1010227']">
+    <Item>
+      <Product>1742100433</Product>      <!-- Galena - Product -->
+    </Item>
+  </ModOp>
+  <!-- END - ADD PRODUCT TO PRODUCTSTORAGELISTS -->
+
+  <!-- START - ADD GOODS TO OTHER ProductList - ALL PRODUCTS -->
+  <ModOp Type="add" GUID='502016,502065' Path="/Values/ProductList/List">
+    <Item>
+      <Product>1742100433</Product>      <!-- Galena - Product -->
+    </Item>
+  </ModOp>
+  <!-- END - ADD GOODS TO OTHER PRODUCTLIST - ALL PRODUCTS -->
+
+  <!-- START ADD TO WORKFORCEGOODS - FarmerWorkforceGoods -->
+  <ModOp Type="add" GUID="502018,502005" Path="/Values/ProductList/List/">
+    <Item>
+      <Product>1742100433</Product>      <!-- Galena - Product -->
+    </Item>
+  </ModOp>
+  <!-- END ADD TO WORKFORCEGOODS - FarmerWorkforceGoods -->
+
+  <!-- START ADD GOODS TO OTHER ProductList - RAW MATERIALS -->
+  <ModOp Type="add" GUID='502052' Path="/Values/ProductList/List">
+    <Item>
+      <Product>1742100433</Product>      <!-- Galena - Product -->
+    </Item>
+  </ModOp>
+  <!-- END ADD GOODS TO OTHER PRODUCTLIST - RAW MATERIALS -->
+
+  <!-- START - DOCKLANDS - ADD TO EXISTING TRADER - Qinsa Mining -->
+  <ModOp Type = "add" GUID='131764' Path="/Values/TradeContractFeature/Traders/Item[TraderName = '131815']/TradeLevels/Item[Unlock = '131841']/Trades">
+    <Item>
+      <Good>1742100433</Good>      <!-- Galena - Product -->
+    </Item>
+  </ModOp>
+  <!-- END - DOCKLANDS - ADD TO EXISTING TRADER - Qinsa Mining -->
+
+  <!-- START BUILDING - GALENA MODULE -->
+  <ModOp Type="addNextSibling" GUID='1010305'>
+    <Asset>
+      <Template>BuffFactoryModule</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100407</GUID>
+          <Name>Galena Module</Name>
+          <IconFilename>data\graphics\icons\icon_galena.png</IconFilename>
+          <InfoDescription>1742100408</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>100000</BuildingCategoryName>
+        </Building>
+        <Blocking />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/production/galena_module/galena_module_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <Amount>1000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>
+              <Amount>12</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>
+              <Amount>8</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Mesh />
+        <Selection>
+          <GUIType>Production</GUIType>
+          <ParticipantMessageArcheType>Resident_tier02_atWork</ParticipantMessageArcheType>
+        </Selection>
+        <Constructable />
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>279511</Sound>
+            </Item>
+            <Item>
+              <Sound>216871</Sound>
+            </Item>
+          </ActiveSounds>
+        </SoundEmitter>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1010196</Product>
+              <Amount>1</Amount>
+              <StorageAmount>8</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <CycleTime>120</CycleTime>
+          <MissingConnectionInfolayer>500449</MissingConnectionInfolayer>
+          <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+          <ClampedMaxTransporterLogisticCost>67</ClampedMaxTransporterLogisticCost>
+        </FactoryBase>
+        <LogisticNode/>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>50</Amount>
+              <InactiveAmount>25</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1010115</Product>
+              <Amount>10</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Industrializable>
+          <BoostedByIndustrialization>0</BoostedByIndustrialization>
+        </Industrializable>
+        <IncidentInfectable />
+        <Electrifiable>
+          <ElectricityBoost>0</ElectricityBoost>
+        </Electrifiable>
+        <AmbientMoodProvider />
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+          <MaximumHitPoints>3500</MaximumHitPoints>
+          <ExplosionEffectsMin>1</ExplosionEffectsMin>
+          <ExplosionEffectsMax>1</ExplosionEffectsMax>
+          <SelfHealPerHealTick>4</SelfHealPerHealTick>
+        </Attackable>
+        <UpgradeList />
+        <Pausable />
+        <FeedbackController />
+        <Infolayer />
+        <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742100494</ProductivityBuff>
+            </Item>
+          </ProductionBuffs>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <ProductionBuffDistance>8</ProductionBuffDistance>
+        </BuffFactory>
+        <BuildingModule>
+          <ModuleType>AdditionalModule</ModuleType>
+        </BuildingModule>
+        <Culture />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - GALENA MODULE -->
+
+  <!-- START BUILDING - GELANA production DUMMY - Building -->
+  <ModOp Type="addNextSibling" GUID='1010284'>
+    <Asset>
+      <Template>FactoryBuilding7</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100016</GUID>
+          <Name>GELANA production DUMMY</Name>
+          <IconFilename>data\graphics\icons\icon_galena.png</IconFilename>
+        </Standard>
+        <Building>
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <AssociatedRegions>Moderate</AssociatedRegions>
+        </Building>
+        <Blocking/>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!--Money-->
+              <Amount>100</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/production/galena_module/galena_module_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Mesh/>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>Resident_tier02_atWork</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Text />
+        <Constructable/>
+        <Locked/>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>270382</Sound>
+            </Item>
+            <Item>
+              <Sound>270364</Sound>
+            </Item>
+          </ActiveSounds>
+        </SoundEmitter>
+        <FeedbackController/>
+        <Infolayer/>
+        <UpgradeList/>
+        <Factory7/>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1010196</Product>
+              <Amount>1</Amount>
+              <StorageAmount>8</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <FactoryOutputs>
+            <Item>
+              <Product>1742100433</Product>              <!--Galena-->
+              <Amount>1</Amount>
+              <StorageAmount>4</StorageAmount>
+            </Item>
+          </FactoryOutputs>
+          <CycleTime>60</CycleTime>
+          <MissingConnectionInfolayer>500449</MissingConnectionInfolayer>
+          <IsMainFactory>1</IsMainFactory>
+        </FactoryBase>
+        <LogisticNode/>
+        <AmbientMoodProvider>
+          <Murmur>Factory</Murmur>
+          <DynamicEnvironmentType>None</DynamicEnvironmentType>
+        </AmbientMoodProvider>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>75</Amount>
+              <InactiveAmount>30</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1010115</Product>
+              <Amount>20</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+          <MaximumHitPoints>1500</MaximumHitPoints>
+          <SelfHealPerHealTick>4</SelfHealPerHealTick>
+        </Attackable>
+        <Pausable/>
+        <IncidentInfectable>
+          <Explosion>
+            <ExplosionCoreDamage>1000</ExplosionCoreDamage>
+            <DamageExplosionChance>30</DamageExplosionChance>
+          </Explosion>
+          <IncidentInfectionChanceFactors>
+            <Fire>
+              <DensityDistance>20</DensityDistance>
+              <FactoryProductivityFactor>0.1</FactoryProductivityFactor>
+              <FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
+            </Fire>
+            <Riot>
+              <FactoryOvertimeFactor>0.4</FactoryOvertimeFactor>
+              <FactoryUndertimeFactor>0.2</FactoryUndertimeFactor>
+              <FactoryHappinessFactor>0.2</FactoryHappinessFactor>
+              <HappinessThreshold>20</HappinessThreshold>
+            </Riot>
+            <Explosion>
+              <BaseChance>4</BaseChance>
+              <FactoryProductivityFactor>0.1</FactoryProductivityFactor>
+              <FactoryOvertimeFactor>0.1</FactoryOvertimeFactor>
+              <FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
+            </Explosion>
+          </IncidentInfectionChanceFactors>
+        </IncidentInfectable>
+        <Industrializable/>
+        <Culture>
+          <CultureType>Culture</CultureType>
+        </Culture>
+        <QuestObject/>
+        <Electrifiable/>
+        <EcoSystemProvider/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - GELANA production DUMMY - Building -->
+
+  <!-- START - REPLACE ISMAINFACTORY IF OTHER FACTORY IS PRESENT WITH THE SAME OUTPUT THAT ALREADY HAS ISMAINFACTORY 1 -->
+  <ModOp Type="merge" GUID="1742100407" Path="/Values/FactoryBase" Condition="//Values/FactoryBase[FactoryOutputs/Item/Product='1742100433' and IsMainFactory='1']">
+    <IsMainFactory>0</IsMainFactory>
+  </ModOp>
+  <!-- END- REPLACE ISMAINFACTORY IF OTHER FACTORY IS PRESENT WITH THE SAME OUTPUT THAT ALREADY HAS ISMAINFACTORY 1 -->
+
+  <!-- START - ADD PRODUCTION BUILDINGS TO WORKFORCE MENU -->
+  <ModOp Type="add" GUID="25000087" Path="/Values/WorkforceMenu/BoostableFactories">
+    <Item>
+      <Factory>1742100407</Factory>
+    </Item>
+  </ModOp>
+  <!-- END - ADD PRODUCTION BUILDINGS TO WORKFORCE MENU -->
+
+  <!-- START - ADD BUILDING TO ALL,ALL EXCEPT POWER PLANT PRODUCTION, GLOBAL MAINTENANCE -->
+  <ModOp GUID='6000018,193856,25599,368' Type="add" Path="Values/ItemEffectTargetPool/EffectTargetGUIDs/">
+    <Item>
+      <GUID>1742100407</GUID>
+    </Item>
+  </ModOp>
+  <!-- END - ADD BUILDING TO ALL,ALL EXCEPT POWER PLANT PRODUCTION, GLOBAL MAINTENANCE -->
+
+  <!-- START GALENA MINES BUFF - BUFF -->
+  <ModOp Type="addNextSibling" GUID="25623">
+    <Asset>
+      <Template>GuildhouseBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100494</GUID>
+          <Name>Digging deeper for Galena</Name>
+          <IconFilename>data\graphics\icons\icon_galena.png</IconFilename>
+          <InfoDescription>1742100495</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1010305</GUID>
+            </Item>
+            <Item>
+              <GUID>1010308</GUID>
+            </Item>
+            <Item>
+              <GUID>1010307</GUID>
+            </Item>
+            <Item>
+              <GUID>1742100163</GUID>
+            </Item>
+          </EffectTargets>
+          <AllowStacking>0</AllowStacking>
+        </ItemEffect>
+        <BuildingUpgrade>
+          <WorkforceAmountUpgrade>
+            <Percental>1</Percental>
+            <Value>25</Value>
+          </WorkforceAmountUpgrade>
+        </BuildingUpgrade>
+        <Buff />
+        <FactoryUpgrade>
+          <AdditionalOutput>
+            <Item>
+              <Product>1742100433</Product>
+              <Amount>1</Amount>
+              <AdditionalOutputCycle>1</AdditionalOutputCycle>
+            </Item>
+          </AdditionalOutput>
+        </FactoryUpgrade>
+        <PopulationUpgrade />
+        <ResidenceUpgrade />
+        <IncidentInfectableUpgrade />
+        <CultureUpgrade />
+        <InfluenceSourceUpgrade />
+        <DistributionUpgrade />
+        <ItemContainerUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END GALENA MINES BUFF - BUFF -->
+
+  <!-- ****************** START Add Galena to OfferingGoods Eli ******************  -->
+  <ModOp Type="add" GUID='46' Path="/Values/Trader/Progression/*[self::EarlyGame or self::EarlyMidGame or self::MidGame or self::LateMidGame or self::LateGame or self::EndGame]/GoodsProduction/">
+    <Item>
+      <Good>1742100433</Good>
+      <ProductionPerMinute>8</ProductionPerMinute>
+    </Item>
+  </ModOp>
+
+  <ModOp Type="add" GUID='46' Path="/Values/Trader/Progression/*[self::EarlyGame or self::EarlyMidGame or self::MidGame or self::LateMidGame or self::LateGame or self::EndGame]/OfferingGoods/Item/GoodSets/">
+    <Item>
+      <Good>1742100433</Good>
+    </Item>
+  </ModOp>
+  <!-- ****************** END Add Galena to OfferingGoods Eli ******************  -->
+
+</ModOps>

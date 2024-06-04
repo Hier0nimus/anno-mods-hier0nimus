@@ -9,6 +9,11 @@ A mod centered around military infrastructure and adding new military residence 
 ### Beta v0.15 (Ongoing)
 - Fixed compatibility for Old Town (Fishboss)
 - Fixed decal for Military Training Facility
+- Added Buildings to pool of all weapons production
+- Changed the BasePrice for Care Packages from 10000 to 150
+- Nerfing dropgoods reputation gain and cooldown when dropping care packages and water on AI
+- Moved Gunpowder, Clean Water, Galena, Lead and Horses to a shared good to use by everyone who wants it
+- Fixed some region product changes to Sleeping Bags
 
 ### Beta v0.14
 - Changed menu icon for Clean water pump

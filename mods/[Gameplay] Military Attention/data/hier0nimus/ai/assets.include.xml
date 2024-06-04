@@ -1000,5 +1000,28 @@
   <ModOp Type="remove" GUID='116345' Path="/Values/ConstructionCategory/BuildingList/Item[Building='4798']" />
   <!-- END AI - REMOVE VANILLA BUILDINGS/DEFENSES FROM CONSTRUCTION MENU -->
 
+  <!-- START NERFING DROPPING GOODS ON AI TO BOOST REPUTATION - ORIGINAL CODE FROM AI Everyone Hard AI (Serp) -->
+  <!-- INCREASING COOLDOWN FROM 30s TO 15min -->
+  <ModOp Type="merge" GUID="167" Path="/Values/Interaction/DropReactionConfig">
+    <DropReaction>
+      <PositiveEffect>
+        <CoolDownAfterThresholdHasBeenReached>900000</CoolDownAfterThresholdHasBeenReached>
+      </PositiveEffect>
+      <IncidentResolver>
+        <CoolDownAfterThresholdHasBeenReached>900000</CoolDownAfterThresholdHasBeenReached>
+      </IncidentResolver>
+    </DropReaction>
+  </ModOp>
+  <!-- NERFING REPUTATION FROM 5 TO 1 -->
+  <!-- Care Packages -->
+  <ModOp Type="merge" GUID="119" Path="/Values/ParticipantMessages/MessageTriggers/AirshipDropPositiveEffectMessage/Reactions/Item[1]">
+    <SideEffectValue>1</SideEffectValue>
+  </ModOp>
+  <!-- Water Drops -->
+  <ModOp Type="merge" GUID="119" Path="/Values/ParticipantMessages/MessageTriggers/AirshipDropIncidentResolvedMessage/Reactions/Item[1]">
+    <SideEffectValue>1</SideEffectValue>
+  </ModOp>
+  <!-- END NERFING DROPPING GOODS ON AI TO BOOST REPUTATION - ORIGINAL CODE FROM AI Everyone Hard AI (Serp) -->
+
 </ModOps>
 
