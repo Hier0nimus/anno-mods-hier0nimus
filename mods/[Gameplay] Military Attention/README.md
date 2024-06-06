@@ -1,10 +1,18 @@
-# Military Attention | BETA 0.15!
+# Military Attention | BETA 0.16!
 
 A mod centered around military infrastructure and adding new military residence tiers for all regions with a focus on the Old World.
 
 ![ma-img-01.jpg](./banner.jpg)
 
 ## Changelog
+
+### Beta v0.16
+- Changed ParticipantMessageArcheType for some of the production buildings which was not correct with the actual workforce it used
+- Fixed wrong materials for Old World Ammunition Depots
+- Changed building costs for Military Academy
+- Fixed some wrong descriptions and images/icons
+- Added compatibility for 1805 - Ships of the Line
+- Fixed decal canteen Enbesa
 
 ### Beta v0.15
 - Fixed compatibility for Old Town (Fishboss)
