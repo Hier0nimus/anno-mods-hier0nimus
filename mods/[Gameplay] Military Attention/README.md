@@ -10,6 +10,7 @@ A mod centered around military infrastructure and adding new military residence 
 - Fixed wrong exchange values for Horses, cean water, lead and gunpowder in Docklands
 - Removed the changes to Bruno Ironbright
 - Changes to existing translations
+- Added French translation
 - Removed not used radius from HQ and fixed the visibility of the streetrange for the public service
 - Fixed decal Canteen Enbesa
 - Fixed moodtext for Arctic Soldiers to represent the heat like other Arctic residences
