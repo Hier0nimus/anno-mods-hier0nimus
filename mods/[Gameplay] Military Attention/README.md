@@ -1,10 +1,18 @@
-# Military Attention | 1.0!
+# Military Attention | 1.1!
 
 A mod centered around military infrastructure and adding new military residence tiers for all regions with a focus on the Old World.
 
 ![ma-img-01.jpg](./banner.jpg)
 
 ## Changelog
+
+### v1.1
+- Fixed wrong exchange values for Horses, cean water, lead and gunpowder in Docklands
+- Removed the changes to Bruno Ironbright
+- Changes to existing translations
+- Removed not used radius from HQ and fixed the visibility of the streetrange for the public service
+- Fixed decal Canteen Enbesa
+- Fixed moodtext for Arctic Soldiers to represent the heat like other Arctic residences
 
 ### Beta v0.16
 - Changed ParticipantMessageArcheType for some of the production buildings which was not correct with the actual workforce it used
@@ -287,7 +295,7 @@ Adds a new soldiers population tier as extra workforce in every region.
 |     |  |
 | -------- | ------- |
 | ![Cemetery](./data/graphics/icons/icon_cemetery.png)  | Cemetery |
-| ![Canteen](./data/graphics/icons/icon_canteen.png)  | Canteen (New World, Enbesa) |
+| ![Canteen](./data/graphics/icons/icon_canteen.png)  | Canteen (Old World, New World, Enbesa) |
 | ![Field Hospital](./data/graphics/icons/icon_military_hospital.png)  | Field Hospital |
 | ![Sanitation Facility](./data/graphics/icons/icon_sanitation_facility.png)  | Sanitation Facility |
 | ![Navy Recruitment Office](./data/graphics/icons/icon_navy_recruitment_office.png) | Navy Recruitment Office  |
@@ -606,25 +614,6 @@ Only add the Huskies lifestyle need to the delight category when Pet needs for r
 
 ## Still on the to do list
 - Translations for all languages. If anyone wants to translate! Would be amazing!
-
-## What if you want to test?
-
-### Reporting a bug
-When reporting a bug please provide the following information:
-- Existing game or new game?
-
-### Things to provide feedback for
-- Balanced?
-    - Population
-    - Income
-    - Upkeep
-    - Needs
-    - Defenses
-    - Buffs
-    - Ships
-    - New mechanics of sailors and ammunition
-- Policies/buffs make sense?
-- New mechanics of sailors and ammunition are clear enough? 
 
 ## FAQ
 
