@@ -1,6 +1,6 @@
 <!-- 
   
-  [Shared] Shared Goods - Galena - v1.0
+  [Shared] Shared Goods - Galena - v1.1
   Created by Hier0nimus
   Enjoy!
 
@@ -237,7 +237,7 @@
           <Costs>
             <Item>
               <Ingredient>1010017</Ingredient>              <!--Money-->
-              <Amount>100</Amount>
+              <Amount>1000</Amount>
             </Item>
           </Costs>
         </Cost>
@@ -290,7 +290,7 @@
             <Item>
               <Product>1742100433</Product>              <!--Galena-->
               <Amount>1</Amount>
-              <StorageAmount>4</StorageAmount>
+              <StorageAmount>6</StorageAmount>
             </Item>
           </FactoryOutputs>
           <CycleTime>60</CycleTime>
@@ -306,12 +306,12 @@
           <Maintenances>
             <Item>
               <Product>1010017</Product>
-              <Amount>75</Amount>
-              <InactiveAmount>30</InactiveAmount>
+              <Amount>150</Amount>
+              <InactiveAmount>125</InactiveAmount>
             </Item>
             <Item>
               <Product>1010115</Product>
-              <Amount>20</Amount>
+              <Amount>80</Amount>
             </Item>
           </Maintenances>
         </Maintenance>
@@ -321,31 +321,7 @@
           <SelfHealPerHealTick>4</SelfHealPerHealTick>
         </Attackable>
         <Pausable/>
-        <IncidentInfectable>
-          <Explosion>
-            <ExplosionCoreDamage>1000</ExplosionCoreDamage>
-            <DamageExplosionChance>30</DamageExplosionChance>
-          </Explosion>
-          <IncidentInfectionChanceFactors>
-            <Fire>
-              <DensityDistance>20</DensityDistance>
-              <FactoryProductivityFactor>0.1</FactoryProductivityFactor>
-              <FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
-            </Fire>
-            <Riot>
-              <FactoryOvertimeFactor>0.4</FactoryOvertimeFactor>
-              <FactoryUndertimeFactor>0.2</FactoryUndertimeFactor>
-              <FactoryHappinessFactor>0.2</FactoryHappinessFactor>
-              <HappinessThreshold>20</HappinessThreshold>
-            </Riot>
-            <Explosion>
-              <BaseChance>4</BaseChance>
-              <FactoryProductivityFactor>0.1</FactoryProductivityFactor>
-              <FactoryOvertimeFactor>0.1</FactoryOvertimeFactor>
-              <FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
-            </Explosion>
-          </IncidentInfectionChanceFactors>
-        </IncidentInfectable>
+        <IncidentInfectable />
         <Industrializable/>
         <Culture>
           <CultureType>Culture</CultureType>
@@ -357,12 +333,6 @@
     </Asset>
   </ModOp>
   <!-- END BUILDING - GELANA production DUMMY - Building -->
-
-  <!-- START - REPLACE ISMAINFACTORY IF OTHER FACTORY IS PRESENT WITH THE SAME OUTPUT THAT ALREADY HAS ISMAINFACTORY 1 -->
-  <ModOp Type="merge" GUID="1742100407" Path="/Values/FactoryBase" Condition="//Values/FactoryBase[FactoryOutputs/Item/Product='1742100433' and IsMainFactory='1']">
-    <IsMainFactory>0</IsMainFactory>
-  </ModOp>
-  <!-- END- REPLACE ISMAINFACTORY IF OTHER FACTORY IS PRESENT WITH THE SAME OUTPUT THAT ALREADY HAS ISMAINFACTORY 1 -->
 
   <!-- START - ADD PRODUCTION BUILDINGS TO WORKFORCE MENU -->
   <ModOp Type="add" GUID="25000087" Path="/Values/WorkforceMenu/BoostableFactories">

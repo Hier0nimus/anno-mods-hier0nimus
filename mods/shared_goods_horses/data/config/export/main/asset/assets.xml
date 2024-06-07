@@ -1,6 +1,6 @@
 <!-- 
   
-  [Shared] Shared Goods - Horses - v1.1
+  [Shared] Shared Goods - Horses - v1.2
   Created by Hier0nimus
   Enjoy!
 
@@ -201,7 +201,7 @@
             </Item>
           </FactoryOutputs>
           <CycleTime>30</CycleTime>
-          <IsMainFactory>1</IsMainFactory>
+          <IsMainFactory>0</IsMainFactory>
         </FactoryBase>
         <LogisticNode />
         <ModuleOwner>
@@ -285,6 +285,122 @@
     </Asset>
   </ModOp>
   <!-- END BUILDING - STABLE -->
+
+  <!-- START BUILDING - HORSES production DUMMY - Building -->
+  <ModOp Type="addNextSibling" GUID='1010284'>
+    <Asset>
+      <Template>FactoryBuilding7</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100384</GUID>
+          <Name>Horses production DUMMY</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/animals/icon_horse.png</IconFilename>
+        </Standard>
+        <Building>
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <AssociatedRegions>Moderate</AssociatedRegions>
+        </Building>
+        <Blocking/>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!--Money-->
+              <Amount>1000</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/production/stables/stables_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Mesh/>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>Resident_tier02_atWork</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Text />
+        <Constructable/>
+        <Locked/>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>270382</Sound>
+            </Item>
+            <Item>
+              <Sound>270364</Sound>
+            </Item>
+          </ActiveSounds>
+        </SoundEmitter>
+        <FeedbackController/>
+        <Infolayer/>
+        <UpgradeList/>
+        <Factory7/>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1010196</Product>
+              <Amount>1</Amount>
+              <StorageAmount>8</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <FactoryOutputs>
+            <Item>
+              <Product>1742100211</Product>              <!-- Horses - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>5</StorageAmount>
+            </Item>
+          </FactoryOutputs>
+          <CycleTime>60</CycleTime>
+          <MissingConnectionInfolayer>500449</MissingConnectionInfolayer>
+          <IsMainFactory>1</IsMainFactory>
+        </FactoryBase>
+        <LogisticNode/>
+        <AmbientMoodProvider>
+          <Murmur>Factory</Murmur>
+          <DynamicEnvironmentType>None</DynamicEnvironmentType>
+        </AmbientMoodProvider>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>100</Amount>
+              <InactiveAmount>80</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1010115</Product>              <!-- Workers -->
+              <Amount>100</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+          <MaximumHitPoints>1500</MaximumHitPoints>
+          <SelfHealPerHealTick>4</SelfHealPerHealTick>
+        </Attackable>
+        <Pausable/>
+        <IncidentInfectable />
+        <Industrializable/>
+        <Culture>
+          <CultureType>Culture</CultureType>
+        </Culture>
+        <QuestObject/>
+        <Electrifiable/>
+        <EcoSystemProvider/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - HORSES production DUMMY - Building -->
 
   <!-- START EXTENDED TRACTORS -->
   <Group Condition="#extended_tractors_kurila">
@@ -466,12 +582,6 @@
   </ModOp>
   <!-- END MODULE HORSE TRAINING GROUND -->
 
-  <!-- START - REPLACE ISMAINFACTORY IF OTHER FACTORY IS PRESENT WITH THE SAME OUTPUT THAT ALREADY HAS ISMAINFACTORY 1 -->
-  <ModOp Type="merge" GUID="1742100209" Path="/Values/FactoryBase" Condition="//Values/FactoryBase[FactoryOutputs/Item/Product='1742100211' and IsMainFactory='1']">
-    <IsMainFactory>0</IsMainFactory>
-  </ModOp>
-  <!-- END- REPLACE ISMAINFACTORY IF OTHER FACTORY IS PRESENT WITH THE SAME OUTPUT THAT ALREADY HAS ISMAINFACTORY 1 -->
-
   <!-- START ADD PRODUCTION BUILDINGS TO WORKFORCE MENU -->
   <ModOp Type="add" GUID="25000087" Path="/Values/WorkforceMenu/BoostableFactories">
     <Item>
@@ -487,14 +597,5 @@
     </Item>
   </ModOp>
   <!-- END - ADD BUILDINGS TO ALL ANIMAL FARM, ALL PRODUCTION, MAINTENANCE  -->
-
-  <!-- ****************** START Add products to existing traders ******************  -->
-
-  <!-- Tattershire Farms -->
-  <ModOp Type = "add" GUID='131764' Path="/Values/TradeContractFeature/Traders/Item[TraderName = '131819']/TradeLevels/Item[Unlock = '131849']/Trades">
-    <Item>
-      <Good>1742100211</Good>      <!-- Horses - Product -->
-    </Item>
-  </ModOp>
 
 </ModOps>
