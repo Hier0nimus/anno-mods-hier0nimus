@@ -1,6 +1,6 @@
 <!-- 
 
-[Gameplay] Military Attention - v1.1
+[Gameplay] Military Attention - v1.2
   
 Created by Hier0nimus
 And help of A LOT of people. Big thank you all!
@@ -85,7 +85,7 @@ BUILDINGS
 1742100090 - Military Academy - Building - Module
 1742100091 - Military Academy - Building - Module - Description
 1742100092 - Military Academy - Building - Module - Button
-1742100093 - Military Academy - Building - Heade
+1742100093 - Military Academy - Building - Header
 1742100094 - Military Academy - Building - Undiscovered head
 1742100163 - Open Pit Iron Mine - Building
 1742100164 - Open Pit Iron Mine - Building - Description
@@ -228,6 +228,7 @@ CONSTRUCTION MENU CHAINS
 1742100447 - Coins - Menu Production Chain
 1742100473 - Basic Weapons - Menu Production Chain
 1742100474 - Basic Weapons - Menu Production Chain - Description
+1742100478 - Military - ConstructionCategory
 
 MILITARY PRODUCTS
 ********************
@@ -585,13 +586,6 @@ NEWSPAPERS
 1742100395 - Newspaper - War is upon us - SpecialEditionSubline
 1742100396 - Newspaper - War is upon us - SpecialEditionImage
 
-FESTIVALS
-********************
-// NOT USED ANYMORE // 1742100476 - Military Parade Residence Buff - Festival - Buff
-// NOT USED ANYMORE // 1742100477 - Military Parade Residence Buff - Festival - Buff - Description
-// NOT USED ANYMORE // 1742100478 - Military Parade Production Buff - Festival - Buff
-// NOT USED ANYMORE // 1742100479 - Military Parade Production Buff - Festival - Buff - Description
-
 MONUMENT
 ********************
 1742100482 - Fort
@@ -603,6 +597,7 @@ MONUMENT
 1742100488 - Fort: Lower part - Building
 1742100489 - Fort: Lower part - Description
 1742100490 - Fort - Building
+1742100580 - Fort - Mod11 - Building
 1742100491 - Fort - Description
 
 DOCKLANDS
@@ -636,48 +631,52 @@ ORNAMENETS
 1742100382 - Military street - AdditionalModule
 1742100383 - Military street - AdditionalModule - Description
 
-HIGHEST - 1742100575
+FREE
+********************
+// NOT USED ANYMORE // 1742100479
+// NOT USED ANYMORE // 1742100476
+// NOT USED ANYMORE // 1742100477
+// NOT USED ANYMORE // 1742100576
+// NOT USED ANYMORE // 1742100577
+// NOT USED ANYMORE // 1742100578
+// NOT USED ANYMORE // 1742100579
+
+HIGHEST - 1742100580
 
 TRIGGERS
 ********************
-HIGHEST: 1742100744
-
-1742100739 - Other regions - Trigger
+HIGHEST: 1742100753
 
 1742100744 - 1 Farmer - Trigger
 1742100738 - Farmers 100 - Trigger
-
-1742100743 - Workers 150 - Trigger
+1742100753 - Workers 150 - Trigger
 1742100703 - Workers 500 - Trigger
 1742100704 - Artisans 1 - Trigger
 1742100737 - Artisans 300 - Trigger
-1742100723 - Artisans 750 - Trigger
 1742100705 - Artisans 900 - Trigger
 1742100736 - Engineers 1 - Trigger
-1742100742 - Engineers 500 - Trigger
+1742100746 - Engineers 500 - Trigger
 1742100708 - Engineers 2000 - Trigger
-1742100709 - Investors 1 - Trigger
+1742100751 - Investors 1 - Trigger
 1742100735 - Investors 5000 - Trigger
-1742100710 - Tourists 300 - Trigger
 
-1742100711 - Shephards 300 - Trigger
-1742100712 - Elders 300 - Trigger
+1742100745 - Shephards 1 - Trigger
 
+1742100746 - Jornaleros 1 - Trigger
 1742100734 - Jornaleros 100 - Trigger
 1742100713 - Obreros 600 - Trigger
 1742100714 - Obreros 1000 - Trigger
-1742100715 - Artista 900 - Trigger
-1742100716 - Artista 1800 - Trigger
 
-1742100741 - Technicians 750 - Trigger
+1742100747 - Explorers 1 - Trigger
+1742100748 - Technicians 750 - Trigger
 
 1742100729 - Soldiers 1 - Trigger
 1742100728 - Soldiers 100 - Trigger
 1742100725 - Soldiers 300 - Trigger
 1742100720 - Soldiers 500 - Trigger
-1742100721 - Soldiers 1000 - Trigger
 
-1742100740 - Creative mode - Trigger
+1742100750 - Creative mode - Trigger
+1742100752 - Retrigger Fort Mod11 - Trigger
 -->
 
 <ModOps>
@@ -693,7 +692,6 @@ HIGHEST: 1742100744
   <Include File="../../../../hier0nimus/military-pools/assets.include.xml" />
   <Include File="../../../../hier0nimus/military-policies-itemsets/assets.include.xml" />
   <Include File="../../../../hier0nimus/sailors/assets.include.xml" />
-  <Include File="../../../../hier0nimus/quests/assets.include.xml" />
   <Include File="../../../../hier0nimus/newspapers/assets.include.xml" />
   <Include File="../../../../hier0nimus/ornaments/assets.include.xml" />
   <Include File="../../../../hier0nimus/monument/assets.include.xml" />

@@ -31,23 +31,6 @@
   </ModOp>
   <!-- END ADD CIGARETTES TO WORKERS BUILDING MENU -->
 
-  <!-- START ADD ORNAMENTS TO MODERATE ARTISANS PARK MENU -->
-  <ModOp Type="add" GUID='501482,501577' Path="/Values/ConstructionCategory/BuildingList">
-    <Item>
-      <Building>1742100552</Building>      <!-- Memorial 01 - OrnamentalBuilding -->
-    </Item>
-    <Item>
-      <Building>1742100554</Building>      <!-- Memorial 02 - OrnamentalBuilding -->
-    </Item>
-    <Item>
-      <Building>1742100572</Building>      <!-- Pallisade wall - OrnamentalBuilding -->
-    </Item>
-    <Item>
-      <Building>1742100574</Building>      <!-- Pallisade wall gate - OrnamentalBuilding -->
-    </Item>
-  </ModOp>
-  <!-- END ADD ORNAMENTS TO MODERATE ARTISANS PARK MENU -->
-
   <!-- START ADD CEMETERY TO ARTISANS BUILDING MENU -->
   <ModOp Type="addNextSibling" GUID='25000191' Path="/Values/ConstructionCategory/BuildingList/Item[Building='500019']">
     <Item>
@@ -1024,5 +1007,45 @@
     </Asset>
   </ModOp>
   <!-- END PRODUCTION CHAIN - BASIC WEAPONS -->
+  
+  <!-- START- ADD MILITARY ORNAMENTS MENU -->
+  <ModOp Type="addNextSibling" GUID='501482'>
+    <Asset>
+      <Template>ConstructionCategory</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100478</GUID>
+          <Name>Military</Name>
+          <IconFilename>data\graphics\icons\icon_pallisade_1x1_straight.png</IconFilename>
+        </Standard>
+        <ConstructionCategory>
+          <BuildingList>
+            <Item>
+              <Building>1742100552</Building>              <!-- Memorial 01 - OrnamentalBuilding -->
+            </Item>
+            <Item>
+              <Building>1742100554</Building>              <!-- Memorial 02 - OrnamentalBuilding -->
+            </Item>
+            <Item>
+              <Building>1742100572</Building>              <!-- Pallisade wall - OrnamentalBuilding -->
+            </Item>
+            <Item>
+              <Building>1742100574</Building>              <!-- Pallisade wall gate - OrnamentalBuilding -->
+            </Item>
+          </BuildingList>
+          <CategoryDescription>19564</CategoryDescription>          <!--CategoryDescriptionOrnaments-->
+        </ConstructionCategory>
+        <Text />
+        <Locked/>
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <ModOp Type="addNextSibling" GUID='500069' Path="Values/ConstructionCategory/BuildingList/Item[Building='501482']">
+    <Item>
+      <Building>1742100478</Building>
+    </Item>
+  </ModOp>
+  <!-- END - ADD MILITARY ORNAMENTS MENU -->
 
 </ModOps>

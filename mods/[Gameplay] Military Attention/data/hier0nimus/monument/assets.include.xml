@@ -153,7 +153,7 @@
         <BuildingUnique>
           <Uniques>
             <Item>
-              <UniqueType>CoalHarbor</UniqueType>
+              <UniqueType>Mod11</UniqueType>
               <UniqueScope>Game</UniqueScope>
             </Item>
           </Uniques>
@@ -315,7 +315,7 @@
         <BuildingUnique>
           <Uniques>
             <Item>
-              <UniqueType>CoalHarbor</UniqueType>
+              <UniqueType>Mod11</UniqueType>
               <UniqueScope>Game</UniqueScope>
             </Item>
           </Uniques>
@@ -445,7 +445,7 @@
           <TransporterCountMax>2</TransporterCountMax>
         </LogisticNode>
         <Monument>
-          <UpgradeTarget>1742100490</UpgradeTarget>
+          <UpgradeTarget>1742100580</UpgradeTarget>
           <UseReplaceInsteadOfChangeGUID>1</UseReplaceInsteadOfChangeGUID>
           <MicrophaseCount>30</MicrophaseCount>          <!-- 30 -->
           <UnfinishedIcon>500415</UnfinishedIcon>
@@ -488,7 +488,7 @@
         <BuildingUnique>
           <Uniques>
             <Item>
-              <UniqueType>CoalHarbor</UniqueType>
+              <UniqueType>Mod11</UniqueType>
               <UniqueScope>Game</UniqueScope>
             </Item>
           </Uniques>
@@ -757,6 +757,303 @@
     </Asset>
   </ModOp>
   <!-- END FORT (OW) - Miilitary Defenses -->
+
+  <!-- START MONUMENT - FORT (OW) - Mod11 - Military Defenses -->
+  <ModOp Type="addNextSibling" GUID='1010343'>
+    <Asset>
+      <Template>HarborBuildingAttackerFort</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100580</GUID>
+          <Name>Fort Mod11</Name>
+          <IconFilename>data/graphics/icons/icon_fort.png</IconFilename>
+          <InfoDescription>1742100491</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11150</BuildingCategoryName>
+          <SnapRadius>10</SnapRadius>
+          <TerrainType>Coast</TerrainType>
+          <AssociatedRegions>Moderate</AssociatedRegions>
+        </Building>
+        <Blocking>
+          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+          <RemoveGrass>1</RemoveGrass>
+        </Blocking>
+        <Mesh />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/special/fort/fort_01_04.cfg</Filename>
+            </Item>
+          </Variations>
+          <Skins>
+            <DefaultSkinDescription>23853</DefaultSkinDescription>
+          </Skins>
+        </Object>
+        <AmbientMoodProvider />
+        <Constructable />
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+        </Selection>
+        <Text />
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <Amount>200000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>
+              <Amount>200</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>
+              <Amount>50</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>
+              <Amount>150</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010202</Ingredient>
+              <Amount>150</Amount>
+            </Item>
+          </Costs>
+          <InfluenceCostType>DefenseBuilding</InfluenceCostType>
+          <InfluenceCostPoints>100</InfluenceCostPoints>
+        </Cost>
+        <BuffFactory>
+          <BaseBuff>1742100567</BaseBuff>
+          <BaseBuffScope>Radius</BaseBuffScope>
+          <BaseBuffDistance>80</BaseBuffDistance>
+        </BuffFactory>
+        <LogisticNode>
+          <TransporterCountMax>2</TransporterCountMax>
+        </LogisticNode>
+        <Attackable>
+          <AttackableType>HarbourBuilding</AttackableType>
+          <MaximumHitPoints>17500</MaximumHitPoints>
+          <DefenseByAIFactor>401</DefenseByAIFactor>
+          <MilitaryDefensePoints>80</MilitaryDefensePoints>
+          <MoralePower>1000</MoralePower>
+          <IslandWarFlag>102307</IslandWarFlag>
+          <ExplosionEffects>
+            <Item>
+              <ExplosionEffectFilePath>data/graphics/effects/military/explosions/harbor_generic_xpl_02.cfg</ExplosionEffectFilePath>
+            </Item>
+          </ExplosionEffects>
+          <ExplosionEffectsMin>1</ExplosionEffectsMin>
+          <ExplosionEffectsMax>1</ExplosionEffectsMax>
+          <SelfHealPerHealTick>5</SelfHealPerHealTick>
+        </Attackable>
+        <Attacker>
+          <BasicAttackType>HarbourTower</BasicAttackType>
+          <BaseDamage>2000</BaseDamage>
+          <ReloadTime>150</ReloadTime>
+          <AttackRange>125</AttackRange>
+          <LineOfSightRange>125</LineOfSightRange>
+          <Turrets>
+            <Item>
+              <TurnSpan>360</TurnSpan>
+              <TurretCfg>data/graphics/buildings/special/harbor_06/harbor_06_turret.cfg</TurretCfg>
+            </Item>
+            <Item>
+              <TurnSpan>360</TurnSpan>
+              <TurretCfg>data/graphics/buildings/special/harbor_06/harbor_06_turret.cfg</TurretCfg>
+            </Item>
+            <Item>
+              <TurnSpan>360</TurnSpan>
+              <TurretCfg>data/graphics/buildings/special/harbor_06/harbor_06_turret.cfg</TurretCfg>
+            </Item>
+            <Item>
+              <TurnSpan>360</TurnSpan>
+              <TurretCfg>data/graphics/buildings/special/harbor_06/harbor_06_turret.cfg</TurretCfg>
+            </Item>
+            <Item>
+              <TurnSpan>360</TurnSpan>
+              <TurretCfg>data/graphics/buildings/special/harbor_06/harbor_06_turret.cfg</TurretCfg>
+            </Item>
+          </Turrets>
+          <ProjectileAsset>101955</ProjectileAsset>
+          <MuzzleEffectAssets>
+            <Item>
+              <MuzzleEffectAsset>101972</MuzzleEffectAsset>
+            </Item>
+            <Item>
+              <MuzzleEffectAsset>101972</MuzzleEffectAsset>
+            </Item>
+            <Item>
+              <MuzzleEffectAsset>101972</MuzzleEffectAsset>
+            </Item>
+            <Item>
+              <MuzzleEffectAsset>101972</MuzzleEffectAsset>
+            </Item>
+            <Item>
+              <MuzzleEffectAsset>101972</MuzzleEffectAsset>
+            </Item>
+          </MuzzleEffectAssets>
+          <FullVolleyTimeMin>0.8</FullVolleyTimeMin>
+          <FullVolleyTimeMax>3.2</FullVolleyTimeMax>
+          <VolleyMaxPerBulletRandomOffset>0.2</VolleyMaxPerBulletRandomOffset>
+          <EmitProjectileTimeAfterStartAnimation>0.35</EmitProjectileTimeAfterStartAnimation>
+          <AccuracyBase>5</AccuracyBase>
+          <AccuracyIncreaseOverDistance>100</AccuracyIncreaseOverDistance>
+          <AccuracyByDistance>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>0</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>HarborBuildingAttacker</TemplateName>
+                    <Index>0</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+            </Item>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>1</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>HarborBuildingAttacker</TemplateName>
+                    <Index>1</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+              <AccuracyByDistancePair>
+                <CorrespondingAccuracy>100</CorrespondingAccuracy>
+              </AccuracyByDistancePair>
+            </Item>
+          </AccuracyByDistance>
+        </Attacker>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>50000</Amount>
+            </Item>
+            <Item>
+              <Product>1742100005</Product>              <!-- Soldiers Workforce -->
+              <Amount>750</Amount>
+            </Item>
+          </Maintenances>
+          <ConsumerPriority>1</ConsumerPriority>
+        </Maintenance>
+        <Locked />
+        <DelayedConstruction />
+        <Pausable />
+        <Infolayer />
+        <BuildingUnique>
+          <Uniques>
+            <Item>
+              <UniqueType>Mod11</UniqueType>
+              <UniqueScope>Game</UniqueScope>
+            </Item>
+          </Uniques>
+        </BuildingUnique>
+        <SoundEmitter>
+          <DestroySounds>
+            <Item>
+              <Sound>9818756</Sound>
+            </Item>
+          </DestroySounds>
+          <ConstructionSounds>
+            <BuildSuccessful>
+              <Item>
+                <Sound>206544</Sound>
+              </Item>
+            </BuildSuccessful>
+            <BuildFailed>
+              <Item>
+                <Sound>9818387</Sound>
+              </Item>
+            </BuildFailed>
+            <BuildMoveStart>
+              <Item>
+                <Sound>9818755</Sound>
+              </Item>
+            </BuildMoveStart>
+            <BuildMoveEnd>
+              <Item>
+                <Sound>200141</Sound>
+              </Item>
+            </BuildMoveEnd>
+          </ConstructionSounds>
+          <IncidentSounds>
+            <InfectedFire>
+              <Item>
+                <Sound>214659</Sound>
+              </Item>
+            </InfectedFire>
+          </IncidentSounds>
+          <BuildingRuined>
+            <Item>
+              <Sound>203848</Sound>
+            </Item>
+          </BuildingRuined>
+          <BuildingRepaired>
+            <Item>
+              <Sound>203866</Sound>
+            </Item>
+          </BuildingRepaired>
+        </SoundEmitter>
+        <CommandQueue />
+        <Culture>
+          <Attractiveness>100</Attractiveness>
+        </Culture>
+        <UpgradeList>
+          <DefaultBuff>1742100262</DefaultBuff>          <!-- Bombs Ammunition Debuff - Buff -->
+        </UpgradeList>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END FORT (OW) - Miilitary Defenses -->
+
+  <ModOp Type="addNextSibling" GUID="1742100580">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100752</GUID>
+          <Name>Retrigger Fort mod11</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Values>
+              <Condition />
+              <ConditionAlwaysTrue />
+            </Values>
+            <Template>ConditionAlwaysTrue</Template>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionSetObjectGUID</Template>
+                <Values>
+                  <ActionSetObjectGUID>
+                    <NewGUID>1742100580</NewGUID>
+                  </ActionSetObjectGUID>
+                  <ObjectFilter>
+                    <ObjectGUID>1742100490</ObjectGUID>
+                    <CheckParticipantID>1</CheckParticipantID>
+                    <CheckProcessingParticipantID>1</CheckProcessingParticipantID>
+                  </ObjectFilter>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+  </ModOp>
 
   <!-- ****************** END MONUMENT ******************  -->
 </ModOps>

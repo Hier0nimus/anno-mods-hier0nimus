@@ -182,17 +182,15 @@ Adaptations to vanilla items
 
   <!-- ****************** START Add Change production ******************  -->
 
-  <!-- ****************** Weapon Factory - Add wood to production ******************  -->
+  <!-- ****************** Weapon Factory - Add wood and gunpowder to production ******************  -->
   <ModOp Type="add" GUID="1010299" Path="/Values/FactoryBase/FactoryInputs">
     <Item>
-      <Product>120008</Product>
-      <!--Wood-->
+      <Product>120008</Product>      <!--Wood-->
       <Amount>1</Amount>
       <StorageAmount>6</StorageAmount>
     </Item>
     <Item>
-      <Product>1742100293</Product>
-      <!--Gunpowder-->
+      <Product>1742100293</Product>      <!--Gunpowder-->
       <Amount>1</Amount>
       <StorageAmount>6</StorageAmount>
     </Item>
@@ -234,7 +232,7 @@ Adaptations to vanilla items
 
   <!-- ****************** START Add Products for other population ******************  -->
 
-  <!-- ****************** Old World - Farmers ******************  -->
+  <!-- ****************** Old World - Farmers - pop 18 ******************  -->
   <ModOp Type="add" GUID="15000000" Path="/Values/PopulationLevel7/PopulationInputs">
     <Item>
       <Product>1742100556</Product>      <!-- Cemetery - Product -->
@@ -248,7 +246,7 @@ Adaptations to vanilla items
     </Item>
     <Item>
       <Product>1742100242</Product>      <!-- Clean Water - Product -->
-      <Amount>0.0000166667</Amount>
+      <Amount>0.0003</Amount>      <!-- 0.0004166667 Amount Fish -->
       <SupplyWeight>2</SupplyWeight>
       <MoneyValue>10</MoneyValue>
       <FullWeightPopulationCount>100</FullWeightPopulationCount>
@@ -260,9 +258,9 @@ Adaptations to vanilla items
     </Item>
     <Item>
       <Product>1742100211</Product>      <!-- Horses - Product -->
-      <Amount>0.0000166667</Amount>
+      <Amount>0.0002</Amount>      <!-- 0.0004166667 Amount Fish -->
       <SupplyWeight>4</SupplyWeight>
-      <MoneyValue>50</MoneyValue>
+      <MoneyValue>30</MoneyValue>
       <FullWeightPopulationCount>100</FullWeightPopulationCount>
       <NoWeightPopulationCount>0</NoWeightPopulationCount>
       <AdditionalGlobalUnlockRequirement>
@@ -272,7 +270,7 @@ Adaptations to vanilla items
     </Item>
   </ModOp>
 
-  <!-- ****************** Old World - Workers ******************  -->
+  <!-- ****************** Old World - Workers - pop 35 ******************  -->
   <ModOp Type="addNextSibling" GUID="15000001" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='1010237']">
     <Item>
       <Product>1742100556</Product>      <!-- Cemetery - Product -->
@@ -282,7 +280,7 @@ Adaptations to vanilla items
     </Item>
     <Item>
       <Product>1742100242</Product>      <!-- Clean Water - Product -->
-      <Amount>0.0000166667</Amount>
+      <Amount>0.0006</Amount>      <!-- 0.0008333334 Amount Fish -->
       <SupplyWeight>4</SupplyWeight>
       <MoneyValue>10</MoneyValue>
       <FullWeightPopulationCount>100</FullWeightPopulationCount>
@@ -292,7 +290,7 @@ Adaptations to vanilla items
   <ModOp Type="addNextSibling" GUID="15000001" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='1010214']">
     <Item>
       <Product>1742100058</Product>      <!-- Cigarettes - Product -->
-      <Amount>0.000033334</Amount>
+      <Amount>0.000138889</Amount>      <!-- 0.000138889 Amount Soap -->
       <HappinessValue>5</HappinessValue>
       <MoneyValue>50</MoneyValue>
       <FullWeightPopulationCount>100</FullWeightPopulationCount>
@@ -314,11 +312,11 @@ Adaptations to vanilla items
     </Item>
   </ModOp>
 
-  <!-- ****************** Old World - Artisans and Scholars ******************  -->
-  <ModOp Type="add" GUID="15000002,118745" Path="/Values/PopulationLevel7/PopulationInputs/">
+  <!-- ****************** Old World - Artisans - pop 38 ******************  -->
+  <ModOp Type="add" GUID="15000002" Path="/Values/PopulationLevel7/PopulationInputs/">
     <Item>
       <Product>1742100058</Product>      <!-- Cigarettes - Product -->
-      <Amount>0.000033334</Amount>
+      <Amount>0.000277778</Amount>      <!-- 0.000277778 Amount Soap -->
       <HappinessValue>5</HappinessValue>
       <MoneyValue>50</MoneyValue>
       <FullWeightPopulationCount>100</FullWeightPopulationCount>
@@ -330,13 +328,29 @@ Adaptations to vanilla items
     </Item>
   </ModOp>
 
-  <!-- ****************** New World - Jornaleros ******************  -->
+  <!-- ****************** Old World - Scholars - pop 162 ******************  -->
+  <ModOp Type="add" GUID="118745" Path="/Values/PopulationLevel7/PopulationInputs/">
+    <Item>
+      <Product>1742100058</Product>      <!-- Cigarettes - Product -->
+      <Amount>0.00025</Amount>      <!-- 0.00075 amount of Clay pipes -->
+      <HappinessValue>3</HappinessValue>
+      <ResearchValue>4</ResearchValue>
+      <FullWeightPopulationCount>100</FullWeightPopulationCount>
+      <NoWeightPopulationCount>0</NoWeightPopulationCount>
+      <AdditionalGlobalUnlockRequirement>
+        <Population>15000001</Population>        <!-- Workers -->
+        <MinPopulationAmount>500</MinPopulationAmount>
+      </AdditionalGlobalUnlockRequirement>
+    </Item>
+  </ModOp>
+
+  <!-- ****************** New World - Jornaleros - pop 12 ******************  -->
   <ModOp Type="add" GUID="15000005" Path="/Values/PopulationLevel7/PopulationInputs/">
     <Item>
       <Product>1742100242</Product>      <!-- Clean Water - Product -->
-      <Amount>0.0000166667</Amount>
+      <Amount>0.0002</Amount>      <!-- 0.00047619 amount plantains -->
       <SupplyWeight>2</SupplyWeight>
-      <MoneyValue>10</MoneyValue>
+      <MoneyValue>20</MoneyValue>
       <FullWeightPopulationCount>100</FullWeightPopulationCount>
       <NoWeightPopulationCount>0</NoWeightPopulationCount>
       <AdditionalGlobalUnlockRequirement>
@@ -346,11 +360,35 @@ Adaptations to vanilla items
     </Item>
   </ModOp>
 
-  <!-- ****************** Arctic - Explorers and Technicians ******************  -->
-  <ModOp Type="add" GUID="112642,112643" Path="/Values/PopulationLevel7/PopulationInputs/">
+  <!-- ****************** New World - Obrero - pop 24 ******************  -->
+  <ModOp Type="add" GUID="15000006" Path="/Values/PopulationLevel7/PopulationInputs/">
+    <Item>
+      <Product>1742100242</Product>      <!-- Clean Water - Product -->
+      <Amount>0.0004</Amount>      <!-- 0.000952381 amount plantains -->
+      <SupplyWeight>4</SupplyWeight>
+      <MoneyValue>20</MoneyValue>
+      <FullWeightPopulationCount>100</FullWeightPopulationCount>
+      <NoWeightPopulationCount>0</NoWeightPopulationCount>
+    </Item>
+  </ModOp>
+
+  <!-- ****************** Arctic - Explorers - pop 10 ******************  -->
+  <ModOp Type="add" GUID="112642" Path="/Values/PopulationLevel7/PopulationInputs/">
     <Item>
       <Product>1742100058</Product>      <!-- Cigarettes - Product -->
-      <Amount>0.0000166667</Amount>
+      <Amount>0.00010</Amount>      <!-- 0.00015 amount Sleeping Bags -->
+      <MoneyValue>60</MoneyValue>
+      <HeatValue>5</HeatValue>
+      <FullWeightPopulationCount>100</FullWeightPopulationCount>
+      <NoWeightPopulationCount>0</NoWeightPopulationCount>
+    </Item>
+  </ModOp>
+  <!-- ****************** Arctic - Technicians - pop 20 ******************  -->
+  <ModOp Type="add" GUID="112643" Path="/Values/PopulationLevel7/PopulationInputs/">
+    <Item>
+      <Product>1742100058</Product>      <!-- Cigarettes - Product -->
+      <Amount>0.0002</Amount>      <!-- 0.0003 amount Sleeping Bags -->
+      <MoneyValue>60</MoneyValue>
       <HeatValue>5</HeatValue>
       <FullWeightPopulationCount>100</FullWeightPopulationCount>
       <NoWeightPopulationCount>0</NoWeightPopulationCount>
@@ -493,8 +531,7 @@ Adaptations to vanilla items
   <ModOp Type="replace" GUID='192039' Path="/Values/FactoryUpgrade/AdditionalOutput">
     <AdditionalOutput>
       <Item>
-        <Product>1742100064</Product>
-        <!--Military Uniforms-->
+        <Product>1742100064</Product>        <!--Military Uniforms-->
         <AdditionalOutputCycle>10</AdditionalOutputCycle>
         <Amount>1</Amount>
       </Item>
@@ -560,6 +597,63 @@ Adaptations to vanilla items
     </AdditionalOutput>
   </ModOp>
   <!-- ****************** END Mariana the Master Stylist Uniforms ******************  -->
+
+  <!-- ****************** START Pope Lucius I, "The Rejuvenator" \ Arch-Archbishop Archibald to Cemetery ******************  -->
+  <ModOp Type="add" GUID='190719,190672' Path="Values/ResidenceUpgrade/NeedProvideNeedUpgrade/">
+    <Item>
+      <ProvidedNeed>1742100556</ProvidedNeed>      <!--cemetery-->
+      <SubstituteNeed>1010350</SubstituteNeed>      <!--church-->
+    </Item>
+  </ModOp>
+  <!-- ****************** END Pope Lucius I, "The Rejuvenator" \  Arch-Archbishop Archibald to Cemetery ******************  -->
+
+  <!-- ****************** START Generous Innkeeper to Cemetery ******************  -->
+  <ModOp Type="add" GUID='190717' Path="Values/ResidenceUpgrade/NeedProvideNeedUpgrade/">
+    <Item>
+      <ProvidedNeed>1742100556</ProvidedNeed>      <!--cemetery-->
+      <SubstituteNeed>1010349</SubstituteNeed>      <!--pub-->
+    </Item>
+  </ModOp>
+  <!-- ****************** END Generous Innkeeper to Cemetery ******************  -->
+
+  <!-- ****************** START Heated Jacket Of Pouchiness ******************  -->
+  <ModOp Type="add" GUID='116166' Path="Values/ItemEffect/EffectTargets/">
+    <Item>
+      <GUID>1742100307</GUID>      <!-- Arctic Soldiers Residence -->
+    </Item>
+    <Item>
+      <GUID>1742100011</GUID>      <!-- Arctic Soldiers Barracks -->
+    </Item>
+  </ModOp>
+  <ModOp Type="add" GUID='116166' Path="Values/ResidenceUpgrade/GoodConsumptionUpgrade/">
+    <Item>
+      <ProvidedNeed>1742100329</ProvidedNeed>      <!--Heated Military Uniforms-->
+      <AmountInPercent>-30</AmountInPercent>
+    </Item>
+  </ModOp>
+  <!-- ****************** END Heated Jacket Of Pouchiness ******************  -->
+
+  <!-- ****************** START Nate's Darling Kettle | Radiator ******************  -->
+  <ModOp Type="add" GUID='116169,116158' Path="Values/ItemEffect/EffectTargets/">
+    <Item>
+      <GUID>1742100307</GUID>      <!-- Arctic Soldiers Residence -->
+    </Item>
+    <Item>
+      <GUID>1742100011</GUID>      <!-- Arctic Soldiers Barracks -->
+    </Item>
+  </ModOp>
+  <!-- ****************** END Nate's Darling Kettle | Radiator ******************  -->
+
+  <!-- ****************** START Add Cemetery to Items ******************  -->
+  <ModOp Type="add" GUID='191707,191743,190716,191706,190711,190712' Path="Values/ItemEffect/EffectTargets/">
+    <Item>
+      <GUID>1742100558</GUID>      <!--Local Cemetery-->
+    </Item>
+    <Item>
+      <GUID>1742100560</GUID>      <!--Cemetery-->
+    </Item>
+  </ModOp>
+  <!-- ****************** END Add Cemetery to Items ******************  -->
 
   <!-- ****************** END TWEAKS ******************  -->
 </ModOps>

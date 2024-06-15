@@ -4,8 +4,7 @@
 
 <ModOps>
 
-  <!-- *********************** TRIGGERS STARTING AT 1742100700 *********************** -->
-
+  <!-- *********************** OTHER REGIONS GLOBAL CHECK *********************** -->
   <!--UNLOCK - Farmers 1 - NEWSPAPER -->
   <ModOp Type="addnextSibling" GUID="130248">
     <Asset>
@@ -62,198 +61,6 @@
                       </Values>
                     </DelayedActions>
                   </ActionDelayedActions>
-                </Values>
-              </TriggerAction>
-            </Item>
-          </TriggerActions>
-        </Trigger>
-        <TriggerSetup />
-      </Values>
-    </Asset>
-  </ModOp>
-
-  <!-- *********************** OTHER REGIONS GLOBAL CHECK *********************** -->
-
-  <!--UNLOCK - OTHER REGIONS UNLOCK -->
-  <ModOp Type="addnextSibling" GUID="130248">
-    <Asset>
-      <Template>Trigger</Template>
-      <Values>
-        <Standard>
-          <GUID>1742100739</GUID>
-          <Name>Other Regions</Name>
-        </Standard>
-        <Trigger>
-          <TriggerCondition>
-            <Template>ConditionPlayerCounter</Template>
-            <Values>
-              <Condition />
-              <ConditionPlayerCounter>
-                <PlayerCounter>PopulationByLevel</PlayerCounter>
-                <Context>15000002</Context>                <!-- Artisans PopulationLevel7 -->
-                <CounterAmount>1</CounterAmount>
-              </ConditionPlayerCounter>
-            </Values>
-          </TriggerCondition>
-          <TriggerActions>
-            <Item>
-              <TriggerAction>
-                <Template>ActionUnlockAsset</Template>
-                <Values>
-                  <Action />
-                  <ActionUnlockAsset>
-                    <UnhideAssets>
-                      <Item>
-                        <Asset>1742100359</Asset>                        <!-- Fire Tower (AR) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100365</Asset>                        <!-- Fire Tower (NW) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100371</Asset>                        <!-- Fire Tower (EN) - Building -->
-                      </Item>
-                    </UnhideAssets>
-                    <UnlockAssets>
-                      <Item>
-                        <Asset>1742100350</Asset>                        <!-- Arctic Military Construction Category menu -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100351</Asset>                        <!-- New World Military Construction Category menu -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100352</Asset>                        <!-- Enbesa Military Construction Category menu -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100306</Asset>                        <!-- Arctic Soldiers - PopulationLevel7 -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100307</Asset>                        <!-- Arctic Soldiers Residence - Encampment - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100315</Asset>                        <!-- New World Soldiers - PopulationLevel7 -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100333</Asset>                        <!-- New World Soldiers Residence - Encampment - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100316</Asset>                        <!-- Enbesa Soldiers - PopulationLevel7 -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100335</Asset>                        <!-- Enbesa Soldiers Residence - Encampment - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100337</Asset>                        <!-- Canteen (NW) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100339</Asset>                        <!-- Canteen (NW) - Product -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100341</Asset>                        <!-- Canteen (EN) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100343</Asset>                        <!-- Canteen (EN) - Product -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100310</Asset>                        <!-- Arctic Outpost - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100319</Asset>                        <!-- Arctic Outpost - Product -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100321</Asset>                        <!-- New World Outpost - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100325</Asset>                        <!-- New World Outpost - Product -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100323</Asset>                        <!-- Enbesa Outpost - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100327</Asset>                        <!-- Enbesa Outpost - Product -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100309</Asset>                        <!-- Arctic Soldiers Workforce - Product -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100317</Asset>                        <!-- New World Workforce - Product -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100318</Asset>                        <!-- Enbesa Workforce - Product -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100353</Asset>                        <!-- Defenses Construction Menu (AR) -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100354</Asset>                        <!-- Defenses Construction Menu (NW) -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100355</Asset>                        <!-- Defenses Construction Menu (EN) -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100356</Asset>                        <!-- Mounted Guns (AR) - Defense -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100362</Asset>                        <!-- Mounted Guns (NW) - Defense -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100368</Asset>                        <!-- Mounted Guns (EN) - Defense -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100357</Asset>                        <!-- Cannon Tower (AR) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100363</Asset>                        <!-- Cannon Tower (NW) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100369</Asset>                        <!-- Cannon Tower (EN) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100358</Asset>                        <!-- Flak Emplacement (AR) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100364</Asset>                        <!-- Flak Emplacement (NW) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100370</Asset>                        <!-- Flak Emplacement (EN) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100360</Asset>                        <!-- Armor Pierce Tower (AR) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100366</Asset>                        <!-- Armor Pierce Tower (NW) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100372</Asset>                        <!-- Armor Pierce Tower (EN) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100361</Asset>                        <!-- Flak Emplacement (AR Land) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100367</Asset>                        <!-- Flak Emplacement (NW Land) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100373</Asset>                        <!-- Flak Emplacement (EN Land) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100549</Asset>                        <!-- Navy Recruitment Office (NW) -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100550</Asset>                        <!-- Navy Recruitment Office (EN) -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100551</Asset>                        <!-- Navy Recruitment Office (AR) -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100524</Asset>                        <!-- Small Military Warehouse (NW) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100525</Asset>                        <!-- Small Military Warehouse (EN) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100017</Asset>                        <!-- Small Military Warehouse (AR) - Building -->
-                      </Item>
-                    </UnlockAssets>
-                  </ActionUnlockAsset>
                 </Values>
               </TriggerAction>
             </Item>
@@ -336,7 +143,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742100743</GUID>
+          <GUID>1742100753</GUID>
           <Name>MOD Trigger</Name>
         </Standard>
         <Trigger>
@@ -426,6 +233,9 @@
                       </Item>
                       <Item>
                         <Asset>849</Asset>                        <!-- Care Packages - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100478</Asset>                        <!-- Military - Construction -->
                       </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>
@@ -592,46 +402,10 @@
                         <Asset>1742100404</Asset>                        <!-- Small Shell Ammunition Depot (OW) - Recipe -->
                       </Item>
                       <Item>
-                        <Asset>1742100452</Asset>                        <!-- Small Shell Ammunition Depot (AR) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100451</Asset>                        <!-- Small Shell Ammunition Depot (AR) - Recipe -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100454</Asset>                        <!-- Small Shell Ammunition Depot (NW) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100453</Asset>                        <!-- Small Shell Ammunition Depot (NW) - Recipe -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100432</Asset>                        <!-- Small Shell Ammunition Depot (EN) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100431</Asset>                        <!-- Small Shell Ammunition Depot (EN) - Recipe -->
-                      </Item>
-                      <Item>
                         <Asset>1742100399</Asset>                        <!-- Small Gas Ammunition Depot (OW) - Building -->
                       </Item>
                       <Item>
                         <Asset>1742100405</Asset>                        <!-- Small Gas Ammunition Depot (OW) - Recipe -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100442</Asset>                        <!-- Small Gas Ammunition Depot (AR) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100441</Asset>                        <!-- Small Gas Ammunition Depot (AR) - Recipe -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100444</Asset>                        <!-- Small Gas Ammunition Depot (NW) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100443</Asset>                        <!-- Small Gas Ammunition Depot (NW) - Recipe -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100446</Asset>                        <!-- Small Gas Ammunition Depot (EN) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100445</Asset>                        <!-- Small Gas Ammunition Depot (EN) - Recipe -->
                       </Item>
                       <Item>
                         <Asset>1742100007</Asset>                        <!-- Military Post Box - Building -->
@@ -690,49 +464,6 @@
                       <Item>
                         <Asset>1742100506</Asset>                        <!-- Care Package Factory: Medium (OW) - Building -->
                       </Item>
-                    </UnlockAssets>
-                  </ActionUnlockAsset>
-                </Values>
-              </TriggerAction>
-            </Item>
-          </TriggerActions>
-        </Trigger>
-        <TriggerSetup />
-      </Values>
-    </Asset>
-  </ModOp>
-
-  <!--UNLOCK - ARTISANS  750 -->
-  <ModOp Type="addnextSibling" GUID="130248">
-    <Asset>
-      <Template>Trigger</Template>
-      <Values>
-        <Standard>
-          <GUID>1742100705</GUID>
-          <Name>MOD Trigger</Name>
-        </Standard>
-        <Trigger>
-          <TriggerCondition>
-            <Template>ConditionPlayerCounter</Template>
-            <Values>
-              <Condition />
-              <ConditionPlayerCounter>
-                <PlayerCounter>PopulationByLevel</PlayerCounter>
-                <Context>15000002</Context>                <!-- Artisans PopulationLevel7 -->
-                <CounterAmount>750</CounterAmount>
-              </ConditionPlayerCounter>
-            </Values>
-          </TriggerCondition>
-          <TriggerActions>
-            <Item>
-              <TriggerAction>
-                <Template>ActionUnlockAsset</Template>
-                <Values>
-                  <Action />
-                  <ActionUnlockAsset>
-                    <UnhideAssets>
-                    </UnhideAssets>
-                    <UnlockAssets>
                     </UnlockAssets>
                   </ActionUnlockAsset>
                 </Values>
@@ -861,7 +592,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742100742</GUID>
+          <GUID>1742100746</GUID>
           <Name>MOD Trigger</Name>
         </Standard>
         <Trigger>
@@ -895,6 +626,9 @@
                       </Item>
                       <Item>
                         <Asset>1742100282</Asset>                        <!-- Large Ammunition Depot - All ammunition (EN) - Recipe -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100484</Asset>                        <!-- Fort: Preparations - Building -->
                       </Item>
                     </UnhideAssets>
                     <UnlockAssets>
@@ -1022,7 +756,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742100709</GUID>
+          <GUID>1742100751</GUID>
           <Name>MOD Trigger</Name>
         </Standard>
         <Trigger>
@@ -1058,6 +792,9 @@
                       </Item>
                       <Item>
                         <Asset>1742100490</Asset>                        <!-- Fort - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100580</Asset>                        <!-- Fort Mod11 - Building -->
                       </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>
@@ -1120,13 +857,15 @@
     </Asset>
   </ModOp>
 
-  <!--UNLOCK - Tourists  300 -->
+  <!-- *********************** EN *********************** -->
+
+  <!--UNLOCK - Shephards 1 -->
   <ModOp Type="addnextSibling" GUID="130248">
     <Asset>
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742100710</GUID>
+          <GUID>1742100745</GUID>
           <Name>MOD Trigger</Name>
         </Standard>
         <Trigger>
@@ -1136,7 +875,7 @@
               <Condition />
               <ConditionPlayerCounter>
                 <PlayerCounter>PopulationByLevel</PlayerCounter>
-                <Context>601379</Context>                <!-- Tourists PopulationLevel7 -->
+                <Context>114329</Context>                <!-- Shephards PopulationLevel7 -->
                 <CounterAmount>1</CounterAmount>
               </ConditionPlayerCounter>
             </Values>
@@ -1149,96 +888,74 @@
                   <Action />
                   <ActionUnlockAsset>
                     <UnhideAssets>
+                      <Item>
+                        <Asset>1742100371</Asset>                        <!-- Fire Tower (EN) - Building -->
+                      </Item>
                     </UnhideAssets>
                     <UnlockAssets>
-                    </UnlockAssets>
-                  </ActionUnlockAsset>
-                </Values>
-              </TriggerAction>
-            </Item>
-          </TriggerActions>
-        </Trigger>
-        <TriggerSetup />
-      </Values>
-    </Asset>
-  </ModOp>
-
-  <!-- *********************** EN *********************** -->
-
-  <!--UNLOCK - Shephards 300 -->
-  <ModOp Type="addnextSibling" GUID="130248">
-    <Asset>
-      <Template>Trigger</Template>
-      <Values>
-        <Standard>
-          <GUID>1742100711</GUID>
-          <Name>MOD Trigger</Name>
-        </Standard>
-        <Trigger>
-          <TriggerCondition>
-            <Template>ConditionPlayerCounter</Template>
-            <Values>
-              <Condition />
-              <ConditionPlayerCounter>
-                <PlayerCounter>PopulationByLevel</PlayerCounter>
-                <Context>114329</Context>                <!-- Shephards PopulationLevel7 -->
-                <CounterAmount>300</CounterAmount>
-              </ConditionPlayerCounter>
-            </Values>
-          </TriggerCondition>
-          <TriggerActions>
-            <Item>
-              <TriggerAction>
-                <Template>ActionUnlockAsset</Template>
-                <Values>
-                  <Action />
-                  <ActionUnlockAsset>
-                    <UnhideAssets>
-                    </UnhideAssets>
-                    <UnlockAssets>
-                    </UnlockAssets>
-                  </ActionUnlockAsset>
-                </Values>
-              </TriggerAction>
-            </Item>
-          </TriggerActions>
-        </Trigger>
-        <TriggerSetup />
-      </Values>
-    </Asset>
-  </ModOp>
-
-  <!--UNLOCK - Elders 300 -->
-  <ModOp Type="addnextSibling" GUID="130248">
-    <Asset>
-      <Template>Trigger</Template>
-      <Values>
-        <Standard>
-          <GUID>1742100712</GUID>
-          <Name>MOD Trigger</Name>
-        </Standard>
-        <Trigger>
-          <TriggerCondition>
-            <Template>ConditionPlayerCounter</Template>
-            <Values>
-              <Condition />
-              <ConditionPlayerCounter>
-                <PlayerCounter>PopulationByLevel</PlayerCounter>
-                <Context>114330</Context>                <!-- Elders PopulationLevel7 -->
-                <CounterAmount>300</CounterAmount>
-              </ConditionPlayerCounter>
-            </Values>
-          </TriggerCondition>
-          <TriggerActions>
-            <Item>
-              <TriggerAction>
-                <Template>ActionUnlockAsset</Template>
-                <Values>
-                  <Action />
-                  <ActionUnlockAsset>
-                    <UnhideAssets>
-                    </UnhideAssets>
-                    <UnlockAssets>
+                      <Item>
+                        <Asset>1742100352</Asset>                        <!-- Enbesa Military Construction Category menu -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100316</Asset>                        <!-- Enbesa Soldiers - PopulationLevel7 -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100335</Asset>                        <!-- Enbesa Soldiers Residence - Encampment - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100341</Asset>                        <!-- Canteen (EN) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100343</Asset>                        <!-- Canteen (EN) - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100323</Asset>                        <!-- Enbesa Outpost - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100327</Asset>                        <!-- Enbesa Outpost - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100318</Asset>                        <!-- Enbesa Soldiers Workforce - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100355</Asset>                        <!-- Defenses Construction Menu (EN) -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100368</Asset>                        <!-- Mounted Guns (EN) - Defense -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100369</Asset>                        <!-- Cannon Tower (EN) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100370</Asset>                        <!-- Flak Emplacement (EN) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100372</Asset>                        <!-- Armor Pierce Tower (EN) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100373</Asset>                        <!-- Flak Emplacement (EN Land) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100550</Asset>                        <!-- Navy Recruitment Office (EN) -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100525</Asset>                        <!-- Small Military Warehouse (EN) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100432</Asset>                        <!-- Small Shell Ammunition Depot (EN) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100431</Asset>                        <!-- Small Shell Ammunition Depot (EN) - Recipe -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100425</Asset>                        <!-- Small Empty Ammunition Depot - Empty (EN) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100422</Asset>                        <!-- Small Basic Ammunition Depot (EN) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100421</Asset>                        <!-- Small Basic Ammunition Depot (EN) - Recipe -->
+                      </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>
                 </Values>
@@ -1252,6 +969,115 @@
   </ModOp>
 
   <!-- *********************** NW *********************** -->
+
+  <!--UNLOCK - Jornaleros 1 -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100746</GUID>
+          <Name>MOD Trigger</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>15000005</Context>                <!-- Jornaleros PopulationLevel7 -->
+                <CounterAmount>1</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
+                      <Item>
+                        <Asset>1742100365</Asset>                        <!-- Fire Tower (NW) - Building -->
+                      </Item>
+                    </UnhideAssets>
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>1742100351</Asset>                        <!-- New World Military Construction Category menu -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100315</Asset>                        <!-- New World Soldiers - PopulationLevel7 -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100333</Asset>                        <!-- New World Soldiers Residence - Encampment - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100337</Asset>                        <!-- Canteen (NW) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100339</Asset>                        <!-- Canteen (NW) - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100321</Asset>                        <!-- New World Outpost - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100325</Asset>                        <!-- New World Outpost - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100317</Asset>                        <!-- New World Workforce - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100354</Asset>                        <!-- Defenses Construction Menu (NW) -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100362</Asset>                        <!-- Mounted Guns (NW) - Defense -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100363</Asset>                        <!-- Cannon Tower (NW) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100364</Asset>                        <!-- Flak Emplacement (NW) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100366</Asset>                        <!-- Armor Pierce Tower (NW) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100367</Asset>                        <!-- Flak Emplacement (NW Land) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100549</Asset>                        <!-- Navy Recruitment Office (NW) -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100524</Asset>                        <!-- Small Military Warehouse (NW) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100454</Asset>                        <!-- Small Shell Ammunition Depot (NW) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100453</Asset>                        <!-- Small Shell Ammunition Depot (NW) - Recipe -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100424</Asset>                        <!-- Small Empty Ammunition Depot - Empty (NW) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100420</Asset>                        <!-- Small Basic Ammunition Depot (NW) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100419</Asset>                        <!-- Small Basic Ammunition Depot (NW) - Recipe -->
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
 
   <!--UNLOCK - Jornaleros 100 -->
   <ModOp Type="addnextSibling" GUID="130248">
@@ -1394,13 +1220,13 @@
     </Asset>
   </ModOp>
 
-  <!--UNLOCK - Artista 900 -->
+  <!--UNLOCK - Explorers 1 -->
   <ModOp Type="addnextSibling" GUID="130248">
     <Asset>
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742100715</GUID>
+          <GUID>1742100747</GUID>
           <Name>MOD Trigger</Name>
         </Standard>
         <Trigger>
@@ -1410,8 +1236,8 @@
               <Condition />
               <ConditionPlayerCounter>
                 <PlayerCounter>PopulationByLevel</PlayerCounter>
-                <Context>5403</Context>                <!-- Artista PopulationLevel7 -->
-                <CounterAmount>900</CounterAmount>
+                <Context>112642</Context>                <!-- Explorers PopulationLevel7 -->
+                <CounterAmount>1</CounterAmount>
               </ConditionPlayerCounter>
             </Values>
           </TriggerCondition>
@@ -1423,51 +1249,68 @@
                   <Action />
                   <ActionUnlockAsset>
                     <UnhideAssets>
+                      <Item>
+                        <Asset>1742100359</Asset>                        <!-- Fire Tower (AR) - Building -->
+                      </Item>
                     </UnhideAssets>
                     <UnlockAssets>
-                    </UnlockAssets>
-                  </ActionUnlockAsset>
-                </Values>
-              </TriggerAction>
-            </Item>
-          </TriggerActions>
-        </Trigger>
-        <TriggerSetup />
-      </Values>
-    </Asset>
-  </ModOp>
-
-  <!--UNLOCK - Artista 1800 -->
-  <ModOp Type="addnextSibling" GUID="130248">
-    <Asset>
-      <Template>Trigger</Template>
-      <Values>
-        <Standard>
-          <GUID>1742100716</GUID>
-          <Name>MOD Trigger</Name>
-        </Standard>
-        <Trigger>
-          <TriggerCondition>
-            <Template>ConditionPlayerCounter</Template>
-            <Values>
-              <Condition />
-              <ConditionPlayerCounter>
-                <PlayerCounter>PopulationByLevel</PlayerCounter>
-                <Context>5403</Context>                <!-- Artista PopulationLevel7 -->
-                <CounterAmount>1800</CounterAmount>
-              </ConditionPlayerCounter>
-            </Values>
-          </TriggerCondition>
-          <TriggerActions>
-            <Item>
-              <TriggerAction>
-                <Template>ActionUnlockAsset</Template>
-                <Values>
-                  <Action />
-                  <ActionUnlockAsset>
-                    <UnhideAssets>
-                    </UnhideAssets>
-                    <UnlockAssets>
+                      <Item>
+                        <Asset>1742100350</Asset>                        <!-- Arctic Military Construction Category menu -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100306</Asset>                        <!-- Arctic Soldiers - PopulationLevel7 -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100307</Asset>                        <!-- Arctic Soldiers Residence - Encampment - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100310</Asset>                        <!-- Arctic Outpost - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100319</Asset>                        <!-- Arctic Outpost - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100309</Asset>                        <!-- Arctic Soldiers Workforce - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100353</Asset>                        <!-- Defenses Construction Menu (AR) -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100356</Asset>                        <!-- Mounted Guns (AR) - Defense -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100357</Asset>                        <!-- Cannon Tower (AR) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100358</Asset>                        <!-- Flak Emplacement (AR) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100360</Asset>                        <!-- Armor Pierce Tower (AR) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100361</Asset>                        <!-- Flak Emplacement (AR Land) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100551</Asset>                        <!-- Navy Recruitment Office (AR) -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100017</Asset>                        <!-- Small Military Warehouse (AR) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100452</Asset>                        <!-- Small Shell Ammunition Depot (AR) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100451</Asset>                        <!-- Small Shell Ammunition Depot (AR) - Recipe -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100423</Asset>                        <!-- Small Empty Ammunition Depot - Empty (AR) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100418</Asset>                        <!-- Small Basic Ammunition Depot (AR) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100417</Asset>                        <!-- Small Basic Ammunition Depot (AR) - Recipe -->
+                      </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>
                 </Values>
@@ -1486,7 +1329,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742100741</GUID>
+          <GUID>1742100748</GUID>
           <Name>MOD Trigger</Name>
         </Standard>
         <Trigger>
@@ -1522,6 +1365,24 @@
                       </Item>
                       <Item>
                         <Asset>1742100371</Asset>                        <!-- Fire Tower (EN) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100446</Asset>                        <!-- Small Gas Ammunition Depot (EN) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100445</Asset>                        <!-- Small Gas Ammunition Depot (EN) - Recipe -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100442</Asset>                        <!-- Small Gas Ammunition Depot (AR) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100441</Asset>                        <!-- Small Gas Ammunition Depot (AR) - Recipe -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100444</Asset>                        <!-- Small Gas Ammunition Depot (NW) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100443</Asset>                        <!-- Small Gas Ammunition Depot (NW) - Recipe -->
                       </Item>
                       <Item>
                         <Asset>1742100226</Asset>                        <!-- Large Ammunition Depot - All ammunition (OW) - Building -->
@@ -1769,37 +1630,10 @@
                         <Asset>1742100401</Asset>                        <!-- Small Empty Ammunition Depot - Empty (OW) - Building -->
                       </Item>
                       <Item>
-                        <Asset>1742100423</Asset>                        <!-- Small Empty Ammunition Depot - Empty (AR) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100424</Asset>                        <!-- Small Empty Ammunition Depot - Empty (NW) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100425</Asset>                        <!-- Small Empty Ammunition Depot - Empty (EN) - Building -->
-                      </Item>
-                      <Item>
                         <Asset>1742100397</Asset>                        <!-- Small Basic Ammunition Depot (OW) - Building -->
                       </Item>
                       <Item>
                         <Asset>1742100403</Asset>                        <!-- Small Basic Ammunition Depot (OW) - Recipe -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100418</Asset>                        <!-- Small Basic Ammunition Depot (AR) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100417</Asset>                        <!-- Small Basic Ammunition Depot (AR) - Recipe -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100420</Asset>                        <!-- Small Basic Ammunition Depot (NW) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100419</Asset>                        <!-- Small Basic Ammunition Depot (NW) - Recipe -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100422</Asset>                        <!-- Small Basic Ammunition Depot (EN) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100421</Asset>                        <!-- Small Basic Ammunition Depot (EN) - Recipe -->
                       </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>
@@ -1865,48 +1699,6 @@
     </Asset>
   </ModOp>
 
-  <!--UNLOCK - SOLDIERS 1000 -->
-  <ModOp Type="addnextSibling" GUID="130248">
-    <Asset>
-      <Template>Trigger</Template>
-      <Values>
-        <Standard>
-          <GUID>1742100721</GUID>
-          <Name>MOD Trigger</Name>
-        </Standard>
-        <Trigger>
-          <TriggerCondition>
-            <Template>ConditionPlayerCounter</Template>
-            <Values>
-              <Condition />
-              <ConditionPlayerCounter>
-                <PlayerCounter>PopulationByLevel</PlayerCounter>
-                <Context>1742100000</Context>                <!-- Soldiers PopulationLevel7 -->
-                <CounterAmount>1000</CounterAmount>
-              </ConditionPlayerCounter>
-            </Values>
-          </TriggerCondition>
-          <TriggerActions>
-            <Item>
-              <TriggerAction>
-                <Template>ActionUnlockAsset</Template>
-                <Values>
-                  <Action />
-                  <ActionUnlockAsset>
-                    <UnhideAssets>
-                    </UnhideAssets>
-                    <UnlockAssets>
-                    </UnlockAssets>
-                  </ActionUnlockAsset>
-                </Values>
-              </TriggerAction>
-            </Item>
-          </TriggerActions>
-        </Trigger>
-        <TriggerSetup />
-      </Values>
-    </Asset>
-  </ModOp>
   <!-- ****************** END TRIGGERS ******************  -->
 
 
@@ -1917,7 +1709,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742100740</GUID>
+          <GUID>1742100750</GUID>
           <Name>Unlock Creative Mode</Name>
         </Standard>
         <Trigger>
@@ -2401,6 +2193,9 @@
                       </Item>
                       <Item>
                         <Asset>1742100490</Asset>                        <!-- Fort - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100580</Asset>                        <!-- Fort Mod11 - Building -->
                       </Item>
                       <Item>
                         <Asset>1742100508</Asset>                        <!-- Care Package: Big - Recipe -->
