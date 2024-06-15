@@ -1,10 +1,13 @@
-# Military Attention | 1.2!
+# Military Attention | 1.3!
 
 A mod centered around military infrastructure and adding new military residence tiers for all regions with a focus on the Old World.
 
 ![ma-img-01.jpg](./banner.jpg)
 
 ## Changelog
+
+### v1.3
+- Made clean water less valuable
 
 ### v1.2
 - Added public services buildings like cemetery, canteens,... to All Public Servies pool so items that effect those effect those buildings
