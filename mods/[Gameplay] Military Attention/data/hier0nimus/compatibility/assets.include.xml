@@ -103,7 +103,7 @@
     <ModOp GUID='1742100316' Type="add" Path="Values/PopulationLevel7/PopulationInputs">
       <Item>
         <Product>535</Product>
-        <Amount>0.000046667</Amount>
+        <Amount>0.0001</Amount>
         <SupplyWeight>1</SupplyWeight>
         <AdditionalGlobalUnlockRequirement>
           <Population>15000002</Population>
@@ -114,7 +114,7 @@
       </Item>
       <Item>
         <Product>536</Product>
-        <Amount>0.000033333</Amount>
+        <Amount>0.00008</Amount>
         <SupplyWeight>3</SupplyWeight>
         <AdditionalGlobalUnlockRequirement>
           <Population>15000006</Population>
@@ -125,7 +125,7 @@
       </Item>
       <Item>
         <Product>2524</Product>
-        <Amount>0.00002</Amount>
+        <Amount>0.00004</Amount>
         <SupplyWeight>9</SupplyWeight>
         <AdditionalGlobalUnlockRequirement>
           <Population>15000006</Population>
@@ -1287,6 +1287,108 @@
       </Item>
     </ModOp>
     <!-- END COMPATIBILITY OLD TOWN -->
+  </Group>
+
+  <Group Condition="#0skater0_AdditionalOilTankers">
+    <!-- START COMPATIBILITY ADDITIONAL OIL TANKERS -->
+    <!-- 
+    ******* SHIPS ******* 
+    2000510000 - Leviathan
+    2000510004 - Triton
+    -->
+
+    <!-- 2000510000 Leviathan -->
+    <ModOp GUID="2000510000" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>75</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>75</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- 2000510004 - Triton -->
+    <ModOp GUID="2000510004" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>110</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>110</Amount>
+      </Item>
+    </ModOp>
+    <!-- END COMPATIBILITY ADDITIONAL OIL TANKERS -->
+  </Group>
+
+  <Group Condition="#Spice_TourismShip">
+    <!-- START COMPATIBILITY Large Tourism Ship [Spice It Up] -->
+    <!-- 
+    ******* SHIPS ******* 
+    1440137001 - Large Tourism Ship
+    -->
+
+    <ModOp GUID="1440137001" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>70</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>70</Amount>
+      </Item>
+    </ModOp>
+    <!-- END COMPATIBILITY Large Tourism Ship [Spice It Up] -->
+  </Group>
+
+  <Group Condition="#Spice_BuildableSalvagers">
+    <!-- START COMPATIBILITY Buildable Salvagers [Spice It Up] -->
+
+    <ModOp GUID="112084" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>38</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>38</Amount>
+      </Item>
+    </ModOp>
+    <!-- END COMPATIBILITY Buildable Salvagers [Spice It Up] -->
+  </Group>
+
+  <Group Condition="#FlagshipGreatEastern_Serp">
+    <!-- START COMPATIBILITY Flagship Armed Great Eastern (Serp) -->
+
+    <ModOp GUID="1500003500" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>75</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>75</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100203</Ingredient>        <!-- Basic Ammunition - Product -->
+        <Amount>50</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100471</Ingredient>        <!-- Basic Weapons - Product -->
+        <Amount>40</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100248</Ingredient>        <!-- Shell Ammunition - Product -->
+        <Amount>25</Amount>
+      </Item>
+      <Item>
+        <Ingredient>846</Ingredient>        <!-- Bombs - Product -->
+        <Amount>50</Amount>
+      </Item>
+    </ModOp>
+    <!-- END COMPATIBILITY Flagship Armed Great Eastern (Serp) -->
   </Group>
 
 </ModOps>

@@ -1,4 +1,4 @@
-# Military Attention | 1.1!
+# Military Attention | 1.2!
 
 A mod centered around military infrastructure and adding new military residence tiers for all regions with a focus on the Old World.
 
@@ -6,11 +6,29 @@ A mod centered around military infrastructure and adding new military residence 
 
 ## Changelog
 
+### v1.2
+- Added public services buildings like cemetery, canteens,... to All Public Servies pool so items that effect those effect those buildings
+- Added cemetery and local cemetery to be affected by multiple existing items
+- Added additional buildings and needs to existing items
+- Fixed wrongly shown unlock condition for the Military Academy from 2000 soldiers to 2000 engineers
+- Increased maintenance costs for all defense buildings
+- Reorganised/Cleanup unlocks/triggers for military buildings in Arctic, New World and Enbesa region
+- Rebalanced/increased all consumption amount for all soldier tiers and the additional needs for vanilla tiers. Before it was way to low.
+- Added compatibility for Additional Oil Tankers from 0skater0
+- Added compatibility for Large Tourism Ship [Spice It Up]
+- Added compatibility for Buildable Salvagers [Spice It Up]
+- Added compatibility for Flagship Armed Great Eastern (Serp)
+- Added Open Pit mines again for AI, so they progress past workers again. Before they were stuck and did not progress to Artisans.
+- The Fort is now another unique type to make sure there is compatibility with other mods. If you have a fort already it will be swapped to the new unique type. If you are in the process of building one this is still registered under the old unique type and you will be able to build another one. New savegames will only be able to build the new type.
+- Cleaned up a lot of the product lists so less goods are double in the marketplace goods
+- Added the new ornaments to their own category
+- Global cleanup of not used code (quests, festivals,...)
+
 ### v1.1
-- Fixed wrong exchange values for Horses, cean water, lead and gunpowder in Docklands
+- Fixed wrong exchange values for Horses, clean water, lead and gunpowder in Docklands
 - Removed the changes to Bruno Ironbright
 - Changes to existing translations
-- Added French translation
+- Added French translation thanks to Khobs
 - Removed not used radius from HQ and fixed the visibility of the streetrange for the public service
 - Fixed decal Canteen Enbesa
 - Fixed moodtext for Arctic Soldiers to represent the heat like other Arctic residences

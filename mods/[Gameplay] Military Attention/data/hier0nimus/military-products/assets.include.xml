@@ -1198,7 +1198,7 @@
               <Product>1010217</Product>              <!-- Canned Food - Product -->
             </Item>
             <Item>
-              <Product>120032</Product>              <!-- Coffee - Product -->
+              <Product>1010223</Product>              <!-- Advanced Weapons - Product -->
             </Item>
             <Item>
               <Product>1010203</Product>              <!-- Soap - Product -->
@@ -1216,10 +1216,13 @@
               <Product>112701</Product>              <!-- Sleeping Bags - Product -->
             </Item>
             <Item>
+              <Product>120032</Product>              <!-- Coffee - Product -->
+            </Item>
+            <Item>
               <Product>1010246</Product>              <!-- Pocket Watches - Product -->
             </Item>
             <Item>
-              <Product>5803</Product>              <!-- Socces Balls - Product -->
+              <Product>112702</Product>              <!-- Oil Lamps - Product -->
             </Item>
           </List>
         </ProductList>
@@ -1241,7 +1244,7 @@
         <ProductList>
           <List>
             <Item>
-              <Product>112705</Product>              <!-- Pemmican - Product -->
+              <Product>112694</Product>              <!-- Caribou Meat - Product -->
             </Item>
             <Item>
               <Product>1742100471</Product>              <!-- Basic Weapons - Product -->
@@ -1257,6 +1260,18 @@
             </Item>
             <Item>
               <Product>849</Product>              <!-- Care Packages - Product -->
+            </Item>
+            <Item>
+              <Product>1010203</Product>              <!-- Soap - Product -->
+            </Item>
+            <Item>
+              <Product>120032</Product>              <!-- Coffee - Product -->
+            </Item>
+            <Item>
+              <Product>1010246</Product>              <!-- Pocket Watches - Product -->
+            </Item>
+            <Item>
+              <Product>1010248</Product>              <!-- Gramophones - Product -->
             </Item>
             <Item>
               <Product>120008</Product>              <!-- Wood - Product -->
@@ -1322,6 +1337,9 @@
             <Item>
               <Product>849</Product>              <!-- Care Packages - Product -->
             </Item>
+            <Item>
+              <Product>120032</Product>              <!-- Coffee - Product -->
+            </Item>
           </List>
         </ProductList>
       </Values>
@@ -1360,16 +1378,19 @@
               <Product>114371</Product>              <!-- Goat Milk - Product -->
             </Item>
             <Item>
-              <Product>1010217</Product>              <!-- Canned Food - Product -->
+              <Product>1742100058</Product>              <!-- Cigarettes - Product -->
             </Item>
             <Item>
-              <Product>120032</Product>              <!-- Coffee - Product -->
+              <Product>1742100185</Product>              <!-- Cardgames - Product -->
             </Item>
             <Item>
               <Product>849</Product>              <!-- Care Packages - Product -->
             </Item>
             <Item>
-              <Product>1742100058</Product>              <!-- Cigarettes - Product -->
+              <Product>1010217</Product>              <!-- Canned Food - Product -->
+            </Item>
+            <Item>
+              <Product>120032</Product>              <!-- Coffee - Product -->
             </Item>
           </List>
         </ProductList>
@@ -1378,37 +1399,32 @@
   </ModOp>
   <!-- END CREATE PRODUCTLIST - SOLDIERSCONSUMERGOODS (EN) -->
 
-  <!-- START ADD TO CONSUMERGOODS TO REGION LISTS -->
-
-  <!-- MODERATE -->
-  <ModOp Type="add" GUID="502031" Path="Values/ProductList/List/">
+  <!-- START ADD SOLDIERS CONSUMER GOODS LISTS TO AllConsumerGoods -->
+  <ModOp Type="addNextSibling" GUID="502031,502034,502035,502081" Path="/Values/ProductList/List/Item[Product='501999']">
     <Item>
-      <Product>1742100015</Product>      <!-- SoldiersConsumerGoods (OW) - ProductList -->
+      <Product>1742100015</Product>      <!-- Soldiers - ProductList -->
     </Item>
   </ModOp>
 
-  <!-- COLONY -->
-  <ModOp Type="add" GUID="502034" Path="Values/ProductList/List/">
+  <ModOp Type="addNextSibling" GUID="502031,502034,502035,502081" Path="/Values/ProductList/List/Item[Product='7398']">
     <Item>
-      <Product>1742100346</Product>      <!-- SoldiersConsumerGoods (NW) ProductList -->
+      <Product>1742100346</Product>      <!-- New World Soldiers - ProductList -->
     </Item>
   </ModOp>
 
-  <!-- ARCTIC -->
-  <ModOp Type="add" GUID="502035" Path="Values/ProductList/List/">
+  <ModOp Type="addNextSibling" GUID="502031,502034,502035,502081" Path="/Values/ProductList/List/Item[Product='502003']">
     <Item>
-      <Product>1742100345</Product>      <!-- SoldiersConsumerGoods (AR) ProductList -->
+      <Product>1742100345</Product>      <!-- Arctic Soldiers - ProductList -->
     </Item>
   </ModOp>
 
-  <!-- ENBESA -->
-  <ModOp Type="add" GUID="502081" Path="Values/ProductList/List/">
+  <ModOp Type="addNextSibling" GUID="502031,502034,502035,502081" Path="/Values/ProductList/List/Item[Product='502074']">
     <Item>
-      <Product>1742100347</Product>      <!-- SoldiersConsumerGoods (EN) ProductList -->
+      <Product>1742100347</Product>      <!-- Enbesa Soldiers - ProductList -->
     </Item>
   </ModOp>
 
-  <!-- END ADD TO CONSUMERGOODS TO REGION LISTS -->
+  <!-- END ADD SOLDIERS CONSUMER GOODS LISTS TO AllConsumerGoods -->
 
   <!-- START ADD TO WORKFORCEGOODS - WorkerWorkforceGoods -->
   <ModOp Type="add" GUID="502018,502005" Path="/Values/ProductList/List/">
