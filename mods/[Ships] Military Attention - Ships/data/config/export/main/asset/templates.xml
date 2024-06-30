@@ -1,0 +1,311 @@
+<ModOps>
+    <!-- START - TEMPLATE Auxiliary Ship -->
+    <ModOp Template="TradeShip" Type = "addNextSibling">
+        <Template>
+            <Name>RepairShip</Name>
+            <Properties>
+                <Standard />
+                <Object>
+                    <AssignDefaultParticipant>1</AssignDefaultParticipant>
+                    <IgnoreForMinimapGeneration>1</IgnoreForMinimapGeneration>
+                </Object>
+                <Mesh>
+                    <ObjectPosition>Dynamic</ObjectPosition>
+                    <SetCompanyLogo>1</SetCompanyLogo>
+                </Mesh>
+                <Selection>
+                    <GUIType>Vehicle</GUIType>
+                    <SelectionPriority>5</SelectionPriority>
+                    <OnSelection>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList />
+                        </Values>
+                    </OnSelection>
+                    <InteractionDistance>2</InteractionDistance>
+                    <AllowedDragType>ItemSocket;CargoProductStack;CargoItemStack;StorageProductStack;StorageItemStack;SharedTransferItem</AllowedDragType>
+                    <Colors>
+                        <SelectionColorType>ParticipantColor</SelectionColorType>
+                        <SelectionColor>0</SelectionColor>
+                        <SelectionBorderColor>2030043136</SelectionBorderColor>
+                        <PickingColorType>ParticipantColor</PickingColorType>
+                        <PickingColor>0</PickingColor>
+                        <PickingBorderColor>503316480</PickingBorderColor>
+                        <CoopSelectionColorType>PropertySelectionColor</CoopSelectionColorType>
+                        <CoopSelectionColor>0</CoopSelectionColor>
+                        <CoopSelectionBorderColor>2038464640</CoopSelectionBorderColor>
+                        <CoopPickingColorType>PropertySelectionColor</CoopPickingColorType>
+                        <CoopPickingColor>0</CoopPickingColor>
+                        <CoopPickingBorderColor>511737984</CoopPickingBorderColor>
+                    </Colors>
+                </Selection>
+                <Walking>
+                    <ReservationLength>3</ReservationLength>
+                    <ReservationWidth>1</ReservationWidth>
+                    <TurnAroundRadius>3</TurnAroundRadius>
+                    <TurnSpeed>45</TurnSpeed>
+                    <TurnMovement>50</TurnMovement>
+                    <ForwardSpeed>5</ForwardSpeed>
+                    <WindMinSlowdownFactor>0.8</WindMinSlowdownFactor>
+                    <WindMaxSpeedupFactor>1.33</WindMaxSpeedupFactor>
+                </Walking>
+                <Text />
+                <CommandQueue>
+                    <IsPlayerControllableVehicle>1</IsPlayerControllableVehicle>
+                    <FollowRadius>10</FollowRadius>
+                    <InsecurityAttractiveness>-5</InsecurityAttractiveness>
+                </CommandQueue>
+                <Drifting />
+                <Collector>
+                    <MaxDragShips>1</MaxDragShips>
+                </Collector>
+                <Attackable>
+                    <SelfHealPerHealTick>300</SelfHealPerHealTick>
+                </Attackable>
+                <MinimapToken />
+                <SoundEmitter>
+                    <IncidentSounds>
+                        <InfectedFire>
+                            <Item>
+                                <Sound>203983</Sound>
+                            </Item>
+                        </InfectedFire>
+                    </IncidentSounds>
+                </SoundEmitter>
+                <UpgradeList />
+                <QuestObject />
+                <Infolayer />
+                <ItemContainer>
+                    <SocketAllocation>Ship;SailShip</SocketAllocation>
+                    <CanStoreProducts>1</CanStoreProducts>
+                </ItemContainer>
+                <FeedbackController />
+                <Draggable>
+                    <DraggableDistanceFromDragger>6</DraggableDistanceFromDragger>
+                    <DraggableOnDrag>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList />
+                        </Values>
+                    </DraggableOnDrag>
+                    <DraggableOnDrop>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList />
+                        </Values>
+                    </DraggableOnDrop>
+                    <DraggableFeedbackOnDrag>2001897</DraggableFeedbackOnDrag>
+                    <DraggableFeedbackOnDrop>2001898</DraggableFeedbackOnDrop>
+                    <DraggableDropInfoLayer>2001942</DraggableDropInfoLayer>
+                </Draggable>
+                <Cost />
+                <Craftable>
+                    <CraftingTime>60000</CraftingTime>
+                </Craftable>
+                <TradeRouteVehicle />
+                <Locked />
+                <Nameable />
+                <MetaPersistent />
+                <ExpeditionAttribute>
+                    <ExpeditionAttributes>
+                        <Item>
+                            <Attribute>Might</Attribute>
+                            <Amount>1</Amount>
+                        </Item>
+                        <Item>
+                            <Attribute>Navigation</Attribute>
+                            <Amount>1</Amount>
+                        </Item>
+                    </ExpeditionAttributes>
+                </ExpeditionAttribute>
+                <ShipMaintenance>
+                    <Maintenance>5</Maintenance>
+                </ShipMaintenance>
+                <Sellable>
+                    <SellPriceFactor>0.5</SellPriceFactor>
+                </Sellable>
+                <Stance />
+                <Rentable />
+                <WorldMapSound />
+                <Pausable />
+                <ShipIncident>
+                    <InfectableByIncident>
+                        <Illness>
+                            <Infectable>1</Infectable>
+                        </Illness>
+                    </InfectableByIncident>
+                </ShipIncident>
+                <SoundEmitterCommandBarks />
+                <RepairCrane/>
+            </Properties>
+        </Template>
+    </ModOp>
+    <!-- END - TEMPLATE Auxiliary Ship -->
+
+    <!-- START - TEMPLATE Heavy Battle Cruiser -->
+    <ModOp Template="WarShip" Type = "addNextSibling">
+        <Template>
+            <Name>BattleCruiserPermit</Name>
+            <Properties>
+                <Standard />
+                <Object>
+                    <AssignDefaultParticipant>1</AssignDefaultParticipant>
+                    <IgnoreForMinimapGeneration>1</IgnoreForMinimapGeneration>
+                </Object>
+                <Mesh>
+                    <ObjectPosition>Dynamic</ObjectPosition>
+                    <SetCompanyLogo>1</SetCompanyLogo>
+                </Mesh>
+                <Selection>
+                    <GUIType>Vehicle</GUIType>
+                    <SelectionPriority>5</SelectionPriority>
+                    <OnSelection>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList />
+                        </Values>
+                    </OnSelection>
+                    <InteractionDistance>3</InteractionDistance>
+                    <AllowedDragType>ItemSocket;CargoProductStack;CargoItemStack;StorageProductStack;StorageItemStack;SharedTransferItem</AllowedDragType>
+                    <Colors>
+                        <SelectionColorType>ParticipantColor</SelectionColorType>
+                        <SelectionColor>0</SelectionColor>
+                        <SelectionBorderColor>2030043136</SelectionBorderColor>
+                        <PickingColorType>ParticipantColor</PickingColorType>
+                        <PickingColor>0</PickingColor>
+                        <PickingBorderColor>503316480</PickingBorderColor>
+                        <CoopSelectionColorType>PropertySelectionColor</CoopSelectionColorType>
+                        <CoopSelectionColor>0</CoopSelectionColor>
+                        <CoopSelectionBorderColor>2038464640</CoopSelectionBorderColor>
+                        <CoopPickingColorType>PropertySelectionColor</CoopPickingColorType>
+                        <CoopPickingColor>0</CoopPickingColor>
+                        <CoopPickingBorderColor>511737984</CoopPickingBorderColor>
+                    </Colors>
+                </Selection>
+                <Walking>
+                    <ReservationLength>24</ReservationLength>
+                    <ReservationWidth>9</ReservationWidth>
+                    <TurnAroundRadius>28</TurnAroundRadius>
+                    <TurnSpeed>20</TurnSpeed>
+                    <TurnSpeedInPlace>15</TurnSpeedInPlace>
+                    <TurnMovement>25</TurnMovement>
+                    <ForwardSpeed>4.5</ForwardSpeed>
+                    <WindMinSlowdownFactor>1</WindMinSlowdownFactor>
+                    <WindMaxSpeedupFactor>1</WindMaxSpeedupFactor>
+                </Walking>
+                <Text />
+                <CommandQueue>
+                    <IsPlayerControllableVehicle>1</IsPlayerControllableVehicle>
+                    <FollowRadius>10</FollowRadius>
+                    <InsecurityAttractiveness>-10</InsecurityAttractiveness>
+                </CommandQueue>
+                <Drifting />
+                <Collector>
+                    <MaxDragShips>1</MaxDragShips>
+                </Collector>
+                <Attackable>
+                    <SelfHealPerHealTick>2.1</SelfHealPerHealTick>
+                </Attackable>
+                <Attacker>
+                    <TargetAngleVariation>30</TargetAngleVariation>
+                    <AttackRangeApproachPercentage>0.85</AttackRangeApproachPercentage>
+                    <ProjectileAsset>100501</ProjectileAsset>
+                    <TurretExplosionEffectAsset>101994</TurretExplosionEffectAsset>
+                    <MuzzleEffectAssets>
+                        <Item>
+                            <MuzzleEffectAsset>101958</MuzzleEffectAsset>
+                        </Item>
+                    </MuzzleEffectAssets>
+                    <AccuracyByDistance>
+                        <Item />
+                        <Item>
+                            <AccuracyByDistancePair>
+                                <EnemyDistanceRelToAttackRange>100</EnemyDistanceRelToAttackRange>
+                                <CorrespondingAccuracy>50</CorrespondingAccuracy>
+                            </AccuracyByDistancePair>
+                        </Item>
+                    </AccuracyByDistance>
+                </Attacker>
+                <MinimapToken />
+                <SoundEmitter>
+                    <IncidentSounds>
+                        <InfectedFire>
+                            <Item>
+                                <Sound>203983</Sound>
+                            </Item>
+                        </InfectedFire>
+                    </IncidentSounds>
+                </SoundEmitter>
+                <UpgradeList />
+                <QuestObject />
+                <Infolayer />
+                <ItemContainer>
+                    <SocketAllocation>Ship;SteamShip;Warship</SocketAllocation>
+                    <CanStoreProducts>1</CanStoreProducts>
+                </ItemContainer>
+                <FeedbackController />
+                <Draggable>
+                    <DraggableDistanceFromDragger>6</DraggableDistanceFromDragger>
+                    <DraggableOnDrag>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList />
+                        </Values>
+                    </DraggableOnDrag>
+                    <DraggableOnDrop>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList />
+                        </Values>
+                    </DraggableOnDrop>
+                    <DraggableFeedbackOnDrag>2001897</DraggableFeedbackOnDrag>
+                    <DraggableFeedbackOnDrop>2001898</DraggableFeedbackOnDrop>
+                    <DraggableDropInfoLayer>2001942</DraggableDropInfoLayer>
+                </Draggable>
+                <Cost />
+                <Craftable>
+                    <CraftingTime>2000000</CraftingTime>
+                </Craftable>
+                <TradeRouteVehicle />
+                <Locked />
+                <Nameable />
+                <MetaPersistent />
+                <ExpeditionAttribute>
+                    <ExpeditionAttributes>
+                        <Item>
+                            <Attribute>Might</Attribute>
+                            <Amount>100</Amount>
+                        </Item>
+                        <Item>
+                            <Attribute>Navigation</Attribute>
+                            <Amount>100</Amount>
+                        </Item>
+                    </ExpeditionAttributes>
+                </ExpeditionAttribute>
+                <ShipMaintenance>
+                    <Maintenance>10000</Maintenance>
+                </ShipMaintenance>
+                <Sellable>
+                    <SellPriceFactor>0.5</SellPriceFactor>
+                </Sellable>
+                <Stance />
+                <Rentable />
+                <WorldMapSound />
+                <Pausable />
+                <ShipIncident>
+                    <InfectableByIncident>
+                        <Illness>
+                            <Infectable>1</Infectable>
+                        </Illness>
+                    </InfectableByIncident>
+                </ShipIncident>
+                <SoundEmitterCommandBarks />
+                <BuildPermit>
+                    <VisibleWithoutPermits>1</VisibleWithoutPermits>
+                </BuildPermit>
+            </Properties>
+        </Template>
+        <!-- END - TEMPLATE Heavy Battle Cruiser -->
+    </ModOp>
+
+</ModOps>
