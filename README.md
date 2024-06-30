@@ -5,7 +5,7 @@
 The perfect specialists and items pack is a set of 118 specialists and items for all regions. Some buildings or items did not got the love they deserve and did not recieve a specialist or legendary streat. This mod wants to change this by giving almost every building and item a specialist or legendary variant.
 
 Current version 18.3 (15/06/2024)
-- Download on Mod.io: https://mod.io/g/anno-1800/m/the-perfect-specialists-items-pack-v170
+- Download on Mod.io: https://mod.io/g/anno-1800/m/the-perfect-specialists-items-pack
 
 ## Music To My Ears
 
