@@ -486,14 +486,79 @@ Adaptations to vanilla items
   </ModOp>
   <!-- ****************** END Farmer more needs by ParticipantMessageArcheType ******************  -->
 
-  <!-- ****************** START Reduction damage Flame towers ******************  -->
+  <!-- ****************** START REBALANCING TOWERS ******************  -->
+
+  <!-- Big Bertha -->
+  <ModOp GUID='102450,1010524' Type="merge" Path="/Values">
+    <Attacker>
+      <BaseDamage>1530</BaseDamage>
+    </Attacker>
+    <Attackable>
+      <MaximumHitPoints>13900</MaximumHitPoints>
+    </Attackable>
+  </ModOp>
+  <ModOp GUID='101955' Type="merge" Path="/Values/Exploder">
+    <InnerDamage>1530</InnerDamage>
+  </ModOp>
+
+  <!-- Cannon Tower-->
+  <ModOp GUID='1010523' Type="merge" Path="/Values">
+    <Attacker>
+      <ReloadTime>44</ReloadTime>
+      <BaseDamage>130</BaseDamage>
+    </Attacker>
+    <Attackable>
+      <MaximumHitPoints>5200</MaximumHitPoints>
+    </Attackable>
+  </ModOp>
+
+  <!-- Puckle Gun -->
+  <ModOp GUID='1010522' Type="merge" Path="/Values">
+    <Attacker>
+      <BaseDamage>20</BaseDamage>
+    </Attacker>
+    <Attackable>
+      <MaximumHitPoints>4500</MaximumHitPoints>
+    </Attackable>
+  </ModOp>
+
+  <!-- Anti-Armor Gun -->
+  <ModOp GUID='3700' Type="merge" Path="/Values">
+    <Attacker>
+      <AttackRange>95</AttackRange>
+      <BaseDamage>400</BaseDamage>
+    </Attacker>
+    <Attackable>
+      <MaximumHitPoints>5600</MaximumHitPoints>
+    </Attackable>
+  </ModOp>
+
+  <!-- Flame Tower -->
+  <ModOp GUID='625,824,632,823' Path="/Values" Type="merge">
+    <Attackable>
+      <MaximumHitPoints>3100</MaximumHitPoints>
+    </Attackable>
+    <Attacker />
+  </ModOp>
   <ModOp Type="merge" GUID='628' Path="/Values/Projectile/Effectivities/Item[GUID='1398']">
     <Factor>1.1</Factor>
   </ModOp>
   <ModOp Type="merge" GUID='628' Path="/Values/Projectile/Effectivities/Item[GUID='1404']">
     <Factor>0.3</Factor>
   </ModOp>
-  <!-- ****************** END Reduction damage Flame towers ******************  -->
+
+  <!-- Change PuckleGun Debuff -->
+  <ModOp GUID='191305' Type="replace" Path="/Values/VehicleUpgrade/ForwardSpeedUpgrade/Value">
+    <Value>-30</Value>
+  </ModOp>
+  <ModOp GUID='191305' Type="replace" Path="/Values/AttackerUpgrade/AttackSpeedUpgrade">
+    <AttackSpeedUpgrade>-20</AttackSpeedUpgrade>
+  </ModOp>
+  <ModOp GUID='191305' Type="replace" Path="/Values/AttackerUpgrade/ReloadTimeUpgrade/Value">
+    <Value>25</Value>
+  </ModOp>
+
+  <!-- ****************** END REBALANCING TOWERS ******************  -->
 
   <!-- ****************** START Weaver, Tailor, Fine Couturier, Lady Jane Smythe add Military Uniforms Factory ******************  -->
   <ModOp Type="add" GUID='191325,191326,191327,191329' Path="Values/ItemEffect/EffectTargets/">

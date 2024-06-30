@@ -1,0 +1,2150 @@
+<!-- 
+  Ships
+-->
+
+<ModOps>
+    <!-- START ADDING SHIPS TO SAILING SHIPYARD -->
+
+    <ModOp Type="add" GUID='1010520' Path="Values/Shipyard/AssemblyOptions/">
+        <Item>
+            <Vehicle>1742100576</Vehicle>            <!-- Windjammer - Ship -->
+        </Item>
+        <Item>
+            <Vehicle>1742100578</Vehicle>            <!-- The Duke - Ship -->
+        </Item>
+    </ModOp>
+
+    <!-- END ADDING SHIPS TO SAILING SHIPYARD -->
+
+    <!-- START ADDING SHIPS TO STEAM SHIPYARD -->
+    <ModOp Type="addPrevSibling" GUID='1010521' Path="/Values/Shipyard/AssemblyOptions/Item[Vehicle='1010062']">
+        <Item>
+            <Vehicle>1742100581</Vehicle>            <!-- Small Cargo Ship -->
+        </Item>
+        <Item>
+            <Vehicle>1742100591</Vehicle>            <!-- Auxiliary Ship -->
+        </Item>
+    </ModOp>
+    <ModOp Type="addPrevSibling" GUID='1010521' Path="/Values/Shipyard/AssemblyOptions/Item[Vehicle='100442']">
+        <Item>
+            <Vehicle>1742100583</Vehicle>            <!-- Small Battle Cruiser -->
+        </Item>
+    </ModOp>
+    <ModOp Type="add" GUID='1010521' Path="/Values/Shipyard/AssemblyOptions/">
+        <Item>
+            <Vehicle>1742100587</Vehicle>            <!-- Torpedo Boat -->
+        </Item>
+        <Item>
+            <Vehicle>1742100589</Vehicle>            <!-- Corvette -->
+        </Item>
+        <Item>
+            <Vehicle>1742100585</Vehicle>            <!-- Heavy Battle Cruiser -->
+        </Item>
+    </ModOp>
+    <!-- END ADDING SHIPS TO STEAM SHIPYARD -->
+
+    <!-- START SHIP - WINDJAMMER -->
+    <ModOp Type="addNextSibling" GUID='100441'>
+        <Asset>
+            <Template>TradeShip</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742100576</GUID>
+                    <Name>Windjammer</Name>
+                    <IconFilename>data/graphics/icons/icon_windjammer.png</IconFilename>
+                    <InfoDescription>1742100577</InfoDescription>
+                </Standard>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/vehicle/windjammer/windjammer.cfg</Filename>
+                        </Item>
+                    </Variations>
+                </Object>
+                <Mesh>
+                    <MeshPlacement>OnWaterSlope</MeshPlacement>
+                </Mesh>
+                <Selection>
+                    <MultiSelectable>1</MultiSelectable>
+                    <OnSelection>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </OnSelection>
+                </Selection>
+                <Walking>
+                    <ReservationLength>12</ReservationLength>                    <!--Clipper 9-->
+                    <ReservationWidth>7.5</ReservationWidth>                    <!--Clipper 5-->
+                    <PathPlannerLayer>Water</PathPlannerLayer>
+                    <ExpensiveDirSmoothing>1</ExpensiveDirSmoothing>                    <!--Clipper 1-->
+                    <TurnAroundRadius>8</TurnAroundRadius>                    <!--Clipper 6-->
+                    <Acceleration>1.25</Acceleration>                    <!--Clipper 1-->
+                    <Deceleration>2.25</Deceleration>                    <!--Clipper 2-->
+                    <TurnRadius>8</TurnRadius>                    <!--Clipper 6-->
+                    <TurnSpeed>40</TurnSpeed>                    <!--Clipper 60-->
+                    <TurnDeceleration>0</TurnDeceleration>                    <!--Clipper 0-->
+                    <TurnMovement>0</TurnMovement>                    <!--Clipper 0-->
+                    <LeaningMaxAngle>-20</LeaningMaxAngle>                    <!--Clipper -20-->
+                    <ForwardSpeed>5.8</ForwardSpeed>                    <!--Clipper 5.5-->
+                    <WindMinSlowdownFactor>0.4</WindMinSlowdownFactor>                    <!--Clipper 0.5-->
+                    <WindSlowdownEffectOnTurningSpeed>0.25</WindSlowdownEffectOnTurningSpeed>                    <!--Clipper 0.35-->
+                    <WindMaxSpeedupFactor>2</WindMaxSpeedupFactor>                    <!--Clipper 1.8-->
+                    <WindSpeedupEffectOnTurningSpeed>0.90</WindSpeedupEffectOnTurningSpeed>                    <!--Clipper 0.85-->
+                    <CurveSegmentDensity>High</CurveSegmentDensity>
+                    <SessionTransferSpeedFactor>2</SessionTransferSpeedFactor>
+                </Walking>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>Windjammer</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>14854</LineID>
+                </Text>
+                <CommandQueue>
+                    <FormationPriority>1</FormationPriority>
+                    <TradeShipPoints>5</TradeShipPoints>
+                    <PriorityShipList>1</PriorityShipList>
+                </CommandQueue>
+                <Drifting>
+                    <OverrideAssetWidthAndLength>0</OverrideAssetWidthAndLength>
+                    <Length>12</Length>                    <!--Clipper 9-->
+                    <Width>2.25</Width>                    <!--Clipper 1.75-->
+                    <FactorRotation>0.65</FactorRotation>                    <!--Clipper 1-->
+                </Drifting>
+                <Collector/>
+                <Attackable>
+                    <MaximumHitPoints>3250</MaximumHitPoints>                    <!--Clipper 2500-->
+                    <AlertRange>200</AlertRange>                    <!--Clipper 150-->
+                    <HPBarOffset>7.5</HPBarOffset>
+                    <SelfHealPerHealTick>2.5</SelfHealPerHealTick>                    <!--Clipper 1.389-->
+                    <SelfHealPausedTimeIfAttacked>30000</SelfHealPausedTimeIfAttacked>                    <!--Clipper 60000-->
+                </Attackable>
+                <MinimapToken>
+                    <TokenAsset>2001947</TokenAsset>                    <!--Ships-->
+                    <StrategicMapAsset>500433</StrategicMapAsset>                    <!--Sailing Ships-->
+                </MinimapToken>
+                <SoundEmitter>
+                    <DestroySounds>
+                        <Item>
+                            <Sound>238315</Sound>                            <!--wwe_sfx_veh_frigate_destroy_os-->
+                        </Item>
+                    </DestroySounds>
+                    <VehicleSounds>
+                        <MovementStart>
+                            <Item>
+                                <Sound>247099</Sound>                                <!--wwe_sfx_veh_clipperp_lp_play-->
+                            </Item>
+                        </MovementStart>
+                    </VehicleSounds>
+                </SoundEmitter>
+                <UpgradeList/>
+                <QuestObject/>
+                <Infolayer/>
+                <ItemContainer>
+                    <SocketCount>2</SocketCount>                    <!--Clipper 1-->
+                    <SlotCount>8</SlotCount>                    <!--Clipper 4-->
+                </ItemContainer>
+                <FeedbackController/>
+                <Draggable>
+                    <DraggableOnDrag>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </DraggableOnDrag>
+                    <DraggableOnDrop>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </DraggableOnDrop>
+                </Draggable>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>
+                            <Amount>10000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010196</Ingredient>                            <!-- Timber -->
+                            <Amount>75</Amount>                            <!-- Clipper 40 -->
+                        </Item>
+                        <Item>
+                            <Ingredient>1010210</Ingredient>                            <!-- Sails -->
+                            <Amount>50</Amount>                            <!-- Clipper 30 -->
+                        </Item>
+                    </Costs>
+                    <InfluenceCostType>TradeShip</InfluenceCostType>
+                    <InfluenceCostPoints>12</InfluenceCostPoints>
+                </Cost>
+                <Craftable>
+                    <CraftingTime>700000</CraftingTime>                    <!-- Clipper 360000 -->
+                </Craftable>
+                <TradeRouteVehicle/>
+                <Locked/>
+                <Nameable/>
+                <MetaPersistent/>
+                <ExpeditionAttribute>
+                    <BaseMorale>65</BaseMorale>                    <!-- Clipper 50 -->
+                    <ExpeditionAttributes>
+                        <Item>
+                            <Attribute>Might</Attribute>
+                        </Item>
+                        <Item>
+                            <Attribute>Navigation</Attribute>
+                            <Amount>40</Amount>                            <!-- Clipper 20 -->
+                        </Item>
+                        <Item>
+                            <Attribute>PerkTradeShip</Attribute>
+                            <Amount>1</Amount>
+                        </Item>
+                        <Item>
+                            <Attribute>PerkSailingShip</Attribute>
+                            <Amount>1</Amount>
+                        </Item>
+                    </ExpeditionAttributes>
+                </ExpeditionAttribute>
+                <ShipMaintenance>
+                    <Maintenance>300</Maintenance>                    <!-- Clipper 175 -->
+                </ShipMaintenance>
+                <Sellable>
+                    <Baseprice>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>0</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>TradeShip</TemplateName>
+                                        <Index>0</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                            <Amount>85000</Amount>                            <!-- Clipper 15000 -->
+                        </Item>
+                    </Baseprice>
+                </Sellable>
+                <Stance/>
+                <Rentable/>
+                <WorldMapSound/>
+                <Pausable/>
+                <ShipIncident/>
+                <SoundEmitterCommandBarks>
+                    <BarkMapping>
+                        <Selection>
+                            <AudioPool>700092</AudioPool>                            <!--Clipper_SelectPool-->
+                        </Selection>
+                        <SelectionDamaged>
+                            <AudioPool>700122</AudioPool>                            <!--Clipper_SelectDamagedPool-->
+                        </SelectionDamaged>
+                        <MoveCommand>
+                            <AudioPool>700093</AudioPool>                            <!--Clipper_MovePool-->
+                        </MoveCommand>
+                        <EscortCommand>
+                            <AudioPool>700124</AudioPool>                            <!--Clipper_EscortPool-->
+                        </EscortCommand>
+                        <PatrolCommand>
+                            <AudioPool>700123</AudioPool>                            <!--Clipper_PatrolPool-->
+                        </PatrolCommand>
+                    </BarkMapping>
+                </SoundEmitterCommandBarks>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END SHIP - WINDJAMMER -->
+
+    <!-- START SHIP - THE DUKE -->
+    <ModOp Type="addNextSibling" GUID='100440'>
+        <Asset>
+            <Template>WarShip</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742100578</GUID>
+                    <Name>The Duke</Name>
+                    <IconFilename>data/graphics/icons/icon_duke.png</IconFilename>
+                    <InfoDescription>1742100579</InfoDescription>
+                </Standard>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/vehicle/man_of_war_duke/man_of_war_duke.cfg</Filename>
+                        </Item>
+                    </Variations>
+                </Object>
+                <Mesh>
+                    <MeshPlacement>OnWaterSlope</MeshPlacement>
+                </Mesh>
+                <Selection>
+                    <MultiSelectable>1</MultiSelectable>
+                    <OnSelection>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </OnSelection>
+                </Selection>
+                <Walking>
+                    <ReservationLength>12</ReservationLength>                    <!-- SOTL 9 -->
+                    <ReservationWidth>6.5</ReservationWidth>                    <!-- SOTL 5 -->
+                    <PathPlannerLayer>Water</PathPlannerLayer>
+                    <ExpensiveDirSmoothing>1</ExpensiveDirSmoothing>                    <!-- SOTL 1 -->
+                    <TurnAroundRadius>10</TurnAroundRadius>                    <!-- SOTL 8 -->
+                    <Acceleration>1</Acceleration>                    <!-- SOTL 1 -->
+                    <Deceleration>1</Deceleration>                    <!-- SOTL 1 -->
+                    <TurnRadius>10</TurnRadius>                    <!-- SOTL 8 -->
+                    <TurnDeceleration>0</TurnDeceleration>                    <!-- SOTL 0 -->
+                    <TurnMovement>0</TurnMovement>                    <!-- SOTL 0 -->
+                    <LeaningMaxAngle>-10</LeaningMaxAngle>                    <!-- SOTL -10 -->
+                    <ForwardSpeed>3.8</ForwardSpeed>                    <!-- SOTL 4 -->
+                    <WindMinSlowdownFactor>0.5</WindMinSlowdownFactor>                    <!-- SOTL 0.4 - 0.95 -->
+                    <WindSlowdownEffectOnTurningSpeed>0.35</WindSlowdownEffectOnTurningSpeed>                    <!-- SOTL 0.35 -->
+                    <WindMaxSpeedupFactor>1.5</WindMaxSpeedupFactor>                    <!-- SOTL 1.8 -->
+                    <WindSpeedupEffectOnTurningSpeed>0.85</WindSpeedupEffectOnTurningSpeed>                    <!-- SOTL 0.85 -->
+                    <CurveSegmentDensity>High</CurveSegmentDensity>
+                </Walking>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>The Duke</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>14853</LineID>
+                </Text>
+                <CommandQueue>
+                    <FormationPriority>3</FormationPriority>                    <!-- SOTL 3 -->
+                    <MilitaryShipPoints>3.2</MilitaryShipPoints>                    <!-- SOTL 3.2 -->
+                    <PriorityShipList>1</PriorityShipList>                    <!-- SOTL 1 -->
+                </CommandQueue>
+                <Drifting>
+                    <OverrideAssetWidthAndLength>0</OverrideAssetWidthAndLength>
+                    <Length>9</Length>                    <!-- SOTL 7 -->
+                    <Width>4</Width>                    <!-- SOTL 2 -->
+                    <FactorRotation>0.65</FactorRotation>                    <!-- SOTL 0.65 -->
+                </Drifting>
+                <Collector/>
+                <Attackable>
+                    <MaximumHitPoints>4800</MaximumHitPoints>                    <!-- SOTL 4000 - 3500 -->
+                    <AlertRange>150</AlertRange>                    <!-- SOTL 150 -->
+                    <HPBarOffset>9.5</HPBarOffset>                    <!-- SOTL 9.5 -->
+                    <AccuracyWidth>5</AccuracyWidth>                    <!-- SOTL 4 -->
+                    <SelfHealPerHealTick>2.8</SelfHealPerHealTick>                    <!-- SOTL 1.667 -->
+                    <SelfHealPausedTimeIfAttacked>30000</SelfHealPausedTimeIfAttacked>                    <!-- SOTL 60000 -->
+                </Attackable>
+                <Attacker>
+                    <BaseDamage>500</BaseDamage>                    <!-- SOTL 525 - 340 -->
+                    <ReloadTime>100</ReloadTime>                    <!-- SOTL 100 - 90 -->
+                    <TargetAngleVariation>50</TargetAngleVariation>                    <!-- SOTL 50 -->
+                    <AttackRange>46</AttackRange>                    <!-- SOTL 68 - 46 -->
+                    <LineOfSightRange>75</LineOfSightRange>                    <!-- SOTL 100 - 60 -->
+                    <ProjectileAsset>102285</ProjectileAsset>                    <!--Line_Ship_Multi_Shot_01-->
+                    <MuzzleEffectAssets>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>0</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>WarShip</TemplateName>
+                                        <Index>0</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                            <MuzzleEffectAsset>102286</MuzzleEffectAsset>                            <!--Shot_Lineship_01-->
+                        </Item>
+                        <Item>
+                            <MuzzleEffectAsset>102287</MuzzleEffectAsset>                            <!--Shot_Lineship_02-->
+                        </Item>
+                        <Item>
+                            <MuzzleEffectAsset>102300</MuzzleEffectAsset>                            <!--Shot_Lineship_03-->
+                        </Item>
+                    </MuzzleEffectAssets>
+                    <FullVolleyTimeMin>1.2</FullVolleyTimeMin>                    <!-- SOTL 0.8 -->
+                    <FullVolleyTimeMax>2.7</FullVolleyTimeMax>                    <!-- SOTL 1.8 -->
+                    <VolleyMaxPerBulletRandomOffset>0.2</VolleyMaxPerBulletRandomOffset>                    <!-- SOTL 0.2 -->
+                    <AccuracyIncreaseOverDistance>100</AccuracyIncreaseOverDistance>                    <!-- SOTL 100 -->
+                    <AccuracySpeedDecay>20</AccuracySpeedDecay>                    <!-- SOTL 20 -->
+                    <AccuracyByDistance>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>0</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>WarShip</TemplateName>
+                                        <Index>0</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                            <AccuracyByDistancePair>
+                                <CorrespondingAccuracy>50</CorrespondingAccuracy>
+                            </AccuracyByDistancePair>
+                        </Item>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>1</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>WarShip</TemplateName>
+                                        <Index>1</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                            <AccuracyByDistancePair>
+                                <EnemyDistanceRelToAttackRange>20</EnemyDistanceRelToAttackRange>
+                            </AccuracyByDistancePair>
+                        </Item>
+                        <Item>
+                            <AccuracyByDistancePair>
+                                <EnemyDistanceRelToAttackRange>40</EnemyDistanceRelToAttackRange>
+                                <CorrespondingAccuracy>70</CorrespondingAccuracy>
+                            </AccuracyByDistancePair>
+                        </Item>
+                        <Item>
+                            <AccuracyByDistancePair>
+                                <EnemyDistanceRelToAttackRange>70</EnemyDistanceRelToAttackRange>
+                                <CorrespondingAccuracy>85</CorrespondingAccuracy>
+                            </AccuracyByDistancePair>
+                        </Item>
+                        <Item>
+                            <AccuracyByDistancePair>
+                                <EnemyDistanceRelToAttackRange>100</EnemyDistanceRelToAttackRange>
+                            </AccuracyByDistancePair>
+                        </Item>
+                    </AccuracyByDistance>
+                </Attacker>
+                <MinimapToken>
+                    <TokenAsset>2001947</TokenAsset>                    <!--Ships-->
+                    <StrategicMapAsset>500433</StrategicMapAsset>                    <!--Sailing Ships-->
+                </MinimapToken>
+                <SoundEmitter>
+                    <ActiveSounds>
+                        <Item>
+                            <Sound>216015</Sound>                            <!--wwe_sfx_veh_liner_ship_lp_play-->
+                        </Item>
+                    </ActiveSounds>
+                    <DestroySounds>
+                        <Item>
+                            <Sound>238317</Sound>                            <!--wwe_sfx_veh_liner_destroy_os-->
+                        </Item>
+                    </DestroySounds>
+                </SoundEmitter>
+                <UpgradeList/>
+                <QuestObject/>
+                <Infolayer/>
+                <ItemContainer>
+                    <SocketCount>4</SocketCount>                    <!-- SOTL 3 -->
+                    <SlotCount>4</SlotCount>                    <!-- SOTL 3 -->
+                </ItemContainer>
+                <FeedbackController/>
+                <Draggable>
+                    <DraggableOnDrag>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </DraggableOnDrag>
+                    <DraggableOnDrop>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </DraggableOnDrop>
+                </Draggable>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!--coins-->
+                            <Amount>25000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010196</Ingredient>                            <!--timber-->
+                            <Amount>90</Amount>                            <!-- SOTL 60 -->
+                        </Item>
+                        <Item>
+                            <Ingredient>1010210</Ingredient>                            <!--sailcloth-->
+                            <Amount>50</Amount>                            <!-- SOTL 30 -->
+                        </Item>
+                        <Item>
+                            <Ingredient>1010221</Ingredient>                            <!--weapons-->
+                            <Amount>50</Amount>                            <!-- SOTL 30 -->
+                        </Item>
+                        <Item>
+                            <Ingredient>1010218</Ingredient>                            <!--steelbeams-->
+                            <Amount>35</Amount>
+                        </Item>
+                    </Costs>
+                    <InfluenceCostType>WarShip</InfluenceCostType>
+                    <InfluenceCostPoints>28</InfluenceCostPoints>                    <!-- SOTL 16 -->
+                </Cost>
+                <Craftable>
+                    <CraftingTime>1200000</CraftingTime>                    <!-- SOTL 720000 -->
+                </Craftable>
+                <TradeRouteVehicle/>
+                <Locked/>
+                <Nameable/>
+                <MetaPersistent/>
+                <ExpeditionAttribute>
+                    <ExpeditionAttributes>
+                        <Item>
+                            <Attribute>Might</Attribute>
+                            <Amount>50</Amount>                            <!-- SOTL 15000 -->
+                        </Item>
+                        <Item>
+                            <Attribute>Navigation</Attribute>
+                        </Item>
+                        <Item>
+                            <Attribute>PerkMilitaryShip</Attribute>
+                            <Amount>1</Amount>
+                        </Item>
+                        <Item>
+                            <Attribute>PerkSailingShip</Attribute>
+                            <Amount>1</Amount>
+                        </Item>
+                    </ExpeditionAttributes>
+                </ExpeditionAttribute>
+                <ShipMaintenance>
+                    <Maintenance>500</Maintenance>                    <!-- SOTL 250 - 300 -->
+                </ShipMaintenance>
+                <Sellable>
+                    <Baseprice>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>0</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>WarShip</TemplateName>
+                                        <Index>0</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                            <Amount>100000</Amount>                            <!-- SOTL 50000 -->
+                        </Item>
+                    </Baseprice>
+                </Sellable>
+                <Stance/>
+                <Rentable/>
+                <WorldMapSound/>
+                <Pausable/>
+                <ShipIncident/>
+                <SoundEmitterCommandBarks>
+                    <BarkMapping>
+                        <Selection>
+                            <AudioPool>700096</AudioPool>                            <!--ShipOfTheLine_SelectPool-->
+                        </Selection>
+                        <SelectionDamaged>
+                            <AudioPool>700128</AudioPool>                            <!--ShipOfTheLine_SelectDamagedPool-->
+                        </SelectionDamaged>
+                        <AttackCommand>
+                            <AudioPool>700097</AudioPool>                            <!--ShipOfTheLine_AttackPool-->
+                        </AttackCommand>
+                        <MoveCommand>
+                            <AudioPool>700098</AudioPool>                            <!--ShipOfTheLine_MovePool-->
+                        </MoveCommand>
+                        <EscortCommand>
+                            <AudioPool>700130</AudioPool>                            <!--ShipOfTheLine_EscortPool-->
+                        </EscortCommand>
+                        <PatrolCommand>
+                            <AudioPool>700129</AudioPool>                            <!--ShipOfTheLine_PatrolPool-->
+                        </PatrolCommand>
+                    </BarkMapping>
+                </SoundEmitterCommandBarks>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END SHIP - THE DUKE -->
+
+    <!-- START SHIP - SMALL BATTLE CRUISER -->
+    <ModOp Type="addNextSibling" GUID='100442'>
+        <Asset>
+            <Template>WarShip</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742100583</GUID>
+                    <Name>Small Battle Cruiser</Name>
+                    <IconFilename>data/graphics/icons/icon_small_battlecruiser.png</IconFilename>
+                    <InfoDescription>1742100584</InfoDescription>
+                </Standard>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/vehicle/small_battle_cruiser/small_battle_cruiser.cfg</Filename>
+                        </Item>
+                    </Variations>
+                </Object>
+                <Mesh>
+                    <MeshPlacement>OnWaterSlope</MeshPlacement>
+                </Mesh>
+                <Selection>
+                    <MultiSelectable>1</MultiSelectable>
+                    <OnSelection>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </OnSelection>
+                </Selection>
+                <Walking>
+                    <ShortenSailsAfter>0</ShortenSailsAfter>
+                    <ReservationLength>6</ReservationLength>                    <!-- Battle Cruiser 16 -->
+                    <ReservationWidth>3</ReservationWidth>                    <!-- Battle Cruiser 6 -->
+                    <PathPlannerLayer>Water</PathPlannerLayer>
+                    <ExpensiveDirSmoothing>1</ExpensiveDirSmoothing>
+                    <TurnAroundRadius>8</TurnAroundRadius>                    <!-- Battle Cruiser 8 - 18 -->
+                    <Acceleration>0.65</Acceleration>                    <!-- Battle Cruiser 0.75 - 0.45 -->
+                    <Deceleration>1</Deceleration>                    <!-- Battle Cruiser 1 - 0.5 -->
+                    <TurnRadius>8</TurnRadius>                    <!-- Battle Cruiser 8 - 15 -->
+                    <TurnDeceleration>0</TurnDeceleration>                    <!-- Battle Cruiser 0 -->
+                    <TurnMovement>0</TurnMovement>                    <!-- Battle Cruiser 0 -->
+                    <LeaningMaxAngle>-10</LeaningMaxAngle>                    <!-- Battle Cruiser -10 -->
+                    <ForwardSpeed>5.8</ForwardSpeed>                    <!-- Battle Cruiser 4.5 - 5.4 -->
+                    <WindMinSlowdownFactor>1</WindMinSlowdownFactor>                    <!-- Battle Cruiser 1 -->
+                    <WindMaxSpeedupFactor>1</WindMaxSpeedupFactor>                    <!-- Battle Cruiser 1 -->
+                    <CargoFullFactor>0.95</CargoFullFactor>                    <!-- Battle Cruiser 0.7 - 0.9 -->
+                    <DamageFullFactor>0.5</DamageFullFactor>                    <!-- Battle Cruiser 0.5 - 0.8 -->
+                    <MinSlowdownFactor>0.65</MinSlowdownFactor>                    <!-- Battle Cruiser 0.5 - 0.6 -->
+                    <CurveSegmentDensity>High</CurveSegmentDensity>
+                </Walking>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>Small Battle Cruiser</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>14857</LineID>
+                </Text>
+                <CommandQueue>
+                    <FormationPriority>2</FormationPriority>
+                    <MilitaryShipPoints>6</MilitaryShipPoints>
+                    <PriorityShipList>1</PriorityShipList>
+                </CommandQueue>
+                <Drifting>
+                    <OverrideAssetWidthAndLength>0</OverrideAssetWidthAndLength>
+                    <Length>5</Length>                    <!-- Battle Cruiser 10 -->
+                    <Width>1.35</Width>                    <!-- Battle Cruiser 1.75 -->
+                    <FactorMovement>0.7</FactorMovement>                    <!-- Battle Cruiser 0.7 -->
+                    <FactorRotation>0.65</FactorRotation>                    <!-- Battle Cruiser 0.65 -->
+                </Drifting>
+                <Collector/>
+                <Attackable>
+                    <MaximumHitPoints>3000</MaximumHitPoints>                    <!-- Battle Cruiser 6000 - 9500 -->
+                    <AlertRange>110</AlertRange>                    <!-- Battle Cruiser 150 -->
+                    <HPBarOffset>6.5</HPBarOffset>                    <!-- Battle Cruiser 280 -->
+                    <ArmorType>HeavyArmor</ArmorType>
+                    <AccuracyWidth>10</AccuracyWidth>                    <!-- Battle Cruiser 8 -->
+                    <SelfHealPerHealTick>1.25</SelfHealPerHealTick>                    <!-- Battle Cruiser 1.667 -->
+                    <SelfHealPausedTimeIfAttacked>80000</SelfHealPausedTimeIfAttacked>                    <!-- Battle Cruiser 60000 -->
+                </Attackable>
+                <Attacker>
+                    <ShootingTracking>TurretFixed</ShootingTracking>
+                    <BaseDamage>480</BaseDamage>                    <!-- Battle Cruiser 280 - 1370 -->
+                    <ReloadTime>165</ReloadTime>                    <!-- Battle Cruiser 70 - 185 -->
+                    <AttackRange>70</AttackRange>                    <!-- Battle Cruiser 84 - 85 -->
+                    <LineOfSightRange>80</LineOfSightRange>                    <!-- Battle Cruiser 100 -->
+                    <Turrets>
+                        <Item>
+                            <TurnSpan>300</TurnSpan>
+                            <TurretCfg>data/graphics/vehicle/battle_cruiser/battle_cruiser_turret_01.cfg</TurretCfg>
+                        </Item>
+                        <Item>
+                            <TurnSpan>300</TurnSpan>
+                            <TurretCfg>data/graphics/vehicle/monitor/monitor_turret.cfg</TurretCfg>
+                        </Item>
+                    </Turrets>
+                    <ProjectileAsset>102033</ProjectileAsset>                    <!--Large_Single_Shot_BattleCruiser-->
+                    <MuzzleEffectAssets>
+                        <Item>
+                            <MuzzleEffectAsset>102228</MuzzleEffectAsset>                            <!--Shot_Battlecruiser-->
+                        </Item>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>0</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>WarShip</TemplateName>
+                                        <Index>0</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                            <MuzzleEffectAsset>102228</MuzzleEffectAsset>                            <!--Shot_Battlecruiser-->
+                        </Item>
+                    </MuzzleEffectAssets>
+                    <FullVolleyTimeMin>1</FullVolleyTimeMin>
+                    <FullVolleyTimeMax>2</FullVolleyTimeMax>
+                    <AccuracyBase>10</AccuracyBase>                    <!-- Battle Cruiser 1 - 15 -->
+                    <AccuracyIncreaseOverDistance>150</AccuracyIncreaseOverDistance>                    <!-- Battle Cruiser 60 - 200 -->
+                    <AccuracySpeedDecay>20</AccuracySpeedDecay>
+                    <AccuracyByDistance>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>0</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>WarShip</TemplateName>
+                                        <Index>0</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                        </Item>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>1</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>WarShip</TemplateName>
+                                        <Index>1</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                            <AccuracyByDistancePair>
+                                <CorrespondingAccuracy>100</CorrespondingAccuracy>
+                            </AccuracyByDistancePair>
+                        </Item>
+                    </AccuracyByDistance>
+                </Attacker>
+                <MinimapToken>
+                    <TokenAsset>2001947</TokenAsset>                    <!--Ships-->
+                    <StrategicMapAsset>501018</StrategicMapAsset>                    <!--Steam Ships-->
+                </MinimapToken>
+                <SoundEmitter>
+                    <ActiveSounds>
+                        <Item>
+                            <Sound>216009</Sound>                            <!--wwe_sfx_veh_battle_cruiser_lp_play-->
+                        </Item>
+                    </ActiveSounds>
+                    <DestroySounds>
+                        <Item>
+                            <Sound>238314</Sound>                            <!--wwe_sfx_veh_battle_cruiser_destroy_os-->
+                        </Item>
+                    </DestroySounds>
+                </SoundEmitter>
+                <UpgradeList/>
+                <QuestObject/>
+                <Infolayer/>
+                <ItemContainer>
+                    <SocketCount>2</SocketCount>                    <!-- Battle Cruiser 4 -->
+                    <SocketAllocation>Ship;SteamShip;Warship</SocketAllocation>
+                    <SlotCount>1</SlotCount>                    <!-- Battle Cruiser 3 -->
+                </ItemContainer>
+                <FeedbackController/>
+                <Draggable>
+                    <DraggableOnDrag>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </DraggableOnDrag>
+                    <DraggableOnDrop>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </DraggableOnDrop>
+                </Draggable>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!--coins-->
+                            <Amount>40000</Amount>                            <!-- Battle Cruiser 250000 -->
+                        </Item>
+                        <Item>
+                            <Ingredient>1010218</Ingredient>                            <!--beams-->
+                            <Amount>28</Amount>                            <!-- Battle Cruiser 60 -->
+                        </Item>
+                        <Item>
+                            <Ingredient>1010224</Ingredient>                            <!--steam motors-->
+                            <Amount>12</Amount>                            <!-- Battle Cruiser 20 -->
+                        </Item>
+                        <Item>
+                            <Ingredient>1010223</Ingredient>                            <!--advanced weapons-->
+                            <Amount>15</Amount>                            <!-- Battle Cruiser 25 -->
+                        </Item>
+                    </Costs>
+                    <InfluenceCostType>WarShip</InfluenceCostType>
+                    <InfluenceCostPoints>10</InfluenceCostPoints>                    <!-- Battle Cruiser 24 -->
+                </Cost>
+                <Craftable>
+                    <CraftingTime>250000</CraftingTime>                    <!-- Battle Cruiser 900000 -->
+                </Craftable>
+                <TradeRouteVehicle/>
+                <Locked/>
+                <Nameable/>
+                <MetaPersistent/>
+                <ExpeditionAttribute>
+                    <BaseMorale>25</BaseMorale>                    <!-- Battle Cruiser 50 -->
+                    <ExpeditionAttributes>
+                        <Item>
+                            <Attribute>Might</Attribute>
+                            <Amount>30</Amount>                            <!-- Battle Cruiser 70 -->
+                        </Item>
+                        <Item>
+                            <Attribute>Navigation</Attribute>
+                        </Item>
+                        <Item>
+                            <Attribute>PerkMilitaryShip</Attribute>
+                            <Amount>1</Amount>
+                        </Item>
+                        <Item>
+                            <Attribute>PerkSteamShip</Attribute>
+                            <Amount>1</Amount>
+                        </Item>
+                    </ExpeditionAttributes>
+                </ExpeditionAttribute>
+                <ShipMaintenance>
+                    <Maintenance>600</Maintenance>                    <!-- Battle Cruiser 850 - 2000 -->
+                </ShipMaintenance>
+                <Sellable>
+                    <Baseprice>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>0</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>WarShip</TemplateName>
+                                        <Index>0</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                            <Amount>100000</Amount>                            <!-- Battle Cruiser 800000 -->
+                        </Item>
+                    </Baseprice>
+                </Sellable>
+                <Stance/>
+                <Rentable/>
+                <WorldMapSound/>
+                <Pausable/>
+                <ShipIncident/>
+                <SoundEmitterCommandBarks>
+                    <BarkMapping>
+                        <Selection>
+                            <AudioPool>700081</AudioPool>                            <!--Battlecruiser_SelectPool-->
+                        </Selection>
+                        <SelectionDamaged>
+                            <AudioPool>700110</AudioPool>                            <!--Battlecruiser_SelectDamagedPool-->
+                        </SelectionDamaged>
+                        <AttackCommand>
+                            <AudioPool>700082</AudioPool>                            <!--Battlecruiser_AttackPool-->
+                        </AttackCommand>
+                        <MoveCommand>
+                            <AudioPool>700083</AudioPool>                            <!--Battlecruiser_MovePool-->
+                        </MoveCommand>
+                        <EscortCommand>
+                            <AudioPool>700112</AudioPool>                            <!--Battlecruiser_EscortPool-->
+                        </EscortCommand>
+                        <PatrolCommand>
+                            <AudioPool>700111</AudioPool>                            <!--Battlecruiser_PatrolPool-->
+                        </PatrolCommand>
+                    </BarkMapping>
+                </SoundEmitterCommandBarks>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END SHIP - SMALL BATTLE CRUISER -->
+
+    <!-- START SHIP - HEAVY BATTLE CRUISER -->
+    <ModOp Type="addNextSibling" GUID='100442'>
+        <Asset>
+            <Template>BattleCruiserPermit</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742100585</GUID>
+                    <Name>Heavy Battle Cruiser</Name>
+                    <IconFilename>data/graphics/icons/icon_heavy_battlecruiser.png</IconFilename>
+                    <InfoDescription>1742100586</InfoDescription>
+                </Standard>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/vehicle/heavy_battle_cruiser/heavy_battle_cruiser.cfg</Filename>
+                        </Item>
+                    </Variations>
+                </Object>
+                <Mesh>
+                    <MeshPlacement>OnWaterSlope</MeshPlacement>
+                </Mesh>
+                <Selection>
+                    <MultiSelectable>1</MultiSelectable>
+                    <OnSelection>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </OnSelection>
+                </Selection>
+                <Walking>
+                    <ShortenSailsAfter>0</ShortenSailsAfter>
+                    <ReservationLength>24</ReservationLength>                    <!-- Battle Cruiser 16 -->
+                    <ReservationWidth>9</ReservationWidth>                    <!-- Battle Cruiser 6 -->
+                    <PathPlannerLayer>Water</PathPlannerLayer>
+                    <ExpensiveDirSmoothing>1</ExpensiveDirSmoothing>
+                    <TurnAroundRadius>28</TurnAroundRadius>                    <!-- Battle Cruiser 8 - 18 -->
+                    <Acceleration>0.30</Acceleration>                    <!-- Battle Cruiser 0.75 - 0.45 -->
+                    <Deceleration>0.4</Deceleration>                    <!-- Battle Cruiser 1 - 0.5 -->
+                    <TurnRadius>20</TurnRadius>                    <!-- Battle Cruiser 8 - 15 -->
+                    <TurnDeceleration>0</TurnDeceleration>                    <!-- Battle Cruiser 0 -->
+                    <TurnMovement>0</TurnMovement>                    <!-- Battle Cruiser 0 -->
+                    <LeaningMaxAngle>-10</LeaningMaxAngle>                    <!-- Battle Cruiser -10 -->
+                    <ForwardSpeed>3.2</ForwardSpeed>                    <!-- Battle Cruiser 4.5 - 5.4 -->
+                    <WindMinSlowdownFactor>1</WindMinSlowdownFactor>                    <!-- Battle Cruiser 1 -->
+                    <WindMaxSpeedupFactor>1</WindMaxSpeedupFactor>                    <!-- Battle Cruiser 1 -->
+                    <CargoFullFactor>0.5</CargoFullFactor>                    <!-- Battle Cruiser 0.7 - 0.9 -->
+                    <DamageFullFactor>0.5</DamageFullFactor>                    <!-- Battle Cruiser 0.5 - 0.8 -->
+                    <MinSlowdownFactor>0.5</MinSlowdownFactor>                    <!-- Battle Cruiser 0.5 - 0.6 -->
+                    <CurveSegmentDensity>High</CurveSegmentDensity>
+                </Walking>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>Heavy Battle Cruiser</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>14857</LineID>
+                </Text>
+                <CommandQueue>
+                    <FormationPriority>2</FormationPriority>
+                    <MilitaryShipPoints>6</MilitaryShipPoints>
+                    <PriorityShipList>1</PriorityShipList>
+                </CommandQueue>
+                <Drifting>
+                    <OverrideAssetWidthAndLength>0</OverrideAssetWidthAndLength>
+                    <Length>14</Length>                    <!-- Battle Cruiser 10 -->
+                    <Width>2.2</Width>                    <!-- Battle Cruiser 1.75 -->
+                    <FactorMovement>0.7</FactorMovement>                    <!-- Battle Cruiser 0.7 -->
+                    <FactorRotation>0.65</FactorRotation>                    <!-- Battle Cruiser 0.65 -->
+                </Drifting>
+                <Collector/>
+                <Attackable>
+                    <MaximumHitPoints>9500</MaximumHitPoints>                    <!-- Battle Cruiser 6000 - 8250 -->
+                    <AlertRange>165</AlertRange>                    <!-- Battle Cruiser 150 -->
+                    <HPBarOffset>6.5</HPBarOffset>                    <!-- Battle Cruiser 280 -->
+                    <AccuracyWidth>12</AccuracyWidth>                    <!-- Battle Cruiser 8 -->
+                    <ArmorType>HeavyArmor</ArmorType>
+                    <SelfHealPerHealTick>2.1</SelfHealPerHealTick>                    <!-- Battle Cruiser 1.667 -->
+                    <SelfHealPausedTimeIfAttacked>20000</SelfHealPausedTimeIfAttacked>                    <!-- Battle Cruiser 60000 -->
+                </Attackable>
+                <Attacker>
+                    <ShootingTracking>TurretFixed</ShootingTracking>
+                    <BaseDamage>1800</BaseDamage>                    <!-- Battle Cruiser 280 - 1370 -->
+                    <ReloadTime>150</ReloadTime>                    <!-- Battle Cruiser 70 - 185 -->
+                    <AttackRange>85</AttackRange>                    <!-- Battle Cruiser 84 - 85 -->
+                    <LineOfSightRange>125</LineOfSightRange>                    <!-- Battle Cruiser 100 -->
+                    <Turrets>
+                        <Item>
+                            <TurnSpan>110</TurnSpan>
+                            <TurretCfg>data/graphics/vehicle/battle_cruiser/battle_cruiser_turret_01.cfg</TurretCfg>
+                        </Item>
+                        <Item>
+                            <TurnSpan>110</TurnSpan>
+                            <TurretCfg>data/graphics/vehicle/battle_cruiser/battle_cruiser_turret_01.cfg</TurretCfg>
+                        </Item>
+                        <Item>
+                            <TurnSpan>110</TurnSpan>
+                            <TurretCfg>data/graphics/vehicle/battle_cruiser/battle_cruiser_turret_01.cfg</TurretCfg>
+                        </Item>
+                        <Item>
+                            <TurnSpan>110</TurnSpan>
+                            <TurretCfg>data/graphics/vehicle/battle_cruiser/battle_cruiser_turret_01.cfg</TurretCfg>
+                        </Item>
+                        <Item>
+                            <TurnSpan>110</TurnSpan>
+                            <TurretCfg>data/graphics/vehicle/battle_cruiser/battle_cruiser_turret_01.cfg</TurretCfg>
+                        </Item>
+                        <Item>
+                            <TurnSpan>110</TurnSpan>
+                            <TurretCfg>data/graphics/vehicle/battle_cruiser/battle_cruiser_turret_01.cfg</TurretCfg>
+                        </Item>
+                        <Item>
+                            <TurnSpan>180</TurnSpan>
+                            <TurretCfg>data/graphics/vehicle/monitor/monitor_turret.cfg</TurretCfg>
+                        </Item>
+                        <Item>
+                            <TurnSpan>180</TurnSpan>
+                            <TurretCfg>data/graphics/vehicle/monitor/monitor_turret.cfg</TurretCfg>
+                        </Item>
+                        <Item>
+                            <TurnSpan>110</TurnSpan>
+                            <TurretCfg>data/graphics/vehicle/battle_cruiser/battle_cruiser_turret_01.cfg</TurretCfg>
+                        </Item>
+                        <Item>
+                            <TurnSpan>110</TurnSpan>
+                            <TurretCfg>data/graphics/vehicle/battle_cruiser/battle_cruiser_turret_01.cfg</TurretCfg>
+                        </Item>
+                    </Turrets>
+                    <ProjectileAsset>102033</ProjectileAsset>                    <!--Large_Single_Shot_BattleCruiser-->
+                    <MuzzleEffectAssets>
+                        <Item>
+                            <MuzzleEffectAsset>102228</MuzzleEffectAsset>                            <!--Shot_Battlecruiser-->
+                        </Item>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>0</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>WarShip</TemplateName>
+                                        <Index>0</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                            <MuzzleEffectAsset>102228</MuzzleEffectAsset>                            <!--Shot_Battlecruiser-->
+                        </Item>
+                    </MuzzleEffectAssets>
+                    <FullVolleyTimeMin>2.8</FullVolleyTimeMin>
+                    <FullVolleyTimeMax>4</FullVolleyTimeMax>
+                    <AccuracyBase>15</AccuracyBase>                    <!-- Battle Cruiser 1 - 15 -->
+                    <AccuracyIncreaseOverDistance>200</AccuracyIncreaseOverDistance>                    <!-- Battle Cruiser 60 - 200 -->
+                    <AccuracySpeedDecay>20</AccuracySpeedDecay>
+                    <AccuracyByDistance>
+                        <Item>
+                            <AccuracyByDistancePair>
+                                <EnemyDistanceRelToAttackRange>0</EnemyDistanceRelToAttackRange>
+                                <CorrespondingAccuracy>5</CorrespondingAccuracy>
+                            </AccuracyByDistancePair>
+                        </Item>
+                        <Item>
+                            <AccuracyByDistancePair>
+                                <EnemyDistanceRelToAttackRange>20</EnemyDistanceRelToAttackRange>
+                                <CorrespondingAccuracy>10</CorrespondingAccuracy>
+                            </AccuracyByDistancePair>
+                        </Item>
+                        <Item>
+                            <AccuracyByDistancePair>
+                                <EnemyDistanceRelToAttackRange>30</EnemyDistanceRelToAttackRange>
+                                <CorrespondingAccuracy>20</CorrespondingAccuracy>
+                            </AccuracyByDistancePair>
+                        </Item>
+                        <Item>
+                            <AccuracyByDistancePair>
+                                <EnemyDistanceRelToAttackRange>40</EnemyDistanceRelToAttackRange>
+                                <CorrespondingAccuracy>50</CorrespondingAccuracy>
+                            </AccuracyByDistancePair>
+                        </Item>
+                        <Item>
+                            <AccuracyByDistancePair>
+                                <EnemyDistanceRelToAttackRange>50</EnemyDistanceRelToAttackRange>
+                                <CorrespondingAccuracy>70</CorrespondingAccuracy>
+                            </AccuracyByDistancePair>
+                        </Item>
+                        <Item>
+                            <AccuracyByDistancePair>
+                                <EnemyDistanceRelToAttackRange>60</EnemyDistanceRelToAttackRange>
+                                <CorrespondingAccuracy>90</CorrespondingAccuracy>
+                            </AccuracyByDistancePair>
+                        </Item>
+                        <Item>
+                            <AccuracyByDistancePair>
+                                <EnemyDistanceRelToAttackRange>100</EnemyDistanceRelToAttackRange>
+                                <CorrespondingAccuracy>100</CorrespondingAccuracy>
+                            </AccuracyByDistancePair>
+                        </Item>
+                    </AccuracyByDistance>
+                </Attacker>
+                <MinimapToken>
+                    <TokenAsset>2001947</TokenAsset>                    <!--Ships-->
+                    <StrategicMapAsset>501018</StrategicMapAsset>                    <!--Steam Ships-->
+                </MinimapToken>
+                <SoundEmitter>
+                    <ActiveSounds>
+                        <Item>
+                            <Sound>216009</Sound>                            <!--wwe_sfx_veh_battle_cruiser_lp_play-->
+                        </Item>
+                    </ActiveSounds>
+                    <DestroySounds>
+                        <Item>
+                            <Sound>238314</Sound>                            <!--wwe_sfx_veh_battle_cruiser_destroy_os-->
+                        </Item>
+                    </DestroySounds>
+                </SoundEmitter>
+                <UpgradeList/>
+                <QuestObject/>
+                <Infolayer/>
+                <ItemContainer>
+                    <SocketCount>4</SocketCount>                    <!-- Battle Cruiser 4 -->
+                    <SocketAllocation>Ship;SteamShip;Warship</SocketAllocation>
+                    <SlotCount>6</SlotCount>                    <!-- Battle Cruiser 3 -->
+                </ItemContainer>
+                <FeedbackController/>
+                <Draggable>
+                    <DraggableOnDrag>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </DraggableOnDrag>
+                    <DraggableOnDrop>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </DraggableOnDrop>
+                </Draggable>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!--coins-->
+                            <Amount>1000000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010218</Ingredient>                            <!--beams-->
+                            <Amount>200</Amount>                            <!-- Battle Cruiser 60 -->
+                        </Item>
+                        <Item>
+                            <Ingredient>1010224</Ingredient>                            <!--steam motors-->
+                            <Amount>150</Amount>                            <!-- Battle Cruiser 20 -->
+                        </Item>
+                        <Item>
+                            <Ingredient>1010223</Ingredient>                            <!--advanced weapons-->
+                            <Amount>100</Amount>                            <!-- Battle Cruiser 25 -->
+                        </Item>
+                    </Costs>
+                    <InfluenceCostType>WarShip</InfluenceCostType>
+                    <InfluenceCostPoints>100</InfluenceCostPoints>                    <!-- Battle Cruiser 24 -->
+                </Cost>
+                <Craftable>
+                    <CraftingTime>2000000</CraftingTime>                    <!-- Battle Cruiser 900000 -->
+                </Craftable>
+                <TradeRouteVehicle/>
+                <Locked/>
+                <Nameable/>
+                <MetaPersistent/>
+                <ExpeditionAttribute>
+                    <BaseMorale>100</BaseMorale>                    <!-- Battle Cruiser 50 -->
+                    <ExpeditionAttributes>
+                        <Item>
+                            <Attribute>Might</Attribute>
+                            <Amount>100</Amount>                            <!-- Battle Cruiser 70 -->
+                        </Item>
+                        <Item>
+                            <Attribute>Navigation</Attribute>
+                            <Amount>100</Amount>
+                        </Item>
+                        <Item>
+                            <Attribute>PerkMilitaryShip</Attribute>
+                            <Amount>1</Amount>
+                        </Item>
+                        <Item>
+                            <Attribute>PerkSteamShip</Attribute>
+                            <Amount>1</Amount>
+                        </Item>
+                    </ExpeditionAttributes>
+                </ExpeditionAttribute>
+                <ShipMaintenance>
+                    <Maintenance>10000</Maintenance>                    <!-- Battle Cruiser 850 - 2000 -->
+                </ShipMaintenance>
+                <Sellable>
+                    <Baseprice>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>0</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>WarShip</TemplateName>
+                                        <Index>0</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                            <Amount>2550000</Amount>                            <!-- Battle Cruiser 800000 -->
+                        </Item>
+                    </Baseprice>
+                </Sellable>
+                <Stance/>
+                <Rentable/>
+                <WorldMapSound/>
+                <Pausable/>
+                <ShipIncident/>
+                <SoundEmitterCommandBarks>
+                    <BarkMapping>
+                        <Selection>
+                            <AudioPool>700081</AudioPool>                            <!--Battlecruiser_SelectPool-->
+                        </Selection>
+                        <SelectionDamaged>
+                            <AudioPool>700110</AudioPool>                            <!--Battlecruiser_SelectDamagedPool-->
+                        </SelectionDamaged>
+                        <AttackCommand>
+                            <AudioPool>700082</AudioPool>                            <!--Battlecruiser_AttackPool-->
+                        </AttackCommand>
+                        <MoveCommand>
+                            <AudioPool>700083</AudioPool>                            <!--Battlecruiser_MovePool-->
+                        </MoveCommand>
+                        <EscortCommand>
+                            <AudioPool>700112</AudioPool>                            <!--Battlecruiser_EscortPool-->
+                        </EscortCommand>
+                        <PatrolCommand>
+                            <AudioPool>700111</AudioPool>                            <!--Battlecruiser_PatrolPool-->
+                        </PatrolCommand>
+                    </BarkMapping>
+                </SoundEmitterCommandBarks>
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <ModOp Type="add" GUID='131205' Path="/Values/BuildPermitGroup/Group">        <!-- Permit Group Great Eastern (Now Harbor and Ships) -->
+        <Item>
+            <BuildPermit>1742100585</BuildPermit>
+        </Item>
+    </ModOp>
+
+    <!-- END SHIP - HEAVY BATTLE CRUISER -->
+
+    <!-- START SHIP - SMALL CARGO SHIP -->
+    <ModOp Type="addNextSibling" GUID='1010062'>
+        <Asset>
+            <Template>TradeShip</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742100581</GUID>
+                    <Name>Small Cargo Ship</Name>
+                    <IconFilename>data/graphics/icons/icon_small_cargo_ship.png</IconFilename>
+                    <InfoDescription>1742100582</InfoDescription>
+                </Standard>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/vehicle/small_cargo_ship/small_cargo_ship.cfg</Filename>
+                        </Item>
+                    </Variations>
+                </Object>
+                <Mesh>
+                    <MeshPlacement>OnWaterSlope</MeshPlacement>
+                </Mesh>
+                <Selection>
+                    <MultiSelectable>1</MultiSelectable>
+                    <OnSelection>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </OnSelection>
+                </Selection>
+                <Walking>
+                    <ShortenSailsAfter>0</ShortenSailsAfter>
+                    <ReservationLength>6</ReservationLength>                    <!-- Cargo Ship 16 -->
+                    <ReservationWidth>3</ReservationWidth>                    <!-- Cargo Ship 6 -->
+                    <PathPlannerLayer>Water</PathPlannerLayer>
+                    <ExpensiveDirSmoothing>1</ExpensiveDirSmoothing>
+                    <TurnAroundRadius>5</TurnAroundRadius>                    <!-- Cargo Ship 8 -->
+                    <Acceleration>1.85</Acceleration>                    <!-- Cargo Ship 1.5 -->
+                    <Deceleration>1.5</Deceleration>                    <!-- Cargo Ship 2 -->
+                    <TurnRadius>5</TurnRadius>                    <!-- Cargo Ship 8 -->
+                    <TurnSpeedInPlace>30</TurnSpeedInPlace>                    <!-- Cargo Ship 20 -->
+                    <TurnDeceleration>0</TurnDeceleration>                    <!-- Cargo Ship 0 -->
+                    <TurnMovement>0</TurnMovement>                    <!-- Cargo Ship 0 -->
+                    <LeaningMaxAngle>-10</LeaningMaxAngle>                    <!-- Cargo Ship -10 -->
+                    <ForwardSpeed>5.8</ForwardSpeed>                    <!-- Cargo Ship 5.2 -->
+                    <WindMinSlowdownFactor>1</WindMinSlowdownFactor>                    <!-- Cargo Ship 1 -->
+                    <WindMaxSpeedupFactor>1</WindMaxSpeedupFactor>                    <!-- Cargo Ship 1 -->
+                    <CargoFullFactor>0.5</CargoFullFactor>                    <!-- Cargo Ship 0.8 -->
+                    <MinSlowdownFactor>0.5</MinSlowdownFactor>                    <!-- Cargo Ship 0.5 -->
+                    <CurveSegmentDensity>High</CurveSegmentDensity>
+                </Walking>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>Small Cargo Ship</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>14859</LineID>
+                </Text>
+                <CommandQueue>
+                    <FormationPriority>1</FormationPriority>
+                    <TradeShipPoints>4</TradeShipPoints>
+                    <PriorityShipList>2</PriorityShipList>
+                </CommandQueue>
+                <Drifting>
+                    <OverrideAssetWidthAndLength>0</OverrideAssetWidthAndLength>
+                    <Length>5</Length>                    <!-- Cargo Ship 7 -->
+                    <Width>1.35</Width>                    <!-- Cargo Ship 1.5 -->
+                    <FactorMovement>0.7</FactorMovement>                    <!-- Cargo Ship 0.7 -->
+                    <FactorRotation>0.65</FactorRotation>                    <!-- Cargo Ship 0.65 -->
+                </Drifting>
+                <Collector/>
+                <Attackable>
+                    <MaximumHitPoints>1250</MaximumHitPoints>                    <!-- Cargo Ship 4000 -->
+                    <AlertRange>100</AlertRange>                    <!-- Cargo Ship 150 -->
+                    <HPBarOffset>4</HPBarOffset>
+                    <SelfHealPerHealTick>1.1</SelfHealPerHealTick>                    <!-- Cargo Ship 1.667 -->
+                    <SelfHealPausedTimeIfAttacked>90000</SelfHealPausedTimeIfAttacked>                    <!-- Cargo Ship 60000 -->
+                </Attackable>
+                <MinimapToken>
+                    <TokenAsset>2001947</TokenAsset>                    <!--Ships-->
+                    <StrategicMapAsset>501018</StrategicMapAsset>                    <!--Steam Ships-->
+                </MinimapToken>
+                <SoundEmitter>
+                    <ActiveSounds>
+                        <Item>
+                            <Sound>201827</Sound>                            <!--wwe_sfx_veh_collier_lp_play-->
+                        </Item>
+                    </ActiveSounds>
+                    <DestroySounds>
+                        <Item>
+                            <Sound>238314</Sound>                            <!--wwe_sfx_veh_battle_cruiser_destroy_os-->
+                        </Item>
+                    </DestroySounds>
+                </SoundEmitter>
+                <UpgradeList/>
+                <QuestObject/>
+                <Infolayer/>
+                <ItemContainer>
+                    <SocketCount>1</SocketCount>                    <!-- Cargo Ship 2 -->
+                    <SocketAllocation>Ship;SteamShip;Tradeship</SocketAllocation>
+                    <SlotCount>2</SlotCount>                    <!-- Cargo Ship 6 -->
+                </ItemContainer>
+                <FeedbackController/>
+                <Draggable>
+                    <DraggableOnDrag>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </DraggableOnDrag>
+                    <DraggableOnDrop>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </DraggableOnDrop>
+                </Draggable>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>
+                            <Amount>7500</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010218</Ingredient>                            <!--beams-->
+                            <Amount>8</Amount>                            <!-- Cargo Ship 20 -->
+                        </Item>
+                        <Item>
+                            <Ingredient>1010224</Ingredient>                            <!--steam motors-->
+                            <Amount>8</Amount>                            <!-- Cargo Ship 20 -->
+                        </Item>
+                    </Costs>
+                    <InfluenceCostType>TradeShip</InfluenceCostType>
+                    <InfluenceCostPoints>2</InfluenceCostPoints>                    <!-- Cargo Ship 6 -->
+                </Cost>
+                <Craftable>
+                    <CraftingTime>100000</CraftingTime>                    <!-- Cargo Ship 540000 -->
+                </Craftable>
+                <TradeRouteVehicle/>
+                <Locked/>
+                <Nameable/>
+                <MetaPersistent/>
+                <ExpeditionAttribute>
+                    <BaseMorale>30</BaseMorale>                    <!-- Cargo Ship 70 -->
+                    <ExpeditionAttributes>
+                        <Item>
+                            <Attribute>Navigation</Attribute>
+                            <Amount>10</Amount>                            <!-- Cargo Ship 20 -->
+                        </Item>
+                        <Item>
+                            <Attribute>PerkTradeShip</Attribute>
+                            <Amount>1</Amount>
+                        </Item>
+                        <Item>
+                            <Attribute>PerkSteamShip</Attribute>
+                            <Amount>1</Amount>
+                        </Item>
+                    </ExpeditionAttributes>
+                </ExpeditionAttribute>
+                <ShipMaintenance>
+                    <Maintenance>50</Maintenance>                    <!-- Cargo Ship 500 -->
+                </ShipMaintenance>
+                <Sellable>
+                    <Baseprice>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>0</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>TradeShip</TemplateName>
+                                        <Index>0</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                            <Amount>40000</Amount>                            <!-- Cargo Ship 300000 -->
+                        </Item>
+                    </Baseprice>
+                </Sellable>
+                <Stance/>
+                <Rentable/>
+                <WorldMapSound/>
+                <Pausable/>
+                <ShipIncident/>
+                <SoundEmitterCommandBarks>
+                    <BarkMapping>
+                        <Selection>
+                            <AudioPool>700094</AudioPool>                            <!--CargoShip_SelectPool-->
+                        </Selection>
+                        <SelectionDamaged>
+                            <AudioPool>700125</AudioPool>                            <!--CargoShip_SelectDamagedPool-->
+                        </SelectionDamaged>
+                        <MoveCommand>
+                            <AudioPool>700095</AudioPool>                            <!--CargoShip_MovePool-->
+                        </MoveCommand>
+                        <EscortCommand>
+                            <AudioPool>700127</AudioPool>                            <!--CargoShip_EscortPool-->
+                        </EscortCommand>
+                        <PatrolCommand>
+                            <AudioPool>700126</AudioPool>                            <!--CargoShip_PatrolPool-->
+                        </PatrolCommand>
+                    </BarkMapping>
+                </SoundEmitterCommandBarks>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END SHIP - SMALL CARGO SHIP -->
+
+    <!-- START SHIP - TORPEDO BOAT -->
+    <ModOp Type="addNextSibling" GUID='100443'>
+        <Asset>
+            <Template>WarShip</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742100587</GUID>
+                    <Name>Torpedo Boat</Name>
+                    <IconFilename>data/graphics/icons/icon_torpedo_boat.png</IconFilename>
+                    <InfoDescription>1742100588</InfoDescription>
+                </Standard>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/vehicle/torpedo_boat/torpedo_boat.cfg</Filename>
+                        </Item>
+                    </Variations>
+                </Object>
+                <Mesh>
+                    <MeshPlacement>OnWaterSlope</MeshPlacement>
+                </Mesh>
+                <Selection>
+                    <ObjectmenuHeaderImage>data/ui/2kimages/main/3dicons/icon_ship.png</ObjectmenuHeaderImage>
+                    <MultiSelectable>1</MultiSelectable>
+                </Selection>
+                <Walking>
+                    <ShortenSailsAfter>0</ShortenSailsAfter>
+                    <ReservationLength>20</ReservationLength>
+                    <ReservationWidth>7</ReservationWidth>
+                    <PathPlannerLayer>Water</PathPlannerLayer>
+                    <ExpensiveDirSmoothing>1</ExpensiveDirSmoothing>
+                    <TurnAroundRadius>8</TurnAroundRadius>
+                    <Acceleration>1.6</Acceleration>
+                    <Deceleration>2</Deceleration>
+                    <TurnRadius>8</TurnRadius>
+                    <TurnSpeed>60</TurnSpeed>
+                    <TurnSpeedInPlace>45</TurnSpeedInPlace>
+                    <TurnDeceleration>0</TurnDeceleration>
+                    <TurnMovement>0</TurnMovement>
+                    <LeaningMaxAngle>-15</LeaningMaxAngle>
+                    <ForwardSpeed>8.5</ForwardSpeed>
+                    <WindMinSlowdownFactor>1</WindMinSlowdownFactor>
+                    <WindMaxSpeedupFactor>1</WindMaxSpeedupFactor>
+                    <CargoFullFactor>0.7</CargoFullFactor>
+                    <DamageFullFactor>0.4</DamageFullFactor>
+                    <MinSlowdownFactor>0.4</MinSlowdownFactor>
+                    <CurveSegmentDensity>Medium</CurveSegmentDensity>
+                </Walking>
+                <CommandQueue>
+                    <FormationPriority>3</FormationPriority>
+                    <MilitaryShipPoints>3</MilitaryShipPoints>
+                    <PriorityShipList>1</PriorityShipList>
+                </CommandQueue>
+                <Drifting>
+                    <OverrideAssetWidthAndLength>0</OverrideAssetWidthAndLength>
+                    <Length>4.5</Length>
+                    <FactorMovement>0.7</FactorMovement>
+                    <FactorRotation>0.65</FactorRotation>
+                </Drifting>
+                <Collector />
+                <Attackable>
+                    <MaximumHitPoints>1250</MaximumHitPoints>
+                    <HPBarOffset>3.5</HPBarOffset>
+                    <AlertRange>150</AlertRange>
+                    <AccuracyWidth>10</AccuracyWidth>
+                    <SelfHealPerHealTick>0</SelfHealPerHealTick>
+                    <SelfHealPausedTimeIfAttacked>60000</SelfHealPausedTimeIfAttacked>
+                </Attackable>
+                <Attacker>
+                    <AttackRange>42</AttackRange>
+                    <LineOfSightRange>50</LineOfSightRange>
+                    <ReloadTime>40</ReloadTime>
+                    <ProjectileCount>2</ProjectileCount>
+                    <BaseDamage>120</BaseDamage>
+                    <ProjectileAsset>102267</ProjectileAsset>
+                    <Turrets>
+                        <Item>
+                            <TurnSpan>300</TurnSpan>
+                            <TurretCfg>data/graphics/vehicle/torpedo_boat/torpedo_boat_turret.cfg</TurretCfg>
+                        </Item>
+                        <Item>
+                            <TurnSpan>300</TurnSpan>
+                            <TurretCfg>data/graphics/vehicle/torpedo_boat/torpedo_boat_turret.cfg</TurretCfg>
+                        </Item>
+                        <Item>
+                            <TurnSpan>240</TurnSpan>
+                            <TurretCfg>data/graphics/vehicle/torpedo_boat/light_cruiser_torpedolauncher.cfg</TurretCfg>
+                        </Item>
+                        <Item>
+                            <TurnSpan>240</TurnSpan>
+                            <TurretCfg>data/graphics/vehicle/torpedo_boat/light_cruiser_torpedolauncher.cfg</TurretCfg>
+                        </Item>
+                    </Turrets>
+                    <AccuracyIncreaseOverDistance>100</AccuracyIncreaseOverDistance>
+                    <AccuracySpeedDecay>20</AccuracySpeedDecay>
+                    <ShootingTracking>TurretFixed</ShootingTracking>
+                    <AccuracyByDistance>
+                        <Item>
+                            <AccuracyByDistancePair>
+                                <EnemyDistanceRelToAttackRange>10</EnemyDistanceRelToAttackRange>
+                                <CorrespondingAccuracy>60</CorrespondingAccuracy>
+                            </AccuracyByDistancePair>
+                        </Item>
+                        <Item>
+                            <AccuracyByDistancePair>
+                                <EnemyDistanceRelToAttackRange>30</EnemyDistanceRelToAttackRange>
+                                <CorrespondingAccuracy>70</CorrespondingAccuracy>
+                            </AccuracyByDistancePair>
+                        </Item>
+                        <Item>
+                            <AccuracyByDistancePair>
+                                <EnemyDistanceRelToAttackRange>50</EnemyDistanceRelToAttackRange>
+                                <CorrespondingAccuracy>90</CorrespondingAccuracy>
+                            </AccuracyByDistancePair>
+                        </Item>
+                    </AccuracyByDistance>
+                    <AccuracyBase>2</AccuracyBase>
+                </Attacker>
+                <MinimapToken>
+                    <TokenAsset>2001947</TokenAsset>
+                    <StrategicMapAsset>501018</StrategicMapAsset>
+                </MinimapToken>
+                <SoundEmitter>
+                    <DestroySounds>
+                        <Item>
+                            <Sound>42000000</Sound>
+                        </Item>
+                    </DestroySounds>
+                    <VehicleSounds>
+                        <MovementStart>
+                            <Item>
+                                <Sound>216019</Sound>
+                            </Item>
+                        </MovementStart>
+                    </VehicleSounds>
+                </SoundEmitter>
+                <UpgradeList />
+                <QuestObject />
+                <Infolayer />
+                <ItemContainer>
+                    <SocketCount>2</SocketCount>
+                    <SocketAllocation>Ship;SteamShip;Warship;Mod10</SocketAllocation>
+                    <SlotCount>2</SlotCount>
+                    <StackLimit>50</StackLimit>
+                </ItemContainer>
+                <FeedbackController />
+                <Draggable />
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>
+                            <Amount>50000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010218</Ingredient>
+                            <Amount>35</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010224</Ingredient>
+                            <Amount>10</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010223</Ingredient>
+                            <Amount>10</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010222</Ingredient>
+                            <Amount>30</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010226</Ingredient>
+                            <Amount>45</Amount>
+                        </Item>
+                    </Costs>
+                    <InfluenceCostType>WarShip</InfluenceCostType>
+                    <InfluenceCostPoints>10</InfluenceCostPoints>
+                </Cost>
+                <Craftable>
+                    <CraftingTime>420000</CraftingTime>
+                </Craftable>
+                <TradeRouteVehicle />
+                <Locked />
+                <Nameable />
+                <MetaPersistent />
+                <ExpeditionAttribute>
+                    <BaseMorale>50</BaseMorale>
+                    <ExpeditionAttributes>
+                        <Item>
+                            <Attribute>Might</Attribute>
+                            <Amount>30</Amount>
+                        </Item>
+                        <Item>
+                            <Attribute>Navigation</Attribute>
+                            <Amount>20</Amount>
+                        </Item>
+                        <Item>
+                            <Attribute>PerkMilitaryShip</Attribute>
+                            <Amount>1</Amount>
+                        </Item>
+                        <Item>
+                            <Attribute>PerkSteamShip</Attribute>
+                            <Amount>1</Amount>
+                        </Item>
+                    </ExpeditionAttributes>
+                </ExpeditionAttribute>
+                <ShipMaintenance>
+                    <Maintenance>500</Maintenance>
+                </ShipMaintenance>
+                <Sellable>
+                    <Baseprice>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>0</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>WarShip</TemplateName>
+                                        <Index>0</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                            <Amount>200000</Amount>
+                        </Item>
+                    </Baseprice>
+                </Sellable>
+                <Stance />
+                <Rentable />
+                <WorldMapSound />
+                <Pausable />
+                <ShipIncident />
+                <SoundEmitterCommandBarks>
+                    <BarkMapping>
+                        <Selection>
+                            <AudioPool>700087</AudioPool>
+                        </Selection>
+                        <AttackCommand>
+                            <AudioPool>700088</AudioPool>
+                        </AttackCommand>
+                        <MoveCommand>
+                            <AudioPool>700089</AudioPool>
+                        </MoveCommand>
+                        <SelectionDamaged>
+                            <AudioPool>700116</AudioPool>
+                        </SelectionDamaged>
+                        <EscortCommand>
+                            <AudioPool>700118</AudioPool>
+                        </EscortCommand>
+                        <PatrolCommand>
+                            <AudioPool>700117</AudioPool>
+                        </PatrolCommand>
+                    </BarkMapping>
+                </SoundEmitterCommandBarks>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END SHIP - TORPEDO BOAT -->
+
+    <!-- START SHIP - CORVBETTE -->
+    <ModOp Type="addNextSibling" GUID='100443'>
+        <Asset>
+            <Template>WarShip</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742100589</GUID>
+                    <Name>Corvette</Name>
+                    <IconFilename>data/graphics/icons/icon_lightcruiser.png</IconFilename>
+                    <InfoDescription>1742100590</InfoDescription>
+                </Standard>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/vehicle/light_cruiser/light_cruiser.cfg</Filename>
+                        </Item>
+                    </Variations>
+                </Object>
+                <Mesh>
+                    <MeshPlacement>OnWaterSlope</MeshPlacement>
+                </Mesh>
+                <Selection>
+                    <MultiSelectable>1</MultiSelectable>
+                </Selection>
+                <Walking>
+                    <ShortenSailsAfter>0</ShortenSailsAfter>
+                    <ReservationLength>16</ReservationLength>
+                    <ReservationWidth>6</ReservationWidth>
+                    <PathPlannerLayer>Water</PathPlannerLayer>
+                    <ExpensiveDirSmoothing>1</ExpensiveDirSmoothing>
+                    <TurnAroundRadius>5</TurnAroundRadius>
+                    <Acceleration>1.7</Acceleration>
+                    <Deceleration>1.6</Deceleration>
+                    <TurnRadius>5</TurnRadius>
+                    <TurnDeceleration>0</TurnDeceleration>
+                    <TurnMovement>0</TurnMovement>
+                    <LeaningMaxAngle>-12</LeaningMaxAngle>
+                    <ForwardSpeed>6.7</ForwardSpeed>
+                    <WindMinSlowdownFactor>1</WindMinSlowdownFactor>
+                    <WindMaxSpeedupFactor>1</WindMaxSpeedupFactor>
+                    <CargoFullFactor>0.85</CargoFullFactor>
+                    <DamageFullFactor>0.6</DamageFullFactor>
+                    <MinSlowdownFactor>0.7</MinSlowdownFactor>
+                    <CurveSegmentDensity>High</CurveSegmentDensity>
+                </Walking>
+                <CommandQueue>
+                    <FormationPriority>2</FormationPriority>
+                    <MilitaryShipPoints>6</MilitaryShipPoints>
+                    <PriorityShipList>1</PriorityShipList>
+                </CommandQueue>
+                <Drifting>
+                    <OverrideAssetWidthAndLength>1</OverrideAssetWidthAndLength>
+                    <Length>6</Length>
+                    <Width>1.75</Width>
+                    <FactorMovement>0.7</FactorMovement>
+                    <FactorRotation>0.65</FactorRotation>
+                </Drifting>
+                <Collector />
+                <Attackable>
+                    <MaximumHitPoints>2300</MaximumHitPoints>
+                    <HPBarOffset>6.5</HPBarOffset>
+                    <AlertRange>150</AlertRange>
+                    <AccuracyWidth>9</AccuracyWidth>
+                    <SelfHealPerHealTick>0</SelfHealPerHealTick>
+                    <SelfHealPausedTimeIfAttacked>60000</SelfHealPausedTimeIfAttacked>
+                </Attackable>
+                <Attacker>
+                    <AttackRange>50</AttackRange>
+                    <LineOfSightRange>60</LineOfSightRange>
+                    <ReloadTime>25</ReloadTime>
+                    <ProjectileAsset>1742100601</ProjectileAsset>
+                    <ProjectileCount>8</ProjectileCount>
+                    <BaseDamage>160</BaseDamage>
+                    <Turrets>
+                        <Item>
+                            <TurnSpan>240</TurnSpan>
+                            <TurretCfg>data/graphics/vehicle/light_cruiser/light_cruiser_turret.cfg</TurretCfg>
+                        </Item>
+                        <Item>
+                            <TurnSpan>240</TurnSpan>
+                            <TurretCfg>data/graphics/vehicle/light_cruiser/light_cruiser_turret.cfg</TurretCfg>
+                        </Item>
+                        <Item>
+                            <TurnSpan>240</TurnSpan>
+                            <TurretCfg>data/graphics/vehicle/light_cruiser/light_cruiser_turret.cfg</TurretCfg>
+                        </Item>
+                        <Item>
+                            <TurnSpan>240</TurnSpan>
+                            <TurretCfg>data/graphics/vehicle/light_cruiser/light_cruiser_turret.cfg</TurretCfg>
+                        </Item>
+                        <Item>
+                            <TurnSpan>240</TurnSpan>
+                            <TurretCfg>data/graphics/vehicle/light_cruiser/light_cruiser_torpedolauncher.cfg</TurretCfg>
+                        </Item>
+                    </Turrets>
+                    <AccuracyBase>1</AccuracyBase>
+                    <AccuracyIncreaseOverDistance>60</AccuracyIncreaseOverDistance>
+                    <AccuracySpeedDecay>20</AccuracySpeedDecay>
+                    <ShootingTracking>TurretFixed</ShootingTracking>
+                    <FullVolleyTimeMin>0.5</FullVolleyTimeMin>
+                    <FullVolleyTimeMax>1</FullVolleyTimeMax>
+                    <MuzzleEffectAssets>
+                        <Item>
+                            <MuzzleEffectAsset>102228</MuzzleEffectAsset>
+                        </Item>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>0</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>WarShip</TemplateName>
+                                        <Index>0</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                            <MuzzleEffectAsset>102228</MuzzleEffectAsset>
+                        </Item>
+                    </MuzzleEffectAssets>
+                    <FullVolleyTimeMax>2</FullVolleyTimeMax>
+                    <AccuracyByDistance>
+                        <Item>
+                            <AccuracyByDistancePair>
+                                <EnemyDistanceRelToAttackRange>100</EnemyDistanceRelToAttackRange>
+                                <CorrespondingAccuracy>60</CorrespondingAccuracy>
+                            </AccuracyByDistancePair>
+                        </Item>
+                        <Item>
+                            <AccuracyByDistancePair>
+                                <EnemyDistanceRelToAttackRange>0</EnemyDistanceRelToAttackRange>
+                                <CorrespondingAccuracy>90</CorrespondingAccuracy>
+                            </AccuracyByDistancePair>
+                        </Item>
+                    </AccuracyByDistance>
+                </Attacker>
+                <MinimapToken>
+                    <TokenAsset>2001947</TokenAsset>
+                    <StrategicMapAsset>501018</StrategicMapAsset>
+                </MinimapToken>
+                <SoundEmitter>
+                    <DestroySounds>
+                        <Item>
+                            <Sound>238314</Sound>
+                        </Item>
+                    </DestroySounds>
+                    <VehicleSounds>
+                        <MovementStart>
+                            <Item>
+                                <Sound>216009</Sound>
+                            </Item>
+                        </MovementStart>
+                    </VehicleSounds>
+                    <ActiveSounds>
+                        <Item>
+                            <Sound>201827</Sound>
+                        </Item>
+                    </ActiveSounds>
+                </SoundEmitter>
+                <UpgradeList />
+                <QuestObject />
+                <Infolayer />
+                <ItemContainer>
+                    <SocketCount>1</SocketCount>
+                    <SocketAllocation>Ship;SteamShip;Warship;Mod10</SocketAllocation>
+                    <SlotCount>2</SlotCount>
+                    <StackLimit>50</StackLimit>
+                </ItemContainer>
+                <FeedbackController />
+                <Draggable />
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>
+                            <Amount>75000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010218</Ingredient>
+                            <Amount>40</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010224</Ingredient>
+                            <Amount>30</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010223</Ingredient>
+                            <Amount>10</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010226</Ingredient>
+                            <Amount>35</Amount>
+                        </Item>
+                    </Costs>
+                    <InfluenceCostType>WarShip</InfluenceCostType>
+                    <InfluenceCostPoints>10</InfluenceCostPoints>
+                </Cost>
+                <Craftable>
+                    <CraftingTime>780000</CraftingTime>
+                </Craftable>
+                <TradeRouteVehicle />
+                <Locked>
+                    <DefaultLockedState>0</DefaultLockedState>
+                </Locked>
+                <Nameable />
+                <MetaPersistent />
+                <ExpeditionAttribute>
+                    <BaseMorale>50</BaseMorale>
+                    <ExpeditionAttributes>
+                        <Item>
+                            <Attribute>Might</Attribute>
+                            <Amount>50</Amount>
+                        </Item>
+                        <Item>
+                            <Attribute>Navigation</Attribute>
+                        </Item>
+                        <Item>
+                            <Attribute>PerkMilitaryShip</Attribute>
+                            <Amount>1</Amount>
+                        </Item>
+                        <Item>
+                            <Attribute>PerkSteamShip</Attribute>
+                            <Amount>1</Amount>
+                        </Item>
+                    </ExpeditionAttributes>
+                </ExpeditionAttribute>
+                <ShipMaintenance>
+                    <Maintenance>700</Maintenance>
+                </ShipMaintenance>
+                <Sellable>
+                    <Baseprice>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>0</InheritedIndex>
+                            </VectorElement>
+                            <Amount>500000</Amount>
+                        </Item>
+                    </Baseprice>
+                </Sellable>
+                <Stance />
+                <Rentable />
+                <WorldMapSound />
+                <Pausable />
+                <ShipIncident />
+                <SoundEmitterCommandBarks>
+                    <BarkMapping>
+                        <Selection>
+                            <AudioPool>700081</AudioPool>
+                        </Selection>
+                        <AttackCommand>
+                            <AudioPool>700082</AudioPool>
+                        </AttackCommand>
+                        <MoveCommand>
+                            <AudioPool>700083</AudioPool>
+                        </MoveCommand>
+                        <SelectionDamaged>
+                            <AudioPool>700110</AudioPool>
+                        </SelectionDamaged>
+                        <EscortCommand>
+                            <AudioPool>700112</AudioPool>
+                        </EscortCommand>
+                        <PatrolCommand>
+                            <AudioPool>700111</AudioPool>
+                        </PatrolCommand>
+                    </BarkMapping>
+                </SoundEmitterCommandBarks>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END SHIP - CORVBETTE -->
+
+    <!-- START SHIP - AUXILIRY SHIP -->
+    <ModOp Type="addNextSibling" GUID='100443'>
+        <Asset>
+            <Template>RepairShip</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742100591</GUID>
+                    <Name>Auxiliary Ship</Name>
+                    <IconFilename>data/graphics/icons/icon_repair_crane.png</IconFilename>
+                    <InfoDescription>1742100592</InfoDescription>
+                </Standard>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/vehicle/healer/healer.cfg</Filename>
+                        </Item>
+                    </Variations>
+                </Object>
+                <Mesh>
+                    <MeshPlacement>OnWaterSlope</MeshPlacement>
+                </Mesh>
+                <Selection>
+                    <MultiSelectable>1</MultiSelectable>
+                </Selection>
+                <Walking>
+                    <ReservationLength>3</ReservationLength>
+                    <ReservationWidth>1</ReservationWidth>
+                    <PathPlannerLayer>Water</PathPlannerLayer>
+                    <ExpensiveDirSmoothing>1</ExpensiveDirSmoothing>
+                    <TurnAroundRadius>4</TurnAroundRadius>
+                    <Acceleration>1.4</Acceleration>
+                    <Deceleration>3</Deceleration>
+                    <TurnRadius>4</TurnRadius>
+                    <TurnSpeed>75</TurnSpeed>
+                    <TurnDeceleration>0</TurnDeceleration>
+                    <TurnMovement>0</TurnMovement>
+                    <LeaningMaxAngle>-10</LeaningMaxAngle>
+                    <ForwardSpeed>10</ForwardSpeed>
+                    <WindMinSlowdownFactor>1</WindMinSlowdownFactor>
+                    <WindSlowdownEffectOnTurningSpeed>1</WindSlowdownEffectOnTurningSpeed>
+                    <WindMaxSpeedupFactor>1</WindMaxSpeedupFactor>
+                    <WindSpeedupEffectOnTurningSpeed>1</WindSpeedupEffectOnTurningSpeed>
+                    <CurveSegmentDensity>High</CurveSegmentDensity>
+                </Walking>
+                <CommandQueue>
+                    <FormationPriority>1</FormationPriority>
+                    <TradeShipPoints>1</TradeShipPoints>
+                    <PriorityShipList>2</PriorityShipList>
+                </CommandQueue>
+                <Drifting>
+                    <OverrideAssetWidthAndLength>0</OverrideAssetWidthAndLength>
+                    <Length>4.2</Length>
+                </Drifting>
+                <Collector />
+                <Attackable>
+                    <MaximumHitPoints>300</MaximumHitPoints>
+                    <HPBarOffset>4.5</HPBarOffset>
+                    <AlertRange>150</AlertRange>
+                    <SelfHealPerHealTick>0</SelfHealPerHealTick>
+                    <SelfHealPausedTimeIfAttacked>60000</SelfHealPausedTimeIfAttacked>
+                </Attackable>
+                <RepairCrane>
+                    <HealRadius>18</HealRadius>
+                    <HealPerMinute>900</HealPerMinute>
+                    <HealBuildingsPerMinute>900</HealBuildingsPerMinute>
+                    <RepairDelay>5000</RepairDelay>
+                </RepairCrane>
+                <MinimapToken>
+                    <TokenAsset>2001947</TokenAsset>
+                    <StrategicMapAsset>500433</StrategicMapAsset>
+                </MinimapToken>
+                <SoundEmitter>
+                    <DestroySounds>
+                        <Item>
+                            <Sound>238318</Sound>
+                        </Item>
+                    </DestroySounds>
+                    <VehicleSounds>
+                        <MovementStart>
+                            <Item>
+                                <Sound>216019</Sound>
+                            </Item>
+                        </MovementStart>
+                    </VehicleSounds>
+                </SoundEmitter>
+                <UpgradeList />
+                <QuestObject />
+                <Infolayer />
+                <ItemContainer>
+                    <SocketCount>0</SocketCount>
+                    <SlotCount>1</SlotCount>
+                </ItemContainer>
+                <FeedbackController />
+                <Draggable />
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>
+                            <Amount>20000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010218</Ingredient>
+                            <Amount>50</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010224</Ingredient>
+                            <Amount>20</Amount>
+                        </Item>
+                    </Costs>
+                    <InfluenceCostType>WarShip</InfluenceCostType>
+                    <InfluenceCostPoints>6</InfluenceCostPoints>
+                </Cost>
+                <Craftable>
+                    <CraftingTime>180000</CraftingTime>
+                </Craftable>
+                <TradeRouteVehicle />
+                <Locked>
+                    <DefaultLockedState>0</DefaultLockedState>
+                </Locked>
+                <Nameable />
+                <MetaPersistent />
+                <ExpeditionAttribute>
+                    <BaseMorale>10</BaseMorale>
+                    <ExpeditionAttributes>
+                        <Item>
+                            <Attribute>Might</Attribute>
+                        </Item>
+                        <Item>
+                            <Attribute>Navigation</Attribute>
+                            <Amount>20</Amount>
+                        </Item>
+                    </ExpeditionAttributes>
+                </ExpeditionAttribute>
+                <ShipMaintenance>
+                    <Maintenance>100</Maintenance>
+                </ShipMaintenance>
+                <Sellable>
+                    <Baseprice>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>0</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>TradeShip</TemplateName>
+                                        <Index>0</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                            <Amount>40000</Amount>
+                        </Item>
+                    </Baseprice>
+                </Sellable>
+                <Stance />
+                <Rentable />
+                <WorldMapSound />
+                <Pausable />
+                <ShipIncident />
+                <SoundEmitterCommandBarks>
+                    <BarkMapping>
+                        <Selection>
+                            <AudioPool>700090</AudioPool>
+                        </Selection>
+                        <MoveCommand>
+                            <AudioPool>700091</AudioPool>
+                        </MoveCommand>
+                        <EscortCommand>
+                            <AudioPool>700121</AudioPool>
+                        </EscortCommand>
+                        <PatrolCommand>
+                            <AudioPool>700120</AudioPool>
+                        </PatrolCommand>
+                        <SelectionDamaged>
+                            <AudioPool>700119</AudioPool>
+                        </SelectionDamaged>
+                    </BarkMapping>
+                </SoundEmitterCommandBarks>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END SHIP - AUXILIRY SHIP -->
+
+    <!-- START PROJECTILE - LIGHT CRUISER PROJECTILE -->
+    <ModOp Type="addNextSibling" GUID='102267'>
+        <Asset>
+            <Template>Projectile</Template>
+            <Values>
+                <Projectile>
+                    <ProjectileType>Arc</ProjectileType>
+                    <ShotHeight>0</ShotHeight>
+                    <ShotAngle>10</ShotAngle>
+                    <ProjectileSpeed>25</ProjectileSpeed>
+                    <DamageType>Cannon</DamageType>
+                    <StatusEffects />
+                </Projectile>
+                <Standard>
+                    <GUID>1742100601</GUID>
+                    <Name>Modern_Gun_Small_Lightcruiser</Name>
+                </Standard>
+                <Mesh />
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/vehicle/light_cruiser/projectile_cannon_modern_lightcruiser.cfg</Filename>
+                        </Item>
+                    </Variations>
+                </Object>
+                <Text />
+                <SoundEmitter>
+                    <ProjectileSounds>
+                        <ProjectileLaunch>
+                            <Item>
+                                <Sound>235859</Sound>
+                            </Item>
+                        </ProjectileLaunch>
+                        <ProjectileImpact>
+                            <Item>
+                                <Sound>235858</Sound>
+                            </Item>
+                        </ProjectileImpact>
+                    </ProjectileSounds>
+                </SoundEmitter>
+                <ProjectileIncident />
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END PROJECTILE - LIGHT CRUISER PROJECTILE -->
+
+</ModOps>

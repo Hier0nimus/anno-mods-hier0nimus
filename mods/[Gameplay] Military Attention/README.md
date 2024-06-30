@@ -1,10 +1,21 @@
-# Military Attention | 1.3!
+# Military Attention | 1.5!
 
 A mod centered around military infrastructure and adding new military residence tiers for all regions with a focus on the Old World.
 
 ![ma-img-01.jpg](./banner.jpg)
 
 ## Changelog
+
+### v1.5
+- Fixed Spanish translations
+
+### v1.4
+- Added translations for all missing languages thanks to automatic translations from Nyk
+- Added Polish manual translation thanks to sollzoren
+- Included rebalance changes that would have been in New Horizons. Some of the Military centered changes are taken out of New Horizons and included in this mod. (Rebalance defense buildings)
+- Fixed first unlock in New World for Soldiers
+- Cleanup .glb files and other assets that are not needed
+- Added Open Pit Iron Mine and Open Pit Coal Mine for the New World. Will be expanded upon in future updates.
 
 ### v1.3
 - Made clean water less valuable
@@ -602,11 +613,6 @@ In newer versions we maybe would tackle more AI advancements and buildings but f
 
 To be able to play this mod together with other mods and also strengthen eachother, I added some compatibility between a couple of mods.
 
-### Combat Overhaul
-[Combat Overhaul on mod.io](https://mod.io/g/anno-1800?_q=Combat+Overhaul)
-
-One of the most and liked mods for Anno 1800. The new ships made from this mod now need the additional building costs.
-
 ### World War Ships
 [World War Ships on Patreon](https://www.patreon.com/WorldWarShip)
 
@@ -634,9 +640,6 @@ Only add the Huskies lifestyle need to the delight category when Pet needs for r
 - [Subway Network 2.0 (Lion053) on mod.io](https://mod.io/g/anno-1800/m/subway-network)
 - [Endless Waves Approaching on mod.io](https://mod.io/g/anno-1800/m/endless-waves-approaching)
 
-## Still on the to do list
-- Translations for all languages. If anyone wants to translate! Would be amazing!
-
 ## FAQ
 
 ### This is a military mod, why no land combat?
@@ -644,7 +647,4 @@ Land combat is not something easily modded into the game. When modding we bend t
 
 ### Why no land defenses for all defenses?
 Land defenses can create troubles. The most important problem occurs when they are put inland. Ships from AI will try to attack them, resulting in ships getting bugged out and stuck on shores. If we disable this so ships do not attack them, that is even worse because then there is no counter to those cannons and they can not be destroyed by ships, but those cannons can shoot on ships. We only choose to do this for the flak cannon because that cannon can only attack airships and so, not bugging out normal ships. We can set the building to only be attackable by bombing them which can only be done by airships who are in the end also the only ships those flak cannons can attack.
-
-### Why are there no new ships?
-At first I was planning to make some new ships for this mod, after all, this is a military centered mod. But this mod took a while to make and at a certain stage other people were starting to make amazing new shipmods and even at a level I would never be able to top. So, I decided not to make any new ships. If you want extra ships use the other amazing already existing shipmods. **Combal Overhaul**, **World War ships**, **Imperio Shipyard** and even the **Enbesa Safari** mod has amazing ships ready to use. Those are some of the mods I also added compatibility for so you have extra costs to build them.  
 
