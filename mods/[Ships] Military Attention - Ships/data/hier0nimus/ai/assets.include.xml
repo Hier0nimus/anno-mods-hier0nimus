@@ -20,6 +20,14 @@
             <Type>1742100589</Type>            <!-- Corvette -->
             <Weight>1</Weight>
         </Item>
+        <Item>
+            <Type>1742100609</Type>            <!-- Flak Ironclad -->
+            <Weight>1</Weight>
+        </Item>
+        <Item>
+            <Type>1742100615</Type>            <!-- Ironclad Cruiser -->
+            <Weight>1</Weight>
+        </Item>
     </ModOp>
     <ModOp Type="merge" GUID="79,80,47" Condition="~/Values/MilitaryAI/WarFleet/ShipLimits/Peace/Progress/EndGame[MaxShipCount&lt;25]" Path="/Values/MilitaryAI/WarFleet/ShipLimits">
         <ShipLimits>
@@ -90,6 +98,18 @@
         </Item>
         <Item>
             <Type>1742100587</Type>            <!-- Torpedo Boat -->
+            <Weight>1</Weight>
+        </Item>
+        <Item>
+            <Type>1742100609</Type>            <!-- Flak Ironclad -->
+            <Weight>1</Weight>
+        </Item>
+        <Item>
+            <Type>1742100615</Type>            <!-- Ironclad Cruiser -->
+            <Weight>1</Weight>
+        </Item>
+        <Item>
+            <Type>1742100613</Type>            <!-- B42 -->
             <Weight>1</Weight>
         </Item>
     </ModOp>
@@ -164,6 +184,18 @@
             <Type>1742100587</Type>            <!-- Torpedo Boat -->
             <Weight>1</Weight>
         </Item>
+        <Item>
+            <Type>1742100609</Type>            <!-- Flak Ironclad -->
+            <Weight>2</Weight>
+        </Item>
+        <Item>
+            <Type>1742100615</Type>            <!-- Ironclad Cruiser -->
+            <Weight>3</Weight>
+        </Item>
+        <Item>
+            <Type>1742100613</Type>            <!-- B42 -->
+            <Weight>1</Weight>
+        </Item>
     </ModOp>
     <ModOp Type="merge" GUID="81,83,11,82" Condition="~/Values/MilitaryAI/WarFleet/ShipLimits/Peace/Progress/EndGame[MaxShipCount&lt;45]" Path="/Values/MilitaryAI/WarFleet/ShipLimits">
         <ShipLimits>
@@ -234,6 +266,18 @@
         </Item>
         <Item>
             <Type>1742100587</Type>            <!-- Torpedo Boat -->
+            <Weight>1</Weight>
+        </Item>
+        <Item>
+            <Type>1742100609</Type>            <!-- Flak Ironclad -->
+            <Weight>2</Weight>
+        </Item>
+        <Item>
+            <Type>1742100615</Type>            <!-- Ironclad Cruiser -->
+            <Weight>3</Weight>
+        </Item>
+        <Item>
+            <Type>1742100613</Type>            <!-- B42 -->
             <Weight>1</Weight>
         </Item>
     </ModOp>
@@ -362,86 +406,40 @@
 
     <!-- END 3TH-PARTY CHANGES -->
 
-
     <!-- START ADD TORPEDO TO 3TH-PARTY CHANGES -->
-
-    <!-- Blake -->
-    <ModOp Type="add" GUID="190162,190163,192069,190166,190165,190164" Path="/Values/RewardPool/ItemsPool/">
+    <!-- Blake, Ketema. Nate, Sermento -->
+    <!-- Mid -->
+    <ModOp Type="add" GUID="190164,190165,127477,127478,193449,193450,190362,190363" Path="/Values/RewardPool/ItemsPool/">
         <Item>
             <ItemLink>191474</ItemLink>            <!-- Torpedo -->
-            <Weight>5</Weight>
+            <Weight>2</Weight>
         </Item>
         <Item>
             <ItemLink>192184</ItemLink>            <!-- Prototype Torpedo -->
-            <Weight>5</Weight>
+            <Weight>2</Weight>
         </Item>
         <Item>
             <ItemLink>192185</ItemLink>            <!--Howell Torpedo-->
-            <Weight>5</Weight>
-        </Item>
-        <Item>
-            <ItemLink>192186</ItemLink>            <!--Whitehead Torpedo-->
-            <Weight>5</Weight>
+            <Weight>1</Weight>
         </Item>
     </ModOp>
-
-    <!-- Ketema -->
-    <ModOp Type="add" GUID="127466,127476,127480,127479,127478,127477" Path="/Values/RewardPool/ItemsPool/">
+    <!-- End -->
+    <ModOp Type="add" GUID="190166,192069,127479,127480,193451,193452,192072,192073" Path="/Values/RewardPool/ItemsPool/">
         <Item>
             <ItemLink>191474</ItemLink>            <!-- Torpedo -->
-            <Weight>5</Weight>
+            <Weight>2</Weight>
         </Item>
         <Item>
             <ItemLink>192184</ItemLink>            <!-- Prototype Torpedo -->
-            <Weight>5</Weight>
+            <Weight>2</Weight>
         </Item>
         <Item>
             <ItemLink>192185</ItemLink>            <!--Howell Torpedo-->
-            <Weight>5</Weight>
+            <Weight>1</Weight>
         </Item>
         <Item>
             <ItemLink>192186</ItemLink>            <!--Whitehead Torpedo-->
-            <Weight>5</Weight>
-        </Item>
-    </ModOp>
-
-    <!-- Nate -->
-    <ModOp Type="add" GUID="193447,193448,193452,193449,193450,193451" Path="/Values/RewardPool/ItemsPool/">
-        <Item>
-            <ItemLink>191474</ItemLink>            <!-- Torpedo -->
-            <Weight>5</Weight>
-        </Item>
-        <Item>
-            <ItemLink>192184</ItemLink>            <!-- Prototype Torpedo -->
-            <Weight>5</Weight>
-        </Item>
-        <Item>
-            <ItemLink>192185</ItemLink>            <!--Howell Torpedo-->
-            <Weight>5</Weight>
-        </Item>
-        <Item>
-            <ItemLink>192186</ItemLink>            <!--Whitehead Torpedo-->
-            <Weight>5</Weight>
-        </Item>
-    </ModOp>
-
-    <!-- Sarmento -->
-    <ModOp Type="add" GUID="192073,192072,190363,190362" Path="/Values/RewardPool/ItemsPool/">
-        <Item>
-            <ItemLink>191474</ItemLink>            <!-- Torpedo -->
-            <Weight>5</Weight>
-        </Item>
-        <Item>
-            <ItemLink>192184</ItemLink>            <!-- Prototype Torpedo -->
-            <Weight>5</Weight>
-        </Item>
-        <Item>
-            <ItemLink>192185</ItemLink>            <!--Howell Torpedo-->
-            <Weight>5</Weight>
-        </Item>
-        <Item>
-            <ItemLink>192186</ItemLink>            <!--Whitehead Torpedo-->
-            <Weight>5</Weight>
+            <Weight>1</Weight>
         </Item>
     </ModOp>
 

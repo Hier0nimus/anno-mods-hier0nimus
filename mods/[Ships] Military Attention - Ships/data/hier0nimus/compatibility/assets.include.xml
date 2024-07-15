@@ -180,6 +180,77 @@ Compatibility
             </Item>
         </ModOp>
 
+        <!-- 1742100611 - Small Reefer -->
+        <ModOp GUID="1742100611" Type="add" Path="/Values/Cost/Costs">
+            <Item>
+                <Ingredient>849</Ingredient>                <!-- Care Packages - Product -->
+                <Amount>18</Amount>
+            </Item>
+            <Item>
+                <Ingredient>1742100533</Ingredient>                <!-- Sailors - Product -->
+                <Amount>18</Amount>
+            </Item>
+        </ModOp>
+
+        <!-- 1742100609 - Flak Ironclad -->
+        <ModOp GUID="1742100609" Type="add" Path="/Values/Cost/Costs">
+            <Item>
+                <Ingredient>849</Ingredient>                <!-- Care Packages - Product -->
+                <Amount>60</Amount>
+            </Item>
+            <Item>
+                <Ingredient>1742100533</Ingredient>                <!-- Sailors - Product -->
+                <Amount>60</Amount>
+            </Item>
+            <Item>
+                <Ingredient>1742100203</Ingredient>                <!-- Basic Ammunition - Product -->
+                <Amount>60</Amount>
+            </Item>
+            <Item>
+                <Ingredient>1742100471</Ingredient>                <!-- Basic Weapons - Product -->
+                <Amount>20</Amount>
+            </Item>
+        </ModOp>
+
+        <!-- 1742100613 - B42 - AirShip -->
+        <ModOp GUID="1742100613" Type="add" Path="/Values/Cost/Costs">
+            <Item>
+                <Ingredient>849</Ingredient>                <!-- Care Packages - Product -->
+                <Amount>30</Amount>
+            </Item>
+            <Item>
+                <Ingredient>1742100533</Ingredient>                <!-- Sailors - Product -->
+                <Amount>30</Amount>
+            </Item>
+        </ModOp>
+
+        <!-- 1742100615 - Ironclad Cruiser - Ship -->
+        <ModOp GUID="1742100615" Type="add" Path="/Values/Cost/Costs">
+            <Item>
+                <Ingredient>849</Ingredient>                <!-- Care Packages - Product -->
+                <Amount>60</Amount>
+            </Item>
+            <Item>
+                <Ingredient>1742100533</Ingredient>                <!-- Sailors - Product -->
+                <Amount>60</Amount>
+            </Item>
+            <Item>
+                <Ingredient>1742100203</Ingredient>                <!-- Basic Ammunition - Product -->
+                <Amount>40</Amount>
+            </Item>
+            <Item>
+                <Ingredient>1742100471</Ingredient>                <!-- Basic Weapons - Product -->
+                <Amount>40</Amount>
+            </Item>
+            <Item>
+                <Ingredient>1742100248</Ingredient>                <!-- Shell Ammunition - Product -->
+                <Amount>30</Amount>
+            </Item>
+            <Item>
+                <Ingredient>846</Ingredient>                <!-- Bombs - Product -->
+                <Amount>20</Amount>
+            </Item>
+        </ModOp>
         <!-- END COMPATIBILITY MILITARY ATTENTION - LOGISTICS & POPULATION -->
     </Group>
 
@@ -191,14 +262,24 @@ Compatibility
         </ModOp>
         <ModOp Type="merge" GUID='1742000184' Path = "/Values/ItemAction">
             <ItemAction>
-                <ActionCooldown>20000</ActionCooldown>
+                <ActionCooldown>30000</ActionCooldown>
             </ItemAction>
+        </ModOp>
+        <ModOp Type="merge" GUID='1742000192' Path = "/Values/Projectile/ProjectileSpeed">
+            <ProjectileSpeed>2.5</ProjectileSpeed>
+        </ModOp>
+        <ModOp Type="merge" GUID='1742000192' Path = "/Values/Exploder/InnerDamage">
+            <InnerDamage>2500</InnerDamage>
+        </ModOp>
+        <ModOp Type="merge" GUID='1742000192' Path = "/Values/Exploder/MinimumDamage">
+            <MinimumDamage>1500</MinimumDamage>
         </ModOp>
         <!-- END COMPATIBILITY The perfect specialists and items pack -->
     </Group>
 
     <Group Condition="#lion053_21_Legendary_Items">
         <!-- START COMPATIBILITY 21 Legendary Items -->
+
         <!-- Ironbrights Torpedo-->
         <ModOp Type="replace" GUID='2100119201' Path = "/Values/Item/Allocation">
             <Allocation>Mod10</Allocation>
@@ -208,6 +289,35 @@ Compatibility
                 <ActionCooldown>40000</ActionCooldown>
             </ItemAction>
         </ModOp>
+        <ModOp Type="merge" GUID='2100119200' Path = "/Values/Projectile/ProjectileSpeed">
+            <ProjectileSpeed>2.5</ProjectileSpeed>
+        </ModOp>
+        <ModOp Type="merge" GUID='2100119200' Path = "/Values/Exploder/InnerDamage">
+            <InnerDamage>2500</InnerDamage>
+        </ModOp>
+        <ModOp Type="merge" GUID='2100119200' Path = "/Values/Exploder/MinimumDamage">
+            <MinimumDamage>1500</MinimumDamage>
+        </ModOp>
+
+        <!-- Saint of the death-->
+        <ModOp Type="merge" GUID='2100119209' Path = "/Values/AttackerUpgrade">
+            <AttackerUpgrade>
+                <BaseDamageUpgrade>
+                    <Value>10</Value>
+                    <Percental>1</Percental>
+                </BaseDamageUpgrade>
+                <AttackRangeUpgrade>
+                    <Value>10</Value>
+                    <Percental>1</Percental>
+                </AttackRangeUpgrade>
+                <ReloadTimeUpgrade>
+                    <Value>-25</Value>
+                    <Percental>1</Percental>
+                </ReloadTimeUpgrade>
+                <AttackSpeedUpgrade>50</AttackSpeedUpgrade>
+            </AttackerUpgrade>
+        </ModOp>
+
         <!-- END COMPATIBILITY 21 Legendary Items -->
     </Group>
 
