@@ -1,10 +1,20 @@
-# Military Attention | 1.5!
+# Military Attention | 1.6!
 
 A mod centered around military infrastructure and adding new military residence tiers for all regions with a focus on the Old World.
 
 ![ma-img-01.jpg](./banner.jpg)
 
 ## Changelog
+
+### v1.6
+- Added Furnace, Basic Weapons Factory, Military Uniforms Factory, Canned food and Care Packages to the New World so you can make that in that region.
+- Made the Military Headquarters a separate unique building type to make sure it is compatible with other mods that reused the Hacienda unique type. Now Mod12 is used.
+- Added compatibility for 1805 - Ships of the Line - Flagship Edition
+- Added new buildings (Military Uniform Factory, Open Pit Mines, Basic Weapons Factory,...) to specialists and pools
+- Copy fixes
+- Added compatibility for "Military Attention - No Vanilla Changes" to revert certain changes back to vanilla values (for example the farmfields changes)
+- Additional support for Combat Overhaul
+
 
 ### v1.5
 - Fixed Spanish translations

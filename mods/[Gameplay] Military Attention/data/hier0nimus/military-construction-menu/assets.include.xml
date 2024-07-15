@@ -44,12 +44,6 @@
     <Item>
       <Building>1742100244</Building>      <!-- Clean Water Pump (NW) - Building -->
     </Item>
-    <Item>
-      <Building>1742100602</Building>      <!-- Open Pit Iron Mine (NW) - Building -->
-    </Item>
-    <Item>
-      <Building>1742100603</Building>      <!-- Open Pit Coal Mine (NW) - Building -->
-    </Item>
   </ModOp>
   <!-- END ADD WATER PUMP NW TO JORNALERO BUILDING MENU -->
 
@@ -227,7 +221,19 @@
               <Building>1742100549</Building>              <!-- Navy Recruitment Office (NW) - Building -->
             </Item>
             <Item>
+              <Building>1742100607</Building>              <!-- Military Uniforms Chain (NW) - Chain -->
+            </Item>
+            <Item>
+              <Building>1742100606</Building>              <!-- Basic Weapons Chain (NW) - Chain -->
+            </Item>
+            <Item>
               <Building>1742100524</Building>              <!-- Small Military Warehouse (NW) - Building -->
+            </Item>
+            <Item>
+              <Building>1742100620</Building>              <!-- Care Packages (NW) - Chain -->
+            </Item>
+            <Item>
+              <Building>1742100617</Building>              <!-- Canned Food (NW) - Chain -->
             </Item>
           </BuildingList>
           <Text />
@@ -544,6 +550,51 @@
   </ModOp>
   <!-- END PRODUCTION CHAIN - Military Uniforms -->
 
+  <!-- START PRODUCTION CHAIN - Military Uniforms (NW) -->
+  <ModOp Type="addNextSibling" GUID='500091'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100607</GUID>
+          <Name>Military Uniforms Chain (NW)</Name>
+          <IconFilename>data/graphics/icons/icon_military_uniforms_0.png</IconFilename>
+          <InfoDescription>1742100067</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742100608</Building>          <!-- Military Uniforms Factory (NW) - Building -->
+          <Tier1>
+            <Item>
+              <Building>101272</Building>              <!-- Alpaca Farm - Building -->
+            </Item>
+            <Item>
+              <Building>1010318</Building>              <!-- Cotton Mill - Building -->
+              <Tier2>
+                <Item>
+                  <Building>1010331</Building>                  <!-- Cotton Farm - Building -->
+                </Item>
+              </Tier2>
+            </Item>
+            <Item>
+              <Building>1742100604</Building>              <!-- Furnace (NW) - Building -->
+              <Tier2>
+                <Item>
+                  <Building>1742100602</Building>                  <!-- Open Pit Iron Mine (NW) - Building -->
+                </Item>
+                <Item>
+                  <Building>1742100603</Building>                  <!-- Open Pit Coal Mine (NW) - Building -->
+                </Item>
+              </Tier2>
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+        <Text />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PRODUCTION CHAIN - Military Uniforms (NW) -->
+
   <!-- START PRODUCTION CHAIN - Heated Military Uniforms -->
   <ModOp Type="addNextSibling" GUID='500091'>
     <Asset>
@@ -585,7 +636,7 @@
       </Values>
     </Asset>
   </ModOp>
-  <!-- END PRODUCTION CHAIN - Military Uniforms -->
+  <!-- END PRODUCTION CHAIN - Heated Military Uniforms -->
 
   <!-- START PRODUCTION CHAIN - Cigarettes -->
   <ModOp Type="addNextSibling" GUID='500091'>
@@ -973,7 +1024,7 @@
       </Values>
     </Asset>
   </ModOp>
-  <!-- END PRODUCTION CHAIN - LEAD COINS -->
+  <!-- END PRODUCTION CHAIN - COINS -->
 
   <!-- START PRODUCTION CHAIN - BASIC WEAPONS -->
   <ModOp Type="addNextSibling" GUID='500091'>
@@ -1013,6 +1064,132 @@
     </Asset>
   </ModOp>
   <!-- END PRODUCTION CHAIN - BASIC WEAPONS -->
+
+  <!-- START PRODUCTION CHAIN - BASIC WEAPONS - NW -->
+  <ModOp Type="addNextSibling" GUID='500091'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100606</GUID>
+          <Name>Basic Weapons Chain (NW)</Name>
+          <IconFilename>data\graphics\icons\icon_basic_weapons.png</IconFilename>
+          <InfoDescription>1742100474</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742100605</Building>          <!-- Basic Weapons Factory (NW) - Building -->
+          <Tier1>
+            <Item>
+              <Building>101260</Building>              <!-- Lumberjack NW - Building -->
+            </Item>
+            <Item>
+              <Building>1742100604</Building>              <!-- Furnace (NW) - Building -->
+              <Tier2>
+                <Item>
+                  <Building>1742100602</Building>                  <!-- Open Pit Iron Mine (NW) - Building -->
+                </Item>
+                <Item>
+                  <Building>1742100603</Building>                  <!-- Open Pit Coal Mine (NW) - Building -->
+                </Item>
+              </Tier2>
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked>
+          <DefaultLockedState>1</DefaultLockedState>
+        </Locked>
+        <Text />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PRODUCTION CHAIN - BASIC WEAPONS - NW -->
+
+  <!-- START PRODUCTION CHAIN - CANNED FOOD - NW -->
+  <ModOp Type="addNextSibling" GUID='500091'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100617</GUID>
+          <Name>Canned Food (NW)</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_canned_goulash.png</IconFilename>
+        </Standard>
+        <ProductionChain>
+          <Building>1742100618</Building>          <!-- Cannery (NW) - Building -->
+          <Tier1>
+            <Item>
+              <Building>1500302490</Building>              <!-- Wat Kitchen (Kurila shared mod nw_food_works) -->
+              <Tier2>
+                <Item>
+                  <Building>7919</Building>                  <!-- Calamari Fishery-->
+                </Item>
+                <Item>
+                  <Building>25019</Building>                  <!--Hacienda Potato farm-->
+                </Item>
+                <Item>
+                  <Building>25508</Building>                  <!--Hacienda Hot Sauce Brewery-->
+                  <Tier3>
+                    <Item>
+                      <Building>25020</Building>                      <!-- Hacienda Spice Farm-->
+                    </Item>
+                  </Tier3>
+                </Item>
+              </Tier2>
+            </Item>
+            <Item>
+              <Building>1742100602</Building>              <!-- Open Pit Iron Mine (NW) - Building -->
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked>
+          <DefaultLockedState>1</DefaultLockedState>
+        </Locked>
+        <Text />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PRODUCTION CHAIN - CANNED FOOD - NW -->
+
+  <!-- START PRODUCTION CHAIN - CARE PACKAGES - NW -->
+  <ModOp Type="addNextSibling" GUID='500091'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100620</GUID>
+          <Name>Care Packages (NW)</Name>
+          <IconFilename>data\graphics\icons\icon_care_packages.png</IconFilename>
+        </Standard>
+        <ProductionChain>
+          <Building>1742100619</Building>          <!-- Care Packages Facrtpry (NW) - Building -->
+          <Tier1>
+            <Item>
+              <Building>1742100244</Building>              <!-- Clean Water Pump (NW) -->
+            </Item>
+            <Item>
+              <Building>101271</Building>
+              <!--food_colony01_05 (Burrito Maker)-->
+              <Tier2>
+                <Item>
+                  <Building>101269</Building>
+                  <!--agriculture_colony01_09 (Cattle Farm)-->
+                </Item>
+                <Item>
+                  <Building>101270</Building>
+                  <!--agriculture_colony01_10 (Corn Farm)-->
+                </Item>
+              </Tier2>
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked>
+          <DefaultLockedState>1</DefaultLockedState>
+        </Locked>
+        <Text />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PRODUCTION CHAIN - CARE PACKAGES - NW -->
 
   <!-- START- ADD MILITARY ORNAMENTS MENU -->
   <ModOp Type="addNextSibling" GUID='501482'>

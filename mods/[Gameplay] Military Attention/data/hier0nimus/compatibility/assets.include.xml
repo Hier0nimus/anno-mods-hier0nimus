@@ -1038,7 +1038,7 @@
       </Item>
     </ModOp>
 
-    <!-- 6700071 + 6800020 - Cargo Boat -->
+    <!-- 6700071 - Cargo Boat -->
     <ModOp GUID="6700071" Type="add" Path="/Values/Cost/Costs">
       <Item>
         <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
@@ -1047,18 +1047,6 @@
       <Item>
         <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
         <Amount>12</Amount>
-      </Item>
-    </ModOp>
-
-    <!-- 6800020 - Armored Cargo Ship -->
-    <ModOp GUID="6800020" Type="add" Path="/Values/Cost/Costs">
-      <Item>
-        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
-        <Amount>30</Amount>
-      </Item>
-      <Item>
-        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
-        <Amount>30</Amount>
       </Item>
     </ModOp>
 
@@ -1182,6 +1170,33 @@
       </Item>
     </ModOp>
 
+    <!-- END COMPATIBILITY COMBAT OVERHAUL -->
+  </Group>
+
+  <Group Condition="#[Gameplay] 03 Combat Overhaul Pirates">
+    <!-- START COMPATIBILITY COMBAT OVERHAUL - PIRATES -->
+
+    <!-- 
+  
+    ******* SHIPS ******* 
+
+    6800020 - Armored Cargo Ship (trade)
+    6799962 - Pyrphorian Cruiser (war)
+
+    -->
+
+    <!-- 6800020 - Armored Cargo Ship -->
+    <ModOp GUID="6800020" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>30</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>30</Amount>
+      </Item>
+    </ModOp>
+
     <!-- 6799962 - Pyrphorian Cruiser -->
     <ModOp GUID="6799962" Type="add" Path="/Values/Cost/Costs">
       <Item>
@@ -1214,7 +1229,7 @@
       </Item>
     </ModOp>
 
-    <!-- END COMPATIBILITY COMBAT OVERHAUL -->
+    <!-- END COMPATIBILITY COMBAT OVERHAUL - PIRATES -->
   </Group>
 
   <Group Condition="#Fishboss_Oldtown">

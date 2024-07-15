@@ -71,114 +71,118 @@ Adaptations to vanilla items
   </ModOp>
   <!-- ****************** END Add Basic ammunition to OfferingGoods Archibald and Isabel ******************  -->
 
-  <!-- ****************** START Production costs reduction for vanilla buildings ******************  -->
+  <Group Condition="!#military_attention_disable_vanilla_changes">
 
-  <!-- ****************** Sailmakers ******************  -->
-  <ModOp Type="remove" GUID="1010288" Path="/Values/Cost/Costs/Item[Ingredient='1010205']" />
+    <!-- ****************** START Production costs reduction for vanilla buildings ******************  -->
 
-  <!-- ****************** Furnace ******************  -->
-  <ModOp Type="replace" GUID="1010297" Path="/Values/Maintenance/Maintenances">
-    <Maintenances>
-      <Item>
-        <Product>1010017</Product>
-        <!--Money-->
-        <Amount>50</Amount>        <!-- 100 -->
-        <InactiveAmount>25</InactiveAmount>
-      </Item>
-      <Item>
-        <Product>1010115</Product>
-        <!--moderate workforce 2-->
-        <Amount>50</Amount>        <!-- 100 -->
-      </Item>
-    </Maintenances>
-  </ModOp>
+    <!-- ****************** Sailmakers ******************  -->
+    <ModOp Type="remove" GUID="1010288" Path="/Values/Cost/Costs/Item[Ingredient='1010205']" />
 
-  <!-- ****************** Steelworks ******************  -->
-  <ModOp Type="replace" GUID="1010296" Path="/Values/Maintenance/Maintenances">
-    <Maintenances>
-      <Item>
-        <Product>1010017</Product>
-        <!--Money-->
-        <Amount>100</Amount>        <!-- 200 -->
-        <InactiveAmount>50</InactiveAmount>
-      </Item>
-      <Item>
-        <Product>1010115</Product>
-        <!--moderate workforce 2-->
-        <Amount>100</Amount>        <!-- 200 -->
-      </Item>
-    </Maintenances>
-  </ModOp>
+    <!-- ****************** Furnace ******************  -->
+    <ModOp Type="replace" GUID="1010297" Path="/Values/Maintenance/Maintenances">
+      <Maintenances>
+        <Item>
+          <Product>1010017</Product>
+          <!--Money-->
+          <Amount>50</Amount>          <!-- 100 -->
+          <InactiveAmount>25</InactiveAmount>
+        </Item>
+        <Item>
+          <Product>1010115</Product>
+          <!--moderate workforce 2-->
+          <Amount>50</Amount>          <!-- 100 -->
+        </Item>
+      </Maintenances>
+    </ModOp>
 
-  <!-- ****************** Weapon Factory ******************  -->
-  <ModOp Type="replace" GUID="1010299" Path="/Values/Maintenance/Maintenances">
-    <Maintenances>
-      <Item>
-        <Product>1010017</Product>
-        <!--Money-->
-        <Amount>80</Amount>        <!-- 150 -->
-        <InactiveAmount>40</InactiveAmount>
-      </Item>
-      <Item>
-        <Product>1010115</Product>
-        <!--moderate workforce 2-->
-        <Amount>40</Amount>        <!-- 50 -->
-      </Item>
-    </Maintenances>
-  </ModOp>
+    <!-- ****************** Steelworks ******************  -->
+    <ModOp Type="replace" GUID="1010296" Path="/Values/Maintenance/Maintenances">
+      <Maintenances>
+        <Item>
+          <Product>1010017</Product>
+          <!--Money-->
+          <Amount>100</Amount>          <!-- 200 -->
+          <InactiveAmount>50</InactiveAmount>
+        </Item>
+        <Item>
+          <Product>1010115</Product>
+          <!--moderate workforce 2-->
+          <Amount>100</Amount>          <!-- 200 -->
+        </Item>
+      </Maintenances>
+    </ModOp>
 
-  <!-- ****************** Sand Mine ******************  -->
-  <ModOp Type="replace" GUID="1010560" Path="/Values/Maintenance/Maintenances">
-    <Maintenances>
-      <Item>
-        <Product>1010017</Product>
-        <!--Money-->
-        <Amount>50</Amount>        <!-- 120 -->
-        <InactiveAmount>25</InactiveAmount>
-      </Item>
-      <Item>
-        <Product>1010115</Product>
-        <!--moderate workforce 2-->
-        <Amount>25</Amount>        <!-- 25 -->
-      </Item>
-    </Maintenances>
-  </ModOp>
+    <!-- ****************** Weapon Factory ******************  -->
+    <ModOp Type="replace" GUID="1010299" Path="/Values/Maintenance/Maintenances">
+      <Maintenances>
+        <Item>
+          <Product>1010017</Product>
+          <!--Money-->
+          <Amount>80</Amount>          <!-- 150 -->
+          <InactiveAmount>40</InactiveAmount>
+        </Item>
+        <Item>
+          <Product>1010115</Product>
+          <!--moderate workforce 2-->
+          <Amount>40</Amount>          <!-- 50 -->
+        </Item>
+      </Maintenances>
+    </ModOp>
 
-  <!-- ****************** Glassmakers ******************  -->
-  <ModOp Type="replace" GUID="1010319" Path="/Values/Maintenance/Maintenances">
-    <Maintenances>
-      <Item>
-        <Product>1010017</Product>
-        <!--Money-->
-        <Amount>50</Amount>        <!-- 100 -->
-        <InactiveAmount>30</InactiveAmount>
-      </Item>
-      <Item>
-        <Product>1010116</Product>
-        <!--moderate workforce 3-->
-        <Amount>50</Amount>        <!-- 100 -->
-      </Item>
-    </Maintenances>
-  </ModOp>
+    <!-- ****************** Sand Mine ******************  -->
+    <ModOp Type="replace" GUID="1010560" Path="/Values/Maintenance/Maintenances">
+      <Maintenances>
+        <Item>
+          <Product>1010017</Product>
+          <!--Money-->
+          <Amount>50</Amount>          <!-- 120 -->
+          <InactiveAmount>25</InactiveAmount>
+        </Item>
+        <Item>
+          <Product>1010115</Product>
+          <!--moderate workforce 2-->
+          <Amount>25</Amount>          <!-- 25 -->
+        </Item>
+      </Maintenances>
+    </ModOp>
 
-  <!-- ****************** Window Makers ******************  -->
-  <ModOp Type="replace" GUID="1010285" Path="/Values/Maintenance/Maintenances">
-    <Maintenances>
-      <Item>
-        <Product>1010017</Product>
-        <!--Money-->
-        <Amount>100</Amount>        <!-- 200 -->
-        <InactiveAmount>40</InactiveAmount>
-      </Item>
-      <Item>
-        <Product>1010116</Product>
-        <!--moderate workforce 3-->
-        <Amount>50</Amount>        <!-- 100 -->
-      </Item>
-    </Maintenances>
-  </ModOp>
+    <!-- ****************** Glassmakers ******************  -->
+    <ModOp Type="replace" GUID="1010319" Path="/Values/Maintenance/Maintenances">
+      <Maintenances>
+        <Item>
+          <Product>1010017</Product>
+          <!--Money-->
+          <Amount>50</Amount>          <!-- 100 -->
+          <InactiveAmount>30</InactiveAmount>
+        </Item>
+        <Item>
+          <Product>1010116</Product>
+          <!--moderate workforce 3-->
+          <Amount>50</Amount>          <!-- 100 -->
+        </Item>
+      </Maintenances>
+    </ModOp>
 
-  <!-- ****************** END Production costs reduction for vanilla buildings ******************  -->
+    <!-- ****************** Window Makers ******************  -->
+    <ModOp Type="replace" GUID="1010285" Path="/Values/Maintenance/Maintenances">
+      <Maintenances>
+        <Item>
+          <Product>1010017</Product>
+          <!--Money-->
+          <Amount>100</Amount>          <!-- 200 -->
+          <InactiveAmount>40</InactiveAmount>
+        </Item>
+        <Item>
+          <Product>1010116</Product>
+          <!--moderate workforce 3-->
+          <Amount>50</Amount>          <!-- 100 -->
+        </Item>
+      </Maintenances>
+    </ModOp>
+
+    <!-- ****************** END Production costs reduction for vanilla buildings ******************  -->
+
+  </Group>
 
   <!-- ****************** START Add Change production ******************  -->
 
@@ -396,89 +400,93 @@ Adaptations to vanilla items
   </ModOp>
   <!-- ****************** END Add Products for other population ******************  -->
 
-  <!-- ****************** START Farmfields reduction ******************  -->
+  <Group Condition="!#military_attention_disable_vanilla_changes">
 
-  <!-- ****************** Potato Farm ******************  -->
-  <ModOp Type="replace" GUID="1010265" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
-    <Limit>42</Limit>    <!-- 72 -->
-  </ModOp>
+    <!-- ****************** START Farmfields reduction ******************  -->
 
-  <!-- ****************** Grain Farm ******************  -->
-  <ModOp Type="replace" GUID="1010262" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
-    <Limit>90</Limit>    <!-- 144 -->
-  </ModOp>
+    <!-- ****************** Potato Farm ******************  -->
+    <ModOp Type="replace" GUID="1010265" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
+      <Limit>42</Limit>      <!-- 72 -->
+    </ModOp>
 
-  <!-- ****************** Hop Farm ******************  -->
-  <ModOp Type="replace" GUID="1010264" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
-    <Limit>66</Limit>    <!-- 96 -->
-  </ModOp>
+    <!-- ****************** Grain Farm ******************  -->
+    <ModOp Type="replace" GUID="1010262" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
+      <Limit>90</Limit>      <!-- 144 -->
+    </ModOp>
 
-  <!-- ****************** Red Pepper Farm ******************  -->
-  <ModOp Type="replace" GUID="100654" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
-    <Limit>78</Limit>    <!-- 108 -->
-  </ModOp>
+    <!-- ****************** Hop Farm ******************  -->
+    <ModOp Type="replace" GUID="1010264" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
+      <Limit>66</Limit>      <!-- 96 -->
+    </ModOp>
 
-  <!-- ****************** Plantains Plantation ******************  -->
-  <ModOp Type="replace" GUID="101263" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
-    <Limit>100</Limit>    <!-- 128 -->
-  </ModOp>
+    <!-- ****************** Red Pepper Farm ******************  -->
+    <ModOp Type="replace" GUID="100654" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
+      <Limit>78</Limit>      <!-- 108 -->
+    </ModOp>
 
-  <!-- ****************** Sugar Cane Plantation ******************  -->
-  <ModOp Type="replace" GUID="1010329" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
-    <Limit>100</Limit>    <!-- 128 -->
-  </ModOp>
+    <!-- ****************** Plantains Plantation ******************  -->
+    <ModOp Type="replace" GUID="101263" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
+      <Limit>100</Limit>      <!-- 128 -->
+    </ModOp>
 
-  <!-- ****************** Cotton Plantation ******************  -->
-  <ModOp Type="replace" GUID="1010331" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
-    <Limit>120</Limit>    <!-- 144 -->
-  </ModOp>
+    <!-- ****************** Sugar Cane Plantation ******************  -->
+    <ModOp Type="replace" GUID="1010329" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
+      <Limit>100</Limit>      <!-- 128 -->
+    </ModOp>
 
-  <!-- ****************** Corn Farm ******************  -->
-  <ModOp Type="replace" GUID="101270" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
-    <Limit>132</Limit>    <!-- 168 -->
-  </ModOp>
+    <!-- ****************** Cotton Plantation ******************  -->
+    <ModOp Type="replace" GUID="1010331" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
+      <Limit>120</Limit>      <!-- 144 -->
+    </ModOp>
 
-  <!-- ****************** Tobacco Farm ******************  -->
-  <ModOp Type="replace" GUID="1010330" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
-    <Limit>158</Limit>    <!-- 192 -->
-  </ModOp>
+    <!-- ****************** Corn Farm ******************  -->
+    <ModOp Type="replace" GUID="101270" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
+      <Limit>132</Limit>      <!-- 168 -->
+    </ModOp>
 
-  <!-- ****************** Cocoa Farm ******************  -->
-  <ModOp Type="replace" GUID="1010332" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
-    <Limit>100</Limit>    <!-- 128 -->
-  </ModOp>
+    <!-- ****************** Tobacco Farm ******************  -->
+    <ModOp Type="replace" GUID="1010330" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
+      <Limit>158</Limit>      <!-- 192 -->
+    </ModOp>
 
-  <!-- ****************** Coffee Plantation ******************  -->
-  <ModOp Type="replace" GUID="101251" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
-    <Limit>132</Limit>    <!-- 168 -->
-  </ModOp>
+    <!-- ****************** Cocoa Farm ******************  -->
+    <ModOp Type="replace" GUID="1010332" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
+      <Limit>100</Limit>      <!-- 128 -->
+    </ModOp>
 
-  <!-- ****************** Hibiscus Farm ******************  -->
-  <ModOp Type="replace" GUID="114447" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
-    <Limit>112</Limit>    <!-- 144 -->
-  </ModOp>
+    <!-- ****************** Coffee Plantation ******************  -->
+    <ModOp Type="replace" GUID="101251" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
+      <Limit>132</Limit>      <!-- 168 -->
+    </ModOp>
 
-  <!-- ****************** Indigo Farm ******************  -->
-  <ModOp Type="replace" GUID="114451" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
-    <Limit>112</Limit>    <!-- 144 -->
-  </ModOp>
+    <!-- ****************** Hibiscus Farm ******************  -->
+    <ModOp Type="replace" GUID="114447" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
+      <Limit>112</Limit>      <!-- 144 -->
+    </ModOp>
 
-  <!-- ****************** Linseed Farm ******************  -->
-  <ModOp Type="replace" GUID="114448" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
-    <Limit>72</Limit>    <!-- 96 -->
-  </ModOp>
+    <!-- ****************** Indigo Farm ******************  -->
+    <ModOp Type="replace" GUID="114451" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
+      <Limit>112</Limit>      <!-- 144 -->
+    </ModOp>
 
-  <!-- ****************** Teff Farm ******************  -->
-  <ModOp Type="replace" GUID="114450" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
-    <Limit>132</Limit>    <!-- 168 -->
-  </ModOp>
+    <!-- ****************** Linseed Farm ******************  -->
+    <ModOp Type="replace" GUID="114448" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
+      <Limit>72</Limit>      <!-- 96 -->
+    </ModOp>
 
-  <!-- ****************** Apiary ******************  -->
-  <ModOp Type="replace" GUID="114453" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
-    <Limit>156</Limit>    <!-- 192 -->
-  </ModOp>
+    <!-- ****************** Teff Farm ******************  -->
+    <ModOp Type="replace" GUID="114450" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
+      <Limit>132</Limit>      <!-- 168 -->
+    </ModOp>
 
-  <!-- ****************** END Farmfields reduction ******************  -->
+    <!-- ****************** Apiary ******************  -->
+    <ModOp Type="replace" GUID="114453" Path="/Values/ModuleOwner/ModuleLimits/Main/Limit">
+      <Limit>156</Limit>      <!-- 192 -->
+    </ModOp>
+
+    <!-- ****************** END Farmfields reduction ******************  -->
+
+  </Group>
 
   <!-- ****************** START Farmer more needs by ParticipantMessageArcheType ******************  -->
   <ModOp Type="replace" GUID="15000000" Path="/Values/PopulationLevel7/PopulationParticipant">
@@ -486,84 +494,127 @@ Adaptations to vanilla items
   </ModOp>
   <!-- ****************** END Farmer more needs by ParticipantMessageArcheType ******************  -->
 
-  <!-- ****************** START REBALANCING TOWERS ******************  -->
+  <Group Condition="!#military_attention_disable_vanilla_changes">
 
-  <!-- Big Bertha -->
-  <ModOp GUID='102450,1010524' Type="merge" Path="/Values">
-    <Attacker>
-      <BaseDamage>1530</BaseDamage>
-    </Attacker>
-    <Attackable>
-      <MaximumHitPoints>13900</MaximumHitPoints>
-    </Attackable>
-  </ModOp>
-  <ModOp GUID='101955' Type="merge" Path="/Values/Exploder">
-    <InnerDamage>1530</InnerDamage>
-  </ModOp>
+    <!-- ****************** START REBALANCING TOWERS ******************  -->
 
-  <!-- Cannon Tower-->
-  <ModOp GUID='1010523' Type="merge" Path="/Values">
-    <Attacker>
-      <ReloadTime>44</ReloadTime>
-      <BaseDamage>130</BaseDamage>
-    </Attacker>
-    <Attackable>
-      <MaximumHitPoints>5200</MaximumHitPoints>
-    </Attackable>
-  </ModOp>
+    <!-- Big Bertha -->
+    <ModOp GUID='102450,1010524' Type="merge" Path="/Values">
+      <Attacker>
+        <BaseDamage>1530</BaseDamage>
+      </Attacker>
+      <Attackable>
+        <MaximumHitPoints>13900</MaximumHitPoints>
+      </Attackable>
+    </ModOp>
+    <ModOp GUID='101955' Type="merge" Path="/Values/Exploder">
+      <InnerDamage>1530</InnerDamage>
+    </ModOp>
 
-  <!-- Puckle Gun -->
-  <ModOp GUID='1010522' Type="merge" Path="/Values">
-    <Attacker>
-      <BaseDamage>20</BaseDamage>
-    </Attacker>
-    <Attackable>
-      <MaximumHitPoints>4500</MaximumHitPoints>
-    </Attackable>
-  </ModOp>
+    <!-- Cannon Tower-->
+    <ModOp GUID='1010523' Type="merge" Path="/Values">
+      <Attacker>
+        <ReloadTime>44</ReloadTime>
+        <BaseDamage>130</BaseDamage>
+      </Attacker>
+      <Attackable>
+        <MaximumHitPoints>5200</MaximumHitPoints>
+      </Attackable>
+    </ModOp>
 
-  <!-- Anti-Armor Gun -->
-  <ModOp GUID='3700' Type="merge" Path="/Values">
-    <Attacker>
-      <AttackRange>95</AttackRange>
-      <BaseDamage>400</BaseDamage>
-    </Attacker>
-    <Attackable>
-      <MaximumHitPoints>5600</MaximumHitPoints>
-    </Attackable>
-  </ModOp>
+    <!-- Puckle Gun -->
+    <ModOp GUID='1010522' Type="merge" Path="/Values">
+      <Attacker>
+        <BaseDamage>20</BaseDamage>
+      </Attacker>
+      <Attackable>
+        <MaximumHitPoints>4500</MaximumHitPoints>
+      </Attackable>
+    </ModOp>
 
-  <!-- Flame Tower -->
-  <ModOp GUID='625,824,632,823' Path="/Values" Type="merge">
-    <Attackable>
-      <MaximumHitPoints>3100</MaximumHitPoints>
-    </Attackable>
-    <Attacker />
-  </ModOp>
-  <ModOp Type="merge" GUID='628' Path="/Values/Projectile/Effectivities/Item[GUID='1398']">
-    <Factor>1.1</Factor>
-  </ModOp>
-  <ModOp Type="merge" GUID='628' Path="/Values/Projectile/Effectivities/Item[GUID='1404']">
-    <Factor>0.3</Factor>
-  </ModOp>
+    <!-- Anti-Armor Gun -->
+    <ModOp GUID='3700' Type="merge" Path="/Values">
+      <Attacker>
+        <AttackRange>95</AttackRange>
+        <BaseDamage>400</BaseDamage>
+      </Attacker>
+      <Attackable>
+        <MaximumHitPoints>5600</MaximumHitPoints>
+      </Attackable>
+    </ModOp>
 
-  <!-- Change PuckleGun Debuff -->
-  <ModOp GUID='191305' Type="replace" Path="/Values/VehicleUpgrade/ForwardSpeedUpgrade/Value">
-    <Value>-30</Value>
-  </ModOp>
-  <ModOp GUID='191305' Type="replace" Path="/Values/AttackerUpgrade/AttackSpeedUpgrade">
-    <AttackSpeedUpgrade>-20</AttackSpeedUpgrade>
-  </ModOp>
-  <ModOp GUID='191305' Type="replace" Path="/Values/AttackerUpgrade/ReloadTimeUpgrade/Value">
-    <Value>25</Value>
-  </ModOp>
+    <!-- Flame Tower -->
+    <ModOp GUID='625,824,632,823' Path="/Values" Type="merge">
+      <Attackable>
+        <MaximumHitPoints>3100</MaximumHitPoints>
+      </Attackable>
+      <Attacker />
+    </ModOp>
+    <ModOp Type="merge" GUID='628' Path="/Values/Projectile/Effectivities/Item[GUID='1398']">
+      <Factor>1.1</Factor>
+    </ModOp>
+    <ModOp Type="merge" GUID='628' Path="/Values/Projectile/Effectivities/Item[GUID='1404']">
+      <Factor>0.3</Factor>
+    </ModOp>
 
-  <!-- ****************** END REBALANCING TOWERS ******************  -->
+    <!-- Change PuckleGun Debuff -->
+    <ModOp GUID='191305' Type="replace" Path="/Values/VehicleUpgrade/ForwardSpeedUpgrade/Value">
+      <Value>-30</Value>
+    </ModOp>
+    <ModOp GUID='191305' Type="replace" Path="/Values/AttackerUpgrade/AttackSpeedUpgrade">
+      <AttackSpeedUpgrade>-20</AttackSpeedUpgrade>
+    </ModOp>
+    <ModOp GUID='191305' Type="replace" Path="/Values/AttackerUpgrade/ReloadTimeUpgrade/Value">
+      <Value>25</Value>
+    </ModOp>
+
+    <!-- ****************** END REBALANCING TOWERS ******************  -->
+
+    <!-- ****************** START Master Craftsman Franke Military Uniforms ******************  -->
+    <ModOp Type="replace" GUID='192039' Path="/Values/FactoryUpgrade/AdditionalOutput">
+      <AdditionalOutput>
+        <Item>
+          <Product>1742100064</Product>          <!--Military Uniforms-->
+          <AdditionalOutputCycle>10</AdditionalOutputCycle>
+          <Amount>1</Amount>
+        </Item>
+      </AdditionalOutput>
+    </ModOp>
+    <!-- ****************** END Master Craftsman Franke Military Uniforms ******************  -->
+
+    <!-- ****************** START Lily The Fashion Designer ******************  -->
+    <ModOp Type="replace" GUID='191328' Path="/Values/FactoryUpgrade/AdditionalOutput">
+      <AdditionalOutput>
+        <Item>
+          <Product>1010237</Product>          <!-- Basic Clothes -->
+          <AdditionalOutputCycle>8</AdditionalOutputCycle>
+          <Amount>1</Amount>
+        </Item>
+      </AdditionalOutput>
+    </ModOp>
+    <!-- ****************** END Lily The Fashion Designer ******************  -->
+
+    <!-- ****************** START Mariana the Master Stylist Military Uniforms ******************  -->
+    <ModOp Type="replace" GUID='191346' Path="/Values/FactoryUpgrade/AdditionalOutput">
+      <AdditionalOutput>
+        <Item>
+          <Product>1742100064</Product>          <!--Military Uniforms-->
+          <AdditionalOutputCycle>8</AdditionalOutputCycle>
+          <Amount>1</Amount>
+        </Item>
+      </AdditionalOutput>
+    </ModOp>
+    <!-- ****************** END Mariana the Master Stylist Uniforms ******************  -->
+
+  </Group>
 
   <!-- ****************** START Weaver, Tailor, Fine Couturier, Lady Jane Smythe add Military Uniforms Factory ******************  -->
   <ModOp Type="add" GUID='191325,191326,191327,191329' Path="Values/ItemEffect/EffectTargets/">
     <Item>
       <GUID>1742100062</GUID>      <!-- Military Uniform Factory -->
+    </Item>
+    <Item>
+      <GUID>1742100608</GUID>      <!-- Military Uniform Factory -->
     </Item>
   </ModOp>
   <!-- ****************** END Weaver, Tailor, Fine Couturier, Lady Jane Smythe add Military Uniforms Factory ******************  -->
@@ -592,17 +643,6 @@ Adaptations to vanilla items
   </ModOp>
   <!-- ****************** END  Millstone, Burrstone, Lovelyman's Grinding Machine add Paper Factory ******************  -->
 
-  <!-- ****************** START Master Craftsman Franke Military Uniforms ******************  -->
-  <ModOp Type="replace" GUID='192039' Path="/Values/FactoryUpgrade/AdditionalOutput">
-    <AdditionalOutput>
-      <Item>
-        <Product>1742100064</Product>        <!--Military Uniforms-->
-        <AdditionalOutputCycle>10</AdditionalOutputCycle>
-        <Amount>1</Amount>
-      </Item>
-    </AdditionalOutput>
-  </ModOp>
-  <!-- ****************** END Master Craftsman Franke Military Uniforms ******************  -->
 
   <!-- ****************** START Hervé Savonne,Chandler,Mercury Thermometer,Thielemann's Tube,Melting Point Apparatus,Herbal Hygienist add Gunpowder Factory ******************  -->
   <ModOp Type="add" GUID='191319,191315,190847,190849,190848,191317' Path="Values/ItemEffect/EffectTargets/">
@@ -611,18 +651,6 @@ Adaptations to vanilla items
     </Item>
   </ModOp>
   <!-- ****************** END Hervé Savonne,Chandler,Mercury Thermometer,Thielemann's Tube,Melting Point Apparatus,Herbal Hygienist add Gunpowder Factory  ******************  -->
-
-  <!-- ****************** START Lily The Fashion Designer ******************  -->
-  <ModOp Type="replace" GUID='191328' Path="/Values/FactoryUpgrade/AdditionalOutput">
-    <AdditionalOutput>
-      <Item>
-        <Product>1010237</Product>        <!-- Basic Clothes -->
-        <AdditionalOutputCycle>8</AdditionalOutputCycle>
-        <Amount>1</Amount>
-      </Item>
-    </AdditionalOutput>
-  </ModOp>
-  <!-- ****************** END Lily The Fashion Designer ******************  -->
 
   <!-- ****************** START Mechanical Drill, Drill, Prospector, Driller, Refiner,Fine Handheld Power Auger add All Clean Water Pumps ******************  -->
   <ModOp Type="add" GUID='190880,190879,190756,191585,190758,190881' Path="Values/ItemEffect/EffectTargets/">
@@ -651,17 +679,13 @@ Adaptations to vanilla items
   </ModOp>
   <!-- ****************** END Mariana the Master Stylist,Weaver, Tailor, Fine Couturier,Cristobal Taffeta add Sleeping Bag Factory + Heated Military Uniform Factory  ******************  -->
 
-  <!-- ****************** START Mariana the Master Stylist Military Uniforms ******************  -->
-  <ModOp Type="replace" GUID='191346' Path="/Values/FactoryUpgrade/AdditionalOutput">
-    <AdditionalOutput>
-      <Item>
-        <Product>1742100064</Product>        <!--Military Uniforms-->
-        <AdditionalOutputCycle>8</AdditionalOutputCycle>
-        <Amount>1</Amount>
-      </Item>
-    </AdditionalOutput>
+  <!-- ****************** START Costumer Designer - Military Uniform Factory New World  ******************  -->
+  <ModOp Type="add" GUID='191348' Path="Values/ItemEffect/EffectTargets/">
+    <Item>
+      <GUID>1742100608</GUID>      <!-- Military Uniform Factory NW -->
+    </Item>
   </ModOp>
-  <!-- ****************** END Mariana the Master Stylist Uniforms ******************  -->
+  <!-- ****************** END Costumer Designer - Military Uniform Factory New World  ******************  -->
 
   <!-- ****************** START Pope Lucius I, "The Rejuvenator" \ Arch-Archbishop Archibald to Cemetery ******************  -->
   <ModOp Type="add" GUID='190719,190672' Path="Values/ResidenceUpgrade/NeedProvideNeedUpgrade/">

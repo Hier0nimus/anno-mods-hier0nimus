@@ -975,7 +975,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742100760</GUID>
+          <GUID>1742100762</GUID>
           <Name>MOD Trigger</Name>
         </Standard>
         <Trigger>
@@ -1072,6 +1072,27 @@
                       <Item>
                         <Asset>1742100603</Asset>                        <!-- Open Pit Coal Mine (NW) - Building -->
                       </Item>
+                      <Item>
+                        <Asset>1742100604</Asset>                        <!-- Furnace (NW) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100605</Asset>                        <!-- Basic Weapons Factory (NW) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100606</Asset>                        <!-- Basic Weapons (NW) - Chain -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100608</Asset>                        <!-- Military Uniforms Factory (NW) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100607</Asset>                        <!-- Military Uniforms (NW) - Chain -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100617</Asset>                        <!-- Canned Food (NW) - Chain -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100618</Asset>                        <!-- Cannery (NW) - Building -->
+                      </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>
                 </Values>
@@ -1117,6 +1138,64 @@
                     <UnlockAssets>
                       <Item>
                         <Asset>1742100244</Asset>                        <!-- Clean Water Pump (NW) - Building -->
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!--UNLOCK - Obreros 1 -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100767</GUID>
+          <Name>MOD Trigger</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>15000006</Context>                <!-- Obreros PopulationLevel7 -->
+                <CounterAmount>1</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
+                    </UnhideAssets>
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>1742100619</Asset>                        <!-- Care Packages Factory (NW) - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100620</Asset>                        <!-- Care Packages (NW) - Production Chain -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100617</Asset>                        <!-- Canned Food (NW) - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100618</Asset>                        <!-- Cannery (NW) - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>7919</Asset>                        <!-- Calamari Fishery - Product -->
                       </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>

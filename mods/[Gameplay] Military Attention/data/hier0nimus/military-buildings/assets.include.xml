@@ -2157,7 +2157,7 @@
         <BuildingUnique>
           <Uniques>
             <Item>
-              <UniqueType>Hacienda</UniqueType>
+              <UniqueType>Mod12</UniqueType>
               <UniqueScope>Area</UniqueScope>
             </Item>
           </Uniques>
@@ -3098,6 +3098,77 @@
     </Asset>
   </ModOp>
   <!-- END BUILDING - MILITARY UNIFORM FACTORY -->
+
+  <!-- START BUILDING - MILITARY UNIFORM FACTORY (NW) -->
+  <ModOp Type="addNextSibling" GUID='1742100062'>
+    <Asset>
+      <BaseAssetGUID>1742100062</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742100608</GUID>
+          <Name>Military Uniform Factory (NW)</Name>
+        </Standard>
+        <Building>
+          <AssociatedRegions>Colony01</AssociatedRegions>
+        </Building>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/production/military_uniform_factory/military_uniform_factory_nw_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>SA_Resident_tier01_atWork</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>120036</Product>              <!-- alpaca wool -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1010240</Product>              <!-- Cotton Fabric -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1010219</Product>              <!--Steel -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <CycleTime>15</CycleTime>
+          <IsMainFactory>0</IsMainFactory>
+        </FactoryBase>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>100</Amount>
+              <InactiveAmount>50</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1010366</Product>              <!-- Jornalero Workforce -->
+              <Amount>75</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+      </Values>
+    </Asset>
+
+  </ModOp>
+  <!-- END BUILDING - MILITARY UNIFORM FACTORY (NW) -->
 
   <!-- START BUILDING - HEATED MILITARY UNIFORM FACTORY -->
   <ModOp Type="addNextSibling" GUID='1010284'>
@@ -4271,57 +4342,109 @@
   </ModOp>
   <!-- END BUILDING - OPEN PIT COAL MINE -->
 
-<!-- START BUILDING - OPEN PIT COAL MINE - NW -->
-<ModOp Type="addNextSibling" GUID='1742100163'>
-  <Asset>
-    <BaseAssetGUID>1742100165</BaseAssetGUID>
-    <Values>
-      <Standard>
-        <GUID>1742100603</GUID>
-        <Name>Open Pit Coal Mine (NW)</Name>
-      </Standard>
-      <Building>
-        <AssociatedRegions>Colony01</AssociatedRegions>
-      </Building>
-      <Object>
-        <Variations>
-          <Item>
-            <Filename>data/graphics/buildings/production/open_pit/open_pit_nw_02.cfg</Filename>
-          </Item>
-        </Variations>
-      </Object>
-      <Selection>
-        <OnSelection>
-          <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
-          <Values>
-            <ActionList />
-          </Values>
-        </OnSelection>
-        <ParticipantMessageArcheType>SA_Resident_tier01_atWork</ParticipantMessageArcheType>
-        <Colors>
-          <WeakSelectionColorType>NoColor</WeakSelectionColorType>
-        </Colors>
-      </Selection>
-      <FactoryBase>
-        <IsMainFactory>0</IsMainFactory>
-      </FactoryBase>
-      <Maintenance>
-        <Maintenances>
-          <Item>
-            <Product>1010017</Product>
-            <Amount>50</Amount>
-            <InactiveAmount>25</InactiveAmount>
-          </Item>
-          <Item>
-            <Product>1010366</Product>            <!-- Jornalero Workforce -->
-            <Amount>30</Amount>
-          </Item>
-        </Maintenances>
-      </Maintenance>
-    </Values>
-  </Asset>
-</ModOp>
-<!-- END BUILDING - OPEN PIT COAL MINE - NW -->
+  <!-- START BUILDING - OPEN PIT COAL MINE - NW -->
+  <ModOp Type="addNextSibling" GUID='1742100163'>
+    <Asset>
+      <BaseAssetGUID>1742100165</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742100603</GUID>
+          <Name>Open Pit Coal Mine (NW)</Name>
+        </Standard>
+        <Building>
+          <AssociatedRegions>Colony01</AssociatedRegions>
+        </Building>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/production/open_pit/open_pit_nw_02.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>SA_Resident_tier01_atWork</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <FactoryBase>
+          <IsMainFactory>0</IsMainFactory>
+        </FactoryBase>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>50</Amount>
+              <InactiveAmount>25</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1010366</Product>              <!-- Jornalero Workforce -->
+              <Amount>30</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - OPEN PIT COAL MINE - NW -->
+
+  <!-- START BUILDING - FURNACE - NW -->
+  <ModOp Type="addNextSibling" GUID='1010284'>
+    <Asset>
+      <BaseAssetGUID>1010297</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742100604</GUID>
+          <Name>Furnace (NW)</Name>
+        </Standard>
+        <Building>
+          <AssociatedRegions>Colony01</AssociatedRegions>
+        </Building>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/eoy21/graphics/buildings/production/heavy_02/heavy_02.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>SA_Resident_tier01_atWork</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <FactoryBase>
+          <IsMainFactory>0</IsMainFactory>
+        </FactoryBase>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>              <!--Money-->
+              <Amount>100</Amount>
+              <InactiveAmount>50</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1010366</Product>              <!-- Jornalero Workforce -->
+              <Amount>100</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - FURNACE - NW -->
 
   <!-- START BUILDING - CARDGAMES FACTORY -->
   <ModOp Type="addNextSibling" GUID='1010284'>
@@ -6317,8 +6440,7 @@
           </FactoryInputs>
           <FactoryOutputs>
             <Item>
-              <Product>1742100471</Product>
-              <!--Basic Weapons-->
+              <Product>1742100471</Product>              <!--Basic Weapons-->
               <Amount>1</Amount>
               <StorageAmount>20</StorageAmount>
             </Item>
@@ -6333,8 +6455,7 @@
         <Maintenance>
           <Maintenances>
             <Item>
-              <Product>1010017</Product>
-              <!--Money-->
+              <Product>1010017</Product>              <!--Money-->
               <Amount>60</Amount>
               <InactiveAmount>25</InactiveAmount>
             </Item>
@@ -6401,6 +6522,47 @@
     </Asset>
   </ModOp>
   <!-- END BUILDING - BASIC WEAPONS FACTORY -->
+
+  <!-- START BUILDING - BASIC WEAPONS FACTORY (NW) -->
+  <ModOp Type="addNextSibling" GUID='1742100469'>
+    <Asset>
+      <BaseAssetGUID>1742100469</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742100605</GUID>
+          <Name>Basic Weapons Factory (NW)</Name>
+        </Standard>
+        <Building>
+          <AssociatedRegions>Colony01</AssociatedRegions>
+        </Building>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/production/basic_weapons_factory/basic_weapons_factory_nw_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <FactoryBase>
+          <IsMainFactory>0</IsMainFactory>
+        </FactoryBase>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>              <!-- Coins -->
+              <Amount>100</Amount>
+              <InactiveAmount>50</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1010366</Product>              <!-- Jornalero Workforce -->
+              <Amount>40</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- END BUILDING - BASIC WEAPONS FACTORY (NW) -->
 
   <!-- START BUILDING - CARE PACKAGE FACTORY - EMPTY (OW) -->
   <ModOp Type="addNextSibling" GUID='923'>
@@ -8119,5 +8281,151 @@
   <!-- ****************** START BUILDING - CLEAN WATER PUMP (NW) - Building ******************  -->
   <!-- SHARED -->
   <!-- ****************** END BUILDING - CLEAN WATER PUMP (NW) - Building ******************  -->
+
+  <!-- START BUILDING - CANNERY - NW -->
+  <ModOp Type="addNextSibling" GUID='1010295'>
+    <Asset>
+      <BaseAssetGUID>1010295</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742100618</GUID>
+          <Name>Cannery (NW)</Name>
+        </Standard>
+        <Building>
+          <AssociatedRegions>Colony01</AssociatedRegions>
+        </Building>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/production/cannery/cannery_nw.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>SA_Resident_tier01_atWork</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>114410</Product>              <!--seafood stew-->
+              <Amount>1</Amount>
+              <StorageAmount>4</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1010227</Product>              <!--iron-->
+              <Amount>1</Amount>
+              <StorageAmount>8</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <FactoryOutputs>
+            <Item>
+              <Product>1010217</Product>              <!--canned food-->
+              <Amount>1</Amount>
+              <StorageAmount>1</StorageAmount>
+            </Item>
+          </FactoryOutputs>
+          <CycleTime>45</CycleTime>
+          <IsMainFactory>0</IsMainFactory>
+        </FactoryBase>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>75</Amount>
+              <InactiveAmount>100</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1010366</Product>              <!-- Jornalero Workforce -->
+              <Amount>125</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - CANNERY - NW -->
+
+  <!-- START BUILDING - CARE PACKAGES FACTORY - NW -->
+  <ModOp Type="addNextSibling" GUID='1010295'>
+    <Asset>
+      <BaseAssetGUID>1010295</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742100619</GUID>
+          <Name>Care Packages Factory (NW)</Name>
+          <IconFilename>data\graphics\icons\icon_care_packages.png</IconFilename>
+          <InfoDescription>1742100497</InfoDescription>
+        </Standard>
+        <Building>
+          <AssociatedRegions>Colony01</AssociatedRegions>
+        </Building>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data\graphics\buildings\production\care_package_factory\care_package_factory_nw_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>SA_Resident_tier01_atWork</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1742100242</Product>              <!-- Clean Water -->
+              <Amount>1</Amount>
+              <StorageAmount>4</StorageAmount>
+            </Item>
+            <Item>
+              <Product>120035</Product>              <!-- Burrito -->
+              <Amount>1</Amount>
+              <StorageAmount>8</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <FactoryOutputs>
+            <Item>
+              <Product>849</Product>              <!-- Care Packages -->
+              <Amount>1</Amount>
+              <StorageAmount>6</StorageAmount>
+            </Item>
+          </FactoryOutputs>
+          <CycleTime>30</CycleTime>
+          <IsMainFactory>0</IsMainFactory>
+        </FactoryBase>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>100</Amount>
+              <InactiveAmount>50</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1010366</Product>              <!-- Jornalero Workforce -->
+              <Amount>150</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - CARE PACKAGES FACTORY - NW -->
 
 </ModOps>
