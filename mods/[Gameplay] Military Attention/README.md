@@ -1,10 +1,17 @@
-# Military Attention | 1.6!
+# Military Attention | 1.7!
 
 A mod centered around military infrastructure and adding new military residence tiers for all regions with a focus on the Old World.
 
 ![ma-img-01.jpg](./banner.jpg)
 
 ## Changelog
+
+### v1.7
+- Added fake production buildings for nitrary and gunpowder for the AI to make sure they produce the goods and do not get stuck in their progression.
+- Fixed the fake Shell Ammunition factory for AI which they did not build resulting in not making more advanced ships because they did not have Shell ammunition.
+- Added ignores for new needs for AI to make sure they do not get stuck on those needs when not building them.
+- Rebalanced ConstructionMaterials for AI a bit and added some additional goods like weapons/cannons, advanced weapons, sails and steam motors.
+- Added a fix that should not keep AI from progressing in the Old World when Cape is available
 
 ### v1.6
 - Added Furnace, Basic Weapons Factory, Military Uniforms Factory, Canned food and Care Packages to the New World so you can make that in that region.
