@@ -146,6 +146,9 @@
                       <Item>
                         <Asset>1742100585</Asset>                        <!-- Heavy Batle Cruiser - Ship -->
                       </Item>
+                      <Item>
+                        <Asset>1742100625</Asset>                        <!-- Large Oil Tanker - Ship -->
+                      </Item>
                     </UnhideAssets>
                     <UnlockAssets>
                       <Item>
@@ -175,7 +178,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742100766</GUID>
+          <GUID>1742100769</GUID>
           <Name>MOD Trigger</Name>
         </Standard>
         <Trigger>
@@ -211,6 +214,9 @@
                       </Item>
                       <Item>
                         <Asset>1742100615</Asset>                        <!-- Ironclad Cruiser - Ship -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100625</Asset>                        <!-- Large Oil Tanker - Ship -->
                       </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>
@@ -269,6 +275,55 @@
           </TriggerActions>
         </Trigger>
         <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!--UNLOCK - OIL POWER PLANT UNLOCK -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100768</GUID>
+          <Name>Unlock Small Oil Tanker</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionUnlocked</Template>
+            <Values>
+              <Condition/>
+              <ConditionUnlocked>
+                <UnlockNeeded>100780</UnlockNeeded>                <!--electricity_02 (Oil Power Plant)-->
+              </ConditionUnlocked>
+              <ConditionPropsNegatable/>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action/>
+                  <ActionUnlockAsset>
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>1742100624</Asset>                        <!-- Small Oil Tanker - Ship -->
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+          <ResetTrigger>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <EmptyAutoCreateValue/>
+            </Values>
+          </ResetTrigger>
+        </Trigger>
+        <TriggerSetup/>
       </Values>
     </Asset>
   </ModOp>
@@ -335,6 +390,12 @@
                       </Item>
                       <Item>
                         <Asset>1742100615</Asset>                        <!-- Ironclad Cruiser - Ship -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100624</Asset>                        <!-- Small Oil Tanker - Ship -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100625</Asset>                        <!-- Large Oil Tanker - Ship -->
                       </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>

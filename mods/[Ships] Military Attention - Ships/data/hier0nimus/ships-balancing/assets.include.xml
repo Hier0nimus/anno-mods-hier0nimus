@@ -71,6 +71,13 @@
             <Amount>100000</Amount>
         </Item>
     </ModOp>
+    <ModOp Type="merge" GUID='100853' Path="/Values/ItemContainer">
+        <SlotCount>2</SlotCount>
+    </ModOp>
+    <ModOp Type="merge" GUID='100853' Path="/Values/Attackable/MaximumHitPoints">
+        <MaximumHitPoints>4000</MaximumHitPoints>        <!-- 5000 - 4000 -->
+    </ModOp>
+
 
     <!-- EXTRAVAGANZA STREAMER -->
     <ModOp Type="addPrevSibling" GUID='102455' Path="/Values/Cost/Costs/Item[Ingredient='1010218']">
@@ -121,278 +128,327 @@
     </ModOp>
 
     <Group Condition="!#military_attention_disable_vanilla_changes">
-        <Group Condition="!#[Gameplay] 01 Combat Overhaul Ships">
-            <!-- START COMPATIBILITY No Vanilla Changes + Combat Overhaul -->
+        <!-- START COMPATIBILITY No Vanilla Changes -->
 
-            <!-- Remove Effectivities of Monitor stuff -->
-            <ModOp GUID='102033' Type="remove" Path="/Values/Projectile/Effectivities/Item[GUID='1508']" />
-            <ModOp GUID='102267' Type="remove" Path="/Values/Projectile/Effectivities/Item[GUID='1404']" />
+        <!-- Remove Effectivities of Monitor stuff -->
+        <ModOp GUID='102033' Type="remove" Path="/Values/Projectile/Effectivities/Item[GUID='1508']" />
+        <ModOp GUID='102267' Type="remove" Path="/Values/Projectile/Effectivities/Item[GUID='1404']" />
 
-            <!-- Gunboat -->
-            <ModOp Type="merge" GUID='100437' Path ="/Values">
-                <Walking>
-                    <WindMinSlowdownFactor>0.5</WindMinSlowdownFactor>
-                    <WindMaxSpeedupFactor>2.4</WindMaxSpeedupFactor>
-                </Walking>
-                <Attackable>
-                    <MaximumHitPoints>650</MaximumHitPoints>
-                </Attackable>
-                <Attacker>
-                    <AttackRange>20</AttackRange>
-                    <ReloadTime>30</ReloadTime>
-                    <BaseDamage>120</BaseDamage>
-                </Attacker>
-                <Cost>
-                    <InfluenceCostPoints>3</InfluenceCostPoints>
-                </Cost>
-                <ShipMaintenance>
-                    <Maintenance>50</Maintenance>
-                </ShipMaintenance>
-            </ModOp>
+        <!-- Gunboat -->
+        <ModOp Type="merge" GUID='100437' Path ="/Values">
+            <Walking>
+                <WindMinSlowdownFactor>0.5</WindMinSlowdownFactor>
+                <WindMaxSpeedupFactor>2.4</WindMaxSpeedupFactor>
+            </Walking>
+            <Attackable>
+                <MaximumHitPoints>650</MaximumHitPoints>
+            </Attackable>
+            <Attacker>
+                <AttackRange>20</AttackRange>
+                <ReloadTime>45</ReloadTime>
+            </Attacker>
+            <Cost>
+                <InfluenceCostPoints>3</InfluenceCostPoints>
+            </Cost>
+            <ShipMaintenance>
+                <Maintenance>50</Maintenance>
+            </ShipMaintenance>
+        </ModOp>
 
-            <!-- Frigate -->
-            <ModOp Type="merge" GUID='100439' Path="/Values">
-                <Walking>
-                    <ForwardSpeed>6</ForwardSpeed>
-                    <WindMaxSpeedupFactor>2.2</WindMaxSpeedupFactor>
-                </Walking>
-                <Attacker>
-                    <AttackRangeApproachPercentage>0.7</AttackRangeApproachPercentage>
-                    <AttackRange>35</AttackRange>
-                    <ReloadTime>40</ReloadTime>
-                    <BaseDamage>160</BaseDamage>
-                </Attacker>
-                <ShipMaintenance>
-                    <Maintenance>125</Maintenance>
-                </ShipMaintenance>
-            </ModOp>
+        <!-- Pirate Gunboat -->
+        <ModOp Type="merge" GUID='102420' Path ="/Values">
+            <Walking>
+                <WindMaxSpeedupFactor>2.5</WindMaxSpeedupFactor>
+            </Walking>
+            <Attackable>
+                <MaximumHitPoints>750</MaximumHitPoints>
+            </Attackable>
+            <Attacker>
+                <AttackRange>25</AttackRange>
+                <ReloadTime>40</ReloadTime>
+            </Attacker>
+        </ModOp>
 
-            <!-- SOTL -->
-            <ModOp Type="merge" GUID='100440' Path="/Values">
-                <Walking>
-                    <WindMinSlowdownFactor>0.95</WindMinSlowdownFactor>
-                </Walking>
-                <Attackable>
-                    <MaximumHitPoints>3250</MaximumHitPoints>
-                </Attackable>
-                <Attacker>
-                    <AttackRangeApproachPercentage>0.7</AttackRangeApproachPercentage>
-                    <AttackRange>46</AttackRange>
-                    <LineOfSightRange>60</LineOfSightRange>
-                    <ReloadTime>90</ReloadTime>
-                    <BaseDamage>340</BaseDamage>
-                </Attacker>
-                <ShipMaintenance>
-                    <Maintenance>300</Maintenance>
-                </ShipMaintenance>
-            </ModOp>
-            <ModOp Type="add" GUID='100440' Path="/Values/Cost/Costs">
+        <!-- Frigate -->
+        <ModOp Type="merge" GUID='100439' Path="/Values">
+            <Walking>
+                <ForwardSpeed>6</ForwardSpeed>
+                <WindMaxSpeedupFactor>2.2</WindMaxSpeedupFactor>
+            </Walking>
+            <Attacker>
+                <BaseDamage>150</BaseDamage>
+                <ReloadTime>45</ReloadTime>
+                <AttackRangeApproachPercentage>0.7</AttackRangeApproachPercentage>
+                <AttackRange>40</AttackRange>
+            </Attacker>
+            <ShipMaintenance>
+                <Maintenance>125</Maintenance>
+            </ShipMaintenance>
+        </ModOp>
+
+        <!-- Pirate Frigate -->
+        <ModOp Type="merge" GUID='102421' Path="/Values">
+            <Walking>
+                <ForwardSpeed>6.2</ForwardSpeed>
+            </Walking>
+            <Attacker>
+                <ReloadTime>40</ReloadTime>
+                <AttackRange>45</AttackRange>
+            </Attacker>
+        </ModOp>
+
+        <!-- SOTL -->
+        <ModOp Type="merge" GUID='100440' Path="/Values">
+            <Walking>
+                <WindMinSlowdownFactor>0.95</WindMinSlowdownFactor>
+            </Walking>
+            <Attackable>
+                <MaximumHitPoints>3250</MaximumHitPoints>
+            </Attackable>
+            <Attacker>
+                <AttackRangeApproachPercentage>0.7</AttackRangeApproachPercentage>
+                <AttackRange>52</AttackRange>
+                <LineOfSightRange>60</LineOfSightRange>
+                <ReloadTime>90</ReloadTime>
+                <BaseDamage>380</BaseDamage>
+            </Attacker>
+            <ShipMaintenance>
+                <Maintenance>300</Maintenance>
+            </ShipMaintenance>
+        </ModOp>
+        <ModOp Type="add" GUID='100440' Path="/Values/Cost/Costs">
+            <Item>
+                <Ingredient>1010218</Ingredient>
+                <Amount>25</Amount>
+            </Item>
+        </ModOp>
+
+        <!-- ROYAL SOTL -->
+        <ModOp Type="merge" GUID='102427' Path="/Values">
+            <Attackable>
+                <MaximumHitPoints>3800</MaximumHitPoints>
+            </Attackable>
+            <Attacker>
+                <AttackRange>56</AttackRange>
+                <ReloadTime>85</ReloadTime>
+                <BaseDamage>390</BaseDamage>
+            </Attacker>
+        </ModOp>
+
+        <!-- PIRATE SOTL -->
+        <ModOp Type="merge" GUID='102419' Path="/Values">
+            <Attackable>
+                <MaximumHitPoints>3500</MaximumHitPoints>
+            </Attackable>
+            <Attacker>
+                <AttackRange>54</AttackRange>
+                <ReloadTime>90</ReloadTime>
+                <BaseDamage>390</BaseDamage>
+            </Attacker>
+        </ModOp>
+
+        <!-- CARGO SHIP -->
+        <ModOp Type="merge" GUID='1010062' Path="/Values">
+            <Walking>
+                <CargoFullFactor>0.7</CargoFullFactor>                <!-- 0.8 -->
+            </Walking>
+        </ModOp>
+
+        <!-- GREAT WHITE -->
+        <ModOp Type="merge" GUID='132706' Path="/Values">
+            <Walking>
+                <CargoFullFactor>0.7</CargoFullFactor>                <!-- 0.8 -->
+            </Walking>
+        </ModOp>
+
+        <!-- EXTRAVAGANZA STREAMER -->
+        <ModOp Type="merge" GUID='102455' Path="/Values">
+            <Walking>
+                <CargoFullFactor>0.7</CargoFullFactor>                <!-- 0.8 -->
+            </Walking>
+        </ModOp>
+
+        <!-- GREAT EASTERN -->
+        <ModOp Type="merge" GUID='118718' Path="/Values">
+            <Walking>
+                <CargoFullFactor>0.5</CargoFullFactor>                <!-- 0.8 -->
+            </Walking>
+        </ModOp>
+
+        <!-- Battle Cruiser -->
+        <ModOp Type="merge" GUID='100442' Path="/Values">
+            <Standard>
+                <InfoDescription>1742100593</InfoDescription>
+            </Standard>
+            <Walking>
+                <TurnAroundRadius>18</TurnAroundRadius>
+                <Acceleration>0.45</Acceleration>
+                <Deceleration>0.5</Deceleration>
+                <TurnRadius>15</TurnRadius>
+                <ForwardSpeed>5.4</ForwardSpeed>
+                <CargoFullFactor>0.9</CargoFullFactor>
+                <DamageFullFactor>0.8</DamageFullFactor>
+                <MinSlowdownFactor>0.6</MinSlowdownFactor>
+            </Walking>
+            <Attackable>
+                <MaximumHitPoints>7000</MaximumHitPoints>
+                <AlertRange>150</AlertRange>
+                <ArmorType>HeavyArmor</ArmorType>
+            </Attackable>
+            <Attacker>
+                <AttackRangeApproachPercentage>0.6</AttackRangeApproachPercentage>
+                <AttackRange>85</AttackRange>
+                <ReloadTime>140</ReloadTime>
+                <BaseDamage>1250</BaseDamage>
+                <AccuracyBase>15</AccuracyBase>
+                <AccuracyIncreaseOverDistance>200</AccuracyIncreaseOverDistance>
+            </Attacker>
+            <ShipMaintenance>
+                <Maintenance>1500</Maintenance>
+            </ShipMaintenance>
+        </ModOp>
+        <ModOp GUID='100442' Path="/Values/Attacker/AccuracyByDistance" Type="replace">
+            <AccuracyByDistance>
                 <Item>
-                    <Ingredient>1010218</Ingredient>
-                    <Amount>25</Amount>
+                    <AccuracyByDistancePair>
+                        <EnemyDistanceRelToAttackRange>0</EnemyDistanceRelToAttackRange>
+                        <CorrespondingAccuracy>5</CorrespondingAccuracy>
+                    </AccuracyByDistancePair>
                 </Item>
-            </ModOp>
-
-            <!-- CARGO SHIP -->
-            <ModOp Type="merge" GUID='1010062' Path="/Values">
-                <Walking>
-                    <CargoFullFactor>0.7</CargoFullFactor>                    <!-- 0.8 -->
-                </Walking>
-            </ModOp>
-
-            <!-- GREAT WHITE -->
-            <ModOp Type="merge" GUID='132706' Path="/Values">
-                <Walking>
-                    <CargoFullFactor>0.7</CargoFullFactor>                    <!-- 0.8 -->
-                </Walking>
-            </ModOp>
-
-            <!-- EXTRAVAGANZA STREAMER -->
-            <ModOp Type="merge" GUID='102455' Path="/Values">
-                <Walking>
-                    <CargoFullFactor>0.7</CargoFullFactor>                    <!-- 0.8 -->
-                </Walking>
-            </ModOp>
-
-            <!-- GREAT EASTERN -->
-            <ModOp Type="merge" GUID='118718' Path="/Values">
-                <Walking>
-                    <CargoFullFactor>0.5</CargoFullFactor>                    <!-- 0.8 -->
-                </Walking>
-            </ModOp>
-
-            <!-- Battle Cruiser -->
-            <ModOp Type="merge" GUID='100442' Path="/Values">
-                <Standard>
-                    <InfoDescription>1742100593</InfoDescription>
-                </Standard>
-                <Walking>
-                    <TurnAroundRadius>18</TurnAroundRadius>
-                    <Acceleration>0.45</Acceleration>
-                    <Deceleration>0.5</Deceleration>
-                    <TurnRadius>15</TurnRadius>
-                    <ForwardSpeed>5.4</ForwardSpeed>
-                    <CargoFullFactor>0.9</CargoFullFactor>
-                    <DamageFullFactor>0.8</DamageFullFactor>
-                    <MinSlowdownFactor>0.6</MinSlowdownFactor>
-                </Walking>
-                <Attackable>
-                    <MaximumHitPoints>6750</MaximumHitPoints>
-                    <AlertRange>150</AlertRange>
-                    <ArmorType>HeavyArmor</ArmorType>
-                </Attackable>
-                <Attacker>
-                    <AttackRangeApproachPercentage>0.6</AttackRangeApproachPercentage>
-                    <AttackRange>85</AttackRange>
-                    <ReloadTime>185</ReloadTime>
-                    <BaseDamage>1370</BaseDamage>
-                    <AccuracyBase>15</AccuracyBase>
-                    <AccuracyIncreaseOverDistance>200</AccuracyIncreaseOverDistance>
-                </Attacker>
-                <ShipMaintenance>
-                    <Maintenance>2000</Maintenance>
-                </ShipMaintenance>
-            </ModOp>
-            <ModOp GUID='100442' Path="/Values/Attacker/AccuracyByDistance" Type="replace">
-                <AccuracyByDistance>
-                    <Item>
-                        <AccuracyByDistancePair>
-                            <EnemyDistanceRelToAttackRange>0</EnemyDistanceRelToAttackRange>
-                            <CorrespondingAccuracy>5</CorrespondingAccuracy>
-                        </AccuracyByDistancePair>
-                    </Item>
-                    <Item>
-                        <AccuracyByDistancePair>
-                            <EnemyDistanceRelToAttackRange>20</EnemyDistanceRelToAttackRange>
-                            <CorrespondingAccuracy>10</CorrespondingAccuracy>
-                        </AccuracyByDistancePair>
-                    </Item>
-                    <Item>
-                        <AccuracyByDistancePair>
-                            <EnemyDistanceRelToAttackRange>30</EnemyDistanceRelToAttackRange>
-                            <CorrespondingAccuracy>20</CorrespondingAccuracy>
-                        </AccuracyByDistancePair>
-                    </Item>
-                    <Item>
-                        <AccuracyByDistancePair>
-                            <EnemyDistanceRelToAttackRange>40</EnemyDistanceRelToAttackRange>
-                            <CorrespondingAccuracy>50</CorrespondingAccuracy>
-                        </AccuracyByDistancePair>
-                    </Item>
-                    <Item>
-                        <AccuracyByDistancePair>
-                            <EnemyDistanceRelToAttackRange>50</EnemyDistanceRelToAttackRange>
-                            <CorrespondingAccuracy>70</CorrespondingAccuracy>
-                        </AccuracyByDistancePair>
-                    </Item>
-                    <Item>
-                        <AccuracyByDistancePair>
-                            <EnemyDistanceRelToAttackRange>60</EnemyDistanceRelToAttackRange>
-                            <CorrespondingAccuracy>90</CorrespondingAccuracy>
-                        </AccuracyByDistancePair>
-                    </Item>
-                    <Item>
-                        <AccuracyByDistancePair>
-                            <EnemyDistanceRelToAttackRange>100</EnemyDistanceRelToAttackRange>
-                            <CorrespondingAccuracy>100</CorrespondingAccuracy>
-                        </AccuracyByDistancePair>
-                    </Item>
-                </AccuracyByDistance>
-            </ModOp>
-
-            <ModOp GUID='102228' Path="/Values/Object/Variations" Type="replace">
-                <Variations>
-                    <Item>
-                        <Filename>data/graphics/effects/military/muzzleflashes/shot_cannon_battlecruiser.cfg</Filename>
-                    </Item>
-                    <Item>
-                        <Filename>data/graphics/effects/military/muzzleflashes/shot_cannon_battlecruiser_2.cfg</Filename>
-                    </Item>
-                </Variations>
-            </ModOp>
-
-            <!-- Monitor -->
-            <ModOp GUID='100443' Path="/Values" Type="merge">
-                <Standard>
-                    <InfoDescription>1742100594</InfoDescription>
-                </Standard>
-                <Walking>
-                    <TurnAroundRadius>5</TurnAroundRadius>
-                    <Acceleration>1</Acceleration>
-                    <Deceleration>1.5</Deceleration>
-                    <TurnRadius>5</TurnRadius>
-                    <ForwardSpeed>4.6</ForwardSpeed>
-                </Walking>
-                <Attackable>
-                    <MaximumHitPoints>6350</MaximumHitPoints>
-                </Attackable>
-                <Attacker>
-                    <AttackRange>45</AttackRange>
-                    <ReloadTime>25</ReloadTime>
-                    <ProjectileAsset>1742100600</ProjectileAsset>
-                    <BaseDamage>110</BaseDamage>
-                </Attacker>
-                <ShipMaintenance>
-                    <Maintenance>800</Maintenance>
-                </ShipMaintenance>
-            </ModOp>
-
-            <!-- Flak Monitor -->
-            <ModOp GUID='720' Path="/Values" Type="merge">
-                <Walking>
-                    <TurnAroundRadius>5</TurnAroundRadius>
-                    <Acceleration>1</Acceleration>
-                    <Deceleration>1.5</Deceleration>
-                    <TurnRadius>5</TurnRadius>
-                    <ForwardSpeed>4.6</ForwardSpeed>
-                </Walking>
-                <Attackable>
-                    <MaximumHitPoints>6350</MaximumHitPoints>
-                </Attackable>
-                <Attacker>
-                    <BaseDamage>30</BaseDamage>                    <!-- 22 -->
-                    <AttackRange>50</AttackRange>                    <!-- 40 -->
-                </Attacker>
-                <ShipMaintenance>
-                    <Maintenance>500</Maintenance>                    <!-- 650 -->
-                </ShipMaintenance>
-            </ModOp>
-
-            <!-- Flame Monitor -->
-            <ModOp GUID='968,1537' Path="/Values" Type="merge">
-                <Walking>
-                    <TurnAroundRadius>5</TurnAroundRadius>
-                    <Acceleration>1</Acceleration>
-                    <Deceleration>1.5</Deceleration>
-                    <TurnRadius>5</TurnRadius>
-                    <ForwardSpeed>4.6</ForwardSpeed>
-                </Walking>
-                <Attacker>
-                    <AttackRange>15</AttackRange>
-                    <ReloadTime>15</ReloadTime>
-                    <BaseDamage>40</BaseDamage>
-                </Attacker>
-                <ShipMaintenance>
-                    <Maintenance>800</Maintenance>
-                </ShipMaintenance>
-            </ModOp>
-            <ModOp Type="replace" GUID='1892' Path="/Values/Projectile/Effectivities/Item[GUID='1398']">
                 <Item>
-                    <GUID>1398</GUID>
-                    <!--all Flamable Ships -->
-                    <Factor>1.4</Factor>
+                    <AccuracyByDistancePair>
+                        <EnemyDistanceRelToAttackRange>20</EnemyDistanceRelToAttackRange>
+                        <CorrespondingAccuracy>10</CorrespondingAccuracy>
+                    </AccuracyByDistancePair>
                 </Item>
-            </ModOp>
-            <ModOp Type="replace" GUID='1538' Path="/Values/Projectile/Effectivities/Item[GUID='1398']">
                 <Item>
-                    <GUID>1398</GUID>
-                    <!--all Flamable Ships -->
-                    <Factor>1.8</Factor>
+                    <AccuracyByDistancePair>
+                        <EnemyDistanceRelToAttackRange>30</EnemyDistanceRelToAttackRange>
+                        <CorrespondingAccuracy>20</CorrespondingAccuracy>
+                    </AccuracyByDistancePair>
                 </Item>
-            </ModOp>
+                <Item>
+                    <AccuracyByDistancePair>
+                        <EnemyDistanceRelToAttackRange>40</EnemyDistanceRelToAttackRange>
+                        <CorrespondingAccuracy>50</CorrespondingAccuracy>
+                    </AccuracyByDistancePair>
+                </Item>
+                <Item>
+                    <AccuracyByDistancePair>
+                        <EnemyDistanceRelToAttackRange>50</EnemyDistanceRelToAttackRange>
+                        <CorrespondingAccuracy>70</CorrespondingAccuracy>
+                    </AccuracyByDistancePair>
+                </Item>
+                <Item>
+                    <AccuracyByDistancePair>
+                        <EnemyDistanceRelToAttackRange>60</EnemyDistanceRelToAttackRange>
+                        <CorrespondingAccuracy>90</CorrespondingAccuracy>
+                    </AccuracyByDistancePair>
+                </Item>
+                <Item>
+                    <AccuracyByDistancePair>
+                        <EnemyDistanceRelToAttackRange>100</EnemyDistanceRelToAttackRange>
+                        <CorrespondingAccuracy>100</CorrespondingAccuracy>
+                    </AccuracyByDistancePair>
+                </Item>
+            </AccuracyByDistance>
+        </ModOp>
 
-            <!-- END COMPATIBILITY No Vanilla Changes + Combat Overhaul -->
-        </Group>
+        <ModOp GUID='102228' Path="/Values/Object/Variations" Type="replace">
+            <Variations>
+                <Item>
+                    <Filename>data/graphics/effects/military/muzzleflashes/shot_cannon_battlecruiser.cfg</Filename>
+                </Item>
+                <Item>
+                    <Filename>data/graphics/effects/military/muzzleflashes/shot_cannon_battlecruiser_2.cfg</Filename>
+                </Item>
+            </Variations>
+        </ModOp>
+
+        <!-- Monitor -->
+        <ModOp GUID='100443' Path="/Values" Type="merge">
+            <Standard>
+                <InfoDescription>1742100594</InfoDescription>
+            </Standard>
+            <Walking>
+                <TurnAroundRadius>5</TurnAroundRadius>
+                <Acceleration>1</Acceleration>
+                <Deceleration>1.5</Deceleration>
+                <TurnRadius>5</TurnRadius>
+                <ForwardSpeed>4.6</ForwardSpeed>
+            </Walking>
+            <Attackable>
+                <MaximumHitPoints>4000</MaximumHitPoints>
+            </Attackable>
+            <Attacker>
+                <AttackRange>45</AttackRange>
+                <ReloadTime>25</ReloadTime>
+                <ProjectileAsset>1742100600</ProjectileAsset>
+                <BaseDamage>98</BaseDamage>
+            </Attacker>
+            <ShipMaintenance>
+                <Maintenance>700</Maintenance>
+            </ShipMaintenance>
+        </ModOp>
+
+        <!-- Flak Monitor -->
+        <ModOp GUID='720' Path="/Values" Type="merge">
+            <Walking>
+                <TurnAroundRadius>5</TurnAroundRadius>
+                <Acceleration>1</Acceleration>
+                <Deceleration>1.5</Deceleration>
+                <TurnRadius>5</TurnRadius>
+                <ForwardSpeed>4.6</ForwardSpeed>
+            </Walking>
+            <Attackable>
+                <MaximumHitPoints>4000</MaximumHitPoints>
+            </Attackable>
+            <Attacker>
+                <BaseDamage>30</BaseDamage>                <!-- 22 -->
+                <AttackRange>50</AttackRange>                <!-- 40 -->
+            </Attacker>
+            <ShipMaintenance>
+                <Maintenance>500</Maintenance>                <!-- 650 -->
+            </ShipMaintenance>
+        </ModOp>
+
+        <!-- Flame Monitor -->
+        <ModOp GUID='968,1537' Path="/Values" Type="merge">
+            <Walking>
+                <TurnAroundRadius>5</TurnAroundRadius>
+                <Acceleration>1</Acceleration>
+                <Deceleration>1.5</Deceleration>
+                <TurnRadius>5</TurnRadius>
+                <ForwardSpeed>4.6</ForwardSpeed>
+            </Walking>
+            <Attackable>
+                <MaximumHitPoints>4000</MaximumHitPoints>
+            </Attackable>
+            <Attacker>
+                <AttackRange>15</AttackRange>
+                <ReloadTime>15</ReloadTime>
+                <BaseDamage>40</BaseDamage>
+            </Attacker>
+            <ShipMaintenance>
+                <Maintenance>800</Maintenance>
+            </ShipMaintenance>
+        </ModOp>
+        <ModOp Type="replace" GUID='1892' Path="/Values/Projectile/Effectivities/Item[GUID='1398']">
+            <Item>
+                <GUID>1398</GUID>
+                <!--all Flamable Ships -->
+                <Factor>1.4</Factor>
+            </Item>
+        </ModOp>
+        <ModOp Type="replace" GUID='1538' Path="/Values/Projectile/Effectivities/Item[GUID='1398']">
+            <Item>
+                <GUID>1398</GUID>
+                <!--all Flamable Ships -->
+                <Factor>1.8</Factor>
+            </Item>
+        </ModOp>
+
+        <!-- END COMPATIBILITY No Vanilla Changes -->
     </Group>
 
     <ModOp Type="addNextSibling" GUID='102267'>
@@ -442,5 +498,10 @@
                 <ProjectileIncident />
             </Values>
         </Asset>
+    </ModOp>
+
+    <!-- Add additional Trade Actions per trade route for oil - From 1 > 8 -->
+    <ModOp Type="merge" GUID='140011' Path="/Values/TradeRouteFeature/TransportationTypes/Oil/MaxTradeActionsPerStation">
+        <MaxTradeActionsPerStation>8</MaxTradeActionsPerStation>
     </ModOp>
 </ModOps>
