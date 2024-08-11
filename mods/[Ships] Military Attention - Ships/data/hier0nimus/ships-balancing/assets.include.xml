@@ -78,7 +78,6 @@
         <MaximumHitPoints>4000</MaximumHitPoints>        <!-- 5000 - 4000 -->
     </ModOp>
 
-
     <!-- EXTRAVAGANZA STREAMER -->
     <ModOp Type="addPrevSibling" GUID='102455' Path="/Values/Cost/Costs/Item[Ingredient='1010218']">
         <Item>
@@ -498,6 +497,24 @@
                 <ProjectileIncident />
             </Values>
         </Asset>
+    </ModOp>
+
+    <!-- Change second fron turret from vanilla Battle Cruiser to bigger turret -->
+    <ModOp Type="merge" GUID='100442' Path="/Values/Attacker/Turrets">
+        <Turrets>
+            <Item>
+                <TurnSpan>300</TurnSpan>
+                <TurretCfg>data/graphics/vehicle/heavy_battle_cruiser/heavy_battle_cruiser_turret_large_01.cfg</TurretCfg>
+            </Item>
+            <Item>
+                <TurnSpan>300</TurnSpan>
+                <TurretCfg>data/graphics/vehicle/battle_cruiser/battle_cruiser_turret_01.cfg</TurretCfg>
+            </Item>
+            <Item>
+                <TurnSpan>300</TurnSpan>
+                <TurretCfg>data/graphics/vehicle/battle_cruiser/battle_cruiser_turret_01.cfg</TurretCfg>
+            </Item>
+        </Turrets>
     </ModOp>
 
     <!-- Add additional Trade Actions per trade route for oil - From 1 > 8 -->
