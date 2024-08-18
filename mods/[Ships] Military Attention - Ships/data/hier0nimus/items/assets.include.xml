@@ -233,244 +233,241 @@
     </ModOp>
 
     <Group Condition="!#military_attention_disable_vanilla_changes">
-        <Group Condition="!#[Gameplay] 01 Combat Overhaul Ships">
 
-            <!-- Bosun: changed damage slowdown bonus to -10% -->
-            <ModOp GUID='191447' Path="/Values/VehicleUpgrade/IgnoreDamageFactorUpgrade/Value" Type="replace">
-                <Value>10</Value>
-            </ModOp>
+        <!-- Bosun: changed damage slowdown bonus to -10% -->
+        <ModOp GUID='191447' Path="/Values/VehicleUpgrade/IgnoreDamageFactorUpgrade/Value" Type="replace">
+            <Value>10</Value>
+        </ModOp>
 
-            <!-- Pilot: removed damage slowdown -->
-            <ModOp GUID='191449' Path="/Values/VehicleUpgrade/IgnoreDamageFactorUpgrade" Type="remove" />
+        <!-- Pilot: removed damage slowdown -->
+        <ModOp GUID='191449' Path="/Values/VehicleUpgrade/IgnoreDamageFactorUpgrade" Type="remove" />
 
-            <!-- Admiral Haynes: Reduced extra HP from 1000 to 500. damage to buildings replaced with 10% base damage. attack range +15% was exchanged for 20% better dispersion and -15% attack range -->
-            <ModOp GUID='191610' Path="/Values/AttackerUpgrade" Type="replace">
-                <AttackerUpgrade>
-                    <AccuracyUpgrade>
-                        <Value>20</Value>
-                        <Percental>1</Percental>
-                    </AccuracyUpgrade>
-                    <BaseDamageUpgrade>
-                        <Value>10</Value>
-                        <Percental>1</Percental>
-                    </BaseDamageUpgrade>
-                    <AttackRangeUpgrade>
-                        <Value>-15</Value>
-                        <Percental>1</Percental>
-                    </AttackRangeUpgrade>
-                </AttackerUpgrade>
-            </ModOp>
-            <ModOp GUID='191610' Path="/Values/AttackableUpgrade/MaxHitpointsUpgrade" Type="replace">
+        <!-- Admiral Haynes: Reduced extra HP from 1000 to 500. damage to buildings replaced with 10% base damage. attack range +15% was exchanged for 20% better dispersion and -15% attack range -->
+        <ModOp GUID='191610' Path="/Values/AttackerUpgrade" Type="replace">
+            <AttackerUpgrade>
+                <AccuracyUpgrade>
+                    <Value>20</Value>
+                    <Percental>1</Percental>
+                </AccuracyUpgrade>
+                <BaseDamageUpgrade>
+                    <Value>10</Value>
+                    <Percental>1</Percental>
+                </BaseDamageUpgrade>
+                <AttackRangeUpgrade>
+                    <Value>-15</Value>
+                    <Percental>1</Percental>
+                </AttackRangeUpgrade>
+            </AttackerUpgrade>
+        </ModOp>
+        <ModOp GUID='191610' Path="/Values/AttackableUpgrade/MaxHitpointsUpgrade" Type="replace">
+            <MaxHitpointsUpgrade>
+                <Value>5</Value>
+                <Percental>1</Percental>
+            </MaxHitpointsUpgrade>
+        </ModOp>
+
+        <!-- Lady Lu: 15% better dispersion, -20% attack range, 500 extra HP -->
+        <ModOp GUID='192449' Path="/Values/AttackerUpgrade" Type="replace">
+            <AttackerUpgrade>
+                <AccuracyUpgrade>
+                    <Value>15</Value>
+                    <Percental>1</Percental>
+                </AccuracyUpgrade>
+                <AttackRangeUpgrade>
+                    <Value>-15</Value>
+                    <Percental>1</Percental>
+                </AttackRangeUpgrade>
+            </AttackerUpgrade>
+        </ModOp>
+        <ModOp Type="replace" GUID='192449' Path="/Values/AttackableUpgrade">
+            <AttackableUpgrade>
                 <MaxHitpointsUpgrade>
                     <Value>5</Value>
                     <Percental>1</Percental>
                 </MaxHitpointsUpgrade>
-            </ModOp>
+            </AttackableUpgrade>
+        </ModOp>
 
-            <!-- Lady Lu: 15% better dispersion, -20% attack range, 500 extra HP -->
-            <ModOp GUID='192449' Path="/Values/AttackerUpgrade" Type="replace">
-                <AttackerUpgrade>
-                    <AccuracyUpgrade>
-                        <Value>15</Value>
-                        <Percental>1</Percental>
-                    </AccuracyUpgrade>
-                    <AttackRangeUpgrade>
-                        <Value>-15</Value>
-                        <Percental>1</Percental>
-                    </AttackRangeUpgrade>
-                </AttackerUpgrade>
-            </ModOp>
-            <ModOp Type="replace" GUID='192449' Path="/Values/AttackableUpgrade">
-                <AttackableUpgrade>
-                    <MaxHitpointsUpgrade>
-                        <Value>5</Value>
-                        <Percental>1</Percental>
-                    </MaxHitpointsUpgrade>
-                </AttackableUpgrade>
-            </ModOp>
+        <!-- Captain Richard Moses: damage from torpedoes -15%, Speed Upgrade reduced to 15% -->
+        <ModOp GUID='191452' Type="replace" Path="/Values/AttackableUpgrade/DamageReceiveFactor/Torpedo/Factor">
+            <Factor>0.85</Factor>
+        </ModOp>
+        <ModOp GUID='191452' Type="replace" Path="/Values/VehicleUpgrade/ForwardSpeedUpgrade/Value">
+            <Value>15</Value>
+        </ModOp>
 
-            <!-- Captain Richard Moses: damage from torpedoes -15%, Speed Upgrade reduced to 15% -->
-            <ModOp GUID='191452' Type="replace" Path="/Values/AttackableUpgrade/DamageReceiveFactor/Torpedo/Factor">
-                <Factor>0.85</Factor>
-            </ModOp>
-            <ModOp GUID='191452' Type="replace" Path="/Values/VehicleUpgrade/ForwardSpeedUpgrade/Value">
-                <Value>15</Value>
-            </ModOp>
+        <!-- Vice Almirante Goncalves: Damage from Torpedoes -10%, Adrenaline Rush  -->
+        <ModOp GUID='191605' Type="replace" Path="/Values/AttackableUpgrade">
+            <AttackableUpgrade>
+                <DamageReceiveFactor>
+                    <Torpedo>
+                        <Factor>0.9</Factor>
+                    </Torpedo>
+                </DamageReceiveFactor>
+            </AttackableUpgrade>
+        </ModOp>
+        <ModOp GUID='191605' Type="replace" Path="/Values/AttackerUpgrade">
+            <AttackerUpgrade>
+                <HitpointDamage>
+                    <Item>
+                        <MinDamageFactor>1.5</MinDamageFactor>
+                    </Item>
+                </HitpointDamage>
+            </AttackerUpgrade>
+        </ModOp>
 
-            <!-- Vice Almirante Goncalves: Damage from Torpedoes -10%, Adrenaline Rush  -->
-            <ModOp GUID='191605' Type="replace" Path="/Values/AttackableUpgrade">
-                <AttackableUpgrade>
-                    <DamageReceiveFactor>
-                        <Torpedo>
-                            <Factor>0.9</Factor>
-                        </Torpedo>
-                    </DamageReceiveFactor>
-                </AttackableUpgrade>
-            </ModOp>
-            <ModOp GUID='191605' Type="replace" Path="/Values/AttackerUpgrade">
-                <AttackerUpgrade>
-                    <HitpointDamage>
-                        <Item>
-                            <MinDamageFactor>1.5</MinDamageFactor>
-                        </Item>
-                    </HitpointDamage>
-                </AttackerUpgrade>
-            </ModOp>
+        <!-- Captain Smith: Damage from ships -15%, Reload Speed +10%, accuracy -10% -->
+        <ModOp GUID='191453' Type="replace" Path="/Values/AttackerUpgrade">
+            <AttackerUpgrade>
+                <AttackSpeedUpgrade>10</AttackSpeedUpgrade>
+                <ReloadTimeUpgrade>
+                    <Percental>1</Percental>
+                </ReloadTimeUpgrade>
+                <AccuracyUpgrade>
+                    <Value>-10</Value>
+                    <Percental>1</Percental>
+                </AccuracyUpgrade>
+            </AttackerUpgrade>
+        </ModOp>
+        <ModOp GUID='191453' Type="replace" Path="/Values/AttackableUpgrade">
+            <AttackableUpgrade>
+                <DamageReceiveFactor>
+                    <Normal>
+                        <Factor>0.85</Factor>
+                    </Normal>
+                </DamageReceiveFactor>
+            </AttackableUpgrade>
+        </ModOp>
+        <ModOp GUID='191453' Type="remove" Path="/Values/VehicleUpgrade"/>
 
-            <!-- Captain Smith: Damage from ships -15%, Reload Speed +10%, accuracy -10% -->
-            <ModOp GUID='191453' Type="replace" Path="/Values/AttackerUpgrade">
-                <AttackerUpgrade>
-                    <AttackSpeedUpgrade>10</AttackSpeedUpgrade>
-                    <ReloadTimeUpgrade>
-                        <Percental>1</Percental>
-                    </ReloadTimeUpgrade>
-                    <AccuracyUpgrade>
-                        <Value>-10</Value>
-                        <Percental>1</Percental>
-                    </AccuracyUpgrade>
-                </AttackerUpgrade>
-            </ModOp>
-            <ModOp GUID='191453' Type="replace" Path="/Values/AttackableUpgrade">
-                <AttackableUpgrade>
-                    <DamageReceiveFactor>
-                        <Normal>
-                            <Factor>0.85</Factor>
-                        </Normal>
-                    </DamageReceiveFactor>
-                </AttackableUpgrade>
-            </ModOp>
-            <ModOp GUID='191453' Type="remove" Path="/Values/VehicleUpgrade"/>
+        <!-- Captain Ibrahim: Damage from Ships -10%, Base Damage +5% Accuracy -10% -->
+        <ModOp GUID='190766' Type="replace" Path="/Values/AttackableUpgrade">
+            <AttackableUpgrade>
+                <DamageReceiveFactor>
+                    <Normal>
+                        <Factor>0.9</Factor>
+                    </Normal>
+                </DamageReceiveFactor>
+            </AttackableUpgrade>
+        </ModOp>
+        <ModOp GUID='190766' Type="replace" Path="/Values/AttackerUpgrade">
+            <AttackerUpgrade>
+                <BaseDamageUpgrade>
+                    <Value>5</Value>
+                    <Percental>1</Percental>
+                </BaseDamageUpgrade>
+                <AccuracyUpgrade>
+                    <Value>-10</Value>
+                    <Percental>1</Percental>
+                </AccuracyUpgrade>
+            </AttackerUpgrade>
+        </ModOp>
 
-            <!-- Captain Ibrahim: Damage from Ships -10%, Base Damage +5% Accuracy -10% -->
-            <ModOp GUID='190766' Type="replace" Path="/Values/AttackableUpgrade">
-                <AttackableUpgrade>
-                    <DamageReceiveFactor>
-                        <Normal>
-                            <Factor>0.9</Factor>
-                        </Normal>
-                    </DamageReceiveFactor>
-                </AttackableUpgrade>
-            </ModOp>
-            <ModOp GUID='190766' Type="replace" Path="/Values/AttackerUpgrade">
-                <AttackerUpgrade>
-                    <BaseDamageUpgrade>
-                        <Value>5</Value>
-                        <Percental>1</Percental>
-                    </BaseDamageUpgrade>
-                    <AccuracyUpgrade>
-                        <Value>-10</Value>
-                        <Percental>1</Percental>
-                    </AccuracyUpgrade>
-                </AttackerUpgrade>
-            </ModOp>
+        <!-- Stephen Drake: Added 50% Damage from Torpedoes, reduced cannon and big bertha damage to -25% -->
+        <ModOp GUID='191611' Type="replace" Path="/Values/AttackableUpgrade">
+            <AttackableUpgrade>
+                <DamageReceiveFactor>
+                    <Cannon>
+                        <Factor>0.75</Factor>
+                    </Cannon>
+                    <BigBertha>
+                        <Factor>0.75</Factor>
+                    </BigBertha>
+                    <Torpedo>
+                        <Factor>1.5</Factor>
+                    </Torpedo>
+                </DamageReceiveFactor>
+            </AttackableUpgrade>
+        </ModOp>
+        <!-- Vice Admiral Adams: Damage from cannons -35%, Damage from Big Bertha -10%, -20% Hitpoints -->
+        <ModOp GUID='191603' Type="replace" Path="/Values/AttackableUpgrade">
+            <AttackableUpgrade>
+                <DamageReceiveFactor>
+                    <Cannon>
+                        <Factor>0.75</Factor>
+                    </Cannon>
+                    <BigBertha>
+                        <Factor>0.75</Factor>
+                    </BigBertha>
+                </DamageReceiveFactor>
+                <MaxHitpointsUpgrade>
+                    <Value>-20</Value>
+                    <Percental>1</Percental>
+                </MaxHitpointsUpgrade>
+            </AttackableUpgrade>
+        </ModOp>
 
-            <!-- Stephen Drake: Added 50% Damage from Torpedoes, reduced cannon and big bertha damage to -25% -->
-            <ModOp GUID='191611' Type="replace" Path="/Values/AttackableUpgrade">
-                <AttackableUpgrade>
-                    <DamageReceiveFactor>
-                        <Cannon>
-                            <Factor>0.75</Factor>
-                        </Cannon>
-                        <BigBertha>
-                            <Factor>0.75</Factor>
-                        </BigBertha>
-                        <Torpedo>
-                            <Factor>1.5</Factor>
-                        </Torpedo>
-                    </DamageReceiveFactor>
-                </AttackableUpgrade>
-            </ModOp>
-            <!-- Vice Admiral Adams: Damage from cannons -35%, Damage from Big Bertha -10%, -20% Hitpoints -->
-            <ModOp GUID='191603' Type="replace" Path="/Values/AttackableUpgrade">
-                <AttackableUpgrade>
-                    <DamageReceiveFactor>
-                        <Cannon>
-                            <Factor>0.75</Factor>
-                        </Cannon>
-                        <BigBertha>
-                            <Factor>0.75</Factor>
-                        </BigBertha>
-                    </DamageReceiveFactor>
-                    <MaxHitpointsUpgrade>
-                        <Value>-20</Value>
-                        <Percental>1</Percental>
-                    </MaxHitpointsUpgrade>
-                </AttackableUpgrade>
-            </ModOp>
+        <!-- Georgina Duffy: HP + 300, movement speed +20% -->
+        <ModOp GUID='191609' Type="replace" Path="/Values/VehicleUpgrade">
+            <VehicleUpgrade>
+                <ForwardSpeedUpgrade>
+                    <Value>20</Value>
+                    <Percental>1</Percental>
+                </ForwardSpeedUpgrade>
+            </VehicleUpgrade>
+        </ModOp>
+        <ModOp GUID='191609' Type="replace" Path="/Values/AttackableUpgrade">
+            <AttackableUpgrade>
+                <MaxHitpointsUpgrade>
+                    <Value>300</Value>
+                </MaxHitpointsUpgrade>
+            </AttackableUpgrade>
+        </ModOp>
 
-            <!-- Georgina Duffy: HP + 300, movement speed +20% -->
-            <ModOp GUID='191609' Type="replace" Path="/Values/VehicleUpgrade">
-                <VehicleUpgrade>
-                    <ForwardSpeedUpgrade>
-                        <Value>20</Value>
-                        <Percental>1</Percental>
-                    </ForwardSpeedUpgrade>
-                </VehicleUpgrade>
-            </ModOp>
-            <ModOp GUID='191609' Type="replace" Path="/Values/AttackableUpgrade">
-                <AttackableUpgrade>
-                    <MaxHitpointsUpgrade>
-                        <Value>300</Value>
-                    </MaxHitpointsUpgrade>
-                </AttackableUpgrade>
-            </ModOp>
+        <!-- Captain Kadijah: HP +500, Speed +15% -->
+        <ModOp GUID='191450' Type="replace" Path="/Values/VehicleUpgrade">
+            <VehicleUpgrade>
+                <ForwardSpeedUpgrade>
+                    <Value>15</Value>
+                    <Percental>1</Percental>
+                </ForwardSpeedUpgrade>
+            </VehicleUpgrade>
+        </ModOp>
+        <ModOp GUID='191450' Type="replace" Path="/Values/AttackableUpgrade">
+            <AttackableUpgrade>
+                <MaxHitpointsUpgrade>
+                    <Value>500</Value>
+                </MaxHitpointsUpgrade>
+            </AttackableUpgrade>
+        </ModOp>
 
-            <!-- Captain Kadijah: HP +500, Speed +15% -->
-            <ModOp GUID='191450' Type="replace" Path="/Values/VehicleUpgrade">
-                <VehicleUpgrade>
-                    <ForwardSpeedUpgrade>
-                        <Value>15</Value>
-                        <Percental>1</Percental>
-                    </ForwardSpeedUpgrade>
-                </VehicleUpgrade>
-            </ModOp>
-            <ModOp GUID='191450' Type="replace" Path="/Values/AttackableUpgrade">
-                <AttackableUpgrade>
-                    <MaxHitpointsUpgrade>
-                        <Value>500</Value>
-                    </MaxHitpointsUpgrade>
-                </AttackableUpgrade>
-            </ModOp>
+        <!-- High Admiral Nadasky: 10% movement speed, +75 shell damage, +5% HP -->
+        <ModOp GUID='191608' Type="replace" Path="/Values/AttackerUpgrade">
+            <AttackerUpgrade>
+                <BaseDamageUpgrade>
+                    <Value>100</Value>
+                </BaseDamageUpgrade>
+            </AttackerUpgrade>
+        </ModOp>
+        <ModOp GUID='191608' Type="replace" Path="/Values/VehicleUpgrade">
+            <VehicleUpgrade>
+                <ForwardSpeedUpgrade>
+                    <Value>10</Value>
+                    <Percental>1</Percental>
+                </ForwardSpeedUpgrade>
+            </VehicleUpgrade>
+        </ModOp>
+        <ModOp GUID='191608' Type="replace" Path="/Values/AttackableUpgrade">
+            <AttackableUpgrade>
+                <MaxHitpointsUpgrade>
+                    <Value>5</Value>
+                    <Percental>1</Percental>
+                </MaxHitpointsUpgrade>
+            </AttackableUpgrade>
+        </ModOp>
 
-            <!-- High Admiral Nadasky: 10% movement speed, +75 shell damage, +5% HP -->
-            <ModOp GUID='191608' Type="replace" Path="/Values/AttackerUpgrade">
-                <AttackerUpgrade>
-                    <BaseDamageUpgrade>
-                        <Value>100</Value>
-                    </BaseDamageUpgrade>
-                </AttackerUpgrade>
-            </ModOp>
-            <ModOp GUID='191608' Type="replace" Path="/Values/VehicleUpgrade">
-                <VehicleUpgrade>
-                    <ForwardSpeedUpgrade>
-                        <Value>10</Value>
-                        <Percental>1</Percental>
-                    </ForwardSpeedUpgrade>
-                </VehicleUpgrade>
-            </ModOp>
-            <ModOp GUID='191608' Type="replace" Path="/Values/AttackableUpgrade">
-                <AttackableUpgrade>
-                    <MaxHitpointsUpgrade>
-                        <Value>5</Value>
-                        <Percental>1</Percental>
-                    </MaxHitpointsUpgrade>
-                </AttackableUpgrade>
-            </ModOp>
-
-            <!-- Indiscrimin8r -->
-            <ModOp GUID='112368' Type="replace" Path="/Values/AttackerUpgrade/BaseDamageUpgrade/Value">
-                <Value>5</Value>
-            </ModOp>
-            <!-- Extermin8r -->
-            <ModOp GUID='112369' Type="replace" Path="/Values/AttackerUpgrade/BaseDamageUpgrade/Value">
-                <Value>7</Value>
-            </ModOp>
-            <!-- Domin8r -->
-            <ModOp GUID='112370' Type="replace" Path="/Values/AttackerUpgrade/BaseDamageUpgrade/Value">
-                <Value>10</Value>
-            </ModOp>
-
-        </Group>
+        <!-- Indiscrimin8r -->
+        <ModOp GUID='112368' Type="replace" Path="/Values/AttackerUpgrade/BaseDamageUpgrade/Value">
+            <Value>5</Value>
+        </ModOp>
+        <!-- Extermin8r -->
+        <ModOp GUID='112369' Type="replace" Path="/Values/AttackerUpgrade/BaseDamageUpgrade/Value">
+            <Value>7</Value>
+        </ModOp>
+        <!-- Domin8r -->
+        <ModOp GUID='112370' Type="replace" Path="/Values/AttackerUpgrade/BaseDamageUpgrade/Value">
+            <Value>10</Value>
+        </ModOp>
     </Group>
 
 </ModOps>
