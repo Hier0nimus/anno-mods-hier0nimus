@@ -1,10 +1,24 @@
-# Military Attention | 1.7!
+# Military Attention | 1.8!
 
 A mod centered around military infrastructure and adding new military residence tiers for all regions with a focus on the Old World.
 
 ![ma-img-01.jpg](./banner.jpg)
 
 ## Changelog
+
+### v1.8
+- Added compatibility for Icebreaker ship mod from EvametryE
+- Fixed decals of military ornaments
+- Open Pit Coal mine now has a cycletime of 15s instead of 30s helping with that hight coal consumption
+- Fixed prison and propagande buff so they can no longer stack multiple times on residences
+- Added an additional variation for the Military Postbox. 
+- Removed additional building costs for Combat Overhaul ships because the author did not want them anymore
+- Added All shipyards to military logistics item set buff
+- Added some additional code so AI would not use certain needs for soldiers
+- Added some additional compatibility for recruitment offices in all regions
+- Fixed the unlock for the Old World Sleeping bag factory
+- Added additional building costs for pirate ships
+- Some code comment changes
 
 ### v1.7
 - Added fake production buildings for nitrary and gunpowder for the AI to make sure they produce the goods and do not get stuck in their progression.
