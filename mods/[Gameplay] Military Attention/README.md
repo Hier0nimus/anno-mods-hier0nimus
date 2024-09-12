@@ -6,6 +6,12 @@ A mod centered around military infrastructure and adding new military residence 
 
 ## Changelog
 
+### v1.9
+- Added Soldiers workforce to free island workforce from "World Leaders" buff
+- Changed the effect to only steam shipyard from both shipyards for "Pyrphorian Ship Blueprints" Military Academy itemset
+- Added Mourning at sea building a cemetery building when Harborlife is installed so people in harbour also have a cemetery building
+- Fixes to text/descriptions
+
 ### v1.8
 - Added compatibility for Icebreaker ship mod from EvametryE
 - Fixed decals of military ornaments

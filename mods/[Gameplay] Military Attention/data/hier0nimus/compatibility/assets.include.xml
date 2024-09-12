@@ -1079,5 +1079,104 @@
     <!-- END COMPATIBILITY Flagship Armed Great Eastern (Serp) -->
   </Group>
 
+  <Group Condition="#Spice_Harborlife">
+    <!-- START COMPATIBILITY HARBORLIFE -->
+
+    <!-- ****************** START BUILDING - MOURNING AT SEA - Building ******************  -->
+    <ModOp Type="addNextSibling" GUID='1010358'>
+      <Asset>
+        <Template>PublicServiceBuilding</Template>
+        <Values>
+          <Standard>
+            <GUID>1742100630</GUID>            <!-- Mourning at sea - Building -->
+            <Name>Mourning at sea</Name>
+            <IconFilename>data/graphics/icons/icon_cemetery.png</IconFilename>
+            <InfoDescription>1742100631</InfoDescription>
+          </Standard>
+          <Building>
+            <BuildingType>Logistic</BuildingType>
+            <AssociatedRegions>Moderate</AssociatedRegions>
+            <TerrainType>Water_Including_Coast</TerrainType>
+          </Building>
+          <Blocking>
+            <GroundDecalAsset>601492</GroundDecalAsset>
+            <GroundDecalInvisible>601493</GroundDecalInvisible>
+            <BlockWater>1</BlockWater>
+            <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+          </Blocking>
+          <Cost>
+            <Costs>
+              <Item>
+                <Ingredient>1010017</Ingredient>                <!-- Coins -->
+                <Amount>100</Amount>
+              </Item>
+            </Costs>
+          </Cost>
+          <Object>
+            <Variations>
+              <Item>
+                <Filename>data/graphics/buildings/public/cemetery/cemetery_03_01.cfg</Filename>
+              </Item>
+            </Variations>
+          </Object>
+          <Selection>
+            <GUIType>PublicService</GUIType>
+            <OnSelection>
+              <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+              <Values>
+                <ActionList />
+              </Values>
+            </OnSelection>
+          </Selection>
+          <SoundEmitter>
+            <ActiveSounds>
+              <Item>
+                <Sound>242785</Sound>
+              </Item>
+            </ActiveSounds>
+            <IncidentSounds>
+              <InfectedFire>
+                <Item>
+                  <Sound>214659</Sound>
+                </Item>
+              </InfectedFire>
+            </IncidentSounds>
+          </SoundEmitter>
+          <PublicService>
+            <FullSatisfactionDistance>40</FullSatisfactionDistance>
+            <NoSatisfactionDistance>50</NoSatisfactionDistance>
+            <PublicServiceOutputs>
+              <Item>
+                <Product>1742100556</Product>                <!-- Cemetery - Product -->
+              </Item>
+            </PublicServiceOutputs>
+          </PublicService>
+          <Maintenance>
+            <Maintenances>
+              <Item>
+                <Product>1010017</Product>                <!-- Coins -->
+                <Amount>20</Amount>
+              </Item>
+            </Maintenances>
+          </Maintenance>
+          <Culture>
+            <Attractiveness>10</Attractiveness>
+          </Culture>
+        </Values>
+      </Asset>
+    </ModOp>
+    <!-- ****************** END BUILDING - MOURNING AT SEA - Building ******************  -->
+
+    <!-- ****************** START ADD BUILDING - MOURNING AT SEA TO HARBORLIFE CONSTRUCTION MENU ******************  -->
+    <ModOp Type="addNextSibling" GUID='8855888' Path="Values/ConstructionCategory/BuildingList/Item[Building='8856009']">
+      <Item>
+        <Building>1742100630</Building>        <!-- Mourning at sea -->
+      </Item>
+    </ModOp>
+    <!-- ****************** END ADD BUILDING - MOURNING AT SEA TO HARBORLIFE CONSTRUCTION MENU ******************  -->
+
+    <!-- END COMPATIBILITY HARBORLIFE -->
+  </Group>
+
 </ModOps>
   
