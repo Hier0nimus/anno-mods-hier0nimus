@@ -1,10 +1,16 @@
-# Military Attention | 1.8!
+# Military Attention | 1.10!
 
 A mod centered around military infrastructure and adding new military residence tiers for all regions with a focus on the Old World.
 
 ![ma-img-01.jpg](./banner.jpg)
 
 ## Changelog
+
+### v1.10
+- Update for Simplified Chinese translation
+- Added new item Sammy Moray - replacing arctic gas with ethanol for Gas Ammunition depots and Gas-Fired Power Plant. Added compatibility for mod "Additional Power Plants"
+- Fixes to All ammunition depots pools
+- Cleanup for product storage lists
 
 ### v1.9
 - Added Soldiers workforce to free island workforce from "World Leaders" buff

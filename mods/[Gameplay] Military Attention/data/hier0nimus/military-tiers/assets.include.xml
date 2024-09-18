@@ -1520,21 +1520,6 @@
       <Product>1742100022</Product>      <!-- Canteen - Product -->
     </Item>
     <Item>
-      <Product>1742100064</Product>      <!-- Military Uniforms - Product -->
-    </Item>
-    <Item>
-      <Product>1742100471</Product>      <!-- Basic Weapons  - Product -->
-    </Item>
-    <Item>
-      <Product>1010221</Product>      <!-- Weapons - Product -->
-    </Item>
-    <Item>
-      <Product>112701</Product>      <!-- Sleeping Bags - Product -->
-    </Item>
-    <Item>
-      <Product>1742100058</Product>      <!-- Cigarettes - Product -->
-    </Item>
-    <Item>
       <Product>1742100236</Product>      <!-- Sanitation Facility - Product -->
     </Item>
     <Item>
@@ -1546,10 +1531,45 @@
     <Item>
       <Product>1742100084</Product>      <!-- Military Academy  - Product -->
     </Item>
+  </ModOp>
+
+  <!-- Military Uniforms > After Work Clothes -->
+  <ModOp Type="addNextSibling" GUID="120057" Path="/Values/ProductStorageList/ProductList/Item[Product='1010237']">
     <Item>
-      <Product>1742100211</Product>      <!-- Horses  - Product -->
+      <Product>1742100064</Product>      <!-- Military Uniforms - Product -->
     </Item>
   </ModOp>
+
+  <!-- Basic Weapons & Weapons > After Bread -->
+  <ModOp Type="addNextSibling" GUID="120057" Path="/Values/ProductStorageList/ProductList/Item[Product='1010213']">
+    <Item>
+      <Product>1742100471</Product>      <!-- Basic Weapons - Product -->
+    </Item>
+    <Item>
+      <Product>1010221</Product>      <!-- Weapons - Product -->
+    </Item>
+  </ModOp>
+
+  <!-- Sleeping Bags & Cardgames & Coins > After Canned food -->
+  <ModOp Type="addNextSibling" GUID="120057" Path="/Values/ProductStorageList/ProductList/Item[Product='1010217']">
+    <Item>
+      <Product>112701</Product>      <!-- Sleeping Bags - Product -->
+    </Item>
+    <Item>
+      <Product>1742100185</Product>      <!-- Cardgames - Product -->
+    </Item>
+    <Item>
+      <Product>1742100439</Product>      <!-- Coins - Product -->
+    </Item>
+  </ModOp>
+
+  <!-- Cigarettes > After Beer -->
+  <ModOp Type="addNextSibling" GUID="120057" Path="/Values/ProductStorageList/ProductList/Item[Product='1010214']">
+    <Item>
+      <Product>1742100058</Product>      <!-- Cigarettes - Product -->
+    </Item>
+  </ModOp>
+
   <!-- END MILITARY CONSUMER GOODS TO StandardMarketplaceModerateStorageList (OW) -->
 
   <!-- START MILITARY CONSUMER GOODS TO StandardMarketplaceModerateStorageList (AR) -->
@@ -1563,22 +1583,46 @@
     <Item>
       <Product>112693</Product>      <!-- Post Office - Product -->
     </Item>
-    <Item>
-      <Product>1742100327</Product>      <!-- Heated Military Uniforms - Product -->
-    </Item>
+  </ModOp>
+
+  <!-- Caribou Meat > Before Pemmican -->
+  <ModOp Type="addPrevSibling" GUID="120059" Path="/Values/ProductStorageList/ProductList/Item[Product='112705']">
     <Item>
       <Product>112694</Product>      <!-- Caribou Meat - Product -->
     </Item>
+  </ModOp>
+
+  <!-- Weapons & Basic Weapons > After Oil Lamps -->
+  <ModOp Type="addNextSibling" GUID="120059" Path="/Values/ProductStorageList/ProductList/Item[Product='112702']">
     <Item>
       <Product>1010221</Product>      <!-- Weapons - Product -->
     </Item>
     <Item>
-      <Product>1742100058</Product>      <!-- Cigarettes - Product -->
-    </Item>
-    <Item>
-      <Product>1742100471</Product>      <!-- Basic Weapons  - Product -->
+      <Product>1742100471</Product>      <!-- Basic Weapons - Product -->
     </Item>
   </ModOp>
+
+  <!-- Coins > After Canned Food -->
+  <ModOp Type="addNextSibling" GUID="120059" Path="/Values/ProductStorageList/ProductList/Item[Product='1010217']">
+    <Item>
+      <Product>1742100439</Product>      <!-- Coins - Product -->
+    </Item>
+  </ModOp>
+
+  <!-- Heated Military Uniforms > After Sleeping Bags -->
+  <ModOp Type="addNextSibling" GUID="120059" Path="/Values/ProductStorageList/ProductList/Item[Product='112701']">
+    <Item>
+      <Product>1742100329</Product>      <!-- Heated Military Uniforms - Product -->
+    </Item>
+  </ModOp>
+
+  <!-- Cigarettes > After Parkas -->
+  <ModOp Type="addNextSibling" GUID="120059" Path="/Values/ProductStorageList/ProductList/Item[Product='112700']">
+    <Item>
+      <Product>1742100058</Product>      <!-- Cigarettes - Product -->
+    </Item>
+  </ModOp>
+
   <!-- END MILITARY CONSUMER GOODS TO StandardMarketplaceModerateStorageList (AR) -->
 
   <!-- START MILITARY CONSUMER GOODS TO StandardMarketplaceModerateStorageList (NW) -->
@@ -1589,25 +1633,41 @@
     <Item>
       <Product>1742100339</Product>      <!-- Canteen - Product -->
     </Item>
+  </ModOp>
+
+  <!-- Basic Weapons & Weapons & Military Uniforms > After Ponchos -->
+  <ModOp Type="addNextSibling" GUID="120058" Path="/Values/ProductStorageList/ProductList/Item[Product='120043']">
     <Item>
-      <Product>1742100064</Product>      <!-- Military Uniforms - Product -->
+      <Product>1742100471</Product>      <!-- Basic Weapons - Product -->
     </Item>
     <Item>
       <Product>1010221</Product>      <!-- Weapons - Product -->
     </Item>
     <Item>
-      <Product>1010217</Product>      <!-- Canned Food - Product -->
+      <Product>1742100064</Product>      <!-- Military Uniforms - Product -->
     </Item>
+  </ModOp>
+
+  <!-- Canned Food & Cardgames & Coins > After Burrito -->
+  <ModOp Type="addNextSibling" GUID="120058" Path="/Values/ProductStorageList/ProductList/Item[Product='120035']">
     <Item>
-      <Product>1742100058</Product>      <!-- Cigarettes - Product -->
+      <Product>1010217</Product>      <!-- Canned Food - Product -->
     </Item>
     <Item>
       <Product>1742100185</Product>      <!-- Cardgames - Product -->
     </Item>
     <Item>
-      <Product>1742100471</Product>      <!-- Basic Weapons  - Product -->
+      <Product>1742100439</Product>      <!-- Coins - Product -->
     </Item>
   </ModOp>
+
+  <!-- Cigarettes > After Cigars -->
+  <ModOp Type="addNextSibling" GUID="120058" Path="/Values/ProductStorageList/ProductList/Item[Product='1010259']">
+    <Item>
+      <Product>1742100058</Product>      <!-- Cigarettes - Product -->
+    </Item>
+  </ModOp>
+
   <!-- END MILITARY CONSUMER GOODS TO StandardMarketplaceModerateStorageList (NW) -->
 
   <!-- START MILITARY CONSUMER GOODS TO StandardMarketplaceModerateStorageList (EN) -->
@@ -1618,11 +1678,22 @@
     <Item>
       <Product>1742100343</Product>      <!-- Canteen - Product -->
     </Item>
+  </ModOp>
+
+  <!-- Basic Weapons & Weapons > After Woven Clothes -->
+  <ModOp Type="addNextSibling" GUID="122362" Path="/Values/ProductStorageList/ProductList/Item[Product='114401']">
     <Item>
-      <Product>1742100064</Product>      <!-- Military Uniforms - Product -->
+      <Product>1742100471</Product>      <!-- Basic Weapons - Product -->
     </Item>
     <Item>
       <Product>1010221</Product>      <!-- Weapons - Product -->
+    </Item>
+  </ModOp>
+
+  <!-- Cardgames & Canned Food & Coffee > After Tea -->
+  <ModOp Type="addNextSibling" GUID="122362" Path="/Values/ProductStorageList/ProductList/Item[Product='114390']">
+    <Item>
+      <Product>1742100185</Product>      <!-- Cardgames - Product -->
     </Item>
     <Item>
       <Product>1010217</Product>      <!-- Canned Food - Product -->
@@ -1630,16 +1701,29 @@
     <Item>
       <Product>120032</Product>      <!-- Coffee - Product -->
     </Item>
+  </ModOp>
+
+  <!-- Coins > After Ceramics -->
+  <ModOp Type="addNextSibling" GUID="122362" Path="/Values/ProductStorageList/ProductList/Item[Product='118724']">
+    <Item>
+      <Product>1742100439</Product>      <!-- Coins - Product -->
+    </Item>
+  </ModOp>
+
+  <!-- Military Uniforms > After Woven Clothes -->
+  <ModOp Type="addNextSibling" GUID="122362" Path="/Values/ProductStorageList/ProductList/Item[Product='114401']">
+    <Item>
+      <Product>1742100064</Product>      <!-- Military Uniforms - Product -->
+    </Item>
+  </ModOp>
+
+  <!-- Cigarettes > After Pipes -->
+  <ModOp Type="addNextSibling" GUID="122362" Path="/Values/ProductStorageList/ProductList/Item[Product='114414']">
     <Item>
       <Product>1742100058</Product>      <!-- Cigarettes - Product -->
     </Item>
-    <Item>
-      <Product>1742100185</Product>      <!-- Cardgames - Product -->
-    </Item>
-    <Item>
-      <Product>1742100471</Product>      <!-- Basic Weapons  - Product -->
-    </Item>
   </ModOp>
+
   <!-- END MILITARY CONSUMER GOODS TO StandardMarketplaceModerateStorageList (EN) -->
 
   <!-- START ADD WORKFORCE TIERS TO ISLANDBARSCENE -->
