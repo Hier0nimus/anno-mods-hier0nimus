@@ -15,9 +15,16 @@
     <!-- END ADDING SHIPS TO SAILING SHIPYARD -->
 
     <!-- START ADDING SHIPS TO AIRSHIP HANGAR -->
-    <ModOp Type="add" GUID='635,636' Path="Values/Shipyard/AssemblyOptions/">
+    <!-- After 1755 - Mapinguari -->
+    <ModOp Type="addNextSibling" GUID='635,636' Path="Values/Shipyard/AssemblyOptions/Item[Vehicle='1755']">
         <Item>
-            <Vehicle>1742100613</Vehicle>            <!-- B42 - AirShip -->
+            <Vehicle>1742100613</Vehicle>            <!-- B42 (Helium) - AirShip -->
+        </Item>
+    </ModOp>
+    <!-- After 114166 - Boreas -->
+    <ModOp Type="addNextSibling" GUID='635,636' Path="Values/Shipyard/AssemblyOptions/Item[Vehicle='114166']">
+        <Item>
+            <Vehicle>1742100629</Vehicle>            <!-- B42 (Arctic Gas) - AirShip -->
         </Item>
     </ModOp>
     <!-- END ADDING SHIPS TO AIRSHIP HANGAR -->
@@ -2351,7 +2358,7 @@
             <Values>
                 <Standard>
                     <GUID>1742100613</GUID>
-                    <Name>B42</Name>
+                    <Name>B42 (Helium)</Name>
                     <IconFilename>data/graphics/icons/icon_b42.png</IconFilename>
                     <InfoDescription>1742100614</InfoDescription>
                 </Standard>
@@ -2425,7 +2432,9 @@
                         </MovementStart>
                     </VehicleSounds>
                 </SoundEmitter>
-                <UpgradeList />
+                <UpgradeList>
+                    <DefaultBuff>721</DefaultBuff>
+                </UpgradeList>
                 <QuestObject/>
                 <Infolayer/>
                 <ItemContainer>
@@ -2474,7 +2483,226 @@
                             <Amount>150</Amount>
                         </Item>
                         <Item>
-                            <Ingredient>840</Ingredient>                            <!--  SA Gas-->
+                            <Ingredient>840</Ingredient>                            <!-- SA Gas-->
+                            <Amount>150</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010223</Ingredient>                            <!--advanced weapons-->
+                            <Amount>25</Amount>
+                        </Item>
+                    </Costs>
+                    <InfluenceCostType>AirshipCombat</InfluenceCostType>
+                    <InfluenceCostPoints>100</InfluenceCostPoints>
+                </Cost>
+                <Craftable>
+                    <CraftingTime>2000000</CraftingTime>                    <!-- 1020000 -->
+                </Craftable>
+                <TradeRouteVehicle>
+                    <LoadingSpeedFactor>0.5</LoadingSpeedFactor>
+                </TradeRouteVehicle>
+                <Locked>
+                    <DLCDependency>24962</DLCDependency>                    <!--Anno 1800 DLC - Empire of the Skies-->
+                </Locked>
+                <Nameable/>
+                <MetaPersistent/>
+                <ExpeditionAttribute />
+                <ShipMaintenance>
+                    <Maintenance>8500</Maintenance>
+                </ShipMaintenance>
+                <Sellable>
+                    <Baseprice>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>0</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>WarAirShip</TemplateName>
+                                        <Index>0</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                            <Amount>7500000</Amount>
+                        </Item>
+                    </Baseprice>
+                </Sellable>
+                <Stance/>
+                <Rentable/>
+                <WorldMapSound/>
+                <Pausable/>
+                <ShipIncident>
+                    <InfectableByIncident>
+                        <Illness>
+                            <Infectable>0</Infectable>
+                        </Illness>
+                    </InfectableByIncident>
+                </ShipIncident>
+                <SoundEmitterCommandBarks>
+                    <BarkMapping>
+                        <Selection>
+                            <AudioPool>4815</AudioPool>                            <!--AgileAirship_SelectShip_Pool-->
+                        </Selection>
+                        <SelectionDamaged>
+                            <AudioPool>4817</AudioPool>                            <!--AgileAirship_Damage_Pool-->
+                        </SelectionDamaged>
+                        <AttackCommand>
+                            <AudioPool>4822</AudioPool>                            <!--AgileAirship_Attack_Pool-->
+                        </AttackCommand>
+                        <MoveCommand>
+                            <AudioPool>4816</AudioPool>                            <!--AgileAirship_Move_Pool-->
+                        </MoveCommand>
+                        <EscortCommand>
+                            <AudioPool>4820</AudioPool>                            <!--AgileAirship_Escort_Pool-->
+                        </EscortCommand>
+                        <PatrolCommand>
+                            <AudioPool>4816</AudioPool>                            <!--AgileAirship_Move_Pool-->
+                        </PatrolCommand>
+                        <DropCommand>
+                            <AudioPool>4823</AudioPool>                            <!--AgileAirship_Drop_Pool-->
+                        </DropCommand>
+                    </BarkMapping>
+                </SoundEmitterCommandBarks>
+                <ItemReplacer>
+                    <ItemReplacementPools>193855</ItemReplacementPools>                    <!--AirShipReplacementPool-->
+                </ItemReplacer>
+                <Bombarder>
+                    <Shafts>12</Shafts>
+                </Bombarder>
+                <Attacker />
+            </Values>
+        </Asset>
+    </ModOp>
+    <ModOp Type="addNextSibling" GUID='1056'>
+        <Asset>
+            <Template>WarAirShipPermit</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742100629</GUID>
+                    <Name>B42 (Arctic Gas)</Name>
+                    <IconFilename>data/graphics/icons/icon_b42.png</IconFilename>
+                    <InfoDescription>1742100614</InfoDescription>
+                </Standard>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/vehicle/b42/b42_01.cfg</Filename>
+                        </Item>
+                    </Variations>
+                </Object>
+                <Mesh>
+                    <LogoMode>CorporationLogoFromPlayer</LogoMode>
+                </Mesh>
+                <Selection>
+                    <StaticHelpEntryPoint>EmpireOfTheSkies_War_Intro</StaticHelpEntryPoint>
+                    <OnSelection>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </OnSelection>
+                </Selection>
+                <Walking>
+                    <ShortenSailsAfter>0</ShortenSailsAfter>
+                    <TurnAroundRadius>15</TurnAroundRadius>
+                    <Acceleration>1.5</Acceleration>
+                    <Deceleration>1.5</Deceleration>
+                    <TurnRadius>10</TurnRadius>
+                    <TurnSpeed>80</TurnSpeed>
+                    <TurnSpeedInPlace>80</TurnSpeedInPlace>
+                    <LeaningMaxAngle>0</LeaningMaxAngle>
+                    <ForwardSpeed>6</ForwardSpeed>
+                    <WindMinSlowdownFactor>0.5</WindMinSlowdownFactor>
+                    <WindSlowdownEffectOnTurningSpeed>0.5</WindSlowdownEffectOnTurningSpeed>
+                    <WindMaxSpeedupFactor>2</WindMaxSpeedupFactor>
+                    <CargoThreshold>0.1</CargoThreshold>
+                    <MinSlowdownFactor>0.5</MinSlowdownFactor>
+                    <SessionTransferSpeedFactor>2</SessionTransferSpeedFactor>
+                </Walking>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>B42</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>57665</LineID>
+                </Text>
+                <CommandQueue>
+                    <MilitaryAirShipPoints>25</MilitaryAirShipPoints>
+                    <TradeShipPoints>6</TradeShipPoints>
+                    <AirShipPoints>300</AirShipPoints>
+                </CommandQueue>
+                <Drifting>
+                    <Length>7</Length>
+                    <Width>4</Width>
+                </Drifting>
+                <Collector/>
+                <Attackable>
+                    <MaximumHitPoints>4000</MaximumHitPoints>
+                </Attackable>
+                <MinimapToken>
+                    <StrategicMapAsset>117300</StrategicMapAsset>                    <!--Steam Ships-->
+                </MinimapToken>
+                <SoundEmitter>
+                    <VehicleSounds>
+                        <MovementStart>
+                            <Item>
+                                <Sound>200990</Sound>                                <!--wwe_sfx_veh_eots_airship_med_lp-->
+                            </Item>
+                        </MovementStart>
+                    </VehicleSounds>
+                </SoundEmitter>
+                <UpgradeList>
+                    <DefaultBuff>1751</DefaultBuff>
+                </UpgradeList>
+                <QuestObject/>
+                <Infolayer/>
+                <ItemContainer>
+                    <SocketCount>3</SocketCount>
+                    <SlotCount>6</SlotCount>
+                </ItemContainer>
+                <FeedbackController/>
+                <Draggable>
+                    <DraggableOnDrag>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </DraggableOnDrag>
+                    <DraggableOnDrop>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </DraggableOnDrop>
+                </Draggable>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!--coins-->
+                            <Amount>1000000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010196</Ingredient>                            <!-- Timber -->
+                            <Amount>50</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010210</Ingredient>                            <!-- Sails -->
+                            <Amount>300</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010218</Ingredient>                            <!--beams-->
+                            <Amount>30</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>838</Ingredient>                            <!-- Aluminium-->
+                            <Amount>200</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010224</Ingredient>                            <!--steam motors-->
+                            <Amount>150</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>112706</Ingredient>                            <!--  Arctic Gas-->
                             <Amount>150</Amount>
                         </Item>
                         <Item>
@@ -2565,7 +2793,10 @@
 
     <ModOp Type="add" GUID='131205' Path="/Values/BuildPermitGroup/Group">        <!-- Permit Group Great Eastern (Now Harbor and Ships) -->
         <Item>
-            <BuildPermit>1742100613</BuildPermit>
+            <BuildPermit>1742100613</BuildPermit>            <!-- B42 (Heliun) - AirShip -->
+        </Item>
+        <Item>
+            <BuildPermit>1742100629</BuildPermit>            <!-- B42 (Arctic Gas) - AirShip -->
         </Item>
     </ModOp>
 
@@ -2992,7 +3223,7 @@
                 <Object>
                     <Variations>
                         <Item>
-                            <Filename>data/graphics/vehicle/large_oil_tanker/large_oil_tanker.cfg</Filename>
+                            <Filename>data/graphics/vehicle/large_oil_tanker/large_oil_tanker_01.cfg</Filename>
                         </Item>
                     </Variations>
                     <Skins>
@@ -3082,11 +3313,5 @@
         </Asset>
     </ModOp>
     <!-- END SHIP - LARGE OIL TANKER -->
-
-    <!-- START CHANGE CRAFTINGTIME FOR TESTING
-    <ModOp Type="replace" GUID="132404,1742100576,1742100578,1742100581,1742100591,1742100583,1742100609,1742100587,1742100589,1742100585,1742100611,1010062,100442,7076,100443,968,1537,100853,118718,720,15831,100438,100437,7080,100439,100441,100441,100440,1742100613,1742100615,102428,1742100624,1742100625,1742000269,1742000271,1742000273" Path="/Values/Craftable/CraftingTime">
-        <CraftingTime>1000</CraftingTime>
-    </ModOp>-->
-    <!-- END CHANGE CRAFTINGTIME FOR TESTING -->
 
 </ModOps>
