@@ -1,0 +1,260 @@
+<!-- 
+  Population
+-->
+
+<ModOps>
+
+  <!-- START - POPULATION - PIRATES -->
+
+  <ModOp GUID='5403' Type="addNextSibling">
+    <!-- START PIRATES - PopulationLevel7 -->
+    <Asset>
+      <Template>PopulationLevel7</Template>
+      <Values>
+        <Standard>
+          <GUID>1742102040</GUID>          <!-- Pirates PopulationLevel7 -->
+          <Name>Pirates</Name>
+          <IconFilename>data/graphics/icons/icon_pirate_population.png</IconFilename>
+        </Standard>
+        <Text />
+        <PopulationLevel7>
+          <PopulationInputs>
+            <!-- BASIC PRODUCTS-->
+            <Item>
+              <Product>1742102050</Product>              <!-- Pirate Haven - Product -->
+              <SupplyWeight>5</SupplyWeight>
+              <IsConsideredByAI>0</IsConsideredByAI>
+            </Item>
+            <Item>
+              <Product>1010200</Product>              <!-- Fish - Product -->
+              <Amount>0.00015</Amount>
+              <SupplyWeight>2</SupplyWeight>
+              <FullWeightPopulationCount>100</FullWeightPopulationCount>
+              <NoWeightPopulationCount>0</NoWeightPopulationCount>
+            </Item>
+            <Item>
+              <Product>1010215</Product>              <!-- Goulash - Product -->
+              <Amount>0.00008</Amount>
+              <SupplyWeight>3</SupplyWeight>
+              <FullWeightPopulationCount>100</FullWeightPopulationCount>
+              <NoWeightPopulationCount>0</NoWeightPopulationCount>
+            </Item>
+            <Item>
+              <Product>1010237</Product>              <!-- Work Clothes - Product -->
+              <Amount>0.00015</Amount>
+              <SupplyWeight>2</SupplyWeight>
+              <FullWeightPopulationCount>100</FullWeightPopulationCount>
+              <NoWeightPopulationCount>0</NoWeightPopulationCount>
+            </Item>
+
+            <!-- HAPPINESS NEEDS-->
+            <Item>
+              <Product>1742102063</Product>              <!-- Pirate Tavern - Product -->
+              <HappinessValue>6</HappinessValue>
+              <IsConsideredByAI>0</IsConsideredByAI>
+            </Item>
+            <Item>
+              <Product>1010216</Product>              <!-- Schnapps - Product -->
+              <Amount>0.00015</Amount>
+              <HappinessValue>2</HappinessValue>
+              <FullWeightPopulationCount>100</FullWeightPopulationCount>
+              <NoWeightPopulationCount>0</NoWeightPopulationCount>
+            </Item>
+            <Item>
+              <Product>1010247</Product>              <!-- Fur Coats - Product -->
+              <Amount>0.00004</Amount>
+              <HappinessValue>3</HappinessValue>
+              <FullWeightPopulationCount>100</FullWeightPopulationCount>
+              <NoWeightPopulationCount>0</NoWeightPopulationCount>
+              <AdditionalGlobalUnlockRequirement>
+                <Population>15000002</Population>                <!-- Artisans - PopulationLevel7 -->
+                <MinPopulationAmount>900</MinPopulationAmount>
+              </AdditionalGlobalUnlockRequirement>
+            </Item>
+            <Item>
+              <Product>1010256</Product>              <!-- Pearls - Product -->
+              <Amount>0.00004</Amount>
+              <HappinessValue>2</HappinessValue>
+              <FullWeightPopulationCount>100</FullWeightPopulationCount>
+              <NoWeightPopulationCount>0</NoWeightPopulationCount>
+              <AdditionalGlobalUnlockRequirement>
+                <Population>15000005</Population>                <!-- Jornaleros - PopulationLevel7 -->
+                <MinPopulationAmount>300</MinPopulationAmount>
+              </AdditionalGlobalUnlockRequirement>
+            </Item>
+            <Item>
+              <Product>120032</Product>              <!-- Coffee - Product -->
+              <Amount>0.00005</Amount>
+              <HappinessValue>2</HappinessValue>
+              <FullWeightPopulationCount>100</FullWeightPopulationCount>
+              <NoWeightPopulationCount>0</NoWeightPopulationCount>
+              <AdditionalGlobalUnlockRequirement>
+                <Population>15000006</Population>                <!-- Obreros -->
+                <MinPopulationAmount>300</MinPopulationAmount>
+              </AdditionalGlobalUnlockRequirement>
+            </Item>
+
+            <!-- MAIL - NO MAIL-->
+            <!-- ADDITIONAL NEEDS-->
+            <Item>
+              <Product>1010238</Product>              <!-- Sausages - Product -->
+              <Amount>0.00004</Amount>
+              <SupplyWeight>2</SupplyWeight>
+              <FullWeightPopulationCount>100</FullWeightPopulationCount>
+              <NoWeightPopulationCount>0</NoWeightPopulationCount>
+              <IsBonusNeed>1</IsBonusNeed>
+            </Item>
+            <Item>
+              <Product>1010214</Product>              <!-- Beer - Product -->
+              <Amount>0.00004</Amount>
+              <SupplyWeight>2</SupplyWeight>
+              <FullWeightPopulationCount>100</FullWeightPopulationCount>
+              <NoWeightPopulationCount>0</NoWeightPopulationCount>
+              <IsBonusNeed>1</IsBonusNeed>
+            </Item>
+            <Item>
+              <Product>1010233</Product>              <!-- Gold Ore - Product -->
+              <Amount>0.00004</Amount>
+              <SupplyWeight>3</SupplyWeight>
+              <FullWeightPopulationCount>100</FullWeightPopulationCount>
+              <NoWeightPopulationCount>0</NoWeightPopulationCount>
+              <IsBonusNeed>1</IsBonusNeed>
+              <AdditionalGlobalUnlockRequirement>
+                <Population>15000006</Population>                <!-- Obreros - PopulationLevel7 -->
+                <MinPopulationAmount>300</MinPopulationAmount>
+              </AdditionalGlobalUnlockRequirement>
+            </Item>
+            <Item>
+              <Product>118728</Product>              <!-- Lobster - Product -->
+              <Amount>0.00004</Amount>
+              <SupplyWeight>3</SupplyWeight>
+              <FullWeightPopulationCount>100</FullWeightPopulationCount>
+              <NoWeightPopulationCount>0</NoWeightPopulationCount>
+              <IsBonusNeed>1</IsBonusNeed>
+              <AdditionalGlobalUnlockRequirement>
+                <Population>114330</Population>                <!-- Elders - PopulationLevel7 -->
+                <MinPopulationAmount>300</MinPopulationAmount>
+              </AdditionalGlobalUnlockRequirement>
+            </Item>
+          </PopulationInputs>
+          <DefaultResidence>1742102047</DefaultResidence>          <!-- Pirates Quarters - Residence - Building -->
+          <PopulationOutputs>
+            <Item>
+              <Product>1742102049</Product>              <!-- Pirates Workforce - Product -->
+              <Amount>100</Amount>
+            </Item>
+          </PopulationOutputs>
+          <CategoryIcon>data/ui/2kimages/main/icons/icon_arrow.png</CategoryIcon>
+          <PopulationParticipant>Advisor_02_Aahrant</PopulationParticipant>
+          <PopulationAtWorkParticipant>Advisor_02_Aahrant</PopulationAtWorkParticipant>
+          <MoodText>
+            <Angry>
+              <Text>1742102042</Text>
+            </Angry>
+            <Unhappy>
+              <Text>1742102043</Text>
+            </Unhappy>
+            <Neutral>
+              <Text>1742102044</Text>
+            </Neutral>
+            <Happy>
+              <Text>1742102045</Text>
+            </Happy>
+            <Euphoric>
+              <Text>1742102046</Text>
+            </Euphoric>
+          </MoodText>
+        </PopulationLevel7>
+        <Locked />
+      </Values>
+    </Asset>
+    <!-- END PIRATES - PopulationLevel7 -->
+  </ModOp>
+
+  <!-- START PIRATES - PopulationGroup7 -->
+  <ModOp GUID='15000083' Type="addNextSibling">
+    <Asset>
+      <Template>PopulationGroup7</Template>
+      <Values>
+        <Standard>
+          <GUID>1742102041</GUID>          <!-- Pirates - PopulationGroup7 -->
+          <Name>Pirates</Name>
+        </Standard>
+        <PopulationGroup7>
+          <PopulationLevels>
+            <Item>
+              <Level>1742102040</Level>              <!-- Pirates - PopulationLevel7 -->
+            </Item>
+          </PopulationLevels>
+          <Regional>Colony01</Regional>
+        </PopulationGroup7>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PIRATES - PopulationGroup7 -->
+
+  <!-- START ADD POPULATION TIERS TO GLOBAL POPULATION -->
+  <ModOp Type="addNextSibling" GUID="2001271" Path="/Values/GUIConfig/PopulationLevelList/Item[PopulationLevel='15000006']">
+    <Item>
+      <PopulationLevel>1742102040</PopulationLevel>      <!-- Pirates - PopulationLevel7 -->
+    </Item>
+  </ModOp>
+  <!-- END ADD POPULATION TIERS TO GLOBAL POPULATION -->
+
+  <!-- START ADD POPULATION TIERS TO KEYWORDFILTER -->
+  <ModOp Type="add" GUID="501962" Path="/Values/KeywordFilter/Keywords">
+    <Item>
+      <Keyword>1742102040</Keyword>      <!-- Soldiers - PopulationLevel7 -->
+      <ProductList>1742102051</ProductList>      <!-- Pirates ProductList -->
+    </Item>
+  </ModOp>
+  <!-- END ADD POPULATION TIERS TO KEYWORDFILTER -->
+
+  <!-- START ADD POPULATION TIERS TO RESIDENCE SCENE -->
+  <ModOp Type="add" GUID="25000118" Path="/Values/ObjectmenuResidenceScene/HappinessConfigs">
+    <Item>
+      <PopulationLevel>1742102040</PopulationLevel>      <!-- Pirates PopulationLevel7 -->
+      <AssignedConfig>502287</AssignedConfig>
+    </Item>
+  </ModOp>
+  <!-- END ADD POPULATION TIERS TO RESIDENCE SCENE -->
+
+  <!-- START ADD WORKFORCE TIERS TO ISLANDBARSCENE -->
+  <ModOp Type="addNextSibling" GUID="25000121" Path="/Values/IslandBarScene/WorkforceOrder/Item[WorkforceEntry='5406']">
+    <Item>
+      <WorkforceEntry>1742102049</WorkforceEntry>      <!-- Pirates Workforce -->
+    </Item>
+  </ModOp>
+  <!-- END ADD WORKFORCE TIERS TO ISLANDBARSCENE -->
+
+  <!-- END - POPULATION - PIRATES -->
+
+  <!-- START ADD PIRATES TO WORKFORCE LIST -->
+  <ModOp Type="add" GUID="25000087" Path="/Values/WorkforceMenu/WorkforceList">
+    <Item>
+      <Factory>1742102049</Factory>
+    </Item>
+  </ModOp>
+  <!-- END ADD PIRATES TO WORKFORCE LIST -->
+
+  <!-- START ADD PRODUCTION BUILDINGS TO WORKFORCE MENU -->
+  <ModOp Type="add" GUID="25000087" Path="/Values/WorkforceMenu/BoostableFactories">
+    <Item>
+      <Factory>1742102052</Factory>      <!-- Pirate Tavern -->
+    </Item>
+    <Item>
+      <Factory>1742102054</Factory>      <!-- Gambling Corner -->
+    </Item>
+    <Item>
+      <Factory>1742102060</Factory>      <!-- Pirate Raid Harbour -->
+    </Item>
+    <Item>
+      <Factory>1742102080</Factory>      <!-- Pirate Fishery -->
+    </Item>
+    <Item>
+      <Factory>1742102082</Factory>      <!-- Pirate Gold Mine -->
+    </Item>
+  </ModOp>
+  <!-- END ADD PRODUCTION BUILDINGS TO WORKFORCE MENU -->
+
+</ModOps>

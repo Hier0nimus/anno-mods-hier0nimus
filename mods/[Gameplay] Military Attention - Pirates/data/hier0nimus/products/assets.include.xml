@@ -1,0 +1,259 @@
+<!-- 
+  Products
+-->
+
+<ModOps>
+
+  <!-- START PRODUCT - PIRATES WORKFORCE -->
+  <ModOp Type="addNextSibling" GUID='1010128'>
+    <Asset>
+      <Template>Product</Template>
+      <Values>
+        <Standard>
+          <GUID>1742102049</GUID>
+          <Name>Pirates Workforce</Name>          <!-- Pirates Workforce - Product -->
+          <IconFilename>data/graphics/icons/icon_menu_pirates_0.png</IconFilename>
+        </Standard>
+        <Text />
+        <Locked />
+        <Product>
+          <StorageLevel>Area</StorageLevel>
+          <DeltaOnly>1</DeltaOnly>
+          <IsWorkforce>1</IsWorkforce>
+        </Product>
+        <ExpeditionAttribute />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PRODUCT - PIRATES WORKFORCE -->
+
+  <!-- START PRODUCT - PIRATE HAVEN -->
+  <ModOp Type="addNextSibling" GUID='5392'>
+    <Asset>
+      <Template>Product</Template>
+      <Values>
+        <Standard>
+          <GUID>1742102050</GUID>          <!-- Pirate Haven - Product -->
+          <Name>Pirate Haven</Name>
+          <IconFilename>data/graphics/icons/icon_pirates_haven.png</IconFilename>
+        </Standard>
+        <Text />
+        <Locked />
+        <Product>
+          <StorageLevel>Building</StorageLevel>
+          <ProductCategory>11708</ProductCategory>
+          <IsAbstract>1</IsAbstract>
+          <AssociatedRegion>Colony01</AssociatedRegion>
+        </Product>
+        <ExpeditionAttribute />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PRODUCT - PIRATE HAVEN -->
+
+  <!-- START PRODUCT - PIRATE TAVERN -->
+  <ModOp Type="addNextSibling" GUID='5392'>
+    <Asset>
+      <Template>Product</Template>
+      <Values>
+        <Standard>
+          <GUID>1742102063</GUID>          <!-- Pirate Tavern - Product -->
+          <Name>Pirate Tavern</Name>
+          <IconFilename>data/graphics/icons/icon_pirates_tavern.png</IconFilename>
+        </Standard>
+        <Text />
+        <Locked />
+        <Product>
+          <StorageLevel>Building</StorageLevel>
+          <ProductCategory>11708</ProductCategory>
+          <IsAbstract>1</IsAbstract>
+          <AssociatedRegion>Colony01</AssociatedRegion>
+        </Product>
+        <ExpeditionAttribute />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PRODUCT - PIRATE TAVERN -->
+
+  <!-- START PRODUCT - PIRATE SAILORS -->
+  <ModOp Type="addNextSibling" GUID='535'>
+    <Asset>
+      <Template>Product</Template>
+      <Values>
+        <Standard>
+          <GUID>1742102058</GUID>
+          <Name>Pirate Sailors</Name>
+          <IconFilename>data/graphics/icons/icon_pirate_population.png</IconFilename>
+        </Standard>
+        <Locked/>
+        <Product>
+          <StorageLevel>Building</StorageLevel>
+          <ProductCategory>11702</ProductCategory>
+          <IsStrategicResource>1</IsStrategicResource>
+          <BasePrice>1500</BasePrice>
+          <CivLevel>1</CivLevel>
+          <AssociatedRegion>Colony01</AssociatedRegion>
+          <ProductionRegions>
+            <Item>
+              <RegionType>Colony01</RegionType>
+            </Item>
+          </ProductionRegions>
+        </Product>
+        <ExpeditionAttribute>
+          <BaseMorale>10</BaseMorale>
+        </ExpeditionAttribute>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PRODUCT - PIRATE SAILORS -->
+
+  <!-- START CREATE PRODUCTLIST - PIRATES -->
+  <ModOp Type="addNextSibling" GUID='501995'>
+    <Asset>
+      <Template>ProductList</Template>
+      <Values>
+        <Standard>
+          <GUID>1742102051</GUID>          <!-- Pirate Consumer Goods ProductList -->
+          <Name>Pirates Consumer Goods</Name>
+          <IconFilename>data/graphics/icons/icon_pirate_population.png</IconFilename>
+        </Standard>
+        <ProductList>
+          <List>
+            <Item>
+              <Product>1742100471</Product>              <!-- Basic Weapons - Product -->
+            </Item>
+          </List>
+        </ProductList>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END CREATE PRODUCTLIST - PIRATES -->
+
+  <!-- START CREATE PRODUCTLIST - PIRATE SAILORS -->
+  <ModOp Type="addNextSibling" GUID='4269'>
+    <Asset>
+      <Template>ProductStorageList</Template>
+      <Values>
+        <Standard>
+          <GUID>1742102059</GUID>
+          <Name>Pirate Sailors</Name>
+        </Standard>
+        <ProductStorageList>
+          <ProductList>
+            <Item>
+              <Product>1742102058</Product>
+            </Item>
+          </ProductList>
+        </ProductStorageList>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END CREATE PRODUCTLIST - PIRATE SAILORS -->
+
+  <!-- START PRODUCT - PIRATE LOOT -->
+  <ModOp Type="addNextSibling" GUID='5392'>
+    <Asset>
+      <Template>Product</Template>
+      <Values>
+        <Standard>
+          <GUID>1742102062</GUID>
+          <Name>Pirate Loot</Name>
+          <IconFilename>data/graphics/icons/icon_pirates_loot.png</IconFilename>
+        </Standard>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Pirate Loot</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>5362</LineID>
+        </Text>
+        <Locked/>
+        <Product>
+          <StorageLevel>Building</StorageLevel>
+          <ProductCategory>11707</ProductCategory>          <!--Product Category Construction Material-->
+          <BasePrice>100</BasePrice>
+          <CivLevel>1</CivLevel>
+          <AssociatedRegion>Colony01</AssociatedRegion>
+          <ProductionRegions>
+            <Item>
+              <RegionType>Colony01</RegionType>
+            </Item>
+          </ProductionRegions>
+        </Product>
+        <ExpeditionAttribute>
+          <BaseMorale>10</BaseMorale>
+          <ExpeditionAttributes>
+            <Item>
+              <Attribute>Diplomacy</Attribute>
+              <Amount>10</Amount>
+            </Item>
+          </ExpeditionAttributes>
+          <FluffText />
+        </ExpeditionAttribute>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PRODUCT - PIRATE LOOT -->
+
+  <!-- START ADD GOODS TO OTHER ProductList - ALL PRODUCTS -->
+  <ModOp Type="add" GUID='502027,502067,501955,501957,502016,502065,502068,502078,502080,502220' Path="/Values/ProductList/List">
+    <Item>
+      <Product>1742102062</Product>      <!-- Pirate Loot - Product -->
+    </Item>
+  </ModOp>
+  <!-- END ADD GOODS TO OTHER PRODUCTLIST - ALL PRODUCTS -->
+
+  <!-- START ADD GOODS TO StandardProductStorageList + StandardMarketplaceREGIONStorageList   -->
+
+  <!-- ************ COLONY REGION ************ -->
+
+  <!-- Cardgames > After Burrito -->
+  <ModOp Type="addNextSibling" GUID="120055,120058" Path="/Values/ProductStorageList/ProductList/Item[Product='120035']">
+    <Item>
+      <Product>1742102062</Product>      <!-- Pirate Loot - Product -->
+    </Item>
+  </ModOp>
+
+  <!-- END ADD GOODS TO PRODUCTSTORAGELIST -->
+
+  <!-- ****************** START TO WEALTH ****************** -->
+  <ModOp Condition="!@25000118//Item[BonusNeed='GUID']" Type="add" GUID='25000118' Path="/Values/ObjectmenuResidenceScene/BonusNeeds/BonusNeeds/Item[Category='2361']/Needs/">
+    <Item>
+      <BonusNeed>1010233</BonusNeed>      <!-- Gold Ore -->
+    </Item>
+  </ModOp>
+  <!-- ****************** END TO WEALTH ****************** -->
+
+  <!-- ****************** START TO FOOD AND DRINK ****************** -->
+  <ModOp Condition="!@25000118//Item[BonusNeed='GUID']" Type="add" GUID='25000118' Path="/Values/ObjectmenuResidenceScene/BonusNeeds/BonusNeeds/Item[Category='2289']/Needs/">
+    <Item>
+      <BonusNeed>1010238</BonusNeed>      <!-- Sausages -->
+    </Item>
+  </ModOp>
+  <!-- ****************** END TOFOOD AND DRINK ****************** -->
+
+  <!-- ********************************** WHEN MA IS NOT INSTALLED ********************************** -->
+  <Group Condition="!#military_attention">
+
+    <!-- ****************** START TO FOOD AND DRINK ****************** -->
+    <ModOp Condition="!@25000118//Item[BonusNeed='GUID']" Type="add" GUID='25000118' Path="/Values/ObjectmenuResidenceScene/BonusNeeds/BonusNeeds/Item[Category='2289']/Needs/">
+      <Item>
+        <BonusNeed>1010214</BonusNeed>        <!-- Beer -->
+      </Item>
+    </ModOp>
+    <!-- ****************** END TO FOOD AND DRINK ****************** -->
+
+    <!-- ****************** START TO DELIGHT ****************** -->
+    <ModOp Condition="!@25000118//Item[BonusNeed='GUID']" Type="add" GUID='25000118' Path="/Values/ObjectmenuResidenceScene/BonusNeeds/BonusNeeds/Item[Category='6364']/Needs/">
+      <Item>
+        <BonusNeed>118728</BonusNeed>        <!-- Lobster -->
+      </Item>
+    </ModOp>
+    <!-- ****************** END TO DELIGHT ****************** -->
+  </Group>
+
+  <!-- ********************************** WHEN MA IS NOT INSTALLED ********************************** -->
+
+</ModOps>

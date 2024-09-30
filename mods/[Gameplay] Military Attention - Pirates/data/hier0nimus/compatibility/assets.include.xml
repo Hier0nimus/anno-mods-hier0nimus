@@ -1,0 +1,272 @@
+<!-- 
+  Compatibility
+-->
+
+<ModOps>
+
+  <!-- ********************************** WHEN MA IS NOT INSTALLED ********************************** -->
+  <Group Condition="!#military_attention">
+    <!-- START NEEDS TO POPULATION -->
+    <ModOp Type="add" GUID='1742102040' Path="Values/PopulationLevel7/PopulationInputs">
+      <Item>
+        <Product>1010221</Product>        <!-- Weapons - Product -->
+        <Amount>0.00008</Amount>
+        <SupplyWeight>3</SupplyWeight>
+        <FullWeightPopulationCount>100</FullWeightPopulationCount>
+        <NoWeightPopulationCount>0</NoWeightPopulationCount>
+        <AdditionalGlobalUnlockRequirement>
+          <Population>15000001</Population>
+          <MinPopulationAmount>300</MinPopulationAmount>
+        </AdditionalGlobalUnlockRequirement>
+      </Item>
+    </ModOp>
+    <!-- END NEEDS TO POPULATION -->
+  </Group>
+
+  <!-- ********************************** WHEN MA IS INSTALLED ********************************** -->
+
+  <Group Condition="#military_attention">
+    <!-- START ADD MA DEFENSE BUILDINGS TO LIST OF BUILDINGS PIRATE HAVEN -->
+    <ModOp Type="add" GUID='1742102000' Path="Values/ModuleOwner/ConstructionOptions">
+      <Item>
+        <ModuleGUID>1742102054</ModuleGUID>        <!--Gambling Corneer - Building-->
+      </Item>
+    </ModOp>
+    <!-- END ADD MA DEFENSE BUILDINGS TO LIST OF BUILDINGS PIRATE HAVEN -->
+
+    <!-- START BUILDING - GAMBLING CORNER -->
+    <ModOp Type="addNextSibling" GUID='1010358' >
+      <Asset>
+        <Template>FactoryBuilding7</Template>
+        <Values>
+          <Standard>
+            <GUID>1742102054</GUID>
+            <Name>Gambling Corner</Name>
+            <IconFilename>data/graphics/icons/icon_coin_lead.png</IconFilename>
+          </Standard>
+          <Blocking>
+            <GroundDecalAsset>24774</GroundDecalAsset>
+            <GroundDecalInvisible>24774</GroundDecalInvisible>
+            <GroundDecalAssetExtra>24774</GroundDecalAssetExtra>
+            <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+          </Blocking>
+          <Building>
+            <TerrainType>Water_Including_Coast</TerrainType>
+            <BuildModeRandomRotation>90</BuildModeRandomRotation>
+            <AssociatedRegions>Colony01</AssociatedRegions>
+          </Building>
+          <Cost>
+            <Costs>
+              <Item>
+                <Ingredient>1010017</Ingredient>                <!--Money-->
+                <Amount>2500</Amount>
+              </Item>
+              <Item>
+                <Ingredient>1010196</Ingredient>                <!--timber-->
+                <Amount>4</Amount>
+              </Item>
+            </Costs>
+          </Cost>
+          <Object>
+            <Variations>
+              <Item>
+                <Filename>data/graphics/buildings/production/gambling_corner/gambling_corner_01.cfg</Filename>
+              </Item>
+            </Variations>
+          </Object>
+          <Mesh/>
+          <Selection>
+            <OnSelection>
+              <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+              <Values>
+                <ActionList/>
+              </Values>
+            </OnSelection>
+            <ParticipantMessageArcheType>Advisor_02_Aahrant</ParticipantMessageArcheType>
+            <Colors>
+              <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+            </Colors>
+          </Selection>
+          <Text>
+            <LocaText>
+              <English>
+                <Text>Gambling Corner</Text>
+                <Status>Exported</Status>
+              </English>
+            </LocaText>
+            <LineID>5310</LineID>
+          </Text>
+          <Constructable/>
+          <Locked/>
+          <SoundEmitter>
+            <ActiveSounds>
+              <Item>
+                <Sound>200809</Sound>                <!--wwe_sfx_bld_food_col01_typeCluster_tag-->
+              </Item>
+              <Item>
+                <Sound>200654</Sound>                <!--wwe_sfx_bld_food_col01_01_lp-->
+              </Item>
+            </ActiveSounds>
+            <IncidentSounds>
+              <InfectedFire>
+                <Item>
+                  <Sound>214659</Sound>                  <!--wwe_sfx_bld_inc_burn-->
+                </Item>
+              </InfectedFire>
+            </IncidentSounds>
+          </SoundEmitter>
+          <FeedbackController/>
+          <Infolayer/>
+          <UpgradeList/>
+          <Factory7/>
+          <FactoryBase>
+            <FactoryInputs>
+              <Item>
+                <Product>1742102062</Product>                <!--Pirate Loot-->
+                <Amount>1</Amount>
+                <StorageAmount>6</StorageAmount>
+              </Item>
+            </FactoryInputs>
+            <FactoryOutputs>
+              <Item>
+                <Product>1742100439</Product>                <!--Coins-->
+                <Amount>1</Amount>
+                <StorageAmount>8</StorageAmount>
+              </Item>
+            </FactoryOutputs>
+            <CycleTime>30</CycleTime>
+            <IsMainFactory>0</IsMainFactory>
+          </FactoryBase>
+          <LogisticNode/>
+          <AmbientMoodProvider>
+            <DynamicEnvironmentType>None</DynamicEnvironmentType>
+          </AmbientMoodProvider>
+          <Maintenance>
+            <Maintenances>
+              <Item>
+                <Product>1010017</Product>                <!--Money-->
+                <Amount>100</Amount>
+                <InactiveAmount>50</InactiveAmount>
+              </Item>
+              <Item>
+                <Product>1742102049</Product>                <!--Pirate workforce-->
+                <Amount>5</Amount>
+              </Item>
+            </Maintenances>
+          </Maintenance>
+          <Attackable>
+            <AttackableType>IslandBuilding</AttackableType>
+            <MaximumHitPoints>4500</MaximumHitPoints>
+            <SelfHealPerHealTick>4</SelfHealPerHealTick>
+          </Attackable>
+          <Pausable/>
+          <IncidentInfectable>
+            <Explosion>
+              <ExplosionCoreDamage>1000</ExplosionCoreDamage>
+              <DamageExplosionChance>25</DamageExplosionChance>
+            </Explosion>
+            <IncidentInfectionChanceFactors>
+              <Fire>
+                <DensityDistance>20</DensityDistance>
+                <FactoryProductivityFactor>0.1</FactoryProductivityFactor>
+                <FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
+              </Fire>
+              <Explosion>
+                <BaseChance>4</BaseChance>
+                <FactoryProductivityFactor>0.1</FactoryProductivityFactor>
+                <FactoryOvertimeFactor>0.1</FactoryOvertimeFactor>
+                <FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
+              </Explosion>
+            </IncidentInfectionChanceFactors>
+          </IncidentInfectable>
+          <Culture>
+            <CultureType>Culture</CultureType>
+          </Culture>
+          <QuestObject/>
+          <Industrializable>
+            <BoostedByIndustrialization>0</BoostedByIndustrialization>
+          </Industrializable>
+          <Electrifiable>
+            <ElectricityBoost>0</ElectricityBoost>
+          </Electrifiable>
+          <EcoSystemProvider/>
+        </Values>
+      </Asset>
+    </ModOp>
+    <!-- END BUILDING - GAMBLING CORNER -->
+
+    <!-- START GAMBLING CORNER TO CONSTRUCTION MENU -->
+    <ModOp Type="addNextSibling" GUID='1742102039,500149' Path="/Values/ConstructionCategory/BuildingList/Item[Building='1742102052']">
+      <Item>
+        <Building>1742102054</Building>        <!-- Gambling Corner - Building -->
+      </Item>
+    </ModOp>
+    <!-- END GAMBLING CORNER TO CONSTRUCTION MENU -->
+
+    <!-- START - ALL BUILDINGS WITH MAINTENANCE - ItemEffectTargetPool -->
+    <ModOp Type="add" GUID="368" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
+      <Item>
+        <GUID>1742102054</GUID>        <!--Gambling Corner-->
+      </Item>
+    </ModOp>
+    <!-- END - ALL BUILDINGS WITH MAINTENANCE - ItemEffectTargetPool -->
+
+    <!-- START - ALL BUILDINGS TO GLOBAL PRODUCTION - ItemEffectTargetPool -->
+    <ModOp Type="add" GUID="6000018,193856" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
+      <Item>
+        <GUID>1742102054</GUID>        <!--Gambling Corner-->
+      </Item>
+    </ModOp>
+    <!-- END - ALL BUILDINGS TO GLOBAL PRODUCTION - ItemEffectTargetPool -->
+
+    <!-- START NEEDS TO POPULATION -->
+    <ModOp Type="add" GUID='1742102040' Path="Values/PopulationLevel7/PopulationInputs">
+      <Item>
+        <Product>1742100471</Product>        <!-- Basic Weapons - Product -->
+        <Amount>0.00006</Amount>
+        <SupplyWeight>3</SupplyWeight>
+        <FullWeightPopulationCount>100</FullWeightPopulationCount>
+        <NoWeightPopulationCount>0</NoWeightPopulationCount>
+        <AdditionalGlobalUnlockRequirement>
+          <Population>15000001</Population>
+          <MinPopulationAmount>300</MinPopulationAmount>
+        </AdditionalGlobalUnlockRequirement>
+        <IsConsideredByAI>0</IsConsideredByAI>
+      </Item>
+      <Item>
+        <Product>1742100242</Product>        <!-- Clean Water - Product -->
+        <Amount>0.00005</Amount>
+        <SupplyWeight>2</SupplyWeight>
+        <FullWeightPopulationCount>100</FullWeightPopulationCount>
+        <NoWeightPopulationCount>0</NoWeightPopulationCount>
+        <AdditionalGlobalUnlockRequirement>
+          <Population>15000000</Population>          <!-- Farmers -->
+          <MinPopulationAmount>100</MinPopulationAmount>
+        </AdditionalGlobalUnlockRequirement>
+        <IsConsideredByAI>0</IsConsideredByAI>
+      </Item>
+    </ModOp>
+    <!-- END NEEDS TO POPULATION -->
+  </Group>
+
+  <!-- START MUSIC TO MY EARS -->
+  <Group Condition="#music_to_my_ears">
+    <ModOp Type="add" GUID='1742102040' Path="/Values/PopulationLevel7/PopulationInputs/">
+      <Item>
+        <Product>1742110098</Product>        <!-- Flute - Product -->
+        <Amount>0.00005</Amount>
+        <HappinessValue>3</HappinessValue>
+        <MoneyValue>10</MoneyValue>
+        <FullWeightPopulationCount>100</FullWeightPopulationCount>
+        <NoWeightPopulationCount>0</NoWeightPopulationCount>
+        <AdditionalGlobalUnlockRequirement>
+          <Population>15000002</Population>          <!-- Artisans -->
+          <MinPopulationAmount>1</MinPopulationAmount>
+        </AdditionalGlobalUnlockRequirement>
+        <IsConsideredByAI>0</IsConsideredByAI>
+      </Item>
+    </ModOp>
+  </Group>
+  <!-- END MUSIC TO MY EARS -->
+
+</ModOps>

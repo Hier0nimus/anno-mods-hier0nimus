@@ -1,0 +1,2237 @@
+<!-- 
+  Balancing
+-->
+
+<ModOps>
+
+  <!-- START - DIPLOMACY -->
+  <ModOp Type="merge" GUID='73,76' Path="Values/Diplomacy/GiftBalancing">
+    <receiveSmall>
+      <BaseValue>15000</BaseValue>      <!-- 7500 -->
+      <IncreasePerLevel>1</IncreasePerLevel>      <!-- 7 -->
+    </receiveSmall>
+    <receiveOrdinary>
+      <BaseValue>50000</BaseValue>      <!-- 15000 -->
+      <IncreasePerLevel>3</IncreasePerLevel>      <!-- 7 -->
+    </receiveOrdinary>
+    <receiveGenerous>
+      <BaseValue>100000</BaseValue>      <!-- 22000 -->
+      <IncreasePerLevel>6</IncreasePerLevel>      <!-- 7 -->
+    </receiveGenerous>
+    <giveSmall>
+      <BaseValue>15000</BaseValue>      <!-- 2000 -->
+      <IncreasePerLevel>1</IncreasePerLevel>      <!-- 7 -->
+    </giveSmall>
+    <giveOrdinary>
+      <BaseValue>50000</BaseValue>      <!-- 3650 -->
+      <IncreasePerLevel>3</IncreasePerLevel>      <!-- 7 -->
+    </giveOrdinary>
+    <giveGenerous>
+      <BaseValue>100000</BaseValue>      <!-- 5250 -->
+      <IncreasePerLevel>6</IncreasePerLevel>      <!-- 7 -->
+    </giveGenerous>
+    <receivePayment>
+      <BaseValue>500</BaseValue>      <!-- 250 -->
+      <IncreasePerLevel>5</IncreasePerLevel>      <!-- 7 -->
+    </receivePayment>
+    <givePayment>
+      <IncreasePerLevel>5</IncreasePerLevel>      <!-- 7 -->
+    </givePayment>
+    <counterProposal>
+      <BaseValue>500</BaseValue>      <!-- 300 -->
+      <IncreasePerLevel>5</IncreasePerLevel>      <!-- 7 -->
+    </counterProposal>
+  </ModOp>
+
+  <ModOp Type="merge" GUID='73,76' Path="Values/Diplomacy/RepeatableActionBalancing/Actions">
+    <Flatter>
+      <ForgettingTime>450000</ForgettingTime>      <!-- 1800000 -->
+    </Flatter>
+    <Insult>
+      <ForgettingTime>3600000</ForgettingTime>      <!-- 1800000 -->
+    </Insult>
+    <Gift>
+      <ForgettingTime>450000</ForgettingTime>      <!-- 1800000 -->
+    </Gift>
+  </ModOp>
+
+  <ModOp Type="merge" GUID='73,76' Path="Values/Diplomacy/Memory">
+    <LongTimeCheck>3600000</LongTimeCheck>    <!-- 7800000 -->
+    <ReputationUpdateTimer>3600000</ReputationUpdateTimer>    <!-- 7860000 -->
+  </ModOp>
+
+  <ModOp Type="merge" GUID='73,76' Path="Values/Diplomacy/DiplomacyAI">
+    <MaxMoneyRequest>50</MaxMoneyRequest>    <!-- 40 -->
+    <GenericTimerStartDelay>1800000</GenericTimerStartDelay>    <!-- 3600000 -->
+    <GenericTimerRepeat>3600000</GenericTimerRepeat>    <!-- 7200000 -->
+    <ActionCooldown>
+      <RequestCeaseFire>
+        <Cooldown>1800000</Cooldown>        <!-- 3600000 -->
+      </RequestCeaseFire>
+    </ActionCooldown>
+  </ModOp>
+
+  <ModOp Type="merge" GUID="140054" Path="/Values/DiplomacyConfig/CeaseFire/TimeLength/Default">
+    <Length>3600000</Length>    <!-- 7200000 -->
+  </ModOp>
+  <ModOp Type="merge" GUID="140054" Path="/Values/DiplomacyConfig/NonAttack/TimeLength/Default">
+    <Length>9000000</Length>    <!-- 18000000 -->
+  </ModOp>
+
+  <!-- END - DIPLOMACY -->
+
+  <!-- START - COOLDOWN SHIP PRODUCTION PIRATES -->
+  <!-- Counter after completing a ship before starting with building a new ship. Ship building time is already long. To make it harder for the player, pirates build their ships faster. -->
+  <!-- EARLYGAME -->
+  <ModOp Type="merge" GUID='73,76' Path="Values/Trader/Progression/EarlyGame/">
+    <ShipProductionCooldown>60000</ShipProductionCooldown>    <!-- 300000 -->
+  </ModOp>
+
+  <!-- EARLMIDGAME -->
+  <ModOp Type="merge" GUID='73,76' Path="Values/Trader/Progression/EarlyMidGame/">
+    <ShipProductionCooldown>45000</ShipProductionCooldown>    <!-- 240000 -->
+  </ModOp>
+
+  <!-- MIDGAME -->
+  <ModOp Type="merge" GUID='73,76' Path="Values/Trader/Progression/MidGame/">
+    <ShipProductionCooldown>30000</ShipProductionCooldown>    <!-- 180000 -->
+  </ModOp>
+
+  <!-- LATEMIDGAME -->
+  <ModOp Type="merge" GUID='73,76' Path="Values/Trader/Progression/LateMidGame/">
+    <ShipProductionCooldown>20000</ShipProductionCooldown>    <!-- 120000 -->
+  </ModOp>
+
+  <!-- LATEGAME -->
+  <ModOp Type="merge" GUID='73,76' Path="Values/Trader/Progression/LateGame/">
+    <ShipProductionCooldown>10000</ShipProductionCooldown>    <!-- 60000 -->
+  </ModOp>
+
+  <!-- ENDGAME -->
+  <ModOp Type="merge" GUID='73,76' Path="Values/Trader/Progression/EndGame/">
+    <ShipProductionCooldown>1000</ShipProductionCooldown>    <!-- / -->
+  </ModOp>
+
+  <!-- END - COOLDOWN SHIP PRODUCTION PIRATES -->
+
+  <!-- START - SHIPS PIRATES - EARLYMIDGAME -->
+  <ModOp Type="replace" GUID='73' Path="Values/Trader/Progression/EarlyMidGame/WarFleet">
+    <WarFleet>
+      <Item>
+        <ShipAsset>102429</ShipAsset>        <!--Pirate Gunboat-->
+        <Amount>6</Amount>        <!-- 4 -->
+      </Item>
+      <Item>
+        <ShipAsset>102430</ShipAsset>        <!--Pirate Frigate-->
+        <Amount>1</Amount>        <!-- / -->
+      </Item>
+    </WarFleet>
+  </ModOp>
+  <!-- END - SHIPS PIRATES - EARLYMIDGAME -->
+  <!-- START - SHIPS PIRATES - MIDGAME -->
+  <ModOp Type="replace" GUID='73,76' Path="Values/Trader/Progression/MidGame/WarFleet">
+    <WarFleet>
+      <Item>
+        <ShipAsset>102431</ShipAsset>        <!--Pirate SOTL-->
+        <Amount>2</Amount>        <!-- / -->
+      </Item>
+      <Item>
+        <ShipAsset>102430</ShipAsset>        <!--Pirate Frigate-->
+        <Amount>4</Amount>        <!-- 2 -->
+      </Item>
+      <Item>
+        <ShipAsset>1742102008</ShipAsset>        <!--Jolly Roger-->
+        <Amount>1</Amount>        <!-- / -->
+      </Item>
+      <Item>
+        <ShipAsset>102429</ShipAsset>        <!--Pirate Gunboat-->
+        <Amount>10</Amount>        <!-- 6 -->
+      </Item>
+    </WarFleet>
+  </ModOp>
+  <ModOp Type="replace" GUID='73,76' Path="Values/Trader/Progression/MidGame/ShipsForSale">
+    <ShipsForSale>
+      <Item>
+        <ShipAsset>102421</ShipAsset>
+        <Weight>3</Weight>
+      </Item>
+      <Item>
+        <ShipAsset>102431</ShipAsset>
+        <Weight>2</Weight>
+      </Item>
+      <Item>
+        <ShipAsset>1742102008</ShipAsset>
+        <Weight>1</Weight>
+      </Item>
+    </ShipsForSale>
+  </ModOp>
+  <!-- END - SHIPS PIRATES - MIDGAME -->
+  <!-- START - SHIPS PIRATES - LATEMIDGAME -->
+  <ModOp Type="replace" GUID='73,76' Path="Values/Trader/Progression/LateMidGame/WarFleet">
+    <WarFleet>
+      <Item>
+        <ShipAsset>102432</ShipAsset>        <!--Pirate Monitor-->
+        <Amount>2</Amount>        <!-- / -->
+      </Item>
+      <Item>
+        <ShipAsset>1742102074</ShipAsset>        <!--Pirate Flak Monitor-->
+        <Amount>3</Amount>        <!-- / -->
+      </Item>
+      <Item>
+        <ShipAsset>1742102068</ShipAsset>        <!--Pirate Flame Monitor-->
+        <Amount>2</Amount>        <!-- / -->
+      </Item>
+      <Item>
+        <ShipAsset>1742102012</ShipAsset>        <!--Ironclad Cruiser-->
+        <Amount>4</Amount>        <!-- / -->
+      </Item>
+      <Item>
+        <ShipAsset>1742102094</ShipAsset>        <!--Pirate Hawk-->
+        <Amount>3</Amount>        <!-- / -->
+      </Item>
+      <Item>
+        <ShipAsset>102431</ShipAsset>        <!--Pirate SOTL-->
+        <Amount>5</Amount>        <!-- 2 -->
+      </Item>
+      <Item>
+        <ShipAsset>1742102008</ShipAsset>        <!--Jolly Roger-->
+        <Amount>2</Amount>        <!-- / -->
+      </Item>
+      <Item>
+        <ShipAsset>102430</ShipAsset>        <!--Pirate Frigate-->
+        <Amount>8</Amount>        <!-- 4 -->
+      </Item>
+      <Item>
+        <ShipAsset>102429</ShipAsset>        <!--Pirate Gunboat-->
+        <Amount>10</Amount>        <!-- 8 -->
+      </Item>
+    </WarFleet>
+  </ModOp>
+  <ModOp Type="replace" GUID='73,76' Path="Values/Trader/Progression/LateMidGame/ShipsForSale">
+    <ShipsForSale>
+      <Item>
+        <ShipAsset>102431</ShipAsset>
+        <Weight>3</Weight>
+      </Item>
+      <Item>
+        <ShipAsset>1742102068</ShipAsset>
+        <Weight>1</Weight>
+      </Item>
+      <Item>
+        <ShipAsset>1742102074</ShipAsset>
+        <Weight>1</Weight>
+      </Item>
+      <Item>
+        <ShipAsset>102432</ShipAsset>
+        <Weight>1</Weight>
+      </Item>
+      <Item>
+        <ShipAsset>1742102008</ShipAsset>
+        <Weight>2</Weight>
+      </Item>
+      <Item>
+        <ShipAsset>1742102012</ShipAsset>
+        <Weight>4</Weight>
+      </Item>
+    </ShipsForSale>
+  </ModOp>
+  <!-- END - SHIPS PIRATES - LATEMIDGAME -->
+  <!-- START - SHIPS PIRATES - LATEGAME -->
+  <ModOp Type="replace" GUID='73,76' Path="Values/Trader/Progression/LateGame/WarFleet">
+    <WarFleet>
+      <Item>
+        <ShipAsset>1742102010</ShipAsset>        <!--Pirate Battle Cruiser-->
+        <Amount>2</Amount>        <!-- / -->
+      </Item>
+      <Item>
+        <ShipAsset>1742102070</ShipAsset>        <!--Pirate Warship-->
+        <Amount>2</Amount>        <!-- / -->
+      </Item>
+      <Item>
+        <ShipAsset>1742102074</ShipAsset>        <!--Pirate Flak Monitor-->
+        <Amount>5</Amount>        <!-- / -->
+      </Item>
+      <Item>
+        <ShipAsset>1742102094</ShipAsset>        <!--Pirate Hawk-->
+        <Amount>4</Amount>        <!-- / -->
+      </Item>
+      <Item>
+        <ShipAsset>1742102096</ShipAsset>        <!--Pirate Black Eagle-->
+        <Amount>2</Amount>        <!-- / -->
+      </Item>
+      <Item>
+        <ShipAsset>102431</ShipAsset>        <!--Pirate Liner-->
+        <Amount>4</Amount>        <!-- 2 -->
+      </Item>
+      <Item>
+        <ShipAsset>1742102008</ShipAsset>        <!--Jolly Roger-->
+        <Amount>4</Amount>        <!-- / -->
+      </Item>
+      <Item>
+        <ShipAsset>1742102012</ShipAsset>        <!--Ironclad Cruiser-->
+        <Amount>5</Amount>        <!-- / -->
+      </Item>
+      <Item>
+        <ShipAsset>102432</ShipAsset>        <!--Pirate Monitor-->
+        <Amount>4</Amount>        <!-- 2 -->
+      </Item>
+      <Item>
+        <ShipAsset>1742102068</ShipAsset>        <!--Pirate Flame Monitor-->
+        <Amount>4</Amount>        <!-- / -->
+      </Item>
+      <Item>
+        <ShipAsset>102430</ShipAsset>        <!--Pirate Frigate-->
+        <Amount>8</Amount>        <!-- 5 -->
+      </Item>
+      <Item>
+        <ShipAsset>102429</ShipAsset>        <!--Pirate Gunboat-->
+        <Amount>10</Amount>        <!-- 10 -->
+      </Item>
+    </WarFleet>
+  </ModOp>
+  <ModOp Type="replace" GUID='73,76' Path="Values/Trader/Progression/LateGame/ShipsForSale">
+    <ShipsForSale>
+      <Item>
+        <ShipAsset>1742102068</ShipAsset>
+        <Weight>2</Weight>
+      </Item>
+      <Item>
+        <ShipAsset>1742102074</ShipAsset>
+        <Weight>1</Weight>
+      </Item>
+      <Item>
+        <ShipAsset>102432</ShipAsset>
+        <Weight>3</Weight>
+      </Item>
+      <Item>
+        <ShipAsset>1742102008</ShipAsset>
+        <Weight>2</Weight>
+      </Item>
+      <Item>
+        <ShipAsset>1742102012</ShipAsset>
+        <Weight>2</Weight>
+      </Item>
+      <Item>
+        <ShipAsset>1742102010</ShipAsset>
+        <Weight>1</Weight>
+      </Item>
+      <Item>
+        <ShipAsset>1742102070</ShipAsset>
+        <Weight>1</Weight>
+      </Item>
+    </ShipsForSale>
+  </ModOp>
+  <!-- END - SHIPS PIRATES - LATEGAME -->
+  <!-- START - SHIPS PIRATES - ENDGAME -->
+  <ModOp Type="replace" GUID='73,76' Path="Values/Trader/Progression/EndGame/WarFleet">
+    <WarFleet>
+      <Item>
+        <ShipAsset>1742102010</ShipAsset>        <!--Pirate Battle Cruiser-->
+        <Amount>6</Amount>        <!-- / -->
+      </Item>
+      <Item>
+        <ShipAsset>1742102012</ShipAsset>        <!--Pirate Ironclad Cruiser-->
+        <Amount>5</Amount>        <!-- / -->
+      </Item>
+      <Item>
+        <ShipAsset>1742102070</ShipAsset>        <!--Pirate Warship-->
+        <Amount>4</Amount>        <!-- / -->
+      </Item>
+      <Item>
+        <ShipAsset>1742102014</ShipAsset>        <!--Pirate Heavy Battle Cruiser-->
+        <Amount>1</Amount>        <!-- / -->
+      </Item>
+      <Item>
+        <ShipAsset>1742102072</ShipAsset>        <!--Pirate Heavy Warship Cruiser-->
+        <Amount>1</Amount>        <!-- / -->
+      </Item>
+      <Item>
+        <ShipAsset>1742102096</ShipAsset>        <!--Pirate Black Eagle-->
+        <Amount>4</Amount>        <!-- / -->
+      </Item>
+      <Item>
+        <ShipAsset>1742102068</ShipAsset>        <!--Pirate Flame Monitor-->
+        <Amount>3</Amount>        <!-- / -->
+      </Item>
+      <Item>
+        <ShipAsset>1742102074</ShipAsset>        <!--Pirate Flak Monitor-->
+        <Amount>5</Amount>        <!-- / -->
+      </Item>
+      <Item>
+        <ShipAsset>1742102094</ShipAsset>        <!--Pirate Hawk-->
+        <Amount>4</Amount>        <!-- / -->
+      </Item>
+      <Item>
+        <ShipAsset>102432</ShipAsset>        <!--Pirate Monitor-->
+        <Amount>3</Amount>        <!-- 3 -->
+      </Item>
+      <Item>
+        <ShipAsset>1742102008</ShipAsset>        <!--Jolly Roger-->
+        <Amount>4</Amount>        <!-- / -->
+      </Item>
+      <Item>
+        <ShipAsset>102431</ShipAsset>        <!--Pirate Liner-->
+        <Amount>2</Amount>        <!-- 3 -->
+      </Item>
+      <Item>
+        <ShipAsset>102430</ShipAsset>        <!--Pirate Frigate-->
+        <Amount>5</Amount>        <!-- 6 -->
+      </Item>
+      <Item>
+        <ShipAsset>102429</ShipAsset>        <!--Pirate Gunboat-->
+        <Amount>8</Amount>        <!-- 10 -->
+      </Item>
+    </WarFleet>
+  </ModOp>
+  <ModOp Type="replace" GUID='73,76' Path="Values/Trader/Progression/EndGame/ShipsForSale">
+    <ShipsForSale>
+      <Item>
+        <ShipAsset>102455</ShipAsset>
+        <Weight>1</Weight>
+      </Item>
+      <Item>
+        <ShipAsset>1742102074</ShipAsset>
+        <Weight>1</Weight>
+      </Item>
+      <Item>
+        <ShipAsset>1742102008</ShipAsset>
+        <Weight>4</Weight>
+      </Item>
+      <Item>
+        <ShipAsset>1742102012</ShipAsset>
+        <Weight>3</Weight>
+      </Item>
+      <Item>
+        <ShipAsset>1742102010</ShipAsset>
+        <Weight>2</Weight>
+      </Item>
+      <Item>
+        <ShipAsset>1742102070</ShipAsset>
+        <Weight>2</Weight>
+      </Item>
+    </ShipsForSale>
+  </ModOp>
+  <!-- END - SHIPS PIRATES - ENDGAME -->
+
+  <!-- START - MILITARY AI -->
+  <ModOp Type="merge" GUID='73,76' Path="Values/MilitaryAI">
+    <StrengthLevels>
+      <Levels>
+        <Inferior>
+          <Flee>0</Flee>          <!-- 1 -->
+          <MaxAttackRatio>100</MaxAttackRatio>
+          <MaxEscortRatio>0</MaxEscortRatio>
+          <MaxDefendRatio>100</MaxDefendRatio>          <!-- / -->
+          <MaxPatrolRatio>0</MaxPatrolRatio>
+          <MaxDefendAllyRatio>10</MaxDefendAllyRatio>
+        </Inferior>
+        <Equal>
+          <Flee>0</Flee>          <!-- / -->
+          <MaxAttackRatio>100</MaxAttackRatio>
+          <MaxEscortRatio>0</MaxEscortRatio>
+          <MaxDefendRatio>100</MaxDefendRatio>          <!-- / -->
+          <MaxPatrolRatio>0</MaxPatrolRatio>
+          <MaxDefendAllyRatio>25</MaxDefendAllyRatio>
+        </Equal>
+        <Superior>
+          <Flee>0</Flee>          <!-- 1 -->
+          <MaxAttackRatio>100</MaxAttackRatio>          <!-- / -->
+          <MaxEscortRatio>0</MaxEscortRatio>
+          <MaxDefendRatio>100</MaxDefendRatio>          <!-- / -->
+          <MaxPatrolRatio>0</MaxPatrolRatio>
+          <MaxDefendAllyRatio>50</MaxDefendAllyRatio>
+        </Superior>
+      </Levels>
+    </StrengthLevels>
+    <Attack>
+      <MilitaryStrengthRatio>120</MilitaryStrengthRatio>      <!-- 90 -->
+      <AttackInterval>500000</AttackInterval>      <!-- 1500000 -->
+      <AirAttackInterval>500000</AirAttackInterval>      <!-- 1500000 -->
+      <AttackTargetPrio>
+        <Item>
+          <Targets>TradeShip</Targets>
+          <Conditions>
+            <Item>
+              <Condition>IsWeaker</Condition>
+            </Item>
+          </Conditions>
+          <SkipTargetWhenInHarbourArea>1</SkipTargetWhenInHarbourArea>          <!-- 1 -->
+        </Item>
+        <Item>
+          <Targets>TradeShip</Targets>
+          <Conditions>
+            <Item>
+              <Condition>IsNearer</Condition>
+            </Item>
+          </Conditions>
+          <SkipTargetWhenInHarbourArea>1</SkipTargetWhenInHarbourArea>          <!-- 1 -->
+        </Item>
+        <Item>
+          <Targets>TradeShip</Targets>
+          <Conditions>
+            <Item>
+              <Condition>IsFarther</Condition>
+            </Item>
+          </Conditions>
+          <SkipTargetWhenInHarbourArea>1</SkipTargetWhenInHarbourArea>          <!-- 1 -->
+        </Item>
+        <Item>
+          <Targets>WarShip</Targets>
+          <Conditions>
+            <Item>
+              <Condition>IsWeaker</Condition>
+            </Item>
+          </Conditions>
+          <SkipProbability>40</SkipProbability>          <!-- 50 -->
+          <SkipTargetWhenInHarbourArea>1</SkipTargetWhenInHarbourArea>          <!-- 1 -->
+        </Item>
+        <Item>
+          <Targets>WarShip</Targets>
+          <Conditions>
+            <Item>
+              <Condition>IsNearer</Condition>
+            </Item>
+          </Conditions>
+          <SkipProbability>40</SkipProbability>          <!-- 50 -->
+          <SkipTargetWhenInHarbourArea>1</SkipTargetWhenInHarbourArea>          <!-- 1 -->
+        </Item>
+        <!-- No additions of DefenseBuilding / Kontor / MilitaryTakeoverTarget. Pirates do not attack those sadly -->
+      </AttackTargetPrio>
+      <RallyBeforeAttack>1</RallyBeforeAttack>      <!-- / -->
+      <IsBlinded>IgnoreBuildings</IsBlinded>
+      <OverkillAttackThreshold>100</OverkillAttackThreshold>
+    </Attack>
+    <!-- <Defense> is ok as is -->
+    <SquadLogic>
+      <FleeStrengthRatio>70</FleeStrengthRatio>      <!-- 60 -->
+      <TargetPriorities>
+        <Item>
+          <Targets>TradeShip</Targets>
+          <Range>120</Range>
+          <MinStrengthRatio>71</MinStrengthRatio>          <!-- 90 -->
+          <Conditions>
+            <Item>
+              <Condition>LowHitpoints</Condition>
+            </Item>
+          </Conditions>
+          <SkipTargetWhenInHarbourArea>1</SkipTargetWhenInHarbourArea>          <!-- 1 -->
+        </Item>
+        <Item>
+          <Targets>WarShip</Targets>
+          <Range>120</Range>
+          <MinStrengthRatio>71</MinStrengthRatio>
+          <Conditions>
+            <Item>
+              <Condition>IsWeaker</Condition>
+            </Item>
+          </Conditions>
+          <SkipTargetWhenInHarbourArea>1</SkipTargetWhenInHarbourArea>
+        </Item>
+        <Item>
+          <Targets>WarShip</Targets>
+          <Range>120</Range>
+          <MinStrengthRatio>71</MinStrengthRatio>
+          <Conditions>
+            <Item>
+              <Condition>LowHitpoints</Condition>
+            </Item>
+          </Conditions>
+          <SkipTargetWhenInHarbourArea>1</SkipTargetWhenInHarbourArea>
+        </Item>
+      </TargetPriorities>
+      <ObservationRange>175</ObservationRange>      <!-- 110 -->
+    </SquadLogic>
+  </ModOp>
+  <!-- END - MILITARY AI -->
+
+  <!-- START - PIRATE -->
+  <!-- ANNE ONLY | JEAN ALREADY HAS 9999 TO BEGIN WITH -->
+  <ModOp Type="merge" GUID='73' Path="Values/Pirate">
+    <AreaOfActivity>
+      <Normal>
+        <StartAreaRadius>400</StartAreaRadius>        <!-- 300 -->
+        <ChaseRange>75</ChaseRange>        <!-- 50 -->
+        <GrowPerProgress>
+          <EarlyMidGame>
+            <GrowAreaPerMinute>1.5</GrowAreaPerMinute>            <!-- 1 -->
+          </EarlyMidGame>
+          <MidGame>
+            <GrowAreaPerMinute>3</GrowAreaPerMinute>            <!-- / -->
+          </MidGame>
+          <LateMidGame>
+            <GrowAreaPerMinute>6</GrowAreaPerMinute>            <!-- 3 -->
+          </LateMidGame>
+          <LateGame>
+            <GrowAreaPerMinute>15</GrowAreaPerMinute>            <!-- 8 -->
+          </LateGame>
+          <EndGame>
+            <GrowAreaPerMinute>30</GrowAreaPerMinute>            <!-- 25 -->
+          </EndGame>
+        </GrowPerProgress>
+      </Normal>
+      <Hard>
+        <StartAreaRadius>600</StartAreaRadius>        <!-- 500 -->
+        <ChaseRange>175</ChaseRange>        <!-- 100 -->
+        <GrowPerProgress>
+          <EarlyMidGame>
+            <GrowAreaPerMinute>3</GrowAreaPerMinute>            <!-- 1.5 -->
+          </EarlyMidGame>
+          <MidGame>
+            <GrowAreaPerMinute>8</GrowAreaPerMinute>            <!-- 4 -->
+          </MidGame>
+          <LateMidGame>
+            <GrowAreaPerMinute>15</GrowAreaPerMinute>            <!-- 8 -->
+          </LateMidGame>
+          <LateGame>
+            <GrowAreaPerMinute>30</GrowAreaPerMinute>            <!-- 25 -->
+          </LateGame>
+          <EndGame>
+            <GrowAreaPerMinute>50</GrowAreaPerMinute>            <!-- / -->
+          </EndGame>
+        </GrowPerProgress>
+      </Hard>
+    </AreaOfActivity>
+  </ModOp>
+  <!-- END - PIRATE -->
+
+  <!-- START - COOLDOWN PIRATES RETURN AFTER DESTRUCTION -->
+  <ModOp Type="merge" GUID='73,76' Path="Values/Pirate">
+    <ComebackAfterKontorDestruction>7200000</ComebackAfterKontorDestruction>    <!-- 9000000 (2.5h) - 7200000 (2h) -->
+  </ModOp>
+  <!-- END - COOLDOWN PIRATES RETURN AFTER DESTRUCTION -->
+
+  <!-- START - COOLDOWN PIRATES REBUILD AFTER DESTRUCTION -->
+  <ModOp Type="merge" GUID='73,76' Path="Values/Pirate">
+    <RebuildAfterIslandWarTimer>900000</RebuildAfterIslandWarTimer>    <!-- 1500000 (25min) - 900000 (15min) -->
+  </ModOp>
+  <!-- END - COOLDOWN PIRATES REBUILD AFTER DESTRUCTION -->
+
+  <!-- START - COMBACK QUESTS -->
+
+  <!-- START - COMBACKFLEET ANNE - EarlyGame + EarlyMidGame - 153266 -->
+  <ModOp Type="merge" GUID='153266' Path="/Values/Trigger/TriggerActions">
+    <TriggerActions>
+      <Item>
+        <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>102429</SpawnGUID>              <!-- Pirate Gunboat -->
+              <Amount>3</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_03_Pirate_Harlow</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateHarlowResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180023</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>102430</SpawnGUID>              <!-- Pirate Frigate -->
+              <Amount>2</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_03_Pirate_Harlow</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateHarlowResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180023</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>102431</SpawnGUID>              <!-- Pirate SOTL -->
+              <Amount>1</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_03_Pirate_Harlow</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateHarlowResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180023</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
+          <Template>ActionMoveObject</Template>
+          <Values>
+            <Action />
+            <ObjectFilter>
+              <ObjectLabel>PirateHarlowResettleGroup</ObjectLabel>
+            </ObjectFilter>
+            <ObjectTargetFilter>
+              <TargetGUID>100681</TargetGUID>
+            </ObjectTargetFilter>
+            <ActionMoveObject>
+              <IgnoreEveryDistractionDuringMove>1</IgnoreEveryDistractionDuringMove>
+              <UseDangerLayer>1</UseDangerLayer>
+            </ActionMoveObject>
+          </Values>
+        </TriggerAction>
+      </Item>
+    </TriggerActions>
+  </ModOp>
+  <!-- END - COMBACKFLEET ANNE - EarlyGame + EarlyMidGame - 153266 -->
+
+  <!-- START - COMBACKFLEET JEAN - EarlyGame + EarlyMidGame - 153274 -->
+  <ModOp Type="merge" GUID='153274' Path="/Values/Trigger/TriggerActions">
+    <TriggerActions>
+      <Item>
+        <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>102429</SpawnGUID>              <!-- Pirate Gunboat -->
+              <Amount>3</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_04_Pirate_LaFortune</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateLafortuneResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180025</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>102430</SpawnGUID>              <!-- Pirate Frigate -->
+              <Amount>2</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_04_Pirate_LaFortune</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateLafortuneResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180025</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>102431</SpawnGUID>              <!-- Pirate SOTL -->
+              <Amount>1</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_04_Pirate_LaFortune</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateLafortuneResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180025</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
+          <Template>ActionMoveObject</Template>
+          <Values>
+            <Action />
+            <ObjectFilter>
+              <ObjectLabel>PirateLafortuneResettleGroup</ObjectLabel>
+            </ObjectFilter>
+            <ObjectTargetFilter>
+              <TargetGUID>100682</TargetGUID>
+            </ObjectTargetFilter>
+            <ActionMoveObject>
+              <IgnoreEveryDistractionDuringMove>1</IgnoreEveryDistractionDuringMove>
+              <UseDangerLayer>1</UseDangerLayer>
+            </ActionMoveObject>
+          </Values>
+        </TriggerAction>
+      </Item>
+    </TriggerActions>
+  </ModOp>
+  <!-- END - COMBACKFLEET JEAN - EarlyGame + EarlyMidGame - 153274 -->
+
+  <!-- START - COMBACKFLEET ANNE - MidGame - 153269 -->
+  <ModOp Type="merge" GUID='153269' Path="/Values/Trigger/TriggerActions">
+    <TriggerActions>
+      <Item>
+        <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>102429</SpawnGUID>              <!-- Pirate Gunboat -->
+              <Amount>5</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_03_Pirate_Harlow</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateHarlowResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180023</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>102430</SpawnGUID>              <!-- Pirate Frigate -->
+              <Amount>4</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_03_Pirate_Harlow</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateHarlowResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180023</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>102431</SpawnGUID>              <!-- Pirate SOTL -->
+              <Amount>3</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_03_Pirate_Harlow</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateHarlowResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180023</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>1742102008</SpawnGUID>              <!-- Jolly Roger -->
+              <Amount>1</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_03_Pirate_Harlow</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateHarlowResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180023</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
+          <Template>ActionMoveObject</Template>
+          <Values>
+            <Action />
+            <ObjectFilter>
+              <ObjectLabel>PirateHarlowResettleGroup</ObjectLabel>
+            </ObjectFilter>
+            <ObjectTargetFilter>
+              <TargetGUID>100681</TargetGUID>
+            </ObjectTargetFilter>
+            <ActionMoveObject>
+              <IgnoreEveryDistractionDuringMove>1</IgnoreEveryDistractionDuringMove>
+              <UseDangerLayer>1</UseDangerLayer>
+            </ActionMoveObject>
+          </Values>
+        </TriggerAction>
+      </Item>
+    </TriggerActions>
+  </ModOp>
+  <!-- END - COMBACKFLEET ANNE - MidGame - 153269 -->
+
+  <!-- START - COMBACKFLEET JEAN - MidGame - 153275 -->
+  <ModOp Type="merge" GUID='153275' Path="/Values/Trigger/TriggerActions">
+    <TriggerActions>
+      <Item>
+        <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>102429</SpawnGUID>              <!-- Pirate Gunboat -->
+              <Amount>5</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_04_Pirate_LaFortune</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateLafortuneResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180025</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>102430</SpawnGUID>              <!-- Pirate Frigate -->
+              <Amount>4</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_04_Pirate_LaFortune</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateLafortuneResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180025</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>102431</SpawnGUID>              <!-- Pirate SOTL -->
+              <Amount>3</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_04_Pirate_LaFortune</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateLafortuneResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180025</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>1742102008</SpawnGUID>              <!-- Jolly Roger -->
+              <Amount>1</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_04_Pirate_LaFortune</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateLafortuneResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180025</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
+          <Template>ActionMoveObject</Template>
+          <Values>
+            <Action />
+            <ObjectFilter>
+              <ObjectLabel>PirateLafortuneResettleGroup</ObjectLabel>
+            </ObjectFilter>
+            <ObjectTargetFilter>
+              <TargetGUID>100682</TargetGUID>
+            </ObjectTargetFilter>
+            <ActionMoveObject>
+              <IgnoreEveryDistractionDuringMove>1</IgnoreEveryDistractionDuringMove>
+              <UseDangerLayer>1</UseDangerLayer>
+            </ActionMoveObject>
+          </Values>
+        </TriggerAction>
+      </Item>
+    </TriggerActions>
+  </ModOp>
+  <!-- END - COMBACKFLEET JEAN - MidGame - 153275 -->
+
+  <!-- START - COMBACKFLEET ANNE - LateMidGame + LateGame - 153270 -->
+  <ModOp Type="merge" GUID='153270' Path="/Values/Trigger/TriggerActions">
+    <TriggerActions>
+      <Item>
+        <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>102431</SpawnGUID>              <!-- Pirate SOTL -->
+              <Amount>2</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_03_Pirate_Harlow</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateHarlowResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180023</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>1742102008</SpawnGUID>              <!-- Jolly Roger -->
+              <Amount>2</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_03_Pirate_Harlow</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateHarlowResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180023</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>102432</SpawnGUID>              <!-- Pirate Monitor -->
+              <Amount>2</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_03_Pirate_Harlow</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateHarlowResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180023</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>1742102068</SpawnGUID>              <!-- Pirate Flame Monitor -->
+              <Amount>2</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_03_Pirate_Harlow</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateHarlowResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180023</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>1742102074</SpawnGUID>              <!-- Pirate Flak Monitor -->
+              <Amount>2</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_03_Pirate_Harlow</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateHarlowResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180023</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>1742102012</SpawnGUID>              <!-- Pirate Ironclad Cruiser -->
+              <Amount>2</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_03_Pirate_Harlow</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateHarlowResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180023</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>1742102010</SpawnGUID>              <!-- Pirate Battle Cruiser -->
+              <Amount>2</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_03_Pirate_Harlow</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateHarlowResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180023</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>1742102070</SpawnGUID>              <!-- Pirate Warship Cruiser -->
+              <Amount>2</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_03_Pirate_Harlow</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateHarlowResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180023</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
+          <Template>ActionMoveObject</Template>
+          <Values>
+            <Action />
+            <ObjectFilter>
+              <ObjectLabel>PirateHarlowResettleGroup</ObjectLabel>
+            </ObjectFilter>
+            <ObjectTargetFilter>
+              <TargetGUID>100681</TargetGUID>
+            </ObjectTargetFilter>
+            <ActionMoveObject>
+              <IgnoreEveryDistractionDuringMove>1</IgnoreEveryDistractionDuringMove>
+              <UseDangerLayer>1</UseDangerLayer>
+            </ActionMoveObject>
+          </Values>
+        </TriggerAction>
+      </Item>
+    </TriggerActions>
+  </ModOp>
+  <!-- END - COMBACKFLEET ANNE - LateMidGame + LateGame - 153270 -->
+
+  <!-- START - COMBACKFLEET JEAN - LateMidGame + LateGame - 153276 -->
+  <ModOp Type="merge" GUID='153276' Path="/Values/Trigger/TriggerActions">
+    <TriggerActions>
+      <Item>
+        <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>102431</SpawnGUID>              <!-- Pirate SOTL -->
+              <Amount>2</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_04_Pirate_LaFortune</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateLafortuneResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180025</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>1742102008</SpawnGUID>              <!-- Jolly Roger -->
+              <Amount>2</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_04_Pirate_LaFortune</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateLafortuneResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180025</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>102432</SpawnGUID>              <!-- Pirate Monitor -->
+              <Amount>2</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_04_Pirate_LaFortune</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateLafortuneResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180025</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>1742102068</SpawnGUID>              <!-- Pirate Flame Monitor -->
+              <Amount>2</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_04_Pirate_LaFortune</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateLafortuneResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180025</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>1742102074</SpawnGUID>              <!-- Pirate Flak Monitor -->
+              <Amount>2</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_04_Pirate_LaFortune</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateLafortuneResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180025</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>1742102012</SpawnGUID>              <!-- Pirate Ironclad Cruiser -->
+              <Amount>2</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_04_Pirate_LaFortune</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateLafortuneResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180025</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>1742102010</SpawnGUID>              <!-- Pirate Battle Cruiser -->
+              <Amount>2</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_04_Pirate_LaFortune</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateLafortuneResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180025</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>1742102070</SpawnGUID>              <!-- Pirate Warship Cruiser -->
+              <Amount>2</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_04_Pirate_LaFortune</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateLafortuneResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180025</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
+          <Template>ActionMoveObject</Template>
+          <Values>
+            <Action />
+            <ObjectFilter>
+              <ObjectLabel>PirateLafortuneResettleGroup</ObjectLabel>
+            </ObjectFilter>
+            <ObjectTargetFilter>
+              <TargetGUID>100682</TargetGUID>
+            </ObjectTargetFilter>
+            <ActionMoveObject>
+              <IgnoreEveryDistractionDuringMove>1</IgnoreEveryDistractionDuringMove>
+              <UseDangerLayer>1</UseDangerLayer>
+            </ActionMoveObject>
+          </Values>
+        </TriggerAction>
+      </Item>
+    </TriggerActions>
+  </ModOp>
+  <!-- END - COMBACKFLEET JEAN - LateMidGame + LateGame - 153276 -->
+
+  <!-- START - COMBACKFLEET ANNE - EndGame - 153271 -->
+  <ModOp Type="merge" GUID='153271' Path="/Values/Trigger/TriggerActions">
+    <TriggerActions>
+      <Item>
+        <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>102432</SpawnGUID>              <!-- Pirate Monitor -->
+              <Amount>2</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_03_Pirate_Harlow</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateHarlowResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180023</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>1742102068</SpawnGUID>              <!-- Pirate Flame Monitor -->
+              <Amount>2</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_03_Pirate_Harlow</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateHarlowResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180023</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>1742102074</SpawnGUID>              <!-- Pirate Flak Monitor -->
+              <Amount>2</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_03_Pirate_Harlow</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateHarlowResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180023</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>1742102012</SpawnGUID>              <!-- Pirate Ironclad Cruiser -->
+              <Amount>2</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_03_Pirate_Harlow</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateHarlowResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180023</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>1742102010</SpawnGUID>              <!-- Pirate Battle Cruiser -->
+              <Amount>2</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_03_Pirate_Harlow</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateHarlowResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180023</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>1742102070</SpawnGUID>              <!-- Pirate Warship Cruiser -->
+              <Amount>2</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_03_Pirate_Harlow</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateHarlowResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180023</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>1742102014</SpawnGUID>              <!-- Pirate Heavy Battle Cruiser -->
+              <Amount>1</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_03_Pirate_Harlow</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateHarlowResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180023</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>1742102072</SpawnGUID>              <!-- Pirate Heavy Warship Cruiser -->
+              <Amount>1</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_03_Pirate_Harlow</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateHarlowResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180023</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
+          <Template>ActionMoveObject</Template>
+          <Values>
+            <Action />
+            <ObjectFilter>
+              <ObjectLabel>PirateHarlowResettleGroup</ObjectLabel>
+            </ObjectFilter>
+            <ObjectTargetFilter>
+              <TargetGUID>100681</TargetGUID>
+            </ObjectTargetFilter>
+            <ActionMoveObject>
+              <IgnoreEveryDistractionDuringMove>1</IgnoreEveryDistractionDuringMove>
+              <UseDangerLayer>1</UseDangerLayer>
+            </ActionMoveObject>
+          </Values>
+        </TriggerAction>
+      </Item>
+    </TriggerActions>
+  </ModOp>
+  <!-- END - COMBACKFLEET ANNE - EndGame - 153271 -->
+
+  <!-- START - COMBACKFLEET JEAN - EndGame - 153277 -->
+  <ModOp Type="merge" GUID='153277' Path="/Values/Trigger/TriggerActions">
+    <TriggerActions>
+      <Item>
+        <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>102432</SpawnGUID>              <!-- Pirate Monitor -->
+              <Amount>2</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_04_Pirate_LaFortune</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateLafortuneResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180025</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>1742102068</SpawnGUID>              <!-- Pirate Flame Monitor -->
+              <Amount>2</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_04_Pirate_LaFortune</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateLafortuneResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180025</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>1742102074</SpawnGUID>              <!-- Pirate Flak Monitor -->
+              <Amount>2</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_04_Pirate_LaFortune</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateLafortuneResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180025</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>1742102012</SpawnGUID>              <!-- Pirate Ironclad Cruiser -->
+              <Amount>2</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_04_Pirate_LaFortune</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateLafortuneResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180025</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>1742102010</SpawnGUID>              <!-- Pirate Battle Cruiser -->
+              <Amount>2</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_04_Pirate_LaFortune</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateLafortuneResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180025</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>1742102070</SpawnGUID>              <!-- Pirate Warship Cruiser -->
+              <Amount>2</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_04_Pirate_LaFortune</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateLafortuneResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180025</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>1742102014</SpawnGUID>              <!-- Pirate Heavy Battle Cruiser -->
+              <Amount>1</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_04_Pirate_LaFortune</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateLafortuneResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180025</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>1742102072</SpawnGUID>              <!-- Pirate Heavy Warship Cruiser -->
+              <Amount>1</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_04_Pirate_LaFortune</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateLafortuneResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180025</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
+          <Template>ActionMoveObject</Template>
+          <Values>
+            <Action />
+            <ObjectFilter>
+              <ObjectLabel>PirateLafortuneResettleGroup</ObjectLabel>
+            </ObjectFilter>
+            <ObjectTargetFilter>
+              <TargetGUID>100682</TargetGUID>
+            </ObjectTargetFilter>
+            <ActionMoveObject>
+              <IgnoreEveryDistractionDuringMove>1</IgnoreEveryDistractionDuringMove>
+              <UseDangerLayer>1</UseDangerLayer>
+            </ActionMoveObject>
+          </Values>
+        </TriggerAction>
+      </Item>
+    </TriggerActions>
+  </ModOp>
+  <!-- END - COMBACKFLEET JEAN - EndGame - 153277 -->
+
+  <!-- ANNE -->
+
+  <ModOp Type="merge" GUID='73' Path="Values/Pirate">
+    <ComebackQuests>
+      <EarlyGame>
+        <PossibleQuests>
+          <Item>
+            <GUID>153266</GUID>
+          </Item>
+          <Item>
+            <GUID>153262</GUID>
+          </Item>
+        </PossibleQuests>
+      </EarlyGame>
+      <EarlyMidGame>
+        <PossibleQuests>
+          <Item>
+            <GUID>153266</GUID>
+          </Item>
+          <Item>
+            <GUID>153266</GUID>
+          </Item>
+          <Item>
+            <GUID>153262</GUID>
+          </Item>
+        </PossibleQuests>
+      </EarlyMidGame>
+      <MidGame>
+        <PossibleQuests>
+          <Item>
+            <GUID>153269</GUID>
+          </Item>
+          <Item>
+            <GUID>153269</GUID>
+          </Item>
+          <Item>
+            <GUID>153262</GUID>
+          </Item>
+        </PossibleQuests>
+      </MidGame>
+      <LateMidGame>
+        <PossibleQuests>
+          <Item>
+            <GUID>153270</GUID>
+          </Item>
+          <Item>
+            <GUID>153270</GUID>
+          </Item>
+          <Item>
+            <GUID>153262</GUID>
+          </Item>
+        </PossibleQuests>
+      </LateMidGame>
+      <LateGame>
+        <PossibleQuests>
+          <Item>
+            <GUID>153270</GUID>
+          </Item>
+          <Item>
+            <GUID>153270</GUID>
+          </Item>
+          <Item>
+            <GUID>153270</GUID>
+          </Item>
+          <Item>
+            <GUID>153262</GUID>
+          </Item>
+        </PossibleQuests>
+      </LateGame>
+      <EndGame>
+        <PossibleQuests>
+          <Item>
+            <GUID>153271</GUID>
+          </Item>
+          <Item>
+            <GUID>153271</GUID>
+          </Item>
+          <Item>
+            <GUID>153262</GUID>
+          </Item>
+        </PossibleQuests>
+      </EndGame>
+    </ComebackQuests>
+  </ModOp>
+
+  <!-- JEAN -->
+
+  <ModOp Type="merge" GUID='76' Path="Values/Pirate">
+    <ComebackQuests>
+      <EarlyGame>
+        <PossibleQuests>
+          <Item>
+            <GUID>153274</GUID>
+          </Item>
+          <Item>
+            <GUID>153272</GUID>
+          </Item>
+        </PossibleQuests>
+      </EarlyGame>
+      <EarlyMidGame>
+        <PossibleQuests>
+          <Item>
+            <GUID>153274</GUID>
+          </Item>
+          <Item>
+            <GUID>153274</GUID>
+          </Item>
+          <Item>
+            <GUID>153272</GUID>
+          </Item>
+        </PossibleQuests>
+      </EarlyMidGame>
+      <MidGame>
+        <PossibleQuests>
+          <Item>
+            <GUID>153275</GUID>
+          </Item>
+          <Item>
+            <GUID>153275</GUID>
+          </Item>
+          <Item>
+            <GUID>153272</GUID>
+          </Item>
+        </PossibleQuests>
+      </MidGame>
+      <LateMidGame>
+        <PossibleQuests>
+          <Item>
+            <GUID>153276</GUID>
+          </Item>
+          <Item>
+            <GUID>153276</GUID>
+          </Item>
+          <Item>
+            <GUID>153272</GUID>
+          </Item>
+        </PossibleQuests>
+      </LateMidGame>
+      <LateGame>
+        <PossibleQuests>
+          <Item>
+            <GUID>153276</GUID>
+          </Item>
+          <Item>
+            <GUID>153276</GUID>
+          </Item>
+          <Item>
+            <GUID>153276</GUID>
+          </Item>
+          <Item>
+            <GUID>153272</GUID>
+          </Item>
+        </PossibleQuests>
+      </LateGame>
+      <EndGame>
+        <PossibleQuests>
+          <Item>
+            <GUID>153277</GUID>
+          </Item>
+          <Item>
+            <GUID>153277</GUID>
+          </Item>
+          <Item>
+            <GUID>153272</GUID>
+          </Item>
+        </PossibleQuests>
+      </EndGame>
+    </ComebackQuests>
+  </ModOp>
+  <!-- END - COMBACK QUESTS -->
+
+  <!-- START - TRADE BUDGET -->
+  <ModOp Type="merge" GUID='73,76' Path="Values/Interaction/">
+    <PaMSyTrade>
+      <ActiveTrade>
+        <TradeAmount>50000</TradeAmount>        <!-- 5000 -->
+      </ActiveTrade>
+      <PassiveTrade>
+        <TradeAmount>150000</TradeAmount>        <!-- 20000 -->
+      </PassiveTrade>
+    </PaMSyTrade>
+  </ModOp>
+  <!-- END - TRADE BUDGET -->
+
+</ModOps>

@@ -1,0 +1,290 @@
+<!-- 
+  Airships
+-->
+
+<ModOps>
+
+  <!-- START ADDING PIRATE AIRSHIPS -->
+
+  <!-- START PIRATE HAWK -->
+  <ModOp Type="addNextSibling" GUID='1054'>
+    <Asset>
+      <BaseAssetGUID>1054</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742102094</GUID>
+          <Name>Pirate Hawk</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/ships/icon_airship_hunter_light.png</IconFilename>
+          <InfoDescription>1742102095</InfoDescription>
+        </Standard>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/vehicle/pirate_airship/pirate_hawk_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Mesh>
+          <LogoMode>Disabled</LogoMode>
+        </Mesh>
+        <Walking>
+          <Acceleration>5.5</Acceleration>          <!-- 5 -->
+          <Deceleration>3</Deceleration>          <!-- 5 -->
+          <TurnSpeed>160</TurnSpeed>          <!-- 145 -->
+          <TurnSpeedInPlace>105</TurnSpeedInPlace>          <!-- 95 -->
+          <ForwardSpeed>16</ForwardSpeed>          <!-- 15 -->
+          <WindMaxSpeedupFactor>2</WindMaxSpeedupFactor>          <!-- 1.7 -->
+        </Walking>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Pirate Hawk</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>57664</LineID>
+        </Text>
+        <CommandQueue>
+          <MilitaryAirShipPoints>2</MilitaryAirShipPoints>
+          <TradeShipPoints>0</TradeShipPoints>
+          <AirShipPoints>0</AirShipPoints>
+        </CommandQueue>
+        <Attackable>
+          <MaximumHitPoints>2000</MaximumHitPoints>          <!-- 1400 -->
+        </Attackable>
+        <Craftable>
+          <CraftingTime>420000</CraftingTime>          <!-- ? -->
+        </Craftable>
+        <Sellable>
+          <CanBeSoldToTrader>0</CanBeSoldToTrader>
+        </Sellable>
+        <Locked>
+          <DefaultLockedState>1</DefaultLockedState>
+        </Locked>
+        <Bombarder>
+          <Shafts>2</Shafts>
+        </Bombarder>
+        <Attacker>
+          <BaseDamage>65</BaseDamage>          <!-- 55 -->
+          <ReloadTime>16</ReloadTime>          <!-- 22 -->
+          <Turrets>
+            <Item>
+              <TurnSpan>360</TurnSpan>
+              <TurretCfg>data/dlc11/graphics/vehicle/airships/airship_gun_turret/airship_gun_turret_01.cfg</TurretCfg>
+            </Item>
+          </Turrets>
+          <ProjectileAsset>2295</ProjectileAsset>
+          <TurretExplosionEffectAsset>2296</TurretExplosionEffectAsset>
+          <MuzzleEffectAssets>
+            <Item>
+              <MuzzleEffectAsset>2297</MuzzleEffectAsset>
+            </Item>
+          </MuzzleEffectAssets>
+          <FullVolleyTimeMin>1</FullVolleyTimeMin>
+          <FullVolleyTimeMax>2</FullVolleyTimeMax>
+          <AccuracyByDistance>
+            <Item/>
+            <Item>
+              <AccuracyByDistancePair>
+                <EnemyDistanceRelToAttackRange>30</EnemyDistanceRelToAttackRange>
+                <CorrespondingAccuracy>60</CorrespondingAccuracy>
+              </AccuracyByDistancePair>
+            </Item>
+            <Item>
+              <AccuracyByDistancePair>
+                <EnemyDistanceRelToAttackRange>100</EnemyDistanceRelToAttackRange>
+              </AccuracyByDistancePair>
+            </Item>
+          </AccuracyByDistance>
+          <WeaponIcon>2188</WeaponIcon>
+        </Attacker>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PIRATE HAWK -->
+
+  <!-- START PIRATE BLACK EAGLE -->
+  <ModOp Type="addNextSibling" GUID='1056'>
+    <Asset>
+      <BaseAssetGUID>1056</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742102096</GUID>
+          <Name>Pirate Black Eagle</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/ships/icon_airship_hunter.png</IconFilename>
+          <InfoDescription>1742102097</InfoDescription>
+        </Standard>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/vehicle/pirate_airship/pirate_black_eagle_01.cfg</Filename>
+            </Item>
+          </Variations>
+          <Skins />
+        </Object>
+        <Mesh>
+          <LogoMode>Disabled</LogoMode>
+        </Mesh>
+        <Walking>
+          <TurnAroundRadius>5</TurnAroundRadius>          <!-- 6 -->
+          <Acceleration>4.5</Acceleration>          <!-- 3.5 -->
+          <Deceleration>2.5</Deceleration>          <!-- 3.5 -->
+          <TurnRadius>5</TurnRadius>          <!-- 6 -->
+          <TurnSpeed>130</TurnSpeed>          <!-- 120 -->
+          <TurnSpeedInPlace>120</TurnSpeedInPlace>          <!-- 110 -->
+          <ForwardSpeed>14</ForwardSpeed>          <!-- 13 -->
+          <WindMaxSpeedupFactor>1.8</WindMaxSpeedupFactor>          <!-- 1.6 -->
+        </Walking>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Pirate Black Eagle</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>57665</LineID>
+        </Text>
+        <Attackable>
+          <MaximumHitPoints>3500</MaximumHitPoints>          <!-- 2300 -->
+        </Attackable>
+        <Craftable>
+          <CraftingTime>510000</CraftingTime>          <!-- 1020000 -->
+        </Craftable>
+        <Sellable>
+          <CanBeSoldToTrader>0</CanBeSoldToTrader>
+        </Sellable>
+        <Locked>
+          <DefaultLockedState>1</DefaultLockedState>
+        </Locked>
+        <Attacker>
+          <BaseDamage>145</BaseDamage>          <!-- 130 -->
+          <ReloadTime>22</ReloadTime>          <!-- 25 -->
+          <Turrets>
+            <Item>
+              <TurnSpan>360</TurnSpan>
+              <TurretCfg>data/dlc11/graphics/vehicle/airships/airship_gun_turret/airship_gun_turret_01_rotated.cfg</TurretCfg>
+            </Item>
+            <Item>
+              <TurnSpan>360</TurnSpan>
+              <TurretCfg>data/dlc11/graphics/vehicle/airships/airship_gun_turret/airship_gun_turret_01.cfg</TurretCfg>
+            </Item>
+          </Turrets>
+          <ProjectileAsset>2295</ProjectileAsset>
+          <TurretExplosionEffectAsset>2296</TurretExplosionEffectAsset>
+          <MuzzleEffectAssets>
+            <Item>
+              <MuzzleEffectAsset>2297</MuzzleEffectAsset>
+            </Item>
+          </MuzzleEffectAssets>
+          <FullVolleyTimeMin>1</FullVolleyTimeMin>
+          <FullVolleyTimeMax>2</FullVolleyTimeMax>
+          <AccuracyByDistance>
+            <Item/>
+            <Item>
+              <AccuracyByDistancePair>
+                <EnemyDistanceRelToAttackRange>30</EnemyDistanceRelToAttackRange>
+                <CorrespondingAccuracy>60</CorrespondingAccuracy>
+              </AccuracyByDistancePair>
+            </Item>
+            <Item>
+              <AccuracyByDistancePair>
+                <EnemyDistanceRelToAttackRange>100</EnemyDistanceRelToAttackRange>
+              </AccuracyByDistancePair>
+            </Item>
+          </AccuracyByDistance>
+          <WeaponIcon>2188</WeaponIcon>
+        </Attacker>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PIRATE BLACK EAGLE -->
+
+  <!-- END ADDING PIRATE AIRSHIPS -->
+
+  <!-- START ADDING PIRATE AIRSHIPS FOR PLAYER -->
+
+  <!-- PIRATE HAWK - PLAYER -->
+  <ModOp Type="addNextSibling" GUID='1742102094'>
+    <Asset>
+      <BaseAssetGUID>1742102094</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742102098</GUID>
+          <Name>Pirate Hawk (Player)</Name>
+        </Standard>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <Amount>950000</Amount>              <!-- 850000 -->
+            </Item>
+            <Item>
+              <Ingredient>1742102058</Ingredient>              <!--Pirate Sailors-->
+              <Amount>10</Amount>
+            </Item>
+          </Costs>
+          <InfluenceCostPoints>8</InfluenceCostPoints>          <!-- 4 -->
+        </Cost>
+        <ItemContainer>
+          <SlotCount>1</SlotCount>
+          <SocketCount>1</SocketCount>
+          <InitSocketItems>
+            <Item>
+              <Item>1742102100</Item>
+            </Item>
+          </InitSocketItems>
+        </ItemContainer>
+        <Craftable>
+          <CraftingTime>250000</CraftingTime>          <!-- 510000 -->
+        </Craftable>
+        <Sellable>
+          <CanBeSoldToTrader>0</CanBeSoldToTrader>
+        </Sellable>
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- PIRATE BLACK EAGLE - PLAYER -->
+  <ModOp Type="addNextSibling" GUID='1742102096'>
+    <Asset>
+      <BaseAssetGUID>1742102096</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742102099</GUID>
+          <Name>Pirate Black Eagle (Player)</Name>
+        </Standard>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <Amount>1255000</Amount>              <!-- 955000 -->
+            </Item>
+            <Item>
+              <Ingredient>1742102058</Ingredient>              <!--Pirate Sailors-->
+              <Amount>20</Amount>
+            </Item>
+          </Costs>
+          <InfluenceCostPoints>10</InfluenceCostPoints>          <!-- 5 -->
+        </Cost>
+        <ItemContainer>
+          <SlotCount>2</SlotCount>
+          <SocketCount>1</SocketCount>
+          <InitSocketItems>
+            <Item>
+              <Item>1742102100</Item>
+            </Item>
+          </InitSocketItems>
+        </ItemContainer>
+        <Craftable>
+          <CraftingTime>510000</CraftingTime>          <!-- 1020000 -->
+        </Craftable>
+        <Sellable>
+          <CanBeSoldToTrader>0</CanBeSoldToTrader>
+        </Sellable>
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- END ADDING PIRATE AIRSHIPS FOR PLAYER -->
+
+</ModOps>

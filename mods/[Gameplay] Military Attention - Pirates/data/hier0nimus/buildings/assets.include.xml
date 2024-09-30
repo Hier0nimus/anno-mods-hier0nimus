@@ -1,0 +1,1941 @@
+<!-- 
+  Buildings
+-->
+
+<ModOps>
+  <!-- START - BUILDING - PIRATE HAVEN -->
+  <ModOp Type="addNextSibling" GUID='1010358'>
+    <Asset>
+      <Template>PirateHaven</Template>
+      <Values>
+        <Standard>
+          <GUID>1742102000</GUID>
+          <Name>Pirate Haven</Name>
+          <IconFilename>data/graphics/icons/icon_pirates_haven.png</IconFilename>
+          <InfoDescription>1742102001</InfoDescription>
+        </Standard>
+        <Text />
+        <Blocking>
+          <GroundDecalAsset>24774</GroundDecalAsset>
+          <GroundDecalInvisible>24774</GroundDecalInvisible>
+          <GroundDecalAssetExtra>24774</GroundDecalAssetExtra>
+          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+          <HarbourAreaExpand>1</HarbourAreaExpand>
+        </Blocking>
+        <Building>
+          <BuildingType>Logistic</BuildingType>
+          <BuildingCategoryName>11151</BuildingCategoryName>
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <AssociatedRegions>Colony01</AssociatedRegions>
+          <AllowChangeVariation>1</AllowChangeVariation>
+          <TerrainType>Coast</TerrainType>
+        </Building>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>125000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>80</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!-- Bricks - Product -->
+              <Amount>50</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product -->
+              <Amount>35</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>              <!-- Windows - Product -->
+              <Amount>20</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Selection>
+          <GUIType>Hacienda</GUIType>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <ParticipantMessageTrigger>ClickKontor</ParticipantMessageTrigger>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/military/pirate_haven/pirate_haven_nw_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Constructable />
+        <Mesh>
+          <LogoMode>CorporationLogoFromPlayer</LogoMode>
+          <SetCompanyLogo>1</SetCompanyLogo>
+        </Mesh>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>282235</Sound>
+            </Item>
+          </ActiveSounds>
+          <DestroySounds>
+            <Item>
+              <Sound>9818756</Sound>
+            </Item>
+          </DestroySounds>
+          <IncidentSounds>
+            <InfectedFire>
+              <Item>
+                <Sound>214659</Sound>
+              </Item>
+            </InfectedFire>
+          </IncidentSounds>
+          <BuildingRepaired>
+            <Item>
+              <Sound>203866</Sound>
+            </Item>
+          </BuildingRepaired>
+        </SoundEmitter>
+        <Locked>
+          <DLCDependency>24961</DLCDependency>
+        </Locked>
+        <Infolayer />
+        <FeedbackController />
+        <Warehouse>
+          <WarehouseStorage>
+            <StorageMax>300</StorageMax>
+          </WarehouseStorage>
+        </Warehouse>
+        <LogisticNode>
+          <QueueConfiguration>
+            <ProcessingQueueParallelCount>4</ProcessingQueueParallelCount>
+          </QueueConfiguration>
+        </LogisticNode>
+        <MinimapToken>
+          <TokenAsset>2001805</TokenAsset>          <!--Harbor-->
+        </MinimapToken>
+        <AmbientMoodProvider>
+          <Murmur>Harbor</Murmur>
+        </AmbientMoodProvider>
+        <LoadingPier>
+          <NumOfPiers>2</NumOfPiers>
+          <LoadingSpeed>2</LoadingSpeed>
+          <MinLoadingTime>5</MinLoadingTime>
+        </LoadingPier>
+        <UpgradeList />
+        <Maintenance />
+        <StorageBase />
+        <Attackable>
+          <AttackableType>HarbourBuilding</AttackableType>
+          <MaximumHitPoints>8000</MaximumHitPoints>
+          <MoralePower>50</MoralePower>
+          <IslandWarFlag>102303</IslandWarFlag>          <!--island_war_flag1-->
+          <RuinSmokeParticlesMin>1</RuinSmokeParticlesMin>
+          <RuinSmokeParticlesMax>3</RuinSmokeParticlesMax>
+          <RuinSmokeParticleRectBorderPercent>0.2</RuinSmokeParticleRectBorderPercent>
+          <ExplosionEffects>
+            <Item>
+              <ExplosionEffectFilePath>data/graphics/effects/military/explosions/harbor_generic_xpl_02.cfg</ExplosionEffectFilePath>
+            </Item>
+          </ExplosionEffects>
+          <ExplosionEffectsMin>1</ExplosionEffectsMin>
+          <ExplosionEffectsMax>1</ExplosionEffectsMax>
+          <SelfHealPerHealTick>10</SelfHealPerHealTick>
+        </Attackable>
+        <Attacker>
+          <ShootingTracking>TurretFixed</ShootingTracking>
+          <TargetAngleVariation>360</TargetAngleVariation>
+          <BasicAttackType>HarbourTower</BasicAttackType>
+          <BaseDamage>250</BaseDamage>
+          <ReloadTime>50</ReloadTime>
+          <AttackRange>92</AttackRange>
+          <LineOfSightRange>92</LineOfSightRange>
+          <Turrets>
+            <Item>
+              <TurnSpan>360</TurnSpan>
+              <TurretCfg>data/graphics/buildings/special/harbor_05_colony01/harbor_05_colony01_turret.cfg</TurretCfg>
+            </Item>
+          </Turrets>
+          <ProjectileAsset>101974</ProjectileAsset>          <!--Medium_Single_Shot-->
+          <MuzzleEffectAssets>
+            <Item>
+              <MuzzleEffectAsset>102220</MuzzleEffectAsset>              <!--Shot_harbor_05_gun_turret-->
+            </Item>
+          </MuzzleEffectAssets>
+          <TurretExplosionEffectAsset>101994</TurretExplosionEffectAsset>          <!--TurretExplosion01-->
+          <EmitProjectileTimeAfterStartAnimation>0.3</EmitProjectileTimeAfterStartAnimation>
+          <AccuracyBase>1</AccuracyBase>
+          <AccuracyIncreaseOverDistance>100</AccuracyIncreaseOverDistance>
+          <AccuracyByDistance>
+            <Item>
+            </Item>
+            <Item>
+              <AccuracyByDistancePair>
+                <EnemyDistanceRelToAttackRange>100</EnemyDistanceRelToAttackRange>
+                <CorrespondingAccuracy>50</CorrespondingAccuracy>
+              </AccuracyByDistancePair>
+            </Item>
+          </AccuracyByDistance>
+        </Attacker>
+        <CommandQueue />
+        <Pausable />
+        <BuildingUnique>
+          <Uniques>
+            <Item>
+              <UniqueType>Mod12</UniqueType>
+              <UniqueScope>Area</UniqueScope>
+            </Item>
+          </Uniques>
+        </BuildingUnique>
+        <ModuleOwner>
+          <ModuleLimits>
+            <Main>
+              <Limit>999</Limit>
+            </Main>
+          </ModuleLimits>
+          <ConstructionOptions>
+            <Item>
+              <ModuleGUID>1742102066</ModuleGUID>              <!-- Wooden walking pier - AdditionalModule -->
+            </Item>
+            <Item>
+              <ModuleGUID>1742102078</ModuleGUID>              <!-- Wooden walking pier land - AdditionalModule -->
+            </Item>
+            <Item>
+              <ModuleGUID>1742102047</ModuleGUID>              <!-- Pirate Quarters - Building -->
+            </Item>
+            <Item>
+              <ModuleGUID>1742102080</ModuleGUID>              <!-- Pirate Fishery - Building -->
+            </Item>
+            <Item>
+              <ModuleGUID>1742102082</ModuleGUID>              <!-- Pirate Gold Mine - Building -->
+            </Item>
+            <Item>
+              <ModuleGUID>1742102060</ModuleGUID>              <!-- Pirate Raid Harbour - Building -->
+            </Item>
+            <Item>
+              <ModuleGUID>1742102052</ModuleGUID>              <!-- Pirate Tavern - Building -->
+            </Item>
+            <Item>
+              <ModuleGUID>1742102037</ModuleGUID>              <!-- Pirate Warehouse - Building -->
+            </Item>
+            <Item>
+              <ModuleGUID>1742102064</ModuleGUID>              <!-- Pirate Harbour Office - Building -->
+            </Item>
+            <Item>
+              <ModuleGUID>1742102056</ModuleGUID>              <!-- Pirate Recruitment Office - Building -->
+            </Item>
+            <Item>
+              <ModuleGUID>1742102002</ModuleGUID>              <!-- Pirate Charter Harbour - Building -->
+            </Item>
+          </ConstructionOptions>
+          <AddModuleLimit>0</AddModuleLimit>
+          <BlueprintModuleOption>
+            <ModuleButtonIcon>1742102000</ModuleButtonIcon>
+            <ModulePopupDescription>1742102004</ModulePopupDescription>
+            <ModulePopupHeader>1742102005</ModulePopupHeader>
+            <ModuleButtonInfotip>1742102006</ModuleButtonInfotip>
+            <ShowRemainingModuleCount>1</ShowRemainingModuleCount>
+          </BlueprintModuleOption>
+        </ModuleOwner>
+        <Hacienda>
+          <AdditionalRadiusThresholds>
+            <Item>
+              <ResidentThreshold>200</ResidentThreshold>
+              <AdditionalHaciendaRadius>10</AdditionalHaciendaRadius>
+            </Item>
+            <Item>
+              <ResidentThreshold>350</ResidentThreshold>
+              <AdditionalHaciendaRadius>12</AdditionalHaciendaRadius>
+            </Item>
+            <Item>
+              <ResidentThreshold>500</ResidentThreshold>
+              <AdditionalHaciendaRadius>15</AdditionalHaciendaRadius>
+            </Item>
+            <Item>
+              <ResidentThreshold>650</ResidentThreshold>
+              <AdditionalHaciendaRadius>18</AdditionalHaciendaRadius>
+            </Item>
+            <Item>
+              <ResidentThreshold>800</ResidentThreshold>
+              <AdditionalHaciendaRadius>22</AdditionalHaciendaRadius>
+            </Item>
+            <Item>
+              <ResidentThreshold>1000</ResidentThreshold>
+              <AdditionalHaciendaRadius>25</AdditionalHaciendaRadius>
+            </Item>
+          </AdditionalRadiusThresholds>
+          <Policies>
+            <Tier1Decree>
+              <Policy>1742102022</Policy>              <!--Pirates_Decree4-->
+              <Description>1742102017</Description>              <!--Decree1_Info-->
+            </Tier1Decree>
+            <Tier2Decree>
+              <Policy>1742102018</Policy>              <!--Pirates_Decree2A-->
+              <AttractivenessThreshold>Fair</AttractivenessThreshold>
+              <Description>1742102019</Description>              <!--Decree2_Info-->
+            </Tier2Decree>
+            <Tier3Decree>
+              <Policy>1742102020</Policy>              <!--Pirates_Decree3-->
+              <AttractivenessThreshold>Curious</AttractivenessThreshold>
+              <Description>1742102021</Description>              <!--Decree3_Info-->
+            </Tier3Decree>
+            <Tier4Decree>
+              <Policy>1742102016</Policy>              <!--Pirates_Decree1-->
+              <AttractivenessThreshold>Pleasant</AttractivenessThreshold>
+              <Description>1742102023</Description>              <!--Decree4_Info-->
+            </Tier4Decree>
+            <Tier5Decree>
+              <Policy>1742102024</Policy>              <!--Pirates_Decree5-->
+              <AttractivenessThreshold>Appealing</AttractivenessThreshold>
+              <Description>1742102025</Description>              <!--Decree5_Info-->
+            </Tier5Decree>
+          </Policies>
+        </Hacienda>
+        <IncidentInfectable />
+        <PublicService>
+          <PublicServiceOutputs>
+            <Item>
+              <Product>1742102050</Product>              <!--Pirate Haven-->
+            </Item>
+          </PublicServiceOutputs>
+          <FunctionDescription>100364</FunctionDescription>          <!--Provides Service-->
+        </PublicService>
+        <Culture>
+          <Attractiveness>1000</Attractiveness>
+        </Culture>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - BUILDING - PIRATE HAVEN -->
+
+  <!-- ******************************************************************************************  -->
+  <!-- ******************** !!!!!!!!!!!!!! STILL TO FIX !!!!!!!!!!!!!! **************************  -->
+  <!-- ******************** !!!!!!!!!!!!!! STREET FIX !!!!!!!!!!!!!! **************************  -->
+  <!-- ******************************************************************************************  -->
+
+  <!-- START - ADD WOODEN WALKING PIER -->
+  <ModOp GUID="102119" Type="addNextSibling">
+    <Asset>
+      <Template>AdditionalModule</Template>
+      <Values>
+        <Standard>
+          <GUID>1742102066</GUID>
+          <Name>Wooden walking pier</Name>
+          <IconFilename>data/graphics/icons/icon_walking_pier.png</IconFilename>
+          <InfoDescription>1742102067</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11153</BuildingCategoryName>          <!--Street-->
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <SecondPartyRelevant>0</SecondPartyRelevant>
+          <ModuleParentType>Hacienda</ModuleParentType>
+          <TerrainType>Water_Including_Coast</TerrainType>
+        </Building>
+        <Blocking>
+          <HidePropsRadius>0</HidePropsRadius>
+          <DeletePropsRadius>0</DeletePropsRadius>
+          <GroundDecalAsset>24774</GroundDecalAsset>
+          <GroundDecalInvisible>1742102066</GroundDecalInvisible>
+          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+          <DisableDefaultTrafficFeedback>0</DisableDefaultTrafficFeedback>
+        </Blocking>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!--Money-->
+              <Amount>75</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!--timber-->
+              <Amount>1</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data\graphics\buildings\military\street\military_ornaments_floor_harbour_1x1_01.cfg</Filename>
+            </Item>
+          </Variations>
+          <Skins>
+            <DefaultSkinName>1742102066</DefaultSkinName>
+            <DefaultSkinDescription>1742102067</DefaultSkinDescription>            <!--ChangeBuildingSkin_toDefaultSkinDesc-->
+            <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>            <!--Classic-->
+          </Skins>
+        </Object>
+        <Mesh/>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+        </Selection>
+        <Text />
+        <Constructable/>
+        <Locked>
+          <DLCDependency>24961</DLCDependency>
+        </Locked>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>209211</Sound>
+            </Item>
+          </ActiveSounds>
+        </SoundEmitter>
+        <FeedbackController/>
+        <Infolayer/>
+        <BuildingModule>
+          <PlazaSize>20</PlazaSize>
+          <ModuleType>Main</ModuleType>
+        </BuildingModule>
+        <AmbientMoodProvider />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - ADD WOODEN WALKING PIER -->
+
+  <!-- START - ADD WOODEN WALKING PIER LAND -->
+  <ModOp GUID="102119" Type="addNextSibling">
+    <Asset>
+      <Template>AdditionalModule</Template>
+      <Values>
+        <Standard>
+          <GUID>1742102078</GUID>
+          <Name>Wooden walking pier land</Name>
+          <IconFilename>data/graphics/icons/icon_walking_pier.png</IconFilename>
+          <InfoDescription>1742102067</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11153</BuildingCategoryName>          <!--Street-->
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <SecondPartyRelevant>0</SecondPartyRelevant>
+          <ModuleParentType>Hacienda</ModuleParentType>
+          <TerrainType>Terrain</TerrainType>
+        </Building>
+        <Blocking>
+          <HidePropsRadius>0</HidePropsRadius>
+          <DeletePropsRadius>0</DeletePropsRadius>
+          <GroundDecalAsset>24774</GroundDecalAsset>
+          <GroundDecalInvisible>1742102078</GroundDecalInvisible>
+          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+          <DisableDefaultTrafficFeedback>0</DisableDefaultTrafficFeedback>
+        </Blocking>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!--Money-->
+              <Amount>75</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!--timber-->
+              <Amount>1</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data\graphics\buildings\military\street\military_ornaments_floor_harbour_1x1_01.cfg</Filename>
+            </Item>
+          </Variations>
+          <Skins>
+            <DefaultSkinName>1742102078</DefaultSkinName>
+            <DefaultSkinDescription>1742102067</DefaultSkinDescription>            <!--ChangeBuildingSkin_toDefaultSkinDesc-->
+            <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>            <!--Classic-->
+          </Skins>
+        </Object>
+        <Mesh/>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+        </Selection>
+        <Text />
+        <Constructable/>
+        <Locked>
+          <DLCDependency>24961</DLCDependency>
+        </Locked>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>209211</Sound>
+            </Item>
+          </ActiveSounds>
+        </SoundEmitter>
+        <FeedbackController/>
+        <Infolayer/>
+        <BuildingModule>
+          <PlazaSize>20</PlazaSize>
+          <ModuleType>Main</ModuleType>
+        </BuildingModule>
+        <AmbientMoodProvider />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - ADD WOODEN WALKING PIER -->
+
+  <!-- START BUILDING - PIRATE CHARTER HARBOUR -->
+  <ModOp Type="addNextSibling" GUID='1010520'>
+    <Asset>
+      <BaseAssetGUID>1010520</BaseAssetGUID>      <!--harbor_02 (Sailing Shipyard)-->
+      <Values>
+        <Standard>
+          <GUID>1742102002</GUID>
+          <Name>Pirate Charter Harbour</Name>
+          <IconFilename>data/graphics/icons/icon_pirates_charter_harbour.png</IconFilename>
+          <InfoDescription>1742102003</InfoDescription>
+        </Standard>
+        <Building>
+          <AssociatedRegions>Colony01</AssociatedRegions>
+        </Building>
+        <Blocking>
+          <GroundDecalAsset>24774</GroundDecalAsset>
+          <GroundDecalInvisible>24774</GroundDecalInvisible>
+          <GroundDecalAssetExtra>24774</GroundDecalAssetExtra>
+          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+          <HarbourAreaExpand>1</HarbourAreaExpand>
+        </Blocking>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/military/pirate_charter_harbour/pirate_charter_harbour_nw_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+        </Selection>
+        <Shipyard>
+          <AssemblyOptions>
+            <Item>
+              <Vehicle>1742102028</Vehicle>              <!--Pirate Gunboat-->
+            </Item>
+            <Item>
+              <Vehicle>1742102029</Vehicle>              <!--Pirate Frigate-->
+            </Item>
+            <Item>
+              <Vehicle>1742102030</Vehicle>              <!--Pirate SOTL-->
+            </Item>
+            <Item>
+              <Vehicle>1742102032</Vehicle>              <!--Jolly Roger-->
+            </Item>
+            <Item>
+              <Vehicle>1742102031</Vehicle>              <!--Pirate Monitor-->
+            </Item>
+            <Item>
+              <Vehicle>1742102076</Vehicle>              <!--Pirate Flame Monitor-->
+            </Item>
+            <Item>
+              <Vehicle>1742102034</Vehicle>              <!-- Pirate Ironclad Cruiser - Warship -->
+            </Item>
+            <Item>
+              <Vehicle>1742102098</Vehicle>              <!-- Pirate Hawk - WarAirShip -->
+            </Item>
+            <Item>
+              <Vehicle>1742102099</Vehicle>              <!-- Pirate Black Eagle - WarAirShip -->
+            </Item>
+            <Item>
+              <Vehicle>1742102033</Vehicle>              <!-- Pirate Battle Cruiser - Warship -->
+            </Item>
+            <Item>
+              <Vehicle>1742102077</Vehicle>              <!-- Pirate Warship Cruiser - Warship -->
+            </Item>
+          </AssemblyOptions>
+        </Shipyard>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>80000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>40</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!-- Bricks - Product -->
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product -->
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>              <!-- Windows - Product -->
+              <Amount>10</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>1500</Amount>
+            </Item>
+            <Item>
+              <Product>1742102049</Product>              <!--Pirate workforce-->
+              <Amount>40</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - PIRATE CHARTER HARBOUR -->
+
+  <!-- START BUILDING - PIRATE QUARTERS -->
+  <ModOp Type="addNextSibling" GUID='101254'>
+    <Asset>
+      <Template>ResidenceBuilding7_Colony</Template>
+      <Values>
+        <Standard>
+          <GUID>1742102047</GUID>
+          <Name>Pirate Quarters</Name>
+          <IconFilename>data/graphics/icons/icon_pirates_quarters.png</IconFilename>
+          <InfoDescription>1742102048</InfoDescription>
+        </Standard>
+        <Blocking/>
+        <Building>
+          <TerrainType>Water_Including_Coast</TerrainType>
+          <BuildingType>Residence</BuildingType>
+          <SkipUnlockMessage>1</SkipUnlockMessage>
+          <BuildModeRandomRotation>90</BuildModeRandomRotation>
+          <AssociatedRegions>Colony01</AssociatedRegions>
+        </Building>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>2</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Mesh/>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/residence/pirates/pirates_01_01.cfg</Filename>
+            </Item>
+            <Item>
+              <Filename>data/graphics/buildings/residence/pirates/pirates_02_01.cfg</Filename>
+            </Item>
+            <Item>
+              <Filename>data/graphics/buildings/residence/pirates/pirates_03_01.cfg</Filename>
+            </Item>
+            <Item>
+              <Filename>data/graphics/buildings/residence/pirates/pirates_04_01.cfg</Filename>
+            </Item>
+            <Item>
+              <Filename>data/graphics/buildings/residence/pirates/pirates_05_01.cfg</Filename>
+            </Item>
+            <Item>
+              <Filename>data/graphics/buildings/residence/pirates/pirates_06_01.cfg</Filename>
+            </Item>
+            <Item>
+              <Filename>data/graphics/buildings/residence/pirates/pirates_07_01.cfg</Filename>
+            </Item>
+          </Variations>
+          <DefaultParticipant>Scenario_Item_Trader</DefaultParticipant>
+        </Object>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>Advisor_02_Aahrant</ParticipantMessageArcheType>
+        </Selection>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Pirate Quarters</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>8481</LineID>
+        </Text>
+        <Constructable/>
+        <Locked>
+          <DefaultLockedState>1</DefaultLockedState>
+        </Locked>
+        <SoundEmitter>
+          <BuildingRepaired>
+            <Item>
+              <Sound>203866</Sound>              <!--wwe_sfx_aui_bld_3d_renovate-->
+            </Item>
+          </BuildingRepaired>
+          <MaterialType>Wood</MaterialType>
+        </SoundEmitter>
+        <Infolayer/>
+        <FeedbackController/>
+        <Residence7>
+          <PopulationLevel7>1742102040</PopulationLevel7>
+          <ResidentMax>10</ResidentMax>
+          <IsBaseResidence>1</IsBaseResidence>
+        </Residence7>
+        <LogisticNode/>
+        <AmbientMoodProvider>
+          <DynamicEnvironmentType>None</DynamicEnvironmentType>
+          <HappinessDependentMurmur>
+            <Angry>
+              <Murmur>JornaleroUnhappy</Murmur>
+            </Angry>
+            <Unhappy>
+              <Murmur>JornaleroContent</Murmur>
+            </Unhappy>
+            <Neutral>
+              <Murmur>JornaleroContent</Murmur>
+            </Neutral>
+            <Happy>
+              <Murmur>JornaleroHappy</Murmur>
+            </Happy>
+            <Euphoric>
+              <Murmur>JornaleroHappy</Murmur>
+            </Euphoric>
+          </HappinessDependentMurmur>
+        </AmbientMoodProvider>
+        <UpgradeList/>
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+          <MaximumHitPoints>1500</MaximumHitPoints>
+        </Attackable>
+        <IncidentInfectable>
+          <Infectable>
+            <Explosion>
+              <Base>0</Base>
+              <Escalated>0</Escalated>
+            </Explosion>
+          </Infectable>
+          <Explosion>
+            <ExplosionCoreDamage>1000</ExplosionCoreDamage>
+          </Explosion>
+          <IncidentInfectionChanceFactors>
+            <Fire>
+              <DensityFactor>0.025</DensityFactor>
+              <DensityDistance>15</DensityDistance>
+            </Fire>
+            <Riot>
+              <ResidenceHappinessFactor>0.4</ResidenceHappinessFactor>
+              <HappinessThreshold>10</HappinessThreshold>
+            </Riot>
+            <Illness>
+              <BaseChance>4</BaseChance>
+              <HitpointFactor>0.1</HitpointFactor>
+              <DensityFactor>0.025</DensityFactor>
+              <DensityDistance>15</DensityDistance>
+              <DilapidatedFactor>10</DilapidatedFactor>
+              <FactoryOvertimeFactor>0.3</FactoryOvertimeFactor>
+              <FactoryUndertimeFactor>0.15</FactoryUndertimeFactor>
+              <ResidenceFullOvertimeChance>20</ResidenceFullOvertimeChance>
+              <ResidenceFullUndertimeChance>-15</ResidenceFullUndertimeChance>
+              <EcoSystemFactor>50</EcoSystemFactor>
+            </Illness>
+            <Explosion>
+              <ResidenceFullOvertimeChance>20</ResidenceFullOvertimeChance>
+              <ResidenceFullUndertimeChance>-15</ResidenceFullUndertimeChance>
+            </Explosion>
+          </IncidentInfectionChanceFactors>
+        </IncidentInfectable>
+        <Pausable/>
+        <Culture/>
+        <StreetActivation/>
+        <InfluenceSource/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - PIRATE QUARTERS -->
+
+  <!-- START BUILDING - PIRATE RAID HARBOUR -->
+  <ModOp Type="addNextSibling" GUID='101262'>
+    <Asset>
+      <BaseAssetGUID>101262</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742102060</GUID>
+          <Name>Pirate Raid Harbour</Name>
+          <IconFilename>data/graphics/icons/icon_pirates_loot.png</IconFilename>
+        </Standard>
+        <Building />
+        <Blocking>
+          <GroundDecalAsset>24774</GroundDecalAsset>
+          <GroundDecalInvisible>24774</GroundDecalInvisible>
+          <GroundDecalAssetExtra>24774</GroundDecalAssetExtra>
+          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+          <HarbourAreaExpand>0</HarbourAreaExpand>
+        </Blocking>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!--Money-->
+              <Amount>10000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!--timber-->
+              <Amount>24</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!--bricks-->
+              <Amount>12</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!--beams-->
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>              <!-- Windows - Product -->
+              <Amount>5</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/military/pirate_raid_harbour/pirate_raid_harbour_nw_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Mesh/>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>Advisor_02_Aahrant</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Pirate Raid Harbour</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>8487</LineID>
+        </Text>
+        <Constructable/>
+        <Locked/>
+        <SoundEmitter />
+        <FeedbackController/>
+        <Infolayer/>
+        <UpgradeList/>
+        <Factory7/>
+        <FactoryBase>
+          <FactoryOutputs>
+            <Item>
+              <Product>1742102062</Product>              <!--Pirate Loot  -->
+              <Amount>1</Amount>
+              <StorageAmount>8</StorageAmount>
+            </Item>
+          </FactoryOutputs>
+          <CycleTime>15</CycleTime>
+          <IsMainFactory>0</IsMainFactory>
+        </FactoryBase>
+        <LogisticNode/>
+        <AmbientMoodProvider>
+          <Murmur>Harbor</Murmur>
+        </AmbientMoodProvider>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>              <!--Money-->
+              <Amount>125</Amount>
+              <InactiveAmount>50</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742102049</Product>              <!--Pirate workforce-->
+              <Amount>20</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Attackable>
+          <AttackableType>HarbourBuilding</AttackableType>
+          <MaximumHitPoints>3500</MaximumHitPoints>
+          <MoralePower>20</MoralePower>
+          <IslandWarFlag>102303</IslandWarFlag>          <!--island_war_flag1-->
+          <RuinSmokeParticlesMin>1</RuinSmokeParticlesMin>
+          <RuinSmokeParticlesMax>3</RuinSmokeParticlesMax>
+          <RuinSmokeParticleRectBorderPercent>0.2</RuinSmokeParticleRectBorderPercent>
+          <ExplosionEffects>
+            <Item>
+              <ExplosionEffectFilePath>data/graphics/effects/military/explosions/harbor_generic_xpl_02.cfg</ExplosionEffectFilePath>
+            </Item>
+          </ExplosionEffects>
+          <ExplosionEffectsMin>1</ExplosionEffectsMin>
+          <ExplosionEffectsMax>1</ExplosionEffectsMax>
+          <SelfHealPerHealTick>10</SelfHealPerHealTick>
+        </Attackable>
+        <Pausable/>
+        <IncidentInfectable />
+        <Industrializable>
+          <BoostedByIndustrialization>0</BoostedByIndustrialization>
+        </Industrializable>
+        <Culture />
+        <QuestObject/>
+        <Electrifiable>
+          <ElectricityBoost>0</ElectricityBoost>
+          <ElectrifiedEffect>0</ElectrifiedEffect>
+          <ShowPowerInObjectMenu>0</ShowPowerInObjectMenu>
+        </Electrifiable>
+        <EcoSystemProvider />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - PIRATE RAID HARBOUR -->
+
+  <!-- START BUILDING - PIRATE TAVERN -->
+  <ModOp Type="addNextSibling" GUID='1010358' >
+    <Asset>
+      <Template>PirateConsumptionBuilding</Template>
+      <Values>
+        <Standard>
+          <GUID>1742102052</GUID>
+          <Name>Pirate Tavern</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_gold.png</IconFilename>
+          <InfoDescription>1742102053</InfoDescription>
+        </Standard>
+        <Blocking>
+          <GroundDecalAsset>24774</GroundDecalAsset>
+          <GroundDecalInvisible>24774</GroundDecalInvisible>
+          <GroundDecalAssetExtra>24774</GroundDecalAssetExtra>
+          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+        </Blocking>
+        <Building>
+          <TerrainType>Water_Including_Coast</TerrainType>
+          <BuildModeRandomRotation>90</BuildModeRandomRotation>
+          <AssociatedRegions>Colony01</AssociatedRegions>
+        </Building>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!--Money-->
+              <Amount>12500</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!--timber-->
+              <Amount>30</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!--bricks-->
+              <Amount>15</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!--beams-->
+              <Amount>5</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>              <!--window-->
+              <Amount>5</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/production/pirate_tavern/pirate_tavern_02.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Mesh/>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>Advisor_02_Aahrant</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Pirate Tavern</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>5310</LineID>
+        </Text>
+        <Constructable/>
+        <Locked/>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>200809</Sound>              <!--wwe_sfx_bld_food_col01_typeCluster_tag-->
+            </Item>
+            <Item>
+              <Sound>200654</Sound>              <!--wwe_sfx_bld_food_col01_01_lp-->
+            </Item>
+          </ActiveSounds>
+          <IncidentSounds>
+            <InfectedFire>
+              <Item>
+                <Sound>214659</Sound>                <!--wwe_sfx_bld_inc_burn-->
+              </Item>
+            </InfectedFire>
+          </IncidentSounds>
+        </SoundEmitter>
+        <FeedbackController/>
+        <Infolayer/>
+        <UpgradeList/>
+        <Factory7/>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1010257</Product>              <!--Rum-->
+              <Amount>1</Amount>
+              <StorageAmount>8</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1742102062</Product>              <!--Pirate Loot-->
+              <Amount>1</Amount>
+              <StorageAmount>6</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <FactoryOutputs>
+            <Item>
+              <Product>1010249</Product>              <!--Gold-->
+              <Amount>1</Amount>
+              <StorageAmount>8</StorageAmount>
+            </Item>
+          </FactoryOutputs>
+          <CycleTime>15</CycleTime>
+          <IsMainFactory>0</IsMainFactory>
+        </FactoryBase>
+        <LogisticNode/>
+        <AmbientMoodProvider>
+          <Murmur>Harbor</Murmur>
+        </AmbientMoodProvider>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>              <!--Money-->
+              <Amount>100</Amount>
+              <InactiveAmount>50</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742102049</Product>              <!--Pirate workforce-->
+              <Amount>10</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Pausable/>
+        <IncidentInfectable>
+          <Explosion>
+            <ExplosionCoreDamage>1000</ExplosionCoreDamage>
+            <DamageExplosionChance>25</DamageExplosionChance>
+          </Explosion>
+          <IncidentInfectionChanceFactors>
+            <Fire>
+              <DensityDistance>20</DensityDistance>
+              <FactoryProductivityFactor>0.1</FactoryProductivityFactor>
+              <FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
+            </Fire>
+            <Explosion>
+              <BaseChance>4</BaseChance>
+              <FactoryProductivityFactor>0.1</FactoryProductivityFactor>
+              <FactoryOvertimeFactor>0.1</FactoryOvertimeFactor>
+              <FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
+            </Explosion>
+          </IncidentInfectionChanceFactors>
+        </IncidentInfectable>
+        <Industrializable/>
+        <Culture>
+          <CultureType>Culture</CultureType>
+        </Culture>
+        <QuestObject/>
+        <Electrifiable/>
+        <EcoSystemProvider/>
+        <PublicService>
+          <PublicServiceOutputs>
+            <Item>
+              <Product>1742102063</Product>              <!--Pirate Tavern-->
+            </Item>
+          </PublicServiceOutputs>
+        </PublicService>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - PIRATE TAVERN -->
+
+  <!-- START BUILDING - PIRATE RECRUITMENT OFFICE  -->
+  <ModOp Type="addNextSibling" GUID='1010284'>
+    <Asset>
+      <Template>PirateRecruitmentOffice</Template>
+      <Values>
+        <Standard>
+          <GUID>1742102056</GUID>
+          <Name>Pirate Recruitment Office</Name>
+          <IconFilename>data/graphics/icons/icon_pirates_recruitment.png</IconFilename>
+          <InfoDescription>1742102057</InfoDescription>
+        </Standard>
+        <Blocking>
+          <GroundDecalAsset>24774</GroundDecalAsset>
+          <GroundDecalInvisible>24774</GroundDecalInvisible>
+          <GroundDecalAssetExtra>24774</GroundDecalAssetExtra>
+          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+        </Blocking>
+        <Building>
+          <TerrainType>Water_Including_Coast</TerrainType>
+          <BuildingType>Residence</BuildingType>
+          <SkipUnlockMessage>1</SkipUnlockMessage>
+          <BuildModeRandomRotation>90</BuildModeRandomRotation>
+          <AssociatedRegions>Colony01</AssociatedRegions>
+        </Building>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!--Money-->
+              <Amount>10000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!--timber-->
+              <Amount>20</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!--bricks-->
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!--beams-->
+              <Amount>5</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>              <!--window-->
+              <Amount>5</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/military/pirate_recruitment_office/pirate_recruitment_office_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Selection>
+          <GUIType>Production</GUIType>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>Advisor_02_Aahrant</ParticipantMessageArcheType>
+        </Selection>
+        <FactoryBase>
+          <FactoryOutputs>
+            <Item>
+              <Product>1742102058</Product>
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+          </FactoryOutputs>
+          <CycleTime>30</CycleTime>
+          <WarehouseTransporterAsset>829</WarehouseTransporterAsset>
+          <MissingConnectionInfolayer>0</MissingConnectionInfolayer>
+          <IsMainFactory>0</IsMainFactory>
+        </FactoryBase>
+        <LogisticNode />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>              <!-- Coins -->
+              <Amount>100</Amount>
+              <InactiveAmount>50</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742102049</Product>              <!-- Pirates Workforce -->
+              <Amount>30</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Pausable />
+        <UpgradeList />
+        <ItemContainer>
+          <SocketAllocation>Mod11</SocketAllocation>
+          <SocketCount>1</SocketCount>
+          <SocketScope>Radius</SocketScope>
+          <SocketScopeRadius>32</SocketScopeRadius>
+          <SocketScopeRadiusOverlapCategory>Mod11</SocketScopeRadiusOverlapCategory>
+        </ItemContainer>
+        <BuffFactory />
+        <PublicService />
+        <Postbox />
+        <Warehouse>
+          <WarehouseStorage>
+            <StorageMax>500</StorageMax>
+          </WarehouseStorage>
+          <StorageType>Warehouse</StorageType>
+        </Warehouse>
+        <StorageBase>
+          <ProductStorageList>1742102059</ProductStorageList>
+        </StorageBase>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - PIRATE RECRUITMENT OFFICE - Building -->
+
+  <!-- START BUILDING - PIRATE HARBOUR OFFICE - Building -->
+  <ModOp Type="addNextSibling" GUID='100586'>
+    <Asset>
+      <BaseAssetGUID>100586</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742102064</GUID>
+          <Name>Pirate Harbour Office</Name>
+          <IconFilename>data/graphics/icons/icon_pirates_harbour_office.png</IconFilename>
+          <InfoDescription>1742102065</InfoDescription>
+        </Standard>
+        <Building>
+          <AssociatedRegions>Colony01</AssociatedRegions>
+        </Building>
+        <Blocking>
+          <GroundDecalAsset>24774</GroundDecalAsset>
+          <GroundDecalInvisible>24774</GroundDecalInvisible>
+          <GroundDecalAssetExtra>24774</GroundDecalAssetExtra>
+        </Blocking>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/special/pirate_harbour_office/pirate_harbour_office_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Mesh/>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+        </Selection>
+        <Text>
+          <LineID>8505</LineID>
+        </Text>
+        <Constructable/>
+        <Locked/>
+        <SoundEmitter/>
+        <FeedbackController/>
+        <Infolayer/>
+        <ItemContainer>
+          <SocketScopeRadius>36</SocketScopeRadius>
+        </ItemContainer>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!--Money-->
+              <Amount>12500</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!--timber-->
+              <Amount>20</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!--bricks-->
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!--beams-->
+              <Amount>5</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>              <!--window-->
+              <Amount>5</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>50</Amount>
+              <InactiveAmount>25</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742102049</Product>              <!--Pirate workforce-->
+              <Amount>25</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <UpgradeList/>
+        <Attackable/>
+        <Pausable/>
+        <Culture/>
+        <Warehouse/>
+        <LogisticNode/>
+        <StorageBase/>
+        <Distribution/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - PIRATE HARBOUR OFFICE - Building -->
+
+  <!-- START BUILDING - PIRATE WAREHOUSE - Building -->
+  <ModOp Type="addNextSibling" GUID='1010371'>
+    <Asset>
+      <Template>Warehouse</Template>
+      <Values>
+        <Standard>
+          <GUID>1742102037</GUID>
+          <Name>Pirate Warehouse</Name>
+          <IconFilename>data/graphics/icons/icon_pirates_warehouse.png</IconFilename>
+          <InfoDescription>1742102038</InfoDescription>
+        </Standard>
+        <Text />
+        <Building>
+          <BuildingCategoryName>11151</BuildingCategoryName>
+          <TerrainType>Water_Including_Coast</TerrainType>
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <AssociatedRegions>Colony01</AssociatedRegions>
+          <BuildingType>Logistic</BuildingType>
+          <SecondPartyRelevant>0</SecondPartyRelevant>
+        </Building>
+        <Blocking>
+          <GroundDecalAsset>24774</GroundDecalAsset>
+          <GroundDecalInvisible>24774</GroundDecalInvisible>
+          <GroundDecalAssetExtra>24774</GroundDecalAssetExtra>
+          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+        </Blocking>
+        <Selection>
+          <GUIType>Warehouse</GUIType>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <ParticipantMessageTrigger>ClickKontor</ParticipantMessageTrigger>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/public/logistic_pirates/pirate_warehouse_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Constructable />
+        <Mesh>
+          <LogoMode>CorporationLogoFromPlayer</LogoMode>
+          <SetCompanyLogo>1</SetCompanyLogo>
+        </Mesh>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>200834</Sound>
+            </Item>
+          </ActiveSounds>
+          <DestroySounds>
+            <Item>
+              <Sound>9818756</Sound>
+            </Item>
+          </DestroySounds>
+          <IncidentSounds>
+            <InfectedFire>
+              <Item>
+                <Sound>214659</Sound>
+              </Item>
+            </InfectedFire>
+          </IncidentSounds>
+          <BuildingRepaired>
+            <Item>
+              <Sound>203866</Sound>
+            </Item>
+          </BuildingRepaired>
+        </SoundEmitter>
+        <Locked />
+        <Infolayer />
+        <FeedbackController />
+        <Warehouse>
+          <WarehouseStorage>
+            <StorageMax>200</StorageMax>
+          </WarehouseStorage>
+        </Warehouse>
+        <LogisticNode>
+          <QueueConfiguration>
+            <ProcessingQueueParallelCount>8</ProcessingQueueParallelCount>
+          </QueueConfiguration>
+        </LogisticNode>
+        <UpgradeList />
+        <AmbientMoodProvider>
+          <Murmur>Harbor</Murmur>
+        </AmbientMoodProvider>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!--Money-->
+              <Amount>25000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!--timber-->
+              <Amount>20</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!--bricks-->
+              <Amount>30</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!--beams-->
+              <Amount>15</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>              <!--window-->
+              <Amount>5</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>75</Amount>
+              <InactiveAmount>50</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742102049</Product>              <!--Pirate workforce-->
+              <Amount>20</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <StorageBase />
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+          <MaximumHitPoints>2500</MaximumHitPoints>
+          <SelfHealPerHealTick>4</SelfHealPerHealTick>
+        </Attackable>
+        <Pausable />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - PIRATE WAREHOUSE - Building -->
+
+  <!-- START BUILDING - PIRATE FISHERY - Building -->
+  <ModOp Type="addNextSibling" GUID='101262'>
+    <Asset>
+      <BaseAssetGUID>101262</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742102080</GUID>
+          <Name>Pirate Fishery</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_fish.png</IconFilename>
+          <InfoDescription>1742102081</InfoDescription>
+        </Standard>
+        <Blocking>
+          <GroundDecalAsset>24774</GroundDecalAsset>
+          <GroundDecalInvisible>24774</GroundDecalInvisible>
+          <GroundDecalAssetExtra>24774</GroundDecalAssetExtra>
+        </Blocking>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <Amount>500</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>
+              <Amount>6</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/production/pirate_fishery/pirate_fishery_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Mesh/>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>Advisor_02_Aahrant</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Pirate Fishery</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>8487</LineID>
+        </Text>
+        <FactoryBase>
+          <FactoryOutputs>
+            <Item>
+              <Product>1010200</Product>
+              <Amount>1</Amount>
+              <StorageAmount>4</StorageAmount>
+            </Item>
+          </FactoryOutputs>
+          <CycleTime>15</CycleTime>
+          <IsMainFactory>0</IsMainFactory>
+        </FactoryBase>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>20</Amount>
+              <InactiveAmount>10</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742102049</Product>              <!--Pirate workforce-->
+              <Amount>10</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - PIRATE FISHERY - Building -->
+
+  <!-- START BUILDING - PIRATE GOLD MINE - Building -->
+  <ModOp Type="addNextSibling" GUID='1010311'>
+    <Asset>
+      <BaseAssetGUID>1010311</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742102082</GUID>
+          <Name>Pirate Gold Mine</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_gold_ore.png</IconFilename>
+          <InfoDescription>1742102083</InfoDescription>
+        </Standard>
+        <Building>
+          <AssociatedRegions>Colony01</AssociatedRegions>
+        </Building>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>3500</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber -->
+              <Amount>20</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!--bricks-->
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!--beams-->
+              <Amount>8</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/production/pirate_gold_mine/pirate_gold_mine_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Mesh/>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>Advisor_02_Aahrant</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Gold Mine</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>3728</LineID>
+        </Text>
+        <FactoryBase>
+          <FactoryOutputs>
+            <Item>
+              <Product>1010233</Product>
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+          </FactoryOutputs>
+          <CycleTime>20</CycleTime>
+          <IsMainFactory>0</IsMainFactory>
+        </FactoryBase>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>150</Amount>
+              <InactiveAmount>80</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742102049</Product>              <!--Pirate workforce-->
+              <Amount>65</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - PIRATE GOLD MINE - Building -->
+
+  <!-- START BUILDING - PIRATE PRODUCTION MODULE - WORK CLOTHES -->
+  <ModOp Type="addNextSibling" GUID='1010305'>
+    <Asset>
+      <Template>BuffFactoryModule</Template>
+      <Values>
+        <Standard>
+          <GUID>1742102084</GUID>
+          <Name>Pirate Work Clothes</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_working_cloth.png</IconFilename>
+          <InfoDescription>1742102085</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>100000</BuildingCategoryName>
+        </Building>
+        <Blocking />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/production/pirate_production_module/pirate_production_module_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <Amount>5000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>
+              <Amount>15</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Mesh />
+        <Selection>
+          <GUIType>Production</GUIType>
+          <ParticipantMessageArcheType>Advisor_02_Aahrant</ParticipantMessageArcheType>
+        </Selection>
+        <Constructable />
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>279511</Sound>
+            </Item>
+            <Item>
+              <Sound>216871</Sound>
+            </Item>
+          </ActiveSounds>
+        </SoundEmitter>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1742102062</Product>              <!-- Pirate Loot - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>8</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <CycleTime>30</CycleTime>
+          <MissingConnectionInfolayer>500449</MissingConnectionInfolayer>
+          <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+          <ClampedMaxTransporterLogisticCost>67</ClampedMaxTransporterLogisticCost>
+        </FactoryBase>
+        <LogisticNode/>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>50</Amount>
+              <InactiveAmount>25</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742102049</Product>              <!--Pirate workforce-->
+              <Amount>10</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Industrializable>
+          <BoostedByIndustrialization>0</BoostedByIndustrialization>
+        </Industrializable>
+        <IncidentInfectable />
+        <Electrifiable>
+          <ElectricityBoost>0</ElectricityBoost>
+        </Electrifiable>
+        <AmbientMoodProvider />
+        <Attackable />
+        <UpgradeList />
+        <Pausable />
+        <FeedbackController />
+        <Infolayer />
+        <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742102091</ProductivityBuff>
+            </Item>
+          </ProductionBuffs>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <ProductionBuffDistance>4</ProductionBuffDistance>
+        </BuffFactory>
+        <BuildingModule>
+          <ModuleType>AdditionalModule</ModuleType>
+        </BuildingModule>
+        <Culture />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - PIRATE PRODUCTION MODULE - WORK CLOTHES -->
+
+  <!-- START BUILDING - PIRATE PRODUCTION MODULE - GOULASH -->
+  <ModOp Type="addNextSibling" GUID='1010305'>
+    <Asset>
+      <Template>BuffFactoryModule</Template>
+      <Values>
+        <Standard>
+          <GUID>1742102086</GUID>
+          <Name>Pirate Goulash</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_goulash_01.png</IconFilename>
+          <InfoDescription>1742102087</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>100000</BuildingCategoryName>
+        </Building>
+        <Blocking />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/production/pirate_production_module/pirate_production_module_02.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <Amount>5000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>
+              <Amount>15</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Mesh />
+        <Selection>
+          <GUIType>Production</GUIType>
+          <ParticipantMessageArcheType>Advisor_02_Aahrant</ParticipantMessageArcheType>
+        </Selection>
+        <Constructable />
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>279511</Sound>
+            </Item>
+            <Item>
+              <Sound>216871</Sound>
+            </Item>
+          </ActiveSounds>
+        </SoundEmitter>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1742102062</Product>              <!-- Pirate Loot - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>8</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <CycleTime>30</CycleTime>
+          <MissingConnectionInfolayer>500449</MissingConnectionInfolayer>
+          <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+          <ClampedMaxTransporterLogisticCost>67</ClampedMaxTransporterLogisticCost>
+        </FactoryBase>
+        <LogisticNode/>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>50</Amount>
+              <InactiveAmount>25</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742102049</Product>              <!--Pirate workforce-->
+              <Amount>10</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Industrializable>
+          <BoostedByIndustrialization>0</BoostedByIndustrialization>
+        </Industrializable>
+        <IncidentInfectable />
+        <Electrifiable>
+          <ElectricityBoost>0</ElectricityBoost>
+        </Electrifiable>
+        <AmbientMoodProvider />
+        <Attackable />
+        <UpgradeList />
+        <Pausable />
+        <FeedbackController />
+        <Infolayer />
+        <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742102092</ProductivityBuff>
+            </Item>
+          </ProductionBuffs>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <ProductionBuffDistance>4</ProductionBuffDistance>
+        </BuffFactory>
+        <BuildingModule>
+          <ModuleType>AdditionalModule</ModuleType>
+        </BuildingModule>
+        <Culture />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - PIRATE PRODUCTION MODULE - GOULASH -->
+
+  <!-- START BUILDING - PIRATE PRODUCTION MODULE - FUR COATS -->
+  <ModOp Type="addNextSibling" GUID='1010305'>
+    <Asset>
+      <Template>BuffFactoryModule</Template>
+      <Values>
+        <Standard>
+          <GUID>1742102088</GUID>
+          <Name>Pirate Fur Coats</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_fur_coats.png</IconFilename>
+          <InfoDescription>1742102089</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>100000</BuildingCategoryName>
+        </Building>
+        <Blocking />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/production/pirate_production_module/pirate_production_module_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <Amount>5000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>
+              <Amount>15</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Mesh />
+        <Selection>
+          <GUIType>Production</GUIType>
+          <ParticipantMessageArcheType>Advisor_02_Aahrant</ParticipantMessageArcheType>
+        </Selection>
+        <Constructable />
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>279511</Sound>
+            </Item>
+            <Item>
+              <Sound>216871</Sound>
+            </Item>
+          </ActiveSounds>
+        </SoundEmitter>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1742102062</Product>              <!-- Pirate Loot - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>6</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <CycleTime>30</CycleTime>
+          <MissingConnectionInfolayer>500449</MissingConnectionInfolayer>
+          <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+          <ClampedMaxTransporterLogisticCost>67</ClampedMaxTransporterLogisticCost>
+        </FactoryBase>
+        <LogisticNode/>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>50</Amount>
+              <InactiveAmount>25</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742102049</Product>              <!--Pirate workforce-->
+              <Amount>10</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Industrializable>
+          <BoostedByIndustrialization>0</BoostedByIndustrialization>
+        </Industrializable>
+        <IncidentInfectable />
+        <Electrifiable>
+          <ElectricityBoost>0</ElectricityBoost>
+        </Electrifiable>
+        <AmbientMoodProvider />
+        <Attackable />
+        <UpgradeList />
+        <Pausable />
+        <FeedbackController />
+        <Infolayer />
+        <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742102093</ProductivityBuff>
+            </Item>
+          </ProductionBuffs>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <ProductionBuffDistance>4</ProductionBuffDistance>
+        </BuffFactory>
+        <BuildingModule>
+          <ModuleType>AdditionalModule</ModuleType>
+        </BuildingModule>
+        <Culture />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - PIRATE PRODUCTION MODULE - FUR COATS -->
+
+</ModOps>  

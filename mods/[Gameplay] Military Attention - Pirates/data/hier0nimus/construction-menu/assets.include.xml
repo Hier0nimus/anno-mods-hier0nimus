@@ -1,0 +1,153 @@
+<!-- 
+  Construction Menu
+-->
+
+<ModOps>
+
+  <!-- START PIRATE CONSTRUCTION CATEGORY -->
+  <ModOp Type="addNextSibling" GUID='500447'>
+    <Asset>
+      <Template>ConstructionCategory</Template>
+      <Values>
+        <Standard>
+          <GUID>1742102039</GUID>          <!-- Pirates Construction Category menu -->
+          <Name>Pirates</Name>
+          <IconFilename>data/graphics/icons/icon_menu_pirates_basic_0.png</IconFilename>
+        </Standard>
+        <ConstructionCategory>
+          <BuildingList>
+            <Item>
+              <Building>1742102000</Building>              <!-- Pirate Haven - Building -->
+            </Item>
+            <Item>
+              <Building>1742102047</Building>              <!-- Pirate Quarters - Building -->
+            </Item>
+            <Item>
+              <Building>1742102080</Building>              <!-- Pirate Fishery - Building -->
+            </Item>
+            <Item>
+              <Building>1742102082</Building>              <!-- Pirate Gold Mine - Building -->
+            </Item>
+            <Item>
+              <Building>1742102060</Building>              <!-- Pirate Raid Harbour - Building -->
+            </Item>
+            <Item>
+              <Building>1742102052</Building>              <!-- Pirate Tavern - Building -->
+            </Item>
+            <Item>
+              <Building>1742102090</Building>              <!-- Pirate Construction Modules - ConstructionCategory -->
+            </Item>
+            <Item>
+              <Building>1742102037</Building>              <!-- Pirate Warehouse - Building -->
+            </Item>
+            <Item>
+              <Building>1742102064</Building>              <!-- Pirate Harbour Office - Building -->
+            </Item>
+            <Item>
+              <Building>1742102056</Building>              <!-- Pirate Recruitment Office - Building -->
+            </Item>
+            <Item>
+              <Building>1742102002</Building>              <!-- Pirate Charter Harbour - Building -->
+            </Item>
+          </BuildingList>
+          <Text />
+        </ConstructionCategory>
+        <Locked />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PIRATE CONSTRUCTION CATEGORY -->
+
+  <!-- START PIRATE CONSTRUCTION CATEGORY TO CONSTRUCTION MENU (NW) -->
+  <ModOp Type="add" GUID='25000035' Path="/Values/ConstructionMenu/RegionMenu/Colony01/CategoryMode/Tier/Categories/">
+    <Item>
+      <Category>1742102039</Category>      <!-- Pirate Category menu -->
+    </Item>
+  </ModOp>
+  <!-- END ADD PIRATE CONSTRUCTION CATEGORY TO CONSTRUCTION MENU (NW) -->
+
+  <!-- START PIRATE HAVEN TO CONSTRUCTIONCATEGORY HARBOUR (NW) -->
+  <ModOp Type="add" GUID='500149' Path="/Values/ConstructionCategory/BuildingList/">
+    <Item>
+      <Building>1742102000</Building>      <!-- Pirate Haven - Building -->
+    </Item>
+    <Item>
+      <Building>1742102047</Building>      <!-- Pirate Quarters - Building -->
+    </Item>
+    <Item>
+      <Building>1742102080</Building>      <!-- Pirate Fishery - Building -->
+    </Item>
+    <Item>
+      <Building>1742102082</Building>      <!-- Pirate Gold Mine - Building -->
+    </Item>
+    <Item>
+      <Building>1742102060</Building>      <!-- Pirate Raid Harbour - Building -->
+    </Item>
+    <Item>
+      <Building>1742102052</Building>      <!-- Pirate Tavern - Building -->
+    </Item>
+    <Item>
+      <Building>1742102037</Building>      <!-- Pirate Warehouse - Building -->
+    </Item>
+    <Item>
+      <Building>1742102064</Building>      <!-- Pirate Harbour Office - Building -->
+    </Item>
+    <Item>
+      <Building>1742102056</Building>      <!-- Pirate Recruitment Office - Building -->
+    </Item>
+    <Item>
+      <Building>1742102002</Building>      <!-- Pirate Charter Harbour - Building -->
+    </Item>
+  </ModOp>
+  <!-- END PIRATE HAVEN TO CONSTRUCTIONCATEGORY HARBOUR (NW) -->
+
+  <!-- START DEFENSES CONSTRUCTION MENU (OW) -->
+  <ModOp Type="addNextSibling" GUID='500952'>
+    <Asset>
+      <Template>ConstructionCategory</Template>
+      <Values>
+        <Standard>
+          <GUID>1742102090</GUID>
+          <Name>Pirate Production Modules</Name>
+          <IconFilename>data/graphics/icons/icon_pirate_production.png</IconFilename>
+        </Standard>
+        <ConstructionCategory>
+          <BuildingList>
+            <Item>
+              <Building>1742102084</Building>              <!-- Pirate Work Clothes - Building -->
+            </Item>
+            <Item>
+              <Building>1742102086</Building>              <!-- Pirate Goulash - Building -->
+            </Item>
+            <Item>
+              <Building>1742102088</Building>              <!-- Pirate Fur Coats - Building -->
+            </Item>
+          </BuildingList>
+          <CategoryDescription>19173</CategoryDescription>
+        </ConstructionCategory>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Pirate Production Modules</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>8481</LineID>
+        </Text>
+        <Locked />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END DEFENSES CONSTRUCTION MENU (OW) -->
+
+  <ModOp Type="addPrevSibling" GUID="15000003" Path="/Values/PopulationLevel7/PopulationInputs/Item[1]">
+    <Item>      <!-- Fish  -->
+      <Product>1010200</Product>
+      <Amount>0.0004</Amount>
+      <SupplyWeight>1</SupplyWeight>
+      <MoneyValue>5</MoneyValue>
+      <IsConsideredByAI>0</IsConsideredByAI>
+    </Item>
+  </ModOp>
+
+</ModOps>

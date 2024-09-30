@@ -1,0 +1,173 @@
+<!-- 
+  Defenses
+-->
+
+<ModOps>
+
+  <!-- START - ANNE HARLOW KONTOR -->
+  <ModOp Type="merge" GUID='100681' Path="Values/">
+    <Object>
+      <Variations>
+        <Item>
+          <Filename>data/graphics/buildings/3rd_party/3rd_party_03_kontor/3rd_party_03_kontor_custom.cfg</Filename>
+        </Item>
+      </Variations>
+    </Object>
+    <Attackable>
+      <MaximumHitPoints>27500</MaximumHitPoints>      <!-- 8000 -->
+      <MoralePower>400</MoralePower>      <!-- 200 -->
+      <MilitaryDefensePoints>20</MilitaryDefensePoints>      <!-- 8 -->
+      <SelfHealPerHealTick>100</SelfHealPerHealTick>      <!-- 300 -->
+    </Attackable>
+    <Attacker>
+      <BasicAttackType>Flak</BasicAttackType>
+      <BaseDamage>66</BaseDamage>      <!-- 22 -->
+      <ReloadTime>2</ReloadTime>      <!-- 3 -->
+      <AttackRange>60</AttackRange>      <!-- 52 -->
+      <LineOfSightRange>120</LineOfSightRange>      <!-- 100 -->
+      <Turrets>
+        <Item>
+          <TurnSpan>360</TurnSpan>
+          <TurretCfg>data/dlc11/graphics/buildings/special/flak_cannon_tower/flak_cannon_tower.cfg</TurretCfg>
+        </Item>
+        <Item>
+          <TurnSpan>360</TurnSpan>
+          <TurretCfg>data/dlc11/graphics/buildings/special/flak_cannon_tower/flak_cannon_tower.cfg</TurretCfg>
+        </Item>
+      </Turrets>
+      <ProjectileAsset>2037</ProjectileAsset>
+      <TurretExplosionEffectAsset>101975</TurretExplosionEffectAsset>
+      <MuzzleEffectAssets>
+        <Item>
+          <MuzzleEffectAsset>2581</MuzzleEffectAsset>
+        </Item>
+      </MuzzleEffectAssets>
+      <AccuracyBase>27</AccuracyBase>
+      <AccuracyIncreaseOverDistance>0</AccuracyIncreaseOverDistance>
+      <AccuracySpeedDecay>0</AccuracySpeedDecay>
+      <AccuracyByDistance>
+        <Item>
+          <AccuracyByDistancePair>
+            <EnemyDistanceRelToAttackRange>16</EnemyDistanceRelToAttackRange>
+            <CorrespondingAccuracy>40</CorrespondingAccuracy>
+          </AccuracyByDistancePair>
+        </Item>
+        <Item>
+          <AccuracyByDistancePair>
+            <EnemyDistanceRelToAttackRange>100</EnemyDistanceRelToAttackRange>
+            <CorrespondingAccuracy>10</CorrespondingAccuracy>
+          </AccuracyByDistancePair>
+        </Item>
+      </AccuracyByDistance>
+    </Attacker>
+  </ModOp>
+  <!-- END - ANNE HARLOW KONTOR -->
+
+  <!-- START - JEAN KONTOR -->
+  <ModOp Type="merge" GUID='100682' Path="Values/">
+    <Object>
+      <Variations>
+        <Item>
+          <Filename>data/graphics/buildings/3rd_party/3rd_party_04_kontor/3rd_party_04_kontor_custom.cfg</Filename>
+        </Item>
+      </Variations>
+    </Object>
+    <Attackable>
+      <MaximumHitPoints>27500</MaximumHitPoints>      <!-- 8000 -->
+      <MoralePower>400</MoralePower>      <!-- 200 -->
+      <MilitaryDefensePoints>20</MilitaryDefensePoints>      <!-- 8 -->
+      <SelfHealPerHealTick>100</SelfHealPerHealTick>      <!-- 300 -->
+    </Attackable>
+    <Attacker>
+      <BasicAttackType>Flak</BasicAttackType>
+      <BaseDamage>66</BaseDamage>      <!-- 22 -->
+      <ReloadTime>2</ReloadTime>      <!-- 3 -->
+      <AttackRange>80</AttackRange>      <!-- 52 -->
+      <LineOfSightRange>120</LineOfSightRange>      <!-- 100 -->
+      <Turrets>
+        <Item>
+          <TurnSpan>360</TurnSpan>
+          <TurretCfg>data/dlc11/graphics/buildings/special/flak_cannon_tower/flak_cannon_tower.cfg</TurretCfg>
+        </Item>
+        <Item>
+          <TurnSpan>360</TurnSpan>
+          <TurretCfg>data/dlc11/graphics/buildings/special/flak_cannon_tower/flak_cannon_tower.cfg</TurretCfg>
+        </Item>
+      </Turrets>
+      <ProjectileAsset>2037</ProjectileAsset>
+      <TurretExplosionEffectAsset>101975</TurretExplosionEffectAsset>
+      <MuzzleEffectAssets>
+        <Item>
+          <MuzzleEffectAsset>2581</MuzzleEffectAsset>
+        </Item>
+      </MuzzleEffectAssets>
+      <AccuracyBase>27</AccuracyBase>
+      <AccuracyIncreaseOverDistance>0</AccuracyIncreaseOverDistance>
+      <AccuracySpeedDecay>0</AccuracySpeedDecay>
+      <AccuracyByDistance>
+        <Item>
+          <AccuracyByDistancePair>
+            <EnemyDistanceRelToAttackRange>16</EnemyDistanceRelToAttackRange>
+            <CorrespondingAccuracy>40</CorrespondingAccuracy>
+          </AccuracyByDistancePair>
+        </Item>
+        <Item>
+          <AccuracyByDistancePair>
+            <EnemyDistanceRelToAttackRange>100</EnemyDistanceRelToAttackRange>
+            <CorrespondingAccuracy>10</CorrespondingAccuracy>
+          </AccuracyByDistancePair>
+        </Item>
+      </AccuracyByDistance>
+    </Attacker>
+  </ModOp>
+  <!-- END - JEAN KONTOR -->
+
+  <!-- START - REBALANCE PIRATE DEFENSES (Make them stronger) -->
+
+  <!-- harbor_04 (Puckle Gun) - Pirates -->
+  <ModOp Type="merge" GUID="102448" Path="Values/">
+    <Attackable>
+      <MaximumHitPoints>7000</MaximumHitPoints>      <!-- 3200 -->
+      <SelfHealPerHealTick>25</SelfHealPerHealTick>      <!-- 5 -->
+      <MilitaryDefensePoints>5</MilitaryDefensePoints>      <!-- 2 -->
+    </Attackable>
+    <Attacker>
+      <BaseDamage>70</BaseDamage>      <!-- 23 -->
+      <AttackRange>75</AttackRange>      <!-- 72 -->
+      <LineOfSightRange>75</LineOfSightRange>      <!-- 72 -->
+    </Attacker>
+  </ModOp>
+
+  <!-- harbor_05 (Cannon Tower) - Pirates -->
+  <ModOp Type="merge" GUID="102449" Path="Values/">
+    <Attackable>
+      <MaximumHitPoints>10000</MaximumHitPoints>      <!-- 4800 -->
+      <SelfHealPerHealTick>25</SelfHealPerHealTick>      <!-- 5 -->
+      <MilitaryDefensePoints>7</MilitaryDefensePoints>      <!-- 3.5 -->
+    </Attackable>
+    <Attacker>
+      <BaseDamage>450</BaseDamage>      <!-- 150 -->
+      <ReloadTime>35</ReloadTime>      <!-- 50 -->
+      <AttackRange>100</AttackRange>      <!-- 92 -->
+      <LineOfSightRange>100</LineOfSightRange>      <!-- 92 -->
+    </Attacker>
+  </ModOp>
+
+  <!-- harbor_06 (Monster Gun) - Pirates -->
+  <ModOp Type="merge" GUID="102450" Path="Values/">
+    <Attackable>
+      <MaximumHitPoints>17500</MaximumHitPoints>      <!-- 7000 -->
+      <SelfHealPerHealTick>40</SelfHealPerHealTick>      <!-- 5 -->
+      <MilitaryDefensePoints>20</MilitaryDefensePoints>      <!-- 10 -->
+    </Attackable>
+    <Attacker>
+      <BaseDamage>2800</BaseDamage>      <!-- 850 -->
+      <ReloadTime>90</ReloadTime>      <!-- 150 -->
+      <AttackRange>120</AttackRange>      <!-- 108 -->
+      <LineOfSightRange>120</LineOfSightRange>      <!-- 108 -->
+    </Attacker>
+  </ModOp>
+
+  <!-- END - REBALANCE PIRATE DEFENSES (Make them stronger) -->
+
+</ModOps>
