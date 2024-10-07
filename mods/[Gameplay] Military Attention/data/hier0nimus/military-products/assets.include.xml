@@ -1460,7 +1460,7 @@
   <!-- 6364 - Delight -->
 
   <!-- ****************** START TO FOOD AND DRINK ****************** -->
-  <ModOp Type="add" GUID='25000118' Path="/Values/ObjectmenuResidenceScene/BonusNeeds/BonusNeeds/Item[Category='2289']/Needs/">
+  <ModOp Condition="!@25000118//Item[BonusNeed='GUID']" Type="add" GUID='25000118' Path="/Values/ObjectmenuResidenceScene/BonusNeeds/BonusNeeds/Item[Category='2289']/Needs/">
     <Item>
       <BonusNeed>133185</BonusNeed>      <!-- Lemonade -->
     </Item>
@@ -1492,7 +1492,7 @@
   <!-- ****************** END TO FOOD AND DRINK ****************** -->
 
   <!-- ****************** START TO DELIGHT ****************** -->
-  <ModOp Type="add" GUID='25000118' Path="/Values/ObjectmenuResidenceScene/BonusNeeds/BonusNeeds/Item[Category='6364']/Needs/">
+  <ModOp Condition="!@25000118//Item[BonusNeed='GUID']" Type="add" GUID='25000118' Path="/Values/ObjectmenuResidenceScene/BonusNeeds/BonusNeeds/Item[Category='6364']/Needs/">
     <Item>
       <BonusNeed>118728</BonusNeed>      <!-- Lobster -->
     </Item>
@@ -1521,7 +1521,7 @@
   <!-- ****************** END TO DELIGHT ****************** -->
 
   <!-- ****************** START TO WEALTH ****************** -->
-  <ModOp Type="add" GUID='25000118' Path="/Values/ObjectmenuResidenceScene/BonusNeeds/BonusNeeds/Item[Category='2361']/Needs/">
+  <ModOp Condition="!@25000118//Item[BonusNeed='GUID']" Type="add" GUID='25000118' Path="/Values/ObjectmenuResidenceScene/BonusNeeds/BonusNeeds/Item[Category='2361']/Needs/">
     <Item>
       <BonusNeed>1742100211</BonusNeed>      <!-- Horses -->
     </Item>
@@ -1536,12 +1536,6 @@
     </Item>
   </ModOp>
   <!-- ****************** END TO WEALTH ****************** -->
-
-  <!-- ****************** START TO RESEARCH ****************** -->
-  <ModOp Type="add" GUID='25000118' Path="/Values/ObjectmenuResidenceScene/BonusNeeds/BonusNeeds/Item[Category='4275']/Needs/">
-
-  </ModOp>
-  <!-- ****************** END TO RESEARCH ****************** -->
 
 
   <!-- ****************** END ADDING PRODUCTS TO BONUS NEEDS ****************** -->

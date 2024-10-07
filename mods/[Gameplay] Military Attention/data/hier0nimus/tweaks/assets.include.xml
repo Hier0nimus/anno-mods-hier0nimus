@@ -236,7 +236,7 @@ Adaptations to vanilla items
 
   <!-- ****************** START Add Products for other population ******************  -->
 
-  <!-- ****************** Old World - Farmers - pop 18 ******************  -->
+  <!-- ****************** Old World - Farmers - pop 0 - 18 ******************  -->
   <ModOp Type="add" GUID="15000000" Path="/Values/PopulationLevel7/PopulationInputs">
     <Item>
       <Product>1742100556</Product>      <!-- Cemetery - Product -->
@@ -277,7 +277,7 @@ Adaptations to vanilla items
     </Item>
   </ModOp>
 
-  <!-- ****************** Old World - Workers - pop 35 ******************  -->
+  <!-- ****************** Old World - Workers - pop 18 - 28 ******************  -->
   <ModOp Type="addNextSibling" GUID="15000001" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='1010237']">
     <Item>
       <Product>1742100556</Product>      <!-- Cemetery - Product -->
@@ -323,7 +323,7 @@ Adaptations to vanilla items
     </Item>
   </ModOp>
 
-  <!-- ****************** Old World - Artisans - pop 38 ******************  -->
+  <!-- ****************** Old World - Artisans - pop 28 - 38 ******************  -->
   <ModOp Type="add" GUID="15000002" Path="/Values/PopulationLevel7/PopulationInputs/">
     <Item>
       <Product>1742100058</Product>      <!-- Cigarettes - Product -->
@@ -338,6 +338,31 @@ Adaptations to vanilla items
       </AdditionalGlobalUnlockRequirement>
       <IsConsideredByAI>0</IsConsideredByAI>
     </Item>
+  </ModOp>
+
+  <!-- ****************** Old World - Engineers - pop 38 - 54 ******************  -->
+  <ModOp Type="merge" GUID="15000003" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='1010217']/SupplyWeight">
+    <SupplyWeight>18</SupplyWeight>
+  </ModOp>
+  <ModOp Type="merge" GUID="15000003" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='1010206']/SupplyWeight">
+    <SupplyWeight>10</SupplyWeight>
+  </ModOp>
+  <ModOp Type="merge" GUID="15000003" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='1010247']/SupplyWeight">
+    <SupplyWeight>10</SupplyWeight>
+  </ModOp>
+
+  <!-- ****************** Old World - Investors - pop 54 - 84 ******************  -->
+  <ModOp Type="merge" GUID="15000004" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='120030']/SupplyWeight">
+    <SupplyWeight>18</SupplyWeight>
+  </ModOp>
+  <ModOp Type="merge" GUID="15000004" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='120032']/SupplyWeight">
+    <SupplyWeight>12</SupplyWeight>
+  </ModOp>
+  <ModOp Type="merge" GUID="15000004" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='1010354']/SupplyWeight">
+    <SupplyWeight>12</SupplyWeight>
+  </ModOp>
+  <ModOp Type="merge" GUID="15000004" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='1010208']/SupplyWeight">
+    <SupplyWeight>12</SupplyWeight>
   </ModOp>
 
   <!-- ****************** Old World - Scholars - pop 162 ******************  -->
