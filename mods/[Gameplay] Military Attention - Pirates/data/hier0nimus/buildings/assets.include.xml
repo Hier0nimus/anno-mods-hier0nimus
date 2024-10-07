@@ -130,7 +130,14 @@
           <MinLoadingTime>5</MinLoadingTime>
         </LoadingPier>
         <UpgradeList />
-        <Maintenance />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>1000</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
         <StorageBase />
         <Attackable>
           <AttackableType>HarbourBuilding</AttackableType>
@@ -274,7 +281,7 @@
           <Policies>
             <Tier1Decree>
               <Policy>1742102022</Policy>              <!--Pirates_Decree4-->
-              <Description>1742102017</Description>              <!--Decree1_Info-->
+              <Description>1742102023</Description>              <!--Decree1_Info-->
             </Tier1Decree>
             <Tier2Decree>
               <Policy>1742102018</Policy>              <!--Pirates_Decree2A-->
@@ -289,7 +296,7 @@
             <Tier4Decree>
               <Policy>1742102016</Policy>              <!--Pirates_Decree1-->
               <AttractivenessThreshold>Pleasant</AttractivenessThreshold>
-              <Description>1742102023</Description>              <!--Decree4_Info-->
+              <Description>1742102017</Description>              <!--Decree4_Info-->
             </Tier4Decree>
             <Tier5Decree>
               <Policy>1742102024</Policy>              <!--Pirates_Decree5-->
@@ -308,7 +315,7 @@
           <FunctionDescription>100364</FunctionDescription>          <!--Provides Service-->
         </PublicService>
         <Culture>
-          <Attractiveness>1000</Attractiveness>
+          <Attractiveness>100</Attractiveness>
         </Culture>
       </Values>
     </Asset>
@@ -591,7 +598,7 @@
             </Item>
             <Item>
               <Product>1742102049</Product>              <!--Pirate workforce-->
-              <Amount>40</Amount>
+              <Amount>100</Amount>
             </Item>
           </Maintenances>
         </Maintenance>
@@ -865,7 +872,7 @@
             </Item>
             <Item>
               <Product>1742102049</Product>              <!--Pirate workforce-->
-              <Amount>20</Amount>
+              <Amount>50</Amount>
             </Item>
           </Maintenances>
         </Maintenance>
@@ -1012,7 +1019,7 @@
             <Item>
               <Product>1742102062</Product>              <!--Pirate Loot-->
               <Amount>1</Amount>
-              <StorageAmount>6</StorageAmount>
+              <StorageAmount>8</StorageAmount>
             </Item>
           </FactoryInputs>
           <FactoryOutputs>
@@ -1038,7 +1045,7 @@
             </Item>
             <Item>
               <Product>1742102049</Product>              <!--Pirate workforce-->
-              <Amount>10</Amount>
+              <Amount>30</Amount>
             </Item>
           </Maintenances>
         </Maintenance>
@@ -1169,7 +1176,7 @@
             </Item>
             <Item>
               <Product>1742102049</Product>              <!-- Pirates Workforce -->
-              <Amount>30</Amount>
+              <Amount>40</Amount>
             </Item>
           </Maintenances>
         </Maintenance>
@@ -1278,7 +1285,7 @@
             </Item>
             <Item>
               <Product>1742102049</Product>              <!--Pirate workforce-->
-              <Amount>25</Amount>
+              <Amount>40</Amount>
             </Item>
           </Maintenances>
         </Maintenance>
@@ -1420,7 +1427,7 @@
             </Item>
             <Item>
               <Product>1742102049</Product>              <!--Pirate workforce-->
-              <Amount>20</Amount>
+              <Amount>50</Amount>
             </Item>
           </Maintenances>
         </Maintenance>
@@ -1498,7 +1505,7 @@
             <Item>
               <Product>1010200</Product>
               <Amount>1</Amount>
-              <StorageAmount>4</StorageAmount>
+              <StorageAmount>8</StorageAmount>
             </Item>
           </FactoryOutputs>
           <CycleTime>15</CycleTime>
@@ -1513,7 +1520,7 @@
             </Item>
             <Item>
               <Product>1742102049</Product>              <!--Pirate workforce-->
-              <Amount>10</Amount>
+              <Amount>15</Amount>
             </Item>
           </Maintenances>
         </Maintenance>
@@ -1605,7 +1612,7 @@
             </Item>
             <Item>
               <Product>1742102049</Product>              <!--Pirate workforce-->
-              <Amount>65</Amount>
+              <Amount>100</Amount>
             </Item>
           </Maintenances>
         </Maintenance>
@@ -1687,7 +1694,7 @@
             </Item>
             <Item>
               <Product>1742102049</Product>              <!--Pirate workforce-->
-              <Amount>10</Amount>
+              <Amount>30</Amount>
             </Item>
           </Maintenances>
         </Maintenance>
@@ -1795,7 +1802,7 @@
             </Item>
             <Item>
               <Product>1742102049</Product>              <!--Pirate workforce-->
-              <Amount>10</Amount>
+              <Amount>30</Amount>
             </Item>
           </Maintenances>
         </Maintenance>
@@ -1903,7 +1910,7 @@
             </Item>
             <Item>
               <Product>1742102049</Product>              <!--Pirate workforce-->
-              <Amount>10</Amount>
+              <Amount>40</Amount>
             </Item>
           </Maintenances>
         </Maintenance>
@@ -1937,5 +1944,337 @@
     </Asset>
   </ModOp>
   <!-- END BUILDING - PIRATE PRODUCTION MODULE - FUR COATS -->
+
+  <!-- START BUILDING - PIRATE PRODUCTION MODULE - WEAPONS -->
+  <ModOp Type="addNextSibling" GUID='1010305'>
+    <Asset>
+      <Template>BuffFactoryModule</Template>
+      <Values>
+        <Standard>
+          <GUID>1742102101</GUID>
+          <Name>Pirate Weapons</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_weapons.png</IconFilename>
+          <InfoDescription>1742102102</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>100000</BuildingCategoryName>
+        </Building>
+        <Blocking />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/production/pirate_production_module/pirate_production_module_03.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <Amount>5000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>
+              <Amount>15</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Mesh />
+        <Selection>
+          <GUIType>Production</GUIType>
+          <ParticipantMessageArcheType>Advisor_02_Aahrant</ParticipantMessageArcheType>
+        </Selection>
+        <Constructable />
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>279511</Sound>
+            </Item>
+            <Item>
+              <Sound>216871</Sound>
+            </Item>
+          </ActiveSounds>
+        </SoundEmitter>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1742102062</Product>              <!-- Pirate Loot - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>6</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <CycleTime>30</CycleTime>
+          <MissingConnectionInfolayer>500449</MissingConnectionInfolayer>
+          <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+          <ClampedMaxTransporterLogisticCost>67</ClampedMaxTransporterLogisticCost>
+        </FactoryBase>
+        <LogisticNode/>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>50</Amount>
+              <InactiveAmount>25</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742102049</Product>              <!--Pirate workforce-->
+              <Amount>40</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Industrializable>
+          <BoostedByIndustrialization>0</BoostedByIndustrialization>
+        </Industrializable>
+        <IncidentInfectable />
+        <Electrifiable>
+          <ElectricityBoost>0</ElectricityBoost>
+        </Electrifiable>
+        <AmbientMoodProvider />
+        <Attackable />
+        <UpgradeList />
+        <Pausable />
+        <FeedbackController />
+        <Infolayer />
+        <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742102109</ProductivityBuff>
+            </Item>
+          </ProductionBuffs>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <ProductionBuffDistance>4</ProductionBuffDistance>
+        </BuffFactory>
+        <BuildingModule>
+          <ModuleType>AdditionalModule</ModuleType>
+        </BuildingModule>
+        <Culture />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - PIRATE PRODUCTION MODULE - WEAPONS -->
+
+  <!-- START BUILDING - PIRATE PRODUCTION MODULE - ADDITIONAL COFFEE -->
+  <ModOp Type="addNextSibling" GUID='1010305'>
+    <Asset>
+      <Template>BuffFactoryModule</Template>
+      <Values>
+        <Standard>
+          <GUID>1742102105</GUID>
+          <Name>Pirate Additional Coffee</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_coffe_cup.png</IconFilename>
+          <InfoDescription>1742102106</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>100000</BuildingCategoryName>
+        </Building>
+        <Blocking />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/production/pirate_production_module/pirate_production_module_02.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <Amount>5000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>
+              <Amount>15</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Mesh />
+        <Selection>
+          <GUIType>Production</GUIType>
+          <ParticipantMessageArcheType>Advisor_02_Aahrant</ParticipantMessageArcheType>
+        </Selection>
+        <Constructable />
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>279511</Sound>
+            </Item>
+            <Item>
+              <Sound>216871</Sound>
+            </Item>
+          </ActiveSounds>
+        </SoundEmitter>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1742102062</Product>              <!-- Pirate Loot - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>6</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <CycleTime>30</CycleTime>
+          <MissingConnectionInfolayer>500449</MissingConnectionInfolayer>
+          <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+          <ClampedMaxTransporterLogisticCost>67</ClampedMaxTransporterLogisticCost>
+        </FactoryBase>
+        <LogisticNode/>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>50</Amount>
+              <InactiveAmount>25</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742102049</Product>              <!--Pirate workforce-->
+              <Amount>40</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Industrializable>
+          <BoostedByIndustrialization>0</BoostedByIndustrialization>
+        </Industrializable>
+        <IncidentInfectable />
+        <Electrifiable>
+          <ElectricityBoost>0</ElectricityBoost>
+        </Electrifiable>
+        <AmbientMoodProvider />
+        <Attackable />
+        <UpgradeList />
+        <Pausable />
+        <FeedbackController />
+        <Infolayer />
+        <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742102111</ProductivityBuff>
+            </Item>
+          </ProductionBuffs>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <ProductionBuffDistance>5</ProductionBuffDistance>
+        </BuffFactory>
+        <BuildingModule>
+          <ModuleType>AdditionalModule</ModuleType>
+        </BuildingModule>
+        <Culture />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - PIRATE PRODUCTION MODULE - ADDITIONAL COFFEE -->
+
+  <!-- START BUILDING - PIRATE PRODUCTION MODULE - LOBSTER -->
+  <ModOp Type="addNextSibling" GUID='1010305'>
+    <Asset>
+      <Template>BuffFactoryModule</Template>
+      <Values>
+        <Standard>
+          <GUID>1742102107</GUID>
+          <Name>Pirate Lobster</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/goods_africa/icon_seafood.png</IconFilename>
+          <InfoDescription>1742102108</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>100000</BuildingCategoryName>
+          <TerrainType>Terrain_Including_Beach</TerrainType>
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <AssociatedRegions>Colony01</AssociatedRegions>
+        </Building>
+        <Blocking>
+          <GroundDecalAsset>24774</GroundDecalAsset>
+          <GroundDecalInvisible>24774</GroundDecalInvisible>
+          <GroundDecalAssetExtra>24774</GroundDecalAssetExtra>
+          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+        </Blocking>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/production/pirate_production_module/pirate_production_module_04.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <Amount>5000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>
+              <Amount>15</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Mesh />
+        <Selection>
+          <GUIType>Production</GUIType>
+          <ParticipantMessageArcheType>Advisor_02_Aahrant</ParticipantMessageArcheType>
+        </Selection>
+        <Constructable />
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>279511</Sound>
+            </Item>
+            <Item>
+              <Sound>216871</Sound>
+            </Item>
+          </ActiveSounds>
+        </SoundEmitter>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1742102062</Product>              <!-- Pirate Loot - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>6</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <CycleTime>30</CycleTime>
+          <MissingConnectionInfolayer>500449</MissingConnectionInfolayer>
+          <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+          <ClampedMaxTransporterLogisticCost>67</ClampedMaxTransporterLogisticCost>
+        </FactoryBase>
+        <LogisticNode/>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>50</Amount>
+              <InactiveAmount>25</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742102049</Product>              <!--Pirate workforce-->
+              <Amount>30</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Industrializable>
+          <BoostedByIndustrialization>0</BoostedByIndustrialization>
+        </Industrializable>
+        <IncidentInfectable />
+        <Electrifiable>
+          <ElectricityBoost>0</ElectricityBoost>
+        </Electrifiable>
+        <AmbientMoodProvider />
+        <Attackable />
+        <UpgradeList />
+        <Pausable />
+        <FeedbackController />
+        <Infolayer />
+        <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742102112</ProductivityBuff>
+            </Item>
+          </ProductionBuffs>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <ProductionBuffDistance>6</ProductionBuffDistance>
+        </BuffFactory>
+        <BuildingModule>
+          <ModuleType>AdditionalModule</ModuleType>
+        </BuildingModule>
+        <Culture />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - PIRATE PRODUCTION MODULE - Lobster -->
 
 </ModOps>  

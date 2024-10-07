@@ -11,7 +11,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742102201</GUID>
+          <GUID>1742102210</GUID>
           <Name>Unlock Pirate - 100 Jornaleros</Name>
         </Standard>
         <Trigger>
@@ -126,13 +126,59 @@
     </Asset>
   </ModOp>
 
+  <!--UNLOCK - 300 Jornaleros -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742102219</GUID>
+          <Name>Unlock Pirate - 300 Jornaleros</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>15000005</Context>                <!-- Jornaleros PopulationLevel7 -->
+                <CounterAmount>300</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
+                    </UnhideAssets>
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>1742102107</Asset>                        <!-- Pirate Lobster - Building -->
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+
   <!--UNLOCK - 100 Pirates -->
   <ModOp Type="addnextSibling" GUID="130248">
     <Asset>
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742102202</GUID>
+          <GUID>1742102211</GUID>
           <Name>Unlock Pirate - 100 Pirates</Name>
         </Standard>
         <Trigger>
@@ -182,6 +228,18 @@
                       <Item>
                         <Asset>1742102088</Asset>                        <!-- Pirate Fur Coats - Building -->
                       </Item>
+                      <Item>
+                        <Asset>1742102101</Asset>                        <!-- Pirate Weapons - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742102103</Asset>                        <!-- Pirate Basic Weapons - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742102105</Asset>                        <!-- Pirate Coffee - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742102107</Asset>                        <!-- Pirate Lobster - Building -->
+                      </Item>
                     </UnhideAssets>
                     <UnlockAssets>
                       <Item>
@@ -229,7 +287,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742102203</GUID>
+          <GUID>1742102212</GUID>
           <Name>Unlock Pirate - 200 Pirates</Name>
         </Standard>
         <Trigger>
@@ -296,7 +354,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742102204</GUID>
+          <GUID>1742102213</GUID>
           <Name>Unlock Pirate - 500 Pirates</Name>
         </Standard>
         <Trigger>
@@ -351,7 +409,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742102205</GUID>
+          <GUID>1742102214</GUID>
           <Name>Unlock Pirate - 750 Pirates</Name>
         </Standard>
         <Trigger>
@@ -403,7 +461,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742102206</GUID>
+          <GUID>1742102215</GUID>
           <Name>Unlock 200 Jornaleros</Name>
         </Standard>
         <Trigger>
@@ -449,8 +507,8 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742102207</GUID>
-          <Name>Unlock 600 Obreros</Name>
+          <GUID>1742102216</GUID>
+          <Name>Unlock 1 Obreros</Name>
         </Standard>
         <Trigger>
           <TriggerCondition>
@@ -495,7 +553,53 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742102208</GUID>
+          <GUID>1742102217</GUID>
+          <Name>Unlock 300 Obreros</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>15000006</Context>                <!-- Obreros PopulationLevel7 -->
+                <CounterAmount>300</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
+                    </UnhideAssets>
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>1742102105</Asset>                        <!-- Pirate Coffee - Building -->
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!--UNLOCK - 600 Obreros -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742102218</GUID>
           <Name>Unlock 600 Obreros</Name>
         </Standard>
         <Trigger>
@@ -523,6 +627,12 @@
                       <Item>
                         <Asset>1742102088</Asset>                        <!-- Pirate Fur Coats - Building -->
                       </Item>
+                      <Item>
+                        <Asset>1742102101</Asset>                        <!-- Pirate Weapons - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742102103</Asset>                        <!-- Pirate Basic Weapons - Building -->
+                      </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>
                 </Values>
@@ -544,7 +654,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742102200</GUID>
+          <GUID>1742102209</GUID>
           <Name>Unlock Creative Mode</Name>
         </Standard>
         <Trigger>
@@ -671,6 +781,18 @@
                       </Item>
                       <Item>
                         <Asset>1742102088</Asset>                        <!-- Pirate Fur Coats - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742102101</Asset>                        <!-- Pirate Weapons - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742102103</Asset>                        <!-- Pirate Basic Weapons - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742102105</Asset>                        <!-- Pirate Coffee - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742102107</Asset>                        <!-- Pirate Lobster - Building -->
                       </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>

@@ -66,19 +66,32 @@
   </ModOp>
   <!-- END ADD PIRATE CONSTRUCTION CATEGORY TO CONSTRUCTION MENU (NW) -->
 
+  <!-- START PIRATE HAVEN TO CONSTRUCTIONCATEGORY CITY (NW) -->
+  <ModOp Type="addNextSibling" GUID='500137' Path="/Values/ConstructionCategory/BuildingList/Item[Building='101254']">
+    <Item>
+      <Building>1742102047</Building>      <!-- Pirate Quarters - Building -->
+    </Item>
+  </ModOp>
+  <!-- END PIRATE HAVEN TO CONSTRUCTIONCATEGORY CITY (NW) -->
+
+  <!-- START PIRATE HAVEN TO CONSTRUCTIONCATEGORY CONSUMABLES (NW) -->
+  <ModOp Type="addNextSibling" GUID='500950' Path="/Values/ConstructionCategory/BuildingList/Item[Building='101311']">
+    <Item>
+      <Building>1742102082</Building>      <!-- Pirate Gold Mine - Building -->
+    </Item>
+    <Item>
+      <Building>1742102090</Building>      <!-- Pirate Construction Modules - ConstructionCategory -->
+    </Item>
+  </ModOp>
+  <!-- END PIRATE HAVEN TO CONSTRUCTIONCATEGORY CONSUMABLES (NW) -->
+
   <!-- START PIRATE HAVEN TO CONSTRUCTIONCATEGORY HARBOUR (NW) -->
   <ModOp Type="add" GUID='500149' Path="/Values/ConstructionCategory/BuildingList/">
     <Item>
       <Building>1742102000</Building>      <!-- Pirate Haven - Building -->
     </Item>
     <Item>
-      <Building>1742102047</Building>      <!-- Pirate Quarters - Building -->
-    </Item>
-    <Item>
       <Building>1742102080</Building>      <!-- Pirate Fishery - Building -->
-    </Item>
-    <Item>
-      <Building>1742102082</Building>      <!-- Pirate Gold Mine - Building -->
     </Item>
     <Item>
       <Building>1742102060</Building>      <!-- Pirate Raid Harbour - Building -->
@@ -120,7 +133,16 @@
               <Building>1742102086</Building>              <!-- Pirate Goulash - Building -->
             </Item>
             <Item>
+              <Building>1742102101</Building>              <!-- Pirate Weapons - Building -->
+            </Item>
+            <Item>
               <Building>1742102088</Building>              <!-- Pirate Fur Coats - Building -->
+            </Item>
+            <Item>
+              <Building>1742102105</Building>              <!-- Pirate Coffee - Building -->
+            </Item>
+            <Item>
+              <Building>1742102107</Building>              <!-- Pirate Lobster - Building -->
             </Item>
           </BuildingList>
           <CategoryDescription>19173</CategoryDescription>
@@ -134,20 +156,12 @@
           </LocaText>
           <LineID>8481</LineID>
         </Text>
-        <Locked />
+        <Locked>
+          <DefaultLockedState>1</DefaultLockedState>
+        </Locked>
       </Values>
     </Asset>
   </ModOp>
   <!-- END DEFENSES CONSTRUCTION MENU (OW) -->
-
-  <ModOp Type="addPrevSibling" GUID="15000003" Path="/Values/PopulationLevel7/PopulationInputs/Item[1]">
-    <Item>      <!-- Fish  -->
-      <Product>1010200</Product>
-      <Amount>0.0004</Amount>
-      <SupplyWeight>1</SupplyWeight>
-      <MoneyValue>5</MoneyValue>
-      <IsConsideredByAI>0</IsConsideredByAI>
-    </Item>
-  </ModOp>
 
 </ModOps>

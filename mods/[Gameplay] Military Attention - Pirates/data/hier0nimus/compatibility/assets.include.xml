@@ -195,6 +195,167 @@
     </ModOp>
     <!-- END BUILDING - GAMBLING CORNER -->
 
+    <!-- START BUILDING - PIRATE PRODUCTION MODULE - BASIC WEAPONS -->
+    <ModOp Type="addNextSibling" GUID='1010305'>
+      <Asset>
+        <Template>BuffFactoryModule</Template>
+        <Values>
+          <Standard>
+            <GUID>1742102103</GUID>
+            <Name>Pirate Basic Weapons</Name>
+            <IconFilename>data\graphics\icons\icon_basic_weapons.png</IconFilename>
+            <InfoDescription>1742102104</InfoDescription>
+          </Standard>
+          <Building>
+            <BuildingCategoryName>100000</BuildingCategoryName>
+          </Building>
+          <Blocking />
+          <Object>
+            <Variations>
+              <Item>
+                <Filename>data/graphics/buildings/production/pirate_production_module/pirate_production_module_03.cfg</Filename>
+              </Item>
+            </Variations>
+          </Object>
+          <Cost>
+            <Costs>
+              <Item>
+                <Ingredient>1010017</Ingredient>
+                <Amount>5000</Amount>
+              </Item>
+              <Item>
+                <Ingredient>1010196</Ingredient>
+                <Amount>15</Amount>
+              </Item>
+            </Costs>
+          </Cost>
+          <Mesh />
+          <Selection>
+            <GUIType>Production</GUIType>
+            <ParticipantMessageArcheType>Advisor_02_Aahrant</ParticipantMessageArcheType>
+          </Selection>
+          <Constructable />
+          <SoundEmitter>
+            <ActiveSounds>
+              <Item>
+                <Sound>279511</Sound>
+              </Item>
+              <Item>
+                <Sound>216871</Sound>
+              </Item>
+            </ActiveSounds>
+          </SoundEmitter>
+          <FactoryBase>
+            <FactoryInputs>
+              <Item>
+                <Product>1742102062</Product>                <!-- Pirate Loot - Product -->
+                <Amount>1</Amount>
+                <StorageAmount>6</StorageAmount>
+              </Item>
+            </FactoryInputs>
+            <CycleTime>30</CycleTime>
+            <MissingConnectionInfolayer>500449</MissingConnectionInfolayer>
+            <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+            <ClampedMaxTransporterLogisticCost>67</ClampedMaxTransporterLogisticCost>
+          </FactoryBase>
+          <LogisticNode/>
+          <Maintenance>
+            <Maintenances>
+              <Item>
+                <Product>1010017</Product>
+                <Amount>50</Amount>
+                <InactiveAmount>25</InactiveAmount>
+              </Item>
+              <Item>
+                <Product>1742102049</Product>                <!--Pirate workforce-->
+                <Amount>40</Amount>
+              </Item>
+            </Maintenances>
+          </Maintenance>
+          <Industrializable>
+            <BoostedByIndustrialization>0</BoostedByIndustrialization>
+          </Industrializable>
+          <IncidentInfectable />
+          <Electrifiable>
+            <ElectricityBoost>0</ElectricityBoost>
+          </Electrifiable>
+          <AmbientMoodProvider />
+          <Attackable />
+          <UpgradeList />
+          <Pausable />
+          <FeedbackController />
+          <Infolayer />
+          <BuffFactory>
+            <ProductionBuffs>
+              <Item>
+                <ProductivityBuff>1742102110</ProductivityBuff>
+              </Item>
+            </ProductionBuffs>
+            <ProductionBuffScope>Radius</ProductionBuffScope>
+            <ProductionBuffDistance>4</ProductionBuffDistance>
+          </BuffFactory>
+          <BuildingModule>
+            <ModuleType>AdditionalModule</ModuleType>
+          </BuildingModule>
+          <Culture />
+        </Values>
+      </Asset>
+    </ModOp>
+    <!-- END BUILDING - PIRATE PRODUCTION MODULE - BASIC WEAPONS -->
+
+    <!-- START PIRATE PRODUCTION MODULE - BASIC WEAPONS BUFF - BUFF -->
+    <ModOp Type="addNextSibling" GUID="25623">
+      <Asset>
+        <Template>GuildhouseBuff</Template>
+        <Values>
+          <Standard>
+            <GUID>1742102110</GUID>
+            <Name>Basic Weapons from ironworks</Name>
+            <IconFilename>data/graphics/icons/icon_pirates_basic_weapons.png</IconFilename>
+            <InfoDescription>1742102104</InfoDescription>
+          </Standard>
+          <ItemEffect>
+            <EffectTargets>
+              <Item>
+                <GUID>6080</GUID>                <!-- Furnace NW -->
+              </Item>
+              <Item>
+                <GUID>1742100604</GUID>                <!-- Furnace NW Military Attention -->
+              </Item>
+              <Item>
+                <GUID>835</GUID>                <!-- Aluminium Smelter -->
+              </Item>
+            </EffectTargets>
+            <AllowStacking>0</AllowStacking>
+          </ItemEffect>
+          <BuildingUpgrade>
+            <WorkforceAmountUpgrade>
+              <Percental>1</Percental>
+              <Value>25</Value>
+            </WorkforceAmountUpgrade>
+          </BuildingUpgrade>
+          <Buff />
+          <FactoryUpgrade>
+            <AdditionalOutput>
+              <Item>
+                <Product>1742100471</Product>                <!-- Basic Weapons Military Attention -->
+                <Amount>1</Amount>
+                <AdditionalOutputCycle>2</AdditionalOutputCycle>
+              </Item>
+            </AdditionalOutput>
+          </FactoryUpgrade>
+          <PopulationUpgrade />
+          <ResidenceUpgrade />
+          <IncidentInfectableUpgrade />
+          <CultureUpgrade />
+          <InfluenceSourceUpgrade />
+          <DistributionUpgrade />
+          <ItemContainerUpgrade />
+        </Values>
+      </Asset>
+    </ModOp>
+    <!-- END PIRATE PRODUCTION MODULE - BASIC WEAPONS BUFF - BUFF -->
+
     <!-- START GAMBLING CORNER TO CONSTRUCTION MENU -->
     <ModOp Type="addNextSibling" GUID='1742102039,500149' Path="/Values/ConstructionCategory/BuildingList/Item[Building='1742102052']">
       <Item>
@@ -203,10 +364,21 @@
     </ModOp>
     <!-- END GAMBLING CORNER TO CONSTRUCTION MENU -->
 
+    <!-- START PIRATE BASIC WEAPONS TO PIRATE MODULES CONSTRUCTION MENU -->
+    <ModOp Type="addNextSibling" GUID='1742102090' Path="/Values/ConstructionCategory/BuildingList/Item[Building='1742102101']">
+      <Item>
+        <Building>1742102103</Building>        <!-- Pirate Basic Weapons - Building -->
+      </Item>
+    </ModOp>
+    <!-- END PIRATE BASIC WEAPONS TO PIRATE MODULES CONSTRUCTION MENU -->
+
     <!-- START - ALL BUILDINGS WITH MAINTENANCE - ItemEffectTargetPool -->
     <ModOp Type="add" GUID="368" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
       <Item>
         <GUID>1742102054</GUID>        <!--Gambling Corner-->
+      </Item>
+      <Item>
+        <GUID>1742102103</GUID>        <!--Pirate Basic Weapons-->
       </Item>
     </ModOp>
     <!-- END - ALL BUILDINGS WITH MAINTENANCE - ItemEffectTargetPool -->
@@ -215,6 +387,9 @@
     <ModOp Type="add" GUID="6000018,193856" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
       <Item>
         <GUID>1742102054</GUID>        <!--Gambling Corner-->
+      </Item>
+      <Item>
+        <GUID>1742102103</GUID>        <!--Pirate Basic Weapons-->
       </Item>
     </ModOp>
     <!-- END - ALL BUILDINGS TO GLOBAL PRODUCTION - ItemEffectTargetPool -->
