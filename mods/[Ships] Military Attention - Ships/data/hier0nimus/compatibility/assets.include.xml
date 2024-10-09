@@ -324,4 +324,21 @@ Compatibility
         <!-- END COMPATIBILITY 21 Legendary Items -->
     </Group>
 
+    <Group Condition="#Spice_Shipcapacity">
+        <!-- START COMPATIBILITY SIU SHIP CAPACITY -->
+        <!-- Increases the Cargolimit for Warships, early cargoships and airships -->
+        <ModOp Type="merge" GUID="1742100576,1742100578,1742100583,1742100587,1742100589,1742100591,1742100609,1742100613,1742100629,1742100615" Path="/Values/ItemContainer">
+            <StackLimit>75</StackLimit>
+        </ModOp>
+        <!-- Increases the Cargolimit of the Cargoships -->
+        <ModOp Type="merge" GUID='1742100581,1742100611,1742100585' Path="/Values/ItemContainer">
+            <StackLimit>100</StackLimit>
+        </ModOp>
+        <!-- Increases the Cargolimit if the Oil Tankers -->
+        <ModOp Type="replace" GUID='1742100624,1742100625' Path="/Values/ItemContainer/StackLimit">
+            <StackLimit>500</StackLimit>
+        </ModOp>
+        <!-- END COMPATIBILITY SIU SHIP CAPACITY -->
+    </Group>
+
 </ModOps>
