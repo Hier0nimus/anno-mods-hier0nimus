@@ -7,6 +7,7 @@
   <!-- START - POOL - PIRATE REWARDPOOLS -->
 
   <ModOp Type="addNextSibling" GUID='13054'>
+
     <!-- START - POOL - PIRATE TRADE TAX -->
     <Asset>
       <Template>RewardPool</Template>
@@ -711,7 +712,7 @@
   <!-- END - ADD PIRATES WAREHOUSE TO STANDARD WEIGHTS AND MEASURES-->
 
   <!-- START ADD PIRATES RESIDENCE TO ALL NEW WORLD RESIDENCES -->
-  <ModOp Type="add" GUID="25677" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
+  <ModOp Type="add" GUID="25677" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
     <Item>
       <GUID>1742102047</GUID>
     </Item>
@@ -764,5 +765,48 @@
     </Item>
   </ModOp>
   <!-- END ADD PIRATE GOLD MINE TO ALL MINES -->
+
+  <!-- START CHANGE PIRATE DROP POOL -->
+  <ModOp Type="merge" GUID="192083" Path="/Values/RewardPool/ItemsPool">
+    <Item>
+      <ItemLink>1742102062</ItemLink>
+      <MinAmount>25</MinAmount>
+      <MaxAmount>50</MaxAmount>
+      <Weight>10</Weight>
+    </Item>
+    <Item>
+      <ItemLink>1010257</ItemLink>
+      <MinAmount>15</MinAmount>
+      <MaxAmount>40</MaxAmount>
+      <Weight>5</Weight>
+    </Item>
+    <Item>
+      <ItemLink>1010249</ItemLink>
+      <MinAmount>10</MinAmount>
+      <MaxAmount>20</MaxAmount>
+      <Weight>3</Weight>
+    </Item>
+    <Item>
+      <ItemLink>1010210</ItemLink>
+      <MinAmount>10</MinAmount>
+      <MaxAmount>20</MaxAmount>
+      <Weight>2</Weight>
+    </Item>
+    <Item>
+      <ItemLink>1010221</ItemLink>
+      <MinAmount>10</MinAmount>
+      <MaxAmount>30</MaxAmount>
+      <Weight>4</Weight>
+    </Item>
+    <Item>
+      <ItemLink>1010223</ItemLink>
+      <MinAmount>5</MinAmount>
+      <MaxAmount>15</MaxAmount>
+      <Weight>1</Weight>
+    </Item>
+  </ModOp>
+  <!-- END CHANGE PIRATE DROP POOL -->
+
+
 
 </ModOps>
