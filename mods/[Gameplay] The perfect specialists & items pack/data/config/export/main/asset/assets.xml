@@ -1,6 +1,6 @@
 <!-- 
   
-  [Gameplay] The perfect specialists & items pack v18.7 (125)
+  [Gameplay] The perfect specialists & items pack v18.9 (125)
   GUID Range: 1742000000-1742000235 + 1742000408-1742000444
   
   Created by Hier0nimus
@@ -19,6 +19,13 @@
   Want to help translate to other languages? Feel free to leave a message on Mod.io - https://mod.io/g/anno-1800/m/the-perfect-specialists-items-pack
   Enjoy!
 
+REMOVED GUIDS
+1742000417 - All Glassmakers
+1742000427 - All Flour Mills
+1742000428 - All Tallow Processing
+1742000429 - All Slaughterhouses
+
+
 -->
 
 <ModOps>
@@ -36,6 +43,9 @@
         <ItemLink>1742000188</ItemLink>        <!-- Sea Mine Of Death 1742000188-1742000189 + 1742000194 -->
       </Item>
     </ItemsPool>
+  </ModOp>
+  <ModOp GUID="192545,192553" Type="merge" Path="/Values/RewardPool/ItemsPool/Item[ItemLink='192641']">
+    <Weight>1</Weight>
   </ModOp>
 
   <!-- LEGENDARY - CONSUMABLES SHIP -->
@@ -1416,7 +1426,7 @@
         <ItemEffect>
           <EffectTargets>
             <Item>
-              <GUID>1742000417</GUID>              <!-- All Glassmakers -->
+              <GUID>1500011903</GUID>              <!-- All Glassmakers - Shared Pool -->
             </Item>
           </EffectTargets>
         </ItemEffect>
@@ -1642,13 +1652,7 @@
               <GUID>114703</GUID>
             </Item>
             <Item>
-              <GUID>116034</GUID>
-            </Item>
-            <Item>
-              <GUID>112667</GUID>
-            </Item>
-            <Item>
-              <GUID>112673</GUID>
+              <GUID>1500301944</GUID>              <!-- all arctic hunting cabins - Shared Pool -->
             </Item>
           </EffectTargets>
         </ItemEffect>
@@ -1734,13 +1738,7 @@
         <ItemEffect>
           <EffectTargets>
             <Item>
-              <GUID>116034</GUID>
-            </Item>
-            <Item>
-              <GUID>112667</GUID>
-            </Item>
-            <Item>
-              <GUID>112673</GUID>
+              <GUID>1500301944</GUID>              <!-- all arctic hunting cabins - Shared Pool -->
             </Item>
           </EffectTargets>
         </ItemEffect>
@@ -2176,6 +2174,7 @@
     </Asset>
   </ModOp>
   <!-- END Aissa Okoro, Smasher of stews  -->
+
   <!-- START Jean-Claude Montagne, The perfect Arctic miner 1742000022-1742000023 -->
   <ModOp GUID="191388" Type="addNextSibling">
     <Asset>
@@ -2219,7 +2218,7 @@
               <GUID>112690</GUID>              <!-- Gas mine -->
             </Item>
             <Item>
-              <GUID>116029</GUID>              <!-- Deep Gold Mine -->
+              <GUID>1500301029</GUID>              <!-- All Arctic Mines - Shared Pool -->
             </Item>
           </EffectTargets>
         </ItemEffect>
@@ -2310,7 +2309,7 @@
               <GUID>112690</GUID>              <!-- Gas mine -->
             </Item>
             <Item>
-              <GUID>116029</GUID>              <!-- Deep Gold Mine -->
+              <GUID>1500301029</GUID>              <!-- All Arctic Mines - Shared Pool -->
             </Item>
           </EffectTargets>
         </ItemEffect>
@@ -2392,7 +2391,7 @@
               <GUID>112690</GUID>              <!-- Gas mine -->
             </Item>
             <Item>
-              <GUID>116029</GUID>              <!-- Deep Gold Mine -->
+              <GUID>1500301029</GUID>              <!-- All Arctic Mines - Shared Pool -->
             </Item>
           </EffectTargets>
         </ItemEffect>
@@ -3655,7 +3654,7 @@
         <ItemEffect>
           <EffectTargets>
             <Item>
-              <GUID>1742000429</GUID>              <!-- All Slaughterhouses -->
+              <GUID>1500200674</GUID>              <!-- All Slaughterhouses - Shared Pool -->
             </Item>
           </EffectTargets>
         </ItemEffect>
@@ -3940,10 +3939,10 @@
         <ItemEffect>
           <EffectTargets>
             <Item>
-              <GUID>1742000427</GUID>              <!-- All Flour Mills -->
+              <GUID>1500200678</GUID>              <!-- All Flour Mills - Shared Pool -->
             </Item>
             <Item>
-              <GUID>1010314</GUID>              <!-- Malthouse -->
+              <GUID>1500301028</GUID>              <!-- Malthouse - Shared Pool -->
             </Item>
           </EffectTargets>
         </ItemEffect>
@@ -4189,7 +4188,10 @@
         <ItemEffect>
           <EffectTargets>
             <Item>
-              <GUID>1742000428</GUID>              <!-- All Tallow Processing -->
+              <GUID>1500200675</GUID>              <!-- Rendering Works - Shared Pool -->
+            </Item>
+            <Item>
+              <GUID>1010300</GUID>              <!-- Dynamite Factory -->
             </Item>
           </EffectTargets>
         </ItemEffect>
@@ -4328,10 +4330,7 @@
         <ItemEffect>
           <EffectTargets>
             <Item>
-              <GUID>1010302</GUID>              <!-- Motor Assembly Line -->
-            </Item>
-            <Item>
-              <GUID>5659</GUID>              <!-- Motor Assembly Plant -->
+              <GUID>1500301946</GUID>              <!-- All motor factories - Shared Pool -->
             </Item>
           </EffectTargets>
         </ItemEffect>
@@ -5002,16 +5001,10 @@
         <ItemEffect>
           <EffectTargets>
             <Item>
-              <GUID>1010318</GUID>              <!-- Cotton Mill -->
-            </Item>
-            <Item>
-              <GUID>124739</GUID>              <!-- Advanced Cotton Mill -->
+              <GUID>1500301945</GUID>              <!-- All fabric mills - Shared Pool -->
             </Item>
             <Item>
               <GUID>1742000426</GUID>              <!-- All Sailmakers  -->
-            </Item>
-            <Item>
-              <GUID>101415</GUID>              <!-- Felt Producer -->
             </Item>
           </EffectTargets>
         </ItemEffect>
@@ -5143,13 +5136,10 @@
         <ItemEffect>
           <EffectTargets>
             <Item>
-              <GUID>1010317</GUID>              <!-- Sugar Refinery -->
+              <GUID>1500301953</GUID>              <!-- Sugar Refinery - Shared Pool -->
             </Item>
             <Item>
-              <GUID>1010340</GUID>              <!-- Rum Distillery (NW Only) -->
-            </Item>
-            <Item>
-              <GUID>24801</GUID>              <!-- Hacienda Rum Distillery -->
+              <GUID>1500200679</GUID>              <!-- Rum Distillery - Shared Pool -->
             </Item>
             <Item>
               <GUID>6594</GUID>              <!-- Mezcal Bar -->
@@ -5227,7 +5217,7 @@
         <ItemEffect>
           <EffectTargets>
             <Item>
-              <GUID>114441</GUID>              <!-- Linen Mill -->
+              <GUID>1500301022</GUID>              <!-- Linen Mill - Shared Pool -->
             </Item>
           </EffectTargets>
         </ItemEffect>
@@ -5436,7 +5426,7 @@
         <ItemEffect>
           <EffectTargets>
             <Item>
-              <GUID>114440</GUID>              <!-- Salt Works -->
+              <GUID>1500301023</GUID>              <!-- Salt Works - Shared Pool -->
             </Item>
           </EffectTargets>
         </ItemEffect>
@@ -5670,10 +5660,7 @@
         <ItemEffect>
           <EffectTargets>
             <Item>
-              <GUID>117744</GUID>              <!-- Paper Mill -->
-            </Item>
-            <Item>
-              <GUID>117743</GUID>              <!-- Clay Collector -->
+              <GUID>1500301947</GUID>              <!-- All river buildings - Shared Pool -->
             </Item>
           </EffectTargets>
         </ItemEffect>
@@ -5884,7 +5871,7 @@
         <ItemEffect>
           <EffectTargets>
             <Item>
-              <GUID>114471</GUID>              <!-- Wat Kitchen -->
+              <GUID>1500301027</GUID>              <!-- Wat Kitchen - Shared Pool -->
             </Item>
             <Item>
               <GUID>5458</GUID>              <!-- Jalea Kitchen -->
@@ -6030,7 +6017,7 @@
         <ItemEffect>
           <EffectTargets>
             <Item>
-              <GUID>114453</GUID>              <!-- Apiary -->
+              <GUID>1500301020</GUID>              <!-- Apiary - Shared Pool -->
             </Item>
           </EffectTargets>
         </ItemEffect>
@@ -7706,7 +7693,7 @@
               <GUID>1418</GUID>              <!-- Industrial Oil Press-->
             </Item>
             <Item>
-              <GUID>1010298</GUID>              <!-- Charcoal Kiln-->
+              <GUID>8924</GUID>              <!-- All Charcoal Kilns-->
             </Item>
           </EffectTargets>
         </ItemEffect>
@@ -8042,7 +8029,7 @@
               <GUID>191593</GUID>              <!-- All Saltpetre Works	-->
             </Item>
             <Item>
-              <GUID>1010560</GUID>              <!-- Sand Mine	-->
+              <GUID>1500010714</GUID>              <!-- Sand Mine - Shared pool	-->
             </Item>
           </EffectTargets>
         </ItemEffect>
@@ -8249,13 +8236,7 @@
         <ItemEffect>
           <EffectTargets>
             <Item>
-              <GUID>116034</GUID>
-            </Item>
-            <Item>
-              <GUID>112667</GUID>
-            </Item>
-            <Item>
-              <GUID>112673</GUID>
+              <GUID>1500301944</GUID>              <!-- all arctic hunting cabins - Shared Pool -->
             </Item>
           </EffectTargets>
         </ItemEffect>
@@ -10195,7 +10176,7 @@
             </Item>
             <Item>
               <ProvidedNeed>120050</ProvidedNeed>              <!-- Chapel -->
-              <SubstituteNeed>120020</SubstituteNeed>              <!-- Hacienda -->
+              <SubstituteNeed>25546</SubstituteNeed>              <!-- Hacienda -->
             </Item>
             <Item>
               <ProvidedNeed>1010348</ProvidedNeed>              <!-- Boxing Arena -->
@@ -11220,7 +11201,7 @@
               <GUID>112690</GUID>              <!-- Gas mine -->
             </Item>
             <Item>
-              <GUID>116029</GUID>              <!-- Deep Gold Mine -->
+              <GUID>1500301029</GUID>              <!-- All Arctic Mines - Shared Pool -->
             </Item>
           </EffectTargets>
         </ItemEffect>
