@@ -1,10 +1,22 @@
-# Military Attention | 1.10!
+# Military Attention | 1.12!
 
 A mod centered around military infrastructure and adding new military residence tiers for all regions with a focus on the Old World.
 
 ![ma-img-01.jpg](./banner.jpg)
 
 ## Changelog
+
+### v1.12
+- Refreshed trigger GUIDs for 1 soldier and 100 soldiers unlock
+- Added buff to churches when building a cemetery next to a church. Added also compatibility for Lion Old World Chapel mod for this.
+- Added compatibility for Pescatarians mod by adding some needs from MA to the Pescatarians population
+- Increased the amount of soldiers you get from early game goods a small bit to get some more soldiers early game
+
+### v1.11
+- Updated Chinese translation thanks to hanthe2th
+- Added compatibility checks for Lifestyle needs so they are more compatible with other mods that change lifestyle needs
+- Fixed wrongly unlock condition for Field Hospital
+- Added additional population for Engineers and Investors in line with the additional population for farmers, workers and artisan so when upgrading you do not loose population.
 
 ### v1.10
 - Update for Simplified Chinese translation

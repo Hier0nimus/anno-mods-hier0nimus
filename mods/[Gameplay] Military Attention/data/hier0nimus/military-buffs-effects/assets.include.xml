@@ -2303,6 +2303,84 @@
       </Values>
     </Asset>
     <!--  END - MILITARY CAMPUS - EFFECTCONTAINER AND BUFFS -->
+
+    <!-- CEMETERY - BUFF & EFFECTCONTAINER -->
+    <Asset>
+      <Template>EffectContainer</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100632</GUID>
+          <Name>Cemetery</Name>
+          <IconFilename>data/graphics/icons/icon_cemetery.png</IconFilename>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1010359</GUID>              <!-- Churh - Public Service - Building -->
+            </Item>
+          </EffectTargets>
+          <AllowStacking>0</AllowStacking>
+        </ItemEffect>
+        <Text />
+        <EffectContainer>
+          <Effects>
+            <Item>
+              <Effect>1742100633</Effect>              <!--Cemetery - TownHallBuff -->
+            </Item>
+          </Effects>
+        </EffectContainer>
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <ModOp GUID="269978" Type="addNextSibling">
+    <Asset>
+      <Template>TownhallBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100633</GUID>
+          <Name>Cemetery</Name>
+          <IconFilename>data/graphics/icons/icon_cemetery.png</IconFilename>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1010359</GUID>              <!-- Churh - Public Service - Building -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Cemetery</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>31345</LineID>
+        </Text>
+        <BuildingUpgrade>
+          <PublicServiceFullSatisfactionDistance>
+            <Value>100</Value>
+            <Percental>1</Percental>
+          </PublicServiceFullSatisfactionDistance>
+          <PublicServiceNoSatisfactionDistance>
+            <Value>100</Value>
+            <Percental>1</Percental>
+          </PublicServiceNoSatisfactionDistance>
+        </BuildingUpgrade>
+        <Buff />
+        <PopulationUpgrade />
+        <ResidenceUpgrade />
+        <IncidentInfectableUpgrade />
+        <CultureUpgrade />
+        <InfluenceSourceUpgrade />
+        <WarehouseUpgrade />
+        <DistributionUpgrade />
+        <ItemContainerUpgrade />
+        <FactoryUpgrade />
+      </Values>
+    </Asset>
+    <!--  END - CEMETERY - EFFECTCONTAINER AND BUFFS -->
   </ModOp>
 
 </ModOps>

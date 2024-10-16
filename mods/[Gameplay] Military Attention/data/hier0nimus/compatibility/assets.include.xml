@@ -1305,5 +1305,72 @@
     <!-- END COMPATIBILITY DIVERSE KRAFTWERKE -->
   </Group>
 
+  <Group Condition="#lion053_ow_chapels">
+    <!-- START COMPATIBILITY CHAPELS LION -->
+    <ModOp Type="add" GUID='1742100632' Path="Values/ItemEffect/EffectTargets">
+      <Item>
+        <GUID>2100115121</GUID>
+      </Item>
+      <Item>
+        <GUID>2100115127</GUID>
+      </Item>
+    </ModOp>
+    <ModOp Type="add" GUID='1742100633' Path="Values/ItemEffect/EffectTargets">
+      <Item>
+        <GUID>2100115121</GUID>
+      </Item>
+      <Item>
+        <GUID>2100115127</GUID>
+      </Item>
+    </ModOp>
+    <!-- END COMPATIBILITY CHAPELS LION -->
+  </Group>
+
+  <Group Condition="#jakob_pescatarians">
+    <!-- START COMPATIBILITY INDUSTRIAL CITIES - PESCATARIANS -->
+    <!-- ****************** START ADDING ADDITIONAL GOODS FOR PESCATARIANS ******************  -->
+    <ModOp Type="addNextSibling" GUID="601382" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='1500010836']">
+      <Item>
+        <Product>1742100556</Product>        <!-- Cemetery - Product -->
+        <SupplyWeight>2</SupplyWeight>
+        <FullWeightPopulationCount>100</FullWeightPopulationCount>
+        <NoWeightPopulationCount>0</NoWeightPopulationCount>
+        <AdditionalGlobalUnlockRequirement>
+          <Population>15000000</Population>          <!-- Farmers -->
+          <MinPopulationAmount>100</MinPopulationAmount>
+        </AdditionalGlobalUnlockRequirement>
+        <IsConsideredByAI>0</IsConsideredByAI>
+      </Item>
+      <Item>
+        <Product>1742100242</Product>        <!-- Clean Water - Product -->
+        <Amount>0.0003</Amount>        <!-- 0.0004166667 Amount Fish -->
+        <SupplyWeight>2</SupplyWeight>
+        <MoneyValue>10</MoneyValue>
+        <FullWeightPopulationCount>100</FullWeightPopulationCount>
+        <NoWeightPopulationCount>0</NoWeightPopulationCount>
+        <AdditionalGlobalUnlockRequirement>
+          <Population>15000000</Population>          <!-- Farmers -->
+          <MinPopulationAmount>100</MinPopulationAmount>
+        </AdditionalGlobalUnlockRequirement>
+        <IsConsideredByAI>0</IsConsideredByAI>
+      </Item>
+      <Item>
+        <Product>1742100211</Product>        <!-- Horses - Product -->
+        <Amount>0.0002</Amount>        <!-- 0.0004166667 Amount Fish -->
+        <SupplyWeight>4</SupplyWeight>
+        <MoneyValue>30</MoneyValue>
+        <FullWeightPopulationCount>100</FullWeightPopulationCount>
+        <NoWeightPopulationCount>0</NoWeightPopulationCount>
+        <AdditionalGlobalUnlockRequirement>
+          <Population>15000000</Population>          <!-- Farmers -->
+          <MinPopulationAmount>100</MinPopulationAmount>
+        </AdditionalGlobalUnlockRequirement>
+        <IsConsideredByAI>0</IsConsideredByAI>
+      </Item>
+    </ModOp>
+    <!-- ****************** END ADDING ADDITIONAL GOODS FOR PESCATARIANS ******************  -->
+    <!-- END COMPATIBILITY INDUSTRIAL CITIES - PESCATARIANS -->
+  </Group>
+
 </ModOps>
   
