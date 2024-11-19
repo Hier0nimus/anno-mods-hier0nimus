@@ -1,0 +1,160 @@
+<!-- 
+  
+  [Shared] Shared Items - Flags - v1.0
+  Created by Taubenangriff & Hier0nimus 
+  Enjoy!
+
+  Fixed Pirate and Peace flag for ships
+
+  1742102007 - Flag Of War - VehicleItem
+  1742102113 - Flag Of Peace - VehicleItem
+  1742102114 - Ships with special flag - Text
+
+-->
+
+<ModOps>
+
+  <!-- Torpedo Launcher: New Socket Allocation -->
+  <ModOp Type="addNextSibling" GUID='115184'>
+    <Asset>
+      <Template>Text</Template>
+      <Values>
+        <Standard>
+          <GUID>1742102114</GUID>
+          <Name>Ships with special flag</Name>
+          <IconFilename>data/ui/2kimages/main/icons/icon_diplomacy_options_cancel.png</IconFilename>
+        </Standard>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Ships with special flag</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>35020</LineID>
+        </Text>
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <ModOp Type="merge" GUID='6000017' Path="/Values/ItemConfig/AllocationText">
+    <AllocationText>
+      <Mod6>
+        <Text>1742102114</Text>
+      </Mod6>
+    </AllocationText>
+  </ModOp>
+
+  <ModOp Type="add" GUID='6000017' Path="/Values/ItemConfig/AllocationIcons">
+    <Item>
+      <Allocation>Mod6</Allocation>
+      <AllocationIcon>data/ui/2kimages/main/icons/icon_diplomacy_options_cancel.png</AllocationIcon>
+    </Item>
+  </ModOp>
+
+  <ModOp Type="add" GUID='501516' Path="/Values/ItemFilter/ItemCategories/Item[CategoryAsset='18021']/ItemTypes">;Mod6</ModOp>
+
+  <ModOp Type="addNextSibling" GUID='192173'>
+    <!-- START - FLAG OF WAR -->
+    <Asset>
+      <Template>VehicleItem</Template>
+      <Values>
+        <Standard>
+          <GUID>1742102007</GUID>
+          <Name>Flag of War</Name>
+          <IconFilename>data/graphics/icons/icon_pirate_flag_diplomacy.png</IconFilename>
+          <InfoDescription>19793</InfoDescription>
+        </Standard>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Flag of War</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>29561</LineID>
+        </Text>
+        <Item>
+          <MaxStackSize>1</MaxStackSize>
+          <Rarity>Common</Rarity>
+          <ExclusiveGroup>Flag</ExclusiveGroup>
+          <TradePrice>666</TradePrice>
+          <Allocation>Mod6</Allocation>
+        </Item>
+        <Cost/>
+        <VehicleUpgrade>
+          <ActivatePirateFlag>1</ActivatePirateFlag>
+        </VehicleUpgrade>
+        <ExpeditionAttribute>
+          <BaseMorale>0</BaseMorale>
+          <ExpeditionAttributes>
+            <Item>
+              <Attribute>Melee</Attribute>
+              <Amount>20</Amount>
+            </Item>
+          </ExpeditionAttributes>
+          <ItemDifficulties>Average;Hard</ItemDifficulties>
+          <FluffText>19793</FluffText>
+        </ExpeditionAttribute>
+        <AttackerUpgrade/>
+        <AttackableUpgrade/>
+        <Locked/>
+        <TradeShipUpgrade/>
+        <CraftableItem/>
+        <DivingBellUpgrade/>
+      </Values>
+    </Asset>
+    <!-- END - FLAG OF WAR -->
+    <!-- START - FLAG OF PEACE -->
+    <Asset>
+      <Template>VehicleItem</Template>
+      <Values>
+        <Standard>
+          <GUID>1742102113</GUID>
+          <Name>Flag of Peace</Name>
+          <IconFilename>data/graphics/icons/icon_white_flag_diplomacy.png</IconFilename>
+          <InfoDescription>19724</InfoDescription>
+        </Standard>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Flag of Peace</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>26807</LineID>
+        </Text>
+        <Item>
+          <MaxStackSize>1</MaxStackSize>
+          <Rarity>Common</Rarity>
+          <ExclusiveGroup>Flag</ExclusiveGroup>
+          <TradePrice>1000</TradePrice>
+          <Allocation>Mod6</Allocation>
+        </Item>
+        <Cost />
+        <VehicleUpgrade>
+          <ActivateWhiteFlag>1</ActivateWhiteFlag>
+        </VehicleUpgrade>
+        <ExpeditionAttribute>
+          <BaseMorale>0</BaseMorale>
+          <ExpeditionAttributes>
+            <Item>
+              <Attribute>Diplomacy</Attribute>
+              <Amount>10</Amount>
+            </Item>
+          </ExpeditionAttributes>
+          <ItemDifficulties>Average;Hard</ItemDifficulties>
+          <FluffText>19724</FluffText>
+        </ExpeditionAttribute>
+        <AttackerUpgrade />
+        <AttackableUpgrade />
+        <Locked />
+        <TradeShipUpgrade />
+        <CraftableItem />
+        <DivingBellUpgrade />
+      </Values>
+    </Asset>
+    <!-- END - FLAG OF PEACE -->
+  </ModOp>
+
+</ModOps>
