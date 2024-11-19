@@ -4,7 +4,6 @@ Compatibility
 
 -->
 <ModOps>
-
     <Group Condition="#military_attention">
         <!-- START MILITARY ATTENTION - LOGISTICS & POPULATION -->
 
@@ -335,10 +334,23 @@ Compatibility
             <StackLimit>100</StackLimit>
         </ModOp>
         <!-- Increases the Cargolimit if the Oil Tankers -->
-        <ModOp Type="replace" GUID='1742100624,1742100625' Path="/Values/ItemContainer/StackLimit">
+        <ModOp Type="merge" GUID='1742100624,1742100625' Path="/Values/ItemContainer">
             <StackLimit>500</StackLimit>
         </ModOp>
         <!-- END COMPATIBILITY SIU SHIP CAPACITY -->
     </Group>
 
+    <Group Condition="#military_attention_pirates">
+        <!-- HUNT IS RELATED TO ANNE HARLOW - SHE BUILDS SOME OF THE PIRATE SHIPS -->
+        <ModOp Type="add" GUID="85" Path="/Values/MilitaryAI/WarFleet/ShipList">
+            <Item>
+                <Type>1742102008</Type>                <!--Jolly Roger-->
+                <Weight>1</Weight>
+            </Item>
+            <Item>
+                <Type>1742102010</Type>                <!--Pirate Battle Cruiser-->
+                <Weight>1</Weight>
+            </Item>
+        </ModOp>
+    </Group>
 </ModOps>
