@@ -1,0 +1,224 @@
+<!-- 
+  Triggers - New Horizons
+-->
+
+<ModOps>
+
+  <!--UNLOCK - ATOLL TIER 1 - 100 -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100782</GUID>
+          <Name>Atoll Tier 1 - 100</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>15100000</Context>                <!-- Asia Tier 1 PopulationLevel7 -->
+                <CounterAmount>100</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
+                      <Item>
+                        <Asset>1742100649</Asset>                        <!-- Swordsmith - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100651</Asset>                        <!-- Navy Recruitment Office (NH) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100652</Asset>                        <!-- Small Military Warehouse (NH) - Building -->
+                      </Item>
+                    </UnhideAssets>
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>1742100006</Asset>                        <!-- Atoll Soldiers - PopulationLevel7 -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100010</Asset>                        <!-- Military (NH) - PopulationLevel7 -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100646</Asset>                        <!-- Military Construction Category (NH) -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100634</Asset>                        <!-- Atoll Soldiers Residence - Encampment - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100636</Asset>                        <!-- Canteen (NH) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100640</Asset>                        <!-- Atoll Outpost - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100638</Asset>                        <!-- Canteen (NH) - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100642</Asset>                        <!-- Atoll Outpost - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100644</Asset>                        <!-- Atoll Soldiers Workforce - Product -->
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!--UNLOCK - ATOLL SOLDIERS 1 - 100 -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100783</GUID>
+          <Name>MOD Trigger</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>1742100006</Context>                <!-- Atoll Soldiers - PopulationLevel7 -->
+                <CounterAmount>100</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
+                    </UnhideAssets>
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>1742100649</Asset>                        <!-- Swordsmith - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100647</Asset>                        <!-- Traditional Weapons - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100651</Asset>                        <!-- Navy Recruitment Office (NH) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100652</Asset>                        <!-- Small Military Warehouse (NH) - Building -->
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+  
+  <!--UNLOCK - CREATIVE MODE -->
+  <ModOp Type="addNextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100781</GUID>
+          <Name>Unlock Creative Mode NH</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionIsCreativeMode</Template>
+            <Values>
+              <Condition />
+              <ConditionIsCreativeMode />
+              <ConditionPropsNegatable />
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>1742100006</Asset>                        <!-- Atoll Soldiers - PopulationLevel7 -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100010</Asset>                        <!-- Military (NH) - PopulationLevel7 -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100646</Asset>                        <!-- Military Construction Category (NH) -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100634</Asset>                        <!-- Atoll Soldiers Residence - Encampment - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100636</Asset>                        <!-- Canteen (NH) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100640</Asset>                        <!-- Atoll Outpost - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100638</Asset>                        <!-- Canteen (NH) - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100642</Asset>                        <!-- Atoll Outpost - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100644</Asset>                        <!-- Atoll Soldiers Workforce - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100649</Asset>                        <!-- Swordsmith - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100647</Asset>                        <!-- Traditional Weapons - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100651</Asset>                        <!-- Navy Recruitment Office (NH) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100652</Asset>                        <!-- Small Military Warehouse (NH) - Building -->
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+          <ResetTrigger>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <EmptyAutoCreateValue />
+            </Values>
+          </ResetTrigger>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+
+</ModOps>

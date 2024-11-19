@@ -1,0 +1,44 @@
+<!-- 
+  Compatibility - New Horizons
+-->
+
+<ModOps>
+
+  <!-- START COMPATIBILITY NH -->
+  <Group Condition="#new_horizons_session">
+
+    <Include File="../../hier0nimus/military-tiers/assets.include.nh.xml" />
+    <Include File="../../hier0nimus/military-buildings/assets.include.nh.xml" />
+    <Include File="../../hier0nimus/ammunition-depot/assets.include.nh.xml" />
+    <Include File="../../hier0nimus/military-defenses/assets.include.nh.xml" />
+    <Include File="../../hier0nimus/military-products/assets.include.nh.xml" />
+    <Include File="../../hier0nimus/military-buffs-effects/assets.include.nh.xml" />
+    <Include File="../../hier0nimus/military-construction-menu/assets.include.nh.xml" />
+    <Include File="../../hier0nimus/triggers/assets.include.nh.xml" />
+
+    <ModOp GUID="14740115" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>5</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>5</Amount>
+      </Item>
+    </ModOp>
+
+    <ModOp GUID="14740102" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>10</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>10</Amount>
+      </Item>
+    </ModOp>
+
+  </Group>
+  <!-- END COMPATIBILITY NH -->
+
+</ModOps>

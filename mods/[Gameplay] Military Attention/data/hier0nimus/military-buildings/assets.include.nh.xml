@@ -1,0 +1,836 @@
+<!-- 
+  Military Buildings - New Horizons
+-->
+
+<ModOps>
+
+  <!-- START BUILDING ATOLL SOLDIERS Residence - ENCAMPMENT -->
+  <ModOp GUID='601891' Type="addNextSibling">
+    <Asset>
+      <Template>ResidenceBuilding</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100634</GUID>          <!-- Atoll Soldiers Residence - Encampment - Building -->
+          <Name>Atoll Encampment</Name>
+          <IconFilename>data/graphics/icons/icon_resident_soldiers_0.png</IconFilename>
+          <InfoDescription>1742100635</InfoDescription>          <!-- Atoll Soldiers Residence - Encampment - Building - Description -->
+        </Standard>
+        <Blocking />
+        <Building>
+          <BuildingType>Residence</BuildingType>
+          <PickingAsset>1742100634</PickingAsset>          <!-- Atoll Soldiers Residence - Encampment - Building -->
+          <SkipUnlockMessage>1</SkipUnlockMessage>
+          <BuildModeRandomRotation>90</BuildModeRandomRotation>
+          <AssociatedRegions>Mod2</AssociatedRegions>
+        </Building>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>1</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010210</Ingredient>              <!-- Sails - Product-->
+              <Amount>1</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Mesh />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/residence/residence_military_soldiers/soldiers_encampment_01-01.cfg</Filename>
+            </Item>
+            <Item>
+              <Filename>data/graphics/buildings/residence/residence_military_soldiers/soldiers_encampment_02-01.cfg</Filename>
+            </Item>
+            <Item>
+              <Filename>data/graphics/buildings/residence/residence_military_soldiers/soldiers_encampment_02-01-no-pallisade.cfg</Filename>
+            </Item>
+            <Item>
+              <Filename>data/graphics/buildings/residence/residence_military_soldiers/soldiers_encampment_03-01.cfg</Filename>
+            </Item>
+            <Item>
+              <Filename>data/graphics/buildings/residence/residence_military_soldiers/soldiers_encampment_03-01-no-pallisade.cfg</Filename>
+            </Item>
+            <Item>
+              <Filename>data/graphics/buildings/residence/residence_military_soldiers/soldiers_encampment_04-01.cfg</Filename>
+            </Item>
+            <Item>
+              <Filename>data/graphics/buildings/residence/residence_military_soldiers/soldiers_encampment_04-01-no-pallisade.cfg</Filename>
+            </Item>
+            <Item>
+              <Filename>data/graphics/buildings/residence/residence_military_soldiers/soldiers_encampment_05-01.cfg</Filename>
+            </Item>
+            <Item>
+              <Filename>data/graphics/buildings/residence/residence_military_soldiers/soldiers_encampment_06-01.cfg</Filename>
+            </Item>
+            <Item>
+              <Filename>data/graphics/buildings/residence/residence_military_soldiers/soldiers_encampment_06-01-no-pallisade.cfg</Filename>
+            </Item>
+            <Item>
+              <Filename>data/graphics/buildings/residence/residence_military_soldiers/soldiers_encampment_07-01.cfg</Filename>
+            </Item>
+            <Item>
+              <Filename>data/graphics/buildings/residence/residence_military_soldiers/soldiers_encampment_07-01-no-pallisade.cfg</Filename>
+            </Item>
+            <Item>
+              <Filename>data/graphics/buildings/residence/residence_military_soldiers/soldiers_encampment_08-01.cfg</Filename>
+            </Item>
+            <Item>
+              <Filename>data/graphics/buildings/residence/residence_military_soldiers/soldiers_encampment_08-01-no-pallisade.cfg</Filename>
+            </Item>
+            <Item>
+              <Filename>data/graphics/buildings/residence/residence_military_soldiers/soldiers_encampment_09-01.cfg</Filename>
+            </Item>
+            <Item>
+              <Filename>data/graphics/buildings/residence/residence_military_soldiers/soldiers_encampment_09-01-no-pallisade.cfg</Filename>
+            </Item>
+            <Item>
+              <Filename>data/graphics/buildings/residence/residence_military_soldiers/soldiers_encampment_10-01.cfg</Filename>
+            </Item>
+            <Item>
+              <Filename>data/graphics/buildings/residence/residence_military_soldiers/soldiers_encampment_10-01-no-pallisade.cfg</Filename>
+            </Item>
+          </Variations>
+          <Skins>
+            <DefaultSkinName>1742100634</DefaultSkinName>
+            <DefaultSkinDescription>23853</DefaultSkinDescription>
+            <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>
+          </Skins>
+        </Object>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>Mercier_DeserterWorker</ParticipantMessageArcheType>
+        </Selection>
+        <Text />
+        <Constructable />
+        <Locked>
+          <DefaultLockedState>1</DefaultLockedState>
+        </Locked>
+        <Upgradable />
+        <SoundEmitter>
+          <ConstructionSounds>
+            <BuildSuccessful>
+              <Item>
+                <VectorElement>
+                  <InheritanceMapV2>
+                    <Entry>
+                      <TemplateName>ResidenceBuilding7</TemplateName>
+                      <Index>0</Index>
+                    </Entry>
+                  </InheritanceMapV2>
+                </VectorElement>
+                <Sound>200776</Sound>
+              </Item>
+            </BuildSuccessful>
+            <BuildUpgradeFailed>
+              <Item>
+                <Sound>9818387</Sound>
+              </Item>
+            </BuildUpgradeFailed>
+          </ConstructionSounds>
+          <IncidentSounds>
+            <InfectedFire>
+              <Item>
+                <Sound>214659</Sound>
+              </Item>
+            </InfectedFire>
+            <InfectedIllness>
+              <Item>
+                <Sound>214756</Sound>
+              </Item>
+            </InfectedIllness>
+            <InfectedRiot>
+              <Item>
+                <Sound>222229</Sound>
+              </Item>
+            </InfectedRiot>
+            <ExplosionOneShots>
+              <Item>
+                <Sound>203849</Sound>
+              </Item>
+            </ExplosionOneShots>
+          </IncidentSounds>
+          <BuildingRepaired>
+            <Item>
+              <Sound>203866</Sound>
+            </Item>
+          </BuildingRepaired>
+          <MaterialType>Wood</MaterialType>
+        </SoundEmitter>
+        <Infolayer />
+        <FeedbackController />
+        <Residence7>
+          <ResidenceStorage>
+            <InputStorageMax>1</InputStorageMax>
+          </ResidenceStorage>
+          <PopulationLevel7>1742100006</PopulationLevel7>          <!-- Atoll Soldiers PopulationLevel7 -->
+          <ResidentMax>10</ResidentMax>
+          <ResidentsRequiredForUpgrade>10</ResidentsRequiredForUpgrade>
+          <IsBaseResidence>0</IsBaseResidence>
+        </Residence7>
+        <LogisticNode />
+        <AmbientMoodProvider>
+          <DynamicEnvironmentType>ResidenceT1</DynamicEnvironmentType>
+        </AmbientMoodProvider>
+        <UpgradeList />
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+          <MaximumHitPoints>1500</MaximumHitPoints>
+        </Attackable>
+        <IncidentInfectable>
+          <Infectable>
+            <Explosion>
+              <Base>0</Base>
+              <Escalated>0</Escalated>
+            </Explosion>
+          </Infectable>
+          <Explosion>
+            <ExplosionCoreDamage>1000</ExplosionCoreDamage>
+          </Explosion>
+          <IncidentInfectionChanceFactors>
+            <Fire>
+              <DensityFactor>0.025</DensityFactor>
+              <DensityDistance>15</DensityDistance>
+            </Fire>
+            <Riot>
+              <ResidenceHappinessFactor>0.4</ResidenceHappinessFactor>
+              <HappinessThreshold>10</HappinessThreshold>
+            </Riot>
+            <Illness>
+              <BaseChance>4</BaseChance>
+              <HitpointFactor>0.1</HitpointFactor>
+              <DensityFactor>0.025</DensityFactor>
+              <DensityDistance>15</DensityDistance>
+              <DilapidatedFactor>10</DilapidatedFactor>
+              <FactoryOvertimeFactor>0.3</FactoryOvertimeFactor>
+              <FactoryUndertimeFactor>0.15</FactoryUndertimeFactor>
+              <ResidenceFullOvertimeChance>20</ResidenceFullOvertimeChance>
+              <ResidenceFullUndertimeChance>-15</ResidenceFullUndertimeChance>
+            </Illness>
+            <Explosion>
+              <ResidenceFullOvertimeChance>20</ResidenceFullOvertimeChance>
+              <ResidenceFullUndertimeChance>-15</ResidenceFullUndertimeChance>
+            </Explosion>
+          </IncidentInfectionChanceFactors>
+        </IncidentInfectable>
+        <Pausable />
+        <Culture />
+        <StreetActivation />
+        <InfluenceSource />
+        <Maintenance>
+          <IncomeCategory>Skyscrapers</IncomeCategory>
+        </Maintenance>
+        <Audio>
+          <ClusterEvent>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <AudioLink />
+            </Values>
+          </ClusterEvent>
+        </Audio>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING ATOLL SOLDIERS Residence - ENCAMPMENT -->
+
+  <!-- START BUILDING - CANTEEN (NH) -->
+  <ModOp Type="addNextSibling" GUID='1010358'>
+    <Asset>
+      <Template>PublicServiceBuilding</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100636</GUID>          <!-- Canteen (NH) - Building -->
+          <Name>Canteen</Name>
+          <IconFilename>data/graphics/icons/icon_canteen.png</IconFilename>
+          <InfoDescription>1742100637</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingType>Logistic</BuildingType>
+          <AssociatedRegions>Mod2</AssociatedRegions>
+        </Building>
+        <Blocking />
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>1000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!-- Bricks - Product -->
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product -->
+              <Amount>2</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/military/canteen/canteen_ow_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Mesh />
+        <Selection>
+          <GUIType>PublicService</GUIType>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+        </Selection>
+        <Text />
+        <Constructable />
+        <Locked />
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>242785</Sound>
+            </Item>
+          </ActiveSounds>
+          <IncidentSounds>
+            <InfectedFire>
+              <Item>
+                <Sound>214659</Sound>
+              </Item>
+            </InfectedFire>
+          </IncidentSounds>
+        </SoundEmitter>
+        <FeedbackController />
+        <Infolayer />
+        <UpgradeList />
+        <LogisticNode />
+        <PublicService>
+          <FullSatisfactionDistance>40</FullSatisfactionDistance>
+          <NoSatisfactionDistance>50</NoSatisfactionDistance>
+          <PublicServiceOutputs>
+            <Item>
+              <Product>1742100638</Product>              <!-- Canteen (NH) - Product -->
+            </Item>
+          </PublicServiceOutputs>
+        </PublicService>
+        <AmbientMoodProvider />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>              <!-- Coins -->
+              <Amount>30</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Attackable />
+        <Pausable />
+        <IncidentInfectable>
+          <Infectable>
+            <Fire>
+              <Base>0</Base>
+            </Fire>
+            <Riot>
+              <Escalated>0</Escalated>
+            </Riot>
+            <Illness>
+              <Escalated>0</Escalated>
+            </Illness>
+            <Explosion>
+              <Base>0</Base>
+              <Escalated>0</Escalated>
+            </Explosion>
+          </Infectable>
+        </IncidentInfectable>
+        <Culture />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - CANTEEN (NH) -->
+
+  <!-- START BUILDING - ATOLL OUTPOST -->
+  <ModOp Type="addNextSibling" GUID='1010358'>
+    <Asset>
+      <Template>PublicServiceBuilding</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100640</GUID>          <!-- Atoll Outpost - Building -->
+          <Name>Atoll Outpost</Name>
+          <IconFilename>data/graphics/icons/icon_military_headquarters.png</IconFilename>
+          <InfoDescription>1742100641</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingType>Logistic</BuildingType>
+          <AssociatedRegions>Mod2</AssociatedRegions>
+        </Building>
+        <Blocking />
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>1500</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>20</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!-- Bricks - Product -->
+              <Amount>20</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product -->
+              <Amount>5</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/military/military_outpost/military_outpost_nw_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Mesh />
+        <Selection>
+          <GUIType>PublicService</GUIType>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+        </Selection>
+        <Text />
+        <Constructable />
+        <Locked />
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>242785</Sound>
+            </Item>
+          </ActiveSounds>
+          <IncidentSounds>
+            <InfectedFire>
+              <Item>
+                <Sound>214659</Sound>
+              </Item>
+            </InfectedFire>
+          </IncidentSounds>
+        </SoundEmitter>
+        <FeedbackController />
+        <Infolayer />
+        <UpgradeList />
+        <LogisticNode />
+        <PublicService>
+          <FullSatisfactionDistance>40</FullSatisfactionDistance>
+          <NoSatisfactionDistance>50</NoSatisfactionDistance>
+          <PublicServiceOutputs>
+            <Item>
+              <Product>1742100642</Product>              <!-- Atoll Outpost - Product -->
+            </Item>
+          </PublicServiceOutputs>
+        </PublicService>
+        <AmbientMoodProvider />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>              <!-- Coins -->
+              <Amount>150</Amount>
+            </Item>
+            <Item>
+              <Product>1742100644</Product>              <!-- Atoll Soldiers Workforce -->
+              <Amount>20</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Attackable />
+        <Pausable />
+        <IncidentInfectable>
+          <Infectable>
+            <Fire>
+              <Base>0</Base>
+            </Fire>
+            <Riot>
+              <Escalated>0</Escalated>
+            </Riot>
+            <Illness>
+              <Escalated>0</Escalated>
+            </Illness>
+            <Explosion>
+              <Base>0</Base>
+              <Escalated>0</Escalated>
+            </Explosion>
+          </Infectable>
+        </IncidentInfectable>
+        <Culture />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - ATOLL OUTPOST -->
+
+  <!-- START BUILDING - SWORDSMITH -->
+  <ModOp Type="addNextSibling" GUID='1010284'>
+    <Asset>
+      <Template>HeavyFactoryBuilding</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100649</GUID>
+          <Name>Swordsmith</Name>
+          <IconFilename>data\graphics\icons\icon_traditional_weapons.png</IconFilename>
+          <InfoDescription>1742100650</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <AssociatedRegions>Mod2</AssociatedRegions>
+        </Building>
+        <Blocking/>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <!--Money-->
+              <Amount>600</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>
+              <!--timber-->
+              <Amount>8</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>
+              <!--bricks-->
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>
+              <!--beams-->
+              <Amount>8</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/production/basic_weapons_factory/basic_weapons_factory_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Mesh/>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>Mod1</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Text />
+        <Constructable/>
+        <Locked/>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>214813</Sound>
+            </Item>
+            <Item>
+              <Sound>206298</Sound>
+            </Item>
+          </ActiveSounds>
+          <ConstructionSounds>
+            <BuildSuccessful>
+              <Item>
+                <VectorElement>
+                  <InheritedIndex>0</InheritedIndex>
+                  <InheritanceMapV2>
+                    <Entry>
+                      <TemplateName>FarmBuilding</TemplateName>
+                      <Index>0</Index>
+                    </Entry>
+                    <Entry>
+                      <TemplateName>HeavyFactoryBuilding</TemplateName>
+                      <Index>0</Index>
+                    </Entry>
+                  </InheritanceMapV2>
+                </VectorElement>
+                <Sound>203830</Sound>
+              </Item>
+            </BuildSuccessful>
+          </ConstructionSounds>
+          <IncidentSounds>
+            <InfectedFire>
+              <Item>
+                <Sound>214659</Sound>
+              </Item>
+            </InfectedFire>
+          </IncidentSounds>
+          <BuildingRepaired>
+            <Item>
+              <Sound>203866</Sound>
+            </Item>
+          </BuildingRepaired>
+          <MaterialType>Metal</MaterialType>
+        </SoundEmitter>
+        <FeedbackController/>
+        <Infolayer/>
+        <UpgradeList/>
+        <Factory7/>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1010219</Product>
+              <!--steel-->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>120008</Product>
+              <!--wood-->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <FactoryOutputs>
+            <Item>
+              <Product>1742100647</Product>              <!--Traditional Weapoms - Product-->
+              <Amount>1</Amount>
+              <StorageAmount>20</StorageAmount>
+            </Item>
+          </FactoryOutputs>
+          <CycleTime>30</CycleTime>
+          <IsMainFactory>1</IsMainFactory>
+        </FactoryBase>
+        <LogisticNode/>
+        <AmbientMoodProvider>
+          <Murmur>Factory</Murmur>
+        </AmbientMoodProvider>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>              <!--Money-->
+              <Amount>60</Amount>
+              <InactiveAmount>25</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>15100001</Product>              <!--Asia Tier 2-->
+              <Amount>20</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+          <MaximumHitPoints>3500</MaximumHitPoints>
+          <SelfHealPerHealTick>6</SelfHealPerHealTick>
+        </Attackable>
+        <Pausable/>
+        <IncidentInfectable>
+          <Infectable>
+            <Illness>
+              <Escalated>0</Escalated>
+            </Illness>
+          </Infectable>
+          <Explosion>
+            <ExplosionCoreDamage>2000</ExplosionCoreDamage>
+            <DamageExplosionChance>38</DamageExplosionChance>
+            <DamageExplosionCheckMax>50</DamageExplosionCheckMax>
+          </Explosion>
+          <IncidentInfectionChanceFactors>
+            <Fire>
+              <BaseChance>10</BaseChance>
+              <DensityDistance>20</DensityDistance>
+              <FactoryProductivityFactor>0.1</FactoryProductivityFactor>
+              <FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
+            </Fire>
+            <Riot>
+              <FactoryOvertimeFactor>0.4</FactoryOvertimeFactor>
+              <FactoryUndertimeFactor>0.2</FactoryUndertimeFactor>
+              <FactoryHappinessFactor>0.2</FactoryHappinessFactor>
+              <HappinessThreshold>20</HappinessThreshold>
+            </Riot>
+            <Explosion>
+              <BaseChance>8</BaseChance>
+              <FactoryProductivityFactor>0.1</FactoryProductivityFactor>
+              <FactoryOvertimeFactor>0.1</FactoryOvertimeFactor>
+              <FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
+            </Explosion>
+          </IncidentInfectionChanceFactors>
+        </IncidentInfectable>
+        <Culture>
+          <HasPollution>1</HasPollution>
+        </Culture>
+        <IncidentInfluencer>
+          <Influence>
+            <Illness>
+              <Distance>10</Distance>
+            </Illness>
+          </Influence>
+        </IncidentInfluencer>
+        <Industrializable/>
+        <QuestObject/>
+        <Electrifiable/>
+        <EcoSystemProvider/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - SWORDSMITH -->
+
+  <!-- START NAVY RECRUITMENT OFFICE (NH) -->
+  <ModOp Type="addNextSibling" GUID='1742100534'>
+    <Asset>
+      <BaseAssetGUID>1742100534</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742100651</GUID>
+          <Name>Navy Recruitment Office (NH)</Name>
+        </Standard>
+        <Building>
+          <AssociatedRegions>Mod2</AssociatedRegions>
+        </Building>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/military/naval_recruitment_office/naval_recruitment_office_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <FactoryBase>
+          <IsMainFactory>0</IsMainFactory>
+        </FactoryBase>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>              <!-- Coins -->
+              <Amount>50</Amount>
+              <InactiveAmount>25</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100644</Product>              <!-- Atoll Soldiers Workforce -->
+              <Amount>20</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <ItemContainer>
+          <SocketScopeRadius>30</SocketScopeRadius>
+        </ItemContainer>
+        <Postbox>
+          <ProductivityFactorByResidents>
+            <Item>
+              <ResidentAmount>0</ResidentAmount>
+              <ProductivityFactor>0</ProductivityFactor>
+            </Item>
+            <Item>
+              <ResidentAmount>100</ResidentAmount>
+              <ProductivityFactor>1</ProductivityFactor>
+            </Item>
+            <Item>
+              <ResidentAmount>250</ResidentAmount>
+              <ProductivityFactor>2</ProductivityFactor>
+            </Item>
+            <Item>
+              <ResidentAmount>500</ResidentAmount>
+              <ProductivityFactor>3</ProductivityFactor>
+            </Item>
+            <Item>
+              <ResidentAmount>1000</ResidentAmount>
+              <ProductivityFactor>4</ProductivityFactor>
+            </Item>
+            <Item>
+              <ResidentAmount>1500</ResidentAmount>
+              <ProductivityFactor>5</ProductivityFactor>
+            </Item>
+            <Item>
+              <ResidentAmount>2000</ResidentAmount>
+              <ProductivityFactor>6</ProductivityFactor>
+            </Item>
+            <Item>
+              <ResidentAmount>3000</ResidentAmount>
+              <ProductivityFactor>7</ProductivityFactor>
+            </Item>
+            <Item>
+              <ResidentAmount>4000</ResidentAmount>
+              <ProductivityFactor>8</ProductivityFactor>
+            </Item>
+            <Item>
+              <ResidentAmount>5000</ResidentAmount>
+              <ProductivityFactor>9</ProductivityFactor>
+            </Item>
+            <Item>
+              <ResidentAmount>6000</ResidentAmount>
+              <ProductivityFactor>10</ProductivityFactor>
+            </Item>
+            <Item>
+              <ResidentAmount>7000</ResidentAmount>
+              <ProductivityFactor>11</ProductivityFactor>
+            </Item>
+            <Item>
+              <ResidentAmount>8000</ResidentAmount>
+              <ProductivityFactor>12</ProductivityFactor>
+            </Item>
+          </ProductivityFactorByResidents>
+          <HasMailmanFeedback>0</HasMailmanFeedback>
+        </Postbox>
+        <Warehouse>
+          <WarehouseStorage>
+            <StorageMax>400</StorageMax>
+          </WarehouseStorage>
+          <StorageType>Warehouse</StorageType>
+        </Warehouse>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END NAVY RECRUITMENT OFFICE (NH) -->
+
+  <!-- START SMALL MILITARY WAREHOUSE (NW) -->
+  <Asset>
+    <BaseAssetGUID>1742100238</BaseAssetGUID>
+    <Values>
+      <Standard>
+        <GUID>1742100652</GUID>
+        <Name>Small Military Warehouse (NH)</Name>
+      </Standard>
+      <Building>
+        <AssociatedRegions>Mod2</AssociatedRegions>
+      </Building>
+      <Object>
+        <Variations>
+          <Item>
+            <Filename>data/graphics/buildings/public/logistic_military/small_logistic_military_nw_01_01.cfg</Filename>
+          </Item>
+        </Variations>
+      </Object>
+      <BuffFactory>
+        <ProductionBuffScope>Radius</ProductionBuffScope>
+        <BaseBuff>1742100653</BaseBuff>
+        <BaseBuffScope>Radius</BaseBuffScope>
+        <BaseBuffDistance>15</BaseBuffDistance>
+      </BuffFactory>
+      <Maintenance>
+        <Maintenances>
+          <Item>
+            <Product>1010017</Product>
+            <Amount>30</Amount>
+          </Item>
+          <Item>
+            <Product>1742100644</Product>            <!-- Atoll Soldiers Workforce -->
+            <Amount>10</Amount>
+          </Item>
+        </Maintenances>
+      </Maintenance>
+    </Values>
+  </Asset>
+  <!-- END SMALL MILITARY WAREHOUSE (NW) -->
+
+</ModOps>

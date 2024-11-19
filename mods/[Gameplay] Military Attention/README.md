@@ -1,10 +1,24 @@
-# Military Attention | 1.12!
+# Military Attention | 1.14!
 
 A mod centered around military infrastructure and adding new military residence tiers for all regions with a focus on the Old World.
 
 ![ma-img-01.jpg](./banner.jpg)
 
 ## Changelog
+
+### v1.14
+- Fixed bug in code for pools
+- Fixed bug with shared Galena good mod
+
+### v1.13
+- Added newest version of shared pools and definitions
+- Added newest version of galena shared good
+- Added fake AI factory so AI makes cannons more easily
+- Rebalanced amount of factories AI make, the fake factories itself and the output of fake factories for AI
+- Removed potential compatibility with Jakob Compact menu because not working at the moment and generating warnings in log
+- Added additional pools for all basic weapons factory and all military uniform factories
+- Added All basic weapons factories and All Military Uniforms factories to more vanilla pools to be used with more items (All Heavy Production, All Ironworks and Foundries, The Cutting Edge)
+- Cleanup pools by combining some buildings into an existing pool for easier management
 
 ### v1.12
 - Refreshed trigger GUIDs for 1 soldier and 100 soldiers unlock
