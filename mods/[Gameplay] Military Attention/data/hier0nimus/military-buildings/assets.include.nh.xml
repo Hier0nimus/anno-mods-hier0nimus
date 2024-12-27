@@ -794,43 +794,45 @@
   <!-- END NAVY RECRUITMENT OFFICE (NH) -->
 
   <!-- START SMALL MILITARY WAREHOUSE (NW) -->
-  <Asset>
-    <BaseAssetGUID>1742100238</BaseAssetGUID>
-    <Values>
-      <Standard>
-        <GUID>1742100652</GUID>
-        <Name>Small Military Warehouse (NH)</Name>
-      </Standard>
-      <Building>
-        <AssociatedRegions>Mod2</AssociatedRegions>
-      </Building>
-      <Object>
-        <Variations>
-          <Item>
-            <Filename>data/graphics/buildings/public/logistic_military/small_logistic_military_nw_01_01.cfg</Filename>
-          </Item>
-        </Variations>
-      </Object>
-      <BuffFactory>
-        <ProductionBuffScope>Radius</ProductionBuffScope>
-        <BaseBuff>1742100653</BaseBuff>
-        <BaseBuffScope>Radius</BaseBuffScope>
-        <BaseBuffDistance>15</BaseBuffDistance>
-      </BuffFactory>
-      <Maintenance>
-        <Maintenances>
-          <Item>
-            <Product>1010017</Product>
-            <Amount>30</Amount>
-          </Item>
-          <Item>
-            <Product>1742100644</Product>            <!-- Atoll Soldiers Workforce -->
-            <Amount>10</Amount>
-          </Item>
-        </Maintenances>
-      </Maintenance>
-    </Values>
-  </Asset>
+  <ModOp Type="addNextSibling" GUID='1742100238'>
+    <Asset>
+      <BaseAssetGUID>1742100238</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742100652</GUID>
+          <Name>Small Military Warehouse (NH)</Name>
+        </Standard>
+        <Building>
+          <AssociatedRegions>Mod2</AssociatedRegions>
+        </Building>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/public/logistic_military/small_logistic_military_nw_01_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <BuffFactory>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <BaseBuff>1742100653</BaseBuff>
+          <BaseBuffScope>Radius</BaseBuffScope>
+          <BaseBuffDistance>15</BaseBuffDistance>
+        </BuffFactory>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>30</Amount>
+            </Item>
+            <Item>
+              <Product>1742100644</Product>              <!-- Atoll Soldiers Workforce -->
+              <Amount>10</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+      </Values>
+    </Asset>
+  </ModOp>
   <!-- END SMALL MILITARY WAREHOUSE (NW) -->
 
 </ModOps>

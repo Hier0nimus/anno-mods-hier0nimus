@@ -5,7 +5,7 @@
 <ModOps>
 
   <!-- START ADD HORSES AND WATER PUMP OW TO FARMER BUILDING MENU -->
-  <ModOp Type="addNextSibling" GUID='25000189' Path="/Values/ConstructionCategory/BuildingList/Item[Building='500505']">
+  <ModOp Type="addNextSibling" GUID='25000189,500945' Path="/Values/ConstructionCategory/BuildingList/Item[Building='500505']">
     <Item>
       <Building>1742100240</Building>      <!-- Clean Water Pump (OW) - Building -->
     </Item>
@@ -19,6 +19,14 @@
   <ModOp Type="addNextSibling" GUID='25000189' Path="/Values/ConstructionCategory/BuildingList/Item[Building='500505']">
     <Item>
       <Building>1742100558</Building>      <!-- Local cemetery - Building -->
+    </Item>
+  </ModOp>
+  <ModOp Type="addNextSibling" GUID='500094' Path="/Values/ConstructionCategory/BuildingList/Item[Building='1010358']">
+    <Item>
+      <Building>1742100558</Building>      <!-- Local cemetery - Building -->
+    </Item>
+    <Item>
+      <Building>1742100560</Building>      <!-- cemetery - Building -->
     </Item>
   </ModOp>
   <!-- END ADD LOCAL CEMETERY TO FARMER BUILDING MENU -->
@@ -39,13 +47,132 @@
   </ModOp>
   <!-- END ADD CEMETERY TO ARTISANS BUILDING MENU -->
 
-  <!-- START ADD WATER PUMP NW TO JORNALERO BUILDING MENU -->
-  <ModOp Type="addNextSibling" GUID='25000193' Path="/Values/ConstructionCategory/BuildingList/Item[Building='500905']">
+  <!-- START ADD ENCAMPMENT TO MODERATE CITY BUILDING MENU (OW) -->
+  <ModOp Type="addNextSibling" GUID='500092' Path="/Values/ConstructionCategory/BuildingList/Item[Building='1010343']">
     <Item>
-      <Building>1742100244</Building>      <!-- Clean Water Pump (NW) - Building -->
+      <Building>1742100001</Building>      <!-- Soldiers Residence - Encampment - Building -->
     </Item>
   </ModOp>
-  <!-- END ADD WATER PUMP NW TO JORNALERO BUILDING MENU -->
+  <!-- END ADD ENCAMPMENT TO MODERATE CITY BUILDING MENU (OW) -->
+
+  <!-- START ADD MILITARY WAREHOUSE TO MODERATE CITY BUILDING MENU (OW) -->
+  <ModOp Type="addNextSibling" GUID='500092' Path="/Values/ConstructionCategory/BuildingList/Item[Building='1010371']">
+    <Item>
+      <Building>1742100238</Building>      <!-- Small Military Warehouse (OW) - Building -->
+    </Item>
+    <Item>
+      <Building>1742100024</Building>      <!-- Military Warehouse - Building -->
+    </Item>
+  </ModOp>
+  <!-- END ADD MILITARY WAREHOUSE TO MODERATE CITY BUILDING MENU (OW) -->
+
+  <!-- START ADD CANTEEN/SANITATION FACILITY/NAVY RECRUITMENT OFFICE/FIELD HOSPITAL/MILITARY TRAINING COMPLEX/MILITARY HQ/RECREATION CENTER/MILITARY POSTBOX/MILITARY PRISON/PROPAGANDA FACILITY TO MODERATE PUBLIC SERVICE BUILDING MENU (OW) -->
+  <ModOp Type="addNextSibling" GUID='500094' Path="/Values/ConstructionCategory/BuildingList/Item[Building='1010359']">
+    <Item>
+      <Building>1742100020</Building>      <!-- Canteen - Building -->
+    </Item>
+    <Item>
+      <Building>1742100076</Building>      <!-- Sanitation Facility - Building -->
+    </Item>
+    <Item>
+      <Building>1742100534</Building>      <!-- Navy Recruitment Office - Building -->
+    </Item>
+    <Item>
+      <Building>1742100562</Building>      <!-- Field Hospital - Building -->
+    </Item>
+    <Item>
+      <Building>1742100193</Building>      <!-- Military Training Complex - Chain -->
+    </Item>
+    <Item>
+      <Building>1742100028</Building>      <!-- Military Headquarters - Building -->
+    </Item>
+    <Item>
+      <Building>1742100078</Building>      <!-- Recreation Centre - Building -->
+    </Item>
+    <Item>
+      <Building>1742100007</Building>      <!-- Military Post Box - Building -->
+    </Item>
+    <Item>
+      <Building>1742100457</Building>      <!-- Military Prison - Building -->
+    </Item>
+    <Item>
+      <Building>1742100459</Building>      <!-- Propaganda Facility - Building -->
+    </Item>
+  </ModOp>
+  <!-- END ADD CANTEEN/SANITATION FACILITY/NAVY RECRUITMENT OFFICE/FIELD HOSPITAL/MILITARY TRAINING COMPLEX/MILITARY HQ/RECREATION CENTER/MILITARY POSTBOX/MILITARY PRISON/PROPAGANDA FACILITY TO MODERATE PUBLIC SERVICE BUILDING MENU (OW) -->
+
+  <!-- START ADD MILITARY UNIFORMS/WEAPONS/BASIC WEAPONS/CARE PACKAGES/BASIC AMMUNITION/COINS/CARDGAMES/SLEEPING BAGS FACTORY/HEATED MILITARY UNIFORMS FACTORY TO MODERATE CONSUMABLES BUILDING MENU (OW) -->
+  <ModOp Type="addNextSibling" GUID='500945' Path="/Values/ConstructionCategory/BuildingList/Item[Building='500004']">
+    <Item>
+      <Building>1742100060</Building>      <!-- Cigarettes - Chain -->
+    </Item>
+    <Item>
+      <Building>500145</Building>      <!-- Weapons - Chain -->
+    </Item>
+    <Item>
+      <Building>1742100473</Building>      <!-- Basic Weapons - Chain -->
+    </Item>
+    <Item>
+      <Building>1742100496</Building>      <!-- Care Package Factory - Empty (OW) - Building -->
+    </Item>
+    <Item>
+      <Building>1742100447</Building>      <!-- Coins - Menu Production Chain -->
+    </Item>
+    <Item>
+      <Building>1742100187</Building>      <!-- Cardgames - Chain -->
+    </Item>
+    <Item>
+      <Building>1742100299</Building>      <!-- Basic Ammunition - Chain -->
+    </Item>
+    <Item>
+      <Building>1742100070</Building>      <!-- Sleeping Bag - Chain -->
+    </Item>
+    <Item>
+      <Building>1742100348</Building>      <!-- Heated Military Uniforms - Chain -->
+    </Item>
+  </ModOp>
+  <!-- END ADD MILITARY UNIFORMS/WEAPONS/BASIC WEAPONS/CARE PACKAGES/BASIC AMMUNITION/COINS/CARDGAMES/SLEEPING BAGS FACTORY/HEATED MILITARY UNIFORMS FACTORY TO MODERATE CONSUMABLES BUILDING MENU (OW) -->
+
+  <!-- START ADD DEFENSES TO HARBOUR BUILDING MENU (OW) -->
+  <ModOp Type="addNextSibling" GUID='500111' Path="/Values/ConstructionCategory/BuildingList/Item[Building='1010519']">
+    <Item>
+      <Building>1742100027</Building>      <!-- Defenses - Construction Menu (OW) -->
+    </Item>
+  </ModOp>
+  <ModOp Type="addNextSibling" GUID='500111' Path="/Values/ConstructionCategory/BuildingList/Item[Building='1010560']">
+    <Item>
+      <Building>1742100484</Building>      <!-- Fort: Preparations - Building -->
+    </Item>
+  </ModOp>
+  <!-- END ADD ADD DEFENSES TO HARBOUR BUILDING MENU (OW) -->
+
+  <!-- START ADD CARE PACKAGES/BASIC-SHELL-BOMDS AMMUNITION TO MATERIALS BUILDING MENU (OW) -->
+  <ModOp Type="addNextSibling" GUID='500943' Path="/Values/ConstructionCategory/BuildingList/Item[Building='500005']">
+    <Item>
+      <Building>1742100496</Building>      <!-- Care Package Factory - Empty (OW) - Building -->
+    </Item>
+    <Item>
+      <Building>1742100473</Building>      <!-- Basic Weapons - Chain -->
+    </Item>
+    <Item>
+      <Building>1742100299</Building>      <!-- Basic Ammunition - Chain -->
+    </Item>
+    <Item>
+      <Building>1742100301</Building>      <!-- Shell Ammunition - Chain -->
+    </Item>
+    <Item>
+      <Building>1742100303</Building>      <!-- Bombs Ammunition - Chain -->
+    </Item>
+  </ModOp>
+  <!-- END ADD CARE PACKAGES/BASIC-SHELL-BOMDS AMMUNITION TO MATERIALS BUILDING MENU (OW) -->
+
+  <!-- START ADD MILITARY ACADEMY TO CULTURE BUILDING MENU (OW) -->
+  <ModOp Type="addNextSibling" GUID='500116' Path="/Values/ConstructionCategory/BuildingList/Item[Building='118938']">
+    <Item>
+      <Building>1742100082</Building>      <!-- Military Academy - Building -->
+    </Item>
+  </ModOp>
+  <!-- END ADD MILITARY ACADEMY TO CULTURE BUILDING MENU (OW) -->
 
   <!-- START SOLDIERS CONSTRUCTION CATEGORY (OW) -->
   <ModOp Type="addNextSibling" GUID='500447'>
@@ -154,6 +281,33 @@
   </ModOp>
   <!-- END SOLDIERS CONSTRUCTION CATEGORY (OW) -->
 
+  <!-- START ADD ENCAMPMENT/ARCTIC OUTPOST TO CITY BUILDING MENU (AR) -->
+  <ModOp Type="addNextSibling" GUID='116343' Path="/Values/ConstructionCategory/BuildingList/Item[Building='112091']">
+    <Item>
+      <Building>1742100307</Building>      <!-- Arctic Soldiers Residence - Encampment - Building -->
+    </Item>
+    <Item>
+      <Building>1742100017</Building>      <!-- Small Military Warehouse (AR) - Building -->
+    </Item>
+    <Item>
+      <Building>1742100551</Building>      <!-- Navy Recruitment Office (AR) - Building -->
+    </Item>
+  </ModOp>
+  <ModOp Type="addNextSibling" GUID='116343' Path="/Values/ConstructionCategory/BuildingList/Item[Building='114889']">
+    <Item>
+      <Building>1742100310</Building>      <!-- Arctic Outpost - Building -->
+    </Item>
+  </ModOp>
+  <!-- END ADD ENCAMPMENT/ARCTIC OUTPOST TO CITY BUILDING MENU (AR) -->
+
+  <!-- START ADD DEFENSES TO HARBOUR BUILDING MENU (AR) -->
+  <ModOp Type="addNextSibling" GUID='116345' Path="/Values/ConstructionCategory/BuildingList/Item[Building='116030']">
+    <Item>
+      <Building>1742100353</Building>      <!-- Defenses - Construction Menu (AR) -->
+    </Item>
+  </ModOp>
+  <!-- END ADD DEFENSES TO HARBOUR BUILDING MENU (AR) -->
+
   <!-- START SOLDIERS CONSTRUCTION CATEGORY (AR) -->
   <ModOp Type="addNextSibling" GUID='500447'>
     <Asset>
@@ -192,6 +346,71 @@
     </Asset>
   </ModOp>
   <!-- END SOLDIERS CONSTRUCTION CATEGORY (AR) -->
+
+  <!-- START ADD WATER PUMP TO JORNALERO BUILDING MENU (NW) -->
+  <ModOp Type="addNextSibling" GUID='25000193,500950' Path="/Values/ConstructionCategory/BuildingList/Item[Building='500905']">
+    <Item>
+      <Building>1742100244</Building>      <!-- Clean Water Pump (NW) - Building -->
+    </Item>
+  </ModOp>
+  <!-- END ADD WATER PUMP TO JORNALERO BUILDING MENU (NW) -->
+
+  <!-- START ADD MILITARY WAREHOUSE TO CITY BUILDING MENU (NW) -->
+  <ModOp Type="addNextSibling" GUID='500137' Path="/Values/ConstructionCategory/BuildingList/Item[Building='101323']">
+    <Item>
+      <Building>1742100524</Building>      <!-- Small Military Warehouse (NW) - Building -->
+    </Item>
+  </ModOp>
+  <!-- END ADD MILITARY WAREHOUSE TO CITY BUILDING MENU (NW) -->
+
+  <!-- START ADD ENCAMPMENT TO CITY BUILDING MENU (NW) -->
+  <ModOp Type="addNextSibling" GUID='500137' Path="/Values/ConstructionCategory/BuildingList/Item[Building='101254']">
+    <Item>
+      <Building>1742100333</Building>      <!-- New World Soldiers Residence - Encampment - Building -->
+    </Item>
+  </ModOp>
+  <!-- END ADD ENCAMPMENT TO CITY BUILDING MENU (NW) -->
+
+  <!-- START ADD OUTPOST TO PUBLIC SERVICE BUILDING MENU (NW) -->
+  <ModOp Type="addNextSibling" GUID='500138' Path="/Values/ConstructionCategory/BuildingList/Item[Building='101257']">
+    <Item>
+      <Building>1742100321</Building>      <!-- New World Outpost - Building -->
+    </Item>
+    <Item>
+      <Building>1742100337</Building>      <!-- Canteen (NW) - Building -->
+    </Item>
+    <Item>
+      <Building>1742100549</Building>      <!-- Navy Recruitment Office (NW) - Building -->
+    </Item>
+  </ModOp>
+  <!-- END ADD OUTPOST TO PUBLIC SERVICE BUILDING MENU (NW) -->
+
+  <!-- START ADD DEFENSES TO HARBOUR BUILDING MENU (NW) -->
+  <ModOp Type="addNextSibling" GUID='500149' Path="/Values/ConstructionCategory/BuildingList/Item[Building='101344']">
+    <Item>
+      <Building>1742100354</Building>      <!-- Defenses - Construction Menu (NW) -->
+    </Item>
+  </ModOp>
+  <!-- END ADD DEFENSES TO HARBOUR BUILDING MENU (NW) -->
+
+  <!-- START ADD MILIATERY UNIFORM FACTORY/BASIC WEAPONS FACTORY/CANNED FOOD/CARE PACKAGES TO CONSUIMABLES BUILDING MENU (NW) -->
+  <ModOp Type="addNextSibling" GUID='500950' Path="/Values/ConstructionCategory/BuildingList/Item[Building='500908']">
+    <Item>
+      <Building>1742100607</Building>      <!-- Military Uniforms Chain (NW) - Chain -->
+    </Item>
+    <Item>
+      <Building>1742100606</Building>      <!-- Basic Weapons Chain (NW) - Chain -->
+    </Item>
+  </ModOp>
+  <ModOp Type="addNextSibling" GUID='500950' Path="/Values/ConstructionCategory/BuildingList/Item[Building='500911']">
+    <Item>
+      <Building>1742100620</Building>      <!-- Care Packages (NW) - Chain -->
+    </Item>
+    <Item>
+      <Building>1742100617</Building>      <!-- Canned Food (NW) - Chain -->
+    </Item>
+  </ModOp>
+  <!-- END ADD MILIATERY UNIFORM FACTORY/BASIC WEAPONS FACTORY/CANNED FOOD/CARE PACKAGES TO CONSUIMABLES BUILDING MENU (NW) -->
 
   <!-- START SOLDIERS CONSTRUCTION CATEGORY (NW) -->
   <ModOp Type="addNextSibling" GUID='500447'>
@@ -243,6 +462,36 @@
     </Asset>
   </ModOp>
   <!-- END MILITARY CONSTRUCTION CATEGORY (NW) -->
+
+  <!-- START ADD ENCMAPMENT/MILITARY WAREHOUSE TO CIY BUILDING MENU (EN) -->
+  <ModOp Type="addNextSibling" GUID='119012' Path="/Values/ConstructionCategory/BuildingList/Item[Building='114436']">
+    <Item>
+      <Building>1742100335</Building>      <!-- Enbesa Soldiers Residence - Encampment - Building -->
+    </Item>
+  </ModOp>
+  <ModOp Type="addNextSibling" GUID='119012' Path="/Values/ConstructionCategory/BuildingList/Item[Building='114509']">
+    <Item>
+      <Building>1742100525</Building>      <!-- Small Military Warehouse (EN) - Building -->
+    </Item>
+    <Item>
+      <Building>1742100323</Building>      <!-- New World Outpost - Building -->
+    </Item>
+    <Item>
+      <Building>1742100341</Building>      <!-- Canteen (EN) - Building -->
+    </Item>
+    <Item>
+      <Building>1742100550</Building>      <!-- Navy Recruitment Office (EN) - Building -->
+    </Item>
+  </ModOp>
+  <!-- END ADD ENCMAPMENT/MILITARY WAREHOUSE TO CIY BUILDING MENU (EN) -->
+
+  <!-- START ADD DEFENSES TO HARBOUR BUILDING MENU (EN) -->
+  <ModOp Type="addNextSibling" GUID='119014' Path="/Values/ConstructionCategory/BuildingList/Item[Building='117871']">
+    <Item>
+      <Building>1742100355</Building>      <!-- Defenses - Construction Menu (NW) -->
+    </Item>
+  </ModOp>
+  <!-- END ADD DEFENSES TO HARBOUR BUILDING MENU (EN) -->
 
   <!-- START SOLDIERS CONSTRUCTION CATEGORY (EN) -->
   <ModOp Type="addNextSibling" GUID='500447'>

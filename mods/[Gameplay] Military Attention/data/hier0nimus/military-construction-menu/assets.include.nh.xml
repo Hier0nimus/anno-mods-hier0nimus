@@ -3,55 +3,55 @@
 -->
 
 <ModOps>
- 
- <!-- START SOLDIERS CONSTRUCTION CATEGORY (NH) -->
-    <ModOp Type="addNextSibling" GUID='500447'>
-      <Asset>
-        <Template>ConstructionCategory</Template>
-        <Values>
-          <Standard>
-            <GUID>1742100646</GUID>            <!-- Atoll Soldiers Construction Category menu (NH) -->
-            <Name>Soldiers</Name>
-            <IconFilename>data/graphics/icons/icon_menu_soldiers_0.png</IconFilename>
-          </Standard>
-          <ConstructionCategory>
-            <BuildingList>
-              <Item>
-                <Building>1742100640</Building>                <!-- Atoll Outpost - Building -->
-              </Item>
-              <Item>
-                <Building>1742100634</Building>                <!-- Atoll Soldiers Residence - Encampment - Building -->
-              </Item>
-              <Item>
-                <Building>1742100636</Building>                <!-- Canteen (NH) - Building -->
-              </Item>
-              <Item>
-                <Building>1742100649</Building>                <!-- Swordsmith - Building -->
-              </Item>
-              <Item>
-                <Building>1742100651</Building>                <!-- Navy Recruitment Office (NH) - Building -->
-              </Item>
-              <Item>
-                <Building>1742100652</Building>                <!-- Small Military Warehouse (NH) - Building -->
-              </Item>
-            </BuildingList>
-            <Text />
-          </ConstructionCategory>
-          <Locked>
-            <DefaultLockedState>1</DefaultLockedState>
-          </Locked>
-        </Values>
-      </Asset>
-    </ModOp>
-    <!-- END SOLDIERS CONSTRUCTION CATEGORY (NH) -->
 
-    <!-- START MILITARY CONSTRUCTION CATEGORY TO CONSTRUCTION MENU (NH) -->
-    <ModOp Type="add" GUID='25000035' Path="/Values/ConstructionMenu/RegionMenu/Mod2/CategoryMode/Tier/Categories/">
-      <Item>
-        <Category>1742100646</Category>        <!-- Military Category menu (NH) -->
-      </Item>
-    </ModOp>
-    <!-- END ADD MILITARY CONSTRUCTION CATEGORY TO CONSTRUCTION MENU (NH) -->
+  <!-- START SOLDIERS CONSTRUCTION CATEGORY (NH) -->
+  <ModOp Type="addNextSibling" GUID='500447'>
+    <Asset>
+      <Template>ConstructionCategory</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100646</GUID>          <!-- Atoll Soldiers Construction Category menu (NH) -->
+          <Name>Soldiers</Name>
+          <IconFilename>data/graphics/icons/icon_menu_soldiers_0.png</IconFilename>
+        </Standard>
+        <ConstructionCategory>
+          <BuildingList>
+            <Item>
+              <Building>1742100640</Building>              <!-- Atoll Outpost - Building -->
+            </Item>
+            <Item>
+              <Building>1742100634</Building>              <!-- Atoll Soldiers Residence - Encampment - Building -->
+            </Item>
+            <Item>
+              <Building>1742100636</Building>              <!-- Canteen (NH) - Building -->
+            </Item>
+            <Item>
+              <Building>1742100649</Building>              <!-- Swordsmith - Building -->
+            </Item>
+            <Item>
+              <Building>1742100651</Building>              <!-- Navy Recruitment Office (NH) - Building -->
+            </Item>
+            <Item>
+              <Building>1742100652</Building>              <!-- Small Military Warehouse (NH) - Building -->
+            </Item>
+          </BuildingList>
+          <Text />
+        </ConstructionCategory>
+        <Locked>
+          <DefaultLockedState>1</DefaultLockedState>
+        </Locked>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END SOLDIERS CONSTRUCTION CATEGORY (NH) -->
+
+  <!-- START MILITARY CONSTRUCTION CATEGORY TO CONSTRUCTION MENU (NH) -->
+  <ModOp Type="add" GUID='25000035' Path="/Values/ConstructionMenu/RegionMenu/Mod2/CategoryMode/Tier/Categories/">
+    <Item>
+      <Category>1742100646</Category>      <!-- Military Category menu (NH) -->
+    </Item>
+  </ModOp>
+  <!-- END ADD MILITARY CONSTRUCTION CATEGORY TO CONSTRUCTION MENU (NH) -->
 
 
 </ModOps>

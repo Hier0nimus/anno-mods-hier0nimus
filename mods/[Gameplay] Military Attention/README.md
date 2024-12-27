@@ -1,10 +1,19 @@
-# Military Attention | 1.14!
+# Military Attention | 1.15!
 
 A mod centered around military infrastructure and adding new military residence tiers for all regions with a focus on the Old World.
 
 ![ma-img-01.jpg](./banner.jpg)
 
 ## Changelog
+
+### v1.15
+- Added buildings to alternative construction menu
+- Rebalance amount of goods AI produce
+- New icons for Cemetery and Military Warehouse
+- Nerfing AI behaviour even more for dropping goods.
+- Added compatibility for Jakob Compact Menu again, but in a correct way now.
+- Additional fixes to make sure the mod works correctly when CO is installed
+- Text fixes
 
 ### v1.14
 - Fixed bug in code for pools
@@ -442,7 +451,7 @@ Adds a new soldiers population tier as extra workforce in every region.
 | ![Small Ammunition Depot](./data/graphics/icons/icon_bombs_ammunition_depot.png) | Small Ammunition Depot (Bombs) (Old World, New World, Enbesa, Arctic)  |
 | ![Large Ammunition Depot](./data/graphics/icons/icon_ammunition_depot_large.png) | Large Ammunition Depot (Old World, New World, Enbesa, Arctic)  |
 | ![Small Military Warehouse](./data/graphics/icons/icon_military_warehouse.png) | Small Military Warehouse  |
-| ![Military Warehouse](./data/graphics/icons/icon_military_warehouse.png) | Military Warehouse  |
+| ![Military Warehouse](./data/graphics/icons/icon_military_warehouse_large.png) | Military Warehouse  |
 
 ### Defense Buildings
 |     |  |
