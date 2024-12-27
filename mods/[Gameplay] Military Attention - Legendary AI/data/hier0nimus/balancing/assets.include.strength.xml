@@ -1,0 +1,228 @@
+<!--
+Balancing - Strengths
+-->
+
+<ModOps>
+
+    <!-- ********************************** STRENGTH REBALANCE ********************************** -->
+
+    <!-- ******* BALANCE MILITARY STRENGTH AI ******* -->
+
+    <!-- StrengthLevels - Set global values as fallbacks - Specific AI values determine their personality so we do not adjust those much -->
+
+    <!-- EASY AI TEMPLATE - 168 - Global AI easy values  -->
+    <ModOp Type="merge" GUID="168" Path="/Values/MilitaryAI">
+        <StrengthLevels>
+            <Levels>
+                <Inferior>
+                    <MaxStrengthRatio>80</MaxStrengthRatio>
+                    <Flee>1</Flee>
+                </Inferior>
+                <Equal>
+                    <MaxStrengthRatio>140</MaxStrengthRatio>
+                    <Flee>1</Flee>
+                </Equal>
+                <Superior>
+                    <MaxStrengthRatio>99999999</MaxStrengthRatio>
+                    <Flee>0</Flee>
+                </Superior>
+            </Levels>
+            <BudgetThreshold>100</BudgetThreshold>
+        </StrengthLevels>
+    </ModOp>
+
+    <!-- MEDIUM AI TEMPLATE - 169 - Global AI medium values  -->
+    <ModOp Type="merge" GUID="169" Path="/Values/MilitaryAI">
+        <StrengthLevels>
+            <Levels>
+                <Inferior>
+                    <MaxStrengthRatio>90</MaxStrengthRatio>
+                    <Flee>1</Flee>
+                </Inferior>
+                <Equal>
+                    <MaxStrengthRatio>125</MaxStrengthRatio>
+                    <Flee>1</Flee>
+                </Equal>
+                <Superior>
+                    <MaxStrengthRatio>99999999</MaxStrengthRatio>
+                    <Flee>0</Flee>
+                </Superior>
+            </Levels>
+            <BudgetThreshold>150</BudgetThreshold>
+        </StrengthLevels>
+    </ModOp>
+
+    <!-- HARD AI TEMPLATE - 170 - Global AI hard values  -->
+    <ModOp Type="merge" GUID="170" Path="/Values/MilitaryAI">
+        <StrengthLevels>
+            <Levels>
+                <Inferior>
+                    <MaxStrengthRatio>80</MaxStrengthRatio>
+                    <Flee>1</Flee>
+                </Inferior>
+                <Equal>
+                    <MaxStrengthRatio>110</MaxStrengthRatio>
+                    <Flee>0</Flee>
+                </Equal>
+                <Superior>
+                    <MaxStrengthRatio>99999999</MaxStrengthRatio>
+                    <Flee>0</Flee>
+                </Superior>
+            </Levels>
+            <BudgetThreshold>200</BudgetThreshold>
+        </StrengthLevels>
+    </ModOp>
+
+    <!-- SPECIFIC EASY AI TEMPLATES - 47,79,80 - Overwriting values if set on specific AI  -->
+    <ModOp Type="merge" GUID="47,79,80" Path="/Values/MilitaryAI">
+        <StrengthLevels>
+            <Levels>
+                <Inferior>
+                    <Flee>1</Flee>
+                </Inferior>
+                <Equal>
+                    <Flee>1</Flee>
+                </Equal>
+                <Superior>
+                    <MaxStrengthRatio>99999999</MaxStrengthRatio>
+                    <Flee>0</Flee>
+                </Superior>
+            </Levels>
+            <BudgetThreshold>100</BudgetThreshold>
+        </StrengthLevels>
+    </ModOp>
+
+    <!-- SPECIFIC MEDIUM AI TEMPLATES - 11,81,82,83,220 - Overwriting values if set on specific AI  -->
+    <ModOp Type="merge" GUID="11,81,82,83,220" Path="/Values/MilitaryAI">
+        <StrengthLevels>
+            <Levels>
+                <Inferior>
+                    <Flee>1</Flee>
+                </Inferior>
+                <Equal>
+                    <Flee>1</Flee>
+                </Equal>
+                <Superior>
+                    <MaxStrengthRatio>99999999</MaxStrengthRatio>
+                    <Flee>0</Flee>
+                </Superior>
+            </Levels>
+            <BudgetThreshold>125</BudgetThreshold>
+        </StrengthLevels>
+    </ModOp>
+
+    <!-- SPECIFIC HARD AI TEMPLATES - 48,84,85 - Overwriting values if set on specific AI  -->
+    <ModOp Type="merge" GUID="48,84,85" Path="/Values/MilitaryAI">
+        <StrengthLevels>
+            <Levels>
+                <Inferior>
+                    <Flee>1</Flee>
+                </Inferior>
+                <Equal>
+                    <Flee>0</Flee>
+                </Equal>
+                <Superior>
+                    <MaxStrengthRatio>99999999</MaxStrengthRatio>
+                    <Flee>0</Flee>
+                </Superior>
+            </Levels>
+            <BudgetThreshold>200</BudgetThreshold>
+        </StrengthLevels>
+    </ModOp>
+
+    <!-- Attack - Set global values as fallbacks - Specific AI values determine their personality so we do not adjust those much -->
+
+    <!-- GLOBAL CHANGES IN HIGHEST LEVEL AS FALLBACK -->
+
+    <!-- EASY AI TEMPLATE - 168 - Global AI easy values  -->
+    <ModOp Type="merge" GUID="168" Path="/Values/MilitaryAI">
+        <Attack>
+            <MilitaryStrengthRatio>150</MilitaryStrengthRatio>
+            <RallyBeforeAttack>1</RallyBeforeAttack>
+        </Attack>
+    </ModOp>
+
+    <!-- MEDIUM AI TEMPLATE - 169 - Global AI medium values  -->
+    <ModOp Type="merge" GUID="169" Path="/Values/MilitaryAI">
+        <Attack>
+            <MilitaryStrengthRatio>130</MilitaryStrengthRatio>
+            <RallyBeforeAttack>1</RallyBeforeAttack>
+        </Attack>
+    </ModOp>
+
+    <!-- HARD AI TEMPLATE - 170 - Global AI hard values  -->
+    <ModOp Type="merge" GUID="170" Path="/Values/MilitaryAI">
+        <Attack>
+            <MilitaryStrengthRatio>110</MilitaryStrengthRatio>
+            <RallyBeforeAttack>1</RallyBeforeAttack>
+        </Attack>
+    </ModOp>
+
+    <!-- ******* BEHAVIOUR SHARES ******* -->
+
+    <ModOp Type="merge" GUID="47,79,80,11,81,82,83,220,48,84,85" Path="/Values/">
+        <BuyShares>
+            <BuySharePriorities>
+                <OwnShare>
+                    <Priority>10</Priority>
+                </OwnShare>
+            </BuySharePriorities>
+            <NextDecisionMinTime>3000000</NextDecisionMinTime>
+            <NextDecisionMaxTime>3600000</NextDecisionMaxTime>
+            <TakeoverIslandProbability>100</TakeoverIslandProbability>
+            <MilitaryTakeoverProbability>100</MilitaryTakeoverProbability>
+            <MaxAmountOfOtherShares>0</MaxAmountOfOtherShares>
+        </BuyShares>
+    </ModOp>
+
+    <!-- ******* ISLAND TAKEOVER/SHARES REBALANCE ******* -->
+
+    <ModOp Type="merge" GUID="140986" Path="/Values/HostileTakeoverFeature/">
+        <BuyShareCoolDown>1800000</BuyShareCoolDown>        <!-- 600000 - 10min -->
+        <QueenSellShareDiscount>0.4</QueenSellShareDiscount>        <!-- 0.5 -->
+        <QueenBuyShareDiscount>0.7</QueenBuyShareDiscount>        <!-- 0.6 -->
+        <TakeoverMoneyCostFactor>10</TakeoverMoneyCostFactor>        <!-- 1.5 -->
+        <ShareIncomeTaxFactor>0.2</ShareIncomeTaxFactor>        <!-- 0.3 -->
+    </ModOp>
+
+    <Group Condition="!#military_attention">
+
+        <!-- ******* NERFING DROPPING GOODS ON AI TO BOOST REPUTATION ******* -->
+
+        <!-- INCREASING COOLDOWN FROM 30s TO 30min -->
+        <ModOp Type="merge" GUID="167" Path="/Values/Interaction/DropReactionConfig">
+            <DropReaction>
+                <PositiveEffect>
+                    <CoolDownAfterThresholdHasBeenReached>1800000</CoolDownAfterThresholdHasBeenReached>
+                </PositiveEffect>
+                <IncidentResolver>
+                    <CoolDownAfterThresholdHasBeenReached>1800000</CoolDownAfterThresholdHasBeenReached>
+                </IncidentResolver>
+            </DropReaction>
+        </ModOp>
+        <!-- NERFING REPUTATION FROM 5 TO 1 AND INCREASING FROM -5 TO -25 -->
+        <!-- Bombs -->
+        <ModOp Type="merge" GUID="119" Path="/Values/ParticipantMessages/MessageTriggers/AirshipDropNegativeEffectMessage/Reactions/Item[1]">
+            <SideEffectValue>-25</SideEffectValue>
+        </ModOp>
+        <!-- Care Packages -->
+        <ModOp Type="merge" GUID="119" Path="/Values/ParticipantMessages/MessageTriggers/AirshipDropPositiveEffectMessage/Reactions/Item[1]">
+            <SideEffectValue>1</SideEffectValue>
+        </ModOp>
+        <!-- Water Drops -->
+        <ModOp Type="merge" GUID="119" Path="/Values/ParticipantMessages/MessageTriggers/AirshipDropIncidentResolvedMessage/Reactions/Item[1]">
+            <SideEffectValue>1</SideEffectValue>
+        </ModOp>
+
+        <!-- ******* AI NOT WAITING FOR CAPE TO REACH CERTAIN LEVEL TO GO FURTHER IN OTHER REGIONS ******* -->
+
+        <ModOp GUID='110934' Path="/Values/Session/SecondPartyMotivation" Type="replace">
+            <SecondPartyMotivation>
+                <TargetPopulation>15000000</TargetPopulation>
+                <TargetAmount>1</TargetAmount>
+            </SecondPartyMotivation>
+        </ModOp>
+
+    </Group>
+
+</ModOps>

@@ -1,0 +1,1614 @@
+<!--
+Balancing - Buildings
+-->
+
+<ModOps>
+
+  <!-- ********************************** CONSTRUCTION BUILDINGS REBALANCE ********************************** -->
+
+  <!-- ******* DEFINE HOW FAST THEY BUILD BUILDINGS ******* -->
+
+  <!-- EASY AI TEMPLATE - 168  -->
+  <ModOp Type="merge" GUID="168" Path="/Values/ConstructionAI">
+    <BuildRules>
+      <MinTimeBetweenBuilds>10000</MinTimeBetweenBuilds>      <!-- / -->
+      <MaxTimeBetweenBuilds>70000</MaxTimeBetweenBuilds>      <!-- 120000 -->
+      <RubberbandSpeedUp>1</RubberbandSpeedUp>      <!-- 0.25 -->
+      <RubberbandSlowDown>1</RubberbandSlowDown>      <!-- 2 -->
+    </BuildRules>
+  </ModOp>
+
+  <!-- MEDIUM AI TEMPLATE - 169  -->
+  <ModOp Type="merge" GUID="169" Path="/Values/ConstructionAI">
+    <BuildRules>
+      <MinTimeBetweenBuilds>2500</MinTimeBetweenBuilds>      <!-- 4000 -->
+      <MaxTimeBetweenBuilds>30000</MaxTimeBetweenBuilds>      <!-- 105000 -->
+      <RubberbandSpeedUp>2.5</RubberbandSpeedUp>      <!-- 0.5 -->
+      <RubberbandSlowDown>0.5</RubberbandSlowDown>      <!-- / -->
+    </BuildRules>
+  </ModOp>
+
+  <!-- HARD AI TEMPLATE - 170  -->
+  <ModOp Type="merge" GUID="170" Path="/Values/ConstructionAI">
+    <BuildRules>
+      <MinTimeBetweenBuilds>1000</MinTimeBetweenBuilds>      <!-- 2000 -->
+      <MaxTimeBetweenBuilds>15000</MaxTimeBetweenBuilds>      <!-- 105000 -->
+      <RubberbandSpeedUp>5</RubberbandSpeedUp>      <!-- 0.5 -->
+      <RubberbandSlowDown>0</RubberbandSlowDown>      <!-- 0.5 -->
+    </BuildRules>
+  </ModOp>
+
+  <!-- ******* ADD SEAMINES AROUND ISLANDS FOR HARD AI ******* -->
+
+  <ModOp Type="merge" GUID="170" Path="/Values/ConstructionAI/">
+    <SeamineConfig>
+      <ContainerValues>
+        <HarborMineDefence>
+          <DistanceToHarbor>90</DistanceToHarbor>
+        </HarborMineDefence>
+      </ContainerValues>
+      <Precondition>LateMidGame</Precondition>      <!-- 1 Engineer -->
+      <HarborMineDefence>
+        <PlaceMinesAroundHarbor>1</PlaceMinesAroundHarbor>
+      </HarborMineDefence>
+    </SeamineConfig>
+  </ModOp>
+
+  <!-- ******* DEFINE HOW MANY BUILDINGS THEY MAKE ******* -->
+
+  <ModOp Type="merge" GUID="167" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/Item">
+    <SimulatedItemProductivity>2</SimulatedItemProductivity>
+  </ModOp>
+
+  <ModOp Type="merge" GUID="167" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/SupplementSessionAdditions/PerRegion/Colony01/AdditionalProductionInEverySupplementSession/Item">
+    <SimulatedItemProductivity>2</SimulatedItemProductivity>
+  </ModOp>
+
+  <!-- START EASY AI TEMPLATE - 168  -->
+  <!-- MainMaterialInfos  -->
+
+  <!--0-timber-->
+  <ModOp Type="merge" GUID="168" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/Item[VectorElement/InheritedIndex='0']">
+    <SimulatedItemProductivity>2</SimulatedItemProductivity>
+    <PerProgressLevelInfos>
+      <EarlyGame>
+        <ProducerBuildingCountMain>2</ProducerBuildingCountMain>        <!-- 1 -->
+      </EarlyGame>
+      <EarlyMidGame>
+        <ProducerBuildingCountMain>2</ProducerBuildingCountMain>        <!-- 1 -->
+      </EarlyMidGame>
+      <MidGame>
+        <ProducerBuildingCountMain>3</ProducerBuildingCountMain>        <!-- 2 -->
+      </MidGame>
+      <LateMidGame>
+        <ProducerBuildingCountMain>4</ProducerBuildingCountMain>        <!-- 3 -->
+      </LateMidGame>
+      <LateGame>
+        <ProducerBuildingCountMain>4</ProducerBuildingCountMain>        <!-- 3 -->
+      </LateGame>
+      <EndGame>
+        <ProducerBuildingCountMain>4</ProducerBuildingCountMain>        <!-- 3 -->
+      </EndGame>
+    </PerProgressLevelInfos>
+    <SmallIslandFactor>1</SmallIslandFactor>
+    <SmallFertilitiesFactor>0.75</SmallFertilitiesFactor>
+  </ModOp>
+
+  <!--1-bricks-->
+  <ModOp Type="merge" GUID="168" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/Item[VectorElement/InheritedIndex='1']">
+    <SimulatedItemProductivity>2</SimulatedItemProductivity>
+    <PerProgressLevelInfos>
+      <EarlyMidGame>
+        <ProducerBuildingCountMain>2</ProducerBuildingCountMain>        <!-- 1 -->
+      </EarlyMidGame>
+      <MidGame>
+        <ProducerBuildingCountMain>3</ProducerBuildingCountMain>        <!-- / -->
+      </MidGame>
+      <LateMidGame>
+        <ProducerBuildingCountMain>5</ProducerBuildingCountMain>        <!-- 5 -->
+      </LateMidGame>
+      <LateGame>
+        <ProducerBuildingCountMain>5</ProducerBuildingCountMain>        <!-- 5 -->
+      </LateGame>
+      <EndGame>
+        <ProducerBuildingCountMain>5</ProducerBuildingCountMain>        <!-- 5 -->
+      </EndGame>
+    </PerProgressLevelInfos>
+    <SmallIslandFactor>1</SmallIslandFactor>
+    <SmallFertilitiesFactor>0.75</SmallFertilitiesFactor>
+  </ModOp>
+
+  <!--2-beams-->
+  <ModOp Type="merge" GUID="168" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/Item[VectorElement/InheritedIndex='2']">
+    <SimulatedItemProductivity>2</SimulatedItemProductivity>
+    <PerProgressLevelInfos>
+      <EarlyMidGame>
+        <ProducerBuildingCountMain>2</ProducerBuildingCountMain>        <!-- / -->
+      </EarlyMidGame>
+      <MidGame>
+        <ProducerBuildingCountMain>4</ProducerBuildingCountMain>        <!-- 3 -->
+      </MidGame>
+      <LateMidGame>
+        <ProducerBuildingCountMain>4</ProducerBuildingCountMain>        <!-- / -->
+      </LateMidGame>
+      <LateGame>
+        <ProducerBuildingCountMain>4</ProducerBuildingCountMain>        <!-- 4 -->
+      </LateGame>
+      <EndGame>
+        <ProducerBuildingCountMain>5</ProducerBuildingCountMain>        <!-- 5 -->
+      </EndGame>
+    </PerProgressLevelInfos>
+    <SmallIslandFactor>1</SmallIslandFactor>
+    <SmallFertilitiesFactor>0.75</SmallFertilitiesFactor>
+  </ModOp>
+
+  <!--3-window-->
+  <ModOp Type="merge" GUID="168" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/Item[VectorElement/InheritedIndex='3']">
+    <SimulatedItemProductivity>2</SimulatedItemProductivity>
+    <PerProgressLevelInfos>
+      <MidGame>
+        <ProducerBuildingCountMain>2</ProducerBuildingCountMain>        <!-- / -->
+      </MidGame>
+      <LateMidGame>
+        <ProducerBuildingCountMain>2</ProducerBuildingCountMain>        <!-- 2 -->
+      </LateMidGame>
+      <LateGame>
+        <ProducerBuildingCountMain>3</ProducerBuildingCountMain>        <!-- 3 -->
+      </LateGame>
+      <EndGame>
+        <ProducerBuildingCountMain>4</ProducerBuildingCountMain>        <!-- 4 -->
+      </EndGame>
+    </PerProgressLevelInfos>
+    <SmallIslandFactor>1</SmallIslandFactor>
+    <SmallFertilitiesFactor>0.75</SmallFertilitiesFactor>
+  </ModOp>
+
+  <!--4-concrete-->
+  <ModOp Type="merge" GUID="168" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/Item[VectorElement/InheritedIndex='4']">
+    <SimulatedItemProductivity>2</SimulatedItemProductivity>
+    <PerProgressLevelInfos>
+      <LateMidGame>
+        <ProducerBuildingCountMain>2</ProducerBuildingCountMain>        <!-- / -->
+      </LateMidGame>
+      <LateGame>
+        <ProducerBuildingCountMain>3</ProducerBuildingCountMain>        <!-- 2 -->
+      </LateGame>
+      <EndGame>
+        <ProducerBuildingCountMain>4</ProducerBuildingCountMain>        <!-- 3 -->
+      </EndGame>
+    </PerProgressLevelInfos>
+    <SmallIslandFactor>1</SmallIslandFactor>
+    <SmallFertilitiesFactor>0.75</SmallFertilitiesFactor>
+  </ModOp>
+
+  <!--5-weapons-->
+  <ModOp Type="merge" GUID="168" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/Item[VectorElement/InheritedIndex='5']">
+    <SimulatedItemProductivity>5</SimulatedItemProductivity>
+    <PerProgressLevelInfos>
+      <EarlyMidGame>
+        <ProducerBuildingCountMain>1</ProducerBuildingCountMain>        <!-- 1 -->
+      </EarlyMidGame>
+      <MidGame>
+        <ProducerBuildingCountMain>2</ProducerBuildingCountMain>        <!-- 2 -->
+      </MidGame>
+      <LateMidGame>
+        <ProducerBuildingCountMain>2</ProducerBuildingCountMain>        <!-- 2 -->
+      </LateMidGame>
+      <LateGame>
+        <ProducerBuildingCountMain>3</ProducerBuildingCountMain>        <!-- 3 -->
+      </LateGame>
+      <EndGame>
+        <ProducerBuildingCountMain>3</ProducerBuildingCountMain>        <!-- 3 -->
+      </EndGame>
+    </PerProgressLevelInfos>
+    <SmallIslandFactor>1</SmallIslandFactor>
+    <SmallFertilitiesFactor>0.75</SmallFertilitiesFactor>
+  </ModOp>
+
+  <!--6-advanced weapons-->
+  <ModOp Type="merge" GUID="168" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/Item[VectorElement/InheritedIndex='6']">
+    <SimulatedItemProductivity>5</SimulatedItemProductivity>
+    <PerProgressLevelInfos>
+      <LateMidGame>
+        <ProducerBuildingCountMain>1</ProducerBuildingCountMain>        <!-- / -->
+      </LateMidGame>
+      <LateGame>
+        <ProducerBuildingCountMain>2</ProducerBuildingCountMain>        <!-- / -->
+      </LateGame>
+      <EndGame>
+        <ProducerBuildingCountMain>2</ProducerBuildingCountMain>        <!-- / -->
+      </EndGame>
+    </PerProgressLevelInfos>
+    <SmallIslandFactor>1</SmallIslandFactor>
+    <SmallFertilitiesFactor>0.75</SmallFertilitiesFactor>
+  </ModOp>
+
+  <!--7-sailcloth-->
+  <ModOp Type="merge" GUID="168" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/Item[VectorElement/InheritedIndex='7']">
+    <SimulatedItemProductivity>2</SimulatedItemProductivity>
+    <PerProgressLevelInfos>
+      <EarlyMidGame>
+        <ProducerBuildingCountMain>3</ProducerBuildingCountMain>        <!-- 2 -->
+      </EarlyMidGame>
+      <MidGame>
+        <ProducerBuildingCountMain>3</ProducerBuildingCountMain>        <!-- 2 -->
+      </MidGame>
+      <LateMidGame>
+        <ProducerBuildingCountMain>3</ProducerBuildingCountMain>        <!-- 2 -->
+      </LateMidGame>
+      <LateGame>
+        <ProducerBuildingCountMain>3</ProducerBuildingCountMain>        <!-- 2 -->
+      </LateGame>
+      <EndGame>
+        <ProducerBuildingCountMain>3</ProducerBuildingCountMain>        <!-- 2 -->
+      </EndGame>
+    </PerProgressLevelInfos>
+    <SmallIslandFactor>1</SmallIslandFactor>
+    <SmallFertilitiesFactor>0.75</SmallFertilitiesFactor>
+  </ModOp>
+
+  <!--8-gas
+  <ModOp Type="merge" GUID="168" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/Item[VectorElement/InheritedIndex='8']">
+  </ModOp>-->
+
+  <!--9-10-11-bombs/pamphlets/care packages
+  <ModOp Type="merge" GUID="168" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/Item[VectorElement/InheritedIndex='9'] and /Values/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/Item[VectorElement/InheritedIndex='10'] and /Values/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/Item[VectorElement/InheritedIndex='11']">
+  </ModOp>-->
+
+  <!--SA Gas-->
+  <ModOp Type="add" GUID="168" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/">
+    <Item>
+      <Product>840</Product>
+      <SimulatedItemProductivity>2</SimulatedItemProductivity>
+      <PerProgressLevelInfos>
+        <EarlyGame>
+          <ProducerBuildingCountMain>0</ProducerBuildingCountMain>          <!-- / -->
+        </EarlyGame>
+        <EarlyMidGame>
+          <ProducerBuildingCountMain>0</ProducerBuildingCountMain>          <!-- / -->
+        </EarlyMidGame>
+        <MidGame>
+          <ProducerBuildingCountMain>1</ProducerBuildingCountMain>          <!-- / -->
+        </MidGame>
+        <LateMidGame>
+          <ProducerBuildingCountMain>1</ProducerBuildingCountMain>          <!-- / -->
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>          <!-- / -->
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>          <!-- / -->
+        </EndGame>
+      </PerProgressLevelInfos>
+      <SmallIslandFactor>1</SmallIslandFactor>
+      <SmallFertilitiesFactor>0.75</SmallFertilitiesFactor>
+    </Item>
+  </ModOp>
+
+  <!--Aluminium-->
+  <ModOp Type="add" GUID="168" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/">
+    <Item>
+      <Product>838</Product>
+      <SimulatedItemProductivity>2</SimulatedItemProductivity>
+      <PerProgressLevelInfos>
+        <EarlyGame>
+          <ProducerBuildingCountMain>0</ProducerBuildingCountMain>          <!-- / -->
+        </EarlyGame>
+        <EarlyMidGame>
+          <ProducerBuildingCountMain>0</ProducerBuildingCountMain>          <!-- / -->
+        </EarlyMidGame>
+        <LateMidGame>
+          <ProducerBuildingCountMain>1</ProducerBuildingCountMain>          <!-- / -->
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>          <!-- / -->
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>          <!-- / -->
+        </EndGame>
+      </PerProgressLevelInfos>
+      <SmallIslandFactor>1</SmallIslandFactor>
+      <SmallFertilitiesFactor>0.75</SmallFertilitiesFactor>
+    </Item>
+  </ModOp>
+
+  <!--Steam Motors-->
+  <ModOp Type="add" GUID="168" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/">
+    <Item>
+      <Product>1010224</Product>      <!-- Steam Motors - Product -->
+      <SimulatedItemProductivity>5</SimulatedItemProductivity>
+      <PerProgressLevelInfos>
+        <LateMidGame>
+          <ProducerBuildingCountMain>1</ProducerBuildingCountMain>
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </EndGame>
+      </PerProgressLevelInfos>
+    </Item>
+  </ModOp>
+
+  <!-- SupplementSessionAdditions  -->
+  <!-- Enbesa -->
+
+  <!--Wanza Wood-->
+  <ModOp Type="merge" GUID="168" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/SupplementSessionAdditions/PerRegion/Africa/AdditionalProductionInEverySupplementSession/Item[Product='114356']">
+    <SimulatedItemProductivity>2</SimulatedItemProductivity>
+    <PerProgressLevelInfos>
+      <MidGame>
+        <ProducerBuildingCount>4</ProducerBuildingCount>        <!-- 3 -->
+      </MidGame>
+      <LateMidGame>
+        <ProducerBuildingCount>4</ProducerBuildingCount>        <!-- 3 -->
+      </LateMidGame>
+      <LateGame>
+        <ProducerBuildingCount>4</ProducerBuildingCount>        <!-- 3 -->
+      </LateGame>
+      <EndGame>
+        <ProducerBuildingCount>4</ProducerBuildingCount>        <!-- 3 -->
+      </EndGame>
+    </PerProgressLevelInfos>
+  </ModOp>
+
+  <!--Mud Bricks-->
+  <ModOp Type="merge" GUID="168" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/SupplementSessionAdditions/PerRegion/Africa/AdditionalProductionInEverySupplementSession/Item[Product='114402']">
+    <SimulatedItemProductivity>2</SimulatedItemProductivity>
+    <PerProgressLevelInfos>
+      <MidGame>
+        <ProducerBuildingCount>3</ProducerBuildingCount>        <!-- 2 -->
+      </MidGame>
+      <LateMidGame>
+        <ProducerBuildingCount>4</ProducerBuildingCount>        <!-- 3 -->
+      </LateMidGame>
+      <LateGame>
+        <ProducerBuildingCount>4</ProducerBuildingCount>        <!-- 3 -->
+      </LateGame>
+      <EndGame>
+        <ProducerBuildingCount>5</ProducerBuildingCount>        <!-- 4 -->
+      </EndGame>
+    </PerProgressLevelInfos>
+  </ModOp>
+
+  <!-- START MEDIUM AI TEMPLATE - 169  -->
+  <!-- MainMaterialInfos  -->
+
+  <!--0-timber-->
+  <ModOp Type="merge" GUID="169" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/Item[VectorElement/InheritedIndex='0']">
+    <SimulatedItemProductivity>2</SimulatedItemProductivity>
+    <PerProgressLevelInfos>
+      <EarlyGame>
+        <ProducerBuildingCountMain>4</ProducerBuildingCountMain>        <!-- 4 -->
+      </EarlyGame>
+      <EarlyMidGame>
+        <ProducerBuildingCountMain>5</ProducerBuildingCountMain>        <!-- 4 -->
+      </EarlyMidGame>
+      <MidGame>
+        <ProducerBuildingCountMain>5</ProducerBuildingCountMain>        <!-- 5 -->
+      </MidGame>
+      <LateMidGame>
+        <ProducerBuildingCountMain>6</ProducerBuildingCountMain>        <!-- 5 -->
+      </LateMidGame>
+      <LateGame>
+        <ProducerBuildingCountMain>6</ProducerBuildingCountMain>        <!-- 6 -->
+      </LateGame>
+      <EndGame>
+        <ProducerBuildingCountMain>7</ProducerBuildingCountMain>        <!-- 6 -->
+      </EndGame>
+    </PerProgressLevelInfos>
+    <SmallIslandFactor>1</SmallIslandFactor>
+    <SmallFertilitiesFactor>0.75</SmallFertilitiesFactor>
+  </ModOp>
+
+  <!--1-bricks-->
+  <ModOp Type="merge" GUID="169" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/Item[VectorElement/InheritedIndex='1']">
+    <SimulatedItemProductivity>2</SimulatedItemProductivity>
+    <PerProgressLevelInfos>
+      <EarlyMidGame>
+        <ProducerBuildingCountMain>6</ProducerBuildingCountMain>        <!-- 6 -->
+      </EarlyMidGame>
+      <MidGame>
+        <ProducerBuildingCountMain>6</ProducerBuildingCountMain>        <!-- 6 -->
+      </MidGame>
+      <LateMidGame>
+        <ProducerBuildingCountMain>7</ProducerBuildingCountMain>        <!-- 6 -->
+      </LateMidGame>
+      <LateGame>
+        <ProducerBuildingCountMain>7</ProducerBuildingCountMain>        <!-- 6 -->
+      </LateGame>
+      <EndGame>
+        <ProducerBuildingCountMain>7</ProducerBuildingCountMain>        <!-- 6 -->
+      </EndGame>
+    </PerProgressLevelInfos>
+    <SmallIslandFactor>1</SmallIslandFactor>
+    <SmallFertilitiesFactor>0.75</SmallFertilitiesFactor>
+  </ModOp>
+
+  <!--2-beams-->
+  <ModOp Type="merge" GUID="169" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/Item[VectorElement/InheritedIndex='2']">
+    <SimulatedItemProductivity>2</SimulatedItemProductivity>
+    <PerProgressLevelInfos>
+      <EarlyMidGame>
+        <ProducerBuildingCountMain>3</ProducerBuildingCountMain>        <!-- 2 -->
+      </EarlyMidGame>
+      <MidGame>
+        <ProducerBuildingCountMain>5</ProducerBuildingCountMain>        <!-- 4 -->
+      </MidGame>
+      <LateMidGame>
+        <ProducerBuildingCountMain>6</ProducerBuildingCountMain>        <!-- 6 -->
+      </LateMidGame>
+      <LateGame>
+        <ProducerBuildingCountMain>6</ProducerBuildingCountMain>        <!-- 6 -->
+      </LateGame>
+      <EndGame>
+        <ProducerBuildingCountMain>7</ProducerBuildingCountMain>        <!-- 6 -->
+      </EndGame>
+    </PerProgressLevelInfos>
+    <SmallIslandFactor>1</SmallIslandFactor>
+    <SmallFertilitiesFactor>0.75</SmallFertilitiesFactor>
+  </ModOp>
+
+  <!--3-window-->
+  <ModOp Type="merge" GUID="169" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/Item[VectorElement/InheritedIndex='3']">
+    <SimulatedItemProductivity>2</SimulatedItemProductivity>
+    <PerProgressLevelInfos>
+      <MidGame>
+        <ProducerBuildingCountMain>4</ProducerBuildingCountMain>        <!-- 3 -->
+      </MidGame>
+      <LateMidGame>
+        <ProducerBuildingCountMain>5</ProducerBuildingCountMain>        <!-- 4 -->
+      </LateMidGame>
+      <LateGame>
+        <ProducerBuildingCountMain>6</ProducerBuildingCountMain>        <!-- 5 -->
+      </LateGame>
+      <EndGame>
+        <ProducerBuildingCountMain>7</ProducerBuildingCountMain>        <!-- 6 -->
+      </EndGame>
+    </PerProgressLevelInfos>
+    <SmallIslandFactor>1</SmallIslandFactor>
+    <SmallFertilitiesFactor>0.75</SmallFertilitiesFactor>
+  </ModOp>
+
+  <!--4-concrete-->
+  <ModOp Type="merge" GUID="169" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/Item[VectorElement/InheritedIndex='4']">
+    <SimulatedItemProductivity>2</SimulatedItemProductivity>
+    <PerProgressLevelInfos>
+      <LateMidGame>
+        <ProducerBuildingCountMain>3</ProducerBuildingCountMain>        <!-- 2 -->
+      </LateMidGame>
+      <LateGame>
+        <ProducerBuildingCountMain>4</ProducerBuildingCountMain>        <!-- 3 -->
+      </LateGame>
+      <EndGame>
+        <ProducerBuildingCountMain>5</ProducerBuildingCountMain>        <!-- 4 -->
+      </EndGame>
+    </PerProgressLevelInfos>
+    <SmallIslandFactor>1</SmallIslandFactor>
+    <SmallFertilitiesFactor>0.75</SmallFertilitiesFactor>
+  </ModOp>
+
+  <!--5-weapons-->
+  <ModOp Type="merge" GUID="169" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/Item[VectorElement/InheritedIndex='5']">
+    <SimulatedItemProductivity>5</SimulatedItemProductivity>
+    <PerProgressLevelInfos>
+      <EarlyMidGame>
+        <ProducerBuildingCountMain>2</ProducerBuildingCountMain>        <!-- 2 -->
+      </EarlyMidGame>
+      <MidGame>
+        <ProducerBuildingCountMain>3</ProducerBuildingCountMain>        <!-- 3 -->
+      </MidGame>
+      <LateMidGame>
+        <ProducerBuildingCountMain>3</ProducerBuildingCountMain>        <!-- 4 -->
+      </LateMidGame>
+      <LateGame>
+        <ProducerBuildingCountMain>3</ProducerBuildingCountMain>        <!-- 5 -->
+      </LateGame>
+      <EndGame>
+        <ProducerBuildingCountMain>4</ProducerBuildingCountMain>        <!-- 6 -->
+      </EndGame>
+    </PerProgressLevelInfos>
+    <SmallIslandFactor>1</SmallIslandFactor>
+    <SmallFertilitiesFactor>0.75</SmallFertilitiesFactor>
+  </ModOp>
+
+  <!--6-advanced weapons-->
+  <ModOp Type="merge" GUID="169" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/Item[VectorElement/InheritedIndex='6']">
+    <SimulatedItemProductivity>5</SimulatedItemProductivity>
+    <PerProgressLevelInfos>
+      <LateMidGame>
+        <ProducerBuildingCountMain>2</ProducerBuildingCountMain>        <!-- 1 -->
+      </LateMidGame>
+      <LateGame>
+        <ProducerBuildingCountMain>3</ProducerBuildingCountMain>        <!-- 2 -->
+      </LateGame>
+      <EndGame>
+        <ProducerBuildingCountMain>3</ProducerBuildingCountMain>        <!-- 3 -->
+      </EndGame>
+    </PerProgressLevelInfos>
+    <SmallIslandFactor>1</SmallIslandFactor>
+    <SmallFertilitiesFactor>0.75</SmallFertilitiesFactor>
+  </ModOp>
+
+  <!--7-sailcloth-->
+  <ModOp Type="merge" GUID="169" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/Item[VectorElement/InheritedIndex='7']">
+    <SimulatedItemProductivity>2</SimulatedItemProductivity>
+    <PerProgressLevelInfos>
+      <EarlyMidGame>
+        <ProducerBuildingCountMain>4</ProducerBuildingCountMain>        <!-- 2 -->
+      </EarlyMidGame>
+      <MidGame>
+        <ProducerBuildingCountMain>4</ProducerBuildingCountMain>        <!-- 2 -->
+      </MidGame>
+      <LateMidGame>
+        <ProducerBuildingCountMain>4</ProducerBuildingCountMain>        <!-- 2 -->
+      </LateMidGame>
+      <LateGame>
+        <ProducerBuildingCountMain>4</ProducerBuildingCountMain>        <!-- 2 -->
+      </LateGame>
+      <EndGame>
+        <ProducerBuildingCountMain>4</ProducerBuildingCountMain>        <!-- 2 -->
+      </EndGame>
+    </PerProgressLevelInfos>
+    <SmallIslandFactor>1</SmallIslandFactor>
+    <SmallFertilitiesFactor>0.75</SmallFertilitiesFactor>
+  </ModOp>
+
+  <!--8-gas
+  <ModOp Type="merge" GUID="169" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/Item[VectorElement/InheritedIndex='8']">
+  </ModOp>-->
+
+  <!--9-10-11-bombs/pamphlets/care packages
+  <ModOp Type="merge" GUID="169" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/Item[VectorElement/InheritedIndex='9'] and /Values/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/Item[VectorElement/InheritedIndex='10'] and /Values/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/Item[VectorElement/InheritedIndex='11']">
+  </ModOp>-->
+
+  <!--SA Gas-->
+  <ModOp Type="add" GUID="169" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/">
+    <Item>
+      <Product>840</Product>
+      <SimulatedItemProductivity>2</SimulatedItemProductivity>
+      <PerProgressLevelInfos>
+        <EarlyGame>
+          <ProducerBuildingCountMain>0</ProducerBuildingCountMain>          <!-- 0 -->
+        </EarlyGame>
+        <EarlyMidGame>
+          <ProducerBuildingCountMain>0</ProducerBuildingCountMain>          <!-- 0 -->
+        </EarlyMidGame>
+        <MidGame>
+          <ProducerBuildingCountMain>1</ProducerBuildingCountMain>          <!-- / -->
+        </MidGame>
+        <LateMidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>          <!-- / -->
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>          <!-- / -->
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>          <!-- / -->
+        </EndGame>
+      </PerProgressLevelInfos>
+      <SmallIslandFactor>1</SmallIslandFactor>
+      <SmallFertilitiesFactor>0.75</SmallFertilitiesFactor>
+    </Item>
+  </ModOp>
+
+  <!--Aluminium-->
+  <ModOp Type="add" GUID="169" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/">
+    <Item>
+      <Product>838</Product>
+      <SimulatedItemProductivity>2</SimulatedItemProductivity>
+      <PerProgressLevelInfos>
+        <EarlyGame>
+          <ProducerBuildingCountMain>0</ProducerBuildingCountMain>          <!-- 0 -->
+        </EarlyGame>
+        <EarlyMidGame>
+          <ProducerBuildingCountMain>0</ProducerBuildingCountMain>          <!-- 0 -->
+        </EarlyMidGame>
+        <LateMidGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>          <!-- 2 -->
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>          <!-- 2 -->
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>4</ProducerBuildingCountMain>          <!-- 3 -->
+        </EndGame>
+      </PerProgressLevelInfos>
+      <SmallIslandFactor>1</SmallIslandFactor>
+      <SmallFertilitiesFactor>0.75</SmallFertilitiesFactor>
+    </Item>
+  </ModOp>
+
+  <!--Steam Motors-->
+  <ModOp Type="add" GUID="169" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/">
+    <Item>
+      <Product>1010224</Product>      <!-- Steam Motors - Product -->
+      <SimulatedItemProductivity>5</SimulatedItemProductivity>
+      <PerProgressLevelInfos>
+        <LateMidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </EndGame>
+      </PerProgressLevelInfos>
+    </Item>
+  </ModOp>
+
+  <!-- SupplementSessionAdditions  -->
+  <!-- Enbesa -->
+
+  <!--Wanza Wood-->
+  <ModOp Type="merge" GUID="169" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/SupplementSessionAdditions/PerRegion/Africa/AdditionalProductionInEverySupplementSession/Item[Product='114356']">
+    <SimulatedItemProductivity>2</SimulatedItemProductivity>
+    <PerProgressLevelInfos>
+      <MidGame>
+        <ProducerBuildingCount>4</ProducerBuildingCount>        <!-- 3 -->
+      </MidGame>
+      <LateMidGame>
+        <ProducerBuildingCount>4</ProducerBuildingCount>        <!-- 3 -->
+      </LateMidGame>
+      <LateGame>
+        <ProducerBuildingCount>4</ProducerBuildingCount>        <!-- 3 -->
+      </LateGame>
+      <EndGame>
+        <ProducerBuildingCount>4</ProducerBuildingCount>        <!-- 3 -->
+      </EndGame>
+    </PerProgressLevelInfos>
+  </ModOp>
+
+  <!--Mud Bricks-->
+  <ModOp Type="merge" GUID="169" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/SupplementSessionAdditions/PerRegion/Africa/AdditionalProductionInEverySupplementSession/Item[Product='114402']">
+    <SimulatedItemProductivity>2</SimulatedItemProductivity>
+    <PerProgressLevelInfos>
+      <MidGame>
+        <ProducerBuildingCount>3</ProducerBuildingCount>        <!-- 2 -->
+      </MidGame>
+      <LateMidGame>
+        <ProducerBuildingCount>4</ProducerBuildingCount>        <!-- 3 -->
+      </LateMidGame>
+      <LateGame>
+        <ProducerBuildingCount>4</ProducerBuildingCount>        <!-- 3 -->
+      </LateGame>
+      <EndGame>
+        <ProducerBuildingCount>5</ProducerBuildingCount>        <!-- 4 -->
+      </EndGame>
+    </PerProgressLevelInfos>
+  </ModOp>
+
+  <!-- END MEDIUM AI TEMPLATE - 169  -->
+
+  <!-- START HARD AI TEMPLATE - 170  -->
+
+  <!--0-timber-->
+  <ModOp Type="merge" GUID="170" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/Item[VectorElement/InheritedIndex='0']">
+    <SimulatedItemProductivity>2</SimulatedItemProductivity>
+    <PerProgressLevelInfos>
+      <EarlyGame>
+        <ProducerBuildingCountMain>6</ProducerBuildingCountMain>        <!-- 4 -->
+      </EarlyGame>
+      <EarlyMidGame>
+        <ProducerBuildingCountMain>6</ProducerBuildingCountMain>        <!-- 4 -->
+      </EarlyMidGame>
+      <MidGame>
+        <ProducerBuildingCountMain>7</ProducerBuildingCountMain>        <!-- 5 -->
+      </MidGame>
+      <LateMidGame>
+        <ProducerBuildingCountMain>7</ProducerBuildingCountMain>        <!-- 5 -->
+      </LateMidGame>
+      <LateGame>
+        <ProducerBuildingCountMain>8</ProducerBuildingCountMain>        <!-- 6 -->
+      </LateGame>
+      <EndGame>
+        <ProducerBuildingCountMain>8</ProducerBuildingCountMain>        <!-- 6 -->
+      </EndGame>
+    </PerProgressLevelInfos>
+    <SmallIslandFactor>1</SmallIslandFactor>
+    <SmallFertilitiesFactor>0.75</SmallFertilitiesFactor>
+  </ModOp>
+
+  <!--1-bricks-->
+  <ModOp Type="merge" GUID="170" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/Item[VectorElement/InheritedIndex='1']">
+    <SimulatedItemProductivity>2</SimulatedItemProductivity>
+    <PerProgressLevelInfos>
+      <EarlyMidGame>
+        <ProducerBuildingCountMain>7</ProducerBuildingCountMain>        <!-- 8 -->
+      </EarlyMidGame>
+      <MidGame>
+        <ProducerBuildingCountMain>7</ProducerBuildingCountMain>        <!-- 8 -->
+      </MidGame>
+      <LateMidGame>
+        <ProducerBuildingCountMain>8</ProducerBuildingCountMain>        <!-- 8 -->
+      </LateMidGame>
+      <LateGame>
+        <ProducerBuildingCountMain>8</ProducerBuildingCountMain>        <!-- 8 -->
+      </LateGame>
+      <EndGame>
+        <ProducerBuildingCountMain>8</ProducerBuildingCountMain>        <!-- 8 -->
+      </EndGame>
+    </PerProgressLevelInfos>
+  </ModOp>
+
+  <!--2-beams-->
+  <ModOp Type="merge" GUID="170" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/Item[VectorElement/InheritedIndex='2']">
+    <SimulatedItemProductivity>2</SimulatedItemProductivity>
+    <PerProgressLevelInfos>
+      <EarlyMidGame>
+        <ProducerBuildingCountMain>4</ProducerBuildingCountMain>        <!-- 2 -->
+      </EarlyMidGame>
+      <MidGame>
+        <ProducerBuildingCountMain>6</ProducerBuildingCountMain>        <!-- 4 -->
+      </MidGame>
+      <LateMidGame>
+        <ProducerBuildingCountMain>7</ProducerBuildingCountMain>        <!-- 6 -->
+      </LateMidGame>
+      <LateGame>
+        <ProducerBuildingCountMain>8</ProducerBuildingCountMain>        <!-- 6 -->
+      </LateGame>
+      <EndGame>
+        <ProducerBuildingCountMain>8</ProducerBuildingCountMain>        <!-- 6 -->
+      </EndGame>
+    </PerProgressLevelInfos>
+  </ModOp>
+
+  <!--3-window-->
+  <ModOp Type="merge" GUID="170" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/Item[VectorElement/InheritedIndex='3']">
+    <SimulatedItemProductivity>2</SimulatedItemProductivity>
+    <PerProgressLevelInfos>
+      <MidGame>
+        <ProducerBuildingCountMain>5</ProducerBuildingCountMain>        <!-- 3 -->
+      </MidGame>
+      <LateMidGame>
+        <ProducerBuildingCountMain>6</ProducerBuildingCountMain>        <!-- 4 -->
+      </LateMidGame>
+      <LateGame>
+        <ProducerBuildingCountMain>7</ProducerBuildingCountMain>        <!-- 5 -->
+      </LateGame>
+      <EndGame>
+        <ProducerBuildingCountMain>8</ProducerBuildingCountMain>        <!-- 6 -->
+      </EndGame>
+    </PerProgressLevelInfos>
+  </ModOp>
+
+  <!--4-concrete-->
+  <ModOp Type="merge" GUID="170" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/Item[VectorElement/InheritedIndex='4']">
+    <SimulatedItemProductivity>2</SimulatedItemProductivity>
+    <PerProgressLevelInfos>
+      <LateMidGame>
+        <ProducerBuildingCountMain>4</ProducerBuildingCountMain>        <!-- 2 -->
+      </LateMidGame>
+      <LateGame>
+        <ProducerBuildingCountMain>5</ProducerBuildingCountMain>        <!-- 3 -->
+      </LateGame>
+      <EndGame>
+        <ProducerBuildingCountMain>6</ProducerBuildingCountMain>        <!-- 4 -->
+      </EndGame>
+    </PerProgressLevelInfos>
+  </ModOp>
+
+  <!--5-weapons-->
+  <ModOp Type="merge" GUID="170" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/Item[VectorElement/InheritedIndex='5']">
+    <SimulatedItemProductivity>5</SimulatedItemProductivity>
+    <PerProgressLevelInfos>
+      <EarlyMidGame>
+        <ProducerBuildingCountMain>3</ProducerBuildingCountMain>        <!-- 3 -->
+      </EarlyMidGame>
+      <MidGame>
+        <ProducerBuildingCountMain>3</ProducerBuildingCountMain>        <!-- 3 -->
+      </MidGame>
+      <LateMidGame>
+        <ProducerBuildingCountMain>4</ProducerBuildingCountMain>        <!-- 5 -->
+      </LateMidGame>
+      <LateGame>
+        <ProducerBuildingCountMain>4</ProducerBuildingCountMain>        <!-- 6 -->
+      </LateGame>
+      <EndGame>
+        <ProducerBuildingCountMain>5</ProducerBuildingCountMain>        <!-- 6 -->
+      </EndGame>
+    </PerProgressLevelInfos>
+  </ModOp>
+
+  <!--6-advanced weapons-->
+  <ModOp Type="merge" GUID="170" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/Item[VectorElement/InheritedIndex='6']">
+    <SimulatedItemProductivity>5</SimulatedItemProductivity>
+    <PerProgressLevelInfos>
+      <LateMidGame>
+        <ProducerBuildingCountMain>3</ProducerBuildingCountMain>        <!-- 2 -->
+      </LateMidGame>
+      <LateGame>
+        <ProducerBuildingCountMain>4</ProducerBuildingCountMain>        <!-- 3 -->
+      </LateGame>
+      <EndGame>
+        <ProducerBuildingCountMain>4</ProducerBuildingCountMain>        <!-- 5 -->
+      </EndGame>
+    </PerProgressLevelInfos>
+  </ModOp>
+
+  <!--7-sailcloth-->
+  <ModOp Type="merge" GUID="170" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/Item[VectorElement/InheritedIndex='7']">
+    <SimulatedItemProductivity>2</SimulatedItemProductivity>
+    <PerProgressLevelInfos>
+      <EarlyMidGame>
+        <ProducerBuildingCountMain>5</ProducerBuildingCountMain>        <!-- 2 -->
+      </EarlyMidGame>
+      <MidGame>
+        <ProducerBuildingCountMain>5</ProducerBuildingCountMain>        <!-- 2 -->
+      </MidGame>
+      <LateMidGame>
+        <ProducerBuildingCountMain>5</ProducerBuildingCountMain>        <!-- 2 -->
+      </LateMidGame>
+      <LateGame>
+        <ProducerBuildingCountMain>5</ProducerBuildingCountMain>        <!-- 2 -->
+      </LateGame>
+      <EndGame>
+        <ProducerBuildingCountMain>5</ProducerBuildingCountMain>        <!-- 2 -->
+      </EndGame>
+    </PerProgressLevelInfos>
+  </ModOp>
+
+  <!--8-gas
+  <ModOp Type="merge" GUID="170" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/Item[VectorElement/InheritedIndex='8']">
+  </ModOp>-->
+
+  <!--9-10-11-bombs/pamphlets/care packages
+  <ModOp Type="merge" GUID="170" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/Item[VectorElement/InheritedIndex='9'] and /Values/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/Item[VectorElement/InheritedIndex='10'] and /Values/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/Item[VectorElement/InheritedIndex='11']">
+  </ModOp>-->
+
+  <!--SA Gas-->
+  <ModOp Type="add" GUID="170" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/">
+    <Item>
+      <Product>840</Product>
+      <SimulatedItemProductivity>2</SimulatedItemProductivity>
+      <PerProgressLevelInfos>
+        <EarlyGame>
+          <ProducerBuildingCountMain>0</ProducerBuildingCountMain>          <!-- 0 -->
+        </EarlyGame>
+        <EarlyMidGame>
+          <ProducerBuildingCountMain>0</ProducerBuildingCountMain>          <!-- 0 -->
+        </EarlyMidGame>
+        <MidGame>
+          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>          <!-- / -->
+        </MidGame>
+        <LateMidGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>          <!-- / -->
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>          <!-- / -->
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>          <!-- / -->
+        </EndGame>
+      </PerProgressLevelInfos>
+      <SmallIslandFactor>1</SmallIslandFactor>
+      <SmallFertilitiesFactor>0.75</SmallFertilitiesFactor>
+    </Item>
+  </ModOp>
+
+  <!--Aluminium-->
+  <ModOp Type="add" GUID="170" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/">
+    <Item>
+      <Product>838</Product>
+      <SimulatedItemProductivity>2</SimulatedItemProductivity>
+      <PerProgressLevelInfos>
+        <EarlyGame>
+          <ProducerBuildingCountMain>0</ProducerBuildingCountMain>          <!-- 0 -->
+        </EarlyGame>
+        <EarlyMidGame>
+          <ProducerBuildingCountMain>0</ProducerBuildingCountMain>          <!-- 0 -->
+        </EarlyMidGame>
+        <LateMidGame>
+          <ProducerBuildingCountMain>4</ProducerBuildingCountMain>          <!-- 2 -->
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>4</ProducerBuildingCountMain>          <!-- 2 -->
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>5</ProducerBuildingCountMain>          <!-- 3 -->
+        </EndGame>
+      </PerProgressLevelInfos>
+      <SmallIslandFactor>1</SmallIslandFactor>
+      <SmallFertilitiesFactor>0.75</SmallFertilitiesFactor>
+    </Item>
+  </ModOp>
+
+  <!--Steam Motors-->
+  <ModOp Type="add" GUID="169" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/">
+    <Item>
+      <Product>1010224</Product>      <!-- Steam Motors - Product -->
+      <SimulatedItemProductivity>5</SimulatedItemProductivity>
+      <PerProgressLevelInfos>
+        <LateMidGame>
+          <ProducerBuildingCountMain>3</ProducerBuildingCountMain>
+        </LateMidGame>
+        <LateGame>
+          <ProducerBuildingCountMain>4</ProducerBuildingCountMain>
+        </LateGame>
+        <EndGame>
+          <ProducerBuildingCountMain>4</ProducerBuildingCountMain>
+        </EndGame>
+      </PerProgressLevelInfos>
+    </Item>
+  </ModOp>
+
+  <!-- SupplementSessionAdditions  -->
+  <!-- Enbesa -->
+
+  <!--Wanza Wood-->
+  <ModOp Type="merge" GUID="169" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/SupplementSessionAdditions/PerRegion/Africa/AdditionalProductionInEverySupplementSession/Item[Product='114356']">
+    <SimulatedItemProductivity>2</SimulatedItemProductivity>
+    <PerProgressLevelInfos>
+      <MidGame>
+        <ProducerBuildingCount>5</ProducerBuildingCount>        <!-- 3 -->
+      </MidGame>
+      <LateMidGame>
+        <ProducerBuildingCount>5</ProducerBuildingCount>        <!-- 5 -->
+      </LateMidGame>
+      <LateGame>
+        <ProducerBuildingCount>5</ProducerBuildingCount>        <!-- 3 -->
+      </LateGame>
+      <EndGame>
+        <ProducerBuildingCount>5</ProducerBuildingCount>        <!-- 3 -->
+      </EndGame>
+    </PerProgressLevelInfos>
+  </ModOp>
+
+  <!--Mud Bricks-->
+  <ModOp Type="merge" GUID="169" Path="/Values/ConstructionAI/EconomyRules/ConstructionMaterials/SupplementSessionAdditions/PerRegion/Africa/AdditionalProductionInEverySupplementSession/Item[Product='114402']">
+    <SimulatedItemProductivity>2</SimulatedItemProductivity>
+    <PerProgressLevelInfos>
+      <MidGame>
+        <ProducerBuildingCount>5</ProducerBuildingCount>        <!-- 2 -->
+      </MidGame>
+      <LateMidGame>
+        <ProducerBuildingCount>5</ProducerBuildingCount>        <!-- 4 -->
+      </LateMidGame>
+      <LateGame>
+        <ProducerBuildingCount>5</ProducerBuildingCount>        <!-- 4 -->
+      </LateGame>
+      <EndGame>
+        <ProducerBuildingCount>5</ProducerBuildingCount>        <!-- 4 -->
+      </EndGame>
+    </PerProgressLevelInfos>
+  </ModOp>
+
+  <!-- END HARD AI TEMPLATE - 170  -->
+
+  <!-- ******* BALANCE DEFENSE BUILDINGS AI ******* -->
+
+  <!-- MEDIUM AI TEMPLATE - 169  -->
+  <ModOp Type="merge" GUID="169" Path="/Values/ConstructionAI/">
+    <DefenseStructuresGround>
+      <Moderate>
+        <HarborDefenses>
+          <Item>
+            <Building>1010522</Building>            <!--harbor_04 (Tower 01, Puckle Gun)-->
+            <Weight>20</Weight>
+          </Item>
+          <Item>
+            <Building>1010523</Building>            <!--harbor_05 (Tower 02, Cannon Tower)-->
+            <Weight>50</Weight>
+          </Item>
+          <Item>
+            <Building>625</Building>            <!--harbor_17 (Tower 04, Fire Tower)-->
+            <Weight>10</Weight>
+            <MaintenanceFactor>0.4</MaintenanceFactor>
+          </Item>
+          <Item>
+            <Building>3700</Building>            <!--harbor_18 (Tower 06, Armor Pierce Tower)-->
+            <Weight>20</Weight>
+            <MaintenanceFactor>0.1</MaintenanceFactor>
+          </Item>
+          <Item>
+            <Building>1010524</Building>            <!--harbor_06 (Tower 03, Monster Gun)-->
+            <Weight>10</Weight>
+            <MaintenanceFactor>0.1</MaintenanceFactor>
+          </Item>
+        </HarborDefenses>
+        <SecurityFactor>
+          <EarlyGame>
+            <Factor>1.5</Factor>            <!-- 1.25 -->
+          </EarlyGame>
+          <EarlyMidGame>
+            <Factor>2</Factor>            <!-- 1.5 -->
+          </EarlyMidGame>
+          <MidGame>
+            <Factor>2.25</Factor>            <!-- 1.75 -->
+          </MidGame>
+          <LateMidGame>
+            <Factor>3</Factor>            <!-- 2 -->
+          </LateMidGame>
+          <LateGame>
+            <Factor>4</Factor>            <!-- 2.5 -->
+          </LateGame>
+          <EndGame>
+            <Factor>5</Factor>            <!-- 3 -->
+          </EndGame>
+        </SecurityFactor>
+      </Moderate>
+      <Colony01>
+        <HarborDefenses>
+          <Item>
+            <Building>101563</Building>            <!--harbor_colony01_04 (Tower 01, Puckle Gun)-->
+            <Weight>20</Weight>
+          </Item>
+          <Item>
+            <Building>101570</Building>            <!--harbor_colony01_05 (Tower 02, Cannon Tower)-->
+            <Weight>50</Weight>
+          </Item>
+          <Item>
+            <Building>632</Building>            <!--harbor_colony01_17 (Tower 03, Fire Tower)-->
+            <Weight>10</Weight>
+            <MaintenanceFactor>0.4</MaintenanceFactor>
+          </Item>
+          <Item>
+            <Building>4797</Building>            <!--harbor_18 (Tower 06, Armor Pierce Tower)-->
+            <Weight>20</Weight>
+            <MaintenanceFactor>0.1</MaintenanceFactor>
+          </Item>
+          <Item>
+            <Building>101571</Building>            <!--harbor_colony01_06 (Tower 03, Monster Gun)-->
+            <Weight>10</Weight>
+            <MaintenanceFactor>0.1</MaintenanceFactor>
+          </Item>
+        </HarborDefenses>
+        <SecurityFactor>
+          <EarlyGame>
+            <Factor>1.5</Factor>            <!-- 1.25 -->
+          </EarlyGame>
+          <EarlyMidGame>
+            <Factor>2</Factor>            <!-- 1.5 -->
+          </EarlyMidGame>
+          <MidGame>
+            <Factor>2.25</Factor>            <!-- 1.75 -->
+          </MidGame>
+          <LateMidGame>
+            <Factor>3</Factor>            <!-- 2 -->
+          </LateMidGame>
+          <LateGame>
+            <Factor>4</Factor>            <!-- 2.5 -->
+          </LateGame>
+          <EndGame>
+            <Factor>5</Factor>            <!-- 3 -->
+          </EndGame>
+        </SecurityFactor>
+      </Colony01>
+      <Arctic>
+        <HarborDefenses>
+          <Item>
+            <Building>112671</Building>            <!--harbor_arctic_02 (Cannon Tower)-->
+            <Weight>70</Weight>
+          </Item>
+          <Item>
+            <Building>824</Building>            <!--harbor_arctic_17 (Tower 03, Fire Tower)-->
+            <Weight>10</Weight>
+            <MaintenanceFactor>0.4</MaintenanceFactor>
+          </Item>
+        </HarborDefenses>
+        <SecurityFactor>
+          <EarlyGame>
+            <Factor>1.5</Factor>            <!-- 1.25 -->
+          </EarlyGame>
+          <EarlyMidGame>
+            <Factor>2</Factor>            <!-- 1.5 -->
+          </EarlyMidGame>
+          <MidGame>
+            <Factor>2.25</Factor>            <!-- 1.75 -->
+          </MidGame>
+          <LateMidGame>
+            <Factor>3</Factor>            <!-- 2 -->
+          </LateMidGame>
+          <LateGame>
+            <Factor>4</Factor>            <!-- 2.5 -->
+          </LateGame>
+          <EndGame>
+            <Factor>5</Factor>            <!-- 3 -->
+          </EndGame>
+        </SecurityFactor>
+      </Arctic>
+      <Africa>
+        <HarborDefenses>
+          <Item>
+            <Building>117861</Building>            <!--tower_colony02_01 (Puckle Gun)-->
+            <Weight>20</Weight>
+          </Item>
+          <Item>
+            <Building>117863</Building>            <!--tower_colony02_02 (Cannon Tower)-->
+            <Weight>70</Weight>
+          </Item>
+          <Item>
+            <Building>823</Building>            <!--harbor_colony02_17 (Tower 03, Fire Tower)-->
+            <Weight>10</Weight>
+            <MaintenanceFactor>0.4</MaintenanceFactor>
+          </Item>
+          <Item>
+            <Building>4799</Building>            <!--harbor_colony02_18 (Tower 06, Armor Pierce Tower)-->
+            <Weight>20</Weight>
+            <MaintenanceFactor>0.1</MaintenanceFactor>
+          </Item>
+        </HarborDefenses>
+        <SecurityFactor>
+          <EarlyGame>
+            <Factor>1.5</Factor>            <!-- 1.25 -->
+          </EarlyGame>
+          <EarlyMidGame>
+            <Factor>2</Factor>            <!-- 1.5 -->
+          </EarlyMidGame>
+          <MidGame>
+            <Factor>2.25</Factor>            <!-- 1.75 -->
+          </MidGame>
+          <LateMidGame>
+            <Factor>3</Factor>            <!-- 2 -->
+          </LateMidGame>
+          <LateGame>
+            <Factor>4</Factor>            <!-- 2.5 -->
+          </LateGame>
+          <EndGame>
+            <Factor>5</Factor>            <!-- 3 -->
+          </EndGame>
+        </SecurityFactor>
+      </Africa>
+    </DefenseStructuresGround>
+    <DefenseStructuresAir>
+      <Moderate>
+        <AirDefenses>
+          <Item>
+            <Building>736</Building>            <!--harbor_18 (Tower 05, FlaK)-->
+            <Weight>10</Weight>
+            <MaintenanceFactor>0.6</MaintenanceFactor>
+          </Item>
+        </AirDefenses>
+        <SecurityFactor>
+          <MidGame>
+            <Factor>1.5</Factor>            <!-- 1 -->
+          </MidGame>
+          <LateMidGame>
+            <Factor>2</Factor>            <!-- 1.25 -->
+          </LateMidGame>
+          <LateGame>
+            <Factor>2.25</Factor>            <!-- 1.5 -->
+          </LateGame>
+          <EndGame>
+            <Factor>3</Factor>            <!-- 2 -->
+          </EndGame>
+        </SecurityFactor>
+        <HighProtectIslandSecurityFactor>2</HighProtectIslandSecurityFactor>
+        <RadiusProtectionFactor>0.75</RadiusProtectionFactor>
+      </Moderate>
+      <Colony01>
+        <AirDefenses>
+          <Item>
+            <Building>742</Building>            <!--harbor_18 Colony01 (Tower 05, FlaK)-->
+            <Weight>10</Weight>
+            <MaintenanceFactor>0.6</MaintenanceFactor>
+          </Item>
+        </AirDefenses>
+        <SecurityFactor>
+          <MidGame>
+            <Factor>1.5</Factor>            <!-- 1 -->
+          </MidGame>
+          <LateMidGame>
+            <Factor>2</Factor>            <!-- 1.25 -->
+          </LateMidGame>
+          <LateGame>
+            <Factor>2.25</Factor>            <!-- 1.5 -->
+          </LateGame>
+          <EndGame>
+            <Factor>3</Factor>            <!-- 2 -->
+          </EndGame>
+        </SecurityFactor>
+        <HighProtectIslandSecurityFactor>2</HighProtectIslandSecurityFactor>
+        <RadiusProtectionFactor>0.75</RadiusProtectionFactor>
+      </Colony01>
+      <Arctic>
+        <AirDefenses>
+          <Item>
+            <Building>822</Building>            <!--harbor_03 arctic (Tower 05, FlaK)-->
+            <Weight>10</Weight>
+            <MaintenanceFactor>0.6</MaintenanceFactor>
+          </Item>
+        </AirDefenses>
+        <SecurityFactor>
+          <MidGame>
+            <Factor>1.5</Factor>            <!-- 1 -->
+          </MidGame>
+          <LateMidGame>
+            <Factor>2</Factor>            <!-- 1.25 -->
+          </LateMidGame>
+          <LateGame>
+            <Factor>2.25</Factor>            <!-- 1.5 -->
+          </LateGame>
+          <EndGame>
+            <Factor>3</Factor>            <!-- 2 -->
+          </EndGame>
+        </SecurityFactor>
+        <HighProtectIslandSecurityFactor>2</HighProtectIslandSecurityFactor>
+        <RadiusProtectionFactor>0.75</RadiusProtectionFactor>
+      </Arctic>
+      <Africa>
+        <AirDefenses>
+          <Item>
+            <Building>743</Building>            <!--harbor_03 Colony02 (Tower 05, FlaK)-->
+            <Weight>10</Weight>
+            <MaintenanceFactor>0.6</MaintenanceFactor>
+          </Item>
+        </AirDefenses>
+        <SecurityFactor>
+          <MidGame>
+            <Factor>1.5</Factor>            <!-- 1 -->
+          </MidGame>
+          <LateMidGame>
+            <Factor>2</Factor>            <!-- 1.25 -->
+          </LateMidGame>
+          <LateGame>
+            <Factor>2.25</Factor>            <!-- 1.5 -->
+          </LateGame>
+          <EndGame>
+            <Factor>3</Factor>            <!-- 2 -->
+          </EndGame>
+        </SecurityFactor>
+        <HighProtectIslandSecurityFactor>2</HighProtectIslandSecurityFactor>
+        <RadiusProtectionFactor>0.75</RadiusProtectionFactor>
+      </Africa>
+    </DefenseStructuresAir>
+  </ModOp>
+
+  <!-- HARD AI TEMPLATE - 170  -->
+  <ModOp Type="merge" GUID="170" Path="/Values/ConstructionAI/">
+    <DefenseStructuresGround>
+      <Moderate>
+        <HarborDefenses>
+          <Item>
+            <Building>1010522</Building>            <!--harbor_04 (Tower 01, Puckle Gun)-->
+            <Weight>20</Weight>
+          </Item>
+          <Item>
+            <Building>1010523</Building>            <!--harbor_05 (Tower 02, Cannon Tower)-->
+            <Weight>50</Weight>
+          </Item>
+          <Item>
+            <Building>625</Building>            <!--harbor_17 (Tower 04, Fire Tower)-->
+            <Weight>10</Weight>
+            <MaintenanceFactor>0.4</MaintenanceFactor>
+          </Item>
+          <Item>
+            <Building>3700</Building>            <!--harbor_18 (Tower 06, Armor Pierce Tower)-->
+            <Weight>20</Weight>
+            <MaintenanceFactor>0.1</MaintenanceFactor>
+          </Item>
+          <Item>
+            <Building>1010524</Building>            <!--harbor_06 (Tower 03, Monster Gun)-->
+            <Weight>10</Weight>
+            <MaintenanceFactor>0.1</MaintenanceFactor>
+          </Item>
+        </HarborDefenses>
+        <SecurityFactor>
+          <EarlyGame>
+            <Factor>2</Factor>            <!-- 1.25 -->
+          </EarlyGame>
+          <EarlyMidGame>
+            <Factor>2.5</Factor>            <!-- 1.5 -->
+          </EarlyMidGame>
+          <MidGame>
+            <Factor>3</Factor>            <!-- 1.75 -->
+          </MidGame>
+          <LateMidGame>
+            <Factor>4</Factor>            <!-- 2 -->
+          </LateMidGame>
+          <LateGame>
+            <Factor>5</Factor>            <!-- 2.5 -->
+          </LateGame>
+          <EndGame>
+            <Factor>6</Factor>            <!-- 3 -->
+          </EndGame>
+        </SecurityFactor>
+      </Moderate>
+      <Colony01>
+        <HarborDefenses>
+          <Item>
+            <Building>101563</Building>            <!--harbor_colony01_04 (Tower 01, Puckle Gun)-->
+            <Weight>20</Weight>
+          </Item>
+          <Item>
+            <Building>101570</Building>            <!--harbor_colony01_05 (Tower 02, Cannon Tower)-->
+            <Weight>50</Weight>
+          </Item>
+          <Item>
+            <Building>632</Building>            <!--harbor_colony01_17 (Tower 03, Fire Tower)-->
+            <Weight>10</Weight>
+            <MaintenanceFactor>0.4</MaintenanceFactor>
+          </Item>
+          <Item>
+            <Building>4797</Building>            <!--harbor_18 (Tower 06, Armor Pierce Tower)-->
+            <Weight>20</Weight>
+            <MaintenanceFactor>0.1</MaintenanceFactor>
+          </Item>
+          <Item>
+            <Building>101571</Building>            <!--harbor_colony01_06 (Tower 03, Monster Gun)-->
+            <Weight>10</Weight>
+            <MaintenanceFactor>0.1</MaintenanceFactor>
+          </Item>
+        </HarborDefenses>
+        <SecurityFactor>
+          <EarlyGame>
+            <Factor>2</Factor>            <!-- 1.25 -->
+          </EarlyGame>
+          <EarlyMidGame>
+            <Factor>2.5</Factor>            <!-- 1.5 -->
+          </EarlyMidGame>
+          <MidGame>
+            <Factor>3</Factor>            <!-- 1.75 -->
+          </MidGame>
+          <LateMidGame>
+            <Factor>4</Factor>            <!-- 2 -->
+          </LateMidGame>
+          <LateGame>
+            <Factor>5</Factor>            <!-- 2.5 -->
+          </LateGame>
+          <EndGame>
+            <Factor>6</Factor>            <!-- 3 -->
+          </EndGame>
+        </SecurityFactor>
+      </Colony01>
+      <Arctic>
+        <HarborDefenses>
+          <Item>
+            <Building>112671</Building>            <!--harbor_arctic_02 (Cannon Tower)-->
+            <Weight>70</Weight>
+          </Item>
+          <Item>
+            <Building>824</Building>            <!--harbor_arctic_17 (Tower 03, Fire Tower)-->
+            <Weight>10</Weight>
+            <MaintenanceFactor>0.4</MaintenanceFactor>
+          </Item>
+        </HarborDefenses>
+        <SecurityFactor>
+          <EarlyGame>
+            <Factor>2</Factor>            <!-- 1.25 -->
+          </EarlyGame>
+          <EarlyMidGame>
+            <Factor>2.5</Factor>            <!-- 1.5 -->
+          </EarlyMidGame>
+          <MidGame>
+            <Factor>3</Factor>            <!-- 1.75 -->
+          </MidGame>
+          <LateMidGame>
+            <Factor>4</Factor>            <!-- 2 -->
+          </LateMidGame>
+          <LateGame>
+            <Factor>5</Factor>            <!-- 2.5 -->
+          </LateGame>
+          <EndGame>
+            <Factor>6</Factor>            <!-- 3 -->
+          </EndGame>
+        </SecurityFactor>
+      </Arctic>
+      <Africa>
+        <HarborDefenses>
+          <Item>
+            <Building>117861</Building>            <!--tower_colony02_01 (Puckle Gun)-->
+            <Weight>20</Weight>
+          </Item>
+          <Item>
+            <Building>117863</Building>            <!--tower_colony02_02 (Cannon Tower)-->
+            <Weight>70</Weight>
+          </Item>
+          <Item>
+            <Building>823</Building>            <!--harbor_colony02_17 (Tower 03, Fire Tower)-->
+            <Weight>10</Weight>
+            <MaintenanceFactor>0.4</MaintenanceFactor>
+          </Item>
+          <Item>
+            <Building>4799</Building>            <!--harbor_colony02_18 (Tower 06, Armor Pierce Tower)-->
+            <Weight>20</Weight>
+            <MaintenanceFactor>0.1</MaintenanceFactor>
+          </Item>
+        </HarborDefenses>
+        <SecurityFactor>
+          <EarlyGame>
+            <Factor>2</Factor>            <!-- 1.25 -->
+          </EarlyGame>
+          <EarlyMidGame>
+            <Factor>2.5</Factor>            <!-- 1.5 -->
+          </EarlyMidGame>
+          <MidGame>
+            <Factor>3</Factor>            <!-- 1.75 -->
+          </MidGame>
+          <LateMidGame>
+            <Factor>4</Factor>            <!-- 2 -->
+          </LateMidGame>
+          <LateGame>
+            <Factor>5</Factor>            <!-- 2.5 -->
+          </LateGame>
+          <EndGame>
+            <Factor>6</Factor>            <!-- 3 -->
+          </EndGame>
+        </SecurityFactor>
+      </Africa>
+    </DefenseStructuresGround>
+    <DefenseStructuresAir>
+      <Moderate>
+        <AirDefenses>
+          <Item>
+            <Building>736</Building>            <!--harbor_18 (Tower 05, FlaK)-->
+            <Weight>10</Weight>
+            <MaintenanceFactor>0.6</MaintenanceFactor>
+          </Item>
+        </AirDefenses>
+        <SecurityFactor>
+          <MidGame>
+            <Factor>2</Factor>            <!-- 1 -->
+          </MidGame>
+          <LateMidGame>
+            <Factor>2.5</Factor>            <!-- 1.25 -->
+          </LateMidGame>
+          <LateGame>
+            <Factor>3</Factor>            <!-- 1.5 -->
+          </LateGame>
+          <EndGame>
+            <Factor>4</Factor>            <!-- 2 -->
+          </EndGame>
+        </SecurityFactor>
+        <HighProtectIslandSecurityFactor>2</HighProtectIslandSecurityFactor>
+        <RadiusProtectionFactor>0.75</RadiusProtectionFactor>
+      </Moderate>
+      <Colony01>
+        <AirDefenses>
+          <Item>
+            <Building>742</Building>            <!--harbor_18 Colony01 (Tower 05, FlaK)-->
+            <Weight>10</Weight>
+            <MaintenanceFactor>0.6</MaintenanceFactor>
+          </Item>
+        </AirDefenses>
+        <SecurityFactor>
+          <MidGame>
+            <Factor>2</Factor>            <!-- 1 -->
+          </MidGame>
+          <LateMidGame>
+            <Factor>2.5</Factor>            <!-- 1.25 -->
+          </LateMidGame>
+          <LateGame>
+            <Factor>3</Factor>            <!-- 1.5 -->
+          </LateGame>
+          <EndGame>
+            <Factor>4</Factor>            <!-- 2 -->
+          </EndGame>
+        </SecurityFactor>
+        <HighProtectIslandSecurityFactor>2</HighProtectIslandSecurityFactor>
+        <RadiusProtectionFactor>0.75</RadiusProtectionFactor>
+      </Colony01>
+      <Arctic>
+        <AirDefenses>
+          <Item>
+            <Building>822</Building>            <!--harbor_03 arctic (Tower 05, FlaK)-->
+            <Weight>10</Weight>
+            <MaintenanceFactor>0.6</MaintenanceFactor>
+          </Item>
+        </AirDefenses>
+        <SecurityFactor>
+          <MidGame>
+            <Factor>2</Factor>            <!-- 1 -->
+          </MidGame>
+          <LateMidGame>
+            <Factor>2.5</Factor>            <!-- 1.25 -->
+          </LateMidGame>
+          <LateGame>
+            <Factor>3</Factor>            <!-- 1.5 -->
+          </LateGame>
+          <EndGame>
+            <Factor>4</Factor>            <!-- 2 -->
+          </EndGame>
+        </SecurityFactor>
+        <HighProtectIslandSecurityFactor>2</HighProtectIslandSecurityFactor>
+        <RadiusProtectionFactor>0.75</RadiusProtectionFactor>
+      </Arctic>
+      <Africa>
+        <AirDefenses>
+          <Item>
+            <Building>743</Building>            <!--harbor_03 Colony02 (Tower 05, FlaK)-->
+            <Weight>10</Weight>
+            <MaintenanceFactor>0.6</MaintenanceFactor>
+          </Item>
+        </AirDefenses>
+        <SecurityFactor>
+          <MidGame>
+            <Factor>2</Factor>            <!-- 1 -->
+          </MidGame>
+          <LateMidGame>
+            <Factor>2.5</Factor>            <!-- 1.25 -->
+          </LateMidGame>
+          <LateGame>
+            <Factor>3</Factor>            <!-- 1.5 -->
+          </LateGame>
+          <EndGame>
+            <Factor>4</Factor>            <!-- 2 -->
+          </EndGame>
+        </SecurityFactor>
+        <HighProtectIslandSecurityFactor>2</HighProtectIslandSecurityFactor>
+        <RadiusProtectionFactor>0.75</RadiusProtectionFactor>
+      </Africa>
+    </DefenseStructuresAir>
+  </ModOp>
+
+  <!-- ******* MAKE KONTORS STRONGER ******* -->
+
+  <!-- Normal Kontor (1) - Small Trading Post -->
+  <ModOp Type="merge" GUID="1010517" Path="/Values/">
+    <Attackable>
+      <MaximumHitPoints>11000</MaximumHitPoints>      <!-- 9000 -->
+    </Attackable>
+  </ModOp>
+
+  <!-- Normal Kontor (2) - Medium Trading Post -->
+  <ModOp Type="merge" GUID="100510" Path="/Values/">
+    <Attackable>
+      <MaximumHitPoints>12000</MaximumHitPoints>      <!-- 9000 -->
+    </Attackable>
+  </ModOp>
+
+  <!-- Normal Kontor (3) - Large Trading Post -->
+  <ModOp Type="merge" GUID="100511" Path="/Values/">
+    <Attackable>
+      <MaximumHitPoints>14000</MaximumHitPoints>      <!-- 9000 -->
+    </Attackable>
+  </ModOp>
+
+  <!-- Normal Kontor (4) - Grand Trading Post -->
+  <ModOp Type="merge" GUID="269867" Path="/Values/">
+    <Attackable>
+      <MaximumHitPoints>16000</MaximumHitPoints>      <!-- 9000 -->
+    </Attackable>
+  </ModOp>
+
+  <!-- Imperial Kontor (1) - Small Trading Post -->
+  <ModOp Type="merge" GUID="1010540" Path="/Values/">
+    <Attackable>
+      <MaximumHitPoints>14000</MaximumHitPoints>      <!-- 9000 -->
+    </Attackable>
+    <Attacker>
+      <BaseDamage>170</BaseDamage>      <!-- 150 -->
+    </Attacker>
+  </ModOp>
+
+  <!-- Imperial Kontor (2) - Medium Trading Post -->
+  <ModOp Type="merge" GUID="100514" Path="/Values/">
+    <Attackable>
+      <MaximumHitPoints>18000</MaximumHitPoints>      <!-- 9000 -->
+    </Attackable>
+    <Attacker>
+      <BaseDamage>190</BaseDamage>      <!-- 150 -->
+    </Attacker>
+  </ModOp>
+
+  <!-- Imperial Kontor (3) - Large Trading Post -->
+  <ModOp Type="merge" GUID="100515" Path="/Values/">
+    <Attackable>
+      <MaximumHitPoints>20000</MaximumHitPoints>      <!-- 9000 -->
+    </Attackable>
+    <Attacker>
+      <BaseDamage>210</BaseDamage>      <!-- 150 -->
+    </Attacker>
+  </ModOp>
+
+  <!-- Imperial Kontor (4) - Grand Trading Post -->
+  <ModOp Type="merge" GUID="269879" Path="/Values/">
+    <Attackable>
+      <MaximumHitPoints>25000</MaximumHitPoints>      <!-- 9000 -->
+    </Attackable>
+    <Attacker>
+      <BaseDamage>250</BaseDamage>      <!-- 150 -->
+    </Attacker>
+  </ModOp>
+
+  <!-- Arctic Sky Trading Posts -->
+  <!-- Inland buildings with harbour island type - change to correct type -->
+  <ModOp Type="merge" GUID="112726,116003,116004" Path="/Values/Attackable">
+    <AttackableType>IslandBuilding</AttackableType>
+  </ModOp>
+
+
+
+</ModOps>
