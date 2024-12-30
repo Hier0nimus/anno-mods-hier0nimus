@@ -17,7 +17,7 @@ You will need ALL DLC's to play this mod. There are new goods in every region fr
 
 Explore the world of musical instruments with new production chains and a lategame Music hall to boost your New world population.
 
-Current version 1.14 (26/08/2024)
+Current version 1.15 (30/12/2024)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/music-to-my-ears
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
@@ -85,10 +85,12 @@ Current version 1.1 (29/01/2024)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/ai-not-asking-for-alliances
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
-## Shared goods
+## Shared mods
+
+### Goods
 
 A list of shared goods that can be used by everybody
-- Clean water
+- Clean Water
 - Galena
 - Gunpowder
 - Horses
@@ -96,6 +98,10 @@ A list of shared goods that can be used by everybody
 - Strings
 - Flutes
 - Djembé
+
+### Mechanics
+
+- Ship Flags
 
 Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
