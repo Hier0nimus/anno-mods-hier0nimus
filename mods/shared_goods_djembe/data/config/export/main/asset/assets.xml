@@ -1,0 +1,450 @@
+<!-- 
+  
+  [Shared] Shared Goods - Djembe - v1.0
+  Created by Hier0nimus
+  Enjoy!
+
+  Add triggers for product, building to unlock when you want it
+  Add building to construction menu where you want it
+
+  1742110017 - Djembé - Product
+  1742110018 - Djembé - Product - Description 
+  1742110001 - Djembé Maker - Building
+  1742110116 - Djembé Maker DUMMY - Building
+  1742110002 - Djembé Maker - Building - Description
+  1742110035 - Djembé - ProductionChain
+  1742110036 - Djembé - ProductionChain - Description
+  1742110031 - Hides from sanga cows for Djembés - GuildhouseBuff
+  1742110032 - Hides from sanga cows for Djembés - GuildhouseBuff - Description
+
+-->
+
+<ModOps>
+
+  <!-- START Djembé - Product -->
+  <ModOp GUID='1010128' Type="addNextSibling">
+    <Asset>
+      <Template>Product</Template>
+      <Values>
+        <Standard>
+          <GUID>1742110017</GUID>
+          <Name>Djembés</Name>
+          <IconFilename>data/graphics/icons/icon_djembe.png</IconFilename>
+          <InfoDescription>1742110018</InfoDescription>
+        </Standard>
+        <Text />
+        <Locked />
+        <Product>
+          <StorageLevel>Building</StorageLevel>
+          <ProductCategory>11705</ProductCategory>
+          <BasePrice>800</BasePrice>
+          <CivLevel>1</CivLevel>
+          <AssociatedRegion>Moderate;Colony01;Africa</AssociatedRegion>
+          <ProductionRegions>
+            <Item>
+              <RegionType>Africa</RegionType>
+              <RequiredDLCs>
+                <Item>
+                  <RequiredDLC>410071</RequiredDLC>                  <!--Anno 1800 DLC - Land of Lions-->
+                </Item>
+              </RequiredDLCs>
+            </Item>
+          </ProductionRegions>
+        </Product>
+        <ExpeditionAttribute>
+          <BaseMorale>0</BaseMorale>
+          <ExpeditionAttributes>
+            <Item>
+              <Attribute>Crafting</Attribute>
+              <Amount>10</Amount>
+            </Item>
+          </ExpeditionAttributes>
+          <FluffText />
+        </ExpeditionAttribute>
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- START ADD GOODS TO StandardProductStorageList + StandardMarketplaceREGIONStorageList   -->
+
+  <!-- ************ MODERATE REGION ************ -->
+
+  <!-- START - ADD PRODUCT TO PRODUCTSTORAGELISTS -->
+  <ModOp Type="add" GUID="120055" Path="/Values/ProductStorageList/ProductList/">
+    <Item>
+      <Product>1742110017</Product>      <!-- Djembe- Product -->
+    </Item>
+  </ModOp>
+  <ModOp Type="addNextSibling" GUID="122362" Path="/Values/ProductStorageList/ProductList/Item[Product='118724']">
+    <Item>
+      <Product>1742110017</Product>      <!-- Djembe- Product -->
+    </Item>
+  </ModOp>
+
+  <!-- START ADD TO WORKFORCEGOODS - ShephardGoods -->
+  <ModOp Type="add" GUID="502073,502071,502069" Path="/Values/ProductList/List/">
+    <Item>
+      <Product>1742110017</Product>      <!-- Djembe- Product -->
+    </Item>
+  </ModOp>
+  <!-- END ADD TO WORKFORCEGOODS - ShephardGoods -->
+
+  <!-- START ADD GOODS TO OTHER ProductList - ALL PRODUCTS -->
+  <ModOp Type="add" GUID='502016,502065' Path="/Values/ProductList/List">
+    <Item>
+      <Product>1742110017</Product>      <!-- Djembe- Product -->
+    </Item>
+  </ModOp>
+  <!-- END ADD GOODS TO OTHER PRODUCTLIST - ALL PRODUCTS -->
+
+  <!-- START ADD GOODS TO OTHER ProductList - CONSUMER -->
+  <ModOp Type="add" GUID='501993' Path="/Values/ProductList/List">
+    <Item>
+      <Product>1742110017</Product>      <!-- Djembe- Product -->
+    </Item>
+  </ModOp>
+  <!-- END ADD GOODS TO OTHER PRODUCTLIST - CONSUMER -->
+
+  <!-- START ADD GOODS TO ProductList AfricaSessionGoods,AllConsumerGoods_AfricaSort -->
+  <ModOp Type="add" GUID='502085,502081' Path="/Values/ProductList/List">
+    <Item>
+      <Product>1742110017</Product>
+    </Item>
+  </ModOp>
+  <!-- END  -->
+
+  <!-- START BUILDING - Djembé Maker - Building -->
+  <ModOp Type="addNextSibling" GUID='1010284'>
+    <Asset>
+      <Template>BuffFactoryModule</Template>
+      <Values>
+        <Standard>
+          <GUID>1742110001</GUID>
+          <Name>Djembé Maker</Name>
+          <IconFilename>data\graphics\icons\icon_djembe.png</IconFilename>
+          <InfoDescription>1742110002</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>100000</BuildingCategoryName>
+          <AssociatedRegions>Africa</AssociatedRegions>
+        </Building>
+        <Blocking />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data\graphics\buildings\production\djembe_maker\djembe_maker.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <Amount>2000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>114356</Ingredient>
+              <Amount>12</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Mesh />
+        <Selection>
+          <GUIType>Production</GUIType>
+          <ParticipantMessageArcheType>Africa_Resident_tier01</ParticipantMessageArcheType>
+        </Selection>
+        <Constructable />
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>270382</Sound>
+            </Item>
+            <Item>
+              <Sound>270364</Sound>
+            </Item>
+          </ActiveSounds>
+        </SoundEmitter>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>114356</Product>
+              <Amount>1</Amount>
+              <StorageAmount>8</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <CycleTime>60</CycleTime>
+          <MissingConnectionInfolayer>500449</MissingConnectionInfolayer>
+          <IsMainFactory>1</IsMainFactory>
+          <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+          <ClampedMaxTransporterLogisticCost>67</ClampedMaxTransporterLogisticCost>
+        </FactoryBase>
+        <LogisticNode/>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>75</Amount>
+              <InactiveAmount>100</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>114340</Product>
+              <Amount>20</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Industrializable>
+          <BoostedByIndustrialization>0</BoostedByIndustrialization>
+        </Industrializable>
+        <IncidentInfectable />
+        <Electrifiable>
+          <ElectricityBoost>0</ElectricityBoost>
+        </Electrifiable>
+        <AmbientMoodProvider />
+        <Attackable />
+        <UpgradeList />
+        <Pausable />
+        <FeedbackController />
+        <Infolayer />
+        <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742110031</ProductivityBuff>
+            </Item>
+          </ProductionBuffs>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <ProductionBuffDistance>8</ProductionBuffDistance>
+        </BuffFactory>
+        <BuildingModule>
+          <ModuleType>AdditionalModule</ModuleType>
+        </BuildingModule>
+        <Culture />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - Djembé Maker - Building -->
+
+  <!-- START BUILDING - Djembé production DUMMY - Building -->
+  <ModOp Type="addNextSibling" GUID='1010284'>
+    <Asset>
+      <Template>FactoryBuilding7</Template>
+      <Values>
+        <Standard>
+          <GUID>1742110116</GUID>
+          <Name>Djembé production DUMMY</Name>
+          <IconFilename>data\graphics\icons\icon_djembe.png</IconFilename>
+        </Standard>
+        <Building>
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <AssociatedRegions>Africa</AssociatedRegions>
+        </Building>
+        <Blocking/>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!--Money-->
+              <Amount>100</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data\graphics\buildings\production\djembe_maker\djembe_maker.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Mesh/>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>Africa_Resident_tier01</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Text />
+        <Constructable/>
+        <Locked/>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>270382</Sound>
+            </Item>
+            <Item>
+              <Sound>270364</Sound>
+            </Item>
+          </ActiveSounds>
+        </SoundEmitter>
+        <FeedbackController/>
+        <Infolayer/>
+        <UpgradeList/>
+        <Factory7/>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>114356</Product>
+              <Amount>1</Amount>
+              <StorageAmount>8</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <FactoryOutputs>
+            <Item>
+              <Product>1742110017</Product>              <!--Djembes-->
+              <Amount>1</Amount>
+              <StorageAmount>4</StorageAmount>
+            </Item>
+          </FactoryOutputs>
+          <CycleTime>60</CycleTime>
+          <MissingConnectionInfolayer>500449</MissingConnectionInfolayer>
+          <IsMainFactory>1</IsMainFactory>
+        </FactoryBase>
+        <LogisticNode/>
+        <AmbientMoodProvider>
+          <Murmur>Factory</Murmur>
+          <DynamicEnvironmentType>None</DynamicEnvironmentType>
+        </AmbientMoodProvider>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>75</Amount>
+              <InactiveAmount>100</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>114340</Product>
+              <Amount>20</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+          <MaximumHitPoints>1500</MaximumHitPoints>
+          <SelfHealPerHealTick>4</SelfHealPerHealTick>
+        </Attackable>
+        <Pausable/>
+        <IncidentInfectable>
+          <Explosion>
+            <ExplosionCoreDamage>1000</ExplosionCoreDamage>
+            <DamageExplosionChance>30</DamageExplosionChance>
+          </Explosion>
+          <IncidentInfectionChanceFactors>
+            <Fire>
+              <DensityDistance>20</DensityDistance>
+              <FactoryProductivityFactor>0.1</FactoryProductivityFactor>
+              <FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
+            </Fire>
+            <Riot>
+              <FactoryOvertimeFactor>0.4</FactoryOvertimeFactor>
+              <FactoryUndertimeFactor>0.2</FactoryUndertimeFactor>
+              <FactoryHappinessFactor>0.2</FactoryHappinessFactor>
+              <HappinessThreshold>20</HappinessThreshold>
+            </Riot>
+            <Explosion>
+              <BaseChance>4</BaseChance>
+              <FactoryProductivityFactor>0.1</FactoryProductivityFactor>
+              <FactoryOvertimeFactor>0.1</FactoryOvertimeFactor>
+              <FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
+            </Explosion>
+          </IncidentInfectionChanceFactors>
+        </IncidentInfectable>
+        <Industrializable/>
+        <Culture>
+          <CultureType>Culture</CultureType>
+        </Culture>
+        <QuestObject/>
+        <Electrifiable/>
+        <EcoSystemProvider/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - Djembé production DUMMY - Building -->
+
+  <!-- START Hides from sanga cows for Djembés - GuildhouseBuff -->
+  <ModOp Type="addNextSibling" GUID="25623">
+    <Asset>
+      <Template>GuildhouseBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742110031</GUID>
+          <Name>Hides from sanga cows for Djembés</Name>
+          <IconFilename>data\graphics\icons\icon_djembe.png</IconFilename>
+          <InfoDescription>1742110032</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>114444</GUID>
+            </Item>
+          </EffectTargets>
+          <AllowStacking>0</AllowStacking>
+        </ItemEffect>
+        <BuildingUpgrade>
+          <WorkforceAmountUpgrade>
+            <Percental>1</Percental>
+            <Value>20</Value>
+          </WorkforceAmountUpgrade>
+        </BuildingUpgrade>
+        <Buff />
+        <FactoryUpgrade>
+          <AdditionalOutput>
+            <Item>
+              <Product>1742110017</Product>
+              <Amount>1</Amount>
+              <AdditionalOutputCycle>1</AdditionalOutputCycle>
+            </Item>
+          </AdditionalOutput>
+        </FactoryUpgrade>
+        <PopulationUpgrade />
+        <ResidenceUpgrade />
+        <IncidentInfectableUpgrade />
+        <CultureUpgrade />
+        <InfluenceSourceUpgrade />
+        <DistributionUpgrade />
+        <ItemContainerUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END Hides from sanga cows for Djembés - GuildhouseBuff -->
+
+  <!-- START - ADD BUILDINGS TO ALL PRODUCTION, MAINTENANCE  -->
+  <ModOp GUID='6000018,193856,25599,368' Type="add" Path="Values/ItemEffectTargetPool/EffectTargetGUIDs/">
+    <Item>
+      <GUID>1742110001</GUID>
+    </Item>
+  </ModOp>
+  <!-- END - ADD BUILDINGS TO ALL PRODUCTION, MAINTENANCE  -->
+
+  <!-- START PRODUCTION CHAIN - Djembé -->
+  <ModOp Type="addNextSibling" GUID='500091'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742110035</GUID>
+          <Name>Djembé</Name>
+          <IconFilename>data\graphics\icons\icon_djembe.png</IconFilename>
+          <InfoDescription>1742110036</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742110001</Building>
+          <Tier1>
+            <Item>
+              <Building>114444</Building>
+            </Item>
+            <Item>
+              <Building>122963</Building>
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+        <Text />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PRODUCTION CHAIN - Djembé -->
+
+</ModOps>
