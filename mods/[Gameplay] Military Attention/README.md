@@ -1,10 +1,14 @@
-# Military Attention | 1.15!
+# Military Attention | 1.16!
 
 A mod centered around military infrastructure and adding new military residence tiers for all regions with a focus on the Old World.
 
 ![ma-img-01.jpg](./banner.jpg)
 
 ## Changelog
+
+### v1.16
+- Additional support for new Imperio Shipyard ships (Frachter Imperio Liner, Viktoria Luise, Kleiner Schlepper mit Lastkahn)
+- Additional support for 1905 - Trans-Ocean Liner
 
 ### v1.15
 - Added buildings to alternative construction menu

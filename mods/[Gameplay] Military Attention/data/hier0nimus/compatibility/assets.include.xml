@@ -210,8 +210,8 @@
     1450150205 - Linienschiff
     1450150206 - Königliches Linienschiff
     1450150300 - Expeditionsschiff
+    -->
 
--->
     <!-- 1450150205 - Linienschiff -->
     <ModOp Type="add" GUID="1450150205" Path="/Values/Cost/Costs">
       <Item>
@@ -282,6 +282,26 @@
 
   </Group>
 
+  <Group Condition="#Trans-Ocean_Liner">
+    <!-- START COMPATIBILITY 1905 - Trans-Ocean Liner -->
+    <!-- 
+    ******* SHIPS ******* 
+    1450152000 - Ocean Liner
+    -->
+
+    <!-- 1450152000 - Ocean Liner -->
+    <ModOp Type="add" GUID="1450152000" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>80</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>80</Amount>
+      </Item>
+    </ModOp>
+  </Group>
+
   <Group Condition="#Imperio Schiffswerft">
     <!-- START COMPATIBILITY IMPERIO SHIPYARD -->
     <!-- 
@@ -307,6 +327,9 @@
     2130020085 - Mateo's Boot
     2130020057 - Expeditionsschiff
     2130020099 - Wellermann
+    2130020089 - Frachter Imperio Liner
+    2130020119 - Viktoria Luise
+    2130020115 - Kleiner Schlepper mit Lastkahn
     -->
 
     <!-- 1947537 - Viermastbark -->
@@ -506,6 +529,50 @@
       <Item>
         <Ingredient>1742100248</Ingredient>        <!-- Shell Ammunition - Product -->
         <Amount>30</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- 2130020089 - Frachter Imperio Liner -->
+    <ModOp GUID="2130020089" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>100</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>100</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- 2130020119 - Viktoria Luise -->
+    <ModOp GUID="2130020119" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>30</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>30</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100203</Ingredient>        <!-- Basic Ammunition - Product -->
+        <Amount>20</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100471</Ingredient>        <!-- Basic Weapons - Product -->
+        <Amount>20</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- 2130020115 - Kleiner Schlepper mit Lastkahn -->
+    <ModOp GUID="2130020115" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>8</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>8</Amount>
       </Item>
     </ModOp>
 
