@@ -1,10 +1,17 @@
-# Military Attention | 1.16!
+# Military Attention | 1.17!
 
 A mod centered around military infrastructure and adding new military residence tiers for all regions with a focus on the Old World.
 
 ![ma-img-01.jpg](./banner.jpg)
 
 ## Changelog
+
+### v1.17
+- Fixed AI building military postbox over and over again. AI do not build it anymore.
+- Cut out Open Pit Mines from Military Attention. It can now also be downloaded as a standalone mod. It is still included in this mod. But no need to install both mods if you have this mod.
+- Disabled open pit mines also for AI to make sure they not bug out AI.
+- Added a pool for All Cemeteries
+- Added additional unlocks for input goods (saltpetre/gunpowder) for cannons/weapons related production chain to also unlock with workers and not only with soldiers.
 
 ### v1.16
 - Additional support for new Imperio Shipyard ships (Frachter Imperio Liner, Viktoria Luise, Kleiner Schlepper mit Lastkahn)

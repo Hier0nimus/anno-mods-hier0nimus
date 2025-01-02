@@ -251,6 +251,79 @@
     </Asset>
   </ModOp>
 
+  <!--UNLOCK - WORKERS 300 -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100788</GUID>
+          <Name>MOD Trigger</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>15000001</Context>                <!-- Workers PopulationLevel7 -->
+                <CounterAmount>300</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
+                    </UnhideAssets>
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>1742100293</Asset>                        <!-- Gunpowder - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100287</Asset>                        <!-- Dung Collector - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100289</Asset>                        <!-- Nitrary - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100374</Asset>                        <!-- Saltpetre Bed - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100376</Asset>                        <!-- Nitrary Shed - Module -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100291</Asset>                        <!-- Gunpowder Factory - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100433</Asset>                        <!-- Galena - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100435</Asset>                        <!-- Lead - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100407</Asset>                        <!-- Galena Mine - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100409</Asset>                        <!-- Lead Smelter - Building -->
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+
   <!--UNLOCK - WORKERS 500 -->
   <ModOp Type="addnextSibling" GUID="130248">
     <Asset>
