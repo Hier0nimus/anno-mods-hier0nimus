@@ -25,7 +25,7 @@ Current version 1.15 (30/12/2024)
 
 Centered around military infrastructure and adding new military residence tiers for all regions with a focus on the Old World.
 
-Current version 1.15 (28/12/2024)
+Current version 1.17 (02/01/2025)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/military-attention
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
@@ -83,6 +83,14 @@ Basic mod that removes the annoying notifications from AI where they ask for an 
 
 Current version 1.1 (29/01/2024)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/ai-not-asking-for-alliances
+- Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
+
+## Open Pit Mines
+
+Mine coal and iron resources right from the ground in the Old World and New World.
+
+Current version 1.0 (2/1/2025)
+- Download on Mod.io: https://mod.io/g/anno-1800/m/open-pit-mines
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
 ## Shared mods
