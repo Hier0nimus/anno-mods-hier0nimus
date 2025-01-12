@@ -106,6 +106,7 @@ A list of shared goods that can be used by everybody
 - Strings
 - Flutes
 - Djembé
+- Sawdust
 
 ### Mechanics
 
