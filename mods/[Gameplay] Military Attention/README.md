@@ -1,10 +1,18 @@
-# Military Attention | 1.17!
+# Military Attention | 1.18!
 
 A mod centered around military infrastructure and adding new military residence tiers for all regions with a focus on the Old World.
 
 ![ma-img-01.jpg](./banner.jpg)
 
 ## Changelog
+
+### v1.18
+- Hide vanilla turrets in harbour menus instead of removing them. Now should be more compatible with other mods.
+- Added new harbour defenses to normal harbour menu to find them more easily when used to the normal location.
+- Removed the removal of the cannon chain in the workers menu, so people can also find the chain there like they are used to.
+- Changed AttackableType for the Canteen so it will not randomly be attacked by ships.
+- Bombs and shells ammunmition are now unlocked for AI a bit later at the moment they can actually start using them.
+- Added a lot more triggers that unhide stuff so you can more easily see what is coming and what you need to do to unlock it.
 
 ### v1.17
 - Fixed AI building military postbox over and over again. AI do not build it anymore.

@@ -159,12 +159,6 @@
       <Product>1742100248</Product>      <!-- Shell Ammunition - Product -->
       <SimulatedItemProductivity>4</SimulatedItemProductivity>
       <PerProgressLevelInfos>
-        <EarlyGame>
-          <ProducerBuildingCountMain>0</ProducerBuildingCountMain>
-        </EarlyGame>
-        <EarlyMidGame>
-          <ProducerBuildingCountMain>0</ProducerBuildingCountMain>
-        </EarlyMidGame>
         <MidGame>
           <ProducerBuildingCountMain>1</ProducerBuildingCountMain>
         </MidGame>
@@ -449,12 +443,6 @@
       <Product>1742100248</Product>      <!-- Shell Ammunition - Product -->
       <SimulatedItemProductivity>4</SimulatedItemProductivity>
       <PerProgressLevelInfos>
-        <EarlyGame>
-          <ProducerBuildingCountMain>0</ProducerBuildingCountMain>
-        </EarlyGame>
-        <EarlyMidGame>
-          <ProducerBuildingCountMain>1</ProducerBuildingCountMain>
-        </EarlyMidGame>
         <MidGame>
           <ProducerBuildingCountMain>1</ProducerBuildingCountMain>
         </MidGame>
@@ -473,9 +461,6 @@
       <Product>846</Product>      <!-- Bombs Ammunition - Product -->
       <SimulatedItemProductivity>4</SimulatedItemProductivity>
       <PerProgressLevelInfos>
-        <MidGame>
-          <ProducerBuildingCountMain>1</ProducerBuildingCountMain>
-        </MidGame>
         <LateMidGame>
           <ProducerBuildingCountMain>1</ProducerBuildingCountMain>
         </LateMidGame>
@@ -742,14 +727,8 @@
       <Product>1742100248</Product>      <!-- Shell Ammunition - Product -->
       <SimulatedItemProductivity>4</SimulatedItemProductivity>
       <PerProgressLevelInfos>
-        <EarlyGame>
-          <ProducerBuildingCountMain>0</ProducerBuildingCountMain>
-        </EarlyGame>
-        <EarlyMidGame>
-          <ProducerBuildingCountMain>1</ProducerBuildingCountMain>
-        </EarlyMidGame>
         <MidGame>
-          <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
+          <ProducerBuildingCountMain>1</ProducerBuildingCountMain>
         </MidGame>
         <LateMidGame>
           <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
@@ -766,9 +745,6 @@
       <Product>846</Product>      <!-- Bombs Ammunition - Product -->
       <SimulatedItemProductivity>4</SimulatedItemProductivity>
       <PerProgressLevelInfos>
-        <MidGame>
-          <ProducerBuildingCountMain>1</ProducerBuildingCountMain>
-        </MidGame>
         <LateMidGame>
           <ProducerBuildingCountMain>2</ProducerBuildingCountMain>
         </LateMidGame>
@@ -1600,60 +1576,152 @@
   </ModOp>
   <!-- END AI - ADD BUILDINGS TO CONSTRUCTION MENU (AR) -->
 
-  <!-- START AI - REMOVE VANILLA BUILDINGS/DEFENSES FROM CONSTRUCTION MENU -->
+  <!-- START AI - HIDE VANILLA BUILDINGS/DEFENSES FROM CONSTRUCTION MENU -->
   <!-- CONSTRUCTION MENU WORKERS -->
-  <ModOp Type="remove" GUID='500952' Path="/Values/ConstructionCategory/BuildingList/Item[Building='1010522']" />
-  <ModOp Type="remove" GUID='500952' Path="/Values/ConstructionCategory/BuildingList/Item[Building='1010523']" />
-  <ModOp Type="remove" GUID='500952' Path="/Values/ConstructionCategory/BuildingList/Item[Building='736']" />
+  <ModOp Type="add" Path="//ConstructionCategory/BuildingList/Item[Building='1010522']">
+    <PlatformVisibility>Console</PlatformVisibility>
+  </ModOp>
+  <ModOp Type="add" Path="//ConstructionCategory/BuildingList/Item[Building='1010523']">
+    <PlatformVisibility>Console</PlatformVisibility>
+  </ModOp>
+  <ModOp Type="add" Path="//ConstructionCategory/BuildingList/Item[Building='736']">
+    <PlatformVisibility>Console</PlatformVisibility>
+  </ModOp>
+
   <!-- CONSTRUCTION MENU ARTISANS -->
-  <ModOp Type="remove" GUID='500953' Path="/Values/ConstructionCategory/BuildingList/Item[Building='625']" />
+  <ModOp Type="add" Path="//ConstructionCategory/BuildingList/Item[Building='625']">
+    <PlatformVisibility>Console</PlatformVisibility>
+  </ModOp>
+
   <!-- CONSTRUCTION MENU ENGINEERS -->
-  <ModOp Type="remove" GUID='500954' Path="/Values/ConstructionCategory/BuildingList/Item[Building='3700']" />
-  <ModOp Type="remove" GUID='500954' Path="/Values/ConstructionCategory/BuildingList/Item[Building='1010524']" />
+  <ModOp Type="add" Path="//ConstructionCategory/BuildingList/Item[Building='3700']">
+    <PlatformVisibility>Console</PlatformVisibility>
+  </ModOp>
+  <ModOp Type="add" Path="//ConstructionCategory/BuildingList/Item[Building='1010524']">
+    <PlatformVisibility>Console</PlatformVisibility>
+  </ModOp>
+
   <!-- CONSTRUCTION MENU HARBOUR (OW) -->
-  <ModOp Type="remove" GUID='500111' Path="/Values/ConstructionCategory/BuildingList/Item[Building='1010522']" />
-  <ModOp Type="remove" GUID='500111' Path="/Values/ConstructionCategory/BuildingList/Item[Building='1010523']" />
-  <ModOp Type="remove" GUID='500111' Path="/Values/ConstructionCategory/BuildingList/Item[Building='736']" />
-  <ModOp Type="remove" GUID='500111' Path="/Values/ConstructionCategory/BuildingList/Item[Building='625']" />
-  <ModOp Type="remove" GUID='500111' Path="/Values/ConstructionCategory/BuildingList/Item[Building='3700']" />
-  <ModOp Type="remove" GUID='500111' Path="/Values/ConstructionCategory/BuildingList/Item[Building='1010524']" />
+  <ModOp Type="add" Path="//ConstructionCategory/BuildingList/Item[Building='1010522']">
+    <PlatformVisibility>Console</PlatformVisibility>
+  </ModOp>
+  <ModOp Type="add" Path="//ConstructionCategory/BuildingList/Item[Building='1010523']">
+    <PlatformVisibility>Console</PlatformVisibility>
+  </ModOp>
+  <ModOp Type="add" Path="//ConstructionCategory/BuildingList/Item[Building='736']">
+    <PlatformVisibility>Console</PlatformVisibility>
+  </ModOp>
+  <ModOp Type="add" Path="//ConstructionCategory/BuildingList/Item[Building='625']">
+    <PlatformVisibility>Console</PlatformVisibility>
+  </ModOp>
+  <ModOp Type="add" Path="//ConstructionCategory/BuildingList/Item[Building='3700']">
+    <PlatformVisibility>Console</PlatformVisibility>
+  </ModOp>
+  <ModOp Type="add" Path="//ConstructionCategory/BuildingList/Item[Building='1010524']">
+    <PlatformVisibility>Console</PlatformVisibility>
+  </ModOp>
+
   <!-- CONSTRUCTION MENU JORNALEROS -->
-  <ModOp Type="remove" GUID='501007' Path="/Values/ConstructionCategory/BuildingList/Item[Building='101563']" />
-  <ModOp Type="remove" GUID='501007' Path="/Values/ConstructionCategory/BuildingList/Item[Building='742']" />
+  <ModOp Type="add" Path="//ConstructionCategory/BuildingList/Item[Building='101563']">
+    <PlatformVisibility>Console</PlatformVisibility>
+  </ModOp>
+  <ModOp Type="add" Path="//ConstructionCategory/BuildingList/Item[Building='742']">
+    <PlatformVisibility>Console</PlatformVisibility>
+  </ModOp>
+
   <!-- CONSTRUCTION MENU OBREROS -->
-  <ModOp Type="remove" GUID='501008' Path="/Values/ConstructionCategory/BuildingList/Item[Building='101570']" />
-  <ModOp Type="remove" GUID='501008' Path="/Values/ConstructionCategory/BuildingList/Item[Building='632']" />
-  <ModOp Type="remove" GUID='501008' Path="/Values/ConstructionCategory/BuildingList/Item[Building='4797']" />
+  <ModOp Type="add" Path="//ConstructionCategory/BuildingList/Item[Building='101570']">
+    <PlatformVisibility>Console</PlatformVisibility>
+  </ModOp>
+  <ModOp Type="add" Path="//ConstructionCategory/BuildingList/Item[Building='632']">
+    <PlatformVisibility>Console</PlatformVisibility>
+  </ModOp>
+  <ModOp Type="add" Path="//ConstructionCategory/BuildingList/Item[Building='4797']">
+    <PlatformVisibility>Console</PlatformVisibility>
+  </ModOp>
+
   <!-- CONSTRUCTION MENU HARBOUR (NW) -->
-  <ModOp Type="remove" GUID='500149' Path="/Values/ConstructionCategory/BuildingList/Item[Building='101563']" />
-  <ModOp Type="remove" GUID='500149' Path="/Values/ConstructionCategory/BuildingList/Item[Building='101570']" />
-  <ModOp Type="remove" GUID='500149' Path="/Values/ConstructionCategory/BuildingList/Item[Building='632']" />
-  <ModOp Type="remove" GUID='500149' Path="/Values/ConstructionCategory/BuildingList/Item[Building='742']" />
-  <ModOp Type="remove" GUID='500149' Path="/Values/ConstructionCategory/BuildingList/Item[Building='4797']" />
+  <ModOp Type="add" Path="//ConstructionCategory/BuildingList/Item[Building='101563']">
+    <PlatformVisibility>Console</PlatformVisibility>
+  </ModOp>
+  <ModOp Type="add" Path="//ConstructionCategory/BuildingList/Item[Building='101570']">
+    <PlatformVisibility>Console</PlatformVisibility>
+  </ModOp>
+  <ModOp Type="add" Path="//ConstructionCategory/BuildingList/Item[Building='632']">
+    <PlatformVisibility>Console</PlatformVisibility>
+  </ModOp>
+  <ModOp Type="add" Path="//ConstructionCategory/BuildingList/Item[Building='742']">
+    <PlatformVisibility>Console</PlatformVisibility>
+  </ModOp>
+  <ModOp Type="add" Path="//ConstructionCategory/BuildingList/Item[Building='4797']">
+    <PlatformVisibility>Console</PlatformVisibility>
+  </ModOp>
+
   <!-- CONSTRUCTION MENU SHEPHERDS -->
-  <ModOp Type="remove" GUID='114555' Path="/Values/ConstructionCategory/BuildingList/Item[Building='117861']" />
-  <ModOp Type="remove" GUID='114555' Path="/Values/ConstructionCategory/BuildingList/Item[Building='743']" />
+  <ModOp Type="add" Path="//ConstructionCategory/BuildingList/Item[Building='117861']">
+    <PlatformVisibility>Console</PlatformVisibility>
+  </ModOp>
+  <ModOp Type="add" Path="//ConstructionCategory/BuildingList/Item[Building='743']">
+    <PlatformVisibility>Console</PlatformVisibility>
+  </ModOp>
+
   <!-- CONSTRUCTION MENU ELDERS -->
-  <ModOp Type="remove" GUID='117897' Path="/Values/ConstructionCategory/BuildingList/Item[Building='117863']" />
-  <ModOp Type="remove" GUID='117897' Path="/Values/ConstructionCategory/BuildingList/Item[Building='823']" />
-  <ModOp Type="remove" GUID='117897' Path="/Values/ConstructionCategory/BuildingList/Item[Building='4799']" />
+  <ModOp Type="add" Path="//ConstructionCategory/BuildingList/Item[Building='117863']">
+    <PlatformVisibility>Console</PlatformVisibility>
+  </ModOp>
+  <ModOp Type="add" Path="//ConstructionCategory/BuildingList/Item[Building='823']">
+    <PlatformVisibility>Console</PlatformVisibility>
+  </ModOp>
+  <ModOp Type="add" Path="//ConstructionCategory/BuildingList/Item[Building='4799']">
+    <PlatformVisibility>Console</PlatformVisibility>
+  </ModOp>
+
   <!-- CONSTRUCTION MENU HARBOUR (EN) -->
-  <ModOp Type="remove" GUID='119014' Path="/Values/ConstructionCategory/BuildingList/Item[Building='117861']" />
-  <ModOp Type="remove" GUID='119014' Path="/Values/ConstructionCategory/BuildingList/Item[Building='743']" />
-  <ModOp Type="remove" GUID='119014' Path="/Values/ConstructionCategory/BuildingList/Item[Building='117863']" />
-  <ModOp Type="remove" GUID='119014' Path="/Values/ConstructionCategory/BuildingList/Item[Building='823']" />
-  <ModOp Type="remove" GUID='119014' Path="/Values/ConstructionCategory/BuildingList/Item[Building='4799']" />
+  <ModOp Type="add" Path="//ConstructionCategory/BuildingList/Item[Building='117861']">
+    <PlatformVisibility>Console</PlatformVisibility>
+  </ModOp>
+  <ModOp Type="add" Path="//ConstructionCategory/BuildingList/Item[Building='743']">
+    <PlatformVisibility>Console</PlatformVisibility>
+  </ModOp>
+  <ModOp Type="add" Path="//ConstructionCategory/BuildingList/Item[Building='117863']">
+    <PlatformVisibility>Console</PlatformVisibility>
+  </ModOp>
+  <ModOp Type="add" Path="//ConstructionCategory/BuildingList/Item[Building='823']">
+    <PlatformVisibility>Console</PlatformVisibility>
+  </ModOp>
+  <ModOp Type="add" Path="//ConstructionCategory/BuildingList/Item[Building='4799']">
+    <PlatformVisibility>Console</PlatformVisibility>
+  </ModOp>
+
   <!-- CONSTRUCTION MENU TECHNICIANS -->
-  <ModOp Type="remove" GUID='112792' Path="/Values/ConstructionCategory/BuildingList/Item[Building='112671']" />
-  <ModOp Type="remove" GUID='112792' Path="/Values/ConstructionCategory/BuildingList/Item[Building='824']" />
-  <ModOp Type="remove" GUID='112792' Path="/Values/ConstructionCategory/BuildingList/Item[Building='822']" />
-  <ModOp Type="remove" GUID='112792' Path="/Values/ConstructionCategory/BuildingList/Item[Building='4798']" />
+  <ModOp Type="add" Path="//ConstructionCategory/BuildingList/Item[Building='112671']">
+    <PlatformVisibility>Console</PlatformVisibility>
+  </ModOp>
+  <ModOp Type="add" Path="//ConstructionCategory/BuildingList/Item[Building='824']">
+    <PlatformVisibility>Console</PlatformVisibility>
+  </ModOp>
+  <ModOp Type="add" Path="//ConstructionCategory/BuildingList/Item[Building='822']">
+    <PlatformVisibility>Console</PlatformVisibility>
+  </ModOp>
+  <ModOp Type="add" Path="//ConstructionCategory/BuildingList/Item[Building='4798']">
+    <PlatformVisibility>Console</PlatformVisibility>
+  </ModOp>
+
   <!-- CONSTRUCTION MENU HARBOUR (AR) -->
-  <ModOp Type="remove" GUID='116345' Path="/Values/ConstructionCategory/BuildingList/Item[Building='112671']" />
-  <ModOp Type="remove" GUID='116345' Path="/Values/ConstructionCategory/BuildingList/Item[Building='824']" />
-  <ModOp Type="remove" GUID='116345' Path="/Values/ConstructionCategory/BuildingList/Item[Building='822']" />
-  <ModOp Type="remove" GUID='116345' Path="/Values/ConstructionCategory/BuildingList/Item[Building='4798']" />
-  <!-- END AI - REMOVE VANILLA BUILDINGS/DEFENSES FROM CONSTRUCTION MENU -->
+  <ModOp Type="add" Path="//ConstructionCategory/BuildingList/Item[Building='112671']">
+    <PlatformVisibility>Console</PlatformVisibility>
+  </ModOp>
+  <ModOp Type="add" Path="//ConstructionCategory/BuildingList/Item[Building='824']">
+    <PlatformVisibility>Console</PlatformVisibility>
+  </ModOp>
+  <ModOp Type="add" Path="//ConstructionCategory/BuildingList/Item[Building='822']">
+    <PlatformVisibility>Console</PlatformVisibility>
+  </ModOp>
+  <ModOp Type="add" Path="//ConstructionCategory/BuildingList/Item[Building='4798']">
+    <PlatformVisibility>Console</PlatformVisibility>
+  </ModOp>
+
+  <!-- END AI - HIDE VANILLA BUILDINGS/DEFENSES FROM CONSTRUCTION MENU -->
 
   <!-- START NERFING DROPPING GOODS ON AI TO BOOST REPUTATION -->
   <!-- INCREASING COOLDOWN FROM 30s TO 30min -->
