@@ -575,4 +575,98 @@
   </ModOp>
   <!-- END PIRATE PRODUCTION MODULE - LOBSTER BUFF - BUFF -->
 
+  <!-- START PIRATE PRODUCTION MODULE - BEER BUFF - BUFF -->
+  <ModOp Type="addNextSibling" GUID="25623">
+    <Asset>
+      <Template>GuildhouseBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742102124</GUID>
+          <Name>Additional Beer</Name>
+          <IconFilename>data/graphics/icons/icon_pirates_beer.png</IconFilename>
+          <InfoDescription>1742102115</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1010340</GUID>              <!-- Rum Distillery -->
+            </Item>
+          </EffectTargets>
+          <AllowStacking>0</AllowStacking>
+        </ItemEffect>
+        <BuildingUpgrade>
+          <WorkforceAmountUpgrade>
+            <Percental>1</Percental>
+            <Value>25</Value>
+          </WorkforceAmountUpgrade>
+        </BuildingUpgrade>
+        <Buff />
+        <FactoryUpgrade>
+          <AdditionalOutput>
+            <Item>
+              <Product>1010214</Product>              <!-- Beer -->
+              <Amount>1</Amount>
+              <AdditionalOutputCycle>3</AdditionalOutputCycle>
+            </Item>
+          </AdditionalOutput>
+        </FactoryUpgrade>
+        <PopulationUpgrade />
+        <ResidenceUpgrade />
+        <IncidentInfectableUpgrade />
+        <CultureUpgrade />
+        <InfluenceSourceUpgrade />
+        <DistributionUpgrade />
+        <ItemContainerUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PIRATE PRODUCTION MODULE - BEER BUFF - BUFF -->
+
+  <!-- START PIRATE PRODUCTION MODULE - COGNAC BUFF - BUFF -->
+  <ModOp Type="addNextSibling" GUID="25623">
+    <Asset>
+      <Template>GuildhouseBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742102125</GUID>
+          <Name>Additional Cognac</Name>
+          <IconFilename>data/graphics/icons/icon_pirates_cognac.png</IconFilename>
+          <InfoDescription>1742102117</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>6594</GUID>              <!-- Mezcal Bar -->
+            </Item>
+          </EffectTargets>
+          <AllowStacking>0</AllowStacking>
+        </ItemEffect>
+        <BuildingUpgrade>
+          <WorkforceAmountUpgrade>
+            <Percental>1</Percental>
+            <Value>25</Value>
+          </WorkforceAmountUpgrade>
+        </BuildingUpgrade>
+        <Buff />
+        <FactoryUpgrade>
+          <AdditionalOutput>
+            <Item>
+              <Product>135234</Product>              <!-- Cognac -->
+              <Amount>1</Amount>
+              <AdditionalOutputCycle>3</AdditionalOutputCycle>
+            </Item>
+          </AdditionalOutput>
+        </FactoryUpgrade>
+        <PopulationUpgrade />
+        <ResidenceUpgrade />
+        <IncidentInfectableUpgrade />
+        <CultureUpgrade />
+        <InfluenceSourceUpgrade />
+        <DistributionUpgrade />
+        <ItemContainerUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PIRATE PRODUCTION MODULE - COGNAC BUFF - BUFF -->
+
 </ModOps>

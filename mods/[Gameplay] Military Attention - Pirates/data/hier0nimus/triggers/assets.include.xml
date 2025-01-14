@@ -11,7 +11,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742102210</GUID>
+          <GUID>1742102221</GUID>
           <Name>Unlock Pirate - 100 Jornaleros</Name>
         </Standard>
         <Trigger>
@@ -84,6 +84,15 @@
                       </Item>
                       <Item>
                         <Asset>1742102090</Asset>                        <!-- Pirates Production Modules - ConstructionCategory -->
+                      </Item>
+                      <Item>
+                        <Asset>1742102118</Asset>                        <!-- Pirate Dungeon  - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742102120</Asset>                        <!-- Pirate Well  - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742102122</Asset>                        <!-- Pirate Surgeon  - Building -->
                       </Item>
                     </UnhideAssets>
                     <UnlockAssets>
@@ -178,7 +187,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742102211</GUID>
+          <GUID>1742102222</GUID>
           <Name>Unlock Pirate - 100 Pirates</Name>
         </Standard>
         <Trigger>
@@ -240,6 +249,12 @@
                       <Item>
                         <Asset>1742102107</Asset>                        <!-- Pirate Lobster - Building -->
                       </Item>
+                      <Item>
+                        <Asset>1742102126</Asset>                        <!-- Pirate Beer - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742102116</Asset>                        <!-- Pirate Cognac - Building -->
+                      </Item>
                     </UnhideAssets>
                     <UnlockAssets>
                       <Item>
@@ -268,6 +283,15 @@
                       </Item>
                       <Item>
                         <Asset>1742102082</Asset>                        <!-- Pirate Gold Mine - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742102118</Asset>                        <!-- Pirate Dungeon  - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742102120</Asset>                        <!-- Pirate Well  - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742102122</Asset>                        <!-- Pirate Surgeon  - Building -->
                       </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>
@@ -507,7 +531,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742102216</GUID>
+          <GUID>1742102224</GUID>
           <Name>Unlock 1 Obreros</Name>
         </Standard>
         <Trigger>
@@ -534,6 +558,9 @@
                     <UnlockAssets>
                       <Item>
                         <Asset>1742102086</Asset>                        <!-- Pirate Goulash - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742102126</Asset>                        <!-- Pirate Beer - Building -->
                       </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>
@@ -632,6 +659,52 @@
                       </Item>
                       <Item>
                         <Asset>1742102103</Asset>                        <!-- Pirate Basic Weapons - Building -->
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!--UNLOCK - 1 Artista -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742102223</GUID>
+          <Name>Unlock 1 Artista</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>5403</Context>                <!-- Artista PopulationLevel7 -->
+                <CounterAmount>1</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
+                    </UnhideAssets>
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>1742102116</Asset>                        <!-- Pirate Cognac - Building -->
                       </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>
@@ -793,6 +866,21 @@
                       </Item>
                       <Item>
                         <Asset>1742102107</Asset>                        <!-- Pirate Lobster - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742102126</Asset>                        <!-- Pirate Beer - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742102116</Asset>                        <!-- Pirate Cognac - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742102118</Asset>                        <!-- Pirate Dungeon  - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742102120</Asset>                        <!-- Pirate Well  - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742102122</Asset>                        <!-- Pirate Surgeon  - Building -->
                       </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>
