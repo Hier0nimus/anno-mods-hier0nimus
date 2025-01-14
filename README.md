@@ -41,7 +41,7 @@ Current version 1.21 (28/12/2024)
 
 Additional mod for Military Attention that focuses on rebalancing the pirates and adding additional pirates mechanics like a new population.
 
-Current version 1.5 (28/12/2024)
+Current version 1.6 (14/01/2025)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/military-attention-pirates
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
