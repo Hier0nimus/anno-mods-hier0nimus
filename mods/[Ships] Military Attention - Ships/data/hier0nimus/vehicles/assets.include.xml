@@ -14,21 +14,6 @@
     </ModOp>
     <!-- END ADDING SHIPS TO SAILING SHIPYARD -->
 
-    <!-- START ADDING SHIPS TO AIRSHIP HANGAR -->
-    <!-- After 1755 - Mapinguari -->
-    <ModOp Type="addNextSibling" GUID='635,636' Path="Values/Shipyard/AssemblyOptions/Item[Vehicle='1755']">
-        <Item>
-            <Vehicle>1742100613</Vehicle>            <!-- B42 (Helium) - AirShip -->
-        </Item>
-    </ModOp>
-    <!-- After 114166 - Boreas -->
-    <ModOp Type="addNextSibling" GUID='635,636' Path="Values/Shipyard/AssemblyOptions/Item[Vehicle='114166']">
-        <Item>
-            <Vehicle>1742100629</Vehicle>            <!-- B42 (Arctic Gas) - AirShip -->
-        </Item>
-    </ModOp>
-    <!-- END ADDING SHIPS TO AIRSHIP HANGAR -->
-
     <!-- START ADDING SHIPS TO STEAM SHIPYARD -->
     <ModOp Type="addPrevSibling" GUID='1010521' Path="/Values/Shipyard/AssemblyOptions/Item[Vehicle='1010062']">
         <Item>
@@ -318,6 +303,18 @@
                             <Filename>data/graphics/vehicle/man_of_war_duke/man_of_war_duke.cfg</Filename>
                         </Item>
                     </Variations>
+                    <Skins>
+                        <DefaultSkinName>1742100578</DefaultSkinName>
+                        <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>                        <!--Classic-->
+                        <SkinList>
+                            <Item>
+                                <SkinAssetGuid>1742100666</SkinAssetGuid>
+                            </Item>
+                            <Item>
+                                <SkinAssetGuid>1742100667</SkinAssetGuid>
+                            </Item>
+                        </SkinList>
+                    </Skins>
                 </Object>
                 <Mesh>
                     <MeshPlacement>OnWaterSlope</MeshPlacement>
@@ -621,7 +618,23 @@
                     <Skins>
                         <DefaultSkinName>1742100583</DefaultSkinName>
                         <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>                        <!--Classic-->
-                        <SkinList />
+                        <SkinList>
+                            <Item>
+                                <SkinAssetGuid>1742100672</SkinAssetGuid>
+                            </Item>
+                            <Item>
+                                <SkinAssetGuid>1742100673</SkinAssetGuid>
+                            </Item>
+                            <Item>
+                                <SkinAssetGuid>1742100674</SkinAssetGuid>
+                            </Item>
+                            <Item>
+                                <SkinAssetGuid>1742100675</SkinAssetGuid>
+                            </Item>
+                            <Item>
+                                <SkinAssetGuid>1742100676</SkinAssetGuid>
+                            </Item>
+                        </SkinList>
                     </Skins>
                 </Object>
                 <Walking>
@@ -817,6 +830,27 @@
                             <Filename>data/graphics/vehicle/heavy_battle_cruiser/heavy_battle_cruiser.cfg</Filename>
                         </Item>
                     </Variations>
+                    <Skins>
+                        <DefaultSkinName>1742100585</DefaultSkinName>
+                        <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>                        <!--Classic-->
+                        <SkinList>
+                            <Item>
+                                <SkinAssetGuid>1742100677</SkinAssetGuid>
+                            </Item>
+                            <Item>
+                                <SkinAssetGuid>1742100678</SkinAssetGuid>
+                            </Item>
+                            <Item>
+                                <SkinAssetGuid>1742100679</SkinAssetGuid>
+                            </Item>
+                            <Item>
+                                <SkinAssetGuid>1742100680</SkinAssetGuid>
+                            </Item>
+                            <Item>
+                                <SkinAssetGuid>1742100681</SkinAssetGuid>
+                            </Item>
+                        </SkinList>
+                    </Skins>
                 </Object>
                 <Mesh>
                     <MeshPlacement>OnWaterSlope</MeshPlacement>
@@ -1057,7 +1091,7 @@
                         </Item>
                     </Costs>
                     <InfluenceCostType>WarShip</InfluenceCostType>
-                    <InfluenceCostPoints>100</InfluenceCostPoints>                    <!-- Battle Cruiser 24 -->
+                    <InfluenceCostPoints>60</InfluenceCostPoints>                    <!-- Battle Cruiser 24 -->
                 </Cost>
                 <Craftable>
                     <CraftingTime>2000000</CraftingTime>                    <!-- Battle Cruiser 900000 -->
@@ -1169,7 +1203,20 @@
                     <Skins>
                         <DefaultSkinName>1742100581</DefaultSkinName>
                         <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>                        <!--Classic-->
-                        <SkinList />
+                        <SkinList>
+                            <Item>
+                                <SkinAssetGuid>1742100668</SkinAssetGuid>
+                            </Item>
+                            <Item>
+                                <SkinAssetGuid>1742100669</SkinAssetGuid>
+                            </Item>
+                            <Item>
+                                <SkinAssetGuid>1742100670</SkinAssetGuid>
+                            </Item>
+                            <Item>
+                                <SkinAssetGuid>1742100671</SkinAssetGuid>
+                            </Item>
+                        </SkinList>
                     </Skins>
                 </Object>
                 <Walking>
@@ -2351,457 +2398,6 @@
     </ModOp>
     <!-- END PROJECTILE - LIGHT CRUISER PROJECTILE -->
 
-    <!-- START SHIP - B42 -->
-    <ModOp Type="addNextSibling" GUID='1056'>
-        <Asset>
-            <Template>WarAirShipPermit</Template>
-            <Values>
-                <Standard>
-                    <GUID>1742100613</GUID>
-                    <Name>B42 (Helium)</Name>
-                    <IconFilename>data/graphics/icons/icon_b42.png</IconFilename>
-                    <InfoDescription>1742100614</InfoDescription>
-                </Standard>
-                <Object>
-                    <Variations>
-                        <Item>
-                            <Filename>data/graphics/vehicle/b42/b42_01.cfg</Filename>
-                        </Item>
-                    </Variations>
-                </Object>
-                <Mesh>
-                    <LogoMode>CorporationLogoFromPlayer</LogoMode>
-                </Mesh>
-                <Selection>
-                    <StaticHelpEntryPoint>EmpireOfTheSkies_War_Intro</StaticHelpEntryPoint>
-                    <OnSelection>
-                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
-                        <Values>
-                            <ActionList/>
-                        </Values>
-                    </OnSelection>
-                </Selection>
-                <Walking>
-                    <ShortenSailsAfter>0</ShortenSailsAfter>
-                    <TurnAroundRadius>15</TurnAroundRadius>
-                    <Acceleration>1.5</Acceleration>
-                    <Deceleration>1.5</Deceleration>
-                    <TurnRadius>10</TurnRadius>
-                    <TurnSpeed>80</TurnSpeed>
-                    <TurnSpeedInPlace>80</TurnSpeedInPlace>
-                    <LeaningMaxAngle>0</LeaningMaxAngle>
-                    <ForwardSpeed>6</ForwardSpeed>
-                    <WindMinSlowdownFactor>0.5</WindMinSlowdownFactor>
-                    <WindSlowdownEffectOnTurningSpeed>0.5</WindSlowdownEffectOnTurningSpeed>
-                    <WindMaxSpeedupFactor>2</WindMaxSpeedupFactor>
-                    <CargoThreshold>0.1</CargoThreshold>
-                    <MinSlowdownFactor>0.5</MinSlowdownFactor>
-                    <SessionTransferSpeedFactor>2</SessionTransferSpeedFactor>
-                </Walking>
-                <Text>
-                    <LocaText>
-                        <English>
-                            <Text>B42</Text>
-                            <Status>Exported</Status>
-                        </English>
-                    </LocaText>
-                    <LineID>57665</LineID>
-                </Text>
-                <CommandQueue>
-                    <MilitaryAirShipPoints>25</MilitaryAirShipPoints>
-                    <TradeShipPoints>6</TradeShipPoints>
-                    <AirShipPoints>300</AirShipPoints>
-                </CommandQueue>
-                <Drifting>
-                    <Length>7</Length>
-                    <Width>4</Width>
-                </Drifting>
-                <Collector/>
-                <Attackable>
-                    <MaximumHitPoints>4000</MaximumHitPoints>
-                </Attackable>
-                <MinimapToken>
-                    <StrategicMapAsset>117300</StrategicMapAsset>                    <!--Steam Ships-->
-                </MinimapToken>
-                <SoundEmitter>
-                    <VehicleSounds>
-                        <MovementStart>
-                            <Item>
-                                <Sound>200990</Sound>                                <!--wwe_sfx_veh_eots_airship_med_lp-->
-                            </Item>
-                        </MovementStart>
-                    </VehicleSounds>
-                </SoundEmitter>
-                <UpgradeList>
-                    <DefaultBuff>721</DefaultBuff>
-                </UpgradeList>
-                <QuestObject/>
-                <Infolayer/>
-                <ItemContainer>
-                    <SocketCount>3</SocketCount>
-                    <SlotCount>6</SlotCount>
-                </ItemContainer>
-                <FeedbackController/>
-                <Draggable>
-                    <DraggableOnDrag>
-                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
-                        <Values>
-                            <ActionList/>
-                        </Values>
-                    </DraggableOnDrag>
-                    <DraggableOnDrop>
-                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
-                        <Values>
-                            <ActionList/>
-                        </Values>
-                    </DraggableOnDrop>
-                </Draggable>
-                <Cost>
-                    <Costs>
-                        <Item>
-                            <Ingredient>1010017</Ingredient>                            <!--coins-->
-                            <Amount>1000000</Amount>
-                        </Item>
-                        <Item>
-                            <Ingredient>1010196</Ingredient>                            <!-- Timber -->
-                            <Amount>50</Amount>
-                        </Item>
-                        <Item>
-                            <Ingredient>1010210</Ingredient>                            <!-- Sails -->
-                            <Amount>300</Amount>
-                        </Item>
-                        <Item>
-                            <Ingredient>1010218</Ingredient>                            <!--beams-->
-                            <Amount>30</Amount>
-                        </Item>
-                        <Item>
-                            <Ingredient>838</Ingredient>                            <!-- Aluminium-->
-                            <Amount>200</Amount>
-                        </Item>
-                        <Item>
-                            <Ingredient>1010224</Ingredient>                            <!--steam motors-->
-                            <Amount>150</Amount>
-                        </Item>
-                        <Item>
-                            <Ingredient>840</Ingredient>                            <!-- SA Gas-->
-                            <Amount>150</Amount>
-                        </Item>
-                        <Item>
-                            <Ingredient>1010223</Ingredient>                            <!--advanced weapons-->
-                            <Amount>25</Amount>
-                        </Item>
-                    </Costs>
-                    <InfluenceCostType>AirshipCombat</InfluenceCostType>
-                    <InfluenceCostPoints>100</InfluenceCostPoints>
-                </Cost>
-                <Craftable>
-                    <CraftingTime>2000000</CraftingTime>                    <!-- 1020000 -->
-                </Craftable>
-                <TradeRouteVehicle>
-                    <LoadingSpeedFactor>0.5</LoadingSpeedFactor>
-                </TradeRouteVehicle>
-                <Locked>
-                    <DLCDependency>24962</DLCDependency>                    <!--Anno 1800 DLC - Empire of the Skies-->
-                </Locked>
-                <Nameable/>
-                <MetaPersistent/>
-                <ExpeditionAttribute />
-                <ShipMaintenance>
-                    <Maintenance>8500</Maintenance>
-                </ShipMaintenance>
-                <Sellable>
-                    <Baseprice>
-                        <Item>
-                            <VectorElement>
-                                <InheritedIndex>0</InheritedIndex>
-                                <InheritanceMapV2>
-                                    <Entry>
-                                        <TemplateName>WarAirShip</TemplateName>
-                                        <Index>0</Index>
-                                    </Entry>
-                                </InheritanceMapV2>
-                            </VectorElement>
-                            <Amount>7500000</Amount>
-                        </Item>
-                    </Baseprice>
-                </Sellable>
-                <Stance/>
-                <Rentable/>
-                <WorldMapSound/>
-                <Pausable/>
-                <ShipIncident>
-                    <InfectableByIncident>
-                        <Illness>
-                            <Infectable>0</Infectable>
-                        </Illness>
-                    </InfectableByIncident>
-                </ShipIncident>
-                <SoundEmitterCommandBarks>
-                    <BarkMapping>
-                        <Selection>
-                            <AudioPool>4815</AudioPool>                            <!--AgileAirship_SelectShip_Pool-->
-                        </Selection>
-                        <SelectionDamaged>
-                            <AudioPool>4817</AudioPool>                            <!--AgileAirship_Damage_Pool-->
-                        </SelectionDamaged>
-                        <AttackCommand>
-                            <AudioPool>4822</AudioPool>                            <!--AgileAirship_Attack_Pool-->
-                        </AttackCommand>
-                        <MoveCommand>
-                            <AudioPool>4816</AudioPool>                            <!--AgileAirship_Move_Pool-->
-                        </MoveCommand>
-                        <EscortCommand>
-                            <AudioPool>4820</AudioPool>                            <!--AgileAirship_Escort_Pool-->
-                        </EscortCommand>
-                        <PatrolCommand>
-                            <AudioPool>4816</AudioPool>                            <!--AgileAirship_Move_Pool-->
-                        </PatrolCommand>
-                        <DropCommand>
-                            <AudioPool>4823</AudioPool>                            <!--AgileAirship_Drop_Pool-->
-                        </DropCommand>
-                    </BarkMapping>
-                </SoundEmitterCommandBarks>
-                <ItemReplacer>
-                    <ItemReplacementPools>193855</ItemReplacementPools>                    <!--AirShipReplacementPool-->
-                </ItemReplacer>
-                <Bombarder>
-                    <Shafts>12</Shafts>
-                </Bombarder>
-                <Attacker />
-            </Values>
-        </Asset>
-    </ModOp>
-    <ModOp Type="addNextSibling" GUID='1056'>
-        <Asset>
-            <Template>WarAirShipPermit</Template>
-            <Values>
-                <Standard>
-                    <GUID>1742100629</GUID>
-                    <Name>B42 (Arctic Gas)</Name>
-                    <IconFilename>data/graphics/icons/icon_b42.png</IconFilename>
-                    <InfoDescription>1742100614</InfoDescription>
-                </Standard>
-                <Object>
-                    <Variations>
-                        <Item>
-                            <Filename>data/graphics/vehicle/b42/b42_01.cfg</Filename>
-                        </Item>
-                    </Variations>
-                </Object>
-                <Mesh>
-                    <LogoMode>CorporationLogoFromPlayer</LogoMode>
-                </Mesh>
-                <Selection>
-                    <StaticHelpEntryPoint>EmpireOfTheSkies_War_Intro</StaticHelpEntryPoint>
-                    <OnSelection>
-                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
-                        <Values>
-                            <ActionList/>
-                        </Values>
-                    </OnSelection>
-                </Selection>
-                <Walking>
-                    <ShortenSailsAfter>0</ShortenSailsAfter>
-                    <TurnAroundRadius>15</TurnAroundRadius>
-                    <Acceleration>1.5</Acceleration>
-                    <Deceleration>1.5</Deceleration>
-                    <TurnRadius>10</TurnRadius>
-                    <TurnSpeed>80</TurnSpeed>
-                    <TurnSpeedInPlace>80</TurnSpeedInPlace>
-                    <LeaningMaxAngle>0</LeaningMaxAngle>
-                    <ForwardSpeed>6</ForwardSpeed>
-                    <WindMinSlowdownFactor>0.5</WindMinSlowdownFactor>
-                    <WindSlowdownEffectOnTurningSpeed>0.5</WindSlowdownEffectOnTurningSpeed>
-                    <WindMaxSpeedupFactor>2</WindMaxSpeedupFactor>
-                    <CargoThreshold>0.1</CargoThreshold>
-                    <MinSlowdownFactor>0.5</MinSlowdownFactor>
-                    <SessionTransferSpeedFactor>2</SessionTransferSpeedFactor>
-                </Walking>
-                <Text>
-                    <LocaText>
-                        <English>
-                            <Text>B42</Text>
-                            <Status>Exported</Status>
-                        </English>
-                    </LocaText>
-                    <LineID>57665</LineID>
-                </Text>
-                <CommandQueue>
-                    <MilitaryAirShipPoints>25</MilitaryAirShipPoints>
-                    <TradeShipPoints>6</TradeShipPoints>
-                    <AirShipPoints>300</AirShipPoints>
-                </CommandQueue>
-                <Drifting>
-                    <Length>7</Length>
-                    <Width>4</Width>
-                </Drifting>
-                <Collector/>
-                <Attackable>
-                    <MaximumHitPoints>4000</MaximumHitPoints>
-                </Attackable>
-                <MinimapToken>
-                    <StrategicMapAsset>117300</StrategicMapAsset>                    <!--Steam Ships-->
-                </MinimapToken>
-                <SoundEmitter>
-                    <VehicleSounds>
-                        <MovementStart>
-                            <Item>
-                                <Sound>200990</Sound>                                <!--wwe_sfx_veh_eots_airship_med_lp-->
-                            </Item>
-                        </MovementStart>
-                    </VehicleSounds>
-                </SoundEmitter>
-                <UpgradeList>
-                    <DefaultBuff>1751</DefaultBuff>
-                </UpgradeList>
-                <QuestObject/>
-                <Infolayer/>
-                <ItemContainer>
-                    <SocketCount>3</SocketCount>
-                    <SlotCount>6</SlotCount>
-                </ItemContainer>
-                <FeedbackController/>
-                <Draggable>
-                    <DraggableOnDrag>
-                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
-                        <Values>
-                            <ActionList/>
-                        </Values>
-                    </DraggableOnDrag>
-                    <DraggableOnDrop>
-                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
-                        <Values>
-                            <ActionList/>
-                        </Values>
-                    </DraggableOnDrop>
-                </Draggable>
-                <Cost>
-                    <Costs>
-                        <Item>
-                            <Ingredient>1010017</Ingredient>                            <!--coins-->
-                            <Amount>1000000</Amount>
-                        </Item>
-                        <Item>
-                            <Ingredient>1010196</Ingredient>                            <!-- Timber -->
-                            <Amount>50</Amount>
-                        </Item>
-                        <Item>
-                            <Ingredient>1010210</Ingredient>                            <!-- Sails -->
-                            <Amount>300</Amount>
-                        </Item>
-                        <Item>
-                            <Ingredient>1010218</Ingredient>                            <!--beams-->
-                            <Amount>30</Amount>
-                        </Item>
-                        <Item>
-                            <Ingredient>838</Ingredient>                            <!-- Aluminium-->
-                            <Amount>200</Amount>
-                        </Item>
-                        <Item>
-                            <Ingredient>1010224</Ingredient>                            <!--steam motors-->
-                            <Amount>150</Amount>
-                        </Item>
-                        <Item>
-                            <Ingredient>112706</Ingredient>                            <!--  Arctic Gas-->
-                            <Amount>150</Amount>
-                        </Item>
-                        <Item>
-                            <Ingredient>1010223</Ingredient>                            <!--advanced weapons-->
-                            <Amount>25</Amount>
-                        </Item>
-                    </Costs>
-                    <InfluenceCostType>AirshipCombat</InfluenceCostType>
-                    <InfluenceCostPoints>100</InfluenceCostPoints>
-                </Cost>
-                <Craftable>
-                    <CraftingTime>2000000</CraftingTime>                    <!-- 1020000 -->
-                </Craftable>
-                <TradeRouteVehicle>
-                    <LoadingSpeedFactor>0.5</LoadingSpeedFactor>
-                </TradeRouteVehicle>
-                <Locked>
-                    <DLCDependency>24962</DLCDependency>                    <!--Anno 1800 DLC - Empire of the Skies-->
-                </Locked>
-                <Nameable/>
-                <MetaPersistent/>
-                <ExpeditionAttribute />
-                <ShipMaintenance>
-                    <Maintenance>8500</Maintenance>
-                </ShipMaintenance>
-                <Sellable>
-                    <Baseprice>
-                        <Item>
-                            <VectorElement>
-                                <InheritedIndex>0</InheritedIndex>
-                                <InheritanceMapV2>
-                                    <Entry>
-                                        <TemplateName>WarAirShip</TemplateName>
-                                        <Index>0</Index>
-                                    </Entry>
-                                </InheritanceMapV2>
-                            </VectorElement>
-                            <Amount>7500000</Amount>
-                        </Item>
-                    </Baseprice>
-                </Sellable>
-                <Stance/>
-                <Rentable/>
-                <WorldMapSound/>
-                <Pausable/>
-                <ShipIncident>
-                    <InfectableByIncident>
-                        <Illness>
-                            <Infectable>0</Infectable>
-                        </Illness>
-                    </InfectableByIncident>
-                </ShipIncident>
-                <SoundEmitterCommandBarks>
-                    <BarkMapping>
-                        <Selection>
-                            <AudioPool>4815</AudioPool>                            <!--AgileAirship_SelectShip_Pool-->
-                        </Selection>
-                        <SelectionDamaged>
-                            <AudioPool>4817</AudioPool>                            <!--AgileAirship_Damage_Pool-->
-                        </SelectionDamaged>
-                        <AttackCommand>
-                            <AudioPool>4822</AudioPool>                            <!--AgileAirship_Attack_Pool-->
-                        </AttackCommand>
-                        <MoveCommand>
-                            <AudioPool>4816</AudioPool>                            <!--AgileAirship_Move_Pool-->
-                        </MoveCommand>
-                        <EscortCommand>
-                            <AudioPool>4820</AudioPool>                            <!--AgileAirship_Escort_Pool-->
-                        </EscortCommand>
-                        <PatrolCommand>
-                            <AudioPool>4816</AudioPool>                            <!--AgileAirship_Move_Pool-->
-                        </PatrolCommand>
-                        <DropCommand>
-                            <AudioPool>4823</AudioPool>                            <!--AgileAirship_Drop_Pool-->
-                        </DropCommand>
-                    </BarkMapping>
-                </SoundEmitterCommandBarks>
-                <ItemReplacer>
-                    <ItemReplacementPools>193855</ItemReplacementPools>                    <!--AirShipReplacementPool-->
-                </ItemReplacer>
-                <Bombarder>
-                    <Shafts>12</Shafts>
-                </Bombarder>
-                <Attacker />
-            </Values>
-        </Asset>
-    </ModOp>
-
-    <ModOp Type="add" GUID='131205' Path="/Values/BuildPermitGroup/Group">        <!-- Permit Group Great Eastern (Now Harbor and Ships) -->
-        <Item>
-            <BuildPermit>1742100613</BuildPermit>            <!-- B42 (Heliun) - AirShip -->
-        </Item>
-        <Item>
-            <BuildPermit>1742100629</BuildPermit>            <!-- B42 (Arctic Gas) - AirShip -->
-        </Item>
-    </ModOp>
-
-    <!-- END SHIP - B42 -->
-
     <!-- START SHIP - IRONCLAD CRUISER -->
     <ModOp Type="addNextSibling" GUID='100442'>
         <Asset>
@@ -3126,13 +2722,20 @@
                 <Object>
                     <Variations>
                         <Item>
-                            <Filename>data/graphics/vehicle/small_oil_tanker/small_oil_tanker.cfg</Filename>
+                            <Filename>data/graphics/vehicle/small_oil_tanker/small_oil_tanker_01.cfg</Filename>
                         </Item>
                     </Variations>
                     <Skins>
                         <DefaultSkinName>1742100624</DefaultSkinName>
                         <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>                        <!--Classic-->
-                        <SkinList />
+                        <SkinList>
+                            <Item>
+                                <SkinAssetGuid>1742100682</SkinAssetGuid>
+                            </Item>
+                            <Item>
+                                <SkinAssetGuid>1742100683</SkinAssetGuid>
+                            </Item>
+                        </SkinList>
                     </Skins>
                 </Object>
                 <Walking>
@@ -3210,6 +2813,18 @@
     </ModOp>
     <!-- END SHIP - SMALL OIL TANKER -->
 
+    <!-- START SHIP - OIL TANKER -->
+    <ModOp Type="merge" GUID="100853" Path="/Values/Object/Skins/">
+        <SkinList>
+            <Item>
+                <SkinAssetGuid>1742100684</SkinAssetGuid>
+            </Item>
+            <Item>
+                <SkinAssetGuid>1742100685</SkinAssetGuid>
+            </Item>
+        </SkinList>
+    </ModOp>
+
     <!-- START SHIP - LARGE OIL TANKER -->
     <ModOp Type="addNextSibling" GUID='100853'>
         <Asset>
@@ -3229,7 +2844,14 @@
                     <Skins>
                         <DefaultSkinName>1742100625</DefaultSkinName>
                         <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>                        <!--Classic-->
-                        <SkinList />
+                        <SkinList>
+                            <Item>
+                                <SkinAssetGuid>1742100686</SkinAssetGuid>
+                            </Item>
+                            <Item>
+                                <SkinAssetGuid>1742100687</SkinAssetGuid>
+                            </Item>
+                        </SkinList>
                     </Skins>
                 </Object>
                 <Walking>
@@ -3313,5 +2935,895 @@
         </Asset>
     </ModOp>
     <!-- END SHIP - LARGE OIL TANKER -->
+
+    <!-- START SHIP - B42 -->
+    <ModOp Type="addNextSibling" GUID='1060'>
+        <Asset>
+            <BaseAssetGUID>1060</BaseAssetGUID>
+            <Values>
+                <Standard>
+                    <GUID>1742100613</GUID>
+                    <Name>B42 (Helium)</Name>
+                    <IconFilename>data/graphics/icons/icon_b42.png</IconFilename>
+                    <InfoDescription>1742100614</InfoDescription>
+                </Standard>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/vehicle/b42/b42_03.cfg</Filename>
+                        </Item>
+                    </Variations>
+                    <Skins>
+                        <SkinList>
+                            <Item>
+                                <SkinAssetGuid>1742100613</SkinAssetGuid>
+                            </Item>
+                        </SkinList>
+                    </Skins>
+                </Object>
+                <Walking>
+                    <TurnAroundRadius>12</TurnAroundRadius>
+                    <Acceleration>0.3</Acceleration>
+                    <Deceleration>0.5</Deceleration>
+                    <TurnRadius>10</TurnRadius>
+                    <TurnSpeed>100</TurnSpeed>
+                    <TurnSpeedInPlace>80</TurnSpeedInPlace>
+                    <LeaningMaxAngle>0</LeaningMaxAngle>
+                    <ForwardSpeed>8.5</ForwardSpeed>
+                    <WindMinSlowdownFactor>0.7</WindMinSlowdownFactor>
+                    <WindSlowdownEffectOnTurningSpeed>0.75</WindSlowdownEffectOnTurningSpeed>
+                    <WindMaxSpeedupFactor>1.3</WindMaxSpeedupFactor>
+                    <CargoFullFactor>0.8</CargoFullFactor>
+                    <MinSlowdownFactor>0.3</MinSlowdownFactor>
+                    <SessionTransferSpeedFactor>1.4</SessionTransferSpeedFactor>
+                </Walking>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>B42</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>57665</LineID>
+                </Text>
+                <CommandQueue>
+                    <TradeShipPoints>6</TradeShipPoints>
+                    <AirShipPoints>300</AirShipPoints>
+                </CommandQueue>
+                <Drifting>
+                    <Length>8</Length>
+                    <Width>6</Width>
+                </Drifting>
+                <ItemContainer>
+                    <SocketCount>3</SocketCount>
+                    <SlotCount>6</SlotCount>
+                </ItemContainer>
+                <Attackable>
+                    <MaximumHitPoints>4500</MaximumHitPoints>
+                </Attackable>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!--coins-->
+                            <Amount>1000000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010196</Ingredient>                            <!-- Timber -->
+                            <Amount>50</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010210</Ingredient>                            <!-- Sails -->
+                            <Amount>300</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010218</Ingredient>                            <!--beams-->
+                            <Amount>30</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>838</Ingredient>                            <!-- Aluminium-->
+                            <Amount>200</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010224</Ingredient>                            <!--steam motors-->
+                            <Amount>150</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>840</Ingredient>                            <!-- SA Gas-->
+                            <Amount>100</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010223</Ingredient>                            <!--advanced weapons-->
+                            <Amount>10</Amount>
+                        </Item>
+                    </Costs>
+                    <InfluenceCostType>AirshipCombat</InfluenceCostType>
+                    <InfluenceCostPoints>50</InfluenceCostPoints>
+                </Cost>
+                <Craftable>
+                    <CraftingTime>2000000</CraftingTime>                    <!-- 1020000 -->
+                </Craftable>
+                <TradeRouteVehicle>
+                    <LoadingSpeedFactor>0.7</LoadingSpeedFactor>
+                </TradeRouteVehicle>
+                <Locked>
+                    <DLCDependency>24962</DLCDependency>                    <!--Anno 1800 DLC - Empire of the Skies-->
+                </Locked>
+                <ShipMaintenance>
+                    <Maintenance>7500</Maintenance>
+                </ShipMaintenance>
+                <Sellable>
+                    <Baseprice>
+                        <Item>
+                            <Amount>4500000</Amount>
+                        </Item>
+                    </Baseprice>
+                </Sellable>
+                <Bombarder>
+                    <Shafts>12</Shafts>
+                </Bombarder>
+            </Values>
+        </Asset>
+    </ModOp>
+    <ModOp Type="addNextSibling" GUID='1737'>
+        <Asset>
+            <BaseAssetGUID>1737</BaseAssetGUID>
+            <Values>
+                <Standard>
+                    <GUID>1742100629</GUID>
+                    <Name>B42 (Arctic Gas)</Name>
+                    <IconFilename>data/graphics/icons/icon_b42.png</IconFilename>
+                    <InfoDescription>1742100614</InfoDescription>
+                </Standard>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/vehicle/b42/b42_03.cfg</Filename>
+                        </Item>
+                    </Variations>
+                    <Skins>
+                        <SkinList>
+                            <Item>
+                                <SkinAssetGuid>1742100629</SkinAssetGuid>
+                            </Item>
+                        </SkinList>
+                    </Skins>
+                </Object>
+                <Walking>
+                    <TurnAroundRadius>12</TurnAroundRadius>
+                    <Acceleration>0.3</Acceleration>
+                    <Deceleration>0.5</Deceleration>
+                    <TurnRadius>10</TurnRadius>
+                    <TurnSpeed>100</TurnSpeed>
+                    <TurnSpeedInPlace>80</TurnSpeedInPlace>
+                    <LeaningMaxAngle>0</LeaningMaxAngle>
+                    <ForwardSpeed>8.5</ForwardSpeed>
+                    <WindMinSlowdownFactor>0.7</WindMinSlowdownFactor>
+                    <WindSlowdownEffectOnTurningSpeed>0.75</WindSlowdownEffectOnTurningSpeed>
+                    <WindMaxSpeedupFactor>1.3</WindMaxSpeedupFactor>
+                    <CargoFullFactor>0.8</CargoFullFactor>
+                    <MinSlowdownFactor>0.3</MinSlowdownFactor>
+                    <SessionTransferSpeedFactor>1.4</SessionTransferSpeedFactor>
+                </Walking>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>B42</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>57665</LineID>
+                </Text>
+                <CommandQueue>
+                    <TradeShipPoints>6</TradeShipPoints>
+                    <AirShipPoints>300</AirShipPoints>
+                </CommandQueue>
+                <Drifting>
+                    <Length>8</Length>
+                    <Width>6</Width>
+                </Drifting>
+                <Attackable>
+                    <MaximumHitPoints>4500</MaximumHitPoints>
+                </Attackable>
+                <ItemContainer>
+                    <SocketCount>3</SocketCount>
+                    <SlotCount>6</SlotCount>
+                </ItemContainer>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!--coins-->
+                            <Amount>1000000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010196</Ingredient>                            <!-- Timber -->
+                            <Amount>50</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010210</Ingredient>                            <!-- Sails -->
+                            <Amount>300</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010218</Ingredient>                            <!--beams-->
+                            <Amount>30</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>838</Ingredient>                            <!-- Aluminium-->
+                            <Amount>200</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010224</Ingredient>                            <!--steam motors-->
+                            <Amount>150</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>112706</Ingredient>                            <!--  Arctic Gas-->
+                            <Amount>100</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010223</Ingredient>                            <!--advanced weapons-->
+                            <Amount>10</Amount>
+                        </Item>
+                    </Costs>
+                    <InfluenceCostType>AirshipCombat</InfluenceCostType>
+                    <InfluenceCostPoints>50</InfluenceCostPoints>
+                </Cost>
+                <Craftable>
+                    <CraftingTime>2000000</CraftingTime>                    <!-- 1020000 -->
+                </Craftable>
+                <TradeRouteVehicle>
+                    <LoadingSpeedFactor>0.7</LoadingSpeedFactor>
+                </TradeRouteVehicle>
+                <Locked>
+                    <DLCDependency>24962</DLCDependency>                    <!--Anno 1800 DLC - Empire of the Skies-->
+                </Locked>
+                <ShipMaintenance>
+                    <Maintenance>7500</Maintenance>
+                </ShipMaintenance>
+                <Sellable>
+                    <Baseprice>
+                        <Item>
+                            <Amount>4500000</Amount>
+                        </Item>
+                    </Baseprice>
+                </Sellable>
+                <Bombarder>
+                    <Shafts>12</Shafts>
+                </Bombarder>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END SHIP - B42 -->
+
+    <!-- START AIRSHIP - F42 -->
+    <ModOp Type="addNextSibling" GUID='1056'>
+        <Asset>
+            <BaseAssetGUID>1056</BaseAssetGUID>
+            <Values>
+                <Standard>
+                    <GUID>1742100657</GUID>
+                    <Name>F42 (Helium)</Name>
+                    <IconFilename>data/graphics/icons/icon_f42.png</IconFilename>
+                    <InfoDescription>1742100659</InfoDescription>
+                </Standard>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/vehicle/f42/f42_02.cfg</Filename>
+                        </Item>
+                    </Variations>
+                    <Skins>
+                        <SkinList>
+                            <Item>
+                                <SkinAssetGuid>1742100657</SkinAssetGuid>
+                            </Item>
+                        </SkinList>
+                    </Skins>
+                </Object>
+                <Walking>
+                    <ShortenSailsAfter>0</ShortenSailsAfter>
+                    <TurnAroundRadius>12</TurnAroundRadius>
+                    <Acceleration>1</Acceleration>
+                    <Deceleration>1</Deceleration>
+                    <TurnRadius>10</TurnRadius>
+                    <TurnSpeed>100</TurnSpeed>
+                    <TurnSpeedInPlace>80</TurnSpeedInPlace>
+                    <LeaningMaxAngle>0</LeaningMaxAngle>
+                    <ForwardSpeed>11</ForwardSpeed>
+                    <WindMinSlowdownFactor>0.8</WindMinSlowdownFactor>
+                    <WindSlowdownEffectOnTurningSpeed>0.9</WindSlowdownEffectOnTurningSpeed>
+                    <WindMaxSpeedupFactor>1.5</WindMaxSpeedupFactor>
+                    <CargoThreshold>0.1</CargoThreshold>
+                    <MinSlowdownFactor>0.2</MinSlowdownFactor>
+                    <SessionTransferSpeedFactor>1.2</SessionTransferSpeedFactor>
+                </Walking>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>F42</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>57665</LineID>
+                </Text>
+                <CommandQueue>
+                    <MilitaryAirShipPoints>2</MilitaryAirShipPoints>
+                </CommandQueue>
+                <Drifting>
+                    <Length>8</Length>
+                    <Width>6</Width>
+                </Drifting>
+                <Attackable>
+                    <MaximumHitPoints>4800</MaximumHitPoints>
+                </Attackable>
+                <ItemContainer>
+                    <SocketCount>3</SocketCount>
+                    <SlotCount>1</SlotCount>
+                </ItemContainer>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!--coins-->
+                            <Amount>1000000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010196</Ingredient>                            <!-- Timber -->
+                            <Amount>50</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010210</Ingredient>                            <!-- Sails -->
+                            <Amount>300</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010218</Ingredient>                            <!--beams-->
+                            <Amount>30</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>838</Ingredient>                            <!-- Aluminium-->
+                            <Amount>200</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010224</Ingredient>                            <!--steam motors-->
+                            <Amount>150</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>840</Ingredient>                            <!-- SA Gas-->
+                            <Amount>120</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010223</Ingredient>                            <!--advanced weapons-->
+                            <Amount>35</Amount>
+                        </Item>
+                    </Costs>
+                    <InfluenceCostType>AirshipCombat</InfluenceCostType>
+                    <InfluenceCostPoints>50</InfluenceCostPoints>
+                </Cost>
+                <Craftable>
+                    <CraftingTime>2000000</CraftingTime>                    <!-- 1020000 -->
+                </Craftable>
+                <ShipMaintenance>
+                    <Maintenance>6000</Maintenance>
+                </ShipMaintenance>
+                <Sellable>
+                    <Baseprice>
+                        <Item>
+                            <Amount>4500000</Amount>
+                        </Item>
+                    </Baseprice>
+                </Sellable>
+                <Attacker>
+                    <BaseDamage>480</BaseDamage>                    <!-- 130 -->
+                    <ReloadTime>28</ReloadTime>                    <!-- 25 -->
+                    <Turrets>
+                        <Item>
+                            <TurnSpan>360</TurnSpan>
+                            <TurretCfg>data/dlc11/graphics/vehicle/airships/airship_gun_turret/airship_gun_turret_01.cfg</TurretCfg>
+                        </Item>
+                        <Item>
+                            <TurnSpan>360</TurnSpan>
+                            <TurretCfg>data/dlc11/graphics/vehicle/airships/airship_gun_turret/airship_gun_turret_01.cfg</TurretCfg>
+                        </Item>
+                        <Item>
+                            <TurnSpan>360</TurnSpan>
+                            <TurretCfg>data/dlc11/graphics/vehicle/airships/airship_gun_turret/airship_gun_turret_01_rotated.cfg</TurretCfg>
+                        </Item>
+                        <Item>
+                            <TurnSpan>360</TurnSpan>
+                            <TurretCfg>data/dlc11/graphics/vehicle/airships/airship_gun_turret/airship_gun_turret_01_rotated.cfg</TurretCfg>
+                        </Item>
+                        <Item>
+                            <TurnSpan>360</TurnSpan>
+                            <TurretCfg>data/dlc11/graphics/vehicle/airships/airship_gun_turret/airship_gun_turret_01_rotated.cfg</TurretCfg>
+                        </Item>
+                        <Item>
+                            <TurnSpan>360</TurnSpan>
+                            <TurretCfg>data/dlc11/graphics/vehicle/airships/airship_gun_turret/airship_gun_turret_01_rotated.cfg</TurretCfg>
+                        </Item>
+                    </Turrets>
+                    <ProjectileAsset>2295</ProjectileAsset>                    <!--Medium_Single_Shot_Airship-->
+                    <TurretExplosionEffectAsset>2296</TurretExplosionEffectAsset>                    <!--TurretExplosion_Airship-->
+                    <MuzzleEffectAssets>
+                        <Item>
+                            <MuzzleEffectAsset>2297</MuzzleEffectAsset>                            <!--ShotMuzzle_Airship-->
+                        </Item>
+                    </MuzzleEffectAssets>
+                    <FullVolleyTimeMin>1</FullVolleyTimeMin>
+                    <FullVolleyTimeMax>2</FullVolleyTimeMax>
+                    <AccuracyByDistance>
+                        <Item>
+                        </Item>
+                        <Item>
+                            <AccuracyByDistancePair>
+                                <EnemyDistanceRelToAttackRange>30</EnemyDistanceRelToAttackRange>
+                                <CorrespondingAccuracy>60</CorrespondingAccuracy>
+                            </AccuracyByDistancePair>
+                        </Item>
+                        <Item>
+                            <AccuracyByDistancePair>
+                                <EnemyDistanceRelToAttackRange>100</EnemyDistanceRelToAttackRange>
+                            </AccuracyByDistancePair>
+                        </Item>
+                    </AccuracyByDistance>
+                    <WeaponIcon>2188</WeaponIcon>                    <!--AirshipWeapon-->
+                </Attacker>
+                <Bombarder>
+                    <Shafts>1</Shafts>
+                </Bombarder>
+            </Values>
+        </Asset>
+    </ModOp>
+    <ModOp Type="addNextSibling" GUID='1732'>
+        <Asset>
+            <BaseAssetGUID>1732</BaseAssetGUID>
+            <Values>
+                <Standard>
+                    <GUID>1742100658</GUID>
+                    <Name>F42 (Arctic Gas)</Name>
+                    <IconFilename>data/graphics/icons/icon_f42.png</IconFilename>
+                    <InfoDescription>1742100659</InfoDescription>
+                </Standard>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/vehicle/f42/f42_02.cfg</Filename>
+                        </Item>
+                    </Variations>
+                    <Skins>
+                        <SkinList>
+                            <Item>
+                                <SkinAssetGuid>1742100658</SkinAssetGuid>
+                            </Item>
+                        </SkinList>
+                    </Skins>
+                </Object>
+                <Walking>
+                    <ShortenSailsAfter>0</ShortenSailsAfter>
+                    <TurnAroundRadius>12</TurnAroundRadius>
+                    <Acceleration>1</Acceleration>
+                    <Deceleration>1</Deceleration>
+                    <TurnRadius>10</TurnRadius>
+                    <TurnSpeed>100</TurnSpeed>
+                    <TurnSpeedInPlace>80</TurnSpeedInPlace>
+                    <LeaningMaxAngle>0</LeaningMaxAngle>
+                    <ForwardSpeed>11</ForwardSpeed>
+                    <WindMinSlowdownFactor>0.8</WindMinSlowdownFactor>
+                    <WindSlowdownEffectOnTurningSpeed>0.9</WindSlowdownEffectOnTurningSpeed>
+                    <WindMaxSpeedupFactor>1.5</WindMaxSpeedupFactor>
+                    <CargoThreshold>0.1</CargoThreshold>
+                    <MinSlowdownFactor>0.2</MinSlowdownFactor>
+                    <SessionTransferSpeedFactor>1.2</SessionTransferSpeedFactor>
+                </Walking>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>F42</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>57665</LineID>
+                </Text>
+                <CommandQueue>
+                    <MilitaryAirShipPoints>2</MilitaryAirShipPoints>
+                </CommandQueue>
+                <Drifting>
+                    <Length>8</Length>
+                    <Width>6</Width>
+                </Drifting>
+                <Attackable>
+                    <MaximumHitPoints>4800</MaximumHitPoints>
+                </Attackable>
+                <ItemContainer>
+                    <SocketCount>3</SocketCount>
+                    <SlotCount>1</SlotCount>
+                </ItemContainer>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!--coins-->
+                            <Amount>1000000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010196</Ingredient>                            <!-- Timber -->
+                            <Amount>50</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010210</Ingredient>                            <!-- Sails -->
+                            <Amount>300</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010218</Ingredient>                            <!--beams-->
+                            <Amount>30</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>838</Ingredient>                            <!-- Aluminium-->
+                            <Amount>200</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010224</Ingredient>                            <!--steam motors-->
+                            <Amount>150</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>112706</Ingredient>                            <!--  Arctic Gas-->
+                            <Amount>120</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010223</Ingredient>                            <!--advanced weapons-->
+                            <Amount>35</Amount>
+                        </Item>
+                    </Costs>
+                    <InfluenceCostType>AirshipCombat</InfluenceCostType>
+                    <InfluenceCostPoints>50</InfluenceCostPoints>
+                </Cost>
+                <Craftable>
+                    <CraftingTime>2000000</CraftingTime>                    <!-- 1020000 -->
+                </Craftable>
+                <ShipMaintenance>
+                    <Maintenance>6000</Maintenance>
+                </ShipMaintenance>
+                <Sellable>
+                    <Baseprice>
+                        <Item>
+                            <Amount>4500000</Amount>
+                        </Item>
+                    </Baseprice>
+                </Sellable>
+                <Attacker>
+                    <BaseDamage>480</BaseDamage>                    <!-- 130 -->
+                    <ReloadTime>28</ReloadTime>                    <!-- 25 -->
+                    <Turrets>
+                        <Item>
+                            <TurnSpan>360</TurnSpan>
+                            <TurretCfg>data/dlc11/graphics/vehicle/airships/airship_gun_turret/airship_gun_turret_01.cfg</TurretCfg>
+                        </Item>
+                        <Item>
+                            <TurnSpan>360</TurnSpan>
+                            <TurretCfg>data/dlc11/graphics/vehicle/airships/airship_gun_turret/airship_gun_turret_01_rotated.cfg</TurretCfg>
+                        </Item>
+                        <Item>
+                            <TurnSpan>360</TurnSpan>
+                            <TurretCfg>data/dlc11/graphics/vehicle/airships/airship_gun_turret/airship_gun_turret_01.cfg</TurretCfg>
+                        </Item>
+                        <Item>
+                            <TurnSpan>360</TurnSpan>
+                            <TurretCfg>data/dlc11/graphics/vehicle/airships/airship_gun_turret/airship_gun_turret_01_rotated.cfg</TurretCfg>
+                        </Item>
+                        <Item>
+                            <TurnSpan>360</TurnSpan>
+                            <TurretCfg>data/dlc11/graphics/vehicle/airships/airship_gun_turret/airship_gun_turret_01_rotated.cfg</TurretCfg>
+                        </Item>
+                        <Item>
+                            <TurnSpan>360</TurnSpan>
+                            <TurretCfg>data/dlc11/graphics/vehicle/airships/airship_gun_turret/airship_gun_turret_01_rotated.cfg</TurretCfg>
+                        </Item>
+                    </Turrets>
+                    <ProjectileAsset>2295</ProjectileAsset>                    <!--Medium_Single_Shot_Airship-->
+                    <TurretExplosionEffectAsset>2296</TurretExplosionEffectAsset>                    <!--TurretExplosion_Airship-->
+                    <MuzzleEffectAssets>
+                        <Item>
+                            <MuzzleEffectAsset>2297</MuzzleEffectAsset>                            <!--ShotMuzzle_Airship-->
+                        </Item>
+                    </MuzzleEffectAssets>
+                    <FullVolleyTimeMin>1</FullVolleyTimeMin>
+                    <FullVolleyTimeMax>2</FullVolleyTimeMax>
+                    <AccuracyByDistance>
+                        <Item>
+                        </Item>
+                        <Item>
+                            <AccuracyByDistancePair>
+                                <EnemyDistanceRelToAttackRange>30</EnemyDistanceRelToAttackRange>
+                                <CorrespondingAccuracy>60</CorrespondingAccuracy>
+                            </AccuracyByDistancePair>
+                        </Item>
+                        <Item>
+                            <AccuracyByDistancePair>
+                                <EnemyDistanceRelToAttackRange>100</EnemyDistanceRelToAttackRange>
+                            </AccuracyByDistancePair>
+                        </Item>
+                    </AccuracyByDistance>
+                    <WeaponIcon>2188</WeaponIcon>                    <!--AirshipWeapon-->
+                </Attacker>
+                <Bombarder>
+                    <Shafts>1</Shafts>
+                </Bombarder>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END AIRSHIP - F42 -->
+
+    <!-- START AIRSHIP - A42 -->
+    <ModOp Type="addNextSibling" GUID='1060'>
+        <Asset>
+            <BaseAssetGUID>1060</BaseAssetGUID>
+            <Values>
+                <Standard>
+                    <GUID>1742100660</GUID>
+                    <Name>A42 (Helium)</Name>
+                    <IconFilename>data/graphics/icons/icon_a42.png</IconFilename>
+                    <InfoDescription>1742100662</InfoDescription>
+                </Standard>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/vehicle/a42/a42_02.cfg</Filename>
+                        </Item>
+                    </Variations>
+                    <Skins>
+                        <SkinList>
+                            <Item>
+                                <SkinAssetGuid>1742100660</SkinAssetGuid>
+                            </Item>
+                        </SkinList>
+                    </Skins>
+                </Object>
+                <Walking>
+                    <ShortenSailsAfter>0</ShortenSailsAfter>
+                    <TurnAroundRadius>12</TurnAroundRadius>
+                    <Acceleration>0.3</Acceleration>
+                    <Deceleration>0.5</Deceleration>
+                    <TurnRadius>10</TurnRadius>
+                    <TurnSpeed>100</TurnSpeed>
+                    <TurnSpeedInPlace>80</TurnSpeedInPlace>
+                    <LeaningMaxAngle>0</LeaningMaxAngle>
+                    <ForwardSpeed>9</ForwardSpeed>
+                    <WindMinSlowdownFactor>0.8</WindMinSlowdownFactor>
+                    <WindSlowdownEffectOnTurningSpeed>0.9</WindSlowdownEffectOnTurningSpeed>
+                    <WindMaxSpeedupFactor>1.4</WindMaxSpeedupFactor>
+                    <CargoThreshold>0.1</CargoThreshold>
+                    <MinSlowdownFactor>0.2</MinSlowdownFactor>
+                    <SessionTransferSpeedFactor>1.8</SessionTransferSpeedFactor>
+                </Walking>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>A42</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>57670</LineID>
+                </Text>
+                <CommandQueue>
+                    <TradeShipPoints>8</TradeShipPoints>
+                    <AirShipPoints>200</AirShipPoints>
+                </CommandQueue>
+                <Drifting>
+                    <Length>8</Length>
+                    <Width>6</Width>
+                </Drifting>
+                <Attackable>
+                    <MaximumHitPoints>4500</MaximumHitPoints>
+                </Attackable>
+                <ItemContainer>
+                    <SocketCount>3</SocketCount>
+                    <SlotCount>8</SlotCount>
+                    <StackLimit>100</StackLimit>
+                </ItemContainer>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!--coins-->
+                            <Amount>1000000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010196</Ingredient>                            <!-- Timber -->
+                            <Amount>50</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010210</Ingredient>                            <!-- Sails -->
+                            <Amount>320</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010218</Ingredient>                            <!--beams-->
+                            <Amount>20</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>838</Ingredient>                            <!-- Aluminium-->
+                            <Amount>180</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010224</Ingredient>                            <!--steam motors-->
+                            <Amount>200</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>840</Ingredient>                            <!--SA Gas-->
+                            <Amount>110</Amount>
+                        </Item>
+                    </Costs>
+                    <InfluenceCostType>AirshipCombat</InfluenceCostType>
+                    <InfluenceCostPoints>50</InfluenceCostPoints>
+                </Cost>
+                <Craftable>
+                    <CraftingTime>2000000</CraftingTime>                    <!-- 1080000 -->
+                </Craftable>
+                <TradeRouteVehicle>
+                    <LoadingSpeedFactor>1.2</LoadingSpeedFactor>
+                </TradeRouteVehicle>
+                <Locked>
+                    <DLCDependency>24962</DLCDependency>                    <!--Anno 1800 DLC - Empire of the Skies-->
+                </Locked>
+                <ShipMaintenance>
+                    <Maintenance>8000</Maintenance>
+                </ShipMaintenance>
+                <Sellable>
+                    <Baseprice>
+                        <Item>
+                            <Amount>4500000</Amount>
+                        </Item>
+                    </Baseprice>
+                </Sellable>
+                <Bombarder>
+                    <Shafts>1</Shafts>
+                </Bombarder>
+            </Values>
+        </Asset>
+    </ModOp>
+    <ModOp Type="addNextSibling" GUID='1737'>
+        <Asset>
+            <BaseAssetGUID>1737</BaseAssetGUID>
+            <Values>
+                <Standard>
+                    <GUID>1742100661</GUID>
+                    <Name>A42 (Arctic Gas)</Name>
+                    <IconFilename>data/graphics/icons/icon_a42.png</IconFilename>
+                    <InfoDescription>1742100662</InfoDescription>
+                </Standard>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/vehicle/a42/a42_02.cfg</Filename>
+                        </Item>
+                    </Variations>
+                    <Skins>
+                        <SkinList>
+                            <Item>
+                                <SkinAssetGuid>1742100661</SkinAssetGuid>
+                            </Item>
+                        </SkinList>
+                    </Skins>
+                </Object>
+                <Walking>
+                    <ShortenSailsAfter>0</ShortenSailsAfter>
+                    <TurnAroundRadius>12</TurnAroundRadius>
+                    <Acceleration>0.3</Acceleration>
+                    <Deceleration>0.5</Deceleration>
+                    <TurnRadius>10</TurnRadius>
+                    <TurnSpeed>100</TurnSpeed>
+                    <TurnSpeedInPlace>80</TurnSpeedInPlace>
+                    <LeaningMaxAngle>0</LeaningMaxAngle>
+                    <ForwardSpeed>9</ForwardSpeed>
+                    <WindMinSlowdownFactor>0.8</WindMinSlowdownFactor>
+                    <WindSlowdownEffectOnTurningSpeed>0.9</WindSlowdownEffectOnTurningSpeed>
+                    <WindMaxSpeedupFactor>1.4</WindMaxSpeedupFactor>
+                    <CargoThreshold>0.1</CargoThreshold>
+                    <MinSlowdownFactor>0.2</MinSlowdownFactor>
+                    <SessionTransferSpeedFactor>1.8</SessionTransferSpeedFactor>
+                </Walking>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>A42</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>57670</LineID>
+                </Text>
+                <CommandQueue>
+                    <TradeShipPoints>8</TradeShipPoints>
+                    <AirShipPoints>200</AirShipPoints>
+                </CommandQueue>
+                <Drifting>
+                    <Length>8</Length>
+                    <Width>6</Width>
+                </Drifting>
+                <Attackable>
+                    <MaximumHitPoints>4500</MaximumHitPoints>
+                </Attackable>
+                <ItemContainer>
+                    <SocketCount>3</SocketCount>
+                    <SlotCount>8</SlotCount>
+                    <StackLimit>100</StackLimit>
+                </ItemContainer>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!--coins-->
+                            <Amount>1000000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010196</Ingredient>                            <!-- Timber -->
+                            <Amount>50</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010210</Ingredient>                            <!-- Sails -->
+                            <Amount>320</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010218</Ingredient>                            <!--beams-->
+                            <Amount>20</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>838</Ingredient>                            <!-- Aluminium-->
+                            <Amount>180</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010224</Ingredient>                            <!--steam motors-->
+                            <Amount>200</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>112706</Ingredient>                            <!--Arctic gas-->
+                            <Amount>110</Amount>
+                        </Item>
+                    </Costs>
+                    <InfluenceCostType>AirshipCombat</InfluenceCostType>
+                    <InfluenceCostPoints>50</InfluenceCostPoints>
+                </Cost>
+                <Craftable>
+                    <CraftingTime>2000000</CraftingTime>                    <!-- 1080000 -->
+                </Craftable>
+                <TradeRouteVehicle>
+                    <LoadingSpeedFactor>1.2</LoadingSpeedFactor>
+                </TradeRouteVehicle>
+                <Locked>
+                    <DLCDependency>24962</DLCDependency>                    <!--Anno 1800 DLC - Empire of the Skies-->
+                </Locked>
+                <ShipMaintenance>
+                    <Maintenance>8000</Maintenance>
+                </ShipMaintenance>
+                <Sellable>
+                    <Baseprice>
+                        <Item>
+                            <Amount>4500000</Amount>
+                        </Item>
+                    </Baseprice>
+                </Sellable>
+                <Bombarder>
+                    <Shafts>1</Shafts>
+                </Bombarder>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END AIRSHIP - A42 -->
+
+    <!-- START ADDING AIRSHIPS TO PERMIT LIST -->
+
+    <ModOp Type="add" GUID='131205' Path="/Values/BuildPermitGroup/Group">        <!-- Permit Group Great Eastern (Now Harbor and Ships) -->
+        <Item>
+            <BuildPermit>1742100613</BuildPermit>            <!-- B42 (Heliun) - AirShip -->
+        </Item>
+        <Item>
+            <BuildPermit>1742100629</BuildPermit>            <!-- B42 (Arctic Gas) - AirShip -->
+        </Item>
+        <Item>
+            <BuildPermit>1742100657</BuildPermit>            <!-- F42 (Heliun) - AirShip -->
+        </Item>
+        <Item>
+            <BuildPermit>1742100658</BuildPermit>            <!-- F42 (Arctic Gas) - AirShip -->
+        </Item>
+        <Item>
+            <BuildPermit>1742100660</BuildPermit>            <!-- A42 (Heliun) - AirShip -->
+        </Item>
+        <Item>
+            <BuildPermit>1742100661</BuildPermit>            <!-- A42 (Arctic Gas) - AirShip -->
+        </Item>
+    </ModOp>
+
+    <!-- END ADDING AIRSHIPS TO PERMIT LIST -->
 
 </ModOps>

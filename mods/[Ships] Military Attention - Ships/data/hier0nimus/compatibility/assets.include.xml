@@ -245,6 +245,46 @@ Compatibility
                 <Ingredient>1742100533</Ingredient>                <!-- Sailors - Product -->
                 <Amount>30</Amount>
             </Item>
+            <Item>
+                <Ingredient>1742100471</Ingredient>                <!-- Basic Weapons - Product -->
+                <Amount>20</Amount>
+            </Item>
+        </ModOp>
+
+        <!-- 1742100613 - A42 - AirShip -->
+        <ModOp GUID="1742100660,1742100661" Type="add" Path="/Values/Cost/Costs">
+            <Item>
+                <Ingredient>849</Ingredient>                <!-- Care Packages - Product -->
+                <Amount>30</Amount>
+            </Item>
+            <Item>
+                <Ingredient>1742100533</Ingredient>                <!-- Sailors - Product -->
+                <Amount>30</Amount>
+            </Item>
+        </ModOp>
+
+        <!-- 1742100613 - F42 - AirShip -->
+        <ModOp GUID="1742100657,1742100658" Type="add" Path="/Values/Cost/Costs">
+            <Item>
+                <Ingredient>849</Ingredient>                <!-- Care Packages - Product -->
+                <Amount>30</Amount>
+            </Item>
+            <Item>
+                <Ingredient>1742100533</Ingredient>                <!-- Sailors - Product -->
+                <Amount>30</Amount>
+            </Item>
+            <Item>
+                <Ingredient>1742100203</Ingredient>                <!-- Basic Ammunition - Product -->
+                <Amount>40</Amount>
+            </Item>
+            <Item>
+                <Ingredient>1742100471</Ingredient>                <!-- Basic Weapons - Product -->
+                <Amount>30</Amount>
+            </Item>
+            <Item>
+                <Ingredient>1742100248</Ingredient>                <!-- Shell Ammunition - Product -->
+                <Amount>20</Amount>
+            </Item>
         </ModOp>
 
         <!-- 1742100615 - Ironclad Cruiser - Ship -->
@@ -340,17 +380,4 @@ Compatibility
         <!-- END COMPATIBILITY SIU SHIP CAPACITY -->
     </Group>
 
-    <Group Condition="#military_attention_pirates">
-        <!-- HUNT IS RELATED TO ANNE HARLOW - SHE BUILDS SOME OF THE PIRATE SHIPS -->
-        <ModOp Type="add" GUID="85" Path="/Values/MilitaryAI/WarFleet/ShipList">
-            <Item>
-                <Type>1742102008</Type>                <!--Jolly Roger-->
-                <Weight>1</Weight>
-            </Item>
-            <Item>
-                <Type>1742102010</Type>                <!--Pirate Battle Cruiser-->
-                <Weight>1</Weight>
-            </Item>
-        </ModOp>
-    </Group>
 </ModOps>

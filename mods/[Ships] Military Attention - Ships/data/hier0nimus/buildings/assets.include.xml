@@ -1,0 +1,274 @@
+<!-- 
+  Buildings
+-->
+
+<ModOps>
+
+    <!-- START ADD LARGE AIRSHIP HANGAR BUILDING MENU -->
+    <ModOp Type="addNextSibling" GUID='500447' Path="/Values/ConstructionCategory/BuildingList/Item[Building='403']">
+        <Item>
+            <Building>1742100663</Building>            <!-- Large Airship Hangar - Shipyard -->
+        </Item>
+    </ModOp>
+    <ModOp Type="addNextSibling" GUID='500092' Path="/Values/ConstructionCategory/BuildingList/Item[Building='7286']">
+        <Item>
+            <Building>1742100663</Building>            <!-- Large Airship Hangar - Shipyard -->
+        </Item>
+    </ModOp>
+    <!-- END ADD LARGE AIRSHIP HANGAR BUILDING MENU -->
+
+    <ModOp Type="addNextSibling" GUID='636'>
+        <Asset>
+            <Template>Monument_with_Shipyard</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742100663</GUID>
+                    <Name>Large Airship Hangar</Name>
+                    <IconFilename>data/ui/2kimages/main/3dicons/airship_platform/icon_airship_hangar_southamerica.png</IconFilename>
+                    <InfoDescription>1742100664</InfoDescription>
+                </Standard>
+                <Building>
+                    <PickingAsset>1742100663</PickingAsset>                    <!--AirshipHangar_Moderate_01_00-->
+                    <AssociatedRegions>Moderate</AssociatedRegions>
+                    <DeactivateHideWhenClippingIntoCamera>1</DeactivateHideWhenClippingIntoCamera>
+                    <SecondPartyRelevant>0</SecondPartyRelevant>
+                </Building>
+                <Blocking/>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!--Money-->
+                            <Amount>100000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010196</Ingredient>                            <!--timber-->
+                            <Amount>80</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010205</Ingredient>                            <!--bricks-->
+                            <Amount>90</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010218</Ingredient>                            <!-- Steel Beams - Product -->
+                            <Amount>100</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>838</Ingredient>                            <!--Aluminium-->
+                            <Amount>150</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010207</Ingredient>                            <!--window-->
+                            <Amount>40</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>151317</Ingredient>                            <!-- Concrete - Product -->
+                            <Amount>100</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010210</Ingredient>                            <!-- Sails - Product -->
+                            <Amount>100</Amount>
+                        </Item>
+                    </Costs>
+                </Cost>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/dlc11/graphics/buildings/special/airship_hangar/airship_hangar_moderate_04.cfg</Filename>
+                        </Item>
+                    </Variations>
+                    <Skins>
+                        <DefaultSkinName>636</DefaultSkinName>
+                        <DefaultSkinDescription>23853</DefaultSkinDescription>                        <!--ChangeBuildingSkin_toDefaultSkinDesc-->
+                        <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>                        <!--Classic-->
+                    </Skins>
+                </Object>
+                <Mesh/>
+                <Selection>
+                    <GUIType>Shipyard</GUIType>
+                    <OnSelection>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </OnSelection>
+                    <ParticipantMessageArcheType>Resident_tier04_atWork</ParticipantMessageArcheType>
+                </Selection>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>Large Airship Hangar</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>56044</LineID>
+                </Text>
+                <Constructable/>
+                <Locked>
+                    <DLCDependency>24962</DLCDependency>                    <!--Anno 1800 DLC - Empire of the Skies-->
+                </Locked>
+                <SoundEmitter>
+                    <ActiveSounds>
+                        <Item>
+                            <Sound>244542</Sound>                            <!--wwe_sfx_bld_monument_arctic_03_lp-->
+                        </Item>
+                    </ActiveSounds>
+                    <ConstructionSounds>
+                        <BuildSuccessful>
+                            <Item>
+                                <VectorElement>
+                                    <InheritedIndex>0</InheritedIndex>
+                                    <InheritanceMapV2>
+                                        <Entry>
+                                            <TemplateName>Monument</TemplateName>
+                                            <Index>0</Index>
+                                        </Entry>
+                                        <Entry>
+                                            <TemplateName>Monument_with_Shipyard</TemplateName>
+                                            <Index>0</Index>
+                                        </Entry>
+                                    </InheritanceMapV2>
+                                </VectorElement>
+                            </Item>
+                            <Item>
+                                <Sound>200912</Sound>                                <!--wwe_sfx_aui_finalize_monument_os-->
+                            </Item>
+                        </BuildSuccessful>
+                        <BuildUpgrade>
+                            <Item>
+                                <VectorElement>
+                                    <InheritedIndex>0</InheritedIndex>
+                                    <InheritanceMapV2>
+                                        <Entry>
+                                            <TemplateName>Monument</TemplateName>
+                                            <Index>0</Index>
+                                        </Entry>
+                                        <Entry>
+                                            <TemplateName>Monument_with_Shipyard</TemplateName>
+                                            <Index>0</Index>
+                                        </Entry>
+                                    </InheritanceMapV2>
+                                </VectorElement>
+                                <Sound>201232</Sound>                                <!--wwe_sfx_aui_bld_upgrade_monument-->
+                            </Item>
+                        </BuildUpgrade>
+                    </ConstructionSounds>
+                    <IncidentSounds>
+                        <InfectedFire>
+                            <Item>
+                                <Sound>214659</Sound>                                <!--wwe_sfx_bld_inc_burn-->
+                            </Item>
+                        </InfectedFire>
+                    </IncidentSounds>
+                </SoundEmitter>
+                <FeedbackController>
+                    <NightBehavior>HideNone</NightBehavior>
+                </FeedbackController>
+                <Infolayer/>
+                <FactoryBase/>
+                <LogisticNode>
+                    <TransporterCountMax>0</TransporterCountMax>
+                </LogisticNode>
+                <Monument>
+                    <UnfinishedIcon>500417</UnfinishedIcon>                    <!--MonumentPhase4-->
+                    <FinishedIcon>500421</FinishedIcon>                    <!--MonumentPhase4 completed-->
+                    <MonumentHeadline>636</MonumentHeadline>
+                    <ProgressbarHeight>150</ProgressbarHeight>
+                </Monument>
+                <Culture/>
+                <AmbientMoodProvider>
+                    <Murmur>DLC11_RigidAirshipHangar</Murmur>
+                </AmbientMoodProvider>
+                <Maintenance>
+                    <Maintenances>
+                        <Item>
+                            <Product>1010017</Product>                            <!--Money-->
+                            <Amount>3000</Amount>
+                            <InactiveAmount>2000</InactiveAmount>
+                        </Item>
+                        <Item>
+                            <Product>1010117</Product>                            <!--Egineers workforce-->
+                            <Amount>750</Amount>
+                        </Item>
+                    </Maintenances>
+                    <ConsumerPriorityAlarmed>2</ConsumerPriorityAlarmed>
+                    <IncomeCategory>HarbourBuildings</IncomeCategory>
+                </Maintenance>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                </Attackable>
+                <Pausable/>
+                <BuildingUnique/>
+                <UpgradeList/>
+                <QuestObject/>
+                <Shipyard>
+                    <AssemblyOptions>
+                        <Item>
+                            <Vehicle>1742100613</Vehicle>                            <!-- B42 (Helium) - AirShip -->
+                        </Item>
+                        <Item>
+                            <Vehicle>1742100629</Vehicle>                            <!-- B42 (Arctic Gas) - AirShip -->
+                        </Item>
+                        <Item>
+                            <Vehicle>1742100657</Vehicle>                            <!-- F42 (Helium) - Ship -->
+                        </Item>
+                        <Item>
+                            <Vehicle>1742100658</Vehicle>                            <!-- F42 (Arctic Gas) - Ship -->
+                        </Item>
+                        <Item>
+                            <Vehicle>1742100660</Vehicle>                            <!-- A42 (Helium) - Ship -->
+                        </Item>
+                        <Item>
+                            <Vehicle>1742100661</Vehicle>                            <!-- A42 (Arctic Gas) - Ship -->
+                        </Item>
+                    </AssemblyOptions>
+                    <AssemblyFilter>
+                        <Item>
+                            <FilterIcon>4393</FilterIcon>
+                            <!--All Airships-->
+                            <FilterInfotip>4393</FilterInfotip>
+                            <!--All Airships-->
+                            <TutorialID>3</TutorialID>
+                        </Item>
+                        <Item>
+                            <FilterType>NonAttacker</FilterType>
+                            <FilterIcon>4395</FilterIcon>
+                            <!--Trade Airships-->
+                            <FilterInfotip>4395</FilterInfotip>
+                            <!--Trade Airships-->
+                            <TutorialID>4</TutorialID>
+                        </Item>
+                        <Item>
+                            <FilterType>Attacker</FilterType>
+                            <FilterIcon>4394</FilterIcon>
+                            <!--Armed Airships-->
+                            <FilterInfotip>4394</FilterInfotip>
+                            <!--Armed Airships-->
+                            <TutorialID>5</TutorialID>
+                        </Item>
+                    </AssemblyFilter>
+                    <AdditionalTabData>
+                        <VisibilityUnlockAsset>180045</VisibilityUnlockAsset>
+                        <!--Arctic Session-->
+                        <HideTabsIfDLCNotActive>
+                            <Item>
+                                <DLC>410042</DLC>
+                                <!--Anno 1800 DLC - The Passage-->
+                            </Item>
+                        </HideTabsIfDLCNotActive>
+                    </AdditionalTabData>
+                </Shipyard>
+                <Heated>
+                    <RequiresHeat>0</RequiresHeat>
+                </Heated>
+                <Electrifiable/>
+                <Industrializable>
+                    <MandatoryIndustrialization>1</MandatoryIndustrialization>
+                </Industrializable>
+                <Electrifiable>
+                    <ElectricityBoost>0</ElectricityBoost>
+                </Electrifiable>
+            </Values>
+        </Asset>
+    </ModOp>
+
+</ModOps>

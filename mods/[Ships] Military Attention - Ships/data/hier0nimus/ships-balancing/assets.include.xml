@@ -525,4 +525,15 @@
     <ModOp Type="merge" GUID='140011' Path="/Values/TradeRouteFeature/TransportationTypes/Oil/MaxTradeActionsPerStation">
         <MaxTradeActionsPerStation>8</MaxTradeActionsPerStation>
     </ModOp>
+
+    <!-- Airships can attack seamines and bomb buildings -->
+    <ModOp Type="merge" GUID="140999" Path="/Values/MilitaryFeature/CanAttackTable/">
+        <HunterAirship>
+            <CanDamageUntargeted>Seamine;</CanDamageUntargeted>
+        </HunterAirship>
+        <BombardierAirship>
+            <CanDamageUntargeted>Seamine;Ship;HarbourBuilding;IslandBuilding</CanDamageUntargeted>
+        </BombardierAirship>
+    </ModOp>
+
 </ModOps>

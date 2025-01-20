@@ -4,25 +4,24 @@
 
 <ModOps>
 
-  <!--UNLOCK - ARTISANS  750 -->
+  <!--UNLOCK - Build Sailing Shipyard -->
   <ModOp Type="addnextSibling" GUID="130248">
     <Asset>
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742100754</GUID>
+          <GUID>1742100790</GUID>
           <Name>MOD Trigger</Name>
         </Standard>
         <Trigger>
           <TriggerCondition>
-            <Template>ConditionPlayerCounter</Template>
+            <Template>ConditionUnlocked</Template>
             <Values>
-              <Condition />
-              <ConditionPlayerCounter>
-                <PlayerCounter>PopulationByLevel</PlayerCounter>
-                <Context>15000002</Context>                <!-- Artisans PopulationLevel7 -->
-                <CounterAmount>750</CounterAmount>
-              </ConditionPlayerCounter>
+              <Condition/>
+              <ConditionUnlocked>
+                <UnlockNeeded>1010520</UnlockNeeded>                <!--harbor_02 (Sailing Shipyard)-->
+              </ConditionUnlocked>
+              <ConditionPropsNegatable/>
             </Values>
           </TriggerCondition>
           <TriggerActions>
@@ -236,7 +235,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742100772</GUID>
+          <GUID>1742100784</GUID>
           <Name>MOD Trigger</Name>
         </Standard>
         <Trigger>
@@ -269,6 +268,21 @@
                       </Item>
                       <Item>
                         <Asset>1742100629</Asset>                        <!-- B42 (Arctic Gas) - AirShip -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100657</Asset>                        <!-- F42 (Helium) - Ship -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100658</Asset>                        <!-- F42 (Arctic Gas) - Ship -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100660</Asset>                        <!-- A42 (Helium) - Ship -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100661</Asset>                        <!-- A42 (Arctic Gas) - Ship -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100663</Asset>                        <!-- Large Airship Hangar - Shipyard -->
                       </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>
@@ -402,6 +416,21 @@
                       </Item>
                       <Item>
                         <Asset>1742100625</Asset>                        <!-- Large Oil Tanker - Ship -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100657</Asset>                        <!-- F42 (Helium) - Ship -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100658</Asset>                        <!-- F42 (Arctic Gas) - Ship -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100660</Asset>                        <!-- A42 (Helium) - Ship -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100661</Asset>                        <!-- A42 (Arctic Gas) - Ship -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100663</Asset>                        <!-- Large Airship Hangar - Shipyard -->
                       </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>
