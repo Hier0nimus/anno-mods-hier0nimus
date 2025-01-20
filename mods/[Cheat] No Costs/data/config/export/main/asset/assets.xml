@@ -1,0 +1,114 @@
+<!-- 
+
+[Cheat] No Costs - v1.1
+  
+Created by Hier0nimus
+Cheat mod!
+
+Enjoy!
+
+-->
+
+<ModOps>
+
+  <!-- No building costs for buildings & ships -->
+  <ModOp Type="replace" Path="//Values/Cost">
+    <Cost/>
+  </ModOp>
+
+  <!-- No building costs for ships - Fix Airships - SA Gas -->
+  <ModOp Type="merge" GUID="1654,1654,1655,1056,1058,1059,1060,1755,114166" Path="/Values/Cost">
+    <Costs>
+      <Item>
+        <Ingredient>840</Ingredient>        <!--SA Gas-->
+        <Amount>1</Amount>
+      </Item>
+    </Costs>
+  </ModOp>
+
+  <!-- No building costs for ships - Fix Airships - AR Gas -->
+  <ModOp Type="merge" GUID="1731,1732,1733,1734,1735,1736,1737" Path="/Values/Cost">
+    <Costs>
+      <Item>
+        <Ingredient>112706</Ingredient>        <!--gas-->
+        <Amount>1</Amount>
+      </Item>
+    </Costs>
+  </ModOp>
+
+  <Group Condition="#military_attention_ships">
+    <ModOp Type="merge" GUID="1742100613,1742100657,1742100660" Path="/Values/Cost">
+      <Costs>
+        <Item>
+          <Ingredient>840</Ingredient>          <!--SA Gas-->
+          <Amount>1</Amount>
+        </Item>
+      </Costs>
+    </ModOp>
+    <ModOp Type="merge" GUID="1742100629,1742100658,1742100661" Path="/Values/Cost">
+      <Costs>
+        <Item>
+          <Ingredient>112706</Ingredient>          <!--gas-->
+          <Amount>1</Amount>
+        </Item>
+      </Costs>
+    </ModOp>
+  </Group>
+
+  <!-- No upgrade costs for residences -->
+  <ModOp Type="replace" Path="//Values/Upgradable/UpgradeCost">
+    <UpgradeCost/>
+  </ModOp>
+  <ModOp Type="replace" Path="//Values/FloorStackOwner/AddFloorCost">
+    <AddFloorCost/>
+  </ModOp>
+
+  <!-- No Maintenance costs ships -->
+  <ModOp Type="replace" Path="//Values/ShipMaintenance/Maintenance">
+    <Maintenance>0</Maintenance>
+  </ModOp>
+
+  <!-- No Maintenance costs no workforce buildings -->
+  <ModOp Type="replace" Path="//Values/Maintenance">
+    <Maintenance/>
+  </ModOp>
+
+  <!-- Fix for Research Institute so it still works -->
+  <ModOp Type="replace" GUID="118940" Path="/Values/Maintenance">
+    <Maintenance>
+      <Maintenances>
+        <Item>
+          <Product>1010117</Product>          <!--moderate workforce 4-->
+        </Item>
+      </Maintenances>
+    </Maintenance>
+  </ModOp>
+
+  <!-- Fix for Iron Tower so it still works -->
+  <ModOp Type="replace" GUID="132770" Path="/Values/Maintenance">
+    <Maintenance>
+      <Maintenances>
+        <Item>
+          <Product>132723</Product>          <!--Tourist Workforce-->
+          <Amount>200</Amount>
+        </Item>
+      </Maintenances>
+    </Maintenance>
+  </ModOp>
+
+  <!-- No (1) research costs -->
+  <ModOp Type="replace" GUID='128475,128952,128953,128954,128955,129525,126888,123401' Path="/Values/ProgressBalancing">
+    <ProgressBalancing>
+      <Progress>
+        <Item>
+          <Value>1</Value>
+        </Item>
+      </Progress>
+      <PostProgress>
+        <ThresholdInterval>0</ThresholdInterval>
+        <ValueIncrease>0</ValueIncrease>
+      </PostProgress>
+    </ProgressBalancing>
+  </ModOp>
+
+</ModOps>
