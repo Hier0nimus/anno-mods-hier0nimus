@@ -1,0 +1,704 @@
+<!-- 
+  
+  v1.0
+
+  [Gameplay] Open Pit Mines
+  Enjoy!
+
+1742100163 - Open Pit Iron Mine - Building
+1742100602 - Open Pit Iron Mine (NW) - Building
+1742100164 - Open Pit Iron Mine - Building - Description
+1742100165 - Open Pit Coal Mine - Building
+1742100603 - Open Pit Coal Mine (NW) - Building
+1742100166 - Open Pit Coal Mine - Building - Description
+
+1742100785 - Unlock 300 Workers
+1742100786 - Unlock 300 Jornaleros
+1742100787 - Unlock Creative Mode
+
+-->
+
+<ModOps>
+
+  <!-- START BUILDING - OPEN PIT IRON MINE -->
+  <ModOp Type="addNextSibling" GUID='1010284'>
+    <Asset>
+      <Template>FactoryBuilding7</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100163</GUID>
+          <Name>Open Pit Iron Mine</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_iron.png</IconFilename>
+          <Description>1742100164</Description>
+        </Standard>
+        <Building>
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <AssociatedRegions>Moderate</AssociatedRegions>
+          <SecondPartyRelevant>0</SecondPartyRelevant>
+        </Building>
+        <Blocking>
+          <BlockWater>1</BlockWater>
+        </Blocking>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>1000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>25</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/production/open_pit/open_pit_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Mesh />
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>Resident_tier02_atWork</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Text />
+        <Constructable />
+        <Locked />
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>239444</Sound>
+            </Item>
+            <Item>
+              <Sound>239332</Sound>
+            </Item>
+          </ActiveSounds>
+          <IncidentSounds>
+            <InfectedFire>
+              <Item>
+                <Sound>214659</Sound>
+              </Item>
+            </InfectedFire>
+          </IncidentSounds>
+        </SoundEmitter>
+        <FeedbackController />
+        <Infolayer />
+        <UpgradeList />
+        <Factory7 />
+        <FactoryBase>
+          <FactoryOutputs>
+            <Item>
+              <Product>1010227</Product>              <!-- Iron -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+          </FactoryOutputs>
+          <CycleTime>30</CycleTime>
+          <IsMainFactory>0</IsMainFactory>
+        </FactoryBase>
+        <LogisticNode />
+        <AmbientMoodProvider>
+          <Murmur>Factory</Murmur>
+          <DynamicEnvironmentType>None</DynamicEnvironmentType>
+        </AmbientMoodProvider>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>50</Amount>
+              <InactiveAmount>25</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1010115</Product>              <!-- Workers Workforce -->
+              <Amount>30</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+          <MaximumHitPoints>5000</MaximumHitPoints>
+          <SelfHealPerHealTick>6</SelfHealPerHealTick>
+        </Attackable>
+        <Pausable />
+        <IncidentInfectable>
+          <Infectable>
+            <Explosion>
+              <Base>0</Base>
+              <Escalated>0</Escalated>
+            </Explosion>
+          </Infectable>
+          <Explosion>
+            <ExplosionCoreDamage>1000</ExplosionCoreDamage>
+          </Explosion>
+          <IncidentInfectionChanceFactors>
+            <Fire>
+              <DensityDistance>20</DensityDistance>
+              <FactoryProductivityFactor>0.1</FactoryProductivityFactor>
+              <FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
+            </Fire>
+            <Riot>
+              <FactoryOvertimeFactor>0.4</FactoryOvertimeFactor>
+              <FactoryUndertimeFactor>0.2</FactoryUndertimeFactor>
+              <FactoryHappinessFactor>0.2</FactoryHappinessFactor>
+              <HappinessThreshold>20</HappinessThreshold>
+            </Riot>
+          </IncidentInfectionChanceFactors>
+        </IncidentInfectable>
+        <Industrializable>
+          <BoostedByIndustrialization>0</BoostedByIndustrialization>
+        </Industrializable>
+        <Culture>
+          <Attractiveness>-10</Attractiveness>
+          <HasPollution>1</HasPollution>
+        </Culture>
+        <QuestObject />
+        <EcoSystemProvider />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - OPEN PIT IRON MINE -->
+
+  <!-- START BUILDING - OPEN PIT IRON MINE - NW -->
+  <ModOp Type="addNextSibling" GUID='1742100163'>
+    <Asset>
+      <BaseAssetGUID>1742100163</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742100602</GUID>
+          <Name>Open Pit Iron Mine (NW)</Name>
+        </Standard>
+        <Building>
+          <AssociatedRegions>Colony01</AssociatedRegions>
+        </Building>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/production/open_pit/open_pit_nw_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>SA_Resident_tier01_atWork</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <FactoryBase>
+          <IsMainFactory>0</IsMainFactory>
+        </FactoryBase>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>50</Amount>
+              <InactiveAmount>25</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1010366</Product>              <!-- Jornalero Workforce -->
+              <Amount>30</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - OPEN PIT IRON MINE - NW -->
+
+  <!-- START BUILDING - OPEN PIT COAL MINE -->
+  <ModOp Type="addNextSibling" GUID='1010284'>
+    <Asset>
+      <Template>FactoryBuilding7</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100165</GUID>
+          <Name>Open Pit Coal Mine</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_coal_2.png</IconFilename>
+          <Description>1742100166</Description>
+        </Standard>
+        <Building>
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <AssociatedRegions>Moderate</AssociatedRegions>
+          <SecondPartyRelevant>0</SecondPartyRelevant>
+        </Building>
+        <Blocking>
+          <BlockWater>1</BlockWater>
+        </Blocking>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>1000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>25</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/production/open_pit/open_pit_02.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Mesh />
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>Resident_tier02_atWork</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Text />
+        <Constructable />
+        <Locked />
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>239444</Sound>
+            </Item>
+            <Item>
+              <Sound>239332</Sound>
+            </Item>
+          </ActiveSounds>
+          <IncidentSounds>
+            <InfectedFire>
+              <Item>
+                <Sound>214659</Sound>
+              </Item>
+            </InfectedFire>
+          </IncidentSounds>
+        </SoundEmitter>
+        <FeedbackController />
+        <Infolayer />
+        <UpgradeList />
+        <Factory7 />
+        <FactoryBase>
+          <FactoryOutputs>
+            <Item>
+              <Product>1010226</Product>              <!-- Coal -->
+              <Amount>1</Amount>
+              <StorageAmount>8</StorageAmount>
+            </Item>
+          </FactoryOutputs>
+          <CycleTime>15</CycleTime>
+          <IsMainFactory>0</IsMainFactory>
+        </FactoryBase>
+        <LogisticNode />
+        <AmbientMoodProvider>
+          <Murmur>Factory</Murmur>
+          <DynamicEnvironmentType>None</DynamicEnvironmentType>
+        </AmbientMoodProvider>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>30</Amount>
+              <InactiveAmount>25</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1010115</Product>              <!-- Soldiers Workforce -->
+              <Amount>20</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+          <MaximumHitPoints>5000</MaximumHitPoints>
+          <SelfHealPerHealTick>6</SelfHealPerHealTick>
+        </Attackable>
+        <Pausable />
+        <IncidentInfectable>
+          <Infectable>
+            <Explosion>
+              <Base>0</Base>
+              <Escalated>0</Escalated>
+            </Explosion>
+          </Infectable>
+          <Explosion>
+            <ExplosionCoreDamage>1000</ExplosionCoreDamage>
+          </Explosion>
+          <IncidentInfectionChanceFactors>
+            <Fire>
+              <DensityDistance>20</DensityDistance>
+              <FactoryProductivityFactor>0.1</FactoryProductivityFactor>
+              <FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
+            </Fire>
+            <Riot>
+              <FactoryOvertimeFactor>0.4</FactoryOvertimeFactor>
+              <FactoryUndertimeFactor>0.2</FactoryUndertimeFactor>
+              <FactoryHappinessFactor>0.2</FactoryHappinessFactor>
+              <HappinessThreshold>20</HappinessThreshold>
+            </Riot>
+          </IncidentInfectionChanceFactors>
+        </IncidentInfectable>
+        <Industrializable>
+          <BoostedByIndustrialization>0</BoostedByIndustrialization>
+        </Industrializable>
+        <Culture>
+          <Attractiveness>-10</Attractiveness>
+          <HasPollution>1</HasPollution>
+        </Culture>
+        <QuestObject />
+        <Electrifiable />
+        <EcoSystemProvider />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - OPEN PIT COAL MINE -->
+
+  <!-- START BUILDING - OPEN PIT COAL MINE - NW -->
+  <ModOp Type="addNextSibling" GUID='1742100163'>
+    <Asset>
+      <BaseAssetGUID>1742100165</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742100603</GUID>
+          <Name>Open Pit Coal Mine (NW)</Name>
+        </Standard>
+        <Building>
+          <AssociatedRegions>Colony01</AssociatedRegions>
+        </Building>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/production/open_pit/open_pit_nw_02.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>SA_Resident_tier01_atWork</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <FactoryBase>
+          <IsMainFactory>0</IsMainFactory>
+        </FactoryBase>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>50</Amount>
+              <InactiveAmount>25</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1010366</Product>              <!-- Jornalero Workforce -->
+              <Amount>30</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - OPEN PIT COAL MINE - NW -->
+
+  <!-- START ADD PRODUCTION BUILDINGS TO WORKFORCE MENU -->
+  <ModOp Type="add" GUID="25000087" Path="/Values/WorkforceMenu/BoostableFactories">
+    <Item>
+      <Factory>1742100163</Factory>
+    </Item>
+    <Item>
+      <Factory>1742100165</Factory>
+    </Item>
+    <Item>
+      <Factory>1742100602</Factory>
+    </Item>
+    <Item>
+      <Factory>1742100603</Factory>
+    </Item>
+  </ModOp>
+  <!-- END ADD PRODUCTION BUILDINGS TO WORKFORCE MENU -->
+
+  <!-- START - ADD BUILDINGS TO MINES AND QUARRIES & ALL OLD WORLD MINES -->
+  <ModOp GUID='190786,1949' Type="add" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
+    <Item>
+      <GUID>1742100163</GUID>
+    </Item>
+    <Item>
+      <GUID>1742100165</GUID>
+    </Item>
+    <Item>
+      <GUID>1742100602</GUID>
+    </Item>
+    <Item>
+      <GUID>1742100603</GUID>
+    </Item>
+  </ModOp>
+  <!-- END - ADD BUILDINGS TO MINES AND QUARRIES -->
+
+  <!-- START - ADD BUILDINGS TO ALL WEAPONS PRODUCTION CHAIN -->
+  <ModOp GUID='192436' Type="add" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
+    <Item>
+      <GUID>1742100163</GUID>
+    </Item>
+    <Item>
+      <GUID>1742100165</GUID>
+    </Item>
+    <Item>
+      <GUID>1742100602</GUID>
+    </Item>
+    <Item>
+      <GUID>1742100603</GUID>
+    </Item>
+  </ModOp>
+  <!-- END - ADD BUILDINGS TO ALL WEAPONS PRODUCTION CHAIN -->
+
+  <!-- START ADD TO GLOBAL MAINTENANCE POOLS -->
+  <ModOp Type="add" GUID="368" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
+    <Item>
+      <GUID>1742100163</GUID>
+    </Item>
+    <Item>
+      <GUID>1742100165</GUID>
+    </Item>
+    <Item>
+      <GUID>1742100602</GUID>
+    </Item>
+    <Item>
+      <GUID>1742100603</GUID>
+    </Item>
+  </ModOp>
+  <!-- START ADD TO GLOBAL MAINTENANCE POOLS -->
+
+  <!-- START ADD TO GLOBAL PRODUCTION POOLS -->
+  <ModOp Type="add" GUID="6000018,193856" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
+    <Item>
+      <GUID>1742100163</GUID>
+    </Item>
+    <Item>
+      <GUID>1742100165</GUID>
+    </Item>
+    <Item>
+      <GUID>1742100602</GUID>
+    </Item>
+    <Item>
+      <GUID>1742100603</GUID>
+    </Item>
+  </ModOp>
+  <!-- START ADD TO GLOBAL PRODUCTION POOLS -->
+
+  <!-- START ADD TO CONSTRUCTION MENU -->
+  <ModOp Type="addNextSibling" GUID='25000190' Path="/Values/ConstructionCategory/BuildingList/Item[Building='500005']">
+    <Item>
+      <Building>1742100165</Building>
+    </Item>
+    <Item>
+      <Building>1742100163</Building>
+    </Item>
+  </ModOp>
+  <ModOp Type="addNextSibling" GUID='500945' Path="/Values/ConstructionCategory/BuildingList/Item[Building='500004']">
+    <Item>
+      <Building>1742100165</Building>
+    </Item>
+    <Item>
+      <Building>1742100163</Building>
+    </Item>
+  </ModOp>
+  <ModOp Type="addPrevSibling" GUID='25000194' Path="/Values/ConstructionCategory/BuildingList/Item[Building='1351']">
+    <Item>
+      <Building>1742100603</Building>
+    </Item>
+    <Item>
+      <Building>1742100602</Building>
+    </Item>
+  </ModOp>
+  <ModOp Type="addPrevSibling" GUID='500950' Path="/Values/ConstructionCategory/BuildingList/Item[Building='101311']">
+    <Item>
+      <Building>1742100603</Building>
+    </Item>
+    <Item>
+      <Building>1742100602</Building>
+    </Item>
+  </ModOp>
+  <!-- END ADD TO CONSTRUCTION MENU -->
+
+
+  <!--UNLOCK - WORKERS 300 -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100785</GUID>
+          <Name>MOD Trigger</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>15000001</Context>                <!-- Workers PopulationLevel7 -->
+                <CounterAmount>150</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
+                      <Item>
+                        <Asset>1742100602</Asset>                        <!-- Open Pit Iron Mine (NW) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100603</Asset>                        <!-- Open Pit Coal Mine (NW) - Building -->
+                      </Item>
+                    </UnhideAssets>
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>1742100163</Asset>                        <!-- Open Pit Iron Mine - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100165</Asset>                        <!-- Open Pit Coal Mine - Building -->
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!--UNLOCK - Jornaleros 300 -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100786</GUID>
+          <Name>MOD Trigger</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>15000005</Context>                <!-- Jornaleros PopulationLevel7 -->
+                <CounterAmount>150</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
+                    </UnhideAssets>
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>1742100602</Asset>                        <!-- Open Pit Iron Mine (NW) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100603</Asset>                        <!-- Open Pit Coal Mine (NW) - Building -->
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <ModOp Type="addNextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100787</GUID>
+          <Name>Unlock Creative Mode</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionIsCreativeMode</Template>
+            <Values>
+              <Condition />
+              <ConditionIsCreativeMode />
+              <ConditionPropsNegatable />
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>1742100163</Asset>                        <!-- Open Pit Iron Mine - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100165</Asset>                        <!-- Open Pit Coal Mine - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100602</Asset>                        <!-- Open Pit Iron Mine (NW) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100603</Asset>                        <!-- Open Pit Coal Mine (NW) - Building -->
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+          <ResetTrigger>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <EmptyAutoCreateValue />
+            </Values>
+          </ResetTrigger>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+
+</ModOps>

@@ -1,0 +1,38 @@
+<ModOps>
+  <!-- New Icons for Research Categories -->
+  <Group>
+    <ModOp Type="replace" GUID='124844' Path="/Values/Standard/IconFilename">      <!-- Permit City and Industry -->
+      <IconFilename>data/modgraphics/icons/icon_Industry_permit.png</IconFilename>
+    </ModOp>
+    <ModOp Type="merge" GUID='124843' Path="/Values/Standard/IconFilename">      <!-- Permit Harbor and Ships -->
+      <Standard>
+        <IconFilename>data/ui/2kimages/main/3dicons/major_discoveries/icon_high_tech_pier.png</IconFilename>
+      </Standard>
+      <Godlike>
+        <BuildPermit>131205</BuildPermit>
+      </Godlike>
+    </ModOp>
+  </Group>
+  <!-- Change Permit Group for Advanced Piers-->
+  <Group>
+    <ModOp Type="Remove" GUID='125266' Path="/Values/BuildPermitGroup/Group/Item[BuildPermit='125028']"></ModOp>
+    <ModOp Type="Remove" GUID='125266' Path="/Values/BuildPermitGroup/Group/Item[BuildPermit='125191']"></ModOp>
+    <ModOp Type="Remove" GUID='125266' Path="/Values/BuildPermitGroup/Group/Item[BuildPermit='125192']"></ModOp>
+    <ModOp Type="Remove" GUID='125266' Path="/Values/BuildPermitGroup/Group/Item[BuildPermit='125193']"></ModOp>
+
+    <ModOp Type="add" GUID='131205' Path="/Values/BuildPermitGroup/Group">      <!-- Permit Group Great Eastern (Now Harbor and Ships) -->
+      <Item>
+        <BuildPermit>125028</BuildPermit>
+      </Item>
+      <Item>
+        <BuildPermit>125191</BuildPermit>
+      </Item>
+      <Item>
+        <BuildPermit>125192</BuildPermit>
+      </Item>
+      <Item>
+        <BuildPermit>125193</BuildPermit>
+      </Item>
+    </ModOp>
+  </Group>
+</ModOps>
