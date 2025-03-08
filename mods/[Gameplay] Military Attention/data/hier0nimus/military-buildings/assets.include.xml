@@ -1255,10 +1255,6 @@
               <Ingredient>1010205</Ingredient>              <!-- Bricks - Product -->
               <Amount>10</Amount>
             </Item>
-            <Item>
-              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product -->
-              <Amount>2</Amount>
-            </Item>
           </Costs>
         </Cost>
         <Object>
@@ -1376,10 +1372,6 @@
               <Ingredient>1010205</Ingredient>              <!-- Bricks - Product -->
               <Amount>10</Amount>
             </Item>
-            <Item>
-              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product -->
-              <Amount>2</Amount>
-            </Item>
           </Costs>
         </Cost>
         <Object>
@@ -1496,10 +1488,6 @@
             <Item>
               <Ingredient>114402</Ingredient>              <!-- Mud Bricks - Product -->
               <Amount>10</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product-->
-              <Amount>2</Amount>
             </Item>
           </Costs>
         </Cost>
@@ -7041,6 +7029,109 @@
   </ModOp>
   <!-- END BUILDING - MILITARY POST BOX -->
 
+  <!-- ****************** START NAVY RECRUITMENT KIOSK - Building ******************  -->
+  <ModOp Type="addNextSibling" GUID='1010284'>
+    <Asset>
+      <Template>NavyRecruitmentOffice</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100689</GUID>
+          <Name>Navy Recruitment Kiosk</Name>
+          <IconFilename>data/graphics/icons/icon_navy_recruitment_office.png</IconFilename>
+          <InfoDescription>1742100535</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildModeRandomRotation>90</BuildModeRandomRotation>
+          <AssociatedRegions>Moderate</AssociatedRegions>
+          <SecondPartyRelevant>0</SecondPartyRelevant>
+        </Building>
+        <Blocking />
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <Amount>1500</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>
+              <Amount>8</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/military/naval_recruitment_kiosk/naval_recruitment_kiosk_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Selection>
+          <GUIType>Production</GUIType>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+        </Selection>
+        <FactoryBase>
+          <FactoryOutputs>
+            <Item>
+              <Product>1742100533</Product>
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+          </FactoryOutputs>
+          <CycleTime>90</CycleTime>
+          <WarehouseTransporterAsset>829</WarehouseTransporterAsset>
+          <MissingConnectionInfolayer>0</MissingConnectionInfolayer>
+          <IsMainFactory>0</IsMainFactory>
+        </FactoryBase>
+        <LogisticNode>
+          <TransporterAsset>829</TransporterAsset>
+          <TransporterCountMax>2</TransporterCountMax>
+          <NeedsTransporterQueue>1</NeedsTransporterQueue>
+          <HideTransportersBeforeTheyMove>1</HideTransportersBeforeTheyMove>
+        </LogisticNode>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>              <!-- Coins -->
+              <Amount>15</Amount>
+              <InactiveAmount>10</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1010115</Product>              <!-- Workers Workforce -->
+              <Amount>2</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Pausable />
+        <UpgradeList />
+        <ItemContainer>
+          <SocketAllocation>Mod11</SocketAllocation>
+          <SocketCount>1</SocketCount>
+          <SocketScope>Radius</SocketScope>
+          <SocketScopeRadius>7</SocketScopeRadius>
+          <SocketScopeRadiusOverlapCategory>Mod11</SocketScopeRadiusOverlapCategory>
+        </ItemContainer>
+        <BuffFactory />
+        <PublicService />
+        <Postbox />
+        <Warehouse>
+          <WarehouseStorage>
+            <StorageMax>20</StorageMax>
+          </WarehouseStorage>
+          <StorageType>Warehouse</StorageType>
+        </Warehouse>
+        <StorageBase>
+          <ProductStorageList>1742100532</ProductStorageList>
+        </StorageBase>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- ****************** END NAVY RECRUITMENT KIOSK (OW) - Building ******************  -->
+
   <!-- ****************** START NAVY RECRUITMENT OFFICE (OW) - Building ******************  -->
   <ModOp Type="addNextSibling" GUID='1010284'>
     <Asset>
@@ -7052,7 +7143,11 @@
           <IconFilename>data/graphics/icons/icon_navy_recruitment_office.png</IconFilename>
           <InfoDescription>1742100535</InfoDescription>
         </Standard>
-        <Building />
+        <Building>
+          <BuildModeRandomRotation>90</BuildModeRandomRotation>
+          <AssociatedRegions>Moderate</AssociatedRegions>
+          <SecondPartyRelevant>0</SecondPartyRelevant>
+        </Building>
         <Blocking />
         <Cost>
           <Costs>
@@ -7159,6 +7254,8 @@
         </Standard>
         <Building>
           <AssociatedRegions>Colony01</AssociatedRegions>
+          <BuildModeRandomRotation>90</BuildModeRandomRotation>
+          <SecondPartyRelevant>0</SecondPartyRelevant>
         </Building>
         <Object>
           <Variations>
@@ -7208,6 +7305,8 @@
         </Standard>
         <Building>
           <AssociatedRegions>Africa</AssociatedRegions>
+          <BuildModeRandomRotation>90</BuildModeRandomRotation>
+          <SecondPartyRelevant>0</SecondPartyRelevant>
         </Building>
         <Cost>
           <Costs>
@@ -7334,6 +7433,8 @@
         </Standard>
         <Building>
           <AssociatedRegions>Arctic</AssociatedRegions>
+          <BuildModeRandomRotation>90</BuildModeRandomRotation>
+          <SecondPartyRelevant>0</SecondPartyRelevant>
         </Building>
         <Object>
           <Variations>

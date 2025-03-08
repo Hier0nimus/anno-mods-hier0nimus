@@ -1,4 +1,5 @@
 <ModOps>
+
 	<ModOp Type="addNextSibling" Path="//Template[Name='Hacienda']">
 		<Template>
 			<Name>MilitaryHQ</Name>
@@ -757,6 +758,11 @@
 				<BuffFactory />
 			</Properties>
 		</Template>
+	</ModOp>
+
+	<!-- INCREASE MATERIAL PRODUCTION FOR AI ON HGHEST LEVEL -->
+	<ModOp Template="Profile_2ndParty" Type="merge" Path="/Properties/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/Item/">
+		<SimulatedItemProductivity>2</SimulatedItemProductivity>
 	</ModOp>
 
 </ModOps>
