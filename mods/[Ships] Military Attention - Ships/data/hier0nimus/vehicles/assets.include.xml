@@ -25,6 +25,9 @@
     </ModOp>
     <ModOp Type="addPrevSibling" GUID='1010521' Path="/Values/Shipyard/AssemblyOptions/Item[Vehicle='100442']">
         <Item>
+            <Vehicle>1742100615</Vehicle>            <!-- Ironclad Cruiser -->
+        </Item>
+        <Item>
             <Vehicle>1742100583</Vehicle>            <!-- Small Battle Cruiser -->
         </Item>
     </ModOp>
@@ -41,9 +44,6 @@
             <Vehicle>1742100589</Vehicle>            <!-- Corvette -->
         </Item>
         <Item>
-            <Vehicle>1742100615</Vehicle>            <!-- Ironclad Cruiser -->
-        </Item>
-        <Item>
             <Vehicle>1742100609</Vehicle>            <!-- Flak Ironclad -->
         </Item>
         <Item>
@@ -51,6 +51,9 @@
         </Item>
         <Item>
             <Vehicle>1742100585</Vehicle>            <!-- Heavy Battle Cruiser -->
+        </Item>
+        <Item>
+            <Vehicle>1742100690</Vehicle>            <!-- Heavy Battle Cruiser (AI) -->
         </Item>
     </ModOp>
     <!-- END ADDING SHIPS TO STEAM SHIPYARD -->
@@ -678,7 +681,7 @@
                 <Attacker>
                     <AttackRange>75</AttackRange>                    <!-- Battle Cruiser 84 - 85 -->
                     <BaseDamage>544</BaseDamage>                    <!-- Battle Cruiser 280 - 1370 -->
-                    <ReloadTime>140</ReloadTime>                    <!-- Battle Cruiser 70 - 150 -->
+                    <ReloadTime>130</ReloadTime>                    <!-- Battle Cruiser 70 - 150 -->
                     <LineOfSightRange>80</LineOfSightRange>                    <!-- Battle Cruiser 100 -->
                     <Turrets>
                         <Item>
@@ -767,7 +770,7 @@
                     <InfluenceCostPoints>10</InfluenceCostPoints>                    <!-- Battle Cruiser 24 -->
                 </Cost>
                 <Craftable>
-                    <CraftingTime>250000</CraftingTime>                    <!-- Battle Cruiser 900000 -->
+                    <CraftingTime>240000</CraftingTime>                    <!-- Battle Cruiser 900000 -->
                 </Craftable>
                 <ExpeditionAttribute>
                     <BaseMorale>25</BaseMorale>                    <!-- Battle Cruiser 50 -->
@@ -867,7 +870,7 @@
                 <Walking>
                     <ShortenSailsAfter>0</ShortenSailsAfter>
                     <ReservationLength>24</ReservationLength>                    <!-- Battle Cruiser 16 -->
-                    <ReservationWidth>9</ReservationWidth>                    <!-- Battle Cruiser 6 -->
+                    <ReservationWidth>10</ReservationWidth>                    <!-- Battle Cruiser 6 -->
                     <PathPlannerLayer>Water</PathPlannerLayer>
                     <ExpensiveDirSmoothing>1</ExpensiveDirSmoothing>
                     <TurnAroundRadius>28</TurnAroundRadius>                    <!-- Battle Cruiser 8 - 18 -->
@@ -901,14 +904,14 @@
                 </CommandQueue>
                 <Drifting>
                     <OverrideAssetWidthAndLength>0</OverrideAssetWidthAndLength>
-                    <Length>14</Length>                    <!-- Battle Cruiser 10 -->
-                    <Width>2.2</Width>                    <!-- Battle Cruiser 1.75 -->
+                    <Length>22</Length>                    <!-- Battle Cruiser 10 -->
+                    <Width>8</Width>                    <!-- Battle Cruiser 1.75 -->
                     <FactorMovement>0.7</FactorMovement>                    <!-- Battle Cruiser 0.7 -->
                     <FactorRotation>0.65</FactorRotation>                    <!-- Battle Cruiser 0.65 -->
                 </Drifting>
                 <Collector/>
                 <Attackable>
-                    <MaximumHitPoints>11500</MaximumHitPoints>                    <!-- Battle Cruiser 6000 - 8250 -->
+                    <MaximumHitPoints>12500</MaximumHitPoints>                    <!-- Battle Cruiser 6000 - 8250 -->
                     <AlertRange>165</AlertRange>                    <!-- Battle Cruiser 150 -->
                     <HPBarOffset>6.5</HPBarOffset>                    <!-- Battle Cruiser 280 -->
                     <AccuracyWidth>12</AccuracyWidth>                    <!-- Battle Cruiser 8 -->
@@ -1181,6 +1184,352 @@
         </Item>
     </ModOp>
 
+    <ModOp Type="addNextSibling" GUID='100442'>
+        <Asset>
+            <BaseAssetGUID>100442</BaseAssetGUID>
+            <Values>
+                <Standard>
+                    <GUID>1742100690</GUID>
+                    <Name>Heavy Battle Cruiser (AI)</Name>
+                    <IconFilename>data/graphics/icons/icon_heavy_battlecruiser.png</IconFilename>
+                    <InfoDescription>1742100586</InfoDescription>
+                </Standard>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/vehicle/heavy_battle_cruiser/heavy_battle_cruiser.cfg</Filename>
+                        </Item>
+                    </Variations>
+                    <Skins>
+                        <DefaultSkinName>1742100585</DefaultSkinName>
+                        <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>                        <!--Classic-->
+                        <SkinList>
+                            <Item>
+                                <SkinAssetGuid>1742100677</SkinAssetGuid>
+                            </Item>
+                            <Item>
+                                <SkinAssetGuid>1742100678</SkinAssetGuid>
+                            </Item>
+                            <Item>
+                                <SkinAssetGuid>1742100679</SkinAssetGuid>
+                            </Item>
+                            <Item>
+                                <SkinAssetGuid>1742100680</SkinAssetGuid>
+                            </Item>
+                            <Item>
+                                <SkinAssetGuid>1742100681</SkinAssetGuid>
+                            </Item>
+                        </SkinList>
+                    </Skins>
+                </Object>
+                <Mesh>
+                    <MeshPlacement>OnWaterSlope</MeshPlacement>
+                </Mesh>
+                <Selection>
+                    <MultiSelectable>1</MultiSelectable>
+                    <OnSelection>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </OnSelection>
+                </Selection>
+                <Walking>
+                    <ShortenSailsAfter>0</ShortenSailsAfter>
+                    <ReservationLength>24</ReservationLength>                    <!-- Battle Cruiser 16 -->
+                    <ReservationWidth>10</ReservationWidth>                    <!-- Battle Cruiser 6 -->
+                    <PathPlannerLayer>Water</PathPlannerLayer>
+                    <ExpensiveDirSmoothing>1</ExpensiveDirSmoothing>
+                    <TurnAroundRadius>28</TurnAroundRadius>                    <!-- Battle Cruiser 8 - 18 -->
+                    <Acceleration>0.30</Acceleration>                    <!-- Battle Cruiser 0.75 - 0.45 -->
+                    <Deceleration>0.4</Deceleration>                    <!-- Battle Cruiser 1 - 0.5 -->
+                    <TurnRadius>20</TurnRadius>                    <!-- Battle Cruiser 8 - 15 -->
+                    <TurnDeceleration>0</TurnDeceleration>                    <!-- Battle Cruiser 0 -->
+                    <TurnMovement>0</TurnMovement>                    <!-- Battle Cruiser 0 -->
+                    <LeaningMaxAngle>-10</LeaningMaxAngle>                    <!-- Battle Cruiser -10 -->
+                    <ForwardSpeed>3.2</ForwardSpeed>                    <!-- Battle Cruiser 4.5 - 5.4 -->
+                    <WindMinSlowdownFactor>1</WindMinSlowdownFactor>                    <!-- Battle Cruiser 1 -->
+                    <WindMaxSpeedupFactor>1</WindMaxSpeedupFactor>                    <!-- Battle Cruiser 1 -->
+                    <CargoFullFactor>0.5</CargoFullFactor>                    <!-- Battle Cruiser 0.7 - 0.9 -->
+                    <DamageFullFactor>0.5</DamageFullFactor>                    <!-- Battle Cruiser 0.5 - 0.8 -->
+                    <MinSlowdownFactor>0.5</MinSlowdownFactor>                    <!-- Battle Cruiser 0.5 - 0.6 -->
+                    <CurveSegmentDensity>High</CurveSegmentDensity>
+                </Walking>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>Heavy Battle Cruiser</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>14857</LineID>
+                </Text>
+                <CommandQueue>
+                    <FormationPriority>2</FormationPriority>
+                    <MilitaryShipPoints>25</MilitaryShipPoints>                    <!-- Battle Cruiser - 6 -->
+                    <PriorityShipList>1</PriorityShipList>
+                </CommandQueue>
+                <Drifting>
+                    <OverrideAssetWidthAndLength>0</OverrideAssetWidthAndLength>
+                    <Length>22</Length>                    <!-- Battle Cruiser 10 -->
+                    <Width>8</Width>                    <!-- Battle Cruiser 1.75 -->
+                    <FactorMovement>0.7</FactorMovement>                    <!-- Battle Cruiser 0.7 -->
+                    <FactorRotation>0.65</FactorRotation>                    <!-- Battle Cruiser 0.65 -->
+                </Drifting>
+                <Collector/>
+                <Attackable>
+                    <MaximumHitPoints>14500</MaximumHitPoints>                    <!-- Battle Cruiser 6000 - 8250 -->
+                    <AlertRange>165</AlertRange>                    <!-- Battle Cruiser 150 -->
+                    <HPBarOffset>6.5</HPBarOffset>                    <!-- Battle Cruiser 280 -->
+                    <AccuracyWidth>12</AccuracyWidth>                    <!-- Battle Cruiser 8 -->
+                    <ArmorType>HeavyArmor</ArmorType>
+                    <SelfHealPerHealTick>2.1</SelfHealPerHealTick>                    <!-- Battle Cruiser 1.667 -->
+                    <SelfHealPausedTimeIfAttacked>20000</SelfHealPausedTimeIfAttacked>                    <!-- Battle Cruiser 60000 -->
+                </Attackable>
+                <Attacker>
+                    <ShootingTracking>TurretFixed</ShootingTracking>
+                    <BaseDamage>2750</BaseDamage>                    <!-- Battle Cruiser 280 - 1250 -->
+                    <ReloadTime>100</ReloadTime>                    <!-- Battle Cruiser 70 - 140 -->
+                    <AttackRange>88</AttackRange>                    <!-- Battle Cruiser 84 - 85 -->
+                    <LineOfSightRange>125</LineOfSightRange>                    <!-- Battle Cruiser 100 -->
+                    <Turrets>
+                        <Item>
+                            <TurnSpan>300</TurnSpan>
+                            <TurretCfg>data/graphics/vehicle/battle_cruiser/battle_cruiser_turret_01.cfg</TurretCfg>
+                        </Item>
+                        <Item>
+                            <TurnSpan>300</TurnSpan>
+                            <TurretCfg>data/graphics/vehicle/battle_cruiser/battle_cruiser_turret_01.cfg</TurretCfg>
+                        </Item>
+                        <Item>
+                            <TurnSpan>300</TurnSpan>
+                            <TurretCfg>data/graphics/vehicle/heavy_battle_cruiser/heavy_battle_cruiser_turret_large_01.cfg</TurretCfg>
+                        </Item>
+                        <Item>
+                            <TurnSpan>300</TurnSpan>
+                            <TurretCfg>data/graphics/vehicle/battle_cruiser/battle_cruiser_turret_01.cfg</TurretCfg>
+                        </Item>
+                        <Item>
+                            <TurnSpan>300</TurnSpan>
+                            <TurretCfg>data/graphics/vehicle/battle_cruiser/battle_cruiser_turret_01.cfg</TurretCfg>
+                        </Item>
+                        <Item>
+                            <TurnSpan>300</TurnSpan>
+                            <TurretCfg>data/graphics/vehicle/battle_cruiser/battle_cruiser_turret_01.cfg</TurretCfg>
+                        </Item>
+                        <Item>
+                            <TurnSpan>300</TurnSpan>
+                            <TurretCfg>data/graphics/vehicle/battle_cruiser/battle_cruiser_turret_01.cfg</TurretCfg>
+                        </Item>
+                        <Item>
+                            <TurnSpan>300</TurnSpan>
+                            <TurretCfg>data/graphics/vehicle/battle_cruiser/battle_cruiser_turret_01.cfg</TurretCfg>
+                        </Item>
+                        <Item>
+                            <TurnSpan>130</TurnSpan>
+                            <TurretCfg>data/graphics/vehicle/battle_cruiser/battle_cruiser_turret_01.cfg</TurretCfg>
+                        </Item>
+                        <Item>
+                            <TurnSpan>130</TurnSpan>
+                            <TurretCfg>data/graphics/vehicle/battle_cruiser/battle_cruiser_turret_01.cfg</TurretCfg>
+                        </Item>
+                    </Turrets>
+                    <ProjectileAsset>102033</ProjectileAsset>                    <!--Large_Single_Shot_BattleCruiser-->
+                    <MuzzleEffectAssets>
+                        <Item>
+                            <MuzzleEffectAsset>102228</MuzzleEffectAsset>                            <!--Shot_Battlecruiser-->
+                        </Item>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>0</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>WarShip</TemplateName>
+                                        <Index>0</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                            <MuzzleEffectAsset>102228</MuzzleEffectAsset>                            <!--Shot_Battlecruiser-->
+                        </Item>
+                    </MuzzleEffectAssets>
+                    <FullVolleyTimeMin>2.8</FullVolleyTimeMin>
+                    <FullVolleyTimeMax>4</FullVolleyTimeMax>
+                    <AccuracyBase>15</AccuracyBase>                    <!-- Battle Cruiser 1 - 15 -->
+                    <AccuracyIncreaseOverDistance>200</AccuracyIncreaseOverDistance>                    <!-- Battle Cruiser 60 - 200 -->
+                    <AccuracySpeedDecay>20</AccuracySpeedDecay>
+                    <AccuracyByDistance>
+                        <Item>
+                            <AccuracyByDistancePair>
+                                <EnemyDistanceRelToAttackRange>0</EnemyDistanceRelToAttackRange>
+                                <CorrespondingAccuracy>5</CorrespondingAccuracy>
+                            </AccuracyByDistancePair>
+                        </Item>
+                        <Item>
+                            <AccuracyByDistancePair>
+                                <EnemyDistanceRelToAttackRange>20</EnemyDistanceRelToAttackRange>
+                                <CorrespondingAccuracy>10</CorrespondingAccuracy>
+                            </AccuracyByDistancePair>
+                        </Item>
+                        <Item>
+                            <AccuracyByDistancePair>
+                                <EnemyDistanceRelToAttackRange>30</EnemyDistanceRelToAttackRange>
+                                <CorrespondingAccuracy>20</CorrespondingAccuracy>
+                            </AccuracyByDistancePair>
+                        </Item>
+                        <Item>
+                            <AccuracyByDistancePair>
+                                <EnemyDistanceRelToAttackRange>40</EnemyDistanceRelToAttackRange>
+                                <CorrespondingAccuracy>50</CorrespondingAccuracy>
+                            </AccuracyByDistancePair>
+                        </Item>
+                        <Item>
+                            <AccuracyByDistancePair>
+                                <EnemyDistanceRelToAttackRange>50</EnemyDistanceRelToAttackRange>
+                                <CorrespondingAccuracy>70</CorrespondingAccuracy>
+                            </AccuracyByDistancePair>
+                        </Item>
+                        <Item>
+                            <AccuracyByDistancePair>
+                                <EnemyDistanceRelToAttackRange>60</EnemyDistanceRelToAttackRange>
+                                <CorrespondingAccuracy>90</CorrespondingAccuracy>
+                            </AccuracyByDistancePair>
+                        </Item>
+                        <Item>
+                            <AccuracyByDistancePair>
+                                <EnemyDistanceRelToAttackRange>100</EnemyDistanceRelToAttackRange>
+                                <CorrespondingAccuracy>100</CorrespondingAccuracy>
+                            </AccuracyByDistancePair>
+                        </Item>
+                    </AccuracyByDistance>
+                </Attacker>
+                <MinimapToken>
+                    <TokenAsset>2001947</TokenAsset>                    <!--Ships-->
+                    <StrategicMapAsset>501018</StrategicMapAsset>                    <!--Steam Ships-->
+                </MinimapToken>
+                <SoundEmitter>
+                    <ActiveSounds>
+                        <Item>
+                            <Sound>216009</Sound>                            <!--wwe_sfx_veh_battle_cruiser_lp_play-->
+                        </Item>
+                    </ActiveSounds>
+                    <DestroySounds>
+                        <Item>
+                            <Sound>238314</Sound>                            <!--wwe_sfx_veh_battle_cruiser_destroy_os-->
+                        </Item>
+                    </DestroySounds>
+                </SoundEmitter>
+                <UpgradeList/>
+                <QuestObject/>
+                <Infolayer/>
+                <ItemContainer>
+                    <SocketCount>4</SocketCount>                    <!-- Battle Cruiser 4 -->
+                    <SocketAllocation>Ship;SteamShip;Warship</SocketAllocation>
+                    <SlotCount>6</SlotCount>                    <!-- Battle Cruiser 3 -->
+                </ItemContainer>
+                <FeedbackController/>
+                <Draggable>
+                    <DraggableOnDrag>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </DraggableOnDrag>
+                    <DraggableOnDrop>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </DraggableOnDrop>
+                </Draggable>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!--coins-->
+                            <Amount>1000000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010218</Ingredient>                            <!--beams-->
+                            <Amount>200</Amount>                            <!-- Battle Cruiser 60 -->
+                        </Item>
+                        <Item>
+                            <Ingredient>1010224</Ingredient>                            <!--steam motors-->
+                            <Amount>150</Amount>                            <!-- Battle Cruiser 20 -->
+                        </Item>
+                        <Item>
+                            <Ingredient>1010223</Ingredient>                            <!--advanced weapons-->
+                            <Amount>100</Amount>                            <!-- Battle Cruiser 25 -->
+                        </Item>
+                    </Costs>
+                    <InfluenceCostType>WarShip</InfluenceCostType>
+                    <InfluenceCostPoints>60</InfluenceCostPoints>                    <!-- Battle Cruiser 24 -->
+                </Cost>
+                <Craftable>
+                    <CraftingTime>1000000</CraftingTime>                    <!-- Battle Cruiser 900000 -->
+                </Craftable>
+                <TradeRouteVehicle/>
+                <Locked/>
+                <Nameable/>
+                <MetaPersistent/>
+                <ExpeditionAttribute>
+                    <BaseMorale>100</BaseMorale>                    <!-- Battle Cruiser 50 -->
+                    <ExpeditionAttributes>
+                        <Item>
+                            <Attribute>Might</Attribute>
+                            <Amount>80</Amount>                            <!-- Battle Cruiser 70 -->
+                        </Item>
+                        <Item>
+                            <Attribute>Navigation</Attribute>
+                            <Amount>50</Amount>
+                        </Item>
+                        <Item>
+                            <Attribute>Diplomacy</Attribute>
+                            <Amount>25</Amount>
+                        </Item>
+                        <Item>
+                            <Attribute>PerkMilitaryShip</Attribute>
+                            <Amount>1</Amount>
+                        </Item>
+                        <Item>
+                            <Attribute>PerkSteamShip</Attribute>
+                            <Amount>1</Amount>
+                        </Item>
+                    </ExpeditionAttributes>
+                </ExpeditionAttribute>
+                <ShipMaintenance>
+                    <Maintenance>10000</Maintenance>                    <!-- Battle Cruiser 850 - 2000 -->
+                </ShipMaintenance>
+                <Sellable />
+                <Stance/>
+                <Rentable/>
+                <WorldMapSound/>
+                <Pausable/>
+                <ShipIncident/>
+                <SoundEmitterCommandBarks>
+                    <BarkMapping>
+                        <Selection>
+                            <AudioPool>700081</AudioPool>                            <!--Battlecruiser_SelectPool-->
+                        </Selection>
+                        <SelectionDamaged>
+                            <AudioPool>700110</AudioPool>                            <!--Battlecruiser_SelectDamagedPool-->
+                        </SelectionDamaged>
+                        <AttackCommand>
+                            <AudioPool>700082</AudioPool>                            <!--Battlecruiser_AttackPool-->
+                        </AttackCommand>
+                        <MoveCommand>
+                            <AudioPool>700083</AudioPool>                            <!--Battlecruiser_MovePool-->
+                        </MoveCommand>
+                        <EscortCommand>
+                            <AudioPool>700112</AudioPool>                            <!--Battlecruiser_EscortPool-->
+                        </EscortCommand>
+                        <PatrolCommand>
+                            <AudioPool>700111</AudioPool>                            <!--Battlecruiser_PatrolPool-->
+                        </PatrolCommand>
+                    </BarkMapping>
+                </SoundEmitterCommandBarks>
+            </Values>
+        </Asset>
+    </ModOp>
+
     <!-- END SHIP - HEAVY BATTLE CRUISER -->
 
     <!-- START SHIP - SMALL CARGO SHIP -->
@@ -1392,7 +1741,7 @@
                     <LineOfSightRange>50</LineOfSightRange>
                     <ReloadTime>40</ReloadTime>
                     <ProjectileCount>2</ProjectileCount>
-                    <BaseDamage>120</BaseDamage>
+                    <BaseDamage>165</BaseDamage>
                     <ProjectileAsset>102267</ProjectileAsset>
                     <Turrets>
                         <Item>
@@ -1647,7 +1996,7 @@
                     <ReloadTime>25</ReloadTime>
                     <ProjectileAsset>1742100601</ProjectileAsset>
                     <ProjectileCount>8</ProjectileCount>
-                    <BaseDamage>160</BaseDamage>
+                    <BaseDamage>195</BaseDamage>
                     <Turrets>
                         <Item>
                             <TurnSpan>240</TurnSpan>
@@ -1737,9 +2086,14 @@
                 <Infolayer />
                 <ItemContainer>
                     <SocketCount>1</SocketCount>
-                    <SocketAllocation>Ship;SteamShip;Warship;Mod10</SocketAllocation>
+                    <SocketAllocation>Ship;SteamShip;Warship;Mod9</SocketAllocation>
                     <SlotCount>2</SlotCount>
                     <StackLimit>50</StackLimit>
+                    <InitSocketItems>
+                        <Item>
+                            <Item>1742200013</Item>
+                        </Item>
+                    </InitSocketItems>
                 </ItemContainer>
                 <FeedbackController />
                 <Draggable />
@@ -1898,7 +2252,7 @@
                 </Drifting>
                 <Collector />
                 <Attackable>
-                    <MaximumHitPoints>300</MaximumHitPoints>
+                    <MaximumHitPoints>450</MaximumHitPoints>
                     <HPBarOffset>4.5</HPBarOffset>
                     <AlertRange>150</AlertRange>
                     <SelfHealPerHealTick>0</SelfHealPerHealTick>
@@ -1932,8 +2286,13 @@
                 <QuestObject />
                 <Infolayer />
                 <ItemContainer>
-                    <SocketCount>0</SocketCount>
+                    <SocketCount>1</SocketCount>
                     <SlotCount>1</SlotCount>
+                    <InitSocketItems>
+                        <Item>
+                            <Item>1742200013</Item>
+                        </Item>
+                    </InitSocketItems>
                 </ItemContainer>
                 <FeedbackController />
                 <Draggable />
@@ -2153,11 +2512,11 @@
                         </Item>
                         <Item>
                             <Ingredient>1010218</Ingredient>                            <!--beams-->
-                            <Amount>70</Amount>                            <!-- Monitor - 35 -->
+                            <Amount>55</Amount>                            <!-- Monitor - 35 -->
                         </Item>
                         <Item>
                             <Ingredient>1010224</Ingredient>                            <!--steam motors-->
-                            <Amount>50</Amount>                            <!-- Monitor - 25 -->
+                            <Amount>35</Amount>                            <!-- Monitor - 25 -->
                         </Item>
                         <Item>
                             <Ingredient>1010223</Ingredient>                            <!--advanced weapons-->
@@ -2612,26 +2971,26 @@
                         </Item>
                         <Item>
                             <Ingredient>1010218</Ingredient>                            <!--beams-->
-                            <Amount>100</Amount>
+                            <Amount>70</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010202</Ingredient>                            <!--Concrete-->
+                            <Amount>10</Amount>
                         </Item>
                         <Item>
                             <Ingredient>1010224</Ingredient>                            <!--steam motors-->
-                            <Amount>40</Amount>
+                            <Amount>25</Amount>
                         </Item>
                         <Item>
                             <Ingredient>1010221</Ingredient>                            <!--weapons-->
-                            <Amount>40</Amount>
-                        </Item>
-                        <Item>
-                            <Ingredient>1010223</Ingredient>                            <!--advanced weapons-->
-                            <Amount>5</Amount>
+                            <Amount>25</Amount>
                         </Item>
                     </Costs>
                     <InfluenceCostType>WarShip</InfluenceCostType>
                     <InfluenceCostPoints>18</InfluenceCostPoints>
                 </Cost>
                 <Craftable>
-                    <CraftingTime>800000</CraftingTime>
+                    <CraftingTime>720000</CraftingTime>
                 </Craftable>
                 <TradeRouteVehicle/>
                 <Locked />

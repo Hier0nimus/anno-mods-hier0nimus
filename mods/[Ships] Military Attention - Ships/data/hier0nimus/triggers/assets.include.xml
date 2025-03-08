@@ -140,9 +140,6 @@
                         <Asset>1742100609</Asset>                        <!-- Flak Ironclad - Ship -->
                       </Item>
                       <Item>
-                        <Asset>1742100615</Asset>                        <!-- Ironclad Cruiser - Ship -->
-                      </Item>
-                      <Item>
                         <Asset>1742100585</Asset>                        <!-- Heavy Batle Cruiser - Ship -->
                       </Item>
                       <Item>
@@ -155,6 +152,9 @@
                       </Item>
                       <Item>
                         <Asset>1742100583</Asset>                        <!-- Small Battle Cruiser - Ship -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100615</Asset>                        <!-- Ironclad Cruiser - Ship -->
                       </Item>
                       <Item>
                         <Asset>1742100591</Asset>                        <!-- Auxiliary Ship - Ship -->
@@ -235,7 +235,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742100784</GUID>
+          <GUID>1742100801</GUID>
           <Name>MOD Trigger</Name>
         </Standard>
         <Trigger>
@@ -333,12 +333,71 @@
               </TriggerAction>
             </Item>
           </TriggerActions>
-          <ResetTrigger>
-            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+        </Trigger>
+        <TriggerSetup/>
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!--UNLOCK - AI UNLOCK -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100798</GUID>
+          <Name>AI Unlock</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionUnlocked</Template>
             <Values>
-              <EmptyAutoCreateValue/>
+              <Condition />
+              <ConditionUnlocked>
+                <UnlockNeeded>1500001601</UnlockNeeded>
+              </ConditionUnlocked>
+              <ConditionPropsNegatable />
             </Values>
-          </ResetTrigger>
+          </TriggerCondition>
+          <SubTriggers>
+            <Item>
+              <SubTrigger>
+                <Template>AutoCreateTrigger</Template>
+                <Values>
+                  <Trigger>
+                    <TriggerCondition>
+                      <Template>ConditionPlayerCounter</Template>
+                      <Values>
+                        <Condition />
+                        <ConditionPlayerCounter>
+                          <PlayerCounter>PopulationByLevel</PlayerCounter>
+                          <Context>15000004</Context>                          <!-- Investors PopulationLevel7 -->
+                          <CounterAmount>100</CounterAmount>
+                        </ConditionPlayerCounter>
+                      </Values>
+                    </TriggerCondition>
+                  </Trigger>
+                </Values>
+              </SubTrigger>
+            </Item>
+          </SubTriggers>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action/>
+                  <ActionUnlockAsset>
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>1742100690</Asset>                        <!-- Heavy Battle Cruiser (AI) -->
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
         </Trigger>
         <TriggerSetup/>
       </Values>
