@@ -25,7 +25,7 @@ Current version 1.15 (30/12/2024)
 
 Centered around military infrastructure and adding new military residence tiers for all regions with a focus on the Old World.
 
-Current version 1.17 (02/01/2025)
+Current version 1.19 (09/03/2025)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/military-attention
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
@@ -33,7 +33,7 @@ Current version 1.17 (02/01/2025)
 
 Additional mod for Military Attention that focuses on new ships and ship balancing. Can be used as a standalone.
 
-Current version 1.21 (28/12/2024)
+Current version 1.24 (09/03/2025)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/military-attention-ships
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
@@ -41,7 +41,7 @@ Current version 1.21 (28/12/2024)
 
 Additional mod for Military Attention that focuses on rebalancing the pirates and adding additional pirates mechanics like a new population.
 
-Current version 1.6 (14/01/2025)
+Current version 1.8 (09/03/2025)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/military-attention-pirates
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
@@ -49,7 +49,7 @@ Current version 1.6 (14/01/2025)
 
 Additional mod for Military Attention that focuses on rebalancing the AI behaviour and strength.
 
-Current version 1.1 (28/12/2024)
+Current version 1.3.1 (09/03/2025)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/military-attention-legendary-ai
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
@@ -111,6 +111,7 @@ A list of shared goods that can be used by everybody
 ### Mechanics
 
 - Ship Flags
+- Support Ships
 
 Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
