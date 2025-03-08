@@ -1,0 +1,30 @@
+<!-- 
+
+Templates
+
+-->
+
+<ModOps>
+
+  <!-- ADD SHIPYARDS TO CRAFTERCONFIGURATION -->
+  <ModOp Template="Profile_2ndParty" Type="add" Path="/Properties/ConstructionAI/CrafterConfiguration/CrafterConstruction/">
+    <Item>
+      <CrafterBuilding>1742102400</CrafterBuilding>
+      <Region>Moderate</Region>
+      <SessionType>Main</SessionType>
+      <RequiredUnlock>1010285</RequiredUnlock>
+    </Item>
+    <Item>
+      <CrafterBuilding>1742102401</CrafterBuilding>
+      <Region>Moderate</Region>
+      <SessionType>Main</SessionType>
+      <RequiredUnlock>1010302</RequiredUnlock>
+    </Item>
+  </ModOp>
+
+  <!-- INCREASE MATERIAL PRODUCTION FOR AI ON HGHEST LEVEL -->
+  <ModOp Template="Profile_2ndParty" Type="merge" Path="/Properties/ConstructionAI/EconomyRules/ConstructionMaterials/MainMaterialInfos/Item/">
+    <SimulatedItemProductivity>3</SimulatedItemProductivity>
+  </ModOp>
+
+</ModOps>

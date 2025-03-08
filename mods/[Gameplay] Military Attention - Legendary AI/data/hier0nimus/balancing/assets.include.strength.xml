@@ -8,7 +8,9 @@ Balancing - Strengths
 
     <!-- ******* BALANCE MILITARY STRENGTH AI ******* -->
 
-    <!-- StrengthLevels - Set global values as fallbacks - Specific AI values determine their personality so we do not adjust those much -->
+    <!-- STRENGTHLEVELS -->
+
+    <!-- Set global values as fallbacks - Specific AI values determine their personality so we do not adjust those much -->
 
     <!-- EASY AI TEMPLATE - 168 - Global AI easy values  -->
     <ModOp Type="merge" GUID="168" Path="/Values/MilitaryAI">
@@ -27,7 +29,7 @@ Balancing - Strengths
                     <Flee>0</Flee>
                 </Superior>
             </Levels>
-            <BudgetThreshold>100</BudgetThreshold>
+            <BudgetThreshold>200</BudgetThreshold>
         </StrengthLevels>
     </ModOp>
 
@@ -48,7 +50,7 @@ Balancing - Strengths
                     <Flee>0</Flee>
                 </Superior>
             </Levels>
-            <BudgetThreshold>150</BudgetThreshold>
+            <BudgetThreshold>250</BudgetThreshold>
         </StrengthLevels>
     </ModOp>
 
@@ -69,7 +71,7 @@ Balancing - Strengths
                     <Flee>0</Flee>
                 </Superior>
             </Levels>
-            <BudgetThreshold>200</BudgetThreshold>
+            <BudgetThreshold>300</BudgetThreshold>
         </StrengthLevels>
     </ModOp>
 
@@ -88,7 +90,7 @@ Balancing - Strengths
                     <Flee>0</Flee>
                 </Superior>
             </Levels>
-            <BudgetThreshold>100</BudgetThreshold>
+            <BudgetThreshold>200</BudgetThreshold>
         </StrengthLevels>
     </ModOp>
 
@@ -107,7 +109,7 @@ Balancing - Strengths
                     <Flee>0</Flee>
                 </Superior>
             </Levels>
-            <BudgetThreshold>125</BudgetThreshold>
+            <BudgetThreshold>250</BudgetThreshold>
         </StrengthLevels>
     </ModOp>
 
@@ -126,36 +128,84 @@ Balancing - Strengths
                     <Flee>0</Flee>
                 </Superior>
             </Levels>
-            <BudgetThreshold>200</BudgetThreshold>
+            <BudgetThreshold>300</BudgetThreshold>
         </StrengthLevels>
     </ModOp>
 
-    <!-- Attack - Set global values as fallbacks - Specific AI values determine their personality so we do not adjust those much -->
+    <!-- ATTACK, PATROL, ESCORT, SQUAD LOGIC BEHAVIOUR -->
 
-    <!-- GLOBAL CHANGES IN HIGHEST LEVEL AS FALLBACK -->
+    <!-- Specific AI values determine their personality so we do not adjust those much -->
 
-    <!-- EASY AI TEMPLATE - 168 - Global AI easy values  -->
-    <ModOp Type="merge" GUID="168" Path="/Values/MilitaryAI">
+    <!-- EASY AI -->
+    <ModOp Type="merge" GUID="47,79,80" Path="/Values/MilitaryAI">
         <Attack>
-            <MilitaryStrengthRatio>150</MilitaryStrengthRatio>
+            <MilitaryStrengthRatio>220</MilitaryStrengthRatio>
+            <AttackInterval>2000000</AttackInterval>            <!-- 1200000/1800000 -->
+            <AirAttackInterval>2000000</AirAttackInterval>            <!-- 1200000/1800000 -->
+            <AdditionalUnitsRatio>2</AdditionalUnitsRatio>
             <RallyBeforeAttack>1</RallyBeforeAttack>
         </Attack>
+        <Patrol>
+            <MinSize>2</MinSize>            <!-- 1 -->
+            <MaxSize>4</MaxSize>            <!-- / -->
+        </Patrol>
+        <Escort>
+            <MinSize>1</MinSize>
+            <MaxSize>2</MaxSize>
+        </Escort>
+        <SquadLogic>
+            <FleeStrengthRatio>80</FleeStrengthRatio>
+            <BombardFleeStrengthRatio>80</BombardFleeStrengthRatio>
+            <ObservationRange>150</ObservationRange>
+        </SquadLogic>
     </ModOp>
 
-    <!-- MEDIUM AI TEMPLATE - 169 - Global AI medium values  -->
-    <ModOp Type="merge" GUID="169" Path="/Values/MilitaryAI">
+    <!-- MEDIUM AI -->
+    <ModOp Type="merge" GUID="11,81,82,83,220" Path="/Values/MilitaryAI">
         <Attack>
-            <MilitaryStrengthRatio>130</MilitaryStrengthRatio>
+            <MilitaryStrengthRatio>260</MilitaryStrengthRatio>
+            <AttackInterval>2500000</AttackInterval>            <!-- 1200000/1800000 -->
+            <AirAttackInterval>2500000</AirAttackInterval>            <!-- 1200000/1800000 -->
+            <AdditionalUnitsRatio>3</AdditionalUnitsRatio>
             <RallyBeforeAttack>1</RallyBeforeAttack>
         </Attack>
+        <Patrol>
+            <MinSize>2</MinSize>            <!-- 1 -->
+            <MaxSize>6</MaxSize>            <!-- 4 -->
+        </Patrol>
+        <Escort>
+            <MinSize>1</MinSize>
+            <MaxSize>2</MaxSize>
+        </Escort>
+        <SquadLogic>
+            <FleeStrengthRatio>60</FleeStrengthRatio>
+            <BombardFleeStrengthRatio>60</BombardFleeStrengthRatio>
+            <ObservationRange>160</ObservationRange>
+        </SquadLogic>
     </ModOp>
 
-    <!-- HARD AI TEMPLATE - 170 - Global AI hard values  -->
-    <ModOp Type="merge" GUID="170" Path="/Values/MilitaryAI">
+    <!-- HARD AI  -->
+    <ModOp Type="merge" GUID="48,84,85" Path="/Values/MilitaryAI">
         <Attack>
-            <MilitaryStrengthRatio>110</MilitaryStrengthRatio>
+            <MilitaryStrengthRatio>280</MilitaryStrengthRatio>
+            <AttackInterval>2500000</AttackInterval>            <!-- 420000/600000 -->
+            <AirAttackInterval>2500000</AirAttackInterval>            <!-- 600000/600000 -->
+            <AdditionalUnitsRatio>4</AdditionalUnitsRatio>
             <RallyBeforeAttack>1</RallyBeforeAttack>
         </Attack>
+        <Patrol>
+            <MinSize>3</MinSize>            <!-- 1 -->
+            <MaxSize>9</MaxSize>            <!-- 5 -->
+        </Patrol>
+        <Escort>
+            <MinSize>1</MinSize>
+            <MaxSize>2</MaxSize>
+        </Escort>
+        <SquadLogic>
+            <FleeStrengthRatio>50</FleeStrengthRatio>
+            <BombardFleeStrengthRatio>50</BombardFleeStrengthRatio>
+            <ObservationRange>170</ObservationRange>
+        </SquadLogic>
     </ModOp>
 
     <!-- ******* BEHAVIOUR SHARES ******* -->
@@ -216,7 +266,7 @@ Balancing - Strengths
 
         <!-- ******* AI NOT WAITING FOR CAPE TO REACH CERTAIN LEVEL TO GO FURTHER IN OTHER REGIONS ******* -->
 
-        <ModOp GUID='110934' Path="/Values/Session/SecondPartyMotivation" Type="replace">
+        <ModOp GUID='110934' Path="/Values/Session/SecondPartyMotivation" Type="merge">
             <SecondPartyMotivation>
                 <TargetPopulation>15000000</TargetPopulation>
                 <TargetAmount>1</TargetAmount>

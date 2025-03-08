@@ -1,0 +1,812 @@
+<!--
+Balancing - Buildings - Enemy
+-->
+
+<ModOps>
+
+  <!-- ********* START NEW AI SHIPS *********  -->
+
+  <!-- ADD TO WARFLEET -->
+  <ModOp Type="add" GUID="47,79,80,83,82,81,11,220,48,84,85" Path="/Values/MilitaryAI/WarFleet/ShipList">
+    <Item>
+      <Type>1742102405</Type>      <!--Enemy Gunboat-->
+      <Weight>0.5</Weight>
+    </Item>
+    <Item>
+      <Type>1742102402</Type>      <!--Enemy Frigate-->
+      <Weight>8</Weight>
+    </Item>
+    <Item>
+      <Type>1742102403</Type>      <!--Enemy Ship-of-the-line-->
+      <Weight>14</Weight>
+    </Item>
+    <Item>
+      <Type>1742102404</Type>      <!--Enemy Battle Cruiser-->
+      <Weight>120</Weight>
+    </Item>
+  </ModOp>
+
+  <!-- NEW SHIPS - GUNBOAT -->
+  <ModOp Type="addNextSibling" GUID="100437">
+    <Asset>
+      <BaseAssetGUID>100437</BaseAssetGUID>      <!--Gunboat (Military)-->
+      <Values>
+        <Standard>
+          <GUID>1742102405</GUID>
+          <Name>Enemy Gunboat</Name>
+        </Standard>
+        <Object/>
+        <Mesh/>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+        </Selection>
+        <Walking>
+          <CargoFullFactor>1</CargoFullFactor>
+        </Walking>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Enemy Gunboat</Text>
+            </English>
+          </LocaText>
+          <LineID>21900</LineID>
+        </Text>
+        <CommandQueue/>
+        <Drifting/>
+        <Collector/>
+        <Attackable/>
+        <Attacker/>
+        <MinimapToken/>
+        <SoundEmitter/>
+        <UpgradeList/>
+        <QuestObject/>
+        <Infolayer/>
+        <ItemContainer/>
+        <FeedbackController/>
+        <Draggable>
+          <DraggableOnDrag>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </DraggableOnDrag>
+          <DraggableOnDrop>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </DraggableOnDrop>
+        </Draggable>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!--timber / 10 -->
+              <Amount>5</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010210</Ingredient>              <!--sailcloth / 20 -->
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010221</Ingredient>              <!--weapons / 7 -->
+              <Amount>4</Amount>
+            </Item>
+          </Costs>
+          <InfluenceCostType>WarShip</InfluenceCostType>
+          <InfluenceCostPoints>2</InfluenceCostPoints>
+        </Cost>
+        <Craftable>
+          <CraftingTime>90000</CraftingTime>          <!-- 180000 -->
+        </Craftable>
+        <TradeRouteVehicle/>
+        <Locked>
+          <DefaultLockedState>1</DefaultLockedState>
+        </Locked>
+        <Nameable/>
+        <MetaPersistent/>
+        <ExpeditionAttribute/>
+        <ShipMaintenance/>
+        <Sellable/>
+        <Stance/>
+        <Rentable/>
+        <WorldMapSound/>
+        <Pausable/>
+        <ShipIncident/>
+        <SoundEmitterCommandBarks/>
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- NEW SHIPS - FRIGATE -->
+  <ModOp Type="addNextSibling" GUID="100439">
+    <Asset>
+      <BaseAssetGUID>100439</BaseAssetGUID>      <!--Frigate (Military)-->
+      <Values>
+        <Standard>
+          <GUID>1742102402</GUID>
+          <Name>Enemy Frigate</Name>
+        </Standard>
+        <Object/>
+        <Mesh/>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+        </Selection>
+        <Walking/>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Enemy Frigate</Text>
+            </English>
+          </LocaText>
+          <LineID>21901</LineID>
+        </Text>
+        <CommandQueue/>
+        <Drifting/>
+        <Collector/>
+        <Attackable/>
+        <Attacker/>
+        <MinimapToken/>
+        <SoundEmitter/>
+        <UpgradeList/>
+        <QuestObject/>
+        <Infolayer/>
+        <ItemContainer/>
+        <FeedbackController/>
+        <Draggable>
+          <DraggableOnDrag>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </DraggableOnDrag>
+          <DraggableOnDrop>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </DraggableOnDrop>
+        </Draggable>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!--timber / 40 -->
+              <Amount>20</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010210</Ingredient>              <!--sailcloth / 20 -->
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010221</Ingredient>              <!--weapons / 15 -->
+              <Amount>8</Amount>
+            </Item>
+          </Costs>
+          <InfluenceCostType>WarShip</InfluenceCostType>
+          <InfluenceCostPoints>4</InfluenceCostPoints>
+        </Cost>
+        <Craftable>
+          <CraftingTime>180000</CraftingTime>          <!-- 360000 -->
+        </Craftable>
+        <TradeRouteVehicle/>
+        <Locked>
+          <DefaultLockedState>1</DefaultLockedState>
+        </Locked>
+        <Nameable/>
+        <MetaPersistent/>
+        <ExpeditionAttribute/>
+        <ShipMaintenance/>
+        <Sellable/>
+        <Stance/>
+        <Rentable/>
+        <WorldMapSound/>
+        <Pausable/>
+        <ShipIncident/>
+        <SoundEmitterCommandBarks/>
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- NEW SHIPS - SOTL -->
+  <ModOp Type="addNextSibling" GUID="100440">
+    <Asset>
+      <BaseAssetGUID>100440</BaseAssetGUID>      <!--Liner (Military)-->
+      <Values>
+        <Standard>
+          <GUID>1742102403</GUID>
+          <Name>Enemy Ship-of-the-line</Name>
+        </Standard>
+        <Object/>
+        <Mesh/>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+        </Selection>
+        <Walking>
+          <CargoFullFactor>1</CargoFullFactor>
+        </Walking>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Enemy Ship-of-the-line</Text>
+            </English>
+          </LocaText>
+          <LineID>21902</LineID>
+        </Text>
+        <CommandQueue/>
+        <Drifting/>
+        <Collector/>
+        <Attackable/>
+        <Attacker/>
+        <MinimapToken/>
+        <SoundEmitter/>
+        <UpgradeList/>
+        <QuestObject/>
+        <Infolayer/>
+        <ItemContainer/>
+        <FeedbackController/>
+        <Draggable>
+          <DraggableOnDrag>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </DraggableOnDrag>
+          <DraggableOnDrop>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </DraggableOnDrop>
+        </Draggable>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!--timber / 60 -->
+              <Amount>30</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010210</Ingredient>              <!--sailcloth / 30 -->
+              <Amount>15</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010221</Ingredient>              <!--weapons / 30 -->
+              <Amount>15</Amount>
+            </Item>
+          </Costs>
+          <InfluenceCostType>WarShip</InfluenceCostType>
+          <InfluenceCostPoints>8</InfluenceCostPoints>
+        </Cost>
+        <Craftable>
+          <CraftingTime>360000</CraftingTime>          <!-- 720000 -->
+        </Craftable>
+        <TradeRouteVehicle/>
+        <Locked>
+          <DefaultLockedState>1</DefaultLockedState>
+        </Locked>
+        <Nameable/>
+        <MetaPersistent/>
+        <ExpeditionAttribute/>
+        <ShipMaintenance/>
+        <Sellable/>
+        <Stance/>
+        <Rentable/>
+        <WorldMapSound/>
+        <Pausable/>
+        <ShipIncident/>
+        <SoundEmitterCommandBarks/>
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- NEW SHIPS - BATTLE CRUISER -->
+  <ModOp Type="addNextSibling" GUID="100442">
+    <Asset>
+      <BaseAssetGUID>100442</BaseAssetGUID>      <!--Battle Cruiser (Military)-->
+      <Values>
+        <Standard>
+          <GUID>1742102404</GUID>
+          <Name>Enemy Battle Cruiser</Name>
+        </Standard>
+        <Object/>
+        <Mesh/>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+        </Selection>
+        <Walking/>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Enemy Battle Cruiser</Text>
+            </English>
+          </LocaText>
+          <LineID>21439</LineID>
+        </Text>
+        <CommandQueue/>
+        <Drifting/>
+        <Collector/>
+        <Attackable/>
+        <Attacker/>
+        <MinimapToken/>
+        <SoundEmitter/>
+        <UpgradeList/>
+        <QuestObject/>
+        <Infolayer/>
+        <ItemContainer/>
+        <FeedbackController/>
+        <Draggable>
+          <DraggableOnDrag>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </DraggableOnDrag>
+          <DraggableOnDrop>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </DraggableOnDrop>
+        </Draggable>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!--beams / 60 -->
+              <Amount>40</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010224</Ingredient>              <!--steam motors / 20 -->
+              <Amount>15</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010223</Ingredient>              <!--advanced weapons / 25 -->
+              <Amount>20</Amount>
+            </Item>
+          </Costs>
+          <InfluenceCostType>WarShip</InfluenceCostType>
+          <InfluenceCostPoints>12</InfluenceCostPoints>
+        </Cost>
+        <Craftable>
+          <CraftingTime>720000</CraftingTime>          <!-- 900000 -->
+        </Craftable>
+        <TradeRouteVehicle/>
+        <Locked>
+          <DefaultLockedState>1</DefaultLockedState>
+        </Locked>
+        <Nameable/>
+        <MetaPersistent/>
+        <ExpeditionAttribute/>
+        <ShipMaintenance/>
+        <Sellable/>
+        <Stance/>
+        <Rentable/>
+        <WorldMapSound/>
+        <Pausable/>
+        <ShipIncident/>
+        <SoundEmitterCommandBarks/>
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- ****************** START REDUCE CRAFTING TIME WHEN MA IS INSTALLED ******************  -->
+
+  <Group Condition="#military_attention">
+
+    <!-- Enemy Gunboat -->
+    <ModOp Type="merge" GUID="1742102405" Path="/Values/Craftable">
+      <CraftingTime>360000</CraftingTime>      <!-- 720000 -->
+    </ModOp>
+
+    <!-- Enemy Frigate -->
+    <ModOp Type="merge" GUID="1742102402" Path="/Values/Craftable">
+      <CraftingTime>360000</CraftingTime>      <!-- 720000 -->
+    </ModOp>
+
+    <!-- Enemy SOTL -->
+    <ModOp Type="merge" GUID="1742102403" Path="/Values/Craftable">
+      <CraftingTime>360000</CraftingTime>      <!-- 720000 -->
+    </ModOp>
+
+    <!-- Enemy Battle Cruiser -->
+    <ModOp Type="merge" GUID="1742102404" Path="/Values/Craftable">
+      <CraftingTime>360000</CraftingTime>      <!-- 720000 -->
+    </ModOp>
+
+  </Group>
+
+  <!-- ********* END NEW AI SHIPS *********  -->
+
+  <!-- ********* START ALTERNATIVE BUILDINGS FOR AI *********  -->
+
+  <!-- ALTERNATIVE SAILING SHIPYARD AI -->
+
+  <ModOp Type="addNextSibling" GUID="1010520">
+    <Asset>
+      <Template>Shipyard</Template>
+      <Values>
+        <Standard>
+          <GUID>1742102400</GUID>
+          <Name>Enemy Sailing Shipyard</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_sail_shipyard.png</IconFilename>
+          <InfoDescription>1090</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11150</BuildingCategoryName>
+          <SnapRadius>10</SnapRadius>
+          <TerrainType>Water_Including_Coast</TerrainType>
+          <AssociatedRegions>Moderate</AssociatedRegions>
+        </Building>
+        <Blocking>
+          <GroundDecalAsset>100446</GroundDecalAsset>
+          <GroundDecalInvisible>101008</GroundDecalInvisible>
+          <GroundDecalAssetExtra>100691</GroundDecalAssetExtra>
+          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+          <HarbourAreaExpand>1</HarbourAreaExpand>
+        </Blocking>
+        <Mesh/>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/special/harbor_02/harbor_02.cfg</Filename>
+            </Item>
+          </Variations>
+          <Skins>
+            <DefaultSkinName>1742102200</DefaultSkinName>
+            <DefaultSkinDescription>23853</DefaultSkinDescription>
+            <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>
+          </Skins>
+        </Object>
+        <AmbientMoodProvider>
+          <Murmur>Harbor</Murmur>
+        </AmbientMoodProvider>
+        <Constructable/>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>Resident_tier02_atWork</ParticipantMessageArcheType>
+        </Selection>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Enemy Sailing Shipyard</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>7016</LineID>
+        </Text>
+        <Shipyard>
+          <AssemblyOptions>
+            <Item>
+              <Vehicle>1742102405</Vehicle>              <!--Enemy Gunboat-->
+            </Item>
+            <Item>
+              <Vehicle>1742102402</Vehicle>              <!--Enemy Frigate-->
+            </Item>
+            <Item>
+              <Vehicle>1742102403</Vehicle>              <!--Enemy Ship-of-the-line-->
+            </Item>
+          </AssemblyOptions>
+        </Shipyard>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!--Money-->
+              <Amount>10000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!--timber-->
+              <Amount>20</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!--bricks-->
+              <Amount>25</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Locked>
+          <DefaultLockedState>1</DefaultLockedState>
+        </Locked>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>              <!--Money-->
+              <Amount>50</Amount>
+              <InactiveAmount>25</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1010115</Product>              <!--moderate workforce 2-->
+              <Amount>25</Amount>
+            </Item>
+          </Maintenances>
+          <ConsumerPriorityAlarmed>2</ConsumerPriorityAlarmed>
+        </Maintenance>
+        <Infolayer/>
+        <Attackable>
+          <AttackableType>HarbourBuilding</AttackableType>
+          <MaximumHitPoints>4000</MaximumHitPoints>
+          <PausedTimeIfAttacked>0</PausedTimeIfAttacked>
+          <HPBarOffset>4.5</HPBarOffset>
+          <DefenseByAIFactor>700</DefenseByAIFactor>
+          <MoralePower>50</MoralePower>
+          <IslandWarFlag>102303</IslandWarFlag>
+          <ExplosionEffects>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>0</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>Shipyard</TemplateName>
+                    <Index>0</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+              <ExplosionEffectFilePath>data/graphics/effects/military/explosions/harbor_generic_xpl_02.cfg</ExplosionEffectFilePath>
+            </Item>
+            <Item>
+              <ExplosionEffectFilePath>data/graphics/effects/military/explosions/harbor_generic_xpl_03.cfg</ExplosionEffectFilePath>
+            </Item>
+          </ExplosionEffects>
+          <ExplosionEffectsMin>1</ExplosionEffectsMin>
+          <ExplosionEffectsMax>2</ExplosionEffectsMax>
+          <SelfHealPerHealTick>5</SelfHealPerHealTick>
+        </Attackable>
+        <Pausable/>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>200896</Sound>
+            </Item>
+          </ActiveSounds>
+          <IncidentSounds>
+            <InfectedFire>
+              <Item>
+                <Sound>214659</Sound>
+              </Item>
+            </InfectedFire>
+          </IncidentSounds>
+          <BuildingRuined>
+            <Item>
+              <Sound>203848</Sound>
+            </Item>
+          </BuildingRuined>
+          <BuildingRepaired>
+            <Item>
+              <Sound>203866</Sound>
+            </Item>
+          </BuildingRepaired>
+        </SoundEmitter>
+        <IncidentInfectable/>
+        <FeedbackController/>
+        <Industrializable/>
+        <UpgradeList/>
+        <LogisticNode/>
+        <StreetActivation/>
+        <QuestObject/>
+        <Electrifiable/>
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- ALTERNATIVE STEAM SHIPYARD AI -->
+
+  <ModOp Type="addNextSibling" GUID="1010521">
+    <Asset>
+      <Template>Shipyard</Template>
+      <Values>
+        <Standard>
+          <GUID>1742102401</GUID>
+          <Name>Enemy Steam Shipyard</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_steam_shipyard.png</IconFilename>
+          <InfoDescription>1091</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11150</BuildingCategoryName>
+          <SnapRadius>10</SnapRadius>
+          <TerrainType>Water_Including_Coast</TerrainType>
+          <AssociatedRegions>Moderate</AssociatedRegions>
+        </Building>
+        <Blocking>
+          <GroundDecalAsset>100446</GroundDecalAsset>
+          <GroundDecalInvisible>101008</GroundDecalInvisible>
+          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+          <HarbourAreaExpand>1</HarbourAreaExpand>
+        </Blocking>
+        <Mesh/>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/special/harbor_03/harbor_03.cfg</Filename>
+            </Item>
+          </Variations>
+          <Skins>
+            <DefaultSkinName>1742102201</DefaultSkinName>
+            <DefaultSkinDescription>23853</DefaultSkinDescription>
+            <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>
+          </Skins>
+        </Object>
+        <AmbientMoodProvider>
+          <Murmur>Harbor</Murmur>
+        </AmbientMoodProvider>
+        <Constructable/>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>Resident_tier04_atWork</ParticipantMessageArcheType>
+        </Selection>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Enemy Steam Shipyard</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>7017</LineID>
+        </Text>
+        <Shipyard>
+          <AssemblyOptions>
+            <Item>
+              <Vehicle>1742102404</Vehicle>              <!--Enemy Battle Cruiser-->
+            </Item>
+          </AssemblyOptions>
+        </Shipyard>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!--Money-->
+              <Amount>90000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!--timber-->
+              <Amount>50</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!--bricks-->
+              <Amount>100</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!--beams-->
+              <Amount>80</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>              <!--window-->
+              <Amount>75</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010202</Ingredient>              <!--concrete-->
+              <Amount>75</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Locked>
+          <DefaultLockedState>1</DefaultLockedState>
+        </Locked>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>              <!--Money-->
+              <Amount>50</Amount>
+              <InactiveAmount>25</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1010117</Product>              <!--moderate workforce 2-->
+              <Amount>25</Amount>
+            </Item>
+          </Maintenances>
+          <ConsumerPriorityAlarmed>2</ConsumerPriorityAlarmed>
+        </Maintenance>
+        <Infolayer/>
+        <Attackable>
+          <AttackableType>HarbourBuilding</AttackableType>
+          <MaximumHitPoints>6000</MaximumHitPoints>
+          <PausedTimeIfAttacked>0</PausedTimeIfAttacked>
+          <DefenseByAIFactor>500</DefenseByAIFactor>
+          <MoralePower>100</MoralePower>
+          <IslandWarFlag>102303</IslandWarFlag>
+          <ExplosionEffects>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>0</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>Shipyard</TemplateName>
+                    <Index>0</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+            </Item>
+            <Item>
+              <ExplosionEffectFilePath>data/graphics/effects/military/explosions/harbor_generic_xpl_02.cfg</ExplosionEffectFilePath>
+            </Item>
+          </ExplosionEffects>
+          <ExplosionEffectsMin>3</ExplosionEffectsMin>
+          <ExplosionEffectsMax>3</ExplosionEffectsMax>
+          <SelfHealPerHealTick>5</SelfHealPerHealTick>
+        </Attackable>
+        <Pausable/>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>200896</Sound>
+            </Item>
+          </ActiveSounds>
+          <IncidentSounds>
+            <InfectedFire>
+              <Item>
+                <Sound>214659</Sound>
+              </Item>
+            </InfectedFire>
+          </IncidentSounds>
+          <BuildingRuined>
+            <Item>
+              <Sound>203848</Sound>
+            </Item>
+          </BuildingRuined>
+          <BuildingRepaired>
+            <Item>
+              <Sound>203866</Sound>
+            </Item>
+          </BuildingRepaired>
+        </SoundEmitter>
+        <IncidentInfectable/>
+        <FeedbackController/>
+        <Industrializable>
+          <MandatoryIndustrialization>1</MandatoryIndustrialization>
+        </Industrializable>
+        <UpgradeList/>
+        <LogisticNode/>
+        <StreetActivation/>
+        <QuestObject/>
+        <Electrifiable>
+          <ElectricityBoost>0</ElectricityBoost>
+        </Electrifiable>
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- ****************** END ALTERNATIVE BUILDINGS FOR AI ******************  -->
+
+  <!-- ADD ENEMY SAILING SHIPYARD TO ARTISANS HARBOUR MENU (OW) -->
+  <ModOp Type="add" GUID='500953' Path="/Values/ConstructionCategory/BuildingList/">
+    <Item>
+      <Building>1742102400</Building>
+      <PlatformVisibility>Console</PlatformVisibility>
+    </Item>
+  </ModOp>
+
+  <!-- ADD ENEMY STEAM SHIPYARD TO ENGINEERS CONSTRUCTION MENU (OW) -->
+  <ModOp Type="add" GUID='500954' Path="/Values/ConstructionCategory/BuildingList/">
+    <Item>
+      <Building>1742102401</Building>
+      <PlatformVisibility>Console</PlatformVisibility>
+    </Item>
+  </ModOp>
+
+  <!-- ********* END ALTERNATIVE BUILDINGS FOR AI *********  -->
+
+</ModOps>

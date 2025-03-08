@@ -6,78 +6,88 @@ Balancing - Ships
 
   <!-- ********************************** CONSTRUCTION SHIPS REBALANCE ********************************** -->
 
+  <!-- ******* SHIPS AND AIRSHIPS CAN ATTACK SEA MINES ******* -->
+
+  <ModOp Type="merge" GUID="140999" Path="/Values/MilitaryFeature/CanAttackTable/">
+    <Warship>
+      <CanDamageTargetedAttack>Ship;HarbourBuilding;Seamine</CanDamageTargetedAttack>
+    </Warship>
+    <HunterAirship>
+      <CanDamageTargetedAttack>Airship;Seamine</CanDamageTargetedAttack>
+    </HunterAirship>
+  </ModOp>
+
   <!-- ******* DEFINE HOW FAST AI BUILD SHIPS AND HOW MUCH IT COSTS ******* -->
 
   <!-- EASY AI TEMPLATE - 168  -->
   <ModOp Type="merge" GUID="168" Path="/Values/ConstructionAI">
     <ShipConstructionBonus>
-      <TimeBonus>0.8</TimeBonus>      <!-- / -->
-      <ProductBonus>0.6</ProductBonus>      <!-- / -->
+      <TimeBonus>0.5</TimeBonus>      <!-- / -->
+      <ProductBonus>0.1</ProductBonus>      <!-- / -->
     </ShipConstructionBonus>
   </ModOp>
 
   <!-- MEDIUM AI TEMPLATE - 169  -->
   <ModOp Type="merge" GUID="169" Path="/Values/ConstructionAI">
     <ShipConstructionBonus>
-      <TimeBonus>0.6</TimeBonus>      <!-- / -->
-      <ProductBonus>0.4</ProductBonus>      <!-- / -->
+      <TimeBonus>0.3</TimeBonus>      <!-- / -->
+      <ProductBonus>0.1</ProductBonus>      <!-- / -->
     </ShipConstructionBonus>
   </ModOp>
 
   <!-- HARD AI TEMPLATE - 170  -->
   <ModOp Type="merge" GUID="170" Path="/Values/ConstructionAI">
     <ShipConstructionBonus>
-      <TimeBonus>0.3</TimeBonus>      <!-- 0.6 -->
-      <ProductBonus>0.3</ProductBonus>      <!-- 0.6 -->
+      <TimeBonus>0.2</TimeBonus>      <!-- 0.6 -->
+      <ProductBonus>0.1</ProductBonus>      <!-- 0.6 -->
     </ShipConstructionBonus>
   </ModOp>
 
   <!-- SPECIFIC EASY AI TEMPLATES - BENTE, QING, WILLY - 79,80,47  -->
-  <!-- NUMBER OF SHIPS IS HIGHER THEN IN MILITARY ATTENTION - SHIPS MOD -->
   <ModOp Type="merge" GUID="79,80,47" Path="/Values/MilitaryAI">
     <WarFleet>
       <ShipLimits>
         <Peace>
           <Progress>
             <EarlyGame>
-              <MaxShipCount>3</MaxShipCount>              <!-- / -->
+              <MaxShipCount>5</MaxShipCount>              <!-- / -->
             </EarlyGame>
             <EarlyMidGame>
-              <MaxShipCount>5</MaxShipCount>              <!-- / -->
+              <MaxShipCount>15</MaxShipCount>              <!-- / -->
             </EarlyMidGame>
             <MidGame>
-              <MaxShipCount>10</MaxShipCount>              <!-- / -->
+              <MaxShipCount>50</MaxShipCount>              <!-- / -->
             </MidGame>
             <LateMidGame>
-              <MaxShipCount>18</MaxShipCount>              <!-- 11 -->
+              <MaxShipCount>75</MaxShipCount>              <!-- 11 -->
             </LateMidGame>
             <LateGame>
-              <MaxShipCount>24</MaxShipCount>              <!-- 15 -->
+              <MaxShipCount>100</MaxShipCount>              <!-- 15 -->
             </LateGame>
             <EndGame>
-              <MaxShipCount>30</MaxShipCount>              <!-- 18 -->
+              <MaxShipCount>200</MaxShipCount>              <!-- 18 -->
             </EndGame>
           </Progress>
         </Peace>
         <War>
           <Progress>
             <EarlyGame>
-              <MaxShipCount>5</MaxShipCount>              <!-- 3 -->
+              <MaxShipCount>8</MaxShipCount>              <!-- 3 -->
             </EarlyGame>
             <EarlyMidGame>
-              <MaxShipCount>10</MaxShipCount>              <!-- 5 -->
+              <MaxShipCount>20</MaxShipCount>              <!-- 5 -->
             </EarlyMidGame>
             <MidGame>
-              <MaxShipCount>16</MaxShipCount>              <!-- 6 -->
+              <MaxShipCount>70</MaxShipCount>              <!-- 6 -->
             </MidGame>
             <LateMidGame>
-              <MaxShipCount>24</MaxShipCount>              <!-- 11 -->
+              <MaxShipCount>110</MaxShipCount>              <!-- 11 -->
             </LateMidGame>
             <LateGame>
-              <MaxShipCount>30</MaxShipCount>              <!-- 15 -->
+              <MaxShipCount>160</MaxShipCount>              <!-- 15 -->
             </LateGame>
             <EndGame>
-              <MaxShipCount>36</MaxShipCount>              <!-- 18 -->
+              <MaxShipCount>300</MaxShipCount>              <!-- 18 -->
             </EndGame>
           </Progress>
         </War>
@@ -87,6 +97,12 @@ Balancing - Ships
       <ShipLimits>
         <Peace>
           <Progress>
+            <EarlyGame>
+              <MaxShipCount>0</MaxShipCount>              <!-- / -->
+            </EarlyGame>
+            <EarlyMidGame>
+              <MaxShipCount>0</MaxShipCount>              <!-- / -->
+            </EarlyMidGame>
             <MidGame>
               <MaxShipCount>1</MaxShipCount>              <!-- 3 -->
             </MidGame>
@@ -97,23 +113,29 @@ Balancing - Ships
               <MaxShipCount>4</MaxShipCount>              <!-- 10 -->
             </LateGame>
             <EndGame>
-              <MaxShipCount>8</MaxShipCount>              <!-- 15 -->
+              <MaxShipCount>20</MaxShipCount>              <!-- 15 -->
             </EndGame>
           </Progress>
         </Peace>
         <War>
           <Progress>
+            <EarlyGame>
+              <MaxShipCount>0</MaxShipCount>              <!-- / -->
+            </EarlyGame>
+            <EarlyMidGame>
+              <MaxShipCount>0</MaxShipCount>              <!-- / -->
+            </EarlyMidGame>
             <MidGame>
-              <MaxShipCount>2</MaxShipCount>              <!-- / -->
+              <MaxShipCount>1</MaxShipCount>              <!-- / -->
             </MidGame>
             <LateMidGame>
               <MaxShipCount>3</MaxShipCount>              <!-- 11 -->
             </LateMidGame>
             <LateGame>
-              <MaxShipCount>9</MaxShipCount>              <!-- 18 -->
+              <MaxShipCount>6</MaxShipCount>              <!-- 18 -->
             </LateGame>
             <EndGame>
-              <MaxShipCount>15</MaxShipCount>              <!-- 28 -->
+              <MaxShipCount>30</MaxShipCount>              <!-- 28 -->
             </EndGame>
           </Progress>
         </War>
@@ -122,51 +144,50 @@ Balancing - Ships
   </ModOp>
 
   <!-- SPECIFIC MEDIUM AI TEMPLATES - MERCIER - 220  -->
-  <!-- NUMBER OF SHIPS IS HIGHER THEN IN MILITARY ATTENTION - SHIPS MOD -->
   <ModOp Type="merge" GUID="220" Path="/Values/MilitaryAI">
     <WarFleet>
       <ShipLimits>
         <Peace>
           <Progress>
             <EarlyGame>
-              <MaxShipCount>10</MaxShipCount>              <!-- 3 - 5 -->
+              <MaxShipCount>5</MaxShipCount>              <!-- 5 - 8 -->
             </EarlyGame>
             <EarlyMidGame>
-              <MaxShipCount>18</MaxShipCount>              <!-- 5 - 8 -->
+              <MaxShipCount>18</MaxShipCount>              <!-- 7 - 15 -->
             </EarlyMidGame>
             <MidGame>
-              <MaxShipCount>40</MaxShipCount>              <!-- 6 - 10 -->
+              <MaxShipCount>75</MaxShipCount>              <!-- 12 - 28 -->
             </MidGame>
             <LateMidGame>
-              <MaxShipCount>100</MaxShipCount>              <!-- 11 - 28 -->
+              <MaxShipCount>250</MaxShipCount>              <!-- 16 - 50 -->
             </LateMidGame>
             <LateGame>
-              <MaxShipCount>100</MaxShipCount>              <!-- 15 - 28 -->
+              <MaxShipCount>250</MaxShipCount>              <!-- 25 - 90 -->
             </LateGame>
             <EndGame>
-              <MaxShipCount>100</MaxShipCount>              <!-- 18 - 28 -->
+              <MaxShipCount>250</MaxShipCount>              <!-- 34 - 180 -->
             </EndGame>
           </Progress>
         </Peace>
         <War>
           <Progress>
             <EarlyGame>
-              <MaxShipCount>20</MaxShipCount>              <!-- 3 - 6 -->
+              <MaxShipCount>8</MaxShipCount>              <!-- 5 - 15 -->
             </EarlyGame>
             <EarlyMidGame>
-              <MaxShipCount>35</MaxShipCount>              <!-- 5 - 10 -->
+              <MaxShipCount>25</MaxShipCount>              <!-- 7 - 35 -->
             </EarlyMidGame>
             <MidGame>
-              <MaxShipCount>60</MaxShipCount>              <!-- 6 - 14 -->
+              <MaxShipCount>90</MaxShipCount>              <!-- 12 - 50 -->
             </MidGame>
             <LateMidGame>
-              <MaxShipCount>200</MaxShipCount>              <!-- 11 - 30 -->
+              <MaxShipCount>400</MaxShipCount>              <!-- 16 - 80 -->
             </LateMidGame>
             <LateGame>
-              <MaxShipCount>200</MaxShipCount>              <!-- 15 - 30 -->
+              <MaxShipCount>400</MaxShipCount>              <!-- 25 - 130 -->
             </LateGame>
             <EndGame>
-              <MaxShipCount>200</MaxShipCount>              <!-- 18 - 30 -->
+              <MaxShipCount>400</MaxShipCount>              <!-- 34 - 200 -->
             </EndGame>
           </Progress>
         </War>
@@ -176,8 +197,14 @@ Balancing - Ships
       <ShipLimits>
         <Peace>
           <Progress>
+            <EarlyGame>
+              <MaxShipCount>0</MaxShipCount>              <!-- / -->
+            </EarlyGame>
+            <EarlyMidGame>
+              <MaxShipCount>0</MaxShipCount>              <!-- / -->
+            </EarlyMidGame>
             <MidGame>
-              <MaxShipCount>4</MaxShipCount>              <!-- 3 -->
+              <MaxShipCount>2</MaxShipCount>              <!-- 3 -->
             </MidGame>
             <LateMidGame>
               <MaxShipCount>20</MaxShipCount>              <!-- 7 -->
@@ -192,17 +219,23 @@ Balancing - Ships
         </Peace>
         <War>
           <Progress>
+            <EarlyGame>
+              <MaxShipCount>0</MaxShipCount>              <!-- / -->
+            </EarlyGame>
+            <EarlyMidGame>
+              <MaxShipCount>0</MaxShipCount>              <!-- / -->
+            </EarlyMidGame>
             <MidGame>
-              <MaxShipCount>8</MaxShipCount>              <!-- / -->
+              <MaxShipCount>3</MaxShipCount>              <!-- / -->
             </MidGame>
             <LateMidGame>
-              <MaxShipCount>26</MaxShipCount>              <!-- 11 -->
+              <MaxShipCount>30</MaxShipCount>              <!-- 11 -->
             </LateMidGame>
             <LateGame>
-              <MaxShipCount>26</MaxShipCount>              <!-- 18 -->
+              <MaxShipCount>30</MaxShipCount>              <!-- 18 -->
             </LateGame>
             <EndGame>
-              <MaxShipCount>26</MaxShipCount>              <!-- 28 -->
+              <MaxShipCount>30</MaxShipCount>              <!-- 28 -->
             </EndGame>
           </Progress>
         </War>
@@ -211,51 +244,50 @@ Balancing - Ships
   </ModOp>
 
   <!-- SPECIFIC MEDIUM AI TEMPLATES - VON MALCHING, SMITH, GASPAROV, BERYL - 81,83,11,82  -->
-  <!-- NUMBER OF SHIPS IS HIGHER THEN IN MILITARY ATTENTION - SHIPS MOD -->
   <ModOp Type="merge" GUID="81,83,11,82" Path="/Values/MilitaryAI">
     <WarFleet>
       <ShipLimits>
         <Peace>
           <Progress>
             <EarlyGame>
-              <MaxShipCount>10</MaxShipCount>              <!-- 5 - 6 -->
+              <MaxShipCount>5</MaxShipCount>              <!-- 5 - 8 -->
             </EarlyGame>
             <EarlyMidGame>
-              <MaxShipCount>18</MaxShipCount>              <!-- 7 - 10 -->
+              <MaxShipCount>18</MaxShipCount>              <!-- 7 - 15 -->
             </EarlyMidGame>
             <MidGame>
-              <MaxShipCount>40</MaxShipCount>              <!-- 12 - 16 -->
+              <MaxShipCount>75</MaxShipCount>              <!-- 12 - 28 -->
             </MidGame>
             <LateMidGame>
-              <MaxShipCount>60</MaxShipCount>              <!-- 16 - 22 -->
+              <MaxShipCount>90</MaxShipCount>              <!-- 16 - 50 -->
             </LateMidGame>
             <LateGame>
-              <MaxShipCount>80</MaxShipCount>              <!-- 25 - 30 -->
+              <MaxShipCount>135</MaxShipCount>              <!-- 25 - 90 -->
             </LateGame>
             <EndGame>
-              <MaxShipCount>100</MaxShipCount>              <!-- 34 - 45 -->
+              <MaxShipCount>250</MaxShipCount>              <!-- 34 - 180 -->
             </EndGame>
           </Progress>
         </Peace>
         <War>
           <Progress>
             <EarlyGame>
-              <MaxShipCount>18</MaxShipCount>              <!-- 5 - 8 -->
+              <MaxShipCount>8</MaxShipCount>              <!-- 5 - 15 -->
             </EarlyGame>
             <EarlyMidGame>
-              <MaxShipCount>30</MaxShipCount>              <!-- 7 - 12 -->
+              <MaxShipCount>25</MaxShipCount>              <!-- 7 - 35 -->
             </EarlyMidGame>
             <MidGame>
-              <MaxShipCount>80</MaxShipCount>              <!-- 12 - 20 -->
+              <MaxShipCount>90</MaxShipCount>              <!-- 12 - 50 -->
             </MidGame>
             <LateMidGame>
-              <MaxShipCount>100</MaxShipCount>              <!-- 16 - 25 -->
+              <MaxShipCount>150</MaxShipCount>              <!-- 16 - 80 -->
             </LateMidGame>
             <LateGame>
-              <MaxShipCount>150</MaxShipCount>              <!-- 25 - 38 -->
+              <MaxShipCount>250</MaxShipCount>              <!-- 25 - 130 -->
             </LateGame>
             <EndGame>
-              <MaxShipCount>200</MaxShipCount>              <!-- 34 - 50 -->
+              <MaxShipCount>400</MaxShipCount>              <!-- 34 - 200 -->
             </EndGame>
           </Progress>
         </War>
@@ -265,14 +297,20 @@ Balancing - Ships
       <ShipLimits>
         <Peace>
           <Progress>
+            <EarlyGame>
+              <MaxShipCount>0</MaxShipCount>              <!-- / -->
+            </EarlyGame>
+            <EarlyMidGame>
+              <MaxShipCount>0</MaxShipCount>              <!-- / -->
+            </EarlyMidGame>
             <MidGame>
-              <MaxShipCount>4</MaxShipCount>              <!-- 3 -->
+              <MaxShipCount>2</MaxShipCount>              <!-- 3 -->
             </MidGame>
             <LateMidGame>
-              <MaxShipCount>8</MaxShipCount>              <!-- 7 -->
+              <MaxShipCount>4</MaxShipCount>              <!-- 7 -->
             </LateMidGame>
             <LateGame>
-              <MaxShipCount>12</MaxShipCount>              <!-- 10 -->
+              <MaxShipCount>8</MaxShipCount>              <!-- 10 -->
             </LateGame>
             <EndGame>
               <MaxShipCount>20</MaxShipCount>              <!-- 15 -->
@@ -281,17 +319,23 @@ Balancing - Ships
         </Peace>
         <War>
           <Progress>
+            <EarlyGame>
+              <MaxShipCount>0</MaxShipCount>              <!-- / -->
+            </EarlyGame>
+            <EarlyMidGame>
+              <MaxShipCount>0</MaxShipCount>              <!-- / -->
+            </EarlyMidGame>
             <MidGame>
-              <MaxShipCount>8</MaxShipCount>              <!-- / -->
+              <MaxShipCount>3</MaxShipCount>              <!-- / -->
             </MidGame>
             <LateMidGame>
-              <MaxShipCount>12</MaxShipCount>              <!-- 11 -->
+              <MaxShipCount>6</MaxShipCount>              <!-- 11 -->
             </LateMidGame>
             <LateGame>
-              <MaxShipCount>18</MaxShipCount>              <!-- 18 -->
+              <MaxShipCount>9</MaxShipCount>              <!-- 18 -->
             </LateGame>
             <EndGame>
-              <MaxShipCount>26</MaxShipCount>              <!-- 28 -->
+              <MaxShipCount>30</MaxShipCount>              <!-- 28 -->
             </EndGame>
           </Progress>
         </War>
@@ -306,44 +350,44 @@ Balancing - Ships
         <Peace>
           <Progress>
             <EarlyGame>
-              <MaxShipCount>15</MaxShipCount>              <!-- 8 - 10 -->
+              <MaxShipCount>5</MaxShipCount>              <!-- 8 - 10 -->
             </EarlyGame>
             <EarlyMidGame>
               <MaxShipCount>30</MaxShipCount>              <!-- 15 - 18 -->
             </EarlyMidGame>
             <MidGame>
-              <MaxShipCount>60</MaxShipCount>              <!-- 22 - 28 -->
+              <MaxShipCount>125</MaxShipCount>              <!-- 22 - 35 -->
             </MidGame>
             <LateMidGame>
-              <MaxShipCount>100</MaxShipCount>              <!-- 34 - 40 -->
+              <MaxShipCount>250</MaxShipCount>              <!-- 34 - 75 -->
             </LateMidGame>
             <LateGame>
-              <MaxShipCount>150</MaxShipCount>              <!-- 46 - 50 -->
+              <MaxShipCount>350</MaxShipCount>              <!-- 46 - 125 -->
             </LateGame>
             <EndGame>
-              <MaxShipCount>200</MaxShipCount>              <!-- 58 - 60 -->
+              <MaxShipCount>500</MaxShipCount>              <!-- 58 - 60 -->
             </EndGame>
           </Progress>
         </Peace>
         <War>
           <Progress>
             <EarlyGame>
-              <MaxShipCount>30</MaxShipCount>              <!-- 8 - 16 -->
+              <MaxShipCount>8</MaxShipCount>              <!-- 8 - 20 -->
             </EarlyGame>
             <EarlyMidGame>
-              <MaxShipCount>50</MaxShipCount>              <!-- 15 - 30 -->
+              <MaxShipCount>40</MaxShipCount>              <!-- 15 - 45 -->
             </EarlyMidGame>
             <MidGame>
-              <MaxShipCount>125</MaxShipCount>              <!-- / - 40 -->
+              <MaxShipCount>125</MaxShipCount>              <!-- / - 65 -->
             </MidGame>
             <LateMidGame>
-              <MaxShipCount>180</MaxShipCount>              <!-- 34 - 55 -->
+              <MaxShipCount>250</MaxShipCount>              <!-- 34 - 100 -->
             </LateMidGame>
             <LateGame>
-              <MaxShipCount>250</MaxShipCount>              <!-- 46 - 68 -->
+              <MaxShipCount>350</MaxShipCount>              <!-- 46 - 175 -->
             </LateGame>
             <EndGame>
-              <MaxShipCount>300</MaxShipCount>              <!-- 58 - 80 -->
+              <MaxShipCount>500</MaxShipCount>              <!-- 58 - 250 -->
             </EndGame>
           </Progress>
         </War>
@@ -354,32 +398,32 @@ Balancing - Ships
         <Peace>
           <Progress>
             <MidGame>
-              <MaxShipCount>6</MaxShipCount>              <!-- 2 -->
+              <MaxShipCount>4</MaxShipCount>              <!-- 2 -->
             </MidGame>
             <LateMidGame>
-              <MaxShipCount>10</MaxShipCount>              <!-- 5 -->
+              <MaxShipCount>8</MaxShipCount>              <!-- 5 -->
             </LateMidGame>
             <LateGame>
-              <MaxShipCount>18</MaxShipCount>              <!-- 8 -->
+              <MaxShipCount>16</MaxShipCount>              <!-- 8 -->
             </LateGame>
             <EndGame>
-              <MaxShipCount>24</MaxShipCount>              <!-- 12 -->
+              <MaxShipCount>40</MaxShipCount>              <!-- 12 -->
             </EndGame>
           </Progress>
         </Peace>
         <War>
           <Progress>
             <MidGame>
-              <MaxShipCount>10</MaxShipCount>              <!-- 4/15 -->
+              <MaxShipCount>4</MaxShipCount>              <!-- 4/15 -->
             </MidGame>
             <LateMidGame>
-              <MaxShipCount>16</MaxShipCount>              <!-- 7/20 -->
+              <MaxShipCount>8</MaxShipCount>              <!-- 7/20 -->
             </LateMidGame>
             <LateGame>
-              <MaxShipCount>24</MaxShipCount>              <!-- 12/30 -->
+              <MaxShipCount>16</MaxShipCount>              <!-- 12/30 -->
             </LateGame>
             <EndGame>
-              <MaxShipCount>32</MaxShipCount>              <!-- 16/40 -->
+              <MaxShipCount>40</MaxShipCount>              <!-- 16/40 -->
             </EndGame>
           </Progress>
         </War>
@@ -440,125 +484,184 @@ Balancing - Ships
     <ModOp Type="replace" GUID="47,79,80,83,82,81,11,220,48,84,85" Path="/Values/MilitaryAI/WarFleet/ShipList/Item[Type='100437']">
       <Item>
         <Type>100437</Type>        <!--Gunboat-->
-        <Weight>1</Weight>
+        <Weight>0.5</Weight>
       </Item>
     </ModOp>
 
     <ModOp Type="replace" GUID="47,79,80,83,82,81,11,220,48,84,85" Path="/Values/MilitaryAI/WarFleet/ShipList/Item[Type='100439']">
       <Item>
         <Type>100439</Type>        <!--Frigate-->
-        <Weight>3</Weight>
+        <Weight>10</Weight>
       </Item>
     </ModOp>
 
     <ModOp Type="replace" GUID="79,80,83,82,81,11,220,48,84,85" Path="/Values/MilitaryAI/WarFleet/ShipList/Item[Type='100440']">
       <Item>
         <Type>100440</Type>        <!--Liner (Military)-->
-        <Weight>6</Weight>
+        <Weight>18</Weight>
       </Item>
     </ModOp>
 
     <ModOp Type="replace" GUID="82,48,84,85" Path="/Values/MilitaryAI/WarFleet/ShipList/Item[Type='968']">
       <Item>
         <Type>968</Type>        <!--Monitor Crocodile (Military)-->
-        <Weight>4</Weight>
+        <Weight>30</Weight>
       </Item>
     </ModOp>
 
     <ModOp Type="replace" GUID="81,11,220,84,85" Path="/Values/MilitaryAI/WarFleet/ShipList/Item[Type='100443']">
       <Item>
         <Type>100443</Type>        <!--Monitor (Military)-->
-        <Weight>4</Weight>
+        <Weight>30</Weight>
       </Item>
     </ModOp>
 
     <ModOp Type="replace" GUID="83,81,11,220,48,84,85" Path="/Values/MilitaryAI/WarFleet/ShipList/Item[Type='100442']">
       <Item>
         <Type>100442</Type>        <!--Battle Cruiser (Military)-->
-        <Weight>15</Weight>
+        <Weight>120</Weight>
       </Item>
     </ModOp>
 
     <ModOp Type="add" GUID="47" Path="/Values/MilitaryAI/WarFleet/ShipList">
       <Item>
         <Type>100440</Type>        <!--Liner (Military)-->
-        <Weight>7</Weight>
+        <Weight>18</Weight>
       </Item>
     </ModOp>
 
     <ModOp Type="add" GUID="47,79,80,82" Path="/Values/MilitaryAI/WarFleet/ShipList">
       <Item>
         <Type>100442</Type>        <!--Battle Cruiser (Military)-->
-        <Weight>15</Weight>
+        <Weight>120</Weight>
       </Item>
     </ModOp>
 
     <ModOp Type="add" GUID="47,79,80,48" Path="/Values/MilitaryAI/WarFleet/ShipList">
       <Item>
         <Type>100443</Type>        <!--Monitor (Military)-->
-        <Weight>4</Weight>
+        <Weight>30</Weight>
       </Item>
     </ModOp>
 
     <ModOp Type="add" GUID="47,79,80,83,82,81,11,220,48,84,85" Path="/Values/MilitaryAI/WarFleet/ShipList">
       <Item>
         <Type>720</Type>        <!--Flak Monitor (Military)-->
-        <Weight>5</Weight>
+        <Weight>25</Weight>
       </Item>
     </ModOp>
 
-    <ModOp Type="add" GUID="79,83,11" Path="/Values/MilitaryAI/WarFleet/ShipList">
+    <ModOp Type="add" GUID="47,79,80,83,82,81,11,220,48,84,85" Path="/Values/MilitaryAI/WarFleet/ShipList">
       <Item>
-        <Type>968</Type>        <!--Monitor Crocodile (Military)-->
-        <Weight>4</Weight>
-      </Item>
-    </ModOp>
-
-    <!-- HUNT IS RELATED TO ANNE HARLOW - SHE BUILDS SOME OF THE PIRATE SHIPS -->
-    <ModOp Type="add" GUID="79,83,11" Path="/Values/MilitaryAI/WarFleet/ShipList">
-      <Item>
-        <Type>968</Type>        <!--Monitor Crocodile (Military)-->
-        <Weight>4</Weight>
-      </Item>
-    </ModOp>
-
-    <!-- QING IS AN ASIAN FIRE BREATHING DRAGON - SHE BUILDS ADDITIONAL PHYPHORIAN SHIPS -->
-    <ModOp Type="add" GUID="79" Path="/Values/MilitaryAI/WarFleet/ShipList">
-      <Item>
-        <Type>102423</Type>        <!--Pyrphorian Monitor-->
-        <Weight>4</Weight>
-      </Item>
-      <Item>
-        <Type>102428</Type>        <!--Pyrphorian CommandoShip-->
-        <Weight>6</Weight>
-      </Item>
-      <Item>
-        <Type>102425</Type>        <!--Pyrphorian Battle Cruiser-->
-        <Weight>10</Weight>
-      </Item>
-    </ModOp>
-
-    <!-- GASPAROV IS NOBLE AND WANTS TIES WITH ROYALTY - HE BUILDS ADDITIONAL ROYAL SHIPS -->
-    <ModOp Type="add" GUID="83" Path="/Values/MilitaryAI/WarFleet/ShipList">
-      <Item>
-        <Type>102427</Type>        <!--Royal Liner-->
-        <Weight>6</Weight>
-      </Item>
-    </ModOp>
-
-    <!-- HUNT IS RELATED TO ANNE HARLOW - SHE BUILDS SOME OF THE PIRATE SHIPS -->
-    <ModOp Type="add" GUID="85" Path="/Values/MilitaryAI/WarFleet/ShipList">
-      <Item>
-        <Type>102432</Type>        <!--Pirate Monitor-->
-        <Weight>4</Weight>
-      </Item>
-      <Item>
-        <Type>102431</Type>        <!--Pirate Liner-->
-        <Weight>6</Weight>
+        <Type>720</Type>        <!--Flak Monitor (Military)-->
+        <Weight>25</Weight>
       </Item>
     </ModOp>
 
   </Group>
+
+  <!-- START - Other Warfleet changes -->
+
+  <!-- EASY -->
+  <ModOp Type="merge" GUID="47,79,80" Path="/Values/MilitaryAI/WarFleet">
+    <SessionOverride>
+      <Item>
+        <SessionGUID>180023</SessionGUID>        <!--Moderate_Session-->
+        <Percentage>100</Percentage>
+      </Item>
+      <Item>
+        <SessionGUID>180025</SessionGUID>        <!--SouthAmerica_Session-->
+        <Percentage>65</Percentage>
+      </Item>
+      <Item>
+        <SessionGUID>110934</SessionGUID>        <!--SunkenTreasures_Session-->
+        <Percentage>65</Percentage>
+      </Item>
+      <Item>
+        <SessionGUID>180045</SessionGUID>        <!--Arctic_Session-->
+        <Percentage>10</Percentage>
+      </Item>
+      <Item>
+        <SessionGUID>112132</SessionGUID>        <!--Africa_Session-->
+        <Percentage>20</Percentage>
+      </Item>
+    </SessionOverride>
+    <CatchupFactor>
+      <Enabled>1</Enabled>
+      <CatchupToPercentage>200</CatchupToPercentage>
+    </CatchupFactor>
+    <SlowdownFactor>
+      <Enabled>0</Enabled>
+    </SlowdownFactor>
+  </ModOp>
+
+  <!-- MEDIUM -->
+  <ModOp Type="merge" GUID="83,82,81,11,220" Path="/Values/MilitaryAI/WarFleet">
+    <SessionOverride>
+      <Item>
+        <SessionGUID>180023</SessionGUID>        <!--Moderate_Session-->
+        <Percentage>100</Percentage>
+      </Item>
+      <Item>
+        <SessionGUID>180025</SessionGUID>        <!--SouthAmerica_Session-->
+        <Percentage>75</Percentage>
+      </Item>
+      <Item>
+        <SessionGUID>110934</SessionGUID>        <!--SunkenTreasures_Session-->
+        <Percentage>75</Percentage>
+      </Item>
+      <Item>
+        <SessionGUID>180045</SessionGUID>        <!--Arctic_Session-->
+        <Percentage>20</Percentage>
+      </Item>
+      <Item>
+        <SessionGUID>112132</SessionGUID>        <!--Africa_Session-->
+        <Percentage>25</Percentage>
+      </Item>
+    </SessionOverride>
+    <CatchupFactor>
+      <Enabled>1</Enabled>
+      <CatchupToPercentage>200</CatchupToPercentage>
+    </CatchupFactor>
+    <SlowdownFactor>
+      <Enabled>0</Enabled>
+    </SlowdownFactor>
+  </ModOp>
+
+  <!-- HARD -->
+  <ModOp Type="merge" GUID="48,84,85" Path="/Values/MilitaryAI/WarFleet">
+    <SessionOverride>
+      <Item>
+        <SessionGUID>180023</SessionGUID>        <!--Moderate_Session-->
+        <Percentage>100</Percentage>
+      </Item>
+      <Item>
+        <SessionGUID>180025</SessionGUID>        <!--SouthAmerica_Session-->
+        <Percentage>85</Percentage>
+      </Item>
+      <Item>
+        <SessionGUID>110934</SessionGUID>        <!--SunkenTreasures_Session-->
+        <Percentage>85</Percentage>
+      </Item>
+      <Item>
+        <SessionGUID>180045</SessionGUID>        <!--Arctic_Session-->
+        <Percentage>25</Percentage>
+      </Item>
+      <Item>
+        <SessionGUID>112132</SessionGUID>        <!--Africa_Session-->
+        <Percentage>30</Percentage>
+      </Item>
+    </SessionOverride>
+    <CatchupFactor>
+      <Enabled>1</Enabled>
+      <CatchupToPercentage>200</CatchupToPercentage>
+    </CatchupFactor>
+    <SlowdownFactor>
+      <Enabled>0</Enabled>
+    </SlowdownFactor>
+  </ModOp>
+
+  <!-- END - Other Warfleet changes -->
 
   <!-- START - Ships have more HP overall -->
 

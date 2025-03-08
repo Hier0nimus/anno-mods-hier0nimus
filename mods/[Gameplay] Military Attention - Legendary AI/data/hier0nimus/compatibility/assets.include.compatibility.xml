@@ -1,0 +1,718 @@
+<!--
+Compatibility
+-->
+
+<ModOps>
+
+  <Group Condition="#military_attention_ships">
+
+    <ModOp Type="remove" GUID="1010521" Path="/Values/Shipyard/AssemblyOptions/Item[Vehicle='1742100690']" />
+
+    <ModOp Type="add" GUID="1742102400" Path="/Values/Shipyard/AssemblyOptions/">
+      <Item>
+        <Vehicle>1742102407</Vehicle>        <!-- Enemy Duke -->
+      </Item>
+    </ModOp>
+
+    <ModOp Type="add" GUID="1742102401" Path="/Values/Shipyard/AssemblyOptions/">
+      <Item>
+        <Vehicle>1742102410</Vehicle>        <!--Enemy Small Battle Cruiser-->
+      </Item>
+      <Item>
+        <Vehicle>1742102406</Vehicle>        <!--Enemy Ironclad Cruiser-->
+      </Item>
+      <Item>
+        <Vehicle>1742100690</Vehicle>        <!-- Heavy Battle Cruiser (AI) -->
+      </Item>
+    </ModOp>
+
+    <!-- ADD TO WARFLEET -->
+    <ModOp Type="add" GUID="47,79,80,83,82,81,11,220,48,84,85" Path="/Values/MilitaryAI/WarFleet/ShipList">
+      <Item>
+        <Type>1742102406</Type>        <!--Enemy Ironclad Cruiser -->
+        <Weight>50</Weight>
+      </Item>
+      <Item>
+        <Type>1742102410</Type>        <!--Enemy Small Battle Cruiser -->
+        <Weight>40</Weight>
+      </Item>
+      <Item>
+        <Type>1742102407</Type>        <!--Enemy Duke-->
+        <Weight>24</Weight>
+      </Item>
+    </ModOp>
+
+    <!-- NEW SHIPS - ENEMY DUKE -->
+    <ModOp Type="addNextSibling" GUID="1742100578">
+      <Asset>
+        <BaseAssetGUID>1742100578</BaseAssetGUID>        <!--Duke-->
+        <Values>
+          <Standard>
+            <GUID>1742102407</GUID>
+            <Name>Enemy Duke</Name>
+          </Standard>
+          <Object/>
+          <Mesh/>
+          <Selection>
+            <OnSelection>
+              <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+              <Values>
+                <ActionList/>
+              </Values>
+            </OnSelection>
+          </Selection>
+          <Walking>
+            <CargoFullFactor>1</CargoFullFactor>
+          </Walking>
+          <Text>
+            <LocaText>
+              <English>
+                <Text>Enemy Duke</Text>
+              </English>
+            </LocaText>
+            <LineID>21902</LineID>
+          </Text>
+          <CommandQueue/>
+          <Drifting/>
+          <Collector/>
+          <Attackable/>
+          <Attacker/>
+          <MinimapToken/>
+          <SoundEmitter/>
+          <UpgradeList/>
+          <QuestObject/>
+          <Infolayer/>
+          <ItemContainer/>
+          <FeedbackController/>
+          <Draggable>
+            <DraggableOnDrag>
+              <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+              <Values>
+                <ActionList/>
+              </Values>
+            </DraggableOnDrag>
+            <DraggableOnDrop>
+              <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+              <Values>
+                <ActionList/>
+              </Values>
+            </DraggableOnDrop>
+          </Draggable>
+          <Cost>
+            <Costs>
+              <Item>
+                <Ingredient>1010196</Ingredient>                <!--timber-->
+                <Amount>45</Amount>                <!-- SOTL 60 -->
+              </Item>
+              <Item>
+                <Ingredient>1010210</Ingredient>                <!--sailcloth-->
+                <Amount>25</Amount>                <!-- SOTL 30 -->
+              </Item>
+              <Item>
+                <Ingredient>1010221</Ingredient>                <!--weapons-->
+                <Amount>25</Amount>                <!-- SOTL 30 -->
+              </Item>
+              <Item>
+                <Ingredient>1010218</Ingredient>                <!--steelbeams-->
+                <Amount>15</Amount>
+              </Item>
+            </Costs>
+            <InfluenceCostType>WarShip</InfluenceCostType>
+            <InfluenceCostPoints>14</InfluenceCostPoints>            <!-- SOTL 16 -->
+          </Cost>
+          <Craftable>
+            <CraftingTime>720000</CraftingTime>            <!-- SOTL 720000 -->
+          </Craftable>
+          <TradeRouteVehicle/>
+          <Locked>
+            <DefaultLockedState>0</DefaultLockedState>
+          </Locked>
+          <Nameable/>
+          <MetaPersistent/>
+          <ExpeditionAttribute/>
+          <ShipMaintenance/>
+          <Sellable/>
+          <Stance/>
+          <Rentable/>
+          <WorldMapSound/>
+          <Pausable/>
+          <ShipIncident/>
+          <SoundEmitterCommandBarks/>
+        </Values>
+      </Asset>
+    </ModOp>
+
+    <!-- NEW SHIPS - ENEMY SMALL BATTLE CRUISER -->
+    <ModOp Type="addNextSibling" GUID="1742100583">
+      <Asset>
+        <BaseAssetGUID>1742100583</BaseAssetGUID>        <!--Small Battle Cruiser-->
+        <Values>
+          <Standard>
+            <GUID>1742102410</GUID>
+            <Name>Enemy Small Battle Cruiser</Name>
+          </Standard>
+          <Object/>
+          <Mesh/>
+          <Selection>
+            <OnSelection>
+              <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+              <Values>
+                <ActionList/>
+              </Values>
+            </OnSelection>
+          </Selection>
+          <Walking>
+            <CargoFullFactor>1</CargoFullFactor>
+          </Walking>
+          <Text>
+            <LocaText>
+              <English>
+                <Text>Enemy Small Battle Cruiser</Text>
+              </English>
+            </LocaText>
+            <LineID>21902</LineID>
+          </Text>
+          <CommandQueue/>
+          <Drifting/>
+          <Collector/>
+          <Attackable/>
+          <Attacker/>
+          <MinimapToken/>
+          <SoundEmitter/>
+          <UpgradeList/>
+          <QuestObject/>
+          <Infolayer/>
+          <ItemContainer/>
+          <FeedbackController/>
+          <Draggable>
+            <DraggableOnDrag>
+              <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+              <Values>
+                <ActionList/>
+              </Values>
+            </DraggableOnDrag>
+            <DraggableOnDrop>
+              <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+              <Values>
+                <ActionList/>
+              </Values>
+            </DraggableOnDrop>
+          </Draggable>
+          <Cost>
+            <Costs>
+              <Item>
+                <Ingredient>1010218</Ingredient>                <!--beams-->
+                <Amount>20</Amount>
+              </Item>
+              <Item>
+                <Ingredient>1010224</Ingredient>                <!--steam motors-->
+                <Amount>8</Amount>
+              </Item>
+              <Item>
+                <Ingredient>1010223</Ingredient>                <!--advanced weapons-->
+                <Amount>10</Amount>
+              </Item>
+            </Costs>
+            <InfluenceCostType>WarShip</InfluenceCostType>
+            <InfluenceCostPoints>9</InfluenceCostPoints>
+          </Cost>
+          <Craftable>
+            <CraftingTime>240000</CraftingTime>
+          </Craftable>
+          <TradeRouteVehicle/>
+          <Locked>
+            <DefaultLockedState>0</DefaultLockedState>
+          </Locked>
+          <Nameable/>
+          <MetaPersistent/>
+          <ExpeditionAttribute/>
+          <ShipMaintenance/>
+          <Sellable/>
+          <Stance/>
+          <Rentable/>
+          <WorldMapSound/>
+          <Pausable/>
+          <ShipIncident/>
+          <SoundEmitterCommandBarks/>
+        </Values>
+      </Asset>
+    </ModOp>
+
+    <!-- NEW SHIPS - ENEMY IRONCLAD CRUISER -->
+    <ModOp Type="addNextSibling" GUID="1742100615">
+      <Asset>
+        <BaseAssetGUID>1742100615</BaseAssetGUID>        <!--Ironclad Cruiser-->
+        <Values>
+          <Standard>
+            <GUID>1742102406</GUID>
+            <Name>Enemy Ironclad Cruiser</Name>
+          </Standard>
+          <Object/>
+          <Mesh/>
+          <Selection>
+            <OnSelection>
+              <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+              <Values>
+                <ActionList/>
+              </Values>
+            </OnSelection>
+          </Selection>
+          <Walking/>
+          <Text>
+            <LocaText>
+              <English>
+                <Text>Enemy Ironclad Cruiser</Text>
+              </English>
+            </LocaText>
+            <LineID>21439</LineID>
+          </Text>
+          <CommandQueue/>
+          <Drifting/>
+          <Collector/>
+          <Attackable/>
+          <Attacker/>
+          <MinimapToken/>
+          <SoundEmitter/>
+          <UpgradeList/>
+          <QuestObject/>
+          <Infolayer/>
+          <ItemContainer/>
+          <FeedbackController/>
+          <Draggable>
+            <DraggableOnDrag>
+              <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+              <Values>
+                <ActionList/>
+              </Values>
+            </DraggableOnDrag>
+            <DraggableOnDrop>
+              <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+              <Values>
+                <ActionList/>
+              </Values>
+            </DraggableOnDrop>
+          </Draggable>
+          <Cost>
+            <Costs>
+              <Item>
+                <Ingredient>1010017</Ingredient>
+                <Amount>150000</Amount>
+              </Item>
+              <Item>
+                <Ingredient>1010196</Ingredient>                <!--timber-->
+                <Amount>20</Amount>
+              </Item>
+              <Item>
+                <Ingredient>1010218</Ingredient>                <!--beams-->
+                <Amount>40</Amount>
+              </Item>
+              <Item>
+                <Ingredient>1010224</Ingredient>                <!--steam motors-->
+                <Amount>15</Amount>
+              </Item>
+              <Item>
+                <Ingredient>1010221</Ingredient>                <!--weapons-->
+                <Amount>20</Amount>
+              </Item>
+            </Costs>
+            <InfluenceCostType>WarShip</InfluenceCostType>
+            <InfluenceCostPoints>12</InfluenceCostPoints>
+          </Cost>
+          <Craftable>
+            <CraftingTime>720000</CraftingTime>
+          </Craftable>
+          <TradeRouteVehicle/>
+          <Locked/>
+          <Nameable/>
+          <MetaPersistent/>
+          <ExpeditionAttribute/>
+          <ShipMaintenance/>
+          <Sellable/>
+          <Stance/>
+          <Rentable/>
+          <WorldMapSound/>
+          <Pausable/>
+          <ShipIncident/>
+          <SoundEmitterCommandBarks/>
+        </Values>
+      </Asset>
+    </ModOp>
+
+    <Group Condition="#military_attention">
+
+      <!-- Enemy Duke -->
+      <ModOp Type="merge" GUID="1742102405" Path="/Values/Craftable">
+        <CraftingTime>480000</CraftingTime>        <!-- 720000 -->
+      </ModOp>
+
+      <!-- Enemy Small Battle Cruiser -->
+      <ModOp Type="merge" GUID="1742102402" Path="/Values/Craftable">
+        <CraftingTime>180000</CraftingTime>        <!-- 240000 -->
+      </ModOp>
+
+      <!-- Enemy Ironclad Cruiser -->
+      <ModOp Type="merge" GUID="1742102403" Path="/Values/Craftable">
+        <CraftingTime>480000</CraftingTime>        <!-- 720000 -->
+      </ModOp>
+
+    </Group>
+
+  </Group>
+
+  <Group Condition="#military_attention_pirates">
+
+    <!-- Let pirates build more ships -->
+    <!-- START - SHIPS PIRATES - LATEMIDGAME -->
+    <ModOp Type="merge" GUID='73,76' Path="Values/Trader/Progression/LateMidGame/WarFleet">
+      <WarFleet>
+        <Item>
+          <ShipAsset>102432</ShipAsset>          <!--Pirate Monitor-->
+          <Amount>3</Amount>          <!-- / - 1 -->
+        </Item>
+        <Item>
+          <ShipAsset>1742102068</ShipAsset>          <!--Pirate Flame Monitor-->
+          <Amount>3</Amount>          <!-- / - 1 -->
+        </Item>
+        <Item>
+          <ShipAsset>1742102012</ShipAsset>          <!--Ironclad Cruiser-->
+          <Amount>3</Amount>          <!-- / - 2 -->
+        </Item>
+        <Item>
+          <ShipAsset>1742102074</ShipAsset>          <!--Pirate Flak Monitor-->
+          <Amount>2</Amount>          <!-- / - 1 -->
+        </Item>
+        <Item>
+          <ShipAsset>102431</ShipAsset>          <!--Pirate SOTL-->
+          <Amount>4</Amount>          <!-- 2 - 3 -->
+        </Item>
+        <Item>
+          <ShipAsset>1742102008</ShipAsset>          <!--Jolly Roger-->
+          <Amount>4</Amount>          <!-- / - 2 -->
+        </Item>
+        <Item>
+          <ShipAsset>102430</ShipAsset>          <!--Pirate Frigate-->
+          <Amount>5</Amount>          <!-- 4 - 4 -->
+        </Item>
+        <Item>
+          <ShipAsset>102429</ShipAsset>          <!--Pirate Gunboat-->
+          <Amount>6</Amount>          <!-- 8 - 6 -->
+        </Item>
+      </WarFleet>
+    </ModOp>
+    <!-- END - SHIPS PIRATES - LATEMIDGAME -->
+    <!-- START - SHIPS PIRATES - LATEGAME -->
+    <ModOp Type="merge" GUID='73,76' Path="Values/Trader/Progression/LateGame/WarFleet">
+      <WarFleet>
+        <Item>
+          <ShipAsset>1742102010</ShipAsset>          <!--Pirate Battle Cruiser-->
+          <Amount>4</Amount>          <!-- / - 3 -->
+        </Item>
+        <Item>
+          <ShipAsset>1742102070</ShipAsset>          <!--Pirate Warship-->
+          <Amount>4</Amount>          <!-- / - 3 -->
+        </Item>
+        <Item>
+          <ShipAsset>1742102094</ShipAsset>          <!--Pirate Hawk-->
+          <Amount>3</Amount>          <!-- / - 2 -->
+        </Item>
+        <Item>
+          <ShipAsset>1742102096</ShipAsset>          <!--Pirate Black Eagle-->
+          <Amount>2</Amount>          <!-- / - 1 -->
+        </Item>
+        <Item>
+          <ShipAsset>1742102074</ShipAsset>          <!--Pirate Flak Monitor-->
+          <Amount>3</Amount>          <!-- / - 2 -->
+        </Item>
+        <Item>
+          <ShipAsset>1742102012</ShipAsset>          <!--Ironclad Cruiser-->
+          <Amount>4</Amount>          <!-- / - 3 -->
+        </Item>
+        <Item>
+          <ShipAsset>102432</ShipAsset>          <!--Pirate Monitor-->
+          <Amount>4</Amount>          <!-- 2 - 2 -->
+        </Item>
+        <Item>
+          <ShipAsset>1742102068</ShipAsset>          <!--Pirate Flame Monitor-->
+          <Amount>4</Amount>          <!-- / - 2 -->
+        </Item>
+        <Item>
+          <ShipAsset>1742102008</ShipAsset>          <!--Jolly Roger-->
+          <Amount>2</Amount>          <!-- / - 2 -->
+        </Item>
+      </WarFleet>
+    </ModOp>
+    <!-- END - SHIPS PIRATES - LATEGAME -->
+    <!-- START - SHIPS PIRATES - ENDGAME -->
+    <ModOp Type="merge" GUID='73,76' Path="Values/Trader/Progression/EndGame/WarFleet">
+      <WarFleet>
+        <Item>
+          <ShipAsset>1742102010</ShipAsset>          <!--Pirate Battle Cruiser-->
+          <Amount>5</Amount>          <!-- / - 3 -->
+        </Item>
+        <Item>
+          <ShipAsset>1742102070</ShipAsset>          <!--Pirate Warship-->
+          <Amount>5</Amount>          <!-- / - 3 -->
+        </Item>
+        <Item>
+          <ShipAsset>1742102014</ShipAsset>          <!--Pirate Heavy Battle Cruiser-->
+          <Amount>1</Amount>          <!-- / - 1 -->
+        </Item>
+        <Item>
+          <ShipAsset>1742102072</ShipAsset>          <!--Pirate Heavy Warship Cruiser-->
+          <Amount>1</Amount>          <!-- / - 1 -->
+        </Item>
+        <Item>
+          <ShipAsset>1742102012</ShipAsset>          <!--Pirate Ironclad Cruiser-->
+          <Amount>5</Amount>          <!-- / - 3 -->
+        </Item>
+        <Item>
+          <ShipAsset>1742102096</ShipAsset>          <!--Pirate Black Eagle-->
+          <Amount>4</Amount>          <!-- / - 2 -->
+        </Item>
+        <Item>
+          <ShipAsset>1742102068</ShipAsset>          <!--Pirate Flame Monitor-->
+          <Amount>5</Amount>          <!-- / - 4 -->
+        </Item>
+        <Item>
+          <ShipAsset>1742102074</ShipAsset>          <!--Pirate Flak Monitor-->
+          <Amount>3</Amount>          <!-- / - 3 -->
+        </Item>
+        <Item>
+          <ShipAsset>1742102094</ShipAsset>          <!--Pirate Hawk-->
+          <Amount>5</Amount>          <!-- / - 3 -->
+        </Item>
+        <Item>
+          <ShipAsset>102432</ShipAsset>          <!--Pirate Monitor-->
+          <Amount>5</Amount>          <!-- 3 - 4 -->
+        </Item>
+        <Item>
+          <ShipAsset>1742102008</ShipAsset>          <!--Jolly Roger-->
+          <Amount>3</Amount>          <!-- / - 3 -->
+        </Item>
+      </WarFleet>
+    </ModOp>
+
+    <!-- START BALANCING PIRATE SHIPS -->
+
+    <!-- Let pirates build their ships faster and make them stronger -->
+
+    <!-- Pirate Gunboat -->
+    <ModOp Type="merge" GUID='102420,102429' Path="/Values/">
+      <Attackable>
+        <MaximumHitPoints>1000</MaximumHitPoints>        <!-- 750 -->
+        <SelfHealPerHealTick>15</SelfHealPerHealTick>        <!-- 3 -->
+        <SelfHealPausedTimeIfAttacked>5000</SelfHealPausedTimeIfAttacked>        <!-- 30000 -->
+      </Attackable>
+      <Attacker>
+        <BaseDamage>125</BaseDamage>        <!-- 105 -->
+        <ReloadTime>35</ReloadTime>        <!-- 50 -->
+        <AttackRange>50</AttackRange>        <!-- 40 -->
+      </Attacker>
+      <Craftable>
+        <CraftingTime>30000</CraftingTime>
+      </Craftable>
+    </ModOp>
+
+    <!-- Pirate Frigate -->
+    <ModOp Type="merge" GUID='102421,102430' Path="/Values/">
+      <Attackable>
+        <MaximumHitPoints>2750</MaximumHitPoints>        <!-- 2500 -->
+        <SelfHealPerHealTick>15</SelfHealPerHealTick>        <!-- 3 -->
+        <SelfHealPausedTimeIfAttacked>5000</SelfHealPausedTimeIfAttacked>        <!-- 60000 -->
+      </Attackable>
+      <Attacker>
+        <BaseDamage>160</BaseDamage>        <!-- 140 -->
+        <ReloadTime>35</ReloadTime>        <!-- 50 -->
+        <AttackRange>65</AttackRange>        <!-- 55 -->
+      </Attacker>
+      <Craftable>
+        <CraftingTime>60000</CraftingTime>
+      </Craftable>
+    </ModOp>
+
+    <!-- Pirate SOTL -->
+    <ModOp Type="merge" GUID="102419,102431" Path="/Values/">
+      <Attackable>
+        <MaximumHitPoints>4750</MaximumHitPoints>        <!-- 4000 -->
+        <SelfHealPerHealTick>15</SelfHealPerHealTick>        <!-- 3 -->
+        <SelfHealPausedTimeIfAttacked>5000</SelfHealPausedTimeIfAttacked>        <!-- 60000 -->
+      </Attackable>
+      <Attacker>
+        <BaseDamage>410</BaseDamage>
+        <ReloadTime>75</ReloadTime>
+        <AttackRange>64</AttackRange>
+      </Attacker>
+      <Craftable>
+        <CraftingTime>90000</CraftingTime>
+      </Craftable>
+    </ModOp>
+
+    <!-- Pirate Monitor -->
+    <ModOp Type="merge" GUID="102422,102432" Path="/Values">
+      <Attackable>
+        <MaximumHitPoints>4250</MaximumHitPoints>        <!-- 4250 -->
+        <SelfHealPerHealTick>15</SelfHealPerHealTick>        <!-- 3 -->
+        <SelfHealPausedTimeIfAttacked>5000</SelfHealPausedTimeIfAttacked>        <!-- 60000 -->
+      </Attackable>
+      <Attacker>
+        <BaseDamage>120</BaseDamage>        <!-- 93 -->
+        <AttackRange>60</AttackRange>        <!-- 48 -->
+      </Attacker>
+      <Craftable>
+        <CraftingTime>90000</CraftingTime>
+      </Craftable>
+    </ModOp>
+
+    <!-- Pirate Jolly Roger -->
+    <ModOp Type="merge" GUID="1742102008" Path="/Values">
+      <Attackable>
+        <MaximumHitPoints>7000</MaximumHitPoints>        <!-- 6750 -->
+        <SelfHealPerHealTick>15</SelfHealPerHealTick>        <!-- 3 -->
+        <SelfHealPausedTimeIfAttacked>5000</SelfHealPausedTimeIfAttacked>        <!-- 60000 -->
+      </Attackable>
+      <Attacker>
+        <BaseDamage>595</BaseDamage>        <!-- SOTL 525 - 350 - DUKE 550 -->
+        <ReloadTime>60</ReloadTime>        <!-- SOTL 100 - 90 - DUKE 80 -->
+        <AttackRange>80</AttackRange>        <!-- SOTL 68 - 52 - DUKE 62 -->
+      </Attacker>
+      <Craftable>
+        <CraftingTime>120000</CraftingTime>
+      </Craftable>
+    </ModOp>
+
+    <!-- Pirate Flame Monitor -->
+    <ModOp Type="merge" GUID="1742102068" Path="/Values/Craftable">
+      <Attackable>
+        <MaximumHitPoints>4250</MaximumHitPoints>        <!-- 4000 -->
+        <SelfHealPerHealTick>15</SelfHealPerHealTick>        <!-- 3 -->
+        <SelfHealPausedTimeIfAttacked>5000</SelfHealPausedTimeIfAttacked>        <!-- 60000 -->
+      </Attackable>
+      <Attacker>
+        <BaseDamage>140</BaseDamage>        <!-- 51 -->
+        <ReloadTime>30</ReloadTime>        <!-- 5 -->
+        <AttackRange>40</AttackRange>        <!-- 25 -->
+      </Attacker>
+      <Craftable>
+        <CraftingTime>90000</CraftingTime>
+      </Craftable>
+    </ModOp>
+
+    <!-- Pirate Flak Monitor -->
+    <ModOp Type="merge" GUID="1742102074" Path="/Values/Craftable">
+      <Attackable>
+        <MaximumHitPoints>4750</MaximumHitPoints>        <!-- 4500 -->
+        <SelfHealPerHealTick>15</SelfHealPerHealTick>        <!-- 3 -->
+        <SelfHealPausedTimeIfAttacked>5000</SelfHealPausedTimeIfAttacked>        <!-- 60000 -->
+      </Attackable>
+      <Attacker>
+        <BaseDamage>40</BaseDamage>        <!-- 22 -->
+        <ReloadTime>2</ReloadTime>        <!-- 3 -->
+        <AttackRange>60</AttackRange>        <!-- 40 -->
+      </Attacker>
+      <Craftable>
+        <CraftingTime>90000</CraftingTime>
+      </Craftable>
+    </ModOp>
+
+    <!-- Pirate Ironclad Cruiser -->
+    <ModOp Type="merge" GUID="1742102012" Path="/Values/Craftable">
+      <Attackable>
+        <MaximumHitPoints>8250</MaximumHitPoints>
+        <SelfHealPerHealTick>15</SelfHealPerHealTick>        <!-- 3 -->
+        <SelfHealPausedTimeIfAttacked>5000</SelfHealPausedTimeIfAttacked>        <!-- 60000 -->
+      </Attackable>
+      <Attacker>
+        <BaseDamage>530</BaseDamage>        <!-- SOTL 525 - 340 - IRONCLAD CRUISER 500 -->
+        <ReloadTime>80</ReloadTime>        <!-- SOTL 100 - 90 - IRONCLAD CRUISER 100 -->
+        <AttackRange>65</AttackRange>        <!-- SOTL 68 - 46 - IRONCLAD CRUISER 54 -->
+      </Attacker>
+      <Craftable>
+        <CraftingTime>120000</CraftingTime>
+      </Craftable>
+    </ModOp>
+
+    <!-- Pirate Battle Cruiser -->
+    <ModOp Type="merge" GUID="1742102010" Path="/Values/Craftable">
+      <Attackable>
+        <MaximumHitPoints>7500</MaximumHitPoints>        <!-- Battle Cruiser 6000 - 7000 -->
+        <SelfHealPerHealTick>15</SelfHealPerHealTick>        <!-- 3 -->
+        <SelfHealPausedTimeIfAttacked>5000</SelfHealPausedTimeIfAttacked>        <!-- 60000 -->
+      </Attackable>
+      <Attacker>
+        <BaseDamage>1350</BaseDamage>        <!-- Battle Cruiser 280 - 1250 -->
+        <ReloadTime>120</ReloadTime>        <!-- Battle Cruiser 70 - 140 -->
+        <AttackRange>90</AttackRange>        <!-- Battle Cruiser 84 - 85 -->
+      </Attacker>
+      <Craftable>
+        <CraftingTime>240000</CraftingTime>
+      </Craftable>
+    </ModOp>
+
+    <!-- Pirate Warship Cruiser -->
+    <ModOp Type="merge" GUID="1742102070" Path="/Values/Craftable">
+      <Attackable>
+        <MaximumHitPoints>7250</MaximumHitPoints>        <!-- Battle Cruiser 6000 - 7000 -->
+        <SelfHealPerHealTick>15</SelfHealPerHealTick>        <!-- 3 -->
+        <SelfHealPausedTimeIfAttacked>5000</SelfHealPausedTimeIfAttacked>        <!-- 60000 -->
+      </Attackable>
+      <Attacker>
+        <BaseDamage>350</BaseDamage>        <!-- 100 -->
+        <ReloadTime>30</ReloadTime>        <!-- 29 -->
+        <AttackRange>44</AttackRange>        <!-- 42 -->
+      </Attacker>
+      <Craftable>
+        <CraftingTime>240000</CraftingTime>
+      </Craftable>
+    </ModOp>
+
+    <!-- Pirate Heavy Battle Cruiser -->
+    <ModOp Type="merge" GUID="1742102014" Path="/Values/Craftable">
+      <Attackable>
+        <MaximumHitPoints>20000</MaximumHitPoints>        <!-- Battle Cruiser 6000 - 7000 - Pirate Battle Cruiser 7250 - Heavy Battle Cruiser 11500 -->
+        <SelfHealPerHealTick>30</SelfHealPerHealTick>        <!-- 3 -->
+        <SelfHealPausedTimeIfAttacked>5000</SelfHealPausedTimeIfAttacked>        <!-- 60000 -->
+      </Attackable>
+      <Attacker>
+        <BaseDamage>3300</BaseDamage>        <!-- Battle Cruiser 280 - 1250 - Pirate Battle Cruiser 1280 - Heavy Battle Cruiser 2500 -->
+        <ReloadTime>90</ReloadTime>        <!-- Battle Cruiser 70 - Pirate Battle Cruiser 130 - Heavy Battle Cruiser 110 -->
+        <AttackRange>92</AttackRange>        <!-- Battle Cruiser 84 - 85 - Pirate Battle Cruiser 86 - Heavy Battle Cruiser 88 -->
+      </Attacker>
+      <Craftable>
+        <CraftingTime>320000</CraftingTime>
+      </Craftable>
+    </ModOp>
+
+    <!-- Pirate Heavy Warship Cruiser -->
+    <ModOp Type="merge" GUID="1742102072" Path="/Values/Craftable">
+      <Attackable>
+        <MaximumHitPoints>18000</MaximumHitPoints>        <!-- Battle Cruiser 6000 - 7000 - Pirate Battle Cruiser 7250 - Heavy Battle Cruiser 11500 -->
+        <SelfHealPerHealTick>30</SelfHealPerHealTick>        <!-- 3 -->
+        <SelfHealPausedTimeIfAttacked>5000</SelfHealPausedTimeIfAttacked>        <!-- 60000 -->
+      </Attackable>
+      <Attacker>
+        <BaseDamage>550</BaseDamage>        <!-- Pyrphorian Battle Cruiser 100 -->
+        <ReloadTime>30</ReloadTime>        <!-- Pyrphorian Battle Cruiser 29 -->
+        <AttackRange>51</AttackRange>        <!-- Pyrphorian Battle Cruiser 42 -->
+      </Attacker>
+      <Craftable>
+        <CraftingTime>320000</CraftingTime>
+      </Craftable>
+    </ModOp>
+
+    <!-- Pirate Iron Maiden -->
+    <ModOp Type="merge" GUID="1742102135" Path="/Values/Craftable">
+      <Craftable>
+        <CraftingTime>420000</CraftingTime>
+      </Craftable>
+    </ModOp>
+
+    <!-- Pirate Skullcrusher -->
+    <ModOp Type="merge" GUID="1742102137" Path="/Values/Craftable">
+      <Craftable>
+        <CraftingTime>420000</CraftingTime>
+      </Craftable>
+    </ModOp>
+
+  </Group>
+
+</ModOps>
