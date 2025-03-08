@@ -11,7 +11,7 @@
   <!-- PIRATE GUNBOAT -->
   <ModOp Type="merge" GUID='102420,102429' Path="/Values/">
     <Walking>
-      <ForwardSpeed>6</ForwardSpeed>      <!-- 5.3 - 6 -->
+      <ForwardSpeed>6</ForwardSpeed>      <!-- 6 -->
       <WindMaxSpeedupFactor>2.5</WindMaxSpeedupFactor>
     </Walking>
     <Attackable>
@@ -34,7 +34,7 @@
   <!-- PIRATE FRIGATE -->
   <ModOp Type="merge" GUID='102421,102430' Path="/Values/">
     <Walking>
-      <ForwardSpeed>6.2</ForwardSpeed>      <!-- 5.2 -->
+      <ForwardSpeed>5.5</ForwardSpeed>      <!-- 5.2 -->
     </Walking>
     <Attacker>
       <ReloadTime>40</ReloadTime>      <!-- 50 - 40 -->
@@ -56,10 +56,10 @@
   <!-- PIRATE SOTL -->
   <ModOp Type="merge" GUID='102419,102431' Path="/Values/">
     <Walking>
-      <ForwardSpeed>5</ForwardSpeed>      <!-- 4 - 4.8 -->
+      <ForwardSpeed>4.5</ForwardSpeed>      <!-- 4 -->
     </Walking>
     <Attackable>
-      <MaximumHitPoints>3500</MaximumHitPoints>
+      <MaximumHitPoints>4250</MaximumHitPoints>      <!-- 4000 -->
       <SelfHealPerHealTick>3.5</SelfHealPerHealTick>      <!-- 1.667 -->
       <SelfHealPausedTimeIfAttacked>30000</SelfHealPausedTimeIfAttacked>      <!-- 60000 -->
     </Attackable>
@@ -79,9 +79,10 @@
   <!-- PIRATE MONITOR -->
   <ModOp Type="merge" GUID='102422,102432' Path="/Values/">
     <Walking>
-      <ForwardSpeed>4.8</ForwardSpeed>
+      <ForwardSpeed>4.8</ForwardSpeed>      <!-- 5.3 -->
     </Walking>
     <Attackable>
+      <MaximumHitPoints>4000</MaximumHitPoints>      <!-- 2500 -->
       <SelfHealPerHealTick>3</SelfHealPerHealTick>      <!-- 1.389 -->
       <SelfHealPausedTimeIfAttacked>30000</SelfHealPausedTimeIfAttacked>      <!-- 60000 -->
     </Attackable>
@@ -250,7 +251,7 @@
           <InfluenceCostPoints>32</InfluenceCostPoints>          <!-- SOTL 16 - DUKE 28 -->
         </Cost>
         <Craftable>
-          <CraftingTime>400000</CraftingTime>          <!-- SOTL 720000 - DUKE 1200000 - 400000 -->
+          <CraftingTime>300000</CraftingTime>          <!-- SOTL 720000 - DUKE 1200000 - 400000 -->
         </Craftable>
         <ExpeditionAttribute>
           <ExpeditionAttributes>
@@ -307,7 +308,7 @@
           <Acceleration>1</Acceleration>          <!-- 1.5 -->
           <Deceleration>1.5</Deceleration>          <!-- 2 -->
           <TurnRadius>5</TurnRadius>          <!-- 6 -->
-          <ForwardSpeed>4.6</ForwardSpeed>          <!-- 5.3 -->
+          <ForwardSpeed>4.8</ForwardSpeed>          <!-- 5.3 -->
         </Walking>
         <Text>
           <LocaText>
@@ -323,12 +324,12 @@
         </Attackable>
         <Attacker>
           <BasicAttackType>Warship</BasicAttackType>
-          <BaseDamage>40</BaseDamage>          <!-- 51 -->
-          <ReloadTime>15</ReloadTime>          <!-- 5 -->
+          <BaseDamage>120</BaseDamage>          <!-- 51 -->
+          <ReloadTime>40</ReloadTime>          <!-- 5 -->
           <AttackRange>30</AttackRange>          <!-- 25 -->
         </Attacker>
         <Craftable>
-          <CraftingTime>450000</CraftingTime>          <!-- 900000 -->
+          <CraftingTime>240000</CraftingTime>          <!-- 900000 -->
         </Craftable>
         <ShipMaintenance>
           <Maintenance>800</Maintenance>          <!-- 390 -->
@@ -360,7 +361,7 @@
           <Acceleration>1</Acceleration>          <!-- 1.5 -->
           <Deceleration>1.5</Deceleration>          <!-- 2 -->
           <TurnRadius>5</TurnRadius>          <!-- 6 -->
-          <ForwardSpeed>4.6</ForwardSpeed>          <!-- 5.3 -->
+          <ForwardSpeed>4.8</ForwardSpeed>          <!-- 5.3 -->
         </Walking>
         <Text>
           <LocaText>
@@ -380,7 +381,7 @@
           <AttackRange>45</AttackRange>          <!-- 40 -->
         </Attacker>
         <Craftable>
-          <CraftingTime>300000</CraftingTime>          <!-- 600000 -->
+          <CraftingTime>180000</CraftingTime>          <!-- 600000 -->
         </Craftable>
         <ShipMaintenance>
           <Maintenance>900</Maintenance>          <!-- 650 -->
@@ -434,7 +435,7 @@
           <TurnDeceleration>0</TurnDeceleration>
           <TurnMovement>0</TurnMovement>
           <LeaningMaxAngle>-10</LeaningMaxAngle>
-          <ForwardSpeed>4.25</ForwardSpeed>          <!-- IRONCLAD CRUISER 4.2 -->
+          <ForwardSpeed>4.7</ForwardSpeed>          <!-- IRONCLAD CRUISER 4.2 -->
           <WindMinSlowdownFactor>1</WindMinSlowdownFactor>
           <WindMaxSpeedupFactor>1</WindMaxSpeedupFactor>
           <CargoFullFactor>0.7</CargoFullFactor>
@@ -603,7 +604,7 @@
           <InfluenceCostPoints>20</InfluenceCostPoints>          <!-- IRONCLAD CRUISER 18 -->
         </Cost>
         <Craftable>
-          <CraftingTime>250000</CraftingTime>          <!-- IRONCLAD CRUISER 800000 - 250000 -->
+          <CraftingTime>240000</CraftingTime>          <!-- IRONCLAD CRUISER 800000 - 250000 -->
         </Craftable>
         <TradeRouteVehicle/>
         <Locked />
@@ -754,7 +755,7 @@
           <InfluenceCostPoints>26</InfluenceCostPoints>          <!-- 24 -->
         </Cost>
         <Craftable>
-          <CraftingTime>450000</CraftingTime>          <!-- 900000 - 450000 -->
+          <CraftingTime>300000</CraftingTime>          <!-- 900000 - 450000 -->
         </Craftable>
         <ExpeditionAttribute>
           <BaseMorale>80</BaseMorale>          <!--50 -->
@@ -821,12 +822,12 @@
         </Attackable>
         <Attacker>
           <BasicAttackType>Warship</BasicAttackType>
-          <BaseDamage>135</BaseDamage>          <!-- 100 -->
-          <ReloadTime>16</ReloadTime>          <!-- 29 -->
+          <BaseDamage>300</BaseDamage>          <!-- 100 -->
+          <ReloadTime>40</ReloadTime>          <!-- 29 -->
           <AttackRange>44</AttackRange>          <!-- 42 -->
         </Attacker>
         <Craftable>
-          <CraftingTime>450000</CraftingTime>          <!-- 900000 -->
+          <CraftingTime>300000</CraftingTime>          <!-- 900000 -->
         </Craftable>
         <ShipMaintenance>
           <Maintenance>2000</Maintenance>          <!-- 1000 -->
@@ -860,7 +861,7 @@
         <Walking>
           <ShortenSailsAfter>0</ShortenSailsAfter>
           <ReservationLength>24</ReservationLength>          <!-- Battle Cruiser 16 -->
-          <ReservationWidth>9</ReservationWidth>          <!-- Battle Cruiser 6 -->
+          <ReservationWidth>10</ReservationWidth>          <!-- Battle Cruiser 6 -->
           <PathPlannerLayer>Water</PathPlannerLayer>
           <ExpensiveDirSmoothing>1</ExpensiveDirSmoothing>
           <TurnAroundRadius>28</TurnAroundRadius>          <!-- Battle Cruiser 8 - 18 -->
@@ -870,7 +871,7 @@
           <TurnDeceleration>0</TurnDeceleration>          <!-- Battle Cruiser 0 -->
           <TurnMovement>0</TurnMovement>          <!-- Battle Cruiser 0 -->
           <LeaningMaxAngle>-10</LeaningMaxAngle>          <!-- Battle Cruiser -10 -->
-          <ForwardSpeed>4.2</ForwardSpeed>          <!-- Battle Cruiser 4.5 - 5.4 - Pirate Battle Cruiser 5.6 - Heavy Battle Cruiser 3.2 -->
+          <ForwardSpeed>4.5</ForwardSpeed>          <!-- Battle Cruiser 4.5 - 5.4 - Pirate Battle Cruiser 5.6 - Heavy Battle Cruiser 3.2 -->
           <WindMinSlowdownFactor>1</WindMinSlowdownFactor>          <!-- Battle Cruiser 1 -->
           <WindMaxSpeedupFactor>1</WindMaxSpeedupFactor>          <!-- Battle Cruiser 1 -->
           <CargoFullFactor>0.5</CargoFullFactor>          <!-- Battle Cruiser 0.7 - 0.9 -->
@@ -887,6 +888,15 @@
           </LocaText>
           <LineID>14857</LineID>
         </Text>
+        <CommandQueue>
+          <FormationPriority>2</FormationPriority>          <!-- Battle Cruiser 2 -->
+          <MilitaryShipPoints>15</MilitaryShipPoints>          <!-- Battle Cruiser 6 -->
+          <PriorityShipList>1</PriorityShipList>          <!-- Battle Cruiser 1 -->
+        </CommandQueue>
+        <Drifting>
+          <Length>22</Length>          <!-- Battle Cruiser 10 -->
+          <Width>8</Width>          <!-- Battle Cruiser 1.75 -->
+        </Drifting>
         <UpgradeList />
         <Attackable>
           <MaximumHitPoints>17500</MaximumHitPoints>          <!-- Battle Cruiser 6000 - 7000 - Pirate Battle Cruiser 7250 - Heavy Battle Cruiser 11500 -->
@@ -1021,14 +1031,14 @@
           <Costs>
             <Item>
               <Ingredient>1010017</Ingredient>              <!--coins-->
-              <Amount>100000000</Amount>              <!--Heavy Battle Cruiser 1000000 -->
+              <Amount>6666666</Amount>              <!--Heavy Battle Cruiser 1000000 -->
             </Item>
           </Costs>
           <InfluenceCostType>WarShip</InfluenceCostType>
-          <InfluenceCostPoints>100</InfluenceCostPoints>          <!-- 24 - Pirate Battle Cruiser 26 - Heavy Battle Cruiser 100 -->
+          <InfluenceCostPoints>50</InfluenceCostPoints>          <!-- 24 - Pirate Battle Cruiser 26 - Heavy Battle Cruiser 100 -->
         </Cost>
         <Craftable>
-          <CraftingTime>100000</CraftingTime>          <!-- Battle Cruiser 900000 - Heavy Battle Cruiser 2000000 - 100000 -->
+          <CraftingTime>480000</CraftingTime>          <!-- Battle Cruiser 900000 - Heavy Battle Cruiser 2000000 - 100000 -->
         </Craftable>
         <ExpeditionAttribute>
           <BaseMorale>100</BaseMorale>          <!-- Battle Cruiser 50 -->
@@ -1087,7 +1097,7 @@
         <Walking>
           <ShortenSailsAfter>0</ShortenSailsAfter>
           <ReservationLength>24</ReservationLength>          <!-- Battle Cruiser 16 -->
-          <ReservationWidth>9</ReservationWidth>          <!-- Battle Cruiser 6 -->
+          <ReservationWidth>10</ReservationWidth>          <!-- Battle Cruiser 6 -->
           <PathPlannerLayer>Water</PathPlannerLayer>
           <ExpensiveDirSmoothing>1</ExpensiveDirSmoothing>
           <TurnAroundRadius>28</TurnAroundRadius>          <!-- Battle Cruiser 8 - 18 -->
@@ -1114,6 +1124,15 @@
           </LocaText>
           <LineID>14857</LineID>
         </Text>
+        <CommandQueue>
+          <FormationPriority>2</FormationPriority>          <!-- Battle Cruiser 2 -->
+          <MilitaryShipPoints>15</MilitaryShipPoints>          <!-- Battle Cruiser 6 -->
+          <PriorityShipList>1</PriorityShipList>          <!-- Battle Cruiser 1 -->
+        </CommandQueue>
+        <Drifting>
+          <Length>22</Length>          <!-- Battle Cruiser 10 -->
+          <Width>8</Width>          <!-- Battle Cruiser 1.75 -->
+        </Drifting>
         <UpgradeList />
         <Attackable>
           <MaximumHitPoints>15000</MaximumHitPoints>          <!-- Battle Cruiser 6000 - 7000 - Pirate Battle Cruiser 7250 - Heavy Battle Cruiser 11500 -->
@@ -1124,8 +1143,8 @@
         <Attacker>
           <BasicAttackType>Warship</BasicAttackType>
           <ShootingTracking>TurretFixed</ShootingTracking>
-          <BaseDamage>400</BaseDamage>          <!-- Pyrphorian Battle Cruiser 100 -->
-          <ReloadTime>20</ReloadTime>          <!-- Pyrphorian Battle Cruiser 29 -->
+          <BaseDamage>500</BaseDamage>          <!-- Pyrphorian Battle Cruiser 100 -->
+          <ReloadTime>40</ReloadTime>          <!-- Pyrphorian Battle Cruiser 29 -->
           <AttackRange>46</AttackRange>          <!-- Pyrphorian Battle Cruiser 42 -->
           <Turrets>
             <Item>
@@ -1206,14 +1225,14 @@
           <Costs>
             <Item>
               <Ingredient>1010017</Ingredient>              <!--coins-->
-              <Amount>100000000</Amount>              <!--Heavy Battle Cruiser 1000000 -->
+              <Amount>6666666</Amount>              <!--Heavy Battle Cruiser 1000000 -->
             </Item>
           </Costs>
           <InfluenceCostType>WarShip</InfluenceCostType>
-          <InfluenceCostPoints>100</InfluenceCostPoints>          <!-- 24 - Pirate Battle Cruiser 26 - Heavy Battle Cruiser 100 -->
+          <InfluenceCostPoints>50</InfluenceCostPoints>          <!-- 24 - Pirate Battle Cruiser 26 - Heavy Battle Cruiser 100 -->
         </Cost>
         <Craftable>
-          <CraftingTime>100000</CraftingTime>          <!-- Battle Cruiser 900000 - Heavy Battle Cruiser 2000000 - 100000 -->
+          <CraftingTime>480000</CraftingTime>          <!-- Battle Cruiser 900000 - Heavy Battle Cruiser 2000000 - 100000 -->
         </Craftable>
         <ExpeditionAttribute>
           <BaseMorale>100</BaseMorale>          <!-- Battle Cruiser 50 -->
@@ -1290,6 +1309,477 @@
     </Asset>
   </ModOp>
   <!-- END MINIMAPDOT - SPECIAL PIRATE SHIP -->
+
+  <!-- START PIRATE IRON MAIDEN -->
+  <ModOp Type="addNextSibling" GUID='100442'>
+    <Asset>
+      <Template>WarShip</Template>
+      <Values>
+        <Standard>
+          <GUID>1742102135</GUID>
+          <Name>Iron Maiden (Pirates)</Name>
+          <IconFilename>data/graphics/icons/icon_iron_maiden_pirate.png</IconFilename>
+          <InfoDescription>1742102136</InfoDescription>
+        </Standard>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/vehicle/iron_maiden/iron_maiden_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Mesh>
+          <MeshPlacement>OnWaterSlope</MeshPlacement>
+        </Mesh>
+        <Selection>
+          <MultiSelectable>1</MultiSelectable>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+        </Selection>
+        <Walking>
+          <ShortenSailsAfter>0</ShortenSailsAfter>
+          <ReservationLength>28</ReservationLength>
+          <ReservationWidth>10</ReservationWidth>
+          <PathPlannerLayer>Water</PathPlannerLayer>
+          <ExpensiveDirSmoothing>1</ExpensiveDirSmoothing>
+          <TurnAroundRadius>28</TurnAroundRadius>
+          <Acceleration>0.50</Acceleration>          <!-- IRONCLAD CRUISER 0.75 -->
+          <Deceleration>0.5</Deceleration>          <!-- IRONCLAD CRUISER 2 -->
+          <TurnRadius>15</TurnRadius>
+          <TurnSpeed>30</TurnSpeed>
+          <TurnDeceleration>0</TurnDeceleration>
+          <TurnMovement>0</TurnMovement>
+          <LeaningMaxAngle>-10</LeaningMaxAngle>
+          <ForwardSpeed>4.25</ForwardSpeed>          <!-- IRONCLAD CRUISER 4.2 -->
+          <WindMinSlowdownFactor>1</WindMinSlowdownFactor>
+          <WindMaxSpeedupFactor>1</WindMaxSpeedupFactor>
+          <CargoFullFactor>0.7</CargoFullFactor>
+          <DamageFullFactor>0.5</DamageFullFactor>
+          <MinSlowdownFactor>0.5</MinSlowdownFactor>
+          <CurveSegmentDensity>High</CurveSegmentDensity>
+        </Walking>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Iron Maiden</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>25836</LineID>
+        </Text>
+        <CommandQueue>
+          <FormationPriority>2</FormationPriority>          <!-- Battle Cruiser 2 -->
+          <MilitaryShipPoints>30</MilitaryShipPoints>          <!-- Battle Cruiser 6 -->
+          <PriorityShipList>1</PriorityShipList>          <!-- Battle Cruiser 1 -->
+        </CommandQueue>
+        <Drifting>
+          <OverrideAssetWidthAndLength>0</OverrideAssetWidthAndLength>
+          <Length>24</Length>          <!-- Heavy Battle Cruiser 16 -->
+          <Width>10</Width>          <!-- Battle Cruiser 6 -->
+          <FactorMovement>1</FactorMovement>
+          <FactorRotation>0.65</FactorRotation>
+        </Drifting>
+        <Collector/>
+        <Attackable>
+          <MaximumHitPoints>30000</MaximumHitPoints>          <!-- Battle Cruiser 6000 - 7000 - Pirate Battle Cruiser 7250 - Heavy Battle Cruiser 11500 -->
+          <AlertRange>190</AlertRange>          <!-- Battle Cruiser 150 - Pirate Battle Cruiser 165 - Heavy Battle Cruiser 165 -->
+          <SelfHealPerHealTick>30</SelfHealPerHealTick>          <!-- Battle Cruiser 1.667 - Pirate Battle Cruiser 5 -->
+          <SelfHealPausedTimeIfAttacked>10000</SelfHealPausedTimeIfAttacked>          <!-- Battle Cruiser 60000 - Pirate Battle Cruiser 20000 -->
+        </Attackable>
+        <Attacker>
+          <ShootingTracking>TurretFixed</ShootingTracking>
+          <BaseDamage>5750</BaseDamage>          <!-- Battle Cruiser 280 - 1250 - Pirate Battle Cruiser 1280 - Heavy Battle Cruiser 2500 -->
+          <ReloadTime>80</ReloadTime>          <!-- Battle Cruiser 70 - Pirate Battle Cruiser 130 - Heavy Battle Cruiser 110 -->
+          <AttackRange>92</AttackRange>          <!-- Battle Cruiser 84 - 85 - Pirate Battle Cruiser 86 - Heavy Battle Cruiser 88 -->
+          <Turrets>
+            <Item>
+              <TurnSpan>300</TurnSpan>
+              <TurretCfg>data/graphics/vehicle/heavy_battle_cruiser_pirate/heavy_battle_cruiser_turret_large_03.cfg</TurretCfg>
+            </Item>
+            <Item>
+              <TurnSpan>210</TurnSpan>
+              <TurretCfg>data/graphics/vehicle/heavy_battle_cruiser_pirate/heavy_battle_cruiser_turret_large_02.cfg</TurretCfg>
+            </Item>
+            <Item>
+              <TurnSpan>210</TurnSpan>
+              <TurretCfg>data/graphics/vehicle/heavy_battle_cruiser_pirate/heavy_battle_cruiser_turret_large_02.cfg</TurretCfg>
+            </Item>
+            <Item>
+              <TurnSpan>210</TurnSpan>
+              <TurretCfg>data/graphics/vehicle/heavy_battle_cruiser_pirate/heavy_battle_cruiser_turret_large_02.cfg</TurretCfg>
+            </Item>
+            <Item>
+              <TurnSpan>210</TurnSpan>
+              <TurretCfg>data/graphics/vehicle/heavy_battle_cruiser_pirate/heavy_battle_cruiser_turret_large_02.cfg</TurretCfg>
+            </Item>
+            <Item>
+              <TurnSpan>300</TurnSpan>
+              <TurretCfg>data/graphics/vehicle/heavy_battle_cruiser_pirate/heavy_battle_cruiser_turret_large_02.cfg</TurretCfg>
+            </Item>
+            <Item>
+              <TurnSpan>300</TurnSpan>
+              <TurretCfg>data/graphics/vehicle/heavy_battle_cruiser_pirate/heavy_battle_cruiser_turret_normal_01.cfg</TurretCfg>
+            </Item>
+            <Item>
+              <TurnSpan>120</TurnSpan>
+              <TurretCfg>data/graphics/vehicle/heavy_battle_cruiser_pirate/heavy_battle_cruiser_turret_normal_01.cfg</TurretCfg>
+            </Item>
+            <Item>
+              <TurnSpan>120</TurnSpan>
+              <TurretCfg>data/graphics/vehicle/heavy_battle_cruiser_pirate/heavy_battle_cruiser_turret_normal_01.cfg</TurretCfg>
+            </Item>
+            <Item>
+              <TurnSpan>120</TurnSpan>
+              <TurretCfg>data/graphics/vehicle/heavy_battle_cruiser_pirate/heavy_battle_cruiser_turret_normal_01.cfg</TurretCfg>
+            </Item>
+            <Item>
+              <TurnSpan>120</TurnSpan>
+              <TurretCfg>data/graphics/vehicle/heavy_battle_cruiser_pirate/heavy_battle_cruiser_turret_normal_01.cfg</TurretCfg>
+            </Item>
+            <Item>
+              <TurnSpan>180</TurnSpan>
+              <TurretCfg>data/graphics/vehicle/heavy_battle_cruiser_pirate/heavy_battle_cruiser_turret_large_01.cfg</TurretCfg>
+            </Item>
+            <Item>
+              <TurnSpan>180</TurnSpan>
+              <TurretCfg>data/graphics/vehicle/heavy_battle_cruiser_pirate/heavy_battle_cruiser_turret_large_01.cfg</TurretCfg>
+            </Item>
+          </Turrets>
+          <ProjectileAsset>102033</ProjectileAsset>          <!--Large_Single_Shot_BattleCruiser-->
+          <MuzzleEffectAssets>
+            <Item>
+              <MuzzleEffectAsset>102228</MuzzleEffectAsset>              <!--Shot_Battlecruiser-->
+            </Item>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>0</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>WarShip</TemplateName>
+                    <Index>0</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+              <MuzzleEffectAsset>102228</MuzzleEffectAsset>              <!--Shot_Battlecruiser-->
+            </Item>
+          </MuzzleEffectAssets>
+          <FullVolleyTimeMin>3.8</FullVolleyTimeMin>
+          <FullVolleyTimeMax>4.8</FullVolleyTimeMax>
+          <AccuracyBase>15</AccuracyBase>          <!-- Battle Cruiser 1 - 15 -->
+          <AccuracyIncreaseOverDistance>100</AccuracyIncreaseOverDistance>          <!-- Battle Cruiser 60 - 200 -->
+          <AccuracySpeedDecay>20</AccuracySpeedDecay>
+          <AccuracyByDistance>
+            <Item>
+              <AccuracyByDistancePair>
+                <EnemyDistanceRelToAttackRange>0</EnemyDistanceRelToAttackRange>
+                <CorrespondingAccuracy>5</CorrespondingAccuracy>
+              </AccuracyByDistancePair>
+            </Item>
+            <Item>
+              <AccuracyByDistancePair>
+                <EnemyDistanceRelToAttackRange>20</EnemyDistanceRelToAttackRange>
+                <CorrespondingAccuracy>10</CorrespondingAccuracy>
+              </AccuracyByDistancePair>
+            </Item>
+            <Item>
+              <AccuracyByDistancePair>
+                <EnemyDistanceRelToAttackRange>30</EnemyDistanceRelToAttackRange>
+                <CorrespondingAccuracy>20</CorrespondingAccuracy>
+              </AccuracyByDistancePair>
+            </Item>
+            <Item>
+              <AccuracyByDistancePair>
+                <EnemyDistanceRelToAttackRange>40</EnemyDistanceRelToAttackRange>
+                <CorrespondingAccuracy>50</CorrespondingAccuracy>
+              </AccuracyByDistancePair>
+            </Item>
+            <Item>
+              <AccuracyByDistancePair>
+                <EnemyDistanceRelToAttackRange>50</EnemyDistanceRelToAttackRange>
+                <CorrespondingAccuracy>70</CorrespondingAccuracy>
+              </AccuracyByDistancePair>
+            </Item>
+            <Item>
+              <AccuracyByDistancePair>
+                <EnemyDistanceRelToAttackRange>60</EnemyDistanceRelToAttackRange>
+                <CorrespondingAccuracy>90</CorrespondingAccuracy>
+              </AccuracyByDistancePair>
+            </Item>
+            <Item>
+              <AccuracyByDistancePair>
+                <EnemyDistanceRelToAttackRange>100</EnemyDistanceRelToAttackRange>
+                <CorrespondingAccuracy>100</CorrespondingAccuracy>
+              </AccuracyByDistancePair>
+            </Item>
+          </AccuracyByDistance>
+        </Attacker>
+        <MinimapToken>
+          <TokenAsset>1742102035</TokenAsset>          <!--Special Pirate Ship-->
+          <StrategicMapAsset>1742102036</StrategicMapAsset>          <!--Special Pirate Ship-->
+        </MinimapToken>
+        <ItemContainer>
+          <SlotCount>6</SlotCount>
+          <SocketCount>1</SocketCount>
+          <InitSlotItems>
+            <Item>
+              <Item>1742102141</Item>
+              <StackSize>1</StackSize>
+            </Item>
+          </InitSlotItems>
+        </ItemContainer>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!--coins-->
+              <Amount>900000</Amount>              <!--Heavy Battle Cruiser 1000000 -->
+            </Item>
+          </Costs>
+          <InfluenceCostType>WarShip</InfluenceCostType>
+          <InfluenceCostPoints>100</InfluenceCostPoints>          <!-- 24 - Pirate Battle Cruiser 26 - Heavy Battle Cruiser 100 -->
+        </Cost>
+        <Craftable>
+          <CraftingTime>600000</CraftingTime>          <!-- Battle Cruiser 900000 - Heavy Battle Cruiser 2000000 - 100000 -->
+        </Craftable>
+        <ExpeditionAttribute>
+          <BaseMorale>200</BaseMorale>          <!-- Battle Cruiser 50 -->
+          <ExpeditionAttributes>
+            <Item>
+              <Attribute>Might</Attribute>
+              <Amount>150</Amount>              <!-- Battle Cruiser 70 -->
+            </Item>
+            <Item>
+              <Attribute>Navigation</Attribute>
+              <Amount>100</Amount>
+            </Item>
+            <Item>
+              <Attribute>Diplomacy</Attribute>
+              <Amount>25</Amount>
+            </Item>
+            <Item>
+              <Attribute>Crafting</Attribute>
+              <Amount>25</Amount>
+            </Item>
+            <Item>
+              <Attribute>PerkMilitaryShip</Attribute>
+              <Amount>1</Amount>
+            </Item>
+            <Item>
+              <Attribute>PerkSteamShip</Attribute>
+              <Amount>1</Amount>
+            </Item>
+          </ExpeditionAttributes>
+        </ExpeditionAttribute>
+        <ShipMaintenance>
+          <Maintenance>25000</Maintenance>          <!-- Battle Cruiser 850 - 2000 -->
+        </ShipMaintenance>
+        <Sellable>
+          <CanBeSoldToTrader>0</CanBeSoldToTrader>
+        </Sellable>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PIRATE IRON MAIDEN -->
+
+  <!-- START PIRATE SKULLCRUSHER -->
+  <ModOp Type="addNextSibling" GUID='102419'>
+    <Asset>
+      <BaseAssetGUID>102419</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742102137</GUID>
+          <Name>Skullcrusher (Pirates)</Name>
+          <IconFilename>data/graphics/icons/icon_skullcrusher_pirate.png</IconFilename>
+          <InfoDescription>1742102138</InfoDescription>
+        </Standard>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/vehicle/skullcrusher/skullcrusher_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Walking>
+          <ReservationLength>26</ReservationLength>          <!-- SOTL 9 - DUKE 12 -->
+          <ReservationWidth>10</ReservationWidth>          <!-- SOTL 5 - DUKE 6.5 -->
+          <TurnAroundRadius>24</TurnAroundRadius>          <!-- SOTL 8 - DUKE 10 -->
+          <TurnRadius>20</TurnRadius>          <!-- SOTL 8 - DUKE 10 -->
+          <ForwardSpeed>5</ForwardSpeed>          <!-- SOTL 4 - 3.8 - DUKE 3.8 -->
+          <WindMinSlowdownFactor>0.70</WindMinSlowdownFactor>          <!-- SOTL 0.4 - 0.95 - DUKE 0.5 -->
+        </Walking>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Skullcrusher</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>25836</LineID>
+        </Text>
+        <CommandQueue>
+          <FormationPriority>3</FormationPriority>          <!-- SOTL 3 -->
+          <MilitaryShipPoints>30</MilitaryShipPoints>          <!-- SOTL 3.2 - DUKE 5 -->
+          <PriorityShipList>1</PriorityShipList>          <!-- SOTL 1 -->
+        </CommandQueue>
+        <Drifting>
+          <OverrideAssetWidthAndLength>0</OverrideAssetWidthAndLength>
+          <Length>24</Length>          <!-- SOTL 7 - DUKE 9 -->
+          <Width>8</Width>          <!-- SOTL 2 - DUKE 4 -->
+        </Drifting>
+        <Attackable>
+          <MaximumHitPoints>30000</MaximumHitPoints>          <!-- SOTL 4000 - 3250 - DUKE 6250 -->
+          <AlertRange>180</AlertRange>          <!-- SOTL 150 - DUKE 150 -->
+          <AccuracyWidth>7</AccuracyWidth>          <!-- SOTL 4 - DUKE 5 -->
+          <SelfHealPerHealTick>30</SelfHealPerHealTick>          <!-- SOTL 1.667 - DUKE 2.8 -->
+          <SelfHealPausedTimeIfAttacked>10000</SelfHealPausedTimeIfAttacked>          <!-- SOTL 60000 - DUKE 30000 -->
+        </Attackable>
+        <Attacker>
+          <BaseDamage>4750</BaseDamage>          <!-- SOTL 525 - 350 - DUKE 550 -->
+          <ReloadTime>100</ReloadTime>          <!-- SOTL 100 - 90 - DUKE 80 -->
+          <AttackRange>78</AttackRange>          <!-- SOTL 68 - 52 - DUKE 62 -->
+          <LineOfSightRange>90</LineOfSightRange>          <!-- SOTL 100 - 60 - DUKE 75 -->
+          <ProjectileAsset>102285</ProjectileAsset>          <!--Line_Ship_Multi_Shot_01-->
+          <MuzzleEffectAssets>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>0</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>WarShip</TemplateName>
+                    <Index>0</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+              <MuzzleEffectAsset>102286</MuzzleEffectAsset>              <!--Shot_Lineship_01-->
+            </Item>
+            <Item>
+              <MuzzleEffectAsset>102287</MuzzleEffectAsset>              <!--Shot_Lineship_02-->
+            </Item>
+            <Item>
+              <MuzzleEffectAsset>102300</MuzzleEffectAsset>              <!--Shot_Lineship_03-->
+            </Item>
+          </MuzzleEffectAssets>
+          <FullVolleyTimeMin>3.6</FullVolleyTimeMin>          <!-- SOTL 0.8 - DUKE 2.2 -->
+          <FullVolleyTimeMax>5.2</FullVolleyTimeMax>          <!-- SOTL 1.8 - DUKE 3.8 -->
+          <VolleyMaxPerBulletRandomOffset>0.3</VolleyMaxPerBulletRandomOffset>          <!-- SOTL 0.2 - DUKE 0.3 -->
+          <AccuracyIncreaseOverDistance>100</AccuracyIncreaseOverDistance>          <!-- SOTL 100 - DUKE 100 -->
+          <AccuracyByDistance>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>0</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>WarShip</TemplateName>
+                    <Index>0</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+              <AccuracyByDistancePair>
+                <CorrespondingAccuracy>50</CorrespondingAccuracy>
+              </AccuracyByDistancePair>
+            </Item>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>1</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>WarShip</TemplateName>
+                    <Index>1</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+              <AccuracyByDistancePair>
+                <EnemyDistanceRelToAttackRange>20</EnemyDistanceRelToAttackRange>
+              </AccuracyByDistancePair>
+            </Item>
+            <Item>
+              <AccuracyByDistancePair>
+                <EnemyDistanceRelToAttackRange>40</EnemyDistanceRelToAttackRange>
+                <CorrespondingAccuracy>70</CorrespondingAccuracy>
+              </AccuracyByDistancePair>
+            </Item>
+            <Item>
+              <AccuracyByDistancePair>
+                <EnemyDistanceRelToAttackRange>70</EnemyDistanceRelToAttackRange>
+                <CorrespondingAccuracy>85</CorrespondingAccuracy>
+              </AccuracyByDistancePair>
+            </Item>
+            <Item>
+              <AccuracyByDistancePair>
+                <EnemyDistanceRelToAttackRange>100</EnemyDistanceRelToAttackRange>
+              </AccuracyByDistancePair>
+            </Item>
+          </AccuracyByDistance>
+        </Attacker>
+        <ItemContainer>
+          <SocketCount>1</SocketCount>          <!-- SOTL 3 - DUKE 4 -->
+          <SlotCount>8</SlotCount>          <!-- SOTL 3 - DUKE 4 -->
+          <InitSlotItems>
+            <Item>
+              <Item>1742102142</Item>
+              <StackSize>1</StackSize>
+            </Item>
+          </InitSlotItems>
+        </ItemContainer>
+        <MinimapToken>
+          <TokenAsset>1742102035</TokenAsset>          <!--Special Pirate Ship-->
+          <StrategicMapAsset>1742102036</StrategicMapAsset>          <!--Special Pirate Ship-->
+        </MinimapToken>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!--coins-->
+              <Amount>9000000</Amount>              <!--Heavy Battle Cruiser 1000000 -->
+            </Item>
+          </Costs>
+          <InfluenceCostType>WarShip</InfluenceCostType>
+          <InfluenceCostPoints>100</InfluenceCostPoints>          <!-- 24 - Pirate Battle Cruiser 26 - Heavy Battle Cruiser 100 -->
+        </Cost>
+        <Craftable>
+          <CraftingTime>600000</CraftingTime>          <!-- SOTL 720000 - DUKE 1200000 - 400000 -->
+        </Craftable>
+        <ExpeditionAttribute>
+          <BaseMorale>200</BaseMorale>          <!-- Battle Cruiser 50 -->
+          <ExpeditionAttributes>
+            <Item>
+              <Attribute>Might</Attribute>
+              <Amount>175</Amount>              <!-- SOTL 50 - DUKE 60 -->
+            </Item>
+            <Item>
+              <Attribute>Navigation</Attribute>
+              <Amount>80</Amount>              <!-- DUKE 30 -->
+            </Item>
+            <Item>
+              <Attribute>Diplomacy</Attribute>
+              <Amount>25</Amount>
+            </Item>
+            <Item>
+              <Attribute>Crafting</Attribute>
+              <Amount>25</Amount>
+            </Item>
+            <Item>
+              <Attribute>PerkMilitaryShip</Attribute>
+              <Amount>1</Amount>
+            </Item>
+            <Item>
+              <Attribute>PerkSailingShip</Attribute>
+              <Amount>1</Amount>
+            </Item>
+          </ExpeditionAttributes>
+        </ExpeditionAttribute>
+        <ShipMaintenance>
+          <Maintenance>25000</Maintenance>          <!-- SOTL 250 - 300 - DUKE 500 -->
+        </ShipMaintenance>
+        <Sellable>
+          <CanBeSoldToTrader>0</CanBeSoldToTrader>
+        </Sellable>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PIRATE SKULLCRUSHER -->
 
   <!-- END PIRATE ONLY SHIPS -->
 
@@ -1498,7 +1988,7 @@
           </InitSocketItems>
         </ItemContainer>
         <Craftable>
-          <CraftingTime>360000</CraftingTime>          <!-- 720000 -->
+          <CraftingTime>240000</CraftingTime>          <!-- 720000 -->
         </Craftable>
         <Sellable>
           <CanBeSoldToTrader>0</CanBeSoldToTrader>
@@ -1540,7 +2030,7 @@
           </InitSocketItems>
         </ItemContainer>
         <Craftable>
-          <CraftingTime>360000</CraftingTime>          <!-- 720000 -->
+          <CraftingTime>240000</CraftingTime>          <!-- 720000 -->
         </Craftable>
         <Sellable>
           <CanBeSoldToTrader>0</CanBeSoldToTrader>
@@ -1566,7 +2056,7 @@
             </Item>
             <Item>
               <Ingredient>1742102058</Ingredient>              <!--Pirate Sailors-->
-              <Amount>65</Amount>
+              <Amount>50</Amount>
             </Item>
           </Costs>
           <InfluenceCostPoints>16</InfluenceCostPoints>
@@ -1582,7 +2072,7 @@
           </InitSocketItems>
         </ItemContainer>
         <Craftable>
-          <CraftingTime>420000</CraftingTime>          <!-- 800000 -->
+          <CraftingTime>360000</CraftingTime>          <!-- 800000 -->
         </Craftable>
         <Sellable>
           <CanBeSoldToTrader>0</CanBeSoldToTrader>
@@ -1624,7 +2114,7 @@
           </InitSocketItems>
         </ItemContainer>
         <Craftable>
-          <CraftingTime>720000</CraftingTime>          <!-- 900000 -->
+          <CraftingTime>480000</CraftingTime>          <!-- 900000 -->
         </Craftable>
         <Sellable>
           <CanBeSoldToTrader>0</CanBeSoldToTrader>
@@ -1666,10 +2156,116 @@
           </InitSocketItems>
         </ItemContainer>
         <Craftable>
-          <CraftingTime>720000</CraftingTime>
+          <CraftingTime>480000</CraftingTime>
         </Craftable>
         <Locked>
           <DefaultLockedState>1</DefaultLockedState>
+        </Locked>
+        <Sellable>
+          <CanBeSoldToTrader>0</CanBeSoldToTrader>
+        </Sellable>
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- PIRATE IRON MAIDEN - PLAYER -->
+  <ModOp Type="addNextSibling" GUID='1742102135'>
+    <Asset>
+      <BaseAssetGUID>1742102135</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742102139</GUID>
+          <Name>Iron Maiden (Player)</Name>
+        </Standard>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <Amount>9000000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1742102058</Ingredient>              <!--Pirate Sailors-->
+              <Amount>300</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1742102141</Ingredient>              <!--Iron Maiden Contract - Product-->
+              <Amount>1</Amount>
+            </Item>
+          </Costs>
+          <InfluenceCostPoints>100</InfluenceCostPoints>
+        </Cost>
+        <Attackable>
+          <MaximumHitPoints>20000</MaximumHitPoints>
+        </Attackable>
+        <ItemContainer>
+          <SlotCount>6</SlotCount>
+          <SocketCount>1</SocketCount>
+          <SocketAllocation>Ship;SteamShip;Warship;Mod6</SocketAllocation>
+          <InitSlotItems />
+          <InitSocketItems>
+            <Item>
+              <Item>1742102007</Item>
+            </Item>
+          </InitSocketItems>
+        </ItemContainer>
+        <Craftable>
+          <CraftingTime>1200000</CraftingTime>
+        </Craftable>
+        <Locked>
+          <DefaultLockedState>0</DefaultLockedState>
+        </Locked>
+        <Sellable>
+          <CanBeSoldToTrader>0</CanBeSoldToTrader>
+        </Sellable>
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- PIRATE SKULLCRUSHER - PLAYER -->
+  <ModOp Type="addNextSibling" GUID='1742102137'>
+    <Asset>
+      <BaseAssetGUID>1742102137</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742102140</GUID>
+          <Name>Skullcrusher (Player)</Name>
+        </Standard>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <Amount>9000000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1742102058</Ingredient>              <!--Pirate Sailors-->
+              <Amount>300</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1742102142</Ingredient>              <!--Iron Maiden Contract - Product-->
+              <Amount>1</Amount>
+            </Item>
+          </Costs>
+          <InfluenceCostPoints>100</InfluenceCostPoints>
+        </Cost>
+        <Attackable>
+          <MaximumHitPoints>20000</MaximumHitPoints>
+        </Attackable>
+        <ItemContainer>
+          <SlotCount>8</SlotCount>
+          <SocketCount>1</SocketCount>
+          <SocketAllocation>Ship;SteamShip;Warship;Mod6</SocketAllocation>
+          <InitSlotItems />
+          <InitSocketItems>
+            <Item>
+              <Item>1742102007</Item>
+            </Item>
+          </InitSocketItems>
+        </ItemContainer>
+        <Craftable>
+          <CraftingTime>1200000</CraftingTime>
+        </Craftable>
+        <Locked>
+          <DefaultLockedState>0</DefaultLockedState>
         </Locked>
         <Sellable>
           <CanBeSoldToTrader>0</CanBeSoldToTrader>

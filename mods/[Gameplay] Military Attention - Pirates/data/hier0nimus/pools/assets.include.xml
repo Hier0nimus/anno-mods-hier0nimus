@@ -6,7 +6,7 @@
 
   <!-- START - POOL - PIRATE REWARDPOOLS -->
 
-  <ModOp Type="addNextSibling" GUID='13054'>
+  <ModOp Type="addNextSibling" GUID='134779'>
 
     <!-- START - POOL - PIRATE TRADE TAX -->
     <Asset>
@@ -20,13 +20,13 @@
           <ItemsPool>
             <Item>
               <ItemLink>1010257</ItemLink>              <!-- Rum -->
-              <MinAmount>40</MinAmount>
+              <MinAmount>20</MinAmount>
               <MaxAmount>40</MaxAmount>
               <Weight>5</Weight>
             </Item>
             <Item>
               <ItemLink>135234</ItemLink>              <!-- Cognac -->
-              <MinAmount>30</MinAmount>
+              <MinAmount>15</MinAmount>
               <MaxAmount>30</MaxAmount>
               <Weight>1</Weight>
             </Item>
@@ -50,7 +50,7 @@
           <ItemsPool>
             <Item>
               <ItemLink>1010249</ItemLink>              <!-- Gold -->
-              <MinAmount>30</MinAmount>
+              <MinAmount>15</MinAmount>
               <MaxAmount>30</MaxAmount>
               <Weight>1</Weight>
             </Item>
@@ -100,6 +100,12 @@
     <Item>
       <Asset>1742102077</Asset>      <!-- Pirate Warship Cruiser - Warship -->
     </Item>
+    <Item>
+      <Asset>1742102139</Asset>      <!-- Iron Maiden - Warship (Pirates) -->
+    </Item>
+    <Item>
+      <Asset>1742102140</Asset>      <!-- Skullcrusher - Warship (Pirates) -->
+    </Item>
   </ModOp>
   <!-- END - ALL PLAYER SHIPS / ALL PLAYER SHIPS CAMPAIGN - AssetPool -->
 
@@ -137,6 +143,12 @@
     </Item>
     <Item>
       <Asset>1742102077</Asset>      <!-- Pirate Warship Cruiser - Warship -->
+    </Item>
+    <Item>
+      <Asset>1742102139</Asset>      <!-- Iron Maiden - Warship (Pirates) -->
+    </Item>
+    <Item>
+      <Asset>1742102140</Asset>      <!-- Skullcrusher - Warship (Pirates) -->
     </Item>
   </ModOp>
   <!-- END - ALL PLAYER SHIPS - PlayerCounterContextPool -->
@@ -206,6 +218,18 @@
     <Item>
       <Asset>1742102099</Asset>      <!-- Pirate Black Eagle - WarAirShip -->
     </Item>
+    <Item>
+      <Asset>1742102139</Asset>      <!-- Iron Maiden - Warship (Pirates) -->
+    </Item>
+    <Item>
+      <Asset>1742102140</Asset>      <!-- Skullcrusher - Warship (Pirates) -->
+    </Item>
+    <Item>
+      <Asset>1742102135</Asset>      <!-- Iron Maiden - Warship (Pirates) -->
+    </Item>
+    <Item>
+      <Asset>1742102137</Asset>      <!-- Skullcrusher - Warship (Pirates) -->
+    </Item>
   </ModOp>
   <!-- END - ALL PIRATE SHIPS - PlayerCounterContextPool -->
 
@@ -267,6 +291,12 @@
     </Item>
     <Item>
       <Asset>1742102099</Asset>      <!-- Pirate Black Eagle - WarAirShip -->
+    </Item>
+    <Item>
+      <Asset>1742102139</Asset>      <!-- Iron Maiden - Warship (Pirates) -->
+    </Item>
+    <Item>
+      <Asset>1742102140</Asset>      <!-- Skullcrusher - Warship (Pirates) -->
     </Item>
   </ModOp>
   <!-- END - ALL MLITARY SHIPS - PlayerCounterContextPool -->
@@ -336,6 +366,12 @@
     <Item>
       <GUID>1742102096</GUID>      <!-- Pirate Black Eagle - WarAirShip -->
     </Item>
+    <Item>
+      <Asset>1742102139</Asset>      <!-- Iron Maiden - Warship (Pirates) -->
+    </Item>
+    <Item>
+      <Asset>1742102140</Asset>      <!-- Skullcrusher - Warship (Pirates) -->
+    </Item>
   </ModOp>
   <!-- END - ALL SHIPS - ItemEffectTargetPool-->
 
@@ -355,6 +391,9 @@
     </Item>
     <Item>
       <GUID>1742102008</GUID>      <!--Jolly Roger (Pirates) - Warship-->
+    </Item>
+    <Item>
+      <Asset>1742102140</Asset>      <!-- Skullcrusher - Warship (Pirates) -->
     </Item>
   </ModOp>
   <!-- END - ALL SAILING SHIPS - ItemEffectTargetPool -->
@@ -396,6 +435,9 @@
     </Item>
     <Item>
       <GUID>1742102070</GUID>      <!-- Pirate Warship Cruiser (Pirates) - Warship -->
+    </Item>
+    <Item>
+      <Asset>1742102139</Asset>      <!-- Iron Maiden - Warship (Pirates) -->
     </Item>
   </ModOp>
   <!-- END - ALL STEAMSHIPS - ItemEffectTargetPool -->
@@ -465,6 +507,12 @@
     <Item>
       <GUID>1742102096</GUID>      <!-- Pirate Black Eagle - WarAirShip -->
     </Item>
+    <Item>
+      <Asset>1742102139</Asset>      <!-- Iron Maiden - Warship (Pirates) -->
+    </Item>
+    <Item>
+      <Asset>1742102140</Asset>      <!-- Skullcrusher - Warship (Pirates) -->
+    </Item>
   </ModOp>
   <!-- END - ALL WARSHIPS / ALL MILITARY UNITS - ItemEffectTargetPool -->
 
@@ -484,6 +532,9 @@
     </Item>
     <Item>
       <GUID>1742102008</GUID>      <!--Jolly Roger (Pirates) - Warship-->
+    </Item>
+    <Item>
+      <Asset>1742102140</Asset>      <!-- Skullcrusher - Warship (Pirates) -->
     </Item>
   </ModOp>
   <!-- END - ALL WOODEN HULL SHIPS (Flamable) - ItemEffectTargetPool-->
@@ -525,6 +576,9 @@
     </Item>
     <Item>
       <GUID>1742102070</GUID>      <!-- Pirate Warship Cruiser (Pirates) - Warship -->
+    </Item>
+    <Item>
+      <Asset>1742102139</Asset>      <!-- Iron Maiden - Warship (Pirates) -->
     </Item>
   </ModOp>
   <!-- END - ALL STEAL HULL SHIPS - ItemEffectTargetPool -->
@@ -767,44 +821,80 @@
   <!-- END ADD PIRATE GOLD MINE TO ALL MINES -->
 
   <!-- START CHANGE PIRATE DROP POOL -->
+
+  <!-- MAIN LISTS - ANNE -->
+  <ModOp Type="merge" GUID="193205" Path="/Values/RewardPool/ItemsPool/Item[ItemLink='190961']">
+    <Weight>60</Weight>    <!-- 25 -->
+  </ModOp>
+  <ModOp Type="merge" GUID="193205" Path="/Values/RewardPool/ItemsPool/Item[ItemLink='193217']">
+    <Weight>5</Weight>    <!-- 25 -->
+  </ModOp>
+  <ModOp Type="merge" GUID="193205" Path="/Values/RewardPool/ItemsPool/Item[ItemLink='192819']">
+    <Weight>5</Weight>    <!-- 10 -->
+  </ModOp>
+  <ModOp Type="merge" GUID="193205" Path="/Values/RewardPool/ItemsPool/Item[ItemLink='192083']">
+    <Weight>30</Weight>    <!-- 40 -->
+  </ModOp>
+  <!-- MAIN LISTS - JEAN -->
+  <ModOp Type="merge" GUID="193206" Path="/Values/RewardPool/ItemsPool/Item[ItemLink='190961']">
+    <Weight>60</Weight>    <!-- 25 -->
+  </ModOp>
+  <ModOp Type="merge" GUID="193206" Path="/Values/RewardPool/ItemsPool/Item[ItemLink='193218']">
+    <Weight>5</Weight>    <!-- 25 -->
+  </ModOp>
+  <ModOp Type="merge" GUID="193206" Path="/Values/RewardPool/ItemsPool/Item[ItemLink='192820']">
+    <Weight>5</Weight>    <!-- 10 -->
+  </ModOp>
+  <ModOp Type="merge" GUID="193206" Path="/Values/RewardPool/ItemsPool/Item[ItemLink='192083']">
+    <Weight>30</Weight>    <!-- 40 -->
+  </ModOp>
+
+  <!-- GOODS -->
   <ModOp Type="merge" GUID="192083" Path="/Values/RewardPool/ItemsPool">
     <Item>
       <ItemLink>1742102062</ItemLink>
-      <MinAmount>25</MinAmount>
-      <MaxAmount>50</MaxAmount>
+      <MinAmount>10</MinAmount>
+      <MaxAmount>15</MaxAmount>
       <Weight>10</Weight>
     </Item>
     <Item>
-      <ItemLink>1010257</ItemLink>
-      <MinAmount>15</MinAmount>
-      <MaxAmount>40</MaxAmount>
-      <Weight>5</Weight>
-    </Item>
-    <Item>
-      <ItemLink>1010249</ItemLink>
+      <ItemLink>1010196</ItemLink>
       <MinAmount>10</MinAmount>
-      <MaxAmount>20</MaxAmount>
-      <Weight>3</Weight>
+      <MaxAmount>15</MaxAmount>
+      <Weight>7</Weight>
     </Item>
     <Item>
       <ItemLink>1010210</ItemLink>
-      <MinAmount>10</MinAmount>
-      <MaxAmount>20</MaxAmount>
+      <MinAmount>5</MinAmount>
+      <MaxAmount>10</MaxAmount>
+      <Weight>7</Weight>
+    </Item>
+    <Item>
+      <ItemLink>1010257</ItemLink>
+      <MinAmount>5</MinAmount>
+      <MaxAmount>10</MaxAmount>
+      <Weight>3</Weight>
+    </Item>
+    <Item>
+      <ItemLink>1010249</ItemLink>
+      <MinAmount>5</MinAmount>
+      <MaxAmount>10</MaxAmount>
       <Weight>2</Weight>
     </Item>
     <Item>
       <ItemLink>1010221</ItemLink>
-      <MinAmount>10</MinAmount>
-      <MaxAmount>30</MaxAmount>
-      <Weight>4</Weight>
+      <MinAmount>5</MinAmount>
+      <MaxAmount>15</MaxAmount>
+      <Weight>2</Weight>
     </Item>
     <Item>
       <ItemLink>1010223</ItemLink>
       <MinAmount>5</MinAmount>
-      <MaxAmount>15</MaxAmount>
+      <MaxAmount>10</MaxAmount>
       <Weight>1</Weight>
     </Item>
   </ModOp>
+
   <!-- END CHANGE PIRATE DROP POOL -->
 
 

@@ -6,48 +6,13 @@
 
   <!-- START CHANGE ITEM - CAPTAIN MOBY -->
 
-  <Group Condition="#harbourmaster_rebalance_kurila">
-    <!-- Add Pirate Raid Harbour ass additional building that is affected -->
-    <ModOp Type="add" GUID="190622" Path="Values/ItemEffect/EffectTargets">
-      <Item>
-        <GUID>1742102060</GUID>        <!-- Pirate Raid Harbour -->
-      </Item>
-    </ModOp>
-  </Group>
-
-  <Group Condition="!#harbourmaster_rebalance_kurila">
-    <!-- No longer affects fisheries and other coastal buildings, only Pirate Raid Harbour -->
-    <!-- No longer gives tallow, only 1/8 gold -->
-    <ModOp Type="replace" GUID="190622" Path="Values/ItemEffect/EffectTargets">
-      <EffectTargets>
-        <Item>
-          <GUID>1742102060</GUID>          <!-- Pirate Raid Harbour -->
-        </Item>
-      </EffectTargets>
-    </ModOp>
-    <ModOp Type="replace" GUID="190622" Path="Values/FactoryUpgrade/AdditionalOutput">
-      <AdditionalOutput>
-        <Item>
-          <Product>1010249</Product>          <!--gold-->
-          <AdditionalOutputCycle>8</AdditionalOutputCycle>
-          <Amount>1</Amount>
-        </Item>
-      </AdditionalOutput>
-    </ModOp>
-  </Group>
-
-  <!-- END CHANGE ITEM - CAPTAIN MOBY -->
-
-  <!-- HUNT IS RELATED TO ANNE HARLOW - SHE BUILDS SOME OF THE PIRATE SHIPS -->
-  <ModOp Type="add" GUID="85" Path="/Values/MilitaryAI/WarFleet/ShipList">
+  <!-- Add Pirate Raid Harbour ass additional building that is affected -->
+  <ModOp Type="add" GUID="190622" Path="Values/ItemEffect/EffectTargets">
     <Item>
-      <Type>1742102008</Type>      <!--Jolly Roger-->
-      <Weight>1</Weight>
-    </Item>
-    <Item>
-      <Type>1742102010</Type>      <!--Pirate Battle Cruiser-->
-      <Weight>1</Weight>
+      <GUID>1742102060</GUID>      <!-- Pirate Raid Harbour -->
     </Item>
   </ModOp>
+
+  <!-- END CHANGE ITEM - CAPTAIN MOBY -->
 
 </ModOps>

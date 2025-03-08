@@ -187,7 +187,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742102222</GUID>
+          <GUID>1742102226</GUID>
           <Name>Unlock Pirate - 100 Pirates</Name>
         </Standard>
         <Trigger>
@@ -254,6 +254,12 @@
                       </Item>
                       <Item>
                         <Asset>1742102116</Asset>                        <!-- Pirate Cognac - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742102139</Asset>                        <!-- Iron Maiden (Player) - Warship -->
+                      </Item>
+                      <Item>
+                        <Asset>1742102140</Asset>                        <!-- Skullcrusher (Player) - Warship -->
                       </Item>
                     </UnhideAssets>
                     <UnlockAssets>
@@ -466,6 +472,55 @@
                       </Item>
                       <Item>
                         <Asset>1742102077</Asset>                        <!-- Pirate Warship Cruiser (Player) - Warship -->
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!--UNLOCK - 2500 Pirates -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742102225</GUID>
+          <Name>Unlock Pirate - 2500 Pirates</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>1742102040</Context>                <!-- Pirates PopulationLevel7 -->
+                <CounterAmount>2500</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
+                    </UnhideAssets>
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>1742102139</Asset>                        <!-- Iron Maiden (Player) - Warship -->
+                      </Item>
+                      <Item>
+                        <Asset>1742102140</Asset>                        <!-- Skullcrusher (Player) - Warship -->
                       </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>

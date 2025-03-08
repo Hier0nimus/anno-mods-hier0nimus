@@ -7,52 +7,66 @@
   <!-- START - DIPLOMACY -->
   <ModOp Type="merge" GUID='73,76' Path="Values/Diplomacy/GiftBalancing">
     <receiveSmall>
-      <BaseValue>15000</BaseValue>      <!-- 7500 -->
-      <IncreasePerLevel>1</IncreasePerLevel>      <!-- 7 -->
+      <BaseValue>50000</BaseValue>      <!-- 7500 -->
     </receiveSmall>
     <receiveOrdinary>
-      <BaseValue>50000</BaseValue>      <!-- 15000 -->
-      <IncreasePerLevel>3</IncreasePerLevel>      <!-- 7 -->
+      <BaseValue>100000</BaseValue>      <!-- 15000 -->
     </receiveOrdinary>
     <receiveGenerous>
-      <BaseValue>100000</BaseValue>      <!-- 22000 -->
-      <IncreasePerLevel>6</IncreasePerLevel>      <!-- 7 -->
+      <BaseValue>200000</BaseValue>      <!-- 22000 -->
     </receiveGenerous>
     <giveSmall>
-      <BaseValue>15000</BaseValue>      <!-- 2000 -->
-      <IncreasePerLevel>1</IncreasePerLevel>      <!-- 7 -->
+      <BaseValue>50000</BaseValue>      <!-- 2000 -->
     </giveSmall>
     <giveOrdinary>
-      <BaseValue>50000</BaseValue>      <!-- 3650 -->
-      <IncreasePerLevel>3</IncreasePerLevel>      <!-- 7 -->
+      <BaseValue>100000</BaseValue>      <!-- 3650 -->
     </giveOrdinary>
     <giveGenerous>
-      <BaseValue>100000</BaseValue>      <!-- 5250 -->
-      <IncreasePerLevel>6</IncreasePerLevel>      <!-- 7 -->
+      <BaseValue>200000</BaseValue>      <!-- 5250 -->
     </giveGenerous>
     <receivePayment>
-      <BaseValue>500</BaseValue>      <!-- 250 -->
-      <IncreasePerLevel>5</IncreasePerLevel>      <!-- 7 -->
+      <BaseValue>1750</BaseValue>      <!-- 250 -->
     </receivePayment>
     <givePayment>
-      <IncreasePerLevel>5</IncreasePerLevel>      <!-- 7 -->
+      <BaseValue>2000</BaseValue>      <!-- 300 -->
     </givePayment>
     <counterProposal>
-      <BaseValue>500</BaseValue>      <!-- 300 -->
-      <IncreasePerLevel>5</IncreasePerLevel>      <!-- 7 -->
+      <BaseValue>2000</BaseValue>      <!-- 300 -->
     </counterProposal>
   </ModOp>
 
-  <ModOp Type="merge" GUID='73,76' Path="Values/Diplomacy/RepeatableActionBalancing/Actions">
-    <Flatter>
-      <ForgettingTime>450000</ForgettingTime>      <!-- 1800000 -->
-    </Flatter>
-    <Insult>
-      <ForgettingTime>3600000</ForgettingTime>      <!-- 1800000 -->
-    </Insult>
-    <Gift>
-      <ForgettingTime>450000</ForgettingTime>      <!-- 1800000 -->
-    </Gift>
+  <ModOp Type="replace" GUID='73,76' Path="Values/Diplomacy/RepeatableActionBalancing/Actions">
+    <Actions>
+      <Flatter>
+        <Subdivisions>
+          <Item>
+            <SuccessChance>40</SuccessChance>
+            <ReputationGain>3</ReputationGain>
+            <ReputationLoss>-10</ReputationLoss>
+          </Item>
+        </Subdivisions>
+        <ForgettingTime>2400000</ForgettingTime>        <!-- 1800000 -->
+      </Flatter>
+      <Insult>
+        <Subdivisions>
+          <Item>
+            <SuccessChance>99</SuccessChance>
+            <ReputationGain>-40</ReputationGain>
+          </Item>
+        </Subdivisions>
+        <ForgettingTime>2400000</ForgettingTime>        <!-- 1800000 -->
+      </Insult>
+      <Gift>
+        <Subdivisions>
+          <Item>
+            <SuccessChance>60</SuccessChance>
+            <ReputationGain>3</ReputationGain>
+            <ReputationLoss>-10</ReputationLoss>
+          </Item>
+        </Subdivisions>
+        <ForgettingTime>2400000</ForgettingTime>        <!-- 1800000 -->
+      </Gift>
+    </Actions>
   </ModOp>
 
   <ModOp Type="merge" GUID='73,76' Path="Values/Diplomacy/Memory">
@@ -61,12 +75,12 @@
   </ModOp>
 
   <ModOp Type="merge" GUID='73,76' Path="Values/Diplomacy/DiplomacyAI">
-    <MaxMoneyRequest>50</MaxMoneyRequest>    <!-- 40 -->
+    <MaxMoneyRequest>80</MaxMoneyRequest>    <!-- 40 -->
     <GenericTimerStartDelay>1800000</GenericTimerStartDelay>    <!-- 3600000 -->
     <GenericTimerRepeat>3600000</GenericTimerRepeat>    <!-- 7200000 -->
     <ActionCooldown>
       <RequestCeaseFire>
-        <Cooldown>1800000</Cooldown>        <!-- 3600000 -->
+        <Cooldown>4200000</Cooldown>        <!-- 3600000 -->
       </RequestCeaseFire>
     </ActionCooldown>
   </ModOp>
@@ -75,7 +89,7 @@
     <Length>3600000</Length>    <!-- 7200000 -->
   </ModOp>
   <ModOp Type="merge" GUID="140054" Path="/Values/DiplomacyConfig/NonAttack/TimeLength/Default">
-    <Length>9000000</Length>    <!-- 18000000 -->
+    <Length>4800000</Length>    <!-- 18000000 -->
   </ModOp>
 
   <!-- END - DIPLOMACY -->
@@ -129,7 +143,7 @@
     <WarFleet>
       <Item>
         <ShipAsset>102431</ShipAsset>        <!--Pirate SOTL-->
-        <Amount>1</Amount>        <!-- / -->
+        <Amount>2</Amount>        <!-- / -->
       </Item>
       <Item>
         <ShipAsset>102430</ShipAsset>        <!--Pirate Frigate-->
@@ -166,24 +180,20 @@
         <Amount>1</Amount>        <!-- / -->
       </Item>
       <Item>
-        <ShipAsset>1742102074</ShipAsset>        <!--Pirate Flak Monitor-->
-        <Amount>2</Amount>        <!-- / -->
-      </Item>
-      <Item>
         <ShipAsset>1742102068</ShipAsset>        <!--Pirate Flame Monitor-->
         <Amount>1</Amount>        <!-- / -->
       </Item>
       <Item>
         <ShipAsset>1742102012</ShipAsset>        <!--Ironclad Cruiser-->
-        <Amount>4</Amount>        <!-- / -->
+        <Amount>2</Amount>        <!-- / -->
       </Item>
       <Item>
-        <ShipAsset>1742102094</ShipAsset>        <!--Pirate Hawk-->
+        <ShipAsset>1742102074</ShipAsset>        <!--Pirate Flak Monitor-->
         <Amount>1</Amount>        <!-- / -->
       </Item>
       <Item>
         <ShipAsset>102431</ShipAsset>        <!--Pirate SOTL-->
-        <Amount>4</Amount>        <!-- 2 -->
+        <Amount>3</Amount>        <!-- 2 -->
       </Item>
       <Item>
         <ShipAsset>1742102008</ShipAsset>        <!--Jolly Roger-->
@@ -233,11 +243,11 @@
     <WarFleet>
       <Item>
         <ShipAsset>1742102010</ShipAsset>        <!--Pirate Battle Cruiser-->
-        <Amount>2</Amount>        <!-- / -->
+        <Amount>3</Amount>        <!-- / -->
       </Item>
       <Item>
         <ShipAsset>1742102070</ShipAsset>        <!--Pirate Warship-->
-        <Amount>1</Amount>        <!-- / -->
+        <Amount>3</Amount>        <!-- / -->
       </Item>
       <Item>
         <ShipAsset>1742102074</ShipAsset>        <!--Pirate Flak Monitor-->
@@ -252,14 +262,6 @@
         <Amount>1</Amount>        <!-- / -->
       </Item>
       <Item>
-        <ShipAsset>102431</ShipAsset>        <!--Pirate Liner-->
-        <Amount>4</Amount>        <!-- 2 -->
-      </Item>
-      <Item>
-        <ShipAsset>1742102008</ShipAsset>        <!--Jolly Roger-->
-        <Amount>2</Amount>        <!-- / -->
-      </Item>
-      <Item>
         <ShipAsset>1742102012</ShipAsset>        <!--Ironclad Cruiser-->
         <Amount>3</Amount>        <!-- / -->
       </Item>
@@ -272,12 +274,8 @@
         <Amount>2</Amount>        <!-- / -->
       </Item>
       <Item>
-        <ShipAsset>102430</ShipAsset>        <!--Pirate Frigate-->
-        <Amount>3</Amount>        <!-- 5 -->
-      </Item>
-      <Item>
-        <ShipAsset>102429</ShipAsset>        <!--Pirate Gunboat-->
-        <Amount>5</Amount>        <!-- 10 -->
+        <ShipAsset>1742102008</ShipAsset>        <!--Jolly Roger-->
+        <Amount>2</Amount>        <!-- / -->
       </Item>
     </WarFleet>
   </ModOp>
@@ -322,12 +320,8 @@
         <Amount>3</Amount>        <!-- / -->
       </Item>
       <Item>
-        <ShipAsset>1742102012</ShipAsset>        <!--Pirate Ironclad Cruiser-->
-        <Amount>4</Amount>        <!-- / -->
-      </Item>
-      <Item>
         <ShipAsset>1742102070</ShipAsset>        <!--Pirate Warship-->
-        <Amount>2</Amount>        <!-- / -->
+        <Amount>3</Amount>        <!-- / -->
       </Item>
       <Item>
         <ShipAsset>1742102014</ShipAsset>        <!--Pirate Heavy Battle Cruiser-->
@@ -338,12 +332,16 @@
         <Amount>1</Amount>        <!-- / -->
       </Item>
       <Item>
+        <ShipAsset>1742102012</ShipAsset>        <!--Pirate Ironclad Cruiser-->
+        <Amount>3</Amount>        <!-- / -->
+      </Item>
+      <Item>
         <ShipAsset>1742102096</ShipAsset>        <!--Pirate Black Eagle-->
         <Amount>2</Amount>        <!-- / -->
       </Item>
       <Item>
         <ShipAsset>1742102068</ShipAsset>        <!--Pirate Flame Monitor-->
-        <Amount>2</Amount>        <!-- / -->
+        <Amount>4</Amount>        <!-- / -->
       </Item>
       <Item>
         <ShipAsset>1742102074</ShipAsset>        <!--Pirate Flak Monitor-->
@@ -355,25 +353,25 @@
       </Item>
       <Item>
         <ShipAsset>102432</ShipAsset>        <!--Pirate Monitor-->
-        <Amount>3</Amount>        <!-- 3 -->
+        <Amount>4</Amount>        <!-- 3 -->
       </Item>
       <Item>
         <ShipAsset>1742102008</ShipAsset>        <!--Jolly Roger-->
-        <Amount>4</Amount>        <!-- / -->
-      </Item>
-      <Item>
-        <ShipAsset>102431</ShipAsset>        <!--Pirate Liner-->
-        <Amount>2</Amount>        <!-- 3 -->
-      </Item>
-      <Item>
-        <ShipAsset>102430</ShipAsset>        <!--Pirate Frigate-->
-        <Amount>3</Amount>        <!-- 6 -->
-      </Item>
-      <Item>
-        <ShipAsset>102429</ShipAsset>        <!--Pirate Gunboat-->
-        <Amount>5</Amount>        <!-- 10 -->
+        <Amount>3</Amount>        <!-- / -->
       </Item>
     </WarFleet>
+  </ModOp>
+  <ModOp Type="add" GUID='73' Path="Values/Trader/Progression/EndGame/WarFleet">
+    <Item>
+      <ShipAsset>1742102135</ShipAsset>      <!-- Iron Maiden - Warship (Pirates)-->
+      <Amount>1</Amount>
+    </Item>
+  </ModOp>
+  <ModOp Type="add" GUID='76' Path="Values/Trader/Progression/EndGame/WarFleet">
+    <Item>
+      <ShipAsset>1742102137</ShipAsset>      <!-- Skullcrusher - Warship (Pirates)-->
+      <Amount>1</Amount>
+    </Item>
   </ModOp>
   <ModOp Type="replace" GUID='73,76' Path="Values/Trader/Progression/EndGame/ShipsForSale">
     <ShipsForSale>
@@ -410,7 +408,7 @@
     <StrengthLevels>
       <Levels>
         <Inferior>
-          <Flee>0</Flee>          <!-- 1 -->
+          <Flee>1</Flee>          <!-- 1 -->
           <MaxAttackRatio>100</MaxAttackRatio>
           <MaxEscortRatio>0</MaxEscortRatio>
           <MaxDefendRatio>100</MaxDefendRatio>          <!-- / -->
@@ -537,24 +535,24 @@
   <!-- END - MILITARY AI -->
 
   <!-- START - PIRATE -->
-  <!-- ANNE ONLY | JEAN ALREADY HAS 9999 TO BEGIN WITH -->
-  <ModOp Type="merge" GUID='73' Path="Values/Pirate">
+  <!-- Keep pirates in their own zone at the beginning to let them grow and not bother other -->
+  <ModOp Type="merge" GUID='73,76' Path="Values/Pirate">
     <AreaOfActivity>
       <Normal>
-        <StartAreaRadius>400</StartAreaRadius>        <!-- 300 -->
+        <StartAreaRadius>350</StartAreaRadius>        <!-- 300 -->
         <ChaseRange>75</ChaseRange>        <!-- 50 -->
         <GrowPerProgress>
           <EarlyMidGame>
-            <GrowAreaPerMinute>1.5</GrowAreaPerMinute>            <!-- 1 -->
+            <GrowAreaPerMinute>0</GrowAreaPerMinute>            <!-- 1 -->
           </EarlyMidGame>
           <MidGame>
-            <GrowAreaPerMinute>3</GrowAreaPerMinute>            <!-- / -->
+            <GrowAreaPerMinute>0</GrowAreaPerMinute>            <!-- / -->
           </MidGame>
           <LateMidGame>
-            <GrowAreaPerMinute>6</GrowAreaPerMinute>            <!-- 3 -->
+            <GrowAreaPerMinute>4</GrowAreaPerMinute>            <!-- 3 -->
           </LateMidGame>
           <LateGame>
-            <GrowAreaPerMinute>15</GrowAreaPerMinute>            <!-- 8 -->
+            <GrowAreaPerMinute>10</GrowAreaPerMinute>            <!-- 8 -->
           </LateGame>
           <EndGame>
             <GrowAreaPerMinute>30</GrowAreaPerMinute>            <!-- 25 -->
@@ -562,23 +560,23 @@
         </GrowPerProgress>
       </Normal>
       <Hard>
-        <StartAreaRadius>600</StartAreaRadius>        <!-- 500 -->
+        <StartAreaRadius>400</StartAreaRadius>        <!-- 500 -->
         <ChaseRange>175</ChaseRange>        <!-- 100 -->
         <GrowPerProgress>
           <EarlyMidGame>
-            <GrowAreaPerMinute>3</GrowAreaPerMinute>            <!-- 1.5 -->
+            <GrowAreaPerMinute>0</GrowAreaPerMinute>            <!-- 1.5 -->
           </EarlyMidGame>
           <MidGame>
-            <GrowAreaPerMinute>8</GrowAreaPerMinute>            <!-- 4 -->
+            <GrowAreaPerMinute>0</GrowAreaPerMinute>            <!-- 4 -->
           </MidGame>
           <LateMidGame>
-            <GrowAreaPerMinute>15</GrowAreaPerMinute>            <!-- 8 -->
+            <GrowAreaPerMinute>6</GrowAreaPerMinute>            <!-- 8 -->
           </LateMidGame>
           <LateGame>
             <GrowAreaPerMinute>30</GrowAreaPerMinute>            <!-- 25 -->
           </LateGame>
           <EndGame>
-            <GrowAreaPerMinute>50</GrowAreaPerMinute>            <!-- / -->
+            <GrowAreaPerMinute>100</GrowAreaPerMinute>            <!-- 50 -->
           </EndGame>
         </GrowPerProgress>
       </Hard>
@@ -1781,6 +1779,33 @@
       </Item>
       <Item>
         <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>1742102135</SpawnGUID>              <!-- Iron Maiden -->
+              <Amount>1</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_03_Pirate_Harlow</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateHarlowResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180023</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
           <Template>ActionMoveObject</Template>
           <Values>
             <Action />
@@ -2022,6 +2047,33 @@
       </Item>
       <Item>
         <TriggerAction>
+          <Template>ActionSpawnObjects</Template>
+          <Values>
+            <Action />
+            <ActionSpawnObjects>
+              <SpawnGUID>1742102137</SpawnGUID>              <!-- Skullcrusher -->
+              <Amount>1</Amount>
+              <Owner>General_Enemy</Owner>
+              <DoSetVisualSpawnOwner>1</DoSetVisualSpawnOwner>
+              <VisualSpawnOwner>Third_party_04_Pirate_LaFortune</VisualSpawnOwner>
+              <SpawnObjectGroupLabel>PirateLafortuneResettleGroup</SpawnObjectGroupLabel>
+            </ActionSpawnObjects>
+            <SpawnArea>
+              <DistanceToBorder>Near</DistanceToBorder>
+              <DistanceToIsland>Far</DistanceToIsland>
+            </SpawnArea>
+            <SessionFilter>
+              <Sessions>
+                <Item>
+                  <Session>180025</Session>
+                </Item>
+              </Sessions>
+            </SessionFilter>
+          </Values>
+        </TriggerAction>
+      </Item>
+      <Item>
+        <TriggerAction>
           <Template>ActionMoveObject</Template>
           <Values>
             <Action />
@@ -2212,18 +2264,5 @@
     </ComebackQuests>
   </ModOp>
   <!-- END - COMBACK QUESTS -->
-
-  <!-- START - TRADE BUDGET -->
-  <ModOp Type="merge" GUID='73,76' Path="Values/Interaction/">
-    <PaMSyTrade>
-      <ActiveTrade>
-        <TradeAmount>50000</TradeAmount>        <!-- 5000 -->
-      </ActiveTrade>
-      <PassiveTrade>
-        <TradeAmount>150000</TradeAmount>        <!-- 20000 -->
-      </PassiveTrade>
-    </PaMSyTrade>
-  </ModOp>
-  <!-- END - TRADE BUDGET -->
 
 </ModOps>
