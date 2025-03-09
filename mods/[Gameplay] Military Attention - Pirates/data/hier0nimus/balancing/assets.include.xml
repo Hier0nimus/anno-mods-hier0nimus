@@ -35,47 +35,13 @@
     </counterProposal>
   </ModOp>
 
-  <ModOp Type="replace" GUID='73,76' Path="Values/Diplomacy/RepeatableActionBalancing/Actions">
-    <Actions>
-      <Flatter>
-        <Subdivisions>
-          <Item>
-            <SuccessChance>40</SuccessChance>
-            <ReputationGain>3</ReputationGain>
-            <ReputationLoss>-10</ReputationLoss>
-          </Item>
-        </Subdivisions>
-        <ForgettingTime>2400000</ForgettingTime>        <!-- 1800000 -->
-      </Flatter>
-      <Insult>
-        <Subdivisions>
-          <Item>
-            <SuccessChance>99</SuccessChance>
-            <ReputationGain>-40</ReputationGain>
-          </Item>
-        </Subdivisions>
-        <ForgettingTime>2400000</ForgettingTime>        <!-- 1800000 -->
-      </Insult>
-      <Gift>
-        <Subdivisions>
-          <Item>
-            <SuccessChance>60</SuccessChance>
-            <ReputationGain>3</ReputationGain>
-            <ReputationLoss>-10</ReputationLoss>
-          </Item>
-        </Subdivisions>
-        <ForgettingTime>2400000</ForgettingTime>        <!-- 1800000 -->
-      </Gift>
-    </Actions>
-  </ModOp>
-
   <ModOp Type="merge" GUID='73,76' Path="Values/Diplomacy/Memory">
     <LongTimeCheck>3600000</LongTimeCheck>    <!-- 7800000 -->
     <ReputationUpdateTimer>3600000</ReputationUpdateTimer>    <!-- 7860000 -->
   </ModOp>
 
   <ModOp Type="merge" GUID='73,76' Path="Values/Diplomacy/DiplomacyAI">
-    <MaxMoneyRequest>80</MaxMoneyRequest>    <!-- 40 -->
+    <MaxMoneyRequest>70</MaxMoneyRequest>    <!-- 40 -->
     <GenericTimerStartDelay>1800000</GenericTimerStartDelay>    <!-- 3600000 -->
     <GenericTimerRepeat>3600000</GenericTimerRepeat>    <!-- 7200000 -->
     <ActionCooldown>
