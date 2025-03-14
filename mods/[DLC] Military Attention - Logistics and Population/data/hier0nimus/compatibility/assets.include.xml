@@ -1397,5 +1397,93 @@
     <!-- END COMPATIBILITYSHARED VEGETABLES JAKOB -->
   </Group>
 
+  <Group Condition="#jakob_biogas">
+    <!-- START COMPATIBILITY JAKOB BIOGAS -->
+    <!--UNLOCK - Engineers 500 -->
+    <ModOp Type="addnextSibling" GUID="130248">
+      <Asset>
+        <Template>Trigger</Template>
+        <Values>
+          <Standard>
+            <GUID>1742100804</GUID>
+            <Name>MOD Trigger</Name>
+          </Standard>
+          <Trigger>
+            <TriggerCondition>
+              <Template>ConditionPlayerCounter</Template>
+              <Values>
+                <Condition />
+                <ConditionPlayerCounter>
+                  <PlayerCounter>PopulationByLevel</PlayerCounter>
+                  <Context>15000003</Context>                  <!-- Engineers PopulationLevel7 -->
+                  <CounterAmount>500</CounterAmount>
+                </ConditionPlayerCounter>
+              </Values>
+            </TriggerCondition>
+            <TriggerActions>
+              <Item>
+                <TriggerAction>
+                  <Template>ActionUnlockAsset</Template>
+                  <Values>
+                    <Action />
+                    <ActionUnlockAsset>
+                      <UnhideAssets>
+                      </UnhideAssets>
+                      <UnlockAssets>
+                        <Item>
+                          <Asset>1742100218</Asset>                          <!-- Fire Tower (OW) - Building -->
+                        </Item>
+                        <Item>
+                          <Asset>1742100359</Asset>                          <!-- Fire Tower (AR) - Building -->
+                        </Item>
+                        <Item>
+                          <Asset>1742100365</Asset>                          <!-- Fire Tower (NW) - Building -->
+                        </Item>
+                        <Item>
+                          <Asset>1742100371</Asset>                          <!-- Fire Tower (EN) - Building -->
+                        </Item>
+                        <Item>
+                          <Asset>1742100446</Asset>                          <!-- Small Gas Ammunition Depot (EN) - Building -->
+                        </Item>
+                        <Item>
+                          <Asset>1742100445</Asset>                          <!-- Small Gas Ammunition Depot (EN) - Recipe -->
+                        </Item>
+                        <Item>
+                          <Asset>1742100442</Asset>                          <!-- Small Gas Ammunition Depot (AR) - Building -->
+                        </Item>
+                        <Item>
+                          <Asset>1742100441</Asset>                          <!-- Small Gas Ammunition Depot (AR) - Recipe -->
+                        </Item>
+                        <Item>
+                          <Asset>1742100444</Asset>                          <!-- Small Gas Ammunition Depot (NW) - Building -->
+                        </Item>
+                        <Item>
+                          <Asset>1742100443</Asset>                          <!-- Small Gas Ammunition Depot (NW) - Recipe -->
+                        </Item>
+                        <Item>
+                          <Asset>1742100226</Asset>                          <!-- Large Ammunition Depot - All ammunition (OW) - Building -->
+                        </Item>
+                        <Item>
+                          <Asset>1742100274</Asset>                          <!-- Large Ammunition Depot - All ammunition (AR) - Building -->
+                        </Item>
+                        <Item>
+                          <Asset>1742100276</Asset>                          <!-- Large Ammunition Depot - All ammunition (NW) - Recipe -->
+                        </Item>
+                        <Item>
+                          <Asset>1742100282</Asset>                          <!-- Large Ammunition Depot - All ammunition (EN) - Recipe -->
+                        </Item>
+                      </UnlockAssets>
+                    </ActionUnlockAsset>
+                  </Values>
+                </TriggerAction>
+              </Item>
+            </TriggerActions>
+          </Trigger>
+          <TriggerSetup />
+        </Values>
+      </Asset>
+    </ModOp>
+  </Group>
+
 </ModOps>
   

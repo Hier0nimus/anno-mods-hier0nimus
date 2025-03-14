@@ -1,6 +1,6 @@
 <!-- 
   
-  v1.0
+  v1.1
 
   [Gameplay] Open Pit Mines
   Enjoy!
@@ -47,7 +47,7 @@
             </Item>
             <Item>
               <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
-              <Amount>25</Amount>
+              <Amount>12</Amount>
             </Item>
           </Costs>
         </Cost>
@@ -120,7 +120,7 @@
             </Item>
             <Item>
               <Product>1010115</Product>              <!-- Workers Workforce -->
-              <Amount>30</Amount>
+              <Amount>25</Amount>
             </Item>
           </Maintenances>
         </Maintenance>
@@ -211,7 +211,7 @@
             </Item>
             <Item>
               <Product>1010366</Product>              <!-- Jornalero Workforce -->
-              <Amount>30</Amount>
+              <Amount>25</Amount>
             </Item>
           </Maintenances>
         </Maintenance>
@@ -247,7 +247,7 @@
             </Item>
             <Item>
               <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
-              <Amount>25</Amount>
+              <Amount>12</Amount>
             </Item>
           </Costs>
         </Cost>
@@ -319,7 +319,7 @@
               <InactiveAmount>25</InactiveAmount>
             </Item>
             <Item>
-              <Product>1010115</Product>              <!-- Soldiers Workforce -->
+              <Product>1010115</Product>              <!-- Worker Workforce -->
               <Amount>20</Amount>
             </Item>
           </Maintenances>
@@ -412,7 +412,7 @@
             </Item>
             <Item>
               <Product>1010366</Product>              <!-- Jornalero Workforce -->
-              <Amount>30</Amount>
+              <Amount>25</Amount>
             </Item>
           </Maintenances>
         </Maintenance>
@@ -438,8 +438,8 @@
   </ModOp>
   <!-- END ADD PRODUCTION BUILDINGS TO WORKFORCE MENU -->
 
-  <!-- START - ADD BUILDINGS TO MINES AND QUARRIES & ALL OLD WORLD MINES -->
-  <ModOp GUID='190786,1949' Type="add" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
+  <!-- START - ADD BUILDINGS TO MINES AND QUARRIES & ALL OLD WORLD MINES & ALL OPEN PITS -->
+  <ModOp GUID='190786,1949,1500300911' Type="add" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
     <Item>
       <GUID>1742100163</GUID>
     </Item>
@@ -523,7 +523,7 @@
       <Building>1742100163</Building>
     </Item>
   </ModOp>
-  <ModOp Type="addPrevSibling" GUID='25000194' Path="/Values/ConstructionCategory/BuildingList/Item[Building='1351']">
+  <ModOp Type="addNextSibling" GUID='25000193' Path="/Values/ConstructionCategory/BuildingList/Item[Building='500907']">
     <Item>
       <Building>1742100603</Building>
     </Item>
@@ -540,7 +540,6 @@
     </Item>
   </ModOp>
   <!-- END ADD TO CONSTRUCTION MENU -->
-
 
   <!--UNLOCK - WORKERS 300 -->
   <ModOp Type="addnextSibling" GUID="130248">
@@ -597,7 +596,7 @@
     </Asset>
   </ModOp>
 
-  <!--UNLOCK - Jornaleros 300 -->
+  <!--UNLOCK - Jornaleros 150 -->
   <ModOp Type="addnextSibling" GUID="130248">
     <Asset>
       <Template>Trigger</Template>

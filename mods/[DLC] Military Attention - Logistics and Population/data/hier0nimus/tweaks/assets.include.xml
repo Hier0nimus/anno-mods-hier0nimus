@@ -200,7 +200,7 @@ Adaptations to vanilla items
 
   <!-- ****************** START Add Change production ******************  -->
 
-  <!-- ****************** Weapon Factory - Add wood and gunpowder to production ******************  -->
+  <!-- ****************** Weapon Factory - Add wood and gunpowder to production / Reduce Cycle time ******************  -->
   <ModOp Type="add" GUID="1010299" Path="/Values/FactoryBase/FactoryInputs">
     <Item>
       <Product>120008</Product>      <!--Wood-->
@@ -212,6 +212,9 @@ Adaptations to vanilla items
       <Amount>1</Amount>
       <StorageAmount>6</StorageAmount>
     </Item>
+  </ModOp>
+  <ModOp Type="merge" GUID="1010299" Path="/Values/FactoryBase">
+    <CycleTime>45</CycleTime>
   </ModOp>
 
   <!-- ****************** Weapon Factory - Add wood to production to menu chain ******************  -->
