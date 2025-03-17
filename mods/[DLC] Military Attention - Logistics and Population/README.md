@@ -1,10 +1,52 @@
-# Military Attention | 1.18!
+# Military Attention | 1.21!
 
 A mod centered around military infrastructure and adding new military residence tiers for all regions with a focus on the Old World.
 
 ![ma-img-01.jpg](./banner.jpg)
 
 ## Changelog
+
+### v1.21
+Fixed norm materials and other graphic mistakes for
+- Canteen (OW + EN)
+- Cigarettes factory
+- Cardgames Factory
+- Military Academy
+- Military Prison
+- Military Training Complex
+- Propaganda Facility
+- Recreation Centre
+- Ammunition Factory (Basic, Shell, Bombs)
+- Heated Military Uniform Factory
+- Sleeping Bags Factory
+- Ammunition Depot (Normal and Large)
+- Gunpowder Factory
+
+### v1.20
+- Changed name of the folder and name of the mod and category. Make sure to delete the old one if you install it manually.
+- Weapons Factory - Cycletime from 90s to 45s to boost early production a bit.
+- Open pit maintenance and building costs reduced.
+- Added open pit mines to shared open pit pool so for example the Mineralogist also affects the open pit mines.
+- If Jakob Biogas mod is installed, fire towers and ammunition depots will be unlocked at 500 engineers.
+
+### v1.19
+- Added AI production buildings like bombs ammunition factory into the correct unlocks so they are only making them when they actually fit the time. 
+- Added a cheaper kiosk recruitment office for early game that uses normal worker workforce and is smaller but produces sailors slower.
+- Added AI recruitment office for the New World, so AI is actually able to also make ships in the New World.
+- Added the correct building model for the nitrary with fields for AI. But still without the shed.
+- Replaced care packages with clean water and lowered the amount of goods for construction of schooner and gunboat to make ship building at the beginning easier.
+- Added clean water pump for AI so thet have clean water to make ships early
+- Made additional sailingships construction costs a bit cheaper to make ship building at the beginning easier.
+- Rebalance price for Care Packages and Saltpetre.
+- Remove construction cost of steel beams for the Canteen in all regions to kickstart soldiers a bit more.
+- Made normal Recruitment Offices not available for AI so they will not build them and get stuck not producing soldiers.
+- Reduced amount of fields of farms for other mods to be in line with the logic of vanilla reduction (Kurila (Herbs OW), Jakob (Olives (OW), Vegetables (OW), Hemp (OW), Flax (OW)), Drakkam (Tomatoes OW), Taludas (Avocados (NW)) mods).
+- Change newspaper trigger to 150 workers when unlocking soldiers instead of at farmers.
+- Rebalanced amount of buildings that AI make and made it more simple to be flexible and less chance of problems.
+- Added Military Uniforms chain to the consumables construction category which was missing.
+- Rebalance defense buildings.
+- Add additional construction cost of care packages and sailors to correct diving vessel.
+- Lowered the unlocks for soldiers from 300 to 200 soldiers and 500 to 400 soldiers.
 
 ### v1.18
 - Hide vanilla turrets in harbour menus instead of removing them. Now should be more compatible with other mods.
