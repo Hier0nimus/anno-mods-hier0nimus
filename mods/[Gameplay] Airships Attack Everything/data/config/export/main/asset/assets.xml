@@ -1,0 +1,36 @@
+<!-- 
+
+[Gameplay] Airships Attack Everything - v1.2
+  
+Created by Hier0nimus
+And help of A LOT of people. Big thank you all!
+
+Enjoy!
+
+-->
+
+<ModOps>
+
+  <!-- Airships can attack ships and buildings -->
+
+  <ModOp Type="merge" GUID="140999" Path="/Values/MilitaryFeature/CanAttackTable/">
+    <HunterAirship>
+      <CanDamageTargetedAttack>Airship;Ship;HarbourBuilding;IslandBuilding</CanDamageTargetedAttack>
+      <CanDamageTargetedAutoAttack>Airship;Ship;</CanDamageTargetedAutoAttack>
+      <CanDamageUntargeted>Seamine;HarbourBuilding;Ship;IslandBuilding</CanDamageUntargeted>
+    </HunterAirship>
+  </ModOp>
+
+  <!-- Airships can attack seamines and bomb buildings -->
+
+  <Group Condition="!#military_attention_legendary_ai">
+    <Group Condition="!#military_attention_ships">
+      <ModOp Type="merge" GUID="140999" Path="/Values/MilitaryFeature/CanAttackTable/">
+        <BombardierAirship>
+          <CanDamageUntargeted>Seamine;Ship;HarbourBuilding;IslandBuilding</CanDamageUntargeted>
+        </BombardierAirship>
+      </ModOp>
+    </Group>
+  </Group>
+
+</ModOps>
