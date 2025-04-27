@@ -6,17 +6,6 @@ Balancing - Ships
 
   <!-- ********************************** CONSTRUCTION SHIPS REBALANCE ********************************** -->
 
-  <!-- ******* SHIPS AND AIRSHIPS CAN ATTACK SEA MINES ******* -->
-
-  <ModOp Type="merge" GUID="140999" Path="/Values/MilitaryFeature/CanAttackTable/">
-    <Warship>
-      <CanDamageTargetedAttack>Ship;HarbourBuilding;Seamine</CanDamageTargetedAttack>
-    </Warship>
-    <HunterAirship>
-      <CanDamageTargetedAttack>Airship;Seamine</CanDamageTargetedAttack>
-    </HunterAirship>
-  </ModOp>
-
   <!-- ******* DEFINE HOW FAST AI BUILD SHIPS AND HOW MUCH IT COSTS ******* -->
 
   <!-- EASY AI TEMPLATE - 168  -->
@@ -466,11 +455,11 @@ Balancing - Ships
   <!-- Water Drop -->
   <!-- Already 1013 - unrestricted. No need to change. -->
 
-  <!-- Airships can attack seamines and bomb buildings -->
   <Group Condition="!#military_attention_ships">
+    <!-- Airships can attack seamines and bomb buildings -->
     <ModOp Type="merge" GUID="140999" Path="/Values/MilitaryFeature/CanAttackTable/">
       <HunterAirship>
-        <CanDamageUntargeted>Seamine;</CanDamageUntargeted>
+        <CanDamageUntargeted>Seamine</CanDamageUntargeted>
       </HunterAirship>
       <BombardierAirship>
         <CanDamageUntargeted>Seamine;Ship;HarbourBuilding;IslandBuilding</CanDamageUntargeted>
@@ -484,7 +473,7 @@ Balancing - Ships
     <ModOp Type="replace" GUID="47,79,80,83,82,81,11,220,48,84,85" Path="/Values/MilitaryAI/WarFleet/ShipList/Item[Type='100437']">
       <Item>
         <Type>100437</Type>        <!--Gunboat-->
-        <Weight>0.5</Weight>
+        <Weight>4</Weight>
       </Item>
     </ModOp>
 
@@ -519,7 +508,7 @@ Balancing - Ships
     <ModOp Type="replace" GUID="83,81,11,220,48,84,85" Path="/Values/MilitaryAI/WarFleet/ShipList/Item[Type='100442']">
       <Item>
         <Type>100442</Type>        <!--Battle Cruiser (Military)-->
-        <Weight>120</Weight>
+        <Weight>150</Weight>
       </Item>
     </ModOp>
 
@@ -533,7 +522,7 @@ Balancing - Ships
     <ModOp Type="add" GUID="47,79,80,82" Path="/Values/MilitaryAI/WarFleet/ShipList">
       <Item>
         <Type>100442</Type>        <!--Battle Cruiser (Military)-->
-        <Weight>120</Weight>
+        <Weight>150</Weight>
       </Item>
     </ModOp>
 
@@ -689,7 +678,7 @@ Balancing - Ships
   <!-- Pirate Frigate -->
   <ModOp Type="merge" GUID='102421' Path="/Values">
     <Attackable>
-      <MaximumHitPoints>2300</MaximumHitPoints>      <!-- VA - 2000 -->
+      <MaximumHitPoints>2500</MaximumHitPoints>      <!-- PI - 2500 -->
     </Attackable>
   </ModOp>
 
@@ -703,14 +692,14 @@ Balancing - Ships
   <!-- ROYAL SOTL -->
   <ModOp Type="merge" GUID='102427' Path="/Values">
     <Attackable>
-      <MaximumHitPoints>4100</MaximumHitPoints>      <!-- MA - 3800 -->
+      <MaximumHitPoints>4000</MaximumHitPoints>      <!-- MA - 3750 -->
     </Attackable>
   </ModOp>
 
   <!-- PIRATE SOTL -->
   <ModOp Type="merge" GUID='102419' Path="/Values">
     <Attackable>
-      <MaximumHitPoints>3800</MaximumHitPoints>      <!-- MA - 3500 -->
+      <MaximumHitPoints>3750</MaximumHitPoints>      <!-- MA - 3500 -->
     </Attackable>
   </ModOp>
 
@@ -738,7 +727,7 @@ Balancing - Ships
   <!-- Flame Monitor -->
   <ModOp GUID='968,1537' Path="/Values" Type="merge">
     <Attackable>
-      <MaximumHitPoints>4250</MaximumHitPoints>      <!-- MA - 4000 -->
+      <MaximumHitPoints>4500</MaximumHitPoints>      <!-- MA - 4250 -->
     </Attackable>
   </ModOp>
 
@@ -747,56 +736,56 @@ Balancing - Ships
     <!-- The Duke -->
     <ModOp GUID='1742100578' Path="/Values" Type="merge">
       <Attackable>
-        <MaximumHitPoints>6500</MaximumHitPoints>        <!-- MA - 6250 -->
+        <MaximumHitPoints>5500</MaximumHitPoints>        <!-- MA - 5000 -->
       </Attackable>
     </ModOp>
 
     <!-- Small Battle Cruiser -->
     <ModOp GUID='1742100583' Path="/Values" Type="merge">
       <Attackable>
-        <MaximumHitPoints>3600</MaximumHitPoints>        <!-- MA - 3450 -->
+        <MaximumHitPoints>3500</MaximumHitPoints>        <!-- MA - 3250 -->
       </Attackable>
     </ModOp>
 
     <!-- Heavy Battle Cruiser -->
     <ModOp GUID='1742100585' Path="/Values" Type="merge">
       <Attackable>
-        <MaximumHitPoints>12500</MaximumHitPoints>        <!-- MA - 11500 -->
+        <MaximumHitPoints>18500</MaximumHitPoints>        <!-- MA - 17500 -->
       </Attackable>
     </ModOp>
 
     <!-- Torpedo Boat -->
     <ModOp GUID='1742100587' Path="/Values" Type="merge">
       <Attackable>
-        <MaximumHitPoints>1800</MaximumHitPoints>        <!-- MA - 1250 -->
+        <MaximumHitPoints>1750</MaximumHitPoints>        <!-- MA - 1500 -->
       </Attackable>
     </ModOp>
 
     <!-- Corvette -->
     <ModOp GUID='1742100589' Path="/Values" Type="merge">
       <Attackable>
-        <MaximumHitPoints>2600</MaximumHitPoints>        <!-- MA - 2300 -->
+        <MaximumHitPoints>2500</MaximumHitPoints>        <!-- MA - 2300 -->
       </Attackable>
     </ModOp>
 
     <!-- Auxiliary Ship -->
     <ModOp GUID='1742100591' Path="/Values" Type="merge">
       <Attackable>
-        <MaximumHitPoints>1000</MaximumHitPoints>        <!-- MA - 300 -->
+        <MaximumHitPoints>800</MaximumHitPoints>        <!-- MA - 450 -->
       </Attackable>
     </ModOp>
 
     <!-- Flak Ironclad -->
     <ModOp GUID='1742100609' Path="/Values" Type="merge">
       <Attackable>
-        <MaximumHitPoints>6500</MaximumHitPoints>        <!-- MA - 6250 -->
+        <MaximumHitPoints>6500</MaximumHitPoints>        <!-- MA - 6000 -->
       </Attackable>
     </ModOp>
 
     <!-- Ironclad Cruiser -->
     <ModOp GUID='1742100615' Path="/Values" Type="merge">
       <Attackable>
-        <MaximumHitPoints>8500</MaximumHitPoints>        <!-- MA - 8000 -->
+        <MaximumHitPoints>8000</MaximumHitPoints>        <!-- MA - 7750 -->
       </Attackable>
     </ModOp>
 
