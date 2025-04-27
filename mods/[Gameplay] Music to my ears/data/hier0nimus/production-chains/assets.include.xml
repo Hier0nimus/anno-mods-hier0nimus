@@ -12,13 +12,17 @@
     </ModOp>
     <!-- END ADD - Djembé Chain -->
 
-    <!-- START ADD - Qilaut Chain -->
-    <ModOp Type="addNextSibling" GUID='112790,116344' Path="/Values/ConstructionCategory/BuildingList/Item[Building='112710']">
-        <Item>
-            <Building>1742110037</Building>
-        </Item>
-    </ModOp>
-    <!-- END ADD - Qilaut Chain -->
+    <Group Condition="!#white_and_cold">
+
+        <!-- START ADD - Qilaut Chain -->
+        <ModOp Type="addNextSibling" GUID='112790,116344' Path="/Values/ConstructionCategory/BuildingList/Item[Building='112710']">
+            <Item>
+                <Building>1742110037</Building>
+            </Item>
+        </ModOp>
+        <!-- END ADD - Qilaut Chain -->
+
+    </Group>
 
     <!-- START ADD - Guitar/Banjo/Music Hall -->
     <ModOp Type="addNextSibling" GUID='25000194' Path="/Values/ConstructionCategory/BuildingList/Item[Building='500909']">
