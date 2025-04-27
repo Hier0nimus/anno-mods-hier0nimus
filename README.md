@@ -107,6 +107,7 @@ A list of shared goods that can be used by everybody
 - Flutes
 - Djembé
 - Sawdust
+- Qilaut
 
 ### Mechanics
 
