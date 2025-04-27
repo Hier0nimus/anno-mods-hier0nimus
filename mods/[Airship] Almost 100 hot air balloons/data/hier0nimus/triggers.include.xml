@@ -3,7 +3,7 @@ TRIGGERS
 -->
 
 <ModOps>
-    <!--UNLOCK - Workers 300 - Uwe -->
+    <!--UNLOCK - Workers 300 - Newspaper + Uwe -->
     <ModOp Type="addnextSibling" GUID="130248">
         <Asset>
             <Template>Trigger</Template>
@@ -70,12 +70,12 @@ TRIGGERS
                                     <ActionUnlockAsset>
                                         <UnhideAssets>
                                             <Item>
-                                                <Asset>1742000271</Asset>                                                <!-- Uwe hot air balloon - Airship -->
+                                                <Asset>1742000271</Asset>                                                <!-- Uwe Hot Air Balloon - Airship -->
                                             </Item>
                                         </UnhideAssets>
                                         <UnlockAssets>
                                             <Item>
-                                                <Asset>1742000269</Asset>                                                <!-- Uwe hot air balloon - Airship -->
+                                                <Asset>1742000269</Asset>                                                <!-- Uwe Hot Air Balloon - Airship -->
                                             </Item>
                                         </UnlockAssets>
                                     </ActionUnlockAsset>
@@ -89,13 +89,57 @@ TRIGGERS
         </Asset>
     </ModOp>
 
-    <!--UNLOCK - Artisan 300 - Carlo -->
+    <!--UNLOCK - Workers 300 - Manfred Unhide -->
     <ModOp Type="addnextSibling" GUID="130248">
         <Asset>
             <Template>Trigger</Template>
             <Values>
                 <Standard>
-                    <GUID>1742000291</GUID>
+                    <GUID>1742000299</GUID>
+                    <Name>MOD Trigger</Name>
+                </Standard>
+                <Trigger>
+                    <TriggerCondition>
+                        <Template>ConditionPlayerCounter</Template>
+                        <Values>
+                            <Condition />
+                            <ConditionPlayerCounter>
+                                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                                <Context>15000001</Context>                                <!-- Workers PopulationLevel7 -->
+                                <CounterAmount>300</CounterAmount>
+                            </ConditionPlayerCounter>
+                        </Values>
+                    </TriggerCondition>
+                    <TriggerActions>
+                        <Item>
+                            <TriggerAction>
+                                <Template>ActionUnlockAsset</Template>
+                                <Values>
+                                    <Action />
+                                    <ActionUnlockAsset>
+                                        <UnhideAssets>
+                                            <Item>
+                                                <Asset>1742000297</Asset>                                                <!-- Manfred Hot Air Balloon - Airship -->
+                                            </Item>
+                                        </UnhideAssets>
+                                    </ActionUnlockAsset>
+                                </Values>
+                            </TriggerAction>
+                        </Item>
+                    </TriggerActions>
+                </Trigger>
+                <TriggerSetup />
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!--UNLOCK - Artisan 300 - Carlo + Manfred -->
+    <ModOp Type="addnextSibling" GUID="130248">
+        <Asset>
+            <Template>Trigger</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742000300</GUID>
                     <Name>MOD Trigger</Name>
                 </Standard>
                 <Trigger>
@@ -119,18 +163,24 @@ TRIGGERS
                                     <ActionUnlockAsset>
                                         <UnhideAssets>
                                             <Item>
-                                                <Asset>1742000273</Asset>                                                <!-- Nena hot air balloon - Airship -->
+                                                <Asset>1742000273</Asset>                                                <!-- Nena Hot Air Balloon - Airship -->
                                             </Item>
                                         </UnhideAssets>
                                         <UnlockAssets>
                                             <Item>
-                                                <Asset>1742000271</Asset>                                                <!-- Uwe hot air balloon - Airship -->
+                                                <Asset>1742000271</Asset>                                                <!-- Uwe Hot Air Balloon - Airship -->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742000297</Asset>                                                <!-- Manfred Hot Air Balloon - Airship -->
                                             </Item>
                                             <Item>
                                                 <Asset>1742000275</Asset>                                                <!-- Joseph-Étienne Gontmolfier -->
                                             </Item>
                                             <Item>
                                                 <Asset>1742000277</Asset>                                                <!-- Jacques-Michel Gontmolfier -->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742000293</Asset>                                                <!-- Jean-Pierre Gontmolfier -->
                                             </Item>
                                             <Item>
                                                 <Asset>1742000279</Asset>                                                <!-- Special Gas Mixture -->
@@ -147,13 +197,13 @@ TRIGGERS
         </Asset>
     </ModOp>
 
-    <!--UNLOCK - Nena - 99 Balloon built -->
+    <!--UNLOCK - Nena - 1 Engineers -->
     <ModOp Type="addnextSibling" GUID="130248">
         <Asset>
             <Template>Trigger</Template>
             <Values>
                 <Standard>
-                    <GUID>1742000292</GUID>
+                    <GUID>1742000301</GUID>
                     <Name>MOD Trigger</Name>
                 </Standard>
                 <Trigger>
@@ -162,50 +212,13 @@ TRIGGERS
                         <Values>
                             <Condition />
                             <ConditionPlayerCounter>
-                                <PlayerCounter>ObjectBuilt</PlayerCounter>
-                                <Context>1742000289</Context>
-                                <CounterAmount>99</CounterAmount>
+                                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                                <Context>15000003</Context>                                <!-- Artisans PopulationLevel7 -->
+                                <CounterAmount>1</CounterAmount>
                             </ConditionPlayerCounter>
                         </Values>
                     </TriggerCondition>
                     <TriggerActions>
-                        <Item>
-                            <TriggerAction>
-                                <Template>ActionDelayedActions</Template>
-                                <Values>
-                                    <Action/>
-                                    <ActionDelayedActions>
-                                        <ExecutionDelay>6000</ExecutionDelay>
-                                        <DelayedActions>
-                                            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
-                                            <Values>
-                                                <ActionList>
-                                                    <Actions>
-                                                        <Item>
-                                                            <Action>
-                                                                <Template>ActionForceNewspaper</Template>
-                                                                <Values>
-                                                                    <Action/>
-                                                                    <ActionForceNewspaper>
-                                                                        <Articles>
-                                                                            <Item>
-                                                                                <Article>1742000285</Article>
-                                                                            </Item>
-                                                                        </Articles>
-                                                                        <OpenNewspaperUI>1</OpenNewspaperUI>
-                                                                        <OpenNewspaperType>SpecialEdition</OpenNewspaperType>
-                                                                    </ActionForceNewspaper>
-                                                                </Values>
-                                                            </Action>
-                                                        </Item>
-                                                    </Actions>
-                                                </ActionList>
-                                            </Values>
-                                        </DelayedActions>
-                                    </ActionDelayedActions>
-                                </Values>
-                            </TriggerAction>
-                        </Item>
                         <Item>
                             <TriggerAction>
                                 <Template>ActionUnlockAsset</Template>
@@ -216,7 +229,7 @@ TRIGGERS
                                         </UnhideAssets>
                                         <UnlockAssets>
                                             <Item>
-                                                <Asset>1742000273</Asset>                                                <!-- Nena hot air balloon - Airship -->
+                                                <Asset>1742000273</Asset>                                                <!-- Nena Hot Air Balloon - Airship -->
                                             </Item>
                                         </UnlockAssets>
                                     </ActionUnlockAsset>
@@ -229,4 +242,76 @@ TRIGGERS
             </Values>
         </Asset>
     </ModOp>
+
+    <!-- ****************** START CREATIVE MODE TRIGGERS ******************  -->
+
+    <ModOp Type="addNextSibling" GUID="130248">
+        <Asset>
+            <Template>Trigger</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742000296</GUID>
+                    <Name>Unlock Creative Mode</Name>
+                </Standard>
+                <Trigger>
+                    <TriggerCondition>
+                        <Template>ConditionIsCreativeMode</Template>
+                        <Values>
+                            <Condition />
+                            <ConditionIsCreativeMode />
+                            <ConditionPropsNegatable />
+                        </Values>
+                    </TriggerCondition>
+                    <TriggerActions>
+                        <Item>
+                            <TriggerAction>
+                                <Template>ActionUnlockAsset</Template>
+                                <Values>
+                                    <Action />
+                                    <ActionUnlockAsset>
+                                        <UnlockAssets>
+                                            <Item>
+                                                <Asset>1742000269</Asset>                                                <!-- Uwe Hot Air Balloon - Airship -->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742000271</Asset>                                                <!-- Uwe Hot Air Balloon - Airship -->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742000273</Asset>                                                <!-- Nena Hot Air Balloon - Airship -->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742000297</Asset>                                                <!-- Manfred Hot Air Balloon - Airship -->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742000275</Asset>                                                <!-- Joseph-Étienne Gontmolfier -->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742000277</Asset>                                                <!-- Jacques-Michel Gontmolfier -->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742000293</Asset>                                                <!-- Jean-Pierre Gontmolfier -->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742000279</Asset>                                                <!-- Special Gas Mixture -->
+                                            </Item>
+                                        </UnlockAssets>
+                                    </ActionUnlockAsset>
+                                </Values>
+                            </TriggerAction>
+                        </Item>
+                    </TriggerActions>
+                    <ResetTrigger>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <EmptyAutoCreateValue />
+                        </Values>
+                    </ResetTrigger>
+                </Trigger>
+                <TriggerSetup />
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- ****************** END CREATIVE MODE TRIGGERS ******************  -->
+
 </ModOps>

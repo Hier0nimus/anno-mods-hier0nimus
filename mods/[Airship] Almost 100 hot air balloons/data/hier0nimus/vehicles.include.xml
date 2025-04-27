@@ -10,6 +10,11 @@ AIRSHIPS & SHIPS
             <Vehicle>1742000269</Vehicle>
         </Item>
     </ModOp>
+    <ModOp Type="AddNextSibling" GUID='1010520' Path="/Values/Shipyard/AssemblyOptions/Item[Vehicle='100439']">
+        <Item>
+            <Vehicle>1742000297</Vehicle>
+        </Item>
+    </ModOp>
     <ModOp Type="AddNextSibling" GUID='1010520' Path="/Values/Shipyard/AssemblyOptions/Item[Vehicle='100441']">
         <Item>
             <Vehicle>1742000271</Vehicle>
@@ -23,13 +28,13 @@ AIRSHIPS & SHIPS
     <!-- END - Add airships to sailing shipyard -->
 
     <ModOp GUID="1737" Type="addnextSibling">
-        <!-- START - Uwe hot air balloon -->
+        <!-- START - Uwe Hot Air Balloon -->
         <Asset>
             <Template>AirShip</Template>
             <Values>
                 <Standard>
                     <GUID>1742000269</GUID>
-                    <Name>Uwe hot air balloon</Name>
+                    <Name>Uwe Hot Air Balloon</Name>
                     <IconFilename>data/graphics/icons/icon_hot_air_balloon_02_01.png</IconFilename>
                     <InfoDescription>1742000270</InfoDescription>
                 </Standard>
@@ -60,31 +65,33 @@ AIRSHIPS & SHIPS
                     </OnSelection>
                 </Selection>
                 <Walking>
-                    <Acceleration>0.5</Acceleration>
-                    <Deceleration>0.5</Deceleration>
-                    <TurnSpeed>30</TurnSpeed>
-                    <TurnSpeedInPlace>30</TurnSpeedInPlace>
-                    <LeaningMaxAngle>0</LeaningMaxAngle>
-                    <ForwardSpeed>3.8</ForwardSpeed>
-                    <WindMinSlowdownFactor>0.9</WindMinSlowdownFactor>
-                    <WindSlowdownEffectOnTurningSpeed>1</WindSlowdownEffectOnTurningSpeed>
-                    <WindMaxSpeedupFactor>3.8</WindMaxSpeedupFactor>
-                    <CargoFullFactor>0.9</CargoFullFactor>
-                    <MinSlowdownFactor>0.9</MinSlowdownFactor>
-                    <SessionTransferSpeedFactor>1.5</SessionTransferSpeedFactor>
+                    <ReservationLength>5</ReservationLength>
+                    <ReservationWidth>5</ReservationWidth>
+                    <TurnAroundRadius>3</TurnAroundRadius>
+                    <Acceleration>0.8</Acceleration>
+                    <Deceleration>1</Deceleration>
+                    <TurnRadius>3</TurnRadius>
+                    <TurnSpeed>70</TurnSpeed>
+                    <TurnSpeedInPlace>70</TurnSpeedInPlace>
+                    <ForwardSpeed>4.5</ForwardSpeed>
+                    <WindMinSlowdownFactor>0.3</WindMinSlowdownFactor>
+                    <WindMaxSpeedupFactor>2.5</WindMaxSpeedupFactor>
+                    <CargoFullFactor>0.5</CargoFullFactor>
+                    <MinSlowdownFactor>0.3</MinSlowdownFactor>
+                    <SessionTransferSpeedFactor>1.25</SessionTransferSpeedFactor>
                 </Walking>
                 <Text />
                 <CommandQueue>
-                    <TradeShipPoints>2</TradeShipPoints>
-                    <AirShipPoints>80</AirShipPoints>
+                    <TradeShipPoints>1</TradeShipPoints>
+                    <AirShipPoints>40</AirShipPoints>
                 </CommandQueue>
                 <Drifting>
-                    <Length>2</Length>
-                    <Width>2</Width>
+                    <Length>3</Length>
+                    <Width>3</Width>
                 </Drifting>
                 <Collector/>
                 <Attackable>
-                    <MaximumHitPoints>500</MaximumHitPoints>
+                    <MaximumHitPoints>400</MaximumHitPoints>
                 </Attackable>
                 <MinimapToken>
                     <TokenAsset>2001947</TokenAsset>                    <!--Ships-->
@@ -94,8 +101,7 @@ AIRSHIPS & SHIPS
                     <VehicleSounds>
                         <MovementStart>
                             <Item>
-                                <Sound>200990</Sound>
-                                <!--wwe_sfx_veh_eots_airship_med_lp-->
+                                <Sound>200990</Sound>                                <!--wwe_sfx_veh_eots_airship_med_lp-->
                             </Item>
                         </MovementStart>
                     </VehicleSounds>
@@ -130,11 +136,11 @@ AIRSHIPS & SHIPS
                         </Item>
                         <Item>
                             <Ingredient>1010210</Ingredient>
-                            <Amount>10</Amount>
+                            <Amount>14</Amount>
                         </Item>
                         <Item>
                             <Ingredient>1010218</Ingredient>
-                            <Amount>6</Amount>
+                            <Amount>4</Amount>
                         </Item>
                         <Item>
                             <Ingredient>1010226</Ingredient>
@@ -150,8 +156,7 @@ AIRSHIPS & SHIPS
                     <LoadingSpeedFactor>0.5</LoadingSpeedFactor>
                 </TradeRouteVehicle>
                 <Locked>
-                    <DLCDependency>24962</DLCDependency>
-                    <!--Anno 1800 DLC - Empire of the Skies-->
+                    <DLCDependency>24962</DLCDependency>                    <!--Anno 1800 DLC - Empire of the Skies-->
                 </Locked>
                 <Nameable/>
                 <MetaPersistent/>
@@ -223,14 +228,14 @@ AIRSHIPS & SHIPS
                 </Bombarder>
             </Values>
         </Asset>
-        <!-- END - Uwe hot air balloon -->
-        <!-- START - Carlo hot air balloon -->
+        <!-- END - Uwe Hot Air Balloon -->
+        <!-- START - Carlo Hot Air Balloon -->
         <Asset>
             <Template>AirShip</Template>
             <Values>
                 <Standard>
                     <GUID>1742000271</GUID>
-                    <Name>Carlo hot air balloon</Name>
+                    <Name>Carlo Hot Air Balloon</Name>
                     <IconFilename>data/graphics/icons/icon_hot_air_balloon_03_01.png</IconFilename>
                     <InfoDescription>1742000272</InfoDescription>
                 </Standard>
@@ -261,27 +266,29 @@ AIRSHIPS & SHIPS
                     </OnSelection>
                 </Selection>
                 <Walking>
-                    <Acceleration>0.4</Acceleration>
-                    <Deceleration>0.4</Deceleration>
-                    <TurnSpeed>25</TurnSpeed>
-                    <TurnSpeedInPlace>25</TurnSpeedInPlace>
-                    <LeaningMaxAngle>0</LeaningMaxAngle>
-                    <ForwardSpeed>4</ForwardSpeed>
-                    <WindMinSlowdownFactor>0.90</WindMinSlowdownFactor>
-                    <WindSlowdownEffectOnTurningSpeed>1</WindSlowdownEffectOnTurningSpeed>
-                    <WindMaxSpeedupFactor>3.6</WindMaxSpeedupFactor>
-                    <CargoFullFactor>0.9</CargoFullFactor>
-                    <MinSlowdownFactor>0.9</MinSlowdownFactor>
-                    <SessionTransferSpeedFactor>1.75</SessionTransferSpeedFactor>
+                    <ReservationLength>6</ReservationLength>
+                    <ReservationWidth>6</ReservationWidth>
+                    <TurnAroundRadius>5</TurnAroundRadius>
+                    <Acceleration>0.6</Acceleration>
+                    <Deceleration>1</Deceleration>
+                    <TurnRadius>5</TurnRadius>
+                    <TurnSpeed>65</TurnSpeed>
+                    <TurnSpeedInPlace>65</TurnSpeedInPlace>
+                    <ForwardSpeed>5</ForwardSpeed>
+                    <WindMinSlowdownFactor>0.3</WindMinSlowdownFactor>
+                    <WindMaxSpeedupFactor>2.5</WindMaxSpeedupFactor>
+                    <CargoFullFactor>0.7</CargoFullFactor>
+                    <MinSlowdownFactor>0.3</MinSlowdownFactor>
+                    <SessionTransferSpeedFactor>1.25</SessionTransferSpeedFactor>
                 </Walking>
                 <Text />
                 <CommandQueue>
-                    <TradeShipPoints>5</TradeShipPoints>
-                    <AirShipPoints>120</AirShipPoints>
+                    <TradeShipPoints>2</TradeShipPoints>
+                    <AirShipPoints>70</AirShipPoints>
                 </CommandQueue>
                 <Drifting>
-                    <Length>3</Length>
-                    <Width>3</Width>
+                    <Length>4</Length>
+                    <Width>4</Width>
                 </Drifting>
                 <Collector/>
                 <Attackable>
@@ -295,8 +302,7 @@ AIRSHIPS & SHIPS
                     <VehicleSounds>
                         <MovementStart>
                             <Item>
-                                <Sound>200990</Sound>
-                                <!--wwe_sfx_veh_eots_airship_med_lp-->
+                                <Sound>200990</Sound>                                <!--wwe_sfx_veh_eots_airship_med_lp-->
                             </Item>
                         </MovementStart>
                     </VehicleSounds>
@@ -331,15 +337,15 @@ AIRSHIPS & SHIPS
                         </Item>
                         <Item>
                             <Ingredient>1010210</Ingredient>
-                            <Amount>40</Amount>
+                            <Amount>50</Amount>
                         </Item>
                         <Item>
                             <Ingredient>1010218</Ingredient>
-                            <Amount>30</Amount>
+                            <Amount>20</Amount>
                         </Item>
                         <Item>
                             <Ingredient>1010226</Ingredient>
-                            <Amount>50</Amount>
+                            <Amount>40</Amount>
                         </Item>
                     </Costs>
                     <InfluenceCostPoints>4</InfluenceCostPoints>
@@ -358,7 +364,7 @@ AIRSHIPS & SHIPS
                 <MetaPersistent/>
                 <ExpeditionAttribute />
                 <ShipMaintenance>
-                    <Maintenance>400</Maintenance>
+                    <Maintenance>125</Maintenance>
                     <DisableEscort>0</DisableEscort>
                 </ShipMaintenance>
                 <Sellable>
@@ -373,7 +379,7 @@ AIRSHIPS & SHIPS
                                     </Entry>
                                 </InheritanceMapV2>
                             </VectorElement>
-                            <Amount>10000</Amount>
+                            <Amount>20000</Amount>
                         </Item>
                     </Baseprice>
                 </Sellable>
@@ -420,18 +426,18 @@ AIRSHIPS & SHIPS
                     <ItemReplacementPools>193855</ItemReplacementPools>
                 </ItemReplacer>
                 <Bombarder>
-                    <Shafts>2</Shafts>
+                    <Shafts>1</Shafts>
                 </Bombarder>
             </Values>
         </Asset>
-        <!-- END - Carlo hot air balloon -->
-        <!-- START - Nena hot air balloon -->
+        <!-- END - Carlo Hot Air Balloon -->
+        <!-- START - Nena Hot Air Balloon -->
         <Asset>
             <Template>AirShip</Template>
             <Values>
                 <Standard>
                     <GUID>1742000273</GUID>
-                    <Name>Nena hot air balloon</Name>
+                    <Name>Nena Hot Air Balloon</Name>
                     <IconFilename>data/graphics/icons/icon_hot_air_balloon_01_01.png</IconFilename>
                     <InfoDescription>1742000274</InfoDescription>
                 </Standard>
@@ -446,7 +452,7 @@ AIRSHIPS & SHIPS
                                     </Entry>
                                 </InheritanceMapV2>
                             </VectorElement>
-                            <Filename>data/graphics/vehicle/hot_air_balloon/hot_air_balloon_01_01.cfg</Filename>
+                            <Filename>data/graphics/vehicle/hot_air_balloon/hot_air_balloon_01_02.cfg</Filename>
                         </Item>
                     </Variations>
                 </Object>
@@ -462,23 +468,25 @@ AIRSHIPS & SHIPS
                     </OnSelection>
                 </Selection>
                 <Walking>
-                    <Acceleration>0.3</Acceleration>
-                    <Deceleration>0.4</Deceleration>
-                    <TurnSpeed>20</TurnSpeed>
-                    <TurnSpeedInPlace>20</TurnSpeedInPlace>
-                    <LeaningMaxAngle>0</LeaningMaxAngle>
-                    <ForwardSpeed>3.5</ForwardSpeed>
-                    <WindMinSlowdownFactor>0.95</WindMinSlowdownFactor>
-                    <WindSlowdownEffectOnTurningSpeed>1</WindSlowdownEffectOnTurningSpeed>
-                    <WindMaxSpeedupFactor>3.4</WindMaxSpeedupFactor>
-                    <CargoFullFactor>0.95</CargoFullFactor>
-                    <MinSlowdownFactor>0.95</MinSlowdownFactor>
-                    <SessionTransferSpeedFactor>2</SessionTransferSpeedFactor>
+                    <ReservationLength>7</ReservationLength>
+                    <ReservationWidth>7</ReservationWidth>
+                    <TurnAroundRadius>8</TurnAroundRadius>
+                    <Acceleration>0.5</Acceleration>
+                    <Deceleration>1</Deceleration>
+                    <TurnRadius>8</TurnRadius>
+                    <TurnSpeed>55</TurnSpeed>
+                    <TurnSpeedInPlace>55</TurnSpeedInPlace>
+                    <ForwardSpeed>4</ForwardSpeed>
+                    <WindMinSlowdownFactor>0.3</WindMinSlowdownFactor>
+                    <WindMaxSpeedupFactor>2.5</WindMaxSpeedupFactor>
+                    <CargoFullFactor>0.9</CargoFullFactor>
+                    <MinSlowdownFactor>0.3</MinSlowdownFactor>
+                    <SessionTransferSpeedFactor>1.5</SessionTransferSpeedFactor>
                 </Walking>
                 <Text />
                 <CommandQueue>
-                    <TradeShipPoints>12</TradeShipPoints>
-                    <AirShipPoints>220</AirShipPoints>
+                    <TradeShipPoints>6</TradeShipPoints>
+                    <AirShipPoints>150</AirShipPoints>
                 </CommandQueue>
                 <Drifting>
                     <Length>5</Length>
@@ -486,7 +494,7 @@ AIRSHIPS & SHIPS
                 </Drifting>
                 <Collector/>
                 <Attackable>
-                    <MaximumHitPoints>3250</MaximumHitPoints>
+                    <MaximumHitPoints>2500</MaximumHitPoints>
                 </Attackable>
                 <MinimapToken>
                     <TokenAsset>2001947</TokenAsset>                    <!--Ships-->
@@ -496,8 +504,7 @@ AIRSHIPS & SHIPS
                     <VehicleSounds>
                         <MovementStart>
                             <Item>
-                                <Sound>200988</Sound>
-                                <!--wwe_sfx_veh_eots_airship_large_lp-->
+                                <Sound>200988</Sound>                                <!--wwe_sfx_veh_eots_airship_large_lp-->
                             </Item>
                         </MovementStart>
                     </VehicleSounds>
@@ -528,7 +535,7 @@ AIRSHIPS & SHIPS
                     <Costs>
                         <Item>
                             <Ingredient>1010196</Ingredient>
-                            <Amount>40</Amount>
+                            <Amount>50</Amount>
                         </Item>
                         <Item>
                             <Ingredient>1010210</Ingredient>
@@ -536,34 +543,33 @@ AIRSHIPS & SHIPS
                         </Item>
                         <Item>
                             <Ingredient>838</Ingredient>
-                            <Amount>75</Amount>
+                            <Amount>50</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010226</Ingredient>
+                            <Amount>100</Amount>
                         </Item>
                         <Item>
                             <Ingredient>1010224</Ingredient>
                             <Amount>25</Amount>
                         </Item>
-                        <Item>
-                            <Ingredient>840</Ingredient>
-                            <Amount>40</Amount>
-                        </Item>
                     </Costs>
-                    <InfluenceCostPoints>20</InfluenceCostPoints>
+                    <InfluenceCostPoints>14</InfluenceCostPoints>
                 </Cost>
                 <Craftable>
-                    <CraftingTime>1080000</CraftingTime>
+                    <CraftingTime>720000</CraftingTime>
                 </Craftable>
                 <TradeRouteVehicle>
-                    <LoadingSpeedFactor>1.5</LoadingSpeedFactor>
+                    <LoadingSpeedFactor>1</LoadingSpeedFactor>
                 </TradeRouteVehicle>
                 <Locked>
-                    <DLCDependency>24962</DLCDependency>
-                    <!--Anno 1800 DLC - Empire of the Skies-->
+                    <DLCDependency>24962</DLCDependency>                    <!--Anno 1800 DLC - Empire of the Skies-->
                 </Locked>
                 <Nameable/>
                 <MetaPersistent/>
                 <ExpeditionAttribute />
                 <ShipMaintenance>
-                    <Maintenance>750</Maintenance>
+                    <Maintenance>250</Maintenance>
                     <DisableEscort>0</DisableEscort>
                 </ShipMaintenance>
                 <Sellable>
@@ -578,7 +584,7 @@ AIRSHIPS & SHIPS
                                     </Entry>
                                 </InheritanceMapV2>
                             </VectorElement>
-                            <Amount>200000</Amount>
+                            <Amount>175000</Amount>
                         </Item>
                     </Baseprice>
                 </Sellable>
@@ -629,10 +635,223 @@ AIRSHIPS & SHIPS
                     <ItemReplacementPools>193855</ItemReplacementPools>
                 </ItemReplacer>
                 <Bombarder>
-                    <Shafts>6</Shafts>
+                    <Shafts>1</Shafts>
                 </Bombarder>
             </Values>
         </Asset>
-        <!-- END - Nena hot air balloon -->
+        <!-- END - Nena Hot Air Balloon -->
+        <!-- START - Manfred Hot Air Balloon -->
+        <Asset>
+            <Template>RepairAirShip</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742000297</GUID>
+                    <Name>Manfred Hot Air Balloon</Name>
+                    <IconFilename>data/graphics/icons/icon_hot_air_balloon_04_01.png</IconFilename>
+                    <InfoDescription>1742000298</InfoDescription>
+                </Standard>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <VectorElement>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>TradeShip</TemplateName>
+                                        <Index>0</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                            <Filename>data/graphics/vehicle/hot_air_balloon/hot_air_balloon_04_01.cfg</Filename>
+                        </Item>
+                    </Variations>
+                </Object>
+                <Mesh>
+                    <LogoMode>CorporationLogoFromPlayer</LogoMode>
+                </Mesh>
+                <Selection>
+                    <OnSelection>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </OnSelection>
+                </Selection>
+                <Walking>
+                    <ReservationLength>5</ReservationLength>
+                    <ReservationWidth>5</ReservationWidth>
+                    <TurnAroundRadius>3</TurnAroundRadius>
+                    <Acceleration>1.2</Acceleration>
+                    <Deceleration>0.8</Deceleration>
+                    <TurnRadius>3</TurnRadius>
+                    <TurnSpeed>80</TurnSpeed>
+                    <TurnSpeedInPlace>80</TurnSpeedInPlace>
+                    <ForwardSpeed>5</ForwardSpeed>
+                    <WindMinSlowdownFactor>0.3</WindMinSlowdownFactor>
+                    <WindMaxSpeedupFactor>3</WindMaxSpeedupFactor>
+                    <CargoFullFactor>0.9</CargoFullFactor>
+                    <MinSlowdownFactor>0.3</MinSlowdownFactor>
+                    <SessionTransferSpeedFactor>1.25</SessionTransferSpeedFactor>
+                </Walking>
+                <Text />
+                <CommandQueue>
+                    <TradeShipPoints>1</TradeShipPoints>
+                    <AirShipPoints>50</AirShipPoints>
+                </CommandQueue>
+                <Drifting>
+                    <Length>4</Length>
+                    <Width>4</Width>
+                </Drifting>
+                <Collector/>
+                <Attackable>
+                    <MaximumHitPoints>750</MaximumHitPoints>
+                </Attackable>
+                <RepairCrane>
+                    <HealRadius>10</HealRadius>
+                    <HealPerMinute>500</HealPerMinute>
+                    <HealBuildingsPerMinute>500</HealBuildingsPerMinute>
+                    <RepairDelay>6000</RepairDelay>
+                </RepairCrane>
+                <MinimapToken>
+                    <TokenAsset>2001947</TokenAsset>                    <!--Ships-->
+                    <StrategicMapAsset>500433</StrategicMapAsset>                    <!--Sailing Ships-->
+                </MinimapToken>
+                <SoundEmitter>
+                    <VehicleSounds>
+                        <MovementStart>
+                            <Item>
+                                <Sound>200990</Sound>                                <!--wwe_sfx_veh_eots_airship_med_lp-->
+                            </Item>
+                        </MovementStart>
+                    </VehicleSounds>
+                </SoundEmitter>
+                <UpgradeList />
+                <QuestObject/>
+                <Infolayer/>
+                <ItemContainer>
+                    <SocketCount>1</SocketCount>
+                    <SocketAllocation>AirShip;Mod9</SocketAllocation>
+                    <SlotCount>1</SlotCount>
+                    <InitSocketItems>
+                        <Item>
+                            <Item>1742200013</Item>
+                        </Item>
+                    </InitSocketItems>
+                </ItemContainer>
+                <FeedbackController/>
+                <Draggable>
+                    <DraggableOnDrag>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </DraggableOnDrag>
+                    <DraggableOnDrop>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </DraggableOnDrop>
+                </Draggable>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010196</Ingredient>
+                            <Amount>15</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010210</Ingredient>
+                            <Amount>40</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010218</Ingredient>
+                            <Amount>15</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010226</Ingredient>
+                            <Amount>30</Amount>
+                        </Item>
+                    </Costs>
+                    <InfluenceCostPoints>4</InfluenceCostPoints>
+                </Cost>
+                <Craftable>
+                    <CraftingTime>360000</CraftingTime>
+                </Craftable>
+                <TradeRouteVehicle>
+                    <LoadingSpeedFactor>1.5</LoadingSpeedFactor>
+                </TradeRouteVehicle>
+                <Locked>
+                    <DLCDependency>24962</DLCDependency>                    <!--Anno 1800 DLC - Empire of the Skies-->
+                </Locked>
+                <Nameable/>
+                <MetaPersistent/>
+                <ExpeditionAttribute />
+                <ShipMaintenance>
+                    <Maintenance>250</Maintenance>
+                    <DisableEscort>0</DisableEscort>
+                </ShipMaintenance>
+                <Sellable>
+                    <Baseprice>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>0</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>AirShip</TemplateName>
+                                        <Index>0</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                            <Amount>15000</Amount>
+                        </Item>
+                    </Baseprice>
+                </Sellable>
+                <Stance/>
+                <Rentable/>
+                <WorldMapSound/>
+                <Pausable/>
+                <ShipIncident>
+                    <InfectableByIncident>
+                        <Illness>
+                            <Infectable>0</Infectable>
+                        </Illness>
+                    </InfectableByIncident>
+                </ShipIncident>
+                <SoundEmitterCommandBarks>
+                    <BarkMapping>
+                        <Selection>
+                            <AudioPool>4815</AudioPool>
+                            <!--AgileAirship_SelectShip_Pool-->
+                        </Selection>
+                        <SelectionDamaged>
+                            <AudioPool>4817</AudioPool>
+                            <!--AgileAirship_Damage_Pool-->
+                        </SelectionDamaged>
+                        <MoveCommand>
+                            <AudioPool>4816</AudioPool>
+                            <!--AgileAirship_Move_Pool-->
+                        </MoveCommand>
+                        <EscortCommand>
+                            <AudioPool>4820</AudioPool>
+                            <!--AgileAirship_Escort_Pool-->
+                        </EscortCommand>
+                        <PatrolCommand>
+                            <AudioPool>4816</AudioPool>
+                            <!--AgileAirship_Move_Pool-->
+                        </PatrolCommand>
+                        <DropCommand>
+                            <AudioPool>4823</AudioPool>
+                            <!--AgileAirship_Drop_Pool-->
+                        </DropCommand>
+                    </BarkMapping>
+                </SoundEmitterCommandBarks>
+                <ItemReplacer>
+                    <ItemReplacementPools>193855</ItemReplacementPools>
+                </ItemReplacer>
+                <Bombarder>
+                    <Shafts>1</Shafts>
+                </Bombarder>
+            </Values>
+        </Asset>
+        <!-- END - Manfred Hot Air Balloon -->
     </ModOp>
 </ModOps>
