@@ -1453,9 +1453,10 @@
       </IncidentResolver>
     </DropReaction>
   </ModOp>
-  <!-- NERFING REPUTATION FROM 5 TO 1 AND INCREASING FROM -5 TO -25 -->
+  <!-- NERFING REPUTATION FROM 5 TO 1 AND ADDING ADDITIONAL NEGATIVE FOR BOMBING -->
   <!-- Bombs -->
-  <ModOp Type="merge" GUID="119" Path="/Values/ParticipantMessages/MessageTriggers/AirshipDropNegativeEffectMessage/Reactions/Item[1]">
+  <ModOp Type="merge" GUID="119" Path="/Values/ParticipantMessages/MessageTriggers/AirshipDropDamageMessage/Reactions/Item[1]">
+    <SideEffect>AddReputation</SideEffect>
     <SideEffectValue>-25</SideEffectValue>
   </ModOp>
   <!-- Care Packages -->

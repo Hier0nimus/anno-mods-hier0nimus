@@ -1371,6 +1371,63 @@
     </Asset>
   </ModOp>
 
+  <!--UNLOCK - Shephards 100 -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100805</GUID>
+          <Name>MOD Trigger</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>114329</Context>                <!-- Shephards PopulationLevel7 -->
+                <CounterAmount>100</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets/>
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>117861</Asset>                        <!-- Mounted Guns - Vanilla (EN) - Defense -->
+                      </Item>
+                      <Item>
+                        <Asset>117863</Asset>                        <!-- Cannon Tower - Vanilla (EN) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>743</Asset>                        <!-- Flak Emplacement - Vanilla (EN) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>4799</Asset>                        <!-- Armor Pierce Tower - Vanilla (EN) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>823</Asset>                        <!-- Flame Tower - Vanilla (EN) - Building -->
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+
   <!-- *********************** NW *********************** -->
 
   <!--UNLOCK - Jornaleros 1 -->

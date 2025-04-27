@@ -159,16 +159,16 @@
     <!-- START COMPATIBILITY ALMOST 100 HOT AIR BALLOONS -->
     <!-- 
     ******* SHIPS ******* 
-    1742000269 - Uwe hot air balloon
-    1742000271 - Carlo hot air balloon
-    1742000273 - Nena hot air balloon
+    1742000269 - Uwe Hot Air Balloon
+    1742000271 - Carlo Hot Air Balloon
+    1742000273 - Nena Hot Air Balloon
     -->
 
-    <!-- 1742000269 - Uwe hot air balloon -->
+    <!-- 1742000269 - Uwe Hot Air Balloon -->
     <ModOp GUID="1742000269" Type="add" Path="/Values/Cost/Costs">
       <Item>
-        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
-        <Amount>1</Amount>
+        <Ingredient>1742100242</Ingredient>        <!-- Clean Water - Product -->
+        <Amount>2</Amount>
       </Item>
       <Item>
         <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
@@ -176,7 +176,19 @@
       </Item>
     </ModOp>
 
-    <!-- 1742000271 - Carlo hot air balloon -->
+    <!-- 1742000297 - Manfred Hot Air Balloon -->
+    <ModOp GUID="1742000297" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>2</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>2</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- 1742000271 - Carlo Hot Air Balloon -->
     <ModOp GUID="1742000271" Type="add" Path="/Values/Cost/Costs">
       <Item>
         <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
@@ -188,7 +200,7 @@
       </Item>
     </ModOp>
 
-    <!-- 1742000273 - Nena hot air balloon -->
+    <!-- 1742000273 - Nena Hot Air Balloon -->
     <ModOp GUID="1742000273" Type="add" Path="/Values/Cost/Costs">
       <Item>
         <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
@@ -308,7 +320,7 @@
     ******* SHIPS ******* 
     1947537 - Viermastbark
     1947560 - Linienschiff
-    2130020011 - Linienschiff
+    2130020011 - Royaler Clipper
     2130020003 - kleines Piratenschiff
     2130020009 - Vasco 2
     2130020013 - Abate's Ship
@@ -658,12 +670,12 @@
         <Amount>80</Amount>
       </Item>
       <Item>
-        <Ingredient>847</Ingredient>        <!-- Sea Mines - Product -->
-        <Amount>80</Amount>
-      </Item>
-      <Item>
         <Ingredient>846</Ingredient>        <!-- Bombs - Product -->
         <Amount>140</Amount>
+      </Item>
+      <Item>
+        <Ingredient>847</Ingredient>        <!-- Sea Mines - Product -->
+        <Amount>80</Amount>
       </Item>
     </ModOp>
 
@@ -1054,6 +1066,43 @@
     <!-- END COMPATIBILITY ADDITIONAL OIL TANKERS -->
   </Group>
 
+  <Group Condition="#Ghostbuster_Battleship">
+    <!-- START COMPATIBILITY BATTLESHIP MOD supersixzer0 Original Ghostbuster -->
+    <!-- 
+    ******* SHIPS ******* 
+    8899003 - Battle Ship
+    -->
+
+    <!-- 8899003 Battle Ship -->
+    <ModOp GUID="8899003" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>150</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>150</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100203</Ingredient>        <!-- Basic Ammunition - Product -->
+        <Amount>100</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100471</Ingredient>        <!-- Basic Weapons - Product -->
+        <Amount>80</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100248</Ingredient>        <!-- Shell Ammunition - Product -->
+        <Amount>50</Amount>
+      </Item>
+      <Item>
+        <Ingredient>846</Ingredient>        <!-- Bombs - Product -->
+        <Amount>100</Amount>
+      </Item>
+    </ModOp>
+    <!-- END COMPATIBILITY BATTLESHIP MOD supersixzer0 Original Ghostbuster -->
+  </Group>
+
   <Group Condition="#Spice_TourismShip">
     <!-- START COMPATIBILITY Large Tourism Ship [Spice It Up] -->
     <!-- 
@@ -1072,22 +1121,6 @@
       </Item>
     </ModOp>
     <!-- END COMPATIBILITY Large Tourism Ship [Spice It Up] -->
-  </Group>
-
-  <Group Condition="#Spice_BuildableSalvagers">
-    <!-- START COMPATIBILITY Buildable Salvagers [Spice It Up] -->
-
-    <ModOp GUID="112084" Type="add" Path="/Values/Cost/Costs">
-      <Item>
-        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
-        <Amount>38</Amount>
-      </Item>
-      <Item>
-        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
-        <Amount>38</Amount>
-      </Item>
-    </ModOp>
-    <!-- END COMPATIBILITY Buildable Salvagers [Spice It Up] -->
   </Group>
 
   <Group Condition="#FlagshipGreatEastern_Serp">
@@ -1123,7 +1156,7 @@
   </Group>
 
   <Group Condition="#Eva_Icebreaker">
-    <!-- START COMPATIBILITY Flagship Armed Great Eastern (Serp) -->
+    <!-- START COMPATIBILITY Ice Breaker -->
 
     <ModOp GUID="2142000001" Type="add" Path="/Values/Cost/Costs">
       <Item>
@@ -1143,7 +1176,7 @@
         <Amount>12</Amount>
       </Item>
     </ModOp>
-    <!-- END COMPATIBILITY Flagship Armed Great Eastern (Serp) -->
+    <!-- END COMPATIBILITY Ice Breaker -->
   </Group>
 
   <Group Condition="#Spice_Harborlife">
@@ -1484,6 +1517,8 @@
       </Asset>
     </ModOp>
   </Group>
+
+  <!--<Include File="./assets.include.nh.xml" />-->
 
 </ModOps>
   

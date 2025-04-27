@@ -1,10 +1,25 @@
-# Military Attention | 1.21!
+# Military Attention | 1.22!
 
 A mod centered around military infrastructure and adding new military residence tiers for all regions with a focus on the Old World.
 
 ![ma-img-01.jpg](./banner.jpg)
 
 ## Changelog
+
+### v1.22
+- Changed reputation for dropping goods on AI and when AI drops goods. Additional compatibility with AI mods from Serp.
+- Additional compatibility for Almost 100 hot air balloons mod
+- Additional compatibility for the salvager (Spice it up) mod
+- Additional compatibility for pirate ships
+- Additional compatibility for the Battle ship mod
+- Rebalance building costs ships
+- Fixed defense buildings for Arctic and Enbesa so they actually shoot 360 degrees around them
+- Unlock defense buildings for AI in Enbesa earlier at 100 shephards instead of 1000 elders in vanilla
+- Fixed short range of Cannons factory
+- Fix automatic corners and straight variations for pallisade wall
+- Fix plaza headquarters to not be that shiny
+- Fixed bug where Ammunition Factories, Ammunition Depots, Military Academy and Campus Module did not have an AttackableType or the wrong value.
+- Updated shared pools mod
 
 ### v1.21
 Fixed norm materials and other graphic mistakes for
