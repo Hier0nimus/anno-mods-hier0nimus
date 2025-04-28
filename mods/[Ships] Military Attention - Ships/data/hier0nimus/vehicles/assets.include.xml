@@ -104,23 +104,23 @@
                     </OnSelection>
                 </Selection>
                 <Walking>
-                    <ReservationLength>12</ReservationLength>                    <!--Clipper 9-->
-                    <ReservationWidth>7.5</ReservationWidth>                    <!--Clipper 5-->
+                    <ReservationLength>16</ReservationLength>                    <!--Clipper 9-->
+                    <ReservationWidth>6</ReservationWidth>                    <!--Clipper 5-->
                     <PathPlannerLayer>Water</PathPlannerLayer>
                     <ExpensiveDirSmoothing>1</ExpensiveDirSmoothing>                    <!--Clipper 1-->
-                    <TurnAroundRadius>10</TurnAroundRadius>                    <!--Clipper 6-->
-                    <Acceleration>0.5</Acceleration>                    <!--Clipper 1-->
-                    <Deceleration>2.2</Deceleration>                    <!--Clipper 2-->
-                    <TurnRadius>10</TurnRadius>                    <!--Clipper 6-->
-                    <TurnSpeed>20</TurnSpeed>                    <!--Clipper 60-->
+                    <TurnAroundRadius>20</TurnAroundRadius>                    <!--Clipper 6-->
+                    <Acceleration>1</Acceleration>                    <!--Clipper 1-->
+                    <Deceleration>2</Deceleration>                    <!--Clipper 2-->
+                    <TurnRadius>20</TurnRadius>                    <!--Clipper 6-->
+                    <TurnSpeed>30</TurnSpeed>                    <!--Clipper 60-->
                     <TurnDeceleration>0</TurnDeceleration>                    <!--Clipper 0-->
                     <TurnMovement>0</TurnMovement>                    <!--Clipper 0-->
                     <LeaningMaxAngle>-20</LeaningMaxAngle>                    <!--Clipper -20-->
-                    <ForwardSpeed>5.8</ForwardSpeed>                    <!--Clipper 5.5-->
-                    <WindMinSlowdownFactor>0.4</WindMinSlowdownFactor>                    <!--Clipper 0.5-->
-                    <WindSlowdownEffectOnTurningSpeed>0.25</WindSlowdownEffectOnTurningSpeed>                    <!--Clipper 0.35-->
+                    <ForwardSpeed>5.5</ForwardSpeed>                    <!--Clipper 5.5-->
+                    <WindMinSlowdownFactor>0.5</WindMinSlowdownFactor>                    <!--Clipper 0.5-->
+                    <WindSlowdownEffectOnTurningSpeed>0.35</WindSlowdownEffectOnTurningSpeed>                    <!--Clipper 0.35-->
                     <WindMaxSpeedupFactor>2</WindMaxSpeedupFactor>                    <!--Clipper 1.8-->
-                    <WindSpeedupEffectOnTurningSpeed>0.70</WindSpeedupEffectOnTurningSpeed>                    <!--Clipper 0.85-->
+                    <WindSpeedupEffectOnTurningSpeed>0.85</WindSpeedupEffectOnTurningSpeed>                    <!--Clipper 0.85-->
                     <CurveSegmentDensity>High</CurveSegmentDensity>
                     <SessionTransferSpeedFactor>2</SessionTransferSpeedFactor>
                 </Walking>
@@ -135,7 +135,7 @@
                 </Text>
                 <CommandQueue>
                     <FormationPriority>1</FormationPriority>
-                    <TradeShipPoints>10</TradeShipPoints>                    <!--Clipper 5-->
+                    <TradeShipPoints>6</TradeShipPoints>                    <!--Clipper 2-->
                     <PriorityShipList>1</PriorityShipList>
                 </CommandQueue>
                 <Drifting>
@@ -147,10 +147,10 @@
                 <Collector/>
                 <Attackable>
                     <MaximumHitPoints>3250</MaximumHitPoints>                    <!--Clipper 2500-->
-                    <AlertRange>200</AlertRange>                    <!--Clipper 150-->
+                    <AlertRange>150</AlertRange>                    <!--Clipper 150-->
                     <HPBarOffset>7.5</HPBarOffset>
-                    <SelfHealPerHealTick>2.5</SelfHealPerHealTick>                    <!--Clipper 1.389-->
-                    <SelfHealPausedTimeIfAttacked>30000</SelfHealPausedTimeIfAttacked>                    <!--Clipper 60000-->
+                    <SelfHealPerHealTick>1.667</SelfHealPerHealTick>                    <!--Clipper 1.389-->
+                    <SelfHealPausedTimeIfAttacked>60000</SelfHealPausedTimeIfAttacked>                    <!--Clipper 60000-->
                 </Attackable>
                 <MinimapToken>
                     <TokenAsset>2001947</TokenAsset>                    <!--Ships-->
@@ -215,7 +215,7 @@
                     <InfluenceCostPoints>12</InfluenceCostPoints>
                 </Cost>
                 <Craftable>
-                    <CraftingTime>700000</CraftingTime>                    <!-- Clipper 360000 -->
+                    <CraftingTime>720000</CraftingTime>                    <!-- Clipper 360000 -->
                 </Craftable>
                 <TradeRouteVehicle/>
                 <Locked/>
@@ -344,7 +344,6 @@
                     <TurnMovement>0</TurnMovement>                    <!-- SOTL 0 -->
                     <LeaningMaxAngle>-10</LeaningMaxAngle>                    <!-- SOTL -10 -->
                     <ForwardSpeed>3.8</ForwardSpeed>                    <!-- SOTL 4 -->
-                    <WindMinSlowdownFactor>0.5</WindMinSlowdownFactor>                    <!-- SOTL 0.4 - 0.95 -->
                     <WindSlowdownEffectOnTurningSpeed>0.35</WindSlowdownEffectOnTurningSpeed>                    <!-- SOTL 0.35 -->
                     <WindMaxSpeedupFactor>1.5</WindMaxSpeedupFactor>                    <!-- SOTL 1.8 -->
                     <WindSpeedupEffectOnTurningSpeed>0.85</WindSpeedupEffectOnTurningSpeed>                    <!-- SOTL 0.85 -->
@@ -361,29 +360,29 @@
                 </Text>
                 <CommandQueue>
                     <FormationPriority>3</FormationPriority>                    <!-- SOTL 3 -->
-                    <MilitaryShipPoints>5</MilitaryShipPoints>                    <!-- SOTL 3.2 -->
+                    <MilitaryShipPoints>4</MilitaryShipPoints>                    <!-- SOTL 3.2 -->
                     <PriorityShipList>1</PriorityShipList>                    <!-- SOTL 1 -->
                 </CommandQueue>
                 <Drifting>
                     <OverrideAssetWidthAndLength>0</OverrideAssetWidthAndLength>
                     <Length>9</Length>                    <!-- SOTL 7 -->
-                    <Width>4</Width>                    <!-- SOTL 2 -->
+                    <Width>2.5</Width>                    <!-- SOTL 2 -->
                     <FactorRotation>0.65</FactorRotation>                    <!-- SOTL 0.65 -->
                 </Drifting>
                 <Collector/>
                 <Attackable>
-                    <MaximumHitPoints>6250</MaximumHitPoints>                    <!-- SOTL 4000 - 3250 -->
+                    <MaximumHitPoints>5000</MaximumHitPoints>                    <!-- SOTL 4000 - 3250 -->
                     <AlertRange>150</AlertRange>                    <!-- SOTL 150 -->
                     <HPBarOffset>9.5</HPBarOffset>                    <!-- SOTL 9.5 -->
-                    <AccuracyWidth>5</AccuracyWidth>                    <!-- SOTL 4 -->
-                    <SelfHealPerHealTick>2.8</SelfHealPerHealTick>                    <!-- SOTL 1.667 -->
-                    <SelfHealPausedTimeIfAttacked>30000</SelfHealPausedTimeIfAttacked>                    <!-- SOTL 60000 -->
+                    <AccuracyWidth>4</AccuracyWidth>                    <!-- SOTL 4 -->
+                    <SelfHealPerHealTick>1.667</SelfHealPerHealTick>                    <!-- SOTL 1.667 -->
+                    <SelfHealPausedTimeIfAttacked>60000</SelfHealPausedTimeIfAttacked>                    <!-- SOTL 60000 -->
                 </Attackable>
                 <Attacker>
-                    <BaseDamage>550</BaseDamage>                    <!-- SOTL 525 - 350 -->
-                    <ReloadTime>80</ReloadTime>                    <!-- SOTL 100 - 90 -->
+                    <BaseDamage>540</BaseDamage>                    <!-- SOTL 525 - 360 -->
+                    <ReloadTime>80</ReloadTime>                    <!-- SOTL 100 - 85 -->
                     <TargetAngleVariation>50</TargetAngleVariation>                    <!-- SOTL 50 -->
-                    <AttackRange>62</AttackRange>                    <!-- SOTL 68 - 52 -->
+                    <AttackRange>56</AttackRange>                    <!-- SOTL 68 - 52 -->
                     <LineOfSightRange>75</LineOfSightRange>                    <!-- SOTL 100 - 60 -->
                     <ProjectileAsset>102285</ProjectileAsset>                    <!--Line_Ship_Multi_Shot_01-->
                     <MuzzleEffectAssets>
@@ -521,10 +520,10 @@
                         </Item>
                     </Costs>
                     <InfluenceCostType>WarShip</InfluenceCostType>
-                    <InfluenceCostPoints>28</InfluenceCostPoints>                    <!-- SOTL 16 -->
+                    <InfluenceCostPoints>24</InfluenceCostPoints>                    <!-- SOTL 16 -->
                 </Cost>
                 <Craftable>
-                    <CraftingTime>1200000</CraftingTime>                    <!-- SOTL 720000 -->
+                    <CraftingTime>900000</CraftingTime>                    <!-- SOTL 720000 -->
                 </Craftable>
                 <TradeRouteVehicle/>
                 <Locked/>
@@ -551,7 +550,7 @@
                     </ExpeditionAttributes>
                 </ExpeditionAttribute>
                 <ShipMaintenance>
-                    <Maintenance>500</Maintenance>                    <!-- SOTL 250 - 300 -->
+                    <Maintenance>450</Maintenance>                    <!-- SOTL 250 - 300 -->
                 </ShipMaintenance>
                 <Sellable>
                     <Baseprice>
@@ -565,7 +564,7 @@
                                     </Entry>
                                 </InheritanceMapV2>
                             </VectorElement>
-                            <Amount>110000</Amount>                            <!-- SOTL 50000 -->
+                            <Amount>100000</Amount>                            <!-- SOTL 50000 -->
                         </Item>
                     </Baseprice>
                 </Sellable>
@@ -641,18 +640,13 @@
                     </Skins>
                 </Object>
                 <Walking>
-                    <ReservationLength>6</ReservationLength>                    <!-- Battle Cruiser 16 -->
+                    <ReservationLength>8</ReservationLength>                    <!-- Battle Cruiser 16 -->
                     <ReservationWidth>3</ReservationWidth>                    <!-- Battle Cruiser 6 -->
                     <TurnAroundRadius>8</TurnAroundRadius>                    <!-- Battle Cruiser 8 - 18 -->
                     <Acceleration>0.65</Acceleration>                    <!-- Battle Cruiser 0.75 - 0.45 -->
                     <Deceleration>1</Deceleration>                    <!-- Battle Cruiser 1 - 0.5 -->
-                    <TurnRadius>6</TurnRadius>                    <!-- Battle Cruiser 8 - 15 -->
-                    <ForwardSpeed>5.6</ForwardSpeed>                    <!-- Battle Cruiser 4.5 - 5.4 -->
-                    <WindMinSlowdownFactor>1</WindMinSlowdownFactor>                    <!-- Battle Cruiser 1 -->
-                    <WindMaxSpeedupFactor>1</WindMaxSpeedupFactor>                    <!-- Battle Cruiser 1 -->
-                    <CargoFullFactor>0.95</CargoFullFactor>                    <!-- Battle Cruiser 0.7 - 0.9 -->
-                    <DamageFullFactor>0.5</DamageFullFactor>                    <!-- Battle Cruiser 0.5 - 0.8 -->
-                    <MinSlowdownFactor>0.65</MinSlowdownFactor>                    <!-- Battle Cruiser 0.5 - 0.6 -->
+                    <TurnRadius>8</TurnRadius>                    <!-- Battle Cruiser 8 - 15 -->
+                    <ForwardSpeed>5.2</ForwardSpeed>                    <!-- Battle Cruiser 4.5 - 5.4 -->
                 </Walking>
                 <Text>
                     <LocaText>
@@ -667,22 +661,17 @@
                     <MilitaryShipPoints>2</MilitaryShipPoints>                    <!-- Battle Cruiser - 6 -->
                 </CommandQueue>
                 <Drifting>
-                    <Length>5</Length>                    <!-- Battle Cruiser 10 -->
-                    <Width>1.35</Width>                    <!-- Battle Cruiser 1.75 -->
+                    <Length>4.5</Length>                    <!-- Battle Cruiser 10 -->
+                    <Width>1.25</Width>                    <!-- Battle Cruiser 1.75 -->
                 </Drifting>
                 <Collector/>
                 <Attackable>
-                    <MaximumHitPoints>3450</MaximumHitPoints>                    <!-- Battle Cruiser 6000 - 6750 -->
-                    <AlertRange>120</AlertRange>                    <!-- Battle Cruiser 150 -->
-                    <AccuracyWidth>10</AccuracyWidth>                    <!-- Battle Cruiser 8 -->
-                    <SelfHealPerHealTick>1.25</SelfHealPerHealTick>                    <!-- Battle Cruiser 1.667 -->
-                    <SelfHealPausedTimeIfAttacked>80000</SelfHealPausedTimeIfAttacked>                    <!-- Battle Cruiser 60000 -->
+                    <MaximumHitPoints>3250</MaximumHitPoints>                    <!-- Battle Cruiser 7000 -->
                 </Attackable>
                 <Attacker>
-                    <AttackRange>75</AttackRange>                    <!-- Battle Cruiser 84 - 85 -->
                     <BaseDamage>544</BaseDamage>                    <!-- Battle Cruiser 280 - 1370 -->
                     <ReloadTime>130</ReloadTime>                    <!-- Battle Cruiser 70 - 150 -->
-                    <LineOfSightRange>80</LineOfSightRange>                    <!-- Battle Cruiser 100 -->
+                    <AttackRange>75</AttackRange>                    <!-- Battle Cruiser 84 - 85 -->
                     <Turrets>
                         <Item>
                             <TurnSpan>300</TurnSpan>
@@ -793,7 +782,7 @@
                     </ExpeditionAttributes>
                 </ExpeditionAttribute>
                 <ShipMaintenance>
-                    <Maintenance>600</Maintenance>                    <!-- Battle Cruiser 850 - 2000 -->
+                    <Maintenance>450</Maintenance>                    <!-- Battle Cruiser 850 - 2000 -->
                 </ShipMaintenance>
                 <Sellable>
                     <Baseprice>
@@ -807,7 +796,7 @@
                                     </Entry>
                                 </InheritanceMapV2>
                             </VectorElement>
-                            <Amount>700000</Amount>                            <!-- Battle Cruiser 800000 - 2000000 -->
+                            <Amount>250000</Amount>                            <!-- Battle Cruiser 800000 - 2000000 -->
                         </Item>
                     </Baseprice>
                 </Sellable>
@@ -869,18 +858,18 @@
                 </Selection>
                 <Walking>
                     <ShortenSailsAfter>0</ShortenSailsAfter>
-                    <ReservationLength>24</ReservationLength>                    <!-- Battle Cruiser 16 -->
-                    <ReservationWidth>10</ReservationWidth>                    <!-- Battle Cruiser 6 -->
+                    <ReservationLength>20</ReservationLength>                    <!-- Battle Cruiser 16 -->
+                    <ReservationWidth>8</ReservationWidth>                    <!-- Battle Cruiser 6 -->
                     <PathPlannerLayer>Water</PathPlannerLayer>
                     <ExpensiveDirSmoothing>1</ExpensiveDirSmoothing>
-                    <TurnAroundRadius>28</TurnAroundRadius>                    <!-- Battle Cruiser 8 - 18 -->
-                    <Acceleration>0.30</Acceleration>                    <!-- Battle Cruiser 0.75 - 0.45 -->
+                    <TurnAroundRadius>22</TurnAroundRadius>                    <!-- Battle Cruiser 8 - 18 -->
+                    <Acceleration>0.4</Acceleration>                    <!-- Battle Cruiser 0.75 - 0.45 -->
                     <Deceleration>0.4</Deceleration>                    <!-- Battle Cruiser 1 - 0.5 -->
-                    <TurnRadius>20</TurnRadius>                    <!-- Battle Cruiser 8 - 15 -->
+                    <TurnRadius>22</TurnRadius>                    <!-- Battle Cruiser 8 - 15 -->
                     <TurnDeceleration>0</TurnDeceleration>                    <!-- Battle Cruiser 0 -->
                     <TurnMovement>0</TurnMovement>                    <!-- Battle Cruiser 0 -->
                     <LeaningMaxAngle>-10</LeaningMaxAngle>                    <!-- Battle Cruiser -10 -->
-                    <ForwardSpeed>3.2</ForwardSpeed>                    <!-- Battle Cruiser 4.5 - 5.4 -->
+                    <ForwardSpeed>4</ForwardSpeed>                    <!-- Battle Cruiser 4.5 - 5.4 -->
                     <WindMinSlowdownFactor>1</WindMinSlowdownFactor>                    <!-- Battle Cruiser 1 -->
                     <WindMaxSpeedupFactor>1</WindMaxSpeedupFactor>                    <!-- Battle Cruiser 1 -->
                     <CargoFullFactor>0.5</CargoFullFactor>                    <!-- Battle Cruiser 0.7 - 0.9 -->
@@ -899,32 +888,31 @@
                 </Text>
                 <CommandQueue>
                     <FormationPriority>2</FormationPriority>
-                    <MilitaryShipPoints>25</MilitaryShipPoints>                    <!-- Battle Cruiser - 6 -->
+                    <MilitaryShipPoints>20</MilitaryShipPoints>                    <!-- Battle Cruiser - 6 -->
                     <PriorityShipList>1</PriorityShipList>
                 </CommandQueue>
                 <Drifting>
-                    <OverrideAssetWidthAndLength>0</OverrideAssetWidthAndLength>
-                    <Length>22</Length>                    <!-- Battle Cruiser 10 -->
+                    <Length>18</Length>                    <!-- Battle Cruiser 10 -->
                     <Width>8</Width>                    <!-- Battle Cruiser 1.75 -->
                     <FactorMovement>0.7</FactorMovement>                    <!-- Battle Cruiser 0.7 -->
                     <FactorRotation>0.65</FactorRotation>                    <!-- Battle Cruiser 0.65 -->
                 </Drifting>
                 <Collector/>
                 <Attackable>
-                    <MaximumHitPoints>12500</MaximumHitPoints>                    <!-- Battle Cruiser 6000 - 8250 -->
-                    <AlertRange>165</AlertRange>                    <!-- Battle Cruiser 150 -->
+                    <MaximumHitPoints>17500</MaximumHitPoints>                    <!-- Battle Cruiser 6000 - 8250 -->
+                    <AlertRange>180</AlertRange>
                     <HPBarOffset>6.5</HPBarOffset>                    <!-- Battle Cruiser 280 -->
                     <AccuracyWidth>12</AccuracyWidth>                    <!-- Battle Cruiser 8 -->
                     <ArmorType>HeavyArmor</ArmorType>
-                    <SelfHealPerHealTick>2.1</SelfHealPerHealTick>                    <!-- Battle Cruiser 1.667 -->
-                    <SelfHealPausedTimeIfAttacked>20000</SelfHealPausedTimeIfAttacked>                    <!-- Battle Cruiser 60000 -->
+                    <SelfHealPerHealTick>10</SelfHealPerHealTick>                    <!-- Battle Cruiser 1.667 -->
+                    <SelfHealPausedTimeIfAttacked>60000</SelfHealPausedTimeIfAttacked>                    <!-- Battle Cruiser 60000 -->
                 </Attackable>
                 <Attacker>
                     <ShootingTracking>TurretFixed</ShootingTracking>
-                    <BaseDamage>2500</BaseDamage>                    <!-- Battle Cruiser 280 - 1250 -->
-                    <ReloadTime>110</ReloadTime>                    <!-- Battle Cruiser 70 - 140 -->
-                    <AttackRange>88</AttackRange>                    <!-- Battle Cruiser 84 - 85 -->
-                    <LineOfSightRange>125</LineOfSightRange>                    <!-- Battle Cruiser 100 -->
+                    <BaseDamage>3200</BaseDamage>                    <!-- Battle Cruiser 280 - 1250 -->
+                    <ReloadTime>130</ReloadTime>                    <!-- Battle Cruiser 70 - 140 -->
+                    <AttackRange>86</AttackRange>                    <!-- Battle Cruiser 84 - 85 -->
+                    <LineOfSightRange>140</LineOfSightRange>                    <!-- Battle Cruiser 100 -->
                     <Turrets>
                         <Item>
                             <TurnSpan>300</TurnSpan>
@@ -1097,7 +1085,7 @@
                     <InfluenceCostPoints>60</InfluenceCostPoints>                    <!-- Battle Cruiser 24 -->
                 </Cost>
                 <Craftable>
-                    <CraftingTime>2000000</CraftingTime>                    <!-- Battle Cruiser 900000 -->
+                    <CraftingTime>1050000</CraftingTime>                    <!-- Battle Cruiser 900000 -->
                 </Craftable>
                 <TradeRouteVehicle/>
                 <Locked/>
@@ -1129,7 +1117,7 @@
                     </ExpeditionAttributes>
                 </ExpeditionAttribute>
                 <ShipMaintenance>
-                    <Maintenance>10000</Maintenance>                    <!-- Battle Cruiser 850 - 2000 -->
+                    <Maintenance>5000</Maintenance>                    <!-- Battle Cruiser 850 - 1500 -->
                 </ShipMaintenance>
                 <Sellable>
                     <Baseprice>
@@ -1235,19 +1223,16 @@
                     </OnSelection>
                 </Selection>
                 <Walking>
-                    <ShortenSailsAfter>0</ShortenSailsAfter>
-                    <ReservationLength>24</ReservationLength>                    <!-- Battle Cruiser 16 -->
-                    <ReservationWidth>10</ReservationWidth>                    <!-- Battle Cruiser 6 -->
-                    <PathPlannerLayer>Water</PathPlannerLayer>
-                    <ExpensiveDirSmoothing>1</ExpensiveDirSmoothing>
-                    <TurnAroundRadius>28</TurnAroundRadius>                    <!-- Battle Cruiser 8 - 18 -->
-                    <Acceleration>0.30</Acceleration>                    <!-- Battle Cruiser 0.75 - 0.45 -->
+                    <ReservationLength>20</ReservationLength>                    <!-- Battle Cruiser 16 -->
+                    <ReservationWidth>8</ReservationWidth>                    <!-- Battle Cruiser 6 -->
+                    <TurnAroundRadius>22</TurnAroundRadius>                    <!-- Battle Cruiser 8 - 18 -->
+                    <Acceleration>0.4</Acceleration>                    <!-- Battle Cruiser 0.75 - 0.45 -->
                     <Deceleration>0.4</Deceleration>                    <!-- Battle Cruiser 1 - 0.5 -->
-                    <TurnRadius>20</TurnRadius>                    <!-- Battle Cruiser 8 - 15 -->
+                    <TurnRadius>22</TurnRadius>                    <!-- Battle Cruiser 8 - 15 -->
                     <TurnDeceleration>0</TurnDeceleration>                    <!-- Battle Cruiser 0 -->
                     <TurnMovement>0</TurnMovement>                    <!-- Battle Cruiser 0 -->
                     <LeaningMaxAngle>-10</LeaningMaxAngle>                    <!-- Battle Cruiser -10 -->
-                    <ForwardSpeed>3.2</ForwardSpeed>                    <!-- Battle Cruiser 4.5 - 5.4 -->
+                    <ForwardSpeed>4</ForwardSpeed>                    <!-- Battle Cruiser 4.5 - 5.4 -->
                     <WindMinSlowdownFactor>1</WindMinSlowdownFactor>                    <!-- Battle Cruiser 1 -->
                     <WindMaxSpeedupFactor>1</WindMaxSpeedupFactor>                    <!-- Battle Cruiser 1 -->
                     <CargoFullFactor>0.5</CargoFullFactor>                    <!-- Battle Cruiser 0.7 - 0.9 -->
@@ -1266,32 +1251,31 @@
                 </Text>
                 <CommandQueue>
                     <FormationPriority>2</FormationPriority>
-                    <MilitaryShipPoints>25</MilitaryShipPoints>                    <!-- Battle Cruiser - 6 -->
+                    <MilitaryShipPoints>20</MilitaryShipPoints>                    <!-- Battle Cruiser - 6 -->
                     <PriorityShipList>1</PriorityShipList>
                 </CommandQueue>
                 <Drifting>
-                    <OverrideAssetWidthAndLength>0</OverrideAssetWidthAndLength>
-                    <Length>22</Length>                    <!-- Battle Cruiser 10 -->
-                    <Width>8</Width>                    <!-- Battle Cruiser 1.75 -->
+                    <Length>18</Length>                    <!-- Battle Cruiser 10 -->
+                    <Width>3.5</Width>                    <!-- Battle Cruiser 1.75 -->
                     <FactorMovement>0.7</FactorMovement>                    <!-- Battle Cruiser 0.7 -->
                     <FactorRotation>0.65</FactorRotation>                    <!-- Battle Cruiser 0.65 -->
                 </Drifting>
                 <Collector/>
                 <Attackable>
-                    <MaximumHitPoints>14500</MaximumHitPoints>                    <!-- Battle Cruiser 6000 - 8250 -->
-                    <AlertRange>165</AlertRange>                    <!-- Battle Cruiser 150 -->
+                    <MaximumHitPoints>25000</MaximumHitPoints>                    <!-- Battle Cruiser 6000 - 8250 -->
+                    <AlertRange>180</AlertRange>
                     <HPBarOffset>6.5</HPBarOffset>                    <!-- Battle Cruiser 280 -->
                     <AccuracyWidth>12</AccuracyWidth>                    <!-- Battle Cruiser 8 -->
                     <ArmorType>HeavyArmor</ArmorType>
-                    <SelfHealPerHealTick>2.1</SelfHealPerHealTick>                    <!-- Battle Cruiser 1.667 -->
-                    <SelfHealPausedTimeIfAttacked>20000</SelfHealPausedTimeIfAttacked>                    <!-- Battle Cruiser 60000 -->
+                    <SelfHealPerHealTick>10</SelfHealPerHealTick>                    <!-- Battle Cruiser 1.667 -->
+                    <SelfHealPausedTimeIfAttacked>30000</SelfHealPausedTimeIfAttacked>                    <!-- Battle Cruiser 60000 -->
                 </Attackable>
                 <Attacker>
                     <ShootingTracking>TurretFixed</ShootingTracking>
-                    <BaseDamage>2750</BaseDamage>                    <!-- Battle Cruiser 280 - 1250 -->
-                    <ReloadTime>100</ReloadTime>                    <!-- Battle Cruiser 70 - 140 -->
-                    <AttackRange>88</AttackRange>                    <!-- Battle Cruiser 84 - 85 -->
-                    <LineOfSightRange>125</LineOfSightRange>                    <!-- Battle Cruiser 100 -->
+                    <BaseDamage>3200</BaseDamage>                    <!-- Battle Cruiser 280 - 1250 -->
+                    <ReloadTime>130</ReloadTime>                    <!-- Battle Cruiser 70 - 140 -->
+                    <AttackRange>86</AttackRange>                    <!-- Battle Cruiser 84 - 85 -->
+                    <LineOfSightRange>140</LineOfSightRange>                    <!-- Battle Cruiser 100 -->
                     <Turrets>
                         <Item>
                             <TurnSpan>300</TurnSpan>
@@ -1464,7 +1448,7 @@
                     <InfluenceCostPoints>60</InfluenceCostPoints>                    <!-- Battle Cruiser 24 -->
                 </Cost>
                 <Craftable>
-                    <CraftingTime>1000000</CraftingTime>                    <!-- Battle Cruiser 900000 -->
+                    <CraftingTime>900000</CraftingTime>                    <!-- Battle Cruiser 900000 -->
                 </Craftable>
                 <TradeRouteVehicle/>
                 <Locked/>
@@ -1496,7 +1480,7 @@
                     </ExpeditionAttributes>
                 </ExpeditionAttribute>
                 <ShipMaintenance>
-                    <Maintenance>10000</Maintenance>                    <!-- Battle Cruiser 850 - 2000 -->
+                    <Maintenance>5000</Maintenance>                    <!-- Battle Cruiser 850 - 1500 -->
                 </ShipMaintenance>
                 <Sellable />
                 <Stance/>
@@ -1569,14 +1553,14 @@
                     </Skins>
                 </Object>
                 <Walking>
-                    <ReservationLength>6</ReservationLength>                    <!-- Cargo Ship 16 -->
+                    <ReservationLength>8</ReservationLength>                    <!-- Cargo Ship 16 -->
                     <ReservationWidth>3</ReservationWidth>                    <!-- Cargo Ship 6 -->
                     <TurnAroundRadius>5</TurnAroundRadius>                    <!-- Cargo Ship 8 -->
                     <Acceleration>1.85</Acceleration>                    <!-- Cargo Ship 1.5 -->
                     <Deceleration>1.5</Deceleration>                    <!-- Cargo Ship 2 -->
                     <TurnRadius>5</TurnRadius>                    <!-- Cargo Ship 8 -->
                     <TurnSpeedInPlace>30</TurnSpeedInPlace>                    <!-- Cargo Ship 20 -->
-                    <ForwardSpeed>5.8</ForwardSpeed>                    <!-- Cargo Ship 5.2 -->
+                    <ForwardSpeed>6</ForwardSpeed>                    <!-- Cargo Ship 5.2 -->
                     <CargoFullFactor>0.5</CargoFullFactor>                    <!-- Cargo Ship 0.8 -->
                 </Walking>
                 <Text>
@@ -1592,15 +1576,11 @@
                     <TradeShipPoints>1</TradeShipPoints>                    <!-- Cargo Ship - 4 -->
                 </CommandQueue>
                 <Drifting>
-                    <Length>5</Length>                    <!-- Cargo Ship 7 -->
-                    <Width>1.35</Width>                    <!-- Cargo Ship 1.5 -->
+                    <Length>4.5</Length>                    <!-- Cargo Ship 7 -->
+                    <Width>1.25</Width>                    <!-- Cargo Ship 1.5 -->
                 </Drifting>
                 <Attackable>
                     <MaximumHitPoints>1250</MaximumHitPoints>                    <!-- Cargo Ship 4000 -->
-                    <AlertRange>100</AlertRange>                    <!-- Cargo Ship 150 -->
-                    <HPBarOffset>4</HPBarOffset>
-                    <SelfHealPerHealTick>1.1</SelfHealPerHealTick>                    <!-- Cargo Ship 1.667 -->
-                    <SelfHealPausedTimeIfAttacked>90000</SelfHealPausedTimeIfAttacked>                    <!-- Cargo Ship 60000 -->
                 </Attackable>
                 <ItemContainer>
                     <SocketCount>1</SocketCount>                    <!-- Cargo Ship 2 -->
@@ -1627,6 +1607,9 @@
                 <Craftable>
                     <CraftingTime>100000</CraftingTime>                    <!-- Cargo Ship 540000 -->
                 </Craftable>
+                <TradeRouteVehicle>
+                    <LoadingSpeedFactor>1.5</LoadingSpeedFactor>
+                </TradeRouteVehicle>
                 <ExpeditionAttribute>
                     <BaseMorale>30</BaseMorale>                    <!-- Cargo Ship 70 -->
                     <ExpeditionAttributes>
@@ -1659,7 +1642,7 @@
                                     </Entry>
                                 </InheritanceMapV2>
                             </VectorElement>
-                            <Amount>100000</Amount>                            <!-- Cargo Ship 300000 -->
+                            <Amount>50000</Amount>                            <!-- Cargo Ship 300000 -->
                         </Item>
                     </Baseprice>
                 </Sellable>
@@ -1695,8 +1678,8 @@
                 </Selection>
                 <Walking>
                     <ShortenSailsAfter>0</ShortenSailsAfter>
-                    <ReservationLength>20</ReservationLength>
-                    <ReservationWidth>7</ReservationWidth>
+                    <ReservationLength>16</ReservationLength>
+                    <ReservationWidth>6</ReservationWidth>
                     <PathPlannerLayer>Water</PathPlannerLayer>
                     <ExpensiveDirSmoothing>1</ExpensiveDirSmoothing>
                     <TurnAroundRadius>8</TurnAroundRadius>
@@ -1704,7 +1687,6 @@
                     <Deceleration>2</Deceleration>
                     <TurnRadius>8</TurnRadius>
                     <TurnSpeed>60</TurnSpeed>
-                    <TurnSpeedInPlace>45</TurnSpeedInPlace>
                     <TurnDeceleration>0</TurnDeceleration>
                     <TurnMovement>0</TurnMovement>
                     <LeaningMaxAngle>-15</LeaningMaxAngle>
@@ -1718,30 +1700,31 @@
                 </Walking>
                 <CommandQueue>
                     <FormationPriority>3</FormationPriority>
-                    <MilitaryShipPoints>3</MilitaryShipPoints>
+                    <MilitaryShipPoints>5</MilitaryShipPoints>
                     <PriorityShipList>1</PriorityShipList>
                 </CommandQueue>
                 <Drifting>
                     <OverrideAssetWidthAndLength>0</OverrideAssetWidthAndLength>
-                    <Length>4.5</Length>
+                    <Length>7</Length>
+                    <Width>2</Width>
                     <FactorMovement>0.7</FactorMovement>
                     <FactorRotation>0.65</FactorRotation>
                 </Drifting>
                 <Collector />
                 <Attackable>
-                    <MaximumHitPoints>1250</MaximumHitPoints>
+                    <MaximumHitPoints>1500</MaximumHitPoints>
                     <HPBarOffset>3.5</HPBarOffset>
                     <AlertRange>150</AlertRange>
                     <AccuracyWidth>10</AccuracyWidth>
-                    <SelfHealPerHealTick>0</SelfHealPerHealTick>
+                    <SelfHealPerHealTick>1.667</SelfHealPerHealTick>
                     <SelfHealPausedTimeIfAttacked>60000</SelfHealPausedTimeIfAttacked>
                 </Attackable>
                 <Attacker>
+                    <BaseDamage>165</BaseDamage>
+                    <ReloadTime>40</ReloadTime>
                     <AttackRange>42</AttackRange>
                     <LineOfSightRange>50</LineOfSightRange>
-                    <ReloadTime>40</ReloadTime>
                     <ProjectileCount>2</ProjectileCount>
-                    <BaseDamage>165</BaseDamage>
                     <ProjectileAsset>102267</ProjectileAsset>
                     <Turrets>
                         <Item>
@@ -1819,7 +1802,7 @@
                     <Costs>
                         <Item>
                             <Ingredient>1010017</Ingredient>
-                            <Amount>50000</Amount>
+                            <Amount>125000</Amount>
                         </Item>
                         <Item>
                             <Ingredient>1010218</Ingredient>
@@ -1874,7 +1857,7 @@
                     </ExpeditionAttributes>
                 </ExpeditionAttribute>
                 <ShipMaintenance>
-                    <Maintenance>500</Maintenance>
+                    <Maintenance>750</Maintenance>
                 </ShipMaintenance>
                 <Sellable>
                     <Baseprice>
@@ -1971,7 +1954,7 @@
                 </Walking>
                 <CommandQueue>
                     <FormationPriority>2</FormationPriority>
-                    <MilitaryShipPoints>6</MilitaryShipPoints>
+                    <MilitaryShipPoints>5</MilitaryShipPoints>
                     <PriorityShipList>1</PriorityShipList>
                 </CommandQueue>
                 <Drifting>
@@ -1987,16 +1970,16 @@
                     <HPBarOffset>6.5</HPBarOffset>
                     <AlertRange>150</AlertRange>
                     <AccuracyWidth>9</AccuracyWidth>
-                    <SelfHealPerHealTick>0</SelfHealPerHealTick>
+                    <SelfHealPerHealTick>1.667</SelfHealPerHealTick>
                     <SelfHealPausedTimeIfAttacked>60000</SelfHealPausedTimeIfAttacked>
                 </Attackable>
                 <Attacker>
+                    <BaseDamage>195</BaseDamage>
+                    <ReloadTime>25</ReloadTime>
                     <AttackRange>50</AttackRange>
                     <LineOfSightRange>60</LineOfSightRange>
-                    <ReloadTime>25</ReloadTime>
                     <ProjectileAsset>1742100601</ProjectileAsset>
                     <ProjectileCount>8</ProjectileCount>
-                    <BaseDamage>195</BaseDamage>
                     <Turrets>
                         <Item>
                             <TurnSpan>240</TurnSpan>
@@ -2101,7 +2084,7 @@
                     <Costs>
                         <Item>
                             <Ingredient>1010017</Ingredient>
-                            <Amount>75000</Amount>
+                            <Amount>150000</Amount>
                         </Item>
                         <Item>
                             <Ingredient>1010218</Ingredient>
@@ -2200,7 +2183,7 @@
     <!-- START SHIP - AUXILIRY SHIP -->
     <ModOp Type="addNextSibling" GUID='100443'>
         <Asset>
-            <Template>RepairShip</Template>
+            <Template></Template>
             <Values>
                 <Standard>
                     <GUID>1742100591</GUID>
@@ -2231,6 +2214,7 @@
                     <Deceleration>3</Deceleration>
                     <TurnRadius>4</TurnRadius>
                     <TurnSpeed>75</TurnSpeed>
+                    <TurnSpeedInPlace>60</TurnSpeedInPlace>
                     <TurnDeceleration>0</TurnDeceleration>
                     <TurnMovement>0</TurnMovement>
                     <LeaningMaxAngle>-10</LeaningMaxAngle>
@@ -2239,23 +2223,29 @@
                     <WindSlowdownEffectOnTurningSpeed>1</WindSlowdownEffectOnTurningSpeed>
                     <WindMaxSpeedupFactor>1</WindMaxSpeedupFactor>
                     <WindSpeedupEffectOnTurningSpeed>1</WindSpeedupEffectOnTurningSpeed>
+                    <CargoThreshold>0.5</CargoThreshold>
+                    <CargoFullFactor>0.7</CargoFullFactor>
+                    <DamageFullFactor>0.5</DamageFullFactor>
+                    <MinSlowdownFactor>0.5</MinSlowdownFactor>
+                    <SessionTransferSpeedFactor>1</SessionTransferSpeedFactor>
                     <CurveSegmentDensity>High</CurveSegmentDensity>
                 </Walking>
                 <CommandQueue>
                     <FormationPriority>1</FormationPriority>
-                    <TradeShipPoints>1</TradeShipPoints>
+                    <TradeShipPoints>2</TradeShipPoints>
                     <PriorityShipList>2</PriorityShipList>
                 </CommandQueue>
                 <Drifting>
                     <OverrideAssetWidthAndLength>0</OverrideAssetWidthAndLength>
-                    <Length>4.2</Length>
+                    <Length>3</Length>
+                    <Width>1</Width>
                 </Drifting>
                 <Collector />
                 <Attackable>
                     <MaximumHitPoints>450</MaximumHitPoints>
                     <HPBarOffset>4.5</HPBarOffset>
                     <AlertRange>150</AlertRange>
-                    <SelfHealPerHealTick>0</SelfHealPerHealTick>
+                    <SelfHealPerHealTick>1.667</SelfHealPerHealTick>
                     <SelfHealPausedTimeIfAttacked>60000</SelfHealPausedTimeIfAttacked>
                 </Attackable>
                 <RepairCrane>
@@ -2300,15 +2290,15 @@
                     <Costs>
                         <Item>
                             <Ingredient>1010017</Ingredient>
-                            <Amount>20000</Amount>
+                            <Amount>18000</Amount>
                         </Item>
                         <Item>
                             <Ingredient>1010218</Ingredient>
-                            <Amount>50</Amount>
+                            <Amount>16</Amount>
                         </Item>
                         <Item>
                             <Ingredient>1010224</Ingredient>
-                            <Amount>20</Amount>
+                            <Amount>14</Amount>
                         </Item>
                     </Costs>
                     <InfluenceCostType>WarShip</InfluenceCostType>
@@ -2407,8 +2397,8 @@
                     </Skins>
                 </Object>
                 <Walking>
-                    <ReservationLength>20</ReservationLength>                    <!-- Monitor - 16 -->
-                    <ReservationWidth>8</ReservationWidth>                    <!-- Monitor - 6 -->
+                    <ReservationLength>16</ReservationLength>                    <!-- Monitor - 16 -->
+                    <ReservationWidth>6</ReservationWidth>                    <!-- Monitor - 6 -->
                     <TurnAroundRadius>10</TurnAroundRadius>                    <!-- Monitor - 6 -->
                     <Acceleration>0.8</Acceleration>                    <!-- Monitor - 0.5 - 1 -->
                     <Deceleration>1</Deceleration>                    <!-- Monitor - 0.5 - 1.5 -->
@@ -2427,19 +2417,19 @@
                     <LineID>56081</LineID>
                 </Text>
                 <CommandQueue>
-                    <MilitaryAirShipPoints>6</MilitaryAirShipPoints>                    <!-- Monitor - 3 -->
+                    <MilitaryAirShipPoints>4</MilitaryAirShipPoints>                    <!-- Monitor - 3 -->
                 </CommandQueue>
                 <Drifting>
-                    <Length>10</Length>                    <!-- Monitor - 4.5 -->
-                    <Width>1.75</Width>
+                    <Length>9</Length>                    <!-- Monitor - 4.5 -->
+                    <Width>2</Width>
                 </Drifting>
                 <Collector/>
                 <Attackable>
-                    <MaximumHitPoints>6250</MaximumHitPoints>                    <!-- Monitor - 3000 - 3800 -->
+                    <MaximumHitPoints>6000</MaximumHitPoints>                    <!-- Monitor - 3000 - 3800 -->
                     <AlertRange>170</AlertRange>                    <!-- Monitor - 150 -->
                     <AccuracyWidth>2.5</AccuracyWidth>
-                    <SelfHealPerHealTick>1</SelfHealPerHealTick>                    <!-- Monitor - 1.389 -->
-                    <SelfHealPausedTimeIfAttacked>80000</SelfHealPausedTimeIfAttacked>                    <!-- Monitor - 60000 -->
+                    <SelfHealPerHealTick>1.667</SelfHealPerHealTick>                    <!-- Monitor - 1.389 -->
+                    <SelfHealPausedTimeIfAttacked>60000</SelfHealPausedTimeIfAttacked>                    <!-- Monitor - 60000 -->
                 </Attackable>
                 <Attacker>
                     <BaseDamage>50</BaseDamage>                    <!-- Monitor - 22 - 30 -->
@@ -2527,13 +2517,13 @@
                     <InfluenceCostPoints>20</InfluenceCostPoints>
                 </Cost>
                 <Craftable>
-                    <CraftingTime>1000000</CraftingTime>                    <!-- Monitor - 600000 -->
+                    <CraftingTime>900000</CraftingTime>                    <!-- Monitor - 600000 -->
                 </Craftable>
                 <Locked>
                     <DLCDependency>24962</DLCDependency>                    <!--Anno 1800 DLC - Empire of the Skies-->
                 </Locked>
                 <ExpeditionAttribute>
-                    <BaseMorale>70</BaseMorale>                    <!-- Monitor - 50 -->
+                    <BaseMorale>50</BaseMorale>                    <!-- Monitor - 50 -->
                     <ExpeditionAttributes>
                         <Item>
                             <Attribute>Might</Attribute>
@@ -2568,7 +2558,7 @@
                                     </Entry>
                                 </InheritanceMapV2>
                             </VectorElement>
-                            <Amount>1350000</Amount>                            <!-- Monitor - 550000 -->
+                            <Amount>950000</Amount>                            <!-- Monitor - 550000 -->
                         </Item>
                     </Baseprice>
                 </Sellable>
@@ -2601,13 +2591,13 @@
                     </Skins>
                 </Object>
                 <Walking>
-                    <ReservationLength>12</ReservationLength>                    <!-- Reefer - 16 -->
-                    <ReservationWidth>5</ReservationWidth>                    <!-- Reefer - 6 -->
+                    <ReservationLength>8</ReservationLength>                    <!-- Reefer - 16 -->
+                    <ReservationWidth>3</ReservationWidth>                    <!-- Reefer - 6 -->
                     <TurnAroundRadius>6</TurnAroundRadius>                    <!-- Reefer - 8 -->
                     <Acceleration>1.6</Acceleration>                    <!-- Reefer - 1.5 -->
                     <Deceleration>2</Deceleration>                    <!-- Reefer - 2 -->
                     <TurnRadius>6</TurnRadius>                    <!-- Reefer - 8 -->
-                    <ForwardSpeed>5</ForwardSpeed>                    <!-- Reefer - 5.2 -->
+                    <ForwardSpeed>5.6</ForwardSpeed>                    <!-- Reefer - 5.2 -->
                     <CargoFullFactor>0.7</CargoFullFactor>                    <!-- Reefer - 0.8 -->
                 </Walking>
                 <Text>
@@ -2620,17 +2610,16 @@
                     <LineID>48546</LineID>
                 </Text>
                 <CommandQueue>
-                    <TradeShipPoints>2</TradeShipPoints>                    <!-- Reefer - 4 -->
+                    <TradeShipPoints>1</TradeShipPoints>                    <!-- Reefer - 4 -->
                 </CommandQueue>
                 <Drifting>
-                    <Length>5</Length>                    <!-- Reefer - 7 -->
+                    <Length>4.5</Length>                    <!-- Reefer - 7 -->
                     <Width>1.25</Width>                    <!-- Reefer - 1.5 -->
                 </Drifting>
                 <Attackable>
                     <MaximumHitPoints>1800</MaximumHitPoints>                    <!-- Reefer - 4000 -->
-                    <AlertRange>125</AlertRange>                    <!-- Reefer - 150 -->
-                    <SelfHealPerHealTick>1.8</SelfHealPerHealTick>                    <!-- Reefer - 4 -->
-                    <SelfHealPausedTimeIfAttacked>30000</SelfHealPausedTimeIfAttacked>                    <!-- Reefer - 60000 -->
+                    <SelfHealPerHealTick>1.667</SelfHealPerHealTick>                    <!-- Reefer - 4 -->
+                    <SelfHealPausedTimeIfAttacked>60000</SelfHealPausedTimeIfAttacked>                    <!-- Reefer - 60000 -->
                 </Attackable>
                 <ItemContainer>
                     <SocketCount>1</SocketCount>                    <!-- Reefer - 2 -->
@@ -2794,10 +2783,9 @@
                     <PathPlannerLayer>Water</PathPlannerLayer>
                     <ExpensiveDirSmoothing>1</ExpensiveDirSmoothing>
                     <TurnAroundRadius>10</TurnAroundRadius>
-                    <Acceleration>0.75</Acceleration>
+                    <Acceleration>0.8</Acceleration>
                     <Deceleration>2</Deceleration>
                     <TurnRadius>10</TurnRadius>
-                    <TurnSpeed>60</TurnSpeed>
                     <TurnDeceleration>0</TurnDeceleration>
                     <TurnMovement>0</TurnMovement>
                     <LeaningMaxAngle>-10</LeaningMaxAngle>
@@ -2820,30 +2808,31 @@
                 </Text>
                 <CommandQueue>
                     <FormationPriority>3</FormationPriority>
-                    <MilitaryShipPoints>5</MilitaryShipPoints>
+                    <MilitaryShipPoints>4</MilitaryShipPoints>
                     <PriorityShipList>1</PriorityShipList>
                 </CommandQueue>
                 <Drifting>
                     <OverrideAssetWidthAndLength>0</OverrideAssetWidthAndLength>
-                    <Length>6</Length>
+                    <Length>9</Length>
+                    <Width>2.5</Width>
                     <FactorMovement>1</FactorMovement>
                     <FactorRotation>0.65</FactorRotation>
                 </Drifting>
                 <Collector/>
                 <Attackable>
-                    <MaximumHitPoints>8000</MaximumHitPoints>
+                    <MaximumHitPoints>7750</MaximumHitPoints>
                     <AlertRange>150</AlertRange>
                     <HPBarOffset>3.5</HPBarOffset>
                     <AccuracyWidth>2.5</AccuracyWidth>
-                    <SelfHealPerHealTick>5</SelfHealPerHealTick>
-                    <SelfHealPausedTimeIfAttacked>50000</SelfHealPausedTimeIfAttacked>
+                    <SelfHealPerHealTick>1.667</SelfHealPerHealTick>
+                    <SelfHealPausedTimeIfAttacked>60000</SelfHealPausedTimeIfAttacked>
                 </Attackable>
                 <Attacker>
-                    <BaseDamage>500</BaseDamage>                    <!-- SOTL 525 - 340 -->
-                    <ReloadTime>100</ReloadTime>                    <!-- SOTL 100 - 90 -->
+                    <BaseDamage>550</BaseDamage>                    <!-- SOTL 525 - 340 -->
+                    <ReloadTime>120</ReloadTime>                    <!-- SOTL 100 - 90 -->
                     <TargetAngleVariation>50</TargetAngleVariation>                    <!-- SOTL 50 -->
-                    <AttackRange>54</AttackRange>                    <!-- SOTL 68 - 46 -->
-                    <LineOfSightRange>75</LineOfSightRange>                    <!-- SOTL 100 - 60 -->
+                    <AttackRange>50</AttackRange>                    <!-- SOTL 68 - 46 -->
+                    <LineOfSightRange>60</LineOfSightRange>                    <!-- SOTL 100 - 60 -->
                     <ProjectileAsset>102285</ProjectileAsset>                    <!--Line_Ship_Multi_Shot_01-->
                     <MuzzleEffectAssets>
                         <Item>
@@ -2865,8 +2854,8 @@
                             <MuzzleEffectAsset>102300</MuzzleEffectAsset>                            <!--Shot_Lineship_03-->
                         </Item>
                     </MuzzleEffectAssets>
-                    <FullVolleyTimeMin>1.2</FullVolleyTimeMin>                    <!-- SOTL 0.8 -->
-                    <FullVolleyTimeMax>2.8</FullVolleyTimeMax>                    <!-- SOTL 1.8 -->
+                    <FullVolleyTimeMin>0.6</FullVolleyTimeMin>                    <!-- SOTL 0.8 -->
+                    <FullVolleyTimeMax>1.6</FullVolleyTimeMax>                    <!-- SOTL 1.8 -->
                     <VolleyMaxPerBulletRandomOffset>0.2</VolleyMaxPerBulletRandomOffset>                    <!-- SOTL 0.2 -->
                     <AccuracyIncreaseOverDistance>100</AccuracyIncreaseOverDistance>                    <!-- SOTL 100 -->
                     <AccuracySpeedDecay>20</AccuracySpeedDecay>                    <!-- SOTL 20 -->
@@ -2983,14 +2972,14 @@
                         </Item>
                         <Item>
                             <Ingredient>1010221</Ingredient>                            <!--weapons-->
-                            <Amount>25</Amount>
+                            <Amount>35</Amount>
                         </Item>
                     </Costs>
                     <InfluenceCostType>WarShip</InfluenceCostType>
                     <InfluenceCostPoints>18</InfluenceCostPoints>
                 </Cost>
                 <Craftable>
-                    <CraftingTime>720000</CraftingTime>
+                    <CraftingTime>900000</CraftingTime>
                 </Craftable>
                 <TradeRouteVehicle/>
                 <Locked />
@@ -3032,7 +3021,7 @@
                                     </Entry>
                                 </InheritanceMapV2>
                             </VectorElement>
-                            <Amount>1350000</Amount>
+                            <Amount>400000</Amount>
                         </Item>
                     </Baseprice>
                 </Sellable>
@@ -3098,10 +3087,10 @@
                     </Skins>
                 </Object>
                 <Walking>
-                    <ReservationLength>12</ReservationLength>                    <!-- 16 -->
-                    <ReservationWidth>5</ReservationWidth>                    <!-- 6 -->
-                    <TurnAroundRadius>6</TurnAroundRadius>                    <!-- 8 -->
-                    <TurnRadius>6</TurnRadius>                    <!-- 8 -->
+                    <ReservationLength>8</ReservationLength>                    <!-- 16 -->
+                    <ReservationWidth>3</ReservationWidth>                    <!-- 6 -->
+                    <TurnAroundRadius>10</TurnAroundRadius>                    <!-- 8 -->
+                    <TurnRadius>10</TurnRadius>                    <!-- 8 -->
                     <ForwardSpeed>4.8</ForwardSpeed>                    <!-- 4.5 -->
                 </Walking>
                 <Text>
@@ -3118,7 +3107,7 @@
                 </CommandQueue>
                 <Drifting>
                     <OverrideAssetWidthAndLength>0</OverrideAssetWidthAndLength>
-                    <Length>8</Length>                    <!-- 10 -->
+                    <Length>6</Length>                    <!-- 10 -->
                     <Width>2</Width>                    <!-- 2 -->
                 </Drifting>
                 <Attackable>
@@ -3235,8 +3224,8 @@
                 </CommandQueue>
                 <Drifting>
                     <OverrideAssetWidthAndLength>0</OverrideAssetWidthAndLength>
-                    <Length>14</Length>                    <!-- 10 -->
-                    <Width>4</Width>                    <!-- 2 -->
+                    <Length>12</Length>                    <!-- 10 -->
+                    <Width>2</Width>                    <!-- 2 -->
                 </Drifting>
                 <Attackable>
                     <MaximumHitPoints>6000</MaximumHitPoints>                    <!-- 5000 -->
@@ -3321,12 +3310,14 @@
                     </Skins>
                 </Object>
                 <Walking>
+                    <ReservationLength>9</ReservationLength>                    <!-- 9 -->
+                    <ReservationWidth>10</ReservationWidth>                    <!-- 5 -->
                     <TurnAroundRadius>12</TurnAroundRadius>
                     <Acceleration>0.3</Acceleration>
                     <Deceleration>0.5</Deceleration>
-                    <TurnRadius>10</TurnRadius>
-                    <TurnSpeed>100</TurnSpeed>
-                    <TurnSpeedInPlace>80</TurnSpeedInPlace>
+                    <TurnRadius>12</TurnRadius>
+                    <TurnSpeed>75</TurnSpeed>
+                    <TurnSpeedInPlace>75</TurnSpeedInPlace>
                     <LeaningMaxAngle>0</LeaningMaxAngle>
                     <ForwardSpeed>8.5</ForwardSpeed>
                     <WindMinSlowdownFactor>0.7</WindMinSlowdownFactor>
@@ -3346,7 +3337,6 @@
                     <LineID>57665</LineID>
                 </Text>
                 <CommandQueue>
-                    <TradeShipPoints>6</TradeShipPoints>
                     <AirShipPoints>300</AirShipPoints>
                 </CommandQueue>
                 <Drifting>
@@ -3390,10 +3380,6 @@
                             <Ingredient>840</Ingredient>                            <!-- SA Gas-->
                             <Amount>100</Amount>
                         </Item>
-                        <Item>
-                            <Ingredient>1010223</Ingredient>                            <!--advanced weapons-->
-                            <Amount>10</Amount>
-                        </Item>
                     </Costs>
                     <InfluenceCostType>AirshipCombat</InfluenceCostType>
                     <InfluenceCostPoints>50</InfluenceCostPoints>
@@ -3408,12 +3394,12 @@
                     <DLCDependency>24962</DLCDependency>                    <!--Anno 1800 DLC - Empire of the Skies-->
                 </Locked>
                 <ShipMaintenance>
-                    <Maintenance>7500</Maintenance>
+                    <Maintenance>4500</Maintenance>
                 </ShipMaintenance>
                 <Sellable>
                     <Baseprice>
                         <Item>
-                            <Amount>4500000</Amount>
+                            <Amount>1750000</Amount>
                         </Item>
                     </Baseprice>
                 </Sellable>
@@ -3448,12 +3434,14 @@
                     </Skins>
                 </Object>
                 <Walking>
+                    <ReservationLength>9</ReservationLength>                    <!-- 9 -->
+                    <ReservationWidth>10</ReservationWidth>                    <!-- 5 -->
                     <TurnAroundRadius>12</TurnAroundRadius>
                     <Acceleration>0.3</Acceleration>
                     <Deceleration>0.5</Deceleration>
-                    <TurnRadius>10</TurnRadius>
-                    <TurnSpeed>100</TurnSpeed>
-                    <TurnSpeedInPlace>80</TurnSpeedInPlace>
+                    <TurnRadius>12</TurnRadius>
+                    <TurnSpeed>75</TurnSpeed>
+                    <TurnSpeedInPlace>75</TurnSpeedInPlace>
                     <LeaningMaxAngle>0</LeaningMaxAngle>
                     <ForwardSpeed>8.5</ForwardSpeed>
                     <WindMinSlowdownFactor>0.7</WindMinSlowdownFactor>
@@ -3473,12 +3461,11 @@
                     <LineID>57665</LineID>
                 </Text>
                 <CommandQueue>
-                    <TradeShipPoints>6</TradeShipPoints>
                     <AirShipPoints>300</AirShipPoints>
                 </CommandQueue>
                 <Drifting>
-                    <Length>8</Length>
-                    <Width>6</Width>
+                    <Length>7</Length>
+                    <Width>8</Width>
                 </Drifting>
                 <Attackable>
                     <MaximumHitPoints>4500</MaximumHitPoints>
@@ -3517,16 +3504,12 @@
                             <Ingredient>112706</Ingredient>                            <!--  Arctic Gas-->
                             <Amount>100</Amount>
                         </Item>
-                        <Item>
-                            <Ingredient>1010223</Ingredient>                            <!--advanced weapons-->
-                            <Amount>10</Amount>
-                        </Item>
                     </Costs>
                     <InfluenceCostType>AirshipCombat</InfluenceCostType>
                     <InfluenceCostPoints>50</InfluenceCostPoints>
                 </Cost>
                 <Craftable>
-                    <CraftingTime>2000000</CraftingTime>                    <!-- 1020000 -->
+                    <CraftingTime>1200000</CraftingTime>                    <!-- 1020000 -->
                 </Craftable>
                 <TradeRouteVehicle>
                     <LoadingSpeedFactor>0.7</LoadingSpeedFactor>
@@ -3535,12 +3518,12 @@
                     <DLCDependency>24962</DLCDependency>                    <!--Anno 1800 DLC - Empire of the Skies-->
                 </Locked>
                 <ShipMaintenance>
-                    <Maintenance>7500</Maintenance>
+                    <Maintenance>4500</Maintenance>
                 </ShipMaintenance>
                 <Sellable>
                     <Baseprice>
                         <Item>
-                            <Amount>4500000</Amount>
+                            <Amount>1750000</Amount>
                         </Item>
                     </Baseprice>
                 </Sellable>
@@ -3578,11 +3561,12 @@
                     </Skins>
                 </Object>
                 <Walking>
-                    <ShortenSailsAfter>0</ShortenSailsAfter>
+                    <ReservationLength>9</ReservationLength>                    <!-- 9 -->
+                    <ReservationWidth>10</ReservationWidth>                    <!-- 5 -->
                     <TurnAroundRadius>12</TurnAroundRadius>
                     <Acceleration>1</Acceleration>
                     <Deceleration>1</Deceleration>
-                    <TurnRadius>10</TurnRadius>
+                    <TurnRadius>12</TurnRadius>
                     <TurnSpeed>100</TurnSpeed>
                     <TurnSpeedInPlace>80</TurnSpeedInPlace>
                     <LeaningMaxAngle>0</LeaningMaxAngle>
@@ -3590,8 +3574,7 @@
                     <WindMinSlowdownFactor>0.8</WindMinSlowdownFactor>
                     <WindSlowdownEffectOnTurningSpeed>0.9</WindSlowdownEffectOnTurningSpeed>
                     <WindMaxSpeedupFactor>1.5</WindMaxSpeedupFactor>
-                    <CargoThreshold>0.1</CargoThreshold>
-                    <MinSlowdownFactor>0.2</MinSlowdownFactor>
+                    <MinSlowdownFactor>0.3</MinSlowdownFactor>
                     <SessionTransferSpeedFactor>1.2</SessionTransferSpeedFactor>
                 </Walking>
                 <Text>
@@ -3604,14 +3587,15 @@
                     <LineID>57665</LineID>
                 </Text>
                 <CommandQueue>
-                    <MilitaryAirShipPoints>2</MilitaryAirShipPoints>
+                    <MilitaryAirShipPoints>10</MilitaryAirShipPoints>
+                    <AirShipPoints>300</AirShipPoints>
                 </CommandQueue>
                 <Drifting>
-                    <Length>8</Length>
-                    <Width>6</Width>
+                    <Length>7</Length>
+                    <Width>8</Width>
                 </Drifting>
                 <Attackable>
-                    <MaximumHitPoints>4800</MaximumHitPoints>
+                    <MaximumHitPoints>4000</MaximumHitPoints>
                 </Attackable>
                 <ItemContainer>
                     <SocketCount>3</SocketCount>
@@ -3656,15 +3640,18 @@
                     <InfluenceCostPoints>50</InfluenceCostPoints>
                 </Cost>
                 <Craftable>
-                    <CraftingTime>2000000</CraftingTime>                    <!-- 1020000 -->
+                    <CraftingTime>1200000</CraftingTime>                    <!-- 1020000 -->
                 </Craftable>
+                <TradeRouteVehicle>
+                    <LoadingSpeedFactor>0.7</LoadingSpeedFactor>
+                </TradeRouteVehicle>
                 <ShipMaintenance>
-                    <Maintenance>6000</Maintenance>
+                    <Maintenance>4500</Maintenance>
                 </ShipMaintenance>
                 <Sellable>
                     <Baseprice>
                         <Item>
-                            <Amount>4500000</Amount>
+                            <Amount>1750000</Amount>
                         </Item>
                     </Baseprice>
                 </Sellable>
@@ -3754,11 +3741,12 @@
                     </Skins>
                 </Object>
                 <Walking>
-                    <ShortenSailsAfter>0</ShortenSailsAfter>
+                    <ReservationLength>9</ReservationLength>                    <!-- 9 -->
+                    <ReservationWidth>10</ReservationWidth>                    <!-- 5 -->
                     <TurnAroundRadius>12</TurnAroundRadius>
                     <Acceleration>1</Acceleration>
                     <Deceleration>1</Deceleration>
-                    <TurnRadius>10</TurnRadius>
+                    <TurnRadius>12</TurnRadius>
                     <TurnSpeed>100</TurnSpeed>
                     <TurnSpeedInPlace>80</TurnSpeedInPlace>
                     <LeaningMaxAngle>0</LeaningMaxAngle>
@@ -3766,8 +3754,7 @@
                     <WindMinSlowdownFactor>0.8</WindMinSlowdownFactor>
                     <WindSlowdownEffectOnTurningSpeed>0.9</WindSlowdownEffectOnTurningSpeed>
                     <WindMaxSpeedupFactor>1.5</WindMaxSpeedupFactor>
-                    <CargoThreshold>0.1</CargoThreshold>
-                    <MinSlowdownFactor>0.2</MinSlowdownFactor>
+                    <MinSlowdownFactor>0.3</MinSlowdownFactor>
                     <SessionTransferSpeedFactor>1.2</SessionTransferSpeedFactor>
                 </Walking>
                 <Text>
@@ -3780,14 +3767,15 @@
                     <LineID>57665</LineID>
                 </Text>
                 <CommandQueue>
-                    <MilitaryAirShipPoints>2</MilitaryAirShipPoints>
+                    <MilitaryAirShipPoints>10</MilitaryAirShipPoints>
+                    <AirShipPoints>300</AirShipPoints>
                 </CommandQueue>
                 <Drifting>
-                    <Length>8</Length>
-                    <Width>6</Width>
+                    <Length>7</Length>
+                    <Width>8</Width>
                 </Drifting>
                 <Attackable>
-                    <MaximumHitPoints>4800</MaximumHitPoints>
+                    <MaximumHitPoints>4000</MaximumHitPoints>
                 </Attackable>
                 <ItemContainer>
                     <SocketCount>3</SocketCount>
@@ -3832,15 +3820,18 @@
                     <InfluenceCostPoints>50</InfluenceCostPoints>
                 </Cost>
                 <Craftable>
-                    <CraftingTime>2000000</CraftingTime>                    <!-- 1020000 -->
+                    <CraftingTime>1200000</CraftingTime>                    <!-- 1020000 -->
                 </Craftable>
+                <TradeRouteVehicle>
+                    <LoadingSpeedFactor>0.7</LoadingSpeedFactor>
+                </TradeRouteVehicle>
                 <ShipMaintenance>
-                    <Maintenance>6000</Maintenance>
+                    <Maintenance>4500</Maintenance>
                 </ShipMaintenance>
                 <Sellable>
                     <Baseprice>
                         <Item>
-                            <Amount>4500000</Amount>
+                            <Amount>1750000</Amount>
                         </Item>
                     </Baseprice>
                 </Sellable>
@@ -3933,13 +3924,14 @@
                     </Skins>
                 </Object>
                 <Walking>
-                    <ShortenSailsAfter>0</ShortenSailsAfter>
+                    <ReservationLength>9</ReservationLength>                    <!-- 9 -->
+                    <ReservationWidth>10</ReservationWidth>                    <!-- 5 -->
                     <TurnAroundRadius>12</TurnAroundRadius>
                     <Acceleration>0.3</Acceleration>
                     <Deceleration>0.5</Deceleration>
-                    <TurnRadius>10</TurnRadius>
-                    <TurnSpeed>100</TurnSpeed>
-                    <TurnSpeedInPlace>80</TurnSpeedInPlace>
+                    <TurnRadius>12</TurnRadius>
+                    <TurnSpeed>75</TurnSpeed>
+                    <TurnSpeedInPlace>75</TurnSpeedInPlace>
                     <LeaningMaxAngle>0</LeaningMaxAngle>
                     <ForwardSpeed>9</ForwardSpeed>
                     <WindMinSlowdownFactor>0.8</WindMinSlowdownFactor>
@@ -3959,15 +3951,15 @@
                     <LineID>57670</LineID>
                 </Text>
                 <CommandQueue>
-                    <TradeShipPoints>8</TradeShipPoints>
-                    <AirShipPoints>200</AirShipPoints>
+                    <TradeShipPoints>10</TradeShipPoints>
+                    <AirShipPoints>300</AirShipPoints>
                 </CommandQueue>
                 <Drifting>
-                    <Length>8</Length>
-                    <Width>6</Width>
+                    <Length>7</Length>
+                    <Width>8</Width>
                 </Drifting>
                 <Attackable>
-                    <MaximumHitPoints>4500</MaximumHitPoints>
+                    <MaximumHitPoints>4250</MaximumHitPoints>
                 </Attackable>
                 <ItemContainer>
                     <SocketCount>3</SocketCount>
@@ -4006,10 +3998,10 @@
                         </Item>
                     </Costs>
                     <InfluenceCostType>AirshipCombat</InfluenceCostType>
-                    <InfluenceCostPoints>50</InfluenceCostPoints>
+                    <InfluenceCostPoints>30</InfluenceCostPoints>
                 </Cost>
                 <Craftable>
-                    <CraftingTime>2000000</CraftingTime>                    <!-- 1080000 -->
+                    <CraftingTime>1200000</CraftingTime>                    <!-- 1080000 -->
                 </Craftable>
                 <TradeRouteVehicle>
                     <LoadingSpeedFactor>1.2</LoadingSpeedFactor>
@@ -4018,12 +4010,12 @@
                     <DLCDependency>24962</DLCDependency>                    <!--Anno 1800 DLC - Empire of the Skies-->
                 </Locked>
                 <ShipMaintenance>
-                    <Maintenance>8000</Maintenance>
+                    <Maintenance>2500</Maintenance>
                 </ShipMaintenance>
                 <Sellable>
                     <Baseprice>
                         <Item>
-                            <Amount>4500000</Amount>
+                            <Amount>2150000</Amount>
                         </Item>
                     </Baseprice>
                 </Sellable>
@@ -4058,13 +4050,14 @@
                     </Skins>
                 </Object>
                 <Walking>
-                    <ShortenSailsAfter>0</ShortenSailsAfter>
+                    <ReservationLength>9</ReservationLength>                    <!-- 9 -->
+                    <ReservationWidth>10</ReservationWidth>                    <!-- 5 -->
                     <TurnAroundRadius>12</TurnAroundRadius>
                     <Acceleration>0.3</Acceleration>
                     <Deceleration>0.5</Deceleration>
-                    <TurnRadius>10</TurnRadius>
-                    <TurnSpeed>100</TurnSpeed>
-                    <TurnSpeedInPlace>80</TurnSpeedInPlace>
+                    <TurnRadius>12</TurnRadius>
+                    <TurnSpeed>75</TurnSpeed>
+                    <TurnSpeedInPlace>75</TurnSpeedInPlace>
                     <LeaningMaxAngle>0</LeaningMaxAngle>
                     <ForwardSpeed>9</ForwardSpeed>
                     <WindMinSlowdownFactor>0.8</WindMinSlowdownFactor>
@@ -4084,15 +4077,15 @@
                     <LineID>57670</LineID>
                 </Text>
                 <CommandQueue>
-                    <TradeShipPoints>8</TradeShipPoints>
-                    <AirShipPoints>200</AirShipPoints>
+                    <TradeShipPoints>10</TradeShipPoints>
+                    <AirShipPoints>300</AirShipPoints>
                 </CommandQueue>
                 <Drifting>
-                    <Length>8</Length>
-                    <Width>6</Width>
+                    <Length>7</Length>
+                    <Width>8</Width>
                 </Drifting>
                 <Attackable>
-                    <MaximumHitPoints>4500</MaximumHitPoints>
+                    <MaximumHitPoints>4250</MaximumHitPoints>
                 </Attackable>
                 <ItemContainer>
                     <SocketCount>3</SocketCount>
@@ -4131,10 +4124,10 @@
                         </Item>
                     </Costs>
                     <InfluenceCostType>AirshipCombat</InfluenceCostType>
-                    <InfluenceCostPoints>50</InfluenceCostPoints>
+                    <InfluenceCostPoints>30</InfluenceCostPoints>
                 </Cost>
                 <Craftable>
-                    <CraftingTime>2000000</CraftingTime>                    <!-- 1080000 -->
+                    <CraftingTime>1200000</CraftingTime>                    <!-- 1080000 -->
                 </Craftable>
                 <TradeRouteVehicle>
                     <LoadingSpeedFactor>1.2</LoadingSpeedFactor>
@@ -4143,12 +4136,12 @@
                     <DLCDependency>24962</DLCDependency>                    <!--Anno 1800 DLC - Empire of the Skies-->
                 </Locked>
                 <ShipMaintenance>
-                    <Maintenance>8000</Maintenance>
+                    <Maintenance>2500</Maintenance>
                 </ShipMaintenance>
                 <Sellable>
                     <Baseprice>
                         <Item>
-                            <Amount>4500000</Amount>
+                            <Amount>2150000</Amount>
                         </Item>
                     </Baseprice>
                 </Sellable>

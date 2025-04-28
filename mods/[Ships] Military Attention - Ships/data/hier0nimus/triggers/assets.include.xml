@@ -177,7 +177,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742100803</GUID>
+          <GUID>1742100807</GUID>
           <Name>MOD Trigger</Name>
         </Standard>
         <Trigger>
@@ -224,6 +224,9 @@
                       <Item>
                         <Asset>1742100663</Asset>                        <!-- Large Airship Hangar - Shipyard -->
                       </Item>
+                      <Item>
+                        <Asset>14740009</Asset>                        <!-- Bulk Freighter - Tradeship -->
+                      </Item>
                     </UnhideAssets>
                     <UnlockAssets>
                       <Item>
@@ -259,7 +262,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742100802</GUID>
+          <GUID>1742100808</GUID>
           <Name>MOD Trigger</Name>
         </Standard>
         <Trigger>
@@ -340,6 +343,54 @@
       </Values>
     </Asset>
   </ModOp>
+
+  <!--UNLOCK - INVESTORS  10000 + Not New Horizons -->
+  <Group Condition="!#new_horizons_ships">
+    <ModOp Type="addnextSibling" GUID="130248">
+      <Asset>
+        <Template>Trigger</Template>
+        <Values>
+          <Standard>
+            <GUID>1742100810</GUID>
+            <Name>MOD Trigger</Name>
+          </Standard>
+          <Trigger>
+            <TriggerCondition>
+              <Template>ConditionPlayerCounter</Template>
+              <Values>
+                <Condition />
+                <ConditionPlayerCounter>
+                  <PlayerCounter>PopulationByLevel</PlayerCounter>
+                  <Context>15000004</Context>                  <!-- Investors PopulationLevel7 -->
+                  <CounterAmount>10000</CounterAmount>
+                </ConditionPlayerCounter>
+              </Values>
+            </TriggerCondition>
+            <TriggerActions>
+              <Item>
+                <TriggerAction>
+                  <Template>ActionUnlockAsset</Template>
+                  <Values>
+                    <Action />
+                    <ActionUnlockAsset>
+                      <UnhideAssets>
+                      </UnhideAssets>
+                      <UnlockAssets>
+                        <Item>
+                          <Asset>14740009</Asset>                          <!-- Bulk Freighter - Tradeship -->
+                        </Item>
+                      </UnlockAssets>
+                    </ActionUnlockAsset>
+                  </Values>
+                </TriggerAction>
+              </Item>
+            </TriggerActions>
+          </Trigger>
+          <TriggerSetup />
+        </Values>
+      </Asset>
+    </ModOp>
+  </Group>
 
   <!--UNLOCK - OIL POWER PLANT UNLOCK -->
   <ModOp Type="addnextSibling" GUID="130248">
@@ -456,7 +507,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742100771</GUID>
+          <GUID>1742100809</GUID>
           <Name>Unlock Creative Mode</Name>
         </Standard>
         <Trigger>
@@ -535,6 +586,9 @@
                       </Item>
                       <Item>
                         <Asset>1742100663</Asset>                        <!-- Large Airship Hangar - Shipyard -->
+                      </Item>
+                      <Item>
+                        <Asset>14740009</Asset>                        <!-- Bulk Freighter - Tradeship -->
                       </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>

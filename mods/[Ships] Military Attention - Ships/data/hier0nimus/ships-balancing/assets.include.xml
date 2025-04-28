@@ -90,6 +90,14 @@
         </Item>
     </ModOp>
 
+    <!-- SALVAGER -->
+    <ModOp Type="addPrevSibling" GUID='112084' Path="/Values/Cost/Costs/Item[Ingredient='1010196']">
+        <Item>
+            <Ingredient>1010017</Ingredient>
+            <Amount>50000</Amount>
+        </Item>
+    </ModOp>
+
     <!-- Battle Cruiser -->
     <ModOp Type="addPrevSibling" GUID='100442' Path="/Values/Cost/Costs/Item[Ingredient='1010218']">
         <Item>
@@ -133,14 +141,14 @@
         <ModOp Type="merge" GUID='100437' Path ="/Values">
             <Walking>
                 <WindMinSlowdownFactor>0.5</WindMinSlowdownFactor>
-                <WindMaxSpeedupFactor>2.4</WindMaxSpeedupFactor>
+                <WindMaxSpeedupFactor>2</WindMaxSpeedupFactor>
             </Walking>
             <Attackable>
                 <MaximumHitPoints>650</MaximumHitPoints>
             </Attackable>
             <Attacker>
-                <AttackRange>20</AttackRange>
                 <ReloadTime>45</ReloadTime>
+                <AttackRange>20</AttackRange>
             </Attacker>
             <Cost>
                 <InfluenceCostPoints>3</InfluenceCostPoints>
@@ -151,24 +159,32 @@
         </ModOp>
 
         <!-- Pirate Gunboat -->
-        <ModOp Type="merge" GUID='102420' Path ="/Values">
+        <ModOp Type="merge" GUID='102420,102429' Path="/Values/">
             <Walking>
-                <WindMaxSpeedupFactor>2.5</WindMaxSpeedupFactor>
+                <WindMaxSpeedupFactor>2.2</WindMaxSpeedupFactor>
             </Walking>
             <Attackable>
                 <MaximumHitPoints>750</MaximumHitPoints>
+                <SelfHealPerHealTick>3</SelfHealPerHealTick>                <!-- 1.389 -->
+                <SelfHealPausedTimeIfAttacked>30000</SelfHealPausedTimeIfAttacked>                <!-- 60000 -->
             </Attackable>
             <Attacker>
-                <AttackRange>25</AttackRange>
                 <ReloadTime>40</ReloadTime>
+                <AttackRange>25</AttackRange>
             </Attacker>
+            <ShipMaintenance>
+                <Maintenance>50</Maintenance>                <!-- 25 -->
+            </ShipMaintenance>
+            <Craftable>
+                <CraftingTime>90000</CraftingTime>                <!-- 180000 -->
+            </Craftable>
         </ModOp>
 
         <!-- Frigate -->
         <ModOp Type="merge" GUID='100439' Path="/Values">
             <Walking>
-                <ForwardSpeed>6</ForwardSpeed>
-                <WindMaxSpeedupFactor>2.2</WindMaxSpeedupFactor>
+                <ForwardSpeed>5.8</ForwardSpeed>
+                <WindMaxSpeedupFactor>2</WindMaxSpeedupFactor>
             </Walking>
             <Attacker>
                 <BaseDamage>150</BaseDamage>
@@ -182,14 +198,23 @@
         </ModOp>
 
         <!-- Pirate Frigate -->
-        <ModOp Type="merge" GUID='102421' Path="/Values">
+        <ModOp Type="merge" GUID='102421,102430' Path="/Values/">
             <Walking>
-                <ForwardSpeed>6.2</ForwardSpeed>
+                <ForwardSpeed>6</ForwardSpeed>
+                <WindMaxSpeedupFactor>2.2</WindMaxSpeedupFactor>
             </Walking>
             <Attacker>
-                <ReloadTime>40</ReloadTime>
-                <AttackRange>45</AttackRange>
+                <ReloadTime>40</ReloadTime>                <!-- 50 - 40 -->
+                <AttackRange>45</AttackRange>                <!-- 55 -->
             </Attacker>
+            <Attackable>
+                <MaximumHitPoints>2500</MaximumHitPoints>                <!-- 2000 -->
+                <SelfHealPerHealTick>3</SelfHealPerHealTick>                <!-- 1.389 -->
+                <SelfHealPausedTimeIfAttacked>30000</SelfHealPausedTimeIfAttacked>                <!-- 60000 -->
+            </Attackable>
+            <Craftable>
+                <CraftingTime>180000</CraftingTime>                <!-- 360000 -->
+            </Craftable>
         </ModOp>
 
         <!-- SOTL -->
@@ -201,11 +226,11 @@
                 <MaximumHitPoints>3250</MaximumHitPoints>
             </Attackable>
             <Attacker>
+                <BaseDamage>360</BaseDamage>
+                <ReloadTime>85</ReloadTime>
                 <AttackRangeApproachPercentage>0.7</AttackRangeApproachPercentage>
                 <AttackRange>52</AttackRange>
                 <LineOfSightRange>60</LineOfSightRange>
-                <ReloadTime>90</ReloadTime>
-                <BaseDamage>380</BaseDamage>
             </Attacker>
             <ShipMaintenance>
                 <Maintenance>300</Maintenance>
@@ -218,27 +243,37 @@
             </Item>
         </ModOp>
 
+        <!-- PIRATE SOTL -->
+        <ModOp Type="merge" GUID='102419,102431' Path="/Values/">
+            <Walking>
+                <ForwardSpeed>4.4</ForwardSpeed>
+            </Walking>
+            <Attackable>
+                <MaximumHitPoints>3500</MaximumHitPoints>                <!-- 4000 -->
+                <SelfHealPerHealTick>3</SelfHealPerHealTick>                <!-- 1.667 -->
+                <SelfHealPausedTimeIfAttacked>30000</SelfHealPausedTimeIfAttacked>                <!-- 60000 -->
+            </Attackable>
+            <Attacker>
+                <BaseDamage>365</BaseDamage>
+                <ReloadTime>80</ReloadTime>
+                <AttackRange>54</AttackRange>
+            </Attacker>
+            <Craftable>
+                <CraftingTime>360000</CraftingTime>                <!-- 720000 -->
+            </Craftable>
+        </ModOp>
+
         <!-- ROYAL SOTL -->
         <ModOp Type="merge" GUID='102427' Path="/Values">
             <Attackable>
-                <MaximumHitPoints>3800</MaximumHitPoints>
+                <MaximumHitPoints>3750</MaximumHitPoints>
+                <SelfHealPerHealTick>4.5</SelfHealPerHealTick>
+                <SelfHealPausedTimeIfAttacked>10000</SelfHealPausedTimeIfAttacked>
             </Attackable>
             <Attacker>
+                <BaseDamage>370</BaseDamage>
+                <ReloadTime>80</ReloadTime>
                 <AttackRange>56</AttackRange>
-                <ReloadTime>85</ReloadTime>
-                <BaseDamage>390</BaseDamage>
-            </Attacker>
-        </ModOp>
-
-        <!-- PIRATE SOTL -->
-        <ModOp Type="merge" GUID='102419' Path="/Values">
-            <Attackable>
-                <MaximumHitPoints>3500</MaximumHitPoints>
-            </Attackable>
-            <Attacker>
-                <AttackRange>54</AttackRange>
-                <ReloadTime>90</ReloadTime>
-                <BaseDamage>390</BaseDamage>
             </Attacker>
         </ModOp>
 
@@ -276,10 +311,10 @@
                 <InfoDescription>1742100593</InfoDescription>
             </Standard>
             <Walking>
-                <TurnAroundRadius>18</TurnAroundRadius>
                 <Acceleration>0.45</Acceleration>
                 <Deceleration>0.5</Deceleration>
-                <TurnRadius>15</TurnRadius>
+                <TurnAroundRadius>16</TurnAroundRadius>
+                <TurnRadius>16</TurnRadius>
                 <ForwardSpeed>5.4</ForwardSpeed>
                 <CargoFullFactor>0.9</CargoFullFactor>
                 <DamageFullFactor>0.8</DamageFullFactor>
@@ -287,19 +322,18 @@
             </Walking>
             <Attackable>
                 <MaximumHitPoints>7000</MaximumHitPoints>
-                <AlertRange>150</AlertRange>
                 <ArmorType>HeavyArmor</ArmorType>
             </Attackable>
             <Attacker>
-                <AttackRangeApproachPercentage>0.6</AttackRangeApproachPercentage>
-                <AttackRange>85</AttackRange>
-                <ReloadTime>140</ReloadTime>
                 <BaseDamage>1250</BaseDamage>
+                <ReloadTime>110</ReloadTime>
+                <AttackRange>85</AttackRange>
+                <AttackRangeApproachPercentage>0.6</AttackRangeApproachPercentage>
                 <AccuracyBase>15</AccuracyBase>
                 <AccuracyIncreaseOverDistance>200</AccuracyIncreaseOverDistance>
             </Attacker>
             <ShipMaintenance>
-                <Maintenance>1500</Maintenance>
+                <Maintenance>1250</Maintenance>
             </ShipMaintenance>
         </ModOp>
         <ModOp GUID='100442' Path="/Values/Attacker/AccuracyByDistance" Type="replace">
@@ -364,6 +398,23 @@
             </Variations>
         </ModOp>
 
+        <!-- Pyrphorian Battle Cruiser -->
+        <ModOp Type="merge" GUID='102425' Path="/Values">
+            <Attackable>
+                <MaximumHitPoints>7000</MaximumHitPoints>
+                <ArmorType>HeavyArmor</ArmorType>
+            </Attackable>
+            <Attacker>
+                <BasicAttackType>Warship</BasicAttackType>
+                <BaseDamage>300</BaseDamage>                <!-- 100 -->
+                <ReloadTime>40</ReloadTime>                <!-- 29 -->
+                <AttackRange>44</AttackRange>                <!-- 42 -->
+            </Attacker>
+            <ShipMaintenance>
+                <Maintenance>1250</Maintenance>
+            </ShipMaintenance>
+        </ModOp>
+
         <!-- Monitor -->
         <ModOp GUID='100443' Path="/Values" Type="merge">
             <Standard>
@@ -380,14 +431,58 @@
                 <MaximumHitPoints>4000</MaximumHitPoints>
             </Attackable>
             <Attacker>
-                <AttackRange>45</AttackRange>
+                <BaseDamage>100</BaseDamage>
                 <ReloadTime>25</ReloadTime>
+                <AttackRange>42</AttackRange>
                 <ProjectileAsset>1742100600</ProjectileAsset>
-                <BaseDamage>98</BaseDamage>
             </Attacker>
             <ShipMaintenance>
                 <Maintenance>700</Maintenance>
             </ShipMaintenance>
+        </ModOp>
+
+        <!-- Pirate Monitor -->
+        <ModOp Type="merge" GUID='102422,102432' Path="/Values/">
+            <Walking>
+                <ForwardSpeed>4.8</ForwardSpeed>                <!-- 5.3 -->
+            </Walking>
+            <Attackable>
+                <MaximumHitPoints>4250</MaximumHitPoints>                <!-- 2500 -->
+                <SelfHealPerHealTick>3</SelfHealPerHealTick>                <!-- 1.389 -->
+                <SelfHealPausedTimeIfAttacked>30000</SelfHealPausedTimeIfAttacked>                <!-- 60000 -->
+            </Attackable>
+            <Attacker>
+                <BaseDamage>105</BaseDamage>                <!-- 93 -->
+                <AttackRange>45</AttackRange>                <!-- 48 -->
+            </Attacker>
+            <Craftable>
+                <CraftingTime>360000</CraftingTime>                <!-- 720000 -->
+            </Craftable>
+        </ModOp>
+
+        <!-- Pyrphorian Monitor -->
+        <ModOp Type="merge" GUID='102423' Path="/Values/">
+            <Walking>
+                <ForwardSpeed>4.8</ForwardSpeed>                <!-- 5.3 -->
+            </Walking>
+            <Attackable>
+                <MaximumHitPoints>4250</MaximumHitPoints>                <!-- 2500 -->
+                <SelfHealPerHealTick>3</SelfHealPerHealTick>                <!-- 1.389 -->
+                <SelfHealPausedTimeIfAttacked>30000</SelfHealPausedTimeIfAttacked>                <!-- 60000 -->
+            </Attackable>
+            <Attacker>
+                <BaseDamage>42</BaseDamage>
+                <AttackRange>28</AttackRange>
+                <Turrets>
+                    <Item>
+                        <TurnSpan>320</TurnSpan>
+                        <TurretCfg>data/graphics/campaign/vehicle/pyro_ship_02/pyro_ship_02_turret_front.cfg</TurretCfg>
+                    </Item>
+                </Turrets>
+            </Attacker>
+            <Craftable>
+                <CraftingTime>360000</CraftingTime>                <!-- 720000 -->
+            </Craftable>
         </ModOp>
 
         <!-- Flak Monitor -->
@@ -424,9 +519,9 @@
                 <MaximumHitPoints>4000</MaximumHitPoints>
             </Attackable>
             <Attacker>
-                <AttackRange>15</AttackRange>
-                <ReloadTime>15</ReloadTime>
                 <BaseDamage>40</BaseDamage>
+                <ReloadTime>15</ReloadTime>
+                <AttackRange>15</AttackRange>
             </Attacker>
             <ShipMaintenance>
                 <Maintenance>800</Maintenance>
@@ -434,16 +529,14 @@
         </ModOp>
         <ModOp Type="replace" GUID='1892' Path="/Values/Projectile/Effectivities/Item[GUID='1398']">
             <Item>
-                <GUID>1398</GUID>
-                <!--all Flamable Ships -->
-                <Factor>1.4</Factor>
+                <GUID>1398</GUID>                <!--all Flamable Ships -->
+                <Factor>1.4</Factor>                <!-- 5.1 -->
             </Item>
         </ModOp>
         <ModOp Type="replace" GUID='1538' Path="/Values/Projectile/Effectivities/Item[GUID='1398']">
             <Item>
-                <GUID>1398</GUID>
-                <!--all Flamable Ships -->
-                <Factor>1.8</Factor>
+                <GUID>1398</GUID>                <!--all Flamable Ships -->
+                <Factor>1.8</Factor>                <!-- 6 -->
             </Item>
         </ModOp>
 
@@ -522,14 +615,21 @@
         <MaxTradeActionsPerStation>8</MaxTradeActionsPerStation>
     </ModOp>
 
+    <!-- Traderoute Settings -->
+    <ModOp Type="replace" GUID='140011' Path="/Values/TradeRouteFeature/TransportationTypes/Normal/MaxGoodTransferAmount" Condition="/Values/TradeRouteFeature/TransportationTypes/Normal[MaxGoodTransferAmount&lt;200]">
+        <MaxGoodTransferAmount>200</MaxGoodTransferAmount>
+    </ModOp>
+    <ModOp Type="replace" GUID='140011' Path="/Values/TradeRouteFeature/TransportationTypes/Normal/DefaultGoodTransferAmount" Condition="/Values/TradeRouteFeature/TransportationTypes/Normal[DefaultGoodTransferAmount&lt;200]">
+        <DefaultGoodTransferAmount>200</DefaultGoodTransferAmount>
+    </ModOp>
+
     <!-- Airships can attack seamines and bomb buildings -->
-    <ModOp Type="merge" GUID="140999" Path="/Values/MilitaryFeature/CanAttackTable/">
-        <HunterAirship>
-            <CanDamageUntargeted>Seamine;</CanDamageUntargeted>
-        </HunterAirship>
-        <BombardierAirship>
-            <CanDamageUntargeted>Seamine;Ship;HarbourBuilding;IslandBuilding</CanDamageUntargeted>
-        </BombardierAirship>
+    <ModOp Type="replace" GUID="140999" Path="/Values/MilitaryFeature/CanAttackTable/BombardierAirship/CanDamageUntargeted">
+        <CanDamageUntargeted>Seamine;Ship;HarbourBuilding;IslandBuilding</CanDamageUntargeted>
+    </ModOp>
+    <!-- Flak can not attack other things -->
+    <ModOp Type="replace" GUID='140999' Path="/Values/MilitaryFeature/CanAttackTable/Flak/CanDamageUntargeted">
+        <CanDamageUntargeted>Airship</CanDamageUntargeted>
     </ModOp>
 
 </ModOps>
