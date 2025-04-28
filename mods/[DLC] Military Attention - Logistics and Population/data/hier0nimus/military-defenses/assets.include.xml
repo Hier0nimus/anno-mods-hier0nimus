@@ -379,7 +379,7 @@
             </Item>
             <Item>
               <Product>1742100318</Product>              <!-- EN Soldiers Workforce -->
-              <Amount>20</Amount>
+              <Amount>75</Amount>
             </Item>
           </Maintenances>
           <ConsumerPriority>1</ConsumerPriority>
@@ -1370,5 +1370,445 @@
     <!-- END Armor Pierce Tower (EN) - Military Defenses -->
   </ModOp>
   <!-- END Military Defenses -->
+
+  <!-- START New Military Defense - Torpedo Launcher -->
+
+  <!-- START Torpedo Launcher (OW) -->
+  <ModOp GUID='625' Type="addNextSibling">
+    <Asset>
+      <Template>HarborBuildingAttacker</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100692</GUID>
+          <Name>Coastal Torpedo Launcher (OW)</Name>
+          <IconFilename>data/graphics/icons/icon_torpedo_launcher.png</IconFilename>
+          <InfoDescription>1742100693</InfoDescription>          <!--Fire tower-->
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11150</BuildingCategoryName>          <!--Harbor Building-->
+          <AssociatedRegions>Moderate</AssociatedRegions>
+        </Building>
+        <Blocking>
+          <GroundDecalAsset>100446</GroundDecalAsset>          <!--Quay System Base-->
+          <GroundDecalInvisible>101008</GroundDecalInvisible>          <!--Quay System Base Invisible-->
+          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+          <RemoveGrass>0</RemoveGrass>
+        </Blocking>
+        <Mesh/>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/special/harbor_04/harbor_04.cfg</Filename>
+            </Item>
+          </Variations>
+          <Skins>
+            <DefaultSkinName>1742100692</DefaultSkinName>
+            <DefaultSkinDescription>23853</DefaultSkinDescription>            <!--ChangeBuildingSkin_toDefaultSkinDesc-->
+            <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>            <!--Classic-->
+          </Skins>
+        </Object>
+        <AmbientMoodProvider/>
+        <Constructable/>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+        </Selection>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Coastal Torpedo Launcher</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>56105</LineID>
+        </Text>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!--Money-->
+              <Amount>20000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!--timber-->
+              <Amount>35</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!--bricks-->
+              <Amount>80</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!--beams-->
+              <Amount>40</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010202</Ingredient>              <!--concrete-->
+              <Amount>75</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010223</Ingredient>              <!--advanced weapons-->
+              <Amount>15</Amount>
+            </Item>
+          </Costs>
+          <InfluenceCostType>DefenseBuilding</InfluenceCostType>
+          <InfluenceCostPoints>12</InfluenceCostPoints>
+        </Cost>
+        <Attackable>
+          <AttackableType>HarbourBuilding</AttackableType>
+          <MaximumHitPoints>3400</MaximumHitPoints>
+          <DefenseByAIFactor>301</DefenseByAIFactor>
+          <MilitaryDefensePoints>8</MilitaryDefensePoints>
+          <MoralePower>65</MoralePower>
+          <IslandWarFlag>102307</IslandWarFlag>          <!--island_war_flag2-->
+          <ExplosionEffects>
+            <Item>
+              <ExplosionEffectFilePath>data/graphics/effects/military/explosions/harbor_generic_xpl_02.cfg</ExplosionEffectFilePath>
+            </Item>
+          </ExplosionEffects>
+          <ExplosionEffectsMin>1</ExplosionEffectsMin>
+          <ExplosionEffectsMax>1</ExplosionEffectsMax>
+          <SelfHealPerHealTick>5</SelfHealPerHealTick>
+        </Attackable>
+        <Attacker>
+          <BasicAttackType>Torpedo</BasicAttackType>
+          <BaseDamage>1850</BaseDamage>
+          <ReloadTime>200</ReloadTime>
+          <AttackRange>125</AttackRange>
+          <LineOfSightRange>140</LineOfSightRange>
+          <Turrets>
+            <Item>
+              <TurnSpan>360</TurnSpan>
+              <TurretCfg>data\graphics\buildings\special\harbor_torpedo\torpedolauncher.cfg</TurretCfg>
+            </Item>
+          </Turrets>
+          <ProjectileAsset>1742100694</ProjectileAsset>
+          <EmitProjectileTimeAfterStartAnimation>0.3</EmitProjectileTimeAfterStartAnimation>
+          <AccuracyBase>1</AccuracyBase>
+          <AccuracyIncreaseOverDistance>100</AccuracyIncreaseOverDistance>
+          <AccuracyByDistance>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>0</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>HarborBuildingAttacker</TemplateName>
+                    <Index>0</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+            </Item>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>1</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>HarborBuildingAttacker</TemplateName>
+                    <Index>1</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+              <AccuracyByDistancePair>
+                <CorrespondingAccuracy>100</CorrespondingAccuracy>
+              </AccuracyByDistancePair>
+            </Item>
+          </AccuracyByDistance>
+        </Attacker>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>              <!--Money-->
+              <Amount>450</Amount>
+              <InactiveAmount>200</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100005</Product>              <!-- Soldiers Workforce -->
+              <Amount>50</Amount>
+            </Item>
+          </Maintenances>
+          <ConsumerPriority>1</ConsumerPriority>
+        </Maintenance>
+        <Locked/>
+        <DelayedConstruction/>
+        <Pausable/>
+        <Infolayer/>
+        <SoundEmitter>
+          <DestroySounds>
+            <Item>
+              <Sound>9818756</Sound>              <!--wwe_sfx_aui_delete-->
+            </Item>
+          </DestroySounds>
+          <ConstructionSounds>
+            <BuildSuccessful>
+              <Item>
+                <Sound>206544</Sound>                <!--wwe_sfx_aui_bld_place_waterbuilding-->
+              </Item>
+            </BuildSuccessful>
+            <BuildFailed>
+              <Item>
+                <Sound>9818387</Sound>                <!--wwe_sfx_aui_deny-->
+              </Item>
+            </BuildFailed>
+            <BuildMoveStart>
+              <Item>
+                <Sound>9818755</Sound>                <!--wwe_sfx_aui_move-->
+              </Item>
+            </BuildMoveStart>
+            <BuildMoveEnd>
+              <Item>
+                <Sound>200141</Sound>                <!--wwe_sfx_aui_move_end-->
+              </Item>
+            </BuildMoveEnd>
+          </ConstructionSounds>
+          <IncidentSounds>
+            <InfectedFire>
+              <Item>
+                <Sound>214659</Sound>                <!--wwe_sfx_bld_inc_burn-->
+              </Item>
+            </InfectedFire>
+          </IncidentSounds>
+          <BuildingRuined>
+            <Item>
+              <Sound>203848</Sound>              <!--wwe_sfx_aui_destroy_big-->
+            </Item>
+          </BuildingRuined>
+          <BuildingRepaired>
+            <Item>
+              <Sound>203866</Sound>              <!--wwe_sfx_aui_bld_3d_renovate-->
+            </Item>
+          </BuildingRepaired>
+        </SoundEmitter>
+        <CommandQueue/>
+        <Culture>
+          <Attractiveness>0</Attractiveness>
+        </Culture>
+        <UpgradeList>
+          <DefaultBuff>1742100262</DefaultBuff>          <!-- Bombs Ammunition Debuff - Buff -->
+        </UpgradeList>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END Torpedo Launcher (OW) -->
+
+  <!-- START Torpedo Launcher (AR) -->
+  <ModOp GUID='1742100220' Type="addNextSibling">
+    <Asset>
+      <BaseAssetGUID>1742100692</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742100696</GUID>
+          <Name>Coastal Torpedo Launcher (AR)</Name>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11150</BuildingCategoryName>
+          <AssociatedRegions>Arctic</AssociatedRegions>
+        </Building>
+        <Blocking>
+          <GroundDecalAsset>114826</GroundDecalAsset>
+          <GroundDecalInvisible>113478</GroundDecalInvisible>
+          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+          <RemoveGrass>0</RemoveGrass>
+        </Blocking>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>450</Amount>
+              <InactiveAmount>200</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100309</Product>              <!-- Arctic Soldiers Workforce -->
+              <Amount>50</Amount>
+            </Item>
+          </Maintenances>
+          <ConsumerPriority>1</ConsumerPriority>
+        </Maintenance>
+      </Values>
+    </Asset>
+    <!-- END Torpedo Launcher (AR) -->
+  </ModOp>
+
+  <!-- START Torpedo Launcher (NW) -->
+  <ModOp GUID='1742100220' Type="addNextSibling">
+    <Asset>
+      <BaseAssetGUID>1742100692</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742100695</GUID>
+          <Name>Coastal Torpedo Launcher (NW)</Name>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11150</BuildingCategoryName>
+          <AssociatedRegions>Colony01</AssociatedRegions>
+        </Building>
+        <Blocking>
+          <GroundDecalAsset>102460</GroundDecalAsset>
+          <GroundDecalInvisible>102459</GroundDecalInvisible>
+          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+          <RemoveGrass>0</RemoveGrass>
+        </Blocking>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/special/harbor_04_colony01/harbor_04_colony01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>450</Amount>
+              <InactiveAmount>200</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100317</Product>              <!-- NW Soldiers Workforce -->
+              <Amount>50</Amount>
+            </Item>
+          </Maintenances>
+          <ConsumerPriority>1</ConsumerPriority>
+        </Maintenance>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END Torpedo Launcher (NW) -->
+
+  <!-- START Torpedo Launcher (EN) -->
+  <ModOp GUID='1742100220' Type="addNextSibling">
+    <Asset>
+      <BaseAssetGUID>1742100692</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742100697</GUID>
+          <Name>Coastal Torpedo Launcher (EN)</Name>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11150</BuildingCategoryName>
+          <AssociatedRegions>Africa</AssociatedRegions>
+        </Building>
+        <Blocking>
+          <GroundDecalAsset>117730</GroundDecalAsset>
+          <GroundDecalInvisible>117731</GroundDecalInvisible>
+          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+          <RemoveGrass>0</RemoveGrass>
+        </Blocking>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/dlc06/graphics/buildings/special/harbor_04_colony02/harbor_04_colony02.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <Amount>20000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>114356</Ingredient>
+              <Amount>35</Amount>
+            </Item>
+            <Item>
+              <Ingredient>114402</Ingredient>
+              <Amount>80</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>
+              <Amount>40</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010202</Ingredient>
+              <Amount>75</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010223</Ingredient>
+              <Amount>15</Amount>
+            </Item>
+          </Costs>
+          <InfluenceCostType>DefenseBuilding</InfluenceCostType>
+          <InfluenceCostPoints>12</InfluenceCostPoints>
+        </Cost>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>450</Amount>
+              <InactiveAmount>200</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100318</Product>              <!-- EN Soldiers Workforce -->
+              <Amount>50</Amount>
+            </Item>
+          </Maintenances>
+          <ConsumerPriority>1</ConsumerPriority>
+        </Maintenance>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END Torpedo Launcher (EN) -->
+
+  <ModOp GUID='100459' Type="addNextSibling">
+    <Asset>
+      <Template>ExplodingProjectile</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100694</GUID>
+          <Name>Torpedo Fast/LowDamage/LongRange</Name>
+        </Standard>
+        <Projectile>
+          <ProjectileType>Arc</ProjectileType>
+          <ShotAngle>1</ShotAngle>
+          <ShotHeight>0.5</ShotHeight>
+          <ProjectileSpeed>18</ProjectileSpeed>
+          <DamageType>Torpedo</DamageType>
+          <Effectivities>
+            <Item>
+              <GUID>191508</GUID>
+              <Factor>0</Factor>
+            </Item>
+          </Effectivities>
+        </Projectile>
+        <Mesh />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/effects/military/projectiles/projectile_torpedo_defense.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Exploder>
+          <InnerDamageRadius>1</InnerDamageRadius>
+          <InnerDamage>1850</InnerDamage>
+          <DebrisForceY>0</DebrisForceY>
+          <DebrisCount>0</DebrisCount>
+          <OuterDamageRadius>1</OuterDamageRadius>
+          <MinimumDamage>1850</MinimumDamage>
+        </Exploder>
+        <SoundEmitter>
+          <ProjectileSounds>
+            <ProjectileLaunch>
+              <Item />
+              <Item>
+                <Sound>235861</Sound>
+              </Item>
+            </ProjectileLaunch>
+            <ProjectileImpact>
+              <Item />
+              <Item>
+                <Sound>235860</Sound>
+              </Item>
+            </ProjectileImpact>
+          </ProjectileSounds>
+        </SoundEmitter>
+        <UpgradeList />
+        <ProjectileIncident />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- END New Military Defense - Torpedo Launcher -->
 
 </ModOps>
