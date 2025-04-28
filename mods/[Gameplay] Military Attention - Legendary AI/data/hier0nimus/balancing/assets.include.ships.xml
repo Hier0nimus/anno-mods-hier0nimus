@@ -457,13 +457,12 @@ Balancing - Ships
 
   <Group Condition="!#military_attention_ships">
     <!-- Airships can attack seamines and bomb buildings -->
-    <ModOp Type="merge" GUID="140999" Path="/Values/MilitaryFeature/CanAttackTable/">
-      <HunterAirship>
-        <CanDamageUntargeted>Seamine</CanDamageUntargeted>
-      </HunterAirship>
-      <BombardierAirship>
-        <CanDamageUntargeted>Seamine;Ship;HarbourBuilding;IslandBuilding</CanDamageUntargeted>
-      </BombardierAirship>
+    <ModOp Type="replace" GUID="140999" Path="/Values/MilitaryFeature/CanAttackTable/BombardierAirship/CanDamageUntargeted">
+      <CanDamageUntargeted>Seamine;Ship;HarbourBuilding;IslandBuilding</CanDamageUntargeted>
+    </ModOp>
+    <!-- Flak can not attack other things -->
+    <ModOp Type="replace" GUID='140999' Path="/Values/MilitaryFeature/CanAttackTable/Flak/CanDamageUntargeted">
+      <CanDamageUntargeted>Airship</CanDamageUntargeted>
     </ModOp>
   </Group>
 
