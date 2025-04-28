@@ -17,7 +17,7 @@ You will need ALL DLC's to play this mod. There are new goods in every region fr
 
 Explore the world of musical instruments with new production chains and a lategame Music hall to boost your New world population.
 
-Current version 1.15 (30/12/2024)
+Current version 1.17 (27/04/2025)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/music-to-my-ears
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
@@ -25,7 +25,7 @@ Current version 1.15 (30/12/2024)
 
 Centered around military infrastructure and adding new military residence tiers for all regions with a focus on the Old World.
 
-Current version 1.19 (09/03/2025)
+Current version 1.22 (28/04/2025)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/military-attention
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
@@ -33,7 +33,7 @@ Current version 1.19 (09/03/2025)
 
 Additional mod for Military Attention that focuses on new ships and ship balancing. Can be used as a standalone.
 
-Current version 1.24 (09/03/2025)
+Current version 1.26 (28/04/2025)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/military-attention-ships
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
@@ -41,7 +41,7 @@ Current version 1.24 (09/03/2025)
 
 Additional mod for Military Attention that focuses on rebalancing the pirates and adding additional pirates mechanics like a new population.
 
-Current version 1.8 (09/03/2025)
+Current version 1.9 (28/04/2025)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/military-attention-pirates
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
@@ -49,16 +49,8 @@ Current version 1.8 (09/03/2025)
 
 Additional mod for Military Attention that focuses on rebalancing the AI behaviour and strength.
 
-Current version 1.3.1 (09/03/2025)
+Current version 1.5 (28/04/2025)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/military-attention-legendary-ai
-- Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
-
-## Military Attention - Airships Attack Everything
-
-Additional mod for Military Attention that adds a small change to airships. They will now be able to attack and bomb everything. Do watch out with using this mod! Read the description to make a thoughtful decision.
-
-Current version 1.0 (13/12/2024)
-- Download on Mod.io: https://mod.io/g/anno-1800/m/military-attention-airships-attack-everything
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
 ## Military Attention - No Vanilla Changes
@@ -71,9 +63,9 @@ Current version 1.0 (14/07/2024)
 
 ## Almost 100 hot air balloons
 
-A mod that adds 3 new airships in the form of hot air balloons that are build in the normal sailing shipyard.
+A mod that adds 4 new airships in the form of hot air balloons that are build in the normal sailing shipyard.
 
-Current version 1.12 (25/11/2024)
+Current version 1.13 (27/04/2025)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/almost-100-hot-air-balloons
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
@@ -83,6 +75,14 @@ Basic mod that removes the annoying notifications from AI where they ask for an 
 
 Current version 1.1 (29/01/2024)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/ai-not-asking-for-alliances
+- Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
+
+## Airships Attack Everything
+
+Additional mod that adds a small change to airships. They will now be able to attack and bomb everything. Do watch out with using this mod! Read the description to make a thoughtful decision.
+
+Current version 1.2 (27/04/2024)
+- Download on Mod.io: https://mod.io/g/anno-1800/m/airships-attack-everything
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
 ## Open Pit Mines
