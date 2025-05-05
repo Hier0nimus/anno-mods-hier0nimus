@@ -380,4 +380,62 @@ Compatibility
         <!-- END COMPATIBILITY SIU SHIP CAPACITY -->
     </Group>
 
+    <Group Condition="#khobs_new_world_shipyard">
+        <!-- START COMPATIBILITY NEW WORLD STEAM SHIPYARD -->
+        <!-- START ADDING SHIPS TO NEW WORLD STEAM SHIPYARD -->
+        <ModOp Type="addPrevSibling" GUID='2143505003' Path="/Values/Shipyard/AssemblyOptions/Item[Vehicle='1010062']">
+            <Item>
+                <Vehicle>1742100581</Vehicle>                <!-- Small Cargo Ship -->
+            </Item>
+            <Item>
+                <Vehicle>1742100591</Vehicle>                <!-- Auxiliary Ship -->
+            </Item>
+        </ModOp>
+        <ModOp Type="addPrevSibling" GUID='2143505003' Path="/Values/Shipyard/AssemblyOptions/Item[Vehicle='100442']">
+            <Item>
+                <Vehicle>1742100615</Vehicle>                <!-- Ironclad Cruiser -->
+            </Item>
+            <Item>
+                <Vehicle>1742100583</Vehicle>                <!-- Small Battle Cruiser -->
+            </Item>
+        </ModOp>
+        <ModOp Type="addPrevSibling" GUID='2143505003' Path="/Values/Shipyard/AssemblyOptions/Item[Vehicle='100853']">
+            <Item>
+                <Vehicle>1742100624</Vehicle>                <!-- Small Oil Tanker -->
+            </Item>
+        </ModOp>
+        <ModOp Type="add" GUID='2143505003' Path="/Values/Shipyard/AssemblyOptions/">
+            <Item>
+                <Vehicle>1742100587</Vehicle>                <!-- Torpedo Boat -->
+            </Item>
+            <Item>
+                <Vehicle>1742100589</Vehicle>                <!-- Corvette -->
+            </Item>
+            <Item>
+                <Vehicle>1742100609</Vehicle>                <!-- Flak Ironclad -->
+            </Item>
+            <Item>
+                <Vehicle>1742100625</Vehicle>                <!-- Large Oil Tanker -->
+            </Item>
+            <Item>
+                <Vehicle>1742100585</Vehicle>                <!-- Heavy Battle Cruiser -->
+            </Item>
+            <Item>
+                <Vehicle>1742100690</Vehicle>                <!-- Heavy Battle Cruiser (AI) -->
+            </Item>
+        </ModOp>
+
+        <Group Condition="#shared_ship_bulk_freighter">
+            <!-- START - Added To Shipyard -->
+            <ModOp Type="add" GUID='2143505003' Path="/Values/Shipyard/AssemblyOptions">
+                <Item>
+                    <Vehicle>14740009</Vehicle>
+                </Item>
+            </ModOp>
+            <!-- END - Added To Shipyard -->
+        </Group>
+        <!-- END ADDING SHIPS TO STEAM SHIPYARD -->
+        <!-- END COMPATIBILITY NEW WORLD STEAM SHIPYARD -->
+    </Group>
+
 </ModOps>
