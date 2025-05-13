@@ -1,6 +1,6 @@
 <!-- 
   
-  [Shared] Shared Goods - Gunpowder - v1.5
+  [Shared] Shared Goods - Gunpowder - v1.8
   Created by Hier0nimus
   Enjoy!
 
@@ -11,6 +11,9 @@
   1742100294 - Gunpowder - Product - Description
   1742100291 - Gunpowder Factory - Building
   1742100292 - Gunpowder Factory - Building - Description
+
+  1742100650 - Gunpowder Factory (NH) - Building
+  1742100698 - Gunpowder (NH) - ProductionChain
 
 -->
 
@@ -396,5 +399,174 @@
     </Item>
   </ModOp>
   <!-- END - ADD BUILDING TO ALL HEAVY,ALL,BOOSTED BY ELECTRICITY,ALL EXCEPT POWER PLANT,ALL WEAPON,ALL IRONWORKS AND FOUNDRIES PRODUCTION,ALL MAINTENANCE -->
+
+  <!-- START - COMPATIBILITY FOR NEW HORIZONS -->
+  <Group Condition="#new_horizons_buildmenu">
+
+    <!-- START - ADD GOODS TO OTHER PRODUCTLIST - INTERMEDIATE GOODS NH -->
+    <ModOp Type="add" GUID='15504018' Path="/Values/ProductList/List">
+      <Item>
+        <Product>1742100293</Product>        <!-- Gunpowder - Product -->
+      </Item>
+    </ModOp>
+    <!-- END - ADD GOODS TO OTHER PRODUCTLIST - INTERMEDIATE GOODS NH -->
+
+    <!-- START BUILDING - GUNPOWDER FACTORY (NH) -->
+    <ModOp Type="addNextSibling" GUID='1742100291'>
+      <Asset>
+        <BaseAssetGUID>1742100291</BaseAssetGUID>
+        <Values>
+          <Standard>
+            <GUID>1742100650</GUID>
+            <Name>Gunpowder Factory (NH)</Name>
+            <InfoDescription>1414018171</InfoDescription>
+          </Standard>
+          <Building>
+            <BuildingCategoryName>1414018301</BuildingCategoryName>
+            <AssociatedRegions>Mod2</AssociatedRegions>
+          </Building>
+          <Cost>
+            <Costs>
+              <Item>
+                <Ingredient>1010017</Ingredient>                <!-- Coins - Product -->
+                <Amount>5000</Amount>
+              </Item>
+              <Item>
+                <Ingredient>1010196</Ingredient>                <!-- Timber - Product -->
+                <Amount>20</Amount>
+              </Item>
+              <Item>
+                <Ingredient>1010205</Ingredient>                <!-- Bricks - Product -->
+                <Amount>15</Amount>
+              </Item>
+              <Item>
+                <Ingredient>1010218</Ingredient>                <!-- Steel Beams - Product -->
+                <Amount>12</Amount>
+              </Item>
+              <Item>
+                <Ingredient>1010207</Ingredient>                <!-- Windows - Product -->
+                <Amount>8</Amount>
+              </Item>
+            </Costs>
+          </Cost>
+          <Selection>
+            <ParticipantMessageArcheType>Mod1</ParticipantMessageArcheType>
+            <Colors>
+              <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+            </Colors>
+          </Selection>
+          <FactoryBase>
+            <FactoryInputs>
+              <Item>
+                <Product>1010226</Product>                <!-- Coal - Product -->
+                <Amount>1</Amount>
+                <StorageAmount>10</StorageAmount>
+              </Item>
+              <Item>
+                <Product>1010232</Product>                <!-- Saltpetre - Product -->
+                <Amount>1</Amount>
+                <StorageAmount>10</StorageAmount>
+              </Item>
+            </FactoryInputs>
+            <FactoryOutputs>
+              <Item>
+                <Product>1742100293</Product>                <!-- Gunpowder - Product -->
+                <Amount>1</Amount>
+                <StorageAmount>14</StorageAmount>
+              </Item>
+            </FactoryOutputs>
+            <CycleTime>15</CycleTime>
+            <IsMainFactory>0</IsMainFactory>
+          </FactoryBase>
+          <Maintenance>
+            <Maintenances>
+              <Item>
+                <Product>1010017</Product>
+                <Amount>200</Amount>
+                <InactiveAmount>100</InactiveAmount>
+              </Item>
+              <Item>
+                <Product>15100003</Product>                <!-- Gongren Workforce -->
+                <Amount>50</Amount>
+              </Item>
+            </Maintenances>
+          </Maintenance>
+          <Electrifiable />
+          <Industrializable>
+            <BoostedByIndustrialization>0</BoostedByIndustrialization>
+          </Industrializable>
+          <Pausable>
+            <IsHaciendaDependent>1</IsHaciendaDependent>
+          </Pausable>
+        </Values>
+      </Asset>
+    </ModOp>
+    <!-- END BUILDING - GUNPOWDER FACTORY (NH) -->
+
+    <!-- START - ADD PRODUCTION BUILDING TO WORKFORCE MENU -->
+    <ModOp Type="add" GUID="25000087" Path="/Values/WorkforceMenu/BoostableFactories">
+      <Item>
+        <Factory>1742100650</Factory>
+      </Item>
+    </ModOp>
+    <!-- END - ADD PRODUCTION BUILDING TO WORKFORCE MENU -->
+
+    <!-- START - ADD BUILDING TO POOLS -->
+    <ModOp GUID='193771,6000018,193875,193856,25599,192436,190842,368' Type="add" Path="Values/ItemEffectTargetPool/EffectTargetGUIDs/">
+      <Item>
+        <GUID>1742100650</GUID>
+      </Item>
+    </ModOp>
+
+    <ModOp Type="add" GUID="14443032" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs" Condition="@1445609">
+      <Item>
+        <GUID>1742100650</GUID>
+      </Item>
+    </ModOp>
+
+    <ModOp Type="add" GUID="133700515" Path="/Values/FeedbackBuildingGroup/Buildings" Condition="@133700515">
+      <Item>
+        <Building>1742100650</Building>
+      </Item>
+    </ModOp>
+
+    <!-- START PRODUCTION CHAIN - GUNPOWDER (NH) -->
+    <ModOp Type="addNextSibling" GUID='500091'>
+      <Asset>
+        <Template>ProductionChain</Template>
+        <Values>
+          <Standard>
+            <GUID>1742100698</GUID>
+            <Name>Gunpowder</Name>
+            <IconFilename>data/graphics/icons/icon_gunpowder.png</IconFilename>
+          </Standard>
+          <ProductionChain>
+            <Building>1742100650</Building>            <!-- Gunpowder Factory - Building -->
+            <Tier1>
+              <Item>
+                <Building>1441328</Building>                <!-- Charcoal Kiln (NH) - Building -->
+              </Item>
+              <Item>
+                <Building>1010310</Building>                <!--coastal_02 (Niter Coast Building)-->
+              </Item>
+            </Tier1>
+          </ProductionChain>
+          <Locked />
+          <Text />
+        </Values>
+      </Asset>
+    </ModOp>
+    <!-- END PRODUCTION CHAIN - GUNPOWDER (NH) -->
+
+    <!-- START ADD TO NH BUILDING MENU -->
+    <ModOp Type="addPrevSibling" GUID='1445610' Path="/Values/ConstructionCategory/BuildingList/Item[Building='1445049']">
+      <Item>
+        <Building>1742100698</Building>        <!-- Gunpowder (NH) - Chain -->
+      </Item>
+    </ModOp>
+    <!-- END ADD TO NH BUILDING MENU -->
+
+  </Group>
+  <!-- END - COMPATIBILITY FOR NEW HORIZONS -->
 
 </ModOps>
