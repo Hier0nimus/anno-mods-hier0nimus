@@ -1,6 +1,6 @@
 <!-- 
   
-  [Shared] Shared Goods - Clean Water - v1.3
+  [Shared] Shared Goods - Clean Water - v1.4
   Created by Hier0nimus
   Enjoy!
 
@@ -12,6 +12,7 @@
   1742100240 - Clean Water Pump (OW) - Building
   1742100241 - Clean Water Pump - Building - Description
   1742100244 - Clean Water Pump (NW) - Building
+  1742101053 - Clean Water Pump (NH) - Building
   1742100511 - All Clean Water Pumps - ItemEffectTargetPool
 
 -->
@@ -317,6 +318,55 @@
 
   <!-- ****************** END BUILDING - CLEAN WATER PUMP (NW) - Building ******************  -->
 
+  <!-- ****************** START BUILDING - CLEAN WATER PUMP (NH) - Building ******************  -->
+  <ModOp Type="addNextSibling" GUID='1742100240'>
+    <Asset>
+      <BaseAssetGUID>1742100240</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742101053</GUID>
+          <Name>Clean Water Pump (NH)</Name>
+        </Standard>
+        <Building>
+          <AssociatedRegions>Mod2</AssociatedRegions>
+        </Building>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/production/water_pump/water_pump_nh_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Selection>
+          <ParticipantMessageArcheType>Resident_tier05_atWork</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>20</Amount>
+              <InactiveAmount>10</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>15100002</Product>              <!-- Horai Tier 1 Workforce -->
+              <Amount>5</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Electrifiable />
+        <Industrializable>
+          <BoostedByIndustrialization>0</BoostedByIndustrialization>
+          <MandatoryIndustrialization>0</MandatoryIndustrialization>
+        </Industrializable>
+        <Pausable/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- ****************** END BUILDING - CLEAN WATER PUMP (NH) - Building ******************  -->
+
   <!-- START BUILDING - CLEAN WATER production DUMMY - Building -->
   <ModOp Type="addNextSibling" GUID='1010284'>
     <Asset>
@@ -438,6 +488,12 @@
     <Item>
       <Factory>1742100240</Factory>
     </Item>
+    <Item>
+      <Factory>1742100244</Factory>
+    </Item>
+    <Item>
+      <Factory>1742101053</Factory>
+    </Item>
   </ModOp>
   <!-- END - ADD PRODUCTION BUILDINGS TO WORKFORCE MENU -->
 
@@ -448,6 +504,9 @@
     </Item>
     <Item>
       <GUID>1742100244</GUID>
+    </Item>
+    <Item>
+      <GUID>1742101053</GUID>
     </Item>
   </ModOp>
   <!-- END - ADD BUILDING TO ALL HEAVY,ALL,BOOSTED BY ELECTRICITY,ALL EXCEPT POWER PLANT,ALL WEAPON,ALL IRONWORKS AND FOUNDRIES PRODUCTION -->
@@ -469,6 +528,9 @@
             </Item>
             <Item>
               <GUID>1742100244</GUID>
+            </Item>
+            <Item>
+              <GUID>1742101053</GUID>
             </Item>
           </EffectTargetGUIDs>
         </ItemEffectTargetPool>
