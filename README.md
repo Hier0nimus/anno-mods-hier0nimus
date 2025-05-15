@@ -25,7 +25,7 @@ Current version 1.17 (27/04/2025)
 
 Centered around military infrastructure and adding new military residence tiers for all regions with a focus on the Old World.
 
-Current version 1.22 (28/04/2025)
+Current version 1.24 (15/05/2025)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/military-attention
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
@@ -33,7 +33,7 @@ Current version 1.22 (28/04/2025)
 
 Additional mod for Military Attention that focuses on new ships and ship balancing. Can be used as a standalone.
 
-Current version 1.26 (28/04/2025)
+Current version 1.28 (05/05/2025)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/military-attention-ships
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
@@ -41,7 +41,7 @@ Current version 1.26 (28/04/2025)
 
 Additional mod for Military Attention that focuses on rebalancing the pirates and adding additional pirates mechanics like a new population.
 
-Current version 1.9 (28/04/2025)
+Current version 1.10 (05/05/2025)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/military-attention-pirates
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
@@ -89,7 +89,7 @@ Current version 1.2 (27/04/2024)
 
 Mine coal and iron resources right from the ground in the Old World and New World.
 
-Current version 1.0 (2/1/2025)
+Current version 1.2 (10/05/2025)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/open-pit-mines
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
