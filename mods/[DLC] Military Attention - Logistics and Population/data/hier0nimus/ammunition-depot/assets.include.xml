@@ -3912,5 +3912,618 @@
   </ModOp>
   <!-- END BUILDING - LARGE AMMUNITION DEPOT - ALL AMMUNITION (EN) -->
 
+  <!-- START MEDIUM AMMUNITION DEPOT - EXPLOSIVE AMMUNITION (OW) -->
+  <ModOp Type="addNextSibling" GUID='1010284'>
+    <Asset>
+      <Template>BuffFactory</Template>
+      <Values>
+        <Standard>
+          <GUID>1742101056</GUID>
+          <Name>Medium Ammunition Depot (OW)</Name>
+          <IconFilename>data/graphics/icons/icon_ammunition_depot_medium.png</IconFilename>
+          <InfoDescription>1742101061</InfoDescription>
+        </Standard>
+        <Text />
+        <Building>
+          <BuildingCategoryName>11150</BuildingCategoryName>
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <AssociatedRegions>Moderate</AssociatedRegions>
+          <TerrainType>Water_Including_Coast</TerrainType>
+        </Building>
+        <Blocking>
+          <GroundDecalAsset>100446</GroundDecalAsset>
+          <GroundDecalInvisible>101008</GroundDecalInvisible>
+          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+        </Blocking>
+        <Mesh />
+        <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742101062</ProductivityBuff>              <!-- Explosive Ammunition Buff - EffectContainer -->
+            </Item>
+          </ProductionBuffs>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <ProvidesPublicServiceNeed>1</ProvidesPublicServiceNeed>
+          <ProductionBuffDistance>58</ProductionBuffDistance>
+          <PublicServiceData>
+            <PublicServices>
+              <Item>
+                <PublicService>1742100286</PublicService>                <!-- Ammunition (Global fake) - Product -->
+              </Item>
+            </PublicServices>
+            <FullSatisfactionDistance>25</FullSatisfactionDistance>
+            <NoSatisfactionDistance>26</NoSatisfactionDistance>
+          </PublicServiceData>
+        </BuffFactory>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1742100203</Product>              <!-- Basic Ammunition - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1742100248</Product>              <!-- Shell Ammunition - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>846</Product>              <!-- Bombs - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <CycleTime>420</CycleTime>
+          <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+          <ClampedMaxTransporterLogisticCost>85</ClampedMaxTransporterLogisticCost>
+        </FactoryBase>
+        <FeedbackController />
+        <Pausable />
+        <Selection>
+          <ParticipantMessageArcheType>Mercier_DeserterWorker</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Attackable>
+          <AttackableType>HarbourBuilding</AttackableType>
+          <MaximumHitPoints>4500</MaximumHitPoints>
+          <HasRuinState>1</HasRuinState>
+          <SelfHealPerHealTick>4</SelfHealPerHealTick>
+        </Attackable>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>500</Amount>
+              <InactiveAmount>300</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100005</Product>              <!-- Soldiers Workforce - Product -->
+              <Amount>50</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <AmbientMoodProvider>
+          <Murmur>Harbor</Murmur>
+        </AmbientMoodProvider>
+        <LogisticNode />
+        <Constructable />
+        <Locked>
+          <DLCDependency>24963</DLCDependency>
+        </Locked>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data\graphics\buildings\public\ammunition_depot\ammunition_depot_medium_ow_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>280018</Sound>
+            </Item>
+          </ActiveSounds>
+        </SoundEmitter>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>18000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>25</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!-- Bricks - Product -->
+              <Amount>40</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product -->
+              <Amount>15</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010202</Ingredient>              <!-- Comcrete - Product -->
+              <Amount>12</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Infolayer />
+        <UpgradeList />
+        <Culture />
+        <Industrializable>
+          <MandatoryIndustrialization>1</MandatoryIndustrialization>
+          <TransporterIndustrializationFactory>1010104</TransporterIndustrializationFactory>
+        </Industrializable>
+        <IncidentInfectable />
+        <Electrifiable />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - MEDIUM AMMUNITION DEPOT - EXPLOSIVE AMMUNITION (OW) -->
+
+  <!-- START MEDIUM AMMUNITION DEPOT - EXPLOSIVE AMMUNITION (AR) -->
+  <ModOp Type="addNextSibling" GUID='1010284'>
+    <Asset>
+      <Template>BuffFactory</Template>
+      <Values>
+        <Standard>
+          <GUID>1742101057</GUID>
+          <Name>Medium Ammunition Depot (AR)</Name>
+          <IconFilename>data/graphics/icons/icon_ammunition_depot_medium.png</IconFilename>
+          <InfoDescription>1742101061</InfoDescription>
+        </Standard>
+        <Text />
+        <Building>
+          <BuildingCategoryName>11150</BuildingCategoryName>
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <AssociatedRegions>Arctic</AssociatedRegions>
+          <TerrainType>Water_Including_Coast</TerrainType>
+        </Building>
+        <Blocking>
+          <GroundDecalAsset>114826</GroundDecalAsset>
+          <GroundDecalInvisible>113478</GroundDecalInvisible>
+          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+          <RemoveGrass>0</RemoveGrass>
+        </Blocking>
+        <Mesh />
+        <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742101062</ProductivityBuff>              <!-- Explosive Ammunition Buff - EffectContainer -->
+            </Item>
+          </ProductionBuffs>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <ProvidesPublicServiceNeed>1</ProvidesPublicServiceNeed>
+          <ProductionBuffDistance>58</ProductionBuffDistance>
+          <PublicServiceData>
+            <PublicServices>
+              <Item>
+                <PublicService>1742100286</PublicService>                <!-- Ammunition (Global fake) - Product -->
+              </Item>
+            </PublicServices>
+            <FullSatisfactionDistance>25</FullSatisfactionDistance>
+            <NoSatisfactionDistance>26</NoSatisfactionDistance>
+          </PublicServiceData>
+        </BuffFactory>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1742100203</Product>              <!-- Basic Ammunition - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1742100248</Product>              <!-- Shell Ammunition - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>846</Product>              <!-- Bombs - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <CycleTime>420</CycleTime>
+          <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+          <ClampedMaxTransporterLogisticCost>85</ClampedMaxTransporterLogisticCost>
+        </FactoryBase>
+        <FeedbackController />
+        <Pausable />
+        <Selection>
+          <ParticipantMessageArcheType>Mercier_DeserterWorker</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Attackable>
+          <AttackableType>HarbourBuilding</AttackableType>
+          <MaximumHitPoints>4500</MaximumHitPoints>
+          <HasRuinState>1</HasRuinState>
+          <SelfHealPerHealTick>4</SelfHealPerHealTick>
+        </Attackable>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>500</Amount>
+              <InactiveAmount>300</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100309</Product>              <!-- Arctic Soldier Workforce - Product -->
+              <Amount>50</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <AmbientMoodProvider>
+          <Murmur>Harbor</Murmur>
+        </AmbientMoodProvider>
+        <LogisticNode />
+        <Constructable />
+        <Locked>
+          <DLCDependency>24963</DLCDependency>
+        </Locked>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data\graphics\buildings\public\ammunition_depot\ammunition_depot_medium_ar_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>280018</Sound>
+            </Item>
+          </ActiveSounds>
+        </SoundEmitter>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>18000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>25</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!-- Bricks - Product -->
+              <Amount>40</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product -->
+              <Amount>15</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010202</Ingredient>              <!-- Comcrete - Product -->
+              <Amount>12</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Infolayer />
+        <UpgradeList />
+        <Culture />
+        <Industrializable />
+        <IncidentInfectable />
+        <Electrifiable>
+          <ElectricityBoost>0</ElectricityBoost>
+          <ElectrifiedEffect>0</ElectrifiedEffect>
+          <ShowPowerInObjectMenu>0</ShowPowerInObjectMenu>
+        </Electrifiable>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - MEDIUM AMMUNITION DEPOT - EXPLOSIVE AMMUNITION (AR) -->
+
+  <!-- START MEDIUM AMMUNITION DEPOT - EXPLOSIVE AMMUNITION (NW) -->
+  <ModOp Type="addNextSibling" GUID='1010284'>
+    <Asset>
+      <Template>BuffFactory</Template>
+      <Values>
+        <Standard>
+          <GUID>1742101058</GUID>
+          <Name>Medium Ammunition Depot (NW)</Name>
+          <IconFilename>data/graphics/icons/icon_ammunition_depot_medium.png</IconFilename>
+          <InfoDescription>1742101061</InfoDescription>
+        </Standard>
+        <Text />
+        <Building>
+          <BuildingCategoryName>11150</BuildingCategoryName>
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <AssociatedRegions>Colony01</AssociatedRegions>
+          <TerrainType>Water_Including_Coast</TerrainType>
+        </Building>
+        <Blocking>
+          <GroundDecalAsset>102460</GroundDecalAsset>
+          <GroundDecalInvisible>102459</GroundDecalInvisible>
+          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+          <RemoveGrass>0</RemoveGrass>
+        </Blocking>
+        <Mesh />
+        <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742101062</ProductivityBuff>              <!-- Explosive Ammunition Buff - EffectContainer -->
+            </Item>
+          </ProductionBuffs>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <ProvidesPublicServiceNeed>1</ProvidesPublicServiceNeed>
+          <ProductionBuffDistance>58</ProductionBuffDistance>
+          <PublicServiceData>
+            <PublicServices>
+              <Item>
+                <PublicService>1742100286</PublicService>                <!-- Ammunition (Global fake) - Product -->
+              </Item>
+            </PublicServices>
+            <FullSatisfactionDistance>25</FullSatisfactionDistance>
+            <NoSatisfactionDistance>26</NoSatisfactionDistance>
+          </PublicServiceData>
+        </BuffFactory>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1742100203</Product>              <!-- Basic Ammunition - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1742100248</Product>              <!-- Shell Ammunition - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>846</Product>              <!-- Bombs - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <CycleTime>420</CycleTime>
+          <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+          <ClampedMaxTransporterLogisticCost>85</ClampedMaxTransporterLogisticCost>
+        </FactoryBase>
+        <FeedbackController />
+        <Pausable />
+        <Selection>
+          <ParticipantMessageArcheType>Mercier_DeserterWorker</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Attackable>
+          <AttackableType>HarbourBuilding</AttackableType>
+          <MaximumHitPoints>4500</MaximumHitPoints>
+          <HasRuinState>1</HasRuinState>
+          <SelfHealPerHealTick>4</SelfHealPerHealTick>
+        </Attackable>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>500</Amount>
+              <InactiveAmount>300</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100317</Product>              <!-- NW Soldier Workforce - Product -->
+              <Amount>50</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <AmbientMoodProvider>
+          <Murmur>Harbor</Murmur>
+        </AmbientMoodProvider>
+        <LogisticNode />
+        <Constructable />
+        <Locked>
+          <DLCDependency>24963</DLCDependency>
+        </Locked>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data\graphics\buildings\public\ammunition_depot\ammunition_depot_medium_nw_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>280018</Sound>
+            </Item>
+          </ActiveSounds>
+        </SoundEmitter>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>18000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>25</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!-- Bricks - Product -->
+              <Amount>40</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product -->
+              <Amount>15</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010202</Ingredient>              <!-- Comcrete - Product -->
+              <Amount>12</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Infolayer />
+        <UpgradeList />
+        <Culture />
+        <Industrializable>
+          <MandatoryIndustrialization>1</MandatoryIndustrialization>
+          <TransporterIndustrializationFactory>1010104</TransporterIndustrializationFactory>
+        </Industrializable>
+        <IncidentInfectable />
+        <Electrifiable />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - MEDIUM AMMUNITION DEPOT - EXPLOSIVE AMMUNITION (NW) -->
+
+  <!-- START MEDIUM AMMUNITION DEPOT - EXPLOSIVE AMMUNITION (EN) -->
+  <ModOp Type="addNextSibling" GUID='1010284'>
+    <Asset>
+      <Template>BuffFactory</Template>
+      <Values>
+        <Standard>
+          <GUID>1742101059</GUID>
+          <Name>Medium Ammunition Depot (EN)</Name>
+          <IconFilename>data/graphics/icons/icon_ammunition_depot_medium.png</IconFilename>
+          <InfoDescription>1742101061</InfoDescription>
+        </Standard>
+        <Text />
+        <Building>
+          <BuildingCategoryName>11150</BuildingCategoryName>
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <AssociatedRegions>Africa</AssociatedRegions>
+          <TerrainType>Water_Including_Coast</TerrainType>
+        </Building>
+        <Blocking>
+          <GroundDecalAsset>117730</GroundDecalAsset>
+          <GroundDecalInvisible>117731</GroundDecalInvisible>
+          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+          <RemoveGrass>0</RemoveGrass>
+        </Blocking>
+        <Mesh />
+        <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742101062</ProductivityBuff>              <!-- Explosive Ammunition Buff - EffectContainer -->
+            </Item>
+          </ProductionBuffs>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <ProvidesPublicServiceNeed>1</ProvidesPublicServiceNeed>
+          <ProductionBuffDistance>58</ProductionBuffDistance>
+          <PublicServiceData>
+            <PublicServices>
+              <Item>
+                <PublicService>1742100286</PublicService>                <!-- Ammunition (Global fake) - Product -->
+              </Item>
+            </PublicServices>
+            <FullSatisfactionDistance>25</FullSatisfactionDistance>
+            <NoSatisfactionDistance>26</NoSatisfactionDistance>
+          </PublicServiceData>
+        </BuffFactory>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1742100203</Product>              <!-- Basic Ammunition - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1742100248</Product>              <!-- Shell Ammunition - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>846</Product>              <!-- Bombs - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <CycleTime>420</CycleTime>
+          <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+          <ClampedMaxTransporterLogisticCost>85</ClampedMaxTransporterLogisticCost>
+        </FactoryBase>
+        <FeedbackController />
+        <Pausable />
+        <Selection>
+          <ParticipantMessageArcheType>Mercier_DeserterWorker</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Attackable>
+          <AttackableType>HarbourBuilding</AttackableType>
+          <MaximumHitPoints>4500</MaximumHitPoints>
+          <HasRuinState>1</HasRuinState>
+          <SelfHealPerHealTick>4</SelfHealPerHealTick>
+        </Attackable>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>500</Amount>
+              <InactiveAmount>300</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100318</Product>              <!-- Enbesa Soldier Workforce - Product -->
+              <Amount>50</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <AmbientMoodProvider>
+          <Murmur>Harbor</Murmur>
+        </AmbientMoodProvider>
+        <LogisticNode />
+        <Constructable />
+        <Locked>
+          <DLCDependency>24963</DLCDependency>
+        </Locked>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data\graphics\buildings\public\ammunition_depot\ammunition_depot_medium_en_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>280018</Sound>
+            </Item>
+          </ActiveSounds>
+        </SoundEmitter>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>18000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>114356</Ingredient>
+              <Amount>25</Amount>
+            </Item>
+            <Item>
+              <Ingredient>114402</Ingredient>
+              <Amount>40</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product -->
+              <Amount>15</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010202</Ingredient>              <!-- Comcrete - Product -->
+              <Amount>12</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Infolayer />
+        <UpgradeList />
+        <Culture />
+        <Industrializable />
+        <IncidentInfectable />
+        <Electrifiable>
+          <ElectricityBoost>0</ElectricityBoost>
+          <ElectrifiedEffect>0</ElectrifiedEffect>
+          <ShowPowerInObjectMenu>0</ShowPowerInObjectMenu>
+        </Electrifiable>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - MEDIUM AMMUNITION DEPOT - EXPLOSIVE AMMUNITION (EN) -->
+
 </ModOps>
 

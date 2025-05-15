@@ -108,9 +108,6 @@
                         <Asset>1742100558</Asset>                        <!-- Local cemetery - Building -->
                       </Item>
                       <Item>
-                        <Asset>1742100630</Asset>                        <!-- Mourning at sea - Building -->
-                      </Item>
-                      <Item>
                         <Asset>1742100242</Asset>                        <!-- Clean Water - Product -->
                       </Item>
                       <Item>
@@ -175,9 +172,6 @@
                       </Item>
                       <Item>
                         <Asset>1742100558</Asset>                        <!-- Local cemetery - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742100630</Asset>                        <!-- Mourning at sea - Building -->
                       </Item>
                       <Item>
                         <Asset>1742100242</Asset>                        <!-- Clean Water - Product -->
@@ -697,7 +691,7 @@
                         <Asset>1742100003</Asset>                        <!-- Soldiers Residence - Barracks - Building -->
                       </Item>
                       <Item>
-                        <Asset>1742100185</Asset>                        <!-- Cardgames Factory - Product -->
+                        <Asset>1742100185</Asset>                        <!-- Games - Product -->
                       </Item>
                       <Item>
                         <Asset>1742100183</Asset>                        <!-- Cardgames Factory - Building -->
@@ -758,6 +752,7 @@
       </Values>
     </Asset>
   </ModOp>
+
   <!--UNLOCK - ARTISANS  300 -->
   <ModOp Type="addnextSibling" GUID="130248">
     <Asset>
@@ -797,6 +792,52 @@
                       </Item>
                       <Item>
                         <Asset>1742100506</Asset>                        <!-- Care Package Factory: Medium (OW) - Building -->
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!--UNLOCK - ARTISANS  750 -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100815</GUID>
+          <Name>MOD Trigger</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>15000002</Context>                <!-- Artisans PopulationLevel7 -->
+                <CounterAmount>750</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
+                    </UnhideAssets>
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>1742100630</Asset>                        <!-- Mourning at sea - Building -->
                       </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>
@@ -865,7 +906,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742100792</GUID>
+          <GUID>1742100819</GUID>
           <Name>MOD Trigger</Name>
         </Standard>
         <Trigger>
@@ -944,6 +985,18 @@
                       </Item>
                       <Item>
                         <Asset>1742100457</Asset>                        <!-- Military Prison - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742101056</Asset>                        <!-- Medium Ammunition Depot - Explosive ammunition (OW) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742101057</Asset>                        <!-- Medium Ammunition Depot - Explosive ammunition (AR) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742101058</Asset>                        <!-- Medium Ammunition Depot - Explosive ammunition (NW) - Recipe -->
+                      </Item>
+                      <Item>
+                        <Asset>1742101059</Asset>                        <!-- Medium Ammunition Depot - Explosive ammunition (EN) - Recipe -->
                       </Item>
                       <Item>
                         <Asset>1742100226</Asset>                        <!-- Large Ammunition Depot - All ammunition (OW) - Building -->
@@ -2223,7 +2276,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742100811</GUID>
+          <GUID>1742100820</GUID>
           <Name>Unlock Creative Mode</Name>
         </Standard>
         <Trigger>
@@ -2517,7 +2570,7 @@
                         <Asset>1742100003</Asset>                        <!-- Soldiers Residence - Barracks - Building -->
                       </Item>
                       <Item>
-                        <Asset>1742100185</Asset>                        <!-- Cardgames Factory - Product -->
+                        <Asset>1742100185</Asset>                        <!-- Games - Product -->
                       </Item>
                       <Item>
                         <Asset>1742100183</Asset>                        <!-- Cardgames Factory - Building -->
@@ -2692,6 +2745,18 @@
                       </Item>
                       <Item>
                         <Asset>1742100437</Asset>                        <!-- Small Bombs Ammunition Depot (EN) - Recipe -->
+                      </Item>
+                      <Item>
+                        <Asset>1742101056</Asset>                        <!-- Medium Ammunition Depot - Explosive ammunition (OW) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742101057</Asset>                        <!-- Medium Ammunition Depot - Explosive ammunition (AR) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742101058</Asset>                        <!-- Medium Ammunition Depot - Explosive ammunition (NW) - Recipe -->
+                      </Item>
+                      <Item>
+                        <Asset>1742101059</Asset>                        <!-- Medium Ammunition Depot - Explosive ammunition (EN) - Recipe -->
                       </Item>
                       <Item>
                         <Asset>1742100226</Asset>                        <!-- Large Ammunition Depot - All ammunition (OW) - Building -->

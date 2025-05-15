@@ -10,23 +10,23 @@
       <Template>ConstructionCategory</Template>
       <Values>
         <Standard>
-          <GUID>1742100646</GUID>          <!-- Atoll Soldiers Construction Category menu (NH) -->
+          <GUID>1742100646</GUID>          <!-- Horai Soldiers Construction Category menu (NH) -->
           <Name>Soldiers</Name>
           <IconFilename>data/graphics/icons/icon_menu_soldiers_0.png</IconFilename>
         </Standard>
         <ConstructionCategory>
           <BuildingList>
             <Item>
-              <Building>1742100640</Building>              <!-- Atoll Outpost - Building -->
+              <Building>1742100640</Building>              <!-- Horai Outpost - Building -->
             </Item>
             <Item>
-              <Building>1742100634</Building>              <!-- Atoll Soldiers Residence - Encampment - Building -->
+              <Building>1742100634</Building>              <!-- Horai Soldiers Residence - Encampment - Building -->
+            </Item>
+            <Item>
+              <Building>1742100649</Building>              <!-- Defenses Menu (NH) - Building -->
             </Item>
             <Item>
               <Building>1742100636</Building>              <!-- Canteen (NH) - Building -->
-            </Item>
-            <Item>
-              <Building>1742100649</Building>              <!-- Swordsmith - Building -->
             </Item>
             <Item>
               <Building>1742100651</Building>              <!-- Navy Recruitment Office (NH) - Building -->
@@ -53,5 +53,826 @@
   </ModOp>
   <!-- END ADD MILITARY CONSTRUCTION CATEGORY TO CONSTRUCTION MENU (NH) -->
 
+  <!-- START PRODUCTION CHAIN - COINS (NH) -->
+  <ModOp Type="addNextSibling" GUID='500091'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100648</GUID>
+          <Name>Coins (NH)</Name>
+          <IconFilename>data\graphics\icons\icon_coin_lead.png</IconFilename>
+        </Standard>
+        <ProductionChain>
+          <Building>1742100647</Building>          <!-- Mint (NH) - Building -->
+          <Tier1>
+            <Item>
+              <Building>1441358</Building>              <!-- Import Pier - Silver Bars  -->
+              <Tier2>
+                <Item>
+                  <Building>1441330</Building>                  <!-- Foreign Trading Company -->
+                </Item>
+              </Tier2>
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+        <Text />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PRODUCTION CHAIN - COINS (NH) -->
+
+  <!-- START PRODUCTION CHAIN - CARE PACKAGES (NH) -->
+  <ModOp Type="addNextSibling" GUID='500091'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742101000</GUID>
+          <Name>Care Packages (NH)</Name>
+          <IconFilename>data\graphics\icons\icon_care_packages.png</IconFilename>
+        </Standard>
+        <ProductionChain>
+          <Building>1742100699</Building>          <!-- Care Packages Facrtpry (NH) - Building -->
+          <Tier1>
+            <Item>
+              <Building>1742101053</Building>              <!-- Clean Water Pump (NH) - Building -->
+            </Item>
+            <Item>
+              <Building>1742101054</Building>              <!-- Cannery (NH) - Building -->
+              <Tier2>
+                <Item>
+                  <Building>1441240</Building>                  <!-- Iron Mine (NH) -->
+                </Item>
+                <Item>
+                  <Building>1441202</Building>
+                </Item>
+                <Item>
+                  <Building>1441232</Building>
+                </Item>
+                <Item>
+                  <Building>1010269</Building>                  <!-- Pig Farm -->
+                </Item>
+              </Tier2>
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked>
+          <DefaultLockedState>1</DefaultLockedState>
+        </Locked>
+        <Text />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PRODUCTION CHAIN - CARE PACKAGES (NH) -->
+
+  <!-- START PRODUCTION CHAIN - BASIC WEAPONS (NH) -->
+  <ModOp Type="addNextSibling" GUID='500091'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742101002</GUID>
+          <Name>Basic Weapons (NH)</Name>
+          <IconFilename>data\graphics\icons\icon_basic_weapons.png</IconFilename>
+          <InfoDescription>1742100474</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742101001</Building>          <!-- Basic Weapons Factory (NH) - Building -->
+          <Tier1>
+            <Item>
+              <Building>1441291</Building>              <!-- Bamboo Forester - Building -->
+            </Item>
+            <Item>
+              <Building>1441263</Building>              <!-- Furnace (NH) -->
+              <Tier2>
+                <Item>
+                  <Building>1742101051</Building>                  <!-- Open Pit Iron Mine (NH) -->
+                </Item>
+                <Item>
+                  <Building>1742101052</Building>                  <!-- Open Pit Coal Mine (NH) -->
+                </Item>
+              </Tier2>
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked>
+          <DefaultLockedState>1</DefaultLockedState>
+        </Locked>
+        <Text />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PRODUCTION CHAIN - BASIC WEAPONS(NH) -->
+
+  <!-- START PRODUCTION CHAIN - CANNONS (NH) -->
+  <ModOp Type="addNextSibling" GUID='500091'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742101004</GUID>
+          <Name>Cannons (NH)</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_weapons.png</IconFilename>
+          <InfoDescription>1742100474</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742101003</Building>          <!-- Cannons Factory (NH) - Building -->
+          <Tier1>
+            <Item>
+              <Building>1441234</Building>              <!-- Lumberjack (NH) - Building -->
+            </Item>
+            <Item>
+              <Building>1441263</Building>              <!-- Furnace (NH) -->
+              <Tier2>
+                <Item>
+                  <Building>1742101051</Building>                  <!-- Open Pit Iron Mine (NH) -->
+                </Item>
+                <Item>
+                  <Building>1742101052</Building>                  <!-- Open Pit Coal Mine (NH) -->
+                </Item>
+              </Tier2>
+            </Item>
+            <Item>
+              <Building>1742100650</Building>              <!-- Gunpowder Factory - Building -->
+              <Tier2>
+                <Item>
+                  <Building>1742101052</Building>                  <!-- Open Pit Coal Mine (NH) -->
+                </Item>
+                <Item>
+                  <Building>1010310</Building>                  <!--coastal_02 (Niter Coast Building)-->
+                </Item>
+              </Tier2>
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked>
+          <DefaultLockedState>1</DefaultLockedState>
+        </Locked>
+        <Text />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PRODUCTION CHAIN - CANNONS(NH) -->
+
+  <!-- START PRODUCTION CHAIN - BASIC AMMUNITION (NH) -->
+  <ModOp Type="addNextSibling" GUID='500091'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742101013</GUID>
+          <Name>Basic Ammunition (NH)</Name>
+          <IconFilename>data/graphics/icons/icon_basic_ammunition.png</IconFilename>
+          <InfoDescription>1742100300</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742101010</Building>          <!-- Ammunition Factory Basic Ammunition (NH) - Building -->
+          <Tier1>
+            <Item>
+              <Building>1742100650</Building>              <!-- Gunpowder Factory - Building -->
+              <Tier2>
+                <Item>
+                  <Building>1742101052</Building>                  <!-- Open Pit Coal Mine (NH) -->
+                </Item>
+                <Item>
+                  <Building>1010310</Building>                  <!--coastal_02 (Niter Coast Building)-->
+                </Item>
+              </Tier2>
+            </Item>
+            <Item>
+              <Building>1742101035</Building>              <!-- Lead Smelter - Building -->
+              <Tier2>
+                <Item>
+                  <Building>1742100407</Building>                  <!-- Galena Module - Building -->
+                  <Tier3>
+                    <Item>
+                      <Building>1441236</Building>                      <!-- Sawmill (NH)) - Building -->
+                      <Tier4>
+                        <Item>
+                          <Building>1441234</Building>                          <!-- Lumberjack (NH)) - Building -->
+                        </Item>
+                      </Tier4>
+                    </Item>
+                  </Tier3>
+                </Item>
+                <Item>
+                  <Building>1441328</Building>                  <!-- Charcoal Kiln (NH) -->
+                </Item>
+              </Tier2>
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+        <Text />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PRODUCTION CHAIN - BASIC AMMUNITION (NH)  -->
+
+  <!-- START PRODUCTION CHAIN - SHELL AMMUNITION (NH) -->
+  <ModOp Type="addNextSibling" GUID='500091'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742101014</GUID>
+          <Name>Shell Ammunition (NH)</Name>
+          <IconFilename>data/graphics/icons/icon_shell_ammunition.png</IconFilename>
+          <InfoDescription>1742100302</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742101011</Building>          <!-- Ammunition Factory Shell Ammunition (NH) - Building -->
+          <Tier1>
+            <Item>
+              <Building>1742100650</Building>              <!-- Gunpowder Factory - Building -->
+              <Tier2>
+                <Item>
+                  <Building>1742101052</Building>                  <!-- Open Pit Coal Mine (NH) -->
+                </Item>
+                <Item>
+                  <Building>1010310</Building>                  <!--coastal_02 (Niter Coast Building)-->
+                </Item>
+              </Tier2>
+            </Item>
+            <Item>
+              <Building>1441263</Building>              <!-- Furnace (NH) -->
+              <Tier2>
+                <Item>
+                  <Building>1742101051</Building>                  <!-- Open Pit Iron Mine (NH) -->
+                </Item>
+                <Item>
+                  <Building>1742101052</Building>                  <!-- Open Pit Coal Mine (NH) -->
+                </Item>
+              </Tier2>
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+        <Text />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PRODUCTION CHAIN - SHELL AMMUNITION (NH) -->
+
+  <!-- START PRODUCTION CHAIN - BOMBS AMMUNITION (NH) -->
+  <ModOp Type="addNextSibling" GUID='500091'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742101015</GUID>
+          <Name>Bombs Ammunition (NH)</Name>
+          <IconFilename>data/graphics/icons/icon_bombs_ammunition.png</IconFilename>
+          <InfoDescription>1742100304</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742101012</Building>          <!-- Ammunition Factory Bombs Ammunition (NH) - Building -->
+          <Tier1>
+            <Item>
+              <Building>1441263</Building>              <!-- Furnace (NH) -->
+              <Tier2>
+                <Item>
+                  <Building>1441240</Building>                  <!-- Iron Mine (NH) -->
+                </Item>
+                <Item>
+                  <Building>1742101052</Building>                  <!-- Open Pit Coal Mine (NH) -->
+                </Item>
+              </Tier2>
+            </Item>
+            <Item>
+              <Building>1441269</Building>              <!-- Dynamite Facrtory (NH) -->
+              <Tier2>
+                <Item>
+                  <Building>1010310</Building>                  <!-- Saltpetre Works - Building -->
+                </Item>
+                <Item>
+                  <Building>1441279</Building>                  <!-- Rendering Works (NH) -->
+                  <Tier3>
+                    <Item>
+                      <Building>1010269</Building>                      <!-- Pig Farm -->
+                    </Item>
+                  </Tier3>
+                </Item>
+              </Tier2>
+            </Item>
+            <Item>
+              <Building>1010310</Building>              <!-- Saltpetre Works - Building -->
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+        <Text />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PRODUCTION CHAIN - BOMBS AMMUNITION(NH) -->
+
+  <!-- START PRODUCTION CHAIN - LEAD (NH) -->
+  <ModOp Type="addNextSibling" GUID='500091'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742101043</GUID>
+          <Name>Lead (NH)</Name>
+          <IconFilename>data/graphics/icons/icon_lead.png</IconFilename>
+          <InfoDescription>1742100440</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742101035</Building>          <!-- Lead Smelter - Building -->
+          <Tier1>
+            <Item>
+              <Building>1441328</Building>              <!-- Charcoal Kiln (NH) -->
+            </Item>
+            <Item>
+              <Building>1742100407</Building>              <!-- Galena Module - Building -->
+              <Tier2>
+                <Item>
+                  <Building>1441236</Building>                  <!-- Sawmill (NH)) - Building -->
+                  <Tier3>
+                    <Item>
+                      <Building>1441234</Building>                      <!-- Lumberjack (NH)) - Building -->
+                    </Item>
+                  </Tier3>
+                </Item>
+              </Tier2>
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+        <Text />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PRODUCTION CHAIN - LEAD (NH) -->
+
+  <!-- START PRODUCTION CHAIN - CIGARETTES (NH) -->
+  <ModOp Type="addNextSibling" GUID='500091'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742101044</GUID>
+          <Name>Cigarettes (NH)</Name>
+          <IconFilename>data/graphics/icons/icon_cigarettes.png</IconFilename>
+          <InfoDescription>1742100061</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742101036</Building>          <!-- Cigarettes Factory (NH) - Building -->
+          <Tier1>
+            <Item>
+              <Building>1010330</Building>              <!-- Tobacco Farm - Building -->
+            </Item>
+            <Item>
+              <Building>1742101050</Building>              <!-- Paper Factory (NH) - Building -->
+              <Tier2>
+                <Item>
+                  <Building>1441257</Building>                  <!-- Hemp Farm (NH) - Building -->
+                </Item>
+                <Item>
+                  <Building>1441218</Building>                  <!-- Mulberry/Silk Farm (NH) - Building -->
+                </Item>
+              </Tier2>
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+        <Text />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PRODUCTION CHAIN - CIGARETTES (NH) -->
+
+  <!-- START PRODUCTION CHAIN - MILITARY UNIFORMS (NH) -->
+  <ModOp Type="addNextSibling" GUID='500091'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742101045</GUID>
+          <Name>Military Uniforms (NH)</Name>
+          <IconFilename>data/graphics/icons/icon_military_uniforms_0.png</IconFilename>
+          <InfoDescription>1742100067</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742101037</Building>          <!-- Military Uniforms Factory (NH) - Building -->
+          <Tier1>
+            <Item>
+              <Building>1441363</Building>
+              <Tier2>
+                <Item>
+                  <Building>1441257</Building>
+                </Item>
+              </Tier2>
+            </Item>
+            <Item>
+              <Building>1441263</Building>              <!-- Furnace (NH) -->
+              <Tier2>
+                <Item>
+                  <Building>1742101051</Building>                  <!-- Open Pit Iron Mine (NH) -->
+                </Item>
+                <Item>
+                  <Building>1742101052</Building>                  <!-- Open Pit Coal Mine (NH) -->
+                </Item>
+              </Tier2>
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+        <Text />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PRODUCTION CHAIN - MILITARY UNIFORMS (NH) -->
+
+  <!-- START PRODUCTION CHAIN - HEATED MILITARY UNIFORMS (NH) -->
+  <ModOp Type="addNextSibling" GUID='500091'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742101046</GUID>
+          <Name>Heated Military Uniforms (NH)</Name>
+          <IconFilename>data/graphics/icons/icon_heated_military_uniforms.png</IconFilename>
+          <InfoDescription>1742100349</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742101038</Building>          <!-- Heated Military Uniforms Factory (NH) - Building -->
+          <Tier1>
+            <Item>
+              <Building>1441363</Building>
+              <Tier2>
+                <Item>
+                  <Building>1441257</Building>
+                </Item>
+              </Tier2>
+            </Item>
+            <Item>
+              <Building>1010558</Building>              <!-- Hunting Cabin - Building -->
+            </Item>
+            <Item>
+              <Building>1441263</Building>              <!-- Furnace (NH) -->
+              <Tier2>
+                <Item>
+                  <Building>1441240</Building>                  <!-- Iron Mine (NH) -->
+                </Item>
+                <Item>
+                  <Building>1441328</Building>                  <!-- Charcoal Kiln (NH) -->
+                </Item>
+              </Tier2>
+            </Item>
+            <Item>
+              <Building>112676</Building>              <!-- Goose Farm - Building -->
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+        <Text />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PRODUCTION CHAIN - HEATED MILITARY UNIFORMS (NH) -->
+
+  <!-- START PRODUCTION CHAIN - GAMES (NH) -->
+  <ModOp Type="addNextSibling" GUID='500091'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742101047</GUID>
+          <Name>Games (NH)</Name>
+          <IconFilename>data/graphics/icons/icon_cardgames.png</IconFilename>
+          <InfoDescription>1742100188</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742101039</Building>          <!-- Games Factory (NH) - Building -->
+          <Tier1>
+            <Item>
+              <Building>1441281</Building>              <!-- Safflower Farm - Building -->
+            </Item>
+            <Item>
+              <Building>1441291</Building>              <!-- Bamboo Forester - Building -->
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+        <Text />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PRODUCTION CHAIN - GAMES (NH) -->
+
+  <!-- START PRODUCTION CHAIN - SLEEPING BAGS (NH) -->
+  <ModOp Type="addNextSibling" GUID='500091'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742101048</GUID>
+          <Name>Sleeping Bags (NH)</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_sleeping_bags.png</IconFilename>
+          <InfoDescription>1742100071</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742101040</Building>          <!-- Sleeping Bag Factory (NH) - Building -->
+          <Tier1>
+            <Item>
+              <Building>1441363</Building>
+              <Tier2>
+                <Item>
+                  <Building>1441257</Building>
+                </Item>
+              </Tier2>
+            </Item>
+            <Item>
+              <Building>1010558</Building>              <!-- Hunting Cabin - Building -->
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+        <Text />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PRODUCTION CHAIN - SLEEPING BAGS (NH) -->
+
+  <!-- START PRODUCTION CHAIN - ADVANCED WEAPONS (NH) -->
+  <ModOp Type="addNextSibling" GUID='500091'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742101042</GUID>
+          <Name>Advanced Weapons (NH)</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_advanced_weaponry.png</IconFilename>
+        </Standard>
+        <ProductionChain>
+          <Building>1742101041</Building>          <!--Advanced Weapons Factory (NH) - Building -->
+          <Tier1>
+            <Item>
+              <Building>1441263</Building>              <!-- Furnace (NH) -->
+              <Tier2>
+                <Item>
+                  <Building>1441240</Building>                  <!-- Iron Mine (NH) -->
+                </Item>
+                <Item>
+                  <Building>1742101052</Building>                  <!-- Open Pit Coal Mine (NH) -->
+                </Item>
+              </Tier2>
+            </Item>
+            <Item>
+              <Building>1441269</Building>
+              <Tier2>
+                <Item>
+                  <Building>1010310</Building>
+                </Item>
+                <Item>
+                  <Building>1441279</Building>
+                  <Tier3>
+                    <Item>
+                      <Building>1010269</Building>
+                    </Item>
+                  </Tier3>
+                </Item>
+              </Tier2>
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+        <Text />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PRODUCTION CHAIN - ADVANCED WEAPONS (NH) -->
+
+  <!-- START PRODUCTION CHAIN - PAPER (NH) -->
+  <ModOp Type="addNextSibling" GUID='500091'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742101049</GUID>
+          <Name>Paper (NH)</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/goods_africa/icon_paper.png</IconFilename>
+        </Standard>
+        <ProductionChain>
+          <Building>1742101050</Building>          <!-- Paper Factory (NH) - Building -->
+          <Tier1>
+            <Item>
+              <Building>1441257</Building>              <!-- Hemp Farm (NH) - Building -->
+            </Item>
+            <Item>
+              <Building>1441218</Building>              <!-- Mulberry/Silk Farm (NH) - Building -->
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+        <Text />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PRODUCTION CHAIN - PAPER (NH) -->
+
+  <!-- START PRODUCTION CHAIN - CANNED FOOD (NH) -->
+  <ModOp Type="addNextSibling" GUID='500091'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742101055</GUID>
+          <Name>Canned Food (NH)</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_canned_goulash.png</IconFilename>
+        </Standard>
+        <ProductionChain>
+          <Building>1742101054</Building>          <!-- Cannery (NH) - Building -->
+          <Tier1>
+            <Item>
+              <Building>1441240</Building>              <!-- Iron Mine (NH) -->
+            </Item>
+            <Item>
+              <Building>1441202</Building>
+            </Item>
+            <Item>
+              <Building>1441232</Building>
+            </Item>
+            <Item>
+              <Building>1010269</Building>              <!-- Pig Farm -->
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+        <Text />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PRODUCTION CHAIN - CANNED FOOD (NH) -->
+
+  <!-- START ADD TO NH INDUSTRIAL BUILDING MENU -->
+  <ModOp Type="addPrevSibling" GUID='1445610' Path="/Values/ConstructionCategory/BuildingList/Item[Building='1445042']">
+    <Item>
+      <Building>1742101049</Building>      <!-- Paper (NH) - Chain -->
+    </Item>
+  </ModOp>
+
+  <ModOp Type="addNextSibling" GUID='1445610' Path="/Values/ConstructionCategory/BuildingList/Item[Building='1445043']">
+    <Item>
+      <Building>1742101043</Building>      <!-- Lead (NH) - Chain -->
+    </Item>
+  </ModOp>
+
+  <ModOp Type="addNextSibling" GUID='1445610' Path="/Values/ConstructionCategory/BuildingList/Item[Building='1445044']">
+    <Item>
+      <Building>1742101002</Building>      <!-- Basic Weapons (NH) - Chain -->
+    </Item>
+    <Item>
+      <Building>1742101044</Building>      <!-- Cigarettes (NH) - Chain -->
+    </Item>
+    <Item>
+      <Building>1742100648</Building>      <!-- Coins (NH) - Chain -->
+    </Item>
+    <Item>
+      <Building>1742101047</Building>      <!-- Cardgames (NH) - Chain -->
+    </Item>
+    <Item>
+      <Building>1742101055</Building>      <!-- Canned Food (NH) - Chain -->
+    </Item>
+    <Item>
+      <Building>1742101000</Building>      <!-- Care Packages (NH) - Chain -->
+    </Item>
+    <Item>
+      <Building>1742101045</Building>      <!-- Military Uniforms (NH) - Chain -->
+    </Item>
+    <Item>
+      <Building>1742101048</Building>      <!-- Sleeping Bags (NH) - Chain -->
+    </Item>
+    <Item>
+      <Building>1742101046</Building>      <!-- Heated Military Uniforms (NH) - Chain -->
+    </Item>
+  </ModOp>
+
+  <ModOp Type="addNextSibling" GUID='1445610' Path="/Values/ConstructionCategory/BuildingList/Item[Building='1445049']">
+    <Item>
+      <Building>1742101004</Building>      <!-- Cannons (NH) - Chain -->
+    </Item>
+    <Item>
+      <Building>1742101013</Building>      <!-- Basic Ammunition (NH) - Chain -->
+    </Item>
+    <Item>
+      <Building>1742101014</Building>      <!-- Shell Ammunition (NH) - Chain -->
+    </Item>
+    <Item>
+      <Building>1742101015</Building>      <!-- Bombs Ammunition (NH) - Chain -->
+    </Item>
+    <Item>
+      <Building>1742101042</Building>      <!-- Advanced Weapons (NH) - Chain -->
+    </Item>
+  </ModOp>
+  <!-- END ADD TO NH INDUSTRIAL BUILDING MENU -->
+
+  <!-- START DEFENSES CONSTRUCTION MENU (NH) -->
+  <ModOp Type="addNextSibling" GUID='500952'>
+    <Asset>
+      <Template>ConstructionCategory</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100649</GUID>
+          <Name>Defenses (NH)</Name>
+          <IconFilename>data/graphics/icons/icon_habour_defence_0.png</IconFilename>
+        </Standard>
+        <ConstructionCategory>
+          <BuildingList>
+            <Item>
+              <Building>1742101016</Building>              <!-- Small Ammunition Depot (Empty) (NH) - Building -->
+            </Item>
+            <Item>
+              <Building>1742101060</Building>              <!-- Medium Ammunition Depot (NH) - Explosive ammunition - Building -->
+            </Item>
+            <Item>
+              <Building>1742101026</Building>              <!-- Large Ammunition Depot (NH) - All ammunition - Building -->
+            </Item>
+            <Item>
+              <Building>1742101027</Building>              <!-- Mounted Guns (NH) - Defense -->
+            </Item>
+            <Item>
+              <Building>1742101029</Building>              <!-- Flak Emplacement (NH) - Building -->
+            </Item>
+            <Item>
+              <Building>1742101033</Building>              <!-- Flak Emplacement (NH Land) - Building -->
+            </Item>
+            <Item>
+              <Building>1742101028</Building>              <!-- Cannon Tower (NH) - Building -->
+            </Item>
+            <Item>
+              <Building>1742101030</Building>              <!-- Fire Tower (NH) - Building -->
+            </Item>
+            <Item>
+              <Building>1742101031</Building>              <!-- Armor Pierce Tower (NH) - Building -->
+            </Item>
+            <Item>
+              <Building>1742101034</Building>              <!-- Coastal Torpedo Launcher (NH) - Building -->
+            </Item>
+            <Item>
+              <Building>1742101032</Building>              <!-- Monster Gun (NH) - Building -->
+            </Item>
+          </BuildingList>
+          <CategoryDescription>19173</CategoryDescription>
+        </ConstructionCategory>
+        <Text />
+        <Locked />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- CONSTRUCTION MENU HARBOUR (NH) -->
+  <ModOp GUID="1445604,1445641" Type="addNextSibling" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1337864']">
+    <Item>
+      <Building>1742101016</Building>      <!-- Small Ammunition Depot (Empty) (NH) - Building -->
+    </Item>
+    <Item>
+      <Building>1742101060</Building>      <!-- Medium Ammunition Depot (NH) - Explosive ammunition - Building -->
+    </Item>
+    <Item>
+      <Building>1742101026</Building>      <!-- Large Ammunition Depot (NH) - All ammunition - Building -->
+    </Item>
+    <Item>
+      <Building>1742101027</Building>      <!-- Mounted Guns (NH) - Defense -->
+    </Item>
+  </ModOp>
+  <ModOp GUID="1445605,1445641" Type="addNextSibling" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1337865']">
+    <Item>
+      <Building>1742101028</Building>      <!-- Cannon Tower (NH) - Building -->
+    </Item>
+  </ModOp>
+  <ModOp GUID="1445605,1445641" Type="addNextSibling" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1337894']">
+    <Item>
+      <Building>1742101029</Building>      <!-- Flak Emplacement (NH) - Building -->
+    </Item>
+    <Item>
+      <Building>1742101033</Building>      <!-- Flak Emplacement (NH Land) - Building -->
+    </Item>
+  </ModOp>
+  <ModOp GUID="1445605,1445641" Type="addNextSibling" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1337896']">
+    <Item>
+      <Building>1742101030</Building>      <!-- Fire Tower (NH) - Building -->
+    </Item>
+  </ModOp>
+  <ModOp GUID="1445605,1445641" Type="addNextSibling" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1337895']">
+    <Item>
+      <Building>1742101031</Building>      <!-- Armor Pierce Tower (NH) - Building -->
+    </Item>
+  </ModOp>
+  <ModOp GUID="1445605,1445641" Type="addNextSibling" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1337866']">
+    <Item>
+      <Building>1742101034</Building>      <!-- Coastal Torpedo Launcher (NH) - Building -->
+    </Item>
+    <Item>
+      <Building>1742101032</Building>      <!-- Monster Gun (NH) - Building -->
+    </Item>
+  </ModOp>
+
+
+  <!-- END DEFENSES CONSTRUCTION MENU (NH) -->
 
 </ModOps>

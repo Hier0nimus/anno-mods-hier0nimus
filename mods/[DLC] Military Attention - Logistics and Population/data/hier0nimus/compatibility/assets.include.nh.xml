@@ -8,13 +8,17 @@
 
   <Include File="../../hier0nimus/military-tiers/assets.include.nh.xml" />
   <Include File="../../hier0nimus/military-buildings/assets.include.nh.xml" />
+  <Include File="../../hier0nimus/military-recipes/assets.include.nh.xml" />
   <Include File="../../hier0nimus/ammunition-depot/assets.include.nh.xml" />
   <Include File="../../hier0nimus/military-defenses/assets.include.nh.xml" />
+  <Include File="../../hier0nimus/ai/assets.include.nh.xml" />
   <Include File="../../hier0nimus/military-products/assets.include.nh.xml" />
   <Include File="../../hier0nimus/military-buffs-effects/assets.include.nh.xml" />
+  <Include File="../../hier0nimus/military-pools/assets.include.nh.xml" />
   <Include File="../../hier0nimus/military-construction-menu/assets.include.nh.xml" />
   <Include File="../../hier0nimus/triggers/assets.include.nh.xml" />
 
+  <!-- Lorcha -->
   <ModOp GUID="14740115" Type="add" Path="/Values/Cost/Costs">
     <Item>
       <Ingredient>849</Ingredient>      <!-- Care Packages - Product -->
@@ -26,6 +30,7 @@
     </Item>
   </ModOp>
 
+  <!-- Junk -->
   <ModOp GUID="14740102" Type="add" Path="/Values/Cost/Costs">
     <Item>
       <Ingredient>849</Ingredient>      <!-- Care Packages - Product -->
@@ -35,7 +40,40 @@
       <Ingredient>1742100533</Ingredient>      <!-- Sailors - Product -->
       <Amount>10</Amount>
     </Item>
+    <Item>
+      <Ingredient>1742100203</Ingredient>      <!-- Basic Ammunition - Product -->
+      <Amount>10</Amount>
+    </Item>
+    <Item>
+      <Ingredient>1742100471</Ingredient>      <!-- Basic Weapons - Product -->
+      <Amount>8</Amount>
+    </Item>
   </ModOp>
+
+  <!-- Pinas -->
+  <ModOp GUID="14740118" Type="add" Path="/Values/Cost/Costs">
+    <Item>
+      <Ingredient>849</Ingredient>      <!-- Care Packages - Product -->
+      <Amount>8</Amount>
+    </Item>
+    <Item>
+      <Ingredient>1742100533</Ingredient>      <!-- Sailors - Product -->
+      <Amount>8</Amount>
+    </Item>
+    <Item>
+      <Ingredient>1742100471</Ingredient>      <!-- Basic Weapons - Product -->
+      <Amount>8</Amount>
+    </Item>
+    <Item>
+      <Ingredient>1742100203</Ingredient>      <!-- Basic Ammunition - Product -->
+      <Amount>15</Amount>
+    </Item>
+    <Item>
+      <Ingredient>1742100471</Ingredient>      <!-- Basic Weapons - Product -->
+      <Amount>10</Amount>
+    </Item>
+  </ModOp>
+
   <!-- END COMPATIBILITY NH -->
 
 </ModOps>

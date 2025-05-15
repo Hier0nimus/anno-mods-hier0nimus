@@ -1,10 +1,27 @@
-# Military Attention | 1.22!
+# Military Attention | 1.24!
 
 A mod centered around military infrastructure and adding new military residence tiers for all regions with a focus on the Old World.
 
 ![ma-img-01.jpg](./banner.jpg)
 
 ## Changelog
+
+### v1.24
+- Mouring at sea is now unlocked only after your unlock harborlife at 750 artisans.
+- Updated Gunpowder shared mod.
+- Updated Clean Water shared mod.
+- Updated Open Pit mines with open pits for Horai.
+- Renamed Cardgames to Games.
+- Added compatibility for the New Horizons mod. Added the Soldiers tier to Horai with corresponding buildings (Outpost, Canteen, Encampments, Navy Recruitment Office, Military Warehouse with military logistics buff, defenses with ammunition depot mechanic,...) and additional industrial magnate production in Horai for a lot of military goods (Paper, Iron, Coal, Lead, Basic Weapons, Cigarettes, Coin, Games, Canned Food, Care Packages, Military Uniforms, Sleeping Bags, Heated Military Uniforms, Gunpowder, Cannons, Basic Ammunition, Shell Ammunition, Bombs, Advanced Weapons). Buildings are all kitbashed from the unique New Horizons buildings. Big thank you for letting me use those as the base!
+- Added compatibility for the new ships from New Horizons
+- Added a medium ammunition depot to all regions that uses the explosive ammunition types (no gas) for easier use of the ammunition depot.
+- Made icon Coastal Torpedo Launcher building a bit more in line with other defense buildings icons.
+- Removed duplicate code to hide normal defenses from construction menu.
+- Changed Icons for Ammunition depots and buffs.
+- Fixed Coastal Torpedo Launcher now also affected by Fort buff.
+
+### v1.23
+- Quick fix for compatibilty with New Horizons Docklands rebalance so the Recruitment office is available again
 
 ### v1.22
 - Changed reputation for dropping goods on AI and when AI drops goods. Additional compatibility with AI mods from Serp.

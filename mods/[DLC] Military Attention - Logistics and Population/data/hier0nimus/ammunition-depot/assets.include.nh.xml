@@ -1,10 +1,1140 @@
 <!-- 
   Ammiunition Depot - New Horizons
 -->
-
-
 <ModOps>
 
+  <ModOp GUID="939" Type="addNextSibling">
+    <!-- START - SMALL AMMUNITION DEPOT (NH) - Recipelist -->
+    <Asset>
+      <Template>RecipeList</Template>
+      <Values>
+        <Standard>
+          <GUID>1742101017</GUID>
+          <Name>Small Ammunition Depot (NH)</Name>
+          <IconFilename>data/graphics/icons/icon_ammunition_depot_small.png</IconFilename>
+        </Standard>
+        <RecipeList>
+          <Recipes>
+            <Item>
+              <Recipe>1742101018</Recipe>              <!-- Small Basic Ammunition (NH) - Recipe -->
+            </Item>
+            <Item>
+              <Recipe>1742101020</Recipe>              <!-- Small Shell Ammunition (NH) - Recipe -->
+            </Item>
+            <Item>
+              <Recipe>1742101022</Recipe>              <!-- Small Gas Ammunition (NH) - Recipe -->
+            </Item>
+            <Item>
+              <Recipe>1742101024</Recipe>              <!-- Small Bombs Ammunition (NH) - Recipe -->
+            </Item>
+          </Recipes>
+          <RecipeListType>Factory</RecipeListType>
+          <RecipeListMoodImage>data/ui/2kimages/main/assets/recipebook/mood_images/recipebook_moodimages_dropgoods.png</RecipeListMoodImage>
+          <RecipeListDescription>1742100275</RecipeListDescription>
+        </RecipeList>
+        <Text />
+      </Values>
+    </Asset>
+    <!-- END - SMALL AMMUNITION DEPOT (NH) - Recipelist -->
+
+    <!-- START - SMALL BASIC AMMUNITION DEPOT (NH) - Recipe -->
+    <Asset>
+      <Template>Recipe</Template>
+      <Values>
+        <Standard>
+          <GUID>1742101018</GUID>
+          <Name>Small Basic Ammunition Depot (NH)</Name>
+          <IconFilename>data/graphics/icons/icon_basic_ammunition.png</IconFilename>
+        </Standard>
+        <Text />
+        <Recipe>
+          <RecipeBuilding>1742101019</RecipeBuilding>
+          <RecipeDescriptionText>1742100277</RecipeDescriptionText>
+          <RecipeImage>data/graphics/recipe_bg/recipebook_basic_ammunition.png</RecipeImage>
+          <RecipeIngredientUIData>
+            <Item>
+              <PosX>60</PosX>
+              <PosY>70</PosY>
+              <UICirclePointer>SouthEast</UICirclePointer>
+            </Item>
+          </RecipeIngredientUIData>
+          <RecipeUnlockConditionText>135017</RecipeUnlockConditionText>
+        </Recipe>
+        <Locked />
+      </Values>
+    </Asset>
+    <!-- END - SMALL BASIC AMMUNITION DEPOT (NH) - Recipe -->
+
+    <!-- START - SMALL SHELL AMMUNITION DEPOT (NH) - Recipe -->
+    <Asset>
+      <Template>Recipe</Template>
+      <Values>
+        <Standard>
+          <GUID>1742101020</GUID>
+          <Name>Small Shell Ammunition Depot (NH)</Name>
+          <IconFilename>data/graphics/icons/icon_shell_ammunition.png</IconFilename>
+        </Standard>
+        <Text />
+        <Recipe>
+          <RecipeBuilding>1742101021</RecipeBuilding>
+          <RecipeDescriptionText>1742100279</RecipeDescriptionText>
+          <RecipeImage>data/graphics/recipe_bg/recipebook_shell_ammunition.png</RecipeImage>
+          <RecipeIngredientUIData>
+            <Item>
+              <PosX>40</PosX>
+              <PosY>70</PosY>
+              <UICirclePointer>SouthEast</UICirclePointer>
+            </Item>
+          </RecipeIngredientUIData>
+          <RecipeUnlockConditionText>135017</RecipeUnlockConditionText>
+        </Recipe>
+        <Locked />
+      </Values>
+    </Asset>
+    <!-- END - SMALL SHELL AMMUNITION DEPOT (NH) - Recipe -->
+
+    <!-- START - SMALL GAS AMMUNITION DEPOT (NH) - Recipe -->
+    <Asset>
+      <Template>Recipe</Template>
+      <Values>
+        <Standard>
+          <GUID>1742101022</GUID>
+          <Name>Small Gas Ammunition Depot (NH)</Name>
+          <IconFilename>data/graphics/icons/icon_gas_ammunition.png</IconFilename>
+        </Standard>
+        <Text />
+        <Recipe>
+          <RecipeBuilding>1742101023</RecipeBuilding>
+          <RecipeDescriptionText>1742100281</RecipeDescriptionText>
+          <RecipeImage>data/graphics/recipe_bg/recipebook_gas_ammunition.png</RecipeImage>
+          <RecipeIngredientUIData>
+            <Item>
+              <PosX>40</PosX>
+              <PosY>60</PosY>
+              <UICirclePointer>SouthEast</UICirclePointer>
+            </Item>
+          </RecipeIngredientUIData>
+          <RecipeUnlockConditionText>135017</RecipeUnlockConditionText>
+        </Recipe>
+        <Locked />
+      </Values>
+    </Asset>
+    <!-- END - SMALL GAS AMMUNITION DEPOT (NH) - Recipe -->
+
+    <!-- START - SMALL BOMBS AMMUNITION DEPOT (NH) - Recipe -->
+    <Asset>
+      <Template>Recipe</Template>
+      <Values>
+        <Standard>
+          <GUID>1742101024</GUID>
+          <Name>Small Bombs Ammunition Depot (NH)</Name>
+          <IconFilename>data/graphics/icons/icon_bombs_ammunition.png</IconFilename>
+        </Standard>
+        <Text />
+        <Recipe>
+          <RecipeBuilding>1742101025</RecipeBuilding>
+          <RecipeDescriptionText>1742100283</RecipeDescriptionText>
+          <RecipeImage>data/graphics/recipe_bg/recipebook_bombs_ammunition.png</RecipeImage>
+          <RecipeIngredientUIData>
+            <Item>
+              <PosX>60</PosX>
+              <PosY>70</PosY>
+              <UICirclePointer>SouthEast</UICirclePointer>
+            </Item>
+          </RecipeIngredientUIData>
+          <RecipeUnlockConditionText>135017</RecipeUnlockConditionText>
+        </Recipe>
+        <Locked />
+      </Values>
+    </Asset>
+    <!-- END - SMALL BOMBS AMMUNITION DEPOT (NH) - Recipe -->
+
+  </ModOp>
+
+  <!-- START SMALL EMPTY AMMUNITION DEPOT (NH) -->
+  <ModOp Type="addNextSibling" GUID='1010263'>
+    <Asset>
+      <Template>Mall</Template>
+      <Values>
+        <Standard>
+          <GUID>1742101016</GUID>          <!-- Small Ammunition Depot (Empty) (NH) - Building -->
+          <Name>Small Ammunition Depot (Empty) (NH)</Name>
+          <IconFilename>data/graphics/icons/icon_ammunition_depot_small.png</IconFilename>
+          <InfoDescription>1742100273</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11151</BuildingCategoryName>
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <AssociatedRegions>Mod2</AssociatedRegions>
+        </Building>
+        <Blocking />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data\graphics\buildings\public\ammunition_depot\ammunition_depot_small_nh_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>10000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1440234</Ingredient>              <!-- Clay Plaster - Product -->
+              <Amount>15</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1440233</Ingredient>              <!-- Bamboo - Product -->
+              <Amount>8</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Mesh />
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>Mercier_DeserterWorker</ParticipantMessageArcheType>
+        </Selection>
+        <Text />
+        <Constructable />
+        <Locked>
+          <DLCDependency>410085</DLCDependency>
+        </Locked>
+        <SoundEmitter />
+        <FactoryBase>
+          <CycleTime>180</CycleTime>
+          <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+          <ClampedMaxTransporterLogisticCost>85</ClampedMaxTransporterLogisticCost>
+        </FactoryBase>
+        <LogisticNode>
+          <TransporterCountMax>0</TransporterCountMax>
+        </LogisticNode>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>100</Amount>
+              <InactiveAmount>50</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100644</Product>              <!-- Horai Soldiers Workforce -->
+              <Amount>40</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Industrializable />
+        <IncidentInfectable />
+        <Electrifiable>
+          <ElectricityBoost>0</ElectricityBoost>
+          <ElectrifiedEffect>0</ElectrifiedEffect>
+          <ShowPowerInObjectMenu>0</ShowPowerInObjectMenu>
+        </Electrifiable>
+        <AmbientMoodProvider>
+          <Murmur>Harbor</Murmur>
+        </AmbientMoodProvider>
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+          <MaximumHitPoints>2500</MaximumHitPoints>
+          <HasRuinState>1</HasRuinState>
+          <SelfHealPerHealTick>4</SelfHealPerHealTick>
+        </Attackable>
+        <UpgradeList />
+        <Pausable>
+          <CanPauseManually>0</CanPauseManually>
+        </Pausable>
+        <FeedbackController />
+        <Infolayer />
+        <BuffFactory>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <ProductionBuffDistance>50</ProductionBuffDistance>
+          <ProvidesPublicServiceNeed>0</ProvidesPublicServiceNeed>
+        </BuffFactory>
+        <RecipeBuilding>
+          <RecipeList>1742101017</RecipeList>          <!-- Small Ammunition Depot - Recipe - List -->
+          <IsBlank>1</IsBlank>
+        </RecipeBuilding>
+        <Culture />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END SMALL EMPTY AMMUNITION DEPOT (NH) -->
+
+  <!-- START SMALL BASIC AMMUNITION DEPOT (NH) -->
+  <ModOp Type="addNextSibling" GUID='1010263'>
+    <Asset>
+      <Template>Mall</Template>
+      <Values>
+        <Standard>
+          <GUID>1742101019</GUID>          <!-- Small Basic Ammunition Depot (NH) - Building -->
+          <Name>Small Basic Ammunition Depot (NH)</Name>
+          <IconFilename>data/graphics/icons/icon_basic_ammunition_depot.png</IconFilename>
+          <InfoDescription>1742100227</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11151</BuildingCategoryName>
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <AssociatedRegions>Mod2</AssociatedRegions>
+        </Building>
+        <Blocking />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data\graphics\buildings\public\ammunition_depot\ammunition_depot_small_basic_nh_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>10000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1440234</Ingredient>              <!-- Clay Plaster - Product -->
+              <Amount>15</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1440233</Ingredient>              <!-- Bamboo - Product -->
+              <Amount>8</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Mesh />
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>Mercier_DeserterWorker</ParticipantMessageArcheType>
+        </Selection>
+        <Text />
+        <Constructable />
+        <Locked>
+          <DLCDependency>410085</DLCDependency>
+        </Locked>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>280018</Sound>
+            </Item>
+          </ActiveSounds>
+        </SoundEmitter>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1742100203</Product>              <!-- Basic Ammunition - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <CycleTime>180</CycleTime>
+          <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+          <ClampedMaxTransporterLogisticCost>85</ClampedMaxTransporterLogisticCost>
+        </FactoryBase>
+        <LogisticNode />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>100</Amount>
+              <InactiveAmount>50</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100644</Product>              <!-- Horai Soldiers Workforce -->
+              <Amount>40</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Industrializable />
+        <IncidentInfectable />
+        <Electrifiable>
+          <ElectricityBoost>0</ElectricityBoost>
+          <ElectrifiedEffect>0</ElectrifiedEffect>
+          <ShowPowerInObjectMenu>0</ShowPowerInObjectMenu>
+        </Electrifiable>
+        <AmbientMoodProvider>
+          <Murmur>Harbor</Murmur>
+        </AmbientMoodProvider>
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+          <MaximumHitPoints>2500</MaximumHitPoints>
+          <HasRuinState>1</HasRuinState>
+          <SelfHealPerHealTick>4</SelfHealPerHealTick>
+        </Attackable>
+        <UpgradeList />
+        <Pausable />
+        <FeedbackController />
+        <Infolayer />
+        <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742100224</ProductivityBuff>              <!-- Basic Ammunition Buff - Buff -->
+            </Item>
+          </ProductionBuffs>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <ProductionBuffDistance>50</ProductionBuffDistance>
+          <PublicServiceData>
+            <PublicServices>
+              <Item>
+                <PublicService>1742100072</PublicService>                <!-- Ammunition (Global fake) - Product -->
+              </Item>
+            </PublicServices>
+            <FullSatisfactionDistance>25</FullSatisfactionDistance>
+            <NoSatisfactionDistance>26</NoSatisfactionDistance>
+          </PublicServiceData>
+        </BuffFactory>
+        <RecipeBuilding>
+          <RecipeList>1742101017</RecipeList>          <!-- Small Ammunition Depot (NH) - Recipe - List -->
+        </RecipeBuilding>
+        <Culture />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END SMALL BASIC AMMUNITION DEPOT (NH) -->
+
+  <!-- START SMALL SHELL AMMUNITION DEPOT (NH) -->
+  <ModOp Type="addNextSibling" GUID='1010263'>
+    <Asset>
+      <Template>Mall</Template>
+      <Values>
+        <Standard>
+          <GUID>1742101021</GUID>          <!-- Small Shell Ammunition Depot (NH) - Building -->
+          <Name>Small Shell Ammunition Depot (NH)</Name>
+          <IconFilename>data/graphics/icons/icon_shell_ammunition_depot.png</IconFilename>
+          <InfoDescription>1742100267</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11151</BuildingCategoryName>
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <AssociatedRegions>Mod2</AssociatedRegions>
+        </Building>
+        <Blocking />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data\graphics\buildings\public\ammunition_depot\ammunition_depot_small_shell_nh_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>10000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1440234</Ingredient>              <!-- Clay Plaster - Product -->
+              <Amount>15</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1440233</Ingredient>              <!-- Bamboo - Product -->
+              <Amount>8</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Mesh />
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>Mercier_DeserterWorker</ParticipantMessageArcheType>
+        </Selection>
+        <Text />
+        <Constructable />
+        <Locked>
+          <DLCDependency>410085</DLCDependency>
+        </Locked>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>280018</Sound>
+            </Item>
+          </ActiveSounds>
+        </SoundEmitter>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1742100248</Product>              <!-- Shell Ammunition - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <CycleTime>180</CycleTime>
+          <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+          <ClampedMaxTransporterLogisticCost>85</ClampedMaxTransporterLogisticCost>
+        </FactoryBase>
+        <LogisticNode />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>200</Amount>
+              <InactiveAmount>100</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100644</Product>              <!-- Horai Soldiers Workforce -->
+              <Amount>50</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Industrializable />
+        <IncidentInfectable />
+        <Electrifiable>
+          <ElectricityBoost>0</ElectricityBoost>
+          <ElectrifiedEffect>0</ElectrifiedEffect>
+          <ShowPowerInObjectMenu>0</ShowPowerInObjectMenu>
+        </Electrifiable>
+        <AmbientMoodProvider>
+          <Murmur>Harbor</Murmur>
+        </AmbientMoodProvider>
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+          <MaximumHitPoints>2500</MaximumHitPoints>
+          <HasRuinState>1</HasRuinState>
+          <SelfHealPerHealTick>4</SelfHealPerHealTick>
+        </Attackable>
+        <UpgradeList />
+        <Pausable />
+        <FeedbackController />
+        <Infolayer />
+        <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742100256</ProductivityBuff>              <!-- Shell Ammunition Buff - Buff -->
+            </Item>
+          </ProductionBuffs>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <ProductionBuffDistance>50</ProductionBuffDistance>
+          <PublicServiceData>
+            <PublicServices>
+              <Item>
+                <PublicService>1742100073</PublicService>                <!-- Ammunition (Global fake) - Product -->
+              </Item>
+            </PublicServices>
+            <FullSatisfactionDistance>25</FullSatisfactionDistance>
+            <NoSatisfactionDistance>26</NoSatisfactionDistance>
+          </PublicServiceData>
+        </BuffFactory>
+        <RecipeBuilding>
+          <RecipeList>1742101017</RecipeList>          <!-- Small Ammunition Depot (NH) - Recipe - List -->
+        </RecipeBuilding>
+        <Culture />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END SMALL SHELL AMMUNITION DEPOT (NH) -->
+
+  <!-- START SMALL GAS AMMUNITION DEPOT (NH) -->
+  <ModOp Type="addNextSibling" GUID='1010263'>
+    <Asset>
+      <Template>Mall</Template>
+      <Values>
+        <Standard>
+          <GUID>1742101023</GUID>
+          <Name>Small Gas Ammunition Depot (NH)</Name>          <!-- Small Gas Ammunition Depot (NH) - Building -->
+          <IconFilename>data/graphics/icons/icon_gas_ammunition_depot.png</IconFilename>
+          <InfoDescription>1742100269</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11151</BuildingCategoryName>
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <AssociatedRegions>Mod2</AssociatedRegions>
+        </Building>
+        <Blocking />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data\graphics\buildings\public\ammunition_depot\ammunition_depot_small_gas_nh_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>10000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1440234</Ingredient>              <!-- Clay Plaster - Product -->
+              <Amount>15</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1440233</Ingredient>              <!-- Bamboo - Product -->
+              <Amount>8</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Mesh />
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>Mercier_DeserterWorker</ParticipantMessageArcheType>
+        </Selection>
+        <Text />
+        <Constructable />
+        <Locked>
+          <DLCDependency>410085</DLCDependency>
+        </Locked>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>280018</Sound>
+            </Item>
+          </ActiveSounds>
+        </SoundEmitter>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>112706</Product>              <!-- Arctic Gas - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <CycleTime>210</CycleTime>
+          <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+          <ClampedMaxTransporterLogisticCost>85</ClampedMaxTransporterLogisticCost>
+        </FactoryBase>
+        <LogisticNode />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>300</Amount>
+              <InactiveAmount>150</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100644</Product>              <!-- Horai Soldiers Workforce -->
+              <Amount>60</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Industrializable />
+        <IncidentInfectable />
+        <Electrifiable>
+          <ElectricityBoost>0</ElectricityBoost>
+          <ElectrifiedEffect>0</ElectrifiedEffect>
+          <ShowPowerInObjectMenu>0</ShowPowerInObjectMenu>
+        </Electrifiable>
+        <AmbientMoodProvider>
+          <Murmur>Harbor</Murmur>
+        </AmbientMoodProvider>
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+          <MaximumHitPoints>2500</MaximumHitPoints>
+          <HasRuinState>1</HasRuinState>
+          <SelfHealPerHealTick>4</SelfHealPerHealTick>
+        </Attackable>
+        <UpgradeList />
+        <Pausable />
+        <FeedbackController />
+        <Infolayer />
+        <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742100260</ProductivityBuff>              <!-- Gas Ammunition Buff - Buff -->
+            </Item>
+          </ProductionBuffs>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <ProductionBuffDistance>50</ProductionBuffDistance>
+          <PublicServiceData>
+            <PublicServices>
+              <Item>
+                <PublicService>1742100074</PublicService>                <!-- Ammunition (Global fake) - Product -->
+              </Item>
+            </PublicServices>
+            <FullSatisfactionDistance>25</FullSatisfactionDistance>
+            <NoSatisfactionDistance>26</NoSatisfactionDistance>
+          </PublicServiceData>
+        </BuffFactory>
+        <RecipeBuilding>
+          <RecipeList>1742101017</RecipeList>          <!-- Small Ammunition Depot (NH) - Recipe - List -->
+        </RecipeBuilding>
+        <Culture />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END SMALL GAS AMMUNITION DEPOT (NH) -->
+
+  <!-- START SMALL BOMBS AMMUNITION DEPOT (NH) -->
+  <ModOp Type="addNextSibling" GUID='1010263'>
+    <Asset>
+      <Template>Mall</Template>
+      <Values>
+        <Standard>
+          <GUID>1742101025</GUID>          <!-- Small Bombs Ammunition Depot (NH) - Building -->
+          <Name>Small Bombs Ammunition Depot (NH)</Name>
+          <IconFilename>data/graphics/icons/icon_bombs_ammunition_depot.png</IconFilename>
+          <InfoDescription>1742100271</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11151</BuildingCategoryName>
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <AssociatedRegions>Mod2</AssociatedRegions>
+        </Building>
+        <Blocking />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data\graphics\buildings\public\ammunition_depot\ammunition_depot_small_bombs_nh_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>10000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1440234</Ingredient>              <!-- Clay Plaster - Product -->
+              <Amount>15</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1440233</Ingredient>              <!-- Bamboo - Product -->
+              <Amount>8</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Mesh />
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>Mercier_DeserterWorker</ParticipantMessageArcheType>
+        </Selection>
+        <Text />
+        <Constructable />
+        <Locked>
+          <DLCDependency>410085</DLCDependency>
+        </Locked>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>280018</Sound>
+            </Item>
+          </ActiveSounds>
+        </SoundEmitter>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>846</Product>              <!-- Bombs - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <CycleTime>240</CycleTime>
+          <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+          <ClampedMaxTransporterLogisticCost>85</ClampedMaxTransporterLogisticCost>
+        </FactoryBase>
+        <LogisticNode />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>500</Amount>
+              <InactiveAmount>250</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100644</Product>              <!-- Horai Soldiers Workforce -->
+              <Amount>60</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Industrializable />
+        <IncidentInfectable />
+        <Electrifiable>
+          <ElectricityBoost>0</ElectricityBoost>
+          <ElectrifiedEffect>0</ElectrifiedEffect>
+          <ShowPowerInObjectMenu>0</ShowPowerInObjectMenu>
+        </Electrifiable>
+        <AmbientMoodProvider>
+          <Murmur>Harbor</Murmur>
+        </AmbientMoodProvider>
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+          <MaximumHitPoints>2500</MaximumHitPoints>
+          <HasRuinState>1</HasRuinState>
+          <SelfHealPerHealTick>4</SelfHealPerHealTick>
+        </Attackable>
+        <UpgradeList />
+        <Pausable />
+        <FeedbackController />
+        <Infolayer />
+        <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742100264</ProductivityBuff>              <!-- Bombs Ammunition Buff - Buff -->
+            </Item>
+          </ProductionBuffs>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <ProductionBuffDistance>50</ProductionBuffDistance>
+          <PublicServiceData>
+            <PublicServices>
+              <Item>
+                <PublicService>1742100075</PublicService>                <!-- Ammunition (Global fake) - Product -->
+              </Item>
+            </PublicServices>
+            <FullSatisfactionDistance>25</FullSatisfactionDistance>
+            <NoSatisfactionDistance>26</NoSatisfactionDistance>
+          </PublicServiceData>
+        </BuffFactory>
+        <RecipeBuilding>
+          <RecipeList>1742101017</RecipeList>          <!-- Small Ammunition Depot (NH) - Recipe - List -->
+        </RecipeBuilding>
+        <Culture />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END SMALL BOMBS AMMUNITION DEPOT (NH) -->
+
+  <!-- START LARGE AMMUNITION DEPOT - ALL AMMUNITION (NH) -->
+  <ModOp Type="addNextSibling" GUID='1010284'>
+    <Asset>
+      <Template>BuffFactory</Template>
+      <Values>
+        <Standard>
+          <GUID>1742101026</GUID>          <!-- Large Ammunition Depot (NH) - All ammunition - Building -->
+          <Name>Large Ammunition Depot (NH)</Name>
+          <IconFilename>data/graphics/icons/icon_ammunition_depot_large.png</IconFilename>
+          <InfoDescription>1742100273</InfoDescription>
+        </Standard>
+        <Text />
+        <Building>
+          <BuildingCategoryName>11150</BuildingCategoryName>
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <AssociatedRegions>Mod2</AssociatedRegions>
+          <TerrainType>Water_Including_Coast</TerrainType>
+        </Building>
+        <Blocking>
+          <GroundDecalAsset>1447910</GroundDecalAsset>
+          <GroundDecalInvisible>1447911</GroundDecalInvisible>
+          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+        </Blocking>
+        <Mesh />
+        <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742100492</ProductivityBuff>              <!-- All Ammunition Buff - EffectContainer -->
+            </Item>
+          </ProductionBuffs>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <ProvidesPublicServiceNeed>1</ProvidesPublicServiceNeed>
+          <ProductionBuffDistance>58</ProductionBuffDistance>
+          <PublicServiceData>
+            <PublicServices>
+              <Item>
+                <PublicService>1742100286</PublicService>                <!-- Ammunition (Global fake) - Product -->
+              </Item>
+            </PublicServices>
+            <FullSatisfactionDistance>25</FullSatisfactionDistance>
+            <NoSatisfactionDistance>26</NoSatisfactionDistance>
+          </PublicServiceData>
+        </BuffFactory>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1742100203</Product>              <!-- Basic Ammunition - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1742100248</Product>              <!-- Shell Ammunition - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>112706</Product>              <!-- Arctic Gas - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>846</Product>              <!-- Bombs - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <CycleTime>300</CycleTime>
+          <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+          <ClampedMaxTransporterLogisticCost>85</ClampedMaxTransporterLogisticCost>
+        </FactoryBase>
+        <FeedbackController />
+        <Pausable />
+        <Selection>
+          <ParticipantMessageArcheType>Mercier_DeserterWorker</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Attackable>
+          <AttackableType>HarbourBuilding</AttackableType>
+          <MaximumHitPoints>4500</MaximumHitPoints>
+          <HasRuinState>1</HasRuinState>
+          <SelfHealPerHealTick>4</SelfHealPerHealTick>
+        </Attackable>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>600</Amount>
+              <InactiveAmount>300</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100644</Product>              <!-- Horai Soldiers Workforce -->
+              <Amount>80</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <AmbientMoodProvider>
+          <Murmur>Harbor</Murmur>
+        </AmbientMoodProvider>
+        <LogisticNode />
+        <Constructable />
+        <Locked>
+          <DLCDependency>24963</DLCDependency>
+        </Locked>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data\graphics\buildings\public\ammunition_depot\ammunition_depot_large_nh_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>280018</Sound>
+            </Item>
+          </ActiveSounds>
+        </SoundEmitter>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>20000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>35</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1440234</Ingredient>              <!-- Clay Plaster - Product -->
+              <Amount>50</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1440233</Ingredient>              <!-- Bamboo - Product -->
+              <Amount>20</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010202</Ingredient>              <!-- Concrete - Product -->
+              <Amount>15</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Infolayer />
+        <UpgradeList />
+        <Culture />
+        <Industrializable />
+        <IncidentInfectable />
+        <Electrifiable>
+          <ElectricityBoost>0</ElectricityBoost>
+          <ElectrifiedEffect>0</ElectrifiedEffect>
+          <ShowPowerInObjectMenu>0</ShowPowerInObjectMenu>
+        </Electrifiable>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - LARGE AMMUNITION DEPOT - ALL AMMUNITION (NH) -->
+
+  <!-- START MEDIUM AMMUNITION DEPOT - EXPLOSIVE AMMUNITION (NH) -->
+  <ModOp Type="addNextSibling" GUID='1010284'>
+    <Asset>
+      <Template>BuffFactory</Template>
+      <Values>
+        <Standard>
+          <GUID>1742101060</GUID>
+          <Name>Medium Ammunition Depot (NH)</Name>
+          <IconFilename>data/graphics/icons/icon_ammunition_depot_medium.png</IconFilename>
+          <InfoDescription>1742101061</InfoDescription>
+        </Standard>
+        <Text />
+        <Building>
+          <BuildingCategoryName>11150</BuildingCategoryName>
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <AssociatedRegions>Mod2</AssociatedRegions>
+          <TerrainType>Water_Including_Coast</TerrainType>
+        </Building>
+        <Blocking>
+          <GroundDecalAsset>1447910</GroundDecalAsset>
+          <GroundDecalInvisible>1447911</GroundDecalInvisible>
+          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+        </Blocking>
+        <Mesh />
+        <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742101062</ProductivityBuff>              <!-- Explosive Ammunition Buff - EffectContainer -->
+            </Item>
+          </ProductionBuffs>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <ProvidesPublicServiceNeed>1</ProvidesPublicServiceNeed>
+          <ProductionBuffDistance>74</ProductionBuffDistance>
+          <PublicServiceData>
+            <PublicServices>
+              <Item>
+                <PublicService>1742100286</PublicService>                <!-- Ammunition (Global fake) - Product -->
+              </Item>
+            </PublicServices>
+            <FullSatisfactionDistance>25</FullSatisfactionDistance>
+            <NoSatisfactionDistance>26</NoSatisfactionDistance>
+          </PublicServiceData>
+        </BuffFactory>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1742100203</Product>              <!-- Basic Ammunition - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1742100248</Product>              <!-- Shell Ammunition - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>846</Product>              <!-- Bombs - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <CycleTime>210</CycleTime>
+          <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+          <ClampedMaxTransporterLogisticCost>85</ClampedMaxTransporterLogisticCost>
+        </FactoryBase>
+        <FeedbackController />
+        <Pausable />
+        <Selection>
+          <ParticipantMessageArcheType>Mercier_DeserterWorker</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Attackable>
+          <AttackableType>HarbourBuilding</AttackableType>
+          <MaximumHitPoints>4500</MaximumHitPoints>
+          <HasRuinState>1</HasRuinState>
+          <SelfHealPerHealTick>4</SelfHealPerHealTick>
+        </Attackable>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>500</Amount>
+              <InactiveAmount>250</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1742100644</Product>              <!-- Horai Soldiers Workforce -->
+              <Amount>50</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <AmbientMoodProvider>
+          <Murmur>Harbor</Murmur>
+        </AmbientMoodProvider>
+        <LogisticNode />
+        <Constructable />
+        <Locked>
+          <DLCDependency>24963</DLCDependency>
+        </Locked>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data\graphics\buildings\public\ammunition_depot\ammunition_depot_medium_nh_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>280018</Sound>
+            </Item>
+          </ActiveSounds>
+        </SoundEmitter>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>18000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>25</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1440234</Ingredient>              <!-- Clay Plaster - Product -->
+              <Amount>40</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1440233</Ingredient>              <!-- Bamboo - Product -->
+              <Amount>15</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010202</Ingredient>              <!-- Concrete - Product -->
+              <Amount>12</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Infolayer />
+        <UpgradeList />
+        <Culture />
+        <Industrializable />
+        <IncidentInfectable />
+        <Electrifiable>
+          <ElectricityBoost>0</ElectricityBoost>
+          <ElectrifiedEffect>0</ElectrifiedEffect>
+          <ShowPowerInObjectMenu>0</ShowPowerInObjectMenu>
+        </Electrifiable>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - MEDIUM AMMUNITION DEPOT - EXPLOSIVE AMMUNITION (NH) -->
 
 </ModOps>
 

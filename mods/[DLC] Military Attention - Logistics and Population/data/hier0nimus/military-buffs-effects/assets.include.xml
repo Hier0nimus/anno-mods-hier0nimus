@@ -1237,7 +1237,7 @@
         <Standard>
           <GUID>1742100224</GUID>
           <Name>Basic Ammunition Buff</Name>
-          <IconFilename>data/graphics/icons/icon_basic_ammunition_depot.png</IconFilename>
+          <IconFilename>data/graphics/icons/icon_basic_ammunition_buff.png</IconFilename>
           <InfoDescription>1742100225</InfoDescription>
         </Standard>
         <ItemEffect>
@@ -1333,7 +1333,7 @@
         <Standard>
           <GUID>1742100256</GUID>
           <Name>Shell Ammunition Buff</Name>
-          <IconFilename>data/graphics/icons/icon_shell_ammunition_depot.png</IconFilename>
+          <IconFilename>data/graphics/icons/icon_shell_ammunition_buff.png</IconFilename>
           <InfoDescription>1742100257</InfoDescription>
         </Standard>
         <ItemEffect>
@@ -1429,7 +1429,7 @@
         <Standard>
           <GUID>1742100260</GUID>
           <Name>Gas Ammunition Buff</Name>
-          <IconFilename>data/graphics/icons/icon_gas_ammunition_depot.png</IconFilename>
+          <IconFilename>data/graphics/icons/icon_gas_ammunition_buff.png</IconFilename>
           <InfoDescription>1742100261</InfoDescription>
         </Standard>
         <ItemEffect>
@@ -1525,7 +1525,7 @@
         <Standard>
           <GUID>1742100264</GUID>
           <Name>Bombs Ammunition Buff</Name>
-          <IconFilename>data/graphics/icons/icon_bombs_ammunition_depot.png</IconFilename>
+          <IconFilename>data/graphics/icons/icon_bombs_ammunition_buff.png</IconFilename>
           <InfoDescription>1742100265</InfoDescription>
         </Standard>
         <ItemEffect>
@@ -1573,7 +1573,7 @@
         <Standard>
           <GUID>1742100492</GUID>
           <Name>Providing All Ammunition</Name>
-          <IconFilename>data/graphics/icons/icon_ammunition_depot_large.png</IconFilename>
+          <IconFilename>data/graphics/icons/icon_ammunition_buff_large.png</IconFilename>
           <InfoDescription>1742100493</InfoDescription>
         </Standard>
         <ItemEffect>
@@ -1605,6 +1605,50 @@
     </Asset>
   </ModOp>
   <!-- END ALL AMMUNITION BUFF - EFFECTCONTAINER -->
+
+  <!-- START EXPLOSIVE AMMUNITION BUFF - EFFECTCONTAINER -->
+  <ModOp GUID="269978" Type="addNextSibling">
+    <Asset>
+      <Template>EffectContainer</Template>
+      <Values>
+        <Standard>
+          <GUID>1742101062</GUID>
+          <Name>Providing Explosive Ammunition</Name>
+          <IconFilename>data/graphics/icons/icon_ammunition_buff_medium.png</IconFilename>
+          <InfoDescription>1742101063</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742100252</GUID>              <!-- Basic Defense buildings - ItemEffectTargetPool -->
+            </Item>
+            <Item>
+              <GUID>1742100253</GUID>              <!-- Shell Defense buildings - ItemEffectTargetPool -->
+            </Item>
+            <Item>
+              <GUID>1742100414</GUID>              <!-- Bombs Defense buildings - ItemEffectTargetPool -->
+            </Item>
+          </EffectTargets>
+          <AllowStacking>0</AllowStacking>
+        </ItemEffect>
+        <Text />
+        <EffectContainer>
+          <Effects>
+            <Item>
+              <Effect>1742100224</Effect>
+            </Item>
+            <Item>
+              <Effect>1742100256</Effect>
+            </Item>
+            <Item>
+              <Effect>1742100264</Effect>
+            </Item>
+          </Effects>
+        </EffectContainer>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END EXPLOSIVE AMMUNITION BUFF - EFFECTCONTAINER -->
 
   <!-- START COLLECTING DUNG BUFF -->
   <ModOp GUID="192176" Type="addNextSibling">
@@ -1964,7 +2008,7 @@
               <GUID>1742100413</GUID>
             </Item>
             <Item>
-              <GUID>1742100220</GUID>              <!-- Monster Gun (OW) - Building -->
+              <GUID>1742100414</GUID>
             </Item>
           </EffectTargets>
           <AllowStacking>0</AllowStacking>
