@@ -1,6 +1,6 @@
 <!-- 
   
-  [Shared] Shared Goods - Gunpowder - v1.9
+  [Shared] Shared Goods - Gunpowder - v1.10
   Created by Hier0nimus
   Enjoy!
 
@@ -10,6 +10,7 @@
   1742100293 - Gunpowder - Product
   1742100294 - Gunpowder - Product - Description
   1742100291 - Gunpowder Factory - Building
+  1742101064 - Gunpowder Factory (NW) - Building
   1742100292 - Gunpowder Factory - Building - Description
 
   1742100650 - Gunpowder Factory (NH) - Building
@@ -263,6 +264,72 @@
   </ModOp>
   <!-- END - BUILDING - GUNPOWDER FACTORY -->
 
+  <!-- START BUILDING - GUNPOWDER FACTORY (NW) -->
+  <ModOp Type="addNextSibling" GUID='1742100291'>
+    <Asset>
+      <BaseAssetGUID>1742100291</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742101064</GUID>
+          <Name>Gunpowder Factory (NW)</Name>
+        </Standard>
+        <Building>
+          <AssociatedRegions>Colony01</AssociatedRegions>
+        </Building>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>SA_Resident_tier01_atWork</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1010226</Product>              <!-- Coal - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1010232</Product>              <!-- Saltpetre - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <FactoryOutputs>
+            <Item>
+              <Product>1742100293</Product>              <!-- Gunpowder - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>14</StorageAmount>
+            </Item>
+          </FactoryOutputs>
+          <CycleTime>15</CycleTime>
+          <IsMainFactory>0</IsMainFactory>
+        </FactoryBase>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>200</Amount>
+              <InactiveAmount>100</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1010366</Product>              <!-- Jornalero Workforce -->
+              <Amount>40</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Electrifiable />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - GUNPOWDER FACTORY (NW) -->
+
   <!-- START BUILDING - GUNPOWDER production DUMMY - Building -->
   <ModOp Type="addNextSibling" GUID='1010284'>
     <Asset>
@@ -389,6 +456,9 @@
     <Item>
       <Factory>1742100291</Factory>
     </Item>
+    <Item>
+      <Factory>1742101064</Factory>
+    </Item>
   </ModOp>
   <!-- END - ADD PRODUCTION BUILDINGS TO WORKFORCE MENU -->
 
@@ -396,6 +466,9 @@
   <ModOp GUID='193771,6000018,193875,193856,25599,192436,190842,368' Type="add" Path="Values/ItemEffectTargetPool/EffectTargetGUIDs/">
     <Item>
       <GUID>1742100291</GUID>
+    </Item>
+    <Item>
+      <GUID>1742101064</GUID>
     </Item>
   </ModOp>
   <!-- END - ADD BUILDING TO ALL HEAVY,ALL,BOOSTED BY ELECTRICITY,ALL EXCEPT POWER PLANT,ALL WEAPON,ALL IRONWORKS AND FOUNDRIES PRODUCTION,ALL MAINTENANCE -->
@@ -405,6 +478,9 @@
     <ModOp GUID='1500301941' Type="add" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
       <Item>
         <GUID>1742100650</GUID>
+      </Item>
+      <Item>
+        <GUID>1742101064</GUID>
       </Item>
     </ModOp>
     <!-- END - ADD BUILDINGS TO ALL WEAPONS FACTORIES -->
