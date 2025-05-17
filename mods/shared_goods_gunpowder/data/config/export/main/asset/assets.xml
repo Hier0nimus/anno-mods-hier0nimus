@@ -1,6 +1,6 @@
 <!-- 
   
-  [Shared] Shared Goods - Gunpowder - v1.8
+  [Shared] Shared Goods - Gunpowder - v1.9
   Created by Hier0nimus
   Enjoy!
 
@@ -399,6 +399,16 @@
     </Item>
   </ModOp>
   <!-- END - ADD BUILDING TO ALL HEAVY,ALL,BOOSTED BY ELECTRICITY,ALL EXCEPT POWER PLANT,ALL WEAPON,ALL IRONWORKS AND FOUNDRIES PRODUCTION,ALL MAINTENANCE -->
+
+  <Group Condition="#shared-pools-and-definitions">
+    <!-- START - ADD BUILDINGS TO ALL WEAPONS FACTORIES -->
+    <ModOp GUID='1500301941' Type="add" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
+      <Item>
+        <GUID>1742100650</GUID>
+      </Item>
+    </ModOp>
+    <!-- END - ADD BUILDINGS TO ALL WEAPONS FACTORIES -->
+  </Group>
 
   <!-- START - COMPATIBILITY FOR NEW HORIZONS -->
   <Group Condition="#new_horizons_buildmenu">
