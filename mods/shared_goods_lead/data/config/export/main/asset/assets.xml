@@ -1,6 +1,6 @@
 <!-- 
   
-  [Shared] Shared Goods - Lead - v1.2
+  [Shared] Shared Goods - Lead - v1.3
   Created by Hier0nimus
   Enjoy!
 
@@ -452,5 +452,125 @@
     </ModOp>
     <!-- END - ADD BUILDINGS TO ALL SMELTERS -->
   </Group>
+
+  <!-- START - COMPATIBILITY FOR NEW HORIZONS -->
+  <Group Condition="#new_horizons_buildmenu">
+
+    <!-- START BUILDING - LEAD SMELTER (NH) -->
+    <ModOp Type="addNextSibling" GUID='1742100409'>
+      <Asset>
+        <BaseAssetGUID>1742100409</BaseAssetGUID>
+        <Values>
+          <Standard>
+            <GUID>1742101035</GUID>
+            <Name>Lead Smelter (NH)</Name>
+            <InfoDescription>1414018171</InfoDescription>
+          </Standard>
+          <Building>
+            <BuildingCategoryName>1414018301</BuildingCategoryName>
+            <AssociatedRegions>Mod2</AssociatedRegions>
+          </Building>
+          <Cost>
+            <Costs>
+              <Item>
+                <Ingredient>1010017</Ingredient>                <!-- Coins -->
+                <Amount>12000</Amount>
+              </Item>
+              <Item>
+                <Ingredient>1010196</Ingredient>                <!-- Timber - Product -->
+                <Amount>20</Amount>
+              </Item>
+              <Item>
+                <Ingredient>1010205</Ingredient>                <!-- Bricks - Product -->
+                <Amount>14</Amount>
+              </Item>
+              <Item>
+                <Ingredient>1010218</Ingredient>                <!-- Steel Beams - Product -->
+                <Amount>6</Amount>
+              </Item>
+              <Item>
+                <Ingredient>1010207</Ingredient>                <!-- Windows - Product -->
+                <Amount>4</Amount>
+              </Item>
+            </Costs>
+          </Cost>
+          <Selection>
+            <ParticipantMessageArcheType>Mod1</ParticipantMessageArcheType>
+            <Colors>
+              <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+            </Colors>
+          </Selection>
+          <FactoryBase>
+            <CycleTime>30</CycleTime>
+            <IsMainFactory>0</IsMainFactory>
+          </FactoryBase>
+          <Maintenance>
+            <Maintenances>
+              <Item>
+                <Product>1010017</Product>
+                <Amount>100</Amount>
+                <InactiveAmount>50</InactiveAmount>
+              </Item>
+              <Item>
+                <Product>15100003</Product>                <!-- Gongren Workforce -->
+                <Amount>30</Amount>
+              </Item>
+            </Maintenances>
+          </Maintenance>
+          <Electrifiable />
+          <Industrializable>
+            <BoostedByIndustrialization>0</BoostedByIndustrialization>
+          </Industrializable>
+          <Pausable>
+            <IsHaciendaDependent>1</IsHaciendaDependent>
+          </Pausable>
+        </Values>
+      </Asset>
+    </ModOp>
+    <!-- END BUILDING - LEAD SMELTER (NH) -->
+
+    <!-- START ADD TO NH BUILDING MENU -->
+    <ModOp Type="addPrevSibling" GUID='1445610' Path="/Values/ConstructionCategory/BuildingList/Item[Building='1445049']">
+      <Item>
+        <Building>1742100698</Building>        <!-- Gunpowder (NH) - Chain -->
+      </Item>
+    </ModOp>
+    <!-- END ADD TO NH BUILDING MENU -->
+
+    <!-- START - ADD PRODUCTION BUILDINGS TO WORKFORCE MENU -->
+    <ModOp Type="add" GUID="25000087" Path="/Values/WorkforceMenu/BoostableFactories">
+      <Item>
+        <Factory>1742101035</Factory>
+      </Item>
+    </ModOp>
+    <!-- END - ADD PRODUCTION BUILDINGS TO WORKFORCE MENU -->
+
+    <!-- START - ADD BUILDING TO ALL HEAVY,ALL EXCEPT POWER PLANT,ALL WEAPON,ALL IRONWORKS AND FOUNDRIES PRODUCTION,ALL MAINTENANCE -->
+    <ModOp GUID='193771,6000018,193856,25599,192436,190842,368,14443032' Type="add" Path="Values/ItemEffectTargetPool/EffectTargetGUIDs/">
+      <Item>
+        <GUID>1742101035</GUID>
+      </Item>
+    </ModOp>
+    <!-- END - ADD BUILDING TO ALL HEAVY,ALL,BOOSTED BY ELECTRICITY,ALL EXCEPT POWER PLANT,ALL WEAPON,ALL IRONWORKS AND FOUNDRIES PRODUCTION,ALL MAINTENANCE -->
+
+    <Group Condition="#shared-pools-and-definitions">
+      <!-- START - ADD BUILDINGS TO ALL SMELTERS -->
+      <ModOp GUID='1500301940' Type="add" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
+        <Item>
+          <GUID>1742101035</GUID>
+        </Item>
+      </ModOp>
+      <!-- END - ADD BUILDINGS TO ALL SMELTERS -->
+    </Group>
+
+    <!-- FEEDBACK -->
+    <ModOp Type="add" GUID="133700515" Path="/Values/FeedbackBuildingGroup/Buildings" Condition="@133700515">
+      <Item>
+        <Building>1742101035</Building>
+      </Item>
+    </ModOp>
+
+  </Group>
+  <!-- END - COMPATIBILITY FOR NEW HORIZONS -->
 
 </ModOps>
