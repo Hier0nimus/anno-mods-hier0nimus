@@ -1,7 +1,7 @@
 <!-- 
   
  
-  [Shared] Shared Goods - Strings - v1.4
+  [Shared] Shared Goods - Strings - v1.6
   Created by Taubenangriff and Hier0nimus
   Enjoy!
 
@@ -352,7 +352,7 @@ Add building to construction menu where you want it
   <!-- END - ADD PRODUCTION BUILDINGS TO WORKFORCE MENU -->
 
   <!-- START - ADD BUILDING TO ALL ENGINEERS,HEAVY,ALL,BOOSTED BY ELECTRICITY,ALL EXCEPT POWER PLANT PRODUCTION -->
-  <ModOp GUID='192423,193771,6000018,193875,193856,25599' Type="add" Path="Values/ItemEffectTargetPool/EffectTargetGUIDs/">
+  <ModOp GUID='192423,193771,6000018,193875,193856,25599,368' Type="add" Path="Values/ItemEffectTargetPool/EffectTargetGUIDs/">
     <Item>
       <GUID>1742200004</GUID>
     </Item>
@@ -367,6 +367,32 @@ Add building to construction menu where you want it
     </Item>
   </ModOp>
   <!-- END - DOCKLANDS - Add strings to existing trader - The Promise Trust -->
+
+  <!-- All string factories -->
+  <ModOp Type="addNextSibling" GUID="119">
+    <Asset>
+      <Template>ItemEffectTargetPool</Template>
+      <Values>
+        <Standard>
+          <GUID>1742200026</GUID>
+          <Name>String Factory</Name>
+        </Standard>
+        <Text>
+          <TextOverride>1742200004</TextOverride>
+        </Text>
+        <ItemEffectTargetPool>
+          <EffectTargetGUIDs>
+            <Item>
+              <GUID>1742200004</GUID>
+            </Item>
+            <Item>
+              <GUID>1441284</GUID>
+            </Item>
+          </EffectTargetGUIDs>
+        </ItemEffectTargetPool>
+      </Values>
+    </Asset>
+  </ModOp>
 
   <!-- START - PRODUCTION CHAIN - Strings Factory (Cotton) -->
   <ModOp Type="addNextSibling" GUID='500091'>
