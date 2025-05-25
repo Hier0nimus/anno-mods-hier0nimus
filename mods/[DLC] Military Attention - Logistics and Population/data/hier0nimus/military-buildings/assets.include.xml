@@ -3804,7 +3804,7 @@
           </ModuleLimits>
           <ConstructionOptions>
             <Item>
-              <ModuleGUID>1742100090</ModuleGUID>
+              <ModuleGUID>1742101065</ModuleGUID>
             </Item>
             <Item>
               <ModuleGUID>113452</ModuleGUID>
@@ -3876,20 +3876,20 @@
   </ModOp>
   <!-- END BUILDING - MILITARY ACADEMY -->
 
-  <!-- START BUILDING - MILITARY ACADEMY MODULE -->
+  <!-- START BUILDING - MILITARY ACADEMY MODULE DEPRECATED -->
   <ModOp GUID="100454" Type="addNextSibling">
     <Asset>
       <Template>AcademyModule</Template>
       <Values>
         <Standard>
           <GUID>1742100090</GUID>
-          <Name>Military Campus</Name>
+          <Name>Military Campus (Deprecated)</Name>
           <IconFilename>data/graphics/icons/icon_military_academy_module.png</IconFilename>
           <InfoDescription>1742100091</InfoDescription>
         </Standard>
         <Building>
           <BuildingCategoryName>2498</BuildingCategoryName>
-          <PickingAsset>1742100090</PickingAsset>
+          <PickingAsset>1742101065</PickingAsset>
           <BuildModeRandomRotation>180</BuildModeRandomRotation>
           <AssociatedRegions>Moderate</AssociatedRegions>
         </Building>
@@ -3950,6 +3950,129 @@
         </BuildingModule>
         <ItemContainer>
           <SocketCount>3</SocketCount>
+          <SocketAllocation>RadiusBuilding;GuildHouse;TownHall;HarborOffice;Dockland;Lodge;Ship;SailShip;SteamShip;Warship;Tradeship;AirShip;Culture;Museum;Zoo;BotanicGarden;DivingVessel;Mod1</SocketAllocation>
+          <SocketScope>Radius</SocketScope>
+          <SocketScopeRadius>0</SocketScopeRadius>
+        </ItemContainer>
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+          <HasRuinState>1</HasRuinState>
+          <SelfHealPerHealTick>4</SelfHealPerHealTick>
+        </Attackable>
+        <QuestObject />
+        <AmbientMoodProvider />
+        <PublicService>
+          <FullSatisfactionDistance>80</FullSatisfactionDistance>
+          <NoSatisfactionDistance>90</NoSatisfactionDistance>
+          <PublicServiceOutputs>
+            <Item>
+              <Product>1010353</Product>              <!--university-->
+            </Item>
+          </PublicServiceOutputs>
+        </PublicService>
+        <UpgradeList />
+        <Factory7/>
+        <LogisticNode/>
+        <Pausable />
+        <FactoryBase />
+        <BuffFactory>
+          <BaseBuff>1742100245</BaseBuff>
+          <BaseBuffScope>Radius</BaseBuffScope>
+          <BaseBuffDistance>18</BaseBuffDistance>
+        </BuffFactory>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>500</Amount>
+            </Item>
+            <Item>
+              <Product>1742100005</Product>              <!-- Soldiers Workforce - Product -->
+              <Amount>50</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - MILITARY ACADEMY MODULE DEPRECATED -->
+
+  <!-- START BUILDING - MILITARY ACADEMY MODULE -->
+  <ModOp GUID="100454" Type="addNextSibling">
+    <Asset>
+      <Template>AcademyModule</Template>
+      <Values>
+        <Standard>
+          <GUID>1742101065</GUID>
+          <Name>Military Campus</Name>
+          <IconFilename>data/graphics/icons/icon_military_academy_module.png</IconFilename>
+          <InfoDescription>1742100091</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>2498</BuildingCategoryName>
+          <PickingAsset>1742101065</PickingAsset>
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <AssociatedRegions>Moderate</AssociatedRegions>
+        </Building>
+        <Blocking />
+        <Text>
+          <TextOverride>1742100090</TextOverride>
+        </Text>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>10000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>30</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!-- Bricks - Product -->
+              <Amount>25</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product -->
+              <Amount>15</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>              <!-- Windows - Product -->
+              <Amount>30</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010202</Ingredient>              <!-- Reinforced Concrete - Product -->
+              <Amount>30</Amount>
+            </Item>
+          </Costs>
+          <InfluenceCostType/>
+          <InfluenceCostPoints>2</InfluenceCostPoints>
+        </Cost>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/military/military_academy/military_academy_module_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Mesh />
+        <Selection>
+          <GUIType>Guildhouse</GUIType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Constructable />
+        <Locked />
+        <SoundEmitter />
+        <FeedbackController />
+        <Infolayer />
+        <BuildingModule>
+          <PlazaSize>20</PlazaSize>
+          <ModuleMoodImage>data/ui/2kimages/main/assets/cultural_building_mood_bg/bg_empty_museum.png</ModuleMoodImage>
+        </BuildingModule>
+        <ItemContainer>
+          <SocketCount>1</SocketCount>
           <SocketAllocation>RadiusBuilding;GuildHouse;TownHall;HarborOffice;Dockland;Lodge;Ship;SailShip;SteamShip;Warship;Tradeship;AirShip;Culture;Museum;Zoo;BotanicGarden;DivingVessel;Mod1</SocketAllocation>
           <SocketScope>Radius</SocketScope>
           <SocketScopeRadius>0</SocketScopeRadius>
@@ -6258,7 +6381,7 @@
         <SoundEmitter/>
         <Factory7/>
         <FactoryBase>
-          <CycleTime>40</CycleTime>
+          <CycleTime>45</CycleTime>
         </FactoryBase>
         <LogisticNode>
           <TransporterCountMax>0</TransporterCountMax>
@@ -6276,7 +6399,6 @@
             </Item>
           </Maintenances>
         </Maintenance>
-        <Industrializable/>
         <IncidentInfectable>
           <IncidentInfectionChanceFactors>
             <Explosion>
@@ -6284,7 +6406,10 @@
             </Explosion>
           </IncidentInfectionChanceFactors>
         </IncidentInfectable>
-        <Electrifiable/>
+        <Electrifiable />
+        <Industrializable>
+          <BoostedByIndustrialization>0</BoostedByIndustrialization>
+        </Industrializable>
         <AmbientMoodProvider>
           <Murmur>Factory</Murmur>
         </AmbientMoodProvider>
@@ -6412,7 +6537,7 @@
               <StorageAmount>10</StorageAmount>
             </Item>
           </FactoryOutputs>
-          <CycleTime>40</CycleTime>
+          <CycleTime>45</CycleTime>
         </FactoryBase>
         <LogisticNode>
           <TransporterCountMax>4</TransporterCountMax>
@@ -6430,13 +6555,15 @@
             </Item>
           </Maintenances>
         </Maintenance>
-        <Industrializable/>
         <IncidentInfectable>
           <Explosion>
             <DamageExplosionCheckMax>75</DamageExplosionCheckMax>
           </Explosion>
         </IncidentInfectable>
-        <Electrifiable/>
+        <Electrifiable />
+        <Industrializable>
+          <BoostedByIndustrialization>0</BoostedByIndustrialization>
+        </Industrializable>
         <AmbientMoodProvider>
           <Murmur>Factory</Murmur>
         </AmbientMoodProvider>

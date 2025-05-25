@@ -4,6 +4,55 @@
 
 <ModOps>
 
+  <!-- MAGNATE INDUSTRIAL PRODUCTION -->
+  <ModOp Type="add" GUID="14443032" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs" Condition="@1445609">
+    <Item>
+      <GUID>1742100647</GUID>
+    </Item>
+    <Item>
+      <GUID>1742100699</GUID>
+    </Item>
+    <Item>
+      <GUID>1742101001</GUID>
+    </Item>
+    <Item>
+      <GUID>1742101003</GUID>
+    </Item>
+    <Item>
+      <GUID>1742101010</GUID>
+    </Item>
+    <Item>
+      <GUID>1742101011</GUID>
+    </Item>
+    <Item>
+      <GUID>1742101012</GUID>
+    </Item>
+    <Item>
+      <GUID>1742101036</GUID>
+    </Item>
+    <Item>
+      <GUID>1742101037</GUID>
+    </Item>
+    <Item>
+      <GUID>1742101038</GUID>
+    </Item>
+    <Item>
+      <GUID>1742101039</GUID>
+    </Item>
+    <Item>
+      <GUID>1742101040</GUID>
+    </Item>
+    <Item>
+      <GUID>1742101041</GUID>
+    </Item>
+    <Item>
+      <GUID>1742101050</GUID>
+    </Item>
+    <Item>
+      <GUID>1742101054</GUID>
+    </Item>
+  </ModOp>
+
   <!-- START - ADD PRODUCTION BUILDING TO WORKFORCE MENU -->
   <ModOp Type="add" GUID="25000087" Path="/Values/WorkforceMenu/BoostableFactories">
     <Item>
@@ -55,45 +104,15 @@
   <!-- END - ADD PRODUCTION BUILDING TO WORKFORCE MENU -->
 
   <!-- START - ADD BUILDING TO POOLS -->
-  <ModOp GUID='193771,6000018,193856,25599,192436,190842,368' Type="add" Path="Values/ItemEffectTargetPool/EffectTargetGUIDs/">
+  <ModOp GUID='6000018,193856' Type="add" Path="Values/ItemEffectTargetPool/EffectTargetGUIDs/">
     <Item>
       <GUID>1742100647</GUID>
-    </Item>
-    <Item>
-      <GUID>1742100699</GUID>
-    </Item>
-    <Item>
-      <GUID>1742101001</GUID>
-    </Item>
-    <Item>
-      <GUID>1742101003</GUID>
-    </Item>
-    <Item>
-      <GUID>1742101010</GUID>
-    </Item>
-    <Item>
-      <GUID>1742101011</GUID>
-    </Item>
-    <Item>
-      <GUID>1742101012</GUID>
     </Item>
     <Item>
       <GUID>1742101036</GUID>
     </Item>
     <Item>
-      <GUID>1742101037</GUID>
-    </Item>
-    <Item>
-      <GUID>1742101038</GUID>
-    </Item>
-    <Item>
       <GUID>1742101039</GUID>
-    </Item>
-    <Item>
-      <GUID>1742101040</GUID>
-    </Item>
-    <Item>
-      <GUID>1742101041</GUID>
     </Item>
     <Item>
       <GUID>1742101050</GUID>
@@ -103,51 +122,52 @@
     </Item>
   </ModOp>
 
-  <ModOp Type="add" GUID="14443032" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs" Condition="@1445609">
+  <!-- START - ADD BUILDING TO POOLS -->
+  <ModOp GUID='368' Type="add" Path="Values/ItemEffectTargetPool/EffectTargetGUIDs/">
     <Item>
       <GUID>1742100647</GUID>
     </Item>
     <Item>
-      <GUID>1742100699</GUID>
-    </Item>
-    <Item>
-      <GUID>1742101001</GUID>
-    </Item>
-    <Item>
-      <GUID>1742101003</GUID>
-    </Item>
-    <Item>
-      <GUID>1742101010</GUID>
-    </Item>
-    <Item>
-      <GUID>1742101011</GUID>
-    </Item>
-    <Item>
-      <GUID>1742101012</GUID>
-    </Item>
-    <Item>
       <GUID>1742101036</GUID>
-    </Item>
-    <Item>
-      <GUID>1742101037</GUID>
-    </Item>
-    <Item>
-      <GUID>1742101038</GUID>
-    </Item>
-    <Item>
-      <GUID>1742101039</GUID>
-    </Item>
-    <Item>
-      <GUID>1742101040</GUID>
-    </Item>
-    <Item>
-      <GUID>1742101041</GUID>
     </Item>
     <Item>
       <GUID>1742101050</GUID>
     </Item>
     <Item>
       <GUID>1742101054</GUID>
+    </Item>
+    <Item>
+      <GUID>1742101039</GUID>
+    </Item>
+    <Item>
+      <GUID>1742101054</GUID>
+    </Item>
+  </ModOp>
+
+  <!-- START - ADD BUILDING TO POOL ALL (MILITARY) (ASIAN) RESIDENCES -->
+  <ModOp GUID='1742100019,190762,193957,14443030' Type="add" Path="Values/ItemEffectTargetPool/EffectTargetGUIDs/">
+    <Item>
+      <GUID>1742100634</GUID>
+    </Item>
+  </ModOp>
+
+  <!-- START - ADD BUILDING TO POOL ALL MILITARY SERVICE BUILDINGS -->
+  <ModOp GUID='1742100427' Type="add" Path="Values/ItemEffectTargetPool/EffectTargetGUIDs/">
+    <Item>
+      <GUID>1742100640</GUID>
+    </Item>
+    <Item>
+      <GUID>1742100636</GUID>
+    </Item>
+  </ModOp>
+
+  <!-- ALL WEAPONS FACTORY (SHARED) TO ItemEffectTargetPool -->
+  <ModOp Type="add" GUID="1500301941" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
+    <Item>
+      <GUID>1742101003</GUID>
+    </Item>
+    <Item>
+      <GUID>1742101041</GUID>
     </Item>
   </ModOp>
 
@@ -155,33 +175,6 @@
   <ModOp Type="add" GUID="1742100045" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
     <Item>
       <GUID>1742100699</GUID>
-    </Item>
-    <Item>
-      <GUID>1742101001</GUID>
-    </Item>
-    <Item>
-      <GUID>1742101003</GUID>
-    </Item>
-    <Item>
-      <GUID>1742101010</GUID>
-    </Item>
-    <Item>
-      <GUID>1742101011</GUID>
-    </Item>
-    <Item>
-      <GUID>1742101012</GUID>
-    </Item>
-    <Item>
-      <GUID>1742101037</GUID>
-    </Item>
-    <Item>
-      <GUID>1742101038</GUID>
-    </Item>
-    <Item>
-      <GUID>1742101041</GUID>
-    </Item>
-    <Item>
-      <GUID>1742101054</GUID>
     </Item>
   </ModOp>
 
@@ -270,6 +263,25 @@
     </Item>
   </ModOp>
 
+  <!-- START - ADD BUILDINGS TO ALL SLEEPING BAG FACTORIES -->
+  <ModOp GUID='1742100280' Type="add" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
+    <Item>
+      <GUID>1742101040</GUID>
+    </Item>
+  </ModOp>
+  <!-- END - ADD BUILDINGS TO ALL SLEEPING BAG FACTORIES -->
+
+  <!-- START - ADD BUILDINGS TO ALL MILITARY UNIFORM FACTORIES -->
+  <ModOp GUID='1742100656' Type="add" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
+    <Item>
+      <GUID>1742101037</GUID>
+    </Item>
+    <Item>
+      <GUID>1742101038</GUID>
+    </Item>
+  </ModOp>
+  <!-- END - ADD BUILDINGS TO ALL MILITARY UNIFORM FACTORIES -->
+
   <!-- All Basic Weapons Factories - ItemEffectTargetPool -->
   <ModOp Type="add" GUID="1742100655" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
     <Item>
@@ -277,8 +289,34 @@
     </Item>
   </ModOp>
 
+  <!-- ALL IRONWORKS AND FOUNDRIES -->
+  <ModOp Type="add" GUID="190842" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
+    <Item>
+      <GUID>1742100647</GUID>
+    </Item>
+    <Item>
+      <GUID>1742101003</GUID>
+    </Item>
+    <Item>
+      <GUID>1742101041</GUID>
+    </Item>
+  </ModOp>
+
+<!-- START - ADD BUILDING TO POOL HEAVY INDUSTRY -->
+<ModOp GUID='193771' Type="add" Path="Values/ItemEffectTargetPool/EffectTargetGUIDs/">
+  <Item>
+    <GUID>1742101003</GUID>
+  </Item>
+  <Item>
+    <GUID>1742101041</GUID>
+  </Item>
+</ModOp>
+
   <!-- ALL WEAPONS PRODUCTION -->
   <ModOp Type="add" GUID="192436" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
+    <Item>
+      <GUID>1742101001</GUID>
+    </Item>
     <Item>
       <GUID>1742101003</GUID>
     </Item>
@@ -291,28 +329,10 @@
     </Item>
   </ModOp>
 
-  <!-- ALL IRONWORKS AND FOUNDRIES -->
-  <ModOp Type="add" GUID="190842" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
+  <!-- ALL PAPER MILLS (Shared) -->
+  <ModOp Type="add" GUID="1500302632" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
     <Item>
-      <GUID>1742100647</GUID>
-    </Item>
-    <Item>
-      <GUID>1742101001</GUID>
-    </Item>
-    <Item>
-      <GUID>1742101003</GUID>
-    </Item>
-    <Item>
-      <GUID>1742101010</GUID>
-    </Item>
-    <Item>
-      <GUID>1742101011</GUID>
-    </Item>
-    <Item>
-      <GUID>1742101012</GUID>
-    </Item>
-    <Item>
-      <GUID>1742101041</GUID>
+      <GUID>1742101050</GUID>
     </Item>
   </ModOp>
 
@@ -389,9 +409,6 @@
     </Item>
     <Item>
       <GUID>1742100640</GUID>      <!-- Horai Outpost - Building -->
-    </Item>
-    <Item>
-      <GUID>1742100651</GUID>      <!-- Navy Recruitment Office (NH) - Building -->
     </Item>
   </ModOp>
   <!-- END ALL MILITARY SERVICE BUILDINGS TO ItemEffectTargetPool -->
