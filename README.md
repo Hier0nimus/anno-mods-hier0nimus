@@ -17,7 +17,7 @@ You will need ALL DLC's to play this mod. There are new goods in every region fr
 
 Explore the world of musical instruments with new production chains and a lategame Music hall to boost your New world population.
 
-Current version 1.17 (27/04/2025)
+Current version 1.18 (23/05/2025)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/music-to-my-ears
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
@@ -25,7 +25,7 @@ Current version 1.17 (27/04/2025)
 
 Centered around military infrastructure and adding new military residence tiers for all regions with a focus on the Old World.
 
-Current version 1.24 (15/05/2025)
+Current version 1.25 (23/05/2025)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/military-attention
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
@@ -33,7 +33,7 @@ Current version 1.24 (15/05/2025)
 
 Additional mod for Military Attention that focuses on new ships and ship balancing. Can be used as a standalone.
 
-Current version 1.28 (05/05/2025)
+Current version 1.29 (23/05/2025)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/military-attention-ships
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
@@ -41,7 +41,7 @@ Current version 1.28 (05/05/2025)
 
 Additional mod for Military Attention that focuses on rebalancing the pirates and adding additional pirates mechanics like a new population.
 
-Current version 1.10 (05/05/2025)
+Current version 1.11 (23/05/2025)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/military-attention-pirates
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
@@ -65,7 +65,7 @@ Current version 1.0 (14/07/2024)
 
 A mod that adds 4 new airships in the form of hot air balloons that are build in the normal sailing shipyard.
 
-Current version 1.13 (27/04/2025)
+Current version 1.14 (23/05/2025)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/almost-100-hot-air-balloons
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
