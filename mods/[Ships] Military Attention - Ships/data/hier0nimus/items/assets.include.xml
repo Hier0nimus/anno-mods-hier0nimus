@@ -3,6 +3,195 @@
 -->
 <ModOps>
 
+    <!-- Add new allocation types to Crafting menu and Kontor menu -->
+
+    <ModOp Type="add" GUID="113879" Path="/Values/ItemFilter/ItemCategories/Item[CategoryAsset='18021']/ItemTypes">;Mod9;Mod10</ModOp>
+    <ModOp Type="add" GUID="113879" Path="/Values/ItemFilter/ItemCategories/Item[CategoryAsset='18022']/ItemTypes">;Mod9;Mod10</ModOp>
+
+    <ModOp Type="add" GUID='501516' Path="/Values/ItemFilter/ItemCategories/Item[CategoryAsset='18021']/ItemTypes">;Mod10</ModOp>
+    <ModOp Type="add" GUID='501516' Path="/Values/ItemFilter/ItemCategories/Item[CategoryAsset='18022']/ItemTypes">;Mod10</ModOp>
+
+    <!-- Rocket Salvo/Barrage: Rework -->
+
+    <!-- Existing Rockets need support ship type now-->
+    <ModOp Type="replace" GUID='1516,1517' Path="/Values/Item/Allocation">
+        <Allocation>Mod9</Allocation>
+    </ModOp>
+
+    <!-- Existing Rockets no longer deal much damage to buildings - only usable for diabling mines -->
+
+    <!-- Existing Rocket Barrages Balancing-->
+    <ModOp Type="merge" GUID='1516' Path="/Values/">
+        <SpecialAction>
+            <BarrageCount>5</BarrageCount>            <!-- 10 -->
+            <ActionRadius>4</ActionRadius>            <!-- 8 -->
+            <BarrageDuration>5000</BarrageDuration>            <!-- 8000 -->
+        </SpecialAction>
+        <ItemAction>
+            <ActionDistance>100</ActionDistance>            <!-- 165 -->
+            <ActionCooldown>15000</ActionCooldown>            <!-- 25000 -->
+            <Charges>10</Charges>
+        </ItemAction>
+        <Item>
+            <Rarity>Common</Rarity>            <!-- Uncommon -->
+            <TradePrice>20000</TradePrice>            <!-- 3528900 -->
+        </Item>
+        <CraftableItem>
+            <CraftingCosts>
+                <Item>
+                    <Product>112518</Product>                    <!--scrap I-->
+                    <Amount>5</Amount>
+                </Item>
+                <Item>
+                    <Product>846</Product>                    <!--Bombs-->
+                    <Amount>3</Amount>
+                </Item>
+            </CraftingCosts>
+        </CraftableItem>
+    </ModOp>
+    <ModOp Type="merge" GUID='1517' Path="/Values/">
+        <SpecialAction>
+            <BarrageCount>10</BarrageCount>            <!-- 18 -->
+            <ActionRadius>4</ActionRadius>            <!-- 8 -->
+            <BarrageDuration>10000</BarrageDuration>            <!-- 12000 -->
+        </SpecialAction>
+        <ItemAction>
+            <ActionDistance>100</ActionDistance>            <!-- 165 -->
+            <ActionCooldown>10000</ActionCooldown>            <!-- 45000 -->
+            <IsDestroyedAfterCooldown>0</IsDestroyedAfterCooldown>
+        </ItemAction>
+        <Item>
+            <Rarity>Legendary</Rarity>            <!-- Epic -->
+            <TradePrice>350000</TradePrice>            <!-- 12450000 -->
+        </Item>
+        <CraftableItem>
+            <CraftingCosts>
+                <Item>
+                    <Product>112523</Product>                    <!--scrap III-->
+                    <Amount>10</Amount>
+                </Item>
+                <Item>
+                    <Product>846</Product>                    <!--Bombs-->
+                    <Amount>10</Amount>
+                </Item>
+            </CraftingCosts>
+        </CraftableItem>
+    </ModOp>
+    <ModOp Type="remove" GUID='1517' Path="/Values/ItemAction/Charges" />
+
+    <!-- Nerf Rocket multiplier buildings-->
+    <ModOp Type="remove" GUID='1518' Path="/Values/Projectile/Effectivities" />
+
+    <ModOp Type="merge" GUID='1518' Path="/Values/">
+        <Exploder>
+            <InnerDamage>35</InnerDamage>            <!-- 38 -->
+            <OuterDamageRadius>12</OuterDamageRadius>            <!-- 8 -->
+            <MinimumDamage>30</MinimumDamage>            <!-- 18 -->
+        </Exploder>
+    </ModOp>
+
+    <!-- Remove Rockat Barrage from Archi selling pool -->
+    <ModOp Type="remove" GUID="2557" Path="/Values/RewardPool/ItemsPool/Item[ItemLink='1517']" />
+
+    <!-- Add Rockat Salvo/Barrage to (crafting) pools -->
+    <ModOp Type="add" GUID="193438" Path="/Values/RewardPool/ItemsPool/">
+        <Item>
+            <ItemLink>1516</ItemLink>
+        </Item>
+    </ModOp>
+    <ModOp Type="add" GUID="193439" Path="/Values/RewardPool/ItemsPool/">
+        <Item>
+            <ItemLink>1517</ItemLink>
+        </Item>
+    </ModOp>
+    <ModOp Type="add" GUID="77,137935" Path="/Values/ItemCrafter/CraftableItemsInRegion/Moderate/CraftableItems/">
+        <Item>
+            <Item>1516</Item>
+        </Item>
+        <Item>
+            <Item>1517</Item>
+        </Item>
+    </ModOp>
+
+    <!-- Special Action Sea Mines: Rework -->
+
+    <!-- Existing Special Action Sea Mines need support ship type now to drop them -->
+    <ModOp Type="replace" GUID='112574,110982,110983,112576,112578' Path = "/Values/Item/Allocation">
+        <Allocation>Mod9</Allocation>
+    </ModOp>
+
+    <!-- Existing Special Action Sea mines rebalancing -->
+    <ModOp Type="merge" GUID='112574' Path="/Values/">
+        <Item>
+            <Rarity>Common</Rarity>            <!-- Uncommon -->
+        </Item>
+        <CraftableItem>
+            <CraftingCosts>
+                <Item>
+                    <Product>112518</Product>                    <!--scrap I-->
+                    <Amount>5</Amount>
+                </Item>
+                <Item>
+                    <Product>847</Product>                    <!--Sea Mines-->
+                    <Amount>4</Amount>
+                </Item>
+                <Item>
+                    <Product>1010243</Product>                    <!--Filament-->
+                    <Amount>2</Amount>
+                </Item>
+            </CraftingCosts>
+        </CraftableItem>
+    </ModOp>
+    <ModOp Type="merge" GUID='112576' Path="/Values/">
+        <CraftableItem>
+            <CraftingCosts>
+                <Item>
+                    <Product>112520</Product>                    <!--scrap II-->
+                    <Amount>5</Amount>
+                </Item>
+                <Item>
+                    <Product>847</Product>                    <!--Sea Mines-->
+                    <Amount>6</Amount>
+                </Item>
+                <Item>
+                    <Product>1010243</Product>                    <!--Filament-->
+                    <Amount>4</Amount>
+                </Item>
+                <Item>
+                    <Product>6280</Product>                    <!--Cables-->
+                    <Amount>2</Amount>
+                </Item>
+            </CraftingCosts>
+        </CraftableItem>
+    </ModOp>
+    <ModOp Type="merge" GUID='112578' Path="/Values/">
+        <CraftableItem>
+            <CraftingCosts>
+                <Item>
+                    <Product>112523</Product>                    <!--scrap III-->
+                    <Amount>5</Amount>
+                </Item>
+                <Item>
+                    <Product>847</Product>                    <!--Sea Mines-->
+                    <Amount>10</Amount>
+                </Item>
+                <Item>
+                    <Product>1010243</Product>                    <!--Filament-->
+                    <Amount>6</Amount>
+                </Item>
+                <Item>
+                    <Product>6280</Product>                    <!--Cables-->
+                    <Amount>4</Amount>
+                </Item>
+            </CraftingCosts>
+        </CraftableItem>
+    </ModOp>
+    <ModOp Type="merge" GUID='110983,112578' Path="/Values/">
+        <ItemAction>
+            <Charges>10</Charges>            <!-- 5 -->
+        </ItemAction>
+    </ModOp>
+
     <!-- Torpedo Launcher: New Socket Allocation -->
     <ModOp Type="addNextSibling" GUID='115184'>
         <Asset>
@@ -41,60 +230,67 @@
         </Item>
     </ModOp>
 
-    <ModOp Type="add" GUID='501516' Path="/Values/ItemFilter/ItemCategories/Item[CategoryAsset='18021']/ItemTypes">;Mod10</ModOp>
-
     <!-- Existing Torpedos need launchers now-->
     <ModOp Type="replace" GUID='192186,192185,192184,191474' Path = "/Values/Item/Allocation">
         <Allocation>Mod10</Allocation>
     </ModOp>
 
     <!-- Existing Torpedos Balancing-->
-    <ModOp Type="merge" GUID='191474,192184' Path = "/Values/ItemAction">
+    <ModOp Type="merge" GUID='191474' Path = "/Values/">
+        <ItemAction>
+            <ActionCooldown>9000</ActionCooldown>            <!-- 25000 -->
+            <Charges>10</Charges>            <!-- 3 -->
+        </ItemAction>
+        <Item>
+            <Rarity>Common</Rarity>            <!-- Uncommon -->
+        </Item>
+    </ModOp>
+    <ModOp Type="merge" GUID='192184' Path = "/Values/">
         <ItemAction>
             <ActionCooldown>10000</ActionCooldown>
         </ItemAction>
     </ModOp>
-    <ModOp Type="merge" GUID='192187' Path = "/Values/Projectile/ProjectileSpeed">
-        <ProjectileSpeed>1</ProjectileSpeed>
+    <ModOp Type="merge" GUID='192187' Path = "/Values/Projectile/">
+        <ProjectileSpeed>1.2</ProjectileSpeed>
     </ModOp>
-    <ModOp Type="merge" GUID='192187' Path = "/Values/Exploder/InnerDamage">
-        <InnerDamage>500</InnerDamage>
+    <ModOp Type="merge" GUID='192187' Path = "/Values/Exploder/">
+        <InnerDamage>750</InnerDamage>
     </ModOp>
-    <ModOp Type="merge" GUID='192187' Path = "/Values/Exploder/MinimumDamage">
-        <MinimumDamage>250</MinimumDamage>
+    <ModOp Type="merge" GUID='192187' Path = "/Values/Exploder/">
+        <MinimumDamage>400</MinimumDamage>
     </ModOp>
 
-    <ModOp Type="merge" GUID='192185' Path = "/Values/ItemAction">
+    <ModOp Type="merge" GUID='192185' Path = "/Values/">
         <ItemAction>
             <ActionCooldown>20000</ActionCooldown>
         </ItemAction>
     </ModOp>
-    <ModOp Type="merge" GUID='192188' Path = "/Values/Projectile/ProjectileSpeed">
-        <ProjectileSpeed>1.25</ProjectileSpeed>
+    <ModOp Type="merge" GUID='192188' Path = "/Values/Projectile/">
+        <ProjectileSpeed>1.8</ProjectileSpeed>
     </ModOp>
-    <ModOp Type="merge" GUID='192188' Path = "/Values/Exploder/InnerDamage">
-        <InnerDamage>750</InnerDamage>
+    <ModOp Type="merge" GUID='192188' Path = "/Values/Exploder/">
+        <InnerDamage>1000</InnerDamage>
     </ModOp>
-    <ModOp Type="merge" GUID='192188' Path = "/Values/Exploder/MinimumDamage">
-        <MinimumDamage>500</MinimumDamage>
+    <ModOp Type="merge" GUID='192188' Path = "/Values/Exploder/">
+        <MinimumDamage>600</MinimumDamage>
     </ModOp>
 
-    <ModOp Type="merge" GUID='192186' Path = "/Values/ItemAction">
+    <ModOp Type="merge" GUID='192186' Path = "/Values/">
         <ItemAction>
             <ActionCooldown>30000</ActionCooldown>
         </ItemAction>
     </ModOp>
-    <ModOp Type="merge" GUID='192189' Path = "/Values/Projectile/ProjectileSpeed">
-        <ProjectileSpeed>2</ProjectileSpeed>
+    <ModOp Type="merge" GUID='192189' Path = "/Values/Projectile/">
+        <ProjectileSpeed>2.5</ProjectileSpeed>
     </ModOp>
-    <ModOp Type="merge" GUID='192189' Path = "/Values/Exploder/InnerDamage">
-        <InnerDamage>1500</InnerDamage>
+    <ModOp Type="merge" GUID='192189' Path = "/Values/Exploder/">
+        <InnerDamage>2000</InnerDamage>
     </ModOp>
-    <ModOp Type="merge" GUID='192189' Path = "/Values/Exploder/MinimumDamage">
-        <MinimumDamage>750</MinimumDamage>
+    <ModOp Type="merge" GUID='192189' Path = "/Values/Exploder/">
+        <MinimumDamage>1000</MinimumDamage>
     </ModOp>
 
-    <ModOp Type="merge" GUID='192187,192188,192189' Path = "/Values/Projectile/StatusEffects">
+    <ModOp Type="merge" GUID='192187,192188,192189' Path = "/Values/Projectile/">
         <StatusEffects>
             <Item>
                 <StatusEffectChain>
@@ -220,7 +416,6 @@
             <UnlockingSpecialist>1742100596</UnlockingSpecialist>
         </Item>
     </ModOp>
-
 
     <!-- at Eli Bleakworth -->
     <!-- at Isabel -->
