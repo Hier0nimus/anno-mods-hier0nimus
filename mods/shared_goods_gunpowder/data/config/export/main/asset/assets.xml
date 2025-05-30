@@ -1,6 +1,6 @@
 <!-- 
   
-  [Shared] Shared Goods - Gunpowder - v1.11
+  [Shared] Shared Goods - Gunpowder - v1.12
   Created by Hier0nimus
   Enjoy!
 
@@ -15,6 +15,8 @@
 
   1742100650 - Gunpowder Factory (NH) - Building
   1742100698 - Gunpowder (NH) - ProductionChain
+
+  1742200032 - All Gunpowder Factories - ItemEffectTargetPool
 
 -->
 
@@ -475,6 +477,36 @@
     </Item>
   </ModOp>
   <!-- END - ADD BUILDING TO ALL HEAVY,ALL,BOOSTED BY ELECTRICITY,ALL EXCEPT POWER PLANT,ALL WEAPON,ALL IRONWORKS AND FOUNDRIES PRODUCTION,ALL MAINTENANCE -->
+
+  <!-- START - ALL GUNPOWDER FACTORIES -->
+  <ModOp Type="addNextSibling" GUID="119">
+    <Asset>
+      <Template>ItemEffectTargetPool</Template>
+      <Values>
+        <Standard>
+          <GUID>1742200032</GUID>
+          <Name>All Gunpowder Factories</Name>
+        </Standard>
+        <Text>
+          <TextOverride>1742100291</TextOverride>
+        </Text>
+        <ItemEffectTargetPool>
+          <EffectTargetGUIDs>
+            <Item>
+              <GUID>1742100291</GUID>              <!-- Gunpowder Factory (OW) -->
+            </Item>
+            <Item>
+              <GUID>1742101064</GUID>              <!-- Gunpowder Factory (NW) -->
+            </Item>
+            <Item>
+              <GUID>1742100650</GUID>              <!-- Gunpowder Factory (NH) -->
+            </Item>
+          </EffectTargetGUIDs>
+        </ItemEffectTargetPool>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - ALL GUNPOWDER FACTORIES -->
 
   <Group Condition="#shared-pools-and-definitions">
     <!-- START - ADD BUILDINGS TO ALL WEAPONS FACTORIES -->
