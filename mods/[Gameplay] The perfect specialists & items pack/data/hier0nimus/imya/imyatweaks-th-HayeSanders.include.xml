@@ -1,0 +1,51 @@
+<ModOps>
+
+    <Group Condition="#Hackner_EnbesaMailIntegration">
+
+        <ImyaTweaks Title="TH - Haye Sanders, Fan Of Letters" />
+
+        <!-- Haye Sanders, Fan Of Letters 1742000494-1742000495 -->
+
+        <ModOp GUID="1742000494" Type="replace" Path="/Values/FactoryUpgrade/ProductivityUpgrade/Value" ModOpID="1742000494_Productivity" Skip="1">
+            <Value>75</Value>
+        </ModOp>
+
+        <ImyaExpose Path="self::Value" ModOpID="1742000494_Productivity" Kind="Slider" ExposeID="Productivity(%)">
+            <SliderDefinition Min="0" Max="200" Stepping="1" />
+        </ImyaExpose>
+
+        <ModOp GUID="1742000494" Type="replace" Path="/Values/FactoryUpgrade/AdditionalOutput/Item[Product='535']/AdditionalOutputCycle" ModOpID="1742000494_AdditionalOutputCycleLocalMail">
+            <AdditionalOutputCycle>2</AdditionalOutputCycle>
+        </ModOp>
+
+        <ImyaExpose Path="self::AdditionalOutputCycle" ModOpID="1742000494_AdditionalOutputCycleLocalMail" Kind="Slider" ExposeID="Local Mail (1/x)">
+            <SliderDefinition Min="1" Max="20" Stepping="1" />
+        </ImyaExpose>
+
+        <ModOp GUID="1742000494" Type="replace" Path="/Values/FactoryUpgrade/AdditionalOutput/Item[Product='103693031']/AdditionalOutputCycle" ModOpID="1742000494_AdditionalOutputCycleEnbesanReports">
+            <AdditionalOutputCycle>4</AdditionalOutputCycle>
+        </ModOp>
+
+        <ImyaExpose Path="self::AdditionalOutputCycle" ModOpID="1742000494_AdditionalOutputCycleEnbesanReports" Kind="Slider" ExposeID="Enbesan History Reports (1/x)">
+            <SliderDefinition Min="1" Max="20" Stepping="1" />
+        </ImyaExpose>
+
+        <ModOp GUID="1742000494" Type="replace" Path="/Values/WarehouseUpgrade/StorageCapacityModifier" ModOpID="1742000494_StorageCapacityModifier">
+            <StorageCapacityModifier>50</StorageCapacityModifier>
+        </ModOp>
+
+        <ImyaExpose Path="self::StorageCapacityModifier" ModOpID="1742000494_StorageCapacityModifier" Kind="Slider" ExposeID="Mail Storage">
+            <SliderDefinition Min="0" Max="300" Stepping="1" />
+        </ImyaExpose>
+
+        <ModOp GUID="1742000494" Type="replace" Path="/Values/BuildingUpgrade/MaintenanceUpgrade/Value" ModOpID="1742000494_MaintenanceUpgrade">
+            <Value>100</Value>
+        </ModOp>
+
+        <ImyaExpose Path="self::Value" ModOpID="1742000494_MaintenanceUpgrade" Kind="Slider" ExposeID="Maintenance (%)">
+            <SliderDefinition Min="-100" Max="300" Stepping="1" />
+        </ImyaExpose>
+
+    </Group>
+
+</ModOps>

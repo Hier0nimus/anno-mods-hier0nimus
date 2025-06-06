@@ -1,0 +1,31 @@
+<ModOps>
+
+    <ImyaTweaks Title="TU - Gertrude von Malching, Digging for gold" />
+
+    <!-- Gertrude von Malching, Digging for gold 1742000096-1742000097 -->
+
+    <ModOp GUID="1742000096" Type="replace" Path="/Values/FactoryUpgrade/ProductivityUpgrade/Value" ModOpID="1742000096_Productivity" Skip="1">
+        <Value>600</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000096_Productivity" Kind="Slider" ExposeID="Productivity (%)">
+        <SliderDefinition Min="0" Max="1000" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000096" Type="replace" Path="/Values/FactoryUpgrade/AdditionalOutput/Item[Product='1010227']/AdditionalOutputCycle" ModOpID="1742000096_AdditionalOutputCycleIron">
+        <AdditionalOutputCycle>6</AdditionalOutputCycle>
+    </ModOp>
+
+    <ImyaExpose Path="self::AdditionalOutputCycle" ModOpID="1742000096_AdditionalOutputCycleIron" Kind="Slider" ExposeID="Iron (1/x)">
+        <SliderDefinition Min="1" Max="20" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000096" Type="replace" Path="/Values/BuildingUpgrade/WorkforceAmountUpgrade/Value" ModOpID="1742000096_WorkforceAmountUpgrade">
+        <Value>60</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000096_WorkforceAmountUpgrade" Kind="Slider" ExposeID="Workforce Needed (%)">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+</ModOps>

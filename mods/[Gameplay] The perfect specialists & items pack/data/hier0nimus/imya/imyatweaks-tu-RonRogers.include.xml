@@ -1,0 +1,55 @@
+<ModOps>
+
+    <ImyaTweaks Title="TU - Ron Rogers, Forger Of Fake Mail" />
+
+    <!-- Ron Rogers, Forger Of Fake Mail 1742000214-1742000215 -->
+
+    <ModOp GUID="1742000214" Type="replace" Path="/Values/FactoryUpgrade/ProductivityUpgrade/Value" ModOpID="1742000214_Productivity" Skip="1">
+        <Value>50</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000214_Productivity" Kind="Slider" ExposeID="Productivity (%)">
+        <SliderDefinition Min="0" Max="200" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000214" Type="replace" Path="/Values/FactoryUpgrade/AdditionalOutput/Item[Product='117702']/AdditionalOutputCycle" ModOpID="1742000214_AdditionalOutputCyclePaper">
+        <AdditionalOutputCycle>6</AdditionalOutputCycle>
+    </ModOp>
+
+    <ImyaExpose Path="self::AdditionalOutputCycle" ModOpID="1742000214_AdditionalOutputCyclePaper" Kind="Slider" ExposeID="Paper (1/x)">
+        <SliderDefinition Min="1" Max="20" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000214" Type="replace" Path="/Values/FactoryUpgrade/AdditionalOutput/Item[Product='536']/AdditionalOutputCycle" ModOpID="1742000214_AdditionalOutputCycleRegionalMail">
+        <AdditionalOutputCycle>2</AdditionalOutputCycle>
+    </ModOp>
+
+    <ImyaExpose Path="self::AdditionalOutputCycle" ModOpID="1742000214_AdditionalOutputCycleRegionalMail" Kind="Slider" ExposeID="Regional Mail (1/x)">
+        <SliderDefinition Min="1" Max="20" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000214" Type="replace" Path="/Values/FactoryUpgrade/AdditionalOutput/Item[Product='2524']/AdditionalOutputCycle" ModOpID="1742000214_AdditionalOutputCycleOverseasMail">
+        <AdditionalOutputCycle>4</AdditionalOutputCycle>
+    </ModOp>
+
+    <ImyaExpose Path="self::AdditionalOutputCycle" ModOpID="1742000214_AdditionalOutputCycleOverseasMail" Kind="Slider" ExposeID="Overseas Mail (1/x)">
+        <SliderDefinition Min="1" Max="20" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000214" Type="replace" Path="/Values/BuildingUpgrade/MaintenanceUpgrade/Value" ModOpID="1742000214_MaintenanceUpgrade">
+        <Value>125</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000214_MaintenanceUpgrade" Kind="Slider" ExposeID="Maintenance (%)">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000214" Type="replace" Path="/Values/BuildingUpgrade/WorkforceAmountUpgrade/Value" ModOpID="1742000214_WorkforceAmountUpgrade">
+        <Value>-50</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000214_WorkforceAmountUpgrade" Kind="Slider" ExposeID="Workforce Needed (%)">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+</ModOps>

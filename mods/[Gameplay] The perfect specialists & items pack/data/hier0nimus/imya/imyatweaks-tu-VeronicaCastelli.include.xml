@@ -1,0 +1,39 @@
+<ModOps>
+
+    <ImyaTweaks Title="TU - Veronica Castelli, Let it grow with less space" />
+
+    <!-- Veronica Castelli, Let it grow with less space 1742000060-1742000061 -->
+
+    <ModOp GUID="1742000060" Type="replace" Path="/Values/FactoryUpgrade/ProductivityUpgrade/Value" ModOpID="1742000060_Productivity" Skip="1">
+        <Value>15</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000060_Productivity" Kind="Slider" ExposeID="Productivity (%)">
+        <SliderDefinition Min="0" Max="200" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000060" Type="replace" Path="/Values/FactoryUpgrade/AdditionalOutput/Item[Product='133097']/AdditionalOutputCycle" ModOpID="1742000060_AdditionalOutputCycleCitrus">
+        <AdditionalOutputCycle>7</AdditionalOutputCycle>
+    </ModOp>
+
+    <ImyaExpose Path="self::AdditionalOutputCycle" ModOpID="1742000060_AdditionalOutputCycleCitrus" Kind="Slider" ExposeID="Citrus (1/x)">
+        <SliderDefinition Min="1" Max="20" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000060" Type="replace" Path="/Values/FactoryUpgrade/AdditionalOutput/Item[Product='120034']/AdditionalOutputCycle" ModOpID="1742000060_AdditionalOutputCycleCorn">
+        <AdditionalOutputCycle>7</AdditionalOutputCycle>
+    </ModOp>
+
+    <ImyaExpose Path="self::AdditionalOutputCycle" ModOpID="1742000060_AdditionalOutputCycleCorn" Kind="Slider" ExposeID="Corn (1/x)">
+        <SliderDefinition Min="1" Max="20" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000060" Type="replace" Path="/Values/ModuleOwnerUpgrade/ModuleLimitPercent" ModOpID="1742000060_ModuleLimitPercent">
+        <ModuleLimitPercent>-50</ModuleLimitPercent>
+    </ModOp>
+
+    <ImyaExpose Path="self::ModuleLimitPercent" ModOpID="1742000060_ModuleLimitPercent" Kind="Slider" ExposeID="Modules (%)">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+</ModOps>

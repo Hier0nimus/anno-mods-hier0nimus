@@ -1,0 +1,31 @@
+<ModOps>
+
+    <ImyaTweaks Title="TU - Sister Moppertus, Drinks from the hacienda" />
+
+    <!-- Sister Moppertus, Drinks from the hacienda 1742000160-1742000161 -->
+
+    <ModOp GUID="1742000160" Type="replace" Path="/Values/FactoryUpgrade/ProductivityUpgrade/Value" ModOpID="1742000160_Productivity" Skip="1">
+        <Value>100</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000160_Productivity" Kind="Slider" ExposeID="Productivity (%)">
+        <SliderDefinition Min="0" Max="300" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000160" Type="replace" Path="/Values/FactoryUpgrade/AdditionalOutput/Item[Product='1010216']/AdditionalOutputCycle" ModOpID="1742000160_AdditionalOutputCycleShnapps">
+        <AdditionalOutputCycle>4</AdditionalOutputCycle>
+    </ModOp>
+
+    <ImyaExpose Path="self::AdditionalOutputCycle" ModOpID="1742000160_AdditionalOutputCycleShnapps" Kind="Slider" ExposeID="Shnapps (1/x)">
+        <SliderDefinition Min="1" Max="20" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000160" Type="replace" Path="/Values/BuildingUpgrade/WorkforceAmountUpgrade/Value" ModOpID="1742000160_WorkforceAmountUpgrade">
+        <Value>-20</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000160_WorkforceAmountUpgrade" Kind="Slider" ExposeID="Workforce Needed (%)">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+</ModOps>

@@ -1,0 +1,55 @@
+<ModOps>
+
+    <ImyaTweaks Title="TU - Joseph Christians, Talking Sense Into People" />
+
+    <!-- Joseph Christians, Talking Sense Into People 1742000202-1742000203 -->
+
+    <ModOp GUID="1742000202" Type="replace" Path="/Values/FactoryUpgrade/AdditionalOutput/Item/Amount" ModOpID="1742000202_Amount" Skip="1">
+        <Amount>10</Amount>
+    </ModOp>
+
+    <ImyaExpose Path="self::Amount" ModOpID="1742000202_Amount" Kind="Slider" ExposeID="Amount (x/cycles)">
+        <SliderDefinition Min="1" Max="20" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000202" Type="replace" Path="/Values/FactoryUpgrade/AdditionalOutput/Item/AdditionalOutputCycle" ModOpID="1742000202_AdditionalOutputCycle" Skip="1">
+        <AdditionalOutputCycle>3</AdditionalOutputCycle>
+    </ModOp>
+
+    <ImyaExpose Path="self::AdditionalOutputCycle" ModOpID="1742000202_AdditionalOutputCycle" Kind="Slider" ExposeID="Cycles (Amount/x)">
+        <SliderDefinition Min="1" Max="20" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000202" Type="replace" Path="/Values/IncidentInfectableUpgrade/IncidentFireIncreaseUpgrade/Value" ModOpID="1742000202_IncidentFireIncreaseUpgrade">
+        <Value>-5</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000202_IncidentFireIncreaseUpgrade" Kind="Slider" ExposeID="Chance Of Fire (x10%)">
+        <SliderDefinition Min="-10" Max="10" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000202" Type="replace" Path="/Values/IncidentInfectableUpgrade/IncidentExplosionIncreaseUpgrade/Value" ModOpID="1742000202_IncidentExplosionIncreaseUpgrade">
+        <Value>-5</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000202_IncidentExplosionIncreaseUpgrade" Kind="Slider" ExposeID="Chance Of Explosions (x10%)">
+        <SliderDefinition Min="-10" Max="10" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000202" Type="replace" Path="/Values/BuildingUpgrade/MaintenanceUpgrade/Value" ModOpID="1742000202_MaintenanceUpgrade">
+        <Value>500</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000202_MaintenanceUpgrade" Kind="Slider" ExposeID="Maintenance (%)">
+        <SliderDefinition Min="-100" Max="1000" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000202" Type="replace" Path="/Values/BuildingUpgrade/WorkforceAmountUpgrade/Value" ModOpID="1742000202_WorkforceAmountUpgrade">
+        <Value>-50</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000202_WorkforceAmountUpgrade" Kind="Slider" ExposeID="Workforce Needed (%)">
+        <SliderDefinition Min="-100" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+</ModOps>

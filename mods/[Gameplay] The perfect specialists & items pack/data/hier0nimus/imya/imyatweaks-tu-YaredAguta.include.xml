@@ -1,0 +1,23 @@
+<ModOps>
+
+    <ImyaTweaks Title="TU - Yared Aguta, Shiny no color" />
+
+    <!-- Yared Aguta, Shiny no color 1742000132-1742000133 -->
+
+    <ModOp GUID="1742000132" Type="replace" Path="/Values/FactoryUpgrade/ProductivityUpgrade/Value" ModOpID="1742000132_Productivity" Skip="1">
+        <Value>40</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000132_Productivity" Kind="Slider" ExposeID="Productivity (%)">
+        <SliderDefinition Min="0" Max="200" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000132" Type="replace" Path="/Values/FactoryUpgrade/AdditionalOutput/Item[Product='1010250']/AdditionalOutputCycle" ModOpID="1742000132_AdditionalOutputCycleJewelry">
+        <AdditionalOutputCycle>7</AdditionalOutputCycle>
+    </ModOp>
+
+    <ImyaExpose Path="self::AdditionalOutputCycle" ModOpID="1742000132_AdditionalOutputCycleJewelry" Kind="Slider" ExposeID="Jewelry (1/x)">
+        <SliderDefinition Min="1" Max="20" Stepping="1" />
+    </ImyaExpose>
+
+</ModOps>

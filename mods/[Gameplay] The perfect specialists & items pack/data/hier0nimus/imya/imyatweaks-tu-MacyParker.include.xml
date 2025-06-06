@@ -1,0 +1,23 @@
+<ModOps>
+
+    <ImyaTweaks Title="TU - Macy Parker, No rendering no glory" />
+
+    <!-- Macy Parker, No rendering no glory 1742000072-1742000073 -->
+
+    <ModOp GUID="1742000072" Type="replace" Path="/Values/FactoryUpgrade/ProductivityUpgrade/Value" ModOpID="1742000072_Productivity" Skip="1">
+        <Value>50</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000072_Productivity" Kind="Slider" ExposeID="Productivity (%)">
+        <SliderDefinition Min="0" Max="200" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000072" Type="replace" Path="/Values/FactoryUpgrade/AdditionalOutput/Item[Product='1010232']/AdditionalOutputCycle" ModOpID="1742000072_AdditionalOutputCycleSaltpetre">
+        <AdditionalOutputCycle>4</AdditionalOutputCycle>
+    </ModOp>
+
+    <ImyaExpose Path="self::AdditionalOutputCycle" ModOpID="1742000072_AdditionalOutputCycleSaltpetre" Kind="Slider" ExposeID="Saltpetre (1/x)">
+        <SliderDefinition Min="1" Max="20" Stepping="1" />
+    </ImyaExpose>
+
+</ModOps>

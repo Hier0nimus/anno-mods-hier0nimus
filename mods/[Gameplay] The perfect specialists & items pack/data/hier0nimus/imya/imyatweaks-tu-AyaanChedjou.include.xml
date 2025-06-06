@@ -1,0 +1,23 @@
+<ModOps>
+
+    <ImyaTweaks Title="TU - Ayaan Chedjou, Canned Food Is Better Food" />
+
+    <!-- Ayaan Chedjou, Canned Food Is Better Food 1742000118-1742000119 -->
+
+    <ModOp GUID="1742000118" Type="replace" Path="/Values/FactoryUpgrade/ProductivityUpgrade/Value" ModOpID="1742000118_Productivity" Skip="1">
+        <Value>50</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000118_Productivity" Kind="Slider" ExposeID="Productivity (%)">
+        <SliderDefinition Min="0" Max="200" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000118" Type="replace" Path="/Values/FactoryUpgrade/AdditionalOutput/Item[Product='1010217']/AdditionalOutputCycle" ModOpID="1742000118_AdditionalOutputCycleCannedFood">
+        <AdditionalOutputCycle>8</AdditionalOutputCycle>
+    </ModOp>
+
+    <ImyaExpose Path="self::AdditionalOutputCycle" ModOpID="1742000118_AdditionalOutputCycleCannedFood" Kind="Slider" ExposeID="Canned Food (1/x)">
+        <SliderDefinition Min="1" Max="20" Stepping="1" />
+    </ImyaExpose>
+
+</ModOps>
