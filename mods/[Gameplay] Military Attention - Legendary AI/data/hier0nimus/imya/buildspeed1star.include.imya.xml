@@ -1,0 +1,78 @@
+<!--
+IMYA TWEAKS BUILDSPEED 1 STAR AI
+-->
+
+<ModOps>
+
+    <!-- 1 STAR AI -->
+    <ImyaTweaks Title="Buildspeed 1 star AI" Description="AI are different based on the speed they build. Tweak settings to make them the same or even more different." Icon="data/ui/2kimages/main/icons/icon_diffilculty_easy.png"/>
+
+    <!-- BUILDINGS -->
+
+    <ModOp Type="merge" GUID="79,80,47" Path="/Values/ConstructionAI">
+        <BuildRules>
+            <MinTimeBetweenBuilds>10000</MinTimeBetweenBuilds>            <!-- / -->
+            <MaxTimeBetweenBuilds>70000</MaxTimeBetweenBuilds>            <!-- 120000 -->
+            <RubberbandSpeedUp>1</RubberbandSpeedUp>            <!-- 0.25 -->
+            <RubberbandSlowDown>0.5</RubberbandSlowDown>            <!-- 2 -->
+        </BuildRules>
+    </ModOp>
+
+    <ModOp Type="replace" GUID="79,80,47" Path="/Values/ConstructionAI/BuildRules/MinTimeBetweenBuilds" ModOpID="ai_buildspeed__1star_MinTimeBetweenBuilds" Skip="1">
+        <MinTimeBetweenBuilds>10000</MinTimeBetweenBuilds>        <!-- / -->
+    </ModOp>
+
+    <ImyaExpose Path="self::MinTimeBetweenBuilds" ModOpID="ai_buildspeed__1star_MinTimeBetweenBuilds" Kind="Slider" ExposeID="Minimal time between builds" Description="Time between consecutive new Buildings if all resources are available. Not set in vanilla so no limit. Set in milliseconds. 1000 milliseconds = 1 second.">
+        <SliderDefinition Min="0" Max="50000" Stepping="1000" />
+    </ImyaExpose>
+
+    <ModOp Type="replace" GUID="79,80,47" Path="/Values/ConstructionAI/BuildRules/MaxTimeBetweenBuilds" ModOpID="ai_buildspeed__1star_MaxTimeBetweenBuilds" Skip="1">
+        <MaxTimeBetweenBuilds>70000</MaxTimeBetweenBuilds>        <!-- 120000 -->
+    </ModOp>
+
+    <ImyaExpose Path="self::MaxTimeBetweenBuilds" ModOpID="ai_buildspeed__1star_MaxTimeBetweenBuilds" Kind="Slider" ExposeID="Maximum time between builds" Description="Maximum Time between two builds that we allow. If we cannot afford anything within this time, we build more Construction Materials. 120000 in vanilla. Set in milliseconds. 1000 milliseconds = 1 second.">
+        <SliderDefinition Min="0" Max="120000" Stepping="1000" />
+    </ImyaExpose>
+
+    <ModOp Type="replace" GUID="79,80,47" Path="/Values/ConstructionAI/BuildRules/RubberbandSpeedUp" ModOpID="ai_buildspeed__1star_RubberbandSpeedUp" Skip="1">
+        <RubberbandSpeedUp>1</RubberbandSpeedUp>        <!-- 0.25 -->
+    </ModOp>
+
+    <ImyaExpose Path="self::RubberbandSpeedUp" ModOpID="ai_buildspeed__1star_RubberbandSpeedUp" Kind="Slider" ExposeID="Rubberband speed up" Description="0: No Rubberbanding --- 1: 'Human is double as good: double speed' --- 2: 'Human is double as good: speed x4'. 0.25 in vanilla">
+        <SliderDefinition Min="0" Max="5" Stepping="0.25" />
+    </ImyaExpose>
+
+    <ModOp Type="replace" GUID="79,80,47" Path="/Values/ConstructionAI/BuildRules/RubberbandSlowDown" ModOpID="ai_buildspeed__1star_RubberbandSlowDown" Skip="1">
+        <RubberbandSlowDown>0.5</RubberbandSlowDown>        <!-- 2 -->
+    </ModOp>
+
+    <ImyaExpose Path="self::RubberbandSlowDown" ModOpID="ai_buildspeed__1star_RubberbandSlowDown" Kind="Slider" ExposeID="Rubberband slow down" Description="0: No Rubberbanding --- 1: 'Human is half as good: 1/2 speed' --- 2: 'Human is half as good: speed 1/4'. 2 in vanilla">
+        <SliderDefinition Min="0" Max="2" Stepping="0.25" />
+    </ImyaExpose>
+
+    <!-- SHIPS -->
+
+    <ModOp Type="merge" GUID="168" Path="/Values/ConstructionAI">
+        <ShipConstructionBonus>
+            <TimeBonus>0.75</TimeBonus>            <!-- / -->
+            <ProductBonus>0.25</ProductBonus>            <!-- / -->
+        </ShipConstructionBonus>
+    </ModOp>
+
+    <ModOp Type="replace" GUID="168" Path="/Values/ConstructionAI/ShipConstructionBonus/TimeBonus" ModOpID="ai_buildspeed__1star_TimeBonus" Skip="1">
+        <TimeBonus>0.75</TimeBonus>        <!-- / -->
+    </ModOp>
+
+    <ImyaExpose Path="self::TimeBonus" ModOpID="ai_buildspeed__1star_TimeBonus" Kind="Slider" ExposeID="Ship building time factor" Description="Time reduction for AI to build ships.">
+        <SliderDefinition Min="0" Max="2" Stepping="0.25" />
+    </ImyaExpose>
+
+    <ModOp Type="replace" GUID="168" Path="/Values/ConstructionAI/ShipConstructionBonus/ProductBonus" ModOpID="ai_buildspeed__1star_ProductBonus" Skip="1">
+        <ProductBonus>0.25</ProductBonus>        <!-- / -->
+    </ModOp>
+
+    <ImyaExpose Path="self::ProductBonus" ModOpID="ai_buildspeed__1star_ProductBonus" Kind="Slider" ExposeID="Ship building cost factor" Description="Production cost reduction for AI to build ships.">
+        <SliderDefinition Min="0" Max="2" Stepping="0.25" />
+    </ImyaExpose>
+
+</ModOps>

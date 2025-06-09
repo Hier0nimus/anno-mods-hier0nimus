@@ -1,0 +1,35 @@
+<!--
+IMYA TWEAKS SHARES
+-->
+
+<ModOps>
+
+    <ImyaTweaks Title="Shares behaviour AI" Description="There are a lot of different tweaks that can be made to shares and how AI use them. We picked a couple to tweak to your liking." Icon="data/ui/2kimages/main/3dicons/influence/icon_shares.png"/>
+
+    <ModOp Type="merge" GUID="140986" Path="/Values/HostileTakeoverFeature/">
+        <BuyShareCoolDown>1800000</BuyShareCoolDown>        <!-- 600000 - 10min -->
+        <QueenSellShareDiscount>0.4</QueenSellShareDiscount>        <!-- 0.5 -->
+        <QueenBuyShareDiscount>0.7</QueenBuyShareDiscount>        <!-- 0.6 -->
+        <TakeoverMoneyCostFactor>10</TakeoverMoneyCostFactor>        <!-- 1.5 -->
+        <ShareIncomeTaxFactor>0.2</ShareIncomeTaxFactor>        <!-- 0.3 -->
+    </ModOp>
+
+    <!-- BUYING COOLDOWN -->
+
+    <ModOp Type="replace" GUID="47,79,80,11,81,82,83,220,48,84,85" Path="/Values/BuyShares/BuyShareCoolDown" ModOpID="ai_BuyShareCoolDown" Skip="1">
+        <BuyShareCoolDown>1800000</BuyShareCoolDown>        <!-- 600000 - 10min -->
+    </ModOp>
+
+    <ImyaExpose Path="self::BuyShareCoolDown" ModOpID="ai_BuyShareCoolDown" Kind="Slider" ExposeID="Cooldown AI buys another share" Description="Time between / cooldown it takes for AI to buy another share. 600000 - 10min in vanilla. Set in milliseconds. 1000 milliseconds = 1 second. 1800000 = 30min">
+        <SliderDefinition Min="0" Max="3600000" Stepping="60000" />
+    </ImyaExpose>
+
+    <ModOp Type="replace" GUID="47,79,80,11,81,82,83,220,48,84,85" Path="/Values/BuyShares/TakeoverMoneyCostFactor" ModOpID="ai_TakeoverMoneyCostFactor" Skip="1">
+        <TakeoverMoneyCostFactor>10</TakeoverMoneyCostFactor>        <!-- 1.5 -->
+    </ModOp>
+
+    <ImyaExpose Path="self::TakeoverMoneyCostFactor" ModOpID="ai_TakeoverMoneyCostFactor" Kind="Slider" ExposeID="Cost factor" Description="Factor increasing cost of buying a share. 1.5 in vanilla.">
+        <SliderDefinition Min="0" Max="20" Stepping="0.5" />
+    </ImyaExpose>
+
+</ModOps>

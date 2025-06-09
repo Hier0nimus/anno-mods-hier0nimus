@@ -1,0 +1,28 @@
+<!--
+IMYA TWEAKS
+-->
+
+<ModOps>
+
+  <!-- START - Mines Around harbour 3 star -->
+
+  <ImyaTweaks Title="Sea mines for 3 star AI around harbour" Description="By default mines are enabled. If you do not want to use them toggle them off." Icon="data/ui/2kimages/main/3dicons/icon_seamine.png"/>
+  <Include File="./mines.include.imya.xml" ModOpID="170_mines" />
+  <ImyaExpose Path="*" ModOpID="170_mines" ExposeID="Enable Mines around harbour 3 star AI" Kind="SkipToggle" InitState="True">
+  </ImyaExpose>
+
+  <!-- END - Mines Around harbour 3 star -->
+
+  <!-- START - Shares AI -->
+
+  <Include File="./shares.include.imya.xml" />
+
+  <!-- END - Shares AI -->
+
+  <!-- START - Buildspeed AI -->
+
+  <Include File="./buildspeed.include.imya.xml" />
+
+  <!-- END - Buildspeed AI -->
+
+</ModOps>

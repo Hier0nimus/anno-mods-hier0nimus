@@ -1,0 +1,22 @@
+<!--
+IMYA TWEAKS MINES
+-->
+
+<ModOps>
+
+  <!-- Mines Around harbour 3 star -->
+  <ModOp Type="merge" GUID="170" Path="/Values/ConstructionAI/">
+    <SeamineConfig>
+      <ContainerValues>
+        <HarborMineDefence>
+          <DistanceToHarbor>90</DistanceToHarbor>
+        </HarborMineDefence>
+      </ContainerValues>
+      <Precondition>LateMidGame</Precondition>      <!-- 1 Engineer -->
+      <HarborMineDefence>
+        <PlaceMinesAroundHarbor>1</PlaceMinesAroundHarbor>
+      </HarborMineDefence>
+    </SeamineConfig>
+  </ModOp>
+
+</ModOps>
