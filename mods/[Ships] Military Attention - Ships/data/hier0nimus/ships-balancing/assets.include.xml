@@ -247,7 +247,7 @@
         <ModOp Type="add" GUID='100440' Path="/Values/Cost/Costs">
             <Item>
                 <Ingredient>1010218</Ingredient>
-                <Amount>25</Amount>
+                <Amount>5</Amount>
             </Item>
         </ModOp>
 
@@ -406,6 +406,23 @@
             </Variations>
         </ModOp>
 
+        <!-- Pyrphorian CommandoShip -->
+        <ModOp Type="merge" GUID='102428' Path="/Values">
+            <Attackable>
+                <MaximumHitPoints>5750</MaximumHitPoints>
+                <ArmorType>HeavyArmor</ArmorType>
+            </Attackable>
+            <Attacker>
+                <BasicAttackType>Warship</BasicAttackType>
+                <BaseDamage>50</BaseDamage>                <!-- 45 -->
+                <ReloadTime>7</ReloadTime>                <!-- 10 -->
+                <AttackRange>28</AttackRange>                <!-- 33 -->
+            </Attacker>
+            <ShipMaintenance>
+                <Maintenance>850</Maintenance>
+            </ShipMaintenance>
+        </ModOp>
+
         <!-- Pyrphorian Battle Cruiser -->
         <ModOp Type="merge" GUID='102425' Path="/Values">
             <Attackable>
@@ -414,9 +431,9 @@
             </Attackable>
             <Attacker>
                 <BasicAttackType>Warship</BasicAttackType>
-                <BaseDamage>300</BaseDamage>                <!-- 100 -->
-                <ReloadTime>40</ReloadTime>                <!-- 29 -->
-                <AttackRange>44</AttackRange>                <!-- 42 -->
+                <BaseDamage>85</BaseDamage>                <!-- 145 -->
+                <ReloadTime>7</ReloadTime>                <!-- 29 -->
+                <AttackRange>40</AttackRange>                <!-- 42 -->
             </Attacker>
             <ShipMaintenance>
                 <Maintenance>1250</Maintenance>
@@ -479,7 +496,8 @@
                 <SelfHealPausedTimeIfAttacked>30000</SelfHealPausedTimeIfAttacked>                <!-- 60000 -->
             </Attackable>
             <Attacker>
-                <BaseDamage>42</BaseDamage>
+                <BaseDamage>30</BaseDamage>
+                <ReloadTime>7</ReloadTime>
                 <AttackRange>28</AttackRange>
                 <Turrets>
                     <Item>
@@ -527,24 +545,32 @@
                 <MaximumHitPoints>4000</MaximumHitPoints>
             </Attackable>
             <Attacker>
-                <BaseDamage>40</BaseDamage>
-                <ReloadTime>15</ReloadTime>
-                <AttackRange>15</AttackRange>
+                <BaseDamage>30</BaseDamage>
+                <ReloadTime>7</ReloadTime>
+                <AttackRange>20</AttackRange>
             </Attacker>
             <ShipMaintenance>
                 <Maintenance>800</Maintenance>
             </ShipMaintenance>
         </ModOp>
-        <ModOp Type="replace" GUID='1892' Path="/Values/Projectile/Effectivities/Item[GUID='1398']">
+        <ModOp Type="merge" GUID='1892' Path="/Values/Projectile/Effectivities/">
             <Item>
                 <GUID>1398</GUID>                <!--all Flamable Ships -->
-                <Factor>1.4</Factor>                <!-- 5.1 -->
+                <Factor>2.5</Factor>                <!-- 5.1 -->
+            </Item>
+            <Item>
+                <GUID>1404</GUID>
+                <Factor>0.35</Factor>                <!-- 0.7 -->
             </Item>
         </ModOp>
-        <ModOp Type="replace" GUID='1538' Path="/Values/Projectile/Effectivities/Item[GUID='1398']">
+        <ModOp Type="merge" GUID='1538' Path="/Values/Projectile/Effectivities/">
             <Item>
                 <GUID>1398</GUID>                <!--all Flamable Ships -->
-                <Factor>1.8</Factor>                <!-- 6 -->
+                <Factor>3</Factor>                <!-- 6 -->
+            </Item>
+            <Item>
+                <GUID>1404</GUID>
+                <Factor>0.5</Factor>                <!-- 0.75 -->
             </Item>
         </ModOp>
 
