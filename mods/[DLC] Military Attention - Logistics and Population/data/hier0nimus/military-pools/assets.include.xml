@@ -879,6 +879,87 @@
   </ModOp>
   <!-- END - All Cemeteries - ItemEffectTargetPool -->
 
+  <!-- START - All Cigarettes Factories - ItemEffectTargetPool -->
+  <ModOp Type="addNextSibling" GUID="119">
+    <Asset>
+      <Template>ItemEffectTargetPool</Template>
+      <Values>
+        <Standard>
+          <GUID>1742200033</GUID>
+          <Name>Cigarettes Factory</Name>
+        </Standard>
+        <Text>
+          <TextOverride>1742100056</TextOverride>
+        </Text>
+        <ItemEffectTargetPool>
+          <EffectTargetGUIDs>
+            <Item>
+              <GUID>1742100056</GUID>              <!-- Cigarettes Factory (OW) - Building -->
+            </Item>
+            <Item>
+              <GUID>1742101036</GUID>              <!-- Cigarettes Factory (NH) - Building -->
+            </Item>
+          </EffectTargetGUIDs>
+        </ItemEffectTargetPool>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - All Cigarettes Factories - ItemEffectTargetPool -->
+
+  <!-- START - All Games Factories - ItemEffectTargetPool -->
+  <ModOp Type="addNextSibling" GUID="119">
+    <Asset>
+      <Template>ItemEffectTargetPool</Template>
+      <Values>
+        <Standard>
+          <GUID>1742200034</GUID>
+          <Name>Games Factory</Name>
+        </Standard>
+        <Text>
+          <TextOverride>1742101039</TextOverride>
+        </Text>
+        <ItemEffectTargetPool>
+          <EffectTargetGUIDs>
+            <Item>
+              <GUID>1742100183</GUID>              <!-- Cardgames Factory (OW) - Building -->
+            </Item>
+            <Item>
+              <GUID>1742101039</GUID>              <!-- Games Factory (NH) - Building -->
+            </Item>
+          </EffectTargetGUIDs>
+        </ItemEffectTargetPool>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - All Games Factories - ItemEffectTargetPool -->
+
+  <!-- START - All Mint - ItemEffectTargetPool -->
+  <ModOp Type="addNextSibling" GUID="119">
+    <Asset>
+      <Template>ItemEffectTargetPool</Template>
+      <Values>
+        <Standard>
+          <GUID>1742200035</GUID>
+          <Name>Mint</Name>
+        </Standard>
+        <Text>
+          <TextOverride>1742100415</TextOverride>
+        </Text>
+        <ItemEffectTargetPool>
+          <EffectTargetGUIDs>
+            <Item>
+              <GUID>1742100415</GUID>              <!-- Mint (OW) - Building -->
+            </Item>
+            <Item>
+              <GUID>1742100647</GUID>              <!-- Mint (NH) - Building -->
+            </Item>
+          </EffectTargetGUIDs>
+        </ItemEffectTargetPool>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - All Mint - ItemEffectTargetPool -->
+
   <!-- START - ADD BUILDINGS TO ALL IRONWORKS AND FOUNDRIES -->
   <ModOp GUID='190842' Type="add" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
     <Item>
@@ -995,5 +1076,13 @@
     </Item>
   </ModOp>
   <!-- START ADD TO SHARED ALL PAPER MILLS POOLS -->
+
+  <!-- START ADD TO SHARED ALL CANNERIES POOLS -->
+  <ModOp Type="add" GUID="1500301032" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
+    <Item>
+      <GUID>1742100618</GUID>
+    </Item>
+  </ModOp>
+  <!-- START ADD TO SHARED ALL CANNERIES POOLS -->
 
 </ModOps>
