@@ -16,7 +16,7 @@ IMYA TWEAKS SHARES
 
     <!-- BUYING COOLDOWN -->
 
-    <ModOp Type="replace" GUID="47,79,80,11,81,82,83,220,48,84,85" Path="/Values/BuyShares/BuyShareCoolDown" ModOpID="ai_BuyShareCoolDown" Skip="1">
+    <ModOp Type="merge" GUID="140986" Path="/Values/HostileTakeoverFeature/" ModOpID="ai_BuyShareCoolDown" Skip="1">
         <BuyShareCoolDown>1800000</BuyShareCoolDown>        <!-- 600000 - 10min -->
     </ModOp>
 
@@ -24,7 +24,7 @@ IMYA TWEAKS SHARES
         <SliderDefinition Min="0" Max="3600000" Stepping="60000" />
     </ImyaExpose>
 
-    <ModOp Type="replace" GUID="47,79,80,11,81,82,83,220,48,84,85" Path="/Values/BuyShares/TakeoverMoneyCostFactor" ModOpID="ai_TakeoverMoneyCostFactor" Skip="1">
+    <ModOp Type="merge" GUID="140986" Path="/Values/HostileTakeoverFeature/" ModOpID="ai_TakeoverMoneyCostFactor" Skip="1">
         <TakeoverMoneyCostFactor>10</TakeoverMoneyCostFactor>        <!-- 1.5 -->
     </ModOp>
 
