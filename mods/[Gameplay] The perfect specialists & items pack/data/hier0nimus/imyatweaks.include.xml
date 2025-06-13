@@ -27,11 +27,11 @@
     <Include File="./imya/imyatweaks-ho-GeorginaRavenscroft.include.xml" />
     <Include File="./imya/imyatweaks-ho-HenrichMorris.include.xml" />
     <Include File="./imya/imyatweaks-sh-AutoControllablePitchPropeller.include.xml" />
-    <Include File="./imya/imyatweaks-sh-KulwaMtoWaBluu.include.xml" />
     <Include File="./imya/imyatweaks-sh-LolaMazigh.include.xml" />
     <Include File="./imya/imyatweaks-sh-LouMazigh.include.xml" />
     <Include File="./imya/imyatweaks-sh-mauriceFriendOfEveryone.include.xml" />
     <Include File="./imya/imyatweaks-sh-PirateCaptainsBlackSail.include.xml" />
+    <Include File="./imya/imyatweaks-sh-KulwaMtoWaBluu.include.xml" />
     <Include File="./imya/imyatweaks-sh-SeaMineOfDeath.include.xml" />
     <Include File="./imya/imyatweaks-sh-TorpedoOfDoom.include.xml" />
     <Include File="./imya/imyatweaks-sh-UltraRapidCanistershot.include.xml" />
@@ -41,12 +41,19 @@
     <Include File="./imya/imyatweaks-th-DoctorEdwardDavy.include.xml" />
     <Include File="./imya/imyatweaks-th-Flippy.include.xml" />
     <Include File="./imya/imyatweaks-th-GeneralAgnesMercier.include.xml" />
-    <Include File="./imya/imyatweaks-th-HayeSanders.include.xml" />
+    <Group Condition="#Hackner_EnbesaMailIntegration">
+        <Include File="./imya/imyatweaks-th-HayeSanders.include.xml" />
+    </Group>
     <Include File="./imya/imyatweaks-th-HolarioJavino.include.xml" />
     <Include File="./imya/imyatweaks-th-MayaTheCat.include.xml" />
     <Include File="./imya/imyatweaks-th-MrsGarrick.include.xml" />
     <Include File="./imya/imyatweaks-th-RupertFlanders.include.xml" />
     <Include File="./imya/imyatweaks-th-ValentinadeFaro.include.xml" />
+    <Group Condition="#new_horizons_products">
+        <Group Condition="#ow-cheese-jakob">
+            <Include File="./imya/imyatweaks-th-ValentinoAlvarez.include.xml" />
+        </Group>
+    </Group>
     <Include File="./imya/imyatweaks-tu-AbebeKanumba.include.xml" />
     <Include File="./imya/imyatweaks-tu-AdamoAdomako.include.xml" />
     <Include File="./imya/imyatweaks-tu-AlessandroVolta.include.xml" />
@@ -114,7 +121,6 @@
     <Include File="./imya/imyatweaks-tu-SisterMoppertus.include.xml" />
     <Include File="./imya/imyatweaks-tu-ThomasAlvaEdison.include.xml" />
     <Include File="./imya/imyatweaks-tu-TrudyGarnier.include.xml" />
-    <Include File="./imya/imyatweaks-tu-ValentinoAlvarez.include.xml" />
     <Include File="./imya/imyatweaks-tu-VeronicaCastelli.include.xml" />
     <Include File="./imya/imyatweaks-tu-WendyvanderMark.include.xml" />
     <Include File="./imya/imyatweaks-tu-WilliamHenryPilkington.include.xml" />
