@@ -94,21 +94,23 @@ IMYA TWEAKS - SHIPS - SMALL CARGO SHIP
 
     <ImyaExpose Path="self::Amount" ModOpID="1742100581_Cost_Coins" Kind="Slider" ExposeID="Building Cost Coins">
         <SliderDefinition Min="1" Max="100000" Stepping="500" />
+    </ImyaExpose>
 
-        <ModOp Type="merge" GUID="1742100581" Path="/Values/Cost/Costs/Item[Ingredient='1010218']" ModOpID="1742100581_Cost_SteelBeams" Skip="1">
-            <Amount>8</Amount>
-        </ModOp>
 
-        <ImyaExpose Path="self::Amount" ModOpID="1742100581_Cost_SteelBeams" Kind="Slider" ExposeID="Building Cost Steel Beams">
-            <SliderDefinition Min="1" Max="100" Stepping="1" />
-        </ImyaExpose>
+    <ModOp Type="merge" GUID="1742100581" Path="/Values/Cost/Costs/Item[Ingredient='1010218']" ModOpID="1742100581_Cost_SteelBeams" Skip="1">
+        <Amount>8</Amount>
+    </ModOp>
 
-        <ModOp Type="merge" GUID="1742100581" Path="/Values/Cost/Costs/Item[Ingredient='1010224']" ModOpID="1742100581_Cost_SteamMotors" Skip="1">
-            <Amount>8</Amount>
-        </ModOp>
+    <ImyaExpose Path="self::Amount" ModOpID="1742100581_Cost_SteelBeams" Kind="Slider" ExposeID="Building Cost Steel Beams">
+        <SliderDefinition Min="1" Max="100" Stepping="1" />
+    </ImyaExpose>
 
-        <ImyaExpose Path="self::Amount" ModOpID="1742100581_Cost_SteamMotors" Kind="Slider" ExposeID="Building Cost Steam Motors">
-            <SliderDefinition Min="1" Max="100" Stepping="1" />
-        </ImyaExpose>
+    <ModOp Type="merge" GUID="1742100581" Path="/Values/Cost/Costs/Item[Ingredient='1010224']" ModOpID="1742100581_Cost_SteamMotors" Skip="1">
+        <Amount>8</Amount>
+    </ModOp>
 
-    </ModOps>
+    <ImyaExpose Path="self::Amount" ModOpID="1742100581_Cost_SteamMotors" Kind="Slider" ExposeID="Building Cost Steam Motors">
+        <SliderDefinition Min="1" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+</ModOps>
