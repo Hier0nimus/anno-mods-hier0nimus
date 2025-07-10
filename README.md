@@ -4,7 +4,7 @@
 
 The perfect specialists and items pack is a set of 172 specialists and items for all regions. Some buildings or items did not got the love they deserve and did not recieve a specialist or legendary treat. This mod wants to change this by giving almost every building and item a specialist or legendary variant.
 
-Current version 19.0 (06/06/2025)
+Current version 19.4 (10/07/2025)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/the-perfect-specialists-items-pack
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
@@ -25,7 +25,7 @@ Current version 1.18 (23/05/2025)
 
 Centered around military infrastructure and adding new military residence tiers for all regions with a focus on the Old World.
 
-Current version 1.25 (23/05/2025)
+Current version 1.28 (10/07/2025)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/military-attention
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
@@ -33,7 +33,7 @@ Current version 1.25 (23/05/2025)
 
 Additional mod for Military Attention that focuses on new ships and ship balancing. Can be used as a standalone.
 
-Current version 1.29 (23/05/2025)
+Current version 1.34 (10/07/2025)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/military-attention-ships
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
@@ -41,7 +41,7 @@ Current version 1.29 (23/05/2025)
 
 Additional mod for Military Attention that focuses on rebalancing the pirates and adding additional pirates mechanics like a new population.
 
-Current version 1.13 (02/06/2025)
+Current version 1.14 (10/07/2025)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/military-attention-pirates
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
@@ -49,7 +49,7 @@ Current version 1.13 (02/06/2025)
 
 Additional mod for Military Attention that focuses on rebalancing the AI behaviour and strength.
 
-Current version 1.5 (28/04/2025)
+Current version 1.8 (10/07/2025)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/military-attention-legendary-ai
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
@@ -65,7 +65,7 @@ Current version 1.0 (14/07/2024)
 
 A mod that adds 4 new airships in the form of hot air balloons that are build in the normal sailing shipyard.
 
-Current version 1.14 (23/05/2025)
+Current version 1.15 (05/07/2025)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/almost-100-hot-air-balloons
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
