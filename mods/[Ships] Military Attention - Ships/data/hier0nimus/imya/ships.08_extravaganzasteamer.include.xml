@@ -8,7 +8,7 @@ IMYA TWEAKS - SHIPS - EXTRAVAGANZA STEAMER
 
     <ImyaTweaks Title="Extravaganza Steamer" Description="Tradeship | Steamship" Icon="data/ui/2kimages/main/3dicons/ships/icon_ship_great_eastern.png"/>
 
-    <ModOp Type="replace" GUID="102455" Path="/Values/Walking/ForwardSpeed" ModOpID="102455_ForwardSpeed" Skip="1">
+    <ModOp Type="merge" GUID="102455" Path="/Values/Walking" ModOpID="102455_ForwardSpeed" Skip="1">
         <ForwardSpeed>5.2</ForwardSpeed>
     </ModOp>
 
@@ -16,7 +16,7 @@ IMYA TWEAKS - SHIPS - EXTRAVAGANZA STEAMER
         <SliderDefinition Min="0" Max="15" Stepping="0.25" />
     </ImyaExpose>
 
-    <ModOp Type="replace" GUID="102455" Path="/Values/Walking/SessionTransferSpeedFactor" ModOpID="102455_SessionTransferSpeedFactor" Skip="1">
+    <ModOp Type="merge" GUID="102455" Path="/Values/Walking" ModOpID="102455_SessionTransferSpeedFactor" Skip="1">
         <SessionTransferSpeedFactor>1</SessionTransferSpeedFactor>
     </ModOp>
 
@@ -24,7 +24,7 @@ IMYA TWEAKS - SHIPS - EXTRAVAGANZA STEAMER
         <SliderDefinition Min="0" Max="3" Stepping="0.25" />
     </ImyaExpose>
 
-    <ModOp Type="replace" GUID="102455" Path="/Values/Attackable/MaximumHitPoints" ModOpID="102455_MaximumHitPoints" Skip="1">
+    <ModOp Type="merge" GUID="102455" Path="/Values/Attackable" ModOpID="102455_MaximumHitPoints" Skip="1">
         <MaximumHitPoints>5000</MaximumHitPoints>
     </ModOp>
 
@@ -33,14 +33,14 @@ IMYA TWEAKS - SHIPS - EXTRAVAGANZA STEAMER
     </ImyaExpose>
 
     <Group Condition="!#new_horizons_ships">
-        <ModOp Type="replace" GUID="102455" Path="/Values/ItemContainer/SlotCount" ModOpID="102455_SlotCount" Skip="1">
+        <ModOp Type="merge" GUID="102455" Path="/Values/ItemContainer" ModOpID="102455_SlotCount" Skip="1">
             <SlotCount>6</SlotCount>
         </ModOp>
     </Group>
 
     <Group Condition="#new_horizons_ships">
         <Group Condition="!#nh_revert_cargo_ship_changes">
-            <ModOp Type="replace" GUID="102455" Path="/Values/ItemContainer/SlotCount" ModOpID="102455_SlotCount" Skip="1">
+            <ModOp Type="merge" GUID="102455" Path="/Values/ItemContainer" ModOpID="102455_SlotCount" Skip="1">
                 <SlotCount>8</SlotCount>
             </ModOp>
         </Group>
@@ -58,7 +58,7 @@ IMYA TWEAKS - SHIPS - EXTRAVAGANZA STEAMER
         <SliderDefinition Min="50" Max="500" Stepping="50" />
     </ImyaExpose>
 
-    <ModOp Type="replace" GUID="102455" Path="/Values/ItemContainer/SocketCount" ModOpID="102455_SocketCount" Skip="1">
+    <ModOp Type="merge" GUID="102455" Path="/Values/ItemContainer" ModOpID="102455_SocketCount" Skip="1">
         <SocketCount>3</SocketCount>
     </ModOp>
 
@@ -66,7 +66,7 @@ IMYA TWEAKS - SHIPS - EXTRAVAGANZA STEAMER
         <SliderDefinition Min="1" Max="4" Stepping="1" />
     </ImyaExpose>
 
-    <ModOp Type="replace" GUID="102455" Path="/Values/Cost/InfluenceCostPoints" ModOpID="102455_InfluenceCostPoints" Skip="1">
+    <ModOp Type="merge" GUID="102455" Path="/Values/Cost" ModOpID="102455_InfluenceCostPoints" Skip="1">
         <InfluenceCostPoints>12</InfluenceCostPoints>
     </ModOp>
 
@@ -74,7 +74,7 @@ IMYA TWEAKS - SHIPS - EXTRAVAGANZA STEAMER
         <SliderDefinition Min="1" Max="25" Stepping="1" />
     </ImyaExpose>
 
-    <ModOp Type="replace" GUID="102455" Path="/Values/Craftable/CraftingTime" ModOpID="102455_CraftingTime" Skip="1">
+    <ModOp Type="merge" GUID="102455" Path="/Values/Craftable" ModOpID="102455_CraftingTime" Skip="1">
         <CraftingTime>540000</CraftingTime>
     </ModOp>
 
@@ -82,7 +82,7 @@ IMYA TWEAKS - SHIPS - EXTRAVAGANZA STEAMER
         <SliderDefinition Min="1000" Max="1000000" Stepping="1000" />
     </ImyaExpose>
 
-    <ModOp Type="replace" GUID="102455" Path="/Values/ShipMaintenance/Maintenance" ModOpID="102455_Maintenance" Skip="1">
+    <ModOp Type="merge" GUID="102455" Path="/Values/ShipMaintenance" ModOpID="102455_Maintenance" Skip="1">
         <Maintenance>100</Maintenance>
     </ModOp>
 

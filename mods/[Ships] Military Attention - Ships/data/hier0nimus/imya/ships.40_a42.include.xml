@@ -8,7 +8,7 @@ IMYA TWEAKS - SHIPS - A42
 
     <ImyaTweaks Title="A42" Description="Airship" Icon="data/ui/2kimages/main/3dicons/ships/icon_airship_cargo_large_a.png"/>
 
-    <ModOp Type="replace" GUID="1742100660,1742100661" Path="/Values/Walking/WindMinSlowdownFactor" ModOpID="1742100660_WindMinSlowdownFactor" Skip="1">
+    <ModOp Type="merge" GUID="1742100660,1742100661" Path="/Values/Walking" ModOpID="1742100660_WindMinSlowdownFactor" Skip="1">
         <WindMinSlowdownFactor>0.80</WindMinSlowdownFactor>
     </ModOp>
 
@@ -16,7 +16,7 @@ IMYA TWEAKS - SHIPS - A42
         <SliderDefinition Min="0" Max="2" Stepping="0.25" />
     </ImyaExpose>
 
-    <ModOp Type="replace" GUID="1742100660,1742100661" Path="/Values/Walking/WindMaxSpeedupFactor" ModOpID="1742100660_WindMaxSpeedupFactor" Skip="1">
+    <ModOp Type="merge" GUID="1742100660,1742100661" Path="/Values/Walking" ModOpID="1742100660_WindMaxSpeedupFactor" Skip="1">
         <WindMaxSpeedupFactor>1.40</WindMaxSpeedupFactor>
     </ModOp>
 
@@ -24,7 +24,7 @@ IMYA TWEAKS - SHIPS - A42
         <SliderDefinition Min="0" Max="3" Stepping="0.25" />
     </ImyaExpose>
 
-    <ModOp Type="replace" GUID="1742100660,1742100661" Path="/Values/Walking/ForwardSpeed" ModOpID="1742100660_ForwardSpeed" Skip="1">
+    <ModOp Type="merge" GUID="1742100660,1742100661" Path="/Values/Walking" ModOpID="1742100660_ForwardSpeed" Skip="1">
         <ForwardSpeed>9</ForwardSpeed>
     </ModOp>
 
@@ -32,7 +32,7 @@ IMYA TWEAKS - SHIPS - A42
         <SliderDefinition Min="0" Max="30" Stepping="0.25" />
     </ImyaExpose>
 
-    <ModOp Type="replace" GUID="1742100660,1742100661" Path="/Values/Walking/SessionTransferSpeedFactor" ModOpID="1742100660_SessionTransferSpeedFactor" Skip="1">
+    <ModOp Type="merge" GUID="1742100660,1742100661" Path="/Values/Walking" ModOpID="1742100660_SessionTransferSpeedFactor" Skip="1">
         <SessionTransferSpeedFactor>1.80</SessionTransferSpeedFactor>
     </ModOp>
 
@@ -40,7 +40,7 @@ IMYA TWEAKS - SHIPS - A42
         <SliderDefinition Min="0" Max="3" Stepping="0.25" />
     </ImyaExpose>
 
-    <ModOp Type="replace" GUID="1742100660,1742100661" Path="/Values/Attackable/MaximumHitPoints" ModOpID="1742100660_MaximumHitPoints" Skip="1">
+    <ModOp Type="merge" GUID="1742100660,1742100661" Path="/Values/Attackable" ModOpID="1742100660_MaximumHitPoints" Skip="1">
         <MaximumHitPoints>4250</MaximumHitPoints>
     </ModOp>
 
@@ -48,7 +48,7 @@ IMYA TWEAKS - SHIPS - A42
         <SliderDefinition Min="50" Max="10000" Stepping="50" />
     </ImyaExpose>
 
-    <ModOp Type="replace" GUID="1742100660,1742100661" Path="/Values/ItemContainer/SlotCount" ModOpID="1742100660_SlotCount" Skip="1">
+    <ModOp Type="merge" GUID="1742100660,1742100661" Path="/Values/ItemContainer" ModOpID="1742100660_SlotCount" Skip="1">
         <SlotCount>8</SlotCount>
     </ModOp>
 
@@ -64,7 +64,7 @@ IMYA TWEAKS - SHIPS - A42
         <SliderDefinition Min="50" Max="500" Stepping="50" />
     </ImyaExpose>
 
-    <ModOp Type="replace" GUID="1742100660,1742100661" Path="/Values/ItemContainer/SocketCount" ModOpID="1742100660_SocketCount" Skip="1">
+    <ModOp Type="merge" GUID="1742100660,1742100661" Path="/Values/ItemContainer" ModOpID="1742100660_SocketCount" Skip="1">
         <SocketCount>3</SocketCount>
     </ModOp>
 
@@ -72,7 +72,7 @@ IMYA TWEAKS - SHIPS - A42
         <SliderDefinition Min="1" Max="4" Stepping="1" />
     </ImyaExpose>
 
-    <ModOp Type="replace" GUID="1742100660,1742100661" Path="/Values/Cost/InfluenceCostPoints" ModOpID="1742100660_InfluenceCostPoints" Skip="1">
+    <ModOp Type="merge" GUID="1742100660,1742100661" Path="/Values/Cost" ModOpID="1742100660_InfluenceCostPoints" Skip="1">
         <InfluenceCostPoints>30</InfluenceCostPoints>
     </ModOp>
 
@@ -80,7 +80,7 @@ IMYA TWEAKS - SHIPS - A42
         <SliderDefinition Min="1" Max="80" Stepping="1" />
     </ImyaExpose>
 
-    <ModOp Type="replace" GUID="1742100660,1742100661" Path="/Values/Craftable/CraftingTime" ModOpID="1742100660_CraftingTime" Skip="1">
+    <ModOp Type="merge" GUID="1742100660,1742100661" Path="/Values/Craftable" ModOpID="1742100660_CraftingTime" Skip="1">
         <CraftingTime>1200000</CraftingTime>
     </ModOp>
 
@@ -88,13 +88,17 @@ IMYA TWEAKS - SHIPS - A42
         <SliderDefinition Min="1000" Max="1500000" Stepping="1000" />
     </ImyaExpose>
 
-    <ModOp Type="replace" GUID="1742100660,1742100661" Path="/Values/ShipMaintenance/Maintenance" ModOpID="1742100660_Maintenance" Skip="1">
+    <ModOp Type="merge" GUID="1742100660,1742100661" Path="/Values/ShipMaintenance" ModOpID="1742100660_Maintenance" Skip="1">
         <Maintenance>2500</Maintenance>
     </ModOp>
 
     <ImyaExpose Path="self::Maintenance" ModOpID="1742100660_Maintenance" Kind="Slider" ExposeID="Maintenance">
         <SliderDefinition Min="0" Max="4000" Stepping="50" />
     </ImyaExpose>
+
+    <ModOp Type="merge" GUID="1742100660" Path="/Values/TradeRouteVehicle" ModOpID="1742100660_LoadingSpeedFactor" Skip="1">
+        <LoadingSpeedFactor>1.2</LoadingSpeedFactor>
+    </ModOp>
 
     <ImyaExpose Path="self::LoadingSpeedFactor" ModOpID="1742100660_LoadingSpeedFactor" Kind="Slider" ExposeID="LoadingSpeedFactor">
         <SliderDefinition Min="0.25" Max="4" Stepping="0.25" />
