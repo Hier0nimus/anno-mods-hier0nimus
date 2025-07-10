@@ -1,0 +1,73 @@
+<!--
+IMYA TWEAKS - SHIPS - AMOUNT - LateMidGame
+-->
+
+<ModOps>
+
+    <ImyaTweaks Title="Pirate Ships - LateMidGame" Description="Attention! Pirates always complete the list from top to bottom. So they do not start making the next ship before the previous amount is fullfilled." Icon="data/ui/2kimages/main/icons/icon_sail_shipyard_2d.png"/>
+
+    <ModOp Type="replace" GUID="73,76" Path="Values/Trader/Progression/LateMidGame/WarFleet/Item[ShipAsset='102432']/Amount" ModOpID="73_LateMidGame_monitor" Skip="1">
+        <Amount>1</Amount>
+    </ModOp>
+
+    <ImyaExpose Path="self::Amount" ModOpID="73_LateMidGame_monitor" Kind="Slider" ExposeID="Pirate Monitor" Description="Vanilla: /">
+        <SliderDefinition Min="0" Max="30" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp Type="replace" GUID="73,76" Path="Values/Trader/Progression/LateMidGame/WarFleet/Item[ShipAsset='1742102068']/Amount" ModOpID="73_LateMidGame_flamemonitor" Skip="1">
+        <Amount>1</Amount>
+    </ModOp>
+
+    <ImyaExpose Path="self::Amount" ModOpID="73_LateMidGame_flamemonitor" Kind="Slider" ExposeID="Pirate Flame Monitor" Description="Vanilla: /">
+        <SliderDefinition Min="0" Max="30" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp Type="replace" GUID="73,76" Path="Values/Trader/Progression/LateMidGame/WarFleet/Item[ShipAsset='1742102012']/Amount" ModOpID="73_LateMidGame_ironcladcruiser" Skip="1">
+        <Amount>2</Amount>
+    </ModOp>
+
+    <ImyaExpose Path="self::Amount" ModOpID="73_LateMidGame_ironcladcruiser" Kind="Slider" ExposeID="Ironclad Cruiser" Description="Vanilla: /">
+        <SliderDefinition Min="0" Max="30" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp Type="replace" GUID="73,76" Path="Values/Trader/Progression/LateMidGame/WarFleet/Item[ShipAsset='1742102074']/Amount" ModOpID="73_LateMidGame_flakmonitor" Skip="1">
+        <Amount>1</Amount>
+    </ModOp>
+
+    <ImyaExpose Path="self::Amount" ModOpID="73_LateMidGame_flakmonitor" Kind="Slider" ExposeID="Pirate Flak Monitor" Description="Vanilla: /">
+        <SliderDefinition Min="0" Max="30" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp Type="replace" GUID="73,76" Path="Values/Trader/Progression/LateMidGame/WarFleet/Item[ShipAsset='102431']/Amount" ModOpID="73_LateMidGame_sotl" Skip="1">
+        <Amount>3</Amount>
+    </ModOp>
+
+    <ImyaExpose Path="self::Amount" ModOpID="73_LateMidGame_sotl" Kind="Slider" ExposeID="Pirate Ship-Of-The-Line" Description="Vanilla: 2">
+        <SliderDefinition Min="0" Max="30" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp Type="replace" GUID="73,76" Path="Values/Trader/Progression/LateMidGame/WarFleet/Item[ShipAsset='1742102008']/Amount" ModOpID="73_LateMidGame_jollyroger" Skip="1">
+        <Amount>2</Amount>
+    </ModOp>
+
+    <ImyaExpose Path="self::Amount" ModOpID="73_LateMidGame_jollyroger" Kind="Slider" ExposeID="Jolly Roger" Description="Vanilla: /">
+        <SliderDefinition Min="0" Max="30" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp Type="replace" GUID="73,76" Path="Values/Trader/Progression/LateMidGame/WarFleet/Item[ShipAsset='102430']/Amount" ModOpID="73_LateMidGame_frigate" Skip="1">
+        <Amount>3</Amount>
+    </ModOp>
+
+    <ImyaExpose Path="self::Amount" ModOpID="73_LateMidGame_frigate" Kind="Slider" ExposeID="Pirate Frigate" Description="Vanilla: 4">
+        <SliderDefinition Min="0" Max="30" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp Type="replace" GUID="73,76" Path="Values/Trader/Progression/LateMidGame/WarFleet/Item[ShipAsset='102429']/Amount" ModOpID="73_LateMidGame_gunboat" Skip="1">
+        <Amount>4</Amount>
+    </ModOp>
+
+    <ImyaExpose Path="self::Amount" ModOpID="73_LateMidGame_gunboat" Kind="Slider" ExposeID="Pirate Gunboat" Description="Vanilla: 8">
+        <SliderDefinition Min="0" Max="30" Stepping="1" />
+    </ImyaExpose>
+
+</ModOps>

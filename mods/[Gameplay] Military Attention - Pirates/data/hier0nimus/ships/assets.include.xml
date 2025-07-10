@@ -11,6 +11,7 @@
   <!-- PIRATE GUNBOAT -->
   <ModOp Type="merge" GUID='102420,102429' Path="/Values/">
     <Walking>
+      <ForwardSpeed>6</ForwardSpeed>
       <WindMaxSpeedupFactor>2.2</WindMaxSpeedupFactor>
     </Walking>
     <Attackable>
@@ -33,7 +34,7 @@
   <!-- PIRATE FRIGATE -->
   <ModOp Type="merge" GUID='102421,102430' Path="/Values/">
     <Walking>
-      <ForwardSpeed>6</ForwardSpeed>
+      <ForwardSpeed>6.24</ForwardSpeed>
       <WindMaxSpeedupFactor>2.2</WindMaxSpeedupFactor>
     </Walking>
     <Attacker>
@@ -53,7 +54,7 @@
   <!-- PIRATE SOTL -->
   <ModOp Type="merge" GUID='102419,102431' Path="/Values/">
     <Walking>
-      <ForwardSpeed>4.4</ForwardSpeed>
+      <ForwardSpeed>4.8</ForwardSpeed>
     </Walking>
     <Attackable>
       <MaximumHitPoints>3500</MaximumHitPoints>      <!-- 4000 -->
@@ -61,8 +62,8 @@
       <SelfHealPausedTimeIfAttacked>30000</SelfHealPausedTimeIfAttacked>      <!-- 60000 -->
     </Attackable>
     <Attacker>
-      <BaseDamage>390</BaseDamage>
-      <ReloadTime>90</ReloadTime>
+      <BaseDamage>365</BaseDamage>
+      <ReloadTime>80</ReloadTime>
       <AttackRange>54</AttackRange>
     </Attacker>
     <Craftable>
@@ -165,6 +166,7 @@
         <Sellable>
           <CanBeSoldToTrader>0</CanBeSoldToTrader>
         </Sellable>
+        <Attackable/>
       </Values>
     </Asset>
   </ModOp>
@@ -207,6 +209,7 @@
         <Sellable>
           <CanBeSoldToTrader>0</CanBeSoldToTrader>
         </Sellable>
+        <Attackable/>
       </Values>
     </Asset>
   </ModOp>
@@ -231,7 +234,7 @@
               <Amount>55</Amount>
             </Item>
           </Costs>
-          <InfluenceCostPoints>10</InfluenceCostPoints>
+          <InfluenceCostPoints>16</InfluenceCostPoints>
         </Cost>
         <ItemContainer>
           <SocketCount>1</SocketCount>
@@ -249,6 +252,7 @@
         <Sellable>
           <CanBeSoldToTrader>0</CanBeSoldToTrader>
         </Sellable>
+        <Attackable/>
       </Values>
     </Asset>
   </ModOp>
@@ -273,11 +277,11 @@
               <Amount>65</Amount>
             </Item>
           </Costs>
-          <InfluenceCostPoints>14</InfluenceCostPoints>
+          <InfluenceCostPoints>24</InfluenceCostPoints>
         </Cost>
         <ItemContainer>
           <SocketCount>1</SocketCount>
-          <SlotCount>6</SlotCount>
+          <SlotCount>4</SlotCount>
           <SocketAllocation>Ship;SailShip;Warship;Mod6</SocketAllocation>
           <InitSocketItems>
             <Item>
@@ -286,11 +290,29 @@
           </InitSocketItems>
         </ItemContainer>
         <Craftable>
-          <CraftingTime>600000</CraftingTime>          <!-- 1200000 -->
+          <CraftingTime>480000</CraftingTime>          <!-- 1200000 -->
         </Craftable>
         <Sellable>
           <CanBeSoldToTrader>0</CanBeSoldToTrader>
         </Sellable>
+        <Attackable/>
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- PIRATE JOLLY ROGER - FOR SALE -->
+  <ModOp Type="addNextSibling" GUID='1742102008'>
+    <Asset>
+      <BaseAssetGUID>1742102008</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742102154</GUID>
+          <Name>Jolly Roger (For Sale)</Name>
+        </Standard>
+        <Cost/>
+        <ItemContainer/>
+        <Craftable/>
+        <Sellable/>
       </Values>
     </Asset>
   </ModOp>
@@ -315,7 +337,7 @@
               <Amount>40</Amount>
             </Item>
           </Costs>
-          <InfluenceCostPoints>6</InfluenceCostPoints>
+          <InfluenceCostPoints>12</InfluenceCostPoints>
         </Cost>
         <ItemContainer>
           <SocketCount>1</SocketCount>
@@ -333,6 +355,7 @@
         <Sellable>
           <CanBeSoldToTrader>0</CanBeSoldToTrader>
         </Sellable>
+        <Attackable/>
       </Values>
     </Asset>
   </ModOp>
@@ -357,7 +380,7 @@
               <Amount>45</Amount>
             </Item>
           </Costs>
-          <InfluenceCostPoints>6</InfluenceCostPoints>
+          <InfluenceCostPoints>12</InfluenceCostPoints>
         </Cost>
         <ItemContainer>
           <SocketCount>1</SocketCount>
@@ -375,6 +398,27 @@
         <Sellable>
           <CanBeSoldToTrader>0</CanBeSoldToTrader>
         </Sellable>
+        <Attackable/>
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- PIRATE FLAME MONITOR - FOR SALE -->
+  <ModOp Type="addNextSibling" GUID='1742102068'>
+    <Asset>
+      <BaseAssetGUID>1742102068</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742102153</GUID>
+          <Name>Pirate Flame Monitor (For Sale)</Name>
+        </Standard>
+        <Cost/>
+        <ItemContainer/>
+        <Craftable/>
+        <Sellable/>
+        <Locked>
+          <DefaultLockedState>0</DefaultLockedState>
+        </Locked>
       </Values>
     </Asset>
   </ModOp>
@@ -399,7 +443,7 @@
               <Amount>50</Amount>
             </Item>
           </Costs>
-          <InfluenceCostPoints>9</InfluenceCostPoints>
+          <InfluenceCostPoints>18</InfluenceCostPoints>
         </Cost>
         <ItemContainer>
           <SlotCount>4</SlotCount>
@@ -417,6 +461,30 @@
         <Sellable>
           <CanBeSoldToTrader>0</CanBeSoldToTrader>
         </Sellable>
+        <UpgradeList>
+          <DefaultBuff>0</DefaultBuff>
+        </UpgradeList>
+        <Attackable/>
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- PIRATE IRONCLAD CRUISER - FOR SALE -->
+  <ModOp Type="addNextSibling" GUID='1742102012'>
+    <Asset>
+      <BaseAssetGUID>1742102012</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742102155</GUID>
+          <Name>Pirate Ironclad Cruiser (For Sale)</Name>
+        </Standard>
+        <Cost/>
+        <ItemContainer/>
+        <Craftable/>
+        <Sellable/>
+        <Locked>
+          <DefaultLockedState>0</DefaultLockedState>
+        </Locked>
         <UpgradeList>
           <DefaultBuff>0</DefaultBuff>
         </UpgradeList>
@@ -444,7 +512,7 @@
               <Amount>80</Amount>
             </Item>
           </Costs>
-          <InfluenceCostPoints>12</InfluenceCostPoints>
+          <InfluenceCostPoints>24</InfluenceCostPoints>
         </Cost>
         <ItemContainer>
           <SlotCount>4</SlotCount>
@@ -462,6 +530,30 @@
         <Sellable>
           <CanBeSoldToTrader>0</CanBeSoldToTrader>
         </Sellable>
+        <UpgradeList>
+          <DefaultBuff>0</DefaultBuff>
+        </UpgradeList>
+        <Attackable/>
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- PIRATE BATTLE CRUISER - FOR SALE -->
+  <ModOp Type="addNextSibling" GUID='1742102010'>
+    <Asset>
+      <BaseAssetGUID>1742102010</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742102156</GUID>
+          <Name>Pirate Battle Cruiser (For Sale)</Name>
+        </Standard>
+        <Cost/>
+        <ItemContainer/>
+        <Craftable/>
+        <Sellable/>
+        <Locked>
+          <DefaultLockedState>0</DefaultLockedState>
+        </Locked>
         <UpgradeList>
           <DefaultBuff>0</DefaultBuff>
         </UpgradeList>
@@ -489,7 +581,7 @@
               <Amount>85</Amount>
             </Item>
           </Costs>
-          <InfluenceCostPoints>12</InfluenceCostPoints>
+          <InfluenceCostPoints>24</InfluenceCostPoints>
         </Cost>
         <ItemContainer>
           <SlotCount>4</SlotCount>
@@ -510,6 +602,30 @@
         <Sellable>
           <CanBeSoldToTrader>0</CanBeSoldToTrader>
         </Sellable>
+        <UpgradeList>
+          <DefaultBuff>0</DefaultBuff>
+        </UpgradeList>
+        <Attackable/>
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- PIRATE WARSHIP CRUISER - FOR SALE -->
+  <ModOp Type="addNextSibling" GUID='1742102070'>
+    <Asset>
+      <BaseAssetGUID>1742102070</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742102157</GUID>
+          <Name>Pirate Warship Cruiser (For Sale)</Name>
+        </Standard>
+        <Cost/>
+        <ItemContainer/>
+        <Craftable/>
+        <Locked>
+          <DefaultLockedState>0</DefaultLockedState>
+        </Locked>
+        <Sellable/>
         <UpgradeList>
           <DefaultBuff>0</DefaultBuff>
         </UpgradeList>
@@ -540,12 +656,21 @@
               <Amount>200</Amount>
             </Item>
           </Costs>
-          <InfluenceCostPoints>40</InfluenceCostPoints>
+          <InfluenceCostPoints>50</InfluenceCostPoints>
         </Cost>
+        <MinimapToken>
+          <TokenAsset>2001947</TokenAsset>          <!--Ships-->
+          <StrategicMapAsset>501018</StrategicMapAsset>          <!--Steam Ships-->
+        </MinimapToken>
         <ItemContainer>
           <SlotCount>4</SlotCount>
           <SocketCount>1</SocketCount>
           <SocketAllocation>Ship;SteamShip;Warship;Mod6</SocketAllocation>
+          <InitSocketItems>
+            <Item>
+              <Item>1742102007</Item>
+            </Item>
+          </InitSocketItems>
         </ItemContainer>
         <Craftable>
           <CraftingTime>600000</CraftingTime>
@@ -556,6 +681,37 @@
         <Sellable>
           <CanBeSoldToTrader>0</CanBeSoldToTrader>
         </Sellable>
+        <UpgradeList>
+          <DefaultBuff>0</DefaultBuff>
+        </UpgradeList>
+        <Attackable/>
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- PIRATE HEAVY BATTLE CRUISER - FOR SALE -->
+  <ModOp Type="addNextSibling" GUID='1742102014'>
+    <Asset>
+      <BaseAssetGUID>1742102014</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742102158</GUID>
+          <Name>Pirate Heavy Battle Cruiser (For Sale)</Name>
+        </Standard>
+        <Text>
+          <TextOverride>1742102014</TextOverride>
+        </Text>
+        <Cost/>
+        <MinimapToken>
+          <TokenAsset>2001947</TokenAsset>          <!--Ships-->
+          <StrategicMapAsset>501018</StrategicMapAsset>          <!--Steam Ships-->
+        </MinimapToken>
+        <ItemContainer/>
+        <Craftable/>
+        <Locked>
+          <DefaultLockedState>0</DefaultLockedState>
+        </Locked>
+        <Sellable/>
         <UpgradeList>
           <DefaultBuff>0</DefaultBuff>
         </UpgradeList>
@@ -586,12 +742,21 @@
               <Amount>200</Amount>
             </Item>
           </Costs>
-          <InfluenceCostPoints>40</InfluenceCostPoints>
+          <InfluenceCostPoints>50</InfluenceCostPoints>
         </Cost>
+        <MinimapToken>
+          <TokenAsset>2001947</TokenAsset>          <!--Ships-->
+          <StrategicMapAsset>501018</StrategicMapAsset>          <!--Steam Ships-->
+        </MinimapToken>
         <ItemContainer>
           <SlotCount>4</SlotCount>
           <SocketCount>1</SocketCount>
           <SocketAllocation>Ship;SteamShip;Warship;Mod6</SocketAllocation>
+          <InitSocketItems>
+            <Item>
+              <Item>1742102007</Item>
+            </Item>
+          </InitSocketItems>
         </ItemContainer>
         <Craftable>
           <CraftingTime>600000</CraftingTime>
@@ -602,6 +767,37 @@
         <Sellable>
           <CanBeSoldToTrader>0</CanBeSoldToTrader>
         </Sellable>
+        <UpgradeList>
+          <DefaultBuff>0</DefaultBuff>
+        </UpgradeList>
+        <Attackable/>
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- PIRATE HEAVY WARSHIP CRUISER - FOR SALE -->
+  <ModOp Type="addNextSibling" GUID='1742102072'>
+    <Asset>
+      <BaseAssetGUID>1742102072</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742102159</GUID>
+          <Name>Pirate Heavy Warship Cruiser (For Sale)</Name>
+        </Standard>
+        <Text>
+          <TextOverride>1742102072</TextOverride>
+        </Text>
+        <Cost/>
+        <MinimapToken>
+          <TokenAsset>2001947</TokenAsset>          <!--Ships-->
+          <StrategicMapAsset>501018</StrategicMapAsset>          <!--Steam Ships-->
+        </MinimapToken>
+        <ItemContainer/>
+        <Craftable/>
+        <Locked>
+          <DefaultLockedState>0</DefaultLockedState>
+        </Locked>
+        <Sellable/>
         <UpgradeList>
           <DefaultBuff>0</DefaultBuff>
         </UpgradeList>
@@ -661,6 +857,7 @@
         <UpgradeList>
           <DefaultBuff>0</DefaultBuff>
         </UpgradeList>
+        <TradeRouteVehicle/>
       </Values>
     </Asset>
   </ModOp>
@@ -717,6 +914,7 @@
         <UpgradeList>
           <DefaultBuff>0</DefaultBuff>
         </UpgradeList>
+        <TradeRouteVehicle/>
       </Values>
     </Asset>
   </ModOp>

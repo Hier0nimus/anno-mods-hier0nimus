@@ -1,0 +1,49 @@
+<!--
+IMYA TWEAKS - DEFENSES - Big Betty
+-->
+
+<ModOps>
+
+    <ImyaTweaks Title="Defenses - Big Betty" Description="Tweak Pirate Big Betty values" Icon="data/ui/2kimages/main/3dicons/icon_defense_tower_monstergun.png"/>
+
+    <ModOp Type="replace" GUID="102450" Path="/Values/Attackable/MaximumHitPoints" ModOpID="73_bigbetty_MaximumHitPoints" Skip="1">
+        <MaximumHitPoints>17500</MaximumHitPoints>
+    </ModOp>
+
+    <ImyaExpose Path="self::MaximumHitPoints" ModOpID="73_bigbetty_MaximumHitPoints" Kind="Slider" ExposeID="MaximumHitPoints" Description="Vanilla 7000">
+        <SliderDefinition Min="1" Max="25000" Stepping="250" />
+    </ImyaExpose>
+
+    <ModOp Type="replace" GUID="102450" Path="/Values/Attacker/BaseDamage" ModOpID="73_bigbetty_BaseDamage" Skip="1">
+        <BaseDamage>2800</BaseDamage>
+    </ModOp>
+
+    <ImyaExpose Path="self::BaseDamage" ModOpID="73_bigbetty_BaseDamage" Kind="Slider" ExposeID="BaseDamage" Description="Vanilla 850">
+        <SliderDefinition Min="1" Max="5000" Stepping="50" />
+    </ImyaExpose>
+
+    <ModOp Type="replace" GUID="102450" Path="/Values/Attacker/ReloadTime" ModOpID="73_bigbetty_ReloadTime" Skip="1">
+        <ReloadTime>90</ReloadTime>
+    </ModOp>
+
+    <ImyaExpose Path="self::ReloadTime" ModOpID="73_bigbetty_ReloadTime" Kind="Slider" ExposeID="ReloadTime" Description="Vanilla 150">
+        <SliderDefinition Min="1" Max="200" Stepping="10" />
+    </ImyaExpose>
+
+    <ModOp Type="replace" GUID="102450" Path="/Values/Attacker/AttackRange" ModOpID="73_bigbetty_AttackRange" Skip="1">
+        <AttackRange>120</AttackRange>
+    </ModOp>
+
+    <ImyaExpose Path="self::AttackRange" ModOpID="73_bigbetty_AttackRange" Kind="Slider" ExposeID="AttackRange" Description="Vanilla 108">
+        <SliderDefinition Min="1" Max="150" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp Type="replace" GUID="102450" Path="/Values/Attacker/LineOfSightRange" ModOpID="73_bigbetty_LineOfSightRange" Skip="1">
+        <LineOfSightRange>120</LineOfSightRange>
+    </ModOp>
+
+    <ImyaExpose Path="self::LineOfSightRange" ModOpID="73_bigbetty_LineOfSightRange" Kind="Slider" ExposeID="LineOfSightRange" Description="Vanilla 108">
+        <SliderDefinition Min="1" Max="150" Stepping="1" />
+    </ImyaExpose>
+
+</ModOps>

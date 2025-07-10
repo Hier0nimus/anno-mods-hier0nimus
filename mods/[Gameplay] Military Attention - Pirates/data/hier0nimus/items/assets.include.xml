@@ -4,6 +4,93 @@
 
 <ModOps>
 
+  <!-- START - Rachel Walker, Pirate Influence - Townhall -->
+  <ModOp GUID="191388" Type="addNextSibling">
+    <Asset>
+      <Template>HarborOfficeItem</Template>
+      <Values>
+        <Standard>
+          <GUID>1742102151</GUID>
+          <Name>Rachel Walker, Pirate Influence</Name>
+          <IconFilename>data/graphics/icons/icon_pirate_specialist_01.png</IconFilename>
+          <InfoDescription>1742102152</InfoDescription>
+        </Standard>
+        <Text />
+        <Item>
+          <MaxStackSize>1</MaxStackSize>
+          <Rarity>Legendary</Rarity>
+          <ItemType>Specialist</ItemType>
+          <TradePrice>1250000</TradePrice>
+          <TradePriceOnlineCurrency>1250000</TradePriceOnlineCurrency>
+        </Item>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742102047</GUID>              <!-- Pirate Residences -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <PopulationUpgrade/>
+        <ItemAction />
+        <ExpeditionAttribute>
+          <BaseMorale>0</BaseMorale>
+          <ExpeditionAttributes>
+            <Item>
+              <Attribute>PerkMale</Attribute>
+              <Amount>1</Amount>
+            </Item>
+            <Item>
+              <Attribute>Faith</Attribute>
+              <Amount>50</Amount>
+            </Item>
+            <Item>
+              <Attribute>Diplomacy</Attribute>
+              <Amount>20</Amount>
+            </Item>
+            <Item>
+              <Attribute>PerkAnthropologist</Attribute>
+              <Amount>1</Amount>
+            </Item>
+          </ExpeditionAttributes>
+          <ItemDifficulties>Hard</ItemDifficulties>
+          <FluffText>1742000135</FluffText>
+        </ExpeditionAttribute>
+        <ResidenceUpgrade>
+          <GoodConsumptionUpgrade>
+            <Item>
+              <ProvidedNeed>1010237</ProvidedNeed>              <!-- Work Clothes -->
+              <AmountInPercent>-50</AmountInPercent>
+            </Item>
+            <Item>
+              <ProvidedNeed>1010247</ProvidedNeed>              <!-- Fur Coats -->
+              <AmountInPercent>-50</AmountInPercent>
+            </Item>
+            <Item>
+              <ProvidedNeed>120032</ProvidedNeed>              <!-- Coffee -->
+              <AmountInPercent>-50</AmountInPercent>
+            </Item>
+          </GoodConsumptionUpgrade>
+          <TaxModifierInPercent>+25</TaxModifierInPercent>
+        </ResidenceUpgrade>
+        <IncidentInfectableUpgrade>
+          <IncidentRiotIncreaseUpgrade>
+            <Value>-5</Value>
+          </IncidentRiotIncreaseUpgrade>
+        </IncidentInfectableUpgrade>
+        <Locked/>
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- END - Rachel Walker, Pirate Influence - Townhall -->
+
+  <!-- ADD TO POOLS -->
+  <ModOp GUID="193094,193964" Path="Values/RewardPool/ItemsPool" Type="add">
+    <Item>
+      <ItemLink>1742102151</ItemLink>      <!-- Rachel Walker, Pirate Influence -->
+    </Item>
+  </ModOp>
+
   <!-- AIRSHIP PIRATE FLAG - LEGACY - Now replaced by shared flag mod with its own socket allocation -->
   <ModOp Type="addNextSibling" GUID='192173'>
     <Asset>

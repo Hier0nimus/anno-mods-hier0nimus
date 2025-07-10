@@ -1,0 +1,49 @@
+<!--
+IMYA TWEAKS - DEFENSES - Cannon Tower
+-->
+
+<ModOps>
+
+    <ImyaTweaks Title="Defenses - Cannon Tower" Description="Tweak Pirate Cannon Tower values" Icon="data/ui/2kimages/main/3dicons/icon_defense_tower_cannon.png"/>
+
+    <ModOp Type="replace" GUID="102449" Path="/Values/Attackable/MaximumHitPoints" ModOpID="73_cannontower_MaximumHitPoints" Skip="1">
+        <MaximumHitPoints>10000</MaximumHitPoints>
+    </ModOp>
+
+    <ImyaExpose Path="self::MaximumHitPoints" ModOpID="73_cannontower_MaximumHitPoints" Kind="Slider" ExposeID="MaximumHitPoints" Description="Vanilla 4800">
+        <SliderDefinition Min="1" Max="15000" Stepping="100" />
+    </ImyaExpose>
+
+    <ModOp Type="replace" GUID="102449" Path="/Values/Attacker/BaseDamage" ModOpID="73_cannontower_BaseDamage" Skip="1">
+        <BaseDamage>450</BaseDamage>
+    </ModOp>
+
+    <ImyaExpose Path="self::BaseDamage" ModOpID="73_cannontower_BaseDamage" Kind="Slider" ExposeID="BaseDamage" Description="Vanilla 150">
+        <SliderDefinition Min="1" Max="1000" Stepping="10" />
+    </ImyaExpose>
+
+    <ModOp Type="replace" GUID="102449" Path="/Values/Attacker/ReloadTime" ModOpID="73_cannontower_ReloadTime" Skip="1">
+        <ReloadTime>35</ReloadTime>
+    </ModOp>
+
+    <ImyaExpose Path="self::ReloadTime" ModOpID="73_cannontower_ReloadTime" Kind="Slider" ExposeID="ReloadTime" Description="Vanilla 50">
+        <SliderDefinition Min="1" Max="100" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp Type="replace" GUID="102449" Path="/Values/Attacker/AttackRange" ModOpID="73_cannontower_AttackRange" Skip="1">
+        <AttackRange>100</AttackRange>
+    </ModOp>
+
+    <ImyaExpose Path="self::AttackRange" ModOpID="73_cannontower_AttackRange" Kind="Slider" ExposeID="AttackRange" Description="Vanilla 92">
+        <SliderDefinition Min="1" Max="150" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp Type="replace" GUID="102449" Path="/Values/Attacker/LineOfSightRange" ModOpID="73_cannontower_LineOfSightRange" Skip="1">
+        <LineOfSightRange>100</LineOfSightRange>
+    </ModOp>
+
+    <ImyaExpose Path="self::LineOfSightRange" ModOpID="73_cannontower_LineOfSightRange" Kind="Slider" ExposeID="LineOfSightRange" Description="Vanilla 92">
+        <SliderDefinition Min="1" Max="150" Stepping="1" />
+    </ImyaExpose>
+
+</ModOps>

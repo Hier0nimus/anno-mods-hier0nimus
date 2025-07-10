@@ -1,0 +1,41 @@
+<!--
+IMYA TWEAKS - DIPLOMACY
+-->
+
+<ModOps>
+
+    <ImyaTweaks Title="Diplomacy" Description="Tweak diplomacy values" Icon="data/ui/2kimages/main/icons/icon_diplomacy.png"/>
+
+    <ModOp Type="replace" GUID="73,76" Path="/Values/Diplomacy/DiplomacyAI/MaxMoneyRequest" ModOpID="73_MaxMoneyRequest" Skip="1">
+        <MaxMoneyRequest>70</MaxMoneyRequest>
+    </ModOp>
+
+    <ImyaExpose Path="self::MaxMoneyRequest" ModOpID="73_MaxMoneyRequest" Kind="Slider" ExposeID="MaxMoneyRequest" Description="Multiples of the counter proposal money value. Vanilla value 40.">
+        <SliderDefinition Min="1" Max="200" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp Type="replace" GUID="73,76" Path="/Values/Diplomacy/DiplomacyAI/ActionCooldown/RequestCeaseFire/Cooldown" ModOpID="73_RequestCeaseFire" Skip="1">
+        <Cooldown>4200000</Cooldown>
+    </ModOp>
+
+    <ImyaExpose Path="self::Cooldown" ModOpID="73_RequestCeaseFire" Kind="Slider" ExposeID="Request CeaseFire Cooldown" Description="Request ceasefire cooldown in milliseconds. Vanilla value 3600000">
+        <SliderDefinition Min="10000" Max="5000000" Stepping="10000" />
+    </ImyaExpose>
+
+    <ModOp Type="replace" GUID="140054" Path="/Values/DiplomacyConfig/CeaseFire/TimeLength/Default/Length" ModOpID="73_CeaseFire" Skip="1">
+        <Length>3600000</Length>
+    </ModOp>
+
+    <ImyaExpose Path="self::Length" ModOpID="73_CeaseFire" Kind="Slider" ExposeID="CeaseFire Length" Description="Length of a ceasefire in milliseconds. Vanilla value 7200000">
+        <SliderDefinition Min="10000" Max="20000000" Stepping="10000" />
+    </ImyaExpose>
+
+    <ModOp Type="replace" GUID="140054" Path="/Values/DiplomacyConfig/NonAttack/TimeLength/Default/Length" ModOpID="73_NonAttack" Skip="1">
+        <Length>4800000</Length>
+    </ModOp>
+
+    <ImyaExpose Path="self::Length" ModOpID="73_NonAttack" Kind="Slider" ExposeID="Non-aggression Pact Length" Description="Length of a Non-aggression pact in milliseconds. Vanilla value 18000000">
+        <SliderDefinition Min="10000" Max="20000000" Stepping="10000" />
+    </ImyaExpose>
+
+</ModOps>

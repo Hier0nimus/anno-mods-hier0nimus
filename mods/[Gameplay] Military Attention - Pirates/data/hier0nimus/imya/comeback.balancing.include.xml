@@ -1,0 +1,25 @@
+<!--
+IMYA TWEAKS - COMEBACK
+-->
+
+<ModOps>
+
+    <ImyaTweaks Title="Comeback" Description="Tweak comeback values" Icon="data/ui/2kimages/main/icons/icon_rally_point.png"/>
+
+    <ModOp Type="replace" GUID="73,76" Path="/Values/Pirate/ComebackAfterKontorDestruction" ModOpID="73_ComebackAfterKontorDestruction" Skip="1">
+        <ComebackAfterKontorDestruction>7200000</ComebackAfterKontorDestruction>
+    </ModOp>
+
+    <ImyaExpose Path="self::ComebackAfterKontorDestruction" ModOpID="73_ComebackAfterKontorDestruction" Kind="Slider" ExposeID="ComebackAfterKontorDestruction" Description="Cooldown when Pirates come back after destroying their kontor. In milliseconds. Vanilla 9000000 (2.5h)">
+        <SliderDefinition Min="1" Max="20000000" Stepping="10000" />
+    </ImyaExpose>
+
+    <ModOp Type="replace" GUID="73,76" Path="/Values/Pirate/RebuildAfterIslandWarTimer" ModOpID="73_RebuildAfterIslandWarTimer" Skip="1">
+        <RebuildAfterIslandWarTimer>900000</RebuildAfterIslandWarTimer>
+    </ModOp>
+
+    <ImyaExpose Path="self::RebuildAfterIslandWarTimer" ModOpID="73_RebuildAfterIslandWarTimer" Kind="Slider" ExposeID="RebuildAfterIslandWarTimer" Description="Cooldown how long it takes pirates to rebuild their kontor. In milliseconds. Vanilla 1500000 (25min)">
+        <SliderDefinition Min="1" Max="20000000" Stepping="10000" />
+    </ImyaExpose>
+
+</ModOps>

@@ -1,0 +1,41 @@
+<!--
+IMYA TWEAKS - DEFENSES - Flak Cannon
+-->
+
+<ModOps>
+
+    <ImyaTweaks Title="Defenses - Flak Cannon" Description="Tweak Pirate Flak Cannon Tower values" Icon="data/ui/2kimages/main/3dicons/military_building/icon_flack_tower.png"/>
+
+    <ModOp Type="replace" GUID="100681,100682" Path="/Values/Attacker/BaseDamage" ModOpID="73_flak_BaseDamage" Skip="1">
+        <BaseDamage>66</BaseDamage>
+    </ModOp>
+
+    <ImyaExpose Path="self::BaseDamage" ModOpID="73_flak_BaseDamage" Kind="Slider" ExposeID="BaseDamage" Description="Vanilla 22">
+        <SliderDefinition Min="1" Max="200" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp Type="replace" GUID="100681,100682" Path="/Values/Attacker/ReloadTime" ModOpID="73_flak_ReloadTime" Skip="1">
+        <ReloadTime>2</ReloadTime>
+    </ModOp>
+
+    <ImyaExpose Path="self::ReloadTime" ModOpID="73_flak_ReloadTime" Kind="Slider" ExposeID="ReloadTime" Description="Vanilla 3">
+        <SliderDefinition Min="1" Max="15" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp Type="replace" GUID="100681,100682" Path="/Values/Attacker/AttackRange" ModOpID="73_flak_AttackRange" Skip="1">
+        <AttackRange>60</AttackRange>
+    </ModOp>
+
+    <ImyaExpose Path="self::AttackRange" ModOpID="73_flak_AttackRange" Kind="Slider" ExposeID="AttackRange" Description="Vanilla 52">
+        <SliderDefinition Min="1" Max="150" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp Type="replace" GUID="100681,100682" Path="/Values/Attacker/LineOfSightRange" ModOpID="73_flak_LineOfSightRange" Skip="1">
+        <LineOfSightRange>120</LineOfSightRange>
+    </ModOp>
+
+    <ImyaExpose Path="self::LineOfSightRange" ModOpID="73_flak_LineOfSightRange" Kind="Slider" ExposeID="LineOfSightRange" Description="Vanilla 100">
+        <SliderDefinition Min="1" Max="150" Stepping="1" />
+    </ImyaExpose>
+
+</ModOps>

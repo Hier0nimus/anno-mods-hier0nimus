@@ -1,0 +1,41 @@
+<!--
+IMYA TWEAKS - DEFENSES - Pucke Gun
+-->
+
+<ModOps>
+
+    <ImyaTweaks Title="Defenses - Puckle Gun" Description="Tweak Pirate Puckle Gun values" Icon="data/ui/2kimages/main/3dicons/icon_defense_tower_pucklegun.png"/>
+
+    <ModOp Type="replace" GUID="102448" Path="/Values/Attackable/MaximumHitPoints" ModOpID="73_puckle_MaximumHitPoints" Skip="1">
+        <MaximumHitPoints>7000</MaximumHitPoints>
+    </ModOp>
+
+    <ImyaExpose Path="self::MaximumHitPoints" ModOpID="73_puckle_MaximumHitPoints" Kind="Slider" ExposeID="MaximumHitPoints" Description="Vanilla 3200">
+        <SliderDefinition Min="1" Max="15000" Stepping="100" />
+    </ImyaExpose>
+
+    <ModOp Type="replace" GUID="102448" Path="/Values/Attacker/BaseDamage" ModOpID="73_puckle_BaseDamage" Skip="1">
+        <BaseDamage>70</BaseDamage>
+    </ModOp>
+
+    <ImyaExpose Path="self::BaseDamage" ModOpID="73_puckle_BaseDamage" Kind="Slider" ExposeID="BaseDamage" Description="Vanilla 23">
+        <SliderDefinition Min="1" Max="150" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp Type="replace" GUID="102448" Path="/Values/Attacker/AttackRange" ModOpID="73_puckle_AttackRange" Skip="1">
+        <AttackRange>75</AttackRange>
+    </ModOp>
+
+    <ImyaExpose Path="self::AttackRange" ModOpID="73_puckle_AttackRange" Kind="Slider" ExposeID="AttackRange" Description="Vanilla 72">
+        <SliderDefinition Min="1" Max="150" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp Type="replace" GUID="102448" Path="/Values/Attacker/LineOfSightRange" ModOpID="73_puckle_LineOfSightRange" Skip="1">
+        <LineOfSightRange>75</LineOfSightRange>
+    </ModOp>
+
+    <ImyaExpose Path="self::LineOfSightRange" ModOpID="73_puckle_LineOfSightRange" Kind="Slider" ExposeID="LineOfSightRange" Description="Vanilla 72">
+        <SliderDefinition Min="1" Max="150" Stepping="1" />
+    </ImyaExpose>
+
+</ModOps>

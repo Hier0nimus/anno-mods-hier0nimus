@@ -1,0 +1,131 @@
+<!--
+IMYA TWEAKS - SHIPS - PIRATE MONITOR
+-->
+
+<ModOps>
+
+    <!-- Pirate Monitor -->
+
+    <ImyaTweaks Title="Pirate Monitor" Description="Warship | Steamship" Icon="data/ui/2kimages/main/3dicons/ships/icon_pirate_ship_monitor.png"/>
+
+    <ModOp Type="merge" GUID="102422,102432" Path="/Values/Walking" ModOpID="102432_ForwardSpeed" Skip="1">
+        <ForwardSpeed>4.8</ForwardSpeed>
+    </ModOp>
+
+    <ImyaExpose Path="self::ForwardSpeed" ModOpID="102432_ForwardSpeed" Kind="Slider" ExposeID="ForwardSpeed">
+        <SliderDefinition Min="0" Max="15" Stepping="0.1" />
+    </ImyaExpose>
+
+    <ModOp Type="merge" GUID="102422,102432" Path="/Values/Walking" ModOpID="102432_SessionTransferSpeedFactor" Skip="1">
+        <SessionTransferSpeedFactor>1</SessionTransferSpeedFactor>
+    </ModOp>
+
+    <ImyaExpose Path="self::SessionTransferSpeedFactor" ModOpID="102432_SessionTransferSpeedFactor" Kind="Slider" ExposeID="SessionTransferSpeedFactor">
+        <SliderDefinition Min="0" Max="3" Stepping="0.25" />
+    </ImyaExpose>
+
+    <ModOp Type="merge" GUID="102422,102432,1742102031" Path="/Values/Attackable" ModOpID="102432_MaximumHitPoints" Skip="1">
+        <MaximumHitPoints>4250</MaximumHitPoints>
+    </ModOp>
+
+    <ImyaExpose Path="self::MaximumHitPoints" ModOpID="102432_MaximumHitPoints" Kind="Slider" ExposeID="MaximumHitPoints">
+        <SliderDefinition Min="50" Max="17500" Stepping="50" />
+    </ImyaExpose>
+
+    <ModOp Type="merge" GUID="102422,102432,1742102031" Path="/Values/ItemContainer" ModOpID="102432_SlotCount" Skip="1">
+        <SlotCount>2</SlotCount>
+    </ModOp>
+
+    <ImyaExpose Path="self::SlotCount" ModOpID="102432_SlotCount" Kind="Slider" ExposeID="SlotCount">
+        <SliderDefinition Min="1" Max="8" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp Type="merge" GUID="102422,102432" Path="/Values/ItemContainer" ModOpID="102432_StackLimit" Skip="1">
+        <StackLimit>50</StackLimit>
+    </ModOp>
+
+    <ImyaExpose Path="self::StackLimit" ModOpID="102432_StackLimit" Kind="Slider" ExposeID="StackLimit">
+        <SliderDefinition Min="50" Max="500" Stepping="50" />
+    </ImyaExpose>
+
+    <ModOp Type="merge" GUID="102422,102432,1742102031" Path="/Values/ItemContainer" ModOpID="102432_SocketCount" Skip="1">
+        <SocketCount>1</SocketCount>
+    </ModOp>
+
+    <ImyaExpose Path="self::SocketCount" ModOpID="102432_SocketCount" Kind="Slider" ExposeID="SocketCount">
+        <SliderDefinition Min="1" Max="4" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp Type="merge" GUID="102422,102432,1742102031" Path="/Values/Cost" ModOpID="102432_InfluenceCostPoints" Skip="1">
+        <InfluenceCostPoints>12</InfluenceCostPoints>
+    </ModOp>
+
+    <ImyaExpose Path="self::InfluenceCostPoints" ModOpID="102432_InfluenceCostPoints" Kind="Slider" ExposeID="InfluenceCostPoints">
+        <SliderDefinition Min="1" Max="25" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp Type="merge" GUID="102422,102432,1742102031" Path="/Values/Craftable" ModOpID="102432_CraftingTime" Skip="1">
+        <CraftingTime>240000</CraftingTime>
+    </ModOp>
+
+    <ImyaExpose Path="self::CraftingTime" ModOpID="102432_CraftingTime" Kind="Slider" ExposeID="CraftingTime">
+        <SliderDefinition Min="1000" Max="1000000" Stepping="1000" />
+    </ImyaExpose>
+
+    <ModOp Type="merge" GUID="102422,102432" Path="/Values/ShipMaintenance" ModOpID="102432_Maintenance" Skip="1">
+        <Maintenance>700</Maintenance>
+    </ModOp>
+
+    <ImyaExpose Path="self::Maintenance" ModOpID="102432_Maintenance" Kind="Slider" ExposeID="Maintenance">
+        <SliderDefinition Min="0" Max="1000" Stepping="5" />
+    </ImyaExpose>
+
+    <ModOp Type="merge" GUID="102422,102432" Path="/Values/Attacker" ModOpID="102432_BaseDamage" Skip="1">
+        <BaseDamage>105</BaseDamage>
+    </ModOp>
+
+    <ImyaExpose Path="self::BaseDamage" ModOpID="102432_BaseDamage" Kind="Slider" ExposeID="BaseDamage">
+        <SliderDefinition Min="0" Max="1000" Stepping="5" />
+    </ImyaExpose>
+
+    <ModOp Type="merge" GUID="102422,102432" Path="/Values/Attacker" ModOpID="102432_ReloadTime" Skip="1">
+        <ReloadTime>25</ReloadTime>
+    </ModOp>
+
+    <ImyaExpose Path="self::ReloadTime" ModOpID="102432_ReloadTime" Kind="Slider" ExposeID="ReloadTime">
+        <SliderDefinition Min="0" Max="150" Stepping="5" />
+    </ImyaExpose>
+
+    <ModOp Type="merge" GUID="102422,102432" Path="/Values/Attacker" ModOpID="102432_AttackRange" Skip="1">
+        <AttackRange>45</AttackRange>
+    </ModOp>
+
+    <ImyaExpose Path="self::AttackRange" ModOpID="102432_AttackRange" Kind="Slider" ExposeID="AttackRange">
+        <SliderDefinition Min="0" Max="150" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp Type="merge" GUID="102422,102432" Path="/Values/TradeRouteVehicle" ModOpID="102432_LoadingSpeedFactor" Skip="1">
+        <LoadingSpeedFactor>1</LoadingSpeedFactor>
+    </ModOp>
+
+    <ImyaExpose Path="self::LoadingSpeedFactor" ModOpID="102432_LoadingSpeedFactor" Kind="Slider" ExposeID="LoadingSpeedFactor">
+        <SliderDefinition Min="0.25" Max="4" Stepping="0.25" />
+    </ImyaExpose>
+
+    <ModOp Type="merge" GUID="1742102031" Path="/Values/Cost/Costs/Item[Ingredient='1010017']" ModOpID="102432_Cost_Coins" Skip="1">
+        <Amount>1200000</Amount>
+    </ModOp>
+
+    <ImyaExpose Path="self::Amount" ModOpID="102432_Cost_Coins" Kind="Slider" ExposeID="Building Cost Coins">
+        <SliderDefinition Min="0" Max="2000000" Stepping="1000" />
+    </ImyaExpose>
+
+    <ModOp Type="merge" GUID="1742102031" Path="/Values/Cost/Costs/Item[Ingredient='1742102058']" ModOpID="102432_Cost_Sailors" Skip="1">
+        <Amount>40</Amount>
+    </ModOp>
+
+    <ImyaExpose Path="self::Amount" ModOpID="102432_Cost_Sailors" Kind="Slider" ExposeID="Building Cost Sailors">
+        <SliderDefinition Min="0" Max="200" Stepping="1" />
+    </ImyaExpose>
+
+</ModOps>

@@ -1,0 +1,21 @@
+<!--
+IMYA TWEAKS - SHIPS - AMOUNT - EarlyMidGame
+-->
+
+<ModOps>
+
+    <ImyaTweaks Title="Pirate Ships - EarlyMidGame" Description="Attention! Pirates always complete the list from top to bottom. So they do not start making the next ship before the previous amount is fullfilled." Icon="data/ui/2kimages/main/icons/icon_sail_shipyard_2d.png"/>
+
+    <ModOp Type="replace" GUID="73" Path="Values/Trader/Progression/EarlyMidGame/WarFleet/Item[ShipAsset='102429']/Amount" ModOpID="73_EarlyMidGame_gunboat" Skip="1">
+        <Amount>5</Amount>
+    </ModOp>
+
+    <ImyaExpose Path="self::Amount" ModOpID="73_EarlyMidGame_gunboat" Kind="Slider" ExposeID="Pirate Gunboat" Description="Vanilla: 4">
+        <SliderDefinition Min="0" Max="30" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp Type="replace" GUID="73,76" Path="Values/Trader/Progression/MidGame/WarFleet/Item[ShipAsset='102430']/Amount" ModOpID="73_MidGame_frigate" Skip="1">
+        <Amount>3</Amount>
+    </ModOp>
+
+</ModOps>
