@@ -1,6 +1,6 @@
 <!-- 
   
-  [Shared] Shared Pirate Ships - v1.1
+  [Shared] Shared Pirate Ships - v1.2
   Created by Hier0nimus 
   Enjoy!
 
@@ -128,6 +128,10 @@
           </AccuracyByDistance>
           <WeaponIcon>2188</WeaponIcon>
         </Attacker>
+        <ItemContainer/>
+        <Cost/>
+        <ShipMaintenance/>
+        <TradeRouteVehicle/>
       </Values>
     </Asset>
   </ModOp>
@@ -215,6 +219,10 @@
           </AccuracyByDistance>
           <WeaponIcon>2188</WeaponIcon>
         </Attacker>
+        <ItemContainer/>
+        <Cost/>
+        <ShipMaintenance/>
+        <TradeRouteVehicle/>
       </Values>
     </Asset>
   </ModOp>
@@ -353,8 +361,8 @@
         </Attacker>
         <Locked />
         <ItemContainer>
-          <SocketCount>3</SocketCount>          <!-- SOTL 3 - DUKE 4 -->
-          <SlotCount>6</SlotCount>          <!-- SOTL 3 - DUKE 4 -->
+          <SocketCount>4</SocketCount>          <!-- SOTL 3 - DUKE 4 -->
+          <SlotCount>4</SlotCount>          <!-- SOTL 3 - DUKE 4 -->
         </ItemContainer>
         <Cost>
           <Costs>
@@ -364,7 +372,7 @@
             </Item>
           </Costs>
           <InfluenceCostType>WarShip</InfluenceCostType>
-          <InfluenceCostPoints>24</InfluenceCostPoints>          <!-- SOTL 16 - DUKE 28 -->
+          <InfluenceCostPoints>24</InfluenceCostPoints>          <!-- SOTL 16 - DUKE 24 -->
         </Cost>
         <Craftable>
           <CraftingTime>300000</CraftingTime>          <!-- SOTL 720000 - DUKE 1200000 - 400000 -->
@@ -409,6 +417,7 @@
             </Item>
           </Baseprice>
         </Sellable>
+        <TradeRouteVehicle/>
       </Values>
     </Asset>
   </ModOp>
@@ -464,6 +473,9 @@
         <ShipMaintenance>
           <Maintenance>800</Maintenance>          <!-- 390 -->
         </ShipMaintenance>
+        <ItemContainer/>
+        <Cost/>
+        <TradeRouteVehicle/>
       </Values>
     </Asset>
   </ModOp>
@@ -515,6 +527,9 @@
         <ShipMaintenance>
           <Maintenance>500</Maintenance>          <!-- 650 -->
         </ShipMaintenance>
+        <ItemContainer/>
+        <Cost/>
+        <TradeRouteVehicle/>
       </Values>
     </Asset>
   </ModOp>
@@ -925,6 +940,7 @@
             </Item>
           </Baseprice>
         </Sellable>
+        <TradeRouteVehicle/>
       </Values>
     </Asset>
   </ModOp>
@@ -1001,6 +1017,9 @@
             </Item>
           </Baseprice>
         </Sellable>
+        <ItemContainer/>
+        <Walking/>
+        <TradeRouteVehicle/>
       </Values>
     </Asset>
   </ModOp>
@@ -1020,7 +1039,7 @@
         <Object>
           <Variations>
             <Item>
-              <Filename>data/graphics/vehicle/heavy_battle_cruiser_pirate/heavy_battle_cruiser_pirate.cfg</Filename>
+              <Filename>data/graphics/vehicle/heavy_battle_cruiser_pirate/heavy_battle_cruiser_pirate_02.cfg</Filename>
             </Item>
           </Variations>
         </Object>
@@ -1066,7 +1085,7 @@
         </Attackable>
         <Attacker>
           <ShootingTracking>TurretFixed</ShootingTracking>
-          <BaseDamage>3300</BaseDamage>          <!-- Battle Cruiser 280 - 1250 - Pirate Battle Cruiser 1280 - Heavy Battle Cruiser 2500 -->
+          <BaseDamage>3400</BaseDamage>          <!-- Battle Cruiser 280 - 1250 - Pirate Battle Cruiser 1280 - Heavy Battle Cruiser 2500 -->
           <ReloadTime>125</ReloadTime>          <!-- Battle Cruiser 70 - Pirate Battle Cruiser 125 - Heavy Battle Cruiser 130 -->
           <AttackRange>88</AttackRange>          <!-- Battle Cruiser 84 - 85 - Pirate Battle Cruiser 86 - Heavy Battle Cruiser 88 -->
           <LineOfSightRange>140</LineOfSightRange>          <!-- Battle Cruiser 100 -->
@@ -1096,19 +1115,11 @@
               <TurretCfg>data/graphics/vehicle/heavy_battle_cruiser_pirate/heavy_battle_cruiser_turret_normal_01.cfg</TurretCfg>
             </Item>
             <Item>
-              <TurnSpan>300</TurnSpan>
+              <TurnSpan>145</TurnSpan>
               <TurretCfg>data/graphics/vehicle/heavy_battle_cruiser_pirate/heavy_battle_cruiser_turret_normal_01.cfg</TurretCfg>
             </Item>
             <Item>
-              <TurnSpan>300</TurnSpan>
-              <TurretCfg>data/graphics/vehicle/heavy_battle_cruiser_pirate/heavy_battle_cruiser_turret_normal_01.cfg</TurretCfg>
-            </Item>
-            <Item>
-              <TurnSpan>130</TurnSpan>
-              <TurretCfg>data/graphics/vehicle/heavy_battle_cruiser_pirate/heavy_battle_cruiser_turret_normal_01.cfg</TurretCfg>
-            </Item>
-            <Item>
-              <TurnSpan>130</TurnSpan>
+              <TurnSpan>145</TurnSpan>
               <TurretCfg>data/graphics/vehicle/heavy_battle_cruiser_pirate/heavy_battle_cruiser_turret_normal_01.cfg</TurretCfg>
             </Item>
           </Turrets>
@@ -1192,11 +1203,11 @@
           <Costs>
             <Item>
               <Ingredient>1010017</Ingredient>              <!--coins-->
-              <Amount>3000000</Amount>              <!--Heavy Battle Cruiser 1000000 -->
+              <Amount>6500000</Amount>              <!--Heavy Battle Cruiser 1000000 -->
             </Item>
           </Costs>
           <InfluenceCostType>WarShip</InfluenceCostType>
-          <InfluenceCostPoints>60</InfluenceCostPoints>          <!-- 24 - Pirate Battle Cruiser 26 - Heavy Battle Cruiser 100 -->
+          <InfluenceCostPoints>50</InfluenceCostPoints>          <!-- 24 - Pirate Battle Cruiser 26 - Heavy Battle Cruiser 100 -->
         </Cost>
         <Craftable>
           <CraftingTime>480000</CraftingTime>          <!-- Battle Cruiser 900000 - Heavy Battle Cruiser 2000000 - 100000 -->
@@ -1227,7 +1238,7 @@
           </ExpeditionAttributes>
         </ExpeditionAttribute>
         <ShipMaintenance>
-          <Maintenance>6000</Maintenance>          <!-- Battle Cruiser 850 - 1500 -->
+          <Maintenance>5000</Maintenance>          <!-- Battle Cruiser 850 - 1500 -->
         </ShipMaintenance>
         <Sellable>
           <CanBeSoldToTrader>0</CanBeSoldToTrader>
@@ -1242,10 +1253,11 @@
                   </Entry>
                 </InheritanceMapV2>
               </VectorElement>
-              <Amount>3000000</Amount>
+              <Amount>6500000</Amount>
             </Item>
           </Baseprice>
         </Sellable>
+        <TradeRouteVehicle/>
       </Values>
     </Asset>
   </ModOp>
@@ -1265,7 +1277,7 @@
         <Object>
           <Variations>
             <Item>
-              <Filename>data/graphics/vehicle/heavy_battle_cruiser_pirate/heavy_battle_cruiser_pirate.cfg</Filename>
+              <Filename>data/graphics/vehicle/heavy_battle_cruiser_pirate/heavy_battle_cruiser_pirate_02.cfg</Filename>
             </Item>
           </Variations>
         </Object>
@@ -1343,19 +1355,11 @@
               <TurretCfg>data/graphics/campaign/vehicle/pyro_ship_02/pyro_ship_02_turret_front.cfg</TurretCfg>
             </Item>
             <Item>
-              <TurnSpan>300</TurnSpan>
+              <TurnSpan>145</TurnSpan>
               <TurretCfg>data/graphics/campaign/vehicle/pyro_ship_02/pyro_ship_02_turret_front.cfg</TurretCfg>
             </Item>
             <Item>
-              <TurnSpan>300</TurnSpan>
-              <TurretCfg>data/graphics/campaign/vehicle/pyro_ship_02/pyro_ship_02_turret_front.cfg</TurretCfg>
-            </Item>
-            <Item>
-              <TurnSpan>130</TurnSpan>
-              <TurretCfg>data/graphics/campaign/vehicle/pyro_ship_02/pyro_ship_02_turret_front.cfg</TurretCfg>
-            </Item>
-            <Item>
-              <TurnSpan>130</TurnSpan>
+              <TurnSpan>145</TurnSpan>
               <TurretCfg>data/graphics/campaign/vehicle/pyro_ship_02/pyro_ship_02_turret_front.cfg</TurretCfg>
             </Item>
           </Turrets>
@@ -1396,11 +1400,11 @@
           <Costs>
             <Item>
               <Ingredient>1010017</Ingredient>              <!--coins-->
-              <Amount>3000000</Amount>              <!--Heavy Battle Cruiser 1000000 -->
+              <Amount>6500000</Amount>              <!--Heavy Battle Cruiser 1000000 -->
             </Item>
           </Costs>
           <InfluenceCostType>WarShip</InfluenceCostType>
-          <InfluenceCostPoints>60</InfluenceCostPoints>          <!-- 24 - Pirate Battle Cruiser 26 - Heavy Battle Cruiser 100 -->
+          <InfluenceCostPoints>50</InfluenceCostPoints>          <!-- 24 - Pirate Battle Cruiser 26 - Heavy Battle Cruiser 100 -->
         </Cost>
         <Craftable>
           <CraftingTime>480000</CraftingTime>          <!-- Battle Cruiser 900000 - Heavy Battle Cruiser 2000000 - 100000 -->
@@ -1431,7 +1435,7 @@
           </ExpeditionAttributes>
         </ExpeditionAttribute>
         <ShipMaintenance>
-          <Maintenance>6000</Maintenance>          <!-- Battle Cruiser 850 - 2000 -->
+          <Maintenance>5000</Maintenance>          <!-- Battle Cruiser 850 - 2000 -->
         </ShipMaintenance>
         <Sellable>
           <CanBeSoldToTrader>0</CanBeSoldToTrader>
@@ -1446,10 +1450,11 @@
                   </Entry>
                 </InheritanceMapV2>
               </VectorElement>
-              <Amount>3000000</Amount>
+              <Amount>6500000</Amount>
             </Item>
           </Baseprice>
         </Sellable>
+        <TradeRouteVehicle/>
       </Values>
     </Asset>
   </ModOp>
@@ -1614,27 +1619,27 @@
               <TurretCfg>data/graphics/vehicle/heavy_battle_cruiser_pirate/heavy_battle_cruiser_turret_normal_01.cfg</TurretCfg>
             </Item>
             <Item>
-              <TurnSpan>120</TurnSpan>
+              <TurnSpan>140</TurnSpan>
               <TurretCfg>data/graphics/vehicle/heavy_battle_cruiser_pirate/heavy_battle_cruiser_turret_normal_01.cfg</TurretCfg>
             </Item>
             <Item>
-              <TurnSpan>120</TurnSpan>
+              <TurnSpan>140</TurnSpan>
               <TurretCfg>data/graphics/vehicle/heavy_battle_cruiser_pirate/heavy_battle_cruiser_turret_normal_01.cfg</TurretCfg>
             </Item>
             <Item>
-              <TurnSpan>120</TurnSpan>
+              <TurnSpan>140</TurnSpan>
               <TurretCfg>data/graphics/vehicle/heavy_battle_cruiser_pirate/heavy_battle_cruiser_turret_normal_01.cfg</TurretCfg>
             </Item>
             <Item>
-              <TurnSpan>120</TurnSpan>
+              <TurnSpan>140</TurnSpan>
               <TurretCfg>data/graphics/vehicle/heavy_battle_cruiser_pirate/heavy_battle_cruiser_turret_normal_01.cfg</TurretCfg>
             </Item>
             <Item>
-              <TurnSpan>180</TurnSpan>
+              <TurnSpan>170</TurnSpan>
               <TurretCfg>data/graphics/vehicle/heavy_battle_cruiser_pirate/heavy_battle_cruiser_turret_large_01.cfg</TurretCfg>
             </Item>
             <Item>
-              <TurnSpan>180</TurnSpan>
+              <TurnSpan>170</TurnSpan>
               <TurretCfg>data/graphics/vehicle/heavy_battle_cruiser_pirate/heavy_battle_cruiser_turret_large_01.cfg</TurretCfg>
             </Item>
           </Turrets>
@@ -1782,6 +1787,7 @@
             </Item>
           </Baseprice>
         </Sellable>
+        <TradeRouteVehicle/>
       </Values>
     </Asset>
   </ModOp>
@@ -1998,26 +2004,56 @@
             </Item>
           </Baseprice>
         </Sellable>
+        <TradeRouteVehicle/>
       </Values>
     </Asset>
   </ModOp>
   <!-- END PIRATE SKULLCRUSHER -->
 
   <!-- START - Rebalance Flame damage -->
-  <ModOp Type="merge" GUID='1892' Path="/Values/Projectile/Effectivities/">
-    <Item>
-      <GUID>1398</GUID>      <!--all Flamable Ships -->
-      <Factor>2.5</Factor>      <!-- 5.1 -->
-    </Item>
-    <Item>
-      <GUID>1404</GUID>
-      <Factor>0.35</Factor>      <!-- 0.7 -->
-    </Item>
+  <ModOp GUID='102405,111134,1892,628' Type="merge" Path="/Values/Projectile">
+    <Effectivities/>
+    <StatusEffects/>
+    <StatusEffectChainDescription>4416</StatusEffectChainDescription>    <!--ChainEffect_Fire-->
+  </ModOp>
+  <ModOp GUID='102405,111134,1892,628' Type="replace" Path="/Values/Projectile/Effectivities">
+    <Effectivities>
+      <Item>
+        <GUID>1398</GUID>        <!--all Flamable Ships -->
+        <Factor>2</Factor>        <!-- 5.1 / 5.75 -->
+      </Item>
+      <Item>
+        <GUID>1404</GUID>        <!--all Steel Hull Ships-->
+        <Factor>0.5</Factor>        <!-- 0.7 / 0.75 -->
+      </Item>
+    </Effectivities>
+  </ModOp>
+  <ModOp GUID='102405,111134,1892,628' Type="replace" Path="/Values/Projectile/StatusEffects">
+    <StatusEffects>
+      <Item>
+        <StatusEffectChain>
+          <Item>
+            <StatusEffect>1401</StatusEffect>            <!--FlameWeaponEffect_Phase01_(Sail)-->
+            <StatusDuration>60000</StatusDuration>
+          </Item>
+        </StatusEffectChain>
+        <StatusEffectExclusiveGroup>1410</StatusEffectExclusiveGroup>        <!--FlameWeapom_EffectExclusiveGroup_(Sail)-->
+      </Item>
+      <Item>
+        <StatusEffectChain>
+          <Item>
+            <StatusEffect>1407</StatusEffect>            <!--FlameWeaponEffect_Phase01_(Steel)-->
+            <StatusDuration>60000</StatusDuration>
+          </Item>
+        </StatusEffectChain>
+        <StatusEffectExclusiveGroup>1411</StatusEffectExclusiveGroup>        <!--FlameWeapom_EffectExclusiveGroup_(Steel)-->
+      </Item>
+    </StatusEffects>
   </ModOp>
   <!-- END - Rebalance Flame damage -->
 
   <!-- START - ALL PIRATE/MLITARY SHIPS - PlayerCounterContextPool -->
-  <ModOp Type="add" GUID="700138,119965" Path="/Values/PlayerCounterContextPool/Contexts/">
+  <ModOp Type="add" GUID="700138" Path="/Values/PlayerCounterContextPool/Contexts/">
     <Item>
       <Asset>1742102008</Asset>      <!--Jolly Roger (Pirates) - Warship-->
     </Item>
@@ -2089,6 +2125,12 @@
     <Item>
       <GUID>1742102096</GUID>      <!-- Pirate Black Eagle - WarAirShip -->
     </Item>
+    <Item>
+      <GUID>1742102137</GUID>      <!-- Skullcrusher (Pirates) - Warship-->
+    </Item>
+    <Item>
+      <GUID>1742102135</GUID>      <!-- Iron Maiden (Pirates) - Warship -->
+    </Item>
   </ModOp>
   <!-- END - ALL SHIPS - ItemEffectTargetPool-->
 
@@ -2096,6 +2138,9 @@
   <ModOp Type="add" GUID="191455" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
     <Item>
       <GUID>1742102008</GUID>      <!--Jolly Roger (Pirates) - Warship-->
+    </Item>
+    <Item>
+      <GUID>1742102137</GUID>      <!-- Skullcrusher (Pirates) - Warship-->
     </Item>
   </ModOp>
   <!-- END - ALL SAILING SHIPS - ItemEffectTargetPool -->
@@ -2122,6 +2167,9 @@
     </Item>
     <Item>
       <GUID>1742102070</GUID>      <!-- Pirate Warship Cruiser (Pirates) - Warship -->
+    </Item>
+    <Item>
+      <GUID>1742102135</GUID>      <!-- Iron Maiden (Pirates) - Warship -->
     </Item>
   </ModOp>
   <!-- END - ALL STEAMSHIPS - ItemEffectTargetPool -->
@@ -2158,13 +2206,22 @@
     <Item>
       <GUID>1742102096</GUID>      <!-- Pirate Black Eagle - WarAirShip -->
     </Item>
+    <Item>
+      <GUID>1742102137</GUID>      <!-- Skullcrusher (Pirates) - Warship-->
+    </Item>
+    <Item>
+      <GUID>1742102135</GUID>      <!-- Iron Maiden (Pirates) - Warship -->
+    </Item>
   </ModOp>
   <!-- END - ALL WARSHIPS / ALL MILITARY UNITS - ItemEffectTargetPool -->
 
   <!-- START - ALL WOODEN HULL SHIPS (Flamable) - ItemEffectTargetPool-->
   <ModOp Type="add" GUID="1398" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
     <Item>
-      <GUID>1742102008</GUID>      <!--Jolly Roger (Pirates) - Warship-->
+      <GUID>1742102008</GUID>      <!-- Jolly Roger (Pirates) - Warship-->
+    </Item>
+    <Item>
+      <GUID>1742102137</GUID>      <!-- Skullcrusher (Pirates) - Warship-->
     </Item>
   </ModOp>
   <!-- END - ALL WOODEN HULL SHIPS (Flamable) - ItemEffectTargetPool-->
@@ -2191,6 +2248,9 @@
     </Item>
     <Item>
       <GUID>1742102070</GUID>      <!-- Pirate Warship Cruiser (Pirates) - Warship -->
+    </Item>
+    <Item>
+      <GUID>1742102135</GUID>      <!-- Iron Maiden (Pirates) - Warship -->
     </Item>
   </ModOp>
   <!-- END - ALL STEAL HULL SHIPS - ItemEffectTargetPool -->
