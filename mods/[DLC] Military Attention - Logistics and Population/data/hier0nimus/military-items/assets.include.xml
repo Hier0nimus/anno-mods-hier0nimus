@@ -40,7 +40,9 @@
         <ExpeditionAttribute>
           <BaseMorale>0</BaseMorale>
         </ExpeditionAttribute>
-        <Locked />
+        <Locked>
+          <DefaultLockedState>0</DefaultLockedState>
+        </Locked>
       </Values>
     </Asset>
   </ModOp>
@@ -63,7 +65,9 @@
         <ExpeditionAttribute>
           <BaseMorale>0</BaseMorale>
         </ExpeditionAttribute>
-        <Locked />
+        <Locked>
+          <DefaultLockedState>0</DefaultLockedState>
+        </Locked>
       </Values>
     </Asset>
   </ModOp>
@@ -86,7 +90,9 @@
         <ExpeditionAttribute>
           <BaseMorale>0</BaseMorale>
         </ExpeditionAttribute>
-        <Locked />
+        <Locked>
+          <DefaultLockedState>0</DefaultLockedState>
+        </Locked>
       </Values>
     </Asset>
   </ModOp>
@@ -109,7 +115,9 @@
         <ExpeditionAttribute>
           <BaseMorale>0</BaseMorale>
         </ExpeditionAttribute>
-        <Locked />
+        <Locked>
+          <DefaultLockedState>0</DefaultLockedState>
+        </Locked>
       </Values>
     </Asset>
   </ModOp>
@@ -132,7 +140,9 @@
         <ExpeditionAttribute>
           <BaseMorale>0</BaseMorale>
         </ExpeditionAttribute>
-        <Locked />
+        <Locked>
+          <DefaultLockedState>0</DefaultLockedState>
+        </Locked>
       </Values>
     </Asset>
   </ModOp>
@@ -155,7 +165,9 @@
         <ExpeditionAttribute>
           <BaseMorale>0</BaseMorale>
         </ExpeditionAttribute>
-        <Locked />
+        <Locked>
+          <DefaultLockedState>0</DefaultLockedState>
+        </Locked>
       </Values>
     </Asset>
   </ModOp>
@@ -178,7 +190,9 @@
         <ExpeditionAttribute>
           <BaseMorale>0</BaseMorale>
         </ExpeditionAttribute>
-        <Locked />
+        <Locked>
+          <DefaultLockedState>0</DefaultLockedState>
+        </Locked>
       </Values>
     </Asset>
   </ModOp>
@@ -201,7 +215,9 @@
         <ExpeditionAttribute>
           <BaseMorale>0</BaseMorale>
         </ExpeditionAttribute>
-        <Locked />
+        <Locked>
+          <DefaultLockedState>0</DefaultLockedState>
+        </Locked>
       </Values>
     </Asset>
   </ModOp>
@@ -316,6 +332,9 @@
     <Item>
       <ItemLink>1742100775</ItemLink>      <!-- Sammy Moray -->
     </Item>
+    <Item>
+      <ItemLink>1742101068</ItemLink>      <!-- Uncle Sam Poster -->
+    </Item>
   </ModOp>
 
   <!-- START - ADD NEW ITEMS - James Fondrick -->
@@ -377,6 +396,9 @@
           <ItemDifficulties>Easy</ItemDifficulties>
           <FluffText>8357</FluffText>
         </ExpeditionAttribute>
+        <Locked>
+          <DefaultLockedState>0</DefaultLockedState>
+        </Locked>        
       </Values>
     </Asset>
   </ModOp>
@@ -440,6 +462,9 @@
           <ItemDifficulties>Easy</ItemDifficulties>
           <FluffText>8357</FluffText>
         </ExpeditionAttribute>
+        <Locked>
+          <DefaultLockedState>0</DefaultLockedState>
+        </Locked>
       </Values>
     </Asset>
   </ModOp>
@@ -503,6 +528,9 @@
           <ItemDifficulties>Easy</ItemDifficulties>
           <FluffText>8357</FluffText>
         </ExpeditionAttribute>
+        <Locked>
+          <DefaultLockedState>0</DefaultLockedState>
+        </Locked>
       </Values>
     </Asset>
   </ModOp>
@@ -566,6 +594,9 @@
           <ItemDifficulties>Easy</ItemDifficulties>
           <FluffText>8357</FluffText>
         </ExpeditionAttribute>
+        <Locked>
+          <DefaultLockedState>0</DefaultLockedState>
+        </Locked>
       </Values>
     </Asset>
   </ModOp>
@@ -635,6 +666,9 @@
           <ItemDifficulties>Easy</ItemDifficulties>
           <FluffText>8357</FluffText>
         </ExpeditionAttribute>
+        <Locked>
+          <DefaultLockedState>0</DefaultLockedState>
+        </Locked>
       </Values>
     </Asset>
   </ModOp>
@@ -702,6 +736,9 @@
           <ItemDifficulties>Easy</ItemDifficulties>
           <FluffText>8357</FluffText>
         </ExpeditionAttribute>
+        <Locked>
+          <DefaultLockedState>0</DefaultLockedState>
+        </Locked>
       </Values>
     </Asset>
   </ModOp>
@@ -779,6 +816,73 @@
           <ItemDifficulties>Easy</ItemDifficulties>
           <FluffText>8357</FluffText>
         </ExpeditionAttribute>
+        <Locked>
+          <DefaultLockedState>0</DefaultLockedState>
+        </Locked>
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- START - ADD NEW ITEMS - UNCLE SAM POSTER -->
+  <ModOp GUID="191388" Type="addNextSibling">
+    <Asset>
+      <Template>TownhallItem</Template>
+      <Values>
+        <Standard>
+          <GUID>1742101068</GUID>
+          <Name>Uncle Sam Poster</Name>
+          <IconFilename>data/graphics/icons/icon_uncle_sam_poster.png</IconFilename>
+          <InfoDescription>1742101069</InfoDescription>
+        </Standard>
+        <Text />
+        <Item>
+          <MaxStackSize>1</MaxStackSize>
+          <Rarity>Legendary</Rarity>
+          <ItemType>Specialist</ItemType>
+          <TradePrice>1110000</TradePrice>
+          <TradePriceOnlineCurrency>1110000</TradePriceOnlineCurrency>
+        </Item>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742100019</GUID>              <!-- All Military Residences -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <PopulationUpgrade/>
+        <ItemAction />
+        <ExpeditionAttribute>
+          <BaseMorale>0</BaseMorale>
+          <ExpeditionAttributes>
+            <Item>
+              <Attribute>Faith</Attribute>
+              <Amount>50</Amount>
+            </Item>
+          </ExpeditionAttributes>
+          <ItemDifficulties>Hard</ItemDifficulties>
+          <FluffText>1742000135</FluffText>
+        </ExpeditionAttribute>
+        <ResidenceUpgrade>
+          <GoodConsumptionUpgrade>
+            <Item>
+              <ProvidedNeed>1742100471</ProvidedNeed>              <!-- Basic Weapons -->
+              <AmountInPercent>40</AmountInPercent>
+            </Item>
+            <Item>
+              <ProvidedNeed>1010221</ProvidedNeed>              <!-- Weapons/Cannons -->
+              <AmountInPercent>40</AmountInPercent>
+            </Item>
+            <Item>
+              <ProvidedNeed>849</ProvidedNeed>              <!-- Care Packages -->
+              <AmountInPercent>40</AmountInPercent>
+            </Item>
+          </GoodConsumptionUpgrade>
+          <AdditionalHappiness>5</AdditionalHappiness>
+          <WorkforceModifierInPercent>40</WorkforceModifierInPercent>
+        </ResidenceUpgrade>
+        <Locked>
+          <DefaultLockedState>0</DefaultLockedState>
+        </Locked>
       </Values>
     </Asset>
   </ModOp>
