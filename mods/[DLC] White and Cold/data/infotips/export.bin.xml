@@ -1,0 +1,107 @@
+<ModOps>
+    <!-- FROM SERP https://github.com/Serpens66/Anno-1800-SharedMods-for-Modders-/blob/main/CodeSnippets.md#Add-product-to-tooltip-arctic-flue-chance -->
+    <!-- Adding mod-heat-providing product to the "Arctic Flue Chance" Tooltip. Unfortunately I see no way to make the game automatically fetch this.. but adding sth to a list is most of the time fully compatible to other mods also adding to the list, so I think its ok to add mod products to this list. -->
+    <!-- Using the same list-entry structure like vanilla, although I wonder why they use as diplay-condition "if the product is not locked" instead of "if the product is unlocked" :D -->
+    <!-- Replace "YOUR_GUID" with your GUID of the product that provides heat. The code will add your product in the list below the vanilla heat provider "114890" (Cantine) -->
+    <ModOp Type="AddNextSibling" Path="//InfoTipData[Guid='116020']/InfoElement[Value/Text='[Selection Object Residence CurrentHeatForGood(114890) &gt;&gt; happiness]']">
+        <InfoElement>
+            <ElementType>4</ElementType>
+            <VisibilityElement>
+                <ElementType>
+                    <ElementType>2</ElementType>
+                </ElementType>
+                <ChildCount>1</ChildCount>
+                <VisibilityElement>
+                    <ElementType>
+                        <ElementType>1</ElementType>
+                    </ElementType>
+                    <CompareOperator />
+                    <ResultType />
+                    <ExpectedValueBool>False</ExpectedValueBool>
+                    <Condition>[Selection Object Area Economy NeedLocked([Selection Object Residence PopulationLevel Guid], 1742004160)]</Condition>
+                </VisibilityElement>
+                <OperatorType />
+            </VisibilityElement>
+            <Icon>
+                <IconGUID>1742004160</IconGUID>                <!-- Community Centtre -->
+                <Style />
+            </Icon>
+            <Text>
+                <TextGUID>1742004160</TextGUID>
+                <Style />
+            </Text>
+            <Value>
+                <Text>[Selection Object Residence CurrentHeatForGood(1742004160) &gt;&gt; happiness]</Text>
+                <Style />
+            </Value>
+            <WarningType />
+            <BackgroundType />
+        </InfoElement>
+        <InfoElement>
+            <ElementType>4</ElementType>
+            <VisibilityElement>
+                <ElementType>
+                    <ElementType>2</ElementType>
+                </ElementType>
+                <ChildCount>1</ChildCount>
+                <VisibilityElement>
+                    <ElementType>
+                        <ElementType>1</ElementType>
+                    </ElementType>
+                    <CompareOperator />
+                    <ResultType />
+                    <ExpectedValueBool>False</ExpectedValueBool>
+                    <Condition>[Selection Object Area Economy NeedLocked([Selection Object Residence PopulationLevel Guid], 1500010847)]</Condition>
+                </VisibilityElement>
+                <OperatorType />
+            </VisibilityElement>
+            <Icon>
+                <IconGUID>1500010847</IconGUID>                <!-- Tea -->
+                <Style />
+            </Icon>
+            <Text>
+                <TextGUID>1500010847</TextGUID>
+                <Style />
+            </Text>
+            <Value>
+                <Text>[Selection Object Residence CurrentHeatForGood(1500010847) &gt;&gt; happiness]</Text>
+                <Style />
+            </Value>
+            <WarningType />
+            <BackgroundType />
+        </InfoElement>
+        <InfoElement>
+            <ElementType>4</ElementType>
+            <VisibilityElement>
+                <ElementType>
+                    <ElementType>2</ElementType>
+                </ElementType>
+                <ChildCount>1</ChildCount>
+                <VisibilityElement>
+                    <ElementType>
+                        <ElementType>1</ElementType>
+                    </ElementType>
+                    <CompareOperator />
+                    <ResultType />
+                    <ExpectedValueBool>False</ExpectedValueBool>
+                    <Condition>[Selection Object Area Economy NeedLocked([Selection Object Residence PopulationLevel Guid], 1010209)]</Condition>
+                </VisibilityElement>
+                <OperatorType />
+            </VisibilityElement>
+            <Icon>
+                <IconGUID>1010209</IconGUID>                <!-- Fur -->
+                <Style />
+            </Icon>
+            <Text>
+                <TextGUID>1010209</TextGUID>
+                <Style />
+            </Text>
+            <Value>
+                <Text>[Selection Object Residence CurrentHeatForGood(1010209) &gt;&gt; happiness]</Text>
+                <Style />
+            </Value>
+            <WarningType />
+            <BackgroundType />
+        </InfoElement>
+    </ModOp>
+</ModOps>  

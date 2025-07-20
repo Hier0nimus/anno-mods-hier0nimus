@@ -1,0 +1,392 @@
+<!-- GUID-RANGE 2.077.10R.XXX -->
+<!-- Quay Streets for Enbesa ans Arctic -->
+
+
+<ModOps>
+
+
+	<ModOp Type="addNextSibling" GUID='601443'>
+		<Asset>
+			<Template>Street</Template>
+			<Values>
+				<Standard>
+					<GUID>2077102023</GUID>
+					<Name>Quay Street Africa</Name>
+					<IconFilename>data/ui/2kimages/main/3dicons/icon_quay.png</IconFilename>
+					<InfoDescription>12752</InfoDescription>
+					<!--Quay InfoCorner-->
+				</Standard>
+				<Cost>
+					<Costs>
+						<Item>
+							<Ingredient>1010017</Ingredient>
+							<!--Money-->
+							<Amount>20</Amount>
+						</Item>
+						<Item>
+							<VectorElement>
+								<InheritedIndex>1</InheritedIndex>
+								<InheritanceMapV2>
+									<Entry>
+										<TemplateName>Street</TemplateName>
+										<Index>1</Index>
+									</Entry>
+								</InheritanceMapV2>
+							</VectorElement>
+						</Item>
+						<Item>
+							<VectorElement>
+								<InheritedIndex>2</InheritedIndex>
+								<InheritanceMapV2>
+									<Entry>
+										<TemplateName>Street</TemplateName>
+										<Index>2</Index>
+									</Entry>
+								</InheritanceMapV2>
+							</VectorElement>
+						</Item>
+						<Item>
+							<VectorElement>
+								<InheritedIndex>3</InheritedIndex>
+								<InheritanceMapV2>
+									<Entry>
+										<TemplateName>Street</TemplateName>
+										<Index>3</Index>
+									</Entry>
+								</InheritanceMapV2>
+							</VectorElement>
+						</Item>
+						<Item>
+							<VectorElement>
+								<InheritedIndex>4</InheritedIndex>
+								<InheritanceMapV2>
+									<Entry>
+										<TemplateName>Street</TemplateName>
+										<Index>4</Index>
+									</Entry>
+								</InheritanceMapV2>
+							</VectorElement>
+						</Item>
+						<Item>
+							<VectorElement>
+								<InheritedIndex>5</InheritedIndex>
+								<InheritanceMapV2>
+									<Entry>
+										<TemplateName>Street</TemplateName>
+										<Index>5</Index>
+									</Entry>
+								</InheritanceMapV2>
+							</VectorElement>
+						</Item>
+					</Costs>
+				</Cost>
+				<Street>
+					<CfgFileName>data\graphics\buildings\special\quay_system_colony02_01\props\quay_system_01.cfg</CfgFileName>
+					<!-- <CfgFileName>data/muggenstuermer/mixed_harbor/harbor_streets/quay_street_africa/quay_system_01.cfg</CfgFileName> -->
+					<InternalID>183</InternalID>
+					<DecalMapping>data/config/street/quay_street.txt.bin</DecalMapping>
+					<DecalVariation>data/config/street/no_var.txt</DecalVariation>
+					<StyleRows>8</StyleRows>
+					<StyleCols>8</StyleCols>
+					<Quality>3</Quality>
+					<OverbuildRule>QuayStreet</OverbuildRule>
+					<IsHarbour>1</IsHarbour>
+					<HasFeedbackPathPlanningPenalty>0</HasFeedbackPathPlanningPenalty>
+					<AdaptToNeighbors>
+						<AdaptGroups>Quay_And_QuaySpecial;Quay_And_QuayBase_And_HiddenFences</AdaptGroups>
+						<NeighborsThatMakeUsAdapt>Street;QuayStreet</NeighborsThatMakeUsAdapt>
+					</AdaptToNeighbors>
+					<ExecuteTransitionRule>64</ExecuteTransitionRule>
+				</Street>
+				<Constructable>
+					<DestructionCategory>StreetsAndBridges</DestructionCategory>
+				</Constructable>
+				<Locked>
+					<DefaultLockedState>0</DefaultLockedState>
+				</Locked>
+				<SoundEmitter>
+					<DestroySounds>
+						<Item>
+							<Sound>200777</Sound>
+							<!--wwe_sfx_aui_delete_streets-->
+						</Item>
+					</DestroySounds>
+					<ConstructionSounds>
+						<BuildSuccessful>
+							<Item>
+								<Sound>215916</Sound>
+								<!--wwe_sfx_aui_bld_place_quay-->
+							</Item>
+						</BuildSuccessful>
+						<BuildMoveStart>
+							<Item>
+								<Sound>9818755</Sound>
+								<!--wwe_sfx_aui_move-->
+							</Item>
+						</BuildMoveStart>
+						<BuildMoveSuccess>
+							<Item>
+								<Sound>203995</Sound>
+								<!--wwe_sfx_aui_move_replace_stone-->
+							</Item>
+						</BuildMoveSuccess>
+						<BuildMoveEnd>
+							<Item>
+								<Sound>200141</Sound>
+								<!--wwe_sfx_aui_move_end-->
+							</Item>
+						</BuildMoveEnd>
+					</ConstructionSounds>
+					<ConstructionStreetSounds>
+						<BuildAddWaypoint>
+							<Item>
+								<Sound>215918</Sound>
+								<!--wwe_sfx_aui_bld_start_quay-->
+							</Item>
+						</BuildAddWaypoint>
+					</ConstructionStreetSounds>
+				</SoundEmitter>
+				<Text>
+					<LocaText>
+						<English>
+							<Text>Quay</Text>
+							<Status>Exported</Status>
+						</English>
+					</LocaText>
+					<LineID>48536</LineID>
+					<TextOverride>601443</TextOverride>
+				</Text>
+				<Building>
+					<BuildingCategoryName>11150</BuildingCategoryName>
+					<!--Harbor Building-->
+					<PickingAsset>114523</PickingAsset>
+					<!--AF | Dirt Street -->
+					<TerrainType>Water_Including_Coast</TerrainType>
+					<AssociatedRegions>Africa</AssociatedRegions>
+				</Building>
+				<Ornament/>
+			</Values>
+		</Asset>
+	</ModOp>
+	
+	<ModOp Type="addNextSibling" GUID='601443'>
+		<Asset>
+			<Template>Street</Template>
+			<Values>
+				<Standard>
+					<GUID>2077103023</GUID>
+					<Name>Quay Street Arctic</Name>
+					<IconFilename>data/ui/2kimages/main/3dicons/icon_quay.png</IconFilename>
+					<InfoDescription>12752</InfoDescription>
+					<!--Quay InfoCorner-->
+				</Standard>
+				<Cost>
+					<Costs>
+						<Item>
+							<Ingredient>1010017</Ingredient>
+							<!--Money-->
+							<Amount>20</Amount>
+						</Item>
+						<Item>
+							<VectorElement>
+								<InheritedIndex>1</InheritedIndex>
+								<InheritanceMapV2>
+									<Entry>
+										<TemplateName>Street</TemplateName>
+										<Index>1</Index>
+									</Entry>
+								</InheritanceMapV2>
+							</VectorElement>
+						</Item>
+						<Item>
+							<VectorElement>
+								<InheritedIndex>2</InheritedIndex>
+								<InheritanceMapV2>
+									<Entry>
+										<TemplateName>Street</TemplateName>
+										<Index>2</Index>
+									</Entry>
+								</InheritanceMapV2>
+							</VectorElement>
+						</Item>
+						<Item>
+							<VectorElement>
+								<InheritedIndex>3</InheritedIndex>
+								<InheritanceMapV2>
+									<Entry>
+										<TemplateName>Street</TemplateName>
+										<Index>3</Index>
+									</Entry>
+								</InheritanceMapV2>
+							</VectorElement>
+						</Item>
+						<Item>
+							<VectorElement>
+								<InheritedIndex>4</InheritedIndex>
+								<InheritanceMapV2>
+									<Entry>
+										<TemplateName>Street</TemplateName>
+										<Index>4</Index>
+									</Entry>
+								</InheritanceMapV2>
+							</VectorElement>
+						</Item>
+						<Item>
+							<VectorElement>
+								<InheritedIndex>5</InheritedIndex>
+								<InheritanceMapV2>
+									<Entry>
+										<TemplateName>Street</TemplateName>
+										<Index>5</Index>
+									</Entry>
+								</InheritanceMapV2>
+							</VectorElement>
+						</Item>
+					</Costs>
+				</Cost>
+				<Street>
+					<CfgFileName>data\graphics\buildings\special\quay_system_colony03_01\props\quay_system_01.cfg</CfgFileName>
+					<!-- <CfgFileName>data\muggenstuermer\mixed_harbor\harbor_streets\quay_street_arctic\quay_system_01.cfg</CfgFileName> -->
+					<InternalID>184</InternalID>
+					<DecalMapping>data/config/street/quay_street.txt.bin</DecalMapping>
+					<DecalVariation>data/config/street/no_var.txt</DecalVariation>
+					<StyleRows>8</StyleRows>
+					<StyleCols>8</StyleCols>
+					<Quality>3</Quality>
+					<OverbuildRule>QuayStreet</OverbuildRule>
+					<IsHarbour>1</IsHarbour>
+					<HasFeedbackPathPlanningPenalty>0</HasFeedbackPathPlanningPenalty>
+					<AdaptToNeighbors>
+						<AdaptGroups>Quay_And_QuaySpecial;Quay_And_QuayBase_And_HiddenFences</AdaptGroups>
+						<NeighborsThatMakeUsAdapt>Street;QuayStreet</NeighborsThatMakeUsAdapt>
+					</AdaptToNeighbors>
+					<ExecuteTransitionRule>64</ExecuteTransitionRule>
+				</Street>
+				<Constructable>
+					<DestructionCategory>StreetsAndBridges</DestructionCategory>
+				</Constructable>
+				<Locked>
+					<DefaultLockedState>0</DefaultLockedState>
+				</Locked>
+				<SoundEmitter>
+					<DestroySounds>
+						<Item>
+							<Sound>200777</Sound>
+							<!--wwe_sfx_aui_delete_streets-->
+						</Item>
+					</DestroySounds>
+					<ConstructionSounds>
+						<BuildSuccessful>
+							<Item>
+								<Sound>215916</Sound>
+								<!--wwe_sfx_aui_bld_place_quay-->
+							</Item>
+						</BuildSuccessful>
+						<BuildMoveStart>
+							<Item>
+								<Sound>9818755</Sound>
+								<!--wwe_sfx_aui_move-->
+							</Item>
+						</BuildMoveStart>
+						<BuildMoveSuccess>
+							<Item>
+								<Sound>203995</Sound>
+								<!--wwe_sfx_aui_move_replace_stone-->
+							</Item>
+						</BuildMoveSuccess>
+						<BuildMoveEnd>
+							<Item>
+								<Sound>200141</Sound>
+								<!--wwe_sfx_aui_move_end-->
+							</Item>
+						</BuildMoveEnd>
+					</ConstructionSounds>
+					<ConstructionStreetSounds>
+						<BuildAddWaypoint>
+							<Item>
+								<Sound>215918</Sound>
+								<!--wwe_sfx_aui_bld_start_quay-->
+							</Item>
+						</BuildAddWaypoint>
+					</ConstructionStreetSounds>
+				</SoundEmitter>
+				<Text>
+					<LocaText>
+						<English>
+							<Text>Quay</Text>
+							<Status>Exported</Status>
+						</English>
+					</LocaText>
+					<LineID>48536</LineID>
+					<TextOverride>601443</TextOverride>
+				</Text>
+				<Building>
+					<BuildingCategoryName>11150</BuildingCategoryName>
+					<!--Harbor Building-->
+					<PickingAsset>112113</PickingAsset>
+					<!-- Snow Street -->
+					<TerrainType>Water_Including_Coast</TerrainType>
+					<AssociatedRegions>Arctic</AssociatedRegions>
+				</Building>
+				<Ornament/>
+			</Values>
+		</Asset>
+	</ModOp>
+	
+	<!-- Streets_Related_MU revoke-->
+
+	<ModOp Type="replace" GUID='114327' Path="/Values/Region/CoastGUIDReplacements/Item[OldGUID='119029']" Condition="@1337501047">
+		<Item>
+			<OldGUID>119029</OldGUID>
+			<!-- AF | Dirt Street -->
+			<NewGUID>2077102023</NewGUID>
+		</Item>
+	</ModOp>
+
+
+	<ModOp Type="replace" GUID='114327' Path="/Values/Region/CoastGUIDReplacements/Item[OldGUID='114523']" Condition="@1337501047">
+		<Item>
+			<OldGUID>114523</OldGUID>
+			<!-- AF | Fast Street -->
+			<NewGUID>2077102023</NewGUID>
+		</Item>
+	</ModOp>
+
+	<ModOp Type="replace" GUID='160001' Path="/Values/Region/CoastGUIDReplacements/Item[OldGUID='112113']" Condition="@1337501046">
+		<Item>
+			<OldGUID>112113</OldGUID>
+			<!-- Snow Street -->
+			<NewGUID>2077103023</NewGUID>
+		</Item>
+	</ModOp>
+	
+	<!--  -->
+
+	<ModOp Type="add" GUID='114327' Path="/Values/Region" Condition="!@1337501047">
+		<CoastGUIDReplacements>   
+			<Item>
+				<OldGUID>119029</OldGUID>
+				<!-- AF | Dirt Street -->
+				<NewGUID>2077102023</NewGUID>
+			</Item>
+			<Item>
+				<OldGUID>114523</OldGUID>
+				<!-- AF | Fast Street -->
+				<NewGUID>2077102023</NewGUID>
+			</Item>
+		</CoastGUIDReplacements>
+	</ModOp>
+
+	<ModOp Type="add" GUID='160001' Path="/Values/Region" Condition="!@1337501046">
+		<CoastGUIDReplacements>
+			<Item>
+				<OldGUID>112113</OldGUID>
+				<!-- Snow Street -->
+				<NewGUID>2077103023</NewGUID>
+			</Item>
+		</CoastGUIDReplacements>
+	</ModOp>
+	
+	
+
+</ModOps>

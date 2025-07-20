@@ -1,0 +1,538 @@
+<!-- 
+  Population
+-->
+
+<ModOps>
+
+  <!-- START - INUIT PopulationLevel7 -->
+  <ModOp GUID='112643' Type="addNextSibling">
+    <Asset>
+      <Template>PopulationLevel7</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004100</GUID>          <!-- Inuit PopulationLevel7 -->
+          <Name>Inuit</Name>
+          <IconFilename>data\ui\2kimages\main\3dicons\specialists\systemic\icon_inuit_specialist_905.png</IconFilename>
+        </Standard>
+        <Text />
+        <PopulationLevel7>
+          <PopulationInputs>
+            <Item>
+              <Product>1742004360</Product>              <!-- Spiritual Site - Product -->
+              <SupplyWeight>1</SupplyWeight>
+            </Item>
+            <Item>
+              <Product>1010213</Product>              <!-- Bread - Product -->
+              <Amount>0.00015</Amount>
+              <SupplyWeight>2</SupplyWeight>
+            </Item>
+            <Item>
+              <Product>1742004162</Product>              <!-- Snow Goggles - Product -->
+              <Amount>0.0001</Amount>
+              <SupplyWeight>2</SupplyWeight>
+            </Item>
+            <Item>
+              <Product>1500010153</Product>              <!-- Tools - Product -->
+              <Amount>0.0001</Amount>
+              <SupplyWeight>2</SupplyWeight>
+            </Item>
+            <Item>
+              <Product>112705</Product>              <!-- Pemmican -->
+              <Amount>0.0002</Amount>
+              <SupplyWeight>2</SupplyWeight>
+            </Item>
+            <Item>
+              <Product>1742004168</Product>              <!-- Snow Shoes - Product -->
+              <Amount>0.00008</Amount>
+              <SupplyWeight>2</SupplyWeight>
+            </Item>
+            <Item>
+              <Product>1742004170</Product>              <!-- Qajaks - Product -->
+              <Amount>0.00008</Amount>
+              <SupplyWeight>2</SupplyWeight>
+            </Item>
+            <Item>
+              <Product>112704</Product>              <!-- Sleds - Product -->
+              <Amount>0.00008</Amount>
+              <SupplyWeight>2</SupplyWeight>
+            </Item>
+            <Item>
+              <Product>112698</Product>              <!-- Huskies - Product -->
+              <Amount>0.00008</Amount>
+              <SupplyWeight>2</SupplyWeight>
+            </Item>
+            <Item>
+              <Product>1742004176</Product>              <!-- Tattooist - Product -->
+              <SupplyWeight>2</SupplyWeight>
+            </Item>
+            <Item>
+              <Product>1742004486</Product>              <!-- Inuit Monument - Product -->
+              <SupplyWeight>4</SupplyWeight>
+              <AdditionalGlobalUnlockRequirement>
+                <Population>1742004100</Population>
+                <MinPopulationAmount>500</MinPopulationAmount>
+              </AdditionalGlobalUnlockRequirement>
+              <IsConsideredByAI>0</IsConsideredByAI>
+            </Item>
+            <!-- HEAT (Sum minimal 60) -->
+            <Item>
+              <Product>120008</Product>              <!-- Wood - Product -->
+              <Amount>0.0005</Amount>
+              <HeatValue>15</HeatValue>
+            </Item>
+            <Item>
+              <Product>1742004160</Product>              <!-- Community Centre - Product -->
+              <HeatValue>10</HeatValue>
+            </Item>
+            <Item>
+              <Product>1500010847</Product>              <!-- Tea - Product -->
+              <Amount>0.0002</Amount>
+              <HeatValue>10</HeatValue>
+            </Item>
+            <Item>
+              <Product>114410</Product>              <!-- Seafood Stew -->
+              <Amount>0.00005</Amount>
+              <HeatValue>10</HeatValue>
+            </Item>
+            <Item>
+              <Product>112700</Product>              <!-- Parkas - Product -->
+              <Amount>0.00005</Amount>
+              <HeatValue>10</HeatValue>
+            </Item>
+            <Item>
+              <Product>1742004400</Product>              <!-- Hot Springs Bathhouse - Product -->
+              <HeatValue>20</HeatValue>
+            </Item>
+            <!-- Lifestyle -->
+            <Item>
+              <Product>1010193</Product>              <!-- Beef -->
+              <Amount>0.00008</Amount>
+              <SupplyWeight>2</SupplyWeight>
+              <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+              <IsBonusNeed>1</IsBonusNeed>
+            </Item>
+            <Item>
+              <Product>5383</Product>              <!-- Herbs -->
+              <Amount>0.00005</Amount>
+              <SupplyWeight>2</SupplyWeight>
+              <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+              <IsBonusNeed>1</IsBonusNeed>
+            </Item>
+            <Item>
+              <Product>112702</Product>              <!-- Oil Lamps -->
+              <Amount>0.00005</Amount>
+              <SupplyWeight>2</SupplyWeight>
+              <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+              <IsBonusNeed>1</IsBonusNeed>
+            </Item>
+            <Item>
+              <Product>1010209</Product>              <!-- Fur - Product -->
+              <Amount>0.00005</Amount>
+              <HeatValue>5</HeatValue>
+              <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+              <IsBonusNeed>1</IsBonusNeed>
+            </Item>
+            <Item>
+              <Product>1742110029</Product>              <!-- Qilaut - Product -->
+              <Amount>0.00004</Amount>
+              <SupplyWeight>3</SupplyWeight>
+              <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+              <IsBonusNeed>1</IsBonusNeed>
+            </Item>
+          </PopulationInputs>
+          <DefaultResidence>1742004102</DefaultResidence>          <!-- Inuit Residence -->
+          <PopulationOutputs>
+            <Item>
+              <Product>1742004159</Product>              <!-- Inuit Workforce -->
+              <Amount>100</Amount>
+            </Item>
+          </PopulationOutputs>
+          <CategoryIcon>data/ui/2kimages/main/icons/icon_arrow.png</CategoryIcon>
+          <PopulationParticipant>Arctic_Inuit</PopulationParticipant>
+          <PopulationAtWorkParticipant>Arctic_Inuit</PopulationAtWorkParticipant>
+          <MoodText>
+            <Angry>
+              <Text>1742004213</Text>              <!-- Freezing Inuit - MoodText -->
+            </Angry>
+            <Unhappy>
+              <Text>1742004214</Text>              <!-- Freezing Inuit - MoodText -->
+            </Unhappy>
+            <Neutral>
+              <Text>1742004215</Text>              <!-- Cold Inuit - MoodText -->
+            </Neutral>
+            <Happy>
+              <Text>1742004216</Text>              <!-- Chilly Inuit - MoodText -->
+            </Happy>
+            <Euphoric>
+              <Text>1742004217</Text>              <!-- Comfortable Inuit - MoodText -->
+            </Euphoric>
+          </MoodText>
+        </PopulationLevel7>
+        <Locked />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - INUIT PopulationLevel7 -->
+
+  <!-- START - ADD POPULATION TIERS TO GLOBAL POPULATION -->
+  <ModOp Type="addNextSibling" GUID="2001271" Path="/Values/GUIConfig/PopulationLevelList/Item[PopulationLevel='112643']">
+    <Item>
+      <PopulationLevel>1742004100</PopulationLevel>      <!-- Inuit PopulationLevel7 -->
+    </Item>
+  </ModOp>
+  <!-- END - ADD POPULATION TIERS TO GLOBAL POPULATION -->
+
+  <!-- START - ADD POPULATION TIERS TO KEYWORDFILTER -->
+  <ModOp Type="add" GUID="501962" Path="/Values/KeywordFilter/Keywords">
+    <Item>
+      <Keyword>1742004100</Keyword>      <!-- Inuit PopulationLevel7 -->
+      <ProductList>1742004158</ProductList>      <!-- Inuit Consumer Goods -->
+    </Item>
+  </ModOp>
+  <!-- END - ADD POPULATION TIERS TO KEYWORDFILTER -->
+
+  <!-- START - ADD POPULATION TIERS TO RESIDENCE SCENE -->
+  <ModOp Type="add" GUID="25000118" Path="/Values/ObjectmenuResidenceScene/HappinessConfigs">
+    <Item>
+      <PopulationLevel>1742004100</PopulationLevel>      <!-- Inuit PopulationLevel7 -->
+      <AssignedConfig>502287</AssignedConfig>
+    </Item>
+  </ModOp>
+  <!-- END - ADD POPULATION TIERS TO RESIDENCE SCENE -->
+
+  <!-- START - ADD WORKFORCE TIERS TO ISLANDBARSCENE -->
+  <ModOp Type="addNextSibling" GUID="25000121" Path="/Values/IslandBarScene/WorkforceOrder/Item[WorkforceEntry='112654']">
+    <Item>
+      <WorkforceEntry>1742004159</WorkforceEntry>      <!-- Inuit Workforce -->
+    </Item>
+  </ModOp>
+  <!-- END - ADD WORKFORCE TIERS TO ISLANDBARSCENE -->
+
+  <!-- START - ADD ADDITIONAL NEEDS TO EXPLORERS AND TECHNICIANS -->
+  <!-- Explorers -->
+  <ModOp Type="addPrevSibling" GUID="112642" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='112708']">
+    <Item>
+      <Product>120008</Product>      <!-- Wood - Product -->
+      <Amount>0.001</Amount>
+      <HeatValue>18</HeatValue>
+    </Item>
+  </ModOp>
+  <ModOp Type="addNextSibling" GUID="112642" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='114890']">
+    <Item>
+      <Product>1742004162</Product>      <!-- Snow Goggles - Product -->
+      <Amount>0.0001</Amount>
+      <SupplyWeight>2</SupplyWeight>
+      <MoneyValue>20</MoneyValue>
+      <IsConsideredByAI>0</IsConsideredByAI>
+    </Item>
+  </ModOp>
+  <ModOp Type="addNextSibling" GUID="112642" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='112705']">
+    <Item>
+      <Product>1742004168</Product>      <!-- Snow Shoes - Product -->
+      <Amount>0.00008</Amount>
+      <SupplyWeight>2</SupplyWeight>
+      <MoneyValue>80</MoneyValue>
+      <IsConsideredByAI>0</IsConsideredByAI>
+    </Item>
+  </ModOp>
+  <!-- Technicians -->
+  <ModOp Type="addPrevSibling" GUID="112643" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='112708']">
+    <Item>
+      <Product>120008</Product>      <!-- Wood - Product -->
+      <Amount>0.001</Amount>
+      <HeatValue>20</HeatValue>
+    </Item>
+  </ModOp>
+  <ModOp Type="addNextSibling" GUID="112643" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='112705']">
+    <Item>
+      <Product>1742004168</Product>      <!-- Snow Shoes - Product -->
+      <Amount>0.00008</Amount>
+      <SupplyWeight>6</SupplyWeight>
+      <MoneyValue>80</MoneyValue>
+      <IsConsideredByAI>0</IsConsideredByAI>
+    </Item>
+  </ModOp>
+  <ModOp Type="add" GUID="112643" Path="/Values/PopulationLevel7/PopulationInputs/">
+    <Item>
+      <Product>1742004400</Product>      <!-- Hot Springs Bathhouse - Product -->
+      <HeatValue>8</HeatValue>
+      <MoneyValue>50</MoneyValue>
+      <IsConsideredByAI>0</IsConsideredByAI>
+    </Item>
+    <Item>
+      <Product>115980</Product>      <!-- Lost Expedition Scrap - Product -->
+      <Amount>0.00008</Amount>
+      <SupplyWeight>4</SupplyWeight>
+      <MoneyValue>100</MoneyValue>
+      <AdditionalGlobalUnlockRequirement>
+        <Population>112643</Population>
+        <MinPopulationAmount>2500</MinPopulationAmount>
+      </AdditionalGlobalUnlockRequirement>
+      <IsConsideredByAI>0</IsConsideredByAI>
+    </Item>
+    <Item>
+      <Product>1010354</Product>      <!--Electricity-->
+      <SupplyWeight>4</SupplyWeight>
+      <RequiredFloorLevel>1</RequiredFloorLevel>
+      <AdditionalGlobalUnlockRequirement>
+        <Population>112643</Population>
+        <MinPopulationAmount>4000</MinPopulationAmount>
+      </AdditionalGlobalUnlockRequirement>
+      <IsConsideredByAI>0</IsConsideredByAI>
+    </Item>
+    <Item>
+      <Product>1742004419</Product>      <!-- Arctic Research Institute - Product -->
+      <SupplyWeight>4</SupplyWeight>
+      <RequiredFloorLevel>2</RequiredFloorLevel>
+      <AdditionalGlobalUnlockRequirement>
+        <Population>112643</Population>
+        <MinPopulationAmount>5000</MinPopulationAmount>
+      </AdditionalGlobalUnlockRequirement>
+      <IsConsideredByAI>0</IsConsideredByAI>
+    </Item>
+    <!-- Lifestyle -->
+    <Item>
+      <Product>1500010847</Product>      <!-- Tea -->
+      <Amount>0.00005</Amount>
+      <SupplyWeight>2</SupplyWeight>
+      <MoneyValue>100</MoneyValue>
+      <AdditionalGlobalUnlockRequirement>
+        <Population>112643</Population>
+        <MinPopulationAmount>2500</MinPopulationAmount>
+      </AdditionalGlobalUnlockRequirement>
+      <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+      <IsBonusNeed>1</IsBonusNeed>
+    </Item>
+    <Item>
+      <Product>120030</Product>      <!-- Spectacles -->
+      <Amount>0.00005</Amount>
+      <SupplyWeight>2</SupplyWeight>
+      <MoneyValue>100</MoneyValue>
+      <AdditionalGlobalUnlockRequirement>
+        <Population>112643</Population>
+        <MinPopulationAmount>2500</MinPopulationAmount>
+      </AdditionalGlobalUnlockRequirement>
+      <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+      <IsBonusNeed>1</IsBonusNeed>
+    </Item>
+    <Item>
+      <Product>1010247</Product>      <!-- Fur Coats -->
+      <Amount>0.00005</Amount>
+      <SupplyWeight>2</SupplyWeight>
+      <MoneyValue>100</MoneyValue>
+      <AdditionalGlobalUnlockRequirement>
+        <Population>112643</Population>
+        <MinPopulationAmount>2500</MinPopulationAmount>
+      </AdditionalGlobalUnlockRequirement>
+      <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+      <IsBonusNeed>1</IsBonusNeed>
+    </Item>
+    <Item>
+      <Product>1010258</Product>      <!-- Chocolate -->
+      <Amount>0.00005</Amount>
+      <SupplyWeight>2</SupplyWeight>
+      <MoneyValue>100</MoneyValue>
+      <AdditionalGlobalUnlockRequirement>
+        <Population>112643</Population>
+        <MinPopulationAmount>2500</MinPopulationAmount>
+      </AdditionalGlobalUnlockRequirement>
+      <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+      <IsBonusNeed>1</IsBonusNeed>
+    </Item>
+    <Item>
+      <Product>133097</Product>      <!-- Citrus Fruits -->
+      <Amount>0.00005</Amount>
+      <SupplyWeight>2</SupplyWeight>
+      <MoneyValue>100</MoneyValue>
+      <RequiredFloorLevel>2</RequiredFloorLevel>
+      <AdditionalGlobalUnlockRequirement>
+        <Population>112643</Population>
+        <MinPopulationAmount>5000</MinPopulationAmount>
+      </AdditionalGlobalUnlockRequirement>
+      <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+      <IsBonusNeed>1</IsBonusNeed>
+    </Item>
+    <Item>
+      <Product>135234</Product>      <!-- Cognac -->
+      <Amount>0.00005</Amount>
+      <SupplyWeight>2</SupplyWeight>
+      <MoneyValue>100</MoneyValue>
+      <RequiredFloorLevel>2</RequiredFloorLevel>
+      <AdditionalGlobalUnlockRequirement>
+        <Population>112643</Population>
+        <MinPopulationAmount>5000</MinPopulationAmount>
+      </AdditionalGlobalUnlockRequirement>
+      <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+      <IsBonusNeed>1</IsBonusNeed>
+    </Item>
+    <Item>
+      <Product>5397</Product>      <!-- Medications -->
+      <Amount>0.00005</Amount>
+      <SupplyWeight>2</SupplyWeight>
+      <MoneyValue>100</MoneyValue>
+      <RequiredFloorLevel>2</RequiredFloorLevel>
+      <AdditionalGlobalUnlockRequirement>
+        <Population>112643</Population>
+        <MinPopulationAmount>5000</MinPopulationAmount>
+      </AdditionalGlobalUnlockRequirement>
+      <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+      <IsBonusNeed>1</IsBonusNeed>
+    </Item>
+    <Item>
+      <Product>133181</Product>      <!-- Shampoo -->
+      <Amount>0.00005</Amount>
+      <SupplyWeight>2</SupplyWeight>
+      <MoneyValue>100</MoneyValue>
+      <RequiredFloorLevel>2</RequiredFloorLevel>
+      <AdditionalGlobalUnlockRequirement>
+        <Population>112643</Population>
+        <MinPopulationAmount>5000</MinPopulationAmount>
+      </AdditionalGlobalUnlockRequirement>
+      <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+      <IsBonusNeed>1</IsBonusNeed>
+    </Item>
+    <Item>
+      <Product>1010246</Product>      <!-- Pocket Watches -->
+      <Amount>0.00005</Amount>
+      <SupplyWeight>2</SupplyWeight>
+      <MoneyValue>100</MoneyValue>
+      <RequiredFloorLevel>2</RequiredFloorLevel>
+      <AdditionalGlobalUnlockRequirement>
+        <Population>112643</Population>
+        <MinPopulationAmount>5000</MinPopulationAmount>
+      </AdditionalGlobalUnlockRequirement>
+      <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+      <IsBonusNeed>1</IsBonusNeed>
+    </Item>
+    <Item>
+      <Product>1010248</Product>      <!-- phonographs -->
+      <Amount>0.00005</Amount>
+      <SupplyWeight>2</SupplyWeight>
+      <MoneyValue>100</MoneyValue>
+      <RequiredFloorLevel>2</RequiredFloorLevel>
+      <AdditionalGlobalUnlockRequirement>
+        <Population>112643</Population>
+        <MinPopulationAmount>5000</MinPopulationAmount>
+      </AdditionalGlobalUnlockRequirement>
+      <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+      <IsBonusNeed>1</IsBonusNeed>
+    </Item>
+    <Item>
+      <Product>135230</Product>      <!-- Typewriter -->
+      <Amount>0.00005</Amount>
+      <SupplyWeight>2</SupplyWeight>
+      <MoneyValue>100</MoneyValue>
+      <RequiredFloorLevel>2</RequiredFloorLevel>
+      <AdditionalGlobalUnlockRequirement>
+        <Population>112643</Population>
+        <MinPopulationAmount>5000</MinPopulationAmount>
+      </AdditionalGlobalUnlockRequirement>
+      <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+      <IsBonusNeed>1</IsBonusNeed>
+    </Item>
+  </ModOp>
+  <!-- END - ADD ADDITIONAL NEEDS TO EXPLORERS AND TECHNICIANS -->
+
+  <!-- START - ADD ADDITIONAL NEEDS TO ENGINEERS AND INVESTORS -->
+  <ModOp Type="add" GUID="15000003" Path="/Values/PopulationLevel7/PopulationInputs">
+    <Item>
+      <Product>1742004333</Product>      <!-- Corsets - Product -->
+      <HappinessValue>3</HappinessValue>
+      <MoneyValue>100</MoneyValue>
+      <FullWeightPopulationCount>1750</FullWeightPopulationCount>
+      <NoWeightPopulationCount>999</NoWeightPopulationCount>
+      <IsConsideredByAI>0</IsConsideredByAI>
+    </Item>
+    <Item>
+      <Product>1742004384</Product>      <!-- Ice Service - Product -->
+      <HappinessValue>3</HappinessValue>
+      <MoneyValue>80</MoneyValue>
+      <IsConsideredByAI>0</IsConsideredByAI>
+    </Item>
+  </ModOp>
+  <ModOp Type="add" GUID="15000004" Path="/Values/PopulationLevel7/PopulationInputs">
+    <Item>
+      <Product>1742004333</Product>      <!-- Corsets - Product -->
+      <Amount>0.000261438</Amount>
+      <HappinessValue>3</HappinessValue>
+      <MoneyValue>200</MoneyValue>
+      <IsConsideredByAI>0</IsConsideredByAI>
+    </Item>
+    <Item>
+      <Product>1742004384</Product>      <!-- Ice Service - Product -->
+      <HappinessValue>3</HappinessValue>
+      <MoneyValue>160</MoneyValue>
+      <IsConsideredByAI>0</IsConsideredByAI>
+    </Item>
+  </ModOp>
+  <!-- END - ADD ADDITIONAL NEEDS TO ENGINEERS AND INVESTORS -->
+
+  <!-- START - ADD ADDITIONAL NEEDS TO ARTISTA -->
+  <ModOp Type="add" GUID="5403" Path="/Values/PopulationLevel7/PopulationInputs">
+    <Item>
+      <Product>1742004333</Product>      <!-- Corsets - Product -->
+      <Amount>0.000261438</Amount>
+      <HappinessValue>3</HappinessValue>
+      <MoneyValue>200</MoneyValue>
+      <IsConsideredByAI>0</IsConsideredByAI>
+    </Item>
+  </ModOp>
+  <!-- END - ADD ADDITIONAL NEEDS TO ARTISTA -->
+
+  <!-- ****************** START TO DELIGHT ****************** -->
+  <ModOp Condition="!@25000118//Item[BonusNeed='GUID']" Type="add" GUID='25000118' Path="/Values/ObjectmenuResidenceScene/BonusNeeds/BonusNeeds/Item[Category='6364']/Needs/">
+    <Item>
+      <BonusNeed>1010247</BonusNeed>      <!-- Fur Coats -->
+    </Item>
+    <Item>
+      <BonusNeed>133097</BonusNeed>      <!-- Citrus -->
+    </Item>
+    <Item>
+      <BonusNeed>1742110029</BonusNeed>      <!-- Qilaut -->
+    </Item>
+  </ModOp>
+  <!-- ****************** END TO DELIGHT ****************** -->
+
+  <!-- ****************** START TO HEALTH ****************** -->
+  <ModOp Condition="!@25000118//Item[BonusNeed='GUID']" Type="add" GUID='25000118' Path="/Values/ObjectmenuResidenceScene/BonusNeeds/BonusNeeds/Item[Category='2290']/Needs/">
+    <Item>
+      <BonusNeed>1500010847</BonusNeed>      <!-- Tea -->
+    </Item>
+  </ModOp>
+  <!-- ****************** END TO HEALTH ****************** -->
+
+  <!-- ****************** START TO WEALTH ****************** -->
+  <ModOp Condition="!@25000118//Item[BonusNeed='GUID']" Type="add" GUID='25000118' Path="/Values/ObjectmenuResidenceScene/BonusNeeds/BonusNeeds/Item[Category='2361']/Needs/">
+    <Item>
+      <BonusNeed>1010246</BonusNeed>      <!-- Pocket Watches -->
+    </Item>
+    <Item>
+      <BonusNeed>1010259</BonusNeed>      <!-- Cigars -->
+    </Item>
+    <Item>
+      <BonusNeed>135234</BonusNeed>      <!-- Cognac -->
+    </Item>
+    <Item>
+      <BonusNeed>135230</BonusNeed>      <!-- Typewriters -->
+    </Item>
+  </ModOp>
+  <!-- ****************** END TO WEALTH ****************** -->
+
+  <!-- ****************** START Explorer & Technicians more needs by ParticipantMessageArcheType ******************  -->
+  <ModOp Type="replace" GUID="112642" Path="/Values/PopulationLevel7/PopulationParticipant">
+    <PopulationParticipant>Arctic_Resident_tier01_atWork</PopulationParticipant>
+  </ModOp>
+  <ModOp Type="replace" GUID="112643" Path="/Values/PopulationLevel7/PopulationParticipant">
+    <PopulationParticipant>Arctic_Resident_tier02_atWork</PopulationParticipant>
+  </ModOp>
+  <!-- ****************** START Explorer & Technicians more needs by ParticipantMessageArcheType ******************  -->
+
+  <!-- START - ADD INUIT POPULATION TO ARCTIC POPULATION -->
+  <ModOp Type="add" GUID="112641" Path="/Values/PopulationGroup7/PopulationLevels">
+    <Item>
+      <Level>1742004100</Level>
+    </Item>
+  </ModOp>
+  <!-- END - ADD INUIT POPULATION TO ARCTIC POPULATION -->
+
+</ModOps>

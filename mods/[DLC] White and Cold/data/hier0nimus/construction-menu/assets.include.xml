@@ -1,0 +1,1241 @@
+<!-- 
+  Construction Menu
+-->
+
+<ModOps>
+
+  <!-- START - ADD INUIT CONSTRUCTION CATEGORY -->
+  <ModOp Type="addNextSibling" GUID='112790'>
+    <Asset>
+      <Template>ConstructionCategory</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004196</GUID>          <!-- Inuit Construction Category menu -->
+          <Name>Inuit construction category menu</Name>
+          <IconFilename>data/graphics/icons/icon_menu_inuit_0.png</IconFilename>
+        </Standard>
+        <ConstructionCategory>
+          <BuildingList>
+            <Item>
+              <Building>1742004102</Building>              <!-- Inuit Residence -->
+            </Item>
+            <Item>
+              <Building>1742004104</Building>              <!-- Small Storage - Building -->
+            </Item>
+            <Item>
+              <Building>1742004358</Building>              <!-- Spiritual Site - Building -->
+            </Item>
+            <Item>
+              <Building>1742004108</Building>              <!-- Community Centre - Building -->
+            </Item>
+            <Item>
+              <Building>1742004128</Building>              <!-- Wood Gathering Cabin - Building -->
+            </Item>
+            <Item>
+              <Building>1742004122</Building>              <!-- Fur Module - Building -->
+            </Item>
+            <Item>
+              <Building>1742004331</Building>              <!-- Timber Chain - Building -->
+            </Item>
+            <Item>
+              <Building>1742004148</Building>              <!-- Labrador Tea Maker - Building -->
+            </Item>
+            <Item>
+              <Building>1742004209</Building>              <!-- Palauga - Chain -->
+            </Item>
+            <Item>
+              <Building>1742004199</Building>              <!-- Snow Goggles - Chain -->
+            </Item>
+            <Item>
+              <Building>1742004110</Building>              <!-- Coastal Centre - Building -->
+            </Item>
+            <Item>
+              <Building>1742004120</Building>              <!-- Forest Centre - Building -->
+            </Item>
+            <Item>
+              <Building>1742004249</Building>              <!-- Crafting Centre - Building -->
+            </Item>
+            <Item>
+              <Building>1742004197</Building>              <!-- Basic Tools - Chain -->
+            </Item>
+            <Item>
+              <Building>1742004409</Building>              <!-- Pemmican - Chain -->
+            </Item>
+            <Item>
+              <Building>1742004405</Building>              <!-- Fish Stew - Chain -->
+            </Item>
+            <Item>
+              <Building>1742004396</Building>              <!-- Qilaut - Chain -->
+            </Item>
+            <Item>
+              <Building>1742004201</Building>              <!-- Snow Shoes - Chain -->
+            </Item>
+            <Item>
+              <Building>1742004203</Building>              <!-- Parkas - Chain -->
+            </Item>
+            <Item>
+              <Building>1742004239</Building>              <!-- Tattooist - Building -->
+            </Item>
+            <Item>
+              <Building>1742004398</Building>              <!-- Hot Springs Bathhouse - Building -->
+            </Item>
+            <Item>
+              <Building>1742004205</Building>              <!-- Qajaks - Chain -->
+            </Item>
+            <Item>
+              <Building>1742004142</Building>              <!-- Husky Breeder - Building -->
+            </Item>
+            <Item>
+              <Building>1742004207</Building>              <!-- Husky Sleds - Chain -->
+            </Item>
+            <Item>
+              <Building>1742004211</Building>              <!-- Sculptures - Chain -->
+            </Item>
+            <Item>
+              <Building>1742004488</Building>              <!-- Monumental Cooking and Drinking Statue - Chain -->
+            </Item>
+            <Item>
+              <Building>1742004489</Building>              <!-- Monumental Residences Statue - Chain -->
+            </Item>
+            <Item>
+              <Building>1742004490</Building>              <!-- Monumental Crafting Statue - Chain -->
+            </Item>
+            <Item>
+              <Building>1742004491</Building>              <!-- Monumental Forest Statue - Chain -->
+            </Item>
+            <Item>
+              <Building>1742004492</Building>              <!-- Monumental Coastal Statue - Chain -->
+            </Item>
+          </BuildingList>
+        </ConstructionCategory>
+        <Locked />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - ADD INUIT CONSTRUCTION CATEGORY -->
+
+  <!-- START - ADD INUIT CONSTRUCTION CATEGORY TO CONSTRUCTION MENU -->
+  <ModOp Type="add" GUID='25000035' Path="/Values/ConstructionMenu/RegionMenu/Arctic/CategoryMode/Tier/Categories/">
+    <Item>
+      <Category>1742004196</Category>      <!-- Inuit Category menu -->
+    </Item>
+  </ModOp>
+  <!-- END - ADD INUIT CONSTRUCTION CATEGORY TO CONSTRUCTION MENU -->
+
+  <!-- START - PRODUCTION CHAIN - Basic Tools -->
+  <ModOp Type="addNextSibling" GUID='15039'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004197</GUID>
+          <Name>Basic Tools</Name>
+          <IconFilename>data\ui\2kimages\main\3dicons\icon_tools.png</IconFilename>
+          <InfoDescription>1742004198</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742004132</Building>          <!-- Basic Tools Maker - Building -->
+          <Tier1>
+            <Item>
+              <Building>1742004128</Building>              <!-- Wood Gathering Cabin - Building -->
+            </Item>
+            <Item>
+              <Building>1742004116</Building>              <!-- Animal Bones Module - Building -->
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - PRODUCTION CHAIN - Basic Tools -->
+
+  <!-- START - PRODUCTION CHAIN - Snow Goggles -->
+  <ModOp Type="addNextSibling" GUID='15039'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004199</GUID>
+          <Name>Snow Goggles Chain</Name>
+          <IconFilename>data\ui\2kimages\main\3dicons\machine_items\icon_snow_goggle_2.png</IconFilename>
+          <InfoDescription>1742004200</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742004130</Building>          <!-- Snow goggles carver - Building -->
+          <Tier1>
+            <Item>
+              <Building>1742004128</Building>              <!-- Wood Gathering Cabin - Building -->
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - PRODUCTION CHAIN - Snow Goggles -->
+
+  <!-- START - PRODUCTION CHAIN - Snow Shoes -->
+  <ModOp Type="addNextSibling" GUID='15039'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004201</GUID>
+          <Name>Snow Shoes Chain</Name>
+          <IconFilename>data/graphics/icons/icon_snowshoes.png</IconFilename>
+          <InfoDescription>1742004202</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742004138</Building>          <!-- Snow Shoes Maker - Building -->
+          <Tier1>
+            <Item>
+              <Building>1742004128</Building>              <!-- Wood Gathering Cabin - Building -->
+            </Item>
+            <Item>
+              <Building>1742004122</Building>              <!-- Fur Module - Building -->
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - PRODUCTION CHAIN - Snow Shoes -->
+
+  <!-- START - PRODUCTION CHAIN - Parkas -->
+  <ModOp Type="addNextSibling" GUID='15039'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004203</GUID>
+          <Name>Parkas Chain</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_fur_parka.png</IconFilename>
+          <InfoDescription>1742004204</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742004146</Building>          <!-- Weavery - Building -->
+          <Tier1>
+            <Item>
+              <Building>1742004126</Building>              <!-- Bear Fur Module - Building -->
+            </Item>
+            <Item>
+              <Building>1742004118</Building>              <!-- Seal Skin Module - Building -->
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - PRODUCTION CHAIN - Parkas -->
+
+  <!-- START - PRODUCTION CHAIN - Qajaks -->
+  <ModOp Type="addNextSibling" GUID='15039'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004205</GUID>
+          <Name>Qajaks Chain</Name>
+          <IconFilename>data\ui\2kimages\main\3dicons\machine_items\icon_fishing_boat_2.png</IconFilename>
+          <InfoDescription>1742004206</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742004140</Building>          <!--Qajaks assembly - Building -->
+          <Tier1>
+            <Item>
+              <Building>1742004128</Building>              <!-- Wood Gathering Cabin - Building -->
+            </Item>
+            <Item>
+              <Building>1742004116</Building>              <!--Animal Bones Module - Building -->
+            </Item>
+            <Item>
+              <Building>1742004118</Building>              <!-- Seal Skin Module - Building -->
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - PRODUCTION CHAIN - Qajaks -->
+
+  <!-- START - PRODUCTION CHAIN - Husky Sleds -->
+  <ModOp Type="addNextSibling" GUID='15039'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004207</GUID>
+          <Name>Sleds Chain</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_sled_frame.png</IconFilename>
+          <InfoDescription>1742004208</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742004144</Building>          <!-- Sled Maker - Building -->
+          <Tier1>
+            <Item>
+              <Building>1742004128</Building>              <!-- Wood Gathering Cabin - Building -->
+            </Item>
+            <Item>
+              <Building>1742004122</Building>              <!-- Fur Module - Building -->
+            </Item>
+            <Item>
+              <Building>1742004116</Building>              <!-- Animal Bones Module - Building -->
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - PRODUCTION CHAIN - Husky Sleds -->
+
+  <!-- START - PRODUCTION CHAIN - Palauga -->
+  <ModOp Type="addNextSibling" GUID='15039'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004209</GUID>
+          <Name>Palauga Chain</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_bread.png</IconFilename>
+          <InfoDescription>1742004210</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742004136</Building>          <!-- Palauga Bakery - Building -->
+          <Tier1>
+            <Item>
+              <Building>1742004134</Building>              <!-- Root Grinder - Building -->
+            </Item>
+            <Item>
+              <Building>1742004114</Building>              <!-- Whale Oil Module - Building -->
+            </Item>
+            <Item>
+              <Building>1742004493</Building>              <!-- Seaweed Harvester - Building -->
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - PRODUCTION CHAIN - Palauga -->
+
+  <!-- START - PRODUCTION CHAIN - Sculptures -->
+  <ModOp Type="addNextSibling" GUID='15039'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004211</GUID>
+          <Name>Sculptures Chain</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/museum/icon_qamutiik_toy.png</IconFilename>
+          <InfoDescription>1742004212</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742004152</Building>          <!-- Sculpture Carver - Building -->
+          <Tier1>
+            <Item>
+              <Building>1742004116</Building>              <!--Animal Bones Module - Building -->
+            </Item>
+            <Item>
+              <Building>1742004154</Building>              <!-- Ink Mixer - Building -->
+              <Tier2>
+                <Item>
+                  <Building>1742004114</Building>                  <!-- Whale Oil Module - Building -->
+                </Item>
+                <Item>
+                  <Building>1742004150</Building>                  <!-- Charcoal Burner - Building -->
+                </Item>
+              </Tier2>
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - PRODUCTION CHAIN - Sculptures -->
+
+  <!-- START - PRODUCTION CHAIN - Tattooist -->
+  <ModOp Type="addNextSibling" GUID='15039'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004239</GUID>
+          <Name>Tattooist Chain</Name>
+          <IconFilename>data/graphics/icons/icon_tattoo_centre.png</IconFilename>
+          <InfoDescription>1742004240</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742004156</Building>          <!-- Tattooist - Building -->
+          <Tier1>
+            <Item>
+              <Building>1742004154</Building>              <!-- Ink Mixer - Building -->
+              <Tier2>
+                <Item>
+                  <Building>1742004114</Building>                  <!-- Whale Oil Module - Building -->
+                </Item>
+                <Item>
+                  <Building>1742004150</Building>                  <!-- Charcoal Burner - Building -->
+                </Item>
+              </Tier2>
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - PRODUCTION CHAIN - Tattooist -->
+
+  <!-- START - ICE BUILDING MENU (AR) -->
+  <ModOp Type="addNextSibling" GUID='112792'>
+    <Asset>
+      <Template>ConstructionCategory</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004268</GUID>
+          <Name>Ice Building Menu (AR)</Name>
+          <IconFilename>data\ui\2kimages\main\3dicons\campaign\icon_iceberg.png</IconFilename>
+        </Standard>
+        <ConstructionCategory>
+          <BuildingList>
+            <Item>
+              <Building>1742004281</Building>              <!-- Strategic Harbour (AR) - Building -->
+            </Item>
+            <Item>
+              <Building>1742004275</Building>              <!-- Ice Harvesting Site - Building -->
+            </Item>
+            <Item>
+              <Building>1742004277</Building>              <!-- Ice Warehouse - Building -->
+            </Item>
+            <Item>
+              <Building>1742004280</Building>              <!-- Ice Depot - Building -->
+            </Item>
+          </BuildingList>
+          <CategoryDescription>19173</CategoryDescription>
+        </ConstructionCategory>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Ice</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>35206</LineID>
+        </Text>
+        <Locked/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - ICE BUILDING MENU (AR) -->
+
+  <!-- START - ICE BUILDING MENU (OW) -->
+  <ModOp Type="addNextSibling" GUID='112792'>
+    <Asset>
+      <Template>ConstructionCategory</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004390</GUID>
+          <Name>Ice Building Menu (OW)</Name>
+          <IconFilename>data\ui\2kimages\main\3dicons\campaign\icon_iceberg.png</IconFilename>
+        </Standard>
+        <ConstructionCategory>
+          <BuildingList>
+            <Item>
+              <Building>1742004392</Building>              <!-- Strategic Harbour (OW) - Building -->
+            </Item>
+            <Item>
+              <Building>1742004386</Building>              <!-- Ice Warehouse (OW) - Building -->
+            </Item>
+            <Item>
+              <Building>1742004387</Building>              <!-- Ice Depot (OW) - Building -->
+            </Item>
+            <Item>
+              <Building>1742004370</Building>              <!-- Ice Coastal Storage (OW) - Building -->
+            </Item>
+            <Item>
+              <Building>1742004376</Building>              <!-- Meat, Milk, Vegetables and Fruit Storage (OW) Storage - Building -->
+            </Item>
+            <Item>
+              <Building>1742004382</Building>              <!-- Ice Distribution Service - Building -->
+            </Item>
+          </BuildingList>
+          <CategoryDescription>19173</CategoryDescription>
+        </ConstructionCategory>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Ice</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>35206</LineID>
+        </Text>
+        <Locked/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - ICE BUILDING MENU (OW) -->
+
+  <!-- START - ICE BUILDING MENU (NW) -->
+  <ModOp Type="addNextSibling" GUID='112792'>
+    <Asset>
+      <Template>ConstructionCategory</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004391</GUID>
+          <Name>Ice Building Menu (NW)</Name>
+          <IconFilename>data\ui\2kimages\main\3dicons\campaign\icon_iceberg.png</IconFilename>
+        </Standard>
+        <ConstructionCategory>
+          <BuildingList>
+            <Item>
+              <Building>1742004393</Building>              <!-- Strategic Harbour (NW) - Building -->
+            </Item>
+            <Item>
+              <Building>1742004388</Building>              <!-- Ice Warehouse (OW) - Building -->
+            </Item>
+            <Item>
+              <Building>1742004389</Building>              <!-- Ice Depot (OW) - Building -->
+            </Item>
+            <Item>
+              <Building>1742004372</Building>              <!-- Ice Coastal Storage (NW) - Building -->
+            </Item>
+            <Item>
+              <Building>1742004378</Building>              <!-- Meat, Milk, Vegetables and Fruit Storage (NW) Storage - Building -->
+            </Item>
+          </BuildingList>
+          <CategoryDescription>19173</CategoryDescription>
+        </ConstructionCategory>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Ice</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>35206</LineID>
+        </Text>
+        <Locked/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - ICE BUILDING MENU (NW) -->
+
+  <!-- START - PRODUCTION CHAIN - Campfire -->
+  <ModOp Type="addNextSibling" GUID='15039'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004271</GUID>
+          <Name>Campfire Chain</Name>
+          <IconFilename>data/graphics/icons/icon_campfire.png</IconFilename>
+          <InfoDescription>1742004270</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742004269</Building>          <!-- Campfire - Building -->
+          <Tier1>
+            <Item>
+              <Building>114703</Building>              <!--agriculture_arctic_01 (Timber Yard)-->
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - PRODUCTION CHAIN - Campfire -->
+
+  <!-- START - PRODUCTION CHAIN - Timber -->
+  <ModOp Type="addNextSibling" GUID='15039'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004331</GUID>
+          <Name>Timber Chain</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_wooden_planks.png</IconFilename>
+          <InfoDescription>1742004332</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742004329</Building>          <!-- Sawmill - Building -->
+          <Tier1>
+            <Item>
+              <Building>1742004128</Building>              <!-- Wood Gathering Cabin - Building -->
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - PRODUCTION CHAIN - Timber -->
+
+  <!-- START - PRODUCTION CHAIN - Corsets -->
+  <ModOp Type="addNextSibling" GUID='15039'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004337</GUID>
+          <Name>Corsets Chain</Name>
+          <IconFilename>data/graphics/icons/icon_corsets.png</IconFilename>
+          <InfoDescription>1742004338</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742004335</Building>          <!-- Women's Tailoring Shop - Building -->
+          <Tier1>
+            <Item>
+              <Building>1010339</Building>              <!--Pearl farm - Building-->
+            </Item>
+            <Item>
+              <Building>1742004116</Building>              <!--Animal Bones Modile - Building-->
+            </Item>
+            <Item>
+              <Building>114441</Building>              <!--intermediate_colony02_01 (Linen Mill)-->
+              <Tier2>
+                <Item>
+                  <Building>114448</Building>                  <!--agriculture_colony02_02 (Flax Farm)-->
+                </Item>
+              </Tier2>
+            </Item>
+            <Item>
+              <Building>1010318</Building>              <!--factory_colony01_03 (Cotton Cloth Processing)-->
+              <Tier2>
+                <Item>
+                  <Building>1010331</Building>                  <!--agriculture_colony01_03 (Cotton Farm)-->
+                </Item>
+              </Tier2>
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - PRODUCTION CHAIN - Corsets -->
+
+  <!-- START - PRODUCTION CHAIN - Fish Stew -->
+  <ModOp Type="addNextSibling" GUID='15039'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004405</GUID>
+          <Name>Fish Stew</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/goods_africa/icon_wat_stew.png</IconFilename>
+          <InfoDescription>1742004406</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742004403</Building>          <!-- Fish Stew Cookhouse - Building -->
+          <Tier1>
+            <Item>
+              <Building>1742004112</Building>              <!-- Fishery - Building -->
+            </Item>
+            <Item>
+              <Building>1742004134</Building>              <!-- Root Grinder - Building -->
+            </Item>
+            <Item>
+              <Building>1742004493</Building>              <!-- Seaweed Harvester - Building -->
+            </Item>
+            <Item>
+              <Building>1010312</Building>              <!--processing_01 (Tallow Processing)-->
+              <Tier2>
+                <Item>
+                  <Building>1010269</Building>                  <!--agriculture_08 (Pig Farm)-->
+                </Item>
+              </Tier2>
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - PRODUCTION CHAIN - Fish Stew -->
+
+  <!-- START - PRODUCTION CHAIN - Pemmican -->
+  <ModOp Type="addNextSibling" GUID='15039'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004409</GUID>
+          <Name>Pemmican</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_pemmican.png</IconFilename>
+          <InfoDescription>1742004406</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742004407</Building>          <!-- Pemmican Cookhouse - Building -->
+          <Tier1>
+            <Item>
+              <Building>1742004124</Building>              <!-- Caribou Meat Module - Building -->
+            </Item>
+            <Item>
+              <Building>1742004134</Building>              <!-- Root Grinder - Building -->
+            </Item>
+            <Item>
+              <Building>1010312</Building>              <!--processing_01 (Tallow Processing)-->
+              <Tier2>
+                <Item>
+                  <Building>1010269</Building>                  <!--agriculture_08 (Pig Farm)-->
+                </Item>
+              </Tier2>
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - PRODUCTION CHAIN - Pemmican -->
+
+  <!-- START - PRODUCTION CHAIN - Brass -->
+  <ModOp Type="addNextSibling" GUID='15039'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004402</GUID>
+          <Name>Brass</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_brass.png</IconFilename>
+          <InfoDescription>1742004165</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742004164</Building>          <!--Brass Smelter-->
+          <Tier1>
+            <Item>
+              <Building>8857203</Building>              <!--Zinc Mine-->
+            </Item>
+            <Item>
+              <Building>8857204</Building>              <!--Copper Mine-->
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - PRODUCTION CHAIN - Brass -->
+
+  <!-- START - PRODUCTION CHAIN - Canned Food -->
+  <ModOp Type="addNextSibling" GUID='15039'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004453</GUID>
+          <Name>Canned Food</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_canned_goulash.png</IconFilename>
+          <InfoDescription>1742004452</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742004451</Building>          <!--Cannery-->
+          <Tier1>
+            <Item>
+              <Building>1010297</Building>              <!-- Furnace -->
+              <Tier2>
+                <Item>
+                  <Building>8857200</Building>                  <!-- Iron Mine -->
+                </Item>
+              </Tier2>
+            </Item>
+            <Item>
+              <Building>1742004403</Building>              <!-- Fish Stew Cookhouse - Building -->
+              <Tier2>
+                <Item>
+                  <Building>1742004112</Building>                  <!-- Fishery - Building -->
+                </Item>
+                <Item>
+                  <Building>1742004134</Building>                  <!-- Root Grinder - Building -->
+                </Item>
+                <Item>
+                  <Building>1742004493</Building>                  <!-- Seaweed Harvester - Building -->
+                </Item>
+                <Item>
+                  <Building>1010312</Building>                  <!--processing_01 (Tallow Processing)-->
+                  <Tier3>
+                    <Item>
+                      <Building>1010269</Building>                      <!--agriculture_08 (Pig Farm)-->
+                    </Item>
+                  </Tier3>
+                </Item>
+              </Tier2>
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - PRODUCTION CHAIN - Canned Food -->
+
+  <!-- START - PRODUCTION CHAIN - Qilaut -->
+  <ModOp Type="addNextSibling" GUID='15039'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004396</GUID>
+          <Name>Qilaut</Name>
+          <IconFilename>data/graphics/icons/icon_qilaut.png</IconFilename>
+          <InfoDescription>1742004395</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742004394</Building>          <!--Qilaut Maker - Building-->
+          <Tier1>
+            <Item>
+              <Building>1742004128</Building>              <!-- Wood Gathering Cabin - Building -->
+            </Item>
+            <Item>
+              <Building>1742004122</Building>              <!-- Fur Module - Building -->
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - PRODUCTION CHAIN - Qilaut -->
+
+  <!-- START - PRODUCTION CHAIN - Monumental Cooking and Drinking Statue -->
+  <ModOp Type="addNextSibling" GUID='15039'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004488</GUID>
+          <Name>Monumental Cooking and Drinking Statue</Name>
+          <IconFilename>data/graphics/icons/icon_inuit_monument.png</IconFilename>
+          <InfoDescription>1742004304</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742004424</Building>          <!-- Monumental Cooking and Drinking Statue - Building -->
+          <Tier1>
+            <Item>
+              <Building>1010263</Building>              <!-- Cattle Farm - Building -->
+            </Item>
+            <Item>
+              <Building>1742004493</Building>              <!-- Seaweed Harvester - Building -->
+            </Item>
+            <Item>
+              <Building>1742004152</Building>              <!-- Sculpture Carver - Building -->
+              <Tier2>
+                <Item>
+                  <Building>1742004116</Building>                  <!--Animal Bones Module - Building -->
+                </Item>
+                <Item>
+                  <Building>1742004154</Building>                  <!-- Ink Mixer - Building -->
+                  <Tier3>
+                    <Item>
+                      <Building>1742004114</Building>                      <!-- Whale Oil Module - Building -->
+                    </Item>
+                    <Item>
+                      <Building>1742004150</Building>                      <!-- Charcoal Burner - Building -->
+                    </Item>
+                  </Tier3>
+                </Item>
+              </Tier2>
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - PRODUCTION CHAIN - Monumental Cooking and Drinking Statue -->
+
+  <!-- START - PRODUCTION CHAIN - Monumental Residences Statue -->
+  <ModOp Type="addNextSibling" GUID='15039'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004489</GUID>
+          <Name>Monumental Residences Statue</Name>
+          <IconFilename>data/graphics/icons/icon_inuit_monument.png</IconFilename>
+          <InfoDescription>1742004471</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742004470</Building>          <!-- Monumental Residences Statue - Building -->
+          <Tier1>
+            <Item>
+              <Building>1742004114</Building>              <!-- Whale Oil Module - Building -->
+            </Item>
+            <Item>
+              <Building>112676</Building>              <!-- Goose Farm - Building -->
+            </Item>
+            <Item>
+              <Building>1742004152</Building>              <!-- Sculpture Carver - Building -->
+              <Tier2>
+                <Item>
+                  <Building>1742004116</Building>                  <!--Animal Bones Module - Building -->
+                </Item>
+                <Item>
+                  <Building>1742004154</Building>                  <!-- Ink Mixer - Building -->
+                  <Tier3>
+                    <Item>
+                      <Building>1742004114</Building>                      <!-- Whale Oil Module - Building -->
+                    </Item>
+                    <Item>
+                      <Building>1742004150</Building>                      <!-- Charcoal Burner - Building -->
+                    </Item>
+                  </Tier3>
+                </Item>
+              </Tier2>
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - PRODUCTION CHAIN - Monumental Residences Statue -->
+
+  <!-- START - PRODUCTION CHAIN - Monumental Crafting Statue -->
+  <ModOp Type="addNextSibling" GUID='15039'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004490</GUID>
+          <Name>Monumental Crafting Statue</Name>
+          <IconFilename>data/graphics/icons/icon_inuit_monument.png</IconFilename>
+          <InfoDescription>1742004475</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742004474</Building>          <!-- Monumental Crafting Statue - Building -->
+          <Tier1>
+            <Item>
+              <Building>1742004132</Building>              <!-- Basic Tools Maker - Building -->
+              <Tier2>
+                <Item>
+                  <Building>1742004128</Building>                  <!-- Wood Gathering Cabin - Building -->
+                </Item>
+                <Item>
+                  <Building>1742004116</Building>                  <!-- Animal Bones Module - Building -->
+                </Item>
+              </Tier2>
+            </Item>
+            <Item>
+              <Building>101262</Building>              <!-- Fish Oil Factory - Building -->
+            </Item>
+            <Item>
+              <Building>1742004152</Building>              <!-- Sculpture Carver - Building -->
+              <Tier2>
+                <Item>
+                  <Building>1742004116</Building>                  <!--Animal Bones Module - Building -->
+                </Item>
+                <Item>
+                  <Building>1742004154</Building>                  <!-- Ink Mixer - Building -->
+                  <Tier3>
+                    <Item>
+                      <Building>1742004114</Building>                      <!-- Whale Oil Module - Building -->
+                    </Item>
+                    <Item>
+                      <Building>1742004150</Building>                      <!-- Charcoal Burner - Building -->
+                    </Item>
+                  </Tier3>
+                </Item>
+              </Tier2>
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - PRODUCTION CHAIN - Monumental Crafting Statue -->
+
+  <!-- START - PRODUCTION CHAIN - Monumental Forest Statue -->
+  <ModOp Type="addNextSibling" GUID='15039'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004491</GUID>
+          <Name>Monumental Forest Statue</Name>
+          <IconFilename>data/graphics/icons/icon_inuit_monument.png</IconFilename>
+          <InfoDescription>1742004479</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742004478</Building>          <!-- Monumental Forest Statue - Building -->
+          <Tier1>
+            <Item>
+              <Building>1010320</Building>              <!--processing_07 (Inlay Processing)-->
+              <Tier2>
+                <Item>
+                  <Building>1742004128</Building>                  <!-- Wood Gathering Cabin - Building -->
+                </Item>
+              </Tier2>
+            </Item>
+            <Item>
+              <Building>1742004126</Building>              <!-- Bear Fur Module - Building -->
+            </Item>
+            <Item>
+              <Building>1742004152</Building>              <!-- Sculpture Carver - Building -->
+              <Tier2>
+                <Item>
+                  <Building>1742004116</Building>                  <!--Animal Bones Module - Building -->
+                </Item>
+                <Item>
+                  <Building>1742004154</Building>                  <!-- Ink Mixer - Building -->
+                  <Tier3>
+                    <Item>
+                      <Building>1742004114</Building>                      <!-- Whale Oil Module - Building -->
+                    </Item>
+                    <Item>
+                      <Building>1742004150</Building>                      <!-- Charcoal Burner - Building -->
+                    </Item>
+                  </Tier3>
+                </Item>
+              </Tier2>
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - PRODUCTION CHAIN - Monumental Forest Statue -->
+
+  <!-- START - PRODUCTION CHAIN - Monumental Coastal Statue -->
+  <ModOp Type="addNextSibling" GUID='15039'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004492</GUID>
+          <Name>Monumental Coastal Statue</Name>
+          <IconFilename>data/graphics/icons/icon_inuit_monument.png</IconFilename>
+          <InfoDescription>1742004483</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742004482</Building>          <!-- Monumental Coastal Statue - Building -->
+          <Tier1>
+            <Item>
+              <Building>1742004118</Building>              <!-- Seal Skin Module - Building -->
+            </Item>
+            <Item>
+              <Building>1010288</Building>              <!-- Sailmakers - Building -->
+            </Item>
+            <Item>
+              <Building>1742004152</Building>              <!-- Sculpture Carver - Building -->
+              <Tier2>
+                <Item>
+                  <Building>1742004116</Building>                  <!--Animal Bones Module - Building -->
+                </Item>
+                <Item>
+                  <Building>1742004154</Building>                  <!-- Ink Mixer - Building -->
+                  <Tier3>
+                    <Item>
+                      <Building>1742004114</Building>                      <!-- Whale Oil Module - Building -->
+                    </Item>
+                    <Item>
+                      <Building>1742004150</Building>                      <!-- Charcoal Burner - Building -->
+                    </Item>
+                  </Tier3>
+                </Item>
+              </Tier2>
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - PRODUCTION CHAIN - Monumental Coastal Statue -->
+
+  <!-- START - ARCTIC LODGE MENU -->
+  <ModOp Type="add" GUID='112792' Path="/Values/ConstructionCategory/BuildingList/">
+    <Item>
+      <Building>1742004267</Building>      <!-- Coastal Arctic Lodge - Building -->
+    </Item>
+  </ModOp>
+  <!-- END - ARCTIC LODGE MENU -->
+
+  <!-- START - ADD CAMPFIRE TO EXPLORERS MENU -->
+  <ModOp Type="addPrevSibling" GUID='112790' Path="/Values/ConstructionCategory/BuildingList/Item[Building='112856']">
+    <Item>
+      <Building>1742004271</Building>      <!-- Campfire - Chain -->
+    </Item>
+  </ModOp>
+  <!-- END - ADD CAMPFIRE TO EXPLORERS MENU -->
+
+  <!-- START - ADD BUILDINGS TO TECHNICIANS MENU -->
+  <ModOp Type="add" GUID='112791' Path="/Values/ConstructionCategory/BuildingList/">
+    <Item>
+      <Building>1742004402</Building>      <!-- Brass - Chain -->
+    </Item>
+    <Item>
+      <Building>1742004268</Building>      <!-- Ice Building Menu - ConstructionCategory -->
+    </Item>
+    <Item>
+      <Building>1742004362</Building>      <!-- Lost Expedition Site - Building -->
+    </Item>
+    <Item>
+      <Building>1742004421</Building>      <!-- Nate's Arctic Windmill - Building -->
+    </Item>
+    <Item>
+      <Building>1742004417</Building>      <!-- Arctic Research Institute - Building -->
+    </Item>
+  </ModOp>
+  <!-- END - ADD BUILDINGS TO TECHNICIANS MENU -->
+
+  <!-- START - HIDE NORMAL CANNED FOOD CHAIN AND ADD NEW -->
+  <ModOp Type="add" GUID='112791' Path="/Values/ConstructionCategory/BuildingList/Item[Building='117268']">
+    <PlatformVisibility>Console</PlatformVisibility>
+  </ModOp>
+  <ModOp Type="addNextSibling" GUID='112791' Path="/Values/ConstructionCategory/BuildingList/Item[Building='117268']">
+    <Item>
+      <Building>1742004453</Building>      <!-- Canned Food - Chain -->
+    </Item>
+  </ModOp>
+
+  <!-- END - HIDE NORMAL ARCTIC GAS MINE -->
+
+  <!-- START - HIDE NORMAL ARCTIC GAS MINE
+  <ModOp Type="add" GUID='112791' Path="/Values/ConstructionCategory/BuildingList/Item[Building='112690']">
+    <PlatformVisibility>Console</PlatformVisibility>
+  </ModOp> -->
+  <ModOp Type="add" GUID='112791' Path="/Values/ConstructionCategory/BuildingList/Item[Building='117556']">
+    <PlatformVisibility>Console</PlatformVisibility>
+  </ModOp>
+  <!-- END - HIDE NORMAL ARCTIC GAS MINE -->
+
+  <!-- START - ADD NEW MINES AND MINING BUILDINGS TO VARIABLE RESOURCES BUILDING MENU -->
+  <ModOp Type="add" GUID='8857201' Path="/Values/ConstructionCategory/BuildingList/">
+    <Item>
+      <Building>112690</Building>      <!--Arctic Gas Mine-->
+    </Item>
+    <Item>
+      <Building>1742004364</Building>      <!--Helium Gas Mine-->
+    </Item>
+    <Item>
+      <Building>1742004368</Building>      <!-- Diamond Mine - Building -->
+    </Item>
+    <Item>
+      <Building>1742004275</Building>      <!--Ice Harvesting Site-->
+    </Item>
+    <Item>
+      <Building>1742004285</Building>      <!-- Mining Institue - Building -->
+    </Item>
+    <Item>
+      <Building>1742004319</Building>      <!-- Mining Optimizations (Blank) - RecipeBuilding -->
+    </Item>
+  </ModOp>
+  <!-- END - ADD NEW MINES AND MINING BUILDINGS TO VARIABLE RESOURCES BUILDING MENU -->
+
+  <!-- START - ADD SMALL DEPOT TO ARCTIC COASTAL MENU -->
+  <ModOp Type="addPrevSibling" GUID='112792' Path="/Values/ConstructionCategory/BuildingList/Item[Building='112670']">
+    <Item>
+      <Building>1742004266</Building>      <!-- Small Depot - Building -->
+    </Item>
+  </ModOp>
+  <!-- END - ADD SMALL DEPOT TO ARCTIC COASTAL MENU -->
+
+  <!-- START - ADD CORSETS CHAIN TO ENGINEERS MENU -->
+  <ModOp Type="addNextSibling" GUID='25000192' Path="/Values/ConstructionCategory/BuildingList/Item[Building='500015']">
+    <Item>
+      <Building>1742004337</Building>      <!-- Corsets - Chain -->
+    </Item>
+  </ModOp>
+  <ModOp Type="add" GUID='25000192' Path="/Values/ConstructionCategory/BuildingList/">
+    <Item>
+      <Building>1742004390</Building>      <!-- Ice Building Menu (OW) - ConstructionCategory -->
+    </Item>
+  </ModOp>
+  <!-- END - ADD CORSETS CHAIN TO ENGINEERS MENU -->
+
+  <!-- START - ADD CORSETS CHAIN TO OBRERO MENU -->
+  <ModOp Type="add" GUID='25000194' Path="/Values/ConstructionCategory/BuildingList/">
+    <Item>
+      <Building>1742004391</Building>      <!-- Ice Building Menu (NW) - ConstructionCategory -->
+    </Item>
+  </ModOp>
+  <!-- END - ADD CORSETS CHAIN TO ENGINEERS MENU -->
+
+  <!-- START - ADD ORNAMENT MENU TO ARCTIC CONSTRUCTION MENU -->
+  <ModOp Type="add" GUID='25000035' Path="/Values/ConstructionMenu/RegionMenu/Arctic/">
+    <OrnamentsMode>
+      <OrnamentsSource>
+        <Categories>
+          <Item>
+            <Category>1742004188</Category>            <!--Arctic Ornaments-->
+          </Item>
+        </Categories>
+      </OrnamentsSource>
+      <OrnamentsCategory>
+        <Categories>
+          <Item>
+            <Category>1742004188</Category>            <!--Arctic Ornaments-->
+          </Item>
+        </Categories>
+      </OrnamentsCategory>
+    </OrnamentsMode>
+  </ModOp>
+  <!-- END - ADD ORNAMENT MENU TO ARCTIC CONSTRUCTION MENU -->
+
+  <!-- START - ADD ARCTIC ORNAMENT MENU -->
+  <ModOp Type="addNextSibling" GUID='25000035'>
+    <Asset>
+      <Template>ConstructionCategory</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004188</GUID>
+          <Name>Arctic Ornaments</Name>
+          <IconFilename>data\ui\2kimages\main\icons\icon_snowflakes.png</IconFilename>
+          <InfoDescription>1742004189</InfoDescription>
+        </Standard>
+        <ConstructionCategory>
+          <BuildingList>
+            <Item>
+              <Building>1742004411</Building>              <!-- Fir Tree - Ornament-->
+            </Item>
+            <Item>
+              <Building>1742004413</Building>              <!-- Bushes - Ornament-->
+            </Item>
+            <Item>
+              <Building>1742004186</Building>              <!--Whalebone Gate - Ornament-->
+            </Item>
+            <Item>
+              <Building>1742004180</Building>              <!--Cairn - Ornament-->
+            </Item>
+            <Item>
+              <Building>1742004468</Building>              <!--Inuksuk - Ornament-->
+            </Item>
+            <Item>
+              <Building>1742004461</Building>              <!--Wind Pole - Ornament-->
+            </Item>
+            <Item>
+              <Building>1742004463</Building>              <!--Flag - Ornament-->
+            </Item>
+          </BuildingList>
+          <CategoryDescription>1742004189</CategoryDescription>          <!--CategoryDescriptionOrnaments-->
+        </ConstructionCategory>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Arctic Ornaments</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>27164</LineID>
+        </Text>
+        <Locked/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - ADD ARCTIC ORNAMENT MENU -->
+
+
+
+</ModOps>
+  1742004411

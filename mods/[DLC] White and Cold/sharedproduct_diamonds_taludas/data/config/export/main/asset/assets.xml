@@ -1,0 +1,110 @@
+<ModOps>
+
+  <Group>
+    <!-- # Product: Raw Jade -->
+    <ModOp Type="addNextSibling" GUID="1010217">
+      <Asset>
+        <Template>Product</Template>
+        <Values>
+          <Standard>
+            <GUID>1999005087</GUID>
+            <Name>Diamonds</Name>
+            <IconFilename>data\modgraphics\ui\icon_diamonds.png</IconFilename>
+            <InfoDescription>1999005088</InfoDescription>
+          </Standard>
+          <Locked />
+          <Product>
+            <StorageLevel>Building</StorageLevel>
+            <ProductCategory>11702</ProductCategory>
+            <BasePrice>1250</BasePrice>
+            <CivLevel>5</CivLevel>
+            <AssociatedRegion>Moderate</AssociatedRegion>
+            <ProductionRegions>
+              <Item>
+                <RegionType>Moderate</RegionType>
+              </Item>
+            </ProductionRegions>
+          </Product>
+          <ExpeditionAttribute>
+            <BaseMorale>40</BaseMorale>
+            <ExpeditionAttributes>
+              <Item>
+                <Attribute>Hunting</Attribute>
+                <Amount>15</Amount>
+              </Item>
+              <Item>
+                <Attribute>Faith</Attribute>
+                <Amount>25</Amount>
+              </Item>
+            </ExpeditionAttributes>
+            <FluffText>1999005089</FluffText>
+          </ExpeditionAttribute>
+        </Values>
+      </Asset>
+    </ModOp>
+
+    <!-- # Expeditions -->
+    <!-- None -->
+
+    <!-- # Docklands: NONE -->
+
+    <!-- # Fake MainFactory -->
+    <ModOp Type="addNextSibling" GUID="1010295" Condition="!//FactoryBase[FactoryOutputs/Item/Product='1999005087']/IsMainFactory[text()='1']">
+      <Asset>
+        <Template>FactoryBuilding7</Template>
+        <Values>
+          <Standard>
+            <GUID>1999005652</GUID>
+            <Name>IsMainfactory_Fake: Diamonds</Name>
+            <IconFilename>data\modgraphics\ui\icon_diamonds.png</IconFilename>
+          </Standard>
+          <Building>
+            <AssociatedRegions>Moderate</AssociatedRegions>
+            <SecondPartyRelevant>0</SecondPartyRelevant>
+          </Building>
+          <Blocking />
+          <Object>
+            <Variations>
+              <Item>
+                <Filename>data\graphics\buildings\public\logistic_01\logistic_01.cfg</Filename>
+              </Item>
+            </Variations>
+          </Object>
+          <Locked />
+          <FactoryBase>
+            <FactoryInputs>
+              <Item>
+                <Product>1999005351</Product>
+                <Amount>10</Amount>
+                <StorageAmount>30</StorageAmount>
+              </Item>
+            </FactoryInputs>
+            <FactoryOutputs>
+              <Item>
+                <Product>1999005087</Product>
+                <Amount>1</Amount>
+                <StorageAmount>4</StorageAmount>
+              </Item>
+            </FactoryOutputs>
+            <CycleTime>30</CycleTime>
+            <IsMainFactory>1</IsMainFactory>
+          </FactoryBase>
+          <Maintenance>
+            <Maintenances>
+                <Item>
+                    <Product>1010017</Product>
+                    <Amount>500</Amount>
+                    <InactiveAmount>250</InactiveAmount>
+                </Item>
+                <Item>
+                    <Product>1010116</Product>
+                    <Amount>100</Amount>
+                </Item>
+            </Maintenances>
+        </Maintenance>
+        </Values>
+      </Asset>
+    </ModOp>
+  </Group>
+
+</ModOps>

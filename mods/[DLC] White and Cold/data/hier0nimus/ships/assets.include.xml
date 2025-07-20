@@ -1,0 +1,274 @@
+<!-- 
+  Ships
+-->
+
+<ModOps>
+
+  <!-- START - SHIP - Ice Ship -->
+  <ModOp Type="addNextSibling" GUID='112670'>
+    <Asset>
+      <Template>TradeShip</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004283</GUID>
+          <Name>Ice Ship</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/ships/icon_ship_collier.png</IconFilename>
+          <InfoDescription>1742004284</InfoDescription>
+        </Standard>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/vehicle/collier/collier.cfg</Filename>
+            </Item>
+          </Variations>
+          <Skins>
+            <DefaultSkinName>1742004283</DefaultSkinName>
+            <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>
+          </Skins>
+        </Object>
+        <Mesh>
+          <MeshPlacement>OnWaterSlope</MeshPlacement>
+        </Mesh>
+        <Selection>
+          <MultiSelectable>1</MultiSelectable>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+        </Selection>
+        <Walking>
+          <ShortenSailsAfter>0</ShortenSailsAfter>
+          <ReservationLength>16</ReservationLength>
+          <ReservationWidth>6</ReservationWidth>
+          <PathPlannerLayer>Water</PathPlannerLayer>
+          <ExpensiveDirSmoothing>1</ExpensiveDirSmoothing>
+          <TurnAroundRadius>8</TurnAroundRadius>
+          <Acceleration>1.5</Acceleration>
+          <Deceleration>2</Deceleration>
+          <TurnRadius>8</TurnRadius>
+          <TurnSpeedInPlace>20</TurnSpeedInPlace>
+          <TurnDeceleration>0</TurnDeceleration>
+          <TurnMovement>0</TurnMovement>
+          <LeaningMaxAngle>-10</LeaningMaxAngle>
+          <ForwardSpeed>30</ForwardSpeed>          <!-- 5.2 -->
+          <WindMinSlowdownFactor>1</WindMinSlowdownFactor>
+          <WindMaxSpeedupFactor>1</WindMaxSpeedupFactor>
+          <CargoFullFactor>0.8</CargoFullFactor>
+          <MinSlowdownFactor>0.5</MinSlowdownFactor>
+          <CurveSegmentDensity>High</CurveSegmentDensity>
+        </Walking>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Ice Ship</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>14861</LineID>
+        </Text>
+        <CommandQueue>
+          <FormationPriority>1</FormationPriority>
+          <TradeShipPoints>4</TradeShipPoints>
+          <PriorityShipList>2</PriorityShipList>
+        </CommandQueue>
+        <Drifting>
+          <OverrideAssetWidthAndLength>0</OverrideAssetWidthAndLength>
+          <Length>7</Length>
+          <Width>1.5</Width>
+          <FactorMovement>0.7</FactorMovement>
+          <FactorRotation>0.65</FactorRotation>
+        </Drifting>
+        <Collector/>
+        <Attackable>
+          <MaximumHitPoints>5000</MaximumHitPoints>
+          <AlertRange>150</AlertRange>
+          <HPBarOffset>4</HPBarOffset>
+          <SelfHealPerHealTick>1.667</SelfHealPerHealTick>
+          <SelfHealPausedTimeIfAttacked>60000</SelfHealPausedTimeIfAttacked>
+        </Attackable>
+        <MinimapToken>
+          <TokenAsset>2001947</TokenAsset>          <!--Ships-->
+          <StrategicMapAsset>501018</StrategicMapAsset>          <!--Steam Ships-->
+        </MinimapToken>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>201830</Sound>              <!--wwe_sfx_veh_oil_tanker_lp_play-->
+            </Item>
+          </ActiveSounds>
+          <DestroySounds>
+            <Item>
+              <Sound>238314</Sound>              <!--wwe_sfx_veh_battle_cruiser_destroy_os-->
+            </Item>
+          </DestroySounds>
+        </SoundEmitter>
+        <UpgradeList/>
+        <QuestObject/>
+        <Infolayer/>
+        <ItemContainer>
+          <SocketAllocation>Ship;SteamShip;Tradeship</SocketAllocation>
+          <SlotCount>2</SlotCount>
+          <StackLimit>500</StackLimit>
+          <FixedSlotContent>1742004273</FixedSlotContent>          <!--Ice Blocks-->
+        </ItemContainer>
+        <FeedbackController/>
+        <Draggable>
+          <DraggableOnDrag>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </DraggableOnDrag>
+          <DraggableOnDrop>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </DraggableOnDrop>
+        </Draggable>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!--beams-->
+              <Amount>20</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010224</Ingredient>              <!--steam motors-->
+              <Amount>20</Amount>
+            </Item>
+          </Costs>
+          <InfluenceCostType>TradeShip</InfluenceCostType>
+          <InfluenceCostPoints>10</InfluenceCostPoints>
+        </Cost>
+        <Craftable>
+          <CraftingTime>540000</CraftingTime>
+        </Craftable>
+        <TradeRouteVehicle/>
+        <Locked/>
+        <Nameable/>
+        <MetaPersistent/>
+        <ExpeditionAttribute>
+          <ExpeditionAttributes>
+            <Item>
+              <Attribute>PerkTradeShip</Attribute>
+              <Amount>1</Amount>
+            </Item>
+            <Item>
+              <Attribute>PerkSteamShip</Attribute>
+              <Amount>1</Amount>
+            </Item>
+          </ExpeditionAttributes>
+        </ExpeditionAttribute>
+        <ShipMaintenance>
+          <Maintenance>500</Maintenance>
+        </ShipMaintenance>
+        <Sellable>
+          <Baseprice>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>0</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>TradeShip</TemplateName>
+                    <Index>0</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+              <Amount>300000</Amount>
+            </Item>
+          </Baseprice>
+        </Sellable>
+        <Stance/>
+        <Rentable/>
+        <WorldMapSound/>
+        <Pausable/>
+        <ShipIncident/>
+        <SoundEmitterCommandBarks>
+          <BarkMapping>
+            <Selection>
+              <AudioPool>700094</AudioPool>              <!--CargoShip_SelectPool-->
+            </Selection>
+            <SelectionDamaged>
+              <AudioPool>700125</AudioPool>              <!--CargoShip_SelectDamagedPool-->
+            </SelectionDamaged>
+            <MoveCommand>
+              <AudioPool>700095</AudioPool>              <!--CargoShip_MovePool-->
+            </MoveCommand>
+            <EscortCommand>
+              <AudioPool>700127</AudioPool>              <!--CargoShip_EscortPool-->
+            </EscortCommand>
+            <PatrolCommand>
+              <AudioPool>700126</AudioPool>              <!--CargoShip_PatrolPool-->
+            </PatrolCommand>
+          </BarkMapping>
+        </SoundEmitterCommandBarks>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - SHIP - Ice Ship -->
+
+  <!-- START - ADD ICE SHIP TO STEAM SHIPYARD -->
+  <ModOp Type="addNextSibling" GUID='1010521' Path="/Values/Shipyard/AssemblyOptions/Item[Vehicle='100442']">
+    <Item>
+      <Vehicle>1742004283</Vehicle>      <!-- Ice Ship -->
+    </Item>
+  </ModOp>
+  <!-- END - ADD ICE SHIP TO STEAM SHIPYARD -->
+
+  <!-- *************************************** AssetPool *************************************** -->
+
+  <!-- START - ALL PLAYER SHIPS / ALL PLAYER SHIPS CAMPAIGN - AssetPool -->
+  <ModOp Type="add" GUID="700151,270174" Path="/Values/AssetPool/AssetList/">
+    <Item>
+      <Asset>1742004283</Asset>      <!-- Ice Ship -->
+    </Item>
+  </ModOp>
+  <!-- END - ALL PLAYER SHIPS / ALL PLAYER SHIPS CAMPAIGN - AssetPool -->
+
+  <!-- *************************************** PlayerCounterContextPool *************************************** -->
+
+  <!-- START - ALL PLAYER SHIPS - PlayerCounterContextPool -->
+  <ModOp Type="add" GUID="700155,700065" Path="/Values/PlayerCounterContextPool/Contexts/">
+    <Item>
+      <Asset>1742004283</Asset>      <!-- Ice Ship -->
+    </Item>
+  </ModOp>
+  <!-- END - ALL PLAYER SHIPS - PlayerCounterContextPool -->
+
+  <!-- *************************************** ItemEffectTargetPool *************************************** -->
+
+  <!-- START - ALL SHIPS - ItemEffectTargetPool-->
+  <ModOp Type="add" GUID="191454" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
+    <Item>
+      <GUID>1742004283</GUID>      <!-- Ice Ship -->
+    </Item>
+  </ModOp>
+  <!-- END - ALL SHIPS - ItemEffectTargetPool -->
+
+  <!-- START - ALL STEAMSHIPS - ItemEffectTargetPool -->
+  <ModOp Type="add" GUID="191456" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
+    <Item>
+      <GUID>1742004283</GUID>      <!-- Ice Ship -->
+    </Item>
+  </ModOp>
+  <!-- END - ALL STEAMSHIPS - ItemEffectTargetPool -->
+
+  <!-- START - ALL TRADE SHIP - ItemEffectTargetPool -->
+  <ModOp Type="add" GUID="193982" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
+    <Item>
+      <GUID>1742004283</GUID>      <!-- Ice Ship -->
+    </Item>
+  </ModOp>
+  <!-- END - ALL TRADE SHIP - ItemEffectTargetPool -->
+
+  <!-- START - ALL STEAL HULL SHIPS - ItemEffectTargetPool -->
+  <ModOp Type="add" GUID="1404" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
+    <Item>
+      <GUID>1742004283</GUID>      <!-- Ice Ship -->
+    </Item>
+  </ModOp>
+  <!-- END - ALL STEAL HULL SHIPS - ItemEffectTargetPool -->
+</ModOps>
+  

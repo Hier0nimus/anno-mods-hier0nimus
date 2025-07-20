@@ -1,0 +1,3711 @@
+<!-- 
+  Mining
+-->
+
+<ModOps>
+
+  <!-- START - ADD PRODUCT ICE BLOCKS -->
+  <ModOp Type="addNextSibling" GUID='112708'>
+    <Asset>
+      <Template>Product</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004273</GUID>
+          <Name>Ice Blocks</Name>
+          <IconFilename>data\ui\2kimages\main\3dicons\campaign\icon_iceberg.png</IconFilename>
+          <InfoDescription>1742004274</InfoDescription>
+        </Standard>
+        <Locked />
+        <Product>
+          <StorageLevel>Building</StorageLevel>
+          <ProductCategory>11703</ProductCategory>
+          <BasePrice>750</BasePrice>
+          <CivLevel>1</CivLevel>
+          <IsStrategicResource>1</IsStrategicResource>
+          <AssociatedRegion>Moderate;Colony01;Arctic;Africa</AssociatedRegion>
+          <ProductionRegions>
+            <Item>
+              <RegionType>Moderate</RegionType>
+            </Item>
+            <Item>
+              <RegionType>Colony01</RegionType>
+            </Item>
+            <Item>
+              <RegionType>Africa</RegionType>
+              <RequiredDLCs>
+                <Item>
+                  <RequiredDLC>410071</RequiredDLC>
+                </Item>
+              </RequiredDLCs>
+            </Item>
+            <Item>
+              <RegionType>Arctic</RegionType>
+              <RequiredDLCs>
+                <Item>
+                  <RequiredDLC>410042</RequiredDLC>
+                </Item>
+              </RequiredDLCs>
+            </Item>
+          </ProductionRegions>
+        </Product>
+        <ExpeditionAttribute />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - ADD PRODUCT ICE BLOCKS -->
+
+  <!-- START - PRODUCTSTORAGELIST - ICE -->
+  <ModOp Type="addNextSibling" GUID='501995'>
+    <Asset>
+      <Template>ProductStorageList</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004279</GUID>
+          <Name>Ice Storage</Name>
+        </Standard>
+        <ProductStorageList>
+          <ProductList>
+            <Item>
+              <Product>1742004273</Product>
+            </Item>
+          </ProductList>
+        </ProductStorageList>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - PRODUCTSTORAGELIST - ICE -->
+
+  <!-- START ADD GOOD TO StandardOilHarborStorageList-->
+  <ModOp Type="add" GUID='120056' Path="/Values/ProductStorageList/ProductList">
+    <Item>
+      <Product>1742004273</Product>      <!-- Ice Blocks -->
+    </Item>
+  </ModOp>
+  <!-- END ADD GOOD TO StandardOilHarborStorageList-->
+
+  <!-- START ADD GOOD TO STRATEGIC GOODS-->
+  <ModOp Type="add" GUID='501961' Path="/Values/ProductList/List">
+    <Item>
+      <Product>1742004273</Product>      <!-- Ice Blocks -->
+    </Item>
+  </ModOp>
+  <!-- END ADD GOOD TO STRATEGIC GOODS-->
+
+  <!-- START - ADD PRODUCT ICE BLOCKS TO TRADEROUTEFEATURE -->
+  <ModOp Type="add" GUID='140011' Path="/Values/TradeRouteFeature/TransportationTypes/Normal/ExcludingGoods/">
+    <Item>
+      <Good>1742004273</Good>      <!--Ice Blocks-->
+    </Item>
+  </ModOp>
+  <ModOp Type="add" GUID='140011' Path="/Values/TradeRouteFeature/TransportationTypes/Charter/ExcludingGoods/">
+    <Item>
+      <Good>1742004273</Good>      <!--Ice Blocks-->
+    </Item>
+  </ModOp>
+  <ModOp Type="add" GUID='140011' Path="/Values/TradeRouteFeature/TransportationTypes/Oil/RestrictedGood/">
+    <Item>
+      <Good>1742004273</Good>      <!--Ice Blocks-->
+    </Item>
+  </ModOp>
+  <!-- END - ADD PRODUCT ICE BLOCKS TO TRADEROUTEFEATURE -->
+
+  <!-- START - CHANGE OIL ROUTES TO STRATEGIC ROUTES -->
+  <ModOp Type="merge" GUID='500748' Path="/Values/Standard/IconFilename">
+    <IconFilename>data/ui/2kimages/main/icons/icon_promo_decree_2d.png</IconFilename>
+  </ModOp>
+  <!-- END - ADD PRODUCT ICE BLOCKS TO TRADEROUTEFEATURE -->
+
+  <!-- START - BUILDING - Ice Harvesting Site -->
+  <ModOp Type="addNextSibling" GUID='116029'>
+    <Asset>
+      <Template>SlotFactoryBuilding7_Arctic</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004275</GUID>
+          <Name>Ice Harvesting Site</Name>
+          <IconFilename>data\ui\2kimages\main\3dicons\campaign\icon_iceberg.png</IconFilename>
+          <InfoDescription>1742004276</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildModeRandomRotation>90</BuildModeRandomRotation>
+          <AssociatedRegions>Arctic</AssociatedRegions>
+          <SecondPartyRelevant>0</SecondPartyRelevant>
+        </Building>
+        <Blocking>
+          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+        </Blocking>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!--Money-->
+              <Amount>5000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!--timber-->
+              <Amount>20</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!--beams-->
+              <Amount>5</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/dlc03/graphics/buildings/production/mining_colony03_01/mining_colony03_01.cfg</Filename>
+            </Item>
+          </Variations>
+          <Skins>
+            <DefaultSkinName>1742004275</DefaultSkinName>
+            <DefaultSkinDescription>1742004276</DefaultSkinDescription>
+            <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>
+          </Skins>
+        </Object>
+        <Mesh/>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>Arctic_Resident_tier02_atWork</ParticipantMessageArcheType>
+        </Selection>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Ice Harvesting Site</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>35086</LineID>
+        </Text>
+        <Constructable/>
+        <Locked/>
+        <SoundEmitter>
+          <IncidentSounds>
+            <InfectedFire>
+              <Item>
+                <Sound>214659</Sound>
+                <!--wwe_sfx_bld_inc_burn-->
+              </Item>
+            </InfectedFire>
+            <ExplosionOneShots>
+              <Item>
+                <Sound>203849</Sound>
+                <!--wwe_sfx_aui_destroy_small-->
+              </Item>
+            </ExplosionOneShots>
+          </IncidentSounds>
+        </SoundEmitter>
+        <FeedbackController/>
+        <Infolayer/>
+        <UpgradeList/>
+        <Factory7/>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1591</Product>              <!-- FakeInputMineralResource-->
+              <StorageAmount>7</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <FactoryOutputs>
+            <Item>
+              <Product>1742004273</Product>              <!--Ice Blocks-->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+          </FactoryOutputs>
+          <CycleTime>60</CycleTime>
+          <IsMainFactory>1</IsMainFactory>
+        </FactoryBase>
+        <Slot>
+          <SlotType>GoldOre</SlotType>
+          <WorkArea>116031</WorkArea>          <!--mining_arctic_02_workarea (Gold Workarea)-->
+        </Slot>
+        <AmbientMoodProvider>
+          <AmbientMood>IndustryHeavy</AmbientMood>
+          <Murmur>Arctic_Mine</Murmur>
+          <GlacierMurmur>Arctic_Mine</GlacierMurmur>
+        </AmbientMoodProvider>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <!--Money-->
+              <Amount>400</Amount>
+              <InactiveAmount>200</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>112654</Product>
+              <!--arctic workforce 2-->
+              <Amount>100</Amount>
+              <ShutdownThreshold>0.2</ShutdownThreshold>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+          <MaximumHitPoints>1500</MaximumHitPoints>
+        </Attackable>
+        <Pausable/>
+        <IncidentInfectable>
+          <Infectable>
+            <Riot>
+              <Base>0</Base>
+              <Escalated>0</Escalated>
+            </Riot>
+            <Illness>
+              <Escalated>0</Escalated>
+            </Illness>
+          </Infectable>
+          <Explosion>
+            <ExplosionCoreDamage>2000</ExplosionCoreDamage>
+            <DamageExplosionCheckMax>40</DamageExplosionCheckMax>
+          </Explosion>
+          <IncidentInfectionChanceFactors>
+            <Fire>
+              <BaseChance>10</BaseChance>
+              <DensityFactor>0.1</DensityFactor>
+              <DensityDistance>20</DensityDistance>
+            </Fire>
+            <Riot>
+              <FactoryOvertimeFactor>0</FactoryOvertimeFactor>
+              <FactoryUndertimeFactor>0</FactoryUndertimeFactor>
+              <FactoryHappinessFactor>0</FactoryHappinessFactor>
+              <ResidenceHappinessFactor>0</ResidenceHappinessFactor>
+              <HappinessMin>0</HappinessMin>
+              <HappinessMax>0</HappinessMax>
+            </Riot>
+            <Illness>
+              <ResidenceSatisfactionFactor>0</ResidenceSatisfactionFactor>
+              <HappinessMin>0</HappinessMin>
+              <HappinessMax>0</HappinessMax>
+              <SatisfactionThreshold>0</SatisfactionThreshold>
+            </Illness>
+            <Explosion>
+              <BaseChance>0</BaseChance>
+              <FactoryProductivityFactor>0.025</FactoryProductivityFactor>
+              <HappinessMin>0</HappinessMin>
+              <HappinessMax>0</HappinessMax>
+              <SatisfactionThreshold>0</SatisfactionThreshold>
+            </Explosion>
+          </IncidentInfectionChanceFactors>
+        </IncidentInfectable>
+        <Culture/>
+        <Industrializable>
+          <BoostedByIndustrialization>0</BoostedByIndustrialization>
+        </Industrializable>
+        <Heated/>
+        <Electrifiable/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - BUILDING - Ice Harvesting Site -->
+
+  <!-- START - BUILDING - Strategic Harbour (AR) -->
+  <ModOp Type="addNextSibling" GUID='112670'>
+    <Asset>
+      <Template>HarborWarehouseStrategic</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004281</GUID>
+          <Name>Strategic Harbour (AR)</Name>
+          <IconFilename>data/graphics/icons/icon_ice_harbour.png</IconFilename>
+          <InfoDescription>1742004282</InfoDescription>          <!--Oil Harbor Infocorner-->
+        </Standard>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Strategic Harbour</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>7028</LineID>
+        </Text>
+        <Blocking>
+          <GroundDecalAsset>0</GroundDecalAsset>
+          <GroundDecalInvisible>0</GroundDecalInvisible>
+          <HasBuildingBaseTiles>0</HasBuildingBaseTiles>
+        </Blocking>
+        <Building>
+          <BuildingCategoryName>11150</BuildingCategoryName>          <!--Harbor Building-->
+          <Destructable>1</Destructable>
+          <AssociatedRegions>Arctic</AssociatedRegions>
+          <SecondPartyRelevant>0</SecondPartyRelevant>
+        </Building>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!--Money-->
+              <Amount>10000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!--timber-->
+              <Amount>20</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!--bricks-->
+              <Amount>25</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!--beams-->
+              <Amount>20</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>              <!--window-->
+              <Amount>15</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010202</Ingredient>              <!--concrete-->
+              <Amount>15</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Selection>
+          <GUIType>RouteServiceModule</GUIType>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+        </Selection>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/special/harbor_14/harbor_14_01.cfg</Filename>
+            </Item>
+          </Variations>
+          <Skins>
+            <DefaultSkinName>1742004281</DefaultSkinName>
+            <DefaultSkinDescription>1742004282</DefaultSkinDescription>
+            <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>            <!--Classic-->
+          </Skins>
+        </Object>
+        <Constructable/>
+        <Mesh/>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>200896</Sound>              <!--wwe_sfx_bld_harbor_typeCluster_tag-->
+            </Item>
+            <Item>
+              <Sound>200920</Sound>              <!--wwe_sfx_bld_harbor_14_lp-->
+            </Item>
+          </ActiveSounds>
+          <IncidentSounds>
+            <InfectedFire>
+              <Item>
+                <Sound>214659</Sound>                <!--wwe_sfx_bld_inc_burn-->
+              </Item>
+            </InfectedFire>
+          </IncidentSounds>
+          <BuildingRuined>
+            <Item>
+              <Sound>203848</Sound>              <!--wwe_sfx_aui_destroy_big-->
+            </Item>
+          </BuildingRuined>
+          <BuildingRepaired>
+            <Item>
+              <Sound>203866</Sound>              <!--wwe_sfx_aui_bld_3d_renovate-->
+            </Item>
+          </BuildingRepaired>
+        </SoundEmitter>
+        <Locked/>
+        <Infolayer/>
+        <FeedbackController/>
+        <Warehouse>
+          <WarehouseStorage>
+            <StorageMax>500</StorageMax>
+          </WarehouseStorage>
+        </Warehouse>
+        <LogisticNode/>
+        <MinimapToken/>
+        <AmbientMoodProvider>
+          <Murmur>Harbor</Murmur>
+        </AmbientMoodProvider>
+        <LoadingPier>
+          <NumOfPiers>1</NumOfPiers>
+          <LoadingSpeed>100</LoadingSpeed>
+          <MinLoadingTime>5</MinLoadingTime>
+        </LoadingPier>
+        <StorageBase>
+          <ProductStorageList>120056</ProductStorageList>          <!--Strategic Goods / Oil-->
+        </StorageBase>
+        <Attackable>
+          <AttackableType>HarbourBuilding</AttackableType>
+          <MaximumHitPoints>5000</MaximumHitPoints>
+          <PausedTimeIfAttacked>0</PausedTimeIfAttacked>
+          <HPBarOffset>5.5</HPBarOffset>
+          <DefenseByAIFactor>400</DefenseByAIFactor>
+          <MoralePower>100</MoralePower>
+          <IslandWarFlag>102303</IslandWarFlag>          <!--island_war_flag1-->
+          <HasRuinState>1</HasRuinState>
+          <ExplosionEffects>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>0</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>HarborWarehouseStrategic</TemplateName>
+                    <Index>0</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+            </Item>
+            <Item>
+              <ExplosionEffectFilePath>data/graphics/effects/military/explosions/harbor_generic_xpl_02.cfg</ExplosionEffectFilePath>
+            </Item>
+          </ExplosionEffects>
+          <ExplosionEffectsMin>3</ExplosionEffectsMin>
+          <ExplosionEffectsMax>5</ExplosionEffectsMax>
+          <SelfHealPerHealTick>5</SelfHealPerHealTick>
+        </Attackable>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>              <!--Money-->
+              <Amount>100</Amount>
+              <InactiveAmount>100</InactiveAmount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Pausable/>
+        <BuildingUnique>
+          <Uniques>
+            <Item>
+              <UniqueType>Mod14</UniqueType>
+              <UniqueScope>Area</UniqueScope>
+            </Item>
+          </Uniques>
+        </BuildingUnique>
+        <UpgradeList/>
+        <TrainStation>
+          <MaxTrainCount>3</MaxTrainCount>
+        </TrainStation>
+        <QuestObject/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - BUILDING - Strategic Harbour (AR) -->
+
+  <!-- START - BUILDING - Strategic Harbour (OW) -->
+  <ModOp Type="addNextSibling" GUID='112670'>
+    <Asset>
+      <Template>HarborWarehouseStrategic</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004392</GUID>
+          <Name>Strategic Harbour (OW)</Name>
+          <IconFilename>data/graphics/icons/icon_ice_harbour.png</IconFilename>
+          <InfoDescription>1742004282</InfoDescription>          <!--Oil Harbor Infocorner-->
+        </Standard>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Strategic Harbour</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>7028</LineID>
+        </Text>
+        <Blocking>
+          <GroundDecalAsset>0</GroundDecalAsset>
+          <GroundDecalInvisible>0</GroundDecalInvisible>
+          <HasBuildingBaseTiles>0</HasBuildingBaseTiles>
+        </Blocking>
+        <Building>
+          <BuildingCategoryName>11150</BuildingCategoryName>          <!--Harbor Building-->
+          <Destructable>1</Destructable>
+          <AssociatedRegions>Moderate</AssociatedRegions>
+          <SecondPartyRelevant>0</SecondPartyRelevant>
+        </Building>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!--Money-->
+              <Amount>10000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!--timber-->
+              <Amount>20</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!--bricks-->
+              <Amount>25</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!--beams-->
+              <Amount>20</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>              <!--window-->
+              <Amount>15</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010202</Ingredient>              <!--concrete-->
+              <Amount>15</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Selection>
+          <GUIType>RouteServiceModule</GUIType>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+        </Selection>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/special/harbor_14/harbor_14_01.cfg</Filename>
+            </Item>
+          </Variations>
+          <Skins>
+            <DefaultSkinName>1742004392</DefaultSkinName>
+            <DefaultSkinDescription>1742004282</DefaultSkinDescription>
+            <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>            <!--Classic-->
+          </Skins>
+        </Object>
+        <Constructable/>
+        <Mesh/>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>200896</Sound>              <!--wwe_sfx_bld_harbor_typeCluster_tag-->
+            </Item>
+            <Item>
+              <Sound>200920</Sound>              <!--wwe_sfx_bld_harbor_14_lp-->
+            </Item>
+          </ActiveSounds>
+          <IncidentSounds>
+            <InfectedFire>
+              <Item>
+                <Sound>214659</Sound>                <!--wwe_sfx_bld_inc_burn-->
+              </Item>
+            </InfectedFire>
+          </IncidentSounds>
+          <BuildingRuined>
+            <Item>
+              <Sound>203848</Sound>              <!--wwe_sfx_aui_destroy_big-->
+            </Item>
+          </BuildingRuined>
+          <BuildingRepaired>
+            <Item>
+              <Sound>203866</Sound>              <!--wwe_sfx_aui_bld_3d_renovate-->
+            </Item>
+          </BuildingRepaired>
+        </SoundEmitter>
+        <Locked/>
+        <Infolayer/>
+        <FeedbackController/>
+        <Warehouse>
+          <WarehouseStorage>
+            <StorageMax>500</StorageMax>
+          </WarehouseStorage>
+        </Warehouse>
+        <LogisticNode/>
+        <MinimapToken/>
+        <AmbientMoodProvider>
+          <Murmur>Harbor</Murmur>
+        </AmbientMoodProvider>
+        <LoadingPier>
+          <NumOfPiers>1</NumOfPiers>
+          <LoadingSpeed>100</LoadingSpeed>
+          <MinLoadingTime>5</MinLoadingTime>
+        </LoadingPier>
+        <StorageBase>
+          <ProductStorageList>120056</ProductStorageList>          <!--Strategic Goods / Oil-->
+        </StorageBase>
+        <Attackable>
+          <AttackableType>HarbourBuilding</AttackableType>
+          <MaximumHitPoints>5000</MaximumHitPoints>
+          <PausedTimeIfAttacked>0</PausedTimeIfAttacked>
+          <HPBarOffset>5.5</HPBarOffset>
+          <DefenseByAIFactor>400</DefenseByAIFactor>
+          <MoralePower>100</MoralePower>
+          <IslandWarFlag>102303</IslandWarFlag>          <!--island_war_flag1-->
+          <HasRuinState>1</HasRuinState>
+          <ExplosionEffects>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>0</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>HarborWarehouseStrategic</TemplateName>
+                    <Index>0</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+            </Item>
+            <Item>
+              <ExplosionEffectFilePath>data/graphics/effects/military/explosions/harbor_generic_xpl_02.cfg</ExplosionEffectFilePath>
+            </Item>
+          </ExplosionEffects>
+          <ExplosionEffectsMin>3</ExplosionEffectsMin>
+          <ExplosionEffectsMax>5</ExplosionEffectsMax>
+          <SelfHealPerHealTick>5</SelfHealPerHealTick>
+        </Attackable>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>              <!--Money-->
+              <Amount>100</Amount>
+              <InactiveAmount>100</InactiveAmount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Pausable/>
+        <BuildingUnique>
+          <Uniques>
+            <Item>
+              <UniqueType>Mod14</UniqueType>
+              <UniqueScope>Area</UniqueScope>
+            </Item>
+          </Uniques>
+        </BuildingUnique>
+        <UpgradeList/>
+        <TrainStation>
+          <MaxTrainCount>3</MaxTrainCount>
+        </TrainStation>
+        <QuestObject/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - BUILDING - Strategic Harbour (OW) -->
+
+  <!-- START - BUILDING - Strategic Harbour (NW) -->
+  <ModOp Type="addNextSibling" GUID='112670'>
+    <Asset>
+      <Template>HarborWarehouseStrategic</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004393</GUID>
+          <Name>Strategic Harbour (NW)</Name>
+          <IconFilename>data/graphics/icons/icon_ice_harbour.png</IconFilename>
+          <InfoDescription>1742004282</InfoDescription>          <!--Oil Harbor Infocorner-->
+        </Standard>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Strategic Harbour</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>7028</LineID>
+        </Text>
+        <Blocking>
+          <GroundDecalAsset>0</GroundDecalAsset>
+          <GroundDecalInvisible>0</GroundDecalInvisible>
+          <HasBuildingBaseTiles>0</HasBuildingBaseTiles>
+        </Blocking>
+        <Building>
+          <BuildingCategoryName>11150</BuildingCategoryName>          <!--Harbor Building-->
+          <Destructable>1</Destructable>
+          <AssociatedRegions>Colony01</AssociatedRegions>
+          <SecondPartyRelevant>0</SecondPartyRelevant>
+        </Building>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!--Money-->
+              <Amount>10000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!--timber-->
+              <Amount>20</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!--bricks-->
+              <Amount>25</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!--beams-->
+              <Amount>20</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>              <!--window-->
+              <Amount>15</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010202</Ingredient>              <!--concrete-->
+              <Amount>15</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Selection>
+          <GUIType>RouteServiceModule</GUIType>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+        </Selection>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/special/harbor_14/harbor_14_01.cfg</Filename>
+            </Item>
+          </Variations>
+          <Skins>
+            <DefaultSkinName>1742004392</DefaultSkinName>
+            <DefaultSkinDescription>1742004282</DefaultSkinDescription>
+            <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>            <!--Classic-->
+          </Skins>
+        </Object>
+        <Constructable/>
+        <Mesh/>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>200896</Sound>              <!--wwe_sfx_bld_harbor_typeCluster_tag-->
+            </Item>
+            <Item>
+              <Sound>200920</Sound>              <!--wwe_sfx_bld_harbor_14_lp-->
+            </Item>
+          </ActiveSounds>
+          <IncidentSounds>
+            <InfectedFire>
+              <Item>
+                <Sound>214659</Sound>                <!--wwe_sfx_bld_inc_burn-->
+              </Item>
+            </InfectedFire>
+          </IncidentSounds>
+          <BuildingRuined>
+            <Item>
+              <Sound>203848</Sound>              <!--wwe_sfx_aui_destroy_big-->
+            </Item>
+          </BuildingRuined>
+          <BuildingRepaired>
+            <Item>
+              <Sound>203866</Sound>              <!--wwe_sfx_aui_bld_3d_renovate-->
+            </Item>
+          </BuildingRepaired>
+        </SoundEmitter>
+        <Locked/>
+        <Infolayer/>
+        <FeedbackController/>
+        <Warehouse>
+          <WarehouseStorage>
+            <StorageMax>500</StorageMax>
+          </WarehouseStorage>
+        </Warehouse>
+        <LogisticNode/>
+        <MinimapToken/>
+        <AmbientMoodProvider>
+          <Murmur>Harbor</Murmur>
+        </AmbientMoodProvider>
+        <LoadingPier>
+          <NumOfPiers>1</NumOfPiers>
+          <LoadingSpeed>100</LoadingSpeed>
+          <MinLoadingTime>5</MinLoadingTime>
+        </LoadingPier>
+        <StorageBase>
+          <ProductStorageList>120056</ProductStorageList>          <!--Strategic Goods / Oil-->
+        </StorageBase>
+        <Attackable>
+          <AttackableType>HarbourBuilding</AttackableType>
+          <MaximumHitPoints>5000</MaximumHitPoints>
+          <PausedTimeIfAttacked>0</PausedTimeIfAttacked>
+          <HPBarOffset>5.5</HPBarOffset>
+          <DefenseByAIFactor>400</DefenseByAIFactor>
+          <MoralePower>100</MoralePower>
+          <IslandWarFlag>102303</IslandWarFlag>          <!--island_war_flag1-->
+          <HasRuinState>1</HasRuinState>
+          <ExplosionEffects>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>0</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>HarborWarehouseStrategic</TemplateName>
+                    <Index>0</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+            </Item>
+            <Item>
+              <ExplosionEffectFilePath>data/graphics/effects/military/explosions/harbor_generic_xpl_02.cfg</ExplosionEffectFilePath>
+            </Item>
+          </ExplosionEffects>
+          <ExplosionEffectsMin>3</ExplosionEffectsMin>
+          <ExplosionEffectsMax>5</ExplosionEffectsMax>
+          <SelfHealPerHealTick>5</SelfHealPerHealTick>
+        </Attackable>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>              <!--Money-->
+              <Amount>100</Amount>
+              <InactiveAmount>100</InactiveAmount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Pausable/>
+        <BuildingUnique>
+          <Uniques>
+            <Item>
+              <UniqueType>Mod14</UniqueType>
+              <UniqueScope>Area</UniqueScope>
+            </Item>
+          </Uniques>
+        </BuildingUnique>
+        <UpgradeList/>
+        <TrainStation>
+          <MaxTrainCount>3</MaxTrainCount>
+        </TrainStation>
+        <QuestObject/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - BUILDING - Strategic Harbour (NW) -->
+
+  <!-- START BUILDING - Mining Institute -->
+  <ModOp GUID="1010358" Type="addNextSibling">
+    <Asset>
+      <Template>IceHarvestingHQ</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004285</GUID>
+          <Name>Mining Institute</Name>
+          <IconFilename>data/graphics/icons/icon_hq_mining.png</IconFilename>
+          <InfoDescription>1742100083</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <AssociatedRegions>Arctic</AssociatedRegions>
+          <SecondPartyRelevant>0</SecondPartyRelevant>
+        </Building>
+        <Blocking />
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>30000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>50</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!-- Bricks - Product -->
+              <Amount>30</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product -->
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>              <!-- Windows - Product -->
+            </Item>
+            <Item>
+              <Ingredient>1010202</Ingredient>              <!-- Reinforced Concrete - Product -->
+            </Item>
+          </Costs>
+        </Cost>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/dlc03/graphics/buildings/public/logistic_colony03_01/logistic_colony03_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Mesh />
+        <Selection />
+        <Text />
+        <Constructable />
+        <Locked />
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>200531</Sound>
+            </Item>
+          </ActiveSounds>
+          <BuildingRepaired>
+            <Item>
+              <Sound>203866</Sound>
+            </Item>
+          </BuildingRepaired>
+        </SoundEmitter>
+        <FeedbackController />
+        <Infolayer />
+        <UpgradeList />
+        <Culture>
+          <CultureSpawnGroup>1</CultureSpawnGroup>
+          <Sets>
+            <Item />
+            <!-- LLT - Itemset -->
+            <Item />
+            <!-- LLB - Itemset -->
+            <Item />
+            <!-- LT - Itemset -->
+            <Item>
+              <Set>1742004290</Set>              <!-- LB - Itemset -->
+            </Item>
+            <Item />
+            <Item>
+              <Set>1742004292</Set>              <!-- M - Itemset -->
+            </Item>
+            <Item />
+            <!-- RT - Itemset -->
+            <Item>
+              <Set>1742004294</Set>              <!-- RB - Itemset -->
+            </Item>
+            <Item/>
+            <!-- RRT - Itemset -->
+            <Item/>
+            <!-- RRB - Itemset -->
+          </Sets>
+          <UndiscoveredSet>1742004289</UndiscoveredSet>          <!-- Mining Institute - Building - Undiscovered head -->
+          <ModuleListHeader>1742004288</ModuleListHeader>          <!-- Mining Institute - Building - Header -->
+          <OpenSetPages>1742004287</OpenSetPages>          <!--  Mining Institute - Building - Module - Button -->
+          <CultureMoodImage>data/ui/2kimages/main/assets/cultural_building_mood_bg/bg_main_museum.png</CultureMoodImage>
+        </Culture>
+        <ModuleOwner>
+          <ModuleLimits>
+            <Connector>
+              <Limit>500</Limit>
+            </Connector>
+          </ModuleLimits>
+          <ConstructionOptions>
+            <Item>
+              <ModuleGUID>1742004296</ModuleGUID>
+            </Item>
+            <Item>
+              <ModuleGUID>1742004277</ModuleGUID>
+            </Item>
+            <Item>
+              <ModuleGUID>1742004275</ModuleGUID>
+            </Item>
+          </ConstructionOptions>
+          <ModuleBuildRadius>20</ModuleBuildRadius>
+        </ModuleOwner>
+        <AmbientMoodProvider/>
+        <LogisticNode />
+        <PublicService/>
+        <Factory7 />
+        <FactoryBase />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>100</Amount>
+            </Item>
+            <Item>
+              <Product>112654</Product>              <!--arctic workforce 2-->
+              <Amount>100</Amount>
+              <ShutdownThreshold>0.2</ShutdownThreshold>
+            </Item>
+          </Maintenances>
+          <ConsumerPriorityAlarmed>2</ConsumerPriorityAlarmed>
+        </Maintenance>
+        <Attackable>
+          <MaximumHitPoints>5000</MaximumHitPoints>
+          <SelfHealPerHealTick>4</SelfHealPerHealTick>
+        </Attackable>
+        <IncidentInfectable>
+          <Explosion>
+            <DamageExplosionChance>0</DamageExplosionChance>
+          </Explosion>
+        </IncidentInfectable>
+        <Pausable />
+        <StreetActivation />
+        <QuestObject />
+        <InfluenceSource />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - Mining Institute -->
+
+  <!-- START BUILDING - Mining Module -->
+  <ModOp GUID="100454" Type="addNextSibling">
+    <Asset>
+      <Template>IceHarvestingModule</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004296</GUID>
+          <Name>Mining Module</Name>
+          <IconFilename>data\ui\2kimages\main\3dicons\ornaments\docklands\docks_ornaments_warehouse_01.png</IconFilename>
+          <InfoDescription>1742004297</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>2498</BuildingCategoryName>
+          <PickingAsset>1742004296</PickingAsset>
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <AssociatedRegions>Arctic</AssociatedRegions>
+          <SecondPartyRelevant>0</SecondPartyRelevant>
+        </Building>
+        <Blocking />
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>10000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>20</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!-- Bricks - Product -->
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product -->
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>              <!-- Windows - Product -->
+            </Item>
+            <Item>
+              <Ingredient>1010202</Ingredient>              <!-- Reinforced Concrete - Product -->
+            </Item>
+          </Costs>
+          <InfluenceCostType/>
+          <InfluenceCostPoints>1</InfluenceCostPoints>
+        </Cost>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/special/campfire/campfire_01.cfg</Filename>
+            </Item>
+            <Item>
+              <Filename>data/graphics/buildings/special/campfire/campfire_02.cfg</Filename>
+            </Item>
+            <Item>
+              <Filename>data/graphics/buildings/special/campfire/campfire_03.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Mesh />
+        <Selection>
+          <GUIType>Guildhouse</GUIType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Text />
+        <Constructable />
+        <Locked />
+        <SoundEmitter />
+        <FeedbackController />
+        <Infolayer />
+        <BuildingModule>
+          <PlazaSize>20</PlazaSize>
+          <ModuleMoodImage>data/ui/2kimages/main/assets/cultural_building_mood_bg/bg_empty_museum.png</ModuleMoodImage>
+        </BuildingModule>
+        <ItemContainer>
+          <SocketCount>1</SocketCount>
+          <SocketAllocation>RadiusBuilding;GuildHouse;TownHall;HarborOffice;Dockland;Lodge;Ship;SailShip;SteamShip;Warship;Tradeship;AirShip;Culture;Museum;Zoo;BotanicGarden;DivingVessel;Mod1</SocketAllocation>
+          <SocketScope>Radius</SocketScope>
+          <SocketScopeRadius>0</SocketScopeRadius>
+        </ItemContainer>
+        <Attackable>
+          <HasRuinState>1</HasRuinState>
+          <SelfHealPerHealTick>4</SelfHealPerHealTick>
+        </Attackable>
+        <QuestObject />
+        <AmbientMoodProvider />
+        <PublicService/>
+        <UpgradeList />
+        <Factory7/>
+        <LogisticNode/>
+        <Pausable />
+        <FactoryBase />
+        <BuffFactory/>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>500</Amount>
+            </Item>
+            <Item>
+              <Product>112654</Product>              <!--arctic workforce 2-->
+              <Amount>10</Amount>
+              <ShutdownThreshold>0.2</ShutdownThreshold>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - Mining Module -->
+
+  <!-- START - Mining Optimizations - Recipelist -->
+  <ModOp GUID="939" Type="addNextSibling">
+    <Asset>
+      <Template>RecipeList</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004305</GUID>
+          <Name>Mining Optimizations</Name>
+          <IconFilename>data/graphics/icons/icon_mining_optimazations.png</IconFilename>
+        </Standard>
+        <RecipeList>
+          <Recipes>
+            <Item>
+              <Recipe>1742004307</Recipe>              <!-- Basic Ice Optimizations - Recipe -->
+            </Item>
+            <Item>
+              <Recipe>1742004310</Recipe>              <!-- Large Ice Optimizations - Recipe -->
+            </Item>
+            <Item>
+              <Recipe>1742004313</Recipe>              <!-- Basic Mining Optimizations - Recipe -->
+            </Item>
+            <Item>
+              <Recipe>1742004316</Recipe>              <!-- Large Mining Optimizations - Recipe -->
+            </Item>
+            <Item>
+              <Recipe>1742004455</Recipe>              <!-- Basic Scrap Optimizations - Recipe -->
+            </Item>
+            <Item>
+              <Recipe>1742004458</Recipe>              <!-- Large Scrap Optimizations - Recipe -->
+            </Item>
+          </Recipes>
+          <RecipeListType>Factory</RecipeListType>
+          <RecipeListMoodImage>data/ui/2kimages/main/assets/recipebook/mood_images/recipebook_moodimages_assembly_line.png</RecipeListMoodImage>
+          <RecipeListDescription>1742004306</RecipeListDescription>
+        </RecipeList>
+        <Text />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - Mining Optimizations - Recipelist -->
+
+  <ModOp GUID="939" Type="addNextSibling">
+    <!-- START - Basic Ice Optimizations - Recipe -->
+    <Asset>
+      <Template>Recipe</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004307</GUID>
+          <Name>Basic Ice Optimizations</Name>
+          <IconFilename>data/graphics/icons/icon_optimazations_1_ice.png</IconFilename>
+        </Standard>
+        <Text />
+        <Recipe>
+          <RecipeBuilding>1742004309</RecipeBuilding>
+          <RecipeDescriptionText>1742004308</RecipeDescriptionText>
+          <RecipeImage>data/ui/2kimages/main/assets/recipebook/drop_goods_magazine/recipebook_dropgoods_packages.png</RecipeImage>
+          <RecipeIngredientUIData>
+            <Item>
+              <PosX>360</PosX>
+              <PosY>50</PosY>
+              <UICirclePointer>SouthWest</UICirclePointer>
+            </Item>
+            <Item>
+              <PosX>50</PosX>
+              <PosY>240</PosY>
+              <UICirclePointer>NorthEast</UICirclePointer>
+            </Item>
+          </RecipeIngredientUIData>
+          <RecipeUnlockConditionText>135017</RecipeUnlockConditionText>
+        </Recipe>
+        <Locked />
+      </Values>
+    </Asset>
+    <!-- END - Basic Ice Optimizations - Recipe -->
+    <!-- START - Large Ice Optimizations - Recipe -->
+    <Asset>
+      <Template>Recipe</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004310</GUID>
+          <Name>Large Ice Optimizations</Name>
+          <IconFilename>data/graphics/icons/icon_optimazations_2_ice.png</IconFilename>
+        </Standard>
+        <Text />
+        <Recipe>
+          <RecipeBuilding>1742004312</RecipeBuilding>
+          <RecipeDescriptionText>1742004311</RecipeDescriptionText>
+          <RecipeImage>data/ui/2kimages/main/assets/recipebook/drop_goods_magazine/recipebook_dropgoods_packages.png</RecipeImage>
+          <RecipeIngredientUIData>
+            <Item>
+              <PosY>30</PosY>
+              <UICirclePointer>SouthEast</UICirclePointer>
+            </Item>
+            <Item>
+              <PosX>360</PosX>
+              <PosY>40</PosY>
+              <UICirclePointer>SouthWest</UICirclePointer>
+            </Item>
+            <Item>
+              <PosX>50</PosX>
+              <PosY>270</PosY>
+              <UICirclePointer>NorthEast</UICirclePointer>
+            </Item>
+            <Item>
+              <PosX>330</PosX>
+              <PosY>240</PosY>
+              <UICirclePointer>NorthWest</UICirclePointer>
+            </Item>
+          </RecipeIngredientUIData>
+          <RecipeUnlockConditionText>135017</RecipeUnlockConditionText>
+        </Recipe>
+        <Locked />
+      </Values>
+    </Asset>
+    <!-- END - Large Ice Optimizations - Recipe -->
+    <!-- START - Basic Mining Optimizations - Recipe -->
+    <Asset>
+      <Template>Recipe</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004313</GUID>
+          <Name>Basic Mining Optimizations</Name>
+          <IconFilename>data/graphics/icons/icon_mining_optimazations1.png</IconFilename>
+        </Standard>
+        <Text />
+        <Recipe>
+          <RecipeBuilding>1742004315</RecipeBuilding>
+          <RecipeDescriptionText>1742004314</RecipeDescriptionText>
+          <RecipeImage>data/ui/2kimages/main/assets/recipebook/drop_goods_magazine/recipebook_dropgoods_packages.png</RecipeImage>
+          <RecipeIngredientUIData>
+            <Item>
+              <PosX>5</PosX>
+              <PosY>25</PosY>
+              <UICirclePointer>SouthEast</UICirclePointer>
+            </Item>
+            <Item>
+              <PosY>260</PosY>
+              <UICirclePointer>NorthEast</UICirclePointer>
+            </Item>
+          </RecipeIngredientUIData>
+          <RecipeUnlockConditionText>135017</RecipeUnlockConditionText>
+        </Recipe>
+        <Locked />
+      </Values>
+    </Asset>
+    <!-- END - Basic Mining Optimizations - Recipe -->
+    <!-- START - Large Mining Optimizations - Recipe -->
+    <Asset>
+      <Template>Recipe</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004316</GUID>
+          <Name>Large Mining Optimizations</Name>
+          <IconFilename>data/graphics/icons/icon_mining_optimazations2.png</IconFilename>
+        </Standard>
+        <Text />
+        <Recipe>
+          <RecipeBuilding>1742004318</RecipeBuilding>
+          <RecipeDescriptionText>1742004317</RecipeDescriptionText>
+          <RecipeImage>data/ui/2kimages/main/assets/recipebook/drop_goods_magazine/recipebook_dropgoods_packages.png</RecipeImage>
+          <RecipeIngredientUIData>
+            <Item>
+              <PosY>30</PosY>
+              <UICirclePointer>SouthEast</UICirclePointer>
+            </Item>
+            <Item>
+              <PosX>360</PosX>
+              <PosY>50</PosY>
+              <UICirclePointer>SouthWest</UICirclePointer>
+            </Item>
+            <Item>
+              <PosX>20</PosX>
+              <PosY>270</PosY>
+              <UICirclePointer>NorthEast</UICirclePointer>
+            </Item>
+            <Item>
+              <PosX>330</PosX>
+              <PosY>240</PosY>
+              <UICirclePointer>NorthWest</UICirclePointer>
+            </Item>
+          </RecipeIngredientUIData>
+          <RecipeUnlockConditionText>135017</RecipeUnlockConditionText>
+        </Recipe>
+        <Locked />
+      </Values>
+    </Asset>
+    <!-- END - Large Mining Optimizations - Recipe -->
+    <!-- START - Basic Scrap Optimizations - Recipe -->
+    <Asset>
+      <Template>Recipe</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004455</GUID>
+          <Name>Basic Scrap Optimizations</Name>
+          <IconFilename>data/graphics/icons/icon_scrap_optimazations1.png</IconFilename>
+        </Standard>
+        <Text />
+        <Recipe>
+          <RecipeBuilding>1742004457</RecipeBuilding>
+          <RecipeDescriptionText>1742004456</RecipeDescriptionText>
+          <RecipeImage>data/ui/2kimages/main/assets/recipebook/drop_goods_magazine/recipebook_dropgoods_packages.png</RecipeImage>
+          <RecipeIngredientUIData>
+            <Item>
+              <PosX>20</PosX>
+              <PosY>50</PosY>
+              <UICirclePointer>SouthEast</UICirclePointer>
+            </Item>
+            <Item>
+              <PosY>230</PosY>
+              <UICirclePointer>NorthEast</UICirclePointer>
+            </Item>
+          </RecipeIngredientUIData>
+          <RecipeUnlockConditionText>135017</RecipeUnlockConditionText>
+        </Recipe>
+        <Locked />
+      </Values>
+    </Asset>
+    <!-- END - Basic Scrap Optimizations - Recipe -->
+    <!-- START - Large Scrap Optimizations - Recipe -->
+    <Asset>
+      <Template>Recipe</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004458</GUID>
+          <Name>Large Scrap Optimizations</Name>
+          <IconFilename>data/graphics/icons/icon_scrap_optimazations2.png</IconFilename>
+        </Standard>
+        <Text />
+        <Recipe>
+          <RecipeBuilding>1742004460</RecipeBuilding>
+          <RecipeDescriptionText>1742004459</RecipeDescriptionText>
+          <RecipeImage>data/ui/2kimages/main/assets/recipebook/drop_goods_magazine/recipebook_dropgoods_packages.png</RecipeImage>
+          <RecipeIngredientUIData>
+            <Item>
+              <PosY>15</PosY>
+              <UICirclePointer>SouthEast</UICirclePointer>
+            </Item>
+            <Item>
+              <PosX>300</PosX>
+              <PosY>25</PosY>
+              <UICirclePointer>SouthWest</UICirclePointer>
+            </Item>
+            <Item>
+              <PosX>30</PosX>
+              <PosY>200</PosY>
+              <UICirclePointer>NorthEast</UICirclePointer>
+            </Item>
+            <Item>
+              <PosX>360</PosX>
+              <PosY>200</PosY>
+              <UICirclePointer>NorthWest</UICirclePointer>
+            </Item>
+          </RecipeIngredientUIData>
+          <RecipeUnlockConditionText>135017</RecipeUnlockConditionText>
+        </Recipe>
+        <Locked />
+      </Values>
+    </Asset>
+    <!-- END - Large Scrap Optimizations - Recipe -->
+  </ModOp>
+
+  <!-- START MINING OPTIMAZATIONS (BLANK) - Building -->
+  <ModOp Type="addNextSibling" GUID='1010263'>
+    <Asset>
+      <Template>Mall</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004319</GUID>
+          <Name>Mining Optimizations (Blank)</Name>
+          <IconFilename>data/graphics/icons/icon_mining_optimazations.png</IconFilename>
+          <InfoDescription>1742004320</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11151</BuildingCategoryName>
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <AssociatedRegions>Arctic</AssociatedRegions>
+          <SecondPartyRelevant>0</SecondPartyRelevant>
+        </Building>
+        <Blocking />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/dlc03/graphics/buildings/public/logistic_colony03_01/logistic_colony03_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>10000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!-- Bricks - Product -->
+              <Amount>15</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product -->
+              <Amount>8</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Mesh />
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>Arctic_Resident_tier02_atWork</ParticipantMessageArcheType>
+        </Selection>
+        <Text />
+        <Constructable />
+        <Locked>
+          <DLCDependency>410085</DLCDependency>
+        </Locked>
+        <SoundEmitter />
+        <FactoryBase>
+          <CycleTime>60</CycleTime>
+          <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+          <ClampedMaxTransporterLogisticCost>85</ClampedMaxTransporterLogisticCost>
+        </FactoryBase>
+        <LogisticNode>
+          <TransporterCountMax>6</TransporterCountMax>
+        </LogisticNode>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>              <!--Money-->
+              <Amount>250</Amount>
+              <InactiveAmount>200</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>112654</Product>              <!--arctic workforce 2-->
+              <Amount>100</Amount>
+              <ShutdownThreshold>0.2</ShutdownThreshold>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Industrializable />
+        <IncidentInfectable />
+        <Electrifiable>
+          <ElectricityBoost>0</ElectricityBoost>
+          <ElectrifiedEffect>0</ElectrifiedEffect>
+          <ShowPowerInObjectMenu>0</ShowPowerInObjectMenu>
+        </Electrifiable>
+        <AmbientMoodProvider>
+          <Murmur>Harbor</Murmur>
+        </AmbientMoodProvider>
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+          <MaximumHitPoints>2500</MaximumHitPoints>
+          <HasRuinState>1</HasRuinState>
+          <SelfHealPerHealTick>4</SelfHealPerHealTick>
+        </Attackable>
+        <UpgradeList />
+        <Pausable>
+          <CanPauseManually>0</CanPauseManually>
+        </Pausable>
+        <FeedbackController />
+        <Infolayer />
+        <BuffFactory>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <ProductionBuffDistance>10</ProductionBuffDistance>
+          <ProvidesPublicServiceNeed>0</ProvidesPublicServiceNeed>
+        </BuffFactory>
+        <RecipeBuilding>
+          <RecipeList>1742004305</RecipeList>          <!-- Mining Optimizations - Recipelist -->
+          <IsBlank>1</IsBlank>
+        </RecipeBuilding>
+        <Culture />
+        <Heated>
+          <RequiresHeat>1</RequiresHeat>
+        </Heated>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END MINING OPTIMAZATIONS (BLANK) - Building -->
+
+  <!-- START MINING OPTIMAZATIONS ICE (BASIC) - Building -->
+  <ModOp Type="addNextSibling" GUID='1010263'>
+    <Asset>
+      <Template>Mall</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004309</GUID>
+          <Name>Basic Ice Optimizations Module</Name>
+          <IconFilename>data/graphics/icons/icon_optimazations_1_ice.png</IconFilename>
+          <InfoDescription>1742004320</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11151</BuildingCategoryName>
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <AssociatedRegions>Arctic</AssociatedRegions>
+          <SecondPartyRelevant>0</SecondPartyRelevant>
+        </Building>
+        <Blocking />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/dlc03/graphics/buildings/public/logistic_colony03_01/logistic_colony03_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>10000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>20</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!-- Bricks - Product -->
+              <Amount>30</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product -->
+              <Amount>15</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Mesh />
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>Arctic_Resident_tier02_atWork</ParticipantMessageArcheType>
+        </Selection>
+        <Text />
+        <Constructable />
+        <Locked>
+          <DLCDependency>410085</DLCDependency>
+        </Locked>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>280018</Sound>
+            </Item>
+          </ActiveSounds>
+        </SoundEmitter>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1800000302</Product>              <!-- Sawdust - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1500010153</Product>              <!-- Tools - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <CycleTime>120</CycleTime>
+          <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+          <ClampedMaxTransporterLogisticCost>85</ClampedMaxTransporterLogisticCost>
+        </FactoryBase>
+        <LogisticNode />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>              <!--Money-->
+              <Amount>250</Amount>
+              <InactiveAmount>200</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>112654</Product>              <!--arctic workforce 2-->
+              <Amount>100</Amount>
+              <ShutdownThreshold>0.2</ShutdownThreshold>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Industrializable />
+        <IncidentInfectable />
+        <Electrifiable>
+          <ElectricityBoost>0</ElectricityBoost>
+          <ElectrifiedEffect>0</ElectrifiedEffect>
+          <ShowPowerInObjectMenu>0</ShowPowerInObjectMenu>
+        </Electrifiable>
+        <AmbientMoodProvider>
+          <Murmur>Harbor</Murmur>
+        </AmbientMoodProvider>
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+          <MaximumHitPoints>2500</MaximumHitPoints>
+          <HasRuinState>1</HasRuinState>
+          <SelfHealPerHealTick>4</SelfHealPerHealTick>
+        </Attackable>
+        <UpgradeList />
+        <Pausable />
+        <FeedbackController />
+        <Infolayer />
+        <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742004321</ProductivityBuff>              <!-- Basic Ice Optimizations Buff - Buff -->
+            </Item>
+          </ProductionBuffs>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <ProductionBuffDistance>10</ProductionBuffDistance>
+          <PublicServiceData />
+        </BuffFactory>
+        <RecipeBuilding>
+          <RecipeList>1742004305</RecipeList>          <!-- Mining Optimizations - Recipelist -->
+        </RecipeBuilding>
+        <Culture />
+        <Heated>
+          <RequiresHeat>1</RequiresHeat>
+        </Heated>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END MINING OPTIMAZATIONS ICE (BASIC) - Building -->
+
+  <!-- START MINING OPTIMAZATIONS ICE (LARGE) - Building -->
+  <ModOp Type="addNextSibling" GUID='1010263'>
+    <Asset>
+      <Template>Mall</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004312</GUID>
+          <Name>Large Ice Optimizations Module</Name>
+          <IconFilename>data/graphics/icons/icon_optimazations_2_ice.png</IconFilename>
+          <InfoDescription>1742004320</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11151</BuildingCategoryName>
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <AssociatedRegions>Arctic</AssociatedRegions>
+          <SecondPartyRelevant>0</SecondPartyRelevant>
+        </Building>
+        <Blocking />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/dlc03/graphics/buildings/public/logistic_colony03_01/logistic_colony03_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>10000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>20</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!-- Bricks - Product -->
+              <Amount>30</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product -->
+              <Amount>15</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Mesh />
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>Arctic_Resident_tier02_atWork</ParticipantMessageArcheType>
+        </Selection>
+        <Text />
+        <Constructable />
+        <Locked>
+          <DLCDependency>410085</DLCDependency>
+        </Locked>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>280018</Sound>
+            </Item>
+          </ActiveSounds>
+        </SoundEmitter>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1800000302</Product>              <!-- Sawdust - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1500010153</Product>              <!-- Tools - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1010224</Product>              <!-- Steam Motors - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>135130</Product>              <!-- Ethanol - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <CycleTime>240</CycleTime>
+          <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+          <ClampedMaxTransporterLogisticCost>85</ClampedMaxTransporterLogisticCost>
+        </FactoryBase>
+        <LogisticNode />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>              <!--Money-->
+              <Amount>250</Amount>
+              <InactiveAmount>200</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>112654</Product>              <!--arctic workforce 2-->
+              <Amount>100</Amount>
+              <ShutdownThreshold>0.2</ShutdownThreshold>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Industrializable />
+        <IncidentInfectable />
+        <Electrifiable>
+          <ElectricityBoost>0</ElectricityBoost>
+          <ElectrifiedEffect>0</ElectrifiedEffect>
+          <ShowPowerInObjectMenu>0</ShowPowerInObjectMenu>
+        </Electrifiable>
+        <AmbientMoodProvider>
+          <Murmur>Harbor</Murmur>
+        </AmbientMoodProvider>
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+          <MaximumHitPoints>2500</MaximumHitPoints>
+          <HasRuinState>1</HasRuinState>
+          <SelfHealPerHealTick>4</SelfHealPerHealTick>
+        </Attackable>
+        <UpgradeList />
+        <Pausable />
+        <FeedbackController />
+        <Infolayer />
+        <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742004323</ProductivityBuff>              <!-- Large Ice Optimizations Buff - Buff -->
+            </Item>
+          </ProductionBuffs>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <ProductionBuffDistance>10</ProductionBuffDistance>
+          <PublicServiceData />
+        </BuffFactory>
+        <RecipeBuilding>
+          <RecipeList>1742004305</RecipeList>          <!-- Mining Optimizations - Recipelist -->
+        </RecipeBuilding>
+        <Culture />
+        <Heated>
+          <RequiresHeat>1</RequiresHeat>
+        </Heated>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END MINING OPTIMAZATIONS ICE (LARGE) - Building -->
+
+  <!-- START MINING OPTIMAZATIONS (BASIC) - Building -->
+  <ModOp Type="addNextSibling" GUID='1010263'>
+    <Asset>
+      <Template>Mall</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004315</GUID>
+          <Name>Basic Mining Optimizations Module</Name>
+          <IconFilename>data/graphics/icons/icon_mining_optimazations1.png</IconFilename>
+          <InfoDescription>1742004320</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11151</BuildingCategoryName>
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <AssociatedRegions>Arctic</AssociatedRegions>
+          <SecondPartyRelevant>0</SecondPartyRelevant>
+        </Building>
+        <Blocking />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/dlc03/graphics/buildings/public/logistic_colony03_01/logistic_colony03_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>10000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>20</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!-- Bricks - Product -->
+              <Amount>30</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product -->
+              <Amount>15</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Mesh />
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>Arctic_Resident_tier02_atWork</ParticipantMessageArcheType>
+        </Selection>
+        <Text />
+        <Constructable />
+        <Locked>
+          <DLCDependency>410085</DLCDependency>
+        </Locked>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>280018</Sound>
+            </Item>
+          </ActiveSounds>
+        </SoundEmitter>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1010196</Product>              <!-- Timber - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1500010153</Product>              <!-- Tools - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <CycleTime>120</CycleTime>
+          <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+          <ClampedMaxTransporterLogisticCost>85</ClampedMaxTransporterLogisticCost>
+        </FactoryBase>
+        <LogisticNode />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>              <!--Money-->
+              <Amount>250</Amount>
+              <InactiveAmount>200</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>112654</Product>              <!--arctic workforce 2-->
+              <Amount>100</Amount>
+              <ShutdownThreshold>0.2</ShutdownThreshold>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Industrializable />
+        <IncidentInfectable />
+        <Electrifiable>
+          <ElectricityBoost>0</ElectricityBoost>
+          <ElectrifiedEffect>0</ElectrifiedEffect>
+          <ShowPowerInObjectMenu>0</ShowPowerInObjectMenu>
+        </Electrifiable>
+        <AmbientMoodProvider>
+          <Murmur>Harbor</Murmur>
+        </AmbientMoodProvider>
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+          <MaximumHitPoints>2500</MaximumHitPoints>
+          <HasRuinState>1</HasRuinState>
+          <SelfHealPerHealTick>4</SelfHealPerHealTick>
+        </Attackable>
+        <UpgradeList />
+        <Pausable />
+        <FeedbackController />
+        <Infolayer />
+        <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742004325</ProductivityBuff>              <!-- Basic Mining Optimizations Buff - Buff -->
+            </Item>
+          </ProductionBuffs>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <ProductionBuffDistance>10</ProductionBuffDistance>
+          <PublicServiceData />
+        </BuffFactory>
+        <RecipeBuilding>
+          <RecipeList>1742004305</RecipeList>          <!-- Mining Optimizations - Recipelist -->
+        </RecipeBuilding>
+        <Culture />
+        <Heated>
+          <RequiresHeat>1</RequiresHeat>
+        </Heated>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END MINING OPTIMAZATIONS (BASIC) - Building -->
+
+  <!-- START MINING OPTIMAZATIONS (LARGE) - Building -->
+  <ModOp Type="addNextSibling" GUID='1010263'>
+    <Asset>
+      <Template>Mall</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004318</GUID>
+          <Name>Large Mining Optimizations Module</Name>
+          <IconFilename>data/graphics/icons/icon_mining_optimazations2.png</IconFilename>
+          <InfoDescription>1742004320</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11151</BuildingCategoryName>
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <AssociatedRegions>Arctic</AssociatedRegions>
+          <SecondPartyRelevant>0</SecondPartyRelevant>
+        </Building>
+        <Blocking />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/dlc03/graphics/buildings/public/logistic_colony03_01/logistic_colony03_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>10000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>20</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!-- Bricks - Product -->
+              <Amount>30</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product -->
+              <Amount>15</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Mesh />
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>Arctic_Resident_tier02_atWork</ParticipantMessageArcheType>
+        </Selection>
+        <Text />
+        <Constructable />
+        <Locked>
+          <DLCDependency>410085</DLCDependency>
+        </Locked>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>280018</Sound>
+            </Item>
+          </ActiveSounds>
+        </SoundEmitter>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1010196</Product>              <!-- Timber - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1500010153</Product>              <!-- Tools - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1010222</Product>              <!-- Dynamite - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1010224</Product>              <!-- Steam Motors - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <CycleTime>240</CycleTime>
+          <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+          <ClampedMaxTransporterLogisticCost>85</ClampedMaxTransporterLogisticCost>
+        </FactoryBase>
+        <LogisticNode />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>              <!--Money-->
+              <Amount>250</Amount>
+              <InactiveAmount>200</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>112654</Product>              <!--arctic workforce 2-->
+              <Amount>100</Amount>
+              <ShutdownThreshold>0.2</ShutdownThreshold>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Industrializable />
+        <IncidentInfectable />
+        <Electrifiable>
+          <ElectricityBoost>0</ElectricityBoost>
+          <ElectrifiedEffect>0</ElectrifiedEffect>
+          <ShowPowerInObjectMenu>0</ShowPowerInObjectMenu>
+        </Electrifiable>
+        <AmbientMoodProvider>
+          <Murmur>Harbor</Murmur>
+        </AmbientMoodProvider>
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+          <MaximumHitPoints>2500</MaximumHitPoints>
+          <HasRuinState>1</HasRuinState>
+          <SelfHealPerHealTick>4</SelfHealPerHealTick>
+        </Attackable>
+        <UpgradeList />
+        <Pausable />
+        <FeedbackController />
+        <Infolayer />
+        <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742004327</ProductivityBuff>              <!-- Large Mining Optimizations Buff - Buff -->
+            </Item>
+          </ProductionBuffs>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <ProductionBuffDistance>10</ProductionBuffDistance>
+          <PublicServiceData />
+        </BuffFactory>
+        <RecipeBuilding>
+          <RecipeList>1742004305</RecipeList>          <!-- Mining Optimizations - Recipelist -->
+        </RecipeBuilding>
+        <Culture />
+        <Heated>
+          <RequiresHeat>1</RequiresHeat>
+        </Heated>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END MINING OPTIOMAZATIONS (LARGE) - Building -->
+
+  <!-- START SCRAP OPTIMAZATIONS (BASIC) - Building -->
+  <ModOp Type="addNextSibling" GUID='1010263'>
+    <Asset>
+      <Template>Mall</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004457</GUID>
+          <Name>Basic Scrap Optimizations Module</Name>
+          <IconFilename>data/graphics/icons/icon_scrap_optimazations1.png</IconFilename>
+          <InfoDescription>1742004456</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11151</BuildingCategoryName>
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <AssociatedRegions>Arctic</AssociatedRegions>
+          <SecondPartyRelevant>0</SecondPartyRelevant>
+        </Building>
+        <Blocking />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/dlc03/graphics/buildings/public/logistic_colony03_01/logistic_colony03_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>10000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>20</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!-- Bricks - Product -->
+              <Amount>30</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product -->
+              <Amount>15</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Mesh />
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>Arctic_Resident_tier02_atWork</ParticipantMessageArcheType>
+        </Selection>
+        <Text />
+        <Constructable />
+        <Locked>
+          <DLCDependency>410085</DLCDependency>
+        </Locked>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>280018</Sound>
+            </Item>
+          </ActiveSounds>
+        </SoundEmitter>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1500010153</Product>              <!-- Tools - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1414</Product>              <!-- Lubricant - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <CycleTime>120</CycleTime>
+          <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+          <ClampedMaxTransporterLogisticCost>85</ClampedMaxTransporterLogisticCost>
+        </FactoryBase>
+        <LogisticNode />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>              <!--Money-->
+              <Amount>250</Amount>
+              <InactiveAmount>200</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>112654</Product>              <!--arctic workforce 2-->
+              <Amount>100</Amount>
+              <ShutdownThreshold>0.2</ShutdownThreshold>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Industrializable />
+        <IncidentInfectable />
+        <Electrifiable>
+          <ElectricityBoost>0</ElectricityBoost>
+          <ElectrifiedEffect>0</ElectrifiedEffect>
+          <ShowPowerInObjectMenu>0</ShowPowerInObjectMenu>
+        </Electrifiable>
+        <AmbientMoodProvider>
+          <Murmur>Harbor</Murmur>
+        </AmbientMoodProvider>
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+          <MaximumHitPoints>2500</MaximumHitPoints>
+          <HasRuinState>1</HasRuinState>
+          <SelfHealPerHealTick>4</SelfHealPerHealTick>
+        </Attackable>
+        <UpgradeList />
+        <Pausable />
+        <FeedbackController />
+        <Infolayer />
+        <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742004397</ProductivityBuff>              <!-- Basic Scrap Optimizations Buff - Buff -->
+            </Item>
+          </ProductionBuffs>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <ProductionBuffDistance>10</ProductionBuffDistance>
+          <PublicServiceData />
+        </BuffFactory>
+        <RecipeBuilding>
+          <RecipeList>1742004305</RecipeList>          <!-- Mining Optimizations - Recipelist -->
+        </RecipeBuilding>
+        <Culture />
+        <Heated>
+          <RequiresHeat>1</RequiresHeat>
+        </Heated>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END SCRAP OPTIMAZATIONS (BASIC) - Building -->
+
+  <!-- START SCRAP OPTIMAZATIONS (LARGE) - Building -->
+  <ModOp Type="addNextSibling" GUID='1010263'>
+    <Asset>
+      <Template>Mall</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004460</GUID>
+          <Name>Large Scrap Optimizations Module</Name>
+          <IconFilename>data/graphics/icons/icon_scrap_optimazations2.png</IconFilename>
+          <InfoDescription>1742004459</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildingCategoryName>11151</BuildingCategoryName>
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <AssociatedRegions>Arctic</AssociatedRegions>
+          <SecondPartyRelevant>0</SecondPartyRelevant>
+        </Building>
+        <Blocking />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/dlc03/graphics/buildings/public/logistic_colony03_01/logistic_colony03_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>10000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>20</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!-- Bricks - Product -->
+              <Amount>30</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product -->
+              <Amount>15</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Mesh />
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>Arctic_Resident_tier02_atWork</ParticipantMessageArcheType>
+        </Selection>
+        <Text />
+        <Constructable />
+        <Locked>
+          <DLCDependency>410085</DLCDependency>
+        </Locked>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>280018</Sound>
+            </Item>
+          </ActiveSounds>
+        </SoundEmitter>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1500010153</Product>              <!-- Tools - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>838</Product>              <!-- Aluminium - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1414</Product>              <!-- Lubricant - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1010224</Product>              <!-- Steam Motors - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <CycleTime>240</CycleTime>
+          <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+          <ClampedMaxTransporterLogisticCost>85</ClampedMaxTransporterLogisticCost>
+        </FactoryBase>
+        <LogisticNode />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>              <!--Money-->
+              <Amount>250</Amount>
+              <InactiveAmount>200</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>112654</Product>              <!--arctic workforce 2-->
+              <Amount>100</Amount>
+              <ShutdownThreshold>0.2</ShutdownThreshold>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Industrializable />
+        <IncidentInfectable />
+        <Electrifiable>
+          <ElectricityBoost>0</ElectricityBoost>
+          <ElectrifiedEffect>0</ElectrifiedEffect>
+          <ShowPowerInObjectMenu>0</ShowPowerInObjectMenu>
+        </Electrifiable>
+        <AmbientMoodProvider>
+          <Murmur>Harbor</Murmur>
+        </AmbientMoodProvider>
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+          <MaximumHitPoints>2500</MaximumHitPoints>
+          <HasRuinState>1</HasRuinState>
+          <SelfHealPerHealTick>4</SelfHealPerHealTick>
+        </Attackable>
+        <UpgradeList />
+        <Pausable />
+        <FeedbackController />
+        <Infolayer />
+        <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742004416</ProductivityBuff>              <!-- Large Mining Optimizations Buff - Buff -->
+            </Item>
+          </ProductionBuffs>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <ProductionBuffDistance>10</ProductionBuffDistance>
+          <PublicServiceData />
+        </BuffFactory>
+        <RecipeBuilding>
+          <RecipeList>1742004305</RecipeList>          <!-- Mining Optimizations - Recipelist -->
+        </RecipeBuilding>
+        <Culture />
+        <Heated>
+          <RequiresHeat>1</RequiresHeat>
+        </Heated>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END SCRAP OPTIMAZATIONS (LARGE) - Building -->
+
+  <!-- START - BUILDING - BUILDING - Ice Warehouse (AR) -->
+  <ModOp Type="addNextSibling" GUID='112658'>
+    <Asset>
+      <Template>Warehouse</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004277</GUID>
+          <Name>Ice Warehouse (AR)</Name>
+          <IconFilename>data/graphics/icons/icon_warehouse_ice.png</IconFilename>
+          <InfoDescription>1742004278</InfoDescription>
+        </Standard>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Ice Warehouse</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>6986</LineID>
+        </Text>
+        <Blocking>
+          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+        </Blocking>
+        <Building>
+          <BuildingType>Logistic</BuildingType>
+          <BuildingCategoryName>11151</BuildingCategoryName>          <!--Infrastructure Building-->
+          <SkipUnlockMessage>1</SkipUnlockMessage>
+          <BuildModeRandomRotation>90</BuildModeRandomRotation>
+          <AssociatedRegions>Arctic</AssociatedRegions>
+          <SecondPartyRelevant>0</SecondPartyRelevant>
+        </Building>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <!--Money-->
+              <Amount>500</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>
+              <!--timber-->
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>
+              <!--bricks-->
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>
+              <!--beams-->
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>
+              <!--window-->
+            </Item>
+            <Item>
+              <Ingredient>1010202</Ingredient>
+              <!--concrete-->
+            </Item>
+          </Costs>
+        </Cost>
+        <Selection>
+          <GUIType>RouteServiceModule</GUIType>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+          <ParticipantMessageTrigger>ClickKontor</ParticipantMessageTrigger>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/dlc03/graphics/buildings/public/logistic_colony03_01/logistic_colony03_01.cfg</Filename>
+            </Item>
+          </Variations>
+          <Skins>
+            <DefaultSkinName>1742004277</DefaultSkinName>
+            <DefaultSkinDescription>1742004278</DefaultSkinDescription>            <!--ChangeBuildingSkin_toDefaultSkinDesc-->
+            <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>            <!--Classic-->
+          </Skins>
+        </Object>
+        <Constructable/>
+        <Mesh>
+          <LogoMode>CorporationLogoFromPlayer</LogoMode>
+          <SetCompanyLogo>1</SetCompanyLogo>
+        </Mesh>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>242769</Sound>              <!--wwe_sfx_bld_logistic_arctic_01_lp-->
+            </Item>
+          </ActiveSounds>
+          <IncidentSounds>
+            <ExplosionOneShots>
+              <Item>
+                <Sound>203849</Sound>                <!--wwe_sfx_aui_destroy_small-->
+              </Item>
+            </ExplosionOneShots>
+          </IncidentSounds>
+        </SoundEmitter>
+        <Locked/>
+        <Infolayer/>
+        <FeedbackController/>
+        <Warehouse>
+          <WarehouseStorage>
+            <StorageMax>250</StorageMax>
+          </WarehouseStorage>
+        </Warehouse>
+        <LogisticNode>
+          <QueueConfiguration>
+            <ProcessingQueueParallelCount>20</ProcessingQueueParallelCount>
+          </QueueConfiguration>
+        </LogisticNode>
+        <UpgradeList/>
+        <AmbientMoodProvider>
+          <Murmur>Warehouse</Murmur>
+        </AmbientMoodProvider>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>              <!--Money-->
+              <Amount>20</Amount>
+              <InactiveAmount>20</InactiveAmount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <StorageBase>
+          <ProductStorageList>1742004279</ProductStorageList>          <!--Ice ||||| 120056 - Strategic Goods / Oil-->
+        </StorageBase>
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+          <MaximumHitPoints>2500</MaximumHitPoints>
+          <SelfHealPerHealTick>4</SelfHealPerHealTick>
+        </Attackable>
+        <Pausable/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - BUILDING - Ice Warehouse (AR) -->
+
+  <!-- START - BUILDING - BUILDING - Ice Depot (AR) -->
+  <ModOp Type="addNextSibling" GUID='112670'>
+    <Asset>
+      <BaseAssetGUID>112670</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742004280</GUID>
+          <Name>Ice Depot (AR)</Name>
+          <IconFilename>data/graphics/icons/icon_depot_ice.png</IconFilename>
+          <InfoDescription>1742004278</InfoDescription>
+        </Standard>
+        <Building>
+          <AssociatedRegions>Arctic</AssociatedRegions>
+          <SecondPartyRelevant>0</SecondPartyRelevant>
+        </Building>
+        <Blocking>
+          <GroundDecalAsset>114826</GroundDecalAsset>          <!--Quay System Colony03 Base-->
+          <GroundDecalInvisible>113478</GroundDecalInvisible>          <!--Quay System Colony03 Invisible-->
+        </Blocking>
+        <Mesh/>
+        <Object>
+          <Variations>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>0</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>HarborDepot</TemplateName>
+                    <Index>0</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+              <Filename>data/dlc03/graphics/buildings/special/harbor_colony03_01/harbor_colony03_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <AmbientMoodProvider>
+          <Murmur>Warehouse</Murmur>
+        </AmbientMoodProvider>
+        <Constructable/>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+        </Selection>
+        <Text>
+          <LocaText>
+            <English/>
+          </LocaText>
+          <LineID>35105</LineID>
+        </Text>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <!--Money-->
+              <Amount>2500</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>
+              <!--timber-->
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>
+              <!--bricks-->
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>
+              <!--beams-->
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>
+              <!--window-->
+            </Item>
+            <Item>
+              <Ingredient>1010202</Ingredient>
+              <!--concrete-->
+            </Item>
+          </Costs>
+        </Cost>
+        <Attackable/>
+        <Warehouse>
+          <WarehouseStorage>
+            <StorageMax>250</StorageMax>
+          </WarehouseStorage>
+          <StorageType>Warehouse</StorageType>
+        </Warehouse>
+        <StorageBase>
+          <ProductStorageList>1742004279</ProductStorageList>          <!--Ice ||||| 120056 - Strategic Goods / Oil-->
+        </StorageBase>
+        <Locked/>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>              <!--Money-->
+              <Amount>20</Amount>
+              <InactiveAmount>20</InactiveAmount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Pausable/>
+        <SoundEmitter/>
+        <Infolayer/>
+        <UpgradeList/>
+        <LogisticNode/>
+        <FeedbackController/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - BUILDING - Ice Depot (AR) -->
+
+  <!-- START - BUILDING - BUILDING - Ice Warehouse (OW) -->
+  <ModOp Type="addNextSibling" GUID='112658'>
+    <Asset>
+      <Template>Warehouse</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004386</GUID>
+          <Name>Ice Warehouse (OW)</Name>
+          <IconFilename>data/graphics/icons/icon_warehouse_ice.png</IconFilename>
+          <InfoDescription>1742004278</InfoDescription>
+        </Standard>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Ice Warehouse</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>6986</LineID>
+        </Text>
+        <Blocking>
+          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+        </Blocking>
+        <Building>
+          <BuildingType>Logistic</BuildingType>
+          <BuildingCategoryName>11151</BuildingCategoryName>          <!--Infrastructure Building-->
+          <SkipUnlockMessage>1</SkipUnlockMessage>
+          <BuildModeRandomRotation>90</BuildModeRandomRotation>
+          <AssociatedRegions>Moderate</AssociatedRegions>
+          <SecondPartyRelevant>0</SecondPartyRelevant>
+        </Building>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <!--Money-->
+              <Amount>500</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>
+              <!--timber-->
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>
+              <!--bricks-->
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>
+              <!--beams-->
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>
+              <!--window-->
+            </Item>
+            <Item>
+              <Ingredient>1010202</Ingredient>
+              <!--concrete-->
+            </Item>
+          </Costs>
+        </Cost>
+        <Selection>
+          <GUIType>RouteServiceModule</GUIType>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+          <ParticipantMessageTrigger>ClickKontor</ParticipantMessageTrigger>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/public/logistic_02/logistic_02.cfg</Filename>
+            </Item>
+          </Variations>
+          <Skins>
+            <DefaultSkinName>1742004386</DefaultSkinName>
+            <DefaultSkinDescription>1742004278</DefaultSkinDescription>            <!--ChangeBuildingSkin_toDefaultSkinDesc-->
+            <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>            <!--Classic-->
+          </Skins>
+        </Object>
+        <Constructable/>
+        <Mesh>
+          <LogoMode>CorporationLogoFromPlayer</LogoMode>
+          <SetCompanyLogo>1</SetCompanyLogo>
+        </Mesh>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>242769</Sound>              <!--wwe_sfx_bld_logistic_arctic_01_lp-->
+            </Item>
+          </ActiveSounds>
+          <IncidentSounds>
+            <ExplosionOneShots>
+              <Item>
+                <Sound>203849</Sound>                <!--wwe_sfx_aui_destroy_small-->
+              </Item>
+            </ExplosionOneShots>
+          </IncidentSounds>
+        </SoundEmitter>
+        <Locked/>
+        <Infolayer/>
+        <FeedbackController/>
+        <Warehouse>
+          <WarehouseStorage>
+            <StorageMax>250</StorageMax>
+          </WarehouseStorage>
+        </Warehouse>
+        <LogisticNode>
+          <QueueConfiguration>
+            <ProcessingQueueParallelCount>20</ProcessingQueueParallelCount>
+          </QueueConfiguration>
+        </LogisticNode>
+        <UpgradeList/>
+        <AmbientMoodProvider>
+          <Murmur>Warehouse</Murmur>
+        </AmbientMoodProvider>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>              <!--Money-->
+              <Amount>20</Amount>
+              <InactiveAmount>20</InactiveAmount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <StorageBase>
+          <ProductStorageList>1742004279</ProductStorageList>          <!--Ice ||||| 120056 - Strategic Goods / Oil-->
+        </StorageBase>
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+          <MaximumHitPoints>2500</MaximumHitPoints>
+          <SelfHealPerHealTick>4</SelfHealPerHealTick>
+        </Attackable>
+        <Pausable/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - BUILDING - Ice Warehouse (OW) -->
+
+  <!-- START - BUILDING - BUILDING - Ice Depot (OW) -->
+  <ModOp Type="addNextSibling" GUID='112670'>
+    <Asset>
+      <BaseAssetGUID>1010519</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742004387</GUID>
+          <Name>Ice Depot (OW)</Name>
+          <IconFilename>data/graphics/icons/icon_depot_ice.png</IconFilename>
+          <InfoDescription>1742004278</InfoDescription>
+        </Standard>
+        <Building>
+          <SecondPartyRelevant>0</SecondPartyRelevant>
+        </Building>
+        <Blocking />
+        <Mesh/>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/special/harbor_01/harbor_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <AmbientMoodProvider>
+          <Murmur>Warehouse</Murmur>
+        </AmbientMoodProvider>
+        <Constructable/>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+        </Selection>
+        <Text>
+          <LocaText>
+            <English/>
+          </LocaText>
+          <LineID>35105</LineID>
+        </Text>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <!--Money-->
+              <Amount>2500</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>
+              <!--timber-->
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>
+              <!--bricks-->
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>
+              <!--beams-->
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>
+              <!--window-->
+            </Item>
+            <Item>
+              <Ingredient>1010202</Ingredient>
+              <!--concrete-->
+            </Item>
+          </Costs>
+        </Cost>
+        <Attackable/>
+        <Warehouse>
+          <WarehouseStorage>
+            <StorageMax>250</StorageMax>
+          </WarehouseStorage>
+          <StorageType>Warehouse</StorageType>
+        </Warehouse>
+        <StorageBase>
+          <ProductStorageList>1742004279</ProductStorageList>          <!--Ice ||||| 120056 - Strategic Goods / Oil-->
+        </StorageBase>
+        <Locked/>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>              <!--Money-->
+              <Amount>20</Amount>
+              <InactiveAmount>20</InactiveAmount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Pausable/>
+        <SoundEmitter/>
+        <Infolayer/>
+        <UpgradeList/>
+        <LogisticNode/>
+        <FeedbackController/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - BUILDING - Ice Depot (OW) -->
+
+  <!-- START - BUILDING - BUILDING - Ice Warehouse (NW) -->
+  <ModOp Type="addNextSibling" GUID='112658'>
+    <Asset>
+      <Template>Warehouse</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004388</GUID>
+          <Name>Ice Warehouse (NW)</Name>
+          <IconFilename>data/graphics/icons/icon_warehouse_ice.png</IconFilename>
+          <InfoDescription>1742004278</InfoDescription>
+        </Standard>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Ice Warehouse</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>6986</LineID>
+        </Text>
+        <Blocking>
+          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+        </Blocking>
+        <Building>
+          <BuildingType>Logistic</BuildingType>
+          <BuildingCategoryName>11151</BuildingCategoryName>          <!--Infrastructure Building-->
+          <SkipUnlockMessage>1</SkipUnlockMessage>
+          <BuildModeRandomRotation>90</BuildModeRandomRotation>
+          <AssociatedRegions>Colony01</AssociatedRegions>
+          <SecondPartyRelevant>0</SecondPartyRelevant>
+        </Building>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <!--Money-->
+              <Amount>500</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>
+              <!--timber-->
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>
+              <!--bricks-->
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>
+              <!--beams-->
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>
+              <!--window-->
+            </Item>
+            <Item>
+              <Ingredient>1010202</Ingredient>
+              <!--concrete-->
+            </Item>
+          </Costs>
+        </Cost>
+        <Selection>
+          <GUIType>RouteServiceModule</GUIType>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+          <ParticipantMessageTrigger>ClickKontor</ParticipantMessageTrigger>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/public/logistic_colony01_01/logistic_colony01_01.cfg</Filename>
+            </Item>
+          </Variations>
+          <Skins>
+            <DefaultSkinName>1742004388</DefaultSkinName>
+            <DefaultSkinDescription>1742004278</DefaultSkinDescription>            <!--ChangeBuildingSkin_toDefaultSkinDesc-->
+            <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>            <!--Classic-->
+          </Skins>
+        </Object>
+        <Constructable/>
+        <Mesh>
+          <LogoMode>CorporationLogoFromPlayer</LogoMode>
+          <SetCompanyLogo>1</SetCompanyLogo>
+        </Mesh>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>242769</Sound>              <!--wwe_sfx_bld_logistic_arctic_01_lp-->
+            </Item>
+          </ActiveSounds>
+          <IncidentSounds>
+            <ExplosionOneShots>
+              <Item>
+                <Sound>203849</Sound>                <!--wwe_sfx_aui_destroy_small-->
+              </Item>
+            </ExplosionOneShots>
+          </IncidentSounds>
+        </SoundEmitter>
+        <Locked/>
+        <Infolayer/>
+        <FeedbackController/>
+        <Warehouse>
+          <WarehouseStorage>
+            <StorageMax>250</StorageMax>
+          </WarehouseStorage>
+        </Warehouse>
+        <LogisticNode>
+          <QueueConfiguration>
+            <ProcessingQueueParallelCount>20</ProcessingQueueParallelCount>
+          </QueueConfiguration>
+        </LogisticNode>
+        <UpgradeList/>
+        <AmbientMoodProvider>
+          <Murmur>Warehouse</Murmur>
+        </AmbientMoodProvider>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>              <!--Money-->
+              <Amount>20</Amount>
+              <InactiveAmount>20</InactiveAmount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <StorageBase>
+          <ProductStorageList>1742004279</ProductStorageList>          <!--Ice ||||| 120056 - Strategic Goods / Oil-->
+        </StorageBase>
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+          <MaximumHitPoints>2500</MaximumHitPoints>
+          <SelfHealPerHealTick>4</SelfHealPerHealTick>
+        </Attackable>
+        <Pausable/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - BUILDING - Ice Warehouse (NW) -->
+
+  <!-- START - BUILDING - BUILDING - Ice Depot (NW) -->
+  <ModOp Type="addNextSibling" GUID='112670'>
+    <Asset>
+      <BaseAssetGUID>101278</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742004389</GUID>
+          <Name>Ice Depot (NW)</Name>
+          <IconFilename>data/graphics/icons/icon_depot_ice.png</IconFilename>
+          <InfoDescription>1742004278</InfoDescription>
+        </Standard>
+        <Building>
+          <SecondPartyRelevant>0</SecondPartyRelevant>
+        </Building>
+        <Blocking />
+        <Mesh/>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/special/harbor_01_colony_01/harbor_01_colony_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <AmbientMoodProvider>
+          <Murmur>Warehouse</Murmur>
+        </AmbientMoodProvider>
+        <Constructable/>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+        </Selection>
+        <Text>
+          <LocaText>
+            <English/>
+          </LocaText>
+          <LineID>35105</LineID>
+        </Text>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <!--Money-->
+              <Amount>2500</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>
+              <!--timber-->
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>
+              <!--bricks-->
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>
+              <!--beams-->
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>
+              <!--window-->
+            </Item>
+            <Item>
+              <Ingredient>1010202</Ingredient>
+              <!--concrete-->
+            </Item>
+          </Costs>
+        </Cost>
+        <Attackable/>
+        <Warehouse>
+          <WarehouseStorage>
+            <StorageMax>250</StorageMax>
+          </WarehouseStorage>
+          <StorageType>Warehouse</StorageType>
+        </Warehouse>
+        <StorageBase>
+          <ProductStorageList>1742004279</ProductStorageList>          <!--Ice ||||| 120056 - Strategic Goods / Oil-->
+        </StorageBase>
+        <Locked/>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>              <!--Money-->
+              <Amount>20</Amount>
+              <InactiveAmount>20</InactiveAmount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Pausable/>
+        <SoundEmitter/>
+        <Infolayer/>
+        <UpgradeList/>
+        <LogisticNode/>
+        <FeedbackController/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - BUILDING - Ice Depot (NW) -->
+
+  <!-- START BUILDING - Coastal Ice Storage (OW) -->
+  <ModOp Type="addNextSibling" GUID='112680'>
+    <Asset>
+      <Template>BuffFactoryCulture</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004370</GUID>
+          <Name>Coastal Ice Storage (OW)</Name>
+          <IconFilename>data/graphics/icons/icon_coastal_storage_ice.png</IconFilename>
+          <InfoDescription>1742004371</InfoDescription>
+        </Standard>
+        <Text />
+        <Building>
+          <TerrainType>Water_Including_Coast</TerrainType>
+          <BuildingCategoryName>100000</BuildingCategoryName>
+          <SkipUnlockMessage>1</SkipUnlockMessage>
+          <BuildModeRandomRotation>90</BuildModeRandomRotation>
+          <AssociatedRegions>Moderate</AssociatedRegions>
+          <SecondPartyRelevant>0</SecondPartyRelevant>
+        </Building>
+        <Blocking>
+          <GroundDecalAsset>100446</GroundDecalAsset>          <!--Quay System Base-->
+          <GroundDecalInvisible>101008</GroundDecalInvisible>          <!--Quay System Base Invisible-->
+          <GroundDecalAssetExtra>100691</GroundDecalAssetExtra>          <!--invisible quay (dummyblocker)-->
+          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+        </Blocking>
+        <Mesh />
+        <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742004374</ProductivityBuff>
+            </Item>
+          </ProductionBuffs>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <ProductionBuffDistance>24</ProductionBuffDistance>
+        </BuffFactory>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1742004273</Product>              <!-- Ice blocks - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>8</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1800000302</Product>              <!-- Sawdust - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>8</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <CycleTime>60</CycleTime>
+        </FactoryBase>
+        <FeedbackController />
+        <Pausable />
+        <Selection>
+          <ParticipantMessageArcheType>Resident_tier04_atWork</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Attackable />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>250</Amount>
+              <InactiveAmount>100</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1010117</Product>              <!-- Engineers Workforce -->
+              <Amount>30</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <AmbientMoodProvider />
+        <LogisticNode />
+        <Constructable />
+        <Locked />
+        <IncidentInfectable>
+          <Infectable>
+            <Fire>
+              <Base>1</Base>
+            </Fire>
+            <Riot>
+              <Base>1</Base>
+            </Riot>
+            <Illness>
+              <Base>1</Base>
+              <Communication>FireDefault</Communication>
+            </Illness>
+            <Explosion>
+              <Base>1</Base>
+            </Explosion>
+          </Infectable>
+          <IncidentInfectionChanceFactors>
+            <Fire>
+              <DensityFactor>0.0025</DensityFactor>
+              <DensityDistance>20</DensityDistance>
+              <FactoryProductivityFactor>0.1</FactoryProductivityFactor>
+              <FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
+            </Fire>
+          </IncidentInfectionChanceFactors>
+        </IncidentInfectable>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/special/harbor_01/harbor_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <SoundEmitter />
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>25000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>25</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!-- Bricks - Product -->
+              <Amount>15</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product -->
+              <Amount>15</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>              <!-- Windows - Product -->
+              <Amount>10</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Infolayer />
+        <UpgradeList />
+        <Culture />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - Coastal Ice Storage (OW) -->
+
+  <!-- START BUILDING - Coastal Ice Storage (NW) -->
+  <ModOp Type="addNextSibling" GUID='112680'>
+    <Asset>
+      <Template>BuffFactoryCulture</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004372</GUID>
+          <Name>Coastal Ice Storage (NW)</Name>
+          <IconFilename>data/graphics/icons/icon_coastal_storage_ice.png</IconFilename>
+          <InfoDescription>1742004373</InfoDescription>
+        </Standard>
+        <Text />
+        <Building>
+          <TerrainType>Water_Including_Coast</TerrainType>
+          <BuildingCategoryName>100000</BuildingCategoryName>
+          <SkipUnlockMessage>1</SkipUnlockMessage>
+          <BuildModeRandomRotation>90</BuildModeRandomRotation>
+          <AssociatedRegions>Colony01</AssociatedRegions>
+          <SecondPartyRelevant>0</SecondPartyRelevant>
+        </Building>
+        <Blocking>
+          <GroundDecalAsset>102460</GroundDecalAsset>          <!--Quay System Colony01 Base-->
+          <GroundDecalInvisible>102459</GroundDecalInvisible>          <!--Quay System Colony01 Base Invisible-->
+          <GroundDecalAssetExtra>100691</GroundDecalAssetExtra>          <!--invisible quay (dummyblocker)-->
+          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+        </Blocking>
+        <Mesh />
+        <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742004374</ProductivityBuff>
+            </Item>
+          </ProductionBuffs>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <ProductionBuffDistance>24</ProductionBuffDistance>
+        </BuffFactory>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1742004273</Product>              <!-- Ice blocks - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>6</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1800000302</Product>              <!-- Sawdust - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>6</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <CycleTime>60</CycleTime>
+        </FactoryBase>
+        <FeedbackController />
+        <Pausable />
+        <Selection>
+          <ParticipantMessageArcheType>SA_Resident_tier02_atWork</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Attackable />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>250</Amount>
+              <InactiveAmount>100</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1010367</Product>              <!-- Obrero Workforce -->
+              <Amount>30</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <AmbientMoodProvider />
+        <LogisticNode />
+        <Constructable />
+        <Locked />
+        <IncidentInfectable>
+          <Infectable>
+            <Fire>
+              <Base>1</Base>
+            </Fire>
+            <Riot>
+              <Base>1</Base>
+            </Riot>
+            <Illness>
+              <Base>1</Base>
+              <Communication>FireDefault</Communication>
+            </Illness>
+            <Explosion>
+              <Base>1</Base>
+            </Explosion>
+          </Infectable>
+          <IncidentInfectionChanceFactors>
+            <Fire>
+              <DensityFactor>0.0025</DensityFactor>
+              <DensityDistance>20</DensityDistance>
+              <FactoryProductivityFactor>0.1</FactoryProductivityFactor>
+              <FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
+            </Fire>
+          </IncidentInfectionChanceFactors>
+        </IncidentInfectable>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/special/harbor_01_colony_01/harbor_01_colony_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <SoundEmitter />
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>25000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>25</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!-- Bricks - Product -->
+              <Amount>15</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product -->
+              <Amount>15</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>              <!-- Windows - Product -->
+              <Amount>10</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Infolayer />
+        <UpgradeList />
+        <Culture />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - Coastal Ice Storage (NW) -->
+
+  <!-- START BUILDING - Ice Storage (OW) -->
+  <ModOp Type="addNextSibling" GUID='112680'>
+    <Asset>
+      <Template>BuffFactoryCulture</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004376</GUID>
+          <Name>Ice Storage (OW)</Name>
+          <IconFilename>data/graphics/icons/icon_storage_ice.png</IconFilename>
+          <InfoDescription>1742004377</InfoDescription>
+        </Standard>
+        <Text />
+        <Building>
+          <BuildingCategoryName>100000</BuildingCategoryName>
+          <SkipUnlockMessage>1</SkipUnlockMessage>
+          <BuildModeRandomRotation>90</BuildModeRandomRotation>
+          <AssociatedRegions>Moderate</AssociatedRegions>
+          <SecondPartyRelevant>0</SecondPartyRelevant>
+        </Building>
+        <Blocking />
+        <Mesh />
+        <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742004380</ProductivityBuff>
+            </Item>
+          </ProductionBuffs>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <ProductionBuffDistance>24</ProductionBuffDistance>
+        </BuffFactory>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1742004273</Product>              <!-- Ice blocks - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>6</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1800000302</Product>              <!-- Sawdust - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>6</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <CycleTime>60</CycleTime>
+        </FactoryBase>
+        <FeedbackController />
+        <Pausable />
+        <Selection>
+          <ParticipantMessageArcheType>Resident_tier04_atWork</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Attackable />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>250</Amount>
+              <InactiveAmount>100</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1010117</Product>              <!-- Engineers Workforce -->
+              <Amount>20</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <AmbientMoodProvider />
+        <LogisticNode />
+        <Constructable />
+        <Locked />
+        <IncidentInfectable>
+          <Infectable>
+            <Fire>
+              <Base>1</Base>
+            </Fire>
+            <Riot>
+              <Base>1</Base>
+            </Riot>
+            <Illness>
+              <Base>1</Base>
+              <Communication>FireDefault</Communication>
+            </Illness>
+            <Explosion>
+              <Base>1</Base>
+            </Explosion>
+          </Infectable>
+          <IncidentInfectionChanceFactors>
+            <Fire>
+              <DensityFactor>0.0025</DensityFactor>
+              <DensityDistance>20</DensityDistance>
+              <FactoryProductivityFactor>0.1</FactoryProductivityFactor>
+              <FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
+            </Fire>
+          </IncidentInfectionChanceFactors>
+        </IncidentInfectable>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/special/harbor_01/harbor_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <SoundEmitter />
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>25000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>25</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!-- Bricks - Product -->
+              <Amount>15</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product -->
+              <Amount>15</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>              <!-- Windows - Product -->
+              <Amount>10</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Infolayer />
+        <UpgradeList />
+        <Culture />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - Ice Storage (OW) -->
+
+  <!-- START BUILDING - Ice Storage (NW) -->
+  <ModOp Type="addNextSibling" GUID='112680'>
+    <Asset>
+      <Template>BuffFactoryCulture</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004378</GUID>
+          <Name>Ice Storage (NW)</Name>
+          <IconFilename>data/graphics/icons/icon_storage_ice.png</IconFilename>
+          <InfoDescription>1742004379</InfoDescription>
+        </Standard>
+        <Text />
+        <Building>
+          <BuildingCategoryName>100000</BuildingCategoryName>
+          <SkipUnlockMessage>1</SkipUnlockMessage>
+          <BuildModeRandomRotation>90</BuildModeRandomRotation>
+          <AssociatedRegions>Colony01</AssociatedRegions>
+          <SecondPartyRelevant>0</SecondPartyRelevant>
+        </Building>
+        <Blocking />
+        <Mesh />
+        <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742004380</ProductivityBuff>
+            </Item>
+          </ProductionBuffs>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <ProductionBuffDistance>24</ProductionBuffDistance>
+        </BuffFactory>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1742004273</Product>              <!-- Ice blocks - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>6</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1800000302</Product>              <!-- Sawdust - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>6</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <CycleTime>60</CycleTime>
+        </FactoryBase>
+        <FeedbackController />
+        <Pausable />
+        <Selection>
+          <ParticipantMessageArcheType>SA_Resident_tier02_atWork</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Attackable />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>250</Amount>
+              <InactiveAmount>100</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1010367</Product>              <!-- Obrero Workforce -->
+              <Amount>30</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <AmbientMoodProvider />
+        <LogisticNode />
+        <Constructable />
+        <Locked />
+        <IncidentInfectable>
+          <Infectable>
+            <Fire>
+              <Base>1</Base>
+            </Fire>
+            <Riot>
+              <Base>1</Base>
+            </Riot>
+            <Illness>
+              <Base>1</Base>
+              <Communication>FireDefault</Communication>
+            </Illness>
+            <Explosion>
+              <Base>1</Base>
+            </Explosion>
+          </Infectable>
+          <IncidentInfectionChanceFactors>
+            <Fire>
+              <DensityFactor>0.0025</DensityFactor>
+              <DensityDistance>20</DensityDistance>
+              <FactoryProductivityFactor>0.1</FactoryProductivityFactor>
+              <FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
+            </Fire>
+          </IncidentInfectionChanceFactors>
+        </IncidentInfectable>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/public/logistic_colony01_01/logistic_colony01_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <SoundEmitter />
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>25000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>25</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!-- Bricks - Product -->
+              <Amount>15</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product -->
+              <Amount>15</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>              <!-- Windows - Product -->
+              <Amount>10</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Infolayer />
+        <UpgradeList />
+        <Culture />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - Ice Storage (NW) -->
+
+</ModOps>
+  

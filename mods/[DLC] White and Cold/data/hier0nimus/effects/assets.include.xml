@@ -1,0 +1,2353 @@
+<!-- 
+  Effects
+-->
+
+<ModOps>
+
+  <!-- START - Coastal Centre - Increase productivity -->
+  <ModOp GUID='25623' Type="addNextSibling">
+    <Asset>
+      <Template>EffectContainer</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004220</GUID>
+          <Name>Increase productivity</Name>
+          <IconFilename>data/graphics/icons/icon_coastal_centre_productivity.png</IconFilename>
+          <InfoDescription>1742004221</InfoDescription>
+        </Standard>
+        <Text />
+        <EffectContainer>
+          <Effects>
+            <Item>
+              <Effect>1742004226</Effect>              <!-- Coastal Centre - Increase productivity - Policy - Buff -->
+            </Item>
+          </Effects>
+          <EffectUsedForInfoTip>1742004226</EffectUsedForInfoTip>
+        </EffectContainer>
+      </Values>
+    </Asset>
+  </ModOp>
+  <ModOp GUID='25623' Type="addNextSibling">
+    <Asset>
+      <Template>HarbourOfficeBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004226</GUID>
+          <Name>Increase productivity</Name>
+          <IconFilename>data/graphics/icons/icon_coastal_centre_productivity.png</IconFilename>
+          <InfoDescription>1742004227</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742004233</GUID>
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Increase productivity</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>21923</LineID>
+        </Text>
+        <FactoryUpgrade>
+          <ProductivityUpgrade>
+            <Value>100</Value>
+            <Percental>1</Percental>
+          </ProductivityUpgrade>
+        </FactoryUpgrade>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - Coastal Centre - Increase productivity  -->
+
+  <!-- START - Coastal Centre - Workforce efficiency -->
+  <ModOp GUID='25623' Type="addNextSibling">
+    <Asset>
+      <Template>EffectContainer</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004348</GUID>
+          <Name>Workforce efficiency</Name>
+          <IconFilename>data/graphics/icons/icon_coastal_centre_workforce.png</IconFilename>
+          <InfoDescription>1742004349</InfoDescription>
+        </Standard>
+        <Text />
+        <EffectContainer>
+          <Effects>
+            <Item>
+              <Effect>1742004350</Effect>              <!-- Coastal Centre - Increase productivity - Policy - Buff -->
+            </Item>
+          </Effects>
+          <EffectUsedForInfoTip>1742004350</EffectUsedForInfoTip>
+        </EffectContainer>
+      </Values>
+    </Asset>
+  </ModOp>
+  <ModOp GUID='25623' Type="addNextSibling">
+    <Asset>
+      <Template>GuildhouseBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004350</GUID>
+          <Name>Workforce efficiency</Name>
+          <IconFilename>data/graphics/icons/icon_coastal_centre_workforce.png</IconFilename>
+          <InfoDescription>1742004351</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742004233</GUID>
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Workforce efficiency</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>21923</LineID>
+        </Text>
+        <BuildingUpgrade>
+          <WorkforceAmountUpgrade>
+            <Value>-50</Value>
+            <Percental>1</Percental>
+          </WorkforceAmountUpgrade>
+        </BuildingUpgrade>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - Coastal Centre - Workforce efficiency  -->
+
+  <!-- START - Coastal Centre - More Fish -->
+  <ModOp GUID='25623' Type="addNextSibling">
+    <Asset>
+      <Template>EffectContainer</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004222</GUID>
+          <Name>More Fish</Name>
+          <IconFilename>data/graphics/icons/icon_coastal_centre_fish.png</IconFilename>
+          <InfoDescription>1742004223</InfoDescription>
+        </Standard>
+        <Text />
+        <EffectContainer>
+          <Effects>
+            <Item>
+              <Effect>1742004229</Effect>              <!-- Coastal Centre - More Fish - Policy - Buff -->
+            </Item>
+          </Effects>
+          <EffectUsedForInfoTip>1742004229</EffectUsedForInfoTip>
+        </EffectContainer>
+      </Values>
+    </Asset>
+  </ModOp>
+  <ModOp GUID='25623' Type="addNextSibling">
+    <Asset>
+      <Template>HarbourOfficeBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004229</GUID>
+          <Name>More Fish</Name>
+          <IconFilename>data/graphics/icons/icon_coastal_centre_fish.png</IconFilename>
+          <InfoDescription>1742004230</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742004112</GUID>
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>More Fish</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>21923</LineID>
+        </Text>
+        <FactoryUpgrade>
+          <AdditionalOutput>
+            <Item>
+              <Product>1010200</Product>              <!-- Fish - Product -->
+              <AdditionalOutputCycle>4</AdditionalOutputCycle>
+              <Amount>1</Amount>
+            </Item>
+            <Item>
+              <Product>120042</Product>              <!-- Fish Oil - Product -->
+              <AdditionalOutputCycle>4</AdditionalOutputCycle>
+              <Amount>1</Amount>
+            </Item>
+            <Item>
+              <Product>1010234</Product>              <!-- Tallow - Product -->
+              <AdditionalOutputCycle>4</AdditionalOutputCycle>
+              <Amount>1</Amount>
+            </Item>
+          </AdditionalOutput>
+        </FactoryUpgrade>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - Coastal Centre - More Fish  -->
+
+  <!-- START - Coastal Centre - Look for whales -->
+  <ModOp GUID='25623' Type="addNextSibling">
+    <Asset>
+      <Template>EffectContainer</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004224</GUID>
+          <Name>Look for whales</Name>
+          <IconFilename>data/graphics/icons/icon_coastal_centre_whale.png</IconFilename>
+          <InfoDescription>1742004225</InfoDescription>
+        </Standard>
+        <Text />
+        <EffectContainer>
+          <Effects>
+            <Item>
+              <Effect>1742004231</Effect>              <!-- Coastal Centre - Look for whales - Policy - Buff -->
+            </Item>
+          </Effects>
+          <EffectUsedForInfoTip>1742004231</EffectUsedForInfoTip>
+        </EffectContainer>
+      </Values>
+    </Asset>
+  </ModOp>
+  <ModOp GUID='25623' Type="addNextSibling">
+    <Asset>
+      <Template>HarbourOfficeBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004231</GUID>
+          <Name>Look for whales</Name>
+          <IconFilename>data/graphics/icons/icon_coastal_centre_whale.png</IconFilename>
+          <InfoDescription>1742004232</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742004114</GUID>              <!--  Whale Oil Module - Building -->
+            </Item>
+            <Item>
+              <GUID>1742004116</GUID>              <!--  Animal Bones Module - Building -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Look for whales</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>21923</LineID>
+        </Text>
+        <FactoryUpgrade>
+          <AdditionalOutput>
+            <Item>
+              <Product>112699</Product>              <!-- Whale Oil - Product -->
+              <AdditionalOutputCycle>2</AdditionalOutputCycle>
+              <Amount>1</Amount>
+            </Item>
+            <Item>
+              <Product>1742004166</Product>              <!-- Animal Bones - Product -->
+              <AdditionalOutputCycle>2</AdditionalOutputCycle>
+              <Amount>1</Amount>
+            </Item>
+            <Item>
+              <Product>1010193</Product>              <!-- Beef - Product -->
+              <AdditionalOutputCycle>2</AdditionalOutputCycle>
+              <Amount>1</Amount>
+            </Item>
+            <Item>
+              <Product>1010234</Product>              <!-- Tallow - Product -->
+              <AdditionalOutputCycle>2</AdditionalOutputCycle>
+              <Amount>1</Amount>
+            </Item>
+          </AdditionalOutput>
+          <AddedFertility>115264</AddedFertility>          <!-- Whale Abundance  -->
+        </FactoryUpgrade>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - Coastal Centre - Look for whales  -->
+
+  <!-- START - Coastal Centre - Look for seals -->
+  <ModOp GUID='25623' Type="addNextSibling">
+    <Asset>
+      <Template>EffectContainer</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004241</GUID>
+          <Name>Look for seals</Name>
+          <IconFilename>data/graphics/icons/icon_coastal_centre_seal.png</IconFilename>
+          <InfoDescription>1742004242</InfoDescription>
+        </Standard>
+        <Text />
+        <EffectContainer>
+          <Effects>
+            <Item>
+              <Effect>1742004243</Effect>              <!-- Coastal Centre - Look for whales - Policy - Buff -->
+            </Item>
+          </Effects>
+          <EffectUsedForInfoTip>1742004243</EffectUsedForInfoTip>
+        </EffectContainer>
+      </Values>
+    </Asset>
+  </ModOp>
+  <ModOp GUID='25623' Type="addNextSibling">
+    <Asset>
+      <Template>HarbourOfficeBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004243</GUID>
+          <Name>Look for seals</Name>
+          <IconFilename>data/graphics/icons/icon_coastal_centre_seal.png</IconFilename>
+          <InfoDescription>1742004244</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742004118</GUID>              <!-- Seal Skin Module - Building -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Look for seals</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>21923</LineID>
+        </Text>
+        <FactoryUpgrade>
+          <AdditionalOutput>
+            <Item>
+              <Product>112696</Product>              <!-- Seal Skin - Product -->
+              <AdditionalOutputCycle>3</AdditionalOutputCycle>
+              <Amount>1</Amount>
+            </Item>
+            <Item>
+              <Product>1010193</Product>              <!-- Beef - Product -->
+              <AdditionalOutputCycle>3</AdditionalOutputCycle>
+              <Amount>1</Amount>
+            </Item>
+            <Item>
+              <Product>1010234</Product>              <!-- Tallow - Product -->
+              <AdditionalOutputCycle>3</AdditionalOutputCycle>
+              <Amount>1</Amount>
+            </Item>
+          </AdditionalOutput>
+          <AddedFertility>112860</AddedFertility>          <!-- Seal Abundance  -->
+        </FactoryUpgrade>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - Coastal Centre - Look for seals  -->
+
+  <!-- START - Forest Centre - Workforce efficiency -->
+  <ModOp GUID='25623' Type="addNextSibling">
+    <Asset>
+      <Template>EffectContainer</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004352</GUID>
+          <Name>Workforce efficiency</Name>
+          <IconFilename>data/graphics/icons/icon_forest_centre_workforce.png</IconFilename>
+          <InfoDescription>1742004353</InfoDescription>
+        </Standard>
+        <Text />
+        <EffectContainer>
+          <Effects>
+            <Item>
+              <Effect>1742004354</Effect>              <!-- Forest Centre - Increase productivity - Policy - Buff -->
+            </Item>
+          </Effects>
+          <EffectUsedForInfoTip>1742004354</EffectUsedForInfoTip>
+        </EffectContainer>
+      </Values>
+    </Asset>
+  </ModOp>
+  <ModOp GUID='25623' Type="addNextSibling">
+    <Asset>
+      <Template>GuildhouseBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004354</GUID>
+          <Name>Workforce efficiency</Name>
+          <IconFilename>data/graphics/icons/icon_forest_centre_workforce.png</IconFilename>
+          <InfoDescription>1742004355</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742004228</GUID>
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Workforce efficiency</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>21923</LineID>
+        </Text>
+        <BuildingUpgrade>
+          <WorkforceAmountUpgrade>
+            <Value>-50</Value>
+            <Percental>1</Percental>
+          </WorkforceAmountUpgrade>
+        </BuildingUpgrade>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - Forest Centre - Workforce efficiency  -->
+
+  <!-- START - Forest Centre - Have you seen the Caribou -->
+  <ModOp GUID='25623' Type="addNextSibling">
+    <Asset>
+      <Template>EffectContainer</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004190</GUID>
+          <Name>Have you seen the Caribou</Name>
+          <IconFilename>data/graphics/icons/icon_forest_centre_caribou.png</IconFilename>
+          <InfoDescription>1742004191</InfoDescription>
+        </Standard>
+        <Text />
+        <EffectContainer>
+          <Effects>
+            <Item>
+              <Effect>1742004235</Effect>              <!-- Forest Centre - Have you seen the Caribou - Policy - Buff -->
+            </Item>
+          </Effects>
+          <EffectUsedForInfoTip>1742004235</EffectUsedForInfoTip>
+        </EffectContainer>
+      </Values>
+    </Asset>
+  </ModOp>
+  <ModOp GUID='25623' Type="addNextSibling">
+    <Asset>
+      <Template>GuildhouseBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004235</GUID>
+          <Name>Have you seen the Caribou</Name>
+          <IconFilename>data/graphics/icons/icon_forest_centre_caribou.png</IconFilename>
+          <InfoDescription>1742004236</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742004122</GUID>              <!-- Fur Module - Building -->
+            </Item>
+            <Item>
+              <GUID>1742004124</GUID>              <!-- Caribou Meat Module - Building -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Have you seen the Caribou?</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>21923</LineID>
+        </Text>
+        <FactoryUpgrade>
+          <AdditionalOutput>
+            <Item>
+              <Product>1010209</Product>              <!-- Fur - Product -->
+              <AdditionalOutputCycle>5</AdditionalOutputCycle>
+              <Amount>1</Amount>
+            </Item>
+            <Item>
+              <Product>1742004166</Product>              <!-- Animal Bones - Product -->
+              <AdditionalOutputCycle>5</AdditionalOutputCycle>
+              <Amount>1</Amount>
+            </Item>
+            <Item>
+              <Product>112694</Product>              <!-- Caribou Meat - Product -->
+              <AdditionalOutputCycle>5</AdditionalOutputCycle>
+              <Amount>1</Amount>
+            </Item>
+          </AdditionalOutput>
+          <AddedFertility>1010581</AddedFertility>          <!-- Caribou & Fur Fertility  -->
+        </FactoryUpgrade>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - Forest Centre - Have you seen the Caribou  -->
+
+  <!-- START - Forest Centre - Have you seen the Bears -->
+  <ModOp GUID='25623' Type="addNextSibling">
+    <Asset>
+      <Template>EffectContainer</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004192</GUID>
+          <Name>Have you seen the Bears</Name>
+          <IconFilename>data/graphics/icons/icon_forest_centre_bear.png</IconFilename>
+          <InfoDescription>1742004193</InfoDescription>
+        </Standard>
+        <Text />
+        <EffectContainer>
+          <Effects>
+            <Item>
+              <Effect>1742004237</Effect>              <!-- Forest Centre - Have you seen the Bears - Policy - Buff -->
+            </Item>
+          </Effects>
+          <EffectUsedForInfoTip>1742004237</EffectUsedForInfoTip>
+        </EffectContainer>
+      </Values>
+    </Asset>
+  </ModOp>
+  <ModOp GUID='25623' Type="addNextSibling">
+    <Asset>
+      <Template>GuildhouseBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004237</GUID>
+          <Name>Have you seen the Bears</Name>
+          <IconFilename>data/graphics/icons/icon_forest_centre_bear.png</IconFilename>
+          <InfoDescription>1742004238</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742004126</GUID>              <!-- Bear Fur Module - Building -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Have you seen the Bears</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>21923</LineID>
+        </Text>
+        <FactoryUpgrade>
+          <AdditionalOutput>
+            <Item>
+              <Product>1010193</Product>              <!-- Beef - Product -->
+              <AdditionalOutputCycle>3</AdditionalOutputCycle>
+              <Amount>1</Amount>
+            </Item>
+            <Item>
+              <Product>112695</Product>              <!-- Bear Fur - Product -->
+              <AdditionalOutputCycle>3</AdditionalOutputCycle>
+              <Amount>1</Amount>
+            </Item>
+          </AdditionalOutput>
+          <AddedFertility>112859</AddedFertility>          <!-- Bear Fertility  -->
+        </FactoryUpgrade>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - Forest Centre - Have you seen the Bears  -->
+
+  <!-- START - Forest Centre - Wood Gathering -->
+  <ModOp GUID='25623' Type="addNextSibling">
+    <Asset>
+      <Template>EffectContainer</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004182</GUID>
+          <Name>Wood Gathering</Name>
+          <IconFilename>data/graphics/icons/icon_forest_centre_tree.png</IconFilename>
+          <InfoDescription>1742004183</InfoDescription>
+        </Standard>
+        <Text />
+        <EffectContainer>
+          <Effects>
+            <Item>
+              <Effect>1742004184</Effect>              <!-- Forest Centre - Wood Gathering - Policy - Buff -->
+            </Item>
+          </Effects>
+          <EffectUsedForInfoTip>1742004184</EffectUsedForInfoTip>
+        </EffectContainer>
+      </Values>
+    </Asset>
+  </ModOp>
+  <ModOp GUID='25623' Type="addNextSibling">
+    <Asset>
+      <Template>GuildhouseBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004184</GUID>
+          <Name>Wood Gathering</Name>
+          <IconFilename>data/graphics/icons/icon_forest_centre_tree.png</IconFilename>
+          <InfoDescription>1742004185</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742004128</GUID>              <!-- Wood Gathering Cabin - Building -->
+            </Item>
+            <Item>
+              <GUID>1742004150</GUID>              <!-- Charcoal Burner - Building -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Wood Gathering</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>21923</LineID>
+        </Text>
+        <FactoryUpgrade>
+          <AdditionalOutput>
+            <Item>
+              <Product>120008</Product>              <!-- Wood - Product -->
+              <AdditionalOutputCycle>3</AdditionalOutputCycle>
+              <Amount>1</Amount>
+            </Item>
+          </AdditionalOutput>
+          <AddedFertility>114236</AddedFertility>          <!-- Tree Fertility -->
+        </FactoryUpgrade>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - Forest Centre - Wood Gathering  -->
+
+  <!-- START - Forest Centre - Warm Drinks -->
+  <ModOp GUID='25623' Type="addNextSibling">
+    <Asset>
+      <Template>EffectContainer</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004245</GUID>
+          <Name>Warm Drinks</Name>
+          <IconFilename>data/graphics/icons/icon_forest_centre_drinks.png</IconFilename>
+          <InfoDescription>1742004246</InfoDescription>
+        </Standard>
+        <Text />
+        <EffectContainer>
+          <Effects>
+            <Item>
+              <Effect>1742004247</Effect>              <!-- Forest Centre - Warm drinks - Policy - Buff -->
+            </Item>
+          </Effects>
+          <EffectUsedForInfoTip>1742004247</EffectUsedForInfoTip>
+        </EffectContainer>
+      </Values>
+    </Asset>
+  </ModOp>
+  <ModOp GUID='25623' Type="addNextSibling">
+    <Asset>
+      <Template>GuildhouseBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004247</GUID>
+          <Name>Warm Drinks</Name>
+          <IconFilename>data/graphics/icons/icon_forest_centre_drinks.png</IconFilename>
+          <InfoDescription>1742004248</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742004148</GUID>              <!-- Labrador Tea Maker - Building -->
+            </Item>
+            <Item>
+              <GUID>1742004134</GUID>              <!-- Root Grinder - Building -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Warm Drinks</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>21923</LineID>
+        </Text>
+        <FactoryUpgrade>
+          <AdditionalOutput>
+            <Item>
+              <Product>1500010847</Product>              <!-- Tea - Product -->
+              <AdditionalOutputCycle>3</AdditionalOutputCycle>
+              <Amount>1</Amount>
+            </Item>
+            <Item>
+              <Product>5383</Product>              <!-- Herbs - Product -->
+              <AdditionalOutputCycle>3</AdditionalOutputCycle>
+              <Amount>1</Amount>
+            </Item>
+          </AdditionalOutput>
+          <AddedFertility>1742004178</AddedFertility>          <!-- Bog Labrador Tea - Fertility -->
+        </FactoryUpgrade>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - Forest Centre - Warm Drinks  -->
+
+  <!-- START - Forest Centre - Increase productivity -->
+  <ModOp GUID='25623' Type="addNextSibling">
+    <Asset>
+      <Template>EffectContainer</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004253</GUID>
+          <Name>Increase productivity</Name>
+          <IconFilename>data/graphics/icons/icon_crafting_centre_productivity.png</IconFilename>
+          <InfoDescription>1742004254</InfoDescription>
+        </Standard>
+        <Text />
+        <EffectContainer>
+          <Effects>
+            <Item>
+              <Effect>1742004255</Effect>              <!-- Forest Centre - Increase productivity - Policy - Buff -->
+            </Item>
+          </Effects>
+          <EffectUsedForInfoTip>1742004255</EffectUsedForInfoTip>
+        </EffectContainer>
+      </Values>
+    </Asset>
+  </ModOp>
+  <ModOp GUID='25623' Type="addNextSibling">
+    <Asset>
+      <Template>GuildhouseBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004255</GUID>
+          <Name>Increase productivity</Name>
+          <IconFilename>data/graphics/icons/icon_crafting_centre_productivity.png</IconFilename>
+          <InfoDescription>1742004256</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742004265</GUID>
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Increase productivity</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>21923</LineID>
+        </Text>
+        <FactoryUpgrade>
+          <ProductivityUpgrade>
+            <Value>100</Value>
+            <Percental>1</Percental>
+          </ProductivityUpgrade>
+        </FactoryUpgrade>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - Forest Centre - Increase productivity  -->
+
+  <!-- START - Forest Centre - Workforce efficiency -->
+  <ModOp GUID='25623' Type="addNextSibling">
+    <Asset>
+      <Template>EffectContainer</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004261</GUID>
+          <Name>Workforce efficiency</Name>
+          <IconFilename>data/graphics/icons/icon_crafting_centre_workforce.png</IconFilename>
+          <InfoDescription>1742004262</InfoDescription>
+        </Standard>
+        <Text />
+        <EffectContainer>
+          <Effects>
+            <Item>
+              <Effect>1742004263</Effect>              <!-- Forest Centre - Increase productivity - Policy - Buff -->
+            </Item>
+          </Effects>
+          <EffectUsedForInfoTip>1742004263</EffectUsedForInfoTip>
+        </EffectContainer>
+      </Values>
+    </Asset>
+  </ModOp>
+  <ModOp GUID='25623' Type="addNextSibling">
+    <Asset>
+      <Template>GuildhouseBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004263</GUID>
+          <Name>Workforce efficiency</Name>
+          <IconFilename>data/graphics/icons/icon_crafting_centre_workforce.png</IconFilename>
+          <InfoDescription>1742004264</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742004265</GUID>
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Workforce efficiency</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>21923</LineID>
+        </Text>
+        <BuildingUpgrade>
+          <WorkforceAmountUpgrade>
+            <Value>-50</Value>
+            <Percental>1</Percental>
+          </WorkforceAmountUpgrade>
+        </BuildingUpgrade>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - Forest Centre - Workforce efficiency  -->
+
+  <!-- START - Forest Centre - Better wood -->
+  <ModOp GUID='25623' Type="addNextSibling">
+    <Asset>
+      <Template>EffectContainer</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004257</GUID>
+          <Name>Better wood</Name>
+          <IconFilename>data/graphics/icons/icon_crafting_centre_wood.png</IconFilename>
+          <InfoDescription>1742004258</InfoDescription>
+        </Standard>
+        <Text />
+        <EffectContainer>
+          <Effects>
+            <Item>
+              <Effect>1742004259</Effect>              <!-- Forest Centre - Increase productivity - Policy - Buff -->
+            </Item>
+          </Effects>
+          <EffectUsedForInfoTip>1742004259</EffectUsedForInfoTip>
+        </EffectContainer>
+      </Values>
+    </Asset>
+  </ModOp>
+  <ModOp GUID='25623' Type="addNextSibling">
+    <Asset>
+      <Template>GuildhouseBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004259</GUID>
+          <Name>Better wood</Name>
+          <IconFilename>data/graphics/icons/icon_crafting_centre_wood.png</IconFilename>
+          <InfoDescription>1742004260</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742004130</GUID>              <!-- Snow Goggles Carver - Building -->
+            </Item>
+            <Item>
+              <GUID>1742004132</GUID>              <!-- Basic Tools Maker - Building -->
+            </Item>
+            <Item>
+              <GUID>1742004138</GUID>              <!-- Snow Shoes Maker - Building -->
+            </Item>
+            <Item>
+              <GUID>1742004140</GUID>              <!-- Qajaks assembly - Building -->
+            </Item>
+            <Item>
+              <GUID>1742004144</GUID>              <!-- Sled Maker - Building -->
+            </Item>
+            <Item>
+              <GUID>1742004394</GUID>              <!-- Qilaut Maker - Building -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Better wood</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>21923</LineID>
+        </Text>
+        <FactoryUpgrade>
+          <AdditionalOutput>
+            <Item>
+              <ForceProductSameAsFactoryOutput>1</ForceProductSameAsFactoryOutput>
+              <AdditionalOutputCycle>1</AdditionalOutputCycle>
+              <Amount>2</Amount>
+            </Item>
+          </AdditionalOutput>
+          <ReplaceInputs>
+            <Item>
+              <OldInput>120008</OldInput>              <!--wood-->
+              <NewInput>1010196</NewInput>              <!--timber-->
+            </Item>
+          </ReplaceInputs>
+        </FactoryUpgrade>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - Forest Centre - Better wood  -->
+
+  <!-- START - ICE HQ ITEMSET 1 - Mining Tools -->
+  <ModOp GUID='124907' Type="addNextSibling">
+    <Asset>
+      <Template>ItemSet</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004290</GUID>
+          <Name>Mining Tools</Name>
+          <IconFilename>data/graphics/icons/icon_hq_mining1.png</IconFilename>
+          <InfoDescription>1742004291</InfoDescription>
+        </Standard>
+        <ItemSocketSet>
+          <SetBuff>1742004298</SetBuff>          <!-- Mining Tools - SetBuff -->
+          <BuffScope>Session</BuffScope>
+        </ItemSocketSet>
+        <Text />
+        <Locked>
+          <DefaultLockedState>0</DefaultLockedState>
+        </Locked>
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- START - ICE HQ ITEMSET 1 - Mining Tools -->
+
+  <!-- 190850 - Bow Saw -->
+  <ModOp GUID="190850" Path="Values/Item" Type="add">
+    <ItemSet>1742004290</ItemSet>
+  </ModOp>
+
+  <!-- 190880 - Mechanical Drill -->
+  <ModOp GUID="190880" Path="Values/Item" Type="add">
+    <ItemSet>1742004290</ItemSet>
+  </ModOp>
+
+  <!-- 190827 - Dynamo -->
+  <ModOp GUID="190827" Path="Values/Item" Type="add">
+    <ItemSet>1742004290</ItemSet>
+  </ModOp>
+
+  <!-- 112879 - Mechanical Panner -->
+  <ModOp GUID="112879" Path="Values/Item" Type="add">
+    <ItemSet>1742004290</ItemSet>
+  </ModOp>
+
+  <!-- 190877 - Safety Elevator -->
+  <ModOp GUID="190877" Path="Values/Item" Type="add">
+    <ItemSet>1742004290</ItemSet>
+  </ModOp>
+
+  <!-- 112380 - Grubby Hands -->
+  <ModOp GUID="112380" Path="Values/Item" Type="add">
+    <ItemSet>1742004290</ItemSet>
+  </ModOp>
+
+
+  <!-- START ITEMSET 1 - Mining Tools - SetBuff -->
+  <ModOp GUID='142519' Type="addNextSibling">
+    <Asset>
+      <Template>FestivalBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004298</GUID>
+          <Name>Mining Tools</Name>
+          <IconFilename>data/graphics/icons/icon_hq_mining1.png</IconFilename>
+          <InfoDescription>1742004299</InfoDescription>
+        </Standard>
+        <Text />
+        <PopulationUpgrade />
+        <ResidenceUpgrade />
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1500301029</GUID>              <!-- All Arctic Mines -->
+            </Item>
+            <Item>
+              <GUID>1742200030</GUID>              <!-- All Arctic Gas Mines -->
+            </Item>
+            <Item>
+              <GUID>1742004275</GUID>              <!-- Ice Harvesting Site -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <Buff />
+        <CultureUpgrade/>
+        <KontorUpgrade/>
+        <AttackableUpgrade/>
+        <AttackerUpgrade/>
+        <BuildingUpgrade/>
+        <FactoryUpgrade>
+          <ProductivityUpgrade>
+            <Value>100</Value>
+            <Percental>1</Percental>
+          </ProductivityUpgrade>
+        </FactoryUpgrade>
+        <PassiveTradeGoodGenUpgrade/>
+        <ShipyardUpgrade/>
+        <VisitorHarborUpgrade/>
+        <VisitorUpgrade/>
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- START - ICE HQ ITEMSET 2 - EXPERIENCED WORKERS -->
+  <ModOp GUID='124907' Type="addNextSibling">
+    <Asset>
+      <Template>ItemSet</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004292</GUID>
+          <Name>Experienced Workers</Name>
+          <IconFilename>data/graphics/icons/icon_hq_mining2.png</IconFilename>
+          <InfoDescription>1742004293</InfoDescription>
+        </Standard>
+        <ItemSocketSet>
+          <SetBuff>1742004300</SetBuff>          <!-- Experienced Workers - SetBuff -->
+          <BuffScope>Session</BuffScope>
+        </ItemSocketSet>
+        <Text />
+        <Locked>
+          <DefaultLockedState>0</DefaultLockedState>
+        </Locked>
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- START - ICE HQ ITEMSET 2 - EXPERIENCED WORKERS -->
+
+  <!-- 190755 - Miner -->
+  <ModOp GUID="190755" Path="Values/Item" Type="add">
+    <ItemSet>1742004292</ItemSet>
+  </ModOp>
+
+  <!-- 1948 - Mad Mary, Dynamite Enthusiast -->
+  <ModOp GUID="1948" Path="Values/Item" Type="add">
+    <ItemSet>1742004292</ItemSet>
+  </ModOp>
+
+  <!-- 191591 - Steven MacLeod, Geological Surveyor -->
+  <ModOp GUID="191591" Path="Values/Item" Type="add">
+    <ItemSet>1742004292</ItemSet>
+  </ModOp>
+
+  <!-- 190760 - Micaela the Mining Engineer -->
+  <ModOp GUID="190760" Path="Values/Item" Type="add">
+    <ItemSet>1742004292</ItemSet>
+  </ModOp>
+
+  <!-- 191590 - Grigor the Geologist -->
+  <ModOp GUID="191590" Path="Values/Item" Type="add">
+    <ItemSet>1742004292</ItemSet>
+  </ModOp>
+
+  <!-- 190761 - Jörg von Malching, Augur of the Auric -->
+  <ModOp GUID="190761" Path="Values/Item" Type="add">
+    <ItemSet>1742004292</ItemSet>
+  </ModOp>
+
+  <!-- START ITEMSET 2 - Experienced Workers - SetBuff -->
+  <ModOp GUID='142519' Type="addNextSibling">
+    <Asset>
+      <Template>FestivalBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004300</GUID>
+          <Name>Experienced Workers</Name>
+          <IconFilename>data/graphics/icons/icon_hq_mining2.png</IconFilename>
+          <InfoDescription>1742004301</InfoDescription>
+        </Standard>
+        <Text />
+        <PopulationUpgrade />
+        <ResidenceUpgrade />
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1500301029</GUID>              <!-- All Arctic Mines -->
+            </Item>
+            <Item>
+              <GUID>1742200030</GUID>              <!-- All Arctic Gas Mines -->
+            </Item>
+            <Item>
+              <GUID>1742004275</GUID>              <!-- Ice Harvesting Site -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <Buff />
+        <CultureUpgrade/>
+        <KontorUpgrade/>
+        <AttackableUpgrade/>
+        <AttackerUpgrade/>
+        <BuildingUpgrade>
+          <WorkforceAmountUpgrade>
+            <Value>-50</Value>
+            <Percental>1</Percental>
+          </WorkforceAmountUpgrade>
+          <MaintenanceUpgrade>
+            <Value>-50</Value>
+            <Percental>1</Percental>
+          </MaintenanceUpgrade>
+        </BuildingUpgrade>
+        <FactoryUpgrade>
+          <ProductivityUpgrade>
+            <Value>50</Value>
+            <Percental>1</Percental>
+          </ProductivityUpgrade>
+        </FactoryUpgrade>
+        <PassiveTradeGoodGenUpgrade/>
+        <ShipyardUpgrade/>
+        <VisitorHarborUpgrade/>
+        <VisitorUpgrade/>
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- START - ICE HQ ITEMSET 3 - ADVANCED TOOLS -->
+  <ModOp GUID='124907' Type="addNextSibling">
+    <Asset>
+      <Template>ItemSet</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004294</GUID>
+          <Name>Advanced Tools</Name>
+          <IconFilename>data/graphics/icons/icon_hq_mining3.png</IconFilename>
+          <InfoDescription>1742004295</InfoDescription>
+        </Standard>
+        <ItemSocketSet>
+          <SetBuff>1742004302</SetBuff>          <!-- Advanced Tools - SetBuff -->
+          <BuffScope>Session</BuffScope>
+        </ItemSocketSet>
+        <Text />
+        <Locked>
+          <DefaultLockedState>0</DefaultLockedState>
+        </Locked>
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- START - ICE HQ ITEMSET 3 - ADVANCED TOOLS -->
+
+  <!-- 112881 - Prospector Of Auspiciousness -->
+  <ModOp GUID="112881" Path="Values/Item" Type="add">
+    <ItemSet>1742004294</ItemSet>
+  </ModOp>
+
+  <!-- 116189 - The Bizarro-Balloono-Magn8 -->
+  <ModOp GUID="116189" Path="Values/Item" Type="add">
+    <ItemSet>1742004294</ItemSet>
+  </ModOp>
+
+  <!-- 112382 - ProcrastiNATE-Or -->
+  <ModOp GUID="112382" Path="Values/Item" Type="add">
+    <ItemSet>1742004294</ItemSet>
+  </ModOp>
+
+  <!-- 112884 - Extractor of Ore-someness -->
+  <ModOp GUID="112884" Path="Values/Item" Type="add">
+    <ItemSet>1742004294</ItemSet>
+  </ModOp>
+
+  <!-- 190881 - Fine Handheld Power Auger -->
+  <ModOp GUID="190881" Path="Values/Item" Type="add">
+    <ItemSet>1742004294</ItemSet>
+  </ModOp>
+
+  <!-- 116167 - Gritty Gas Extractor -->
+  <ModOp GUID="116167" Path="Values/Item" Type="add">
+    <ItemSet>1742004294</ItemSet>
+  </ModOp>
+
+  <!-- START ITEMSET 3 - Advanced Tools - SetBuff -->
+  <ModOp GUID='142519' Type="addNextSibling">
+    <Asset>
+      <Template>FestivalBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004302</GUID>
+          <Name>Advanced Tools</Name>
+          <IconFilename>data/graphics/icons/icon_hq_mining3.png</IconFilename>
+          <InfoDescription>1742004303</InfoDescription>
+        </Standard>
+        <Text />
+        <PopulationUpgrade />
+        <ResidenceUpgrade />
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1500301029</GUID>              <!-- All Arctic Mines -->
+            </Item>
+            <Item>
+              <GUID>1742200030</GUID>              <!-- All Arctic Gas Mines -->
+            </Item>
+            <Item>
+              <GUID>1742004275</GUID>              <!-- Ice Harvesting Site -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <Buff />
+        <CultureUpgrade/>
+        <KontorUpgrade/>
+        <AttackableUpgrade/>
+        <AttackerUpgrade/>
+        <BuildingUpgrade/>
+        <FactoryUpgrade>
+          <ProductivityUpgrade>
+            <Value>200</Value>
+            <Percental>1</Percental>
+          </ProductivityUpgrade>
+        </FactoryUpgrade>
+        <PassiveTradeGoodGenUpgrade/>
+        <ShipyardUpgrade/>
+        <VisitorHarborUpgrade/>
+        <VisitorUpgrade/>
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- START Basic Ice Optimizations Buff - Buff -->
+  <ModOp GUID='142519' Type="addNextSibling">
+    <Asset>
+      <Template>GuildhouseBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004321</GUID>
+          <Name>Basic Ice Optimizations Buff</Name>
+          <IconFilename>data/graphics/icons/icon_optimazations_1_ice.png</IconFilename>
+          <InfoDescription>1742004322</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742004275</GUID>              <!-- Ice Harvesting Site -->
+            </Item>
+          </EffectTargets>
+          <AllowStacking>1</AllowStacking>
+        </ItemEffect>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Basic Ice Optimizations</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>36690</LineID>
+        </Text>
+        <FactoryUpgrade>
+          <AdditionalOutput>
+            <Item>
+              <ForceProductSameAsFactoryOutput>1</ForceProductSameAsFactoryOutput>
+              <AdditionalOutputCycle>1</AdditionalOutputCycle>
+              <Amount>1</Amount>
+            </Item>
+          </AdditionalOutput>
+        </FactoryUpgrade>
+        <BuildingUpgrade>
+          <WorkforceAmountUpgrade>
+            <Value>50</Value>
+            <Percental>1</Percental>
+          </WorkforceAmountUpgrade>
+          <MaintenanceUpgrade>
+            <Value>50</Value>
+            <Percental>1</Percental>
+          </MaintenanceUpgrade>
+        </BuildingUpgrade>
+        <WarehouseUpgrade/>
+        <Buff/>
+        <CultureUpgrade/>
+        <ModuleOwnerUpgrade/>
+        <IncidentInfectableUpgrade/>
+        <PowerplantUpgrade/>
+        <IndustrializableUpgrade/>
+        <ItemContainerUpgrade/>
+        <IncidentInfluencerUpgrade/>
+        <IrrigationUpgrade/>
+        <EcoSystemProviderUpgrade/>
+        <ResourceUpgrade/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END Basic Ice Optimizations Buff - Buff -->
+
+  <!-- START Large Ice Optimizations Buff - Buff -->
+  <ModOp GUID='142519' Type="addNextSibling">
+    <Asset>
+      <Template>GuildhouseBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004323</GUID>
+          <Name>Large Ice Optimizations Buff</Name>
+          <IconFilename>data/graphics/icons/icon_optimazations_2_ice.png</IconFilename>
+          <InfoDescription>1742004324</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742004275</GUID>              <!-- Ice Harvesting Site -->
+            </Item>
+          </EffectTargets>
+          <AllowStacking>1</AllowStacking>
+        </ItemEffect>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Large Ice Optimizations</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>36690</LineID>
+        </Text>
+        <FactoryUpgrade>
+          <AdditionalOutput>
+            <Item>
+              <ForceProductSameAsFactoryOutput>1</ForceProductSameAsFactoryOutput>
+              <AdditionalOutputCycle>1</AdditionalOutputCycle>
+              <Amount>3</Amount>
+            </Item>
+          </AdditionalOutput>
+        </FactoryUpgrade>
+        <BuildingUpgrade>
+          <WorkforceAmountUpgrade>
+            <Value>100</Value>
+            <Percental>1</Percental>
+          </WorkforceAmountUpgrade>
+          <MaintenanceUpgrade>
+            <Value>100</Value>
+            <Percental>1</Percental>
+          </MaintenanceUpgrade>
+        </BuildingUpgrade>
+        <WarehouseUpgrade/>
+        <Buff/>
+        <CultureUpgrade/>
+        <ModuleOwnerUpgrade/>
+        <IncidentInfectableUpgrade/>
+        <PowerplantUpgrade/>
+        <IndustrializableUpgrade/>
+        <ItemContainerUpgrade/>
+        <IncidentInfluencerUpgrade/>
+        <IrrigationUpgrade/>
+        <EcoSystemProviderUpgrade/>
+        <ResourceUpgrade/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END Large Ice Optimizations Buff - Buff -->
+
+  <!-- START Basic Mining Optimizations Buff - Buff -->
+  <ModOp GUID='142519' Type="addNextSibling">
+    <Asset>
+      <Template>GuildhouseBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004325</GUID>
+          <Name>Basic Mining Optimizations Buff</Name>
+          <IconFilename>data/graphics/icons/icon_mining_optimazations1.png</IconFilename>
+          <InfoDescription>1742004326</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1500301029</GUID>              <!-- All Arctic Mines -->
+            </Item>
+            <Item>
+              <GUID>1742200030</GUID>              <!-- All Arctic Gas Mines -->
+            </Item>
+          </EffectTargets>
+          <AllowStacking>1</AllowStacking>
+        </ItemEffect>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Basic Mining Optimizations</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>36690</LineID>
+        </Text>
+        <FactoryUpgrade>
+          <AdditionalOutput>
+            <Item>
+              <ForceProductSameAsFactoryOutput>1</ForceProductSameAsFactoryOutput>
+              <AdditionalOutputCycle>1</AdditionalOutputCycle>
+              <Amount>1</Amount>
+            </Item>
+          </AdditionalOutput>
+        </FactoryUpgrade>
+        <BuildingUpgrade>
+          <WorkforceAmountUpgrade>
+            <Value>50</Value>
+            <Percental>1</Percental>
+          </WorkforceAmountUpgrade>
+          <MaintenanceUpgrade>
+            <Value>50</Value>
+            <Percental>1</Percental>
+          </MaintenanceUpgrade>
+        </BuildingUpgrade>
+        <WarehouseUpgrade />
+        <Buff/>
+        <CultureUpgrade/>
+        <ModuleOwnerUpgrade/>
+        <IncidentInfectableUpgrade/>
+        <PowerplantUpgrade/>
+        <IndustrializableUpgrade/>
+        <ItemContainerUpgrade/>
+        <IncidentInfluencerUpgrade/>
+        <IrrigationUpgrade/>
+        <EcoSystemProviderUpgrade/>
+        <ResourceUpgrade/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END Basic Mining Optimizations Buff - Buff -->
+
+  <!-- START Large Mining Optimizations Buff - Buff -->
+  <ModOp GUID='142519' Type="addNextSibling">
+    <Asset>
+      <Template>GuildhouseBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004327</GUID>
+          <Name>Large Mining Optimizations Buff</Name>
+          <IconFilename>data/graphics/icons/icon_mining_optimazations2.png</IconFilename>
+          <InfoDescription>1742004328</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1500301029</GUID>              <!-- All Arctic Mines -->
+            </Item>
+            <Item>
+              <GUID>1742200030</GUID>              <!-- All Arctic Gas Mines -->
+            </Item>
+          </EffectTargets>
+          <AllowStacking>1</AllowStacking>
+        </ItemEffect>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Large Mining Optimizations</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>36690</LineID>
+        </Text>
+        <FactoryUpgrade>
+          <AdditionalOutput>
+            <Item>
+              <ForceProductSameAsFactoryOutput>1</ForceProductSameAsFactoryOutput>
+              <AdditionalOutputCycle>1</AdditionalOutputCycle>
+              <Amount>3</Amount>
+            </Item>
+          </AdditionalOutput>
+        </FactoryUpgrade>
+        <BuildingUpgrade>
+          <WorkforceAmountUpgrade>
+            <Value>100</Value>
+            <Percental>1</Percental>
+          </WorkforceAmountUpgrade>
+          <MaintenanceUpgrade>
+            <Value>100</Value>
+            <Percental>1</Percental>
+          </MaintenanceUpgrade>
+        </BuildingUpgrade>
+        <WarehouseUpgrade />
+        <Buff/>
+        <CultureUpgrade/>
+        <ModuleOwnerUpgrade/>
+        <IncidentInfectableUpgrade/>
+        <PowerplantUpgrade/>
+        <IndustrializableUpgrade/>
+        <ItemContainerUpgrade/>
+        <IncidentInfluencerUpgrade/>
+        <IrrigationUpgrade/>
+        <EcoSystemProviderUpgrade/>
+        <ResourceUpgrade/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END Large Mining Optimizations Buff - Buff -->
+
+  <!-- START Basic Scrap Optimizations Buff - Buff -->
+  <ModOp GUID='142519' Type="addNextSibling">
+    <Asset>
+      <Template>GuildhouseBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004397</GUID>
+          <Name>Basic Scrap Optimizations Buff</Name>
+          <IconFilename>data/graphics/icons/icon_scrap_optimazations1.png</IconFilename>
+          <InfoDescription>1742004415</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742004362</GUID>              <!-- Lost Expedition Site - Building -->
+            </Item>
+          </EffectTargets>
+          <AllowStacking>1</AllowStacking>
+        </ItemEffect>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Basic Scrap Optimizations</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>36690</LineID>
+        </Text>
+        <FactoryUpgrade>
+          <ProductivityUpgrade>
+            <Value>50</Value>
+            <Percental>1</Percental>
+          </ProductivityUpgrade>
+          <AdditionalOutput>
+            <Item>
+              <Product>112518</Product>              <!-- Scrap -->
+              <AdditionalOutputCycle>2</AdditionalOutputCycle>
+              <Amount>1</Amount>
+            </Item>
+            <Item>
+              <Product>112520</Product>              <!-- Nice Scrap -->
+              <AdditionalOutputCycle>2</AdditionalOutputCycle>
+              <Amount>1</Amount>
+            </Item>
+          </AdditionalOutput>
+        </FactoryUpgrade>
+        <BuildingUpgrade>
+          <WorkforceAmountUpgrade>
+            <Value>50</Value>
+            <Percental>1</Percental>
+          </WorkforceAmountUpgrade>
+          <MaintenanceUpgrade>
+            <Value>50</Value>
+            <Percental>1</Percental>
+          </MaintenanceUpgrade>
+        </BuildingUpgrade>
+        <WarehouseUpgrade />
+        <Buff/>
+        <CultureUpgrade/>
+        <ModuleOwnerUpgrade/>
+        <IncidentInfectableUpgrade/>
+        <PowerplantUpgrade/>
+        <IndustrializableUpgrade/>
+        <ItemContainerUpgrade/>
+        <IncidentInfluencerUpgrade/>
+        <IrrigationUpgrade/>
+        <EcoSystemProviderUpgrade/>
+        <ResourceUpgrade/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END Basic Scrap Optimizations Buff - Buff -->
+
+  <!-- START Large Scrap Optimizations Buff - Buff -->
+  <ModOp GUID='142519' Type="addNextSibling">
+    <Asset>
+      <Template>GuildhouseBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004416</GUID>
+          <Name>Large Scrap Optimizations Buff</Name>
+          <IconFilename>data/graphics/icons/icon_scrap_optimazations2.png</IconFilename>
+          <InfoDescription>1742004454</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742004362</GUID>              <!-- Lost Expedition Site - Building -->
+            </Item>
+          </EffectTargets>
+          <AllowStacking>1</AllowStacking>
+        </ItemEffect>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Large Scrap Optimizations</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>36690</LineID>
+        </Text>
+        <FactoryUpgrade>
+          <ProductivityUpgrade>
+            <Value>100</Value>
+            <Percental>1</Percental>
+          </ProductivityUpgrade>
+          <AdditionalOutput>
+            <Item>
+              <Product>112518</Product>              <!-- Scrap -->
+              <AdditionalOutputCycle>1</AdditionalOutputCycle>
+              <Amount>1</Amount>
+            </Item>
+            <Item>
+              <Product>112520</Product>              <!-- Nice Scrap -->
+              <AdditionalOutputCycle>1</AdditionalOutputCycle>
+              <Amount>1</Amount>
+            </Item>
+            <Item>
+              <Product>112523</Product>              <!-- Special Scrap -->
+              <AdditionalOutputCycle>1</AdditionalOutputCycle>
+              <Amount>1</Amount>
+            </Item>
+          </AdditionalOutput>
+        </FactoryUpgrade>
+        <BuildingUpgrade>
+          <WorkforceAmountUpgrade>
+            <Value>100</Value>
+            <Percental>1</Percental>
+          </WorkforceAmountUpgrade>
+          <MaintenanceUpgrade>
+            <Value>100</Value>
+            <Percental>1</Percental>
+          </MaintenanceUpgrade>
+        </BuildingUpgrade>
+        <WarehouseUpgrade />
+        <Buff/>
+        <CultureUpgrade/>
+        <ModuleOwnerUpgrade/>
+        <IncidentInfectableUpgrade/>
+        <PowerplantUpgrade/>
+        <IndustrializableUpgrade/>
+        <ItemContainerUpgrade/>
+        <IncidentInfluencerUpgrade/>
+        <IrrigationUpgrade/>
+        <EcoSystemProviderUpgrade/>
+        <ResourceUpgrade/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END Large Scrap Optimizations Buff - Buff -->
+
+  <!-- START Coastal Ice Storage Buff - BUFF -->
+  <ModOp GUID='25623' Type="addNextSibling">
+    <Asset>
+      <Template>HarbourOfficeBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004374</GUID>
+          <Name>Coastal Ice Storage Buff</Name>
+          <IconFilename>data/graphics/icons/icon_coastal_storage_ice.png</IconFilename>
+          <InfoDescription>1742004375</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>190779</GUID>
+            </Item>
+          </EffectTargets>
+          <AllowStacking>0</AllowStacking>
+        </ItemEffect>
+        <Text />
+        <FactoryUpgrade>
+          <ProductivityUpgrade>
+            <Value>100</Value>
+            <Percental>1</Percental>
+          </ProductivityUpgrade>
+          <AdditionalOutput>
+            <Item>
+              <ForceProductSameAsFactoryOutput>1</ForceProductSameAsFactoryOutput>
+              <AdditionalOutputCycle>2</AdditionalOutputCycle>
+              <Amount>1</Amount>
+            </Item>
+          </AdditionalOutput>
+        </FactoryUpgrade>
+        <BuildingUpgrade>
+          <WorkforceAmountUpgrade>
+            <Value>25</Value>
+            <Percental>1</Percental>
+          </WorkforceAmountUpgrade>
+        </BuildingUpgrade>
+        <Buff />
+        <AttackerUpgrade />
+        <VisitorHarborUpgrade />
+        <VisitorUpgrade />
+        <PassiveTradeGoodGenUpgrade />
+        <KontorUpgrade />
+        <AttackableUpgrade/>
+        <CultureUpgrade/>
+        <ResourceUpgrade />
+        <PierUpgrade/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END Coastal Ice Storage Buff - BUFF -->
+
+  <!-- START Meat, Milk, Vegetables and Fruit Ice Storage Buff - BUFF -->
+  <ModOp GUID="192176" Type="addNextSibling">
+    <Asset>
+      <Template>GuildhouseBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004380</GUID>
+          <Name>Meat, Milk, Vegetables, Fruit and Ice Cream Ice Storage Buff</Name>
+          <IconFilename>data/graphics/icons/icon_storage_ice.png</IconFilename>
+          <InfoDescription>1742004381</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1010269</GUID>
+            </Item>
+            <Item>
+              <GUID>1010263</GUID>
+            </Item>
+            <Item>
+              <GUID>101269</GUID>
+            </Item>
+            <Item>
+              <GUID>114456</GUID>
+            </Item>
+            <Item>
+              <GUID>114439</GUID>
+            </Item>
+            <Item>
+              <GUID>1010265</GUID>
+            </Item>
+            <Item>
+              <GUID>100654</GUID>
+            </Item>
+            <Item>
+              <GUID>100655</GUID>
+            </Item>
+            <Item>
+              <GUID>101263</GUID>
+            </Item>
+            <Item>
+              <GUID>133031</GUID>
+            </Item>
+            <Item>
+              <GUID>5459</GUID>
+            </Item>
+          </EffectTargets>
+          <AllowStacking>0</AllowStacking>
+        </ItemEffect>
+        <Text />
+        <FactoryUpgrade>
+          <ProductivityUpgrade>
+            <Value>100</Value>
+            <Percental>1</Percental>
+          </ProductivityUpgrade>
+          <AdditionalOutput>
+            <Item>
+              <ForceProductSameAsFactoryOutput>1</ForceProductSameAsFactoryOutput>
+              <AdditionalOutputCycle>2</AdditionalOutputCycle>
+              <Amount>1</Amount>
+            </Item>
+          </AdditionalOutput>
+        </FactoryUpgrade>
+        <BuildingUpgrade>
+          <WorkforceAmountUpgrade>
+            <Value>25</Value>
+            <Percental>1</Percental>
+          </WorkforceAmountUpgrade>
+        </BuildingUpgrade>
+        <Buff />
+        <CultureUpgrade />
+        <ModuleOwnerUpgrade />
+        <IncidentInfectableUpgrade />
+        <PowerplantUpgrade />
+        <IndustrializableUpgrade />
+        <ItemContainerUpgrade />
+        <IncidentInfluencerUpgrade />
+        <IrrigationUpgrade />
+        <EcoSystemProviderUpgrade />
+        <ResourceUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END Meat, Milk, Vegetables and Fruit Ice Storage Buff - BUFF -->
+
+  <!-- START Rare Research - Buff -->
+  <ModOp GUID="192176" Type="addNextSibling">
+    <Asset>
+      <Template>TownhallBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004436</GUID>
+          <Name>Rare Research</Name>
+          <IconFilename>data/graphics/icons/icon_research_institute_01.png</IconFilename>
+          <InfoDescription>1742004437</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742200028</GUID>              <!--All Technician Residences-->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Rare Research</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>49936</LineID>
+        </Text>
+        <BuildingUpgrade/>
+        <Buff/>
+        <PopulationUpgrade>
+          <InputBenefitModifier>
+            <Item>
+              <Product>1742004419</Product>              <!--Arctic Research Institute-->
+              <AdditionalResearch>1</AdditionalResearch>
+            </Item>
+          </InputBenefitModifier>
+        </PopulationUpgrade>
+        <ResidenceUpgrade/>
+        <IncidentInfectableUpgrade/>
+        <CultureUpgrade/>
+        <InfluenceSourceUpgrade/>
+        <WarehouseUpgrade/>
+        <DistributionUpgrade/>
+        <ItemContainerUpgrade/>
+        <FactoryUpgrade/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END Rare Research - Buff -->
+
+  <!-- START Rare Research - Buff -->
+  <ModOp GUID="192176" Type="addNextSibling">
+    <Asset>
+      <Template>TownhallBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004438</GUID>
+          <Name>Rare Research</Name>
+          <IconFilename>data/graphics/icons/icon_research_institute_02.png</IconFilename>
+          <InfoDescription>1742004439</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742200028</GUID>              <!--All Technician Residences-->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Rare Research</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>49936</LineID>
+        </Text>
+        <BuildingUpgrade/>
+        <Buff/>
+        <PopulationUpgrade>
+          <InputBenefitModifier>
+            <Item>
+              <Product>1742004419</Product>              <!--Arctic Research Institute-->
+              <AdditionalResearch>2</AdditionalResearch>
+            </Item>
+          </InputBenefitModifier>
+        </PopulationUpgrade>
+        <ResidenceUpgrade/>
+        <IncidentInfectableUpgrade/>
+        <CultureUpgrade/>
+        <InfluenceSourceUpgrade/>
+        <WarehouseUpgrade/>
+        <DistributionUpgrade/>
+        <ItemContainerUpgrade/>
+        <FactoryUpgrade/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END Rare Research - Buff -->
+
+  <!-- START Legendary Research - Buff -->
+  <ModOp GUID="192176" Type="addNextSibling">
+    <Asset>
+      <Template>TownhallBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004440</GUID>
+          <Name>Legendary Research</Name>
+          <IconFilename>data/graphics/icons/icon_research_institute_03.png</IconFilename>
+          <InfoDescription>1742004441</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742200028</GUID>              <!--All Technician Residences-->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Legendary Research</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>49936</LineID>
+        </Text>
+        <BuildingUpgrade/>
+        <Buff/>
+        <PopulationUpgrade>
+          <InputBenefitModifier>
+            <Item>
+              <Product>1742004419</Product>              <!--Arctic Research Institute-->
+              <AdditionalResearch>4</AdditionalResearch>
+            </Item>
+          </InputBenefitModifier>
+        </PopulationUpgrade>
+        <ResidenceUpgrade/>
+        <IncidentInfectableUpgrade/>
+        <CultureUpgrade/>
+        <InfluenceSourceUpgrade/>
+        <WarehouseUpgrade/>
+        <DistributionUpgrade/>
+        <ItemContainerUpgrade/>
+        <FactoryUpgrade/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END Rare Research - Buff -->
+
+  <!-- START Monumental Cooking and Drinking Influence - BUFF -->
+  <ModOp GUID="192176" Type="addNextSibling">
+    <Asset>
+      <Template>GuildhouseBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004465</GUID>
+          <Name>Monumental Cooking and Drinking Influence</Name>
+          <IconFilename>data/graphics/icons/icon_inuit_monument.png</IconFilename>
+          <InfoDescription>1742004466</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742004467</GUID>
+            </Item>
+          </EffectTargets>
+          <AllowStacking>0</AllowStacking>
+        </ItemEffect>
+        <Text />
+        <FactoryUpgrade>
+          <AdditionalOutput>
+            <Item>
+              <ForceProductSameAsFactoryOutput>1</ForceProductSameAsFactoryOutput>
+              <AdditionalOutputCycle>2</AdditionalOutputCycle>
+              <Amount>1</Amount>
+            </Item>
+          </AdditionalOutput>
+        </FactoryUpgrade>
+        <BuildingUpgrade>
+          <WorkforceAmountUpgrade>
+            <Value>25</Value>
+            <Percental>1</Percental>
+          </WorkforceAmountUpgrade>
+        </BuildingUpgrade>
+        <Buff />
+        <CultureUpgrade />
+        <ModuleOwnerUpgrade />
+        <IncidentInfectableUpgrade />
+        <PowerplantUpgrade />
+        <IndustrializableUpgrade />
+        <ItemContainerUpgrade />
+        <IncidentInfluencerUpgrade />
+        <IrrigationUpgrade />
+        <EcoSystemProviderUpgrade />
+        <ResourceUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END Monumental Cooking and Drinking Influence - BUFF -->
+
+  <!-- START Monumental Residences Influence - BUFF -->
+  <ModOp GUID="192176" Type="addNextSibling">
+    <Asset>
+      <Template>TownhallBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004472</GUID>
+          <Name>Monumental Residences Influence</Name>
+          <IconFilename>data/graphics/icons/icon_inuit_monument.png</IconFilename>
+          <InfoDescription>1742004473</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742004179</GUID>
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <Text />
+        <BuildingUpgrade/>
+        <Buff/>
+        <PopulationUpgrade />
+        <ResidenceUpgrade>
+          <GoodConsumptionUpgrade>
+            <Item>
+              <ProvidedNeed>1742004360</ProvidedNeed>              <!-- Spiritual Site - Product  -->
+              <AmountInPercent>-100</AmountInPercent>
+            </Item>
+            <Item>
+              <ProvidedNeed>1010200</ProvidedNeed>              <!-- Fish - Product  -->
+              <AmountInPercent>-30</AmountInPercent>
+            </Item>
+            <Item>
+              <ProvidedNeed>112694</ProvidedNeed>              <!-- Caribou Meat - Product  -->
+              <AmountInPercent>-30</AmountInPercent>
+            </Item>
+            <Item>
+              <ProvidedNeed>1742004162</ProvidedNeed>              <!-- Snow Goggles - Product  -->
+              <AmountInPercent>-30</AmountInPercent>
+            </Item>
+            <Item>
+              <ProvidedNeed>1500010153</ProvidedNeed>              <!-- Tools - Product  -->
+              <AmountInPercent>-30</AmountInPercent>
+            </Item>
+            <Item>
+              <ProvidedNeed>1010213</ProvidedNeed>              <!-- Bread - Product  -->
+              <AmountInPercent>-30</AmountInPercent>
+            </Item>
+            <Item>
+              <ProvidedNeed>1742004168</ProvidedNeed>              <!-- Snow Shoes - Product  -->
+              <AmountInPercent>-30</AmountInPercent>
+            </Item>
+            <Item>
+              <ProvidedNeed>1742004170</ProvidedNeed>              <!-- Qajaks - Product  -->
+              <AmountInPercent>-30</AmountInPercent>
+            </Item>
+          </GoodConsumptionUpgrade>
+        </ResidenceUpgrade>
+        <IncidentInfectableUpgrade>
+          <IncidentArcticIllnessIncreaseUpgrade>
+            <Value>-6</Value>
+          </IncidentArcticIllnessIncreaseUpgrade>
+        </IncidentInfectableUpgrade>
+        <CultureUpgrade/>
+        <InfluenceSourceUpgrade/>
+        <WarehouseUpgrade/>
+        <DistributionUpgrade/>
+        <ItemContainerUpgrade/>
+        <FactoryUpgrade/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END Monumental Residences Influence - BUFF -->
+
+  <!-- START Monumental Crafting Influence - BUFF -->
+  <ModOp GUID="192176" Type="addNextSibling">
+    <Asset>
+      <Template>GuildhouseBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004476</GUID>
+          <Name>Monumental Crafting Influence</Name>
+          <IconFilename>data/graphics/icons/icon_inuit_monument.png</IconFilename>
+          <InfoDescription>1742004477</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742004265</GUID>
+            </Item>
+          </EffectTargets>
+          <AllowStacking>0</AllowStacking>
+        </ItemEffect>
+        <Text />
+        <FactoryUpgrade>
+          <AdditionalOutput>
+            <Item>
+              <ForceProductSameAsFactoryOutput>1</ForceProductSameAsFactoryOutput>
+              <AdditionalOutputCycle>2</AdditionalOutputCycle>
+              <Amount>1</Amount>
+            </Item>
+          </AdditionalOutput>
+        </FactoryUpgrade>
+        <BuildingUpgrade>
+          <WorkforceAmountUpgrade>
+            <Value>25</Value>
+            <Percental>1</Percental>
+          </WorkforceAmountUpgrade>
+        </BuildingUpgrade>
+        <Buff />
+        <CultureUpgrade />
+        <ModuleOwnerUpgrade />
+        <IncidentInfectableUpgrade />
+        <PowerplantUpgrade />
+        <IndustrializableUpgrade />
+        <ItemContainerUpgrade />
+        <IncidentInfluencerUpgrade />
+        <IrrigationUpgrade />
+        <EcoSystemProviderUpgrade />
+        <ResourceUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END Monumental Crafting Influence - BUFF -->
+
+  <!-- START Monumental Forest Influence - BUFF -->
+  <ModOp GUID="192176" Type="addNextSibling">
+    <Asset>
+      <Template>GuildhouseBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004480</GUID>
+          <Name>Monumental Forest Influence</Name>
+          <IconFilename>data/graphics/icons/icon_inuit_monument.png</IconFilename>
+          <InfoDescription>1742004481</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742004228</GUID>
+            </Item>
+          </EffectTargets>
+          <AllowStacking>0</AllowStacking>
+        </ItemEffect>
+        <Text />
+        <FactoryUpgrade>
+          <AdditionalOutput>
+            <Item>
+              <ForceProductSameAsFactoryOutput>1</ForceProductSameAsFactoryOutput>
+              <AdditionalOutputCycle>2</AdditionalOutputCycle>
+              <Amount>1</Amount>
+            </Item>
+          </AdditionalOutput>
+          <AddedFertility>1742004178</AddedFertility>          <!-- Bog Labrador Tea - Fertility -->
+        </FactoryUpgrade>
+        <BuildingUpgrade>
+          <WorkforceAmountUpgrade>
+            <Value>25</Value>
+            <Percental>1</Percental>
+          </WorkforceAmountUpgrade>
+        </BuildingUpgrade>
+        <Buff />
+        <CultureUpgrade />
+        <ModuleOwnerUpgrade />
+        <IncidentInfectableUpgrade />
+        <PowerplantUpgrade />
+        <IndustrializableUpgrade />
+        <ItemContainerUpgrade />
+        <IncidentInfluencerUpgrade />
+        <IrrigationUpgrade />
+        <EcoSystemProviderUpgrade />
+        <ResourceUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END Monumental Forest Influence - BUFF -->
+
+  <!-- START Monumental Coastal Influence - BUFF -->
+  <ModOp GUID="192176" Type="addNextSibling">
+    <Asset>
+      <Template>GuildhouseBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004484</GUID>
+          <Name>Monumental Coastal Influence</Name>
+          <IconFilename>data/graphics/icons/icon_inuit_monument.png</IconFilename>
+          <InfoDescription>1742004485</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742004233</GUID>
+            </Item>
+          </EffectTargets>
+          <AllowStacking>0</AllowStacking>
+        </ItemEffect>
+        <Text />
+        <FactoryUpgrade>
+          <AdditionalOutput>
+            <Item>
+              <ForceProductSameAsFactoryOutput>1</ForceProductSameAsFactoryOutput>
+              <AdditionalOutputCycle>2</AdditionalOutputCycle>
+              <Amount>1</Amount>
+            </Item>
+          </AdditionalOutput>
+        </FactoryUpgrade>
+        <BuildingUpgrade>
+          <WorkforceAmountUpgrade>
+            <Value>25</Value>
+            <Percental>1</Percental>
+          </WorkforceAmountUpgrade>
+        </BuildingUpgrade>
+        <Buff />
+        <CultureUpgrade />
+        <ModuleOwnerUpgrade />
+        <IncidentInfectableUpgrade />
+        <PowerplantUpgrade />
+        <IndustrializableUpgrade />
+        <ItemContainerUpgrade />
+        <IncidentInfluencerUpgrade />
+        <IrrigationUpgrade />
+        <EcoSystemProviderUpgrade />
+        <ResourceUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END Monumental Coastal Influence - BUFF -->
+  <!-- START Conny Cobbler - BUFF -->
+  <ModOp GUID="192176" Type="addNextSibling">
+<Asset>
+	<Template>TownhallBuff</Template>
+	<Values>
+		<Standard>
+			<GUID>1742004504</GUID>
+			<Name>Conny Cobbler</Name>
+			<IconFilename>data/ui/2kimages/main/3dicons/recipes/icon_daiquiri_tropic.png</IconFilename>
+		</Standard>
+		<ItemEffect>
+			<EffectTargets>
+				<Item>
+					<GUID>194015</GUID><!--all residences EU without Scholars-->
+				</Item>
+			</EffectTargets>
+			<AllowStacking>0</AllowStacking>
+		</ItemEffect>
+		<Text/>
+		<BuildingUpgrade/>
+		<Buff/>
+		<PopulationUpgrade/>
+		<ResidenceUpgrade>
+			<AdditionalHappiness>3</AdditionalHappiness>
+			<GoodConsumptionUpgrade>
+				<Item>
+					<ProvidedNeed>135234</ProvidedNeed><!--cognac-->
+					<AmountInPercent>-25</AmountInPercent>
+				</Item>
+				<Item>
+					<ProvidedNeed>1010258</ProvidedNeed><!--chocolate-->
+					<AmountInPercent>-25</AmountInPercent>
+				</Item>
+				<Item>
+					<ProvidedNeed>1742004384</ProvidedNeed><!--ice service-->
+					<AmountInPercent>-100</AmountInPercent>
+				</Item>
+			</GoodConsumptionUpgrade>
+		</ResidenceUpgrade>
+		<IncidentInfectableUpgrade/>
+		<CultureUpgrade/>
+		<InfluenceSourceUpgrade/>
+		<WarehouseUpgrade/>
+		<DistributionUpgrade/>
+		<ItemContainerUpgrade/>
+		<FactoryUpgrade/>
+	</Values>
+</Asset>
+  </ModOp>
+  <!-- END Conny Cobbler - BUFF -->
+  <!-- START Bubbly Julep - BUFF -->
+  <ModOp GUID="192176" Type="addNextSibling">
+<Asset>
+	<Template>TownhallBuff</Template>
+	<Values>
+		<Standard>
+			<GUID>1742004505</GUID>
+			<Name>Bubbly Julep</Name>
+			<IconFilename>data/ui/2kimages/main/3dicons/recipes/icon_daiquiri_tropic.png</IconFilename>
+		</Standard>
+		<ItemEffect>
+			<EffectTargets>
+				<Item>
+					<GUID>194015</GUID><!--all residences EU without Scholars-->
+				</Item>
+			</EffectTargets>
+			<AllowStacking>0</AllowStacking>
+		</ItemEffect>
+		<Text/>
+		<BuildingUpgrade/>
+		<Buff/>
+		<PopulationUpgrade/>
+		<ResidenceUpgrade>
+			<AdditionalHappiness>3</AdditionalHappiness>
+			<GoodConsumptionUpgrade>
+				<Item>
+					<ProvidedNeed>1010259</ProvidedNeed><!--cigars-->
+					<AmountInPercent>-25</AmountInPercent>
+				</Item>
+				<Item>
+					<ProvidedNeed>120016</ProvidedNeed><!--champagne-->
+					<AmountInPercent>-25</AmountInPercent>
+				</Item>
+				<Item>
+					<ProvidedNeed>1742004384</ProvidedNeed><!--ice service-->
+					<AmountInPercent>-100</AmountInPercent>
+				</Item>
+			</GoodConsumptionUpgrade>
+		</ResidenceUpgrade>
+		<IncidentInfectableUpgrade/>
+		<CultureUpgrade/>
+		<InfluenceSourceUpgrade/>
+		<WarehouseUpgrade/>
+		<DistributionUpgrade/>
+		<ItemContainerUpgrade/>
+		<FactoryUpgrade/>
+	</Values>
+</Asset>
+  </ModOp>
+  <!-- END Bubbly Julep - BUFF -->
+  <!-- START Ice Coffee - BUFF -->
+  <ModOp GUID="192176" Type="addNextSibling">
+<Asset>
+	<Template>TownhallBuff</Template>
+	<Values>
+		<Standard>
+			<GUID>1742004506</GUID>
+			<Name>Ice Coffee</Name>
+			<IconFilename>data/ui/2kimages/main/3dicons/recipes/icon_daiquiri_tropic.png</IconFilename>
+		</Standard>
+		<ItemEffect>
+			<EffectTargets>
+				<Item>
+					<GUID>194015</GUID><!--all residences EU without Scholars-->
+				</Item>
+			</EffectTargets>
+			<AllowStacking>0</AllowStacking>
+		</ItemEffect>
+		<Text/>
+		<BuildingUpgrade/>
+		<Buff/>
+		<PopulationUpgrade/>
+		<ResidenceUpgrade>
+			<AdditionalHappiness>3</AdditionalHappiness>
+			<GoodConsumptionUpgrade>
+				<Item>
+					<ProvidedNeed>120032</ProvidedNeed><!--coffee-->
+					<AmountInPercent>-20</AmountInPercent>
+				</Item>
+				<Item>
+					<ProvidedNeed>135229</ProvidedNeed><!--biscuits-->
+					<AmountInPercent>-30</AmountInPercent>
+				</Item>
+				<Item>
+					<ProvidedNeed>1742004384</ProvidedNeed><!--ice service-->
+					<AmountInPercent>-100</AmountInPercent>
+				</Item>
+			</GoodConsumptionUpgrade>
+		</ResidenceUpgrade>
+		<IncidentInfectableUpgrade/>
+		<CultureUpgrade/>
+		<InfluenceSourceUpgrade/>
+		<WarehouseUpgrade/>
+		<DistributionUpgrade/>
+		<ItemContainerUpgrade/>
+		<FactoryUpgrade/>
+	</Values>
+</Asset>
+  </ModOp>
+  <!-- END Ice Coffee - BUFF -->
+
+</ModOps>
+  

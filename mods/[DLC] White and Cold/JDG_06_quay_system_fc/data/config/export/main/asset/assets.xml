@@ -1,0 +1,693 @@
+<!-- GUID-RANGE 2.077.06R.XXX -->
+
+<ModOps>
+
+    <Include File="./arcticquay.include.xml" Condition="!@2077023021"/>
+
+    <ModOp Type="addNextSibling" GUID="1010567">
+        <Asset>
+            <Template>Street</Template>
+            <Values>
+                <Standard>
+                    <GUID>2077060001</GUID>
+                    <Name>Quay System Full Corners</Name>
+                    <IconFilename>data/ui/2kimages/main/3dicons/jdg/icon_quay_fc_0.png</IconFilename>
+                    <ID>QuaySystemFCModerate</ID>
+                    <InfoDescription>12752</InfoDescription>
+                    <!--Quay InfoCorner-->
+                </Standard>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>
+                            <!--Money-->
+                            <Amount>5</Amount>
+                        </Item>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>1</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>Street</TemplateName>
+                                        <Index>1</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                        </Item>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>2</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>Street</TemplateName>
+                                        <Index>2</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                        </Item>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>3</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>Street</TemplateName>
+                                        <Index>3</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                        </Item>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>4</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>Street</TemplateName>
+                                        <Index>4</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                        </Item>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>5</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>Street</TemplateName>
+                                        <Index>5</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                        </Item>
+                    </Costs>
+                </Cost>
+                <Street>
+                    <CfgFileName>data/graphics/buildings/special/quay_system_01/props/quay_system_01.cfg</CfgFileName>
+                    <InternalID>179</InternalID>
+                    <DecalMapping>data/config/street/quay_base.txt.bin</DecalMapping>
+                    <DecalVariation>data/config/street/no_var.txt</DecalVariation>
+                    <StyleRows>8</StyleRows>
+                    <StyleCols>8</StyleCols>
+                    <OverbuildRule>Harbour</OverbuildRule>
+                    <IsLogicRoad>0</IsLogicRoad>
+                    <IsHarbour>1</IsHarbour>
+                    <IsPlazza>1</IsPlazza>
+
+                    <HasFeedbackPathPlanningPenalty>0</HasFeedbackPathPlanningPenalty>
+                    <AdaptToNeighbors>
+                        <AdaptGroups>Quay_And_QuaySpecial;Quay_And_QuayBase_And_HiddenFences</AdaptGroups>
+                        <NeighborsThatMakeUsAdapt>Quay_And_QuaySpecial;QuayStreet</NeighborsThatMakeUsAdapt>
+                    </AdaptToNeighbors>
+                    <NeighbourToTransitionRule>44</NeighbourToTransitionRule>
+                    </Street>
+                <Constructable/>
+                <Locked/>
+                <SoundEmitter>
+                    <DestroySounds>
+                        <Item>
+                            <Sound>9818756</Sound>
+                        </Item>
+                    </DestroySounds>
+                    <ConstructionSounds>
+                        <BuildSuccessful>
+                            <Item>
+                                <Sound>215916</Sound>
+                            </Item>
+                        </BuildSuccessful>
+                        <BuildMoveStart>
+                            <Item>
+                                <Sound>9818755</Sound>
+                            </Item>
+                        </BuildMoveStart>
+                        <BuildMoveSuccess>
+                            <Item>
+                                <Sound>203995</Sound>
+                            </Item>
+                        </BuildMoveSuccess>
+                        <BuildMoveEnd>
+                            <Item>
+                                <Sound>200141</Sound>
+                            </Item>
+                        </BuildMoveEnd>
+                    </ConstructionSounds>
+                    <ConstructionStreetSounds>
+                        <BuildAddWaypoint>
+                            <Item>
+                                <Sound>215918</Sound>
+                            </Item>
+                        </BuildAddWaypoint>
+                    </ConstructionStreetSounds>
+                </SoundEmitter>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>Quay Full Corners</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>7001</LineID>
+                </Text>
+                <Building>
+                    <BuildingCategoryName>11150</BuildingCategoryName>
+                    <!--Harbor Building-->
+                    <Movable>0</Movable>
+                    <PickingAsset>2077060001</PickingAsset>
+                    <AssociatedRegions>Moderate</AssociatedRegions>
+                    <TerrainType>Water_Including_Coast</TerrainType>
+                </Building>
+                <Ornament/>
+            </Values>
+        </Asset>
+    </ModOp>
+    <ModOp Type="addNextSibling" GUID="2077060001">
+        <Asset>
+            <BaseAssetGUID>2077060001</BaseAssetGUID>
+            <Values>
+                <Standard>
+                    <GUID>2077061001</GUID>
+                    <Name>Quay System Colony 01 Full Corners</Name>
+                    <IconFilename>data/ui/2kimages/main/3dicons/jdg/icon_quay_fc_0.png</IconFilename>
+                    <ID>QuaySystemFCColony01</ID>
+                    <InfoDescription>12752</InfoDescription>
+                    <!--Quay InfoCorner-->
+                </Standard>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>
+                            <!--Money-->
+                            <Amount>5</Amount>
+                        </Item>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>1</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>Street</TemplateName>
+                                        <Index>1</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                        </Item>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>2</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>Street</TemplateName>
+                                        <Index>2</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                        </Item>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>3</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>Street</TemplateName>
+                                        <Index>3</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                        </Item>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>4</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>Street</TemplateName>
+                                        <Index>4</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                        </Item>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>5</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>Street</TemplateName>
+                                        <Index>5</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                        </Item>
+                    </Costs>
+                </Cost>
+                <Street>
+                    <CfgFileName>data/graphics/buildings/special/quay_system_colony01_01/props/quay_system_colony01_01.cfg</CfgFileName>
+                    <InternalID>180</InternalID>
+                </Street>
+                <Constructable/>
+                <Locked/>
+                <SoundEmitter/>
+                <Building>
+                    <PickingAsset>2077061001</PickingAsset>
+                    <AssociatedRegions>Colony01</AssociatedRegions>                    
+                </Building>
+                <Ornament/>
+            </Values>
+        </Asset>
+    </ModOp>
+    <ModOp Type="addNextSibling" GUID="2077061001">
+        <Asset>
+            <BaseAssetGUID>2077060001</BaseAssetGUID>
+            <Values>
+                <Standard>
+                    <GUID>2077062001</GUID>
+                    <Name>Quay System Africa Full Corners</Name>
+                    <IconFilename>data/ui/2kimages/main/3dicons/jdg/icon_quay_fc_0.png</IconFilename>
+                    <ID>QuaySystemFCAfrica</ID>
+                    <InfoDescription>12752</InfoDescription>
+                    <!--Quay InfoCorner-->
+                </Standard>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>0</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>Street</TemplateName>
+                                        <Index>0</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                        </Item>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>1</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>Street</TemplateName>
+                                        <Index>1</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                            <Ingredient>114356</Ingredient>
+                            <!--Wanza Wood-->
+                            <Amount>1</Amount>
+                        </Item>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>2</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>Street</TemplateName>
+                                        <Index>2</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                            <Ingredient>114402</Ingredient>
+                            <!--Mud Bricks-->
+                        </Item>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>3</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>Street</TemplateName>
+                                        <Index>3</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                        </Item>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>4</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>Street</TemplateName>
+                                        <Index>4</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                        </Item>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>5</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>Street</TemplateName>
+                                        <Index>5</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                        </Item>
+                    </Costs>
+                </Cost>
+                <Street>
+                    <CfgFileName>data/dlc06/graphics/buildings/special/quay_system_01/props/quay_system_01.cfg</CfgFileName>
+                    <InternalID>181</InternalID>
+                </Street>
+                <Constructable/>
+                <Locked/>
+                <SoundEmitter/>
+                <Building>
+                    <PickingAsset>2077062001</PickingAsset>
+                    <AssociatedRegions>Africa</AssociatedRegions>
+                </Building>
+                <Ornament/>
+            </Values>
+        </Asset>
+    </ModOp>
+    <ModOp Type="addNextSibling" GUID="2077062001">
+        <Asset>
+            <BaseAssetGUID>2077060001</BaseAssetGUID>
+            <Values>
+                <Standard>
+                    <GUID>2077063001</GUID>
+                    <Name>Quay System Colony 03 Full Corners</Name>
+                    <IconFilename>data/ui/2kimages/main/3dicons/jdg/icon_quay_fc_0.png</IconFilename>
+                    <ID>QuaySystemFCColony03</ID>
+                    <InfoDescription>12752</InfoDescription>
+                    <!--Quay InfoCorner-->
+                </Standard>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>
+                            <!--Money-->
+                            <Amount>5</Amount>
+                        </Item>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>1</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>Street</TemplateName>
+                                        <Index>1</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                        </Item>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>2</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>Street</TemplateName>
+                                        <Index>2</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                        </Item>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>3</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>Street</TemplateName>
+                                        <Index>3</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                        </Item>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>4</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>Street</TemplateName>
+                                        <Index>4</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                        </Item>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>5</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>Street</TemplateName>
+                                        <Index>5</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                        </Item>
+                    </Costs>
+                </Cost>
+                <Street>
+                    <CfgFileName>data/dlc03/graphics/buildings/special/quay_system_colony03_01/props/quay_system_colony03_01.cfg</CfgFileName>
+                    <InternalID>182</InternalID>
+                </Street>
+                <Constructable/>
+                <Locked/>
+                <SoundEmitter/>
+                <Building>
+                    <PickingAsset>2077063001</PickingAsset>
+                    <AssociatedRegions>Arctic</AssociatedRegions>
+                </Building>
+                <Ornament/>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- TRIGGERS -->
+
+    <ModOp Type="addNextSibling" GUID='130253'>
+        <Asset>
+            <Template>Trigger</Template>
+            <Values>
+                <Standard>
+                    <GUID>2077069001</GUID>
+                    <Name>Trigger Quay FC OW</Name>
+                </Standard>
+                <Trigger>
+                    <TriggerCondition>
+                        <Template>ConditionPlayerCounter</Template>
+                        <Values>
+                            <Condition/>
+                            <ConditionPlayerCounter>
+                                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                                <Context>15000001</Context>
+                                <!--Moderate Population 2-->
+                                <CounterAmount>150</CounterAmount>
+                            </ConditionPlayerCounter>
+                        </Values>
+                    </TriggerCondition>
+                    <TriggerActions>
+                        <Item>
+                            <TriggerAction>
+                                <Template>ActionUnlockAsset</Template>
+                                <Values>
+                                    <Action/>
+                                    <ActionUnlockAsset>
+                                        <UnlockAssets>
+                                            <Item>
+                                                <Asset>2077060001</Asset>
+                                            </Item>
+                                        </UnlockAssets>
+                                    </ActionUnlockAsset>                  
+                                </Values>
+                            </TriggerAction>
+                        </Item>
+                    </TriggerActions>
+                </Trigger>
+                <TriggerSetup/>
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <ModOp Type="addNextSibling" GUID="130248">
+        <Asset>
+            <Template>Trigger</Template>
+            <Values>
+                <Standard>
+                    <GUID>2077069002</GUID>
+                    <Name>Trigger Quay FC NW</Name>
+                </Standard>
+                <Trigger>
+                    <TriggerCondition>
+                        <Template>ConditionPlayerCounter</Template>
+                        <Values>
+                            <Condition/>
+                            <ConditionPlayerCounter>
+                                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                                <Context>15000005</Context>
+                                <!--Colony01 Population 1-->
+                                <CounterAmount>50</CounterAmount>
+                            </ConditionPlayerCounter>
+                        </Values>
+                    </TriggerCondition>
+                    <TriggerActions>
+                        <Item>
+                            <TriggerAction>
+                                <Template>ActionUnlockAsset</Template>
+                                <Values>
+                                    <Action/>
+                                    <ActionUnlockAsset>
+                                        <UnlockAssets>
+                                            <Item>
+                                                <Asset>2077061001</Asset>
+                                            </Item>
+                                        </UnlockAssets>
+                                    </ActionUnlockAsset>
+                                </Values>
+                            </TriggerAction>
+                        </Item>
+                    </TriggerActions>
+                </Trigger>
+                <TriggerSetup/>
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <ModOp Type="addNextSibling" GUID="130248">
+        <Asset>
+            <Template>Trigger</Template>
+            <Values>
+                <Standard>
+                    <GUID>2077069003</GUID>
+                    <Name>TTrigger Quay FC Africa</Name>
+                </Standard>
+                <Trigger>
+                    <TriggerCondition>
+                        <Template>ConditionPlayerCounter</Template>
+                        <Values>
+                            <Condition/>
+                                <ConditionPlayerCounter>
+                                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                                <Context>114329</Context>
+                                <!--Africa Population 1-->
+                                <CounterAmount>150</CounterAmount>
+                            </ConditionPlayerCounter>
+                        </Values>
+                    </TriggerCondition>
+                    <TriggerActions>
+                        <Item>
+                            <TriggerAction>
+                                <Template>ActionUnlockAsset</Template>
+                                <Values>
+                                    <Action/>
+                                    <ActionUnlockAsset>
+                                        <UnlockAssets>
+                                            <Item>
+                                                <Asset>2077062001</Asset>
+                                            </Item>
+                                        </UnlockAssets>
+                                    </ActionUnlockAsset>
+                                </Values>
+                            </TriggerAction>
+                        </Item>
+                    </TriggerActions>
+                </Trigger>
+                <TriggerSetup/>
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <ModOp Type="addNextSibling" GUID="130248">
+        <Asset>
+            <Template>Trigger</Template>
+            <Values>
+                <Standard>
+                    <GUID>2077069004</GUID>
+                    <Name>Trigger Quay FC Arctic</Name>
+                </Standard>
+                <Trigger>
+                    <TriggerCondition>
+                        <Template>ConditionPlayerCounter</Template>
+                        <Values>
+                            <Condition/>
+                            <ConditionPlayerCounter>
+                                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                                <Context>112643</Context>
+                                <!--Arctic Population 2-->
+                                <CounterAmount>1</CounterAmount>
+                            </ConditionPlayerCounter>
+                        </Values>
+                    </TriggerCondition>
+                    <TriggerActions>
+                        <Item>
+                            <TriggerAction>
+                                <Template>ActionUnlockAsset</Template>
+                                <Values>
+                                    <Action/>
+                                    <ActionUnlockAsset>
+                                        <UnlockAssets>
+                                            <Item>
+                                                <Asset>2077063001</Asset>
+                                            </Item>
+                                        </UnlockAssets>
+                                    </ActionUnlockAsset>
+                                </Values>
+                            </TriggerAction>
+                        </Item>
+                    </TriggerActions>
+                </Trigger>
+                <TriggerSetup/>
+            </Values>
+        </Asset>
+    </ModOp>
+
+
+  <!-- CATEGORY MENU -->
+
+  <!-- Moderate (OW) Construction Menu -->
+  <ModOp Type="addNextSibling" GUID='500952,500111' Path="/Values/ConstructionCategory/BuildingList/Item[Building='1010567']">
+    <Item>
+      <Building>2077060001</Building>
+    </Item>
+  </ModOp>
+
+  <!-- Colony 01 (NW) Construction Menu -->
+  <ModOp Type="addNextSibling" GUID='501007,500149' Path="/Values/ConstructionCategory/BuildingList/Item[Building='101339']">
+    <Item>
+      <Building>2077061001</Building>
+    </Item>
+  </ModOp>
+
+  <!-- Colony 02 / Africa Construction Menu -->
+  <ModOp Type="addNextSibling" GUID='114555,119014' Path="/Values/ConstructionCategory/BuildingList/Item[Building='117729']">
+    <Item>
+      <Building>2077062001</Building>
+    </Item>
+  </ModOp>
+
+  <!-- Colony 03 / Arctic Construction Menu -->
+  <ModOp Type="addPrevSibling" GUID='112792,116345' Path="/Values/ConstructionCategory/BuildingList/Item[1]" Condition="!@8857106">
+    <Item>
+      <Building>2077063001</Building>
+    </Item>
+  </ModOp>
+
+  <ModOp Type="addNextSibling" GUID='112792,116345' Path="/Values/ConstructionCategory/BuildingList/Item[Building='8857106']" Condition="@8857106">
+    <Item>
+      <Building>2077063001</Building>
+    </Item>
+  </ModOp>
+
+
+    <!-- moderate OW menu ornamental / industrial / harbor -->
+<!--
+    <ModOp Type="addNextSibling" GUID="500156,132390" Path="Values/ConstructionCategory/BuildingList/Item[Building = '1010567']">
+        <Item>
+            <Building>601492</Building>
+        </Item>
+    </ModOp>
+-->
+    <!-- colony 01 NW menu ornamental / industrial / harbor -->
+<!--    
+    <ModOp Type="addNextSibling" GUID="500157,132504" Path="Values/ConstructionCategory/BuildingList/Item[Building = '1010567']">
+        <Item>
+            <Building>132528</Building>
+        </Item>
+    </ModOp>
+-->
+
+<!-- 
+    <ModOp Type="addPrevSibling" GUID='116345' Path="/Values/ConstructionCategory/BuildingList/Item[Building = '112666']">
+        <Item>
+            <Building>8857106</Building>
+        </Item>
+    </ModOp>
+
+    <ModOp Type="addPrevSibling" GUID='112792' Path="/Values/ConstructionCategory/BuildingList/Item[Building = '112670']">
+        <Item>
+            <Building>8857106</Building>
+        </Item>
+    </ModOp>
+
+-->
+
+</ModOps>

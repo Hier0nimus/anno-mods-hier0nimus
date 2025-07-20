@@ -1,0 +1,48 @@
+<!-- 
+  Fertilities
+-->
+
+<ModOps>
+
+  <!-- START ADD FERTILITY - Bog Labrador Tea -->
+  <ModOp Type="addNextSibling" GUID='11703'>
+    <Asset>
+      <Template>Fertility</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004178</GUID>
+          <Name>Bog Labrador Tea</Name>
+          <IconFilename>data/graphics/icons/icon_bog_labrador_tea.png</IconFilename>
+        </Standard>
+        <Fertility />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END ADD FERTILITY - Cloudberries -->
+
+  <!-- START LIST FERTILITY - ARCTIC -->
+  <ModOp GUID="160001" Type="add" Path="/Values/Region/AllowedFertilities">
+    <Item>
+      <Fertility>1742004178</Fertility>      <!-- Bog Labrador Tea - Fertility -->
+    </Item>
+  </ModOp>
+  <!-- START LIST FERTILITY - ARCTIC -->
+
+  <!-- START ADD FERTILITYORDER - Cloudberries Fertility -->
+  <ModOp Type="add" GUID="500204" Path="/Values/MinimapScene/FertilityOrder">
+    <Item>
+      <GUID>1742004178</GUID>      <!-- Bog Labrador Tea - Fertility -->
+    </Item>
+  </ModOp>
+  <!-- END ADD FERTILITYORDER - Cloudberries Fertility -->
+
+  <!-- START ADD FERTILITY - ARCTIC ISLANDS SETS - Bog Labrador Tea Fertility -->
+  <ModOp Type="add" GUID="115967,117055,117056,117060,117061,116937,116939,116940,115969,117063,117064,117065,117066,115977,116933,116936,115970,117067,117069,117070,116927,116930,116938,117068,116929,116935,116932" Path="/Values/FertilitySet/Fertilities">
+    <Item>
+      <Fertility>1742004178</Fertility>      <!-- Bog Labrador Tea Fertility -->
+    </Item>
+  </ModOp>
+  <!-- END ADD FERTILITY - ARCTIC ISLANDS SETS - Bog Labrador Tea Fertility -->
+
+</ModOps>
+  

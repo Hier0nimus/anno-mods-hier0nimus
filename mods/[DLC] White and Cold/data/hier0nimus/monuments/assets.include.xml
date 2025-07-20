@@ -1,0 +1,1600 @@
+<!-- 
+  Monuments
+-->
+
+<ModOps>
+
+
+  <!-- START BUILDING - Arctic Research Institute -->
+  <ModOp Type="addNextSibling" GUID='132770'>
+    <!-- Blank -->
+    <Asset>
+      <Template>ArcticResearchInstitute</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004417</GUID>
+          <Name>Arctic Research Institute (Blank)</Name>
+          <IconFilename>data/graphics/icons/icon_research_institute.png</IconFilename>
+          <InfoDescription>1742004418</InfoDescription>
+        </Standard>
+        <Building>
+          <SkipUnlockMessage>1</SkipUnlockMessage>
+          <PickingAsset>1742004417</PickingAsset>
+          <DestructionConfirmation>1</DestructionConfirmation>
+          <BuildModeRandomRotation>90</BuildModeRandomRotation>
+          <AssociatedRegions>Arctic</AssociatedRegions>
+        </Building>
+        <Blocking/>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/public/monument_technicians/monument_technicians_01_02.cfg</Filename>
+            </Item>
+          </Variations>
+          <Skins/>
+        </Object>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!--Money-->
+              <Amount>100000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!--timber-->
+              <Amount>110</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!--bricks-->
+              <Amount>40</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!--beams-->
+              <Amount>180</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>              <!--window-->
+              <Amount>30</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010202</Ingredient>              <!--concrete-->
+              <Amount>60</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Mesh>
+          <LogoMode>CorporationLogoFromPlayer</LogoMode>
+          <SetCompanyLogo>1</SetCompanyLogo>
+        </Mesh>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+        </Selection>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Arctic Research Institute</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>49831</LineID>
+        </Text>
+        <Constructable/>
+        <Locked>
+          <DLCDependency>410084</DLCDependency>          <!--Anno 1800 DLC - Tourism-->
+        </Locked>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>279523</Sound>              <!--wwe_sfx_bld_tourist_monument_lp-->
+            </Item>
+            <Item>
+              <Sound>279590</Sound>              <!--wwe_mus_tourist_monument_near-->
+            </Item>
+          </ActiveSounds>
+          <ConstructionSounds>
+            <BuildSuccessful>
+              <Item>
+                <VectorElement>
+                  <InheritedIndex>0</InheritedIndex>
+                  <InheritanceMapV2>
+                    <Entry>
+                      <TemplateName>Monument</TemplateName>
+                      <Index>0</Index>
+                    </Entry>
+                    <Entry>
+                      <TemplateName>TowerRestaurant</TemplateName>
+                      <Index>0</Index>
+                    </Entry>
+                  </InheritanceMapV2>
+                </VectorElement>
+              </Item>
+              <Item>
+                <Sound>200912</Sound>                <!--wwe_sfx_aui_finalize_monument_os-->
+              </Item>
+            </BuildSuccessful>
+            <BuildUpgrade>
+              <Item>
+                <VectorElement>
+                  <InheritedIndex>0</InheritedIndex>
+                  <InheritanceMapV2>
+                    <Entry>
+                      <TemplateName>Monument</TemplateName>
+                      <Index>0</Index>
+                    </Entry>
+                    <Entry>
+                      <TemplateName>TowerRestaurant</TemplateName>
+                      <Index>0</Index>
+                    </Entry>
+                  </InheritanceMapV2>
+                </VectorElement>
+                <Sound>201232</Sound>                <!--wwe_sfx_aui_bld_upgrade_monument-->
+              </Item>
+            </BuildUpgrade>
+          </ConstructionSounds>
+          <SpawnSounds>
+            <Item>
+              <Sound>200912</Sound>              <!--wwe_sfx_aui_finalize_monument_os-->
+            </Item>
+          </SpawnSounds>
+        </SoundEmitter>
+        <FactoryBase/>
+        <LogisticNode>
+          <TransporterCountMax>0</TransporterCountMax>
+        </LogisticNode>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>              <!--Money-->
+              <Amount>2500</Amount>
+            </Item>
+            <Item>
+              <Product>112654</Product>              <!--Technicians Workforce-->
+              <Amount>500</Amount>
+            </Item>
+          </Maintenances>
+          <CanRequestAdditionalWorkforce>0</CanRequestAdditionalWorkforce>
+        </Maintenance>
+        <IncidentInfectable/>
+        <AmbientMoodProvider>
+          <Murmur>Arctic_AirshipHangarConstruction</Murmur>
+        </AmbientMoodProvider>
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+        </Attackable>
+        <UpgradeList/>
+        <Pausable>
+          <CanPauseManually>0</CanPauseManually>
+        </Pausable>
+        <FeedbackController>
+          <NightBehavior>HideNone</NightBehavior>
+        </FeedbackController>
+        <Infolayer/>
+        <BuffFactory>
+          <CanBeAffectedByAdditionalWorkforce>0</CanBeAffectedByAdditionalWorkforce>
+          <RangeIncreasePerHundredAdditionalWorkforce>0</RangeIncreasePerHundredAdditionalWorkforce>
+        </BuffFactory>
+        <RecipeBuilding>
+          <RecipeList>1742004425</RecipeList>          <!--Arctic Research Institute - RecipeList-->
+          <IsBlank>1</IsBlank>
+        </RecipeBuilding>
+        <BuildingUnique>
+          <Uniques>
+            <Item>
+              <UniqueType>ResearchCenter</UniqueType>
+              <UniqueScope>Area</UniqueScope>
+            </Item>
+          </Uniques>
+        </BuildingUnique>
+        <PublicService>
+          <FullSatisfactionDistance>99</FullSatisfactionDistance>
+          <NoSatisfactionDistance>100</NoSatisfactionDistance>
+          <PublicServiceOutputs>
+            <Item>
+              <Product>1742004419</Product>
+            </Item>
+          </PublicServiceOutputs>
+          <FunctionDescription>1742004420</FunctionDescription>
+        </PublicService>
+        <Culture/>
+        <QuestObject/>
+      </Values>
+    </Asset>
+    <!-- Rare -->
+    <Asset>
+      <Template>ArcticResearchInstitute</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004433</GUID>
+          <Name>Arctic Research Institute (Rare)</Name>
+          <IconFilename>data/graphics/icons/icon_research_institute_01.png</IconFilename>
+          <InfoDescription>1742004418</InfoDescription>
+        </Standard>
+        <Building>
+          <SkipUnlockMessage>1</SkipUnlockMessage>
+          <PickingAsset>1742004433</PickingAsset>
+          <DestructionConfirmation>1</DestructionConfirmation>
+          <BuildModeRandomRotation>90</BuildModeRandomRotation>
+          <AssociatedRegions>Arctic</AssociatedRegions>
+        </Building>
+        <Blocking/>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/public/monument_technicians/monument_technicians_01_02.cfg</Filename>
+            </Item>
+          </Variations>
+          <Skins/>
+        </Object>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!--Money-->
+              <Amount>100000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!--timber-->
+              <Amount>110</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!--bricks-->
+              <Amount>40</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!--beams-->
+              <Amount>180</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>              <!--window-->
+              <Amount>30</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010202</Ingredient>              <!--concrete-->
+              <Amount>60</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Mesh>
+          <LogoMode>CorporationLogoFromPlayer</LogoMode>
+          <SetCompanyLogo>1</SetCompanyLogo>
+        </Mesh>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+        </Selection>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Arctic Research Institute</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>49831</LineID>
+        </Text>
+        <Constructable/>
+        <Locked>
+          <DLCDependency>410084</DLCDependency>          <!--Anno 1800 DLC - Tourism-->
+        </Locked>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>279523</Sound>              <!--wwe_sfx_bld_tourist_monument_lp-->
+            </Item>
+            <Item>
+              <Sound>279590</Sound>              <!--wwe_mus_tourist_monument_near-->
+            </Item>
+          </ActiveSounds>
+          <ConstructionSounds>
+            <BuildSuccessful>
+              <Item>
+                <VectorElement>
+                  <InheritedIndex>0</InheritedIndex>
+                  <InheritanceMapV2>
+                    <Entry>
+                      <TemplateName>Monument</TemplateName>
+                      <Index>0</Index>
+                    </Entry>
+                    <Entry>
+                      <TemplateName>TowerRestaurant</TemplateName>
+                      <Index>0</Index>
+                    </Entry>
+                  </InheritanceMapV2>
+                </VectorElement>
+              </Item>
+              <Item>
+                <Sound>200912</Sound>                <!--wwe_sfx_aui_finalize_monument_os-->
+              </Item>
+            </BuildSuccessful>
+            <BuildUpgrade>
+              <Item>
+                <VectorElement>
+                  <InheritedIndex>0</InheritedIndex>
+                  <InheritanceMapV2>
+                    <Entry>
+                      <TemplateName>Monument</TemplateName>
+                      <Index>0</Index>
+                    </Entry>
+                    <Entry>
+                      <TemplateName>TowerRestaurant</TemplateName>
+                      <Index>0</Index>
+                    </Entry>
+                  </InheritanceMapV2>
+                </VectorElement>
+                <Sound>201232</Sound>                <!--wwe_sfx_aui_bld_upgrade_monument-->
+              </Item>
+            </BuildUpgrade>
+          </ConstructionSounds>
+          <SpawnSounds>
+            <Item>
+              <Sound>200912</Sound>              <!--wwe_sfx_aui_finalize_monument_os-->
+            </Item>
+          </SpawnSounds>
+        </SoundEmitter>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1500010153</Product>              <!-- Tools -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+          <ClampedMaxTransporterLogisticCost>60</ClampedMaxTransporterLogisticCost>
+        </FactoryBase>
+        <LogisticNode>
+          <TransporterCountMax>0</TransporterCountMax>
+        </LogisticNode>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>              <!--Money-->
+              <Amount>2500</Amount>
+            </Item>
+            <Item>
+              <Product>112654</Product>              <!--Technicians Workforce-->
+              <Amount>500</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <IncidentInfectable/>
+        <AmbientMoodProvider>
+          <Murmur>Arctic_AirshipHangarConstruction</Murmur>
+        </AmbientMoodProvider>
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+        </Attackable>
+        <UpgradeList/>
+        <Pausable>
+          <CanPauseManually>0</CanPauseManually>
+        </Pausable>
+        <FeedbackController>
+          <NightBehavior>HideNone</NightBehavior>
+        </FeedbackController>
+        <Infolayer/>
+        <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742004436</ProductivityBuff>              <!--Rare Research - Buff-->
+            </Item>
+          </ProductionBuffs>
+        </BuffFactory>
+        <RecipeBuilding>
+          <RecipeList>1742004425</RecipeList>          <!--Arctic Research Institute - RecipeList-->
+        </RecipeBuilding>
+        <BuildingUnique>
+          <Uniques>
+            <Item>
+              <UniqueType>ResearchCenter</UniqueType>
+              <UniqueScope>Area</UniqueScope>
+            </Item>
+          </Uniques>
+        </BuildingUnique>
+        <PublicService>
+          <FullSatisfactionDistance>99</FullSatisfactionDistance>
+          <NoSatisfactionDistance>100</NoSatisfactionDistance>
+          <PublicServiceOutputs>
+            <Item>
+              <Product>1742004419</Product>
+            </Item>
+          </PublicServiceOutputs>
+          <FunctionDescription>1742004420</FunctionDescription>
+        </PublicService>
+        <Culture/>
+        <QuestObject/>
+      </Values>
+    </Asset>
+    <!-- Epic -->
+    <Asset>
+      <Template>ArcticResearchInstitute</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004434</GUID>
+          <Name>Arctic Research Institute (Epic)</Name>
+          <IconFilename>data/graphics/icons/icon_research_institute_02.png</IconFilename>
+          <InfoDescription>1742004418</InfoDescription>
+        </Standard>
+        <Building>
+          <SkipUnlockMessage>1</SkipUnlockMessage>
+          <PickingAsset>1742004434</PickingAsset>
+          <DestructionConfirmation>1</DestructionConfirmation>
+          <BuildModeRandomRotation>90</BuildModeRandomRotation>
+          <AssociatedRegions>Arctic</AssociatedRegions>
+        </Building>
+        <Blocking/>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/public/monument_technicians/monument_technicians_01_02.cfg</Filename>
+            </Item>
+          </Variations>
+          <Skins/>
+        </Object>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!--Money-->
+              <Amount>100000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!--timber-->
+              <Amount>110</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!--bricks-->
+              <Amount>40</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!--beams-->
+              <Amount>180</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>              <!--window-->
+              <Amount>30</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010202</Ingredient>              <!--concrete-->
+              <Amount>60</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Mesh>
+          <LogoMode>CorporationLogoFromPlayer</LogoMode>
+          <SetCompanyLogo>1</SetCompanyLogo>
+        </Mesh>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+        </Selection>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Arctic Research Institute</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>49831</LineID>
+        </Text>
+        <Constructable/>
+        <Locked>
+          <DLCDependency>410084</DLCDependency>          <!--Anno 1800 DLC - Tourism-->
+        </Locked>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>279523</Sound>              <!--wwe_sfx_bld_tourist_monument_lp-->
+            </Item>
+            <Item>
+              <Sound>279590</Sound>              <!--wwe_mus_tourist_monument_near-->
+            </Item>
+          </ActiveSounds>
+          <ConstructionSounds>
+            <BuildSuccessful>
+              <Item>
+                <VectorElement>
+                  <InheritedIndex>0</InheritedIndex>
+                  <InheritanceMapV2>
+                    <Entry>
+                      <TemplateName>Monument</TemplateName>
+                      <Index>0</Index>
+                    </Entry>
+                    <Entry>
+                      <TemplateName>TowerRestaurant</TemplateName>
+                      <Index>0</Index>
+                    </Entry>
+                  </InheritanceMapV2>
+                </VectorElement>
+              </Item>
+              <Item>
+                <Sound>200912</Sound>                <!--wwe_sfx_aui_finalize_monument_os-->
+              </Item>
+            </BuildSuccessful>
+            <BuildUpgrade>
+              <Item>
+                <VectorElement>
+                  <InheritedIndex>0</InheritedIndex>
+                  <InheritanceMapV2>
+                    <Entry>
+                      <TemplateName>Monument</TemplateName>
+                      <Index>0</Index>
+                    </Entry>
+                    <Entry>
+                      <TemplateName>TowerRestaurant</TemplateName>
+                      <Index>0</Index>
+                    </Entry>
+                  </InheritanceMapV2>
+                </VectorElement>
+                <Sound>201232</Sound>                <!--wwe_sfx_aui_bld_upgrade_monument-->
+              </Item>
+            </BuildUpgrade>
+          </ConstructionSounds>
+          <SpawnSounds>
+            <Item>
+              <Sound>200912</Sound>              <!--wwe_sfx_aui_finalize_monument_os-->
+            </Item>
+          </SpawnSounds>
+        </SoundEmitter>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1500010153</Product>              <!-- Tools - Product  -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1414</Product>              <!-- Industrial Lubricant - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>6280</Product>              <!-- Cables - Product  -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+          <ClampedMaxTransporterLogisticCost>60</ClampedMaxTransporterLogisticCost>
+        </FactoryBase>
+        <LogisticNode>
+          <TransporterCountMax>0</TransporterCountMax>
+        </LogisticNode>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>              <!--Money-->
+              <Amount>2500</Amount>
+            </Item>
+            <Item>
+              <Product>112654</Product>              <!--Technicians Workforce-->
+              <Amount>500</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <IncidentInfectable/>
+        <AmbientMoodProvider>
+          <Murmur>Arctic_AirshipHangarConstruction</Murmur>
+        </AmbientMoodProvider>
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+        </Attackable>
+        <UpgradeList/>
+        <Pausable>
+          <CanPauseManually>0</CanPauseManually>
+        </Pausable>
+        <FeedbackController>
+          <NightBehavior>HideNone</NightBehavior>
+        </FeedbackController>
+        <Infolayer/>
+        <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742004438</ProductivityBuff>              <!--Epic Research - Buff-->
+            </Item>
+          </ProductionBuffs>
+        </BuffFactory>
+        <RecipeBuilding>
+          <RecipeList>1742004425</RecipeList>          <!--Arctic Research Institute - RecipeList-->
+        </RecipeBuilding>
+        <BuildingUnique>
+          <Uniques>
+            <Item>
+              <UniqueType>ResearchCenter</UniqueType>
+              <UniqueScope>Area</UniqueScope>
+            </Item>
+          </Uniques>
+        </BuildingUnique>
+        <PublicService>
+          <FullSatisfactionDistance>99</FullSatisfactionDistance>
+          <NoSatisfactionDistance>100</NoSatisfactionDistance>
+          <PublicServiceOutputs>
+            <Item>
+              <Product>1742004419</Product>
+            </Item>
+          </PublicServiceOutputs>
+          <FunctionDescription>1742004420</FunctionDescription>
+        </PublicService>
+        <Culture/>
+        <QuestObject/>
+      </Values>
+    </Asset>
+    <!-- Legendary -->
+    <Asset>
+      <Template>ArcticResearchInstitute</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004435</GUID>
+          <Name>Arctic Research Institute (Legendary)</Name>
+          <IconFilename>data/graphics/icons/icon_research_institute_03.png</IconFilename>
+          <InfoDescription>1742004418</InfoDescription>
+        </Standard>
+        <Building>
+          <SkipUnlockMessage>1</SkipUnlockMessage>
+          <PickingAsset>1742004435</PickingAsset>
+          <DestructionConfirmation>1</DestructionConfirmation>
+          <BuildModeRandomRotation>90</BuildModeRandomRotation>
+          <AssociatedRegions>Arctic</AssociatedRegions>
+        </Building>
+        <Blocking/>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/public/monument_technicians/monument_technicians_01_02.cfg</Filename>
+            </Item>
+          </Variations>
+          <Skins/>
+        </Object>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!--Money-->
+              <Amount>100000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!--timber-->
+              <Amount>110</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!--bricks-->
+              <Amount>40</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!--beams-->
+              <Amount>180</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>              <!--window-->
+              <Amount>30</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010202</Ingredient>              <!--concrete-->
+              <Amount>60</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Mesh>
+          <LogoMode>CorporationLogoFromPlayer</LogoMode>
+          <SetCompanyLogo>1</SetCompanyLogo>
+        </Mesh>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+        </Selection>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Arctic Research Institute</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>49831</LineID>
+        </Text>
+        <Constructable/>
+        <Locked>
+          <DLCDependency>410084</DLCDependency>          <!--Anno 1800 DLC - Tourism-->
+        </Locked>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>279523</Sound>              <!--wwe_sfx_bld_tourist_monument_lp-->
+            </Item>
+            <Item>
+              <Sound>279590</Sound>              <!--wwe_mus_tourist_monument_near-->
+            </Item>
+          </ActiveSounds>
+          <ConstructionSounds>
+            <BuildSuccessful>
+              <Item>
+                <VectorElement>
+                  <InheritedIndex>0</InheritedIndex>
+                  <InheritanceMapV2>
+                    <Entry>
+                      <TemplateName>Monument</TemplateName>
+                      <Index>0</Index>
+                    </Entry>
+                    <Entry>
+                      <TemplateName>TowerRestaurant</TemplateName>
+                      <Index>0</Index>
+                    </Entry>
+                  </InheritanceMapV2>
+                </VectorElement>
+              </Item>
+              <Item>
+                <Sound>200912</Sound>                <!--wwe_sfx_aui_finalize_monument_os-->
+              </Item>
+            </BuildSuccessful>
+            <BuildUpgrade>
+              <Item>
+                <VectorElement>
+                  <InheritedIndex>0</InheritedIndex>
+                  <InheritanceMapV2>
+                    <Entry>
+                      <TemplateName>Monument</TemplateName>
+                      <Index>0</Index>
+                    </Entry>
+                    <Entry>
+                      <TemplateName>TowerRestaurant</TemplateName>
+                      <Index>0</Index>
+                    </Entry>
+                  </InheritanceMapV2>
+                </VectorElement>
+                <Sound>201232</Sound>                <!--wwe_sfx_aui_bld_upgrade_monument-->
+              </Item>
+            </BuildUpgrade>
+          </ConstructionSounds>
+          <SpawnSounds>
+            <Item>
+              <Sound>200912</Sound>              <!--wwe_sfx_aui_finalize_monument_os-->
+            </Item>
+          </SpawnSounds>
+        </SoundEmitter>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1500010153</Product>              <!-- Tools - Product  -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>6280</Product>              <!-- Cables - Product  -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1010224</Product>              <!-- Steam motors - Product  -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>135230</Product>              <!-- Typewriters - Product  -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+          <ClampedMaxTransporterLogisticCost>60</ClampedMaxTransporterLogisticCost>
+        </FactoryBase>
+        <LogisticNode>
+          <TransporterCountMax>0</TransporterCountMax>
+        </LogisticNode>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>              <!--Money-->
+              <Amount>2500</Amount>
+            </Item>
+            <Item>
+              <Product>112654</Product>              <!--Technicians Workforce-->
+              <Amount>500</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <IncidentInfectable/>
+        <AmbientMoodProvider>
+          <Murmur>Arctic_AirshipHangarConstruction</Murmur>
+        </AmbientMoodProvider>
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+        </Attackable>
+        <UpgradeList/>
+        <Pausable>
+          <CanPauseManually>0</CanPauseManually>
+        </Pausable>
+        <FeedbackController>
+          <NightBehavior>HideNone</NightBehavior>
+        </FeedbackController>
+        <Infolayer/>
+        <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742004440</ProductivityBuff>              <!--Legendary Research - Buff-->
+            </Item>
+          </ProductionBuffs>
+        </BuffFactory>
+        <RecipeBuilding>
+          <RecipeList>1742004425</RecipeList>          <!--Arctic Research Institute - RecipeList-->
+        </RecipeBuilding>
+        <BuildingUnique>
+          <Uniques>
+            <Item>
+              <UniqueType>ResearchCenter</UniqueType>
+              <UniqueScope>Area</UniqueScope>
+            </Item>
+          </Uniques>
+        </BuildingUnique>
+        <PublicService>
+          <FullSatisfactionDistance>99</FullSatisfactionDistance>
+          <NoSatisfactionDistance>100</NoSatisfactionDistance>
+          <PublicServiceOutputs>
+            <Item>
+              <Product>1742004419</Product>
+            </Item>
+          </PublicServiceOutputs>
+          <FunctionDescription>1742004420</FunctionDescription>
+        </PublicService>
+        <Culture/>
+        <QuestObject/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - Arctic Research Institute -->
+
+  <!-- START RECIPELIST - Arctic Research Institute Recipe list -->
+  <ModOp Type="addNextSibling" GUID='132770'>
+    <Asset>
+      <Template>RecipeList</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004425</GUID>
+          <Name>Arctic Research Institute</Name>
+          <InfoDescription>1742004426</InfoDescription>
+        </Standard>
+        <RecipeList>
+          <Recipes>
+            <Item>
+              <Recipe>1742004427</Recipe>              <!--Rare Research-->
+            </Item>
+            <Item>
+              <Recipe>1742004429</Recipe>              <!--Epic Research-->
+            </Item>
+            <Item>
+              <Recipe>1742004431</Recipe>              <!--Legendary Research-->
+            </Item>
+          </Recipes>
+          <RecipeListType>Laboratory</RecipeListType>
+          <RecipeListMoodImage>data/ui/2kimages/main/assets/recipebook/mood_images/recipebook_moodimages_laboratory.png</RecipeListMoodImage>
+          <RecipeListDescription>1742004426</RecipeListDescription>
+        </RecipeList>
+        <Text/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END RECIPELIST - Arctic Research Institute Recipe list -->
+
+  <!-- START RECIPES - Arctic Research Institute Recipes -->
+  <ModOp Type="addNextSibling" GUID='133377'>
+    <!-- Rare -->
+    <Asset>
+      <Template>Recipe</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004427</GUID>
+          <Name>Rare Research</Name>
+          <IconFilename>data/graphics/icons/icon_research_institute_01.png</IconFilename>
+          <InfoDescription>1742004428</InfoDescription>
+        </Standard>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Rare Research</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>49876</LineID>
+        </Text>
+        <Recipe>
+          <RecipeBuilding>1742004433</RecipeBuilding>          <!--Tourist_monument_03 (Sandwich)-->
+          <RecipeDescriptionText>1742004428</RecipeDescriptionText>
+          <RecipeImage>data/ui/2kimages/main/assets/recipebook/luxury_restaurant/recipebook_luxury_restaurant_sandwich_la_reine.png</RecipeImage>
+          <RecipeIngredientUIData>
+            <Item>
+              <PosX>10</PosX>
+              <PosY>30</PosY>
+              <UICirclePointer>SouthEast</UICirclePointer>
+            </Item>
+          </RecipeIngredientUIData>
+          <RecipeUnlockConditionText>134685</RecipeUnlockConditionText>
+          <RecipeUnlockConditionTextOptional>135022</RecipeUnlockConditionTextOptional>
+          <OptionalUnlockAsset>134915</OptionalUnlockAsset>
+          <UseFluffUnlockText>1</UseFluffUnlockText>
+        </Recipe>
+        <Locked/>
+      </Values>
+    </Asset>
+    <!-- Epic -->
+    <Asset>
+      <Template>Recipe</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004429</GUID>
+          <Name>Epic Research</Name>
+          <IconFilename>data/graphics/icons/icon_research_institute_02.png</IconFilename>
+          <InfoDescription>1742004430</InfoDescription>
+        </Standard>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Rare Research</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>49876</LineID>
+        </Text>
+        <Recipe>
+          <RecipeBuilding>1742004434</RecipeBuilding>          <!--Tourist_monument_03 (Sandwich)-->
+          <RecipeDescriptionText>1742004430</RecipeDescriptionText>
+          <RecipeImage>data/ui/2kimages/main/assets/recipebook/luxury_restaurant/recipebook_luxury_restaurant_sandwich_la_reine.png</RecipeImage>
+          <RecipeIngredientUIData>
+            <Item>
+              <PosX>380</PosX>
+              <PosY>30</PosY>
+              <UICirclePointer>SouthWest</UICirclePointer>
+            </Item>
+            <Item>
+              <PosY>270</PosY>
+              <UICirclePointer>NorthEast</UICirclePointer>
+            </Item>
+            <Item>
+              <PosX>380</PosX>
+              <PosY>270</PosY>
+              <UICirclePointer>NorthWest</UICirclePointer>
+            </Item>
+          </RecipeIngredientUIData>
+          <RecipeUnlockConditionText>134685</RecipeUnlockConditionText>
+          <RecipeUnlockConditionTextOptional>135022</RecipeUnlockConditionTextOptional>
+          <OptionalUnlockAsset>134915</OptionalUnlockAsset>
+          <UseFluffUnlockText>1</UseFluffUnlockText>
+        </Recipe>
+        <Locked/>
+      </Values>
+    </Asset>
+    <!-- Legendary -->
+    <Asset>
+      <Template>Recipe</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004431</GUID>
+          <Name>Legendary Research</Name>
+          <IconFilename>data/graphics/icons/icon_research_institute_03.png</IconFilename>
+          <InfoDescription>1742004432</InfoDescription>
+        </Standard>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Rare Research</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>49876</LineID>
+        </Text>
+        <Recipe>
+          <RecipeBuilding>1742004435</RecipeBuilding>          <!--Tourist_monument_03 (Sandwich)-->
+          <RecipeDescriptionText>1742004432</RecipeDescriptionText>
+          <RecipeImage>data/ui/2kimages/main/assets/recipebook/luxury_restaurant/recipebook_luxury_restaurant_sandwich_la_reine.png</RecipeImage>
+          <RecipeIngredientUIData>
+            <Item>
+              <PosX>10</PosX>
+              <PosY>30</PosY>
+              <UICirclePointer>SouthEast</UICirclePointer>
+            </Item>
+            <Item>
+              <PosX>380</PosX>
+              <PosY>30</PosY>
+              <UICirclePointer>SouthWest</UICirclePointer>
+            </Item>
+            <Item>
+              <PosY>270</PosY>
+              <UICirclePointer>NorthEast</UICirclePointer>
+            </Item>
+            <Item>
+              <PosX>380</PosX>
+              <PosY>270</PosY>
+              <UICirclePointer>NorthWest</UICirclePointer>
+            </Item>
+          </RecipeIngredientUIData>
+          <RecipeUnlockConditionText>134685</RecipeUnlockConditionText>
+          <RecipeUnlockConditionTextOptional>135022</RecipeUnlockConditionTextOptional>
+          <OptionalUnlockAsset>134915</OptionalUnlockAsset>
+          <UseFluffUnlockText>1</UseFluffUnlockText>
+        </Recipe>
+        <Locked/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END RECIPES - Arctic Research Institute Recipes -->
+
+  <!-- START BUILDING - Monumental Cooking and Drinking Statue -->
+  <ModOp Type="addNextSibling" GUID='1010284'>
+    <Asset>
+      <Template>BuffFactoryCultureInuit</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004424</GUID>
+          <Name>Monumental Cooking and Drinking Statue</Name>
+          <IconFilename>data/graphics/icons/icon_inuit_monument.png</IconFilename>
+          <InfoDescription>1742004304</InfoDescription>
+        </Standard>
+        <Text />
+        <Building>
+          <SkipUnlockMessage>1</SkipUnlockMessage>
+          <PickingAsset>1742004424</PickingAsset>
+          <DestructionConfirmation>1</DestructionConfirmation>
+          <BuildModeRandomRotation>90</BuildModeRandomRotation>
+          <AssociatedRegions>Arctic</AssociatedRegions>
+        </Building>
+        <Blocking />
+        <Mesh />
+        <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742004465</ProductivityBuff>
+            </Item>
+          </ProductionBuffs>
+          <ProductionBuffScope>Area</ProductionBuffScope>
+        </BuffFactory>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1010193</Product>              <!-- Beef - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1440212</Product>              <!-- Algae - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1742004172</Product>              <!-- Sculptures - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <CycleTime>180</CycleTime>
+          <IsMainFactory>1</IsMainFactory>
+        </FactoryBase>
+        <FeedbackController />
+        <Pausable />
+        <Selection>
+          <ParticipantMessageArcheType>Arctic_Inuit</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Attackable />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1742004159</Product>              <!-- Inuit Workforce -->
+              <Amount>100</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <AmbientMoodProvider />
+        <LogisticNode />
+        <Constructable />
+        <Locked />
+        <IncidentInfectable/>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/public/monument_inuit/monument_inuit_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <SoundEmitter />
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>25000</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Infolayer />
+        <UpgradeList />
+        <Culture />
+        <BuildingUnique>
+          <Uniques>
+            <Item>
+              <UniqueType>TourismMonument</UniqueType>
+              <UniqueScope>Area</UniqueScope>
+            </Item>
+          </Uniques>
+        </BuildingUnique>
+        <PublicService>
+          <FullSatisfactionDistance>99</FullSatisfactionDistance>
+          <NoSatisfactionDistance>100</NoSatisfactionDistance>
+          <PublicServiceOutputs>
+            <Item>
+              <Product>1742004486</Product>
+            </Item>
+          </PublicServiceOutputs>
+          <FunctionDescription>1742004487</FunctionDescription>
+        </PublicService>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - Monumental Cooking and Drinking Statue -->
+
+  <!-- START BUILDING - Monumental Residences Statue -->
+  <ModOp Type="addNextSibling" GUID='1010284'>
+    <Asset>
+      <Template>BuffFactoryCultureInuit</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004470</GUID>
+          <Name>Monumental Residences Statue</Name>
+          <IconFilename>data/graphics/icons/icon_inuit_monument.png</IconFilename>
+          <InfoDescription>1742004471</InfoDescription>
+        </Standard>
+        <Text />
+        <Building>
+          <SkipUnlockMessage>1</SkipUnlockMessage>
+          <PickingAsset>1742004470</PickingAsset>
+          <DestructionConfirmation>1</DestructionConfirmation>
+          <BuildModeRandomRotation>90</BuildModeRandomRotation>
+          <AssociatedRegions>Arctic</AssociatedRegions>
+        </Building>
+        <Blocking />
+        <Mesh />
+        <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742004472</ProductivityBuff>
+            </Item>
+          </ProductionBuffs>
+          <ProductionBuffScope>Area</ProductionBuffScope>
+        </BuffFactory>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>112699</Product>              <!-- Whale Oil - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>112697</Product>              <!-- Goose Feathers - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1742004172</Product>              <!-- Sculptures - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <CycleTime>180</CycleTime>
+          <IsMainFactory>1</IsMainFactory>
+        </FactoryBase>
+        <FeedbackController />
+        <Pausable />
+        <Selection>
+          <ParticipantMessageArcheType>Arctic_Inuit</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Attackable />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1742004159</Product>              <!-- Inuit Workforce -->
+              <Amount>100</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <AmbientMoodProvider />
+        <LogisticNode />
+        <Constructable />
+        <Locked />
+        <IncidentInfectable/>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/public/monument_inuit/monument_inuit_04.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <SoundEmitter />
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>25000</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Infolayer />
+        <UpgradeList />
+        <Culture />
+        <BuildingUnique>
+          <Uniques>
+            <Item>
+              <UniqueType>TourismMonument</UniqueType>
+              <UniqueScope>Area</UniqueScope>
+            </Item>
+          </Uniques>
+        </BuildingUnique>
+        <PublicService>
+          <FullSatisfactionDistance>99</FullSatisfactionDistance>
+          <NoSatisfactionDistance>100</NoSatisfactionDistance>
+          <PublicServiceOutputs>
+            <Item>
+              <Product>1742004486</Product>
+            </Item>
+          </PublicServiceOutputs>
+          <FunctionDescription>1742004487</FunctionDescription>
+        </PublicService>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - Monumental Residences Statue -->
+
+  <!-- START BUILDING - Monumental Crafting Statue -->
+  <ModOp Type="addNextSibling" GUID='1010284'>
+    <Asset>
+      <Template>BuffFactoryCultureInuit</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004474</GUID>
+          <Name>Monumental Crafting Statue</Name>
+          <IconFilename>data/graphics/icons/icon_inuit_monument.png</IconFilename>
+          <InfoDescription>1742004475</InfoDescription>
+        </Standard>
+        <Text />
+        <Building>
+          <SkipUnlockMessage>1</SkipUnlockMessage>
+          <PickingAsset>1742004474</PickingAsset>
+          <DestructionConfirmation>1</DestructionConfirmation>
+          <BuildModeRandomRotation>90</BuildModeRandomRotation>
+          <AssociatedRegions>Arctic</AssociatedRegions>
+        </Building>
+        <Blocking />
+        <Mesh />
+        <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742004476</ProductivityBuff>
+            </Item>
+          </ProductionBuffs>
+          <ProductionBuffScope>Area</ProductionBuffScope>
+        </BuffFactory>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1500010153</Product>              <!-- Tools - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>120042</Product>              <!-- Fish Oil - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1742004172</Product>              <!-- Sculptures - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <CycleTime>180</CycleTime>
+          <IsMainFactory>1</IsMainFactory>
+        </FactoryBase>
+        <FeedbackController />
+        <Pausable />
+        <Selection>
+          <ParticipantMessageArcheType>Arctic_Inuit</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Attackable />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1742004159</Product>              <!-- Inuit Workforce -->
+              <Amount>100</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <AmbientMoodProvider />
+        <LogisticNode />
+        <Constructable />
+        <Locked />
+        <IncidentInfectable/>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/public/monument_inuit/monument_inuit_03.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <SoundEmitter />
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>25000</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Infolayer />
+        <UpgradeList />
+        <Culture />
+        <BuildingUnique>
+          <Uniques>
+            <Item>
+              <UniqueType>TourismMonument</UniqueType>
+              <UniqueScope>Area</UniqueScope>
+            </Item>
+          </Uniques>
+        </BuildingUnique>
+        <PublicService>
+          <FullSatisfactionDistance>99</FullSatisfactionDistance>
+          <NoSatisfactionDistance>100</NoSatisfactionDistance>
+          <PublicServiceOutputs>
+            <Item>
+              <Product>1742004486</Product>
+            </Item>
+          </PublicServiceOutputs>
+          <FunctionDescription>1742004487</FunctionDescription>
+        </PublicService>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - Monumental Crafting Statue -->
+
+  <!-- START BUILDING - Monumental Forest Statue -->
+  <ModOp Type="addNextSibling" GUID='1010284'>
+    <Asset>
+      <Template>BuffFactoryCultureInuit</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004478</GUID>
+          <Name>Monumental Forest Statue</Name>
+          <IconFilename>data/graphics/icons/icon_inuit_monument.png</IconFilename>
+          <InfoDescription>1742004479</InfoDescription>
+        </Standard>
+        <Text />
+        <Building>
+          <SkipUnlockMessage>1</SkipUnlockMessage>
+          <PickingAsset>1742004478</PickingAsset>
+          <DestructionConfirmation>1</DestructionConfirmation>
+          <BuildModeRandomRotation>90</BuildModeRandomRotation>
+          <AssociatedRegions>Arctic</AssociatedRegions>
+        </Building>
+        <Blocking />
+        <Mesh />
+        <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742004480</ProductivityBuff>
+            </Item>
+          </ProductionBuffs>
+          <ProductionBuffScope>Area</ProductionBuffScope>
+        </BuffFactory>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1010242</Product>              <!-- Inlays - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>112695</Product>              <!-- Bear Fur - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1742004172</Product>              <!-- Sculptures - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <CycleTime>180</CycleTime>
+          <IsMainFactory>1</IsMainFactory>
+        </FactoryBase>
+        <FeedbackController />
+        <Pausable />
+        <Selection>
+          <ParticipantMessageArcheType>Arctic_Inuit</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Attackable />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1742004159</Product>              <!-- Inuit Workforce -->
+              <Amount>100</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <AmbientMoodProvider />
+        <LogisticNode />
+        <Constructable />
+        <Locked />
+        <IncidentInfectable/>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/public/monument_inuit/monument_inuit_05.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <SoundEmitter />
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>25000</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Infolayer />
+        <UpgradeList />
+        <Culture />
+        <BuildingUnique>
+          <Uniques>
+            <Item>
+              <UniqueType>TourismMonument</UniqueType>
+              <UniqueScope>Area</UniqueScope>
+            </Item>
+          </Uniques>
+        </BuildingUnique>
+        <PublicService>
+          <FullSatisfactionDistance>99</FullSatisfactionDistance>
+          <NoSatisfactionDistance>100</NoSatisfactionDistance>
+          <PublicServiceOutputs>
+            <Item>
+              <Product>1742004486</Product>
+            </Item>
+          </PublicServiceOutputs>
+          <FunctionDescription>1742004487</FunctionDescription>
+        </PublicService>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - Monumental Forest Statue -->
+
+  <!-- START BUILDING - Monumental Coastal Statue -->
+  <ModOp Type="addNextSibling" GUID='1010284'>
+    <Asset>
+      <Template>BuffFactoryCultureInuit</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004482</GUID>
+          <Name>Monumental Coastal Statue</Name>
+          <IconFilename>data/graphics/icons/icon_inuit_monument.png</IconFilename>
+          <InfoDescription>1742004483</InfoDescription>
+        </Standard>
+        <Text />
+        <Building>
+          <SkipUnlockMessage>1</SkipUnlockMessage>
+          <PickingAsset>1742004482</PickingAsset>
+          <DestructionConfirmation>1</DestructionConfirmation>
+          <BuildModeRandomRotation>90</BuildModeRandomRotation>
+          <AssociatedRegions>Arctic</AssociatedRegions>
+        </Building>
+        <Blocking />
+        <Mesh />
+        <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742004484</ProductivityBuff>
+            </Item>
+          </ProductionBuffs>
+          <ProductionBuffScope>Area</ProductionBuffScope>
+        </BuffFactory>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>112696</Product>              <!-- Seal Skin - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1010210</Product>              <!-- Sails - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1742004172</Product>              <!-- Sculptures - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <CycleTime>180</CycleTime>
+          <IsMainFactory>1</IsMainFactory>
+        </FactoryBase>
+        <FeedbackController />
+        <Pausable />
+        <Selection>
+          <ParticipantMessageArcheType>Arctic_Inuit</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Attackable />
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1742004159</Product>              <!-- Inuit Workforce -->
+              <Amount>100</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <AmbientMoodProvider />
+        <LogisticNode />
+        <Constructable />
+        <Locked />
+        <IncidentInfectable/>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/public/monument_inuit/monument_inuit_02.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <SoundEmitter />
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>25000</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Infolayer />
+        <UpgradeList />
+        <Culture />
+        <BuildingUnique>
+          <Uniques>
+            <Item>
+              <UniqueType>TourismMonument</UniqueType>
+              <UniqueScope>Area</UniqueScope>
+            </Item>
+          </Uniques>
+        </BuildingUnique>
+        <PublicService>
+          <FullSatisfactionDistance>99</FullSatisfactionDistance>
+          <NoSatisfactionDistance>100</NoSatisfactionDistance>
+          <PublicServiceOutputs>
+            <Item>
+              <Product>1742004486</Product>
+            </Item>
+          </PublicServiceOutputs>
+          <FunctionDescription>1742004487</FunctionDescription>
+        </PublicService>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - Monumental Coastal Statue -->
+
+</ModOps>
+  
