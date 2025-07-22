@@ -5116,6 +5116,376 @@
     </ModOp>
     <!-- END - BUILDING Campfire -->
 
+    <!-- START - RESIDENCE EXPLORERS -->
+    <ModOp Type="merge" GUID='112091' Path="/Values/">
+        <FloorStackOwner>
+            <UpgradeTargetGUID>1742004507</UpgradeTargetGUID>            <!--Explorers Upgraded Residence-->
+            <AddFloorCost>
+                <Item>
+                    <Ingredient>1010017</Ingredient>                    <!--Money-->
+                    <Amount>500</Amount>
+                </Item>
+                <Item>
+                    <Ingredient>1010196</Ingredient>                    <!--timber-->
+                    <Amount>10</Amount>
+                </Item>
+                <Item>
+                    <Ingredient>1010218</Ingredient>                    <!--beams-->
+                    <Amount>10</Amount>
+                </Item>
+                <Item>
+                    <Ingredient>1010207</Ingredient>                    <!--window-->
+                    <Amount>5</Amount>
+                </Item>
+                <Item>
+                    <Ingredient>112697</Ingredient>                    <!--Goose Feathers-->
+                    <Amount>8</Amount>
+                </Item>
+                <Item>
+                    <Ingredient>1800000302</Ingredient>                    <!--Sawdust-->
+                    <Amount>8</Amount>
+                </Item>
+            </AddFloorCost>
+        </FloorStackOwner>
+    </ModOp>
+    <!-- END - RESIDENCE EXPLORERS -->
+
+    <!-- START - BUILDING Explorers Upgraded Residence -->
+    <ModOp Type="addNextSibling" GUID='112091'>
+        <Asset>
+            <Template>ResidenceBuilding7_Arctic</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004507</GUID>
+                    <Name>Explorers Upgraded Residence</Name>
+                    <IconFilename>data/ui/2kimages/main/3dicons/icon_resident.png</IconFilename>
+                    <InfoDescription>1742004508</InfoDescription>
+                </Standard>
+                <Blocking/>
+                <Building>
+                    <BuildingType>Residence</BuildingType>
+                    <SkipUnlockMessage>1</SkipUnlockMessage>
+                    <PickingAsset>112091</PickingAsset>                    <!--residence_arctic_tier01-->
+                    <BuildModeRandomRotation>90</BuildModeRandomRotation>
+                </Building>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!--Money-->
+                            <Amount>500</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010196</Ingredient>                            <!--timber-->
+                            <Amount>10</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010218</Ingredient>                            <!--beams-->
+                            <Amount>10</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010207</Ingredient>                            <!--window-->
+                            <Amount>5</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>112697</Ingredient>                            <!--Goose Feathers-->
+                            <Amount>8</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1800000302</Ingredient>                            <!--Sawdust-->
+                            <Amount>8</Amount>
+                        </Item>
+                    </Costs>
+                </Cost>
+                <Mesh/>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_01_01.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_01_02.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_02_01.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_02_02.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_03_01.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_03_02.cfg</Filename>
+                        </Item>
+                    </Variations>
+                    <Skins/>
+                </Object>
+                <Selection>
+                    <StaticHelpEntryPoint>HighLifeSkyscrapers</StaticHelpEntryPoint>
+                    <OnSelection>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </OnSelection>
+                    <ParticipantMessageTrigger>ClickSkyscraper</ParticipantMessageTrigger>
+                    <ParticipantMessageArcheType>Arctic_Resident_tier01</ParticipantMessageArcheType>
+                </Selection>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>Explorers Upgraded Residence</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>35072</LineID>
+                </Text>
+                <Constructable>
+                    <ConstructionMenuIcon>112642</ConstructionMenuIcon>                    <!--Arctic Population 1-->
+                </Constructable>
+                <Locked>
+                    <DefaultLockedState>1</DefaultLockedState>
+                    <DLCDependency>410085</DLCDependency>                    <!--Anno 1800 DLC - HighLife-->
+                </Locked>
+                <Upgradable>
+                    <UpgradeCost/>
+                </Upgradable>
+                <SoundEmitter>
+                    <ConstructionSounds>
+                        <BuildSuccessful>
+                            <Item>
+                                <VectorElement>
+                                    <InheritanceMapV2>
+                                        <Entry>
+                                            <TemplateName>ResidenceBuilding7</TemplateName>
+                                            <Index>0</Index>
+                                        </Entry>
+                                    </InheritanceMapV2>
+                                </VectorElement>
+                                <Sound>200776</Sound>                                <!--wwe_sfx_aui_bld_place_bp-->
+                            </Item>
+                        </BuildSuccessful>
+                        <BuildUpgradeFailed>
+                            <Item>
+                                <Sound>9818387</Sound>                                <!--wwe_sfx_aui_deny-->
+                            </Item>
+                        </BuildUpgradeFailed>
+                    </ConstructionSounds>
+                    <IncidentSounds>
+                        <InfectedFire>
+                            <Item>
+                                <Sound>214659</Sound>                                <!--wwe_sfx_bld_inc_burn-->
+                            </Item>
+                        </InfectedFire>
+                        <InfectedIllness>
+                            <Item>
+                                <Sound>214756</Sound>                                <!--wwe_sfx_vox_inc_ill_os-->
+                            </Item>
+                        </InfectedIllness>
+                        <InfectedRiot>
+                            <Item>
+                                <Sound>222229</Sound>                                <!--wwe_sfx_vox_inc_rio_os-->
+                            </Item>
+                        </InfectedRiot>
+                        <ExplosionOneShots>
+                            <Item>
+                                <Sound>203849</Sound>                                <!--wwe_sfx_aui_destroy_small-->
+                            </Item>
+                        </ExplosionOneShots>
+                    </IncidentSounds>
+                    <BuildingRepaired>
+                        <Item>
+                            <Sound>203866</Sound>                            <!--wwe_sfx_aui_bld_3d_renovate-->
+                        </Item>
+                    </BuildingRepaired>
+                    <MaterialType>Stone</MaterialType>
+                </SoundEmitter>
+                <Infolayer>
+                    <AdditionalYOffset>0</AdditionalYOffset>
+                </Infolayer>
+                <FeedbackController/>
+                <RandomDummySpawner/>
+                <Residence7>
+                    <ResidenceStorage>
+                        <InputStorageMax>1</InputStorageMax>
+                    </ResidenceStorage>
+                    <PopulationLevel7>112642</PopulationLevel7>                    <!--Arctic Population 1-->
+                    <ResidentMax>40</ResidentMax>
+                    <ResidentsRequiredForUpgrade>40</ResidentsRequiredForUpgrade>
+                </Residence7>
+                <LogisticNode>
+                    <REMOVE_THIS_LATER_FeedbackUnitTier>Level4</REMOVE_THIS_LATER_FeedbackUnitTier>
+                </LogisticNode>
+                <AmbientMoodProvider>
+                    <Murmur>Arctic_BasicTundra</Murmur>
+                    <GlacierMurmur>Arctic_BasicGlacier</GlacierMurmur>
+                    <DynamicEnvironmentType>ResidenceT1</DynamicEnvironmentType>
+                </AmbientMoodProvider>
+                <UpgradeList/>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>1500</MaximumHitPoints>
+                </Attackable>
+                <IncidentInfectable>
+                    <Infectable>
+                        <Riot>
+                            <Base>0</Base>
+                            <Escalated>0</Escalated>
+                        </Riot>
+                        <Illness>
+                            <Base>0</Base>
+                            <Escalated>0</Escalated>
+                        </Illness>
+                        <Explosion>
+                            <Base>0</Base>
+                            <Escalated>0</Escalated>
+                        </Explosion>
+                        <ArcticIllness>
+                            <Base>1</Base>
+                            <Escalated>1</Escalated>
+                            <Communication>IllnessArcticDefault</Communication>
+                        </ArcticIllness>
+                    </Infectable>
+                    <Explosion>
+                        <ExplosionCoreDamage>1000</ExplosionCoreDamage>
+                    </Explosion>
+                    <IncidentInfectionChanceFactors>
+                        <Fire>
+                            <BaseChance>4</BaseChance>
+                            <DensityFactor>0.025</DensityFactor>
+                            <DensityDistance>12</DensityDistance>
+                        </Fire>
+                        <Riot>
+                            <FactoryOvertimeFactor>0</FactoryOvertimeFactor>
+                            <FactoryUndertimeFactor>0</FactoryUndertimeFactor>
+                            <FactoryHappinessFactor>0</FactoryHappinessFactor>
+                            <ResidenceHappinessFactor>0</ResidenceHappinessFactor>
+                            <HappinessMin>0</HappinessMin>
+                            <HappinessMax>0</HappinessMax>
+                        </Riot>
+                        <Illness>
+                            <ResidenceSatisfactionFactor>0</ResidenceSatisfactionFactor>
+                            <HappinessMin>0</HappinessMin>
+                            <HappinessMax>0</HappinessMax>
+                            <SatisfactionThreshold>0</SatisfactionThreshold>
+                        </Illness>
+                        <Explosion>
+                            <HitpointFactor>0</HitpointFactor>
+                            <HappinessMin>0</HappinessMin>
+                            <HappinessMax>0</HappinessMax>
+                            <SatisfactionThreshold>0</SatisfactionThreshold>
+                        </Explosion>
+                        <ArcticIllness>
+                            <BaseChance>4</BaseChance>
+                            <NoHeatFactor>30</NoHeatFactor>
+                        </ArcticIllness>
+                    </IncidentInfectionChanceFactors>
+                </IncidentInfectable>
+                <Pausable/>
+                <Culture/>
+                <StreetActivation/>
+                <InfluenceSource/>
+                <FloorStackOwner>
+                    <FloorCount>1</FloorCount>
+                    <Components>
+                        <BigFloor>
+                            <FloorIcon>data/ui/2kimages/main/3dicons/icon_city_ornament_large.png</FloorIcon>
+                            <FloorVariations>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</RoofCFG>
+                                </Item>
+                            </FloorVariations>
+                        </BigFloor>
+                        <MediumFloor>
+                            <FloorIcon>data/ui/2kimages/main/3dicons/icon_city_ornament_medium.png</FloorIcon>
+                            <FloorVariations>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</RoofCFG>
+                                </Item>
+                            </FloorVariations>
+                        </MediumFloor>
+                        <TinyFloor>
+                            <FloorIcon>data/ui/2kimages/main/3dicons/icon_city_ornament_small.png</FloorIcon>
+                            <FloorVariations>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</RoofCFG>
+                                </Item>
+                            </FloorVariations>
+                        </TinyFloor>
+                    </Components>
+                </FloorStackOwner>
+                <Maintenance>
+                    <IncomeCategory>Skyscrapers</IncomeCategory>
+                </Maintenance>
+                <Heated/>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END - BUILDING Explorers Upgraded Residence -->
+
     <!-- START - RESIDENCE TECHNICIANS -->
     <ModOp Type="merge" GUID='112652' Path="/Values/">
         <Upgradable>
@@ -5224,28 +5594,22 @@
                 <Object>
                     <Variations>
                         <Item>
-                            <Filename>data/graphics/buildings/residence/residence_tier04_01/residence_tier04_01.cfg</Filename>
+                            <Filename>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01.cfg</Filename>
                         </Item>
                         <Item>
-                            <Filename>data/graphics/buildings/residence/residence_tier04_02/residence_tier04_02.cfg</Filename>
+                            <Filename>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_02.cfg</Filename>
                         </Item>
                         <Item>
-                            <Filename>data/graphics/buildings/residence/residence_tier04_03/residence_tier04_03.cfg</Filename>
+                            <Filename>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_03.cfg</Filename>
                         </Item>
                         <Item>
-                            <Filename>data/graphics/buildings/residence/residence_tier04_04/residence_tier04_04.cfg</Filename>
+                            <Filename>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01.cfg</Filename>
                         </Item>
                         <Item>
-                            <Filename>data/graphics/buildings/residence/residence_tier04_05/residence_tier04_05.cfg</Filename>
+                            <Filename>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_02.cfg</Filename>
                         </Item>
                         <Item>
-                            <Filename>data/graphics/buildings/residence/residence_tier04_06/residence_tier04_06.cfg</Filename>
-                        </Item>
-                        <Item>
-                            <Filename>data/graphics/buildings/residence/residence_tier04_07/residence_tier04_07.cfg</Filename>
-                        </Item>
-                        <Item>
-                            <Filename>data/graphics/buildings/residence/residence_tier04_08/residence_tier04_08.cfg</Filename>
+                            <Filename>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_03_01.cfg</Filename>
                         </Item>
                     </Variations>
                     <Skins/>
@@ -5518,28 +5882,22 @@
                 <Object>
                     <Variations>
                         <Item>
-                            <Filename>data/dlc09/graphics/buildings/residence/residence_tier04_01/residence_tier04_01_01.cfg</Filename>
+                            <Filename>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_base.cfg</Filename>
                         </Item>
                         <Item>
-                            <Filename>data/dlc09/graphics/buildings/residence/residence_tier04_02/residence_tier04_02_01.cfg</Filename>
+                            <Filename>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_02_base.cfg</Filename>
                         </Item>
                         <Item>
-                            <Filename>data/dlc09/graphics/buildings/residence/residence_tier04_01/residence_tier04_01_01.cfg</Filename>
+                            <Filename>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_03_base.cfg</Filename>
                         </Item>
                         <Item>
-                            <Filename>data/dlc09/graphics/buildings/residence/residence_tier04_04/residence_tier04_04_01.cfg</Filename>
+                            <Filename>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_base.cfg</Filename>
                         </Item>
                         <Item>
-                            <Filename>data/dlc09/graphics/buildings/residence/residence_tier04_04/residence_tier04_04_01.cfg</Filename>
+                            <Filename>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_02_base.cfg</Filename>
                         </Item>
                         <Item>
-                            <Filename>data/dlc09/graphics/buildings/residence/residence_tier04_06/residence_tier04_06_01.cfg</Filename>
-                        </Item>
-                        <Item>
-                            <Filename>data/dlc09/graphics/buildings/residence/residence_tier04_07/residence_tier04_07_01.cfg</Filename>
-                        </Item>
-                        <Item>
-                            <Filename>data/dlc09/graphics/buildings/residence/residence_tier04_08/residence_tier04_08_01.cfg</Filename>
+                            <Filename>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_03_01_base.cfg</Filename>
                         </Item>
                     </Variations>
                     <Skins/>
@@ -5718,36 +6076,28 @@
                             <FloorIcon>data/ui/2kimages/main/3dicons/icon_city_ornament_large.png</FloorIcon>
                             <FloorVariations>
                                 <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_01/residence_tier04_01_02.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_01/residence_tier04_01_02_roof.cfg</RoofCFG>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_roof.cfg</RoofCFG>
                                 </Item>
                                 <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_02/residence_tier04_02_02.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_02/residence_tier04_02_02_roof.cfg</RoofCFG>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_roof.cfg</RoofCFG>
                                 </Item>
                                 <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_01/residence_tier04_01_02.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_01/residence_tier04_01_02_roof.cfg</RoofCFG>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_roof.cfg</RoofCFG>
                                 </Item>
                                 <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_04/residence_tier04_04_02.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_04/residence_tier04_04_02_roof.cfg</RoofCFG>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_roof.cfg</RoofCFG>
                                 </Item>
                                 <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_04/residence_tier04_04_02.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_04/residence_tier04_04_02_roof.cfg</RoofCFG>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_roof.cfg</RoofCFG>
                                 </Item>
                                 <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_06/residence_tier04_06_02.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_06/residence_tier04_06_02_roof.cfg</RoofCFG>
-                                </Item>
-                                <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_07/residence_tier04_07_02.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_07/residence_tier04_07_02_roof.cfg</RoofCFG>
-                                </Item>
-                                <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_08/residence_tier04_08_02.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_08/residence_tier04_08_02_roof.cfg</RoofCFG>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_roof.cfg</RoofCFG>
                                 </Item>
                             </FloorVariations>
                         </BigFloor>
@@ -5755,36 +6105,28 @@
                             <FloorIcon>data/ui/2kimages/main/3dicons/icon_city_ornament_medium.png</FloorIcon>
                             <FloorVariations>
                                 <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_01/residence_tier04_01_03.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_01/residence_tier04_01_03_roof.cfg</RoofCFG>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_roof.cfg</RoofCFG>
                                 </Item>
                                 <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_02/residence_tier04_02_03.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_02/residence_tier04_02_03_roof.cfg</RoofCFG>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_roof.cfg</RoofCFG>
                                 </Item>
                                 <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_01/residence_tier04_01_03.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_01/residence_tier04_01_03_roof.cfg</RoofCFG>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_roof.cfg</RoofCFG>
                                 </Item>
                                 <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_04/residence_tier04_04_03.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_04/residence_tier04_04_03_roof.cfg</RoofCFG>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_roof.cfg</RoofCFG>
                                 </Item>
                                 <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_04/residence_tier04_04_03.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_04/residence_tier04_04_03_roof.cfg</RoofCFG>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_roof.cfg</RoofCFG>
                                 </Item>
                                 <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_06/residence_tier04_06_03.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_06/residence_tier04_06_03_roof.cfg</RoofCFG>
-                                </Item>
-                                <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_07/residence_tier04_07_03.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_07/residence_tier04_07_03_roof.cfg</RoofCFG>
-                                </Item>
-                                <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_08/residence_tier04_08_03.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_08/residence_tier04_08_03_roof.cfg</RoofCFG>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_roof.cfg</RoofCFG>
                                 </Item>
                             </FloorVariations>
                         </MediumFloor>
@@ -5792,36 +6134,28 @@
                             <FloorIcon>data/ui/2kimages/main/3dicons/icon_city_ornament_small.png</FloorIcon>
                             <FloorVariations>
                                 <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_01/residence_tier04_01_04.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_01/residence_tier04_01_04_roof.cfg</RoofCFG>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_roof.cfg</RoofCFG>
                                 </Item>
                                 <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_02/residence_tier04_02_04.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_02/residence_tier04_02_04_roof.cfg</RoofCFG>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_roof.cfg</RoofCFG>
                                 </Item>
                                 <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_01/residence_tier04_01_04.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_01/residence_tier04_01_04_roof.cfg</RoofCFG>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_roof.cfg</RoofCFG>
                                 </Item>
                                 <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_04/residence_tier04_04_04.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_04/residence_tier04_04_04_roof.cfg</RoofCFG>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_roof.cfg</RoofCFG>
                                 </Item>
                                 <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_04/residence_tier04_04_04.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_04/residence_tier04_04_04_roof.cfg</RoofCFG>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_roof.cfg</RoofCFG>
                                 </Item>
                                 <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_06/residence_tier04_06_04.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_06/residence_tier04_06_04_roof.cfg</RoofCFG>
-                                </Item>
-                                <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_07/residence_tier04_07_04.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_07/residence_tier04_07_04_roof.cfg</RoofCFG>
-                                </Item>
-                                <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_08/residence_tier04_08_04.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_08/residence_tier04_08_04_roof.cfg</RoofCFG>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_roof.cfg</RoofCFG>
                                 </Item>
                             </FloorVariations>
                         </TinyFloor>
@@ -5937,28 +6271,22 @@
                 <Object>
                     <Variations>
                         <Item>
-                            <Filename>data/dlc09/graphics/buildings/residence/residence_tier04_01/residence_tier04_01_01.cfg</Filename>
+                            <Filename>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_base.cfg</Filename>
                         </Item>
                         <Item>
-                            <Filename>data/dlc09/graphics/buildings/residence/residence_tier04_02/residence_tier04_02_01.cfg</Filename>
+                            <Filename>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_02_base.cfg</Filename>
                         </Item>
                         <Item>
-                            <Filename>data/dlc09/graphics/buildings/residence/residence_tier04_01/residence_tier04_01_01.cfg</Filename>
+                            <Filename>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_03_base.cfg</Filename>
                         </Item>
                         <Item>
-                            <Filename>data/dlc09/graphics/buildings/residence/residence_tier04_04/residence_tier04_04_01.cfg</Filename>
+                            <Filename>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_base.cfg</Filename>
                         </Item>
                         <Item>
-                            <Filename>data/dlc09/graphics/buildings/residence/residence_tier04_04/residence_tier04_04_01.cfg</Filename>
+                            <Filename>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_02_base.cfg</Filename>
                         </Item>
                         <Item>
-                            <Filename>data/dlc09/graphics/buildings/residence/residence_tier04_06/residence_tier04_06_01.cfg</Filename>
-                        </Item>
-                        <Item>
-                            <Filename>data/dlc09/graphics/buildings/residence/residence_tier04_07/residence_tier04_07_01.cfg</Filename>
-                        </Item>
-                        <Item>
-                            <Filename>data/dlc09/graphics/buildings/residence/residence_tier04_08/residence_tier04_08_01.cfg</Filename>
+                            <Filename>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_03_01_base.cfg</Filename>
                         </Item>
                     </Variations>
                     <Skins/>
@@ -6138,36 +6466,28 @@
                             <FloorIcon>data/ui/2kimages/main/3dicons/icon_city_ornament_large.png</FloorIcon>
                             <FloorVariations>
                                 <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_01/residence_tier04_01_02.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_01/residence_tier04_01_02_roof.cfg</RoofCFG>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_roof.cfg</RoofCFG>
                                 </Item>
                                 <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_02/residence_tier04_02_02.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_02/residence_tier04_02_02_roof.cfg</RoofCFG>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_roof.cfg</RoofCFG>
                                 </Item>
                                 <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_01/residence_tier04_01_02.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_01/residence_tier04_01_02_roof.cfg</RoofCFG>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_roof.cfg</RoofCFG>
                                 </Item>
                                 <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_04/residence_tier04_04_02.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_04/residence_tier04_04_02_roof.cfg</RoofCFG>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_roof.cfg</RoofCFG>
                                 </Item>
                                 <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_04/residence_tier04_04_02.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_04/residence_tier04_04_02_roof.cfg</RoofCFG>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_roof.cfg</RoofCFG>
                                 </Item>
                                 <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_06/residence_tier04_06_02.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_06/residence_tier04_06_02_roof.cfg</RoofCFG>
-                                </Item>
-                                <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_07/residence_tier04_07_02.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_07/residence_tier04_07_02_roof.cfg</RoofCFG>
-                                </Item>
-                                <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_08/residence_tier04_08_02.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_08/residence_tier04_08_02_roof.cfg</RoofCFG>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_roof.cfg</RoofCFG>
                                 </Item>
                             </FloorVariations>
                         </BigFloor>
@@ -6175,36 +6495,28 @@
                             <FloorIcon>data/ui/2kimages/main/3dicons/icon_city_ornament_medium.png</FloorIcon>
                             <FloorVariations>
                                 <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_01/residence_tier04_01_03.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_01/residence_tier04_01_03_roof.cfg</RoofCFG>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_roof.cfg</RoofCFG>
                                 </Item>
                                 <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_02/residence_tier04_02_03.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_02/residence_tier04_02_03_roof.cfg</RoofCFG>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_roof.cfg</RoofCFG>
                                 </Item>
                                 <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_01/residence_tier04_01_03.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_01/residence_tier04_01_03_roof.cfg</RoofCFG>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_roof.cfg</RoofCFG>
                                 </Item>
                                 <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_04/residence_tier04_04_03.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_04/residence_tier04_04_03_roof.cfg</RoofCFG>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_roof.cfg</RoofCFG>
                                 </Item>
                                 <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_04/residence_tier04_04_03.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_04/residence_tier04_04_03_roof.cfg</RoofCFG>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_roof.cfg</RoofCFG>
                                 </Item>
                                 <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_06/residence_tier04_06_03.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_06/residence_tier04_06_03_roof.cfg</RoofCFG>
-                                </Item>
-                                <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_07/residence_tier04_07_03.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_07/residence_tier04_07_03_roof.cfg</RoofCFG>
-                                </Item>
-                                <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_08/residence_tier04_08_03.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_08/residence_tier04_08_03_roof.cfg</RoofCFG>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_roof.cfg</RoofCFG>
                                 </Item>
                             </FloorVariations>
                         </MediumFloor>
@@ -6212,36 +6524,28 @@
                             <FloorIcon>data/ui/2kimages/main/3dicons/icon_city_ornament_small.png</FloorIcon>
                             <FloorVariations>
                                 <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_01/residence_tier04_01_04.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_01/residence_tier04_01_04_roof.cfg</RoofCFG>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_roof.cfg</RoofCFG>
                                 </Item>
                                 <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_02/residence_tier04_02_04.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_02/residence_tier04_02_04_roof.cfg</RoofCFG>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_roof.cfg</RoofCFG>
                                 </Item>
                                 <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_01/residence_tier04_01_04.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_01/residence_tier04_01_04_roof.cfg</RoofCFG>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_roof.cfg</RoofCFG>
                                 </Item>
                                 <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_04/residence_tier04_04_04.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_04/residence_tier04_04_04_roof.cfg</RoofCFG>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_roof.cfg</RoofCFG>
                                 </Item>
                                 <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_04/residence_tier04_04_04.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_04/residence_tier04_04_04_roof.cfg</RoofCFG>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_roof.cfg</RoofCFG>
                                 </Item>
                                 <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_06/residence_tier04_06_04.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_06/residence_tier04_06_04_roof.cfg</RoofCFG>
-                                </Item>
-                                <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_07/residence_tier04_07_04.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_07/residence_tier04_07_04_roof.cfg</RoofCFG>
-                                </Item>
-                                <Item>
-                                    <FloorCFG>data/dlc09/graphics/buildings/residence/residence_tier04_08/residence_tier04_08_04.cfg</FloorCFG>
-                                    <RoofCFG>data/dlc09/graphics/buildings/residence/residence_tier04_08/residence_tier04_08_04_roof.cfg</RoofCFG>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_roof.cfg</RoofCFG>
                                 </Item>
                             </FloorVariations>
                         </TinyFloor>
@@ -6269,7 +6573,7 @@
                 <Object>
                     <Variations>
                         <Item>
-                            <Filename>data/dlc03/graphics/buildings/production/production_colony03_13/production_colony03_13.cfg</Filename>
+                            <Filename>data/graphics/buildings/production/sawmill_inuit/sawmill_inuit_01.cfg</Filename>
                         </Item>
                     </Variations>
                 </Object>
@@ -7098,21 +7402,13 @@
                     <IconFilename>data\graphics\icons\icon_hotsprings_bathhouse.png</IconFilename>
                     <InfoDescription>1742004399</InfoDescription>
                 </Standard>
-                <Text>
-                    <LocaText>
-                        <English>
-                            <Text>Hot Springs Bathhouse</Text>
-                            <Status>Exported</Status>
-                        </English>
-                    </LocaText>
-                    <LineID>35097</LineID>
-                </Text>
+                <Text/>
                 <Blocking>
                     <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
                 </Blocking>
                 <Building>
-                    <BuildingType>Logistic</BuildingType>
-                    <BuildingCategoryName>100000</BuildingCategoryName>                    <!--Production-->
+                    <BuildingType>Factory</BuildingType>                    <!-- Logistic -->
+                    <BuildingCategoryName>100003</BuildingCategoryName>                    <!--Production-->
                     <SkipUnlockMessage>1</SkipUnlockMessage>
                     <BuildModeRandomRotation>180</BuildModeRandomRotation>
                     <AssociatedRegions>Arctic</AssociatedRegions>
@@ -7222,15 +7518,26 @@
                     <HeatRange>99</HeatRange>                    <!-- 18 -->
                     <MinProductivityPercentToProvideHeat>1</MinProductivityPercentToProvideHeat>
                 </HeatProvider>
+                <Factory7/>
                 <FactoryBase>
-                    <FactoryInputs>
-                        <Item>
-                            <Product>1591</Product>                            <!--FakeInputMineralResource-->
-                            <StorageAmount>3</StorageAmount>
-                        </Item>
-                    </FactoryInputs>
+                    <CycleTime>120</CycleTime>
+                    <IsMainFactory>1</IsMainFactory>
                     <MissingConnectionInfolayer>0</MissingConnectionInfolayer>
                 </FactoryBase>
+                <ModuleOwner>
+                    <ModuleLimits>
+                        <Main>
+                            <Limit>3</Limit>
+                        </Main>
+                    </ModuleLimits>
+                    <ConstructionOptions>
+                        <Item>
+                            <ModuleGUID>1742004356</ModuleGUID>                            <!-- Bathing Area -->
+                        </Item>
+                    </ConstructionOptions>
+                    <ModuleBuildRadius>5</ModuleBuildRadius>
+                    <FarmType>AnimalFarm</FarmType>
+                </ModuleOwner>
                 <PublicService>
                     <FullSatisfactionDistance>99</FullSatisfactionDistance>
                     <NoSatisfactionDistance>100</NoSatisfactionDistance>
@@ -7241,6 +7548,74 @@
                     </PublicServiceOutputs>
                     <FunctionDescription>1742004401</FunctionDescription>
                 </PublicService>
+            </Values>
+        </Asset>
+        <Asset>
+            <Template>Farmfield</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004356</GUID>
+                    <Name>Bathing Area</Name>
+                    <IconFilename>data/ui/2kimages/main/3dicons/icon_water_drop.png</IconFilename>
+                    <InfoDescription>1742004357</InfoDescription>
+                </Standard>
+                <Building>
+                    <AssociatedRegions>Arctic</AssociatedRegions>
+                </Building>
+                <Blocking>
+                    <GroundDecalAsset>116631</GroundDecalAsset>                    <!--BasePlateFenceAgriculturePassage-->
+                    <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+                </Blocking>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!-- Coins -->
+                            <Amount>5000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010196</Ingredient>                            <!--timber-->
+                            <Amount>20</Amount>
+                        </Item>
+                    </Costs>
+                </Cost>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/dlc03/graphics/buildings/production/production_colony03_02/production_colony03_02_module_01.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/dlc03/graphics/buildings/production/production_colony03_02/production_colony03_02_module_02.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/dlc03/graphics/buildings/production/production_colony03_02/production_colony03_02_module_03.cfg</Filename>
+                        </Item>
+                    </Variations>
+                    <Skins>
+                        <DefaultSkinName>1742004356</DefaultSkinName>
+                        <DefaultSkinDescription>23853</DefaultSkinDescription>
+                        <!--ChangeBuildingSkin_toDefaultSkinDesc-->
+                        <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>
+                        <!--Classic-->
+                    </Skins>
+                </Object>
+                <Mesh/>
+                <Selection>
+                    <OnSelection>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </OnSelection>
+                </Selection>
+                <Text/>
+                <Constructable/>
+                <Locked/>
+                <SoundEmitter/>
+                <FeedbackController/>
+                <Infolayer/>
+                <BuildingModule/>
+                <AmbientMoodProvider/>
+                <ModuleIrrigation/>
             </Values>
         </Asset>
     </ModOp>
@@ -7675,177 +8050,6 @@
     </ModOp>
     <!-- END BUILDING - Nate's Arctic Windmill -->
 
-    <!-- START BUILDING - Brass Smelter -->
-    <ModOp GUID='100780' Type="addNextSibling">
-        <Asset>
-            <Template>FactoryBuilding7_Arctic</Template>
-            <Values>
-                <Standard>
-                    <GUID>1742004164</GUID>
-                    <Name>Brass Smelter</Name>
-                    <IconFilename>data/ui/2kimages/main/3dicons/icon_brass.png</IconFilename>
-                    <InfoDescription>1742004165</InfoDescription>
-                </Standard>
-                <Building/>
-                <Blocking/>
-                <Cost>
-                    <Costs>
-                        <Item>
-                            <Ingredient>1010017</Ingredient>                            <!-- Coins -->
-                            <Amount>15000</Amount>
-                        </Item>
-                        <Item>
-                            <Ingredient>1010196</Ingredient>                            <!--timber-->
-                            <Amount>35</Amount>
-                        </Item>
-                        <Item>
-                            <Ingredient>1010205</Ingredient>                            <!--bricks-->
-                            <Amount>30</Amount>
-                        </Item>
-                        <Item>
-                            <Ingredient>1010218</Ingredient>                            <!--beams-->
-                            <Amount>25</Amount>
-                        </Item>
-                    </Costs>
-                </Cost>
-                <Object>
-                    <Variations>
-                        <Item>
-                            <Filename>data/dlc03/graphics/buildings/production/production_colony03_08/production_colony03_08.cfg</Filename>
-                        </Item>
-                    </Variations>
-                    <Skins/>
-                </Object>
-                <Mesh/>
-                <Selection>
-                    <OnSelection>
-                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
-                        <Values>
-                            <ActionList/>
-                        </Values>
-                    </OnSelection>
-                    <ParticipantMessageArcheType>Arctic_Resident_tier02_atWork</ParticipantMessageArcheType>
-                </Selection>
-                <Text>
-                    <LocaText>
-                        <English>
-                            <Text>Brass Smelter</Text>
-                            <Status>Exported</Status>
-                        </English>
-                    </LocaText>
-                    <LineID>35080</LineID>
-                </Text>
-                <Constructable/>
-                <Locked/>
-                <SoundEmitter>
-                    <ActiveSounds>
-                        <Item>
-                            <Sound>247110</Sound>                            <!--wwe_sfx_bld_factory_arctic_typeCluster_tag-->
-                        </Item>
-                        <Item>
-                            <Sound>240565</Sound>                            <!--wwe_sfx_bld_factory_arctic_03_lp-->
-                        </Item>
-                    </ActiveSounds>
-                    <IncidentSounds>
-                        <InfectedFire>
-                            <Item>
-                                <Sound>214659</Sound>                                <!--wwe_sfx_bld_inc_burn-->
-                            </Item>
-                        </InfectedFire>
-                    </IncidentSounds>
-                </SoundEmitter>
-                <FeedbackController/>
-                <Infolayer/>
-                <UpgradeList/>
-                <Factory7/>
-                <FactoryBase>
-                    <FactoryInputs>
-                        <Item>
-                            <Product>1010229</Product>                            <!--zinc-->
-                            <Amount>1</Amount>
-                            <StorageAmount>4</StorageAmount>
-                        </Item>
-                        <Item>
-                            <Product>1010230</Product>                            <!--copper-->
-                            <Amount>1</Amount>
-                            <StorageAmount>4</StorageAmount>
-                        </Item>
-                    </FactoryInputs>
-                    <FactoryOutputs>
-                        <Item>
-                            <Product>1010204</Product>                            <!--brass-->
-                            <Amount>1</Amount>
-                            <StorageAmount>2</StorageAmount>
-                        </Item>
-                    </FactoryOutputs>
-                    <CycleTime>60</CycleTime>
-                    <IsMainFactory>0</IsMainFactory>
-                </FactoryBase>
-                <LogisticNode/>
-                <AmbientMoodProvider>
-                    <Murmur>Arctic_Farm</Murmur>
-                    <GlacierMurmur>Arctic_Farm</GlacierMurmur>
-                </AmbientMoodProvider>
-                <Maintenance>
-                    <Maintenances>
-                        <Item>
-                            <Product>1010017</Product>                            <!--Money-->
-                            <Amount>200</Amount>
-                            <InactiveAmount>100</InactiveAmount>
-                        </Item>
-                        <Item>
-                            <Product>112654</Product>                            <!--arctic workforce 2-->
-                            <Amount>50</Amount>
-                            <ShutdownThreshold>0.2</ShutdownThreshold>
-                        </Item>
-                    </Maintenances>
-                </Maintenance>
-                <Attackable>
-                    <AttackableType>IslandBuilding</AttackableType>
-                    <MaximumHitPoints>2500</MaximumHitPoints>
-                </Attackable>
-                <Pausable/>
-                <IncidentInfectable>
-                    <Infectable>
-                        <Riot>
-                            <Base>0</Base>
-                            <Escalated>0</Escalated>
-                        </Riot>
-                        <Explosion>
-                            <Base>0</Base>
-                            <Escalated>0</Escalated>
-                        </Explosion>
-                    </Infectable>
-                    <IncidentInfectionChanceFactors>
-                        <Riot>
-                            <FactoryOvertimeFactor>0</FactoryOvertimeFactor>
-                            <FactoryUndertimeFactor>0</FactoryUndertimeFactor>
-                            <FactoryHappinessFactor>0</FactoryHappinessFactor>
-                            <ResidenceHappinessFactor>0</ResidenceHappinessFactor>
-                            <HappinessMin>0</HappinessMin>
-                            <HappinessMax>0</HappinessMax>
-                        </Riot>
-                        <Illness>
-                            <ResidenceSatisfactionFactor>0</ResidenceSatisfactionFactor>
-                            <HappinessMin>0</HappinessMin>
-                            <HappinessMax>0</HappinessMax>
-                            <SatisfactionThreshold>0</SatisfactionThreshold>
-                        </Illness>
-                        <Explosion>
-                            <HappinessMin>0</HappinessMin>
-                            <HappinessMax>0</HappinessMax>
-                            <SatisfactionThreshold>0</SatisfactionThreshold>
-                        </Explosion>
-                    </IncidentInfectionChanceFactors>
-                </IncidentInfectable>
-                <Culture/>
-                <QuestObject/>
-                <Heated/>
-            </Values>
-        </Asset>
-    </ModOp>
-    <!-- END BUILDING - Brass Smelter -->
-
     <!-- START BUILDING - Cannery (Arctic) -->
     <ModOp GUID='100780' Type="addNextSibling">
         <Asset>
@@ -8052,7 +8256,7 @@
                 <Object>
                     <Variations>
                         <Item>
-                            <Filename>data/graphics/buildings/production/hunting_gear_maker/hunting_gear_maker_01.cfg</Filename>
+                            <Filename>data/graphics/buildings/production/qilaut_maker_inuit/qilaut_maker_inuit_01.cfg</Filename>
                         </Item>
                     </Variations>
                 </Object>

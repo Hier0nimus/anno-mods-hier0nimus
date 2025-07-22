@@ -201,6 +201,9 @@
                         <Asset>1742004271</Asset>                        <!-- Campfire - Chain -->
                       </Item>
                       <Item>
+                        <Asset>1742004507</Asset>                        <!-- Explorers Upgraded Residence - Building -->
+                      </Item>
+                      <Item>
                         <Asset>1742004272</Asset>                        <!-- Technicians Upgraded Residence - Building -->
                       </Item>
                       <Item>
@@ -217,9 +220,6 @@
                       </Item>
                       <Item>
                         <Asset>1742004279</Asset>                        <!-- Ice Storage - ProductStorageList -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004280</Asset>                        <!-- Ice Depot - Building -->
                       </Item>
                       <Item>
                         <Asset>1742004281</Asset>                        <!-- Strategic Harbour (AR) - Building -->
@@ -348,13 +348,7 @@
                         <Asset>1742004386</Asset>                        <!-- Ice Warehouse (OW) - Building -->
                       </Item>
                       <Item>
-                        <Asset>1742004387</Asset>                        <!-- Ice Depot (OW) - Building -->
-                      </Item>
-                      <Item>
                         <Asset>1742004388</Asset>                        <!-- Ice Warehouse (NW) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004389</Asset>                        <!-- Ice Depot (NW) - Building -->
                       </Item>
                       <Item>
                         <Asset>1742004398</Asset>                        <!-- Hot Springs Bathhouse - Building -->
@@ -430,12 +424,6 @@
                       </Item>
                       <Item>
                         <Asset>1742004444</Asset>                        <!-- Technicians Upgraded Residence Level 2 - ResidenceBuilding7_Arctic -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004402</Asset>                        <!-- Brass - Chain -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004164</Asset>                        <!-- Brass Smelter - Building -->
                       </Item>
                       <Item>
                         <Asset>1742004453</Asset>                        <!-- Canned Food - Chain -->
@@ -518,32 +506,32 @@
     </Asset>
   </ModOp>
   <!-- END - Inuit Unlock  -->
-   <!--START - Creative Mode -->
-   <ModOp Type="addNextSibling" GUID="130248">
-     <Asset>
-       <Template>Trigger</Template>
-       <Values>
-         <Standard>
-           <GUID>1742004801</GUID>
-           <Name>Unlock Creative Mode</Name>
-          </Standard>
-          <Trigger>
-            <TriggerCondition>
-              <Template>ConditionIsCreativeMode</Template>
-              <Values>
-                <Condition />
-                <ConditionIsCreativeMode />
-                <ConditionPropsNegatable />
-              </Values>
-            </TriggerCondition>
-            <TriggerActions>
-              <Item>
-                <TriggerAction>
-                  <Template>ActionUnlockAsset</Template>
-                  <Values>
-                    <Action />
-                    <ActionUnlockAsset>
-                      <UnlockAssets>
+  <!--START - Creative Mode -->
+  <ModOp Type="addNextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004801</GUID>
+          <Name>Unlock Creative Mode</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionIsCreativeMode</Template>
+            <Values>
+              <Condition />
+              <ConditionIsCreativeMode />
+              <ConditionPropsNegatable />
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnlockAssets>
                       <Item>
                         <Asset>1742004100</Asset>                        <!-- Inuit PopulationLevel7 -->
                       </Item>
@@ -713,6 +701,9 @@
                         <Asset>1742004271</Asset>                        <!-- Campfire - Chain -->
                       </Item>
                       <Item>
+                        <Asset>1742004507</Asset>                        <!-- Explorers Upgraded Residence - Building -->
+                      </Item>
+                      <Item>
                         <Asset>1742004272</Asset>                        <!-- Technicians Upgraded Residence - Building -->
                       </Item>
                       <Item>
@@ -729,9 +720,6 @@
                       </Item>
                       <Item>
                         <Asset>1742004279</Asset>                        <!-- Ice Storage - ProductStorageList -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004280</Asset>                        <!-- Ice Depot - Building -->
                       </Item>
                       <Item>
                         <Asset>1742004281</Asset>                        <!-- Strategic Harbour (AR) - Building -->
@@ -860,13 +848,7 @@
                         <Asset>1742004386</Asset>                        <!-- Ice Warehouse (OW) - Building -->
                       </Item>
                       <Item>
-                        <Asset>1742004387</Asset>                        <!-- Ice Depot (OW) - Building -->
-                      </Item>
-                      <Item>
                         <Asset>1742004388</Asset>                        <!-- Ice Warehouse (NW) - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004389</Asset>                        <!-- Ice Depot (NW) - Building -->
                       </Item>
                       <Item>
                         <Asset>1742004398</Asset>                        <!-- Hot Springs Bathhouse - Building -->
@@ -944,12 +926,6 @@
                         <Asset>1742004444</Asset>                        <!-- Technicians Upgraded Residence Level 2 - ResidenceBuilding7_Arctic -->
                       </Item>
                       <Item>
-                        <Asset>1742004402</Asset>                        <!-- Brass - Chain -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004164</Asset>                        <!-- Brass Smelter - Building -->
-                      </Item>
-                      <Item>
                         <Asset>1742004453</Asset>                        <!-- Canned Food - Chain -->
                       </Item>
                       <Item>
@@ -1018,24 +994,24 @@
                       <Item>
                         <Asset>1742004503</Asset>                        <!-- Ice Coffee - Building -->
                       </Item>
-                      </UnlockAssets>
-                    </ActionUnlockAsset>
-                  </Values>
-                </TriggerAction>
-              </Item>
-            </TriggerActions>
-            <ResetTrigger>
-              <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
-              <Values>
-                <EmptyAutoCreateValue />
-              </Values>
-            </ResetTrigger>
-          </Trigger>
-          <TriggerSetup />
-        </Values>
-      </Asset>
-    </ModOp>
-    <!--END - Creative Mode -->
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+          <ResetTrigger>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <EmptyAutoCreateValue />
+            </Values>
+          </ResetTrigger>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!--END - Creative Mode -->
 
 </ModOps>
   

@@ -414,9 +414,6 @@
             <Item>
               <Building>1742004277</Building>              <!-- Ice Warehouse - Building -->
             </Item>
-            <Item>
-              <Building>1742004280</Building>              <!-- Ice Depot - Building -->
-            </Item>
           </BuildingList>
           <CategoryDescription>19173</CategoryDescription>
         </ConstructionCategory>
@@ -452,9 +449,6 @@
             </Item>
             <Item>
               <Building>1742004386</Building>              <!-- Ice Warehouse (OW) - Building -->
-            </Item>
-            <Item>
-              <Building>1742004387</Building>              <!-- Ice Depot (OW) - Building -->
             </Item>
             <Item>
               <Building>1742004370</Building>              <!-- Ice Coastal Storage (OW) - Building -->
@@ -500,9 +494,6 @@
             </Item>
             <Item>
               <Building>1742004388</Building>              <!-- Ice Warehouse (OW) - Building -->
-            </Item>
-            <Item>
-              <Building>1742004389</Building>              <!-- Ice Depot (OW) - Building -->
             </Item>
             <Item>
               <Building>1742004372</Building>              <!-- Ice Coastal Storage (NW) - Building -->
@@ -640,9 +631,6 @@
               <Building>1742004112</Building>              <!-- Fishery - Building -->
             </Item>
             <Item>
-              <Building>1742004134</Building>              <!-- Root Grinder - Building -->
-            </Item>
-            <Item>
               <Building>1742004493</Building>              <!-- Seaweed Harvester - Building -->
             </Item>
             <Item>
@@ -697,34 +685,6 @@
   </ModOp>
   <!-- END - PRODUCTION CHAIN - Pemmican -->
 
-  <!-- START - PRODUCTION CHAIN - Brass -->
-  <ModOp Type="addNextSibling" GUID='15039'>
-    <Asset>
-      <Template>ProductionChain</Template>
-      <Values>
-        <Standard>
-          <GUID>1742004402</GUID>
-          <Name>Brass</Name>
-          <IconFilename>data/ui/2kimages/main/3dicons/icon_brass.png</IconFilename>
-          <InfoDescription>1742004165</InfoDescription>
-        </Standard>
-        <ProductionChain>
-          <Building>1742004164</Building>          <!--Brass Smelter-->
-          <Tier1>
-            <Item>
-              <Building>8857203</Building>              <!--Zinc Mine-->
-            </Item>
-            <Item>
-              <Building>8857204</Building>              <!--Copper Mine-->
-            </Item>
-          </Tier1>
-        </ProductionChain>
-        <Locked />
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END - PRODUCTION CHAIN - Brass -->
-
   <!-- START - PRODUCTION CHAIN - Canned Food -->
   <ModOp Type="addNextSibling" GUID='15039'>
     <Asset>
@@ -752,9 +712,6 @@
               <Tier2>
                 <Item>
                   <Building>1742004112</Building>                  <!-- Fishery - Building -->
-                </Item>
-                <Item>
-                  <Building>1742004134</Building>                  <!-- Root Grinder - Building -->
                 </Item>
                 <Item>
                   <Building>1742004493</Building>                  <!-- Seaweed Harvester - Building -->
@@ -1071,9 +1028,6 @@
 
   <!-- START - ADD BUILDINGS TO TECHNICIANS MENU -->
   <ModOp Type="add" GUID='112791' Path="/Values/ConstructionCategory/BuildingList/">
-    <Item>
-      <Building>1742004402</Building>      <!-- Brass - Chain -->
-    </Item>
     <Item>
       <Building>1742004268</Building>      <!-- Ice Building Menu - ConstructionCategory -->
     </Item>

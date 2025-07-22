@@ -335,11 +335,11 @@
 				<Blocking/>
 				<Building>
 					<BuildingType>Factory</BuildingType>
-					<BuildingCategoryName>100003</BuildingCategoryName>					<!--Public Service-->
+					<BuildingCategoryName>100003</BuildingCategoryName>					<!-- Public Service-->
 				</Building>
 				<Cost/>
 				<Selection>
-					<GUIType>PublicService</GUIType>
+					<GUIType>Production</GUIType>					<!-- PublicService -->
 					<OnSelection>
 						<IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
 						<Values>
@@ -402,6 +402,18 @@
 				<Infolayer/>
 				<FeedbackController/>
 				<UpgradeList/>
+				<Factory7/>
+				<LogisticNode>
+					<TransporterCountMax>0</TransporterCountMax>
+					<NeedsTransporterQueue>0</NeedsTransporterQueue>
+				</LogisticNode>
+				<FactoryBase>
+					<MissingConnectionInfolayer>0</MissingConnectionInfolayer>
+				</FactoryBase>
+				<ModuleOwner>
+					<ModuleBuildRadius>10</ModuleBuildRadius>
+					<ImplicitProductivityModules>0</ImplicitProductivityModules>
+				</ModuleOwner>
 				<AmbientMoodProvider/>
 				<Maintenance>
 					<IncomeCategory>PublicServiceBuildings</IncomeCategory>
@@ -423,10 +435,6 @@
 						</Illness>
 					</Infectable>
 				</IncidentInfectable>
-				<LogisticNode>
-					<TransporterCountMax>0</TransporterCountMax>
-					<NeedsTransporterQueue>0</NeedsTransporterQueue>
-				</LogisticNode>
 				<PublicService>
 					<FunctionDescription>100364</FunctionDescription>					<!--Provides Service-->
 				</PublicService>
@@ -442,9 +450,6 @@
 					<HeatRange>18</HeatRange>
 					<MinProductivityPercentToProvideHeat>1</MinProductivityPercentToProvideHeat>
 				</HeatProvider>
-				<FactoryBase>
-					<MissingConnectionInfolayer>0</MissingConnectionInfolayer>
-				</FactoryBase>
 			</Properties>
 		</Template>
 	</ModOp>
