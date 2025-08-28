@@ -4,21 +4,6 @@
 
 <ModOps>
 
-  <!-- START - Inuit Unlock 00 - Discovering Inuit Qumaq  -->
-  <ModOp Type="add" GUID="114156" Path="Values/Objectives/WinConditions/Item/Objective/Values/ConditionQuestObjective/OnSuccessActions/Values/ActionList/Actions/">
-    <Item>
-      <Action>
-        <Template>ActionRegisterTrigger</Template>
-        <Values>
-          <Action/>
-          <ActionRegisterTrigger>
-            <TriggerAsset>1742004802</TriggerAsset>            <!--Inuit Unlock - 00-->
-          </ActionRegisterTrigger>
-        </Values>
-      </Action>
-    </Item>
-  </ModOp>
-
   <ModOp Type="addnextSibling" GUID="130248">
     <Asset>
       <Template>Trigger</Template>
@@ -29,162 +14,13 @@
         </Standard>
         <Trigger>
           <TriggerCondition>
-            <Template>ConditionQuestState</Template>
-            <Values>
-              <Condition/>
-              <ConditionQuestState>
-                <ConditionQuestStateStates>Active</ConditionQuestStateStates>
-                <ConditionQuestStateQuestGUID>114156</ConditionQuestStateQuestGUID>                <!--ArcticQ104_HelpFromTheInuit-->
-              </ConditionQuestState>
-            </Values>
-          </TriggerCondition>
-          <TriggerActions>
-            <Item>
-              <TriggerAction>
-                <Template>ActionUnlockAsset</Template>
-                <Values>
-                  <Action />
-                  <ActionUnlockAsset>
-                    <UnhideAssets>
-                      <Item>
-                        <Asset>1742004130</Asset>                        <!-- Sow Goggles Carver - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004199</Asset>                        <!-- Snow Goggles - Chain -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004162</Asset>                        <!-- Sow goggles - Product -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004132</Asset>                        <!-- Basic Tools Maker - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004116</Asset>                        <!--  Animal Bones Module - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004166</Asset>                        <!--  Animal Bones - Product -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004197</Asset>                        <!-- Basic Tools - Chain -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004124</Asset>                        <!-- Caribou Meat Module - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004407</Asset>                        <!-- Pemmican Cookhouse - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004409</Asset>                        <!-- Pemmican - Chain -->
-                      </Item>
-                    </UnhideAssets>
-                    <UnlockAssets>
-                      <Item>
-                        <Asset>1742004196</Asset>                        <!-- Inuit Category menu -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004100</Asset>                        <!-- Inuit PopulationLevel7 -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004102</Asset>                        <!-- Inuit Residence -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004266</Asset>                        <!-- Small Depot - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004108</Asset>                        <!-- Community Centre - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004160</Asset>                        <!-- Community Centre - Product -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004128</Asset>                        <!-- Wood Gathering Cabin - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004329</Asset>                        <!-- Sawmill - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004331</Asset>                        <!-- Timber - Chain -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004134</Asset>                        <!-- Root Grinder - Building  -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004136</Asset>                        <!-- Palauga bakery - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004122</Asset>                        <!-- Fur module - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004104</Asset>                        <!-- Small Storage - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004209</Asset>                        <!-- Palauga - Chain -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004148</Asset>                        <!-- Labrador Tea Maker - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004532</Asset>                        <!-- Bog Labrador Tea Seeds (Rare) - Item -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004194</Asset>                        <!-- Bog Labrador Tea Seeds (Epic) - Item -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004533</Asset>                        <!-- Bog Labrador Tea Seeds (Legendary) - Item -->
-                      </Item>
-                      <Item>
-                        <Asset>1500010847</Asset>                        <!-- Tea - Product -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004178</Asset>                        <!-- Bog Labrador Tea - Fertility -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004358</Asset>                        <!-- Spiritual Site - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004180</Asset>                        <!-- Cairn - Ornament -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004468</Asset>                        <!-- Inuksuk - Ornament -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004493</Asset>                        <!-- Seaweed Harvester - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1440212</Asset>                        <!-- Algae - Product -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004114</Asset>                        <!--  Whale Oil Module - Building -->
-                      </Item>
-                    </UnlockAssets>
-                  </ActionUnlockAsset>
-                </Values>
-              </TriggerAction>
-            </Item>
-          </TriggerActions>
-        </Trigger>
-        <TriggerSetup />
-      </Values>
-    </Asset>
-  </ModOp>
-
-  <ModOp Type="addnextSibling" GUID="130248">
-    <Asset>
-      <Template>Trigger</Template>
-      <Values>
-        <Standard>
-          <GUID>1742004801</GUID>
-          <Name>Backup Unlock Inuit</Name>
-        </Standard>
-        <Trigger>
-          <TriggerCondition>
             <Template>ConditionPlayerCounter</Template>
             <Values>
               <Condition />
               <ConditionPlayerCounter>
                 <PlayerCounter>PopulationByLevel</PlayerCounter>
-                <Context>112643</Context>
-                <CounterAmount>500</CounterAmount>
+                <Context>112642</Context>                <!-- Explorers -->
+                <CounterAmount>100</CounterAmount>
               </ConditionPlayerCounter>
             </Values>
           </TriggerCondition>
@@ -238,9 +74,6 @@
                         <Asset>1742004102</Asset>                        <!-- Inuit Residence -->
                       </Item>
                       <Item>
-                        <Asset>1742004266</Asset>                        <!-- Small Depot - Building -->
-                      </Item>
-                      <Item>
                         <Asset>1742004108</Asset>                        <!-- Community Centre - Building -->
                       </Item>
                       <Item>
@@ -317,7 +150,6 @@
       </Values>
     </Asset>
   </ModOp>
-  <!-- END - Inuit Unlock - Discovering Inuit Qumaq  -->
 
   <!-- START - Inuit Unlock - 01  -->
   <ModOp Type="addnextSibling" GUID="130248">
@@ -969,7 +801,9 @@
                       </Item>
                     </UnhideAssets>
                     <UnlockAssets>
-
+                      <Item>
+                        <Asset>1742004266</Asset>                        <!-- Small Depot - Building -->
+                      </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>
                 </Values>
