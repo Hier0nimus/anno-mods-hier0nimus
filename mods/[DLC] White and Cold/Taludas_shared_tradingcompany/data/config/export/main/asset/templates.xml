@@ -1,0 +1,296 @@
+<ModOps>
+    <ModOp Type="addNextSibling" Path="//Template[Name = 'FactoryBuilding7']" Condition="!//Template[Name = 'TradeCompany_Module']">
+        <Template>
+            <Name>Hacienda_TradeCompany</Name>
+            <Properties>
+                <Standard />
+                <Text />
+                <Blocking />
+                <Building>
+                    <BuildingType>Factory</BuildingType>
+                </Building>
+                <Cost />
+                <Selection>
+                    <GUIType>Generic</GUIType>
+                    <OnSelection>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList />
+                        </Values>
+                    </OnSelection>
+                </Selection>
+                <Object>
+                    <IgnoreForMinimapGeneration>1</IgnoreForMinimapGeneration>
+                </Object>
+                <Constructable>
+                    <DestructionCategory>Production</DestructionCategory>
+                </Constructable>
+                <Mesh />
+                <SoundEmitter>
+                    <ConstructionSounds>
+                        <BuildFailed>
+                            <Item>
+                                <Sound>9818387</Sound>
+                            </Item>
+                        </BuildFailed>
+                        <BuildMoveStart>
+                            <Item>
+                                <Sound>9818755</Sound>
+                            </Item>
+                        </BuildMoveStart>
+                        <BuildMoveSuccess>
+                            <Item>
+                                <Sound>203995</Sound>
+                            </Item>
+                        </BuildMoveSuccess>
+                        <BuildMoveEnd>
+                            <Item>
+                                <Sound>200141</Sound>
+                            </Item>
+                        </BuildMoveEnd>
+                    </ConstructionSounds>
+                </SoundEmitter>
+                <Locked />
+                <Infolayer />
+                <FeedbackController>
+                    <NightBehavior>HideNone</NightBehavior>
+                </FeedbackController>
+                <Warehouse>
+                    <WarehouseStorage>
+                        <StorageMax>100</StorageMax>
+                    </WarehouseStorage>
+                    <StorageType>Warehouse</StorageType>
+                </Warehouse>
+                <LogisticNode>
+                    <TransporterCountMax>0</TransporterCountMax>
+                    <QueueConfiguration>
+                        <ProcessingQueueParallelCount>2</ProcessingQueueParallelCount>
+                    </QueueConfiguration>
+                </LogisticNode>
+                <UpgradeList />
+                <AmbientMoodProvider />
+                <Maintenance>
+                    <IncomeCategory>InfrastructureBuildings</IncomeCategory>
+                </Maintenance>
+                <StorageBase>
+                    <ProductStorageList>120055</ProductStorageList>
+                </StorageBase>
+                <Attackable>
+                    <HasRuinState>1</HasRuinState>
+                </Attackable>
+                <Pausable />
+                <BuildingUnique />
+                <ModuleOwner />
+                <Hacienda>
+                    <HaciendaRadius>15</HaciendaRadius>
+                </Hacienda>
+                <IncidentInfectable>
+                    <Infectable>
+                        <Illness>
+                            <Base>0</Base>
+                            <Escalated>0</Escalated>
+                        </Illness>
+                        <Explosion>
+                            <Base>0</Base>
+                            <Escalated>0</Escalated>
+                        </Explosion>
+                    </Infectable>
+                </IncidentInfectable>
+                <Culture />
+            </Properties>
+        </Template>
+        <Template>
+            <Name>TradeCompany_Module</Name>
+            <Properties>
+                <Standard>
+                    <InfoDescription>11143</InfoDescription>
+                </Standard>
+                <Building>
+                    <BuildingType>Factory</BuildingType>
+                    <BuildingCategoryName>100000</BuildingCategoryName>
+                    <SecondPartyRelevant>0</SecondPartyRelevant>
+                    <TerrainType>Water_Including_Coast</TerrainType>
+                    <BuildingCategoryName>1999005414</BuildingCategoryName>
+                </Building>
+                <Blocking>
+                    <GroundDecalAsset>601492</GroundDecalAsset>
+                    <GroundDecalInvisible>601493</GroundDecalInvisible>
+                    <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+                    <HarbourAreaSize>1</HarbourAreaSize>
+                </Blocking>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>
+                            <Amount>5000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010196</Ingredient>
+                            <Amount>12</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010205</Ingredient>
+                            <Amount>8</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010218</Ingredient>
+                            <Amount>6</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010207</Ingredient>
+                            <Amount>4</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010202</Ingredient>
+                        </Item>
+                    </Costs>
+                </Cost>
+                <Object>
+                    <IgnoreForMinimapGeneration>1</IgnoreForMinimapGeneration>
+                </Object>
+                <Mesh />
+                <Selection>
+                    <GUIType>Production</GUIType>
+                    <OnSelection>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList />
+                        </Values>
+                    </OnSelection>
+                </Selection>
+                <Text />
+                <Constructable>
+                    <DestructionCategory>Production</DestructionCategory>
+                </Constructable>
+                <Locked />
+                <SoundEmitter>
+                    <DestroySounds>
+                        <Item>
+                            <Sound>9818756</Sound>
+                        </Item>
+                    </DestroySounds>
+                    <ConstructionSounds>
+                        <BuildSuccessful>
+                            <Item>
+                                <Sound>202368</Sound>
+                            </Item>
+                        </BuildSuccessful>
+                        <BuildFailed>
+                            <Item>
+                                <Sound>9818387</Sound>
+                            </Item>
+                        </BuildFailed>
+                        <BuildMoveStart>
+                            <Item>
+                                <Sound>9818755</Sound>
+                            </Item>
+                        </BuildMoveStart>
+                        <BuildMoveSuccess>
+                            <Item>
+                                <Sound>203995</Sound>
+                            </Item>
+                        </BuildMoveSuccess>
+                        <BuildMoveEnd>
+                            <Item>
+                                <Sound>200141</Sound>
+                            </Item>
+                        </BuildMoveEnd>
+                    </ConstructionSounds>
+                    <IncidentSounds>
+                        <ExplosionOneShots>
+                            <Item>
+                                <Sound>203849</Sound>
+                            </Item>
+                        </ExplosionOneShots>
+                    </IncidentSounds>
+                    <BuildingRepaired>
+                        <Item>
+                            <Sound>203866</Sound>
+                        </Item>
+                    </BuildingRepaired>
+                </SoundEmitter>
+                <FeedbackController />
+                <Infolayer />
+                <UpgradeList />
+                <Factory7 />
+                <FactoryBase />
+                <LogisticNode>
+                    <HideTransportersBeforeTheyMove>1</HideTransportersBeforeTheyMove>
+                </LogisticNode>
+                <AmbientMoodProvider>
+                    <DynamicEnvironmentType>Building_Industry</DynamicEnvironmentType>
+                </AmbientMoodProvider>
+                <Maintenance>
+                    <ConsumerPriority>1</ConsumerPriority>
+                    <Maintenances>
+                        <Item>
+                            <Product>1010017</Product>
+                            <Amount>300</Amount>
+                            <InactiveAmount>150</InactiveAmount>
+                        </Item>
+                        <Item>
+                            <Product>1010115</Product>
+                            <Amount>100</Amount>
+                        </Item>
+                    </Maintenances>
+                </Maintenance>
+                <Attackable>
+                    <AttackableType>HarbourBuilding</AttackableType>
+                    <MaximumHitPoints>3000</MaximumHitPoints>
+                    <DefenseByAIFactor>332</DefenseByAIFactor>
+                    <MoralePower>50</MoralePower>
+                    <IslandWarFlag>102303</IslandWarFlag>
+                    <RuinSmokeParticles>
+                        <Item>
+                            <SmokeParticleFilePath>data/graphics/effects/military/explosions/harbor_generic_xpl_02.cfg</SmokeParticleFilePath>
+                        </Item>
+                        <Item>
+                            <SmokeParticleFilePath>data/graphics/effects/military/explosions/harbor_generic_xpl_03.cfg</SmokeParticleFilePath>
+                        </Item>
+                    </RuinSmokeParticles>
+                    <RuinSmokeParticlesMin>1</RuinSmokeParticlesMin>
+                    <RuinSmokeParticlesMax>3</RuinSmokeParticlesMax>
+                    <RuinSmokeParticleRectBorderPercent>0.2</RuinSmokeParticleRectBorderPercent>
+                    <ExplosionEffects>
+                        <Item>
+                            <ExplosionEffectFilePath>data/graphics/effects/military/explosions/harbor_generic_xpl_02.cfg</ExplosionEffectFilePath>
+                        </Item>
+                    </ExplosionEffects>
+                    <ExplosionEffectsMin>1</ExplosionEffectsMin>
+                    <ExplosionEffectsMax>2</ExplosionEffectsMax>
+                    <SelfHealPerHealTick>4</SelfHealPerHealTick>
+                </Attackable>
+                <Pausable>
+                    <CanPauseManually>1</CanPauseManually>
+                </Pausable>
+                <IncidentInfectable>
+                    <Infectable>
+                        <Fire>
+                            <Communication>FireIndustry</Communication>
+                        </Fire>
+                        <Riot>
+                            <Communication>RiotIndustry</Communication>
+                            <InitiallySpreadToSameGUID>1</InitiallySpreadToSameGUID>
+                        </Riot>
+                        <Illness>
+                            <Base>0</Base>
+                            <Escalated>0</Escalated>
+                            <Communication>IllnessIndustry</Communication>
+                        </Illness>
+                        <Explosion>
+                            <Communication>ExplosionIndustry</Communication>
+                        </Explosion>
+                    </Infectable>
+                </IncidentInfectable>
+                <Industrializable>
+                    <BoostedByIndustrialization>0</BoostedByIndustrialization>
+                </Industrializable>
+                <Culture>
+                    <CultureType>Factory</CultureType>
+                </Culture>
+                <Electrifiable />
+                <BuildingModule />
+            </Properties>
+        </Template>
+    </ModOp>
+</ModOps>

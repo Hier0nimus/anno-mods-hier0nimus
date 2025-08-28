@@ -1,0 +1,159 @@
+<!-- This mod was created by Tisogno -->
+<!-- It is declared as "shared" so that other modders are allowed and invited to make free use of it -->
+<!-- But, any changes to the code require permission of the creator -->
+
+<!-- GUIDs:
+	1957006101	silver ore (asset)
+	1957006201	silver ore (description)
+	1957006104	silver ore fake factory (for docklands)
+-->
+
+<ModOps>
+	<!-- Product "Silver Ore" -->
+	<ModOp GUID='1010233' Type="addNextSibling">
+		<Asset>
+			<Template>Product</Template>
+			<Values>
+				<Standard>
+					<GUID>1957006101</GUID>
+					<Name>Silver Ore</Name>
+					<IconFilename>data/modgraphics/icons/silver/icon_silver_ore.png</IconFilename>
+					<InfoDescription>1957006201</InfoDescription>
+				</Standard>
+				<Text>
+					<LocaText />
+					<LineID>5385</LineID>
+				</Text>
+				<Locked/>
+				<Product>
+					<StorageLevel>Building</StorageLevel>
+					<ProductCategory>11702</ProductCategory>
+					<BasePrice>600</BasePrice>
+					<CivLevel>4</CivLevel>
+					<AssociatedRegion>Moderate;Colony01;Africa;Arctic</AssociatedRegion>
+					<ProductionRegions>
+						<Item>
+							<RegionType>Colony01</RegionType>
+						</Item>
+						<Item>
+							<RegionType>Arctic</RegionType>
+						</Item>
+					</ProductionRegions>
+				</Product>
+				<ExpeditionAttribute>
+					<BaseMorale>10</BaseMorale>
+				</ExpeditionAttribute>
+			</Values>
+		</Asset>
+	</ModOp>
+
+	<!-- Note: -->
+	<!-- 	Here, silver ore is only assigned to the standard product list (after gold ore) -->
+	<!-- 	It is up to the individual mods to administer other lists for their purposes -->
+	<!-- 	To avoid double entries, they should always check existing contents -->
+	<ModOp Type="addNextSibling" GUID="120055" Path="/Values/ProductStorageList/ProductList/Item[Product='1010233']" Condition="!~/Values/ProductStorageList/ProductList/Item[Product='1957006101']">
+		<Item>
+			<Product>1957006101</Product>
+		</Item>
+	</ModOp>
+
+	<!-- Adding to docklands trader "Qinsa Mining" -->
+	<ModOp Type="addNextSibling" GUID='131764' Path="/Values/TradeContractFeature/Traders/Item[TraderName='131815']/TradeLevels/Item[Unlock='131843']/Trades/Item[Good='1010233']" Condition="!@131764/.//TradeLevels/Item/Trades[Item/Good='1957006101']">
+		<Item>
+			<Level>Uncommon</Level>
+			<Good>1957006101</Good>
+		</Item>
+	</ModOp>
+
+	<!-- Fake factory (for price calculation in docklands) -->
+	<ModOp Type="addNextSibling" GUID="1010311" Condition="!//FactoryBase[FactoryOutputs/Item/Product='1957006101']/IsMainFactory[text()='1']">
+		<Asset>
+			<Template>SlotFactoryBuilding7</Template>
+			<Values>
+				<Standard>
+					<GUID>1957006104</GUID>
+					<Name>Fake Factory Silver Ore</Name>
+					<IconFilename>data/modgraphics/icons/silver/icon_silver_ore.png</IconFilename>
+				</Standard>
+				<Building>
+					<BuildModeRandomRotation>180</BuildModeRandomRotation>
+					<AssociatedRegions>Colony01;Arctic</AssociatedRegions>
+					<SecondPartyRelevant>0</SecondPartyRelevant>
+				</Building>
+				<Blocking/>
+				<Cost>
+					<Costs>
+						<Item>
+							<Ingredient>1010017</Ingredient>
+							<Amount>12000</Amount>
+						</Item>
+						<Item>
+							<Ingredient>1010196</Ingredient>
+							<Amount>8</Amount>
+						</Item>
+						<Item>
+							<Ingredient>1010205</Ingredient>
+							<Amount>15</Amount>
+						</Item>
+						<Item>
+							<Ingredient>1010218</Ingredient>
+							<Amount>12</Amount>
+						</Item>
+						<Item>
+							<Ingredient>1010207</Ingredient>
+							<Amount>10</Amount>
+						</Item>
+						<Item>
+							<Ingredient>1010202</Ingredient>
+							<Amount>10</Amount>
+						</Item>
+					</Costs>
+				</Cost>
+				<Object>
+					<Variations>
+						<Item>
+							<Filename>data/graphics/buildings/production/mining_colony01_01/mining_colony01_01.cfg</Filename>
+						</Item>
+					</Variations>
+				</Object>
+				<FactoryBase>
+					<FactoryInputs>
+						<Item>
+							<Product>1591</Product>
+							<StorageAmount>6</StorageAmount>
+						</Item>
+					</FactoryInputs>
+					<FactoryOutputs>
+						<Item>
+							<Product>1957006101</Product>
+							<Amount>1</Amount>
+							<StorageAmount>2</StorageAmount>
+						</Item>
+					</FactoryOutputs>
+					<CycleTime>120</CycleTime>
+					<IsMainFactory>1</IsMainFactory>
+				</FactoryBase>
+				<UpgradeList/>
+				<Factory7/>
+				<LogisticNode/>
+				<Slot>
+					<SlotType>GoldOre</SlotType>
+					<WorkArea>1010549</WorkArea>
+				</Slot>
+				<Maintenance>
+					<Maintenances>
+						<Item>
+							<Product>1010017</Product>
+							<Amount>250</Amount>
+						</Item>
+						<Item>
+							<Product>1010367</Product>
+							<Amount>80</Amount>
+						</Item>
+					</Maintenances>
+				</Maintenance>
+				<Industrializable/>
+			</Values>
+		</Asset>
+	</ModOp>
+</ModOps>

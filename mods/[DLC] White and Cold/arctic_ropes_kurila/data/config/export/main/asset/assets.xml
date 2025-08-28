@@ -1,0 +1,222 @@
+<ModOps>
+  <Group>
+      <!-- New Entries -->
+        <Group>
+          <ModOp Type="addNextSibling" GUID="112681">
+            <Asset>
+              <BaseAssetGUID>112681</BaseAssetGUID>
+              <Values>
+                <Standard>
+                  <GUID>1500303160</GUID>
+                  <Name>Arctic_Ropeyard</Name>
+                  <IconFilename>data\ui\2kimages\main\3dicons\icon_rope.png</IconFilename>
+                </Standard>
+                <Object>
+                  <Variations>
+                    <Item>
+                      <Filename>data/kurila/arctic_ropeyard/arctic_ropeyard.cfg</Filename>
+                    </Item>
+                  </Variations>
+                </Object>
+                <FactoryBase>
+                  <FactoryInputs>
+                    <Item>
+                      <Product>112696</Product>
+                      <Amount>1</Amount>
+                      <StorageAmount>4</StorageAmount>
+                    </Item>
+                  </FactoryInputs>
+                  <FactoryOutputs>
+                    <Item>
+                      <Product>1500010825</Product>
+                      <Amount>1</Amount>
+                      <StorageAmount>4</StorageAmount>
+                    </Item>
+                  </FactoryOutputs>
+                  <CycleTime>30</CycleTime>
+                  <IsMainFactory>0</IsMainFactory>
+                  <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+                  <ClampedMaxTransporterLogisticCost>67</ClampedMaxTransporterLogisticCost>
+                </FactoryBase>
+              </Values>
+            </Asset>
+            <Asset>
+              <Template>ProductionChain</Template>
+              <Values>
+                <Standard>
+                  <GUID>1500303161</GUID>
+                  <Name>Ropes_Chain</Name>
+                  <IconFilename>data\ui\2kimages\main\3dicons\icon_rope.png</IconFilename>
+                </Standard>
+                <Text>
+                  <TextOverride>1500010825</TextOverride>
+                </Text>
+                <ProductionChain>
+                  <Building>1500303160</Building>
+                  <Tier1>
+                    <Item>
+                      <Building>112674</Building>
+                    </Item>
+                  </Tier1>
+                </ProductionChain>
+                <Locked />
+              </Values>
+            </Asset>
+            <Asset>
+              <Template>Trigger</Template>
+              <Values>
+                <Standard>
+                  <GUID>1500303162</GUID>
+                  <Name>Unlock_1_Technican</Name>
+                </Standard>
+                <Trigger>
+                  <TriggerCondition>
+                    <Template>ConditionPlayerCounter</Template>
+                    <Values>
+                      <Condition />
+                      <ConditionPlayerCounter>
+                        <PlayerCounter>PopulationByLevel</PlayerCounter>
+                        <Context>112643</Context>
+                        <CounterAmount>1</CounterAmount>
+                      </ConditionPlayerCounter>
+                    </Values>
+                  </TriggerCondition>
+                  <TriggerActions>
+                    <Item>
+                      <TriggerAction>
+                        <Template>ActionUnlockAsset</Template>
+                        <Values>
+                          <Action />
+                          <ActionUnlockAsset>
+                            <UnlockAssets>
+                              <Item>
+                                <Asset>1500303160</Asset>
+                              </Item>
+                              <Item>
+                                <Asset>1500303161</Asset>
+                              </Item>
+                            </UnlockAssets>
+                          </ActionUnlockAsset>
+                        </Values>
+                      </TriggerAction>
+                    </Item>
+                    <Item>
+                      <TriggerAction >
+                        <Template>ActionBuff</Template>
+                        <Values>
+                          <Action />
+                          <ActionBuff>
+                            <BuffAsset>1500303123</BuffAsset>
+                            <AddBuff>0</AddBuff>
+                            <BuffProcessingParticipant>1</BuffProcessingParticipant>
+                          </ActionBuff>
+                        </Values>
+                      </TriggerAction >
+                    </Item>
+                    <Item>
+                      <TriggerAction >
+                        <Template>ActionBuff</Template>
+                        <Values>
+                          <Action />
+                          <ActionBuff>
+                            <BuffAsset>1500303123</BuffAsset>
+                            <AddBuff>1</AddBuff>
+                            <BuffProcessingParticipant>1</BuffProcessingParticipant>
+                          </ActionBuff>
+                        </Values>
+                      </TriggerAction >
+                    </Item>
+                  </TriggerActions>
+                </Trigger>
+                <TriggerSetup />
+              </Values>
+            </Asset>
+            <Asset>
+              <Template>Trigger</Template>
+              <Values>
+                <Standard>
+                  <GUID>1500303163</GUID>
+                  <Name>Unlock_Creative_Mode</Name>
+                </Standard>
+                <Trigger>
+                  <TriggerCondition>
+                    <Values>
+                      <ConditionPropsNegatable />
+                      <Condition />
+                      <ConditionIsCreativeMode />
+                    </Values>
+                    <Template>ConditionIsCreativeMode</Template>
+                  </TriggerCondition>
+                  <TriggerActions>
+                    <Item>
+                      <TriggerAction>
+                        <Template>ActionUnlockAsset</Template>
+                        <Values>
+                          <Action />
+                          <ActionUnlockAsset>
+                            <UnlockAssets>
+                              <Item>
+                                <Asset>1500303160</Asset>
+                              </Item>
+                              <Item>
+                                <Asset>1500303161</Asset>
+                              </Item>
+                            </UnlockAssets>
+                          </ActionUnlockAsset>
+                        </Values>
+                      </TriggerAction>
+                    </Item>
+                  </TriggerActions>
+                </Trigger>
+                <TriggerSetup />
+              </Values>
+            </Asset>
+          </ModOp>
+        </Group>
+      <!-- Adding to Pools / Buffs / Lists / Menu -->
+        <Group>
+          <!-- Feedbacks -->
+            <ModOp Type="add" GUID="142311" Path="/Values/FeedbackBuildingGroup/Buildings">
+              <Item>
+                <Building>1500303160</Building>
+              </Item>
+            </ModOp>
+          <!-- Item / Pools -->
+            <ModOp Type="add" GUID="193770,368" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
+              <Item>
+                <GUID>1500303160</GUID>
+              </Item>
+            </ModOp>
+          <!-- ProductList -->
+            <ModOp Type="addNextSibling" GUID="502011,502025,502219,502045"
+              Condition="!/Values/ProductList/List/Item[Product='1500010825']"
+              Path="/Values/ProductList/List/Item[Product='112704']">
+              <Item>
+                <Product>1500010825</Product>
+              </Item>
+            </ModOp>
+          <!-- Build Menu -->
+            <ModOp Type="addNextSibling" GUID="116342,112791"
+              Path="/Values/ConstructionCategory/BuildingList/Item[1]">
+              <Item>
+                <Building>1500303161</Building>
+                <Technician>1</Technician>
+              </Item>
+            </ModOp>
+        </Group>
+    <!-- Mod: Husky Sled Revision-->
+      <Group Condition="#arctic_husky_sled_revision_kurila">
+        <ModOp Type="merge" GUID='1500303160' Path="/Values">
+          <Electrifiable>
+            <ElectricityBoost>0</ElectricityBoost>
+            <ShowPowerInObjectMenu>0</ShowPowerInObjectMenu>
+          </Electrifiable>
+          <Industrializable>
+            <BoostedByIndustrialization>1</BoostedByIndustrialization>
+            <TransporterIndustrializationFactory>120028</TransporterIndustrializationFactory>
+            <TransporterIndustrializationWarehouse>120027</TransporterIndustrializationWarehouse>
+          </Industrializable>
+        </ModOp>
+      </Group>
+  </Group>
+</ModOps>

@@ -1,0 +1,254 @@
+<ModOps>
+
+  <Group>
+    <!-- #Product: Trade Licenses -->
+    <ModOp Type="addNextSibling" GUID="1010217">
+      <Asset>
+        <Template>Product</Template>
+        <Values>
+          <Standard>
+            <GUID>1999005351</GUID>
+            <Name>Trade Licenses</Name>
+            <IconFilename>data/ui/2kimages/main/3dicons/consumables/item_survey_royalships.png</IconFilename>
+            <InfoDescription>1999005352</InfoDescription>
+          </Standard>
+          <Locked />
+          <Product>
+            <StorageLevel>Building</StorageLevel>
+            <ProductCategory>11797</ProductCategory>
+            <BasePrice>1800</BasePrice>
+            <CivLevel>3</CivLevel>
+            <AssociatedRegion>Moderate</AssociatedRegion>
+            <ProductionRegions>
+              <Item>
+                <RegionType>Moderate</RegionType>
+              </Item>
+            </ProductionRegions>
+          </Product>
+          <ExpeditionAttribute>
+            <BaseMorale>70</BaseMorale>
+            <FluffText>1999005062</FluffText>
+          </ExpeditionAttribute>
+        </Values>
+      </Asset>
+    </ModOp>
+
+    <!-- # Expeditions: NONE -->
+
+    <!-- # Docklands: NONE -->
+
+    <!-- # Fake MainFactory -->
+    <ModOp Type="addNextSibling" GUID="1010295" Condition="!//FactoryBase[FactoryOutputs/Item/Product='1999005351']/IsMainFactory[text()='1']">
+      <!-- empty Export Dock FAKE MAIN FACTORY -->
+      <Asset>
+        <Template>TradeCompany_Module</Template>
+        <Values>
+          <Standard>
+            <GUID>1999005383</GUID>
+            <Name>OW Hacienda export dock blank</Name>
+            <InfoDescription>11143</InfoDescription>
+          </Standard>
+          <Building>
+            <SecondPartyRelevant>0</SecondPartyRelevant>
+            <AssociatedRegions>Moderate</AssociatedRegions>
+            <TerrainType>Water_Including_Coast</TerrainType>
+            <BuildModeStartDirectionOffset>-90</BuildModeStartDirectionOffset>
+            <KeepRotationInBlock>1</KeepRotationInBlock>
+            <BuildingCategoryName>1999005414</BuildingCategoryName>
+            <AllowChangeVariation>1</AllowChangeVariation>
+          </Building>
+          <Blocking>
+            <GroundDecalAsset>601492</GroundDecalAsset>
+            <GroundDecalInvisible>601493</GroundDecalInvisible>
+            <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+            <HarbourAreaSize>1</HarbourAreaSize>
+          </Blocking>
+          <Object>
+            <Variations>
+              <Item>
+                <Filename>data/graphics/buildings/special/harbor_08/harbor_08.cfg</Filename>
+              </Item>
+            </Variations>
+            <Skins>
+              <DefaultSkinName>1999005383</DefaultSkinName>
+              <DefaultSkinDescription>23853</DefaultSkinDescription>
+              <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>
+            </Skins>
+          </Object>
+          <Cost>
+            <Costs>
+              <Item>
+                <Ingredient>1010017</Ingredient>
+                <Amount>2000</Amount>
+              </Item>
+              <Item>
+                <Ingredient>1010196</Ingredient>
+                <Amount>12</Amount>
+              </Item>
+              <Item>
+                <Ingredient>1010205</Ingredient>
+                <Amount>8</Amount>
+              </Item>
+              <Item>
+                <Ingredient>1010218</Ingredient>
+                <Amount>6</Amount>
+              </Item>
+              <Item>
+                <Ingredient>1010207</Ingredient>
+                <Amount>4</Amount>
+              </Item>
+              <Item>
+                <Ingredient>1010202</Ingredient>
+              </Item>
+            </Costs>
+          </Cost>
+          <Mesh />
+          <Selection>
+            <GUIType>Production</GUIType>
+            <OnSelection>
+              <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+              <Values>
+                <ActionList />
+              </Values>
+            </OnSelection>
+            <ParticipantMessageArcheType>Resident_tier02_atWork</ParticipantMessageArcheType>
+            <Colors>
+              <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+            </Colors>
+          </Selection>
+          <Text>
+            <LocaText>
+              <English>
+                <Text>Empty Export Dock</Text>
+                <Status>Exported</Status>
+              </English>
+            </LocaText>
+            <LineID>55216</LineID>
+          </Text>
+          <Constructable />
+          <Locked>
+          </Locked>
+          <SoundEmitter>
+            <ActiveSounds>
+              <Item>
+                <Sound>216871</Sound>
+              </Item>
+              <Item>
+                <Sound>206327</Sound>
+              </Item>
+            </ActiveSounds>
+            <IncidentSounds>
+              <InfectedFire>
+                <Item>
+                  <Sound>214659</Sound>
+                </Item>
+              </InfectedFire>
+            </IncidentSounds>
+            <MaterialType>Soil</MaterialType>
+          </SoundEmitter>
+          <Factory7 />
+          <FactoryBase>
+            <FactoryInputs>
+              <Item>
+                <Product>135230</Product>
+                <Amount>1</Amount>
+                <StorageAmount>10</StorageAmount>
+              </Item>
+            </FactoryInputs>
+            <FactoryOutputs>
+              <Item>
+                <Product>1999005351</Product>
+                <Amount>1</Amount>
+                <StorageAmount>8</StorageAmount>
+              </Item>
+            </FactoryOutputs>
+            <IsMainFactory>1</IsMainFactory>
+          </FactoryBase>
+          <LogisticNode>
+            <HideTransportersBeforeTheyMove>1</HideTransportersBeforeTheyMove>
+            <TransporterAsset>120028</TransporterAsset>
+          </LogisticNode>
+          <Maintenance>
+            <Maintenances>
+              <Item>
+                <Product>1010017</Product>
+                <Amount>300</Amount>
+                <InactiveAmount>150</InactiveAmount>
+              </Item>
+              <Item>
+                <Product>1010115</Product>
+                <Amount>100</Amount>
+              </Item>
+            </Maintenances>
+          </Maintenance>
+          <Industrializable>
+            <BoostedByIndustrialization>0</BoostedByIndustrialization>
+          </Industrializable>
+          <IncidentInfectable>
+            <Infectable>
+              <Explosion>
+                <Base>0</Base>
+                <Escalated>0</Escalated>
+              </Explosion>
+            </Infectable>
+            <Explosion>
+              <ExplosionCoreDamage>1000</ExplosionCoreDamage>
+            </Explosion>
+            <IncidentInfectionChanceFactors>
+              <Fire>
+                <DensityDistance>20</DensityDistance>
+                <FactoryProductivityFactor>0.1</FactoryProductivityFactor>
+                <FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
+              </Fire>
+              <Riot>
+                <FactoryOvertimeFactor>0.4</FactoryOvertimeFactor>
+                <FactoryUndertimeFactor>0.2</FactoryUndertimeFactor>
+                <FactoryHappinessFactor>0.2</FactoryHappinessFactor>
+                <HappinessThreshold>20</HappinessThreshold>
+              </Riot>
+            </IncidentInfectionChanceFactors>
+          </IncidentInfectable>
+          <Electrifiable />
+          <AmbientMoodProvider />
+          <Attackable>
+            <AttackableType>HarbourBuilding</AttackableType>
+            <MaximumHitPoints>3000</MaximumHitPoints>
+            <DefenseByAIFactor>332</DefenseByAIFactor>
+            <MoralePower>50</MoralePower>
+            <IslandWarFlag>102303</IslandWarFlag>
+            <RuinSmokeParticles>
+              <Item>
+                <SmokeParticleFilePath>data/graphics/effects/military/explosions/harbor_generic_xpl_02.cfg</SmokeParticleFilePath>
+              </Item>
+              <Item>
+                <SmokeParticleFilePath>data/graphics/effects/military/explosions/harbor_generic_xpl_03.cfg</SmokeParticleFilePath>
+              </Item>
+            </RuinSmokeParticles>
+            <RuinSmokeParticlesMin>1</RuinSmokeParticlesMin>
+            <RuinSmokeParticlesMax>3</RuinSmokeParticlesMax>
+            <RuinSmokeParticleRectBorderPercent>0.2</RuinSmokeParticleRectBorderPercent>
+            <ExplosionEffects>
+              <Item>
+                <ExplosionEffectFilePath>data/graphics/effects/military/explosions/harbor_generic_xpl_02.cfg</ExplosionEffectFilePath>
+              </Item>
+            </ExplosionEffects>
+            <ExplosionEffectsMin>1</ExplosionEffectsMin>
+            <ExplosionEffectsMax>2</ExplosionEffectsMax>
+            <SelfHealPerHealTick>4</SelfHealPerHealTick>
+          </Attackable>
+          <UpgradeList />
+          <Pausable>
+          </Pausable>
+          <FeedbackController />
+          <Infolayer />
+          <Culture>
+            <CultureType>Culture</CultureType>
+            <Attractiveness>0</Attractiveness>
+          </Culture>
+          <BuildingModule />
+        </Values>
+      </Asset>
+    </ModOp>
+  </Group>
+
+</ModOps>
