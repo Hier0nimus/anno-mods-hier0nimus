@@ -4,14 +4,138 @@
 
 <ModOps>
 
-  <!-- START SEEDS ITEM - Bog Labrador Tea Seeds -->
+  <!-- START NEW ITEMS -->
+  <!-- START NEW ITEM - Vladimir Slafofski -->
+  <ModOp GUID="192190" Type="addNextSibling">
+    <Asset>
+      <Template>GuildhouseItem</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004534</GUID>
+          <Name>Vladimir Slafofski</Name>
+          <IconFilename>data\ui\2kimages\main\3dicons\specialists\systemic\icon_anarchist_krapotkin.png</IconFilename>
+          <InfoDescription>1742004535</InfoDescription>
+        </Standard>
+        <Item>
+          <MaxStackSize>1</MaxStackSize>
+          <Rarity>Legendary</Rarity>
+          <ItemType>Specialist</ItemType>
+          <TradePrice>1292800</TradePrice>
+          <TradePriceOnlineCurrency>1292800</TradePriceOnlineCurrency>
+        </Item>
+        <FactoryUpgrade>
+          <ProductivityUpgrade>
+            <Value>50</Value>
+            <Percental>1</Percental>
+          </ProductivityUpgrade>
+          <AdditionalOutput>
+            <Item>
+              <ForceProductSameAsFactoryOutput>1</ForceProductSameAsFactoryOutput>
+              <AdditionalOutputCycle>2</AdditionalOutputCycle>
+              <Amount>10</Amount>
+            </Item>
+          </AdditionalOutput>
+          <ReplaceInputs>
+            <Item>
+              <OldInput>1010256</OldInput>              <!-- Pearls - Product -->
+              <NewInput>1999005087</NewInput>              <!-- Diamonds - Product -->
+            </Item>
+          </ReplaceInputs>
+        </FactoryUpgrade>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1010328</GUID>              <!-- Jewellers - Pool -->
+            </Item>
+            <Item>
+              <GUID>1742004335</GUID>              <!-- Womans Tailoring Shop - Pool -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <ExpeditionAttribute>
+          <BaseMorale>10</BaseMorale>
+          <ExpeditionAttributes>
+            <Item>
+              <Attribute>PerkMale</Attribute>
+              <Amount>1</Amount>
+            </Item>
+            <Item>
+              <Attribute>Diplomacy</Attribute>
+              <Amount>40</Amount>
+            </Item>
+            <Item>
+              <Attribute>Crafting</Attribute>
+              <Amount>40</Amount>
+            </Item>
+          </ExpeditionAttributes>
+          <ItemDifficulties>Easy</ItemDifficulties>
+          <FluffText>8357</FluffText>
+        </ExpeditionAttribute>
+        <Locked>
+          <DefaultLockedState>0</DefaultLockedState>
+        </Locked>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END NEW ITEM - Vladimir Slafofski -->
+  <!-- START NEW ITEM - Bog Labrador Tea Seeds (Rare) -->
+  <ModOp GUID="191388" Type="addNextSibling">
+    <Asset>
+      <Template>GuildhouseItem</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004532</GUID>
+          <Name>Bog Labrador Tea Seeds (Rare)</Name>
+          <IconFilename>data/graphics/icons/icon_fertility_bog_labrador_tea.png</IconFilename>
+          <InfoDescription>1742004195</InfoDescription>
+        </Standard>
+        <Item>
+          <Allocation>Lodge</Allocation>
+          <MaxStackSize>1</MaxStackSize>
+          <Rarity>Rare</Rarity>
+          <TradePrice>60500</TradePrice>
+        </Item>
+        <FactoryUpgrade>
+          <AddedFertility>1742004178</AddedFertility>          <!-- Bog Labrador Tea - Fertility -->
+        </FactoryUpgrade>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742004148</GUID>              <!-- Labrador Tea Maker - Building -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <ItemAction />
+        <ExpeditionAttribute>
+          <BaseMorale>5</BaseMorale>
+          <ItemDifficulties>Average;Hard</ItemDifficulties>
+        </ExpeditionAttribute>
+        <CultureUpgrade />
+        <BuildingUpgrade />
+        <ModuleOwnerUpgrade />
+        <IncidentInfluencerUpgrade />
+        <IncidentInfectableUpgrade />
+        <ResidenceUpgrade />
+        <PopulationUpgrade />
+        <IndustrializableUpgrade />
+        <Locked />
+        <Buff />
+        <CraftableItem />
+        <HeaterUpgrade />
+        <PowerplantUpgrade />
+        <IrrigationUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END NEW ITEM - Bog Labrador Tea Seeds (Rare) -->
+  <!-- START NEW ITEM - Bog Labrador Tea Seeds (Epic) -->
   <ModOp GUID="191388" Type="addNextSibling">
     <Asset>
       <Template>GuildhouseItem</Template>
       <Values>
         <Standard>
           <GUID>1742004194</GUID>
-          <Name>Bog Labrador Tea Seeds</Name>
+          <Name>Bog Labrador Tea Seeds (Epic)</Name>
           <IconFilename>data/graphics/icons/icon_fertility_bog_labrador_tea.png</IconFilename>
           <InfoDescription>1742004195</InfoDescription>
         </Standard>
@@ -19,7 +143,7 @@
           <Allocation>Lodge</Allocation>
           <MaxStackSize>1</MaxStackSize>
           <Rarity>Epic</Rarity>
-          <TradePrice>90000</TradePrice>
+          <TradePrice>125000</TradePrice>
         </Item>
         <FactoryUpgrade>
           <ProductivityUpgrade>
@@ -57,7 +181,177 @@
       </Values>
     </Asset>
   </ModOp>
-  <!-- END SEEDS ITEM - Bog Labrador Tea Seeds -->
+  <!-- END NEW ITEM - Bog Labrador Tea Seeds (Epic) -->
+  <!-- START NEW ITEM - Bog Labrador Tea Seeds (Legendary) -->
+  <ModOp GUID="191388" Type="addNextSibling">
+    <Asset>
+      <Template>GuildhouseItem</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004533</GUID>
+          <Name>Bog Labrador Tea Seeds (Legendary)</Name>
+          <IconFilename>data/graphics/icons/icon_fertility_bog_labrador_tea.png</IconFilename>
+          <InfoDescription>1742004195</InfoDescription>
+        </Standard>
+        <Item>
+          <Allocation>Lodge</Allocation>
+          <MaxStackSize>1</MaxStackSize>
+          <Rarity>Legendary</Rarity>
+          <TradePrice>900000</TradePrice>
+        </Item>
+        <FactoryUpgrade>
+          <ProductivityUpgrade>
+            <Value>40</Value>
+            <Percental>1</Percental>
+          </ProductivityUpgrade>
+          <AdditionalOutput>
+            <Item>
+              <ForceProductSameAsFactoryOutput>1</ForceProductSameAsFactoryOutput>
+              <AdditionalOutputCycle>3</AdditionalOutputCycle>
+              <Amount>1</Amount>
+            </Item>
+          </AdditionalOutput>
+          <AddedFertility>1742004178</AddedFertility>          <!-- Bog Labrador Tea - Fertility -->
+        </FactoryUpgrade>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742004148</GUID>              <!-- Labrador Tea Maker - Building -->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <ItemAction />
+        <ExpeditionAttribute>
+          <BaseMorale>15</BaseMorale>
+          <ItemDifficulties>Average;Hard</ItemDifficulties>
+        </ExpeditionAttribute>
+        <CultureUpgrade />
+        <BuildingUpgrade />
+        <ModuleOwnerUpgrade />
+        <IncidentInfluencerUpgrade />
+        <IncidentInfectableUpgrade />
+        <ResidenceUpgrade />
+        <PopulationUpgrade />
+        <IndustrializableUpgrade />
+        <Locked />
+        <Buff />
+        <CraftableItem />
+        <HeaterUpgrade />
+        <PowerplantUpgrade />
+        <IrrigationUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END NEW ITEM - Bog Labrador Tea Seeds (Legendary) -->
+  <!-- START NEW ITEM - Bog Labrador Tea Seeds (Legendary) -->
+  <ModOp GUID="116163" Type="addNextSibling">
+    <Asset>
+      <Template>GuildhouseItem</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004530</GUID>
+          <Name>Zoppy Battery</Name>
+          <IconFilename>data/graphics/icons/icon_zoppy_battery.png</IconFilename>
+          <InfoDescription>1742004531</InfoDescription>
+        </Standard>
+        <Text/>
+        <Item>
+          <Allocation>Lodge</Allocation>
+          <MaxStackSize>1</MaxStackSize>
+          <Rarity>Epic</Rarity>
+          <TradePrice>250000</TradePrice>
+        </Item>
+        <FactoryUpgrade>
+          <ReplaceInputs>
+            <Item>
+              <OldInput>1010226</OldInput>              <!--coal-->
+              <NewInput>112699</NewInput>              <!--whale oil-->
+            </Item>
+          </ReplaceInputs>
+        </FactoryUpgrade>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>114751</GUID>              <!--heater_arctic-->
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <ItemAction/>
+        <ExpeditionAttribute>
+          <BaseMorale>0</BaseMorale>
+          <ExpeditionAttributes>
+            <Item>
+              <Attribute>Crafting</Attribute>
+              <Amount>35</Amount>
+            </Item>
+          </ExpeditionAttributes>
+          <ItemDifficulties>Average;Hard</ItemDifficulties>
+        </ExpeditionAttribute>
+        <CultureUpgrade/>
+        <BuildingUpgrade/>
+        <ModuleOwnerUpgrade/>
+        <IncidentInfluencerUpgrade/>
+        <IncidentInfectableUpgrade/>
+        <ResidenceUpgrade/>
+        <PopulationUpgrade/>
+        <IndustrializableUpgrade/>
+        <Locked>
+          <DLCDependency>410042</DLCDependency>          <!--Anno 1800 DLC - The Passage-->
+        </Locked>
+        <Buff/>
+        <CraftableItem>
+          <CraftingCosts>
+            <Item>
+              <Product>115980</Product>              <!--arctic scrap I-->
+              <Amount>30</Amount>
+            </Item>
+            <Item>
+              <Product>1010226</Product>              <!--coal-->
+              <Amount>35</Amount>
+            </Item>
+          </CraftingCosts>
+        </CraftableItem>
+        <HeaterUpgrade>
+          <HeatRangeUpgrade>
+            <Value>30</Value>
+            <Percental>1</Percental>
+          </HeatRangeUpgrade>
+        </HeaterUpgrade>
+        <PowerplantUpgrade/>
+        <IrrigationUpgrade/>
+        <EcoSystemProviderUpgrade/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END NEW ITEM - Bog Labrador Tea Seeds (Legendary) -->
+  <!-- END NEW ITEMS -->
+
+  <!-- START CHANGE ITEMS -->
+  <!-- START CHANGE ITEMS - Ice Maker  -->
+  <ModOp Type="merge" GUID="116180" Path="/Values">
+    <ResidenceUpgrade>
+      <GoodConsumptionUpgrade>
+        <Item>
+          <ProvidedNeed>1742004384</ProvidedNeed>          <!--Ice-service-->
+          <AmountInPercent>-100</AmountInPercent>
+        </Item>
+      </GoodConsumptionUpgrade>
+    </ResidenceUpgrade>
+  </ModOp>
+  <!-- END CHANGE ITEMS - Ice Maker  -->
+  <!-- START CHANGE ITEMS - RefridgeN8r  -->
+  <ModOp Type="merge" GUID="116178" Path="/Values">
+    <ResidenceUpgrade>
+      <GoodConsumptionUpgrade>
+        <Item>
+          <ProvidedNeed>1742004384</ProvidedNeed>          <!--Ice-service-->
+          <AmountInPercent>-100</AmountInPercent>
+        </Item>
+      </GoodConsumptionUpgrade>
+    </ResidenceUpgrade>
+  </ModOp>
+  <!-- END CHANGE ITEMS - RefridgeN8r  -->
+  <!-- END CHANGE ITEMS -->
 
 </ModOps>
   

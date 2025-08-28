@@ -55,7 +55,7 @@
         </Text>
         <FactoryUpgrade>
           <ProductivityUpgrade>
-            <Value>100</Value>
+            <Value>60</Value>
             <Percental>1</Percental>
           </ProductivityUpgrade>
         </FactoryUpgrade>
@@ -253,22 +253,22 @@
           <AdditionalOutput>
             <Item>
               <Product>112699</Product>              <!-- Whale Oil - Product -->
-              <AdditionalOutputCycle>2</AdditionalOutputCycle>
+              <AdditionalOutputCycle>4</AdditionalOutputCycle>
               <Amount>1</Amount>
             </Item>
             <Item>
               <Product>1742004166</Product>              <!-- Animal Bones - Product -->
-              <AdditionalOutputCycle>2</AdditionalOutputCycle>
+              <AdditionalOutputCycle>4</AdditionalOutputCycle>
               <Amount>1</Amount>
             </Item>
             <Item>
               <Product>1010193</Product>              <!-- Beef - Product -->
-              <AdditionalOutputCycle>2</AdditionalOutputCycle>
+              <AdditionalOutputCycle>4</AdditionalOutputCycle>
               <Amount>1</Amount>
             </Item>
             <Item>
               <Product>1010234</Product>              <!-- Tallow - Product -->
-              <AdditionalOutputCycle>2</AdditionalOutputCycle>
+              <AdditionalOutputCycle>4</AdditionalOutputCycle>
               <Amount>1</Amount>
             </Item>
           </AdditionalOutput>
@@ -749,7 +749,7 @@
         </Text>
         <FactoryUpgrade>
           <ProductivityUpgrade>
-            <Value>100</Value>
+            <Value>60</Value>
             <Percental>1</Percental>
           </ProductivityUpgrade>
         </FactoryUpgrade>
@@ -887,7 +887,7 @@
             <Item>
               <ForceProductSameAsFactoryOutput>1</ForceProductSameAsFactoryOutput>
               <AdditionalOutputCycle>1</AdditionalOutputCycle>
-              <Amount>2</Amount>
+              <Amount>1</Amount>
             </Item>
           </AdditionalOutput>
           <ReplaceInputs>
@@ -1494,7 +1494,7 @@
         <ItemEffect>
           <EffectTargets>
             <Item>
-              <GUID>1742004362</GUID>              <!-- Lost Expedition Site - Building -->
+              <GUID>1742004362</GUID>              <!-- Expedition Equipment Assembly - Building -->
             </Item>
           </EffectTargets>
           <AllowStacking>1</AllowStacking>
@@ -1567,7 +1567,7 @@
         <ItemEffect>
           <EffectTargets>
             <Item>
-              <GUID>1742004362</GUID>              <!-- Lost Expedition Site - Building -->
+              <GUID>1742004362</GUID>              <!-- Expedition Equipment Assembly - Building -->
             </Item>
           </EffectTargets>
           <AllowStacking>1</AllowStacking>
@@ -2031,7 +2031,7 @@
         </ResidenceUpgrade>
         <IncidentInfectableUpgrade>
           <IncidentArcticIllnessIncreaseUpgrade>
-            <Value>-6</Value>
+            <Value>-5</Value>
           </IncidentArcticIllnessIncreaseUpgrade>
         </IncidentInfectableUpgrade>
         <CultureUpgrade/>
@@ -2045,14 +2045,14 @@
   </ModOp>
   <!-- END Monumental Residences Influence - BUFF -->
 
-  <!-- START Monumental Crafting Influence - BUFF -->
+  <!-- START Monumental Crafting and Coastal Influence - BUFF -->
   <ModOp GUID="192176" Type="addNextSibling">
     <Asset>
       <Template>GuildhouseBuff</Template>
       <Values>
         <Standard>
           <GUID>1742004476</GUID>
-          <Name>Monumental Crafting Influence</Name>
+          <Name>Monumental Crafting and Coastal Influence</Name>
           <IconFilename>data/graphics/icons/icon_inuit_monument.png</IconFilename>
           <InfoDescription>1742004477</InfoDescription>
         </Standard>
@@ -2060,6 +2060,9 @@
           <EffectTargets>
             <Item>
               <GUID>1742004265</GUID>
+            </Item>
+            <Item>
+              <GUID>1742004233</GUID>
             </Item>
           </EffectTargets>
           <AllowStacking>0</AllowStacking>
@@ -2094,7 +2097,7 @@
       </Values>
     </Asset>
   </ModOp>
-  <!-- END Monumental Crafting Influence - BUFF -->
+  <!-- END Monumental Crafting and Coastal Influence - BUFF -->
 
   <!-- START Monumental Forest Influence - BUFF -->
   <ModOp GUID="192176" Type="addNextSibling">
@@ -2155,7 +2158,7 @@
       <Values>
         <Standard>
           <GUID>1742004484</GUID>
-          <Name>Monumental Coastal Influence</Name>
+          <Name>DEPRECATED - Monumental Coastal Influence</Name>
           <IconFilename>data/graphics/icons/icon_inuit_monument.png</IconFilename>
           <InfoDescription>1742004485</InfoDescription>
         </Standard>
@@ -2200,152 +2203,152 @@
   <!-- END Monumental Coastal Influence - BUFF -->
   <!-- START Conny Cobbler - BUFF -->
   <ModOp GUID="192176" Type="addNextSibling">
-<Asset>
-	<Template>TownhallBuff</Template>
-	<Values>
-		<Standard>
-			<GUID>1742004504</GUID>
-			<Name>Conny Cobbler</Name>
-			<IconFilename>data/ui/2kimages/main/3dicons/recipes/icon_daiquiri_tropic.png</IconFilename>
-		</Standard>
-		<ItemEffect>
-			<EffectTargets>
-				<Item>
-					<GUID>194015</GUID><!--all residences EU without Scholars-->
-				</Item>
-			</EffectTargets>
-			<AllowStacking>0</AllowStacking>
-		</ItemEffect>
-		<Text/>
-		<BuildingUpgrade/>
-		<Buff/>
-		<PopulationUpgrade/>
-		<ResidenceUpgrade>
-			<AdditionalHappiness>3</AdditionalHappiness>
-			<GoodConsumptionUpgrade>
-				<Item>
-					<ProvidedNeed>135234</ProvidedNeed><!--cognac-->
-					<AmountInPercent>-25</AmountInPercent>
-				</Item>
-				<Item>
-					<ProvidedNeed>1010258</ProvidedNeed><!--chocolate-->
-					<AmountInPercent>-25</AmountInPercent>
-				</Item>
-				<Item>
-					<ProvidedNeed>1742004384</ProvidedNeed><!--ice service-->
-					<AmountInPercent>-100</AmountInPercent>
-				</Item>
-			</GoodConsumptionUpgrade>
-		</ResidenceUpgrade>
-		<IncidentInfectableUpgrade/>
-		<CultureUpgrade/>
-		<InfluenceSourceUpgrade/>
-		<WarehouseUpgrade/>
-		<DistributionUpgrade/>
-		<ItemContainerUpgrade/>
-		<FactoryUpgrade/>
-	</Values>
-</Asset>
+    <Asset>
+      <Template>TownhallBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004504</GUID>
+          <Name>Conny Cobbler</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/recipes/icon_daiquiri_tropic.png</IconFilename>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>194015</GUID>              <!--all residences EU without Scholars-->
+            </Item>
+          </EffectTargets>
+          <AllowStacking>0</AllowStacking>
+        </ItemEffect>
+        <Text/>
+        <BuildingUpgrade/>
+        <Buff/>
+        <PopulationUpgrade/>
+        <ResidenceUpgrade>
+          <AdditionalHappiness>3</AdditionalHappiness>
+          <GoodConsumptionUpgrade>
+            <Item>
+              <ProvidedNeed>135234</ProvidedNeed>              <!--cognac-->
+              <AmountInPercent>-25</AmountInPercent>
+            </Item>
+            <Item>
+              <ProvidedNeed>1010258</ProvidedNeed>              <!--chocolate-->
+              <AmountInPercent>-25</AmountInPercent>
+            </Item>
+            <Item>
+              <ProvidedNeed>1742004384</ProvidedNeed>              <!--ice service-->
+              <AmountInPercent>-100</AmountInPercent>
+            </Item>
+          </GoodConsumptionUpgrade>
+        </ResidenceUpgrade>
+        <IncidentInfectableUpgrade/>
+        <CultureUpgrade/>
+        <InfluenceSourceUpgrade/>
+        <WarehouseUpgrade/>
+        <DistributionUpgrade/>
+        <ItemContainerUpgrade/>
+        <FactoryUpgrade/>
+      </Values>
+    </Asset>
   </ModOp>
   <!-- END Conny Cobbler - BUFF -->
   <!-- START Bubbly Julep - BUFF -->
   <ModOp GUID="192176" Type="addNextSibling">
-<Asset>
-	<Template>TownhallBuff</Template>
-	<Values>
-		<Standard>
-			<GUID>1742004505</GUID>
-			<Name>Bubbly Julep</Name>
-			<IconFilename>data/ui/2kimages/main/3dicons/recipes/icon_daiquiri_tropic.png</IconFilename>
-		</Standard>
-		<ItemEffect>
-			<EffectTargets>
-				<Item>
-					<GUID>194015</GUID><!--all residences EU without Scholars-->
-				</Item>
-			</EffectTargets>
-			<AllowStacking>0</AllowStacking>
-		</ItemEffect>
-		<Text/>
-		<BuildingUpgrade/>
-		<Buff/>
-		<PopulationUpgrade/>
-		<ResidenceUpgrade>
-			<AdditionalHappiness>3</AdditionalHappiness>
-			<GoodConsumptionUpgrade>
-				<Item>
-					<ProvidedNeed>1010259</ProvidedNeed><!--cigars-->
-					<AmountInPercent>-25</AmountInPercent>
-				</Item>
-				<Item>
-					<ProvidedNeed>120016</ProvidedNeed><!--champagne-->
-					<AmountInPercent>-25</AmountInPercent>
-				</Item>
-				<Item>
-					<ProvidedNeed>1742004384</ProvidedNeed><!--ice service-->
-					<AmountInPercent>-100</AmountInPercent>
-				</Item>
-			</GoodConsumptionUpgrade>
-		</ResidenceUpgrade>
-		<IncidentInfectableUpgrade/>
-		<CultureUpgrade/>
-		<InfluenceSourceUpgrade/>
-		<WarehouseUpgrade/>
-		<DistributionUpgrade/>
-		<ItemContainerUpgrade/>
-		<FactoryUpgrade/>
-	</Values>
-</Asset>
+    <Asset>
+      <Template>TownhallBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004505</GUID>
+          <Name>Bubbly Julep</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/recipes/icon_daiquiri_tropic.png</IconFilename>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>194015</GUID>              <!--all residences EU without Scholars-->
+            </Item>
+          </EffectTargets>
+          <AllowStacking>0</AllowStacking>
+        </ItemEffect>
+        <Text/>
+        <BuildingUpgrade/>
+        <Buff/>
+        <PopulationUpgrade/>
+        <ResidenceUpgrade>
+          <AdditionalHappiness>3</AdditionalHappiness>
+          <GoodConsumptionUpgrade>
+            <Item>
+              <ProvidedNeed>1010259</ProvidedNeed>              <!--cigars-->
+              <AmountInPercent>-25</AmountInPercent>
+            </Item>
+            <Item>
+              <ProvidedNeed>120016</ProvidedNeed>              <!--champagne-->
+              <AmountInPercent>-25</AmountInPercent>
+            </Item>
+            <Item>
+              <ProvidedNeed>1742004384</ProvidedNeed>              <!--ice service-->
+              <AmountInPercent>-100</AmountInPercent>
+            </Item>
+          </GoodConsumptionUpgrade>
+        </ResidenceUpgrade>
+        <IncidentInfectableUpgrade/>
+        <CultureUpgrade/>
+        <InfluenceSourceUpgrade/>
+        <WarehouseUpgrade/>
+        <DistributionUpgrade/>
+        <ItemContainerUpgrade/>
+        <FactoryUpgrade/>
+      </Values>
+    </Asset>
   </ModOp>
   <!-- END Bubbly Julep - BUFF -->
   <!-- START Ice Coffee - BUFF -->
   <ModOp GUID="192176" Type="addNextSibling">
-<Asset>
-	<Template>TownhallBuff</Template>
-	<Values>
-		<Standard>
-			<GUID>1742004506</GUID>
-			<Name>Ice Coffee</Name>
-			<IconFilename>data/ui/2kimages/main/3dicons/recipes/icon_daiquiri_tropic.png</IconFilename>
-		</Standard>
-		<ItemEffect>
-			<EffectTargets>
-				<Item>
-					<GUID>194015</GUID><!--all residences EU without Scholars-->
-				</Item>
-			</EffectTargets>
-			<AllowStacking>0</AllowStacking>
-		</ItemEffect>
-		<Text/>
-		<BuildingUpgrade/>
-		<Buff/>
-		<PopulationUpgrade/>
-		<ResidenceUpgrade>
-			<AdditionalHappiness>3</AdditionalHappiness>
-			<GoodConsumptionUpgrade>
-				<Item>
-					<ProvidedNeed>120032</ProvidedNeed><!--coffee-->
-					<AmountInPercent>-20</AmountInPercent>
-				</Item>
-				<Item>
-					<ProvidedNeed>135229</ProvidedNeed><!--biscuits-->
-					<AmountInPercent>-30</AmountInPercent>
-				</Item>
-				<Item>
-					<ProvidedNeed>1742004384</ProvidedNeed><!--ice service-->
-					<AmountInPercent>-100</AmountInPercent>
-				</Item>
-			</GoodConsumptionUpgrade>
-		</ResidenceUpgrade>
-		<IncidentInfectableUpgrade/>
-		<CultureUpgrade/>
-		<InfluenceSourceUpgrade/>
-		<WarehouseUpgrade/>
-		<DistributionUpgrade/>
-		<ItemContainerUpgrade/>
-		<FactoryUpgrade/>
-	</Values>
-</Asset>
+    <Asset>
+      <Template>TownhallBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004506</GUID>
+          <Name>Ice Coffee</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/recipes/icon_daiquiri_tropic.png</IconFilename>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>194015</GUID>              <!--all residences EU without Scholars-->
+            </Item>
+          </EffectTargets>
+          <AllowStacking>0</AllowStacking>
+        </ItemEffect>
+        <Text/>
+        <BuildingUpgrade/>
+        <Buff/>
+        <PopulationUpgrade/>
+        <ResidenceUpgrade>
+          <AdditionalHappiness>3</AdditionalHappiness>
+          <GoodConsumptionUpgrade>
+            <Item>
+              <ProvidedNeed>120032</ProvidedNeed>              <!--coffee-->
+              <AmountInPercent>-20</AmountInPercent>
+            </Item>
+            <Item>
+              <ProvidedNeed>135229</ProvidedNeed>              <!--biscuits-->
+              <AmountInPercent>-30</AmountInPercent>
+            </Item>
+            <Item>
+              <ProvidedNeed>1742004384</ProvidedNeed>              <!--ice service-->
+              <AmountInPercent>-100</AmountInPercent>
+            </Item>
+          </GoodConsumptionUpgrade>
+        </ResidenceUpgrade>
+        <IncidentInfectableUpgrade/>
+        <CultureUpgrade/>
+        <InfluenceSourceUpgrade/>
+        <WarehouseUpgrade/>
+        <DistributionUpgrade/>
+        <ItemContainerUpgrade/>
+        <FactoryUpgrade/>
+      </Values>
+    </Asset>
   </ModOp>
   <!-- END Ice Coffee - BUFF -->
 

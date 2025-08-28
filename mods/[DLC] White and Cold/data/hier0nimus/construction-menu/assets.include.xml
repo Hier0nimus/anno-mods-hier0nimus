@@ -47,15 +47,6 @@
               <Building>1742004199</Building>              <!-- Snow Goggles - Chain -->
             </Item>
             <Item>
-              <Building>1742004110</Building>              <!-- Coastal Centre - Building -->
-            </Item>
-            <Item>
-              <Building>1742004120</Building>              <!-- Forest Centre - Building -->
-            </Item>
-            <Item>
-              <Building>1742004249</Building>              <!-- Crafting Centre - Building -->
-            </Item>
-            <Item>
               <Building>1742004197</Building>              <!-- Basic Tools - Chain -->
             </Item>
             <Item>
@@ -65,28 +56,37 @@
               <Building>1742004405</Building>              <!-- Fish Stew - Chain -->
             </Item>
             <Item>
-              <Building>1742004396</Building>              <!-- Qilaut - Chain -->
+              <Building>1742004201</Building>              <!-- Snow Shoes - Chain -->
             </Item>
             <Item>
-              <Building>1742004201</Building>              <!-- Snow Shoes - Chain -->
+              <Building>1742004110</Building>              <!-- Coastal Centre - Building -->
+            </Item>
+            <Item>
+              <Building>1742004120</Building>              <!-- Forest Centre - Building -->
+            </Item>
+            <Item>
+              <Building>1742004249</Building>              <!-- Crafting Centre - Building -->
             </Item>
             <Item>
               <Building>1742004203</Building>              <!-- Parkas - Chain -->
             </Item>
             <Item>
-              <Building>1742004239</Building>              <!-- Tattooist - Building -->
+              <Building>1742004205</Building>              <!-- Qajaks - Chain -->
+            </Item>
+            <Item>
+              <Building>1742004396</Building>              <!-- Qilaut - Chain -->
             </Item>
             <Item>
               <Building>1742004398</Building>              <!-- Hot Springs Bathhouse - Building -->
-            </Item>
-            <Item>
-              <Building>1742004205</Building>              <!-- Qajaks - Chain -->
             </Item>
             <Item>
               <Building>1742004142</Building>              <!-- Husky Breeder - Building -->
             </Item>
             <Item>
               <Building>1742004207</Building>              <!-- Husky Sleds - Chain -->
+            </Item>
+            <Item>
+              <Building>1742004239</Building>              <!-- Tattooist - Building -->
             </Item>
             <Item>
               <Building>1742004211</Building>              <!-- Sculptures - Chain -->
@@ -98,13 +98,10 @@
               <Building>1742004489</Building>              <!-- Monumental Residences Statue - Chain -->
             </Item>
             <Item>
-              <Building>1742004490</Building>              <!-- Monumental Crafting Statue - Chain -->
+              <Building>1742004490</Building>              <!-- Monumental Crafting and Coastal Production Statue - Chain -->
             </Item>
             <Item>
               <Building>1742004491</Building>              <!-- Monumental Forest Statue - Chain -->
-            </Item>
-            <Item>
-              <Building>1742004492</Building>              <!-- Monumental Coastal Statue - Chain -->
             </Item>
           </BuildingList>
         </ConstructionCategory>
@@ -393,6 +390,39 @@
   </ModOp>
   <!-- END - PRODUCTION CHAIN - Tattooist -->
 
+  <!-- START - OIL BUILDING MENU (AR) -->
+  <ModOp Type="addNextSibling" GUID='112792'>
+    <Asset>
+      <Template>ConstructionCategory</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004528</GUID>
+          <Name>Oil Building Menu (AR)</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_oil.png</IconFilename>
+        </Standard>
+        <ConstructionCategory>
+          <BuildingList>
+            <Item>
+              <Building>1742004281</Building>              <!-- Strategic Harbour (AR) - Building -->
+            </Item>
+            <Item>
+              <Building>1742004525</Building>              <!-- Oil Refinery - Building -->
+            </Item>
+            <Item>
+              <Building>1742004515</Building>              <!-- Oil Platform - Building -->
+            </Item>
+            <Item>
+              <Building>1742004459</Building>              <!-- Oil Warehouse - Building -->
+            </Item>
+          </BuildingList>
+        </ConstructionCategory>
+        <Text/>
+        <Locked/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - OIL BUILDING MENU (AR) -->
+
   <!-- START - ICE BUILDING MENU (AR) -->
   <ModOp Type="addNextSibling" GUID='112792'>
     <Asset>
@@ -417,15 +447,7 @@
           </BuildingList>
           <CategoryDescription>19173</CategoryDescription>
         </ConstructionCategory>
-        <Text>
-          <LocaText>
-            <English>
-              <Text>Ice</Text>
-              <Status>Exported</Status>
-            </English>
-          </LocaText>
-          <LineID>35206</LineID>
-        </Text>
+        <Text/>
         <Locked/>
       </Values>
     </Asset>
@@ -462,15 +484,7 @@
           </BuildingList>
           <CategoryDescription>19173</CategoryDescription>
         </ConstructionCategory>
-        <Text>
-          <LocaText>
-            <English>
-              <Text>Ice</Text>
-              <Status>Exported</Status>
-            </English>
-          </LocaText>
-          <LineID>35206</LineID>
-        </Text>
+        <Text/>
         <Locked/>
       </Values>
     </Asset>
@@ -538,7 +552,9 @@
             </Item>
           </Tier1>
         </ProductionChain>
-        <Locked />
+        <Locked>
+          <DefaultLockedState>0</DefaultLockedState>
+        </Locked>
       </Values>
     </Asset>
   </ModOp>
@@ -590,12 +606,7 @@
               <Building>1742004116</Building>              <!--Animal Bones Modile - Building-->
             </Item>
             <Item>
-              <Building>114441</Building>              <!--intermediate_colony02_01 (Linen Mill)-->
-              <Tier2>
-                <Item>
-                  <Building>114448</Building>                  <!--agriculture_colony02_02 (Flax Farm)-->
-                </Item>
-              </Tier2>
+              <Building>1999005407</Building>              <!--Import dock Silk Trading Compnay - Building-->
             </Item>
             <Item>
               <Building>1010318</Building>              <!--factory_colony01_03 (Cotton Cloth Processing)-->
@@ -670,12 +681,7 @@
               <Building>1742004134</Building>              <!-- Root Grinder - Building -->
             </Item>
             <Item>
-              <Building>1010312</Building>              <!--processing_01 (Tallow Processing)-->
-              <Tier2>
-                <Item>
-                  <Building>1010269</Building>                  <!--agriculture_08 (Pig Farm)-->
-                </Item>
-              </Tier2>
+              <Building>1742004114</Building>              <!-- Whale Oil Module - Building -->
             </Item>
           </Tier1>
         </ProductionChain>
@@ -703,7 +709,7 @@
               <Building>1010297</Building>              <!-- Furnace -->
               <Tier2>
                 <Item>
-                  <Building>8857200</Building>                  <!-- Iron Mine -->
+                  <Building>1010305</Building>                  <!-- Iron Mine -->
                 </Item>
               </Tier2>
             </Item>
@@ -856,19 +862,19 @@
   </ModOp>
   <!-- END - PRODUCTION CHAIN - Monumental Residences Statue -->
 
-  <!-- START - PRODUCTION CHAIN - Monumental Crafting Statue -->
+  <!-- START - PRODUCTION CHAIN - Monumental Crafting and Coastal Production Statue -->
   <ModOp Type="addNextSibling" GUID='15039'>
     <Asset>
       <Template>ProductionChain</Template>
       <Values>
         <Standard>
           <GUID>1742004490</GUID>
-          <Name>Monumental Crafting Statue</Name>
+          <Name>Monumental Crafting and Coastal Production Statue</Name>
           <IconFilename>data/graphics/icons/icon_inuit_monument.png</IconFilename>
           <InfoDescription>1742004475</InfoDescription>
         </Standard>
         <ProductionChain>
-          <Building>1742004474</Building>          <!-- Monumental Crafting Statue - Building -->
+          <Building>1742004474</Building>          <!-- Monumental Crafting and Coastal Production Statue - Building -->
           <Tier1>
             <Item>
               <Building>1742004132</Building>              <!-- Basic Tools Maker - Building -->
@@ -909,7 +915,7 @@
       </Values>
     </Asset>
   </ModOp>
-  <!-- END - PRODUCTION CHAIN - Monumental Crafting Statue -->
+  <!-- END - PRODUCTION CHAIN - Monumental Crafting and Coastal Production Statue -->
 
   <!-- START - PRODUCTION CHAIN - Monumental Forest Statue -->
   <ModOp Type="addNextSibling" GUID='15039'>
@@ -1010,6 +1016,69 @@
   </ModOp>
   <!-- END - PRODUCTION CHAIN - Monumental Coastal Statue -->
 
+  <!-- START - PRODUCTION CHAIN - Expedition Equipment Assembly -->
+  <ModOp Type="addNextSibling" GUID='15039'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004457</GUID>
+          <Name>Expedition Equipment</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_passage_junk.png</IconFilename>
+          <InfoDescription>1742004458</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742004362</Building>          <!-- Expedition Equipment Assembly - Building -->
+          <Tier1>
+            <Item>
+              <Building>936</Building>              <!-- Care Package Factory - Building -->
+            </Item>
+            <Item>
+              <Building>1742004132</Building>              <!-- Tools - Building -->
+              <Tier2>
+                <Item>
+                  <Building>1742004128</Building>                  <!-- Wood Gathering Cabin - Building -->
+                </Item>
+                <Item>
+                  <Building>1742004116</Building>                  <!-- Animal Bones Module - Building -->
+                </Item>
+              </Tier2>
+            </Item>
+            <Item>
+              <Building>112679</Building>              <!--factory_arctic_03 (Oil Lamp Factory)-->
+              <Tier2>
+                <Item>
+                  <Building>112666</Building>                  <!--coastal_arctic_01 (Whale Coast Building)-->
+                </Item>
+                <Item>
+                  <Building>1010282</Building>                  <!--heavy_09 (Brass Heavy Industry)-->
+                  <Tier3>
+                    <Item>
+                      <Building>1010307</Building>                      <!--mining_04 (Zinc Mine)-->
+                    </Item>
+                    <Item>
+                      <Building>1010308</Building>                      <!--mining_05 (Copper Mine)-->
+                    </Item>
+                  </Tier3>
+                </Item>
+              </Tier2>
+            </Item>
+            <Item>
+              <Building>1500303160</Building>
+              <Tier2>
+                <Item>
+                  <Building>112674</Building>
+                </Item>
+              </Tier2>
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - PRODUCTION CHAIN - Monumental Coastal Statue -->
+
   <!-- START - ARCTIC LODGE MENU -->
   <ModOp Type="add" GUID='112792' Path="/Values/ConstructionCategory/BuildingList/">
     <Item>
@@ -1029,13 +1098,19 @@
   <!-- START - ADD BUILDINGS TO TECHNICIANS MENU -->
   <ModOp Type="add" GUID='112791' Path="/Values/ConstructionCategory/BuildingList/">
     <Item>
+      <Building>1742004319</Building>      <!-- Mining Optimizations (Blank) - RecipeBuilding -->
+    </Item>
+    <Item>
+      <Building>1742004457</Building>      <!-- Expedition Equipment Assembly - Chain -->
+    </Item>
+    <Item>
       <Building>1742004268</Building>      <!-- Ice Building Menu - ConstructionCategory -->
     </Item>
     <Item>
-      <Building>1742004362</Building>      <!-- Lost Expedition Site - Building -->
+      <Building>1742004421</Building>      <!-- Nate's Arctic Windmill - Building -->
     </Item>
     <Item>
-      <Building>1742004421</Building>      <!-- Nate's Arctic Windmill - Building -->
+      <Building>1742004285</Building>      <!-- Mining Institue - Building -->
     </Item>
     <Item>
       <Building>1742004417</Building>      <!-- Arctic Research Institute - Building -->
@@ -1053,7 +1128,7 @@
     </Item>
   </ModOp>
 
-  <!-- END - HIDE NORMAL ARCTIC GAS MINE -->
+  <!-- END - HIDE NORMAL CANNED FOOD CHAIN AND ADD NEW -->
 
   <!-- START - HIDE NORMAL ARCTIC GAS MINE
   <ModOp Type="add" GUID='112791' Path="/Values/ConstructionCategory/BuildingList/Item[Building='112690']">
@@ -1064,25 +1139,19 @@
   </ModOp>
   <!-- END - HIDE NORMAL ARCTIC GAS MINE -->
 
-  <!-- START - ADD NEW MINES AND MINING BUILDINGS TO VARIABLE RESOURCES BUILDING MENU -->
-  <ModOp Type="add" GUID='8857201' Path="/Values/ConstructionCategory/BuildingList/">
-    <Item>
-      <Building>112690</Building>      <!--Arctic Gas Mine-->
-    </Item>
+  <!-- START - ADD NEW MINES AND MINING BUILDINGS TO TECHNICIANS BUILDING MENU -->
+  <ModOp Type="addNextSibling" GUID='112791' Path="/Values/ConstructionCategory/BuildingList/Item[Building='112690']">
     <Item>
       <Building>1742004364</Building>      <!--Helium Gas Mine-->
     </Item>
     <Item>
-      <Building>1742004368</Building>      <!-- Diamond Mine - Building -->
+      <Building>1742004455</Building>      <!-- Silver Mine - Building -->
     </Item>
     <Item>
-      <Building>1742004275</Building>      <!--Ice Harvesting Site-->
+      <Building>1742004368</Building>      <!-- Diamond Open Pit Mine - Building -->
     </Item>
     <Item>
-      <Building>1742004285</Building>      <!-- Mining Institue - Building -->
-    </Item>
-    <Item>
-      <Building>1742004319</Building>      <!-- Mining Optimizations (Blank) - RecipeBuilding -->
+      <Building>1742004528</Building>      <!-- Oil ConstructionCategory -->
     </Item>
   </ModOp>
   <!-- END - ADD NEW MINES AND MINING BUILDINGS TO VARIABLE RESOURCES BUILDING MENU -->
@@ -1095,7 +1164,7 @@
   </ModOp>
   <!-- END - ADD SMALL DEPOT TO ARCTIC COASTAL MENU -->
 
-  <!-- START - ADD CORSETS CHAIN TO ENGINEERS MENU -->
+  <!-- START - ADD OW CHAINS CHAINS TO ENGINEERS MENU -->
   <ModOp Type="addNextSibling" GUID='25000192' Path="/Values/ConstructionCategory/BuildingList/Item[Building='500015']">
     <Item>
       <Building>1742004337</Building>      <!-- Corsets - Chain -->
@@ -1106,7 +1175,23 @@
       <Building>1742004390</Building>      <!-- Ice Building Menu (OW) - ConstructionCategory -->
     </Item>
   </ModOp>
-  <!-- END - ADD CORSETS CHAIN TO ENGINEERS MENU -->
+  <!-- END - ADD OW CHAINS TO ENGINEERS MENU -->
+
+  <!-- START - ADD TRADING COMPANY CHAINS TO ENGINEERS MENU -->
+  <ModOp Type="addNextSibling" GUID='25000192' Path="/Values/ConstructionCategory/BuildingList/Item[Building='500954']">
+    <Item>
+      <Building>1999005648</Building>      <!-- OW Trading Company construction menu - Chain -->
+    </Item>
+  </ModOp>
+  <ModOp Type="add" GUID='1999005648' Path="/Values/ConstructionCategory/BuildingList/">
+    <Item>
+      <Building>1742004536</Building>      <!-- Export Dock - Animal Bones - Building -->
+    </Item>
+    <Item>
+      <Building>1999005407</Building>      <!-- Silk Import Dock Trading Company - Building -->
+    </Item>
+  </ModOp>
+  <!-- END - ADD TRADING COMPANYW CHAINS TO ENGINEERS MENU -->
 
   <!-- START - ADD CORSETS CHAIN TO OBRERO MENU -->
   <ModOp Type="add" GUID='25000194' Path="/Values/ConstructionCategory/BuildingList/">
@@ -1188,8 +1273,4 @@
     </Asset>
   </ModOp>
   <!-- END - ADD ARCTIC ORNAMENT MENU -->
-
-
-
 </ModOps>
-  1742004411

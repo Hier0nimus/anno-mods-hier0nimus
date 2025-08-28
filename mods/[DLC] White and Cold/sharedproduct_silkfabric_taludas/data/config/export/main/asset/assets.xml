@@ -1,0 +1,109 @@
+<ModOps>
+  <Group>
+    <!-- # Product: Silk -->
+    <ModOp Type="addNextSibling" GUID="1010217">
+      <Asset>
+        <Template>Product</Template>
+        <Values>
+          <Standard>
+            <GUID>1440209</GUID>
+            <Name>Silk</Name>
+            <IconFilename>data\modgraphics\ui\icon_silk.png</IconFilename>
+            <InfoDescription>1999005097</InfoDescription>
+          </Standard>
+          <Locked />
+          <Product>
+            <StorageLevel>Building</StorageLevel>
+            <ProductCategory>11703</ProductCategory>
+            <BasePrice>225</BasePrice>
+            <CivLevel>3</CivLevel>
+            <AssociatedRegion>Moderate</AssociatedRegion>
+            <ProductionRegions>
+              <Item>
+                <RegionType>Moderate</RegionType>
+              </Item>
+            </ProductionRegions>
+          </Product>
+          <ExpeditionAttribute>
+            <BaseMorale>0</BaseMorale>
+            <ExpeditionAttributes>
+              <Item>
+                <Attribute>Crafting</Attribute>
+                <Amount>25</Amount>
+              </Item>
+              <Item>
+                <Attribute>Medicine</Attribute>
+                <Amount>10</Amount>
+              </Item>
+            </ExpeditionAttributes>
+            <FluffText>1999005098</FluffText>
+          </ExpeditionAttribute>
+        </Values>
+      </Asset>
+    </ModOp>
+
+    <!-- # Expeditions -->
+    <!-- None -->
+
+    <!-- # Docklands: NONE -->
+
+    <!-- # Fake MainFactory -->
+    <ModOp Type="addNextSibling" GUID="1010295" Condition="!//FactoryBase[FactoryOutputs/Item/Product='1440209']/IsMainFactory[text()='1']">
+      <Asset>
+        <Template>FactoryBuilding7</Template>
+        <Values>
+          <Standard>
+            <GUID>1999005662</GUID>
+            <Name>IsMainfactory_Fake: Silk</Name>
+            <IconFilename>data\modgraphics\ui\icon_silk.png</IconFilename>
+          </Standard>
+          <Building>
+            <AssociatedRegions>Moderate</AssociatedRegions>
+            <SecondPartyRelevant>0</SecondPartyRelevant>
+          </Building>
+          <Blocking />
+          <Object>
+            <Variations>
+              <Item>
+                <Filename>data\graphics\buildings\public\logistic_01\logistic_01.cfg</Filename>
+              </Item>
+            </Variations>
+          </Object>
+          <Locked />
+          <FactoryBase>
+            <FactoryInputs>
+                <Item>
+                    <Product>1999005351</Product>
+                    <Amount>4</Amount>
+                    <StorageAmount>12</StorageAmount>
+                </Item>
+            </FactoryInputs>
+            <FactoryOutputs>
+                <Item>
+                    <Product>1440209</Product>
+                    <Amount>1</Amount>
+                    <StorageAmount>4</StorageAmount>
+                </Item>
+            </FactoryOutputs>
+            <CycleTime>30</CycleTime>
+            <IsMainFactory>1</IsMainFactory>
+        </FactoryBase>
+          <Maintenance>
+            <Maintenances>
+              <Item>
+                <Product>1010017</Product>
+                <Amount>500</Amount>
+                <InactiveAmount>250</InactiveAmount>
+              </Item>
+              <Item>
+                <Product>1010116</Product>
+                <Amount>100</Amount>
+              </Item>
+            </Maintenances>
+          </Maintenance>
+        </Values>
+      </Asset>
+    </ModOp>
+  </Group>
+
+</ModOps>

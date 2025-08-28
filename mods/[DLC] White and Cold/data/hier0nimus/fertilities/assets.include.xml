@@ -18,7 +18,7 @@
       </Values>
     </Asset>
   </ModOp>
-  <!-- END ADD FERTILITY - Cloudberries -->
+  <!-- END ADD FERTILITY - Bog Labrador Tea -->
 
   <!-- START LIST FERTILITY - ARCTIC -->
   <ModOp GUID="160001" Type="add" Path="/Values/Region/AllowedFertilities">
@@ -28,21 +28,256 @@
   </ModOp>
   <!-- START LIST FERTILITY - ARCTIC -->
 
-  <!-- START ADD FERTILITYORDER - Cloudberries Fertility -->
+  <!-- START ADD FERTILITYORDER - Bog Labrador Tea Fertility -->
   <ModOp Type="add" GUID="500204" Path="/Values/MinimapScene/FertilityOrder">
     <Item>
       <GUID>1742004178</GUID>      <!-- Bog Labrador Tea - Fertility -->
     </Item>
   </ModOp>
-  <!-- END ADD FERTILITYORDER - Cloudberries Fertility -->
+  <!-- END ADD FERTILITYORDER - Bog Labrador Tea Fertility -->
 
   <!-- START ADD FERTILITY - ARCTIC ISLANDS SETS - Bog Labrador Tea Fertility -->
-  <ModOp Type="add" GUID="115967,117055,117056,117060,117061,116937,116939,116940,115969,117063,117064,117065,117066,115977,116933,116936,115970,117067,117069,117070,116927,116930,116938,117068,116929,116935,116932" Path="/Values/FertilitySet/Fertilities">
+  <!-- MEDIUM/HIGH FERTILITY - 115969,115970,115977,117063,117064,117065,117066,116933,116935,116936,117067,117068,117069,117070,116927,116930,116929,116932 -->
+  <ModOp Type="addNextSibling" GUID="115969,115970,117063,117064,117065,117066,116933,116935,116936,117067,117068,117069,117070,116930,116929,116932" Path="/Values/FertilitySet/Fertilities/Item[Fertility='114236']">
+    <Item>
+      <Fertility>1742004178</Fertility>      <!-- Bog Labrador Tea Fertility -->
+    </Item>
+  </ModOp>
+  <!-- LOW FERTILITY - 115967,117055,117056,117060,117061,116937,116938,116939,116940 -->
+  <ModOp Type="addNextSibling" GUID="115967,117060,117061,116937,116938,116939" Path="/Values/FertilitySet/Fertilities/Item[Fertility='114236']">
     <Item>
       <Fertility>1742004178</Fertility>      <!-- Bog Labrador Tea Fertility -->
     </Item>
   </ModOp>
   <!-- END ADD FERTILITY - ARCTIC ISLANDS SETS - Bog Labrador Tea Fertility -->
+
+  <!-- START ADD NEW ISLAND TO EXISTING FERTILITYSETS - MEDIUM SIZE - 115969,115970,115977,117063,117064,117065,117066,117067,117068,117069,117070 -->
+  <ModOp Type="merge" GUID="115969,115970,115977,117063,117064,117065,117066,117067,117068,117069,117070" Path="/Values/ResourceSetCondition">
+    <AllowedIslandType>Starter;Normal</AllowedIslandType>
+  </ModOp>
+  <!-- END ADD NEW ISLAND TO EXISTING FERTILITYSETS - MEDIUM SIZE -->
+
+  <!-- START ADD NEW ISLAND TO EXISTING FERTILITYSETS - SMALL SIZE - 115977,116933,116935,116936,116927,116930,116929,116932 -->
+  <!-- END ADD NEW ISLAND TO EXISTING FERTILITYSETS - SMALL SIZE -->
+
+  <!-- START ADD FERTILITYSETS - ARCTIC MEDIUM-HIGH LARGE 1 -->
+  <ModOp Type="addNextSibling" GUID="116932">
+    <Asset>
+      <Template>FertilitySet</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004164</GUID>
+          <Name>Arctic Medium-High Large 1</Name>
+        </Standard>
+        <ResourceSetCondition>
+          <AllowedRegion>Arctic</AllowedRegion>
+          <AllowedIslandType>Starter</AllowedIslandType>
+          <AllowedIslandDifficulty>Normal;Hard</AllowedIslandDifficulty>
+          <AllowedResourceAmounts>Medium;High</AllowedResourceAmounts>
+          <AllowedIslandSize>Large</AllowedIslandSize>
+        </ResourceSetCondition>
+        <FertilitySet>
+          <Fertilities>
+            <Item>
+              <Fertility>114236</Fertility>              <!--Tree Fertility-->
+            </Item>
+            <Item>
+              <Fertility>1742004178</Fertility>              <!-- Bog Labrador Tea Fertility -->
+            </Item>
+            <Item>
+              <Fertility>112858</Fertility>              <!--Caribou Fertility-->
+            </Item>
+            <Item>
+              <Fertility>115264</Fertility>              <!--Whale Fertility-->
+            </Item>
+            <Item>
+              <Fertility>1010581</Fertility>              <!--Fur Fertility-->
+            </Item>
+          </Fertilities>
+        </FertilitySet>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END ADD FERTILITYSETS - ARCTIC MEDIUM-HIGH LARGE 1 -->
+
+  <!-- START ADD FERTILITYSETS - ARCTIC MEDIUM-HIGH LARGE 2 -->
+  <ModOp Type="addNextSibling" GUID="116932">
+    <Asset>
+      <Template>FertilitySet</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004165</GUID>
+          <Name>Arctic Medium-High Large 2</Name>
+        </Standard>
+        <ResourceSetCondition>
+          <AllowedRegion>Arctic</AllowedRegion>
+          <AllowedIslandType>Starter</AllowedIslandType>
+          <AllowedIslandDifficulty>Normal;Hard</AllowedIslandDifficulty>
+          <AllowedResourceAmounts>Medium;High</AllowedResourceAmounts>
+          <AllowedIslandSize>Large</AllowedIslandSize>
+        </ResourceSetCondition>
+        <FertilitySet>
+          <Fertilities>
+            <Item>
+              <Fertility>114236</Fertility>              <!--Tree Fertility-->
+            </Item>
+            <Item>
+              <Fertility>1742004178</Fertility>              <!-- Bog Labrador Tea Fertility -->
+            </Item>
+            <Item>
+              <Fertility>115264</Fertility>              <!--Whale Fertility-->
+            </Item>
+            <Item>
+              <Fertility>112860</Fertility>              <!--Seal Fertility-->
+            </Item>
+            <Item>
+              <Fertility>112859</Fertility>              <!--Bear Fertility-->
+            </Item>
+          </Fertilities>
+        </FertilitySet>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END ADD FERTILITYSETS - ARCTIC MEDIUM-HIGH LARGE 2 -->
+
+  <!-- START ADD FERTILITYSETS - ARCTIC LOW LARGE 1 -->
+  <ModOp Type="addNextSibling" GUID="116932">
+    <Asset>
+      <Template>FertilitySet</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004402</GUID>
+          <Name>Arctic Low Large 1</Name>
+        </Standard>
+        <ResourceSetCondition>
+          <AllowedRegion>Arctic</AllowedRegion>
+          <AllowedIslandType>Starter</AllowedIslandType>
+          <AllowedIslandDifficulty>Normal;Hard</AllowedIslandDifficulty>
+          <AllowedResourceAmounts>Low;</AllowedResourceAmounts>
+          <AllowedIslandSize>Large</AllowedIslandSize>
+        </ResourceSetCondition>
+        <FertilitySet>
+          <Fertilities>
+            <Item>
+              <Fertility>114236</Fertility>              <!--Tree Fertility-->
+            </Item>
+            <Item>
+              <Fertility>1742004178</Fertility>              <!-- Bog Labrador Tea Fertility -->
+            </Item>
+            <Item>
+              <Fertility>112858</Fertility>              <!--Caribou Fertility-->
+            </Item>
+            <Item>
+              <Fertility>115264</Fertility>              <!--Whale Fertility-->
+            </Item>
+          </Fertilities>
+        </FertilitySet>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END ADD FERTILITYSETS - ARCTIC LOW LARGE 1 -->
+
+  <!-- START ADD FERTILITYSETS - ARCTIC LOW LARGE 2 -->
+  <ModOp Type="addNextSibling" GUID="116932">
+    <Asset>
+      <Template>FertilitySet</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004280</GUID>
+          <Name>Arctic Low Large 2</Name>
+        </Standard>
+        <ResourceSetCondition>
+          <AllowedRegion>Arctic</AllowedRegion>
+          <AllowedIslandType>Starter</AllowedIslandType>
+          <AllowedIslandDifficulty>Normal;Hard</AllowedIslandDifficulty>
+          <AllowedResourceAmounts>Low;</AllowedResourceAmounts>
+          <AllowedIslandSize>Large</AllowedIslandSize>
+        </ResourceSetCondition>
+        <FertilitySet>
+          <Fertilities>
+            <Item>
+              <Fertility>114236</Fertility>              <!--Tree Fertility-->
+            </Item>
+            <Item>
+              <Fertility>112860</Fertility>              <!--Seal Fertility-->
+            </Item>
+            <Item>
+              <Fertility>112859</Fertility>              <!--Bear Fertility-->
+            </Item>
+          </Fertilities>
+        </FertilitySet>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END ADD FERTILITYSETS - ARCTIC LOW LARGE 2 -->
+
+  <!-- START ADD FERTILITYSETS - ARCTIC LOW LARGE 3 -->
+  <ModOp Type="addNextSibling" GUID="116932">
+    <Asset>
+      <Template>FertilitySet</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004387</GUID>
+          <Name>Arctic Low Large 3</Name>
+        </Standard>
+        <ResourceSetCondition>
+          <AllowedRegion>Arctic</AllowedRegion>
+          <AllowedIslandType>Starter</AllowedIslandType>
+          <AllowedIslandDifficulty>Normal;Hard</AllowedIslandDifficulty>
+          <AllowedResourceAmounts>Low;</AllowedResourceAmounts>
+          <AllowedIslandSize>Large</AllowedIslandSize>
+        </ResourceSetCondition>
+        <FertilitySet>
+          <Fertilities>
+            <Item>
+              <Fertility>114236</Fertility>              <!--Tree Fertility-->
+            </Item>
+            <Item>
+              <Fertility>112858</Fertility>              <!--Caribou Fertility-->
+            </Item>
+            <Item>
+              <Fertility>1010581</Fertility>              <!--Fur Fertility-->
+            </Item>
+          </Fertilities>
+        </FertilitySet>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END ADD FERTILITYSETS - ARCTIC LOW LARGE 3 -->
+
+  <!-- START ADD FERTILITYSETS - ARCTIC LOW LARGE 4 -->
+  <ModOp Type="addNextSibling" GUID="116932">
+    <Asset>
+      <Template>FertilitySet</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004389</GUID>
+          <Name>Arctic Low Large 4</Name>
+        </Standard>
+        <ResourceSetCondition>
+          <AllowedRegion>Arctic</AllowedRegion>
+          <AllowedIslandType>Starter</AllowedIslandType>
+          <AllowedIslandDifficulty>Normal;Hard</AllowedIslandDifficulty>
+          <AllowedResourceAmounts>Low;</AllowedResourceAmounts>
+          <AllowedIslandSize>Large</AllowedIslandSize>
+        </ResourceSetCondition>
+        <FertilitySet>
+          <Fertilities>
+            <Item>
+              <Fertility>114236</Fertility>              <!--Tree Fertility-->
+            </Item>
+            <Item>
+              <Fertility>1742004178</Fertility>              <!-- Bog Labrador Tea Fertility -->
+            </Item>
+            <Item>
+              <Fertility>112860</Fertility>              <!--Seal Fertility-->
+            </Item>
+          </Fertilities>
+        </FertilitySet>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END ADD FERTILITYSETS - ARCTIC LOW LARGE 4 -->
 
 </ModOps>
   

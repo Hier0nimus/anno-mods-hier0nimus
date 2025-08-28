@@ -417,6 +417,56 @@
   </ModOp>
   <!-- END - ADD PRODUCT INUIT MONUMENT -->
 
+  <!-- START - ADD PRODUCT ICE BLOCKS -->
+  <ModOp Type="addNextSibling" GUID='112708'>
+    <Asset>
+      <Template>Product</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004273</GUID>
+          <Name>Ice Blocks</Name>
+          <IconFilename>data\ui\2kimages\main\3dicons\campaign\icon_iceberg.png</IconFilename>
+          <InfoDescription>1742004274</InfoDescription>
+        </Standard>
+        <Locked />
+        <Product>
+          <StorageLevel>Building</StorageLevel>
+          <ProductCategory>11703</ProductCategory>
+          <BasePrice>750</BasePrice>
+          <CivLevel>1</CivLevel>
+          <IsStrategicResource>1</IsStrategicResource>
+          <AssociatedRegion>Moderate;Colony01;Arctic;Africa</AssociatedRegion>
+          <ProductionRegions>
+            <Item>
+              <RegionType>Moderate</RegionType>
+            </Item>
+            <Item>
+              <RegionType>Colony01</RegionType>
+            </Item>
+            <Item>
+              <RegionType>Africa</RegionType>
+              <RequiredDLCs>
+                <Item>
+                  <RequiredDLC>410071</RequiredDLC>
+                </Item>
+              </RequiredDLCs>
+            </Item>
+            <Item>
+              <RegionType>Arctic</RegionType>
+              <RequiredDLCs>
+                <Item>
+                  <RequiredDLC>410042</RequiredDLC>
+                </Item>
+              </RequiredDLCs>
+            </Item>
+          </ProductionRegions>
+        </Product>
+        <ExpeditionAttribute />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - ADD PRODUCT ICE BLOCKS -->
+
   <!-- START - PRODUCTLIST - INUIT CONSUMER GOODS -->
   <ModOp Type="addNextSibling" GUID='501995'>
     <Asset>
@@ -489,9 +539,6 @@
     <Item>
       <Product>1742004172</Product>      <!-- Sculptures - Product -->
     </Item>
-    <Item>
-      <Product>1555000161</Product>      <!-- Ink - Product -->
-    </Item>
   </ModOp>
   <!-- END ADD GOOD TO StandartProductStorageList -->
 
@@ -517,6 +564,157 @@
     </Item>
   </ModOp>
   <!-- END ADD GOOD TO ProductList -->
+
+  <!-- START ADD GOOD TO ProductList - Arctic Agri Goods -->
+  <ModOp Type="add" GUID='502042' Path="/Values/ProductList/List">
+    <Item>
+      <Product>1742004166</Product>      <!-- Animal Bones - Product -->
+    </Item>
+  </ModOp>
+  <!-- END ADD GOOD TO ProductList -->
+
+  <!-- START ADD GOOD TO ProductList - Arctic Intermidiate Goods -->
+  <ModOp Type="add" GUID='502048' Path="/Values/ProductList/List">
+    <Item>
+      <Product>1555000161</Product>      <!-- Ink - Product -->
+    </Item>
+  </ModOp>
+  <!-- END ADD GOOD TO ProductList -->
+
+  <!-- CORSETS > AFTER POCKET WATCHES -->
+  <ModOp Type="addNextSibling" GUID="120055,120057" Path="/Values/ProductStorageList/ProductList/Item[Product='1010246']">
+    <Item>
+      <Product>1742004333</Product>      <!-- Corsets - Product -->
+    </Item>
+  </ModOp>
+
+  <!-- START ADD TO WORKFORCEGOODS - EngineersConsumerGoods / ArtisanWorkForceGoods -->
+  <ModOp Type="add" GUID="501998,502020,502006" Path="/Values/ProductList/List/">
+    <Item>
+      <Product>1742004333</Product>      <!-- Corsets - Product -->
+    </Item>
+  </ModOp>
+  <!-- END ADD TO WORKFORCEGOODS - EngineersConsumerGoods / ArtisanWorkForceGoods -->
+
+  <!-- START ADD GOODS TO OTHER ProductList - ALL PRODUCTS -->
+  <ModOp Type="add" GUID='502016,502065' Path="/Values/ProductList/List">
+    <Item>
+      <Product>1742004333</Product>      <!-- Corsets - Product -->
+    </Item>
+  </ModOp>
+  <!-- END ADD GOODS TO OTHER PRODUCTLIST - ALL PRODUCTS -->
+
+  <!-- START ADD GOODS TO OTHER ProductList - LUXURY -->
+  <ModOp Type="add" GUID='501992' Path="/Values/ProductList/List">
+    <Item>
+      <Product>1742004333</Product>      <!-- Corsets - Product -->
+    </Item>
+  </ModOp>
+  <!-- END ADD GOODS TO OTHER PRODUCTLIST - LUXURY -->
+
+  <!-- START ADD GOODS TO OTHER ProductList - HEATING GOODS -->
+  <ModOp Type="add" GUID='501994' Path="/Values/ProductList/List">
+    <Item>
+      <Product>120008</Product>      <!-- Wood - Product -->
+    </Item>
+    <Item>
+      <Product>114410</Product>      <!-- Seafood Stew - Product -->
+    </Item>
+    <Item>
+      <Product>1010209</Product>      <!-- Furs - Product -->
+    </Item>
+  </ModOp>
+  <!-- END ADD GOODS TO OTHER PRODUCTLIST - HEATING GOODS -->
+
+  <!-- START ADD DIAMONDS AND SILVER ORE TO ARCTIC ProductList -->
+  <!-- Add Product 'Diamonds' to the global storage lists if not already present in the StandardStorageProductList -->
+  <ModOp Type="add" GUID="120055" Path="/Values/ProductStorageList/ProductList" Condition="!//Values[Standard/GUID='120055']/ProductStorageList/ProductList/Item[Product='1999005087']">
+    <Item>
+      <Product>1999005087</Product>
+    </Item>
+  </ModOp>
+  <ModOp Type="add" GUID="502011,502051" Path="/Values/ProductList/List">
+    <Item>
+      <Product>1999005087</Product>
+    </Item>
+    <Item>
+      <Product>1957006101</Product>
+    </Item>
+  </ModOp>
+  <!-- START ADD DIAMONDS AND SILVER ORE TO ARCTIC ProductList -->
+
+  <!-- START ADD ALGAE TO ARCTIC ProductList -->
+  <!-- Add Product 'Algae' to the global storage lists if not already present in the StandardStorageProductList -->
+  <ModOp Type="add" GUID="120055" Path="/Values/ProductStorageList/ProductList" Condition="!//Values[Standard/GUID='120055']/ProductStorageList/ProductList/Item[Product='1440212']">
+    <Item>
+      <Product>1440212</Product>
+    </Item>
+  </ModOp>
+  <ModOp Type="add" GUID="501954,501955,502028,502068,502039,502042," Path="/Values/ProductList/List">
+    <Item>
+      <Product>1440212</Product>
+    </Item>
+  </ModOp>
+  <!-- START ADD ALGAE TO ARCTIC ProductList -->
+
+
+  <!-- START ADD GOOD TO StandardOilHarborStorageList-->
+  <ModOp Type="add" GUID='120056' Path="/Values/ProductStorageList/ProductList">
+    <Item>
+      <Product>1742004273</Product>      <!-- Ice Blocks -->
+    </Item>
+  </ModOp>
+  <!-- END ADD GOOD TO StandardOilHarborStorageList-->
+
+  <!-- START ADD GOOD TO STRATEGIC GOODS-->
+  <ModOp Type="add" GUID='501961' Path="/Values/ProductList/List">
+    <Item>
+      <Product>1742004273</Product>      <!-- Ice Blocks -->
+    </Item>
+  </ModOp>
+  <!-- END ADD GOOD TO STRATEGIC GOODS-->
+
+  <!-- START - PRODUCTSTORAGELIST - ICE -->
+  <ModOp Type="addNextSibling" GUID='501995'>
+    <Asset>
+      <Template>ProductStorageList</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004279</GUID>
+          <Name>Ice Storage</Name>
+        </Standard>
+        <ProductStorageList>
+          <ProductList>
+            <Item>
+              <Product>1742004273</Product>
+            </Item>
+          </ProductList>
+        </ProductStorageList>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - PRODUCTSTORAGELIST - ICE -->
+
+  <!-- START - PRODUCTSTORAGELIST - OIL -->
+  <ModOp Type="addNextSibling" GUID='501995'>
+    <Asset>
+      <Template>ProductStorageList</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004527</GUID>
+          <Name>Oil Storage</Name>
+        </Standard>
+        <ProductStorageList>
+          <ProductList>
+            <Item>
+              <Product>1010566</Product>
+            </Item>
+          </ProductList>
+        </ProductStorageList>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - PRODUCTSTORAGELIST - OIL -->
 
   <!-- ****************** END ADDING ALL PRODUCTS TO PRODUCTS LISTS ****************** -->
 
@@ -581,83 +779,6 @@
   <!-- ****************** END TO FOOD AND WEALTH ****************** -->
 
   <!-- ****************** END ADDING PRODUCTS TO BONUS NEEDS ****************** -->
-
-  <!-- ****************** START ADD OTHER PRODUCT TO PRODUCTSTORAGELISTS ****************** -->
-
-  <!-- CORSETS > AFTER POCKET WATCHES -->
-  <ModOp Type="addNextSibling" GUID="120055,120057" Path="/Values/ProductStorageList/ProductList/Item[Product='1010246']">
-    <Item>
-      <Product>1742004333</Product>      <!-- Corsets - Product -->
-    </Item>
-  </ModOp>
-
-  <!-- START ADD TO WORKFORCEGOODS - EngineersConsumerGoods / ArtisanWorkForceGoods -->
-  <ModOp Type="add" GUID="501998,502020,502006" Path="/Values/ProductList/List/">
-    <Item>
-      <Product>1742004333</Product>      <!-- Corsets - Product -->
-    </Item>
-  </ModOp>
-  <!-- END ADD TO WORKFORCEGOODS - EngineersConsumerGoods / ArtisanWorkForceGoods -->
-
-  <!-- START ADD GOODS TO OTHER ProductList - ALL PRODUCTS -->
-  <ModOp Type="add" GUID='502016,502065' Path="/Values/ProductList/List">
-    <Item>
-      <Product>1742004333</Product>      <!-- Corsets - Product -->
-    </Item>
-  </ModOp>
-  <!-- END ADD GOODS TO OTHER PRODUCTLIST - ALL PRODUCTS -->
-
-  <!-- START ADD GOODS TO OTHER ProductList - LUXURY -->
-  <ModOp Type="add" GUID='501992' Path="/Values/ProductList/List">
-    <Item>
-      <Product>1742004333</Product>      <!-- Corsets - Product -->
-    </Item>
-  </ModOp>
-  <!-- END ADD GOODS TO OTHER PRODUCTLIST - LUXURY -->
-
-  <!-- START ADD GOODS TO OTHER ProductList - HEATING GOODS -->
-  <ModOp Type="add" GUID='501994' Path="/Values/ProductList/List">
-    <Item>
-      <Product>120008</Product>      <!-- Wood - Product -->
-    </Item>
-    <Item>
-      <Product>114410</Product>      <!-- Seafood Stew - Product -->
-    </Item>
-    <Item>
-      <Product>1010209</Product>      <!-- Furs - Product -->
-    </Item>
-  </ModOp>
-  <!-- END ADD GOODS TO OTHER PRODUCTLIST - HEATING GOODS -->
-
-  <!-- START ADD DIAMONDS TO ARCTIC ProductList -->
-  <!-- Add Product 'Diamonds' to the global storage lists if not already present in the StandardStorageProductList -->
-  <ModOp Type="add" GUID="120055" Path="/Values/ProductStorageList/ProductList" Condition="!//Values[Standard/GUID='120055']/ProductStorageList/ProductList/Item[Product='1999005087']">
-    <Item>
-      <Product>1999005087</Product>
-    </Item>
-  </ModOp>
-  <ModOp Type="add" GUID="502011,502051" Path="/Values/ProductList/List">
-    <Item>
-      <Product>1999005087</Product>
-    </Item>
-  </ModOp>
-  <!-- START ADD DIAMONDS TO ARCTIC ProductList -->
-
-  <!-- START ADD ALGAE TO ARCTIC ProductList -->
-  <!-- Add Product 'Algae' to the global storage lists if not already present in the StandardStorageProductList -->
-  <ModOp Type="add" GUID="120055" Path="/Values/ProductStorageList/ProductList" Condition="!//Values[Standard/GUID='120055']/ProductStorageList/ProductList/Item[Product='1440212']">
-    <Item>
-      <Product>1440212</Product>
-    </Item>
-  </ModOp>
-  <ModOp Type="add" GUID="501954,501955,502028,502068,502039,502042," Path="/Values/ProductList/List">
-    <Item>
-      <Product>1440212</Product>
-    </Item>
-  </ModOp>
-  <!-- START ADD ALGAE TO ARCTIC ProductList -->
-
-  <!-- ****************** END ADD OTHER PRODUCT TO PRODUCTSTORAGELISTS ****************** -->
 
 </ModOps>
   

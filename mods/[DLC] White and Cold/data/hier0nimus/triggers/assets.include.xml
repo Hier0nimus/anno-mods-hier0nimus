@@ -3,25 +3,39 @@
 -->
 
 <ModOps>
-  <!-- START - Inuit Unlock - 10 Explorers  -->
+
+  <!-- START - Inuit Unlock 00 - Discovering Inuit Qumaq  -->
+  <ModOp Type="add" GUID="114156" Path="Values/Objectives/WinConditions/Item/Objective/Values/ConditionQuestObjective/OnSuccessActions/Values/ActionList/Actions/">
+    <Item>
+      <Action>
+        <Template>ActionRegisterTrigger</Template>
+        <Values>
+          <Action/>
+          <ActionRegisterTrigger>
+            <TriggerAsset>1742004802</TriggerAsset>            <!--Inuit Unlock - 00-->
+          </ActionRegisterTrigger>
+        </Values>
+      </Action>
+    </Item>
+  </ModOp>
+
   <ModOp Type="addnextSibling" GUID="130248">
     <Asset>
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742004800</GUID>
-          <Name>MOD Trigger</Name>
+          <GUID>1742004802</GUID>
+          <Name>Inuit Unlock - 00</Name>
         </Standard>
         <Trigger>
           <TriggerCondition>
-            <Template>ConditionPlayerCounter</Template>
+            <Template>ConditionQuestState</Template>
             <Values>
-              <Condition />
-              <ConditionPlayerCounter>
-                <PlayerCounter>PopulationByLevel</PlayerCounter>
-                <Context>112642</Context>                <!-- Explorers -->
-                <CounterAmount>10</CounterAmount>
-              </ConditionPlayerCounter>
+              <Condition/>
+              <ConditionQuestState>
+                <ConditionQuestStateStates>Active</ConditionQuestStateStates>
+                <ConditionQuestStateQuestGUID>114156</ConditionQuestStateQuestGUID>                <!--ArcticQ104_HelpFromTheInuit-->
+              </ConditionQuestState>
             </Values>
           </TriggerCondition>
           <TriggerActions>
@@ -31,7 +45,42 @@
                 <Values>
                   <Action />
                   <ActionUnlockAsset>
+                    <UnhideAssets>
+                      <Item>
+                        <Asset>1742004130</Asset>                        <!-- Sow Goggles Carver - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004199</Asset>                        <!-- Snow Goggles - Chain -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004162</Asset>                        <!-- Sow goggles - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004132</Asset>                        <!-- Basic Tools Maker - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004116</Asset>                        <!--  Animal Bones Module - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004166</Asset>                        <!--  Animal Bones - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004197</Asset>                        <!-- Basic Tools - Chain -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004124</Asset>                        <!-- Caribou Meat Module - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004407</Asset>                        <!-- Pemmican Cookhouse - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004409</Asset>                        <!-- Pemmican - Chain -->
+                      </Item>
+                    </UnhideAssets>
                     <UnlockAssets>
+                      <Item>
+                        <Asset>1742004196</Asset>                        <!-- Inuit Category menu -->
+                      </Item>
                       <Item>
                         <Asset>1742004100</Asset>                        <!-- Inuit PopulationLevel7 -->
                       </Item>
@@ -39,22 +88,13 @@
                         <Asset>1742004102</Asset>                        <!-- Inuit Residence -->
                       </Item>
                       <Item>
-                        <Asset>1742004196</Asset>                        <!-- Inuit Category menu -->
+                        <Asset>1742004266</Asset>                        <!-- Small Depot - Building -->
                       </Item>
                       <Item>
                         <Asset>1742004108</Asset>                        <!-- Community Centre - Building -->
                       </Item>
                       <Item>
                         <Asset>1742004160</Asset>                        <!-- Community Centre - Product -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004110</Asset>                        <!-- Coastal Centre - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004120</Asset>                        <!-- Forest Centre - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004249</Asset>                        <!-- Crafting Centre - Building -->
                       </Item>
                       <Item>
                         <Asset>1742004128</Asset>                        <!-- Wood Gathering Cabin - Building -->
@@ -66,7 +106,101 @@
                         <Asset>1742004331</Asset>                        <!-- Timber - Chain -->
                       </Item>
                       <Item>
+                        <Asset>1742004134</Asset>                        <!-- Root Grinder - Building  -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004136</Asset>                        <!-- Palauga bakery - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004122</Asset>                        <!-- Fur module - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004104</Asset>                        <!-- Small Storage - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004209</Asset>                        <!-- Palauga - Chain -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004148</Asset>                        <!-- Labrador Tea Maker - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004532</Asset>                        <!-- Bog Labrador Tea Seeds (Rare) - Item -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004194</Asset>                        <!-- Bog Labrador Tea Seeds (Epic) - Item -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004533</Asset>                        <!-- Bog Labrador Tea Seeds (Legendary) - Item -->
+                      </Item>
+                      <Item>
+                        <Asset>1500010847</Asset>                        <!-- Tea - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004178</Asset>                        <!-- Bog Labrador Tea - Fertility -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004358</Asset>                        <!-- Spiritual Site - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004180</Asset>                        <!-- Cairn - Ornament -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004468</Asset>                        <!-- Inuksuk - Ornament -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004493</Asset>                        <!-- Seaweed Harvester - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1440212</Asset>                        <!-- Algae - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004114</Asset>                        <!--  Whale Oil Module - Building -->
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004801</GUID>
+          <Name>Backup Unlock Inuit</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>112643</Context>
+                <CounterAmount>500</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
+                      <Item>
                         <Asset>1742004130</Asset>                        <!-- Sow Goggles Carver - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004199</Asset>                        <!-- Snow Goggles - Chain -->
                       </Item>
                       <Item>
                         <Asset>1742004162</Asset>                        <!-- Sow goggles - Product -->
@@ -75,28 +209,153 @@
                         <Asset>1742004132</Asset>                        <!-- Basic Tools Maker - Building -->
                       </Item>
                       <Item>
-                        <Asset>1742004134</Asset>                        <!-- Root Grinder - Building  -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004112</Asset>                        <!--  Fishery - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004114</Asset>                        <!--  Whale Oil Module - Building -->
-                      </Item>
-                      <Item>
                         <Asset>1742004116</Asset>                        <!--  Animal Bones Module - Building -->
                       </Item>
                       <Item>
                         <Asset>1742004166</Asset>                        <!--  Animal Bones - Product -->
                       </Item>
                       <Item>
-                        <Asset>1742004136</Asset>                        <!-- Palauga bakery - Building -->
+                        <Asset>1742004197</Asset>                        <!-- Basic Tools - Chain -->
                       </Item>
                       <Item>
                         <Asset>1742004124</Asset>                        <!-- Caribou Meat Module - Building -->
                       </Item>
                       <Item>
+                        <Asset>1742004407</Asset>                        <!-- Pemmican Cookhouse - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004409</Asset>                        <!-- Pemmican - Chain -->
+                      </Item>
+                    </UnhideAssets>
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>1742004196</Asset>                        <!-- Inuit Category menu -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004100</Asset>                        <!-- Inuit PopulationLevel7 -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004102</Asset>                        <!-- Inuit Residence -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004266</Asset>                        <!-- Small Depot - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004108</Asset>                        <!-- Community Centre - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004160</Asset>                        <!-- Community Centre - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004128</Asset>                        <!-- Wood Gathering Cabin - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004329</Asset>                        <!-- Sawmill - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004331</Asset>                        <!-- Timber - Chain -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004134</Asset>                        <!-- Root Grinder - Building  -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004136</Asset>                        <!-- Palauga bakery - Building -->
+                      </Item>
+                      <Item>
                         <Asset>1742004122</Asset>                        <!-- Fur module - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004104</Asset>                        <!-- Small Storage - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004209</Asset>                        <!-- Palauga - Chain -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004148</Asset>                        <!-- Labrador Tea Maker - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004532</Asset>                        <!-- Bog Labrador Tea Seeds (Rare) - Item -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004194</Asset>                        <!-- Bog Labrador Tea Seeds (Epic) - Item -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004533</Asset>                        <!-- Bog Labrador Tea Seeds (Legendary) - Item -->
+                      </Item>
+                      <Item>
+                        <Asset>1500010847</Asset>                        <!-- Tea - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004178</Asset>                        <!-- Bog Labrador Tea - Fertility -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004358</Asset>                        <!-- Spiritual Site - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004180</Asset>                        <!-- Cairn - Ornament -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004468</Asset>                        <!-- Inuksuk - Ornament -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004493</Asset>                        <!-- Seaweed Harvester - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1440212</Asset>                        <!-- Algae - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004114</Asset>                        <!--  Whale Oil Module - Building -->
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - Inuit Unlock - Discovering Inuit Qumaq  -->
+
+  <!-- START - Inuit Unlock - 01  -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004803</GUID>
+          <Name>Inuit Unlock - 01</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>1742004100</Context>                <!-- Inuit -->
+                <CounterAmount>100</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
+                      <Item>
+                        <Asset>1742004112</Asset>                        <!--  Fishery - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004403</Asset>                        <!-- Fish Stew Cookhouse - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004405</Asset>                        <!-- Fish Stew - Chain -->
                       </Item>
                       <Item>
                         <Asset>1742004138</Asset>                        <!-- Snow Shoes Maker - Building -->
@@ -105,17 +364,91 @@
                         <Asset>1742004168</Asset>                        <!-- Snow Shoes - Product -->
                       </Item>
                       <Item>
-                        <Asset>1742004140</Asset>                        <!-- Qajaks Assembly - Building -->
+                        <Asset>1742004201</Asset>                        <!-- Snow Shoes - Chain -->
                       </Item>
                       <Item>
-                        <Asset>1742004170</Asset>                        <!-- Qajaks - Product -->
+                        <Asset>1742004110</Asset>                        <!-- Coastal Centre - Building -->
                       </Item>
                       <Item>
-                        <Asset>1742004142</Asset>                        <!-- Husky Breeder - Building -->
+                        <Asset>1742004120</Asset>                        <!-- Forest Centre - Building -->
                       </Item>
                       <Item>
-                        <Asset>1742004144</Asset>                        <!-- Sled Maker - Building -->
+                        <Asset>1742004249</Asset>                        <!-- Crafting Centre - Building -->
                       </Item>
+                    </UnhideAssets>
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>1742004130</Asset>                        <!-- Sow Goggles Carver - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004199</Asset>                        <!-- Snow Goggles - Chain -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004162</Asset>                        <!-- Sow goggles - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004132</Asset>                        <!-- Basic Tools Maker - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004116</Asset>                        <!--  Animal Bones Module - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004166</Asset>                        <!--  Animal Bones - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004197</Asset>                        <!-- Basic Tools - Chain -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004124</Asset>                        <!-- Caribou Meat Module - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004407</Asset>                        <!-- Pemmican Cookhouse - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004409</Asset>                        <!-- Pemmican - Chain -->
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - Inuit Unlock - 01  -->
+
+  <!-- START - Inuit Unlock - 02  -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004804</GUID>
+          <Name>Inuit Unlock - 02</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>1742004100</Context>                <!-- Inuit -->
+                <CounterAmount>300</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
                       <Item>
                         <Asset>1742004126</Asset>                        <!-- Bear Fur Module - Building -->
                       </Item>
@@ -126,58 +459,188 @@
                         <Asset>1742004146</Asset>                        <!-- Weavery - Building -->
                       </Item>
                       <Item>
+                        <Asset>1742004203</Asset>                        <!-- Parkas - Chain -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004106</Asset>                        <!-- Large Storage - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004140</Asset>                        <!-- Qajaks Assembly - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004170</Asset>                        <!-- Qajaks - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004205</Asset>                        <!-- Qajaks - Chain -->
+                      </Item>
+                    </UnhideAssets>
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>1742004112</Asset>                        <!--  Fishery - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004403</Asset>                        <!-- Fish Stew Cookhouse - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004405</Asset>                        <!-- Fish Stew - Chain -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004138</Asset>                        <!-- Snow Shoes Maker - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004168</Asset>                        <!-- Snow Shoes - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004201</Asset>                        <!-- Snow Shoes - Chain -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004110</Asset>                        <!-- Coastal Centre - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004120</Asset>                        <!-- Forest Centre - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004249</Asset>                        <!-- Crafting Centre - Building -->
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - Inuit Unlock - 02  -->
+
+  <!-- START - Inuit Unlock - 03  -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004805</GUID>
+          <Name>Inuit Unlock - 03</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>1742004100</Context>                <!-- Inuit -->
+                <CounterAmount>500</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
+                      <Item>
+                        <Asset>1742004394</Asset>                        <!-- Qilaut Maker - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004396</Asset>                        <!-- Qilaut - Chain -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004142</Asset>                        <!-- Husky Breeder - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004144</Asset>                        <!-- Sled Maker - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004207</Asset>                        <!-- Husky Sleds - Chain -->
+                      </Item>
+                    </UnhideAssets>
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>1742004126</Asset>                        <!-- Bear Fur Module - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004118</Asset>                        <!-- Seal Skin Module - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004146</Asset>                        <!-- Weavery - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004203</Asset>                        <!-- Parkas - Chain -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004106</Asset>                        <!-- Large Storage - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004140</Asset>                        <!-- Qajaks Assembly - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004170</Asset>                        <!-- Qajaks - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004205</Asset>                        <!-- Qajaks - Chain -->
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - Inuit Unlock - 03  -->
+
+  <!-- START - Inuit Unlock - 04  -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004806</GUID>
+          <Name>Inuit Unlock - 04</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>1742004100</Context>                <!-- Inuit -->
+                <CounterAmount>750</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
+                      <Item>
                         <Asset>1742004152</Asset>                        <!-- Sculpture Carver - Building -->
                       </Item>
                       <Item>
                         <Asset>1742004172</Asset>                        <!-- Sculptures - Product -->
                       </Item>
                       <Item>
-                        <Asset>1742004104</Asset>                        <!-- Small Storage - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004106</Asset>                        <!-- Large Storage - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004197</Asset>                        <!-- Basic Tools - Chain -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004199</Asset>                        <!-- Snow Goggles - Chain -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004201</Asset>                        <!-- Snow Shoes - Chain -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004203</Asset>                        <!-- Parkas - Chain -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004205</Asset>                        <!-- Qajaks - Chain -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004207</Asset>                        <!-- Husky Sleds - Chain -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004209</Asset>                        <!-- Palauga - Chain -->
-                      </Item>
-                      <Item>
                         <Asset>1742004211</Asset>                        <!-- Sculptures - Chain -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004148</Asset>                        <!-- Labrador Tea Maker - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004194</Asset>                        <!-- Bog Labrador Tea Seeds - Item -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004178</Asset>                        <!-- Bog Labrador Tea - Fertility -->
                       </Item>
                       <Item>
                         <Asset>1742004150</Asset>                        <!-- Charcoal Burner - Building -->
                       </Item>
                       <Item>
                         <Asset>1555000161</Asset>                        <!-- Ink - Product -->
-                      </Item>
-                      <Item>
-                        <Asset>1500010847</Asset>                        <!-- Tea - Product -->
                       </Item>
                       <Item>
                         <Asset>1742004154</Asset>                        <!-- Ink Mixer - Building -->
@@ -188,24 +651,633 @@
                       <Item>
                         <Asset>1742004239</Asset>                        <!-- Tattooist Chain - Chain -->
                       </Item>
+                    </UnhideAssets>
+                    <UnlockAssets>
                       <Item>
-                        <Asset>1742004266</Asset>                        <!-- Small Depot - Building -->
+                        <Asset>1742004394</Asset>                        <!-- Qilaut Maker - Building -->
                       </Item>
+                      <Item>
+                        <Asset>1742004396</Asset>                        <!-- Qilaut - Chain -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004142</Asset>                        <!-- Husky Breeder - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004144</Asset>                        <!-- Sled Maker - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004207</Asset>                        <!-- Husky Sleds - Chain -->
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - Inuit Unlock - 04  -->
+
+  <!-- START - Inuit Unlock - 05  -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004807</GUID>
+          <Name>Inuit Unlock - 05</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>1742004100</Context>                <!-- Inuit -->
+                <CounterAmount>1000</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
+                      <Item>
+                        <Asset>1742004424</Asset>                        <!-- Monumental Cooking and Drinking Statue - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004470</Asset>                        <!-- Monumental Residences Statue - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004474</Asset>                        <!-- Monumental Crafting and Coastal Production Statue - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004478</Asset>                        <!-- Monumental Forest Statue - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004482</Asset>                        <!-- Monumental Coastal Statue - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004486</Asset>                        <!-- Inuit Monument - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004488</Asset>                        <!-- Monumental Cooking and Drinking Statue - Chain -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004489</Asset>                        <!-- Monumental Residences Statue - Chain -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004490</Asset>                        <!-- Monumental Crafting and Coastal Production Statue - Chain -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004491</Asset>                        <!-- Monumental Forest Statue - Chain -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004492</Asset>                        <!-- Monumental Coastal Statue - Chain -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004398</Asset>                        <!-- Hot Springs Bathhouse - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004400</Asset>                        <!-- Hot Springs Bathhouse - Product -->
+                      </Item>
+                    </UnhideAssets>
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>1742004152</Asset>                        <!-- Sculpture Carver - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004172</Asset>                        <!-- Sculptures - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004211</Asset>                        <!-- Sculptures - Chain -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004150</Asset>                        <!-- Charcoal Burner - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1555000161</Asset>                        <!-- Ink - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004154</Asset>                        <!-- Ink Mixer - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004156</Asset>                        <!-- Tattooist - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004239</Asset>                        <!-- Tattooist Chain - Chain -->
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - Inuit Unlock - 05  -->
+
+  <!-- START - Inuit Unlock - 06  -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004808</GUID>
+          <Name>Inuit Unlock - 06</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>1742004100</Context>                <!-- Inuit -->
+                <CounterAmount>2500</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
+
+                    </UnhideAssets>
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>1742004424</Asset>                        <!-- Monumental Cooking and Drinking Statue - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004470</Asset>                        <!-- Monumental Residences Statue - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004474</Asset>                        <!-- Monumental Crafting and Coastal Production Statue - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004478</Asset>                        <!-- Monumental Forest Statue - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004482</Asset>                        <!-- Monumental Coastal Statue - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004486</Asset>                        <!-- Inuit Monument - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004488</Asset>                        <!-- Monumental Cooking and Drinking Statue - Chain -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004489</Asset>                        <!-- Monumental Residences Statue - Chain -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004490</Asset>                        <!-- Monumental Crafting and Coastal Production Statue - Chain -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004491</Asset>                        <!-- Monumental Forest Statue - Chain -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004492</Asset>                        <!-- Monumental Coastal Statue - Chain -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004398</Asset>                        <!-- Hot Springs Bathhouse - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004400</Asset>                        <!-- Hot Springs Bathhouse - Product -->
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - Inuit Unlock - 06  -->
+
+  <!-- START - Explorers Unlock - 1  -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004816</GUID>
+          <Name>Explorers Unlock - 1</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>112642</Context>                <!-- Explorers -->
+                <CounterAmount>1</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
+
+                    </UnhideAssets>
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>1742004188</Asset>                        <!-- Arctic Ornaments - ConstructionCategory -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004461</Asset>                        <!-- Wind Pole - Ornament -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004463</Asset>                        <!-- Flag - Ornament -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004411</Asset>                        <!-- Fir Tree - Ornament -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004413</Asset>                        <!-- Bushes - Ornament -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004530</Asset>                        <!-- Zoppy Battery - Item -->
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - Explorers Unlock - 1  -->
+
+  <!-- START - Technicians Unlock - 1  -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004809</GUID>
+          <Name>Technicians Unlock - 1</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>112643</Context>                <!-- Technicians -->
+                <CounterAmount>1</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
                       <Item>
                         <Asset>1742004267</Asset>                        <!-- Coastal Arctic Lodge - Building -->
                       </Item>
+                    </UnhideAssets>
+                    <UnlockAssets>
+
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - Technicians Unlock - 1  -->
+
+  <!-- START - Technicians Unlock - 100  -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004810</GUID>
+          <Name>Technicians Unlock - 100</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>112643</Context>                <!-- Technicians -->
+                <CounterAmount>100</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
+
+                    </UnhideAssets>
+                    <UnlockAssets>
                       <Item>
-                        <Asset>1742004269</Asset>                        <!-- Campfire - Building -->
+                        <Asset>1742004267</Asset>                        <!-- Coastal Arctic Lodge - Building -->
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - Technicians Unlock - 100  -->
+
+  <!-- START - Technicians Unlock - 500  -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004811</GUID>
+          <Name>Technicians Unlock - 500</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>112643</Context>                <!-- Technicians -->
+                <CounterAmount>100</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
+                      <Item>
+                        <Asset>1742004333</Asset>                        <!-- Corsets - Product -->
                       </Item>
                       <Item>
-                        <Asset>1742004271</Asset>                        <!-- Campfire - Chain -->
+                        <Asset>1742004335</Asset>                        <!-- Women's Tailoring Shop - Building -->
                       </Item>
+                      <Item>
+                        <Asset>1742004337</Asset>                        <!-- Corsets - Chain -->
+                      </Item>
+                      <Item>
+                        <Asset>1999005649</Asset>                        <!-- Asset Pool Trading company OW - Asset Pool -->
+                      </Item>
+                      <Item>
+                        <Asset>1999005407</Asset>                        <!-- Import Dock Silk Trading COmpany - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004339</Asset>                        <!-- Soap - Recipe -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004342</Asset>                        <!-- Industrial Lubricant - Recipe -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004345</Asset>                        <!-- Lacquer - Recipe -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004340</Asset>                        <!-- Soap - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004343</Asset>                        <!-- Industrial Lubricant - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004346</Asset>                        <!-- Lacquer - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004364</Asset>                        <!-- Helium Gas Mine - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004366</Asset>                        <!-- Helium Gas Pump - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004453</Asset>                        <!-- Canned Food - Chain -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004451</Asset>                        <!-- Cannery - Building -->
+                      </Item>
+                    </UnhideAssets>
+                    <UnlockAssets>
+
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - Technicians Unlock - 500  -->
+
+  <!-- START - Technicians Unlock - 750  -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004812</GUID>
+          <Name>Technicians Unlock - 750</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>112643</Context>                <!-- Technicians -->
+                <CounterAmount>750</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
                       <Item>
                         <Asset>1742004507</Asset>                        <!-- Explorers Upgraded Residence - Building -->
                       </Item>
                       <Item>
                         <Asset>1742004272</Asset>                        <!-- Technicians Upgraded Residence - Building -->
                       </Item>
+                      <Item>
+                        <Asset>1742004305</Asset>                        <!-- Mining Optimization - Recipelist -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004313</Asset>                        <!-- Basic Mining Optimizations - Recipe -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004315</Asset>                        <!-- Basic Mining Optimizations - RecipeBuilding -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004319</Asset>                        <!-- Mining Optimizations (Blank) - RecipeBuilding -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004319</Asset>                        <!-- Mining Optimizations (Blank) - RecipeBuilding -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004362</Asset>                        <!-- Expedition Equipment Assembly - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004457</Asset>                        <!-- Expedition Equipment Assembly - Chain -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004368</Asset>                        <!-- Diamond Open Pit Mine - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004534</Asset>                        <!-- Vladimir Slafofski - Item -->
+                      </Item>
+                      <Item>
+                        <Asset>1957006101</Asset>                        <!-- Silver Ore - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004455</Asset>                        <!-- Silver Mine - Building -->
+                      </Item>
+                    </UnhideAssets>
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>1742004333</Asset>                        <!-- Corsets - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004335</Asset>                        <!-- Women's Tailoring Shop - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004337</Asset>                        <!-- Corsets - Chain -->
+                      </Item>
+                      <Item>
+                        <Asset>1999005649</Asset>                        <!-- Asset Pool Trading company OW - Asset Pool -->
+                      </Item>
+                      <Item>
+                        <Asset>1999005407</Asset>                        <!-- Import Dock Silk Trading COmpany - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004339</Asset>                        <!-- Soap - Recipe -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004342</Asset>                        <!-- Industrial Lubricant - Recipe -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004345</Asset>                        <!-- Lacquer - Recipe -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004340</Asset>                        <!-- Soap - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004343</Asset>                        <!-- Industrial Lubricant - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004346</Asset>                        <!-- Lacquer - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004364</Asset>                        <!-- Helium Gas Mine - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004366</Asset>                        <!-- Helium Gas Pump - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004453</Asset>                        <!-- Canned Food - Chain -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004451</Asset>                        <!-- Cannery - Building -->
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - Technicians Unlock - 750  -->
+
+  <!-- START - Technicians Unlock - 1000  -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004813</GUID>
+          <Name>Technicians Unlock - 1000</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>112643</Context>                <!-- Technicians -->
+                <CounterAmount>1000</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
                       <Item>
                         <Asset>1742004273</Asset>                        <!-- Ice Blocks - Product -->
                       </Item>
@@ -234,13 +1306,28 @@
                         <Asset>1742004283</Asset>                        <!-- Ice Ship - TradeShip -->
                       </Item>
                       <Item>
-                        <Asset>1742004285</Asset>                        <!-- Mining Institue - Building -->
+                        <Asset>1742004370</Asset>                        <!-- Ice Coatal Storage (OW) - Building -->
                       </Item>
                       <Item>
-                        <Asset>1742004296</Asset>                        <!-- Mining Module - Building -->
+                        <Asset>1742004372</Asset>                        <!-- Ice Coatal Storage (NW) - Building -->
                       </Item>
                       <Item>
-                        <Asset>1742004305</Asset>                        <!-- Mining Optimization - Recipelist -->
+                        <Asset>1742004376</Asset>                        <!-- Ice Storage (OW) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004378</Asset>                        <!--Ice Storage (NW) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004382</Asset>                        <!-- Ice Distribution Service - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004384</Asset>                        <!-- Ice Service - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004386</Asset>                        <!-- Ice Warehouse (OW) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004388</Asset>                        <!-- Ice Warehouse (NW) - Building -->
                       </Item>
                       <Item>
                         <Asset>1742004307</Asset>                        <!-- Basic Ice Optimizations - Recipe -->
@@ -255,6 +1342,50 @@
                         <Asset>1742004312</Asset>                        <!-- Large Ice Optimizations - RecipeBuilding -->
                       </Item>
                       <Item>
+                        <Asset>1742004495</Asset>                        <!-- Conny Cobbler - Recipe -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004497</Asset>                        <!-- Conny Cobbler - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004498</Asset>                        <!-- Bubbly Julep - Recipe -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004500</Asset>                        <!-- Bubbly Julep - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004501</Asset>                        <!-- Ice Coffee - Recipe -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004503</Asset>                        <!-- Ice Coffee - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004515</Asset>                        <!-- Oil Platform - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004525</Asset>                        <!-- Oil Refinery - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004459</Asset>                        <!-- Oil Warehouse - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004528</Asset>                        <!-- Oil - ConstructionCategory -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004442</Asset>                        <!-- Technicians Upgraded Residence Level 1 - ResidenceBuilding7_Arctic -->
+                      </Item>
+                    </UnhideAssets>
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>1742004507</Asset>                        <!-- Explorers Upgraded Residence - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004272</Asset>                        <!-- Technicians Upgraded Residence - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004305</Asset>                        <!-- Mining Optimization - Recipelist -->
+                      </Item>
+                      <Item>
                         <Asset>1742004313</Asset>                        <!-- Basic Mining Optimizations - Recipe -->
                       </Item>
                       <Item>
@@ -267,64 +1398,123 @@
                         <Asset>1742004318</Asset>                        <!-- Large Mining Optimizations - RecipeBuilding -->
                       </Item>
                       <Item>
-                        <Asset>1742004455</Asset>                        <!-- Basic Scrap Optimizations - Recipe -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004457</Asset>                        <!-- Basic Scrap Optimizations - RecipeBuilding -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004458</Asset>                        <!-- Large Scrap Optimizations - Recipe -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004460</Asset>                        <!-- Large Scrap Optimizations - RecipeBuilding -->
-                      </Item>
-                      <Item>
                         <Asset>1742004319</Asset>                        <!-- Mining Optimizations (Blank) - RecipeBuilding -->
                       </Item>
                       <Item>
                         <Asset>1742004319</Asset>                        <!-- Mining Optimizations (Blank) - RecipeBuilding -->
                       </Item>
                       <Item>
-                        <Asset>1742004333</Asset>                        <!-- Corsets - Product -->
+                        <Asset>1742004362</Asset>                        <!-- Expedition Equipment Assembly - Building -->
                       </Item>
                       <Item>
-                        <Asset>1742004335</Asset>                        <!-- Women's Tailoring Shop - Building -->
+                        <Asset>1742004457</Asset>                        <!-- Expedition Equipment Assembly - Chain -->
                       </Item>
                       <Item>
-                        <Asset>1742004337</Asset>                        <!-- Corsets - Chain -->
+                        <Asset>1742004368</Asset>                        <!-- Diamond Open Pit Mine - Building -->
                       </Item>
                       <Item>
-                        <Asset>1742004339</Asset>                        <!-- Soap - Recipe -->
+                        <Asset>1742004534</Asset>                        <!-- Vladimir Slafofski - Item -->
                       </Item>
                       <Item>
-                        <Asset>1742004342</Asset>                        <!-- Industrial Lubricant - Recipe -->
+                        <Asset>1957006101</Asset>                        <!-- Silver Ore - Product -->
                       </Item>
                       <Item>
-                        <Asset>1742004345</Asset>                        <!-- Lacquer - Recipe -->
+                        <Asset>1742004455</Asset>                        <!-- Silver Mine - Building -->
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - Technicians Unlock - 1000  -->
+
+  <!-- START - Technicians Unlock - 2500  -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004814</GUID>
+          <Name>Technicians Unlock - 2500</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>112643</Context>                <!-- Technicians -->
+                <CounterAmount>2500</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
+                      <Item>
+                        <Asset>1742004285</Asset>                        <!-- Mining Institue - Building -->
                       </Item>
                       <Item>
-                        <Asset>1742004340</Asset>                        <!-- Soap - Building -->
+                        <Asset>1742004296</Asset>                        <!-- Mining Module - Building -->
                       </Item>
                       <Item>
-                        <Asset>1742004343</Asset>                        <!-- Industrial Lubricant - Building -->
+                        <Asset>1742004316</Asset>                        <!-- Large Mining Optimizations - Recipe -->
                       </Item>
                       <Item>
-                        <Asset>1742004346</Asset>                        <!-- Lacquer - Building -->
+                        <Asset>1742004318</Asset>                        <!-- Large Mining Optimizations - RecipeBuilding -->
                       </Item>
                       <Item>
-                        <Asset>1742004358</Asset>                        <!-- Spiritual Site - Building -->
+                        <Asset>1742004310</Asset>                        <!-- Large Ice Optimizations - Recipe -->
                       </Item>
                       <Item>
-                        <Asset>1742004362</Asset>                        <!-- Lost Expedition Site - Building -->
+                        <Asset>1742004312</Asset>                        <!-- Large Ice Optimizations - RecipeBuilding -->
                       </Item>
                       <Item>
-                        <Asset>1742004364</Asset>                        <!-- Helium Gas Mine - Building -->
+                        <Asset>1742004421</Asset>                        <!-- Nate's Arctic Windmill -->
                       </Item>
                       <Item>
-                        <Asset>1742004366</Asset>                        <!-- Helium Gas Pump - Building -->
+                        <Asset>1742004444</Asset>                        <!-- Technicians Upgraded Residence Level 2 - ResidenceBuilding7_Arctic -->
+                      </Item>
+                    </UnhideAssets>
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>1742004273</Asset>                        <!-- Ice Blocks - Product -->
                       </Item>
                       <Item>
-                        <Asset>1742004368</Asset>                        <!-- Diamond Mine - Building -->
+                        <Asset>1742004268</Asset>                        <!-- Ice Building Menu - ConstructionCategory -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004275</Asset>                        <!-- Ice Harvesting Site - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004277</Asset>                        <!-- Ice Warehouse - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004279</Asset>                        <!-- Ice Storage - ProductStorageList -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004281</Asset>                        <!-- Strategic Harbour (AR) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004392</Asset>                        <!-- Strategic Harbour (OW) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004393</Asset>                        <!-- Strategic Harbour (NW) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004283</Asset>                        <!-- Ice Ship - TradeShip -->
                       </Item>
                       <Item>
                         <Asset>1742004370</Asset>                        <!-- Ice Coatal Storage (OW) - Building -->
@@ -351,44 +1541,86 @@
                         <Asset>1742004388</Asset>                        <!-- Ice Warehouse (NW) - Building -->
                       </Item>
                       <Item>
-                        <Asset>1742004398</Asset>                        <!-- Hot Springs Bathhouse - Building -->
+                        <Asset>1742004307</Asset>                        <!-- Basic Ice Optimizations - Recipe -->
                       </Item>
                       <Item>
-                        <Asset>1742004400</Asset>                        <!-- Hot Springs Bathhouse - Product -->
+                        <Asset>1742004309</Asset>                        <!-- Basic Ice Optimizations - RecipeBuilding -->
                       </Item>
                       <Item>
-                        <Asset>1742004403</Asset>                        <!-- Fish Stew Cookhouse - Building -->
+                        <Asset>1742004495</Asset>                        <!-- Conny Cobbler - Recipe -->
                       </Item>
                       <Item>
-                        <Asset>1742004405</Asset>                        <!-- Fish Stew - Chain -->
+                        <Asset>1742004497</Asset>                        <!-- Conny Cobbler - Building -->
                       </Item>
                       <Item>
-                        <Asset>1742004407</Asset>                        <!-- Pemmican Cookhouse - Building -->
+                        <Asset>1742004498</Asset>                        <!-- Bubbly Julep - Recipe -->
                       </Item>
                       <Item>
-                        <Asset>1742004409</Asset>                        <!-- Pemmican - Chain -->
+                        <Asset>1742004500</Asset>                        <!-- Bubbly Julep - Building -->
                       </Item>
                       <Item>
-                        <Asset>1742004180</Asset>                        <!-- Cairn - Ornament -->
+                        <Asset>1742004501</Asset>                        <!-- Ice Coffee - Recipe -->
                       </Item>
                       <Item>
-                        <Asset>1742004468</Asset>                        <!-- Inuksuk - Ornament -->
+                        <Asset>1742004503</Asset>                        <!-- Ice Coffee - Building -->
                       </Item>
                       <Item>
-                        <Asset>1742004461</Asset>                        <!-- Wind Pole - Ornament -->
+                        <Asset>1742004515</Asset>                        <!-- Oil Platform - Building -->
                       </Item>
                       <Item>
-                        <Asset>1742004463</Asset>                        <!-- Flag - Ornament -->
+                        <Asset>1742004525</Asset>                        <!-- Oil Refinery - Building -->
                       </Item>
                       <Item>
-                        <Asset>1742004188</Asset>                        <!-- Arctic Ornaments - ConstructionCategory -->
+                        <Asset>1742004459</Asset>                        <!-- Oil Warehouse - Building -->
                       </Item>
                       <Item>
-                        <Asset>1742004411</Asset>                        <!-- Fir Tree - Ornament -->
+                        <Asset>1742004528</Asset>                        <!-- Oil - ConstructionCategory -->
                       </Item>
                       <Item>
-                        <Asset>1742004413</Asset>                        <!-- Bushes - Ornament -->
+                        <Asset>1742004442</Asset>                        <!-- Technicians Upgraded Residence Level 1 - ResidenceBuilding7_Arctic -->
                       </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - Technicians Unlock - 2500  -->
+
+  <!-- START - Technicians Unlock - 5000  -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004815</GUID>
+          <Name>Technicians Unlock - 5000</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>112643</Context>                <!-- Technicians -->
+                <CounterAmount>5000</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
                       <Item>
                         <Asset>1742004417</Asset>                        <!-- Arctic Research Institute (Blank) - Building -->
                       </Item>
@@ -416,83 +1648,31 @@
                       <Item>
                         <Asset>1742004419</Asset>                        <!-- Arctic Research Institute - Product -->
                       </Item>
+                    </UnhideAssets>
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>1742004285</Asset>                        <!-- Mining Institue - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004296</Asset>                        <!-- Mining Module - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004316</Asset>                        <!-- Large Mining Optimizations - Recipe -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004318</Asset>                        <!-- Large Mining Optimizations - RecipeBuilding -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004310</Asset>                        <!-- Large Ice Optimizations - Recipe -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004312</Asset>                        <!-- Large Ice Optimizations - RecipeBuilding -->
+                      </Item>
                       <Item>
                         <Asset>1742004421</Asset>                        <!-- Nate's Arctic Windmill -->
                       </Item>
                       <Item>
-                        <Asset>1742004442</Asset>                        <!-- Technicians Upgraded Residence Level 1 - ResidenceBuilding7_Arctic -->
-                      </Item>
-                      <Item>
                         <Asset>1742004444</Asset>                        <!-- Technicians Upgraded Residence Level 2 - ResidenceBuilding7_Arctic -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004453</Asset>                        <!-- Canned Food - Chain -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004451</Asset>                        <!-- Cannery - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004394</Asset>                        <!-- Qilaut Maker - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004396</Asset>                        <!-- Qilaut - Chain -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004424</Asset>                        <!-- Monumental Cooking and Drinking Statue - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004470</Asset>                        <!-- Monumental Residences Statue - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004474</Asset>                        <!-- Monumental Crafting Statue - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004478</Asset>                        <!-- Monumental Forest Statue - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004482</Asset>                        <!-- Monumental Coastal Statue - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004486</Asset>                        <!-- Inuit Monument - Product -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004488</Asset>                        <!-- Monumental Cooking and Drinking Statue - Chain -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004489</Asset>                        <!-- Monumental Residences Statue - Chain -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004490</Asset>                        <!-- Monumental Crafting Statue - Chain -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004491</Asset>                        <!-- Monumental Forest Statue - Chain -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004492</Asset>                        <!-- Monumental Coastal Statue - Chain -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004493</Asset>                        <!-- Seaweed Harvester - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1440212</Asset>                        <!-- Algae - Product -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004495</Asset>                        <!-- Conny Cobbler - Recipe -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004497</Asset>                        <!-- Conny Cobbler - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004498</Asset>                        <!-- Bubbly Julep - Recipe -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004500</Asset>                        <!-- Bubbly Julep - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004501</Asset>                        <!-- Ice Coffee - Recipe -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004503</Asset>                        <!-- Ice Coffee - Building -->
                       </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>
@@ -505,14 +1685,87 @@
       </Values>
     </Asset>
   </ModOp>
-  <!-- END - Inuit Unlock  -->
+  <!-- END - Technicians Unlock - 5000  -->
+
+  <!-- START - Technicians Unlock - 10000  -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004817</GUID>
+          <Name>Technicians Unlock - 10000</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>112643</Context>                <!-- Technicians -->
+                <CounterAmount>10000</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
+
+                    </UnhideAssets>
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>1742004417</Asset>                        <!-- Arctic Research Institute (Blank) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004433</Asset>                        <!-- Arctic Research Institute (Rare) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004434</Asset>                        <!-- Arctic Research Institute (Epic) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004435</Asset>                        <!-- Arctic Research Institute (Legendary) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004425</Asset>                        <!-- Arctic Research Institute - RecipeList -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004427</Asset>                        <!-- Rare Research - Recipe -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004429</Asset>                        <!-- Epic Research - Recipe -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004431</Asset>                        <!-- Legendary Research - Recipe -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004419</Asset>                        <!-- Arctic Research Institute - Product -->
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - Technicians Unlock - 10000  -->
+
   <!--START - Creative Mode -->
   <ModOp Type="addNextSibling" GUID="130248">
     <Asset>
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742004801</GUID>
+          <GUID>1742004800</GUID>
           <Name>Unlock Creative Mode</Name>
         </Standard>
         <Trigger>
@@ -665,7 +1918,13 @@
                         <Asset>1742004148</Asset>                        <!-- Labrador Tea Maker - Building -->
                       </Item>
                       <Item>
-                        <Asset>1742004194</Asset>                        <!-- Bog Labrador Tea Seeds - Item -->
+                        <Asset>1742004532</Asset>                        <!-- Bog Labrador Tea Seeds (Rare) - Item -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004194</Asset>                        <!-- Bog Labrador Tea Seeds (Epic) - Item -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004533</Asset>                        <!-- Bog Labrador Tea Seeds (Legendary) - Item -->
                       </Item>
                       <Item>
                         <Asset>1742004178</Asset>                        <!-- Bog Labrador Tea - Fertility -->
@@ -767,18 +2026,6 @@
                         <Asset>1742004318</Asset>                        <!-- Large Mining Optimizations - RecipeBuilding -->
                       </Item>
                       <Item>
-                        <Asset>1742004455</Asset>                        <!-- Basic Scrap Optimizations - Recipe -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004457</Asset>                        <!-- Basic Scrap Optimizations - RecipeBuilding -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004458</Asset>                        <!-- Large Scrap Optimizations - Recipe -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004460</Asset>                        <!-- Large Scrap Optimizations - RecipeBuilding -->
-                      </Item>
-                      <Item>
                         <Asset>1742004319</Asset>                        <!-- Mining Optimizations (Blank) - RecipeBuilding -->
                       </Item>
                       <Item>
@@ -815,7 +2062,7 @@
                         <Asset>1742004358</Asset>                        <!-- Spiritual Site - Building -->
                       </Item>
                       <Item>
-                        <Asset>1742004362</Asset>                        <!-- Lost Expedition Site - Building -->
+                        <Asset>1742004362</Asset>                        <!-- Expedition Equipment Assembly - Building -->
                       </Item>
                       <Item>
                         <Asset>1742004364</Asset>                        <!-- Helium Gas Mine - Building -->
@@ -824,7 +2071,7 @@
                         <Asset>1742004366</Asset>                        <!-- Helium Gas Pump - Building -->
                       </Item>
                       <Item>
-                        <Asset>1742004368</Asset>                        <!-- Diamond Mine - Building -->
+                        <Asset>1742004368</Asset>                        <!-- Diamond Open Pit Mine - Building -->
                       </Item>
                       <Item>
                         <Asset>1742004370</Asset>                        <!-- Ice Coatal Storage (OW) - Building -->
@@ -944,7 +2191,7 @@
                         <Asset>1742004470</Asset>                        <!-- Monumental Residences Statue - Building -->
                       </Item>
                       <Item>
-                        <Asset>1742004474</Asset>                        <!-- Monumental Crafting Statue - Building -->
+                        <Asset>1742004474</Asset>                        <!-- Monumental Crafting and Coastal Production Statue - Building -->
                       </Item>
                       <Item>
                         <Asset>1742004478</Asset>                        <!-- Monumental Forest Statue - Building -->
@@ -962,7 +2209,7 @@
                         <Asset>1742004489</Asset>                        <!-- Monumental Residences Statue - Chain -->
                       </Item>
                       <Item>
-                        <Asset>1742004490</Asset>                        <!-- Monumental Crafting Statue - Chain -->
+                        <Asset>1742004490</Asset>                        <!-- Monumental Crafting and Coastal Production Statue - Chain -->
                       </Item>
                       <Item>
                         <Asset>1742004491</Asset>                        <!-- Monumental Forest Statue - Chain -->
@@ -993,6 +2240,39 @@
                       </Item>
                       <Item>
                         <Asset>1742004503</Asset>                        <!-- Ice Coffee - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1957006101</Asset>                        <!-- Silver Ore - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004455</Asset>                        <!-- Silver Mine - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004457</Asset>                        <!-- Expedition Equipment Assembly - Chain -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004515</Asset>                        <!-- Oil Platform - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004525</Asset>                        <!-- Oil Refinery - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004459</Asset>                        <!-- Oil Warehouse - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004528</Asset>                        <!-- Oil - ConstructionCategory -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004530</Asset>                        <!-- Zoppy Battery - Item -->
+                      </Item>
+                      <Item>
+                        <Asset>1999005649</Asset>                        <!-- Asset Pool Trading company OW - Asset Pool -->
+                      </Item>
+                      <Item>
+                        <Asset>1999005407</Asset>                        <!-- Import Dock Silk Trading COmpany - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004534</Asset>                        <!-- Vladimir Slafofski - Item -->
                       </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>

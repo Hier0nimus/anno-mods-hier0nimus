@@ -12,13 +12,13 @@
         <Standard>
           <GUID>1742004283</GUID>
           <Name>Ice Ship</Name>
-          <IconFilename>data/ui/2kimages/main/3dicons/ships/icon_ship_collier.png</IconFilename>
+          <IconFilename>data/graphics/icons/icon_ice_ship.png</IconFilename>
           <InfoDescription>1742004284</InfoDescription>
         </Standard>
         <Object>
           <Variations>
             <Item>
-              <Filename>data/graphics/vehicle/collier/collier.cfg</Filename>
+              <Filename>data/graphics/vehicle/ice_ship/ice_ship_01.cfg</Filename>
             </Item>
           </Variations>
           <Skins>
@@ -52,12 +52,13 @@
           <TurnDeceleration>0</TurnDeceleration>
           <TurnMovement>0</TurnMovement>
           <LeaningMaxAngle>-10</LeaningMaxAngle>
-          <ForwardSpeed>30</ForwardSpeed>          <!-- 5.2 -->
+          <ForwardSpeed>4.8</ForwardSpeed>
           <WindMinSlowdownFactor>1</WindMinSlowdownFactor>
           <WindMaxSpeedupFactor>1</WindMaxSpeedupFactor>
           <CargoFullFactor>0.8</CargoFullFactor>
           <MinSlowdownFactor>0.5</MinSlowdownFactor>
           <CurveSegmentDensity>High</CurveSegmentDensity>
+          <SessionTransferSpeedFactor>0.5</SessionTransferSpeedFactor>
         </Walking>
         <Text>
           <LocaText>
@@ -132,20 +133,26 @@
           <Costs>
             <Item>
               <Ingredient>1010218</Ingredient>              <!--beams-->
-              <Amount>20</Amount>
+              <Amount>30</Amount>
             </Item>
             <Item>
               <Ingredient>1010224</Ingredient>              <!--steam motors-->
-              <Amount>20</Amount>
+              <Amount>30</Amount>
+            </Item>
+            <Item>
+              <Ingredient>115980</Ingredient>              <!--Expedition Equipment/Lost Expedition scrap-->
+              <Amount>15</Amount>
             </Item>
           </Costs>
           <InfluenceCostType>TradeShip</InfluenceCostType>
-          <InfluenceCostPoints>10</InfluenceCostPoints>
+          <InfluenceCostPoints>20</InfluenceCostPoints>
         </Cost>
         <Craftable>
           <CraftingTime>540000</CraftingTime>
         </Craftable>
-        <TradeRouteVehicle/>
+        <TradeRouteVehicle>
+          <LoadingSpeedFactor>0.5</LoadingSpeedFactor>
+        </TradeRouteVehicle>
         <Locked/>
         <Nameable/>
         <MetaPersistent/>

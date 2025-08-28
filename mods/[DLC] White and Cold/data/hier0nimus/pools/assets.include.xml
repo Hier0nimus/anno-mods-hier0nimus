@@ -210,25 +210,18 @@
   </ModOp>
   <!-- END - ADD INUIT FOOD PRODUCTION BUILDINGS TO ItemEffectTargetPool -->
 
-  <!-- START ADD TO GLOBAL MAINTENANCE POOLS -->
-  <ModOp Type="add" GUID="368" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
+  <!-- START - ADD EXPORT DOCKS TRADING COMPANY TO -->
+  <ModOp GUID="1999010500" Type="add" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
     <Item>
-      <GUID>1742004417</GUID>
-    </Item>
-    <Item>
-      <GUID>1742004433</GUID>
-    </Item>
-    <Item>
-      <GUID>1742004434</GUID>
-    </Item>
-    <Item>
-      <GUID>1742004435</GUID>
-    </Item>
-    <Item>
-      <GUID>1742004421</GUID>
+      <GUID>1742004536</GUID>      <!-- Export Dock - Animal Bones - Building -->
     </Item>
   </ModOp>
-  <!-- START ADD TO GLOBAL MAINTENANCE POOLS -->
+  <ModOp GUID="1999005649" Type="add" Path="/Values/AssetPool/AssetList">
+    <Item>
+      <Asset>1742004536</Asset>      <!-- Export Dock - Animal Bones - Building -->
+    </Item>
+  </ModOp>
+  <!-- END - ADD EXPORT DOCKS TRADING COMPANY TO -->
 
   <!-- START - ADD TECHNICIAN RESIDENCES TO - ALL TECHICIAN RESIDENCES -->
   <ModOp GUID="1742200028" Type="add" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
@@ -252,13 +245,74 @@
   </ModOp>
   <!-- END - ADD GAS MINES TO - ALL GAS MINES -->
 
+  <!-- START - ADD NEW SLOTS TO ALL MINES ASSET POOL -->
+  <ModOp Type="add" GUID="700047" Path="/Values/AssetPool/AssetList">
+    <Item>
+      <Asset>1742004368</Asset>      <!-- Diamond Open Pit Mine -->
+    </Item>
+  </ModOp>
+  <!-- END - ADD NEW SLOTS TO ALL MINES ASSET POOL -->
+
+  <!-- START - ADD Vladimir Slafofski TO POOLS -->
+  <ModOp GUID="130182" Type="add" Path="/Values/AssetPool/AssetList">
+    <Item>
+      <Asset>1742004534</Asset>      <!-- Vladimir Slafofski - Item -->
+    </Item>
+  </ModOp>
+  <ModOp GUID="192732,193069" Type="add" Path="/Values/RewardPool/ItemsPool">
+    <Item>
+      <Asset>1742004534</Asset>      <!-- Vladimir Slafofski - Item -->
+    </Item>
+  </ModOp>
+  <!-- END - ADD VLADIMIR TO POOLS -->
+
+  <!-- START - ADD ZOPPY BATTERY TO POOLS -->
+  <ModOp GUID="116656" Type="add" Path="/Values/AssetPool/AssetList">
+    <Item>
+      <Asset>1742004530</Asset>      <!-- Zoppy Battery - Item -->
+    </Item>
+  </ModOp>
+  <ModOp GUID="193802" Type="add" Path="/Values/RewardPool/ItemsPool">
+    <Item>
+      <ItemLink>1742004530</ItemLink>      <!-- Zoppy Battery - Item -->
+    </Item>
+  </ModOp>
+  <!-- ADD TO ARCTIC NATE CRAFTER -->
+  <ModOp Type="add" GUID="117422" Path="/Values/ItemCrafter/CraftableItemsInRegion/Arctic/CraftableItems/">
+    <Item>
+      <Item>1742004530</Item>      <!-- Zoppy Battery - Item -->
+    </Item>
+  </ModOp>
+  <!-- END - ADD ADD ZOPPY BATTERY TO POOLS -->
+
   <!-- START - ADD ITEMS - ARCTIC RewardPools -->
   <ModOp GUID="193839,117398,116334,116340,193950,193787" Type="add" Path="/Values/RewardPool/ItemsPool">
     <Item>
-      <ItemLink>1742004194</ItemLink>      <!-- Bog Labrador Tea Seeds - Item -->
+      <ItemLink>1742004532</ItemLink>      <!-- Bog Labrador Tea Seeds (Rare) - Item -->
+    </Item>
+    <Item>
+      <ItemLink>1742004194</ItemLink>      <!-- Bog Labrador Tea Seeds (Epic) - Item -->
+    </Item>
+    <Item>
+      <ItemLink>1742004533</ItemLink>      <!-- Bog Labrador Tea Seeds (Legendary) - Item -->
     </Item>
   </ModOp>
   <!-- END - ADD ITEMS - ARCTIC RewardPools -->
+
+  <!-- START - ADD WOMEN'S TAILORING SHOP TO -->
+  <!-- POOLS -->
+  <ModOp GUID="190890" Type="add" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
+    <Item>
+      <GUID>1742004335</GUID>      <!-- Women's Tailoring Shop - Building -->
+    </Item>
+  </ModOp>
+  <!-- ITEMS -->
+  <ModOp GUID="191326,191337,191328,125138,191348,191329" Type="add" Path="/Values/ItemEffect/EffectTargets">
+    <Item>
+      <GUID>1742004335</GUID>      <!-- Women's Tailoring Shop - Building -->
+    </Item>
+  </ModOp>
+  <!-- END - ADD WOMEN'S TAILORING SHOP TO -->
 
   <!-- START - ADD RESIDENCES TO - ALL RESIDENCES (FEEDBACK) -->
   <ModOp GUID="142785" Type="add" Path="/Values/FeedbackBuildingGroup/Buildings">
@@ -282,16 +336,30 @@
     <Item>
       <GUID>1742004112</GUID>      <!-- Fishery - Building -->
     </Item>
+    <Item>
+      <GUID>1742004493</GUID>      <!-- Seaweed Harvester - Building -->
+    </Item>
   </ModOp>
   <!-- END - ADD ITEMS TO - ALL FISHERIES -->
 
-  <!-- START - ADD ITEMS TO - ALL ARCTIC MINES -->
+  <!-- START - ADD BUILDINGS TO - ALL ARCTIC MINES -->
   <ModOp GUID="1500301029" Type="add" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
     <Item>
-      <GUID>1742004368</GUID>      <!-- Diamond Mine - Building -->
+      <GUID>1742004368</GUID>      <!-- Diamond Open Pit Mine - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004455</GUID>      <!-- Silver Mine - Building -->
     </Item>
   </ModOp>
-  <!-- END - ADD ITEMS TO - ALL ARCTIC MINES -->
+  <!-- END - ADD BUILDINGS TO - ALL ARCTIC MINES -->
+
+  <!-- START - ADD BUILDINGS TO - ALL OPEN PITS -->
+  <ModOp GUID="1500300911" Type="add" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
+    <Item>
+      <GUID>1742004368</GUID>      <!-- Diamond Open Pit Mine - Building -->
+    </Item>
+  </ModOp>
+  <!-- END - ADD BUILDINGS TO - ALL OPEN PITS -->
 
   <!-- START - CHANGING EXISTING ITEMS -->
 
@@ -366,6 +434,9 @@
     <Item>
       <GUID>1742004134</GUID>      <!-- Root Grinder - Building -->
     </Item>
+    <Item>
+      <GUID>1742004403</GUID>      <!-- Fish Stew Cookhouse - Building -->
+    </Item>
   </ModOp>
 
   <!-- Residents -->
@@ -375,75 +446,202 @@
     </Item>
   </ModOp>
 
+  <!-- Soap -->
+  <ModOp GUID="190849,190848,190847,191319,191318,191317,191316,191315" Type="add" Path="/Values/ItemEffect/EffectTargets/">
+    <Item>
+      <GUID>1742004340</GUID>      <!-- Chemical Plant: Soap - Building -->
+    </Item>
+  </ModOp>
+
+  <!-- All Chemical Plants -->
+  <ModOp GUID="194011" Type="add" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
+    <Item>
+      <GUID>1742004340</GUID>      <!-- Chemical Plant: Soap - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004343</GUID>      <!-- Chemical Plant: Industrial Lubricant - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004346</GUID>      <!-- Chemical Plant: Lacquer - Building -->
+    </Item>
+  </ModOp>
+
   <!-- END - CHANGING EXISTING ITEMS -->
 
   <!-- START - ADD ITEMS TO - ALL ARCTIC PRODUCTION POOL -->
   <ModOp GUID="193770" Type="add" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
     <Item>
-      <GUID>1742004112</GUID>      <!-- Fishery - Building -->
+      <GUID>1742004233</GUID>      <!-- All Inuit Coastal Buildings -->
     </Item>
     <Item>
-      <GUID>1742004114</GUID>      <!-- Whale Oil Module - Building -->
+      <GUID>1742004234</GUID>      <!-- All Inuit Hunting Buildings -->
     </Item>
     <Item>
-      <GUID>1742004116</GUID>      <!-- Animal Bones Module - Building -->
+      <GUID>1742004228</GUID>      <!-- All Inuit Forest Buildings -->
     </Item>
     <Item>
-      <GUID>1742004118</GUID>      <!-- Seal Skin Module - Building -->
+      <GUID>1742004265</GUID>      <!-- All Inuit Crafting Buildings -->
     </Item>
     <Item>
-      <GUID>1742004122</GUID>      <!-- Fur Module - Building -->
+      <GUID>1742004467</GUID>      <!-- All Inuit Food and Drinks Production Buildings -->
     </Item>
     <Item>
-      <GUID>1742004124</GUID>      <!-- Caribou Meat Module - Building -->
+      <GUID>1742004275</GUID>      <!-- Ice Harvesting Site - Building -->
     </Item>
     <Item>
-      <GUID>1742004126</GUID>      <!-- Bear Fur Module - Building -->
+      <GUID>1742004362</GUID>      <!-- Expedition Equipment Assembly - Building -->
     </Item>
     <Item>
-      <GUID>1742004128</GUID>      <!-- Wood Gathering Cabin - Building -->
+      <GUID>1742004364</GUID>      <!-- Helium Gas Mine - Building -->
     </Item>
     <Item>
-      <GUID>1742004130</GUID>      <!-- Snow Goggles Carver - Building -->
+      <GUID>1742004368</GUID>      <!-- Diamond Open Pit Mine - Building -->
     </Item>
     <Item>
-      <GUID>1742004132</GUID>      <!-- Basic Tools Maker - Building -->
+      <GUID>1742004451</GUID>      <!-- Cannery - Building -->
     </Item>
     <Item>
-      <GUID>1742004134</GUID>      <!-- Root Grinder - Building -->
-    </Item>
-    <Item>
-      <GUID>1742004136</GUID>      <!-- Palauga Bakery - Building -->
-    </Item>
-    <Item>
-      <GUID>1742004138</GUID>      <!-- Snow Shoes Maker - Building -->
-    </Item>
-    <Item>
-      <GUID>1742004140</GUID>      <!-- Qajaks assembly - Building -->
-    </Item>
-    <Item>
-      <GUID>1742004142</GUID>      <!-- Husky Breeder - Building -->
-    </Item>
-    <Item>
-      <GUID>1742004144</GUID>      <!-- Sled Maker - Building -->
-    </Item>
-    <Item>
-      <GUID>1742004146</GUID>      <!-- Weavery - Building -->
-    </Item>
-    <Item>
-      <GUID>1742004148</GUID>      <!-- Labrador Tea Maker - Building -->
-    </Item>
-    <Item>
-      <GUID>1742004150</GUID>      <!-- Charcoal Burner - Building -->
-    </Item>
-    <Item>
-      <GUID>1742004152</GUID>      <!-- Sculpture Carver - Building -->
-    </Item>
-    <Item>
-      <GUID>1742004154</GUID>      <!-- Ink Mixer - Building -->
+      <GUID>1742004525</GUID>      <!-- Oil Refinery - Building -->
     </Item>
   </ModOp>
   <!-- END - ADD ITEMS TO - ALL ARCTIC PRODUCTION POOL -->
+
+  <!-- START - ADD ITEMS TO - ALL PRODUCTION POOL -->
+  <ModOp GUID="6000018" Type="add" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
+    <Item>
+      <GUID>1742004340</GUID>      <!-- Chemical Plant: Soap - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004343</GUID>      <!-- Chemical Plant: Industrial Lubricant - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004346</GUID>      <!-- Chemical Plant: Lacquer - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004335</GUID>      <!-- Women's Tailoring Shop - Building -->
+    </Item>
+  </ModOp>
+  <!-- END - ADD ITEMS TO - ALL PRODUCTION POOL -->
+
+  <!-- START ADD TO GLOBAL MAINTENANCE POOLS -->
+  <ModOp Type="add" GUID="368" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
+    <Item>
+      <GUID>1742004417</GUID>
+    </Item>
+    <Item>
+      <GUID>1742004433</GUID>
+    </Item>
+    <Item>
+      <GUID>1742004434</GUID>
+    </Item>
+    <Item>
+      <GUID>1742004435</GUID>
+    </Item>
+    <Item>
+      <GUID>1742004421</GUID>
+    </Item>
+    <Item>
+      <GUID>1742004340</GUID>      <!-- Chemical Plant: Soap - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004343</GUID>      <!-- Chemical Plant: Industrial Lubricant - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004346</GUID>      <!-- Chemical Plant: Lacquer - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004275</GUID>      <!-- Ice Harvesting Site - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004277</GUID>      <!-- Ice Warehouse (AR) - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004386</GUID>      <!-- Ice Warehouse (OW) - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004388</GUID>      <!-- Ice Warehouse (NW) - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004281</GUID>      <!-- Strategic Harbour (AR) - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004392</GUID>      <!-- Strategic Harbour (OW) - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004393</GUID>      <!-- Strategic Harbour (NW) - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004285</GUID>      <!-- Mining Institute - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004296</GUID>      <!-- Mining Module - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004335</GUID>      <!-- Women's Tailoring Shop - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004362</GUID>      <!-- Expedition Equipment Assembly - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004364</GUID>      <!-- Helium Gas Mine - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004368</GUID>      <!-- Diamond Open Pit Mine - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004370</GUID>      <!-- Coastal Ice Storage (OW) - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004372</GUID>      <!-- Coastal Ice Storage (NW) - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004376</GUID>      <!-- Ice Storage (OW) - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004378</GUID>      <!-- Ice Storage (NW) - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004382</GUID>      <!-- Ice-distribution Service - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004451</GUID>      <!-- Cannery - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004455</GUID>      <!-- Silver Mine - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004309</GUID>      <!-- Basic Ice Optimizations - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004312</GUID>      <!-- Large Ice Optimizations - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004315</GUID>      <!-- Basic Mining Optimizations - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004318</GUID>      <!-- Large Mining Optimizations - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004497</GUID>      <!-- Conny Cobbler - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004500</GUID>      <!-- Bubbly Julep - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004503</GUID>      <!-- Ice Coffee - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004525</GUID>      <!-- Oil Refinery - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004459</GUID>      <!-- Oil Warehouse - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004536</GUID>      <!-- Export Dock - Animal Bones - Building -->
+    </Item>
+  </ModOp>
+  <!-- START ADD TO GLOBAL MAINTENANCE POOLS -->
+
 
 </ModOps>
   

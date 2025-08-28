@@ -1,0 +1,2370 @@
+<!-- 
+  Buildings
+-->
+
+<ModOps>
+
+    <!-- START - ADAPTING ARCTIC STREET BRIDGE -->
+    <ModOp GUID='112113' Type="merge" Path="/Values/Street/">
+        <BridgeAsset>1742004520</BridgeAsset>
+    </ModOp>
+
+    <ModOp GUID='112113' Type="addNextSibling">
+        <Asset>
+            <Template>BridgeBuilding</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004520</GUID>
+                    <Name>Snow Street Bridge</Name>
+                </Standard>
+                <Text/>
+                <Blocking>
+                    <GroundDecalAsset></GroundDecalAsset>
+                </Blocking>
+                <Building>
+                    <PickingAsset>112113</PickingAsset>
+                </Building>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>
+                            <Amount>1000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010196</Ingredient>
+                            <Amount>20</Amount>
+                        </Item>
+                    </Costs>
+                </Cost>
+                <Selection>
+                    <OnSelection>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </OnSelection>
+                </Selection>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/buildings/special/over_water/bridge_snow_street_01.cfg</Filename>
+                        </Item>
+                    </Variations>
+                    <Skins>
+                        <DefaultSkinName>1742004520</DefaultSkinName>
+                        <DefaultSkinDescription>23853</DefaultSkinDescription>                        <!--ChangeBuildingSkin_toDefaultSkinDesc-->
+                    </Skins>
+                </Object>
+                <Constructable/>
+                <SoundEmitter>
+                    <DestroySounds>
+                        <Item>
+                            <Sound>200777</Sound>
+                            <!--wwe_sfx_aui_delete_streets-->
+                        </Item>
+                    </DestroySounds>
+                    <ConstructionSounds>
+                        <BuildSuccessful>
+                            <Item>
+                                <VectorElement>
+                                    <InheritedIndex>0</InheritedIndex>
+                                    <InheritanceMapV2>
+                                        <Entry>
+                                            <TemplateName>BridgeBuilding</TemplateName>
+                                            <Index>0</Index>
+                                        </Entry>
+                                    </InheritanceMapV2>
+                                </VectorElement>
+                            </Item>
+                            <Item>
+                                <Sound>200901</Sound>
+                                <!--wwe_sfx_aui_bld_place_bridge_addon-->
+                            </Item>
+                        </BuildSuccessful>
+                    </ConstructionSounds>
+                    <SpawnSounds>
+                        <Item>
+                            <Sound>200901</Sound>
+                            <!--wwe_sfx_aui_bld_place_bridge_addon-->
+                        </Item>
+                    </SpawnSounds>
+                    <BuildingRepaired>
+                        <Item>
+                            <Sound>203866</Sound>
+                            <!--wwe_sfx_aui_bld_3d_renovate-->
+                        </Item>
+                    </BuildingRepaired>
+                    <MaterialType>Bridge_Dirt</MaterialType>
+                </SoundEmitter>
+                <FeedbackController/>
+                <Ornament/>
+                <AmbientMoodProvider/>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                </Attackable>
+                <Pausable/>
+                <Bridge>
+                    <MinLength>3</MinLength>
+                    <MaxLength>16</MaxLength>
+                </Bridge>
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- START - BUILDING Small Depot -->
+    <ModOp Type="addNextSibling" GUID='1010519'>
+        <Asset>
+            <BaseAssetGUID>1010519</BaseAssetGUID>
+            <Values>
+                <Standard>
+                    <GUID>1742004266</GUID>
+                    <Name>Small Depot</Name>
+                </Standard>
+                <Building>
+                    <AssociatedRegions>Arctic</AssociatedRegions>
+                </Building>
+                <Blocking>
+                    <GroundDecalAsset>114826</GroundDecalAsset>                    <!--Quay System Colony03 Base-->
+                    <GroundDecalInvisible>113478</GroundDecalInvisible>                    <!--Quay System Colony03 Invisible-->
+                </Blocking>
+                <Mesh/>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/buildings/special/small_depot/small_depot_ar_01.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/special/small_depot/small_depot_ar_02.cfg</Filename>
+                        </Item>
+                    </Variations>
+                </Object>
+                <AmbientMoodProvider>
+                    <Murmur>Warehouse</Murmur>
+                </AmbientMoodProvider>
+                <Constructable/>
+                <Selection>
+                    <OnSelection>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </OnSelection>
+                </Selection>
+                <Text>
+                    <LocaText>
+                        <English/>
+                    </LocaText>
+                    <LineID>35105</LineID>
+                </Text>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!-- Coins -->
+                            <Amount>1250</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010196</Ingredient>                            <!-- Timber - Product -->
+                            <Amount>5</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010205</Ingredient>                            <!--bricks-->
+                            <Amount>5</Amount>
+                        </Item>
+                    </Costs>
+                </Cost>
+                <Attackable/>
+                <Warehouse>
+                    <WarehouseStorage>
+                        <StorageMax>25</StorageMax>
+                    </WarehouseStorage>
+                </Warehouse>
+                <StorageBase/>
+                <Locked/>
+                <Maintenance>
+                    <Maintenances>
+                        <Item>
+                            <Product>1010017</Product>                            <!--Money-->
+                            <Amount>25</Amount>
+                        </Item>
+                    </Maintenances>
+                </Maintenance>
+                <Pausable/>
+                <SoundEmitter/>
+                <Infolayer/>
+                <UpgradeList/>
+                <LogisticNode/>
+                <FeedbackController/>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END - BUILDING Small Depot -->
+
+    <!-- START - ADD VARIATIONS TO ARCTIC LODGE -->
+    <ModOp GUID='112678' Type="add" Path="/Values/Object/Variations/">
+        <Item>
+            <Filename>data/graphics/buildings/special/arctic_lodge/arctic_lodge_inuit_01.cfg</Filename>
+        </Item>
+    </ModOp>
+    <ModOp GUID='112678' Type="merge" Path="/Values/Building/">
+        <Building>
+            <AllowChangeVariation>1</AllowChangeVariation>
+        </Building>
+    </ModOp>
+    <!-- END - ADD VARIATIONS TO ARCTIC LODGE -->
+
+    <!-- START - BUILDING Coastal Arctic Lodge -->
+    <ModOp Type="addNextSibling" GUID='112678'>
+        <Asset>
+            <BaseAssetGUID>112678</BaseAssetGUID>
+            <Values>
+                <Standard>
+                    <GUID>1742004267</GUID>
+                    <Name>Coastal Arctic Lodge</Name>
+                    <IconFilename>data/graphics/icons/icon_arctic_lodge_coastal.png</IconFilename>
+                </Standard>
+                <Blocking>
+                    <GroundDecalAsset>0</GroundDecalAsset>
+                    <GroundDecalInvisible>0</GroundDecalInvisible>
+                    <HasBuildingBaseTiles>0</HasBuildingBaseTiles>
+                </Blocking>
+                <Building>
+                    <TerrainType>Water_Including_Coast</TerrainType>
+                    <AssociatedRegions>Arctic</AssociatedRegions>
+                </Building>
+                <Cost />
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/buildings/special/arctic_lodge/arctic_lodge_coastal_01.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/special/arctic_lodge/arctic_lodge_inuit_coastal_02.cfg</Filename>
+                        </Item>
+                    </Variations>
+                    <Skins>
+                        <SkinList/>
+                    </Skins>
+                </Object>
+                <Mesh/>
+                <Selection>
+                    <OnSelection>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </OnSelection>
+                </Selection>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>Coastal Arctic Lodge</Text>
+                        </English>
+                    </LocaText>
+                    <LineID>35499</LineID>
+                </Text>
+                <Constructable/>
+                <Locked/>
+                <SoundEmitter />
+                <FeedbackController/>
+                <Infolayer/>
+                <ItemContainer>
+                    <SocketScopeRadius>20</SocketScopeRadius>
+                </ItemContainer>
+                <UpgradeList/>
+                <Attackable/>
+                <Pausable/>
+                <Maintenance>
+                    <Maintenances>
+                        <Item>
+                            <Product>1010017</Product>                            <!--Money-->
+                            <Amount>50</Amount>
+                        </Item>
+                    </Maintenances>
+                </Maintenance>
+                <IncidentInfluencer/>
+                <Culture/>
+                <StorageBase/>
+                <Warehouse/>
+                <LogisticNode/>
+                <Distribution/>
+                <InfluenceSource/>
+                <BuildingUnique/>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END - BUILDING Coastal Arctic Lodge -->
+
+    <!-- START - BUILDING Campfire -->
+    <ModOp Type="addNextSibling" GUID='114751'>
+        <Asset>
+            <Template>Heater_Arctic</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004269</GUID>
+                    <Name>Campfire</Name>
+                    <IconFilename>data/graphics/icons/icon_campfire.png</IconFilename>
+                    <InfoDescription>1742004270</InfoDescription>
+                </Standard>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>Campfire</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>35097</LineID>
+                </Text>
+                <Blocking>
+                    <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+                </Blocking>
+                <Building>
+                    <BuildingType>Logistic</BuildingType>
+                    <BuildingCategoryName>100000</BuildingCategoryName>                    <!--Production-->
+                    <SkipUnlockMessage>1</SkipUnlockMessage>
+                    <BuildModeRandomRotation>180</BuildModeRandomRotation>
+                    <AssociatedRegions>Arctic</AssociatedRegions>
+                    <AllowChangeVariation>1</AllowChangeVariation>
+                </Building>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!-- Coins -->
+                            <Amount>1000</Amount>
+                        </Item>
+                    </Costs>
+                </Cost>
+                <Selection>
+                    <GUIType>Production</GUIType>
+                    <OnSelection>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </OnSelection>
+                    <ParticipantMessageArcheType>Arctic_Resident_tier01</ParticipantMessageArcheType>
+                </Selection>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/buildings/special/campfire/campfire_01.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/special/campfire/campfire_02.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/special/campfire/campfire_03.cfg</Filename>
+                        </Item>
+                    </Variations>
+                    <Skins>
+                        <DefaultSkinName>114751</DefaultSkinName>
+                        <DefaultSkinDescription>23853</DefaultSkinDescription>                        <!--ChangeBuildingSkin_toDefaultSkinDesc-->
+                        <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>                        <!--Classic-->
+                    </Skins>
+                </Object>
+                <Constructable/>
+                <Mesh/>
+                <SoundEmitter>
+                    <ActiveSounds>
+                        <Item>
+                            <Sound>243906</Sound>                            <!--wwe_sfx_bld_heater_arctic_lp-->
+                        </Item>
+                    </ActiveSounds>
+                    <IncidentSounds>
+                        <InfectedFire>
+                            <Item>
+                                <Sound>214659</Sound>                                <!--wwe_sfx_bld_inc_burn-->
+                            </Item>
+                        </InfectedFire>
+                    </IncidentSounds>
+                    <BuildingRepaired>
+                        <Item>
+                            <Sound>203866</Sound>                            <!--wwe_sfx_aui_bld_3d_renovate-->
+                        </Item>
+                    </BuildingRepaired>
+                </SoundEmitter>
+                <Locked>
+                    <DefaultLockedState>0</DefaultLockedState>
+                </Locked>
+                <Infolayer/>
+                <FeedbackController>
+                    <NightBehavior>HideAll</NightBehavior>
+                </FeedbackController>
+                <UpgradeList/>
+                <AmbientMoodProvider>
+                    <AmbientMood>ResidenceTier1</AmbientMood>
+                </AmbientMoodProvider>
+                <Maintenance>
+                    <Maintenances>
+                        <Item>
+                            <Product>112653</Product>                            <!-- Explorer Workforce -->
+                            <Amount>3</Amount>
+                        </Item>
+                    </Maintenances>
+                </Maintenance>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>2500</MaximumHitPoints>
+                    <SelfHealPerHealTick>4</SelfHealPerHealTick>
+                </Attackable>
+                <Pausable>
+                    <CanPauseManually>1</CanPauseManually>
+                </Pausable>
+                <IncidentInfectable>
+                    <Infectable>
+                        <Fire>
+                            <Escalated>0</Escalated>
+                        </Fire>
+                    </Infectable>
+                    <IncidentInfectionChanceFactors>
+                        <Fire>
+                            <DensityDistance>15</DensityDistance>
+                        </Fire>
+                    </IncidentInfectionChanceFactors>
+                    <PerIncidentProximityEffect>
+                        <Riot>
+                            <ProximityEffect>
+                                <Item>
+                                    <Distance>10</Distance>
+                                    <InfectionChanceDebuff>15</InfectionChanceDebuff>
+                                </Item>
+                            </ProximityEffect>
+                        </Riot>
+                    </PerIncidentProximityEffect>
+                </IncidentInfectable>
+                <LogisticNode>
+                    <TransporterCountMax>1</TransporterCountMax>
+                    <NeedsTransporterQueue>1</NeedsTransporterQueue>
+                </LogisticNode>
+                <StreetActivation/>
+                <HeatProvider>
+                    <MinProductivityPercentToProvideHeat>50</MinProductivityPercentToProvideHeat>
+                    <MissingHeatNotification>115008</MissingHeatNotification>
+                    <HeatRange>1</HeatRange>
+                </HeatProvider>
+                <FactoryBase>
+                    <FactoryInputs>
+                        <Item>
+                            <Product>120008</Product>                            <!-- Wood -->
+                            <Amount>1</Amount>
+                            <StorageAmount>10</StorageAmount>
+                        </Item>
+                    </FactoryInputs>
+                    <CycleTime>90</CycleTime>
+                </FactoryBase>
+                <StorageBase>
+                    <ProductStorageList>120059</ProductStorageList>
+                </StorageBase>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END - BUILDING Campfire -->
+
+    <!-- START - RESIDENCE EXPLORERS -->
+    <ModOp Type="merge" GUID='112091' Path="/Values/">
+        <FloorStackOwner>
+            <UpgradeTargetGUID>1742004507</UpgradeTargetGUID>            <!--Explorers Upgraded Residence-->
+            <AddFloorCost>
+                <Item>
+                    <Ingredient>1010017</Ingredient>                    <!--Money-->
+                    <Amount>500</Amount>
+                </Item>
+                <Item>
+                    <Ingredient>1010196</Ingredient>                    <!--timber-->
+                    <Amount>10</Amount>
+                </Item>
+                <Item>
+                    <Ingredient>1010218</Ingredient>                    <!--beams-->
+                    <Amount>10</Amount>
+                </Item>
+                <Item>
+                    <Ingredient>1010207</Ingredient>                    <!--window-->
+                    <Amount>5</Amount>
+                </Item>
+                <Item>
+                    <Ingredient>112697</Ingredient>                    <!--Goose Feathers-->
+                    <Amount>8</Amount>
+                </Item>
+                <Item>
+                    <Ingredient>1800000302</Ingredient>                    <!--Sawdust-->
+                    <Amount>8</Amount>
+                </Item>
+            </AddFloorCost>
+        </FloorStackOwner>
+    </ModOp>
+    <!-- END - RESIDENCE EXPLORERS -->
+
+    <!-- START - BUILDING Explorers Upgraded Residence -->
+    <ModOp Type="addNextSibling" GUID='112091'>
+        <Asset>
+            <Template>ResidenceBuilding7_Arctic</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004507</GUID>
+                    <Name>Explorers Upgraded Residence</Name>
+                    <IconFilename>data/ui/2kimages/main/3dicons/icon_resident.png</IconFilename>
+                    <InfoDescription>1742004508</InfoDescription>
+                </Standard>
+                <Blocking/>
+                <Building>
+                    <BuildingType>Residence</BuildingType>
+                    <SkipUnlockMessage>1</SkipUnlockMessage>
+                    <PickingAsset>112091</PickingAsset>                    <!--residence_arctic_tier01-->
+                    <BuildModeRandomRotation>90</BuildModeRandomRotation>
+                </Building>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!--Money-->
+                            <Amount>1500</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010196</Ingredient>                            <!--timber-->
+                            <Amount>10</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010218</Ingredient>                            <!--beams-->
+                            <Amount>10</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010207</Ingredient>                            <!--window-->
+                            <Amount>5</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>112697</Ingredient>                            <!--Goose Feathers-->
+                            <Amount>8</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1800000302</Ingredient>                            <!--Sawdust-->
+                            <Amount>8</Amount>
+                        </Item>
+                    </Costs>
+                </Cost>
+                <Mesh/>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_01_01.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_01_02.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_02_01.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_02_02.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_03_01.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_03_02.cfg</Filename>
+                        </Item>
+                    </Variations>
+                    <Skins/>
+                </Object>
+                <Selection>
+                    <StaticHelpEntryPoint>HighLifeSkyscrapers</StaticHelpEntryPoint>
+                    <OnSelection>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </OnSelection>
+                    <ParticipantMessageTrigger>ClickSkyscraper</ParticipantMessageTrigger>
+                    <ParticipantMessageArcheType>Arctic_Resident_tier01</ParticipantMessageArcheType>
+                </Selection>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>Explorers Upgraded Residence</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>35072</LineID>
+                </Text>
+                <Constructable>
+                    <ConstructionMenuIcon>112642</ConstructionMenuIcon>                    <!--Arctic Population 1-->
+                </Constructable>
+                <Locked>
+                    <DefaultLockedState>1</DefaultLockedState>
+                    <DLCDependency>410085</DLCDependency>                    <!--Anno 1800 DLC - HighLife-->
+                </Locked>
+                <Upgradable>
+                    <UpgradeCost/>
+                </Upgradable>
+                <SoundEmitter>
+                    <ConstructionSounds>
+                        <BuildSuccessful>
+                            <Item>
+                                <VectorElement>
+                                    <InheritanceMapV2>
+                                        <Entry>
+                                            <TemplateName>ResidenceBuilding7</TemplateName>
+                                            <Index>0</Index>
+                                        </Entry>
+                                    </InheritanceMapV2>
+                                </VectorElement>
+                                <Sound>200776</Sound>                                <!--wwe_sfx_aui_bld_place_bp-->
+                            </Item>
+                        </BuildSuccessful>
+                        <BuildUpgradeFailed>
+                            <Item>
+                                <Sound>9818387</Sound>                                <!--wwe_sfx_aui_deny-->
+                            </Item>
+                        </BuildUpgradeFailed>
+                    </ConstructionSounds>
+                    <IncidentSounds>
+                        <InfectedFire>
+                            <Item>
+                                <Sound>214659</Sound>                                <!--wwe_sfx_bld_inc_burn-->
+                            </Item>
+                        </InfectedFire>
+                        <InfectedIllness>
+                            <Item>
+                                <Sound>214756</Sound>                                <!--wwe_sfx_vox_inc_ill_os-->
+                            </Item>
+                        </InfectedIllness>
+                        <InfectedRiot>
+                            <Item>
+                                <Sound>222229</Sound>                                <!--wwe_sfx_vox_inc_rio_os-->
+                            </Item>
+                        </InfectedRiot>
+                        <ExplosionOneShots>
+                            <Item>
+                                <Sound>203849</Sound>                                <!--wwe_sfx_aui_destroy_small-->
+                            </Item>
+                        </ExplosionOneShots>
+                    </IncidentSounds>
+                    <BuildingRepaired>
+                        <Item>
+                            <Sound>203866</Sound>                            <!--wwe_sfx_aui_bld_3d_renovate-->
+                        </Item>
+                    </BuildingRepaired>
+                    <MaterialType>Stone</MaterialType>
+                </SoundEmitter>
+                <Infolayer>
+                    <AdditionalYOffset>0</AdditionalYOffset>
+                </Infolayer>
+                <FeedbackController/>
+                <RandomDummySpawner/>
+                <Residence7>
+                    <ResidenceStorage>
+                        <InputStorageMax>1</InputStorageMax>
+                    </ResidenceStorage>
+                    <PopulationLevel7>112642</PopulationLevel7>                    <!--Arctic Population 1-->
+                    <ResidentMax>40</ResidentMax>
+                    <ResidentsRequiredForUpgrade>40</ResidentsRequiredForUpgrade>
+                </Residence7>
+                <LogisticNode>
+                    <REMOVE_THIS_LATER_FeedbackUnitTier>Level4</REMOVE_THIS_LATER_FeedbackUnitTier>
+                </LogisticNode>
+                <AmbientMoodProvider>
+                    <Murmur>Arctic_BasicTundra</Murmur>
+                    <GlacierMurmur>Arctic_BasicGlacier</GlacierMurmur>
+                    <DynamicEnvironmentType>ResidenceT1</DynamicEnvironmentType>
+                </AmbientMoodProvider>
+                <UpgradeList/>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>1500</MaximumHitPoints>
+                </Attackable>
+                <IncidentInfectable>
+                    <Infectable>
+                        <Riot>
+                            <Base>0</Base>
+                            <Escalated>0</Escalated>
+                        </Riot>
+                        <Illness>
+                            <Base>0</Base>
+                            <Escalated>0</Escalated>
+                        </Illness>
+                        <Explosion>
+                            <Base>0</Base>
+                            <Escalated>0</Escalated>
+                        </Explosion>
+                        <ArcticIllness>
+                            <Base>1</Base>
+                            <Escalated>1</Escalated>
+                            <Communication>IllnessArcticDefault</Communication>
+                        </ArcticIllness>
+                    </Infectable>
+                    <Explosion>
+                        <ExplosionCoreDamage>1000</ExplosionCoreDamage>
+                    </Explosion>
+                    <IncidentInfectionChanceFactors>
+                        <Fire>
+                            <BaseChance>4</BaseChance>
+                            <DensityFactor>0.025</DensityFactor>
+                            <DensityDistance>12</DensityDistance>
+                        </Fire>
+                        <Riot>
+                            <FactoryOvertimeFactor>0</FactoryOvertimeFactor>
+                            <FactoryUndertimeFactor>0</FactoryUndertimeFactor>
+                            <FactoryHappinessFactor>0</FactoryHappinessFactor>
+                            <ResidenceHappinessFactor>0</ResidenceHappinessFactor>
+                            <HappinessMin>0</HappinessMin>
+                            <HappinessMax>0</HappinessMax>
+                        </Riot>
+                        <Illness>
+                            <ResidenceSatisfactionFactor>0</ResidenceSatisfactionFactor>
+                            <HappinessMin>0</HappinessMin>
+                            <HappinessMax>0</HappinessMax>
+                            <SatisfactionThreshold>0</SatisfactionThreshold>
+                        </Illness>
+                        <Explosion>
+                            <HitpointFactor>0</HitpointFactor>
+                            <HappinessMin>0</HappinessMin>
+                            <HappinessMax>0</HappinessMax>
+                            <SatisfactionThreshold>0</SatisfactionThreshold>
+                        </Explosion>
+                        <ArcticIllness>
+                            <BaseChance>4</BaseChance>
+                            <NoHeatFactor>30</NoHeatFactor>
+                        </ArcticIllness>
+                    </IncidentInfectionChanceFactors>
+                </IncidentInfectable>
+                <Pausable/>
+                <Culture/>
+                <StreetActivation/>
+                <InfluenceSource/>
+                <FloorStackOwner>
+                    <FloorCount>1</FloorCount>
+                    <Components>
+                        <BigFloor>
+                            <FloorIcon>data/ui/2kimages/main/3dicons/icon_city_ornament_large.png</FloorIcon>
+                            <FloorVariations>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</RoofCFG>
+                                </Item>
+                            </FloorVariations>
+                        </BigFloor>
+                        <MediumFloor>
+                            <FloorIcon>data/ui/2kimages/main/3dicons/icon_city_ornament_medium.png</FloorIcon>
+                            <FloorVariations>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</RoofCFG>
+                                </Item>
+                            </FloorVariations>
+                        </MediumFloor>
+                        <TinyFloor>
+                            <FloorIcon>data/ui/2kimages/main/3dicons/icon_city_ornament_small.png</FloorIcon>
+                            <FloorVariations>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_explorers/residence_explorers_upgraded_dummy.cfg</RoofCFG>
+                                </Item>
+                            </FloorVariations>
+                        </TinyFloor>
+                    </Components>
+                </FloorStackOwner>
+                <Maintenance>
+                    <IncomeCategory>Skyscrapers</IncomeCategory>
+                </Maintenance>
+                <Heated/>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END - BUILDING Explorers Upgraded Residence -->
+
+    <!-- START - RESIDENCE TECHNICIANS -->
+    <ModOp Type="merge" GUID='112652' Path="/Values/">
+        <FloorStackOwner>
+            <UpgradeTargetGUID>1742004442</UpgradeTargetGUID>            <!--Explorers Upgraded Residence - Level 1 -->
+            <AddFloorCost>
+                <Item>
+                    <Ingredient>1010017</Ingredient>                    <!--Money-->
+                    <Amount>5000</Amount>
+                </Item>
+                <Item>
+                    <Ingredient>1010196</Ingredient>                    <!--timber-->
+                    <Amount>12</Amount>
+                </Item>
+                <Item>
+                    <Ingredient>1010205</Ingredient>                    <!--bricks-->
+                    <Amount>10</Amount>
+                </Item>
+                <Item>
+                    <Ingredient>1010218</Ingredient>                    <!--beams-->
+                    <Amount>12</Amount>
+                </Item>
+                <Item>
+                    <Ingredient>838</Ingredient>                    <!--Aluminium-->
+                    <Amount>12</Amount>
+                </Item>
+                <Item>
+                    <Ingredient>1010207</Ingredient>                    <!--window-->
+                    <Amount>8</Amount>
+                </Item>
+                <Item>
+                    <Ingredient>1010202</Ingredient>                    <!--concrete-->
+                    <Amount>8</Amount>
+                </Item>
+                <Item>
+                    <Ingredient>112697</Ingredient>                    <!--Goose Feathers-->
+                    <Amount>10</Amount>
+                </Item>
+                <Item>
+                    <Ingredient>1800000302</Ingredient>                    <!--Sawdust-->
+                    <Amount>15</Amount>
+                </Item>
+            </AddFloorCost>
+        </FloorStackOwner>
+    </ModOp>
+    <!-- END - RESIDENCE TECHNICIANS -->
+
+    <!-- START - BUILDING Technicians Upgraded Residence -->
+    <ModOp Type="addNextSibling" GUID='114751'>
+        <Asset>
+            <Template>ResidenceBuilding7_Arctic</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004272</GUID>
+                    <Name>DEPRECATED - Technicians Upgraded Residence</Name>
+                    <IconFilename>data/ui/2kimages/main/3dicons/icon_resident.png</IconFilename>
+                    <InfoDescription>163059</InfoDescription>                    <!--residence 01 infocorner-->
+                </Standard>
+                <Blocking/>
+                <Building>
+                    <BuildingType>Residence</BuildingType>
+                    <SkipUnlockMessage>1</SkipUnlockMessage>
+                    <PickingAsset>112091</PickingAsset>                    <!--residence_arctic_tier01-->
+                    <BuildModeRandomRotation>90</BuildModeRandomRotation>
+                </Building>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!--Money-->
+                            <Amount>5000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010196</Ingredient>                            <!--timber-->
+                            <Amount>12</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010205</Ingredient>                            <!--bricks-->
+                            <Amount>10</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010218</Ingredient>                            <!--beams-->
+                            <Amount>12</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>838</Ingredient>                            <!--Aluminium-->
+                            <Amount>12</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010207</Ingredient>                            <!--window-->
+                            <Amount>8</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010202</Ingredient>                            <!--concrete-->
+                            <Amount>8</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>112697</Ingredient>                            <!--Goose Feathers-->
+                            <Amount>10</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1800000302</Ingredient>                            <!--Sawdust-->
+                            <Amount>15</Amount>
+                        </Item>
+                    </Costs>
+                </Cost>
+                <Mesh/>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_02.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_03.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_02.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_03_01.cfg</Filename>
+                        </Item>
+                    </Variations>
+                    <Skins/>
+                </Object>
+                <Selection>
+                    <OnSelection>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </OnSelection>
+                    <ParticipantMessageArcheType>Arctic_Resident_tier02</ParticipantMessageArcheType>
+                </Selection>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>Technicians Upgraded Residence</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>35072</LineID>
+                </Text>
+                <Constructable>
+                    <ConstructionMenuIcon>112643</ConstructionMenuIcon>                    <!--Arctic Population 2-->
+                </Constructable>
+                <Locked>
+                    <DefaultLockedState>1</DefaultLockedState>
+                </Locked>
+                <Upgradable>
+                    <UpgradeCost/>
+                </Upgradable>
+                <SoundEmitter>
+                    <ConstructionSounds>
+                        <BuildSuccessful>
+                            <Item>
+                                <VectorElement>
+                                    <InheritanceMapV2>
+                                        <Entry>
+                                            <TemplateName>ResidenceBuilding7</TemplateName>
+                                            <Index>0</Index>
+                                        </Entry>
+                                    </InheritanceMapV2>
+                                </VectorElement>
+                                <Sound>200776</Sound>                                <!--wwe_sfx_aui_bld_place_bp-->
+                            </Item>
+                        </BuildSuccessful>
+                        <BuildUpgradeFailed>
+                            <Item>
+                                <Sound>9818387</Sound>                                <!--wwe_sfx_aui_deny-->
+                            </Item>
+                        </BuildUpgradeFailed>
+                    </ConstructionSounds>
+                    <IncidentSounds>
+                        <InfectedFire>
+                            <Item>
+                                <Sound>214659</Sound>                                <!--wwe_sfx_bld_inc_burn-->
+                            </Item>
+                        </InfectedFire>
+                        <InfectedIllness>
+                            <Item>
+                                <Sound>214756</Sound>                                <!--wwe_sfx_vox_inc_ill_os-->
+                            </Item>
+                        </InfectedIllness>
+                        <InfectedRiot>
+                            <Item>
+                                <Sound>222229</Sound>                                <!--wwe_sfx_vox_inc_rio_os-->
+                            </Item>
+                        </InfectedRiot>
+                        <ExplosionOneShots>
+                            <Item>
+                                <Sound>203849</Sound>                                <!--wwe_sfx_aui_destroy_small-->
+                            </Item>
+                        </ExplosionOneShots>
+                    </IncidentSounds>
+                    <BuildingRepaired>
+                        <Item>
+                            <Sound>203866</Sound>                            <!--wwe_sfx_aui_bld_3d_renovate-->
+                        </Item>
+                    </BuildingRepaired>
+                    <MaterialType>Stone</MaterialType>
+                </SoundEmitter>
+                <Infolayer/>
+                <FeedbackController/>
+                <RandomDummySpawner/>
+                <Residence7>
+                    <ResidenceStorage>
+                        <InputStorageMax>1</InputStorageMax>
+                    </ResidenceStorage>
+                    <PopulationLevel7>112643</PopulationLevel7>                    <!--Arctic Population 2-->
+                    <ResidentMax>30</ResidentMax>
+                    <ResidentsRequiredForUpgrade>30</ResidentsRequiredForUpgrade>
+                </Residence7>
+                <LogisticNode/>
+                <AmbientMoodProvider>
+                    <Murmur>Arctic_BasicTundra</Murmur>
+                    <GlacierMurmur>Arctic_BasicGlacier</GlacierMurmur>
+                    <DynamicEnvironmentType>ResidenceT1</DynamicEnvironmentType>
+                </AmbientMoodProvider>
+                <UpgradeList/>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>1500</MaximumHitPoints>
+                </Attackable>
+                <IncidentInfectable>
+                    <Infectable>
+                        <Riot>
+                            <Base>0</Base>
+                            <Escalated>0</Escalated>
+                        </Riot>
+                        <Illness>
+                            <Base>0</Base>
+                            <Escalated>0</Escalated>
+                        </Illness>
+                        <Explosion>
+                            <Base>0</Base>
+                            <Escalated>0</Escalated>
+                        </Explosion>
+                        <ArcticIllness>
+                            <Base>1</Base>
+                            <Escalated>1</Escalated>
+                            <Communication>IllnessArcticDefault</Communication>
+                        </ArcticIllness>
+                    </Infectable>
+                    <Explosion>
+                        <ExplosionCoreDamage>1000</ExplosionCoreDamage>
+                    </Explosion>
+                    <IncidentInfectionChanceFactors>
+                        <Fire>
+                            <BaseChance>4</BaseChance>
+                            <DensityFactor>0.025</DensityFactor>
+                            <DensityDistance>12</DensityDistance>
+                        </Fire>
+                        <Riot>
+                            <FactoryOvertimeFactor>0</FactoryOvertimeFactor>
+                            <FactoryUndertimeFactor>0</FactoryUndertimeFactor>
+                            <FactoryHappinessFactor>0</FactoryHappinessFactor>
+                            <ResidenceHappinessFactor>0</ResidenceHappinessFactor>
+                            <HappinessMin>0</HappinessMin>
+                            <HappinessMax>0</HappinessMax>
+                        </Riot>
+                        <Illness>
+                            <ResidenceSatisfactionFactor>0</ResidenceSatisfactionFactor>
+                            <HappinessMin>0</HappinessMin>
+                            <HappinessMax>0</HappinessMax>
+                            <SatisfactionThreshold>0</SatisfactionThreshold>
+                        </Illness>
+                        <Explosion>
+                            <HitpointFactor>0</HitpointFactor>
+                            <HappinessMin>0</HappinessMin>
+                            <HappinessMax>0</HappinessMax>
+                            <SatisfactionThreshold>0</SatisfactionThreshold>
+                        </Explosion>
+                        <ArcticIllness>
+                            <BaseChance>4</BaseChance>
+                            <NoHeatFactor>30</NoHeatFactor>
+                        </ArcticIllness>
+                    </IncidentInfectionChanceFactors>
+                </IncidentInfectable>
+                <Pausable/>
+                <Culture/>
+                <StreetActivation/>
+                <InfluenceSource/>
+                <FloorStackOwner>
+                    <UpgradeTargetGUID>1742004442</UpgradeTargetGUID>                    <!--Technicians Upgraded Residence Level 1-->
+                    <AddFloorCost>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!--Money-->
+                            <Amount>5000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010196</Ingredient>                            <!--timber-->
+                            <Amount>12</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010205</Ingredient>                            <!--bricks-->
+                            <Amount>10</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010218</Ingredient>                            <!--beams-->
+                            <Amount>12</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>838</Ingredient>                            <!--Aluminium-->
+                            <Amount>12</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010207</Ingredient>                            <!--window-->
+                            <Amount>8</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010202</Ingredient>                            <!--concrete-->
+                            <Amount>8</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>112697</Ingredient>                            <!--Goose Feathers-->
+                            <Amount>10</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1800000302</Ingredient>                            <!--Sawdust-->
+                            <Amount>15</Amount>
+                        </Item>
+                    </AddFloorCost>
+                </FloorStackOwner>
+                <Maintenance />
+                <Heated/>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END - BUILDING Technicians Upgraded Residence -->
+
+    <!-- START - BUILDING Technicians Upgraded Residence Level 1 -->
+    <ModOp Type="addNextSibling" GUID='114751'>
+        <Asset>
+            <Template>ResidenceBuilding7_Arctic</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004442</GUID>
+                    <Name>Technicians Upgraded Residence Level 1</Name>
+                    <IconFilename>data/ui/2kimages/main/3dicons/icon_resident.png</IconFilename>
+                    <InfoDescription>1742004443</InfoDescription>
+                </Standard>
+                <Blocking/>
+                <Building>
+                    <BuildingType>Residence</BuildingType>
+                    <SkipUnlockMessage>1</SkipUnlockMessage>
+                    <PickingAsset>112091</PickingAsset>                    <!--residence_arctic_tier01-->
+                    <BuildModeRandomRotation>90</BuildModeRandomRotation>
+                </Building>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!--Money-->
+                            <Amount>5000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010196</Ingredient>                            <!--timber-->
+                            <Amount>12</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010205</Ingredient>                            <!--bricks-->
+                            <Amount>10</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010218</Ingredient>                            <!--beams-->
+                            <Amount>12</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>838</Ingredient>                            <!--Aluminium-->
+                            <Amount>12</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010207</Ingredient>                            <!--window-->
+                            <Amount>8</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010202</Ingredient>                            <!--concrete-->
+                            <Amount>8</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>112697</Ingredient>                            <!--Goose Feathers-->
+                            <Amount>10</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1800000302</Ingredient>                            <!--Sawdust-->
+                            <Amount>15</Amount>
+                        </Item>
+                    </Costs>
+                </Cost>
+                <Mesh/>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_base.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_02_base.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_03_base.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_base.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_02_base.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_03_01_base.cfg</Filename>
+                        </Item>
+                    </Variations>
+                    <Skins/>
+                </Object>
+                <Selection>
+                    <StaticHelpEntryPoint>HighLifeSkyscrapers</StaticHelpEntryPoint>
+                    <OnSelection>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </OnSelection>
+                    <ParticipantMessageTrigger>ClickSkyscraper</ParticipantMessageTrigger>
+                    <ParticipantMessageArcheType>Arctic_Resident_tier02</ParticipantMessageArcheType>
+                </Selection>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>Technicians Upgraded Residence Level 1</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>35072</LineID>
+                </Text>
+                <Constructable>
+                    <ConstructionMenuIcon>112643</ConstructionMenuIcon>                    <!--Arctic Population 2-->
+                </Constructable>
+                <Locked>
+                    <DefaultLockedState>1</DefaultLockedState>
+                    <DLCDependency>410085</DLCDependency>                    <!--Anno 1800 DLC - HighLife-->
+                </Locked>
+                <Upgradable>
+                    <UpgradeCost/>
+                </Upgradable>
+                <SoundEmitter>
+                    <ConstructionSounds>
+                        <BuildSuccessful>
+                            <Item>
+                                <VectorElement>
+                                    <InheritanceMapV2>
+                                        <Entry>
+                                            <TemplateName>ResidenceBuilding7</TemplateName>
+                                            <Index>0</Index>
+                                        </Entry>
+                                    </InheritanceMapV2>
+                                </VectorElement>
+                                <Sound>200776</Sound>                                <!--wwe_sfx_aui_bld_place_bp-->
+                            </Item>
+                        </BuildSuccessful>
+                        <BuildUpgradeFailed>
+                            <Item>
+                                <Sound>9818387</Sound>                                <!--wwe_sfx_aui_deny-->
+                            </Item>
+                        </BuildUpgradeFailed>
+                    </ConstructionSounds>
+                    <IncidentSounds>
+                        <InfectedFire>
+                            <Item>
+                                <Sound>214659</Sound>                                <!--wwe_sfx_bld_inc_burn-->
+                            </Item>
+                        </InfectedFire>
+                        <InfectedIllness>
+                            <Item>
+                                <Sound>214756</Sound>                                <!--wwe_sfx_vox_inc_ill_os-->
+                            </Item>
+                        </InfectedIllness>
+                        <InfectedRiot>
+                            <Item>
+                                <Sound>222229</Sound>                                <!--wwe_sfx_vox_inc_rio_os-->
+                            </Item>
+                        </InfectedRiot>
+                        <ExplosionOneShots>
+                            <Item>
+                                <Sound>203849</Sound>                                <!--wwe_sfx_aui_destroy_small-->
+                            </Item>
+                        </ExplosionOneShots>
+                    </IncidentSounds>
+                    <BuildingRepaired>
+                        <Item>
+                            <Sound>203866</Sound>                            <!--wwe_sfx_aui_bld_3d_renovate-->
+                        </Item>
+                    </BuildingRepaired>
+                    <MaterialType>Stone</MaterialType>
+                </SoundEmitter>
+                <Infolayer>
+                    <AdditionalYOffset>0</AdditionalYOffset>
+                </Infolayer>
+                <FeedbackController/>
+                <RandomDummySpawner/>
+                <Residence7>
+                    <ResidenceStorage>
+                        <InputStorageMax>1</InputStorageMax>
+                    </ResidenceStorage>
+                    <PopulationLevel7>112643</PopulationLevel7>                    <!--Arctic Population 2-->
+                    <ResidentMax>40</ResidentMax>
+                    <ResidentsRequiredForUpgrade>40</ResidentsRequiredForUpgrade>
+                </Residence7>
+                <LogisticNode>
+                    <REMOVE_THIS_LATER_FeedbackUnitTier>Level4</REMOVE_THIS_LATER_FeedbackUnitTier>
+                </LogisticNode>
+                <AmbientMoodProvider>
+                    <Murmur>Arctic_BasicTundra</Murmur>
+                    <GlacierMurmur>Arctic_BasicGlacier</GlacierMurmur>
+                    <DynamicEnvironmentType>ResidenceT1</DynamicEnvironmentType>
+                </AmbientMoodProvider>
+                <UpgradeList/>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>2500</MaximumHitPoints>
+                </Attackable>
+                <IncidentInfectable>
+                    <Infectable>
+                        <Riot>
+                            <Base>0</Base>
+                            <Escalated>0</Escalated>
+                        </Riot>
+                        <Illness>
+                            <Base>0</Base>
+                            <Escalated>0</Escalated>
+                        </Illness>
+                        <Explosion>
+                            <Base>0</Base>
+                            <Escalated>0</Escalated>
+                        </Explosion>
+                        <ArcticIllness>
+                            <Base>1</Base>
+                            <Escalated>1</Escalated>
+                            <Communication>IllnessArcticDefault</Communication>
+                        </ArcticIllness>
+                    </Infectable>
+                    <Explosion>
+                        <ExplosionCoreDamage>1000</ExplosionCoreDamage>
+                    </Explosion>
+                    <IncidentInfectionChanceFactors>
+                        <Fire>
+                            <BaseChance>4</BaseChance>
+                            <DensityFactor>0.025</DensityFactor>
+                            <DensityDistance>12</DensityDistance>
+                        </Fire>
+                        <Riot>
+                            <FactoryOvertimeFactor>0</FactoryOvertimeFactor>
+                            <FactoryUndertimeFactor>0</FactoryUndertimeFactor>
+                            <FactoryHappinessFactor>0</FactoryHappinessFactor>
+                            <ResidenceHappinessFactor>0</ResidenceHappinessFactor>
+                            <HappinessMin>0</HappinessMin>
+                            <HappinessMax>0</HappinessMax>
+                        </Riot>
+                        <Illness>
+                            <ResidenceSatisfactionFactor>0</ResidenceSatisfactionFactor>
+                            <HappinessMin>0</HappinessMin>
+                            <HappinessMax>0</HappinessMax>
+                            <SatisfactionThreshold>0</SatisfactionThreshold>
+                        </Illness>
+                        <Explosion>
+                            <HitpointFactor>0</HitpointFactor>
+                            <HappinessMin>0</HappinessMin>
+                            <HappinessMax>0</HappinessMax>
+                            <SatisfactionThreshold>0</SatisfactionThreshold>
+                        </Explosion>
+                        <ArcticIllness>
+                            <BaseChance>4</BaseChance>
+                            <NoHeatFactor>30</NoHeatFactor>
+                        </ArcticIllness>
+                    </IncidentInfectionChanceFactors>
+                </IncidentInfectable>
+                <Pausable/>
+                <Culture/>
+                <StreetActivation/>
+                <InfluenceSource>
+                    <InfluenceSource>Engineers</InfluenceSource>
+                </InfluenceSource>
+                <FloorStackOwner>
+                    <FloorCount>1</FloorCount>
+                    <Components>
+                        <BigFloor>
+                            <FloorIcon>data/ui/2kimages/main/3dicons/icon_city_ornament_large.png</FloorIcon>
+                            <FloorVariations>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_roof.cfg</RoofCFG>
+                                </Item>
+                            </FloorVariations>
+                        </BigFloor>
+                        <MediumFloor>
+                            <FloorIcon>data/ui/2kimages/main/3dicons/icon_city_ornament_medium.png</FloorIcon>
+                            <FloorVariations>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_roof.cfg</RoofCFG>
+                                </Item>
+                            </FloorVariations>
+                        </MediumFloor>
+                        <TinyFloor>
+                            <FloorIcon>data/ui/2kimages/main/3dicons/icon_city_ornament_small.png</FloorIcon>
+                            <FloorVariations>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_roof.cfg</RoofCFG>
+                                </Item>
+                            </FloorVariations>
+                        </TinyFloor>
+                    </Components>
+                    <UpgradeTargetGUID>1742004444</UpgradeTargetGUID>                    <!--Technicians Upgraded Residence Level 2-->
+                    <AddFloorCost>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!--Money-->
+                            <Amount>5000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010196</Ingredient>                            <!--timber-->
+                            <Amount>12</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010205</Ingredient>                            <!--bricks-->
+                            <Amount>10</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010218</Ingredient>                            <!--beams-->
+                            <Amount>12</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>838</Ingredient>                            <!--Aluminium-->
+                            <Amount>12</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010207</Ingredient>                            <!--window-->
+                            <Amount>8</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010202</Ingredient>                            <!--concrete-->
+                            <Amount>8</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>112697</Ingredient>                            <!--Goose Feathers-->
+                            <Amount>10</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1800000302</Ingredient>                            <!--Sawdust-->
+                            <Amount>15</Amount>
+                        </Item>
+                    </AddFloorCost>
+                </FloorStackOwner>
+                <Maintenance>
+                    <IncomeCategory>Skyscrapers</IncomeCategory>
+                </Maintenance>
+                <Heated/>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END - BUILDING Technicians Upgraded Residence Level 1 -->
+
+    <!-- START - BUILDING Technicians Upgraded Residence Level 2 -->
+    <ModOp Type="addNextSibling" GUID='114751'>
+        <Asset>
+            <Template>ResidenceBuilding7_Arctic</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004444</GUID>
+                    <Name>Technicians Upgraded Residence Level 2</Name>
+                    <IconFilename>data/ui/2kimages/main/3dicons/icon_resident.png</IconFilename>
+                    <InfoDescription>1742004445</InfoDescription>
+                </Standard>
+                <Blocking/>
+                <Building>
+                    <BuildingType>Residence</BuildingType>
+                    <SkipUnlockMessage>1</SkipUnlockMessage>
+                    <PickingAsset>112091</PickingAsset>                    <!--residence_arctic_tier01-->
+                    <BuildModeRandomRotation>90</BuildModeRandomRotation>
+                </Building>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!--Money-->
+                            <Amount>5000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010196</Ingredient>                            <!--timber-->
+                            <Amount>12</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010205</Ingredient>                            <!--bricks-->
+                            <Amount>10</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010218</Ingredient>                            <!--beams-->
+                            <Amount>12</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>838</Ingredient>                            <!--Aluminium-->
+                            <Amount>12</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010207</Ingredient>                            <!--window-->
+                            <Amount>8</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010202</Ingredient>                            <!--concrete-->
+                            <Amount>8</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>112697</Ingredient>                            <!--Goose Feathers-->
+                            <Amount>10</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1800000302</Ingredient>                            <!--Sawdust-->
+                            <Amount>15</Amount>
+                        </Item>
+                    </Costs>
+                </Cost>
+                <Mesh/>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_base.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_02_base.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_03_base.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_base.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_02_base.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_03_01_base.cfg</Filename>
+                        </Item>
+                    </Variations>
+                    <Skins/>
+                </Object>
+                <Selection>
+                    <StaticHelpEntryPoint>HighLifeSkyscrapers</StaticHelpEntryPoint>
+                    <OnSelection>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </OnSelection>
+                    <ParticipantMessageTrigger>ClickSkyscraper</ParticipantMessageTrigger>
+                    <ParticipantMessageArcheType>Arctic_Resident_tier02</ParticipantMessageArcheType>
+                </Selection>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>Technicians Upgraded Residence Level 2</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>35072</LineID>
+                </Text>
+                <Constructable>
+                    <ConstructionMenuIcon>112643</ConstructionMenuIcon>                    <!--Arctic Population 2-->
+                </Constructable>
+                <Locked>
+                    <DefaultLockedState>1</DefaultLockedState>
+                    <DLCDependency>410085</DLCDependency>                    <!--Anno 1800 DLC - HighLife-->
+                </Locked>
+                <Upgradable>
+                    <UpgradeCost/>
+                </Upgradable>
+                <SoundEmitter>
+                    <ConstructionSounds>
+                        <BuildSuccessful>
+                            <Item>
+                                <VectorElement>
+                                    <InheritanceMapV2>
+                                        <Entry>
+                                            <TemplateName>ResidenceBuilding7</TemplateName>
+                                            <Index>0</Index>
+                                        </Entry>
+                                    </InheritanceMapV2>
+                                </VectorElement>
+                                <Sound>200776</Sound>                                <!--wwe_sfx_aui_bld_place_bp-->
+                            </Item>
+                        </BuildSuccessful>
+                        <BuildUpgradeFailed>
+                            <Item>
+                                <Sound>9818387</Sound>                                <!--wwe_sfx_aui_deny-->
+                            </Item>
+                        </BuildUpgradeFailed>
+                    </ConstructionSounds>
+                    <IncidentSounds>
+                        <InfectedFire>
+                            <Item>
+                                <Sound>214659</Sound>                                <!--wwe_sfx_bld_inc_burn-->
+                            </Item>
+                        </InfectedFire>
+                        <InfectedIllness>
+                            <Item>
+                                <Sound>214756</Sound>                                <!--wwe_sfx_vox_inc_ill_os-->
+                            </Item>
+                        </InfectedIllness>
+                        <InfectedRiot>
+                            <Item>
+                                <Sound>222229</Sound>                                <!--wwe_sfx_vox_inc_rio_os-->
+                            </Item>
+                        </InfectedRiot>
+                        <ExplosionOneShots>
+                            <Item>
+                                <Sound>203849</Sound>                                <!--wwe_sfx_aui_destroy_small-->
+                            </Item>
+                        </ExplosionOneShots>
+                    </IncidentSounds>
+                    <BuildingRepaired>
+                        <Item>
+                            <Sound>203866</Sound>                            <!--wwe_sfx_aui_bld_3d_renovate-->
+                        </Item>
+                    </BuildingRepaired>
+                    <MaterialType>Stone</MaterialType>
+                </SoundEmitter>
+                <Infolayer>
+                    <AdditionalYOffset>0</AdditionalYOffset>
+                </Infolayer>
+                <FeedbackController/>
+                <RandomDummySpawner/>
+                <Residence7>
+                    <ResidenceStorage>
+                        <InputStorageMax>1</InputStorageMax>
+                    </ResidenceStorage>
+                    <PopulationLevel7>112643</PopulationLevel7>                    <!--Arctic Population 2-->
+                    <ResidentMax>80</ResidentMax>
+                    <ResidentsRequiredForUpgrade>80</ResidentsRequiredForUpgrade>
+                </Residence7>
+                <LogisticNode>
+                    <REMOVE_THIS_LATER_FeedbackUnitTier>Level4</REMOVE_THIS_LATER_FeedbackUnitTier>
+                </LogisticNode>
+                <AmbientMoodProvider>
+                    <Murmur>Arctic_BasicTundra</Murmur>
+                    <GlacierMurmur>Arctic_BasicGlacier</GlacierMurmur>
+                    <DynamicEnvironmentType>ResidenceT1</DynamicEnvironmentType>
+                </AmbientMoodProvider>
+                <UpgradeList/>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>3500</MaximumHitPoints>
+                </Attackable>
+                <IncidentInfectable>
+                    <Infectable>
+                        <Riot>
+                            <Base>0</Base>
+                            <Escalated>0</Escalated>
+                        </Riot>
+                        <Illness>
+                            <Base>0</Base>
+                            <Escalated>0</Escalated>
+                        </Illness>
+                        <Explosion>
+                            <Base>0</Base>
+                            <Escalated>0</Escalated>
+                        </Explosion>
+                        <ArcticIllness>
+                            <Base>1</Base>
+                            <Escalated>1</Escalated>
+                            <Communication>IllnessArcticDefault</Communication>
+                        </ArcticIllness>
+                    </Infectable>
+                    <Explosion>
+                        <ExplosionCoreDamage>1000</ExplosionCoreDamage>
+                    </Explosion>
+                    <IncidentInfectionChanceFactors>
+                        <Fire>
+                            <BaseChance>4</BaseChance>
+                            <DensityFactor>0.025</DensityFactor>
+                            <DensityDistance>12</DensityDistance>
+                        </Fire>
+                        <Riot>
+                            <FactoryOvertimeFactor>0</FactoryOvertimeFactor>
+                            <FactoryUndertimeFactor>0</FactoryUndertimeFactor>
+                            <FactoryHappinessFactor>0</FactoryHappinessFactor>
+                            <ResidenceHappinessFactor>0</ResidenceHappinessFactor>
+                            <HappinessMin>0</HappinessMin>
+                            <HappinessMax>0</HappinessMax>
+                        </Riot>
+                        <Illness>
+                            <ResidenceSatisfactionFactor>0</ResidenceSatisfactionFactor>
+                            <HappinessMin>0</HappinessMin>
+                            <HappinessMax>0</HappinessMax>
+                            <SatisfactionThreshold>0</SatisfactionThreshold>
+                        </Illness>
+                        <Explosion>
+                            <HitpointFactor>0</HitpointFactor>
+                            <HappinessMin>0</HappinessMin>
+                            <HappinessMax>0</HappinessMax>
+                            <SatisfactionThreshold>0</SatisfactionThreshold>
+                        </Explosion>
+                        <ArcticIllness>
+                            <BaseChance>4</BaseChance>
+                            <NoHeatFactor>30</NoHeatFactor>
+                        </ArcticIllness>
+                    </IncidentInfectionChanceFactors>
+                </IncidentInfectable>
+                <Pausable/>
+                <Culture/>
+                <StreetActivation/>
+                <InfluenceSource>
+                    <InfluenceSource>Engineers</InfluenceSource>
+                    <ProvidesDifficultyInfluence>1</ProvidesDifficultyInfluence>
+                </InfluenceSource>
+                <FloorStackOwner>
+                    <FloorCount>2</FloorCount>
+                    <Components>
+                        <BigFloor>
+                            <FloorIcon>data/ui/2kimages/main/3dicons/icon_city_ornament_large.png</FloorIcon>
+                            <FloorVariations>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_roof.cfg</RoofCFG>
+                                </Item>
+                            </FloorVariations>
+                        </BigFloor>
+                        <MediumFloor>
+                            <FloorIcon>data/ui/2kimages/main/3dicons/icon_city_ornament_medium.png</FloorIcon>
+                            <FloorVariations>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_roof.cfg</RoofCFG>
+                                </Item>
+                            </FloorVariations>
+                        </MediumFloor>
+                        <TinyFloor>
+                            <FloorIcon>data/ui/2kimages/main/3dicons/icon_city_ornament_small.png</FloorIcon>
+                            <FloorVariations>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_01_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_roof.cfg</RoofCFG>
+                                </Item>
+                            </FloorVariations>
+                        </TinyFloor>
+                    </Components>
+                </FloorStackOwner>
+                <Maintenance>
+                    <IncomeCategory>Skyscrapers</IncomeCategory>
+                </Maintenance>
+                <Heated/>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END - BUILDING Technicians Upgraded Residence Level 2 -->
+
+    <!-- START - BUILDING - Expedition Equipment Assembly -->
+    <ModOp Type="addNextSibling" GUID='112680'>
+        <Asset>
+            <Template>FactoryBuilding7_Arctic</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004362</GUID>
+                    <Name>Expedition Equipment Assembly</Name>
+                    <IconFilename>data/ui/2kimages/main/3dicons/icon_passage_junk.png</IconFilename>
+                    <InfoDescription>1742004363</InfoDescription>
+                </Standard>
+                <Building/>
+                <Blocking/>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!-- Coins -->
+                            <Amount>30000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010196</Ingredient>                            <!--timber-->
+                            <Amount>20</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010205</Ingredient>                            <!--bricks-->
+                            <Amount>18</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010218</Ingredient>                            <!--beams-->
+                            <Amount>14</Amount>
+                        </Item>
+                    </Costs>
+                </Cost>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/buildings/production/expedition_equipment_assembly/expedition_equipment_assembly_01.cfg</Filename>
+                        </Item>
+                    </Variations>
+                </Object>
+                <Mesh/>
+                <Selection>
+                    <OnSelection>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </OnSelection>
+                    <ParticipantMessageArcheType>Arctic_Resident_tier02_atWork</ParticipantMessageArcheType>
+                </Selection>
+                <Text/>
+                <Constructable/>
+                <Locked/>
+                <SoundEmitter>
+                    <ActiveSounds>
+                        <Item>
+                            <Sound>247110</Sound>                            <!--wwe_sfx_bld_factory_arctic_typeCluster_tag-->
+                        </Item>
+                        <Item>
+                            <Sound>240565</Sound>                            <!--wwe_sfx_bld_factory_arctic_03_lp-->
+                        </Item>
+                    </ActiveSounds>
+                    <IncidentSounds>
+                        <InfectedFire>
+                            <Item>
+                                <Sound>214659</Sound>                                <!--wwe_sfx_bld_inc_burn-->
+                            </Item>
+                        </InfectedFire>
+                    </IncidentSounds>
+                </SoundEmitter>
+                <FeedbackController/>
+                <Infolayer/>
+                <UpgradeList/>
+                <Factory7/>
+                <FactoryBase>
+                    <FactoryInputs>
+                        <Item>
+                            <Product>849</Product>                            <!--Care Packages-->
+                            <Amount>1</Amount>
+                            <StorageAmount>4</StorageAmount>
+                        </Item>
+                        <Item>
+                            <Product>1500010153</Product>                            <!--Tools-->
+                            <Amount>1</Amount>
+                            <StorageAmount>4</StorageAmount>
+                        </Item>
+                        <Item>
+                            <Product>112702</Product>                            <!--oil lamps-->
+                            <Amount>1</Amount>
+                            <StorageAmount>4</StorageAmount>
+                        </Item>
+                        <Item>
+                            <Product>1500010825</Product>                            <!--ropes-->
+                            <Amount>1</Amount>
+                            <StorageAmount>4</StorageAmount>
+                        </Item>
+                    </FactoryInputs>
+                    <FactoryOutputs>
+                        <Item>
+                            <Product>115980</Product>                            <!--Expedition Equipment/Lost Expedition scrap-->
+                            <Amount>1</Amount>
+                            <StorageAmount>2</StorageAmount>S
+                        </Item>
+                    </FactoryOutputs>
+                    <CycleTime>90</CycleTime>
+                    <IsMainFactory>1</IsMainFactory>
+                </FactoryBase>
+                <LogisticNode/>
+                <AmbientMoodProvider>
+                    <AmbientMood>IndustryHeavy</AmbientMood>
+                    <Murmur>Arctic_Farm</Murmur>
+                    <GlacierMurmur>Arctic_Farm</GlacierMurmur>
+                </AmbientMoodProvider>
+                <Maintenance>
+                    <Maintenances>
+                        <Item>
+                            <Product>1010017</Product>                            <!--Money-->
+                            <Amount>200</Amount>
+                            <InactiveAmount>500</InactiveAmount>
+                        </Item>
+                        <Item>
+                            <Product>112654</Product>                            <!--arctic workforce 2-->
+                            <Amount>50</Amount>
+                            <ShutdownThreshold>0.2</ShutdownThreshold>
+                        </Item>
+                    </Maintenances>
+                </Maintenance>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>2500</MaximumHitPoints>
+                </Attackable>
+                <Pausable/>
+                <IncidentInfectable>
+                    <Infectable>
+                        <Riot>
+                            <Base>0</Base>
+                            <Escalated>0</Escalated>
+                        </Riot>
+                        <Explosion>
+                            <Base>0</Base>
+                            <Escalated>0</Escalated>
+                        </Explosion>
+                    </Infectable>
+                    <IncidentInfectionChanceFactors>
+                        <Riot>
+                            <FactoryOvertimeFactor>0</FactoryOvertimeFactor>
+                            <FactoryUndertimeFactor>0</FactoryUndertimeFactor>
+                            <FactoryHappinessFactor>0</FactoryHappinessFactor>
+                            <ResidenceHappinessFactor>0</ResidenceHappinessFactor>
+                            <HappinessMin>0</HappinessMin>
+                            <HappinessMax>0</HappinessMax>
+                        </Riot>
+                        <Illness>
+                            <ResidenceSatisfactionFactor>0</ResidenceSatisfactionFactor>
+                            <HappinessMin>0</HappinessMin>
+                            <HappinessMax>0</HappinessMax>
+                            <SatisfactionThreshold>0</SatisfactionThreshold>
+                        </Illness>
+                        <Explosion>
+                            <HappinessMin>0</HappinessMin>
+                            <HappinessMax>0</HappinessMax>
+                            <SatisfactionThreshold>0</SatisfactionThreshold>
+                        </Explosion>
+                    </IncidentInfectionChanceFactors>
+                </IncidentInfectable>
+                <Culture/>
+                <QuestObject/>
+                <Heated/>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END BUILDING - Expedition Equipment Assembly -->
+
+    <!-- START BUILDING - Nate's Arctic Windmill -->
+    <ModOp GUID='100780' Type="addNextSibling">
+        <Asset>
+            <Template>ArcticPowerplantWithRadius</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004421</GUID>
+                    <Name>Nate's Arctic Windmill</Name>
+                    <IconFilename>data/graphics/icons/icon_nates_windmill.png</IconFilename>
+                    <InfoDescription>1742004422</InfoDescription>
+                </Standard>
+                <Blocking />
+                <Building>
+                    <BuildingCategoryName>11169</BuildingCategoryName>                    <!-- power plant -->
+                    <BuildModeRandomRotation>90</BuildModeRandomRotation>
+                    <AssociatedRegions>Arctic</AssociatedRegions>
+                    <SecondPartyRelevant>0</SecondPartyRelevant>
+                </Building>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>
+                            <Amount>10000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010218</Ingredient>
+                            <Amount>20</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010210</Ingredient>
+                            <Amount>10</Amount>
+                        </Item>
+                    </Costs>
+                    <InfluenceCostType>ZooModule</InfluenceCostType>
+                    <InfluenceCostPoints>1</InfluenceCostPoints>
+                </Cost>
+                <Maintenance>
+                    <IncomeCategory>ProductionBuildings</IncomeCategory>
+                    <Maintenances>
+                        <Item>
+                            <Product>1010017</Product>                            <!--Money-->
+                            <Amount>250</Amount>
+                        </Item>
+                        <Item>
+                            <Product>112654</Product>                            <!--Technicians Workforce-->
+                            <Amount>20</Amount>
+                        </Item>
+                    </Maintenances>
+                </Maintenance>
+                <Selection>
+                    <GUIType>PublicService</GUIType>
+                </Selection>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/buildings/public/nates_windmill/nates_arctic_windmill_01.cfg</Filename>
+                        </Item>
+                    </Variations>
+                </Object>
+                <Constructable />
+                <Mesh />
+                <SoundEmitter>
+                    <ActiveSounds>
+                        <Item>
+                            <Sound>235839</Sound>
+                        </Item>
+                    </ActiveSounds>
+                    <DestroySounds>
+                        <Item>
+                            <Sound>9818756</Sound>
+                        </Item>
+                    </DestroySounds>
+                </SoundEmitter>
+                <Locked />
+                <FeedbackController />
+                <AmbientMoodProvider />
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>3000</MaximumHitPoints>
+                    <SelfHealPerHealTick>4</SelfHealPerHealTick>
+                </Attackable>
+                <Pausable />
+                <IncidentInfectable>
+                    <Infectable>
+                        <Fire>
+                            <Base>1</Base>
+                        </Fire>
+                    </Infectable>
+                </IncidentInfectable>
+                <Infolayer />
+                <LogisticNode>
+                    <TransporterCountMax>0</TransporterCountMax>
+                    <PathLayers>Street</PathLayers>
+                </LogisticNode>
+                <ItemContainer>
+                    <SocketCount>0</SocketCount>
+                    <SocketScopeRadiusOverlapCategory>None</SocketScopeRadiusOverlapCategory>
+                    <SocketScope>Radius</SocketScope>
+                    <SocketScopeRadius>0</SocketScopeRadius>
+                </ItemContainer>
+                <FactoryBase />
+                <Powerplant>
+                    <IndustrializationDistance>14</IndustrializationDistance>
+                </Powerplant>
+                <PublicService>
+                    <FullSatisfactionDistance>14</FullSatisfactionDistance>
+                    <NoSatisfactionDistance>14</NoSatisfactionDistance>
+                    <PublicServiceOutputs>
+                        <Item>
+                            <Product>1010354</Product>
+                        </Item>
+                    </PublicServiceOutputs>
+                    <FunctionDescription>1742004423</FunctionDescription>
+                </PublicService>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END BUILDING - Nate's Arctic Windmill -->
+
+    <!-- START BUILDING - Cannery (Arctic) -->
+    <ModOp GUID='100780' Type="addNextSibling">
+        <Asset>
+            <Template>FactoryBuilding7_Arctic</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004451</GUID>
+                    <Name>Cannery (Arctic)</Name>
+                    <IconFilename>data/ui/2kimages/main/3dicons/icon_canned_goulash.png</IconFilename>
+                    <InfoDescription>1742004452</InfoDescription>
+                </Standard>
+                <Building/>
+                <Blocking/>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!-- Coins -->
+                            <Amount>15000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010196</Ingredient>                            <!--timber-->
+                            <Amount>25</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010205</Ingredient>                            <!--bricks-->
+                            <Amount>20</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010218</Ingredient>                            <!--beams-->
+                            <Amount>15</Amount>
+                        </Item>
+                    </Costs>
+                </Cost>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/buildings/production/cannery_arctic/cannery_arctic_01.cfg</Filename>
+                        </Item>
+                    </Variations>
+                    <Skins/>
+                </Object>
+                <Mesh/>
+                <Selection>
+                    <OnSelection>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </OnSelection>
+                    <ParticipantMessageArcheType>Arctic_Resident_tier02_atWork</ParticipantMessageArcheType>
+                </Selection>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>Cannery</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>35084</LineID>
+                </Text>
+                <Constructable/>
+                <Locked/>
+                <SoundEmitter>
+                    <ActiveSounds>
+                        <Item>
+                            <Sound>247110</Sound>                            <!--wwe_sfx_bld_factory_arctic_typeCluster_tag-->
+                        </Item>
+                        <Item>
+                            <Sound>240581</Sound>                            <!--wwe_sfx_bld_food_arctic_01_lp-->
+                        </Item>
+                    </ActiveSounds>
+                    <IncidentSounds>
+                        <InfectedFire>
+                            <Item>
+                                <Sound>214659</Sound>                                <!--wwe_sfx_bld_inc_burn-->
+                            </Item>
+                        </InfectedFire>
+                    </IncidentSounds>
+                </SoundEmitter>
+                <FeedbackController/>
+                <Infolayer/>
+                <UpgradeList/>
+                <Factory7/>
+                <FactoryBase>
+                    <FactoryInputs>
+                        <Item>
+                            <Product>1010219</Product>                            <!--Steel-->
+                            <Amount>1</Amount>
+                            <StorageAmount>4</StorageAmount>
+                        </Item>
+                        <Item>
+                            <Product>114410</Product>                            <!--fish stew-->
+                            <Amount>1</Amount>
+                            <StorageAmount>4</StorageAmount>
+                        </Item>
+                    </FactoryInputs>
+                    <FactoryOutputs>
+                        <Item>
+                            <Product>1010217</Product>                            <!--canned food-->
+                            <Amount>1</Amount>
+                            <StorageAmount>2</StorageAmount>
+                        </Item>
+                    </FactoryOutputs>
+                    <CycleTime>60</CycleTime>
+                    <IsMainFactory>0</IsMainFactory>
+                </FactoryBase>
+                <LogisticNode/>
+                <AmbientMoodProvider>
+                    <Murmur>Arctic_Farm</Murmur>
+                    <GlacierMurmur>Arctic_Farm</GlacierMurmur>
+                </AmbientMoodProvider>
+                <Maintenance>
+                    <Maintenances>
+                        <Item>
+                            <Product>1010017</Product>                            <!--Money-->
+                            <Amount>250</Amount>
+                            <InactiveAmount>200</InactiveAmount>
+                        </Item>
+                        <Item>
+                            <Product>112654</Product>                            <!--arctic workforce 1-->
+                            <Amount>150</Amount>
+                            <ShutdownThreshold>0.2</ShutdownThreshold>
+                        </Item>
+                    </Maintenances>
+                </Maintenance>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>2000</MaximumHitPoints>
+                </Attackable>
+                <Pausable/>
+                <IncidentInfectable>
+                    <Infectable>
+                        <Riot>
+                            <Base>0</Base>
+                            <Escalated>0</Escalated>
+                        </Riot>
+                        <Explosion>
+                            <Base>0</Base>
+                            <Escalated>0</Escalated>
+                        </Explosion>
+                    </Infectable>
+                    <IncidentInfectionChanceFactors>
+                        <Riot>
+                            <FactoryOvertimeFactor>0</FactoryOvertimeFactor>
+                            <FactoryUndertimeFactor>0</FactoryUndertimeFactor>
+                            <FactoryHappinessFactor>0</FactoryHappinessFactor>
+                            <ResidenceHappinessFactor>0</ResidenceHappinessFactor>
+                            <HappinessMin>0</HappinessMin>
+                            <HappinessMax>0</HappinessMax>
+                        </Riot>
+                        <Illness>
+                            <ResidenceSatisfactionFactor>0</ResidenceSatisfactionFactor>
+                            <HappinessMin>0</HappinessMin>
+                            <HappinessMax>0</HappinessMax>
+                            <SatisfactionThreshold>0</SatisfactionThreshold>
+                        </Illness>
+                        <Explosion>
+                            <HappinessMin>0</HappinessMin>
+                            <HappinessMax>0</HappinessMax>
+                            <SatisfactionThreshold>0</SatisfactionThreshold>
+                        </Explosion>
+                    </IncidentInfectionChanceFactors>
+                </IncidentInfectable>
+                <Culture/>
+                <QuestObject/>
+                <Heated/>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END BUILDING - Cannery (Arctic) -->
+
+</ModOps>
+  

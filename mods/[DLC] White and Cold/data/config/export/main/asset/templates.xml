@@ -98,7 +98,7 @@
 	</ModOp>
 	<ModOp Type="addNextSibling" Path="//Template[Name='CultureBuilding']">
 		<Template>
-			<Name>IceHarvestingHQ</Name>
+			<Name>MiningHQ</Name>
 			<Properties>
 				<Standard/>
 				<Building>
@@ -219,7 +219,7 @@
 			</Properties>
 		</Template>
 		<Template>
-			<Name>IceHarvestingModule</Name>
+			<Name>MiningModule</Name>
 			<Properties>
 				<Standard />
 				<Building>
@@ -311,7 +311,6 @@
 					<SocketScope>ModuleOwner</SocketScope>
 				</ItemContainer>
 				<Attackable />
-				<QuestObject />
 				<AmbientMoodProvider>
 					<DynamicEnvironmentType>Fog</DynamicEnvironmentType>
 				</AmbientMoodProvider>
@@ -800,6 +799,144 @@
 				<Culture/>
 				<BuildingUnique/>
 				<PublicService/>
+			</Properties>
+		</Template>
+	</ModOp>
+	<ModOp Type="addNextSibling" Path="//Template[Name='PowerplantBuilding']">
+		<Template>
+			<Name>IceHarvesting</Name>
+			<Properties>
+				<Standard>
+					<InfoDescription>11143</InfoDescription>					<!--production building infocorner-->
+				</Standard>
+				<Building>
+					<BuildingType>Factory</BuildingType>
+					<BuildingCategoryName>100000</BuildingCategoryName>					<!--Production-->
+				</Building>
+				<Blocking>
+					<RemoveGrass>0</RemoveGrass>
+				</Blocking>
+				<Cost/>
+				<Object>
+					<IgnoreForMinimapGeneration>1</IgnoreForMinimapGeneration>
+				</Object>
+				<Mesh/>
+				<Selection>
+					<GUIType>Production</GUIType>
+					<OnSelection>
+						<IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+						<Values>
+							<ActionList/>
+						</Values>
+					</OnSelection>
+				</Selection>
+				<Text/>
+				<Constructable>
+					<DestructionCategory>Production</DestructionCategory>
+				</Constructable>
+				<Locked/>
+				<SoundEmitter>
+					<DestroySounds>
+						<Item>
+							<Sound>9818756</Sound>
+							<!--wwe_sfx_aui_delete-->
+						</Item>
+					</DestroySounds>
+					<ConstructionSounds>
+						<BuildFailed>
+							<Item>
+								<Sound>9818387</Sound>
+								<!--wwe_sfx_aui_deny-->
+							</Item>
+						</BuildFailed>
+						<BuildMoveStart>
+							<Item>
+								<Sound>9818755</Sound>
+								<!--wwe_sfx_aui_move-->
+							</Item>
+						</BuildMoveStart>
+						<BuildMoveSuccess>
+							<Item>
+								<Sound>203993</Sound>
+								<!--wwe_sfx_aui_move_replace_metal-->
+							</Item>
+						</BuildMoveSuccess>
+						<BuildMoveEnd>
+							<Item>
+								<Sound>200141</Sound>
+								<!--wwe_sfx_aui_move_end-->
+							</Item>
+						</BuildMoveEnd>
+					</ConstructionSounds>
+					<IncidentSounds>
+						<ExplosionOneShots>
+							<Item>
+								<Sound>203848</Sound>
+								<!--wwe_sfx_aui_destroy_big-->
+							</Item>
+						</ExplosionOneShots>
+					</IncidentSounds>
+				</SoundEmitter>
+				<FeedbackController/>
+				<Infolayer/>
+				<UpgradeList/>
+				<Factory7/>
+				<FactoryBase/>
+				<LogisticNode/>
+				<ModuleOwner>
+					<ModuleBuildRadius>10</ModuleBuildRadius>
+					<ImplicitProductivityModules>0</ImplicitProductivityModules>
+				</ModuleOwner>
+				<Slot>
+					<SnapsToSlot>1</SnapsToSlot>
+				</Slot>
+				<AmbientMoodProvider/>
+				<Maintenance>
+					<ConsumerPriority>1</ConsumerPriority>
+				</Maintenance>
+				<Attackable>
+					<HasRuinState>1</HasRuinState>
+				</Attackable>
+				<Pausable>
+					<CanPauseManually>1</CanPauseManually>
+				</Pausable>
+				<IncidentInfectable>
+					<Infectable>
+						<Fire>
+							<Communication>FireIndustry</Communication>
+						</Fire>
+						<Riot>
+							<Communication>RiotIndustry</Communication>
+							<InitiallySpreadToSameGUID>1</InitiallySpreadToSameGUID>
+						</Riot>
+						<Illness>
+							<Base>0</Base>
+							<Communication>IllnessIndustry</Communication>
+						</Illness>
+						<Explosion>
+							<Communication>ExplosionIndustry</Communication>
+						</Explosion>
+					</Infectable>
+					<Explosion>
+						<DamageExplosionChance>30</DamageExplosionChance>
+					</Explosion>
+					<IncidentInfectionChanceFactors>
+						<Explosion>
+							<BaseChance>0.1</BaseChance>
+							<FactoryProductivityFactor>0.1</FactoryProductivityFactor>
+							<FactoryOvertimeFactor>0.1</FactoryOvertimeFactor>
+						</Explosion>
+					</IncidentInfectionChanceFactors>
+				</IncidentInfectable>
+				<Culture>
+					<CultureType>Factory</CultureType>
+				</Culture>
+				<Industrializable/>
+				<Heated>
+					<RequiresHeat>1</RequiresHeat>
+					<MissingHeatInfolayer>116919</MissingHeatInfolayer>
+				</Heated>
+				<Electrifiable/>
 			</Properties>
 		</Template>
 	</ModOp>
