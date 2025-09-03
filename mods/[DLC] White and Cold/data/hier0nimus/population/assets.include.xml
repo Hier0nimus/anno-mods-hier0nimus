@@ -285,9 +285,21 @@
     <Item>
       <Product>1742004162</Product>      <!-- Snow Goggles - Product -->
       <Amount>0.0001</Amount>
-      <SupplyWeight>2</SupplyWeight>
+      <SupplyWeight>4</SupplyWeight>
       <MoneyValue>20</MoneyValue>
       <IsConsideredByAI>0</IsConsideredByAI>
+      <RequiredFloorLevel>1</RequiredFloorLevel>
+    </Item>
+  </ModOp>
+  <ModOp Type="addNextSibling" GUID="112642" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='1010216']">
+    <Item>
+      <Product>114410</Product>      <!-- Seafood Stew -->
+      <Amount>0.00005</Amount>
+      <HeatValue>10</HeatValue>
+      <AdditionalGlobalUnlockRequirement>
+        <Population>112642</Population>
+        <MinPopulationAmount>1000</MinPopulationAmount>
+      </AdditionalGlobalUnlockRequirement>
       <RequiredFloorLevel>1</RequiredFloorLevel>
     </Item>
   </ModOp>
@@ -295,10 +307,34 @@
     <Item>
       <Product>1742004168</Product>      <!-- Snow Shoes - Product -->
       <Amount>0.00008</Amount>
-      <SupplyWeight>2</SupplyWeight>
+      <SupplyWeight>4</SupplyWeight>
       <MoneyValue>80</MoneyValue>
       <IsConsideredByAI>0</IsConsideredByAI>
       <RequiredFloorLevel>1</RequiredFloorLevel>
+    </Item>
+    <Item>
+      <Product>1500010847</Product>      <!-- Tea -->
+      <Amount>0.00005</Amount>
+      <SupplyWeight>3</SupplyWeight>
+      <MoneyValue>100</MoneyValue>
+      <AdditionalGlobalUnlockRequirement>
+        <Population>112642</Population>
+        <MinPopulationAmount>1000</MinPopulationAmount>
+      </AdditionalGlobalUnlockRequirement>
+      <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+      <IsBonusNeed>1</IsBonusNeed>
+    </Item>
+    <Item>
+      <Product>1010247</Product>      <!-- Fur Coats -->
+      <Amount>0.00005</Amount>
+      <SupplyWeight>3</SupplyWeight>
+      <MoneyValue>100</MoneyValue>
+      <AdditionalGlobalUnlockRequirement>
+        <Population>112642</Population>
+        <MinPopulationAmount>1000</MinPopulationAmount>
+      </AdditionalGlobalUnlockRequirement>
+      <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+      <IsBonusNeed>1</IsBonusNeed>
     </Item>
   </ModOp>
   <!-- Technicians -->
@@ -313,7 +349,7 @@
     <Item>
       <Product>1742004162</Product>      <!-- Snow Goggles - Product -->
       <Amount>0.0001</Amount>
-      <SupplyWeight>2</SupplyWeight>
+      <SupplyWeight>4</SupplyWeight>
       <MoneyValue>20</MoneyValue>
       <IsConsideredByAI>0</IsConsideredByAI>
       <RequiredFloorLevel>1</RequiredFloorLevel>
@@ -321,9 +357,21 @@
     <Item>
       <Product>1742004168</Product>      <!-- Snow Shoes - Product -->
       <Amount>0.00008</Amount>
-      <SupplyWeight>6</SupplyWeight>
+      <SupplyWeight>4</SupplyWeight>
       <MoneyValue>80</MoneyValue>
       <IsConsideredByAI>0</IsConsideredByAI>
+      <RequiredFloorLevel>1</RequiredFloorLevel>
+    </Item>
+  </ModOp>
+  <ModOp Type="addNextSibling" GUID="112643" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='120032']">
+    <Item>
+      <Product>114410</Product>      <!-- Seafood Stew -->
+      <Amount>0.00005</Amount>
+      <HeatValue>10</HeatValue>
+      <AdditionalGlobalUnlockRequirement>
+        <Population>112643</Population>
+        <MinPopulationAmount>1000</MinPopulationAmount>
+      </AdditionalGlobalUnlockRequirement>
       <RequiredFloorLevel>1</RequiredFloorLevel>
     </Item>
   </ModOp>
@@ -579,6 +627,21 @@
     </Item>
   </ModOp>
   <!-- END - ADD ADDITIONAL NEEDS TO ARTISTA -->
+
+  <!-- START - ADD ADDITIONAL NEEDS TO TOURISTS -->
+  <ModOp Type="add" GUID="601379" Path="/Values/PopulationLevel7/PopulationInputs">
+    <Item>
+      <Product>1742004384</Product>      <!-- Ice Service - Product -->
+      <HappinessValue>3</HappinessValue>
+      <MoneyValue>150</MoneyValue>
+      <IsConsideredByAI>0</IsConsideredByAI>
+      <AdditionalGlobalUnlockRequirement>
+        <Population>112643</Population>
+        <MinPopulationAmount>2500</MinPopulationAmount>
+      </AdditionalGlobalUnlockRequirement>
+    </Item>
+  </ModOp>
+  <!-- END - ADD ADDITIONAL NEEDS TO TOURISTS -->
 
   <!-- ****************** START TO DELIGHT ****************** -->
   <ModOp Condition="!@25000118//Item[BonusNeed='GUID']" Type="add" GUID='25000118' Path="/Values/ObjectmenuResidenceScene/BonusNeeds/BonusNeeds/Item[Category='6364']/Needs/">

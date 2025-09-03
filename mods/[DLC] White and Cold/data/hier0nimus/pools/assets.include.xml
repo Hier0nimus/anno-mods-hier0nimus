@@ -3,6 +3,36 @@
 -->
 
 <ModOps>
+  <!-- START - ADD ALL UPGRADED ARCTIC RESIDENCES TO ItemEffectTargetPool -->
+  <ModOp GUID='112652' Type="addNextSibling">
+    <Asset>
+      <Template>ItemEffectTargetPool</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004526</GUID>
+          <Name>All Upgraded Insulated Arctic Residences</Name>
+        </Standard>
+        <ItemEffectTargetPool>
+          <EffectTargetGUIDs>
+            <Item>
+              <GUID>1742004272</GUID>              <!-- Technicians Upgraded Residence - ResidenceBuilding7_Arctic -->
+            </Item>
+            <Item>
+              <GUID>1742004442</GUID>              <!-- Technicians Upgraded Residence Level 1 - ResidenceBuilding7_Arctic -->
+            </Item>
+            <Item>
+              <GUID>1742004444</GUID>              <!-- Technicians Upgraded Residence Level 2 - ResidenceBuilding7_Arctic -->
+            </Item>
+            <Item>
+              <GUID>1742004507</GUID>              <!-- Explorers Upgraded Residence - ResidenceBuilding7_Arctic -->
+            </Item>
+          </EffectTargetGUIDs>
+        </ItemEffectTargetPool>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - ADD ALL UPGRADED ARCTIC RESIDENCES TO ItemEffectTargetPool -->
+
   <!-- START - ADD INUIT RESIDENCES TO ItemEffectTargetPool -->
   <ModOp GUID='112652' Type="addNextSibling">
     <Asset>
@@ -223,6 +253,14 @@
   </ModOp>
   <!-- END - ADD EXPORT DOCKS TRADING COMPANY TO -->
 
+  <!-- START - ADD EXPLORER RESIDENCES TO - ALL EXPLORER RESIDENCES -->
+  <ModOp GUID="1742200027" Type="add" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
+    <Item>
+      <GUID>1742004507</GUID>      <!-- Explorers Upgraded Residence - ResidenceBuilding7_Arctic -->
+    </Item>
+  </ModOp>
+  <!-- END - ADD EXPLORER RESIDENCES TO - ALL EXPLORER RESIDENCES -->
+
   <!-- START - ADD TECHNICIAN RESIDENCES TO - ALL TECHICIAN RESIDENCES -->
   <ModOp GUID="1742200028" Type="add" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
     <Item>
@@ -236,6 +274,26 @@
     </Item>
   </ModOp>
   <!-- END - ADD TECHNICIAN RESIDENCES TO - ALL TECHICIAN RESIDENCES -->
+
+  <!-- START - ADD NEW RESIDENCES TO - ALL ARCTIC RESIDENCES -->
+  <ModOp GUID="1742200029" Type="add" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
+    <Item>
+      <GUID>1742004272</GUID>      <!-- Technicians Upgraded Residence - ResidenceBuilding7_Arctic -->
+    </Item>
+    <Item>
+      <GUID>1742004442</GUID>      <!-- Technicians Upgraded Residence Level 1 - ResidenceBuilding7_Arctic -->
+    </Item>
+    <Item>
+      <GUID>1742004444</GUID>      <!-- Technicians Upgraded Residence Level 2 - ResidenceBuilding7_Arctic -->
+    </Item>
+    <Item>
+      <GUID>1742004507</GUID>      <!-- Explorers Upgraded Residence - ResidenceBuilding7_Arctic -->
+    </Item>
+    <Item>
+      <GUID>1742004102</GUID>      <!-- Inuit Residence - ResidenceBuilding7_Arctic -->
+    </Item>
+  </ModOp>
+  <!-- END - ADD NEW RESIDENCES TO - ALL ARCTIC RESIDENCES -->
 
   <!-- START - ADD ARCTIC GAS MINES TO - ALL ARCTIC GAS MINES -->
   <ModOp GUID="1742200030" Type="add" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
@@ -261,7 +319,7 @@
   </ModOp>
   <ModOp GUID="192732,193069" Type="add" Path="/Values/RewardPool/ItemsPool">
     <Item>
-      <Asset>1742004534</Asset>      <!-- Vladimir Slafofski - Item -->
+      <ItemLink>1742004534</ItemLink>      <!-- Vladimir Slafofski - Item -->
     </Item>
   </ModOp>
   <!-- END - ADD VLADIMIR TO POOLS -->

@@ -32,7 +32,7 @@
             <Item>
               <ForceProductSameAsFactoryOutput>1</ForceProductSameAsFactoryOutput>
               <AdditionalOutputCycle>2</AdditionalOutputCycle>
-              <Amount>10</Amount>
+              <Amount>5</Amount>
             </Item>
           </AdditionalOutput>
           <ReplaceInputs>
@@ -71,6 +71,12 @@
           <ItemDifficulties>Easy</ItemDifficulties>
           <FluffText>8357</FluffText>
         </ExpeditionAttribute>
+        <BuildingUpgrade>
+          <WorkforceAmountUpgrade>
+            <Value>25</Value>
+            <Percental>1</Percental>
+          </WorkforceAmountUpgrade>
+        </BuildingUpgrade>
         <Locked>
           <DefaultLockedState>0</DefaultLockedState>
         </Locked>
@@ -326,7 +332,29 @@
   <!-- END NEW ITEM - Bog Labrador Tea Seeds (Legendary) -->
   <!-- END NEW ITEMS -->
 
+  <!-- START CHANGE ITEMS - MORE GENERAL ITEMS WITH UNIFIED ALLOCATION  -->
+  <!-- START CHANGE ITEMS - Drills  -->
+  <ModOp Type="merge" GUID="190879,190880,190881" Path="/Values">
+    <Item>
+      <Allocation>Mod1</Allocation>
+    </Item>
+    <ItemEffect>
+      <AllowStacking>0</AllowStacking>
+    </ItemEffect>
+  </ModOp>
+  <ModOp Type="add" GUID="190879,190880,190881" Path="/Values/ItemEffect/EffectTargets">
+    <Item>
+      <GUID>1742200030</GUID>      <!-- All Arctic Gas Mines -->
+    </Item>
+    <Item>
+      <GUID>1742004275</GUID>      <!-- Ice Harvesting Site -->
+    </Item>
+  </ModOp>
+  <!-- END CHANGE ITEMS - Drills  -->
+  <!-- END CHANGE ITEMS - MORE GENERAL ITEMS WITH UNIFIED ALLOCATION  -->
+
   <!-- START CHANGE ITEMS -->
+
   <!-- START CHANGE ITEMS - Ice Maker  -->
   <ModOp Type="merge" GUID="116180" Path="/Values">
     <ResidenceUpgrade>

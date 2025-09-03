@@ -1,0 +1,85 @@
+<ModOps>
+  <!-- Mod1 = Trade Union and Harbormaster Office -->
+    <Group>
+      <ModOp Type="addNextSibling" GUID='2346'>
+        <Asset>
+          <Template>Text</Template>
+          <Values>
+            <Standard>
+              <GUID>1500301991</GUID>
+              <Name>All_Item_Sockets</Name>
+              <IconFilename>data/ui/2kimages/main/3dicons/icon_guild_house_3.png</IconFilename>
+            </Standard>
+          </Values>
+        </Asset>
+      </ModOp>
+      <ModOp Type="add" GUID="6000017" Path="/Values/ItemConfig/AllocationIcons">
+        <Item>
+          <Allocation>Mod1</Allocation>
+          <AllocationIcon>data/ui/2kimages/main/3dicons/icon_guild_house_3.png</AllocationIcon>
+        </Item>
+      </ModOp>
+      <ModOp Type="add" GUID="6000017" Path="/Values/ItemConfig/AllocationText">
+        <Mod1>
+          <Text>1500301991</Text>
+        </Mod1>
+      </ModOp>
+    </Group>
+  <!-- Add new Allocations to Buildings -->
+    <Group>
+      <!-- Trade Union -->
+        <ModOp Type="merge" GUID="1010516" Path="/Values/ItemContainer" Condition="!/Values/ItemContainer[SocketAllocation='RadiusBuilding;Guildhouse']">
+          <SocketAllocation>RadiusBuilding;Guildhouse</SocketAllocation>
+        </ModOp>
+        <ModOp Type="add" GUID="1010516" Path="/Values/ItemContainer/SocketAllocation">;Mod1</ModOp>
+      <!-- Lodge -->
+        <ModOp Type="add" GUID="112678" Path="/Values/ItemContainer/SocketAllocation">;Mod1</ModOp>
+      <!-- Town Hall -->
+        <ModOp Type="add" GUID="100415" Path="/Values/ItemContainer/SocketAllocation">;Mod1</ModOp>
+      <!-- Harbormaster Office -->
+        <ModOp Type="merge" GUID="100586" Path="/Values/ItemContainer" Condition="!/Values/ItemContainer[SocketAllocation='RadiusBuilding;HarborOffice']">
+          <SocketAllocation>RadiusBuilding;HarborOffice</SocketAllocation>
+        </ModOp>
+        <ModOp Type="add" GUID="100586" Path="/Values/ItemContainer/SocketAllocation">;Mod1</ModOp>
+      <!-- Dockland -->
+        <ModOp Type="add" GUID="601470" Path="/Values/ItemContainer/SocketAllocation">;Mod1</ModOp>
+      <!-- Dockland Mod -->
+        <ModOp Type="add" GUID="1404422070,1404422099,1337500801" Path="/Values/ItemContainer/SocketAllocation" Condition="#NewWorldDocklands">;Mod1</ModOp>
+    </Group>
+  <!-- Item Filters -->
+    <Group>
+      <!-- General -->
+        <Group>
+          <ModOp Type="add" GUID="501516" Path="/Values/ItemFilter/ItemCategories/Item[CategoryAsset='18021']/ItemTypes">;Mod1</ModOp>
+          <ModOp Type="add" GUID="501516" Path="/Values/ItemFilter/ItemCategories/Item[CategoryAsset='18023']/ItemTypes">;Mod1</ModOp>
+          <ModOp Type="add" GUID="501516" Path="/Values/ItemFilter/ItemCategories/Item[CategoryAsset='18024']/ItemTypes">;Mod1</ModOp>
+          <ModOp Type="add" GUID="501516" Path="/Values/ItemFilter/ItemCategories/Item[CategoryAsset='18025']/ItemTypes">;Mod1</ModOp>
+        </Group>
+      <!-- Arctic -->
+        <Group>
+          <ModOp Type="add" GUID="502015" Path="/Values/ItemFilter/ItemCategories/Item[CategoryAsset='18021']/ItemTypes">;Mod1</ModOp>
+          <ModOp Type="add" GUID="502015" Path="/Values/ItemFilter/ItemCategories/Item[CategoryAsset='116633']/ItemTypes">;Mod1</ModOp>
+          <ModOp Type="add" GUID="502015" Path="/Values/ItemFilter/ItemCategories" Condition="!/Values/ItemFilter/ItemCategories/Item[CategoryAsset='18024']">
+            <Item>
+              <CategoryAsset>18024</CategoryAsset>
+              <ItemTypes>HarborOffice</ItemTypes>
+            </Item>
+          </ModOp>
+          <ModOp Type="add" GUID="502015" Path="/Values/ItemFilter/ItemCategories/Item[CategoryAsset='18024']/ItemTypes">;Mod1</ModOp>
+        </Group>
+      <!-- Crafting General -->
+        <Group>
+          <ModOp Type="add" GUID="113879" Path="/Values/ItemFilter/ItemCategories/Item[CategoryAsset='18021']/ItemTypes">;Mod1</ModOp>
+          <ModOp Type="add" GUID="113879" Path="/Values/ItemFilter/ItemCategories/Item[CategoryAsset='18023']/ItemTypes">;Mod1</ModOp>
+          <ModOp Type="add" GUID="113879" Path="/Values/ItemFilter/ItemCategories/Item[CategoryAsset='18024']/ItemTypes">;Mod1</ModOp>
+          <ModOp Type="add" GUID="113879" Path="/Values/ItemFilter/ItemCategories/Item[CategoryAsset='18025']/ItemTypes">;Mod1</ModOp>
+        </Group>
+      <!-- Crafting Arctic -->
+        <Group>
+          <ModOp Type="add" GUID="116632" Path="/Values/ItemFilter/ItemCategories/Item[CategoryAsset='18021']/ItemTypes">;Mod1</ModOp>
+          <ModOp Type="add" GUID="116632" Path="/Values/ItemFilter/ItemCategories/Item[CategoryAsset='116633']/ItemTypes">;Mod1</ModOp>
+          <ModOp Type="add" GUID="116632" Path="/Values/ItemFilter/ItemCategories/Item[CategoryAsset='18023']/ItemTypes">;Mod1</ModOp>
+          <ModOp Type="add" GUID="116632" Path="/Values/ItemFilter/ItemCategories/Item[CategoryAsset='18025']/ItemTypes">;Mod1</ModOp>
+        </Group>
+    </Group>
+</ModOps>
