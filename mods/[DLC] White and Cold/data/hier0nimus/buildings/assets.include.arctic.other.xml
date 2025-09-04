@@ -493,6 +493,19 @@
     </ModOp>
     <!-- END - RESIDENCE EXPLORERS -->
 
+    <!-- Add to neighbor feature -->
+    <ModOp Type="add" GUID="7233" Path='/Values/ResidenceUpgradeFeature/BuildingsExcludedFromDefaultVariationRule'>
+        <Item>
+            <Building>1742004507</Building>
+        </Item>
+        <Item>
+            <Building>1742004442</Building>
+        </Item>
+        <Item>
+            <Building>1742004444</Building>
+        </Item>
+    </ModOp>
+
     <!-- START - BUILDING Explorers Upgraded Residence -->
     <ModOp Type="addNextSibling" GUID='112091'>
         <Asset>
@@ -510,6 +523,116 @@
                     <SkipUnlockMessage>1</SkipUnlockMessage>
                     <PickingAsset>112091</PickingAsset>                    <!--residence_arctic_tier01-->
                     <BuildModeRandomRotation>90</BuildModeRandomRotation>
+                    <InfluencedByNeighbors>
+                        <Item>
+                            <Building>1742004507</Building>                            <!--Explorer Upgraded Residence-->
+                        </Item>
+                    </InfluencedByNeighbors>
+                    <BuildingBlockPool>
+                        <Single>
+                            <Pool>
+                                <Item>
+                                    <Variation>0</Variation>
+                                </Item>
+                                <Item>
+                                    <Variation>1</Variation>
+                                </Item>
+                            </Pool>
+                        </Single>
+                        <DontCare />
+                        <Corner/>
+                        <Mid>
+                            <Pool>
+                                <Item>
+                                    <Variation>2</Variation>
+                                </Item>
+                                <Item>
+                                    <Variation>3</Variation>
+                                </Item>
+                            </Pool>
+                        </Mid>
+                        <End>
+                            <Pool>
+                                <Item>
+                                    <Variation>4</Variation>
+                                </Item>
+                                <Item>
+                                    <Variation>5</Variation>
+                                </Item>
+                            </Pool>
+                        </End>
+                        <TCrossing />
+                        <Crossing />
+                    </BuildingBlockPool>
+                    <InfluencedVariationDirection>
+                        <Item>
+                            <!-- 0-single -->
+                            <Type>Single</Type>
+                        </Item>
+                        <Item>
+                            <!-- 1-end, south-west -->
+                            <Direction>3</Direction>
+                            <Type>End</Type>
+                        </Item>
+                        <Item>
+                            <!-- 2-end, south-east -->
+                            <Direction>1</Direction>
+                            <Type>End</Type>
+                        </Item>
+                        <Item>
+                            <!-- 3-corner, south -->
+                            <Direction>3</Direction>
+                            <Type>End</Type>
+                        </Item>
+                        <Item>
+                            <!-- 4-end, north-east -->
+                            <Type>End</Type>
+                        </Item>
+                        <Item>
+                            <!-- 5-mid, south-west to north-east -->
+                            <Direction>1</Direction>
+                            <Type>Mid</Type>
+                        </Item>
+                        <Item>
+                            <!-- 6-corner, east -->
+                            <Direction>1</Direction>
+                            <Type>End</Type>
+                        </Item>
+                        <Item>
+                            <!-- 7-T, front facing south-east -->
+                        </Item>
+                        <Item>
+                            <!-- 8-end, north-west -->
+                            <Type>End</Type>
+                        </Item>
+                        <Item>
+                            <!-- 9-corner, west -->
+                            <Direction>3</Direction>
+                            <Type>End</Type>
+                        </Item>
+                        <Item>
+                            <!-- 10-mid, north-west to south-east -->
+                            <Direction>3</Direction>
+                            <Type>Mid</Type>
+                        </Item>
+                        <Item>
+                            <!-- 11-T, front facing south-west  -->
+                        </Item>
+                        <Item>
+                            <!-- 12-corner, north -->
+                            <Direction>1</Direction>
+                            <Type>End</Type>
+                        </Item>
+                        <Item>
+                            <!-- 13-T, front facing north-west -->
+                        </Item>
+                        <Item>
+                            <!-- 14-T, front facing north-east -->
+                        </Item>
+                        <Item>
+                            <!-- 15-crossing -->
+                        </Item>
+                    </InfluencedVariationDirection>
                 </Building>
                 <Cost>
                     <Costs>
@@ -877,7 +1000,7 @@
     </ModOp>
     <!-- END - RESIDENCE TECHNICIANS -->
 
-    <!-- START - BUILDING Technicians Upgraded Residence -->
+    <!-- START - DEPRECATED - BUILDING Technicians Upgraded Residence -->
     <ModOp Type="addNextSibling" GUID='114751'>
         <Asset>
             <Template>ResidenceBuilding7_Arctic</Template>
@@ -971,7 +1094,7 @@
                 <Text>
                     <LocaText>
                         <English>
-                            <Text>Technicians Upgraded Residence</Text>
+                            <Text>DEPRECATED - Technicians Upgraded Residence</Text>
                             <Status>Exported</Status>
                         </English>
                     </LocaText>
@@ -1054,7 +1177,7 @@
                     <DynamicEnvironmentType>ResidenceT1</DynamicEnvironmentType>
                 </AmbientMoodProvider>
                 <UpgradeList>
-                    <DefaultBuff>1742004525</DefaultBuff>    <!-- Heated Insulated Residences - Buff -->
+                    <DefaultBuff>1742004525</DefaultBuff>                    <!-- Heated Insulated Residences - Buff -->
                 </UpgradeList>
                 <Attackable>
                     <AttackableType>IslandBuilding</AttackableType>
@@ -1165,7 +1288,7 @@
             </Values>
         </Asset>
     </ModOp>
-    <!-- END - BUILDING Technicians Upgraded Residence -->
+    <!-- END - BUILDING DEPRECATED - Technicians Upgraded Residence -->
 
     <!-- START - BUILDING Technicians Upgraded Residence Level 1 -->
     <ModOp Type="addNextSibling" GUID='114751'>
@@ -1184,6 +1307,146 @@
                     <SkipUnlockMessage>1</SkipUnlockMessage>
                     <PickingAsset>112091</PickingAsset>                    <!--residence_arctic_tier01-->
                     <BuildModeRandomRotation>90</BuildModeRandomRotation>
+                    <InfluencedByNeighbors>
+                        <Item>
+                            <Building>1742004442</Building>                            <!--Technicians Upgraded Residence Level 1-->
+                        </Item>
+                        <Item>
+                            <Building>1742004444</Building>                            <!--Technicians Upgraded Residence Level 2-->
+                        </Item>
+                    </InfluencedByNeighbors>
+                    <BuildingBlockPool>
+                        <Single>
+                            <Pool>
+                                <Item>
+                                    <Variation>6</Variation>
+                                </Item>
+                                <Item>
+                                    <Variation>7</Variation>
+                                </Item>
+                            </Pool>
+                        </Single>
+                        <DontCare />
+                        <Corner>
+                            <Pool>
+                                <Item>
+                                    <DirectionOffet>2</DirectionOffet>
+                                    <Variation>0</Variation>
+                                </Item>
+                                <Item>
+                                    <DirectionOffet>2</DirectionOffet>
+                                    <Variation>1</Variation>
+                                </Item>
+                                <Item>
+                                    <DirectionOffet>2</DirectionOffet>
+                                    <Variation>2</Variation>
+                                </Item>
+                            </Pool>
+                        </Corner>
+                        <Mid>
+                            <Pool>
+                                <Item>
+                                    <DirectionOffet>1</DirectionOffet>
+                                    <Variation>3</Variation>
+                                </Item>
+                                <Item>
+                                    <DirectionOffet>1</DirectionOffet>
+                                    <Variation>4</Variation>
+                                </Item>
+                                <Item>
+                                    <DirectionOffet>1</DirectionOffet>
+                                    <Variation>5</Variation>
+                                </Item>
+                            </Pool>
+                        </Mid>
+                        <End>
+                            <Pool>
+                                <Item>
+                                    <Variation>8</Variation>
+                                </Item>
+                                <Item>
+                                    <Variation>9</Variation>
+                                </Item>
+                            </Pool>
+                        </End>
+                        <TCrossing />
+                        <Crossing />
+                    </BuildingBlockPool>
+                    <InfluencedVariationDirection>
+                        <Item>
+                            <!-- single -->
+                            <Direction>0</Direction>
+                            <Type>Single</Type>
+                        </Item>
+                        <Item>
+                            <!-- end, south-west -->
+                            <Direction>1</Direction>
+                            <Type>Mid</Type>
+                        </Item>
+                        <Item>
+                            <!-- end, south-east -->
+                            <Type>Mid</Type>
+                        </Item>
+                        <Item>
+                            <!-- corner, south -->
+                            <Direction>2</Direction>
+                            <Type>Corner</Type>
+                        </Item>
+                        <Item>
+                            <!-- end, north-east -->
+                            <Direction>1</Direction>
+                            <Type>Mid</Type>
+                        </Item>
+                        <Item>
+                            <!-- mid, south-west to north-east -->
+                            <Direction>1</Direction>
+                            <Type>Mid</Type>
+                        </Item>
+                        <Item>
+                            <!-- corner, east -->
+                            <Direction>3</Direction>
+                            <Type>Corner</Type>
+                        </Item>
+                        <Item>
+                            <!-- T, front facing south-east -->
+                            <Direction>3</Direction>
+                            <Type>Mid</Type>
+                        </Item>
+                        <Item>
+                            <!-- end, north-west -->
+                            <Type>Mid</Type>
+                        </Item>
+                        <Item>
+                            <!-- corner, west -->
+                            <Direction>1</Direction>
+                            <Type>Corner</Type>
+                        </Item>
+                        <Item>
+                            <!-- mid, north-west to south-east -->
+                            <Type>Mid</Type>
+                        </Item>
+                        <Item>
+                            <!-- T, front facing south-west  -->
+                            <Direction>2</Direction>
+                            <Type>Mid</Type>
+                        </Item>
+                        <Item>
+                            <!-- corner, north -->
+                            <Type>Corner</Type>
+                        </Item>
+                        <Item>
+                            <!-- T, front facing north-west -->
+                            <Direction>1</Direction>
+                            <Type>Mid</Type>
+                        </Item>
+                        <Item>
+                            <!-- T, front facing north-east -->
+                            <Type>Mid</Type>
+                        </Item>
+                        <Item>
+                            <!-- crossing -->
+                        </Item>
+                    </InfluencedVariationDirection>
                 </Building>
                 <Cost>
                     <Costs>
@@ -1245,6 +1508,18 @@
                         </Item>
                         <Item>
                             <Filename>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_03_01_base.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_04_01_base.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_04_02_base.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_05_01_base.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_05_02_base.cfg</Filename>
                         </Item>
                     </Variations>
                     <Skins/>
@@ -1351,7 +1626,7 @@
                     <DynamicEnvironmentType>ResidenceT1</DynamicEnvironmentType>
                 </AmbientMoodProvider>
                 <UpgradeList>
-                    <DefaultBuff>1742004525</DefaultBuff>    <!-- Heated Insulated Residences - Buff -->
+                    <DefaultBuff>1742004525</DefaultBuff>                    <!-- Heated Insulated Residences - Buff -->
                 </UpgradeList>
                 <Attackable>
                     <AttackableType>IslandBuilding</AttackableType>
@@ -1448,6 +1723,22 @@
                                     <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_floor.cfg</FloorCFG>
                                     <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_roof.cfg</RoofCFG>
                                 </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_04_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_04_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_04_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_04_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_05_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_05_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_05_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_05_01_roof.cfg</RoofCFG>
+                                </Item>
                             </FloorVariations>
                         </BigFloor>
                         <MediumFloor>
@@ -1477,6 +1768,22 @@
                                     <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_floor.cfg</FloorCFG>
                                     <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_roof.cfg</RoofCFG>
                                 </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_04_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_04_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_04_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_04_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_05_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_05_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_05_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_05_01_roof.cfg</RoofCFG>
+                                </Item>
                             </FloorVariations>
                         </MediumFloor>
                         <TinyFloor>
@@ -1505,6 +1812,22 @@
                                 <Item>
                                     <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_floor.cfg</FloorCFG>
                                     <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_04_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_04_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_04_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_04_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_05_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_05_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_05_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_05_01_roof.cfg</RoofCFG>
                                 </Item>
                             </FloorVariations>
                         </TinyFloor>
@@ -1575,6 +1898,146 @@
                     <SkipUnlockMessage>1</SkipUnlockMessage>
                     <PickingAsset>112091</PickingAsset>                    <!--residence_arctic_tier01-->
                     <BuildModeRandomRotation>90</BuildModeRandomRotation>
+                    <InfluencedByNeighbors>
+                        <Item>
+                            <Building>1742004442</Building>                            <!--Technicians Upgraded Residence Level 1-->
+                        </Item>
+                        <Item>
+                            <Building>1742004444</Building>                            <!--Technicians Upgraded Residence Level 2-->
+                        </Item>
+                    </InfluencedByNeighbors>
+                    <BuildingBlockPool>
+                        <Single>
+                            <Pool>
+                                <Item>
+                                    <Variation>6</Variation>
+                                </Item>
+                                <Item>
+                                    <Variation>7</Variation>
+                                </Item>
+                            </Pool>
+                        </Single>
+                        <DontCare />
+                        <Corner>
+                            <Pool>
+                                <Item>
+                                    <DirectionOffet>2</DirectionOffet>
+                                    <Variation>0</Variation>
+                                </Item>
+                                <Item>
+                                    <DirectionOffet>2</DirectionOffet>
+                                    <Variation>1</Variation>
+                                </Item>
+                                <Item>
+                                    <DirectionOffet>2</DirectionOffet>
+                                    <Variation>2</Variation>
+                                </Item>
+                            </Pool>
+                        </Corner>
+                        <Mid>
+                            <Pool>
+                                <Item>
+                                    <DirectionOffet>1</DirectionOffet>
+                                    <Variation>3</Variation>
+                                </Item>
+                                <Item>
+                                    <DirectionOffet>1</DirectionOffet>
+                                    <Variation>4</Variation>
+                                </Item>
+                                <Item>
+                                    <DirectionOffet>1</DirectionOffet>
+                                    <Variation>5</Variation>
+                                </Item>
+                            </Pool>
+                        </Mid>
+                        <End>
+                            <Pool>
+                                <Item>
+                                    <Variation>8</Variation>
+                                </Item>
+                                <Item>
+                                    <Variation>9</Variation>
+                                </Item>
+                            </Pool>
+                        </End>
+                        <TCrossing />
+                        <Crossing />
+                    </BuildingBlockPool>
+                    <InfluencedVariationDirection>
+                        <Item>
+                            <!-- single -->
+                            <Direction>0</Direction>
+                            <Type>Single</Type>
+                        </Item>
+                        <Item>
+                            <!-- end, south-west -->
+                            <Direction>1</Direction>
+                            <Type>Mid</Type>
+                        </Item>
+                        <Item>
+                            <!-- end, south-east -->
+                            <Type>Mid</Type>
+                        </Item>
+                        <Item>
+                            <!-- corner, south -->
+                            <Direction>2</Direction>
+                            <Type>Corner</Type>
+                        </Item>
+                        <Item>
+                            <!-- end, north-east -->
+                            <Direction>1</Direction>
+                            <Type>Mid</Type>
+                        </Item>
+                        <Item>
+                            <!-- mid, south-west to north-east -->
+                            <Direction>1</Direction>
+                            <Type>Mid</Type>
+                        </Item>
+                        <Item>
+                            <!-- corner, east -->
+                            <Direction>3</Direction>
+                            <Type>Corner</Type>
+                        </Item>
+                        <Item>
+                            <!-- T, front facing south-east -->
+                            <Direction>3</Direction>
+                            <Type>Mid</Type>
+                        </Item>
+                        <Item>
+                            <!-- end, north-west -->
+                            <Type>Mid</Type>
+                        </Item>
+                        <Item>
+                            <!-- corner, west -->
+                            <Direction>1</Direction>
+                            <Type>Corner</Type>
+                        </Item>
+                        <Item>
+                            <!-- mid, north-west to south-east -->
+                            <Type>Mid</Type>
+                        </Item>
+                        <Item>
+                            <!-- T, front facing south-west  -->
+                            <Direction>2</Direction>
+                            <Type>Mid</Type>
+                        </Item>
+                        <Item>
+                            <!-- corner, north -->
+                            <Type>Corner</Type>
+                        </Item>
+                        <Item>
+                            <!-- T, front facing north-west -->
+                            <Direction>1</Direction>
+                            <Type>Mid</Type>
+                        </Item>
+                        <Item>
+                            <!-- T, front facing north-east -->
+                            <Type>Mid</Type>
+                        </Item>
+                        <Item>
+                            <!-- crossing -->
+                        </Item>
+                    </InfluencedVariationDirection>
                 </Building>
                 <Cost>
                     <Costs>
@@ -1636,6 +2099,18 @@
                         </Item>
                         <Item>
                             <Filename>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_03_01_base.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_04_01_base.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_04_02_base.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_05_01_base.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_05_02_base.cfg</Filename>
                         </Item>
                     </Variations>
                     <Skins/>
@@ -1742,7 +2217,7 @@
                     <DynamicEnvironmentType>ResidenceT1</DynamicEnvironmentType>
                 </AmbientMoodProvider>
                 <UpgradeList>
-                    <DefaultBuff>1742004525</DefaultBuff>    <!-- Heated Insulated Residences - Buff -->
+                    <DefaultBuff>1742004525</DefaultBuff>                    <!-- Heated Insulated Residences - Buff -->
                 </UpgradeList>
                 <Attackable>
                     <AttackableType>IslandBuilding</AttackableType>
@@ -1840,6 +2315,22 @@
                                     <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_floor.cfg</FloorCFG>
                                     <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_roof.cfg</RoofCFG>
                                 </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_04_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_04_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_04_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_04_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_05_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_05_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_05_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_05_01_roof.cfg</RoofCFG>
+                                </Item>
                             </FloorVariations>
                         </BigFloor>
                         <MediumFloor>
@@ -1869,6 +2360,22 @@
                                     <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_floor.cfg</FloorCFG>
                                     <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_roof.cfg</RoofCFG>
                                 </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_04_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_04_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_04_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_04_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_05_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_05_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_05_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_05_01_roof.cfg</RoofCFG>
+                                </Item>
                             </FloorVariations>
                         </MediumFloor>
                         <TinyFloor>
@@ -1897,6 +2404,22 @@
                                 <Item>
                                     <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_floor.cfg</FloorCFG>
                                     <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_02_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_04_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_04_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_04_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_04_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_05_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_05_01_roof.cfg</RoofCFG>
+                                </Item>
+                                <Item>
+                                    <FloorCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_05_01_floor.cfg</FloorCFG>
+                                    <RoofCFG>data/graphics/buildings/residence/residence_technicians/residence_technician_upgraded_05_01_roof.cfg</RoofCFG>
                                 </Item>
                             </FloorVariations>
                         </TinyFloor>

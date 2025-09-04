@@ -11,7 +11,6 @@
       <RegionType>Arctic</RegionType>
     </Item>
   </ModOp>
-
   <!-- END - EXPAND PRODUCTION REGIONS EXISTING PRODUCTS -->
 
   <!-- START - ADD INUIT WORKFORCE PRODUCTS -->
@@ -117,7 +116,14 @@
             </Item>
           </ProductionRegions>
         </Product>
-        <ExpeditionAttribute />
+        <ExpeditionAttribute>
+          <ExpeditionAttributes>
+            <Item>
+              <Attribute>Navigation</Attribute>
+              <Amount>10</Amount>
+            </Item>
+          </ExpeditionAttributes>
+        </ExpeditionAttribute>
       </Values>
     </Asset>
   </ModOp>
@@ -152,7 +158,14 @@
             </Item>
           </ProductionRegions>
         </Product>
-        <ExpeditionAttribute />
+        <ExpeditionAttribute>
+          <ExpeditionAttributes>
+            <Item>
+              <Attribute>Diplomacy</Attribute>
+              <Amount>1</Amount>
+            </Item>
+          </ExpeditionAttributes>
+        </ExpeditionAttribute>
       </Values>
     </Asset>
   </ModOp>
@@ -187,7 +200,14 @@
             </Item>
           </ProductionRegions>
         </Product>
-        <ExpeditionAttribute />
+        <ExpeditionAttribute>
+          <ExpeditionAttributes>
+            <Item>
+              <Attribute>Navigation</Attribute>
+              <Amount>5</Amount>
+            </Item>
+          </ExpeditionAttributes>
+        </ExpeditionAttribute>
       </Values>
     </Asset>
   </ModOp>
@@ -222,7 +242,14 @@
             </Item>
           </ProductionRegions>
         </Product>
-        <ExpeditionAttribute />
+        <ExpeditionAttribute>
+          <ExpeditionAttributes>
+            <Item>
+              <Attribute>Navigation</Attribute>
+              <Amount>10</Amount>
+            </Item>
+          </ExpeditionAttributes>
+        </ExpeditionAttribute>
       </Values>
     </Asset>
   </ModOp>
@@ -257,7 +284,14 @@
             </Item>
           </ProductionRegions>
         </Product>
-        <ExpeditionAttribute />
+        <ExpeditionAttribute>
+          <ExpeditionAttributes>
+            <Item>
+              <Attribute>Diplomacy</Attribute>
+              <Amount>15</Amount>
+            </Item>
+          </ExpeditionAttributes>
+        </ExpeditionAttribute>
       </Values>
     </Asset>
   </ModOp>
@@ -315,6 +349,10 @@
         <ExpeditionAttribute>
           <BaseMorale>0</BaseMorale>
           <ExpeditionAttributes>
+            <Item>
+              <Attribute>Diplomacy</Attribute>
+              <Amount>10</Amount>
+            </Item>
             <Item>
               <Attribute>Medicine</Attribute>
               <Amount>10</Amount>
@@ -482,6 +520,9 @@
               <Product>1010209</Product>              <!-- Fur - Product -->
             </Item>
             <Item>
+              <Product>1010200</Product>              <!-- Fish - Product -->
+            </Item>
+            <Item>
               <Product>1500010847</Product>              <!-- Tea - Product -->
             </Item>
             <Item>
@@ -511,6 +552,18 @@
             <Item>
               <Product>112703</Product>              <!-- Husky Sleds - Product -->
             </Item>
+            <Item>
+              <Product>112698</Product>              <!-- Husky - Product -->
+            </Item>
+            <Item>
+              <Product>112704</Product>              <!-- Sled frames - Product -->
+            </Item>
+            <Item>
+              <Product>1742110029</Product>              <!-- Qilaut - Product -->
+            </Item>
+            <Item>
+              <Product>1742004172</Product>              <!-- Sculptures - Product -->
+            </Item>
           </List>
         </ProductList>
       </Values>
@@ -518,90 +571,197 @@
   </ModOp>
   <!-- END - PRODUCTLIST - INUIT CONSUMER GOODS -->
 
+  <!-- START - PRODUCTLIST - INUIT UNLOCK GOODS -->
+  <ModOp Type="addNextSibling" GUID='501995'>
+    <Asset>
+      <Template>ProductList</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004537</GUID>          <!-- Inuit ProductList -->
+          <Name>Inuit Unlock goods</Name>
+          <IconFilename>data\ui\2kimages\main\3dicons\specialists\systemic\icon_inuit_specialist_905.png</IconFilename>
+        </Standard>
+        <ProductList>
+          <List>
+            <Item>
+              <Product>120008</Product>              <!-- Wood - Product -->
+            </Item>
+            <Item>
+              <Product>1010196</Product>              <!-- Timber - Product -->
+            </Item>
+            <Item>
+              <Product>1010209</Product>              <!-- Fur - Product -->
+            </Item>
+            <Item>
+              <Product>1010200</Product>              <!-- Fish - Product -->
+            </Item>
+            <Item>
+              <Product>1500010847</Product>              <!-- Tea - Product -->
+            </Item>
+            <Item>
+              <Product>1010235</Product>              <!-- Flour - Product -->
+            </Item>
+            <Item>
+              <Product>1440212</Product>              <!-- Algae - Product -->
+            </Item>
+            <Item>
+              <Product>112699</Product>              <!-- Whale oil - Product -->
+            </Item>
+            <Item>
+              <Product>1010213</Product>              <!-- Bread - Product -->
+            </Item>
+            <Item>
+              <Product>112696</Product>              <!-- Seal skin  - Product -->
+            </Item>
+            <Item>
+              <Product>112695</Product>              <!-- Bear Fur  - Product -->
+            </Item>
+            <Item>
+              <Product>112700</Product>              <!-- Parkas - Product -->
+            </Item>
+            <Item>
+              <Product>1742004162</Product>              <!-- Snow Goggles - Product -->
+            </Item>
+            <Item>
+              <Product>1742004166</Product>              <!-- Animal Bones - Product -->
+            </Item>
+            <Item>
+              <Product>1500010153</Product>              <!-- Tools - Product -->
+            </Item>
+            <Item>
+              <Product>112694</Product>              <!-- Caribou Meat - Product -->
+            </Item>
+            <Item>
+              <Product>112705</Product>              <!-- Pemmican - Product -->
+            </Item>
+            <Item>
+              <Product>114410</Product>              <!-- Seafood Stew - Product -->
+            </Item>
+            <Item>
+              <Product>1742004168</Product>              <!-- Snow shoes - Product -->
+            </Item>
+            <Item>
+              <Product>1742004170</Product>              <!-- Qajaks - Product -->
+            </Item>
+            <Item>
+              <Product>112703</Product>              <!-- Husky Sleds - Product -->
+            </Item>
+            <Item>
+              <Product>1742004172</Product>              <!-- Sculptures - Product -->
+            </Item>
+            <Item>
+              <Product>1742110029</Product>              <!-- Qilaut - Product -->
+            </Item>
+            <Item>
+              <Product>112698</Product>              <!-- Husky - Product -->
+            </Item>
+            <Item>
+              <Product>112704</Product>              <!-- Sled frames - Product -->
+            </Item>
+            <Item>
+              <Product>1010226</Product>              <!-- Coal - Product -->
+            </Item>
+            <Item>
+              <Product>1555000161</Product>              <!-- Ink - Product -->
+            </Item>
+          </List>
+        </ProductList>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - PRODUCTLIST - INUIT UNLOCK GOODS -->
+
   <!-- START - ADD GOOD TO StandartProductStorageList -->
-  <ModOp Type="add" GUID='120055' Path="/Values/ProductStorageList/ProductList">
+  <!-- Snow Goggles -->
+  <ModOp Type="add" GUID="120055" Condition="!~/Values/ProductStorageList/ProductList/Item[Product='1742004162']" Path="/Values/ProductStorageList/ProductList">
     <Item>
       <Product>1742004162</Product>      <!-- Snow Goggles - Product -->
     </Item>
+  </ModOp>
+  <!-- Animal Bones -->
+  <ModOp Type="add" GUID="120055" Condition="!~/Values/ProductStorageList/ProductList/Item[Product='1742004166']" Path="/Values/ProductStorageList/ProductList">
     <Item>
       <Product>1742004166</Product>      <!-- Animal Bones - Product -->
     </Item>
+  </ModOp>
+  <!-- Snow Shoes -->
+  <ModOp Type="add" GUID="120055" Condition="!~/Values/ProductStorageList/ProductList/Item[Product='1742004168']" Path="/Values/ProductStorageList/ProductList">
     <Item>
       <Product>1742004168</Product>      <!-- Snow Shoes - Product -->
     </Item>
+  </ModOp>
+  <!-- Qajaks -->
+  <ModOp Type="add" GUID="120055" Condition="!~/Values/ProductStorageList/ProductList/Item[Product='1742004170']" Path="/Values/ProductStorageList/ProductList">
     <Item>
       <Product>1742004170</Product>      <!-- Qajaks - Product -->
     </Item>
+  </ModOp>
+  <!-- Sculptures -->
+  <ModOp Type="add" GUID="120055" Condition="!~/Values/ProductStorageList/ProductList/Item[Product='1742004172']" Path="/Values/ProductStorageList/ProductList">
     <Item>
       <Product>1742004172</Product>      <!-- Sculptures - Product -->
     </Item>
   </ModOp>
   <!-- END ADD GOOD TO StandartProductStorageList -->
 
-  <!-- START ADD GOOD TO ProductList -->
-  <ModOp Type="add" GUID='501954,501955,502028,502068' Path="/Values/ProductList/List">
+  <!-- START ADD GOOD TO ProductList - ALL GOODS -->
+  <ModOp Type="add" GUID="502016,502065,502027,502067,502028,502068,502078,502080,502220" Path="/Values/ProductList/List">
     <Item>
-      <Product>1742004162</Product>      <!-- Snow Goggles - Product -->
-    </Item>
-    <Item>
-      <Product>1742004166</Product>      <!-- Animal Bones - Product -->
-    </Item>
-    <Item>
-      <Product>1742004168</Product>      <!-- Snow Shoes - Product -->
-    </Item>
-    <Item>
-      <Product>1742004170</Product>      <!-- Qajaks - Product -->
-    </Item>
-    <Item>
-      <Product>1742004172</Product>      <!-- Sculptures - Product -->
-    </Item>
-    <Item>
-      <Product>1555000161</Product>      <!-- Ink - Product -->
+      <Product>1742004537</Product>      <!-- Inuit Unlock Goods - Product List -->
     </Item>
   </ModOp>
-  <!-- END ADD GOOD TO ProductList -->
+  <!-- END ADD GOOD TO ProductList - ALL GOODS -->
 
-  <!-- START ADD GOOD TO ProductList - Arctic Agri Goods -->
-  <ModOp Type="add" GUID='502042' Path="/Values/ProductList/List">
+  <!-- START ADD GOOD TO ProductList - ALL CONSUMER GOODS -->
+  <ModOp Type="add" GUID="502031,502034,502035,502081" Path="/Values/ProductList/List">
+    <Item>
+      <Product>1742004158</Product>      <!-- Inuit Consumer Goods - Product List -->
+    </Item>
+  </ModOp>
+  <!-- END ADD GOOD TO ProductList - ALL CONSUMER GOODS -->
+
+  <!-- START ADD GOOD TO ProductList - Agri Goods -->
+  <!-- Animal Bones -->
+  <ModOp Type="add" GUID="502039" Condition="!~/Values/ProductList/List/Item[Product='1742004166']" Path="/Values/ProductList/List">
     <Item>
       <Product>1742004166</Product>      <!-- Animal Bones - Product -->
     </Item>
   </ModOp>
-  <!-- END ADD GOOD TO ProductList -->
+  <!-- Algae -->
+  <ModOp Type="add" GUID="502039" Condition="!~/Values/ProductList/List/Item[Product='1440212']" Path="/Values/ProductList/List">
+    <Item>
+      <Product>1440212</Product>      <!-- Algae - Product -->
+    </Item>
+  </ModOp>
+  <!-- END ADD GOOD TO ProductList - Agri Goods -->
 
   <!-- START ADD GOOD TO ProductList - Arctic Intermidiate Goods -->
-  <ModOp Type="add" GUID='502048' Path="/Values/ProductList/List">
+  <!-- Ink -->
+  <ModOp Type="add" GUID="502045" Condition="!~/Values/ProductList/List/Item[Product='1555000161']" Path="/Values/ProductList/List">
     <Item>
       <Product>1555000161</Product>      <!-- Ink - Product -->
     </Item>
   </ModOp>
   <!-- END ADD GOOD TO ProductList -->
 
-  <!-- CORSETS > AFTER POCKET WATCHES -->
-  <ModOp Type="addNextSibling" GUID="120055,120057" Path="/Values/ProductStorageList/ProductList/Item[Product='1010246']">
+  <!-- START - CORSETS > AFTER POCKET WATCHES -->
+  <ModOp Type="addNextSibling" GUID="120055,120057" Condition="!~/Values/ProductStorageList/ProductList/Item[Product='1742004333']" Path="/Values/ProductStorageList/ProductList/Item[Product='1010246']">
     <Item>
       <Product>1742004333</Product>      <!-- Corsets - Product -->
     </Item>
   </ModOp>
+  <!-- END - CORSETS > AFTER POCKET WATCHES -->
 
   <!-- START ADD TO WORKFORCEGOODS - EngineersConsumerGoods / ArtisanWorkForceGoods -->
-  <ModOp Type="add" GUID="501998,502020,502006" Path="/Values/ProductList/List/">
+  <ModOp Type="add" GUID="501998,502020,502006" Condition="!~/Values/ProductList/List/Item[Product='1742004333']" Path="/Values/ProductList/List/">
     <Item>
       <Product>1742004333</Product>      <!-- Corsets - Product -->
     </Item>
   </ModOp>
   <!-- END ADD TO WORKFORCEGOODS - EngineersConsumerGoods / ArtisanWorkForceGoods -->
 
-  <!-- START ADD GOODS TO OTHER ProductList - ALL PRODUCTS -->
-  <ModOp Type="add" GUID='502016,502065' Path="/Values/ProductList/List">
-    <Item>
-      <Product>1742004333</Product>      <!-- Corsets - Product -->
-    </Item>
-  </ModOp>
-  <!-- END ADD GOODS TO OTHER PRODUCTLIST - ALL PRODUCTS -->
-
   <!-- START ADD GOODS TO OTHER ProductList - LUXURY -->
-  <ModOp Type="add" GUID='501992' Path="/Values/ProductList/List">
+  <ModOp Type="add" GUID='501992' Condition="!~/Values/ProductList/List/Item[Product='1742004333']" Path="/Values/ProductList/List">
     <Item>
       <Product>1742004333</Product>      <!-- Corsets - Product -->
     </Item>
@@ -609,13 +769,20 @@
   <!-- END ADD GOODS TO OTHER PRODUCTLIST - LUXURY -->
 
   <!-- START ADD GOODS TO OTHER ProductList - HEATING GOODS -->
-  <ModOp Type="add" GUID='501994' Path="/Values/ProductList/List">
+  <!-- Wood -->
+  <ModOp Type="add" GUID='501994' Condition="!~/Values/ProductList/List/Item[Product='120008']" Path="/Values/ProductList/List">
     <Item>
       <Product>120008</Product>      <!-- Wood - Product -->
     </Item>
+  </ModOp>
+  <!-- Seafood Stew -->
+  <ModOp Type="add" GUID='501994' Condition="!~/Values/ProductList/List/Item[Product='114410']" Path="/Values/ProductList/List">
     <Item>
       <Product>114410</Product>      <!-- Seafood Stew - Product -->
     </Item>
+  </ModOp>
+  <!-- Furs -->
+  <ModOp Type="add" GUID='501994' Condition="!~/Values/ProductList/List/Item[Product='1010209']" Path="/Values/ProductList/List">
     <Item>
       <Product>1010209</Product>      <!-- Furs - Product -->
     </Item>
@@ -623,36 +790,108 @@
   <!-- END ADD GOODS TO OTHER PRODUCTLIST - HEATING GOODS -->
 
   <!-- START ADD DIAMONDS AND SILVER ORE TO ARCTIC ProductList -->
-  <!-- Add Product 'Diamonds' to the global storage lists if not already present in the StandardStorageProductList -->
-  <ModOp Type="add" GUID="120055" Path="/Values/ProductStorageList/ProductList" Condition="!//Values[Standard/GUID='120055']/ProductStorageList/ProductList/Item[Product='1999005087']">
+  <!-- Diamonds -->
+  <ModOp Type="add" GUID="120055" Condition="!~/Values/ProductStorageList/ProductList/Item[Product='1999005087']" Path="/Values/ProductStorageList/ProductList">
     <Item>
       <Product>1999005087</Product>
     </Item>
   </ModOp>
-  <ModOp Type="add" GUID="502011,502051" Path="/Values/ProductList/List">
+  <ModOp Type="add" GUID="502011,502051" Condition="!~/Values/ProductStorageList/ProductList/Item[Product='1999005087']" Path="/Values/ProductList/List">
     <Item>
       <Product>1999005087</Product>
     </Item>
+  </ModOp>
+  <!-- Silver -->
+  <ModOp Type="add" GUID="502011,502051" Condition="!~/Values/ProductStorageList/ProductList/Item[Product='1957006101']" Path="/Values/ProductList/List">
     <Item>
       <Product>1957006101</Product>
     </Item>
   </ModOp>
   <!-- START ADD DIAMONDS AND SILVER ORE TO ARCTIC ProductList -->
 
-  <!-- START ADD ALGAE TO ARCTIC ProductList -->
-  <!-- Add Product 'Algae' to the global storage lists if not already present in the StandardStorageProductList -->
-  <ModOp Type="add" GUID="120055" Path="/Values/ProductStorageList/ProductList" Condition="!//Values[Standard/GUID='120055']/ProductStorageList/ProductList/Item[Product='1440212']">
+  <!-- START ADD GOOD TO ProductList - EXPLORER CONSUMER GOODS -->
+  <!-- Wood -->
+  <ModOp Type="add" GUID="502002" Condition="!~/Values/ProductList/List/Item[Product='120008']" Path="/Values/ProductList/List">
     <Item>
-      <Product>1440212</Product>
+      <Product>120008</Product>      <!-- Wood - Product -->
     </Item>
   </ModOp>
-  <ModOp Type="add" GUID="501954,501955,502028,502068,502039,502042," Path="/Values/ProductList/List">
+  <!-- Fish -->
+  <ModOp Type="add" GUID="502002" Condition="!~/Values/ProductList/List/Item[Product='1010200']" Path="/Values/ProductList/List">
     <Item>
-      <Product>1440212</Product>
+      <Product>1010200</Product>      <!-- Fish - Product -->
     </Item>
   </ModOp>
-  <!-- START ADD ALGAE TO ARCTIC ProductList -->
+  <!-- Tea -->
+  <ModOp Type="add" GUID="502002" Condition="!~/Values/ProductList/List/Item[Product='1500010847']" Path="/Values/ProductList/List">
+    <Item>
+      <Product>1500010847</Product>      <!-- Tea - Product -->
+    </Item>
+  </ModOp>
+  <!-- Snow Goggles -->
+  <ModOp Type="add" GUID="502002" Condition="!~/Values/ProductList/List/Item[Product='1742004162']" Path="/Values/ProductList/List">
+    <Item>
+      <Product>1742004162</Product>      <!-- Snow Goggles - Product -->
+    </Item>
+  </ModOp>
+  <!-- Seafood Stew -->
+  <ModOp Type="add" GUID="502002" Condition="!~/Values/ProductList/List/Item[Product='114410']" Path="/Values/ProductList/List">
+    <Item>
+      <Product>114410</Product>      <!-- Seafood Stew - Product -->
+    </Item>
+  </ModOp>
+  <!-- Snow shoes -->
+  <ModOp Type="add" GUID="502002" Condition="!~/Values/ProductList/List/Item[Product='1742004168']" Path="/Values/ProductList/List">
+    <Item>
+      <Product>1742004168</Product>      <!-- Snow shoes - Product -->
+    </Item>
+  </ModOp>
+  <!-- END ADD GOOD TO ProductList - EXPLORER CONSUMER GOODS -->
 
+  <!-- START ADD GOOD TO ProductList - TECHNICIAN CONSUMER GOODS -->
+  <!-- Wood -->
+  <ModOp Type="add" GUID="502003" Condition="!~/Values/ProductList/List/Item[Product='120008']" Path="/Values/ProductList/List">
+    <Item>
+      <Product>120008</Product>      <!-- Wood - Product -->
+    </Item>
+  </ModOp>
+  <!-- Fish -->
+  <ModOp Type="add" GUID="502003" Condition="!~/Values/ProductList/List/Item[Product='1010200']" Path="/Values/ProductList/List">
+    <Item>
+      <Product>1010200</Product>      <!-- Fish - Product -->
+    </Item>
+  </ModOp>
+  <!-- Tea -->
+  <ModOp Type="add" GUID="502003" Condition="!~/Values/ProductList/List/Item[Product='1500010847']" Path="/Values/ProductList/List">
+    <Item>
+      <Product>1500010847</Product>      <!-- Tea - Product -->
+    </Item>
+  </ModOp>
+  <!-- Snow Goggles -->
+  <ModOp Type="add" GUID="502003" Condition="!~/Values/ProductList/List/Item[Product='1742004162']" Path="/Values/ProductList/List">
+    <Item>
+      <Product>1742004162</Product>      <!-- Snow Goggles - Product -->
+    </Item>
+  </ModOp>
+  <!-- Seafood Stew -->
+  <ModOp Type="add" GUID="502003" Condition="!~/Values/ProductList/List/Item[Product='114410']" Path="/Values/ProductList/List">
+    <Item>
+      <Product>114410</Product>      <!-- Seafood Stew - Product -->
+    </Item>
+  </ModOp>
+  <!-- Snow shoes -->
+  <ModOp Type="add" GUID="502003" Condition="!~/Values/ProductList/List/Item[Product='1742004168']" Path="/Values/ProductList/List">
+    <Item>
+      <Product>1742004168</Product>      <!-- Snow shoes - Product -->
+    </Item>
+  </ModOp>
+  <!-- Lost Expedition Scrap / Expedition Equipment -->
+  <ModOp Type="add" GUID="502003" Condition="!~/Values/ProductList/List/Item[Product='115980']" Path="/Values/ProductList/List">
+    <Item>
+      <Product>115980</Product>      <!-- Lost Expedition Scrap / Expedition Equipment - Product -->
+    </Item>
+  </ModOp>
+  <!-- END ADD GOOD TO ProductList - TECHNICIAN CONSUMER GOODS -->
 
   <!-- START ADD GOOD TO StandardOilHarborStorageList-->
   <ModOp Type="add" GUID='120056' Path="/Values/ProductStorageList/ProductList">
@@ -713,14 +952,6 @@
   <!-- END - PRODUCTSTORAGELIST - OIL -->
 
   <!-- ****************** END ADDING ALL PRODUCTS TO PRODUCTS LISTS ****************** -->
-
-  <!-- START - ADD INUIT CONSUMER GOODS LISTS TO AllConsumerGoods_ArcticSort -->
-  <ModOp Type="addNextSibling" GUID="502035" Path="/Values/ProductList/List/Item[Product='501997']">
-    <Item>
-      <Product>1742004158</Product>      <!-- Inuit consumer goods -->
-    </Item>
-  </ModOp>
-  <!-- END - ADD INUIT CONSUMER GOODS LISTS TO AllConsumerGoods_ArcticSort -->
 
   <!-- START - ADD INUIT CONSUMER GOODS TO StandardMarketplaceArcticStorageList -->
   <ModOp Type="addNextSibling" GUID='120059' Path="/Values/ProductStorageList/ProductList/Item[Product='112703']">
