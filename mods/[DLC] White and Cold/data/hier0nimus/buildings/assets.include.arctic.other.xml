@@ -2639,6 +2639,10 @@
                             <Ingredient>1010210</Ingredient>
                             <Amount>10</Amount>
                         </Item>
+                        <Item>
+                            <Ingredient>6280</Ingredient>
+                            <Amount>10</Amount>
+                        </Item>
                     </Costs>
                     <InfluenceCostType>ZooModule</InfluenceCostType>
                     <InfluenceCostPoints>1</InfluenceCostPoints>
@@ -2657,7 +2661,7 @@
                     </Maintenances>
                 </Maintenance>
                 <Selection>
-                    <GUIType>PublicService</GUIType>
+                    <GUIType>Production</GUIType>
                 </Selection>
                 <Object>
                     <Variations>
@@ -2698,7 +2702,7 @@
                 </IncidentInfectable>
                 <Infolayer />
                 <LogisticNode>
-                    <TransporterCountMax>0</TransporterCountMax>
+                    <TransporterCountMax>1</TransporterCountMax>
                     <PathLayers>Street</PathLayers>
                 </LogisticNode>
                 <ItemContainer>
@@ -2707,13 +2711,22 @@
                     <SocketScope>Radius</SocketScope>
                     <SocketScopeRadius>0</SocketScopeRadius>
                 </ItemContainer>
-                <FactoryBase />
+                <FactoryBase>
+                    <FactoryInputs>
+                        <Item>
+                            <Product>1414</Product>                            <!-- Industrial Lubricant -->
+                            <Amount>1</Amount>
+                            <StorageAmount>4</StorageAmount>
+                        </Item>
+                    </FactoryInputs>
+                    <CycleTime>90</CycleTime>
+                </FactoryBase>
                 <Powerplant>
-                    <IndustrializationDistance>14</IndustrializationDistance>
+                    <IndustrializationDistance>18</IndustrializationDistance>
                 </Powerplant>
                 <PublicService>
-                    <FullSatisfactionDistance>14</FullSatisfactionDistance>
-                    <NoSatisfactionDistance>14</NoSatisfactionDistance>
+                    <FullSatisfactionDistance>18</FullSatisfactionDistance>
+                    <NoSatisfactionDistance>18</NoSatisfactionDistance>
                     <PublicServiceOutputs>
                         <Item>
                             <Product>1010354</Product>
