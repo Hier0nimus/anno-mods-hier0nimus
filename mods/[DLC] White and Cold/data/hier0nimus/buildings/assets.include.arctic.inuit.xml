@@ -231,7 +231,10 @@
                 <StorageBase>
                     <ProductStorageList>120059</ProductStorageList>
                 </StorageBase>
-                <Attackable />
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>3000</MaximumHitPoints>
+                </Attackable>
                 <Pausable />
                 <LogisticNode />
                 <PublicService>
@@ -374,6 +377,10 @@
                         </Item>
                     </Maintenances>
                 </Maintenance>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>1500</MaximumHitPoints>
+                </Attackable>
                 <FreeAreaProductivity>
                     <InfluenceRadius>7</InfluenceRadius>
                     <NeededAreaPercent>35</NeededAreaPercent>
@@ -533,7 +540,10 @@
                         </Item>
                     </Maintenances>
                 </Maintenance>
-                <Attackable />
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>1750</MaximumHitPoints>
+                </Attackable>
                 <Pausable />
                 <IncidentInfectable>
                     <Infectable>
@@ -860,6 +870,10 @@
                         </Item>
                     </Maintenances>
                 </Maintenance>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>1500</MaximumHitPoints>
+                </Attackable>
                 <FreeAreaProductivity>
                     <InfluenceRadius>7</InfluenceRadius>
                     <NeededAreaPercent>30</NeededAreaPercent>
@@ -1065,10 +1079,10 @@
                             <ModuleGUID>1742004112</ModuleGUID>                            <!--  Fishery - Building -->
                         </Item>
                         <Item>
-                            <ModuleGUID>1742004114</ModuleGUID>                            <!--  Whale Oil Module - Building -->
+                            <ModuleGUID>1742004114</ModuleGUID>                            <!--  Whaling Oil Docks - Building -->
                         </Item>
                         <Item>
-                            <ModuleGUID>1742004116</ModuleGUID>                            <!--  Animal Bones Module - Building -->
+                            <ModuleGUID>1742004116</ModuleGUID>                            <!--  Whaling Bones Docks - Building -->
                         </Item>
                         <Item>
                             <ModuleGUID>1742004118</ModuleGUID>                            <!--  Seal Hunter - Building -->
@@ -1446,14 +1460,14 @@
     </ModOp>
     <!-- END - BUILDING - Seaweed Harvester -->
 
-    <!-- START - BUILDING - Whale Oil Module  -->
+    <!-- START - BUILDING - Whaling Oil Docks  -->
     <ModOp Type="addNextSibling" GUID='112680'>
         <Asset>
             <Template>FactoryBuilding7_Arctic</Template>
             <Values>
                 <Standard>
                     <GUID>1742004114</GUID>
-                    <Name>Whale Oil Module </Name>
+                    <Name>Whaling Oil Docks </Name>
                     <IconFilename>data/ui/2kimages/main/3dicons/icon_whale_oil_2.png</IconFilename>
                     <InfoDescription>1742004115</InfoDescription>
                 </Standard>
@@ -1464,6 +1478,7 @@
                     <GroundDecalAsset>0</GroundDecalAsset>
                     <GroundDecalInvisible>0</GroundDecalInvisible>
                     <HasBuildingBaseTiles>0</HasBuildingBaseTiles>
+                    <HarbourAreaSize>1</HarbourAreaSize>
                 </Blocking>
                 <Cost>
                     <Costs>
@@ -1608,16 +1623,16 @@
             </Values>
         </Asset>
     </ModOp>
-    <!-- END - BUILDING - Whale Oil Module  -->
+    <!-- END - BUILDING - Whaling Oil Docks  -->
 
-    <!-- START - BUILDING - Animal Bones Module  -->
+    <!-- START - BUILDING - Whaling Bones Docks  -->
     <ModOp Type="addNextSibling" GUID='112680'>
         <Asset>
             <Template>FactoryBuilding7_Arctic</Template>
             <Values>
                 <Standard>
                     <GUID>1742004116</GUID>
-                    <Name>Animal Bones Module </Name>
+                    <Name>Whaling Bones Docks </Name>
                     <IconFilename>data/graphics/icons/icon_animal_bones.png</IconFilename>
                     <InfoDescription>1742004117</InfoDescription>
                 </Standard>
@@ -1628,6 +1643,7 @@
                     <GroundDecalAsset>0</GroundDecalAsset>
                     <GroundDecalInvisible>0</GroundDecalInvisible>
                     <HasBuildingBaseTiles>0</HasBuildingBaseTiles>
+                    <HarbourAreaSize>1</HarbourAreaSize>
                 </Blocking>
                 <Cost>
                     <Costs>
@@ -1775,7 +1791,7 @@
             </Values>
         </Asset>
     </ModOp>
-    <!-- END - BUILDING - Animal Bones Module  -->
+    <!-- END - BUILDING - Whaling Bones Docks  -->
 
     <!-- START - BUILDING - Seal Hunter  -->
     <ModOp Type="addNextSibling" GUID='112680'>
@@ -1795,6 +1811,7 @@
                     <GroundDecalAsset>0</GroundDecalAsset>
                     <GroundDecalInvisible>0</GroundDecalInvisible>
                     <HasBuildingBaseTiles>0</HasBuildingBaseTiles>
+                    <HarbourAreaSize>1</HarbourAreaSize>
                 </Blocking>
                 <Cost>
                     <Costs>
@@ -2047,7 +2064,10 @@
                     </Maintenances>
                 </Maintenance>
                 <StorageBase />
-                <Attackable />
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>5000</MaximumHitPoints>
+                </Attackable>
                 <Pausable />
                 <BuildingUnique>
                     <Uniques>
@@ -2083,7 +2103,7 @@
                             <ModuleGUID>1742004124</ModuleGUID>                            <!-- Caribou Butcher - Building -->
                         </Item>
                         <Item>
-                            <ModuleGUID>1742004126</ModuleGUID>                            <!-- Bear Caribou Skinner - Building -->
+                            <ModuleGUID>1742004126</ModuleGUID>                            <!-- Bear Skinner - Building -->
                         </Item>
                     </ConstructionOptions>
                     <AddModuleLimit>0</AddModuleLimit>
@@ -2243,6 +2263,10 @@
                         </Item>
                     </Maintenances>
                 </Maintenance>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>2500</MaximumHitPoints>
+                </Attackable>
                 <FreeAreaProductivity>
                     <InfluenceRadius>8</InfluenceRadius>
                     <NeededAreaPercent>35</NeededAreaPercent>
@@ -2411,6 +2435,10 @@
                         </Item>
                     </Maintenances>
                 </Maintenance>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>2500</MaximumHitPoints>
+                </Attackable>
                 <FreeAreaProductivity>
                     <InfluenceRadius>8</InfluenceRadius>
                     <NeededAreaPercent>35</NeededAreaPercent>
@@ -2464,14 +2492,14 @@
     </ModOp>
     <!-- START - END - Caribou Skinner - Building -->
 
-    <!-- START - BUILDING - Bear Caribou Skinner -->
+    <!-- START - BUILDING - Bear Skinner -->
     <ModOp Type="addNextSibling" GUID='112680'>
         <Asset>
             <Template>FreeAreaBuilding_Arctic</Template>
             <Values>
                 <Standard>
-                    <GUID>1742004126</GUID>                    <!-- Bear Caribou Skinner -->
-                    <Name>Bear Caribou Skinner</Name>
+                    <GUID>1742004126</GUID>                    <!-- Bear Skinner -->
+                    <Name>Bear Skinner</Name>
                     <IconFilename>data/ui/2kimages/main/3dicons/icon_bear_fur.png</IconFilename>
                     <InfoDescription>1742004127</InfoDescription>
                 </Standard>
@@ -2579,6 +2607,10 @@
                         </Item>
                     </Maintenances>
                 </Maintenance>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>2500</MaximumHitPoints>
+                </Attackable>
                 <FreeAreaProductivity>
                     <InfluenceRadius>9</InfluenceRadius>
                     <NeededAreaPercent>35</NeededAreaPercent>
@@ -2630,7 +2662,7 @@
             </Values>
         </Asset>
     </ModOp>
-    <!-- START - END - Bear Caribou Skinner - Building -->
+    <!-- START - END - Bear Skinner - Building -->
 
     <!-- START - BUILDING - Palauga Bakery -->
     <ModOp Type="addNextSibling" GUID='112680'>
@@ -2742,6 +2774,10 @@
                         </Item>
                     </Maintenances>
                 </Maintenance>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>3500</MaximumHitPoints>
+                </Attackable>
                 <Pausable />
                 <IncidentInfectable>
                     <Infectable>
@@ -2905,6 +2941,10 @@
                         </Item>
                     </Maintenances>
                 </Maintenance>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>3500</MaximumHitPoints>
+                </Attackable>
                 <Pausable />
                 <IncidentInfectable>
                     <Infectable>
@@ -3063,6 +3103,10 @@
                         </Item>
                     </Maintenances>
                 </Maintenance>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>3500</MaximumHitPoints>
+                </Attackable>
                 <Pausable />
                 <IncidentInfectable>
                     <Infectable>
@@ -3216,6 +3260,10 @@
                         </Item>
                     </Maintenances>
                 </Maintenance>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>3500</MaximumHitPoints>
+                </Attackable>
                 <IncidentInfectable>
                     <Infectable>
                         <Riot>
@@ -3347,12 +3395,12 @@
                             <StorageAmount>8</StorageAmount>
                         </Item>
                         <Item>
-                            <Product>1010209</Product>                            <!-- Furs - Product -->
+                            <Product>1742004166</Product>                            <!-- Animal Bones - Product -->
                             <Amount>1</Amount>
                             <StorageAmount>8</StorageAmount>
                         </Item>
                         <Item>
-                            <Product>1742004166</Product>                            <!-- Animal Bones - Product -->
+                            <Product>1500010825</Product>                            <!-- Ropes - Product -->
                             <Amount>1</Amount>
                             <StorageAmount>8</StorageAmount>
                         </Item>
@@ -3381,6 +3429,10 @@
                         </Item>
                     </Maintenances>
                 </Maintenance>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>3500</MaximumHitPoints>
+                </Attackable>
                 <Pausable />
                 <IncidentInfectable>
                     <Infectable>
@@ -3425,6 +3477,169 @@
         </Asset>
     </ModOp>
     <!-- END - BUILDING - Sled Maker -->
+
+    <!-- START - BUILDING - Husky Sled Service -->
+    <ModOp Type="addNextSibling" GUID='112680'>
+        <Asset>
+            <Template>FactoryBuilding7_Arctic</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004541</GUID>
+                    <Name>Husky Sled Service</Name>                    <!-- Husky Sled Service - Building -->
+                    <IconFilename>data/ui/2kimages/main/3dicons/icon_sled.png</IconFilename>
+                    <InfoDescription>1742004542</InfoDescription>
+                </Standard>
+                <Building>
+                    <SkipUnlockMessage>1</SkipUnlockMessage>
+                    <BuildModeRandomRotation>180</BuildModeRandomRotation>
+                </Building>
+                <Blocking />
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!-- Coins -->
+                            <Amount>40000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010196</Ingredient>                            <!-- Timber -->
+                            <Amount>24</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010209</Ingredient>                            <!-- Fur -->
+                            <Amount>15</Amount>
+                        </Item>
+                    </Costs>
+                </Cost>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/buildings/production/husky_sled_service_inuit/husky_sled_service_inuit_01.cfg</Filename>
+                        </Item>
+                    </Variations>
+                </Object>
+                <Mesh />
+                <Selection>
+                    <OnSelection>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList />
+                        </Values>
+                    </OnSelection>
+                    <ParticipantMessageArcheType>Arctic_Inuit</ParticipantMessageArcheType>
+                    <Colors>
+                        <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+                    </Colors>
+                </Selection>
+                <Constructable />
+                <Locked />
+                <SoundEmitter>
+                    <ActiveSounds>
+                        <Item>
+                            <Sound>247110</Sound>
+                        </Item>
+                        <Item>
+                            <Sound>240557</Sound>
+                        </Item>
+                    </ActiveSounds>
+                    <IncidentSounds>
+                        <InfectedFire>
+                            <Item>
+                                <Sound>214659</Sound>
+                            </Item>
+                        </InfectedFire>
+                    </IncidentSounds>
+                    <MaterialType>Wood</MaterialType>
+                </SoundEmitter>
+                <FeedbackController />
+                <Infolayer />
+                <UpgradeList />
+                <Factory7 />
+                <FactoryBase>
+                    <FactoryInputs>
+                        <Item>
+                            <Product>112698</Product>                            <!--husky-->
+                            <Amount>1</Amount>
+                            <StorageAmount>10</StorageAmount>
+                        </Item>
+                        <Item>
+                            <Product>112704</Product>                            <!--sled frames-->
+                            <Amount>1</Amount>
+                            <StorageAmount>10</StorageAmount>
+                        </Item>
+                    </FactoryInputs>
+                    <FactoryOutputs>
+                        <Item>
+                            <Product>112703</Product>                            <!--sleds-->
+                            <Amount>1</Amount>
+                            <StorageAmount>10</StorageAmount>
+                        </Item>
+                    </FactoryOutputs>
+                    <CycleTime>15</CycleTime>
+                    <IsMainFactory>0</IsMainFactory>
+                </FactoryBase>
+                <LogisticNode />
+                <AmbientMoodProvider>
+                    <Murmur>Arctic_Farm</Murmur>
+                    <GlacierMurmur>Arctic_Farm</GlacierMurmur>
+                    <DynamicEnvironmentType>None</DynamicEnvironmentType>
+                </AmbientMoodProvider>
+                <Maintenance>
+                    <Maintenances>
+                        <Item>
+                            <Product>1742004159</Product>                            <!-- Inuit Workforce -->
+                            <Amount>50</Amount>
+                            <ShutdownThreshold>0.2</ShutdownThreshold>
+                        </Item>
+                    </Maintenances>
+                </Maintenance>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>2500</MaximumHitPoints>
+                </Attackable>
+                <Pausable />
+                <IncidentInfectable>
+                    <Infectable>
+                        <Riot>
+                            <Base>0</Base>
+                            <Escalated>0</Escalated>
+                        </Riot>
+                        <Explosion>
+                            <Base>0</Base>
+                            <Escalated>0</Escalated>
+                        </Explosion>
+                    </Infectable>
+                    <IncidentInfectionChanceFactors>
+                        <Riot>
+                            <FactoryOvertimeFactor>0</FactoryOvertimeFactor>
+                            <FactoryUndertimeFactor>0</FactoryUndertimeFactor>
+                            <FactoryHappinessFactor>0</FactoryHappinessFactor>
+                            <ResidenceHappinessFactor>0</ResidenceHappinessFactor>
+                            <HappinessMin>0</HappinessMin>
+                            <HappinessMax>0</HappinessMax>
+                        </Riot>
+                        <Illness>
+                            <ResidenceSatisfactionFactor>0</ResidenceSatisfactionFactor>
+                            <HappinessMin>0</HappinessMin>
+                            <HappinessMax>0</HappinessMax>
+                            <SatisfactionThreshold>0</SatisfactionThreshold>
+                        </Illness>
+                        <Explosion>
+                            <HappinessMin>0</HappinessMin>
+                            <HappinessMax>0</HappinessMax>
+                            <SatisfactionThreshold>0</SatisfactionThreshold>
+                        </Explosion>
+                    </IncidentInfectionChanceFactors>
+                </IncidentInfectable>
+                <Culture>
+                    <CultureType>Culture</CultureType>
+                </Culture>
+                <Heated>
+                    <RequiresHeat>0</RequiresHeat>
+                </Heated>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END - BUILDING - Husky Sled Service -->
 
     <!-- START - BUILDING - Weavery -->
     <ModOp Type="addNextSibling" GUID='112680'>
@@ -3539,6 +3754,10 @@
                         </Item>
                     </Maintenances>
                 </Maintenance>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>2000</MaximumHitPoints>
+                </Attackable>
                 <Pausable />
                 <IncidentInfectable>
                     <Infectable>
@@ -3668,6 +3887,11 @@
                             <StorageAmount>8</StorageAmount>
                         </Item>
                         <Item>
+                            <Product>1500010825</Product>                            <!-- Ropes - Product -->
+                            <Amount>1</Amount>
+                            <StorageAmount>8</StorageAmount>
+                        </Item>
+                        <Item>
                             <Product>1555000161</Product>                            <!-- Ink - Product -->
                             <Amount>1</Amount>
                             <StorageAmount>8</StorageAmount>
@@ -3680,7 +3904,7 @@
                             <StorageAmount>8</StorageAmount>
                         </Item>
                     </FactoryOutputs>
-                    <CycleTime>30</CycleTime>
+                    <CycleTime>60</CycleTime>
                 </FactoryBase>
                 <LogisticNode />
                 <AmbientMoodProvider>
@@ -3697,6 +3921,10 @@
                         </Item>
                     </Maintenances>
                 </Maintenance>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>1500</MaximumHitPoints>
+                </Attackable>
                 <Pausable />
                 <IncidentInfectable>
                     <Infectable>
@@ -3822,7 +4050,10 @@
                     </Maintenances>
                 </Maintenance>
                 <StorageBase />
-                <Attackable />
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>1500</MaximumHitPoints>
+                </Attackable>
                 <Upgradable>
                     <NextGUID>1742004106</NextGUID>                    <!-- Large Storage - Building -->
                     <UpgradeCost>
@@ -3929,7 +4160,10 @@
                     </Maintenances>
                 </Maintenance>
                 <StorageBase />
-                <Attackable />
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>2000</MaximumHitPoints>
+                </Attackable>
                 <Upgradable>
                     <NextGUID>0</NextGUID>
                 </Upgradable>
@@ -4061,6 +4295,10 @@
                         </Item>
                     </Maintenances>
                 </Maintenance>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>1500</MaximumHitPoints>
+                </Attackable>
                 <FreeAreaProductivity>
                     <InfluenceRadius>8</InfluenceRadius>
                     <NeededAreaPercent>30</NeededAreaPercent>
@@ -4442,6 +4680,10 @@
                         </Item>
                     </Maintenances>
                 </Maintenance>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>1500</MaximumHitPoints>
+                </Attackable>
                 <Pausable />
                 <IncidentInfectable>
                     <Infectable>
@@ -4559,7 +4801,10 @@
                     </OnSelection>
                     <ParticipantMessageArcheType>Arctic_Inuit</ParticipantMessageArcheType>
                 </Selection>
-                <Attackable />
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>1800</MaximumHitPoints>
+                </Attackable>
                 <Maintenance>
                     <Maintenances>
                         <Item>
@@ -4698,7 +4943,10 @@
                     </Maintenances>
                 </Maintenance>
                 <StorageBase />
-                <Attackable />
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>5000</MaximumHitPoints>
+                </Attackable>
                 <Pausable />
                 <BuildingUnique>
                     <Uniques>
@@ -4811,11 +5059,7 @@
                     <Costs>
                         <Item>
                             <Ingredient>1010017</Ingredient>                            <!-- Coins -->
-                            <Amount>15000</Amount>
-                        </Item>
-                        <Item>
-                            <Ingredient>1010196</Ingredient>                            <!-- Timber - Product -->
-                            <Amount>6</Amount>
+                            <Amount>10000</Amount>
                         </Item>
                         <Item>
                             <Ingredient>1010209</Ingredient>                            <!-- Fur -->
@@ -4832,6 +5076,10 @@
                         </Item>
                     </Maintenances>
                 </Maintenance>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>1500</MaximumHitPoints>
+                </Attackable>
                 <Heated>
                     <RequiresHeat>0</RequiresHeat>
                 </Heated>
@@ -4937,7 +5185,7 @@
                 <AmbientMoodProvider/>
                 <Attackable>
                     <AttackableType>IslandBuilding</AttackableType>
-                    <MaximumHitPoints>3000</MaximumHitPoints>
+                    <MaximumHitPoints>1500</MaximumHitPoints>
                 </Attackable>
                 <Pausable/>
                 <IncidentInfectable>
@@ -5296,6 +5544,10 @@
                         </Item>
                     </Maintenances>
                 </Maintenance>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>2000</MaximumHitPoints>
+                </Attackable>
                 <Pausable />
                 <IncidentInfectable>
                     <Infectable>
@@ -5451,6 +5703,10 @@
                         </Item>
                     </Maintenances>
                 </Maintenance>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>2000</MaximumHitPoints>
+                </Attackable>
                 <Pausable />
                 <IncidentInfectable>
                     <Infectable>
@@ -5670,6 +5926,346 @@
         </Asset>
     </ModOp>
     <!-- END BUILDING - Qilaut Maker -->
+
+    <!-- START BUILDING - Soap Maker -->
+    <ModOp GUID='100780' Type="addNextSibling">
+        <Asset>
+            <Template>FactoryBuilding7_Arctic</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004538</GUID>
+                    <Name>Soap Maker</Name>
+                    <IconFilename>data/ui/2kimages/main/3dicons/icon_soap_2.png</IconFilename>
+                    <InfoDescription>1742004539</InfoDescription>
+                </Standard>
+                <Building>
+                    <SkipUnlockMessage>1</SkipUnlockMessage>
+                    <BuildModeRandomRotation>180</BuildModeRandomRotation>
+                </Building>
+                <Blocking/>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!-- Coins -->
+                            <Amount>28000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010196</Ingredient>                            <!-- Timber -->
+                            <Amount>12</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010209</Ingredient>                            <!-- Fur -->
+                            <Amount>8</Amount>
+                        </Item>
+                    </Costs>
+                </Cost>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/buildings/production/soap_maker_inuit/soap_maker_inuit_01.cfg</Filename>
+                        </Item>
+                    </Variations>
+                </Object>
+                <Mesh />
+                <Selection>
+                    <OnSelection>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList />
+                        </Values>
+                    </OnSelection>
+                    <ParticipantMessageArcheType>Arctic_Inuit</ParticipantMessageArcheType>
+                    <Colors>
+                        <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+                    </Colors>
+                </Selection>
+                <Text />
+                <Constructable/>
+                <Locked/>
+                <SoundEmitter>
+                    <ActiveSounds>
+                        <Item>
+                            <Sound>247110</Sound>
+                        </Item>
+                        <Item>
+                            <Sound>240557</Sound>
+                        </Item>
+                    </ActiveSounds>
+                    <IncidentSounds>
+                        <InfectedFire>
+                            <Item>
+                                <Sound>214659</Sound>
+                            </Item>
+                        </InfectedFire>
+                    </IncidentSounds>
+                    <MaterialType>Wood</MaterialType>
+                </SoundEmitter>
+                <FeedbackController/>
+                <Infolayer/>
+                <UpgradeList/>
+                <Factory7/>
+                <FactoryBase>
+                    <FactoryInputs>
+                        <Item>
+                            <Product>112699</Product>                            <!-- Whale Oil -->
+                            <Amount>1</Amount>
+                            <StorageAmount>8</StorageAmount>
+                        </Item>
+                    </FactoryInputs>
+                    <FactoryOutputs>
+                        <Item>
+                            <Product>1010203</Product>                            <!--Soap-->
+                            <Amount>1</Amount>
+                            <StorageAmount>4</StorageAmount>
+                        </Item>
+                    </FactoryOutputs>
+                    <CycleTime>45</CycleTime>
+                    <IsMainFactory>0</IsMainFactory>
+                </FactoryBase>
+                <LogisticNode/>
+                <AmbientMoodProvider>
+                    <Murmur>Arctic_Factory</Murmur>
+                    <DynamicEnvironmentType>None</DynamicEnvironmentType>
+                </AmbientMoodProvider>
+                <Maintenance>
+                    <Maintenances>
+                        <Item>
+                            <Product>1742004159</Product>                            <!-- Inuit Workforce -->
+                            <Amount>25</Amount>
+                            <ShutdownThreshold>0.2</ShutdownThreshold>
+                        </Item>
+                    </Maintenances>
+                </Maintenance>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>1500</MaximumHitPoints>
+                    <SelfHealPerHealTick>6</SelfHealPerHealTick>
+                </Attackable>
+                <Pausable/>
+                <IncidentInfectable>
+                    <Infectable>
+                        <Riot>
+                            <Base>0</Base>
+                            <Escalated>0</Escalated>
+                        </Riot>
+                        <Explosion>
+                            <Base>0</Base>
+                            <Escalated>0</Escalated>
+                        </Explosion>
+                    </Infectable>
+                    <Explosion>
+                        <ExplosionCoreDamage>1000</ExplosionCoreDamage>
+                    </Explosion>
+                    <IncidentInfectionChanceFactors>
+                        <Fire>
+                            <DensityFactor>0.1</DensityFactor>
+                            <DensityDistance>20</DensityDistance>
+                            <FactoryProductivityFactor>0.1</FactoryProductivityFactor>
+                            <FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
+                        </Fire>
+                        <Riot>
+                            <FactoryOvertimeFactor>0</FactoryOvertimeFactor>
+                            <FactoryUndertimeFactor>0</FactoryUndertimeFactor>
+                            <FactoryHappinessFactor>0</FactoryHappinessFactor>
+                            <ResidenceHappinessFactor>0</ResidenceHappinessFactor>
+                            <HappinessMin>0</HappinessMin>
+                            <HappinessMax>0</HappinessMax>
+                            <HappinessThreshold>20</HappinessThreshold>
+                        </Riot>
+                        <Illness>
+                            <ResidenceSatisfactionFactor>0</ResidenceSatisfactionFactor>
+                            <HappinessMin>0</HappinessMin>
+                            <HappinessMax>0</HappinessMax>
+                            <SatisfactionThreshold>0</SatisfactionThreshold>
+                        </Illness>
+                        <Explosion>
+                            <HappinessMin>0</HappinessMin>
+                            <HappinessMax>0</HappinessMax>
+                            <SatisfactionThreshold>0</SatisfactionThreshold>
+                        </Explosion>
+                    </IncidentInfectionChanceFactors>
+                </IncidentInfectable>
+                <Culture>
+                    <CultureType>Culture</CultureType>
+                </Culture>
+                <QuestObject/>
+                <Heated>
+                    <RequiresHeat>0</RequiresHeat>
+                </Heated>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END BUILDING - Soap Maker -->
+
+    <!-- START BUILDING - Rope Maker -->
+    <ModOp GUID='100780' Type="addNextSibling">
+        <Asset>
+            <Template>FactoryBuilding7_Arctic</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004543</GUID>
+                    <Name>Rope Maker</Name>
+                    <IconFilename>data\ui\2kimages\main\3dicons\icon_rope.png</IconFilename>
+                    <InfoDescription>1742004544</InfoDescription>
+                </Standard>
+                <Building>
+                    <SkipUnlockMessage>1</SkipUnlockMessage>
+                    <BuildModeRandomRotation>180</BuildModeRandomRotation>
+                </Building>
+                <Blocking/>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!-- Coins -->
+                            <Amount>15000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010196</Ingredient>                            <!-- Timber -->
+                            <Amount>10</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010209</Ingredient>                            <!-- Fur -->
+                            <Amount>6</Amount>
+                        </Item>
+                    </Costs>
+                </Cost>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/buildings/production/rope_maker_inuit/rope_maker_inuit_01.cfg</Filename>
+                        </Item>
+                    </Variations>
+                </Object>
+                <Mesh />
+                <Selection>
+                    <OnSelection>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList />
+                        </Values>
+                    </OnSelection>
+                    <ParticipantMessageArcheType>Arctic_Inuit</ParticipantMessageArcheType>
+                    <Colors>
+                        <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+                    </Colors>
+                </Selection>
+                <Text />
+                <Constructable/>
+                <Locked/>
+                <SoundEmitter>
+                    <ActiveSounds>
+                        <Item>
+                            <Sound>247110</Sound>
+                        </Item>
+                        <Item>
+                            <Sound>240557</Sound>
+                        </Item>
+                    </ActiveSounds>
+                    <IncidentSounds>
+                        <InfectedFire>
+                            <Item>
+                                <Sound>214659</Sound>
+                            </Item>
+                        </InfectedFire>
+                    </IncidentSounds>
+                    <MaterialType>Wood</MaterialType>
+                </SoundEmitter>
+                <FeedbackController/>
+                <Infolayer/>
+                <UpgradeList/>
+                <Factory7/>
+                <FactoryBase>
+                    <FactoryInputs>
+                        <Item>
+                            <Product>112696</Product>                            <!-- Seal Skin -->
+                            <Amount>1</Amount>
+                            <StorageAmount>8</StorageAmount>
+                        </Item>
+                    </FactoryInputs>
+                    <FactoryOutputs>
+                        <Item>
+                            <Product>1500010825</Product>                            <!-- Ropes -->
+                            <Amount>1</Amount>
+                            <StorageAmount>4</StorageAmount>
+                        </Item>
+                    </FactoryOutputs>
+                    <CycleTime>20</CycleTime>
+                    <IsMainFactory>0</IsMainFactory>
+                </FactoryBase>
+                <LogisticNode/>
+                <AmbientMoodProvider>
+                    <Murmur>Arctic_Factory</Murmur>
+                    <DynamicEnvironmentType>None</DynamicEnvironmentType>
+                </AmbientMoodProvider>
+                <Maintenance>
+                    <Maintenances>
+                        <Item>
+                            <Product>1742004159</Product>                            <!-- Inuit Workforce -->
+                            <Amount>25</Amount>
+                            <ShutdownThreshold>0.2</ShutdownThreshold>
+                        </Item>
+                    </Maintenances>
+                </Maintenance>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>1500</MaximumHitPoints>
+                    <SelfHealPerHealTick>6</SelfHealPerHealTick>
+                </Attackable>
+                <Pausable/>
+                <IncidentInfectable>
+                    <Infectable>
+                        <Riot>
+                            <Base>0</Base>
+                            <Escalated>0</Escalated>
+                        </Riot>
+                        <Explosion>
+                            <Base>0</Base>
+                            <Escalated>0</Escalated>
+                        </Explosion>
+                    </Infectable>
+                    <Explosion>
+                        <ExplosionCoreDamage>1000</ExplosionCoreDamage>
+                    </Explosion>
+                    <IncidentInfectionChanceFactors>
+                        <Fire>
+                            <DensityFactor>0.1</DensityFactor>
+                            <DensityDistance>20</DensityDistance>
+                            <FactoryProductivityFactor>0.1</FactoryProductivityFactor>
+                            <FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
+                        </Fire>
+                        <Riot>
+                            <FactoryOvertimeFactor>0</FactoryOvertimeFactor>
+                            <FactoryUndertimeFactor>0</FactoryUndertimeFactor>
+                            <FactoryHappinessFactor>0</FactoryHappinessFactor>
+                            <ResidenceHappinessFactor>0</ResidenceHappinessFactor>
+                            <HappinessMin>0</HappinessMin>
+                            <HappinessMax>0</HappinessMax>
+                            <HappinessThreshold>20</HappinessThreshold>
+                        </Riot>
+                        <Illness>
+                            <ResidenceSatisfactionFactor>0</ResidenceSatisfactionFactor>
+                            <HappinessMin>0</HappinessMin>
+                            <HappinessMax>0</HappinessMax>
+                            <SatisfactionThreshold>0</SatisfactionThreshold>
+                        </Illness>
+                        <Explosion>
+                            <HappinessMin>0</HappinessMin>
+                            <HappinessMax>0</HappinessMax>
+                            <SatisfactionThreshold>0</SatisfactionThreshold>
+                        </Explosion>
+                    </IncidentInfectionChanceFactors>
+                </IncidentInfectable>
+                <Culture>
+                    <CultureType>Culture</CultureType>
+                </Culture>
+                <QuestObject/>
+                <Heated>
+                    <RequiresHeat>0</RequiresHeat>
+                </Heated>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END BUILDING - Rope Maker -->
 
 </ModOps>
   

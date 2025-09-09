@@ -1,15 +1,15 @@
 <!-- 
 
-[DLC] White and Cold - v0.5.4
+[DLC] White and Cold - v0.5.5
 GUID Range: 1742004000-1742004???
 
 Created by Hier0nimus
-Special Thanks to Kreitani for his examples (Kingsgrove / Four Crowns), Taube and Taludas for the new mine slottype and help with skinning the islands and Mayabeque as an amazing example to learn from, and many others for so many insights!
+Special Thanks to Taube and Taludas for the help with skinning the islands and Mayabeque as an amazing example to learn from, and many others for so many insights!
 Big thank you to the modding community for all the help!
 Enjoy!
 
-GUID NEXT NORMAL: 1742004538
-GUID NEXT TRIGGERS: 1742004819
+GUID NEXT NORMAL: 1742004549
+GUID NEXT TRIGGERS: 1742004823
 
 SESSION
 *************************
@@ -20,7 +20,12 @@ SESSION
 1742004004 - White and Cold Icon - Icon
 1742004005 - White and Cold Background - Icon
 
-1742004101 - Session Unlock - Trigger
+1742004051 - White and Cold Expedition - Expedition
+1742004052 - White and Cold Expedition - Expedition - Title
+1742004053 - White and Cold Expedition - Expedition - Description
+1742004054 - White and Cold Expedition - ExpeditionSlot
+
+1742004050 - Session Unlock - Trigger
 
 ISLANDS
 *************************
@@ -36,6 +41,7 @@ ISLANDS
 1742004015 - Arctic Skinned Island - Small - 2 - RandomIsland
 1742004016 - Arctic Skinned Island - Small - 3 - RandomIsland
 1742004017 - Arctic Skinned Island - Small - 4 - RandomIsland
+...1742004049 Reserved for islands
 
 POPULATION
 *************************
@@ -65,10 +71,10 @@ BUILDINGS
 1742004219 - Coastal Centre - Info Tip
 1742004112 - Fishery - Building
 1742004113 - Fishery - Building - Description
-1742004114 - Whale Oil Module - Building
-1742004115 - Whale Oil Module - Building - Description
-1742004116 - Animal Bones Module - Building
-1742004117 - Animal Bones Module - Building - Description
+1742004114 - Whaling Oil Docks - Building
+1742004115 - Whaling Oil Docks - Building - Description
+1742004116 - Whaling Bones Docks - Building
+1742004117 - Whaling Bones Docks - Building - Description
 1742004118 - Seal Hunter - Building
 1742004119 - Seal Hunter - Building - Description
 1742004120 - Forest Centre - Building
@@ -79,8 +85,8 @@ BUILDINGS
 1742004123 - Caribou Skinner - Building - Description
 1742004124 - Caribou Butcher - Building
 1742004125 - Caribou Butcher - Building - Description
-1742004126 - Bear Caribou Skinner - Building
-1742004127 - Bear Caribou Skinner - Building - Description
+1742004126 - Bear Skinner - Building
+1742004127 - Bear Skinner - Building - Description
 1742004128 - Wood Gathering Cabin - Building
 1742004129 - Wood Gathering Cabin - Building - Description
 1742004329 - Sawmill 
@@ -183,6 +189,12 @@ BUILDINGS
 1742004456 - Silver Mine - Building - Description
 1742004529 - Silver Mine Workarea - Building
 1742004536 - Export Dock - Animal Bones - Building
+1742004538 - Soap Maker - Building
+1742004539 - Soap Maker - Building - Description
+1742004541 - Husky Sleds Service - Building
+1742004542 - Husky Sleds Service - Building - Description
+1742004543 - Rope Maker - Building
+1742004544 - Rope Maker - Building - Description
 
 MONUMENTS
 *************************
@@ -461,8 +473,8 @@ CONSTRUCTION MENU
 1742004204 - Parkas - Chain - Description
 1742004205 - Qajaks - Chain
 1742004206 - Qajaks - Chain - Description
-1742004207 - Sleds - Chain
-1742004208 - Sleds - Chain - Description
+1742004207 - Husky Sleds Service - Chain
+1742004208 - Husky Sleds Service - Chain - Description
 1742004209 - Palauga - Chain
 1742004210 - Palauga - Chain - Description
 1742004211 - Sculptures - Chain
@@ -493,6 +505,7 @@ CONSTRUCTION MENU
 1742004457 - Expedition Equipment Assembly - Chain
 1742004458 - Expedition Equipment Assembly - Chain - Description
 1742004528 - Oil - ConstructionCategory
+1742004540 - Soap - Chain
 
 ORNAMENTS
 *************************
@@ -519,15 +532,22 @@ MOODTEXT
 1742004216 - Chilly Inuit - MoodText
 1742004217 - Comfortable Inuit - MoodText
 
+NEWSPAPER
+*************************
+1742004545 - Deeper Arctic Exploration - NewspaperSpecialEditionArticle
+1742004546 - Deeper Arctic Exploration - SpecialEditionHeadline
+1742004547 - Deeper Arctic Exploration - SpecialEditionSubline
+1742004548 - Deeper Arctic Exploration - SpecialEditionImage
+
 TRIGGERS
 *************************
 1742004800 - Creative Mode - Trigger
 1742004801 - FREE
 1742004802 - Inuit Unlock (100 Explorers) - 00 - Trigger
-1742004803 - Inuit Unlock - 01 - Trigger
-1742004804 - Inuit Unlock - 02 - Trigger
-1742004805 - Inuit Unlock - 03 - Trigger
-1742004806 - Inuit Unlock - 04 - Trigger
+1742004819 - Inuit Unlock - 01 - Trigger
+1742004820 - Inuit Unlock - 02 - Trigger
+1742004821 - Inuit Unlock - 03 - Trigger
+1742004822 - Inuit Unlock - 04 - Trigger
 1742004807 - Inuit Unlock - 05 - Trigger
 1742004808 - Inuit Unlock - 06 - Trigger
 1742004816 - Explorers Unlock - 1 - Trigger
@@ -559,10 +579,13 @@ TRIGGERS
     <Include File="../../../../hier0nimus/population/assets.include.xml" />
     <Include File="../../../../hier0nimus/products/assets.include.xml" />
     <Include File="../../../../hier0nimus/mining/assets.include.xml" />
+    <Include File="../../../../hier0nimus/expeditions/assets.include.xml" />
+    <Include File="../../../../hier0nimus/newspapers/assets.include.xml" />
     <Include File="../../../../hier0nimus/compatibility/assets.include.xml" />
     <!-- ************* INCLUDES SESSION ************* -->
     <Include File="../../../../hier0nimus/islands/assets.include.xml" />
     <Include File="../../../../hier0nimus/session/assets.include.enlarged.xml" />
+    <Include File="../../../../hier0nimus/session/assets.include.xml" />
     <!-- ************* INCLUDES TRIGGERS ************* -->
     <Include File="../../../../hier0nimus/triggers/assets.include.xml" />
 

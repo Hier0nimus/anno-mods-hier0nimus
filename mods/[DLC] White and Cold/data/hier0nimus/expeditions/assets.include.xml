@@ -1,0 +1,101 @@
+<!-- 
+  Expeditions
+-->
+
+<ModOps>
+
+  <ModOp Type="addnextSibling" GUID="804040">
+    <Asset>
+      <Template>Expedition</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004051</GUID>
+          <Name>White and Cold Expedition</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/expeditions/icon_expedition_exploration.png</IconFilename>
+        </Standard>
+        <Expedition>
+          <ExpeditionCategory>Discovery</ExpeditionCategory>
+          <HasCustomName>1</HasCustomName>
+          <ExpeditionName>1742004052</ExpeditionName>
+          <HasCustomDescription>1</HasCustomDescription>
+          <ExpeditionDescription>1742004053</ExpeditionDescription>
+          <ExpeditionRegion>Arctic</ExpeditionRegion>
+          <ExpeditionDifficulty>Hard</ExpeditionDifficulty>
+          <IsMandatory>1</IsMandatory>
+          <EventList>
+            <Item>
+              <EventOrEventPool>802470</EventOrEventPool>
+            </Item>
+            <Item>
+              <EventOrEventPool>803304</EventOrEventPool>
+            </Item>
+            <Item>
+              <EventOrEventPool>802987</EventOrEventPool>
+            </Item>
+            <Item>
+              <EventOrEventPool>804042</EventOrEventPool>
+            </Item>
+            <Item>
+              <EventOrEventPool>803072</EventOrEventPool>
+            </Item>
+          </EventList>
+          <Threats>
+            <Item>
+              <Threat>800034</Threat>              <!--Crafting-->
+            </Item>
+            <Item>
+              <Threat>800028</Threat>              <!--Faith-->
+            </Item>
+            <Item>
+              <Threat>800033</Threat>              <!--Navigation-->
+            </Item>
+          </Threats>
+          <FillThreats>1</FillThreats>
+          <MinPauseBetweenEvents>10000</MinPauseBetweenEvents>          <!-- 300000 -->
+          <MaxPauseBetweenEvents>10000</MaxPauseBetweenEvents>          <!-- 300000 -->
+          <MoraleAmounts>
+            <AddHigh>15</AddHigh>
+            <AddMedium>10</AddMedium>
+            <AddFew>5</AddFew>
+            <None>0</None>
+            <RemoveContinue>-10</RemoveContinue>
+            <RemoveFew>-5</RemoveFew>
+            <RemoveMedium>-10</RemoveMedium>
+            <RemoveHigh>-15</RemoveHigh>
+            <RemoveVeryHigh>-20</RemoveVeryHigh>
+          </MoraleAmounts>
+          <ExpeditionTargetSession>1742004000</ExpeditionTargetSession>
+          <WorldMapCardBG>500897</WorldMapCardBG>          <!--ExpeditionCardBackgroundGenericPolar-->
+          <ExpeditionWorldMapAsset>data/graphics/ui/3d_objects/expedition_marker/expedition_marker_02.cfg</ExpeditionWorldMapAsset>
+          <Reward>801585</Reward>          <!--Reward Event Discovery Expeditions-->
+          <BackgroundVideo>data/ui/video/expedition/polar_a.bk2</BackgroundVideo>
+        </Expedition>
+        <Locked>
+          <DLCDependency>410042</DLCDependency>          <!--Anno 1800 DLC - The Passage-->
+        </Locked>
+        <WorldMapSound/>
+      </Values>
+    </Asset>
+
+    <Asset>
+      <Template>ExpeditionSlot</Template>
+      <Values>
+        <ExpeditionSlot>
+          <SlotRegion>Arctic</SlotRegion>
+          <SpecialExpeditionsSlot>
+            <Item>
+              <Expedition>1742004051</Expedition>
+            </Item>
+          </SpecialExpeditionsSlot>
+        </ExpeditionSlot>
+        <Standard>
+          <GUID>1742004054</GUID>
+          <Name>White_And_Cold_Unlock</Name>
+        </Standard>
+      </Values>
+    </Asset>
+
+  </ModOp>
+
+</ModOps>
+  

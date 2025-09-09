@@ -4,6 +4,112 @@
 
 <ModOps>
 
+  <!-- New Session Trigger For existing savegames that already have the Arctic Unlocked -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <!-- Using an IsOptional condition to make sure the Trigger gets done directly when the mod is first enabled -->
+    <!-- the ActionLoadSession will only be done when at this time the Arctic is already unlocked -->
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004050</GUID>
+          <Name>Load New Session if Arctic is already unlocked</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionAlwaysTrue</Template>
+            <Values>
+              <Condition />
+              <ConditionAlwaysTrue />
+            </Values>
+          </TriggerCondition>
+          <SubTriggers>
+            <Item>
+              <SubTrigger>
+                <Template>AutoCreateTrigger</Template>
+                <Values>
+                  <Trigger>
+                    <TriggerCondition>
+                      <Template>ConditionUnlocked</Template>
+                      <Values>
+                        <Condition>
+                          <IsOptional>1</IsOptional>
+                        </Condition>
+                        <ConditionUnlocked>
+                          <UnlockNeeded>114115</UnlockNeeded>
+                        </ConditionUnlocked>
+                        <ConditionPropsNegatable />
+                      </Values>
+                    </TriggerCondition>
+                    <TriggerActions>
+                      <Item>
+                        <TriggerAction>
+                          <Template>ActionUnlockAsset</Template>
+                          <Values>
+                            <Action />
+                            <ActionUnlockAsset>
+                              <UnlockAssets>
+                                <Item>
+                                  <Asset>1742004051</Asset>                                  <!-- White And Cold - SessionArctic -->
+                                </Item>
+                              </UnlockAssets>
+                            </ActionUnlockAsset>
+                          </Values>
+                        </TriggerAction>
+                      </Item>
+                      <Item>
+                        <TriggerAction>
+                          <Template>ActionDelayedActions</Template>
+                          <Values>
+                            <Action/>
+                            <ActionDelayedActions>
+                              <ExecutionDelay>1000</ExecutionDelay>
+                              <DelayedActions>
+                                <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                                <Values>
+                                  <ActionList>
+                                    <Actions>
+                                      <Item>
+                                        <Action>
+                                          <Template>ActionForceNewspaper</Template>
+                                          <Values>
+                                            <Action/>
+                                            <ActionForceNewspaper>
+                                              <Articles>
+                                                <Item>
+                                                  <Article>1742004545</Article>
+                                                </Item>
+                                              </Articles>
+                                              <OpenNewspaperUI>1</OpenNewspaperUI>
+                                              <OpenNewspaperType>SpecialEdition</OpenNewspaperType>
+                                            </ActionForceNewspaper>
+                                          </Values>
+                                        </Action>
+                                      </Item>
+                                    </Actions>
+                                  </ActionList>
+                                </Values>
+                              </DelayedActions>
+                            </ActionDelayedActions>
+                          </Values>
+                        </TriggerAction>
+                      </Item>
+                    </TriggerActions>
+                  </Trigger>
+                </Values>
+              </SubTrigger>
+            </Item>
+          </SubTriggers>
+        </Trigger>
+        <TriggerSetup>
+          <AutoRegisterTrigger>1</AutoRegisterTrigger>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- OTHER UNLOCKS -->
   <ModOp Type="addnextSibling" GUID="130248">
     <Asset>
       <Template>Trigger</Template>
@@ -45,7 +151,7 @@
                         <Asset>1742004132</Asset>                        <!-- Basic Tools Maker - Building -->
                       </Item>
                       <Item>
-                        <Asset>1742004116</Asset>                        <!--  Animal Bones Module - Building -->
+                        <Asset>1742004116</Asset>                        <!--  Whaling Bones Docks - Building -->
                       </Item>
                       <Item>
                         <Asset>1742004166</Asset>                        <!--  Animal Bones - Product -->
@@ -137,7 +243,7 @@
                         <Asset>1440212</Asset>                        <!-- Algae - Product -->
                       </Item>
                       <Item>
-                        <Asset>1742004114</Asset>                        <!--  Whale Oil Module - Building -->
+                        <Asset>1742004114</Asset>                        <!--  Whaling Oil Docks - Building -->
                       </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>
@@ -157,7 +263,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742004803</GUID>
+          <GUID>1742004819</GUID>
           <Name>Inuit Unlock - 01</Name>
         </Standard>
         <Trigger>
@@ -190,6 +296,12 @@
                         <Asset>1742004405</Asset>                        <!-- Fish Stew - Chain -->
                       </Item>
                       <Item>
+                        <Asset>1742004118</Asset>                        <!-- Seal Hunter - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004543</Asset>                        <!-- Rope Maker - Building -->
+                      </Item>
+                      <Item>
                         <Asset>1742004138</Asset>                        <!-- Snow Shoes Maker - Building -->
                       </Item>
                       <Item>
@@ -207,6 +319,12 @@
                       <Item>
                         <Asset>1742004249</Asset>                        <!-- Crafting Centre - Building -->
                       </Item>
+                      <Item>
+                        <Asset>1742004538</Asset>                        <!-- Soap Maker - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004540</Asset>                        <!-- Soap - ProductionChain -->
+                      </Item>
                     </UnhideAssets>
                     <UnlockAssets>
                       <Item>
@@ -222,7 +340,7 @@
                         <Asset>1742004132</Asset>                        <!-- Basic Tools Maker - Building -->
                       </Item>
                       <Item>
-                        <Asset>1742004116</Asset>                        <!--  Animal Bones Module - Building -->
+                        <Asset>1742004116</Asset>                        <!--  Whaling Bones Docks - Building -->
                       </Item>
                       <Item>
                         <Asset>1742004166</Asset>                        <!--  Animal Bones - Product -->
@@ -258,7 +376,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742004804</GUID>
+          <GUID>1742004820</GUID>
           <Name>Inuit Unlock - 02</Name>
         </Standard>
         <Trigger>
@@ -282,10 +400,7 @@
                   <ActionUnlockAsset>
                     <UnhideAssets>
                       <Item>
-                        <Asset>1742004126</Asset>                        <!-- Bear Caribou Skinner - Building -->
-                      </Item>
-                      <Item>
-                        <Asset>1742004118</Asset>                        <!-- Seal Hunter - Building -->
+                        <Asset>1742004126</Asset>                        <!-- Bear Skinner - Building -->
                       </Item>
                       <Item>
                         <Asset>1742004146</Asset>                        <!-- Weavery - Building -->
@@ -317,6 +432,12 @@
                         <Asset>1742004405</Asset>                        <!-- Fish Stew - Chain -->
                       </Item>
                       <Item>
+                        <Asset>1742004118</Asset>                        <!-- Seal Hunter - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004543</Asset>                        <!-- Rope Maker - Building -->
+                      </Item>
+                      <Item>
                         <Asset>1742004138</Asset>                        <!-- Snow Shoes Maker - Building -->
                       </Item>
                       <Item>
@@ -333,6 +454,12 @@
                       </Item>
                       <Item>
                         <Asset>1742004249</Asset>                        <!-- Crafting Centre - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004538</Asset>                        <!-- Soap Maker - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004540</Asset>                        <!-- Soap - ProductionChain -->
                       </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>
@@ -353,7 +480,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742004805</GUID>
+          <GUID>1742004821</GUID>
           <Name>Inuit Unlock - 03</Name>
         </Standard>
         <Trigger>
@@ -389,12 +516,15 @@
                         <Asset>1742004144</Asset>                        <!-- Sled Maker - Building -->
                       </Item>
                       <Item>
+                        <Asset>1742004541</Asset>                        <!-- Husky Sled Service - Building -->
+                      </Item>
+                      <Item>
                         <Asset>1742004207</Asset>                        <!-- Husky Sleds - Chain -->
                       </Item>
                     </UnhideAssets>
                     <UnlockAssets>
                       <Item>
-                        <Asset>1742004126</Asset>                        <!-- Bear Caribou Skinner - Building -->
+                        <Asset>1742004126</Asset>                        <!-- Bear Skinner - Building -->
                       </Item>
                       <Item>
                         <Asset>1742004118</Asset>                        <!-- Seal Hunter - Building -->
@@ -436,7 +566,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742004806</GUID>
+          <GUID>1742004822</GUID>
           <Name>Inuit Unlock - 04</Name>
         </Standard>
         <Trigger>
@@ -496,6 +626,9 @@
                       </Item>
                       <Item>
                         <Asset>1742004144</Asset>                        <!-- Sled Maker - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004541</Asset>                        <!-- Husky Sled Service - Building -->
                       </Item>
                       <Item>
                         <Asset>1742004207</Asset>                        <!-- Husky Sleds - Chain -->
@@ -1671,10 +1804,10 @@
                         <Asset>1742004112</Asset>                        <!--  Fishery - Building -->
                       </Item>
                       <Item>
-                        <Asset>1742004114</Asset>                        <!--  Whale Oil Module - Building -->
+                        <Asset>1742004114</Asset>                        <!--  Whaling Oil Docks - Building -->
                       </Item>
                       <Item>
-                        <Asset>1742004116</Asset>                        <!--  Animal Bones Module - Building -->
+                        <Asset>1742004116</Asset>                        <!--  Whaling Bones Docks - Building -->
                       </Item>
                       <Item>
                         <Asset>1742004166</Asset>                        <!--  Animal Bones - Product -->
@@ -1707,7 +1840,7 @@
                         <Asset>1742004144</Asset>                        <!-- Sled Maker - Building -->
                       </Item>
                       <Item>
-                        <Asset>1742004126</Asset>                        <!-- Bear Caribou Skinner - Building -->
+                        <Asset>1742004126</Asset>                        <!-- Bear Skinner - Building -->
                       </Item>
                       <Item>
                         <Asset>1742004118</Asset>                        <!-- Seal Hunter - Building -->
@@ -2110,6 +2243,15 @@
                       </Item>
                       <Item>
                         <Asset>1742004534</Asset>                        <!-- Vladimir Slafofski - Item -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004543</Asset>                        <!-- Rope Maker - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004538</Asset>                        <!-- Soap Maker - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004541</Asset>                        <!-- Husky Sled Service - Building -->
                       </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>
