@@ -465,42 +465,6 @@
   </ModOp>
   <!-- END - ADD PRODUCT INUIT MONUMENT -->
 
-  <!-- START - ADD PRODUCT ICE BLOCKS -->
-  <ModOp Type="addNextSibling" GUID='112708'>
-    <Asset>
-      <Template>Product</Template>
-      <Values>
-        <Standard>
-          <GUID>1742004273</GUID>
-          <Name>Ice Blocks</Name>
-          <IconFilename>data\ui\2kimages\main\3dicons\campaign\icon_iceberg.png</IconFilename>
-          <InfoDescription>1742004274</InfoDescription>
-        </Standard>
-        <Locked />
-        <Product>
-          <StorageLevel>Building</StorageLevel>
-          <ProductCategory>11703</ProductCategory>
-          <BasePrice>750</BasePrice>
-          <CivLevel>1</CivLevel>
-          <IsStrategicResource>1</IsStrategicResource>
-          <AssociatedRegion>Moderate;Colony01;Arctic;Africa</AssociatedRegion>
-          <ProductionRegions>
-            <Item>
-              <RegionType>Arctic</RegionType>
-              <RequiredDLCs>
-                <Item>
-                  <RequiredDLC>410042</RequiredDLC>
-                </Item>
-              </RequiredDLCs>
-            </Item>
-          </ProductionRegions>
-        </Product>
-        <ExpeditionAttribute />
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END - ADD PRODUCT ICE BLOCKS -->
-
   <!-- START - PRODUCTLIST - INUIT CONSUMER GOODS -->
   <ModOp Type="addNextSibling" GUID='501995'>
     <Asset>
@@ -898,64 +862,6 @@
     </Item>
   </ModOp>
   <!-- END ADD GOOD TO ProductList - TECHNICIAN CONSUMER GOODS -->
-
-  <!-- START ADD GOOD TO StandardOilHarborStorageList-->
-  <ModOp Type="add" GUID='120056' Path="/Values/ProductStorageList/ProductList">
-    <Item>
-      <Product>1742004273</Product>      <!-- Ice Blocks -->
-    </Item>
-  </ModOp>
-  <!-- END ADD GOOD TO StandardOilHarborStorageList-->
-
-  <!-- START ADD GOOD TO STRATEGIC GOODS-->
-  <ModOp Type="add" GUID='501961' Path="/Values/ProductList/List">
-    <Item>
-      <Product>1742004273</Product>      <!-- Ice Blocks -->
-    </Item>
-  </ModOp>
-  <!-- END ADD GOOD TO STRATEGIC GOODS-->
-
-  <!-- START - PRODUCTSTORAGELIST - ICE -->
-  <ModOp Type="addNextSibling" GUID='501995'>
-    <Asset>
-      <Template>ProductStorageList</Template>
-      <Values>
-        <Standard>
-          <GUID>1742004279</GUID>
-          <Name>Ice Storage</Name>
-        </Standard>
-        <ProductStorageList>
-          <ProductList>
-            <Item>
-              <Product>1742004273</Product>
-            </Item>
-          </ProductList>
-        </ProductStorageList>
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END - PRODUCTSTORAGELIST - ICE -->
-
-  <!-- START - PRODUCTSTORAGELIST - OIL -->
-  <ModOp Type="addNextSibling" GUID='501995'>
-    <Asset>
-      <Template>ProductStorageList</Template>
-      <Values>
-        <Standard>
-          <GUID>1742004527</GUID>
-          <Name>Oil Storage</Name>
-        </Standard>
-        <ProductStorageList>
-          <ProductList>
-            <Item>
-              <Product>1010566</Product>
-            </Item>
-          </ProductList>
-        </ProductStorageList>
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END - PRODUCTSTORAGELIST - OIL -->
 
   <!-- ****************** END ADDING ALL PRODUCTS TO PRODUCTS LISTS ****************** -->
 

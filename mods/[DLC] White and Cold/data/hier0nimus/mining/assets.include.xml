@@ -399,37 +399,13 @@
     </MapGeneratorSlotCountOverride>
   </ModOp>
 
-  <!-- START - ADD PRODUCT ICE BLOCKS TO TRADEROUTEFEATURE -->
-  <ModOp Type="add" GUID='140011' Path="/Values/TradeRouteFeature/TransportationTypes/Normal/ExcludingGoods/">
-    <Item>
-      <Good>1742004273</Good>      <!--Ice Blocks-->
-    </Item>
-  </ModOp>
-  <ModOp Type="add" GUID='140011' Path="/Values/TradeRouteFeature/TransportationTypes/Charter/ExcludingGoods/">
-    <Item>
-      <Good>1742004273</Good>      <!--Ice Blocks-->
-    </Item>
-  </ModOp>
-  <ModOp Type="add" GUID='140011' Path="/Values/TradeRouteFeature/TransportationTypes/Oil/RestrictedGood/">
-    <Item>
-      <Good>1742004273</Good>      <!--Ice Blocks-->
-    </Item>
-  </ModOp>
-  <!-- END - ADD PRODUCT ICE BLOCKS TO TRADEROUTEFEATURE -->
-
-  <!-- START - CHANGE OIL ROUTES TO STRATEGIC ROUTES -->
-  <ModOp Type="merge" GUID='500748' Path="/Values/Standard/IconFilename">
-    <IconFilename>data/ui/2kimages/main/icons/icon_promo_decree_2d.png</IconFilename>
-  </ModOp>
-  <!-- END - ADD PRODUCT ICE BLOCKS TO TRADEROUTEFEATURE -->
-
-  <!-- START - ADD ICE HAVRESTING SITE TO RIVERSLOTS FEATURE -->
+  <!-- START - ADD ICE HARVESTING SITE TO RIVERSLOTS FEATURE -->
   <ModOp Type="add" GUID='131694' Path="/Values/RiverSlotFeature/RiverslotBuildings">
     <Item>
       <Building>1742004275</Building>
     </Item>
   </ModOp>
-  <!-- END - ADD ICE HAVRESTING SITE TO RIVERSLOTS FEATURE -->
+  <!-- END - ADD ICE HARVESTING SITE TO RIVERSLOTS FEATURE -->
 
   <!-- START - BUILDING - Ice Harvesting Site - Station -->
   <ModOp Type="addNextSibling" GUID='116029'>
@@ -673,567 +649,6 @@
     </Asset>
   </ModOp>
   <!-- END - BUILDING - Ice Harvesting Site - Main -->
-
-  <!-- START - BUILDING - Strategic Harbour (AR) -->
-  <ModOp Type="addNextSibling" GUID='112670'>
-    <Asset>
-      <Template>HarborWarehouseStrategic</Template>
-      <Values>
-        <Standard>
-          <GUID>1742004281</GUID>
-          <Name>Strategic Harbour (AR)</Name>
-          <IconFilename>data/graphics/icons/icon_strategic_harbour.png</IconFilename>
-          <InfoDescription>1742004282</InfoDescription>          <!--Oil Harbor Infocorner-->
-        </Standard>
-        <Text>
-          <LocaText>
-            <English>
-              <Text>Strategic Harbour</Text>
-              <Status>Exported</Status>
-            </English>
-          </LocaText>
-          <LineID>7028</LineID>
-        </Text>
-        <Blocking>
-          <GroundDecalAsset>114826</GroundDecalAsset>          <!--Quay System Colony03 Base-->
-          <GroundDecalInvisible>113478</GroundDecalInvisible>          <!--Quay System Colony03 Invisible-->
-          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
-        </Blocking>
-        <Building>
-          <BuildingCategoryName>11150</BuildingCategoryName>          <!--Harbor Building-->
-          <Destructable>1</Destructable>
-          <AssociatedRegions>Arctic</AssociatedRegions>
-          <SecondPartyRelevant>0</SecondPartyRelevant>
-        </Building>
-        <Cost>
-          <Costs>
-            <Item>
-              <Ingredient>1010017</Ingredient>              <!--Money-->
-              <Amount>40000</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010196</Ingredient>              <!--timber-->
-              <Amount>50</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010205</Ingredient>              <!--bricks-->
-              <Amount>30</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010218</Ingredient>              <!--beams-->
-              <Amount>25</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010207</Ingredient>              <!--window-->
-              <Amount>15</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010202</Ingredient>              <!--concrete-->
-              <Amount>15</Amount>
-            </Item>
-          </Costs>
-        </Cost>
-        <Selection>
-          <GUIType>RouteServiceModule</GUIType>
-          <OnSelection>
-            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
-            <Values>
-              <ActionList/>
-            </Values>
-          </OnSelection>
-        </Selection>
-        <Object>
-          <Variations>
-            <Item>
-              <Filename>data/graphics/buildings/special/strategic_harbour/strategic_harbour_ar_01.cfg</Filename>
-            </Item>
-          </Variations>
-          <Skins>
-            <DefaultSkinName>1742004281</DefaultSkinName>
-            <DefaultSkinDescription>1742004282</DefaultSkinDescription>
-            <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>            <!--Classic-->
-          </Skins>
-        </Object>
-        <Constructable/>
-        <Mesh/>
-        <SoundEmitter>
-          <ActiveSounds>
-            <Item>
-              <Sound>200896</Sound>              <!--wwe_sfx_bld_harbor_typeCluster_tag-->
-            </Item>
-            <Item>
-              <Sound>200920</Sound>              <!--wwe_sfx_bld_harbor_14_lp-->
-            </Item>
-          </ActiveSounds>
-          <IncidentSounds>
-            <InfectedFire>
-              <Item>
-                <Sound>214659</Sound>                <!--wwe_sfx_bld_inc_burn-->
-              </Item>
-            </InfectedFire>
-          </IncidentSounds>
-          <BuildingRuined>
-            <Item>
-              <Sound>203848</Sound>              <!--wwe_sfx_aui_destroy_big-->
-            </Item>
-          </BuildingRuined>
-          <BuildingRepaired>
-            <Item>
-              <Sound>203866</Sound>              <!--wwe_sfx_aui_bld_3d_renovate-->
-            </Item>
-          </BuildingRepaired>
-        </SoundEmitter>
-        <Locked/>
-        <Infolayer/>
-        <FeedbackController/>
-        <Warehouse>
-          <WarehouseStorage>
-            <StorageMax>500</StorageMax>
-          </WarehouseStorage>
-        </Warehouse>
-        <LogisticNode/>
-        <MinimapToken/>
-        <AmbientMoodProvider>
-          <Murmur>Harbor</Murmur>
-        </AmbientMoodProvider>
-        <LoadingPier>
-          <NumOfPiers>1</NumOfPiers>
-          <LoadingSpeed>100</LoadingSpeed>
-          <MinLoadingTime>5</MinLoadingTime>
-        </LoadingPier>
-        <StorageBase>
-          <ProductStorageList>120056</ProductStorageList>          <!--Strategic Goods / Oil-->
-        </StorageBase>
-        <Attackable>
-          <AttackableType>HarbourBuilding</AttackableType>
-          <MaximumHitPoints>5000</MaximumHitPoints>
-          <PausedTimeIfAttacked>0</PausedTimeIfAttacked>
-          <HPBarOffset>5.5</HPBarOffset>
-          <DefenseByAIFactor>400</DefenseByAIFactor>
-          <MoralePower>100</MoralePower>
-          <IslandWarFlag>102303</IslandWarFlag>          <!--island_war_flag1-->
-          <HasRuinState>1</HasRuinState>
-          <ExplosionEffects>
-            <Item>
-              <VectorElement>
-                <InheritedIndex>0</InheritedIndex>
-                <InheritanceMapV2>
-                  <Entry>
-                    <TemplateName>HarborWarehouseStrategic</TemplateName>
-                    <Index>0</Index>
-                  </Entry>
-                </InheritanceMapV2>
-              </VectorElement>
-            </Item>
-            <Item>
-              <ExplosionEffectFilePath>data/graphics/effects/military/explosions/harbor_generic_xpl_02.cfg</ExplosionEffectFilePath>
-            </Item>
-          </ExplosionEffects>
-          <ExplosionEffectsMin>3</ExplosionEffectsMin>
-          <ExplosionEffectsMax>5</ExplosionEffectsMax>
-          <SelfHealPerHealTick>5</SelfHealPerHealTick>
-        </Attackable>
-        <Maintenance>
-          <Maintenances>
-            <Item>
-              <Product>1010017</Product>              <!--Money-->
-              <Amount>500</Amount>
-              <InactiveAmount>250</InactiveAmount>
-            </Item>
-          </Maintenances>
-        </Maintenance>
-        <Pausable/>
-        <BuildingUnique>
-          <Uniques>
-            <Item>
-              <UniqueType>Mod14</UniqueType>
-              <UniqueScope>Area</UniqueScope>
-            </Item>
-          </Uniques>
-        </BuildingUnique>
-        <UpgradeList/>
-        <TrainStation>
-          <MaxTrainCount>3</MaxTrainCount>
-        </TrainStation>
-        <QuestObject/>
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END - BUILDING - Strategic Harbour (AR) -->
-
-  <!-- START - BUILDING - Strategic Harbour (OW) -->
-  <ModOp Type="addNextSibling" GUID='112670'>
-    <Asset>
-      <Template>HarborWarehouseStrategic</Template>
-      <Values>
-        <Standard>
-          <GUID>1742004392</GUID>
-          <Name>Strategic Harbour (OW)</Name>
-          <IconFilename>data/graphics/icons/icon_strategic_harbour.png</IconFilename>
-          <InfoDescription>1742004282</InfoDescription>          <!--Oil Harbor Infocorner-->
-        </Standard>
-        <Text>
-          <LocaText>
-            <English>
-              <Text>Strategic Harbour</Text>
-              <Status>Exported</Status>
-            </English>
-          </LocaText>
-          <LineID>7028</LineID>
-        </Text>
-        <Blocking>
-          <GroundDecalAsset>100446</GroundDecalAsset>          <!--Quay System Base-->
-          <GroundDecalInvisible>101008</GroundDecalInvisible>          <!--Quay System Base Invisible-->
-          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
-        </Blocking>
-        <Building>
-          <BuildingCategoryName>11150</BuildingCategoryName>          <!--Harbor Building-->
-          <Destructable>1</Destructable>
-          <AssociatedRegions>Moderate</AssociatedRegions>
-          <SecondPartyRelevant>0</SecondPartyRelevant>
-        </Building>
-        <Cost>
-          <Costs>
-            <Item>
-              <Ingredient>1010017</Ingredient>              <!--Money-->
-              <Amount>40000</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010196</Ingredient>              <!--timber-->
-              <Amount>50</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010205</Ingredient>              <!--bricks-->
-              <Amount>30</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010218</Ingredient>              <!--beams-->
-              <Amount>25</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010207</Ingredient>              <!--window-->
-              <Amount>15</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010202</Ingredient>              <!--concrete-->
-              <Amount>15</Amount>
-            </Item>
-          </Costs>
-        </Cost>
-        <Selection>
-          <GUIType>RouteServiceModule</GUIType>
-          <OnSelection>
-            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
-            <Values>
-              <ActionList/>
-            </Values>
-          </OnSelection>
-        </Selection>
-        <Object>
-          <Variations>
-            <Item>
-              <Filename>data/graphics/buildings/special/strategic_harbour/strategic_harbour_01.cfg</Filename>
-            </Item>
-          </Variations>
-          <Skins>
-            <DefaultSkinName>1742004392</DefaultSkinName>
-            <DefaultSkinDescription>1742004282</DefaultSkinDescription>
-            <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>            <!--Classic-->
-          </Skins>
-        </Object>
-        <Constructable/>
-        <Mesh/>
-        <SoundEmitter>
-          <ActiveSounds>
-            <Item>
-              <Sound>200896</Sound>              <!--wwe_sfx_bld_harbor_typeCluster_tag-->
-            </Item>
-            <Item>
-              <Sound>200920</Sound>              <!--wwe_sfx_bld_harbor_14_lp-->
-            </Item>
-          </ActiveSounds>
-          <IncidentSounds>
-            <InfectedFire>
-              <Item>
-                <Sound>214659</Sound>                <!--wwe_sfx_bld_inc_burn-->
-              </Item>
-            </InfectedFire>
-          </IncidentSounds>
-          <BuildingRuined>
-            <Item>
-              <Sound>203848</Sound>              <!--wwe_sfx_aui_destroy_big-->
-            </Item>
-          </BuildingRuined>
-          <BuildingRepaired>
-            <Item>
-              <Sound>203866</Sound>              <!--wwe_sfx_aui_bld_3d_renovate-->
-            </Item>
-          </BuildingRepaired>
-        </SoundEmitter>
-        <Locked/>
-        <Infolayer/>
-        <FeedbackController/>
-        <Warehouse>
-          <WarehouseStorage>
-            <StorageMax>500</StorageMax>
-          </WarehouseStorage>
-        </Warehouse>
-        <LogisticNode/>
-        <MinimapToken/>
-        <AmbientMoodProvider>
-          <Murmur>Harbor</Murmur>
-        </AmbientMoodProvider>
-        <LoadingPier>
-          <NumOfPiers>1</NumOfPiers>
-          <LoadingSpeed>100</LoadingSpeed>
-          <MinLoadingTime>5</MinLoadingTime>
-        </LoadingPier>
-        <StorageBase>
-          <ProductStorageList>120056</ProductStorageList>          <!--Strategic Goods / Oil-->
-        </StorageBase>
-        <Attackable>
-          <AttackableType>HarbourBuilding</AttackableType>
-          <MaximumHitPoints>5000</MaximumHitPoints>
-          <PausedTimeIfAttacked>0</PausedTimeIfAttacked>
-          <HPBarOffset>5.5</HPBarOffset>
-          <DefenseByAIFactor>400</DefenseByAIFactor>
-          <MoralePower>100</MoralePower>
-          <IslandWarFlag>102303</IslandWarFlag>          <!--island_war_flag1-->
-          <HasRuinState>1</HasRuinState>
-          <ExplosionEffects>
-            <Item>
-              <VectorElement>
-                <InheritedIndex>0</InheritedIndex>
-                <InheritanceMapV2>
-                  <Entry>
-                    <TemplateName>HarborWarehouseStrategic</TemplateName>
-                    <Index>0</Index>
-                  </Entry>
-                </InheritanceMapV2>
-              </VectorElement>
-            </Item>
-            <Item>
-              <ExplosionEffectFilePath>data/graphics/effects/military/explosions/harbor_generic_xpl_02.cfg</ExplosionEffectFilePath>
-            </Item>
-          </ExplosionEffects>
-          <ExplosionEffectsMin>3</ExplosionEffectsMin>
-          <ExplosionEffectsMax>5</ExplosionEffectsMax>
-          <SelfHealPerHealTick>5</SelfHealPerHealTick>
-        </Attackable>
-        <Maintenance>
-          <Maintenances>
-            <Item>
-              <Product>1010017</Product>              <!--Money-->
-              <Amount>500</Amount>
-              <InactiveAmount>250</InactiveAmount>
-            </Item>
-          </Maintenances>
-        </Maintenance>
-        <Pausable/>
-        <BuildingUnique>
-          <Uniques>
-            <Item>
-              <UniqueType>Mod14</UniqueType>
-              <UniqueScope>Area</UniqueScope>
-            </Item>
-          </Uniques>
-        </BuildingUnique>
-        <UpgradeList/>
-        <TrainStation>
-          <MaxTrainCount>3</MaxTrainCount>
-        </TrainStation>
-        <QuestObject/>
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END - BUILDING - Strategic Harbour (OW) -->
-
-  <!-- START - BUILDING - Strategic Harbour (NW) -->
-  <ModOp Type="addNextSibling" GUID='112670'>
-    <Asset>
-      <Template>HarborWarehouseStrategic</Template>
-      <Values>
-        <Standard>
-          <GUID>1742004393</GUID>
-          <Name>Strategic Harbour (NW)</Name>
-          <IconFilename>data/graphics/icons/icon_strategic_harbour.png</IconFilename>
-          <InfoDescription>1742004282</InfoDescription>          <!--Oil Harbor Infocorner-->
-        </Standard>
-        <Text>
-          <LocaText>
-            <English>
-              <Text>Strategic Harbour</Text>
-              <Status>Exported</Status>
-            </English>
-          </LocaText>
-          <LineID>7028</LineID>
-        </Text>
-        <Blocking>
-          <GroundDecalAsset>102460</GroundDecalAsset>          <!--Quay System Colony01 Base-->
-          <GroundDecalInvisible>102459</GroundDecalInvisible>          <!--Quay System Colony01 Base Invisible-->
-          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
-        </Blocking>
-        <Building>
-          <BuildingCategoryName>11150</BuildingCategoryName>          <!--Harbor Building-->
-          <Destructable>1</Destructable>
-          <AssociatedRegions>Colony01</AssociatedRegions>
-          <SecondPartyRelevant>0</SecondPartyRelevant>
-        </Building>
-        <Cost>
-          <Costs>
-            <Item>
-              <Ingredient>1010017</Ingredient>              <!--Money-->
-              <Amount>40000</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010196</Ingredient>              <!--timber-->
-              <Amount>50</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010205</Ingredient>              <!--bricks-->
-              <Amount>30</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010218</Ingredient>              <!--beams-->
-              <Amount>25</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010207</Ingredient>              <!--window-->
-              <Amount>15</Amount>
-            </Item>
-            <Item>
-              <Ingredient>1010202</Ingredient>              <!--concrete-->
-              <Amount>15</Amount>
-            </Item>
-          </Costs>
-        </Cost>
-        <Selection>
-          <GUIType>RouteServiceModule</GUIType>
-          <OnSelection>
-            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
-            <Values>
-              <ActionList/>
-            </Values>
-          </OnSelection>
-        </Selection>
-        <Object>
-          <Variations>
-            <Item>
-              <Filename>data/graphics/buildings/special/strategic_harbour/strategic_harbour_01.cfg</Filename>
-            </Item>
-          </Variations>
-          <Skins>
-            <DefaultSkinName>1742004392</DefaultSkinName>
-            <DefaultSkinDescription>1742004282</DefaultSkinDescription>
-            <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>            <!--Classic-->
-          </Skins>
-        </Object>
-        <Constructable/>
-        <Mesh/>
-        <SoundEmitter>
-          <ActiveSounds>
-            <Item>
-              <Sound>200896</Sound>              <!--wwe_sfx_bld_harbor_typeCluster_tag-->
-            </Item>
-            <Item>
-              <Sound>200920</Sound>              <!--wwe_sfx_bld_harbor_14_lp-->
-            </Item>
-          </ActiveSounds>
-          <IncidentSounds>
-            <InfectedFire>
-              <Item>
-                <Sound>214659</Sound>                <!--wwe_sfx_bld_inc_burn-->
-              </Item>
-            </InfectedFire>
-          </IncidentSounds>
-          <BuildingRuined>
-            <Item>
-              <Sound>203848</Sound>              <!--wwe_sfx_aui_destroy_big-->
-            </Item>
-          </BuildingRuined>
-          <BuildingRepaired>
-            <Item>
-              <Sound>203866</Sound>              <!--wwe_sfx_aui_bld_3d_renovate-->
-            </Item>
-          </BuildingRepaired>
-        </SoundEmitter>
-        <Locked/>
-        <Infolayer/>
-        <FeedbackController/>
-        <Warehouse>
-          <WarehouseStorage>
-            <StorageMax>500</StorageMax>
-          </WarehouseStorage>
-        </Warehouse>
-        <LogisticNode/>
-        <MinimapToken/>
-        <AmbientMoodProvider>
-          <Murmur>Harbor</Murmur>
-        </AmbientMoodProvider>
-        <LoadingPier>
-          <NumOfPiers>1</NumOfPiers>
-          <LoadingSpeed>100</LoadingSpeed>
-          <MinLoadingTime>5</MinLoadingTime>
-        </LoadingPier>
-        <StorageBase>
-          <ProductStorageList>120056</ProductStorageList>          <!--Strategic Goods / Oil-->
-        </StorageBase>
-        <Attackable>
-          <AttackableType>HarbourBuilding</AttackableType>
-          <MaximumHitPoints>5000</MaximumHitPoints>
-          <PausedTimeIfAttacked>0</PausedTimeIfAttacked>
-          <HPBarOffset>5.5</HPBarOffset>
-          <DefenseByAIFactor>400</DefenseByAIFactor>
-          <MoralePower>100</MoralePower>
-          <IslandWarFlag>102303</IslandWarFlag>          <!--island_war_flag1-->
-          <HasRuinState>1</HasRuinState>
-          <ExplosionEffects>
-            <Item>
-              <VectorElement>
-                <InheritedIndex>0</InheritedIndex>
-                <InheritanceMapV2>
-                  <Entry>
-                    <TemplateName>HarborWarehouseStrategic</TemplateName>
-                    <Index>0</Index>
-                  </Entry>
-                </InheritanceMapV2>
-              </VectorElement>
-            </Item>
-            <Item>
-              <ExplosionEffectFilePath>data/graphics/effects/military/explosions/harbor_generic_xpl_02.cfg</ExplosionEffectFilePath>
-            </Item>
-          </ExplosionEffects>
-          <ExplosionEffectsMin>3</ExplosionEffectsMin>
-          <ExplosionEffectsMax>5</ExplosionEffectsMax>
-          <SelfHealPerHealTick>5</SelfHealPerHealTick>
-        </Attackable>
-        <Maintenance>
-          <Maintenances>
-            <Item>
-              <Product>1010017</Product>              <!--Money-->
-              <Amount>500</Amount>
-              <InactiveAmount>250</InactiveAmount>
-            </Item>
-          </Maintenances>
-        </Maintenance>
-        <Pausable/>
-        <BuildingUnique>
-          <Uniques>
-            <Item>
-              <UniqueType>Mod14</UniqueType>
-              <UniqueScope>Area</UniqueScope>
-            </Item>
-          </Uniques>
-        </BuildingUnique>
-        <UpgradeList/>
-        <TrainStation>
-          <MaxTrainCount>3</MaxTrainCount>
-        </TrainStation>
-        <QuestObject/>
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END - BUILDING - Strategic Harbour (NW) -->
 
   <!-- START BUILDING - Mining Institute -->
   <ModOp GUID="1010358" Type="addNextSibling">
@@ -1511,13 +926,13 @@
         <RecipeList>
           <Recipes>
             <Item>
-              <Recipe>1742004313</Recipe>              <!-- Basic Mining Optimizations - Recipe -->
+              <Recipe>1742004313</Recipe>              <!-- Basic Mining and Drilling Optimizations - Recipe -->
             </Item>
             <Item>
               <Recipe>1742004307</Recipe>              <!-- Basic Ice Optimizations - Recipe -->
             </Item>
             <Item>
-              <Recipe>1742004316</Recipe>              <!-- Large Mining Optimizations - Recipe -->
+              <Recipe>1742004316</Recipe>              <!-- Large Mining and Drilling Optimizations - Recipe -->
             </Item>
             <Item>
               <Recipe>1742004310</Recipe>              <!-- Large Ice Optimizations - Recipe -->
@@ -1607,13 +1022,13 @@
       </Values>
     </Asset>
     <!-- END - Large Ice Optimizations - Recipe -->
-    <!-- START - Basic Mining Optimizations - Recipe -->
+    <!-- START - Basic Mining and Drilling Optimizations - Recipe -->
     <Asset>
       <Template>Recipe</Template>
       <Values>
         <Standard>
           <GUID>1742004313</GUID>
-          <Name>Basic Mining Optimizations</Name>
+          <Name>Basic Mining and Drilling Optimizations</Name>
           <IconFilename>data/graphics/icons/icon_mining_optimazations1.png</IconFilename>
         </Standard>
         <Text />
@@ -1637,14 +1052,14 @@
         <Locked />
       </Values>
     </Asset>
-    <!-- END - Basic Mining Optimizations - Recipe -->
-    <!-- START - Large Mining Optimizations - Recipe -->
+    <!-- END - Basic Mining and Drilling Optimizations - Recipe -->
+    <!-- START - Large Mining and Drilling Optimizations - Recipe -->
     <Asset>
       <Template>Recipe</Template>
       <Values>
         <Standard>
           <GUID>1742004316</GUID>
-          <Name>Large Mining Optimizations</Name>
+          <Name>Large Mining and Drilling Optimizations</Name>
           <IconFilename>data/graphics/icons/icon_mining_optimazations2.png</IconFilename>
         </Standard>
         <Text />
@@ -1678,10 +1093,10 @@
         <Locked />
       </Values>
     </Asset>
-    <!-- END - Large Mining Optimizations - Recipe -->
+    <!-- END - Large Mining and Drilling Optimizations - Recipe -->
   </ModOp>
 
-  <!-- START MINING OPTIMAZATIONS (BLANK) - Building -->
+  <!-- START MINING AND DRILLING OPTIMAZATIONS (BLANK) - Building -->
   <ModOp Type="addNextSibling" GUID='1010263'>
     <Asset>
       <Template>Mall</Template>
@@ -1796,7 +1211,7 @@
         <Infolayer />
         <BuffFactory>
           <ProductionBuffScope>Radius</ProductionBuffScope>
-          <ProductionBuffDistance>12</ProductionBuffDistance>
+          <ProductionBuffDistance>20</ProductionBuffDistance>
           <ProvidesPublicServiceNeed>0</ProvidesPublicServiceNeed>
         </BuffFactory>
         <RecipeBuilding>
@@ -1810,9 +1225,9 @@
       </Values>
     </Asset>
   </ModOp>
-  <!-- END MINING OPTIMAZATIONS (BLANK) - Building -->
+  <!-- END MINING AND DRILLING / ICE OPTIMAZATIONS (BLANK) - Building -->
 
-  <!-- START MINING OPTIMAZATIONS ICE (BASIC) - Building -->
+  <!-- START MINING AND DRILLING OPTIMAZATIONS ICE (BASIC) - Building -->
   <ModOp Type="addNextSibling" GUID='1010263'>
     <Asset>
       <Template>Mall</Template>
@@ -1946,7 +1361,7 @@
             </Item>
           </ProductionBuffs>
           <ProductionBuffScope>Radius</ProductionBuffScope>
-          <ProductionBuffDistance>10</ProductionBuffDistance>
+          <ProductionBuffDistance>20</ProductionBuffDistance>
           <PublicServiceData />
         </BuffFactory>
         <RecipeBuilding>
@@ -1959,9 +1374,9 @@
       </Values>
     </Asset>
   </ModOp>
-  <!-- END MINING OPTIMAZATIONS ICE (BASIC) - Building -->
+  <!-- END MINING AND DRILLING OPTIMAZATIONS ICE (BASIC) - Building -->
 
-  <!-- START MINING OPTIMAZATIONS ICE (LARGE) - Building -->
+  <!-- START MINING AND DRILLING OPTIMAZATIONS ICE (LARGE) - Building -->
   <ModOp Type="addNextSibling" GUID='1010263'>
     <Asset>
       <Template>Mall</Template>
@@ -2105,7 +1520,7 @@
             </Item>
           </ProductionBuffs>
           <ProductionBuffScope>Radius</ProductionBuffScope>
-          <ProductionBuffDistance>10</ProductionBuffDistance>
+          <ProductionBuffDistance>32</ProductionBuffDistance>
           <PublicServiceData />
         </BuffFactory>
         <RecipeBuilding>
@@ -2118,16 +1533,16 @@
       </Values>
     </Asset>
   </ModOp>
-  <!-- END MINING OPTIMAZATIONS ICE (LARGE) - Building -->
+  <!-- END MINING AND DRILLING OPTIMAZATIONS ICE (LARGE) - Building -->
 
-  <!-- START MINING OPTIMAZATIONS (BASIC) - Building -->
+  <!-- START MINING AND DRILLING OPTIMAZATIONS (BASIC) - Building -->
   <ModOp Type="addNextSibling" GUID='1010263'>
     <Asset>
       <Template>Mall</Template>
       <Values>
         <Standard>
           <GUID>1742004315</GUID>
-          <Name>Basic Mining Optimizations Module</Name>
+          <Name>Basic Mining and Drilling Optimizations Module</Name>
           <IconFilename>data/graphics/icons/icon_mining_optimazations1.png</IconFilename>
           <InfoDescription>1742004320</InfoDescription>
         </Standard>
@@ -2250,11 +1665,11 @@
         <BuffFactory>
           <ProductionBuffs>
             <Item>
-              <ProductivityBuff>1742004325</ProductivityBuff>              <!-- Basic Mining Optimizations Buff - Buff -->
+              <ProductivityBuff>1742004325</ProductivityBuff>              <!-- Basic Mining and Drilling Optimizations Buff - Buff -->
             </Item>
           </ProductionBuffs>
           <ProductionBuffScope>Radius</ProductionBuffScope>
-          <ProductionBuffDistance>10</ProductionBuffDistance>
+          <ProductionBuffDistance>20</ProductionBuffDistance>
           <PublicServiceData />
         </BuffFactory>
         <RecipeBuilding>
@@ -2267,16 +1682,16 @@
       </Values>
     </Asset>
   </ModOp>
-  <!-- END MINING OPTIMAZATIONS (BASIC) - Building -->
+  <!-- END MINING AND DRILLING OPTIMAZATIONS (BASIC) - Building -->
 
-  <!-- START MINING OPTIMAZATIONS (LARGE) - Building -->
+  <!-- START MINING AND DRILLING OPTIMAZATIONS (LARGE) - Building -->
   <ModOp Type="addNextSibling" GUID='1010263'>
     <Asset>
       <Template>Mall</Template>
       <Values>
         <Standard>
           <GUID>1742004318</GUID>
-          <Name>Large Mining Optimizations Module</Name>
+          <Name>Large Mining and Drilling Optimizations Module</Name>
           <IconFilename>data/graphics/icons/icon_mining_optimazations2.png</IconFilename>
           <InfoDescription>1742004320</InfoDescription>
         </Standard>
@@ -2409,11 +1824,11 @@
         <BuffFactory>
           <ProductionBuffs>
             <Item>
-              <ProductivityBuff>1742004327</ProductivityBuff>              <!-- Large Mining Optimizations Buff - Buff -->
+              <ProductivityBuff>1742004327</ProductivityBuff>              <!-- Large Mining and Drilling Optimizations Buff - Buff -->
             </Item>
           </ProductionBuffs>
           <ProductionBuffScope>Radius</ProductionBuffScope>
-          <ProductionBuffDistance>10</ProductionBuffDistance>
+          <ProductionBuffDistance>32</ProductionBuffDistance>
           <PublicServiceData />
         </BuffFactory>
         <RecipeBuilding>
@@ -4177,5 +3592,19 @@
     </Asset>
   </ModOp>
   <!-- END BUILDING - Diamond Open Pit Mine -->
+
+  <!-- Arctic production buildings are affected by electricity but don't get a production buff and use "Husky Sled Transporter" when electrified  -->
+  <!-- NEED TO BE LOADED AFTER ALL PRODUCTION BUILDINGS ARE LOADED -->
+  <ModOp Type="merge" GUID="1742004112,1742004114,1742004116,1742004118,1742004122,1742004124,1742004126,1742004128,1742004329,1742004130,1742004132,1742004134,1742004136,1742004138,1742004140,1742004142,1742004144,1742004146,1742004148,1742004150,1742004152,1742004154,1742004269,1742004519,1742004362,1742004364,1742004368,1742004403,1742004407,1742004451,1742004394,1742004493,1742004455,1742004538,1742004543" Path="/Values">
+    <Electrifiable>
+      <ElectricityBoost>0</ElectricityBoost>
+      <ShowPowerInObjectMenu>0</ShowPowerInObjectMenu>
+    </Electrifiable>
+    <Industrializable>
+      <BoostedByIndustrialization>1</BoostedByIndustrialization>
+      <TransporterIndustrializationFactory>120028</TransporterIndustrializationFactory>
+      <TransporterIndustrializationWarehouse>120027</TransporterIndustrializationWarehouse>
+    </Industrializable>
+  </ModOp>
 </ModOps>
   

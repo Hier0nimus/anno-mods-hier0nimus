@@ -1346,14 +1346,14 @@
   </ModOp>
   <!-- END Large Ice Optimizations Buff - Buff -->
 
-  <!-- START Basic Mining Optimizations Buff - Buff -->
+  <!-- START Basic Mining and Drilling Optimizations Buff - Buff -->
   <ModOp GUID='142519' Type="addNextSibling">
     <Asset>
       <Template>GuildhouseBuff</Template>
       <Values>
         <Standard>
           <GUID>1742004325</GUID>
-          <Name>Basic Mining Optimizations Buff</Name>
+          <Name>Basic Mining and Drilling Optimizations Buff</Name>
           <IconFilename>data/graphics/icons/icon_mining_optimazations1.png</IconFilename>
           <InfoDescription>1742004326</InfoDescription>
         </Standard>
@@ -1365,13 +1365,16 @@
             <Item>
               <GUID>1742200030</GUID>              <!-- All Arctic Gas Mines -->
             </Item>
+            <Item>
+              <GUID>1742004515</GUID>              <!-- Oil Platform -->
+            </Item>
           </EffectTargets>
           <AllowStacking>1</AllowStacking>
         </ItemEffect>
         <Text>
           <LocaText>
             <English>
-              <Text>Basic Mining Optimizations</Text>
+              <Text>Basic Mining and Drilling Optimizations</Text>
               <Status>Exported</Status>
             </English>
           </LocaText>
@@ -1411,16 +1414,16 @@
       </Values>
     </Asset>
   </ModOp>
-  <!-- END Basic Mining Optimizations Buff - Buff -->
+  <!-- END Basic Mining and Drilling Optimizations Buff - Buff -->
 
-  <!-- START Large Mining Optimizations Buff - Buff -->
+  <!-- START Large Mining and Drilling Optimizations Buff - Buff -->
   <ModOp GUID='142519' Type="addNextSibling">
     <Asset>
       <Template>GuildhouseBuff</Template>
       <Values>
         <Standard>
           <GUID>1742004327</GUID>
-          <Name>Large Mining Optimizations Buff</Name>
+          <Name>Large Mining and Drilling Optimizations Buff</Name>
           <IconFilename>data/graphics/icons/icon_mining_optimazations2.png</IconFilename>
           <InfoDescription>1742004328</InfoDescription>
         </Standard>
@@ -1432,13 +1435,16 @@
             <Item>
               <GUID>1742200030</GUID>              <!-- All Arctic Gas Mines -->
             </Item>
+            <Item>
+              <GUID>1742004515</GUID>              <!-- Oil Platform -->
+            </Item>
           </EffectTargets>
           <AllowStacking>1</AllowStacking>
         </ItemEffect>
         <Text>
           <LocaText>
             <English>
-              <Text>Large Mining Optimizations</Text>
+              <Text>Large Mining and Drilling Optimizations</Text>
               <Status>Exported</Status>
             </English>
           </LocaText>
@@ -1478,159 +1484,7 @@
       </Values>
     </Asset>
   </ModOp>
-  <!-- END Large Mining Optimizations Buff - Buff -->
-
-  <!-- START Basic Scrap Optimizations Buff - Buff -->
-  <ModOp GUID='142519' Type="addNextSibling">
-    <Asset>
-      <Template>GuildhouseBuff</Template>
-      <Values>
-        <Standard>
-          <GUID>1742004397</GUID>
-          <Name>Basic Scrap Optimizations Buff</Name>
-          <IconFilename>data/graphics/icons/icon_scrap_optimazations1.png</IconFilename>
-          <InfoDescription>1742004415</InfoDescription>
-        </Standard>
-        <ItemEffect>
-          <EffectTargets>
-            <Item>
-              <GUID>1742004362</GUID>              <!-- Expedition Equipment Assembly - Building -->
-            </Item>
-          </EffectTargets>
-          <AllowStacking>1</AllowStacking>
-        </ItemEffect>
-        <Text>
-          <LocaText>
-            <English>
-              <Text>Basic Scrap Optimizations</Text>
-              <Status>Exported</Status>
-            </English>
-          </LocaText>
-          <LineID>36690</LineID>
-        </Text>
-        <FactoryUpgrade>
-          <ProductivityUpgrade>
-            <Value>50</Value>
-            <Percental>1</Percental>
-          </ProductivityUpgrade>
-          <AdditionalOutput>
-            <Item>
-              <Product>112518</Product>              <!-- Scrap -->
-              <AdditionalOutputCycle>2</AdditionalOutputCycle>
-              <Amount>1</Amount>
-            </Item>
-            <Item>
-              <Product>112520</Product>              <!-- Nice Scrap -->
-              <AdditionalOutputCycle>2</AdditionalOutputCycle>
-              <Amount>1</Amount>
-            </Item>
-          </AdditionalOutput>
-        </FactoryUpgrade>
-        <BuildingUpgrade>
-          <WorkforceAmountUpgrade>
-            <Value>50</Value>
-            <Percental>1</Percental>
-          </WorkforceAmountUpgrade>
-          <MaintenanceUpgrade>
-            <Value>50</Value>
-            <Percental>1</Percental>
-          </MaintenanceUpgrade>
-        </BuildingUpgrade>
-        <WarehouseUpgrade />
-        <Buff/>
-        <CultureUpgrade/>
-        <ModuleOwnerUpgrade/>
-        <IncidentInfectableUpgrade/>
-        <PowerplantUpgrade/>
-        <IndustrializableUpgrade/>
-        <ItemContainerUpgrade/>
-        <IncidentInfluencerUpgrade/>
-        <IrrigationUpgrade/>
-        <EcoSystemProviderUpgrade/>
-        <ResourceUpgrade/>
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END Basic Scrap Optimizations Buff - Buff -->
-
-  <!-- START Large Scrap Optimizations Buff - Buff -->
-  <ModOp GUID='142519' Type="addNextSibling">
-    <Asset>
-      <Template>GuildhouseBuff</Template>
-      <Values>
-        <Standard>
-          <GUID>1742004416</GUID>
-          <Name>Large Scrap Optimizations Buff</Name>
-          <IconFilename>data/graphics/icons/icon_scrap_optimazations2.png</IconFilename>
-          <InfoDescription>1742004454</InfoDescription>
-        </Standard>
-        <ItemEffect>
-          <EffectTargets>
-            <Item>
-              <GUID>1742004362</GUID>              <!-- Expedition Equipment Assembly - Building -->
-            </Item>
-          </EffectTargets>
-          <AllowStacking>1</AllowStacking>
-        </ItemEffect>
-        <Text>
-          <LocaText>
-            <English>
-              <Text>Large Scrap Optimizations</Text>
-              <Status>Exported</Status>
-            </English>
-          </LocaText>
-          <LineID>36690</LineID>
-        </Text>
-        <FactoryUpgrade>
-          <ProductivityUpgrade>
-            <Value>100</Value>
-            <Percental>1</Percental>
-          </ProductivityUpgrade>
-          <AdditionalOutput>
-            <Item>
-              <Product>112518</Product>              <!-- Scrap -->
-              <AdditionalOutputCycle>1</AdditionalOutputCycle>
-              <Amount>1</Amount>
-            </Item>
-            <Item>
-              <Product>112520</Product>              <!-- Nice Scrap -->
-              <AdditionalOutputCycle>1</AdditionalOutputCycle>
-              <Amount>1</Amount>
-            </Item>
-            <Item>
-              <Product>112523</Product>              <!-- Special Scrap -->
-              <AdditionalOutputCycle>1</AdditionalOutputCycle>
-              <Amount>1</Amount>
-            </Item>
-          </AdditionalOutput>
-        </FactoryUpgrade>
-        <BuildingUpgrade>
-          <WorkforceAmountUpgrade>
-            <Value>100</Value>
-            <Percental>1</Percental>
-          </WorkforceAmountUpgrade>
-          <MaintenanceUpgrade>
-            <Value>100</Value>
-            <Percental>1</Percental>
-          </MaintenanceUpgrade>
-        </BuildingUpgrade>
-        <WarehouseUpgrade />
-        <Buff/>
-        <CultureUpgrade/>
-        <ModuleOwnerUpgrade/>
-        <IncidentInfectableUpgrade/>
-        <PowerplantUpgrade/>
-        <IndustrializableUpgrade/>
-        <ItemContainerUpgrade/>
-        <IncidentInfluencerUpgrade/>
-        <IrrigationUpgrade/>
-        <EcoSystemProviderUpgrade/>
-        <ResourceUpgrade/>
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END Large Scrap Optimizations Buff - Buff -->
-
+  <!-- END Large Mining and Drilling Optimizations Buff - Buff -->
   <!-- START Coastal Ice Storage Buff - BUFF -->
   <ModOp GUID='25623' Type="addNextSibling">
     <Asset>

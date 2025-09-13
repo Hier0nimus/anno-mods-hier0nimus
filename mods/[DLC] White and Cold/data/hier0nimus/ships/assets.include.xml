@@ -12,13 +12,13 @@
         <Standard>
           <GUID>1742004283</GUID>
           <Name>Ice Ship</Name>
-          <IconFilename>data/graphics/icons/icon_ice_ship.png</IconFilename>
+          <IconFilename>data/graphics/icons/icon_ice_ship_02.png</IconFilename>
           <InfoDescription>1742004284</InfoDescription>
         </Standard>
         <Object>
           <Variations>
             <Item>
-              <Filename>data/graphics/vehicle/ice_ship/ice_ship_01.cfg</Filename>
+              <Filename>data/graphics/vehicle/ice_ship/ice_ship_02.cfg</Filename>
             </Item>
           </Variations>
           <Skins>
@@ -58,7 +58,7 @@
           <CargoFullFactor>0.8</CargoFullFactor>
           <MinSlowdownFactor>0.5</MinSlowdownFactor>
           <CurveSegmentDensity>High</CurveSegmentDensity>
-          <SessionTransferSpeedFactor>0.5</SessionTransferSpeedFactor>
+          <SessionTransferSpeedFactor>1</SessionTransferSpeedFactor>
         </Walking>
         <Text>
           <LocaText>
@@ -111,7 +111,7 @@
         <ItemContainer>
           <SocketAllocation>Ship;SteamShip;Tradeship</SocketAllocation>
           <SlotCount>2</SlotCount>
-          <StackLimit>500</StackLimit>
+          <StackLimit>400</StackLimit>
           <FixedSlotContent>1742004273</FixedSlotContent>          <!--Ice Blocks-->
         </ItemContainer>
         <FeedbackController/>
@@ -217,7 +217,7 @@
   <!-- END - SHIP - Ice Ship -->
 
   <!-- START - ADD ICE SHIP TO STEAM SHIPYARD -->
-  <ModOp Type="addNextSibling" GUID='1010521' Path="/Values/Shipyard/AssemblyOptions/Item[Vehicle='100442']">
+  <ModOp Type="add" GUID='1010521' Path="/Values/Shipyard/AssemblyOptions/">
     <Item>
       <Vehicle>1742004283</Vehicle>      <!-- Ice Ship -->
     </Item>

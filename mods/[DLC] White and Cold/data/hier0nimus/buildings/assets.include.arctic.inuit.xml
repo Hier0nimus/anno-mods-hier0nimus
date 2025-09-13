@@ -3481,7 +3481,7 @@
     <!-- START - BUILDING - Husky Sled Service -->
     <ModOp Type="addNextSibling" GUID='112680'>
         <Asset>
-            <Template>FactoryBuilding7_Arctic</Template>
+            <Template>BuffFactory</Template>
             <Values>
                 <Standard>
                     <GUID>1742004541</GUID>
@@ -3490,8 +3490,10 @@
                     <InfoDescription>1742004542</InfoDescription>
                 </Standard>
                 <Building>
+                    <BuildingCategoryName>100003</BuildingCategoryName>
                     <SkipUnlockMessage>1</SkipUnlockMessage>
                     <BuildModeRandomRotation>180</BuildModeRandomRotation>
+                    <SecondPartyRelevant>0</SecondPartyRelevant>
                 </Building>
                 <Blocking />
                 <Cost>
@@ -3503,10 +3505,6 @@
                         <Item>
                             <Ingredient>1010196</Ingredient>                            <!-- Timber -->
                             <Amount>24</Amount>
-                        </Item>
-                        <Item>
-                            <Ingredient>1010209</Ingredient>                            <!-- Fur -->
-                            <Amount>15</Amount>
                         </Item>
                     </Costs>
                 </Cost>
@@ -3569,15 +3567,19 @@
                     </FactoryInputs>
                     <FactoryOutputs>
                         <Item>
-                            <Product>112703</Product>                            <!--sleds-->
-                            <Amount>1</Amount>
-                            <StorageAmount>10</StorageAmount>
+                            <Product>1500300897</Product>
+                            <Amount>0</Amount>
+                            <!-- to avoid +1 fly outs -->
+                            <StorageAmount>1</StorageAmount>
                         </Item>
                     </FactoryOutputs>
-                    <CycleTime>15</CycleTime>
+                    <ProductionOutputInfotip>1500300895</ProductionOutputInfotip>
+                    <CycleTime>60</CycleTime>
+                    <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+                    <ClampedMaxTransporterLogisticCost>67</ClampedMaxTransporterLogisticCost>
+                    <WarehouseTransporterAsset>120027</WarehouseTransporterAsset>
                     <IsMainFactory>0</IsMainFactory>
                 </FactoryBase>
-                <LogisticNode />
                 <AmbientMoodProvider>
                     <Murmur>Arctic_Farm</Murmur>
                     <GlacierMurmur>Arctic_Farm</GlacierMurmur>
@@ -3596,7 +3598,39 @@
                     <AttackableType>IslandBuilding</AttackableType>
                     <MaximumHitPoints>2500</MaximumHitPoints>
                 </Attackable>
-                <Pausable />
+                <BuffFactory>
+                    <BaseBuff>1500300906</BaseBuff>
+                    <BaseBuffScope>Local</BaseBuffScope>
+                    <ProductionBuffs>
+                        <Item>
+                            <ProductivityBuff>1500302820</ProductivityBuff>
+                            <ProductivityThresholdUp>0.01</ProductivityThresholdUp>
+                        </Item>
+                        <Item>
+                            <ProductivityBuff>1500302822</ProductivityBuff>
+                            <ProductivityThresholdUp>1.02</ProductivityThresholdUp>
+                            <ProductivityThresholdDown>1.01</ProductivityThresholdDown>
+                        </Item>
+                        <Item>
+                            <ProductivityBuff>1500302823</ProductivityBuff>
+                            <ProductivityThresholdUp>1.42</ProductivityThresholdUp>
+                            <ProductivityThresholdDown>1.41</ProductivityThresholdDown>
+                        </Item>
+                    </ProductionBuffs>
+                    <ProductionBuffScope>Radius</ProductionBuffScope>
+                </BuffFactory>
+                <PublicService>
+                    <FullSatisfactionDistance>40</FullSatisfactionDistance>
+                    <NoSatisfactionDistance>50</NoSatisfactionDistance>
+                    <PublicServiceOutputs>
+                        <Item>
+                            <Product>112703</Product>
+                        </Item>
+                    </PublicServiceOutputs>
+                </PublicService>
+                <LogisticNode>
+                    <TransporterAsset>120028</TransporterAsset>
+                </LogisticNode>
                 <IncidentInfectable>
                     <Infectable>
                         <Riot>
@@ -3630,9 +3664,7 @@
                         </Explosion>
                     </IncidentInfectionChanceFactors>
                 </IncidentInfectable>
-                <Culture>
-                    <CultureType>Culture</CultureType>
-                </Culture>
+                <Culture/>
                 <Heated>
                     <RequiresHeat>0</RequiresHeat>
                 </Heated>
@@ -6266,6 +6298,89 @@
         </Asset>
     </ModOp>
     <!-- END BUILDING - Rope Maker -->
+    <!-- START - BUILDING - Shaman -->
+    <ModOp Type="addNextSibling" GUID='112669'>
+        <Asset>
+            <BaseAssetGUID>112669</BaseAssetGUID>
+            <Values>
+                <Standard>
+                    <GUID>1742004557</GUID>
+                    <Name>Shaman</Name>
+                    <IconFilename>data\graphics\icons\icon_shaman.png</IconFilename>
+                    <InfoDescription>1742004558</InfoDescription>
+                </Standard>
+                <Blocking />
+                <Building/>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!-- Coins -->
+                            <Amount>15000</Amount>
+                        </Item>
+                    </Costs>
+                </Cost>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/buildings/special/shaman_inuit/shaman_inuit_01.cfg</Filename>
+                        </Item>
+                    </Variations>
+                </Object>
+                <Mesh/>
+                <Selection/>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>Shaman</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>35093</LineID>
+                </Text>
+                <Constructable/>
+                <Locked/>
+                <SoundEmitter/>
+                <FeedbackController/>
+                <Infolayer/>
+                <UpgradeList/>
+                <IncidentResolver>
+                    <ResolverUnit>114895</ResolverUnit>                    <!--Arctic Ranger Normal-->
+                    <SpecialUnit>114896</SpecialUnit>                    <!--Arctic Ranger Special-->
+                    <SpecialUnitThresholds/>
+                    <ResolvableIncidents>Fire;ArcticIllness</ResolvableIncidents>
+                    <DuringConstructionText>1742004559</DuringConstructionText>                    <!--Recruiting Units Text Shaman-->
+                    <DuringIncidentHeadline>1742004560</DuringIncidentHeadline>                    <!--Institution Unit In Action Shaman-->
+                    <ActionButtonText>3690</ActionButtonText>                    <!--Institution Special Action Button Text-->
+                    <DuringIncidentHeadlineIcon>501922</DuringIncidentHeadlineIcon>                    <!--Incident - Ranger-->
+                </IncidentResolver>
+                <Maintenance>
+                    <Maintenances>
+                        <Item>
+                            <Product>1010017</Product>                            <!-- Coins -->
+                            <Amount>50</Amount>
+                            <InactiveAmount>25</InactiveAmount>
+                        </Item>
+                    </Maintenances>
+                </Maintenance>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>2500</MaximumHitPoints>
+                    <SelfHealPerHealTick>4</SelfHealPerHealTick>
+                </Attackable>
+                <Pausable/>
+                <IncidentInfluencer/>
+                <DelayedConstruction/>
+                <AmbientMoodProvider/>
+                <Culture/>
+                <QuestObject/>
+                <Heated>
+                    <RequiresHeat>0</RequiresHeat>
+                </Heated>
+                <LogisticNode/>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END - BUILDING - Shaman -->
 
 </ModOps>
   

@@ -165,6 +165,9 @@
         <ItemEffectTargetPool>
           <EffectTargetGUIDs>
             <Item>
+              <GUID>1742004329</GUID>              <!-- Sawmill - Building -->
+            </Item>
+            <Item>
               <GUID>1742004130</GUID>              <!-- Snow Goggles Carver - Building -->
             </Item>
             <Item>
@@ -245,6 +248,69 @@
     </Asset>
   </ModOp>
   <!-- END - ADD INUIT FOOD PRODUCTION BUILDINGS TO ItemEffectTargetPool -->
+
+  <!-- START - ADD INUIT PRODUCTION BUILDINGS TO ItemEffectTargetPool -->
+  <ModOp GUID='112652' Type="addNextSibling">
+    <Asset>
+      <Template>ItemEffectTargetPool</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004416</GUID>
+          <Name>All Inuit Production Buildings</Name>
+        </Standard>
+        <ItemEffectTargetPool>
+          <EffectTargetGUIDs>
+            <Item>
+              <GUID>1742004228</GUID>              <!--  All Inuit Forest Buildings - ItemEffectPool -->
+            </Item>
+            <Item>
+              <GUID>1742004233</GUID>              <!--  All Inuit Coastal Buildings - ItemEffectPool -->
+            </Item>
+            <Item>
+              <GUID>1742004234</GUID>              <!--  All Inuit Hunting Buildings - ItemEffectPool -->
+            </Item>
+            <Item>
+              <GUID>1742004265</GUID>              <!--  All Inuit Crafting Buildings - ItemEffectPool -->
+            </Item>
+            <Item>
+              <GUID>1742004467</GUID>              <!--  All Inuit Food and Drinks Production Buildings - ItemEffectPool  -->
+            </Item>
+          </EffectTargetGUIDs>
+        </ItemEffectTargetPool>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - ADD INUIT FOOD PRODUCTION BUILDINGS TO ItemEffectTargetPool -->
+
+  <!-- START - ADD INUIT PUBLIC SERVICES TO ItemEffectTargetPool -->
+  <ModOp GUID='112652' Type="addNextSibling">
+    <Asset>
+      <Template>ItemEffectTargetPool</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004556</GUID>
+          <Name>All Inuit Public Services</Name>
+        </Standard>
+        <ItemEffectTargetPool>
+          <EffectTargetGUIDs>
+            <Item>
+              <GUID>1742004108</GUID>              <!--  Community Centre - Building -->
+            </Item>
+            <Item>
+              <GUID>1742004156</GUID>              <!--  Tattooist - Building -->
+            </Item>
+            <Item>
+              <GUID>1742004358</GUID>              <!--  Spiritual Site - Building -->
+            </Item>
+            <Item>
+              <GUID>1742004398</GUID>              <!--  Hot Springs Bathhouse - Building -->
+            </Item>
+          </EffectTargetGUIDs>
+        </ItemEffectTargetPool>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - ADD INUIT PUBLIC SERVICES TO ItemEffectTargetPool -->
 
   <!-- START - ADD EXPORT DOCKS TRADING COMPANY TO -->
   <ModOp GUID="1999010500" Type="add" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
@@ -330,24 +396,64 @@
   </ModOp>
   <!-- END - ADD VLADIMIR TO POOLS -->
 
-  <!-- START - ADD ZOPPY BATTERY TO POOLS -->
+  <!-- START - ADD ITEMS TO POOLS -->
   <ModOp GUID="116656" Type="add" Path="/Values/AssetPool/AssetList">
     <Item>
       <Asset>1742004530</Asset>      <!-- Zoppy Battery - Item -->
+    </Item>
+    <Item>
+      <Asset>1742004549</Asset>      <!-- Zippy Battery - Item -->
+    </Item>
+    <Item>
+      <Asset>1742004553</Asset>      <!-- Grotty Oil Sucker - Item -->
+    </Item>
+    <Item>
+      <Asset>1742004551</Asset>      <!-- Gratty Oil Extractor - Item -->
+    </Item>
+    <Item>
+      <Asset>1742004397</Asset>      <!-- Portable Drilling Machine - Item -->
     </Item>
   </ModOp>
   <ModOp GUID="193802" Type="add" Path="/Values/RewardPool/ItemsPool">
     <Item>
       <ItemLink>1742004530</ItemLink>      <!-- Zoppy Battery - Item -->
     </Item>
+    <Item>
+      <ItemLink>1742004553</ItemLink>      <!-- Grotty Oil Sucker - Item -->
+    </Item>
+  </ModOp>
+  <ModOp GUID="193803" Type="add" Path="/Values/RewardPool/ItemsPool">
+    <Item>
+      <ItemLink>1742004549</ItemLink>      <!-- Zippy Battery - Item -->
+    </Item>
+    <Item>
+      <ItemLink>1742004551</ItemLink>      <!-- Gratty Oil Extractor - Item -->
+    </Item>
+    <Item>
+      <ItemLink>1742004397</ItemLink>      <!-- Portable Drilling Machine - Item -->
+    </Item>
   </ModOp>
   <!-- ADD TO ARCTIC NATE CRAFTER -->
-  <ModOp Type="add" GUID="117422" Path="/Values/ItemCrafter/CraftableItemsInRegion/Arctic/CraftableItems/">
+  <ModOp Type="addNextSibling" GUID="117422" Path="/Values/ItemCrafter/CraftableItemsInRegion/Arctic/CraftableItems/Item[Item='116163']">
     <Item>
       <Item>1742004530</Item>      <!-- Zoppy Battery - Item -->
     </Item>
+    <Item>
+      <Asset>1742004551</Asset>      <!-- Gratty Oil Extractor - Item -->
+    </Item>
   </ModOp>
-  <!-- END - ADD ADD ZOPPY BATTERY TO POOLS -->
+  <ModOp Type="addNextSibling" GUID="117422" Path="/Values/ItemCrafter/CraftableItemsInRegion/Arctic/CraftableItems/Item[Item='116169']">
+    <Item>
+      <Asset>1742004549</Asset>      <!-- Zippy Battery - Item -->
+    </Item>
+    <Item>
+      <Asset>1742004553</Asset>      <!-- Grotty Oil Sucker - Item -->
+    </Item>
+    <Item>
+      <Asset>1742004397</Asset>      <!-- Portable Drilling Machine - Item -->
+    </Item>
+  </ModOp>
+  <!-- END - ADD ADD ITEMS TO POOLS -->
 
   <!-- START - ADD ITEMS - ARCTIC RewardPools -->
   <ModOp GUID="193839,117398,116334,116340,193950,193787" Type="add" Path="/Values/RewardPool/ItemsPool">
@@ -424,6 +530,38 @@
     </Item>
   </ModOp>
   <!-- END - ADD BUILDINGS TO - ALL OPEN PITS -->
+
+  <!-- START - ADD BUILDINGS TO - ALL HUSKY SLED STATIONS -->
+  <ModOp GUID="1500302821" Type="add" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
+    <Item>
+      <GUID>1742004541</GUID>      <!-- Husky Sleds Service - Building -->
+    </Item>
+  </ModOp>
+  <!-- END - ADD BUILDINGS TO - ALL HUSKY SLED STATIONS -->
+
+  <!-- START - ADD BUILDINGS TO - Dog_Sled_Fake_Buff_UI -->
+  <ModOp GUID="1500300885" Type="add" Path="/Values/ItemEffect/EffectTargets/">
+    <Item>
+      <GUID>1742004556</GUID>      <!-- All Inuit Public Services - ItemEffectPool -->
+    </Item>
+  </ModOp>
+  <!-- END - ADD BUILDINGS TO - Dog_Sled_Fake_Buff_UI -->
+
+  <!-- START - ADD BUILDINGS TO - Dog_Sled_Buff_Publics -->
+  <ModOp GUID="1500300886" Type="add" Path="/Values/ItemEffect/EffectTargets/">
+    <Item>
+      <GUID>1742004556</GUID>      <!-- All Inuit Public Services - ItemEffectPool -->
+    </Item>
+  </ModOp>
+  <!-- END - ADD BUILDINGS TO - Dog_Sled_Buff_Publics -->
+
+  <!-- START - ADD BUILDINGS TO - Dog_Sled_Buff_Institutions -->
+  <ModOp GUID="1500300887" Type="add" Path="/Values/ItemEffect/EffectTargets/">
+    <Item>
+      <GUID>1742004557</GUID>      <!-- Shaman - Building -->
+    </Item>
+  </ModOp>
+  <!-- END - ADD BUILDINGS TO - Dog_Sled_Buff_Institutions -->
 
   <!-- START - CHANGING EXISTING ITEMS -->
 
@@ -683,10 +821,10 @@
       <GUID>1742004312</GUID>      <!-- Large Ice Optimizations - Building -->
     </Item>
     <Item>
-      <GUID>1742004315</GUID>      <!-- Basic Mining Optimizations - Building -->
+      <GUID>1742004315</GUID>      <!-- Basic Mining and Drilling Optimizations - Building -->
     </Item>
     <Item>
-      <GUID>1742004318</GUID>      <!-- Large Mining Optimizations - Building -->
+      <GUID>1742004318</GUID>      <!-- Large Mining and Drilling Optimizations - Building -->
     </Item>
     <Item>
       <GUID>1742004497</GUID>      <!-- Conny Cobbler - Building -->

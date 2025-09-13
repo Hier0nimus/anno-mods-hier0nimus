@@ -1,6 +1,6 @@
 <!-- 
 
-[DLC] White and Cold - v0.5.5
+[DLC] White and Cold - v0.5.6
 GUID Range: 1742004000-1742004???
 
 Created by Hier0nimus
@@ -8,8 +8,8 @@ Special Thanks to Taube and Taludas for the help with skinning the islands and M
 Big thank you to the modding community for all the help!
 Enjoy!
 
-GUID NEXT NORMAL: 1742004549
-GUID NEXT TRIGGERS: 1742004823
+GUID NEXT NORMAL: 1742004561 (END 1742004799)
+GUID NEXT TRIGGERS: 1742004828
 
 SESSION
 *************************
@@ -89,8 +89,8 @@ BUILDINGS
 1742004127 - Bear Skinner - Building - Description
 1742004128 - Wood Gathering Cabin - Building
 1742004129 - Wood Gathering Cabin - Building - Description
-1742004329 - Sawmill 
-1742004330 - Sawmill - Description
+1742004329 - Sawmill  - Building
+1742004330 - Sawmill - Building - Description
 1742004130 - Snow Goggles Carver - Building
 1742004131 - Snow Goggles Carver - Building - Description
 1742004132 - Basic Tools Maker - Building
@@ -134,10 +134,6 @@ BUILDINGS
 1742004386 - Ice Warehouse (OW) - Building
 1742004388 - Ice Warehouse (NW) - Building
 1742004278 - Ice Warehouse - Building - Description
-1742004281 - Strategic Harbour (AR) - Building
-1742004392 - Strategic Harbour (OW) - Building
-1742004393 - Strategic Harbour (NW) - Building
-1742004282 - Strategic Harbour (AR) - Building - Description
 1742004285 - Mining Institute - Building
 1742004286 - Mining Institute - Building - Description
 1742004287 - Mining Institute - Building - Module - Button
@@ -195,6 +191,10 @@ BUILDINGS
 1742004542 - Husky Sleds Service - Building - Description
 1742004543 - Rope Maker - Building
 1742004544 - Rope Maker - Building - Description
+1742004557 - Shaman - Building
+1742004558 - Shaman - Building - Description
+1742004559 - Shaman - Building - Recruiting Units Text
+1742004560 - Shaman - Building - Institution Unit In Action Text
 
 MONUMENTS
 *************************
@@ -236,12 +236,12 @@ RECIPES
 1742004310 - Large Ice Optimizations - Recipe
 1742004311 - Large Ice Optimizations - Recipe - Description
 1742004312 - Large Ice Optimizations - Building
-1742004313 - Basic Mining Optimizations - Recipe
-1742004314 - Basic Mining Optimizations - Recipe - Description
-1742004315 - Basic Mining Optimizations - Building
-1742004316 - Large Mining Optimizations - Recipe
-1742004317 - Large Mining Optimizations - Recipe - Description
-1742004318 - Large Mining Optimizations - Building
+1742004313 - Basic Mining and Drilling Optimizations - Recipe
+1742004314 - Basic Mining and Drilling Optimizations - Recipe - Description
+1742004315 - Basic Mining and Drilling Optimizations - Building
+1742004316 - Large Mining and Drilling Optimizations - Recipe
+1742004317 - Large Mining and Drilling Optimizations - Recipe - Description
+1742004318 - Large Mining and Drilling Optimizations - Building
 1742004339 - Soap - Recipe
 1742004340 - Chemical Plant: Soap - Building
 1742004341 - Chemical Plant: Soap - Building - Description
@@ -344,9 +344,12 @@ POOLS
 1742004233 - All Inuit Coastal Buildings - ItemEffectPool
 1742004234 - All Inuit Hunting Buildings - ItemEffectPool
 1742004265 - All Inuit Crafting Buildings - ItemEffectPool
+1742004467 - All Inuit Food and Drinks Production Buildings - ItemEffectPool
 [SHARED] 1742200028 - All Technicians Residences - ItemEffectTargetPool
 [SHARED] 1742200030 - All Gas Mines - ItemEffectTargetPool
 1742004526 - All Upgraded Arctic Residences - ItemEffectPool
+1742004416 - All Inuit Production Buildings - ItemEffectPool
+1742004556 - All Inuit Public Services - ItemEffectPool
 
 ITEMEFECTS AND BUFFS
 *************************
@@ -416,14 +419,11 @@ ITEMEFECTS AND BUFFS
 1742004322 - Basic Ice Optimizations Buff - Buff - Description
 1742004323 - Large Ice Optimizations Buff - Buff
 1742004324 - Large Ice Optimizations Buff - Buff - Description
-1742004325 - Basic Mining Optimizations Buff - Buff
-1742004326 - Basic Mining Optimizations Buff - Buff - Description
-1742004327 - Large Mining Optimizations Buff - Buff
-1742004328 - Large Mining Optimizations Buff - Buff - Description
-1742004397 - Basic Scrap Optimizations Buff - Buff
-1742004415 - Basic Scrap Optimizations Buff - Buff - Description
-1742004416 - Large Scrap Optimizations Buff - Buff
-1742004454 - Large Scrap Optimizations Buff - Buff - Description
+1742004325 - Basic Mining and Drilling Optimizations Buff - Buff
+1742004326 - Basic Mining and Drilling Optimizations Buff - Buff - Description
+1742004327 - Large Mining and Drilling Optimizations Buff - Buff
+1742004328 - Large Mining and Drilling Optimizations Buff - Buff - Description
+
 1742004504 - Conny Cobbler - Buff
 1742004505 - Bubbly Julep - Buff
 1742004506 - Ice Coffee - Buff
@@ -457,8 +457,16 @@ ITEMS
 1742004195 - Bog Labrador Tea Seeds - Item - Description
 1742004530 - Zoppy Battery - Item
 1742004531 - Zoppy Battery - Item - Description
+1742004549 - Zippy Battery - Item
+1742004550 - Zippy Battery - Item - Description
 1742004534 - Vladimir Slafofski - Item
 1742004535 - Vladimir Slafofski - Item - Description
+1742004551 - Gratty Oil Extractor - Item
+1742004552 - Gratty Oil Extractor - Item - Description
+1742004553 - Grotty Oil Sucker - Item
+1742004554 - Grotty Oil Sucker - Item - Description
+1742004397 - Portable Drilling Machine - Item
+1742004415 - Portable Drilling Machine - Item - Description
 
 CONSTRUCTION MENU
 *************************
@@ -541,22 +549,21 @@ NEWSPAPER
 
 TRIGGERS
 *************************
-1742004800 - Creative Mode - Trigger
-1742004801 - FREE
-1742004802 - Inuit Unlock (100 Explorers) - 00 - Trigger
-1742004819 - Inuit Unlock - 01 - Trigger
+1742004801 - Creative Mode - Trigger
+1742004824 - Inuit Unlock (100 Explorers) - 00 - Trigger
+1742004828 - Inuit Unlock - 01 - Trigger
 1742004820 - Inuit Unlock - 02 - Trigger
 1742004821 - Inuit Unlock - 03 - Trigger
 1742004822 - Inuit Unlock - 04 - Trigger
 1742004807 - Inuit Unlock - 05 - Trigger
 1742004808 - Inuit Unlock - 06 - Trigger
-1742004816 - Explorers Unlock - 1 - Trigger
+1742004825 - Explorers Unlock - 1 - Trigger
 1742004809 - Technicians Unlock - 1 - Trigger
 1742004810 - Technicians Unlock - 100 - Trigger
 1742004811 - Technicians Unlock - 500 - Trigger
 1742004812 - Technicians Unlock - 750 - Trigger
-1742004813 - Technicians Unlock - 1000 - Trigger
-1742004814 - Technicians Unlock - 2500 - Trigger
+1742004826 - Technicians Unlock - 1000 - Trigger
+1742004827 - Technicians Unlock - 2500 - Trigger
 1742004818 - Technicians Unlock - 5000 - Trigger
 1742004817 - Technicians Unlock - 10000 - Trigger
 
@@ -579,6 +586,7 @@ TRIGGERS
     <Include File="../../../../hier0nimus/population/assets.include.xml" />
     <Include File="../../../../hier0nimus/products/assets.include.xml" />
     <Include File="../../../../hier0nimus/mining/assets.include.xml" />
+    <Include File="../../../../hier0nimus/strategic/assets.include.xml" />
     <Include File="../../../../hier0nimus/expeditions/assets.include.xml" />
     <Include File="../../../../hier0nimus/newspapers/assets.include.xml" />
     <Include File="../../../../hier0nimus/compatibility/assets.include.xml" />
