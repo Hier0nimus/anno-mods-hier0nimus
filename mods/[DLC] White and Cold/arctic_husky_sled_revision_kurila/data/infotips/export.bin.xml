@@ -1,0 +1,340 @@
+<ModOps>
+  <!-- New Display entry for "Improved by Husky Sleds" only for Arctic Buildings -->
+  <ModOp Type="addNextSibling" Path="//InfoTipData[Guid='25000020']//InfoElement[InfoElement/Text[TextGUID='13659']]">
+      <InfoElement>
+        <ElementType>8</ElementType>
+        <ChildCount>1</ChildCount>
+        <VisibilityElement>
+          <ElementType>
+            <ElementType>2</ElementType>
+          </ElementType>
+          <ChildCount>1</ChildCount>
+          <VisibilityElement>
+            <ElementType>
+              <ElementType>2</ElementType>
+            </ElementType>
+            <ChildCount>8</ChildCount>
+            <VisibilityElement><!-- Can be boostet by electricity -->
+              <ElementType>
+                <ElementType>1</ElementType>
+              </ElementType>
+              <CompareOperator />
+              <ResultType />
+              <Condition>[StaticData Electricity CanBeBoostedByElectricity([RefGuid])]</Condition><!-- Can be boostet by electricity -->
+            </VisibilityElement>
+            <VisibilityElement><!-- Needs electricity -->
+              <ElementType>
+                <ElementType>1</ElementType>
+              </ElementType>
+              <CompareOperator />
+              <ResultType />
+              <ExpectedValueBool>False</ExpectedValueBool>
+              <Condition>[StaticData Electricity NeedsElectricity([RefGuid])]</Condition><!-- Needs electricity -->
+            </VisibilityElement>
+            <VisibilityElement><!-- Needs electricity unlocked -->
+              <ElementType>
+                <ElementType>1</ElementType>
+              </ElementType>
+              <CompareOperator />
+              <ResultType />
+              <Condition>[Unlock IsUnlocked(120022)]</Condition><!-- electricity unlocked -->
+            </VisibilityElement>
+            <VisibilityElement><!-- Can be build in the Arctic -->
+              <ElementType>
+                <ElementType>2</ElementType>
+              </ElementType>
+              <ChildCount>2</ChildCount>
+              <VisibilityElement>
+                <ElementType>
+                  <ElementType>1</ElementType>
+                </ElementType>
+                <CompareOperator />
+                <ResultType />
+                <Condition>[StaticData Building AllowedInRegion(3, [RefGuid])]</Condition><!-- Can be build in the Arctic -->
+              </VisibilityElement>
+              <OperatorType>
+                <OperatorType>1</OperatorType>
+              </OperatorType>
+            </VisibilityElement>
+            <OperatorType />
+          </VisibilityElement>
+          <OperatorType />
+        </VisibilityElement>
+        <InfoElement>
+          <ElementType>4</ElementType>
+          <VisibilityElement>
+            <ElementType>
+              <ElementType>2</ElementType>
+            </ElementType>
+            <OperatorType />
+          </VisibilityElement>
+          <Icon>
+            <IconGUID>112703</IconGUID><!-- Husky Sleds -->
+            <Style />
+          </Icon>
+          <Text>
+            <TextGUID>1500300094</TextGUID><!-- Improved by Husky Sleds -->
+            <Style />
+          </Text>
+          <Value>
+            <Style />
+          </Value>
+          <WarningType />
+          <BackgroundType />
+        </InfoElement>
+      </InfoElement>
+  </ModOp>
+
+  <!-- New Condition for Vanilla "Impoved by Electricity" only for NOT Arctic Buildings -->
+  <ModOp Type="addPrevSibling" Path="//InfoTipData[Guid='25000020']//InfoElement[InfoElement/Text[TextGUID='13659']]/VisibilityElement/VisibilityElement/OperatorType">
+    <VisibilityElement>
+      <ElementType>
+        <ElementType>1</ElementType>
+      </ElementType>
+      <CompareOperator>
+        <CompareOperator>1</CompareOperator>
+      </CompareOperator>
+      <ResultType />
+      <Condition>[StaticData Building AllowedInRegion(3, [RefGuid])]</Condition>
+    </VisibilityElement>
+  </ModOp>
+
+  <!-- Production Output Infotip for husky sled factory (linked in /Values/FactoryBase/ProductionOutputInfotip)-->
+  <ModOp Type="addNextSibling" Path ="//InfoTipData[Guid='25000208']">
+    <InfoTipData>
+      <Guid>1500300895</Guid>
+      <ChildCount>4</ChildCount>
+      <InfoElement>
+        <ElementType>2</ElementType>
+        <VisibilityElement>
+          <ElementType>
+            <ElementType>2</ElementType>
+          </ElementType>
+          <OperatorType />
+        </VisibilityElement>
+        <Icon>
+          <IconGUID>1500300889</IconGUID>
+          <Style />
+        </Icon>
+        <Text>
+          <TextGUID>1500300889</TextGUID>
+          <Style />
+        </Text>
+        <SubText>
+          <TextGUID>2363</TextGUID> <!-- "Effect" -->
+          <Style />
+        </SubText>
+        <BackgroundType />
+      </InfoElement>
+      <InfoElement>
+        <ElementType>8</ElementType>
+        <ChildCount>1</ChildCount>
+        <VisibilityElement>
+          <ElementType>
+            <ElementType>2</ElementType>
+          </ElementType>
+          <ChildCount>1</ChildCount>
+          <VisibilityElement>
+            <ElementType>
+              <ElementType>1</ElementType>
+            </ElementType>
+            <CompareOperator>
+              <CompareOperator>5</CompareOperator>
+            </CompareOperator>
+            <ResultType>
+              <ResultType>1</ResultType>
+            </ResultType>
+            <Condition>[ToolOneHelper ItemOrBuffEffectTargets(1500300889)]</Condition>
+          </VisibilityElement>
+          <OperatorType />
+        </VisibilityElement>
+        <InfoElement>
+          <ElementType>5</ElementType>
+          <VisibilityElement>
+            <ElementType>
+              <ElementType>2</ElementType>
+            </ElementType>
+            <OperatorType />
+          </VisibilityElement>
+          <Text>
+            <Text>[AssetData(20085) Text][ItemAssetData(1500300889) ItemOrBuffEffectTargetsFormatted]</Text> <!-- 20085 = "Affects" -->
+            <Style />
+          </Text>
+          <BackgroundType />
+        </InfoElement>
+      </InfoElement>
+      <InfoElement>
+        <ElementType>19</ElementType>
+        <VisibilityElement>
+          <ElementType>
+            <ElementType>2</ElementType>
+          </ElementType>
+          <OperatorType />
+        </VisibilityElement>
+        <TemplateGUID>454144439</TemplateGUID> <!-- Buff Effects Formatted -->
+        <Variables>
+          <None>
+            <ID>1840762361</ID>
+            <Name>ItemGuid</Name>
+            <Source>[ItemAssetData(1500300889) Guid]</Source>
+          </None>
+          <None>
+            <ID>1840762361</ID>
+            <Name>ItemGuid</Name>
+            <Source>[ItemAssetData(1500300889) Guid]</Source>
+          </None>
+          <None>
+            <ID>1840762361</ID>
+            <Name>ItemGuid</Name>
+            <Source>[ItemAssetData(1500300889) Guid]</Source>
+          </None>
+        </Variables>
+      </InfoElement>
+      <InfoElement>
+        <ElementType>4</ElementType>
+        <VisibilityElement>
+          <ElementType>
+            <ElementType>2</ElementType>
+          </ElementType>
+          <OperatorType />
+        </VisibilityElement>
+        <Icon>
+            <IconGUID>112680</IconGUID> <!-- husky sled icon -->
+            <Style />
+          </Icon>
+          <Text>
+            <Text>[AssetData(1500300896) Text]</Text> <!-- "Provides Husky Sleds" -->
+            <Style />
+          </Text>
+        <BackgroundType />
+      </InfoElement>
+      <InfoElement>
+        <ElementType>8</ElementType>
+        <ChildCount>4</ChildCount>
+        <VisibilityElement>
+          <ElementType>
+            <ElementType>2</ElementType>
+          </ElementType>
+          <ChildCount>1</ChildCount>
+          <VisibilityElement>
+            <ElementType>
+              <ElementType>1</ElementType>
+            </ElementType>
+            <CompareOperator>
+              <CompareOperator>0</CompareOperator>
+            </CompareOperator>
+            <ResultType>
+              <ResultType>1</ResultType>
+            </ResultType>
+            <Condition>[Item BuffFluff([RefGuid])]</Condition>
+          </VisibilityElement>
+          <OperatorType />
+        </VisibilityElement>
+        <InfoElement>
+          <ElementType>6</ElementType>
+          <VisibilityElement>
+            <ElementType>
+              <ElementType>2</ElementType>
+            </ElementType>
+            <OperatorType />
+          </VisibilityElement>
+          <Text>
+            <Style />
+          </Text>
+        </InfoElement>
+        <InfoElement>
+          <ElementType>18</ElementType>
+          <VisibilityElement>
+            <ElementType>
+              <ElementType>2</ElementType>
+            </ElementType>
+            <OperatorType />
+          </VisibilityElement>
+          <Text>
+            <Text>[AssetData([Item BuffFluff(1500300889)]) Text]</Text> <!-- potential fluff text needs to be defined in your buff: /Values/Buff/PossibleFluffTexts to be shown here -->
+            <Style />
+          </Text>
+          <BackgroundType />
+        </InfoElement>
+      </InfoElement>
+      <Variables />
+    </InfoTipData>
+  </ModOp>
+
+  <!-- Adds a line to the construction menu infotip when hovering over the husky sled factory icon -->
+  <ModOp Type="addNextSibling" Path ="//InfoTipData[Guid='25000020']/InfoElement/InfoElement/InfoElement/InfoElement[VisibilityElement/VisibilityElement/VisibilityElement/ExpectedValueInt='101269'][1]">
+    <InfoElement>
+      <ElementType>4</ElementType>
+      <VisibilityElement>
+        <ElementType>
+          <ElementType>2</ElementType>
+        </ElementType>
+        <ChildCount>1</ChildCount>
+        <VisibilityElement>
+          <ElementType>
+            <ElementType>2</ElementType>
+          </ElementType>
+          <ChildCount>3</ChildCount>
+					<VisibilityElement><!-- Buildings list -->
+						<ElementType>
+							<ElementType>2</ElementType>
+						</ElementType>
+						<ChildCount>2</ChildCount>
+            <VisibilityElement><!-- Is Husky Station -->
+              <ElementType>
+                <ElementType>1</ElementType>
+              </ElementType>
+              <CompareOperator />
+              <ResultType>
+                <ResultType>1</ResultType>
+              </ResultType>
+              <ExpectedValueInt>112680</ExpectedValueInt><!-- Husky Station -->
+              <Condition>[RefGuid]</Condition>
+            </VisibilityElement>
+            <VisibilityElement><!-- Is Harbour Husky Station -->
+              <ElementType>
+                <ElementType>1</ElementType>
+              </ElementType>
+              <CompareOperator />
+              <ResultType>
+                <ResultType>1</ResultType>
+              </ResultType>
+              <ExpectedValueInt>1500300098</ExpectedValueInt><!-- Harbour Husky Station -->
+              <Condition>[RefGuid]</Condition>
+            </VisibilityElement>
+            <VisibilityElement><!-- Is Dockland Husky Station -->
+              <ElementType>
+                <ElementType>1</ElementType>
+              </ElementType>
+              <CompareOperator />
+              <ResultType>
+                <ResultType>1</ResultType>
+              </ResultType>
+              <ExpectedValueInt>1500302818</ExpectedValueInt><!-- Dockland Husky Station -->
+              <Condition>[RefGuid]</Condition>
+            </VisibilityElement>
+						<OperatorType>
+							<OperatorType>1</OperatorType>
+						</OperatorType>
+					</VisibilityElement>
+          <OperatorType />
+        </VisibilityElement>
+        <OperatorType />
+      </VisibilityElement>
+      <Icon>
+        <IconGUID>112680</IconGUID> <!-- husky sled icon -->
+        <Style />
+      </Icon>
+      <Text>
+        <TextGUID>1500300896</TextGUID> <!-- "Provides Husky Sleds" -->
+        <Style />
+      </Text>
+      <Value>
+        <Style />
+      </Value>
+      <WarningType />
+      <BackgroundType />
+    </InfoElement>
+  </ModOp>
+
+</ModOps>

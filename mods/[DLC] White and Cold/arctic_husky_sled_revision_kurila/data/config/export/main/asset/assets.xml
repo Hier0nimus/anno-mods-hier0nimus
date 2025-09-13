@@ -1,0 +1,882 @@
+<ModOps>
+  <Group ModOpID="HuskySleds">
+    <!-- Condition Target -->
+    <Group ModOpID="Item">
+      <ModOp Type="merge" GUID="86" Path="/Values">
+        <HuskySleds />
+      </ModOp>
+    </Group>
+    <!-- Adjust Husky Sleds -->
+    <Group>
+      <!-- Adjust Husky Sleds -->
+      <Group>
+        <ModOp Type="replace" GUID="112703" Path="/Values/Product">
+          <Product>
+            <ProductColor>-11415604</ProductColor>
+            <StorageLevel>Building</StorageLevel>
+            <ProductCategory>11708</ProductCategory>
+            <IsAbstract>1</IsAbstract>
+            <AssociatedRegion>Arctic</AssociatedRegion>
+          </Product>
+        </ModOp>
+        <ModOp Type="remove" GUID="112703" Path="/Values/ExpeditionAttribute">
+        </ModOp>
+        <ModOp Type="merge" GUID="112704" Path="/Values">
+          <Product>
+            <ProductCategory>11703</ProductCategory>
+          </Product>
+        </ModOp>
+      </Group>
+      <!-- Remove Husky Sleds from Lists, Pools and Cosuming -->
+      <Group>
+        <ModOp Type="remove" GUID="112643" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='112703']/Amount">
+        </ModOp>
+        <ModOp Type="remove" GUID="120055,120059" Path="/Values/ProductStorageList/ProductList/Item[Product='112703']">
+        </ModOp>
+        <ModOp Type="remove" GUID="502011,502025,502219,502003,501956,501993" Path="/Values/ProductList/List/Item[Product='112703']">
+        </ModOp>
+      </Group>
+      <!-- Replace Husky Sleds with Sleds -->
+      <ModOp Type="replace" GUID="116190" Path="/Values/CraftableItem/CraftingCosts/Item[Product='112703']/Product" Condition="/Values/CraftableItem/CraftingCosts/Item[Product='112703']">
+        <Product>112704</Product>
+      </ModOp>
+    </Group>
+    <!-- Adjust Husky Sled Factory -->
+    <Group>
+      <!-- New Buff: Affects Canteen, Post Office and Ranger Station: +50% range, All Arctic Production Buildings use Husky Sled Transporters -->
+      <ModOp GUID="142449" Type="addNextSibling">
+        <Asset>
+          <Template>FestivalBuff</Template>
+          <Values>
+            <Standard>
+              <GUID>1500300885</GUID>
+              <Name>Dog_Sled_Fake_Buff_UI</Name>
+              <IconFilename>data/ui/2kimages/main/3dicons/icon_sled.png</IconFilename>
+            </Standard>
+            <Text>
+              <TextOverride>112703</TextOverride>
+            </Text>
+            <PopulationUpgrade />
+            <ResidenceUpgrade />
+            <ItemEffect>
+              <EffectTargets>
+                <Item>
+                  <GUID>114889</GUID>
+                </Item>
+                <Item>
+                  <GUID>112684</GUID>
+                </Item>
+                <Item>
+                  <GUID>112669</GUID>
+                </Item>
+                <Item>
+                  <GUID>114751</GUID>
+                </Item>
+                <Item>
+                  <GUID>193770</GUID>
+                </Item>
+              </EffectTargets>
+              <AllowStacking>0</AllowStacking>
+            </ItemEffect>
+            <Buff />
+            <CultureUpgrade>
+              <HideBuff>1</HideBuff>
+            </CultureUpgrade>
+            <KontorUpgrade />
+            <AttackableUpgrade />
+            <AttackerUpgrade />
+            <BuildingUpgrade />
+            <FactoryUpgrade />
+            <PassiveTradeGoodGenUpgrade />
+            <ShipyardUpgrade />
+            <VisitorHarborUpgrade />
+            <VisitorUpgrade />
+            <HeaterUpgrade />
+            <IndustrializableUpgrade />
+          </Values>
+        </Asset>
+        <Asset>
+          <Template>FestivalBuff</Template>
+          <Values>
+            <Standard>
+              <GUID>1500300886</GUID>
+              <Name>Dog_Sled_Buff_Publics</Name>
+              <IconFilename>data/ui/2kimages/main/3dicons/icon_sled.png</IconFilename>
+            </Standard>
+            <Text>
+              <TextOverride>112703</TextOverride>
+            </Text>
+            <PopulationUpgrade />
+            <ResidenceUpgrade />
+            <ItemEffect>
+              <EffectTargets>
+                <Item>
+                  <GUID>114889</GUID>
+                </Item>
+                <Item>
+                  <GUID>112684</GUID>
+                </Item>
+                <Item>
+                  <GUID>4260</GUID>
+                </Item>
+              </EffectTargets>
+              <AllowStacking>0</AllowStacking>
+            </ItemEffect>
+            <Buff />
+            <CultureUpgrade>
+              <HideBuff>0</HideBuff>
+            </CultureUpgrade>
+            <KontorUpgrade />
+            <AttackableUpgrade />
+            <AttackerUpgrade />
+            <BuildingUpgrade>
+              <PublicServiceFullSatisfactionDistance>
+                <Value>50</Value>
+                <Percental>1</Percental>
+              </PublicServiceFullSatisfactionDistance>
+              <PublicServiceNoSatisfactionDistance>
+                <Value>50</Value>
+                <Percental>1</Percental>
+              </PublicServiceNoSatisfactionDistance>
+            </BuildingUpgrade>
+            <FactoryUpgrade />
+            <PassiveTradeGoodGenUpgrade />
+            <ShipyardUpgrade />
+            <VisitorHarborUpgrade />
+            <VisitorUpgrade />
+            <HeaterUpgrade />
+            <IndustrializableUpgrade />
+          </Values>
+        </Asset>
+        <Asset>
+          <Template>FestivalBuff</Template>
+          <Values>
+            <Standard>
+              <GUID>1500300887</GUID>
+              <Name>Dog_Sled_Buff_Institutions</Name>
+              <IconFilename>data/ui/2kimages/main/3dicons/icon_sled.png</IconFilename>
+            </Standard>
+            <Text>
+              <TextOverride>112703</TextOverride>
+            </Text>
+            <PopulationUpgrade />
+            <ResidenceUpgrade />
+            <ItemEffect>
+              <EffectTargets>
+                <Item>
+                  <GUID>112669</GUID>
+                </Item>
+              </EffectTargets>
+              <AllowStacking>0</AllowStacking>
+            </ItemEffect>
+            <Buff />
+            <CultureUpgrade>
+              <HideBuff>0</HideBuff>
+            </CultureUpgrade>
+            <KontorUpgrade />
+            <AttackableUpgrade />
+            <AttackerUpgrade />
+            <BuildingUpgrade>
+              <ResolverUnitMovementSpeedUpgrade>
+                <Value>50</Value>
+                <Percental>1</Percental>
+              </ResolverUnitMovementSpeedUpgrade>
+            </BuildingUpgrade>
+            <FactoryUpgrade />
+            <PassiveTradeGoodGenUpgrade />
+            <ShipyardUpgrade />
+            <VisitorHarborUpgrade />
+            <VisitorUpgrade />
+            <HeaterUpgrade />
+            <IndustrializableUpgrade />
+          </Values>
+        </Asset>
+        <Asset>
+          <Template>FestivalBuff</Template>
+          <Values>
+            <Standard>
+              <GUID>1500300888</GUID>
+              <Name>Dog_Sled_Buff_Transporter</Name>
+              <IconFilename>data/ui/2kimages/main/3dicons/icon_sled.png</IconFilename>
+            </Standard>
+            <Text>
+              <TextOverride>112703</TextOverride>
+            </Text>
+            <PopulationUpgrade />
+            <ResidenceUpgrade />
+            <ItemEffect>
+              <EffectTargets>
+                <Item>
+                  <GUID>114751</GUID>
+                </Item>
+                <Item>
+                  <GUID>8857100</GUID>
+                </Item>
+                <Item>
+                  <GUID>1500302816</GUID>
+                </Item>
+                <Item>
+                  <GUID>1500300098</GUID>
+                </Item>
+                <Item>
+                  <GUID>193770</GUID>
+                </Item>
+              </EffectTargets>
+              <AllowStacking>0</AllowStacking>
+            </ItemEffect>
+            <Buff />
+            <CultureUpgrade>
+              <HideBuff>1</HideBuff>
+              <!-- hidden to hide the "provides electricity" line; instead a fake buff is shown (see below) -->
+            </CultureUpgrade>
+            <KontorUpgrade />
+            <AttackableUpgrade />
+            <AttackerUpgrade />
+            <BuildingUpgrade />
+            <FactoryUpgrade />
+            <PassiveTradeGoodGenUpgrade />
+            <ShipyardUpgrade />
+            <VisitorHarborUpgrade />
+            <VisitorUpgrade />
+            <HeaterUpgrade />
+            <IndustrializableUpgrade>
+              <ProvideIndustrialization>1</ProvideIndustrialization>
+            </IndustrializableUpgrade>
+          </Values>
+        </Asset>
+        <Asset>
+          <Template>Text</Template>
+          <Values>
+            <Standard>
+              <GUID>1500300899</GUID>
+              <Name>Buff_Desc_Provides_Husyk_Sleds</Name>
+            </Standard>
+          </Values>
+        </Asset>
+        <Asset>
+          <Template>FestivalBuff</Template>
+          <Values>
+            <Standard>
+              <GUID>1500300898</GUID>
+              <Name>Dog_Sled_Buff_Transporter_FAKE</Name>
+              <IconFilename>data/ui/2kimages/main/3dicons/icon_sled.png</IconFilename>
+              <InfoDescription>1500300899</InfoDescription>
+            </Standard>
+            <Text>
+              <TextOverride>112703</TextOverride>
+            </Text>
+            <PopulationUpgrade />
+            <ResidenceUpgrade />
+            <ItemEffect>
+              <EffectTargets>
+                <Item>
+                  <GUID>114751</GUID>
+                </Item>
+                <Item>
+                  <GUID>193770</GUID>
+                </Item>
+              </EffectTargets>
+              <AllowStacking>0</AllowStacking>
+            </ItemEffect>
+            <Buff />
+            <CultureUpgrade>
+              <HideBuff>0</HideBuff>
+            </CultureUpgrade>
+            <KontorUpgrade />
+            <AttackableUpgrade />
+            <AttackerUpgrade />
+            <BuildingUpgrade />
+            <FactoryUpgrade />
+            <PassiveTradeGoodGenUpgrade />
+            <ShipyardUpgrade />
+            <VisitorHarborUpgrade />
+            <VisitorUpgrade />
+            <HeaterUpgrade />
+            <IndustrializableUpgrade>
+              <ProvideIndustrialization>0</ProvideIndustrialization>
+            </IndustrializableUpgrade>
+          </Values>
+        </Asset>
+        <Asset>
+          <Template>Text</Template>
+          <Values>
+            <Standard>
+              <GUID>1500300905</GUID>
+              <Name>Husky_Sled_Fluff_Text</Name>
+            </Standard>
+          </Values>
+        </Asset>
+        <Asset>
+          <Template>EffectContainer</Template>
+          <Values>
+            <Standard>
+              <GUID>1500300889</GUID>
+              <Name>Dog_Sled_Buff_Container</Name>
+              <IconFilename>data/ui/2kimages/main/3dicons/icon_sled.png</IconFilename>
+            </Standard>
+            <Text>
+              <TextOverride>112703</TextOverride>
+            </Text>
+            <EffectContainer>
+              <Effects>
+                <Item>
+                  <Effect>1500300885</Effect>
+                </Item>
+                <Item>
+                  <Effect>1500300886</Effect>
+                </Item>
+                <Item>
+                  <Effect>1500300887</Effect>
+                </Item>
+                <Item>
+                  <Effect>1500300888</Effect>
+                </Item>
+                <Item>
+                  <Effect>1500300898</Effect>
+                  <!-- visible fake buff for factories -->
+                </Item>
+              </Effects>
+            </EffectContainer>
+            <IndustrializableUpgrade>
+              <ProvideIndustrialization>0</ProvideIndustrialization>
+              <!-- set to 0 to be ignored in infotip which uses custom text instead -->
+            </IndustrializableUpgrade>
+            <BuildingUpgrade>
+              <ResolverUnitMovementSpeedUpgrade>
+                <Value>50</Value>
+                <Percental>1</Percental>
+              </ResolverUnitMovementSpeedUpgrade>
+              <PublicServiceFullSatisfactionDistance>
+                <Value>50</Value>
+                <Percental>1</Percental>
+              </PublicServiceFullSatisfactionDistance>
+              <PublicServiceNoSatisfactionDistance>
+                <Value>50</Value>
+                <Percental>1</Percental>
+              </PublicServiceNoSatisfactionDistance>
+            </BuildingUpgrade>
+            <Buff>
+              <PossibleFluffTexts>
+                <Item>
+                  <FluffText>1500300905</FluffText>
+                </Item>
+              </PossibleFluffTexts>
+            </Buff>
+          </Values>
+        </Asset>
+        <Asset>
+          <Template>Text</Template>
+          <Values>
+            <Standard>
+              <GUID>1500300094</GUID>
+              <Name>Electricity Possible Text</Name>
+            </Standard>
+            <Text>
+              <LocaText>
+                <English>
+                  <Text>Improved by Husky Sleds</Text>
+                  <Status>Exported</Status>
+                </English>
+              </LocaText>
+              <LineID>19536</LineID>
+            </Text>
+          </Values>
+        </Asset>
+        <Asset>
+          <Template>Text</Template>
+          <Values>
+            <Standard>
+              <GUID>1500300896</GUID>
+              <Name>Provides Husyk Sleds Text</Name>
+            </Standard>
+          </Values>
+        </Asset>
+        <Asset>
+          <Template>FestivalBuff</Template>
+          <Values>
+            <Standard>
+              <GUID>1500300906</GUID>
+              <Name>Reduce_Range_Husky_Station</Name>
+              <IconFilename>data/ui/2kimages/main/3dicons/icon_sled.png</IconFilename>
+            </Standard>
+            <PopulationUpgrade />
+            <ResidenceUpgrade />
+            <ItemEffect>
+              <EffectTargets>
+                <Item>
+                  <GUID>1500302821</GUID>
+                </Item>
+              </EffectTargets>
+              <AllowStacking>0</AllowStacking>
+            </ItemEffect>
+            <CultureUpgrade>
+              <HideBuff>1</HideBuff>
+            </CultureUpgrade>
+            <BuildingUpgrade>
+              <PublicServiceFullSatisfactionDistance>
+                <Value>-1000</Value>
+                <Percental>1</Percental>
+              </PublicServiceFullSatisfactionDistance>
+              <PublicServiceNoSatisfactionDistance>
+                <Value>-1000</Value>
+                <Percental>1</Percental>
+              </PublicServiceNoSatisfactionDistance>
+            </BuildingUpgrade>
+          </Values>
+        </Asset>
+        <Asset>
+          <Template>ForwardBuff</Template>
+          <Values>
+            <Standard>
+              <GUID>1500302820</GUID>
+              <Name>ForwardBuff_Dog_Sled_Buff_Container</Name>
+              <IconFilename>data/ui/2kimages/main/3dicons/icon_sled.png</IconFilename>
+            </Standard>
+            <Buff />
+            <ItemEffect>
+              <EffectTargets>
+                <Item>
+                  <GUID>1500302821</GUID>
+                </Item>
+              </EffectTargets>
+              <AllowStacking>0</AllowStacking>
+            </ItemEffect>
+            <EffectForward>
+              <ForwardEffect>1500300889</ForwardEffect>
+              <ForwardEffectScope>Radius</ForwardEffectScope>
+              <ForwardEffectRange>18</ForwardEffectRange>
+            </EffectForward>
+            <CultureUpgrade>
+              <HideBuff>1</HideBuff>
+            </CultureUpgrade>
+            <BuildingUpgrade>
+              <PublicServiceFullSatisfactionDistance>
+                <Value>1000</Value>
+                <Percental>1</Percental>
+              </PublicServiceFullSatisfactionDistance>
+              <PublicServiceNoSatisfactionDistance>
+                <Value>1000</Value>
+                <Percental>1</Percental>
+              </PublicServiceNoSatisfactionDistance>
+            </BuildingUpgrade>
+          </Values>
+        </Asset>
+        <Asset>
+          <Template>ForwardBuff</Template>
+          <Values>
+            <Standard>
+              <GUID>1500302822</GUID>
+              <Name>ForwardBuff_Dog_Sled_Buff_Container_40_Procent</Name>
+              <IconFilename>data/ui/2kimages/main/3dicons/icon_sled.png</IconFilename>
+            </Standard>
+            <Buff />
+            <ItemEffect>
+              <EffectTargets>
+                <Item>
+                  <GUID>1500302821</GUID>
+                </Item>
+              </EffectTargets>
+              <AllowStacking>0</AllowStacking>
+            </ItemEffect>
+            <EffectForward>
+              <ForwardEffect>1500300889</ForwardEffect>
+              <ForwardEffectScope>Radius</ForwardEffectScope>
+              <ForwardEffectRange>25</ForwardEffectRange>
+            </EffectForward>
+            <CultureUpgrade>
+              <HideBuff>1</HideBuff>
+            </CultureUpgrade>
+            <BuildingUpgrade>
+              <PublicServiceFullSatisfactionDistance>
+                <Value>1000</Value>
+                <Percental>1</Percental>
+              </PublicServiceFullSatisfactionDistance>
+              <PublicServiceNoSatisfactionDistance>
+                <Value>1000</Value>
+                <Percental>1</Percental>
+              </PublicServiceNoSatisfactionDistance>
+            </BuildingUpgrade>
+          </Values>
+        </Asset>
+        <Asset>
+          <Template>ForwardBuff</Template>
+          <Values>
+            <Standard>
+              <GUID>1500302823</GUID>
+              <Name>ForwardBuff_Dog_Sled_Buff_Container_80_Procent</Name>
+              <IconFilename>data/ui/2kimages/main/3dicons/icon_sled.png</IconFilename>
+            </Standard>
+            <Buff />
+            <ItemEffect>
+              <EffectTargets>
+                <Item>
+                  <GUID>1500302821</GUID>
+                </Item>
+              </EffectTargets>
+              <AllowStacking>0</AllowStacking>
+            </ItemEffect>
+            <EffectForward>
+              <ForwardEffect>1500300889</ForwardEffect>
+              <ForwardEffectScope>Radius</ForwardEffectScope>
+              <ForwardEffectRange>32</ForwardEffectRange>
+            </EffectForward>
+            <CultureUpgrade>
+              <HideBuff>1</HideBuff>
+            </CultureUpgrade>
+            <BuildingUpgrade>
+              <PublicServiceFullSatisfactionDistance>
+                <Value>1000</Value>
+                <Percental>1</Percental>
+              </PublicServiceFullSatisfactionDistance>
+              <PublicServiceNoSatisfactionDistance>
+                <Value>1000</Value>
+                <Percental>1</Percental>
+              </PublicServiceNoSatisfactionDistance>
+            </BuildingUpgrade>
+          </Values>
+        </Asset>
+        <Asset>
+          <Template>ItemEffectTargetPool</Template>
+          <Values>
+            <Standard>
+              <GUID>1500302821</GUID>
+              <Name>All Husky Stations</Name>
+            </Standard>
+            <Text>
+              <TextOverride>112680</TextOverride>
+            </Text>
+            <ItemEffectTargetPool>
+              <EffectTargetGUIDs>
+                <Item>
+                  <GUID>112680</GUID>
+                </Item>
+                <Item>
+                  <GUID>1500300098</GUID>
+                </Item>
+                <Item>
+                  <GUID>1500302818</GUID>
+                </Item>
+              </EffectTargetGUIDs>
+            </ItemEffectTargetPool>
+          </Values>
+        </Asset>
+      </ModOp>
+      <!-- Arctic production buildings are affected by electricity but don't get a production buff and use "Husry Sled Transporter" when electrified  -->
+      <ModOp Type="merge" GUID="114751,114705,112676,112682,112690,114703,112667,112673,116034,114704,112666,112668,112674,112675,112679,112672,112681" Path="/Values">
+        <Electrifiable>
+          <ElectricityBoost>0</ElectricityBoost>
+          <ShowPowerInObjectMenu>0</ShowPowerInObjectMenu>
+        </Electrifiable>
+        <Industrializable>
+          <BoostedByIndustrialization>1</BoostedByIndustrialization>
+          <TransporterIndustrializationFactory>120028</TransporterIndustrializationFactory>
+          <TransporterIndustrializationWarehouse>120027</TransporterIndustrializationWarehouse>
+        </Industrializable>
+      </ModOp>
+      <!-- Husky Sled Factory is changed into a public building that consumes goods -->
+      <Group>
+        <ModOp Type="addNextSibling" GUID="112703">
+          <Asset>
+            <Template>Product</Template>
+            <Values>
+              <Standard>
+                <GUID>1500300897</GUID>
+                <Name>Hidden Fake Output</Name>
+                <IconFilename>data/ui/2kimages/main/3dicons/icon_sled.png</IconFilename>
+              </Standard>
+              <Locked>
+                <DefaultLockedState>0</DefaultLockedState>
+              </Locked>
+              <Product>
+                <DeltaOnly>1</DeltaOnly>
+                <IsAbstract>1</IsAbstract>
+                <AssociatedRegion>Arctic</AssociatedRegion>
+                <HideInUI>1</HideInUI>
+                <!-- icon is shown as husky sled factory output but product should be invisible in storage lists / statistics -->
+              </Product>
+              <ExpeditionAttribute />
+            </Values>
+          </Asset>
+        </ModOp>
+        <ModOp Type="merge" GUID="112680" Path="/">
+          <Template>BuffFactory</Template>
+          <Values>
+            <Standard>
+              <InfoDescription>11144</InfoDescription>
+            </Standard>
+            <Building>
+              <BuildingCategoryName>100003</BuildingCategoryName>
+              <SecondPartyRelevant>0</SecondPartyRelevant>
+            </Building>
+            <FactoryBase>
+              <FactoryOutputs>
+                <Item>
+                  <Product>1500300897</Product>
+                  <Amount>0</Amount>
+                  <!-- to avoid +1 fly outs -->
+                  <StorageAmount>1</StorageAmount>
+                </Item>
+              </FactoryOutputs>
+              <ProductionOutputInfotip>1500300895</ProductionOutputInfotip>
+              <CycleTime>30</CycleTime>
+              <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+              <ClampedMaxTransporterLogisticCost>67</ClampedMaxTransporterLogisticCost>
+              <WarehouseTransporterAsset>120027</WarehouseTransporterAsset>
+              <IsMainFactory>0</IsMainFactory>
+            </FactoryBase>
+            <BuffFactory>
+              <BaseBuff>1500300906</BaseBuff>
+              <BaseBuffScope>Local</BaseBuffScope>
+              <ProductionBuffs>
+                <Item>
+                  <ProductivityBuff>1500302820</ProductivityBuff>
+                  <ProductivityThresholdUp>0.01</ProductivityThresholdUp>
+                </Item>
+                <Item>
+                  <ProductivityBuff>1500302822</ProductivityBuff>
+                  <ProductivityThresholdUp>1.02</ProductivityThresholdUp>
+                  <ProductivityThresholdDown>1.01</ProductivityThresholdDown>
+                </Item>
+                <Item>
+                  <ProductivityBuff>1500302823</ProductivityBuff>
+                  <ProductivityThresholdUp>1.42</ProductivityThresholdUp>
+                  <ProductivityThresholdDown>1.41</ProductivityThresholdDown>
+                </Item>
+              </ProductionBuffs>
+              <ProductionBuffScope>Radius</ProductionBuffScope>
+            </BuffFactory>
+            <PublicService>
+              <FullSatisfactionDistance>20</FullSatisfactionDistance>
+              <NoSatisfactionDistance>40</NoSatisfactionDistance>
+              <PublicServiceOutputs>
+                <Item>
+                  <Product>112703</Product>
+                </Item>
+              </PublicServiceOutputs>
+            </PublicService>
+            <LogisticNode>
+              <TransporterAsset>120028</TransporterAsset>
+            </LogisticNode>
+            <Maintenance>
+              <Maintenances>
+                <Item>
+                  <Product>1010017</Product>
+                </Item>
+                <Item>
+                  <Product>112654</Product>
+                  <Amount>50</Amount>
+                </Item>
+              </Maintenances>
+            </Maintenance>
+          </Values>
+        </ModOp>
+        <ModOp Type="remove" GUID="112680" Path="/Values/Factory7">
+        </ModOp>
+      </Group>
+      <!-- Husky Sled Chain -->
+      <Group>
+        <ModOp Type="remove" GUID="116344" Path="/Values/ConstructionCategory/BuildingList/Item[Building='112714']">
+        </ModOp>
+        <ModOp Type="addNextSibling" GUID="116343" Path="/Values/ConstructionCategory/BuildingList/Item[Building='112856']">
+          <Item>
+            <Building>112714</Building>
+          </Item>
+        </ModOp>
+        <Group Condition="#arctic_ropes_kurila">
+          <ModOp Type="replace" GUID="112714" Path="/Values/ProductionChain/Tier1/Item/Tier2/Item[Building='112674']">
+            <Item>
+              <Building>1500303160</Building>
+              <Tier3>
+                <Item>
+                  <Building>112674</Building>
+                </Item>
+              </Tier3>
+            </Item>
+          </ModOp>
+          <ModOp Type="replace" GUID="112681" Path="/Values/FactoryBase/FactoryInputs/Item[Product='112696']/Product">
+            <Product>1500010825</Product>
+          </ModOp>
+        </Group>
+      </Group>
+    </Group>
+    <!-- Adjust Husky Transporter -->
+    <Group>
+      <!-- "Residence Transporter" which uses the dogsled feedback unit is added to the Arctic region -->
+      <Group>
+        <ModOp Type="merge" GUID="142725" Path="/Values/FeedbackSessionDescription/LogisticConfig/TransporterClasses">
+          <ElectricWarehouseTransporter>
+            <TransporterClass>142745</TransporterClass>
+          </ElectricWarehouseTransporter>
+          <ElectricFactoryTransporter>
+            <TransporterClass>142745</TransporterClass>
+          </ElectricFactoryTransporter>
+        </ModOp>
+        <ModOp Type="replace" GUID="115488" Path="/Values/Trailer/TrailerCount">
+          <TrailerCount>2</TrailerCount>
+        </ModOp>
+      </Group>
+      <!-- Include production buildings from other mods -->
+      <!--
+              <ModOp GUID="1337472600,1337472601,1337472602,1337472603" Path="/Values" Type="add">
+                <Electrifiable>
+                <ElectricityBoost>0</ElectricityBoost>
+              </Electrifiable>
+              </ModOp>
+              <ModOp GUID="1337472600,1337472601,1337472602,1337472603" Path="/Values" Type="add">
+                <Industrializable>
+                <TransporterIndustrializationFactory>1010106</TransporterIndustrializationFactory>
+                <TransporterIndustrializationWarehouse>1010106</TransporterIndustrializationWarehouse>
+              </Industrializable>
+              </ModOp>
+            -->
+    </Group>
+    <!-- Adjust Items  -->
+    <Group Skip="1">
+      <!-- Arctic Carpenter Items -->
+      <Group>
+        <!-- Tools -->
+        <Group>
+          <!-- Ulu -->
+          <ModOp Type="merge" GUID="116099" Path="/Values">
+            <FactoryUpgrade>
+              <ProductivityUpgrade>
+                <Value>25</Value>
+                <Percental>1</Percental>
+              </ProductivityUpgrade>
+            </FactoryUpgrade>
+            <BuildingUpgrade>
+              <MaintenanceUpgrade>
+                <Value>-10</Value>
+                <Percental>1</Percental>
+              </MaintenanceUpgrade>
+            </BuildingUpgrade>
+          </ModOp>
+          <!-- Wooden Adze -->
+          <ModOp Type="merge" GUID="116100" Path="/Values">
+            <BuildingUpgrade>
+              <MaintenanceUpgrade>
+                <Value>-15</Value>
+                <Percental>1</Percental>
+              </MaintenanceUpgrade>
+            </BuildingUpgrade>
+          </ModOp>
+          <!-- Bone Adze -->
+          <ModOp Type="merge" GUID="116101" Path="/Values">
+            <BuildingUpgrade>
+              <MaintenanceUpgrade>
+                <Value>-25</Value>
+                <Percental>1</Percental>
+              </MaintenanceUpgrade>
+              <WorkforceAmountUpgrade>
+                <Value>0</Value>
+                <Percental>1</Percental>
+              </WorkforceAmountUpgrade>
+              <PublicServiceFullSatisfactionDistance>
+                <Value>40</Value>
+                <Percental>1</Percental>
+              </PublicServiceFullSatisfactionDistance>
+              <PublicServiceNoSatisfactionDistance>
+                <Value>40</Value>
+                <Percental>1</Percental>
+              </PublicServiceNoSatisfactionDistance>
+            </BuildingUpgrade>
+          </ModOp>
+          <!-- All -->
+          <ModOp Type="remove" GUID="116099,116100" Path="/Values/ItemEffect/EffectTargets/Item[GUID='112680']">
+          </ModOp>
+          <ModOp Type="replace" GUID="116101" Path="/Values/ItemEffect/EffectTargets/Item[GUID='112680']/GUID">
+            <GUID>1500302821</GUID>
+          </ModOp>
+        </Group>
+        <!-- Specialists -->
+        <Group>
+          <!-- Sled Builder -->
+          <ModOp Type="merge" GUID="116147" Path="/Values">
+            <FactoryUpgrade>
+              <ProductivityUpgrade>
+                <Value>20</Value>
+                <Percental>1</Percental>
+              </ProductivityUpgrade>
+            </FactoryUpgrade>
+            <BuildingUpgrade>
+              <MaintenanceUpgrade>
+                <Value>0</Value>
+                <Percental>1</Percental>
+              </MaintenanceUpgrade>
+              <WorkforceAmountUpgrade>
+                <Value>-10</Value>
+                <Percental>1</Percental>
+              </WorkforceAmountUpgrade>
+            </BuildingUpgrade>
+          </ModOp>
+          <!-- Sharp Sled Builder -->
+          <ModOp Type="merge" GUID="116150" Path="/Values">
+            <FactoryUpgrade>
+              <ProductivityUpgrade>
+                <Value>30</Value>
+                <Percental>1</Percental>
+              </ProductivityUpgrade>
+            </FactoryUpgrade>
+            <BuildingUpgrade>
+              <WorkforceAmountUpgrade>
+                <Value>-15</Value>
+                <Percental>1</Percental>
+              </WorkforceAmountUpgrade>
+            </BuildingUpgrade>
+          </ModOp>
+          <!-- Naaqtuuq the Sled-Builder -->
+          <ModOp Type="merge" GUID="116153" Path="/Values">
+            <BuildingUpgrade>
+              <WorkforceAmountUpgrade>
+                <Value>-25</Value>
+                <Percental>1</Percental>
+              </WorkforceAmountUpgrade>
+              <PublicServiceFullSatisfactionDistance>
+                <Value>40</Value>
+                <Percental>1</Percental>
+              </PublicServiceFullSatisfactionDistance>
+              <PublicServiceNoSatisfactionDistance>
+                <Value>40</Value>
+                <Percental>1</Percental>
+              </PublicServiceNoSatisfactionDistance>
+            </BuildingUpgrade>
+          </ModOp>
+          <!-- All -->
+          <ModOp Type="remove" GUID="116147,116150" Path="/Values/ItemEffect/EffectTargets/Item[GUID='112680']">
+          </ModOp>
+          <ModOp Type="replace" GUID="116153" Path="/Values/ItemEffect/EffectTargets/Item[GUID='112680']/GUID">
+            <GUID>1500302821</GUID>
+          </ModOp>
+        </Group>
+      </Group>
+      <!-- All Arctic Productiuon Buildings -->
+      <Group>
+        <ModOp Type="remove" GUID="193770" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/Item[GUID='112680']">
+        </ModOp>
+      </Group>
+    </Group>
+    <!-- Mod: Item Sockets -->
+    <Group Condition="#item_sockets_kurila">
+      <ModOp Type="merge" GUID="112680" Path="/Values">
+        <Selection>
+          <UnlockSecondGUI>1500300092</UnlockSecondGUI>
+          <SecondGUIType>Guildhouse</SecondGUIType>
+          <AllowedDragType>ItemSocket;CargoItemStack;StorageItemStack;SharedTransferItem</AllowedDragType>
+        </Selection>
+        <ItemContainer>
+          <SocketCount>3</SocketCount>
+          <SocketAllocation>RadiusBuilding;Lodge;Mod1</SocketAllocation>
+          <SocketScope>Radius</SocketScope>
+        </ItemContainer>
+      </ModOp>
+      <ModOp Type="merge" GUID="112680" Path="/Values/ItemContainer/SocketCount" Content="@1010516/ItemContainer/SocketCount" Condition="@1010516/ItemContainer/SocketCount">
+      </ModOp>
+    </Group>
+  </Group>
+  <!-- Imya Tweaks -->
+  <ImyaTweaks Title="Features of Husky Sleds Revision" Icon="data/ui/2kimages/main/3dicons/icon_sled.png" />
+  <ImyaExpose Path="*" Kind="SkipToggle" InitState="True" ModOpID="HuskySleds" ExposeID="Disable/Enable Husky Sleds Revision">
+  </ImyaExpose>
+  <ImyaExpose Path="*" Kind="SkipToggle" InitState="True" ModOpID="Item" ExposeID="Disable/Enable Item Changes for Husky Sleds Revision">
+  </ImyaExpose>
+</ModOps>
