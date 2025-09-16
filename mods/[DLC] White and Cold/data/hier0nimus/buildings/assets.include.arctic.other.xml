@@ -2910,5 +2910,484 @@
     </ModOp>
     <!-- END BUILDING - Cannery (Arctic) -->
 
+    <!-- START - BUILDING - Entertainment Hall -->
+    <ModOp Type="addNextSibling" GUID='1010358'>
+        <Asset>
+            <Template>BuffFactory</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004563</GUID>
+                    <Name>Entertainment Hall</Name>
+                    <IconFilename>data/graphics/icons/icon_entertainment_hall.png</IconFilename>
+                    <InfoDescription>1742004564</InfoDescription>
+                </Standard>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!--Money-->
+                            <Amount>50000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010196</Ingredient>                            <!--timber-->
+                            <Amount>25</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010205</Ingredient>                            <!--bricks-->
+                            <Amount>20</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010218</Ingredient>                            <!--beams-->
+                            <Amount>15</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>838</Ingredient>                            <!--Aluminium-->
+                            <Amount>10</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010207</Ingredient>                            <!--window-->
+                            <Amount>10</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010202</Ingredient>                            <!--concrete-->
+                            <Amount>10</Amount>
+                        </Item>
+                    </Costs>
+                </Cost>
+                <Text />
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/dlc03/graphics/buildings/public/service_colony03_02/service_colony03_02.cfg</Filename>
+                        </Item>
+                    </Variations>
+                </Object>
+                <Building>
+                    <BuildingCategoryName>100003</BuildingCategoryName>
+                    <AssociatedRegions>Arctic</AssociatedRegions>
+                </Building>
+                <Blocking />
+                <Mesh />
+                <BuffFactory>
+                    <ProductionBuffScope>Local</ProductionBuffScope>
+                    <ProvidesPublicServiceNeed>1</ProvidesPublicServiceNeed>
+                    <PublicServiceData>
+                        <PublicServices>
+                            <Item>
+                                <PublicService>1742004565</PublicService>                                <!-- Tattooist - Product -->
+                            </Item>
+                        </PublicServices>
+                        <FullSatisfactionDistance>42</FullSatisfactionDistance>
+                        <NoSatisfactionDistance>50</NoSatisfactionDistance>
+                    </PublicServiceData>
+                </BuffFactory>
+                <FactoryBase>
+                    <FactoryInputs>
+                        <Item>
+                            <Product>5392</Product>                            <!-- Film Reel - Product -->
+                            <Amount>1</Amount>
+                            <StorageAmount>8</StorageAmount>
+                        </Item>
+                        <Item>
+                            <Product>135232</Product>                            <!-- Billiard Tables - Product -->
+                            <Amount>1</Amount>
+                            <StorageAmount>8</StorageAmount>
+                        </Item>
+                        <Item>
+                            <Product>1010214</Product>                            <!-- Beer - Product -->
+                            <Amount>1</Amount>
+                            <StorageAmount>8</StorageAmount>
+                        </Item>
+                    </FactoryInputs>
+                    <CycleTime>240</CycleTime>
+                    <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+                    <ClampedMaxTransporterLogisticCost>100</ClampedMaxTransporterLogisticCost>
+                </FactoryBase>
+                <FeedbackController>
+                    <NightBehavior>HideNone</NightBehavior>
+                </FeedbackController>
+                <Pausable />
+                <Selection>
+                    <OnSelection>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList />
+                        </Values>
+                    </OnSelection>
+                    <ParticipantMessageArcheType>Arctic_Resident_tier02_atWork</ParticipantMessageArcheType>
+                </Selection>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>1800</MaximumHitPoints>
+                </Attackable>
+                <Maintenance>
+                    <Maintenances>
+                        <Item>
+                            <Product>1010017</Product>                            <!--Money-->
+                            <Amount>200</Amount>
+                            <InactiveAmount>100</InactiveAmount>
+                        </Item>
+                        <Item>
+                            <Product>112654</Product>                            <!--arctic workforce 2-->
+                            <Amount>50</Amount>
+                            <ShutdownThreshold>0.2</ShutdownThreshold>
+                        </Item>
+                    </Maintenances>
+                </Maintenance>
+                <AmbientMoodProvider>
+                    <AmbientMood>ResidenceTier1</AmbientMood>
+                    <Murmur>DLC12_Cinema</Murmur>
+                    <DynamicEnvironmentType>Building_Residence</DynamicEnvironmentType>
+                </AmbientMoodProvider>
+                <LogisticNode />
+                <Constructable>
+                    <DestructionCategory>Production</DestructionCategory>
+                </Constructable>
+                <Locked>
+                    <DLCDependency>24963</DLCDependency>
+                </Locked>
+                <IncidentInfectable />
+                <SoundEmitter>
+                    <ActiveSounds>
+                        <Item>
+                            <Sound>201669</Sound>
+                        </Item>
+                    </ActiveSounds>
+                </SoundEmitter>
+                <Infolayer />
+                <UpgradeList />
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END - BUILDING - Entertainment Hall -->
+
+    <!-- START - BUILDING - Moulin White -->
+    <ModOp Type="addNextSibling" GUID='1010358'>
+        <Asset>
+            <Template>BuffFactory</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004567</GUID>
+                    <Name>Moulin White</Name>
+                    <IconFilename>data\ui\2kimages\main\3dicons\icon_cabaret.png</IconFilename>
+                    <InfoDescription>1742004568</InfoDescription>
+                </Standard>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!--Money-->
+                            <Amount>75000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010196</Ingredient>                            <!--timber-->
+                            <Amount>40</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010205</Ingredient>                            <!--bricks-->
+                            <Amount>15</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010218</Ingredient>                            <!--beams-->
+                            <Amount>20</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>838</Ingredient>                            <!--Aluminium-->
+                            <Amount>15</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010207</Ingredient>                            <!--window-->
+                            <Amount>30</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010202</Ingredient>                            <!--concrete-->
+                            <Amount>15</Amount>
+                        </Item>
+                    </Costs>
+                </Cost>
+                <Text />
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/dlc03/graphics/buildings/public/service_colony03_02/service_colony03_02.cfg</Filename>
+                        </Item>
+                    </Variations>
+                </Object>
+                <Building>
+                    <BuildingCategoryName>100003</BuildingCategoryName>
+                    <AssociatedRegions>Arctic</AssociatedRegions>
+                </Building>
+                <Blocking />
+                <Mesh />
+                <BuffFactory>
+                    <ProductionBuffScope>Local</ProductionBuffScope>
+                    <ProvidesPublicServiceNeed>1</ProvidesPublicServiceNeed>
+                    <PublicServiceData>
+                        <PublicServices>
+                            <Item>
+                                <PublicService>1742004569</PublicService>                                <!-- Moulin White - Product -->
+                            </Item>
+                        </PublicServices>
+                        <FullSatisfactionDistance>54</FullSatisfactionDistance>
+                        <NoSatisfactionDistance>60</NoSatisfactionDistance>
+                    </PublicServiceData>
+                </BuffFactory>
+                <FactoryBase>
+                    <FactoryInputs>
+                        <Item>
+                            <Product>1742004333</Product>                            <!-- Corsets - Product -->
+                            <Amount>1</Amount>
+                            <StorageAmount>8</StorageAmount>
+                        </Item>
+                        <Item>
+                            <Product>5389</Product>                            <!-- Costume - Product -->
+                            <Amount>1</Amount>
+                            <StorageAmount>8</StorageAmount>
+                        </Item>
+                        <Item>
+                            <Product>120016</Product>                            <!-- Champagne - Product -->
+                            <Amount>1</Amount>
+                            <StorageAmount>8</StorageAmount>
+                        </Item>
+                    </FactoryInputs>
+                    <CycleTime>300</CycleTime>
+                    <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+                    <ClampedMaxTransporterLogisticCost>100</ClampedMaxTransporterLogisticCost>
+                </FactoryBase>
+                <FeedbackController>
+                    <NightBehavior>HideNone</NightBehavior>
+                </FeedbackController>
+                <Pausable />
+                <Selection>
+                    <OnSelection>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList />
+                        </Values>
+                    </OnSelection>
+                    <ParticipantMessageArcheType>Arctic_Resident_tier02_atWork</ParticipantMessageArcheType>
+                </Selection>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>1800</MaximumHitPoints>
+                </Attackable>
+                <Maintenance>
+                    <Maintenances>
+                        <Item>
+                            <Product>1010017</Product>                            <!--Money-->
+                            <Amount>400</Amount>
+                            <InactiveAmount>200</InactiveAmount>
+                        </Item>
+                        <Item>
+                            <Product>112654</Product>                            <!--arctic workforce 2-->
+                            <Amount>100</Amount>
+                            <ShutdownThreshold>0.2</ShutdownThreshold>
+                        </Item>
+                    </Maintenances>
+                </Maintenance>
+                <AmbientMoodProvider>
+                    <AmbientMood>ResidenceTier1</AmbientMood>
+                    <Murmur>DLC12_Cinema</Murmur>
+                    <DynamicEnvironmentType>Building_Residence</DynamicEnvironmentType>
+                </AmbientMoodProvider>
+                <LogisticNode />
+                <Constructable>
+                    <DestructionCategory>Production</DestructionCategory>
+                </Constructable>
+                <Locked>
+                    <DLCDependency>24963</DLCDependency>
+                </Locked>
+                <IncidentInfectable />
+                <SoundEmitter>
+                    <ActiveSounds>
+                        <Item>
+                            <Sound>201669</Sound>
+                        </Item>
+                    </ActiveSounds>
+                </SoundEmitter>
+                <Infolayer />
+                <UpgradeList />
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END - BUILDING - Moulin White -->
+
+    <!-- START - BUILDING - Bathhouse -->
+    <ModOp Type="addNextSibling" GUID='1010358'>
+        <Asset>
+            <Template>Bathhouse_Heater</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004561</GUID>
+                    <Name>Bathhouse</Name>
+                    <IconFilename>data\graphics\icons\icon_hotsprings_bathhouse.png</IconFilename>
+                    <InfoDescription>1742004562</InfoDescription>
+                </Standard>
+                <Text/>
+                <Blocking>
+                    <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+                </Blocking>
+                <Building>
+                    <BuildingType>Logistic</BuildingType>
+                    <BuildingCategoryName>100000</BuildingCategoryName>                    <!--Production-->
+                    <SkipUnlockMessage>1</SkipUnlockMessage>
+                    <BuildModeRandomRotation>180</BuildModeRandomRotation>
+                    <AssociatedRegions>Arctic</AssociatedRegions>
+                </Building>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!--Money-->
+                            <Amount>50000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010196</Ingredient>                            <!--timber-->
+                            <Amount>20</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010205</Ingredient>                            <!--bricks-->
+                            <Amount>15</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010218</Ingredient>                            <!--beams-->
+                            <Amount>10</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010207</Ingredient>                            <!--window-->
+                            <Amount>10</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010202</Ingredient>                            <!--concrete-->
+                            <Amount>10</Amount>
+                        </Item>
+                    </Costs>
+                </Cost>
+                <Selection>
+                    <GUIType>Production</GUIType>
+                    <OnSelection>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </OnSelection>
+                    <ParticipantMessageArcheType>[NONE]</ParticipantMessageArcheType>
+                </Selection>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/dlc03/graphics/buildings/public/service_colony03_02/service_colony03_02.cfg</Filename>
+                        </Item>
+                    </Variations>
+                </Object>
+                <Constructable/>
+                <Mesh/>
+                <SoundEmitter>
+                    <ActiveSounds>
+                        <Item>
+                            <Sound>243906</Sound>
+                            <!--wwe_sfx_bld_heater_arctic_lp-->
+                        </Item>
+                    </ActiveSounds>
+                    <IncidentSounds>
+                        <InfectedFire>
+                            <Item>
+                                <Sound>214659</Sound>
+                                <!--wwe_sfx_bld_inc_burn-->
+                            </Item>
+                        </InfectedFire>
+                    </IncidentSounds>
+                    <BuildingRepaired>
+                        <Item>
+                            <Sound>203866</Sound>
+                            <!--wwe_sfx_aui_bld_3d_renovate-->
+                        </Item>
+                    </BuildingRepaired>
+                </SoundEmitter>
+                <Locked/>
+                <Infolayer/>
+                <FeedbackController>
+                    <NightBehavior>HideAll</NightBehavior>
+                </FeedbackController>
+                <UpgradeList/>
+                <AmbientMoodProvider>
+                    <AmbientMood>ResidenceTier1</AmbientMood>
+                </AmbientMoodProvider>
+                <Maintenance>
+                    <Maintenances>
+                        <Item>
+                            <Product>1010017</Product>                            <!--Money-->
+                            <Amount>100</Amount>
+                        </Item>
+                        <Item>
+                            <Product>112654</Product>                            <!--arctic workforce 2-->
+                            <Amount>30</Amount>
+                        </Item>
+                    </Maintenances>
+                </Maintenance>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>2500</MaximumHitPoints>
+                    <SelfHealPerHealTick>4</SelfHealPerHealTick>
+                </Attackable>
+                <Pausable>
+                    <CanPauseManually>1</CanPauseManually>
+                </Pausable>
+                <IncidentInfectable>
+                    <Infectable>
+                        <Fire>
+                            <Escalated>0</Escalated>
+                        </Fire>
+                    </Infectable>
+                    <IncidentInfectionChanceFactors>
+                        <Fire>
+                            <DensityDistance>15</DensityDistance>
+                        </Fire>
+                    </IncidentInfectionChanceFactors>
+                    <PerIncidentProximityEffect>
+                        <Riot>
+                            <ProximityEffect>
+                                <Item>
+                                    <Distance>10</Distance>
+                                    <InfectionChanceDebuff>15</InfectionChanceDebuff>
+                                </Item>
+                            </ProximityEffect>
+                        </Riot>
+                    </PerIncidentProximityEffect>
+                </IncidentInfectable>
+                <LogisticNode>
+                    <TransporterCountMax>1</TransporterCountMax>
+                    <NeedsTransporterQueue>1</NeedsTransporterQueue>
+                </LogisticNode>
+                <StreetActivation/>
+                <HeatProvider>
+                    <MinProductivityPercentToProvideHeat>1</MinProductivityPercentToProvideHeat>
+                    <MissingHeatNotification>115008</MissingHeatNotification>                    <!--Heating HeaterNotWorking Notification-->
+                </HeatProvider>
+                <FactoryBase>
+                    <FactoryInputs>
+                        <Item>
+                            <Product>5383</Product>                            <!-- herbs -->
+                            <Amount>1</Amount>
+                            <StorageAmount>20</StorageAmount>
+                        </Item>
+                    </FactoryInputs>
+                    <ClampedMaxTransporterLogisticCost>18</ClampedMaxTransporterLogisticCost>
+                    <CycleTime>60</CycleTime>
+                </FactoryBase>
+                <StorageBase>
+                    <ProductStorageList>120059</ProductStorageList>                    <!--StandardMarketplaceArcticStorageList-->
+                </StorageBase>
+                <PublicService>
+                    <FullSatisfactionDistance>40</FullSatisfactionDistance>
+                    <NoSatisfactionDistance>41</NoSatisfactionDistance>
+                    <PublicServiceOutputs>
+                        <Item>
+                            <Product>1742004400</Product>
+                        </Item>
+                    </PublicServiceOutputs>
+                    <FunctionDescription>1742004401</FunctionDescription>
+                </PublicService>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END - BUILDING - Bathhouse -->
 </ModOps>
   

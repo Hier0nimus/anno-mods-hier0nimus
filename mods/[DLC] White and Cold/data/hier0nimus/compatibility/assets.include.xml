@@ -27,5 +27,37 @@
     </ModOp>
   </Group>
 
+  <Group Condition="!#jakob_alternative_needs">
+    <ModOp Type="add" GUID="112643" Path="/Values/PopulationLevel7/PopulationInputs/">
+      <Item>
+        <Product>1500010847</Product>        <!-- Tea -->
+        <Amount>0.00005</Amount>
+        <SupplyWeight>2</SupplyWeight>
+        <MoneyValue>100</MoneyValue>
+        <AdditionalGlobalUnlockRequirement>
+          <Population>112643</Population>
+          <MinPopulationAmount>2500</MinPopulationAmount>
+        </AdditionalGlobalUnlockRequirement>
+        <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+        <IsBonusNeed>1</IsBonusNeed>
+      </Item>
+    </ModOp>
+  </Group>
+
+  <Group Condition="#new_horizons_population">
+    <ModOp Type="add" GUID="15100100" Path="/Values/PopulationLevel7/PopulationInputs/">
+      <Item>
+        <Product>1742004384</Product>        <!-- Ice Service - Product -->
+        <HappinessValue>3</HappinessValue>
+        <MoneyValue>200</MoneyValue>
+        <IsConsideredByAI>0</IsConsideredByAI>
+        <AdditionalGlobalUnlockRequirement>
+          <Population>112643</Population>
+          <MinPopulationAmount>2500</MinPopulationAmount>
+        </AdditionalGlobalUnlockRequirement>
+      </Item>
+    </ModOp>
+  </Group>
+
 </ModOps>
   

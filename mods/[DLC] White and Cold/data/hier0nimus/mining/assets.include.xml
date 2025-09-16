@@ -1943,7 +1943,7 @@
         <FeedbackController/>
         <Warehouse>
           <WarehouseStorage>
-            <StorageMax>250</StorageMax>
+            <StorageMax>100</StorageMax>
           </WarehouseStorage>
         </Warehouse>
         <LogisticNode>
@@ -2086,7 +2086,7 @@
         <FeedbackController/>
         <Warehouse>
           <WarehouseStorage>
-            <StorageMax>250</StorageMax>
+            <StorageMax>100</StorageMax>
           </WarehouseStorage>
         </Warehouse>
         <LogisticNode>
@@ -2226,7 +2226,7 @@
         <FeedbackController/>
         <Warehouse>
           <WarehouseStorage>
-            <StorageMax>250</StorageMax>
+            <StorageMax>100</StorageMax>
           </WarehouseStorage>
         </Warehouse>
         <LogisticNode>
@@ -2901,6 +2901,186 @@
   </ModOp>
   <!-- END BUILDING - Silver Mine Workarea -->
 
+  <!-- START - BUILDING - Oil Harbour (AR) -->
+  <ModOp Type="addNextSibling" GUID='112670'>
+    <Asset>
+      <Template>HarborWarehouseStrategic</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004555</GUID>
+          <Name>Oil Harbour (AR)</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_oil_habour_01.png</IconFilename>
+          <InfoDescription>1742004282</InfoDescription>
+        </Standard>
+        <Text/>
+        <Blocking>
+          <GroundDecalAsset>114826</GroundDecalAsset>          <!--Quay System Colony03 Base-->
+          <GroundDecalInvisible>113478</GroundDecalInvisible>          <!--Quay System Colony03 Invisible-->
+          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+        </Blocking>
+        <Building>
+          <BuildingCategoryName>11150</BuildingCategoryName>          <!--Harbor Building-->
+          <Destructable>1</Destructable>
+          <TerrainType>Coast</TerrainType>
+          <AssociatedRegions>Arctic</AssociatedRegions>
+          <SecondPartyRelevant>0</SecondPartyRelevant>
+        </Building>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!--Coins-->
+              <Amount>50000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!--timber-->
+              <Amount>50</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!--bricks-->
+              <Amount>70</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!--beams-->
+              <Amount>50</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>              <!--window-->
+              <Amount>50</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010202</Ingredient>              <!--concrete-->
+              <Amount>60</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Selection>
+          <GUIType>CoalOilHarbour</GUIType>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+        </Selection>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data\graphics\buildings\special\strategic_harbour\strategic_harbour_ar_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Constructable/>
+        <Mesh/>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>200896</Sound>              <!--wwe_sfx_bld_harbor_typeCluster_tag-->
+            </Item>
+            <Item>
+              <Sound>200920</Sound>              <!--wwe_sfx_bld_harbor_14_lp-->
+            </Item>
+          </ActiveSounds>
+          <IncidentSounds>
+            <InfectedFire>
+              <Item>
+                <Sound>214659</Sound>                <!--wwe_sfx_bld_inc_burn-->
+              </Item>
+            </InfectedFire>
+          </IncidentSounds>
+          <BuildingRuined>
+            <Item>
+              <Sound>203848</Sound>              <!--wwe_sfx_aui_destroy_big-->
+            </Item>
+          </BuildingRuined>
+          <BuildingRepaired>
+            <Item>
+              <Sound>203866</Sound>              <!--wwe_sfx_aui_bld_3d_renovate-->
+            </Item>
+          </BuildingRepaired>
+        </SoundEmitter>
+        <Locked/>
+        <Infolayer/>
+        <FeedbackController/>
+        <Warehouse>
+          <WarehouseStorage>
+            <StorageMax>250</StorageMax>
+          </WarehouseStorage>
+        </Warehouse>
+        <LogisticNode/>
+        <MinimapToken/>
+        <AmbientMoodProvider>
+          <Murmur>Harbor</Murmur>
+        </AmbientMoodProvider>
+        <LoadingPier>
+          <NumOfPiers>1</NumOfPiers>
+          <LoadingSpeed>100</LoadingSpeed>
+          <MinLoadingTime>5</MinLoadingTime>
+        </LoadingPier>
+        <StorageBase>
+          <ProductStorageList>120056</ProductStorageList>
+        </StorageBase>
+        <Attackable>
+          <AttackableType>HarbourBuilding</AttackableType>
+          <MaximumHitPoints>5000</MaximumHitPoints>
+          <PausedTimeIfAttacked>0</PausedTimeIfAttacked>
+          <HPBarOffset>5.5</HPBarOffset>
+          <DefenseByAIFactor>400</DefenseByAIFactor>
+          <MoralePower>100</MoralePower>
+          <IslandWarFlag>102303</IslandWarFlag>          <!--island_war_flag1-->
+          <HasRuinState>1</HasRuinState>
+          <ExplosionEffects>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>0</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>HarborWarehouseStrategic</TemplateName>
+                    <Index>0</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+            </Item>
+            <Item>
+              <ExplosionEffectFilePath>data/graphics/effects/military/explosions/harbor_generic_xpl_02.cfg</ExplosionEffectFilePath>
+            </Item>
+          </ExplosionEffects>
+          <ExplosionEffectsMin>3</ExplosionEffectsMin>
+          <ExplosionEffectsMax>5</ExplosionEffectsMax>
+          <SelfHealPerHealTick>5</SelfHealPerHealTick>
+        </Attackable>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>              <!-- Coins -->
+              <Amount>500</Amount>
+              <InactiveAmount>250</InactiveAmount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Pausable/>
+        <BuildingUnique>
+          <Uniques>
+            <Item>
+              <UniqueType>OilHarbor</UniqueType>
+              <UniqueScope>Area</UniqueScope>
+            </Item>
+          </Uniques>
+        </BuildingUnique>
+        <UpgradeList/>
+        <QuestObject/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - BUILDING - Oil Harbour (AR) -->
+
+  <!-- START - ADD PIERS TO ALL BUILDINGS WITH MAINTENANCE POOL / ALL HARBOUR BUILDINGS / ALL LOADING TIME BUILDINGS -->
+  <ModOp Type="add" GUID="368,193897,191508,193480" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
+    <Item>
+      <GUID>1742004555</GUID>      <!-- Oil Harbour (AR) - Building-->
+    </Item>
+  </ModOp>
+  <!-- END - ADD PIERS TO ALL BUILDINGS WITH MAINTENANCE POOL / ALL HARBOUR BUILDINGS / ALL LOADING TIME BUILDINGS -->
+
   <!-- START BUILDING - Oil Platform -->
   <ModOp Type="addNextSibling" GUID='101332'>
     <Asset>
@@ -3124,7 +3304,7 @@
           </Variations>
         </Object>
         <StorageBase>
-          <ProductStorageList>1742004527</ProductStorageList>          <!-- Oil only =/= strategic goods because ice blocks are added to those also -->
+          <ProductStorageList>120056</ProductStorageList>
         </StorageBase>
       </Values>
     </Asset>

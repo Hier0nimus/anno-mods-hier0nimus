@@ -441,9 +441,6 @@
               <Building>1742004555</Building>              <!-- Strategic Harbour (AR) - Building -->
             </Item>
             <Item>
-              <Building>1742004281</Building>              <!-- Strategic Pier (AR) - Building -->
-            </Item>
-            <Item>
               <Building>1742004515</Building>              <!-- Oil Platform - Building -->
             </Item>
             <Item>
@@ -470,12 +467,6 @@
         </Standard>
         <ConstructionCategory>
           <BuildingList>
-            <Item>
-              <Building>1742004555</Building>              <!-- Strategic Harbour (AR) - Building -->
-            </Item>
-            <Item>
-              <Building>1742004281</Building>              <!-- Strategic Pier (AR) - Building -->
-            </Item>
             <Item>
               <Building>1742004275</Building>              <!-- Ice Harvesting Site - Building -->
             </Item>
@@ -504,12 +495,6 @@
         </Standard>
         <ConstructionCategory>
           <BuildingList>
-            <Item>
-              <Building>100783</Building>              <!-- Oil Harbour (OW) / Strategic Harbour (OW) - Building -->
-            </Item>
-            <Item>
-              <Building>1742004392</Building>              <!-- Strategic Pier (OW) - Building -->
-            </Item>
             <Item>
               <Building>1742004386</Building>              <!-- Ice Warehouse (OW) - Building -->
             </Item>
@@ -544,12 +529,6 @@
         </Standard>
         <ConstructionCategory>
           <BuildingList>
-            <Item>
-              <Building>101329</Building>              <!-- OIl Harbour (NW) / Strategic Harbour (NW) - Building -->
-            </Item>
-            <Item>
-              <Building>1742004393</Building>              <!-- Strategic Pier (NW) - Building -->
-            </Item>
             <Item>
               <Building>1742004388</Building>              <!-- Ice Warehouse (OW) - Building -->
             </Item>
@@ -1243,6 +1222,240 @@
   </ModOp>
   <!-- END - PRODUCTION CHAIN - Soap -->
 
+  <!-- START - PRODUCTION CHAIN - Entertainment Hall -->
+  <ModOp Type="addNextSibling" GUID='15039'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004566</GUID>
+          <Name>Entertainment Hall</Name>
+          <IconFilename>data/graphics/icons/icon_entertainment_hall.png</IconFilename>
+          <InfoDescription>1742004564</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742004563</Building>          <!-- Entertainment Hall - Building -->
+          <Tier1>
+            <Item>
+              <Building>5828</Building>
+              <!--Multifactory_SA_Chemical_Film-->
+              <Tier2>
+                <Item>
+                  <Building>101272</Building>
+                  <!--agriculture_colony01_11 (Alpaca Farm)-->
+                  <ForceIcon>1010232</ForceIcon>
+                  <!--salpeter-->
+                  <Tier3>
+                    <Item>
+                      <Building>5164</Building>
+                      <!--Colony01 electricity_02 (Oil Power Plant)-->
+                    </Item>
+                  </Tier3>
+                </Item>
+                <Item>
+                  <Building>135224</Building>
+                  <!--Multifactory_SA_Chemical_Celluloid-->
+                  <Tier3>
+                    <Item>
+                      <Building>1010331</Building>
+                      <!--agriculture_colony01_03 (Cotton Farm)-->
+                    </Item>
+                    <Item>
+                      <Building>134614</Building>
+                      <!--TreePlanter_Colony01_Camphora_Camphor-->
+                    </Item>
+                    <Item>
+                      <Building>135134</Building>
+                      <!--Multifactory_SA_Chemical_Ethanol-->
+                    </Item>
+                  </Tier3>
+                </Item>
+              </Tier2>
+            </Item>
+            <Item>
+              <Building>135407</Building>
+              <!--Multifactory_Manufacturer_Billiard-->
+              <Tier2>
+                <Item>
+                  <Building>135088</Building>
+                  <!--TreePlanter_Moderate_CherryWood-->
+                </Item>
+                <Item>
+                  <Building>101415</Building>
+                  <!--factory_colony01_06 (Felt Maker)-->
+                  <Tier3>
+                    <Item>
+                      <Building>101272</Building>
+                      <!--agriculture_colony01_11 (Alpaca Farm)-->
+                    </Item>
+                  </Tier3>
+                </Item>
+                <Item>
+                  <Building>135224</Building>
+                  <!--Multifactory_SA_Chemical_Celluloid-->
+                  <Tier3>
+                    <Item>
+                      <Building>1010331</Building>
+                      <!--agriculture_colony01_03 (Cotton Farm)-->
+                    </Item>
+                    <Item>
+                      <Building>134614</Building>
+                      <!--TreePlanter_Colony01_Camphora_Camphor-->
+                    </Item>
+                    <Item>
+                      <Building>135134</Building>
+                      <!--Multifactory_SA_Chemical_Ethanol-->
+                      <Tier4>
+                        <Item>
+                          <Building>101260</Building>
+                          <!--agriculture_colony01_06 (Timber Yard)-->
+                        </Item>
+                        <Item>
+                          <Building>101270</Building>
+                          <!--agriculture_colony01_10 (Corn Farm)-->
+                        </Item>
+                      </Tier4>
+                    </Item>
+                  </Tier3>
+                </Item>
+              </Tier2>
+            </Item>
+            <Item>
+              <Building>1010292</Building>
+              <!--food_02 (Beer Maker)-->
+              <Tier2>
+                <Item>
+                  <Building>1010264</Building>
+                  <!--agriculture_03 (Hop Farm)-->
+                </Item>
+                <Item>
+                  <Building>1010314</Building>
+                  <!--processing_03 (Malt Processing)-->
+                  <Tier3>
+                    <Item>
+                      <Building>1010262</Building>
+                      <!--agriculture_01 (Grain Farm)-->
+                    </Item>
+                  </Tier3>
+                </Item>
+              </Tier2>
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - PRODUCTION CHAIN - Entertainment Hall -->
+
+  <!-- START - PRODUCTION CHAIN - Moulin White -->
+  <ModOp Type="addNextSibling" GUID='15039'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004570</GUID>
+          <Name>Moulin White</Name>
+          <IconFilename>data\ui\2kimages\main\3dicons\icon_cabaret.png</IconFilename>
+          <InfoDescription>1742004568</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742004567</Building>          <!-- Moulin White - Building -->
+          <Tier1>
+            <Item>
+              <Building>100659</Building>
+              <!--food_08 (Champagne Maker)-->
+              <Tier2>
+                <Item>
+                  <Building>100655</Building>
+                  <!--agriculture_10 (Vineyard)-->
+                </Item>
+                <Item>
+                  <Building>1010319</Building>
+                  <!--processing_06 (Glass Processing)-->
+                  <Tier3>
+                    <Item>
+                      <Building>1010560</Building>
+                      <!--coastal_03 (Quartz Sand Coast Building)-->
+                    </Item>
+                  </Tier3>
+                </Item>
+              </Tier2>
+            </Item>
+            <Item>
+              <Building>1742004335</Building>              <!-- Women's Tailoring Shop - Building -->
+              <Tier2>
+                <Item>
+                  <Building>1010339</Building>                  <!--Pearl farm - Building-->
+                </Item>
+                <Item>
+                  <Building>1742004116</Building>                  <!--Animal Bones Modile - Building-->
+                </Item>
+                <Item>
+                  <Building>1999005407</Building>                  <!--Import dock Silk Trading Compnay - Building-->
+                </Item>
+                <Item>
+                  <Building>1010318</Building>                  <!--factory_colony01_03 (Cotton Cloth Processing)-->
+                  <Tier3>
+                    <Item>
+                      <Building>1010331</Building>                      <!--agriculture_colony01_03 (Cotton Farm)-->
+                    </Item>
+                  </Tier3>
+                </Item>
+              </Tier2>
+            </Item>
+            <Item>
+              <Building>5933</Building>
+              <!--DLC12 workshop_colony01_05 (Costume Maker)-->
+              <Tier2>
+                <Item>
+                  <Building>1010318</Building>
+                  <!--factory_colony01_03 (Cotton Cloth Processing)-->
+                  <Tier3>
+                    <Item>
+                      <Building>1010331</Building>
+                      <!--agriculture_colony01_03 (Cotton Farm)-->
+                    </Item>
+                  </Tier3>
+                </Item>
+                <Item>
+                  <Building>5462</Building>
+                  <!--DLC12 Lab Pigments-->
+                  <Tier3>
+                    <Item>
+                      <Building>1390</Building>
+                      <!--mining_colony01_23 (SAOre02)-->
+                    </Item>
+                    <Item>
+                      <Building>101272</Building>
+                      <!--agriculture_colony01_11 (Alpaca Farm)-->
+                      <ForceIcon>1010232</ForceIcon>
+                      <!--salpeter-->
+                    </Item>
+                  </Tier3>
+                </Item>
+                <Item>
+                  <Building>5457</Building>
+                  <!--DLC12 agriculture_colony01_12 (Nandu Farm)-->
+                  <ForceIcon>5401</ForceIcon>
+                  <!--nandu feathers-->
+                  <Tier3>
+                    <Item>
+                      <Building>5164</Building>
+                      <!--Colony01 electricity_02 (Oil Power Plant)-->
+                    </Item>
+                  </Tier3>
+                </Item>
+              </Tier2>
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - PRODUCTION CHAIN - Moulin White -->
+
   <!-- START - ARCTIC LODGE MENU -->
   <ModOp Type="add" GUID='112792' Path="/Values/ConstructionCategory/BuildingList/">
     <Item>
@@ -1262,6 +1475,9 @@
   <!-- START - ADD BUILDINGS TO TECHNICIANS MENU -->
   <ModOp Type="add" GUID='112791' Path="/Values/ConstructionCategory/BuildingList/">
     <Item>
+      <Building>1742004561</Building>      <!-- Bathhouse - Building -->
+    </Item>
+    <Item>
       <Building>1742004319</Building>      <!-- Mining Optimizations (Blank) - RecipeBuilding -->
     </Item>
     <Item>
@@ -1271,7 +1487,13 @@
       <Building>1742004268</Building>      <!-- Ice Building Menu - ConstructionCategory -->
     </Item>
     <Item>
+      <Building>1742004566</Building>      <!-- Entertainment Hall - ProductionChain -->
+    </Item>
+    <Item>
       <Building>1742004421</Building>      <!-- Nate's Arctic Windmill - Building -->
+    </Item>
+    <Item>
+      <Building>1742004570</Building>      <!-- Moulin White - ProductionChain -->
     </Item>
     <Item>
       <Building>1742004285</Building>      <!-- Mining Institue - Building -->
@@ -1365,26 +1587,64 @@
   </ModOp>
   <!-- END - ADD CORSETS CHAIN TO ENGINEERS MENU -->
 
-  <!-- START - ADD ORNAMENT MENU TO ARCTIC CONSTRUCTION MENU -->
-  <ModOp Type="add" GUID='25000035' Path="/Values/ConstructionMenu/RegionMenu/Arctic/">
-    <OrnamentsMode>
-      <OrnamentsSource>
-        <Categories>
-          <Item>
-            <Category>1742004188</Category>            <!--Arctic Ornaments-->
-          </Item>
-        </Categories>
-      </OrnamentsSource>
-      <OrnamentsCategory>
-        <Categories>
-          <Item>
-            <Category>1742004188</Category>            <!--Arctic Ornaments-->
-          </Item>
-        </Categories>
-      </OrnamentsCategory>
-    </OrnamentsMode>
-  </ModOp>
-  <!-- END - ADD ORNAMENT MENU TO ARCTIC CONSTRUCTION MENU -->
+  <Group Condition="!#A_Modified_Ornaments_Tab">
+    <Group Condition="!#CheatMenu">
+      <!-- START - ADD ORNAMENT MENU TO ARCTIC CONSTRUCTION MENU -->
+      <ModOp Type="add" GUID='25000035' Path="/Values/ConstructionMenu/RegionMenu/Arctic/">
+        <OrnamentsMode>
+          <OrnamentsSource>
+            <Categories>
+              <Item>
+                <Category>1742004188</Category>                <!--Arctic Ornaments-->
+              </Item>
+            </Categories>
+          </OrnamentsSource>
+          <OrnamentsCategory>
+            <Categories>
+              <Item>
+                <Category>1742004188</Category>                <!--Arctic Ornaments-->
+              </Item>
+            </Categories>
+          </OrnamentsCategory>
+        </OrnamentsMode>
+      </ModOp>
+      <!-- END - ADD ORNAMENT MENU TO ARCTIC CONSTRUCTION MENU -->
+    </Group>
+  </Group>
+
+  <Group Condition="#A_Modified_Ornaments_Tab">
+    <Group Condition="!#CheatMenu">
+      <!-- START - ADD ORNAMENT MENU TO ARCTIC CONSTRUCTION MENU -->
+      <ModOp Type="add" GUID='25000035' Path="/Values/ConstructionMenu/RegionMenu/Arctic/OrnamentsMode/OrnamentsSource/Categories">
+        <Item>
+          <Category>1742004188</Category>          <!--Arctic Ornaments-->
+        </Item>
+      </ModOp>
+      <ModOp Type="add" GUID='25000035' Path="/Values/ConstructionMenu/RegionMenu/Arctic/OrnamentsMode/OrnamentsCategory/Categories">
+        <Item>
+          <Category>1742004188</Category>          <!--Arctic Ornaments-->
+        </Item>
+      </ModOp>
+      <!-- END - ADD ORNAMENT MENU TO ARCTIC CONSTRUCTION MENU -->
+    </Group>
+  </Group>
+
+  <Group Condition="#CheatMenu">
+    <Group Condition="!#A_Modified_Ornaments_Tab">
+      <!-- START - ADD ORNAMENT MENU TO ARCTIC CONSTRUCTION MENU -->
+      <ModOp Type="add" GUID='25000035' Path="/Values/ConstructionMenu/RegionMenu/Arctic/OrnamentsMode/OrnamentsSource/Categories">
+        <Item>
+          <Category>1742004188</Category>          <!--Arctic Ornaments-->
+        </Item>
+      </ModOp>
+      <ModOp Type="add" GUID='25000035' Path="/Values/ConstructionMenu/RegionMenu/Arctic/OrnamentsMode/OrnamentsCategory/Categories">
+        <Item>
+          <Category>1742004188</Category>          <!--Arctic Ornaments-->
+        </Item>
+      </ModOp>
+      <!-- END - ADD ORNAMENT MENU TO ARCTIC CONSTRUCTION MENU -->
+    </Group>
+  </Group>
 
   <!-- START - ADD ARCTIC ORNAMENT MENU -->
   <ModOp Type="addNextSibling" GUID='25000035'>

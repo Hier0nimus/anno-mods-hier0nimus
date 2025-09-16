@@ -383,6 +383,22 @@
   </ModOp>
   <!-- END - ADD NEW SLOTS TO ALL MINES ASSET POOL -->
 
+  <!-- START - ADD PEMMICAN COOKHOUSE TO SHARED PEMMICAN COOKHOUSE -->
+  <ModOp Type="add" GUID="1742200041" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
+    <Item>
+      <GUID>1742004407</GUID>      <!--  Pemmican Cookhouse - Building -->
+    </Item>
+  </ModOp>
+  <!-- END - ADD PEMMICAN COOKHOUSE TO SHARED PEMMICAN COOKHOUSE -->
+
+  <!-- START - ADD SAWMILL TO SHARED SAWMILL -->
+  <ModOp Type="add" GUID="1500301939" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
+    <Item>
+      <GUID>1742004329</GUID>      <!-- Sawmill - Building -->
+    </Item>
+  </ModOp>
+  <!-- END - ADD SAWMILL TO SHARED SAWMILL -->
+
   <!-- START - ADD Vladimir Slafofski TO POOLS -->
   <ModOp GUID="130182" Type="add" Path="/Values/AssetPool/AssetList">
     <Item>
@@ -433,24 +449,41 @@
       <ItemLink>1742004397</ItemLink>      <!-- Portable Drilling Machine - Item -->
     </Item>
   </ModOp>
+  <ModOp GUID="116658" Type="add" Path="/Values/AssetPool/AssetList">
+    <Item>
+      <Asset>1742004530</Asset>      <!-- Zoppy Battery - Item -->
+    </Item>
+    <Item>
+      <Asset>1742004553</Asset>      <!-- Grotty Oil Sucker - Item -->
+    </Item>
+    <Item>
+      <Asset>1742004549</Asset>      <!-- Zippy Battery - Item -->
+    </Item>
+    <Item>
+      <Asset>1742004551</Asset>      <!-- Gratty Oil Extractor - Item -->
+    </Item>
+    <Item>
+      <Asset>1742004397</Asset>      <!-- Portable Drilling Machine - Item -->
+    </Item>
+  </ModOp>
   <!-- ADD TO ARCTIC NATE CRAFTER -->
   <ModOp Type="addNextSibling" GUID="117422" Path="/Values/ItemCrafter/CraftableItemsInRegion/Arctic/CraftableItems/Item[Item='116163']">
     <Item>
       <Item>1742004530</Item>      <!-- Zoppy Battery - Item -->
     </Item>
     <Item>
-      <Asset>1742004551</Asset>      <!-- Gratty Oil Extractor - Item -->
+      <Item>1742004551</Item>      <!-- Gratty Oil Extractor - Item -->
     </Item>
   </ModOp>
   <ModOp Type="addNextSibling" GUID="117422" Path="/Values/ItemCrafter/CraftableItemsInRegion/Arctic/CraftableItems/Item[Item='116169']">
     <Item>
-      <Asset>1742004549</Asset>      <!-- Zippy Battery - Item -->
+      <Item>1742004549</Item>      <!-- Zippy Battery - Item -->
     </Item>
     <Item>
-      <Asset>1742004553</Asset>      <!-- Grotty Oil Sucker - Item -->
+      <Item>1742004553</Item>      <!-- Grotty Oil Sucker - Item -->
     </Item>
     <Item>
-      <Asset>1742004397</Asset>      <!-- Portable Drilling Machine - Item -->
+      <Item>1742004397</Item>      <!-- Portable Drilling Machine - Item -->
     </Item>
   </ModOp>
   <!-- END - ADD ADD ITEMS TO POOLS -->
@@ -530,6 +563,20 @@
     </Item>
   </ModOp>
   <!-- END - ADD BUILDINGS TO - ALL OPEN PITS -->
+
+  <!-- START - ADD BUILDINGS TO - ALL ARCTIC HUNTING CABINSS -->
+  <ModOp GUID="1500301944" Type="add" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
+    <Item>
+      <GUID>1742004122</GUID>      <!--  Caribou Skinner - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004124</GUID>      <!--  Caribou Butcher - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004126</GUID>      <!--  Bear Skinner - Building -->
+    </Item>
+  </ModOp>
+  <!-- END - ADD BUILDINGS TO - ALL ARCTIC HUNTING CABINSS -->
 
   <!-- START - ADD BUILDINGS TO - ALL HUSKY SLED STATIONS -->
   <ModOp GUID="1500302821" Type="add" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
@@ -642,10 +689,12 @@
   </ModOp>
 
   <!-- Residents -->
-  <ModOp GUID="116161,116166,116169,116158,116133" Type="add" Path="/Values/ItemEffect/EffectTargets/">
-    <Item>
-      <GUID>1742004102</GUID>      <!-- Inuit Residence - Building -->
-    </Item>
+  <ModOp GUID="116169,116166,116161,116158,116133" Type="replace" Path="/Values/ItemEffect/EffectTargets/">
+    <EffectTargets>
+      <Item>
+        <GUID>1742200029</GUID>        <!-- All Arctic Residence - Building -->
+      </Item>
+    </EffectTargets>
   </ModOp>
 
   <!-- Soap -->
@@ -843,6 +892,15 @@
     </Item>
     <Item>
       <GUID>1742004536</GUID>      <!-- Export Dock - Animal Bones - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004566</GUID>      <!-- Entertainment Hall - ProductionChain -->
+    </Item>
+    <Item>
+      <GUID>1742004421</GUID>      <!-- Nate's Arctic Windmill - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004570</GUID>      <!-- Moulin White - ProductionChain -->
     </Item>
   </ModOp>
   <!-- START ADD TO GLOBAL MAINTENANCE POOLS -->

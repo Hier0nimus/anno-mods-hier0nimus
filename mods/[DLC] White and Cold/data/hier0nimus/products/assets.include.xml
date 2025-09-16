@@ -13,6 +13,86 @@
   </ModOp>
   <!-- END - EXPAND PRODUCTION REGIONS EXISTING PRODUCTS -->
 
+  <!-- START - ADD PRODUCT ICE BLOCKS -->
+  <ModOp Type="addNextSibling" GUID='112708'>
+    <Asset>
+      <Template>Product</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004273</GUID>
+          <Name>Ice Blocks</Name>
+          <IconFilename>data\ui\2kimages\main\3dicons\campaign\icon_iceberg.png</IconFilename>
+          <InfoDescription>1742004274</InfoDescription>
+        </Standard>
+        <Locked />
+        <Product>
+          <StorageLevel>Building</StorageLevel>
+          <ProductCategory>11702</ProductCategory>
+          <BasePrice>750</BasePrice>
+          <CivLevel>4</CivLevel>
+          <AssociatedRegion>Moderate;Colony01;Arctic;Africa</AssociatedRegion>
+          <ProductionRegions>
+            <Item>
+              <RegionType>Arctic</RegionType>
+              <RequiredDLCs>
+                <Item>
+                  <RequiredDLC>410042</RequiredDLC>
+                </Item>
+              </RequiredDLCs>
+            </Item>
+          </ProductionRegions>
+        </Product>
+        <ExpeditionAttribute>
+          <BaseMorale>5</BaseMorale>
+        </ExpeditionAttribute>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - ADD PRODUCT ICE BLOCKS -->
+
+  <ModOp Type="add" GUID="502051" Path="/Values/ProductList/List">
+    <Item>
+      <Product>1742004273</Product>
+    </Item>
+  </ModOp>
+
+  <!-- START ADD GOOD TO StandardOilHarborStorageList-->
+  <ModOp Type="add" GUID='120055' Path="/Values/ProductStorageList/ProductList">
+    <Item>
+      <Product>1742004273</Product>
+    </Item>
+  </ModOp>
+  <!-- END ADD GOOD TO StandardOilHarborStorageList-->
+
+  <!-- START ADD GOOD TO TECHNICIAN UNLOCK GOODS-->
+  <ModOp Type="add" GUID='502025' Path="/Values/ProductList/List">
+    <Item>
+      <Product>1742004273</Product>
+    </Item>
+  </ModOp>
+  <!-- END ADD GOOD TO TECHNICIAN GOODS-->
+
+  <!-- START - PRODUCTSTORAGELIST - ICE -->
+  <ModOp Type="addNextSibling" GUID='501995'>
+    <Asset>
+      <Template>ProductStorageList</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004279</GUID>
+          <Name>Ice Storage</Name>
+        </Standard>
+        <ProductStorageList>
+          <ProductList>
+            <Item>
+              <Product>1742004273</Product>
+            </Item>
+          </ProductList>
+        </ProductStorageList>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - PRODUCTSTORAGELIST - ICE -->
+
   <!-- START - ADD INUIT WORKFORCE PRODUCTS -->
   <ModOp GUID='112653' Type="addNextSibling">
     <Asset>
@@ -365,14 +445,14 @@
   </ModOp>
   <!-- END - ADD PRODUCT Corsets -->
 
-  <!-- START - ADD PRODUCT Hot Springs Bathhouse -->
+  <!-- START - ADD PRODUCT Bathhouse -->
   <ModOp Type="addNextSibling" GUID='112708'>
     <Asset>
       <Template>Product</Template>
       <Values>
         <Standard>
-          <GUID>1742004400</GUID>          <!-- Hot Springs Bathhouse - Product -->
-          <Name>Hot Springs Bathhouse</Name>
+          <GUID>1742004400</GUID>          <!-- Bathhouse - Product -->
+          <Name>Bathhouse</Name>
           <IconFilename>data/graphics/icons/icon_hotsprings_bathhouse.png</IconFilename>
           <InfoDescription>1742004401</InfoDescription>
         </Standard>
@@ -388,7 +468,7 @@
       </Values>
     </Asset>
   </ModOp>
-  <!-- END - ADD PRODUCT Hot Springs Bathhouse -->
+  <!-- END - ADD PRODUCT Bathhouse -->
 
   <!-- START - ADD PRODUCT ICE SERVICE -->
   <ModOp Type="addNextSibling" GUID='112708'>
@@ -464,6 +544,56 @@
     </Asset>
   </ModOp>
   <!-- END - ADD PRODUCT INUIT MONUMENT -->
+
+  <!-- START - ADD PRODUCT Entertainment Hall -->
+  <ModOp Type="addNextSibling" GUID='112708'>
+    <Asset>
+      <Template>Product</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004565</GUID>
+          <Name>Entertainment Hall</Name>
+          <IconFilename>data/graphics/icons/icon_entertainment_hall.png</IconFilename>
+          <InfoDescription>1742004564</InfoDescription>
+        </Standard>
+        <Locked />
+        <Product>
+          <ProductColor>-11415604</ProductColor>
+          <StorageLevel>Building</StorageLevel>
+          <ProductCategory>11702</ProductCategory>
+          <IsAbstract>1</IsAbstract>
+          <AssociatedRegion>Arctic</AssociatedRegion>
+        </Product>
+        <ExpeditionAttribute />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - ADD PRODUCT Entertainment Hall -->
+
+  <!-- START - ADD PRODUCT Moulin White -->
+  <ModOp Type="addNextSibling" GUID='112708'>
+    <Asset>
+      <Template>Product</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004569</GUID>
+          <Name>Moulin White</Name>
+          <IconFilename>data\ui\2kimages\main\3dicons\icon_cabaret.png</IconFilename>
+          <InfoDescription>1742004568</InfoDescription>
+        </Standard>
+        <Locked />
+        <Product>
+          <ProductColor>-11415604</ProductColor>
+          <StorageLevel>Building</StorageLevel>
+          <ProductCategory>11702</ProductCategory>
+          <IsAbstract>1</IsAbstract>
+          <AssociatedRegion>Arctic</AssociatedRegion>
+        </Product>
+        <ExpeditionAttribute />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - ADD PRODUCT Moulin White -->
 
   <!-- START - PRODUCTLIST - INUIT CONSUMER GOODS -->
   <ModOp Type="addNextSibling" GUID='501995'>
