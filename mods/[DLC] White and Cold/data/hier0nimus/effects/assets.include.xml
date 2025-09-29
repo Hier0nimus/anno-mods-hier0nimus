@@ -1782,7 +1782,7 @@
         <Standard>
           <GUID>1742004465</GUID>
           <Name>Monumental Cooking and Drinking Influence</Name>
-          <IconFilename>data/graphics/icons/icon_inuit_monument.png</IconFilename>
+          <IconFilename>data/graphics/icons/icon_inuit_monument_coocking.png</IconFilename>
           <InfoDescription>1742004466</InfoDescription>
         </Standard>
         <ItemEffect>
@@ -1833,7 +1833,7 @@
         <Standard>
           <GUID>1742004472</GUID>
           <Name>Monumental Residences Influence</Name>
-          <IconFilename>data/graphics/icons/icon_inuit_monument.png</IconFilename>
+          <IconFilename>data/graphics/icons/icon_inuit_monument_residents.png</IconFilename>
           <InfoDescription>1742004473</InfoDescription>
         </Standard>
         <ItemEffect>
@@ -1907,7 +1907,7 @@
         <Standard>
           <GUID>1742004476</GUID>
           <Name>Monumental Crafting and Coastal Influence</Name>
-          <IconFilename>data/graphics/icons/icon_inuit_monument.png</IconFilename>
+          <IconFilename>data/graphics/icons/icon_inuit_monument_coastal.png</IconFilename>
           <InfoDescription>1742004477</InfoDescription>
         </Standard>
         <ItemEffect>
@@ -1961,7 +1961,7 @@
         <Standard>
           <GUID>1742004480</GUID>
           <Name>Monumental Forest Influence</Name>
-          <IconFilename>data/graphics/icons/icon_inuit_monument.png</IconFilename>
+          <IconFilename>data/graphics/icons/icon_inuit_monument_forest.png</IconFilename>
           <InfoDescription>1742004481</InfoDescription>
         </Standard>
         <ItemEffect>
@@ -2063,7 +2063,7 @@
         <Standard>
           <GUID>1742004504</GUID>
           <Name>Conny Cobbler</Name>
-          <IconFilename>data/ui/2kimages/main/3dicons/recipes/icon_daiquiri_tropic.png</IconFilename>
+          <IconFilename>data\graphics\icons\icon_recipe_conny_cobbler.png</IconFilename>
         </Standard>
         <ItemEffect>
           <EffectTargets>
@@ -2113,7 +2113,7 @@
         <Standard>
           <GUID>1742004505</GUID>
           <Name>Bubbly Julep</Name>
-          <IconFilename>data/ui/2kimages/main/3dicons/recipes/icon_daiquiri_tropic.png</IconFilename>
+          <IconFilename>data\graphics\icons\icon_recipe_bubbly_julep.png</IconFilename>
         </Standard>
         <ItemEffect>
           <EffectTargets>
@@ -2163,7 +2163,7 @@
         <Standard>
           <GUID>1742004506</GUID>
           <Name>Ice Coffee</Name>
-          <IconFilename>data/ui/2kimages/main/3dicons/recipes/icon_daiquiri_tropic.png</IconFilename>
+          <IconFilename>data\graphics\icons\icon_recipe_ice_coffee.png</IconFilename>
         </Standard>
         <ItemEffect>
           <EffectTargets>
@@ -2245,6 +2245,36 @@
     </Asset>
   </ModOp>
   <!-- END Heated Insulated Residences - BUFF -->
+  <!-- START Providing Wood - BUFF -->
+  <ModOp GUID='25623' Type="addNextSibling">
+    <Asset>
+      <Template>GuildhouseBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004571</GUID>
+          <Name>Providing Wood</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_wood_log.png</IconFilename>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742004269</GUID>
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <Text/>
+        <FactoryUpgrade>
+          <InputAmountUpgrade>
+            <Item>
+              <Product>120008</Product><!-- Wood -->
+              <Amount>-1</Amount>
+            </Item>
+          </InputAmountUpgrade>
+        </FactoryUpgrade>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END Providing Wood - BUFF -->
 
 </ModOps>
   

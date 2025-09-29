@@ -459,6 +459,20 @@
     </ModOp>
     <!-- END - BUILDING Campfire -->
 
+    <!-- START - GIVING LUMBERJACKS HUT BUFF TO CAMPFIRE -->
+    <ModOp GUID='114703,1742004128' Type="merge" Path="/Values/">
+        <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742004571</ProductivityBuff>              <!-- Providing Wood - Buff -->
+            </Item>
+          </ProductionBuffs>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <ProductionBuffDistance>3</ProductionBuffDistance>
+        </BuffFactory>
+    </ModOp>
+    <!-- END - GIVING LUMBERJACKS HUT BUFF TO CAMPFIRE -->
+
     <!-- START - RESIDENCE EXPLORERS -->
     <ModOp Type="merge" GUID='112091' Path="/Values/">
         <FloorStackOwner>
@@ -2722,11 +2736,11 @@
                     <CycleTime>90</CycleTime>
                 </FactoryBase>
                 <Powerplant>
-                    <IndustrializationDistance>18</IndustrializationDistance>
+                    <IndustrializationDistance>20</IndustrializationDistance>
                 </Powerplant>
                 <PublicService>
-                    <FullSatisfactionDistance>18</FullSatisfactionDistance>
-                    <NoSatisfactionDistance>18</NoSatisfactionDistance>
+                    <FullSatisfactionDistance>20</FullSatisfactionDistance>
+                    <NoSatisfactionDistance>20</NoSatisfactionDistance>
                     <PublicServiceOutputs>
                         <Item>
                             <Product>1010354</Product>
@@ -3060,14 +3074,14 @@
     </ModOp>
     <!-- END - BUILDING - Entertainment Hall -->
 
-    <!-- START - BUILDING - Moulin White -->
+    <!-- START - BUILDING - Moulin Blanc -->
     <ModOp Type="addNextSibling" GUID='1010358'>
         <Asset>
             <Template>BuffFactory</Template>
             <Values>
                 <Standard>
                     <GUID>1742004567</GUID>
-                    <Name>Moulin White</Name>
+                    <Name>Moulin Blanc</Name>
                     <IconFilename>data\ui\2kimages\main\3dicons\icon_cabaret.png</IconFilename>
                     <InfoDescription>1742004568</InfoDescription>
                 </Standard>
@@ -3123,7 +3137,7 @@
                     <PublicServiceData>
                         <PublicServices>
                             <Item>
-                                <PublicService>1742004569</PublicService>                                <!-- Moulin White - Product -->
+                                <PublicService>1742004569</PublicService>                                <!-- Moulin Blanc - Product -->
                             </Item>
                         </PublicServices>
                         <FullSatisfactionDistance>54</FullSatisfactionDistance>
@@ -3208,7 +3222,7 @@
             </Values>
         </Asset>
     </ModOp>
-    <!-- END - BUILDING - Moulin White -->
+    <!-- END - BUILDING - Moulin Blanc -->
 
     <!-- START - BUILDING - Bathhouse -->
     <ModOp Type="addNextSibling" GUID='1010358'>

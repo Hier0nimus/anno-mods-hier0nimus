@@ -266,7 +266,13 @@
           <IconFilename>data/ui/2kimages/main/3dicons/icon_rich_sea_2.png</IconFilename>
           <InfoDescription>1742004522</InfoDescription>
         </Standard>
-        <Blocking />
+        <Blocking>
+          <HidePropsRadius>0</HidePropsRadius>
+          <DeletePropsRadius>0</DeletePropsRadius>
+          <RemoveGrass>0</RemoveGrass>
+          <RemovePropsRadius>1</RemovePropsRadius>
+          <BlocksBuilding>0</BlocksBuilding>
+        </Blocking>
         <Object>
           <Variations>
             <Item>
@@ -331,7 +337,13 @@
           <AssociatedRegions>Arctic</AssociatedRegions>
         </Building>
         <BezierPath />
-        <Blocking />
+        <Blocking>
+          <HidePropsRadius>0</HidePropsRadius>
+          <DeletePropsRadius>0</DeletePropsRadius>
+          <RemoveGrass>0</RemoveGrass>
+          <RemovePropsRadius>1</RemovePropsRadius>
+          <BlocksBuilding>0</BlocksBuilding>
+        </Blocking>
       </Values>
     </Asset>
   </ModOp>
@@ -441,7 +453,13 @@
             </Values>
           </OnSelection>
         </Selection>
-        <Blocking/>
+        <Blocking>
+          <HidePropsRadius>0</HidePropsRadius>
+          <DeletePropsRadius>0</DeletePropsRadius>
+          <RemoveGrass>0</RemoveGrass>
+          <RemovePropsRadius>1</RemovePropsRadius>
+          <BlocksBuilding>0</BlocksBuilding>
+        </Blocking>
         <Building>
           <Destructable>0</Destructable>
         </Building>
@@ -467,7 +485,11 @@
           <SecondPartyRelevant>0</SecondPartyRelevant>
         </Building>
         <Blocking>
-          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+          <HidePropsRadius>0</HidePropsRadius>
+          <DeletePropsRadius>0</DeletePropsRadius>
+          <RemoveGrass>0</RemoveGrass>
+          <RemovePropsRadius>1</RemovePropsRadius>
+          <BlocksBuilding>0</BlocksBuilding>
         </Blocking>
         <Cost>
           <Costs>
@@ -569,7 +591,7 @@
               <ModuleGUID>1742004277</ModuleGUID>
             </Item>
           </ConstructionOptions>
-          <ModuleBuildRadius>8</ModuleBuildRadius>
+          <ModuleBuildRadius>12</ModuleBuildRadius>
           <FarmType>AnimalFarm</FarmType>
         </ModuleOwner>
         <AmbientMoodProvider>
@@ -962,7 +984,7 @@
         <Recipe>
           <RecipeBuilding>1742004309</RecipeBuilding>
           <RecipeDescriptionText>1742004308</RecipeDescriptionText>
-          <RecipeImage>data/ui/2kimages/main/assets/recipebook/drop_goods_magazine/recipebook_dropgoods_packages.png</RecipeImage>
+          <RecipeImage>data/graphics/icons/icon_optimazations_recipe_1_ice.png</RecipeImage>
           <RecipeIngredientUIData>
             <Item>
               <PosX>360</PosX>
@@ -994,7 +1016,7 @@
         <Recipe>
           <RecipeBuilding>1742004312</RecipeBuilding>
           <RecipeDescriptionText>1742004311</RecipeDescriptionText>
-          <RecipeImage>data/ui/2kimages/main/assets/recipebook/drop_goods_magazine/recipebook_dropgoods_packages.png</RecipeImage>
+          <RecipeImage>data/graphics/icons/icon_optimazations_recipe_2_ice.png</RecipeImage>
           <RecipeIngredientUIData>
             <Item>
               <PosY>30</PosY>
@@ -1035,7 +1057,7 @@
         <Recipe>
           <RecipeBuilding>1742004315</RecipeBuilding>
           <RecipeDescriptionText>1742004314</RecipeDescriptionText>
-          <RecipeImage>data/ui/2kimages/main/assets/recipebook/drop_goods_magazine/recipebook_dropgoods_packages.png</RecipeImage>
+          <RecipeImage>data/graphics/icons/icon_optimazations_recipe_1_mining.png</RecipeImage>
           <RecipeIngredientUIData>
             <Item>
               <PosX>5</PosX>
@@ -1066,7 +1088,7 @@
         <Recipe>
           <RecipeBuilding>1742004318</RecipeBuilding>
           <RecipeDescriptionText>1742004317</RecipeDescriptionText>
-          <RecipeImage>data/ui/2kimages/main/assets/recipebook/drop_goods_magazine/recipebook_dropgoods_packages.png</RecipeImage>
+          <RecipeImage>data/graphics/icons/icon_optimazations_recipe_2_mining.png</RecipeImage>
           <RecipeIngredientUIData>
             <Item>
               <PosY>30</PosY>
@@ -1843,14 +1865,14 @@
   </ModOp>
   <!-- END MINING OPTIOMAZATIONS (LARGE) - Building -->
 
-  <!-- START - BUILDING - Ice Warehouse (AR) -->
+  <!-- START - BUILDING - Ice Depot (AR) -->
   <ModOp Type="addNextSibling" GUID='112658'>
     <Asset>
       <Template>Warehouse</Template>
       <Values>
         <Standard>
           <GUID>1742004277</GUID>
-          <Name>Ice Warehouse (AR)</Name>
+          <Name>Ice Depot (AR)</Name>
           <IconFilename>data/graphics/icons/icon_warehouse_ice.png</IconFilename>
           <InfoDescription>1742004278</InfoDescription>
         </Standard>
@@ -1984,16 +2006,16 @@
       </Values>
     </Asset>
   </ModOp>
-  <!-- END - BUILDING - Ice Warehouse (AR) -->
+  <!-- END - BUILDING - Ice Depot (AR) -->
 
-  <!-- START - BUILDING - Ice Warehouse (OW) -->
+  <!-- START - BUILDING - Ice Depot (OW) -->
   <ModOp Type="addNextSibling" GUID='112658'>
     <Asset>
       <Template>Warehouse</Template>
       <Values>
         <Standard>
           <GUID>1742004386</GUID>
-          <Name>Ice Warehouse (OW)</Name>
+          <Name>Ice Depot (OW)</Name>
           <IconFilename>data/graphics/icons/icon_warehouse_ice.png</IconFilename>
           <InfoDescription>1742004278</InfoDescription>
         </Standard>
@@ -2124,16 +2146,16 @@
       </Values>
     </Asset>
   </ModOp>
-  <!-- END - BUILDING - Ice Warehouse (OW) -->
+  <!-- END - BUILDING - Ice Depot (OW) -->
 
-  <!-- START - BUILDING - Ice Warehouse (NW) -->
+  <!-- START - BUILDING - Ice Depot (NW) -->
   <ModOp Type="addNextSibling" GUID='112658'>
     <Asset>
       <Template>Warehouse</Template>
       <Values>
         <Standard>
           <GUID>1742004388</GUID>
-          <Name>Ice Warehouse (NW)</Name>
+          <Name>Ice Depot (NW)</Name>
           <IconFilename>data/graphics/icons/icon_warehouse_ice.png</IconFilename>
           <InfoDescription>1742004278</InfoDescription>
         </Standard>
@@ -2264,7 +2286,7 @@
       </Values>
     </Asset>
   </ModOp>
-  <!-- END - BUILDING - Ice Warehouse (NW) -->
+  <!-- END - BUILDING - Ice Depot (NW) -->
 
   <!-- START BUILDING - Coastal Ice Storage (OW) -->
   <ModOp Type="addNextSibling" GUID='112680'>
@@ -3285,14 +3307,14 @@
   </ModOp>
   <!-- END BUILDING - Oil Platform -->
 
-  <!-- START BUILDING - Oil Warehouse -->
+  <!-- START BUILDING - Oil Depot -->
   <ModOp Type="addNextSibling" GUID='1742004277'>
     <Asset>
       <BaseAssetGUID>1742004277</BaseAssetGUID>
       <Values>
         <Standard>
           <GUID>1742004459</GUID>
-          <Name>Oil Warehouse</Name>
+          <Name>Oil Depot</Name>
           <IconFilename>data/graphics/icons/icon_warehouse_oil.png</IconFilename>
           <InfoDescription>1742004460</InfoDescription>
         </Standard>
@@ -3306,10 +3328,15 @@
         <StorageBase>
           <ProductStorageList>120056</ProductStorageList>
         </StorageBase>
+        <Warehouse>
+          <WarehouseStorage>
+            <StorageMax>400</StorageMax>
+          </WarehouseStorage>
+        </Warehouse>
       </Values>
     </Asset>
   </ModOp>
-  <!-- END BUILDING - Oil Warehouse -->
+  <!-- END BUILDING - Oil Depot -->
 
   <!-- START - BUILDING - Helium Gas Mine -->
   <ModOp Type="addNextSibling" GUID='112690'>
