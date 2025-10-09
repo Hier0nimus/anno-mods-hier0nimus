@@ -880,4 +880,993 @@
         </Asset>
     </ModOp>
     <!-- END - ADD NEW CHECICAL PLANT RECIPES -->
+
+    <!-- START - ARCTIC GREENHOUSE -->
+    <!-- START - Arctic Greenhouse - Recipelist -->
+    <ModOp GUID="939" Type="addNextSibling">
+        <Asset>
+            <Template>RecipeList</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004577</GUID>
+                    <Name>Arctic Greenhouse</Name>
+                </Standard>
+                <RecipeList>
+                    <Recipes>
+                        <Item>
+                            <Recipe>1742004580</Recipe>                            <!-- Arctic Greenhouse - Potatoes - Recipe -->
+                        </Item>
+                        <Item>
+                            <Recipe>1742004583</Recipe>                            <!-- Arctic Greenhouse - Red Peppers - Recipe -->
+                        </Item>
+                        <Item>
+                            <Recipe>1742004586</Recipe>                            <!-- Arctic Greenhouse - Herbs - Recipe -->
+                        </Item>
+                    </Recipes>
+                    <RecipeListType>Farm</RecipeListType>
+                    <RecipeListMoodImage>data/ui/2kimages/main/assets/recipebook/mood_images/recipebook_moodimages_universalfarm.png</RecipeListMoodImage>
+                    <RecipeListDescription>1742004578</RecipeListDescription>
+                </RecipeList>
+                <Text />
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END - Arctic Greenhouse - Recipelist -->
+
+    <ModOp GUID="25023" Type="addNextSibling">
+        <!-- START - Arctic Greenhouse - Potatoes - Recipe -->
+        <Asset>
+            <Template>Recipe</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004580</GUID>
+                    <Name>Arctic Greenhouse - Potatoes</Name>
+                    <IconFilename>data/ui/2kimages/main/3dicons/icon_potatoes.png</IconFilename>
+                </Standard>
+                <Text />
+                <Recipe>
+                    <RecipeBuilding>1742004582</RecipeBuilding>
+                    <RecipeDescriptionText>1742004581</RecipeDescriptionText>
+                    <RecipeImage>data/ui/2kimages/main/assets/recipebook/universal_farm/recipebook_universalfarm_potatoes.png</RecipeImage>
+                </Recipe>
+                <Locked />
+            </Values>
+        </Asset>
+        <!-- END - Arctic Greenhouse - Potatoes - Recipe -->
+    </ModOp>
+    <ModOp GUID="25023" Type="addNextSibling">
+        <!-- START - Arctic Greenhouse - Red Peppers - Recipe -->
+        <Asset>
+            <Template>Recipe</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004583</GUID>
+                    <Name>Arctic Greenhouse - Red Peppers</Name>
+                    <IconFilename>data/ui/2kimages/main/3dicons/icon_pepper.png</IconFilename>
+                </Standard>
+                <Text />
+                <Recipe>
+                    <RecipeBuilding>1742004585</RecipeBuilding>
+                    <RecipeDescriptionText>1742004584</RecipeDescriptionText>
+                    <RecipeImage>data\graphics\icons\recipe_bg_red_peppers.png</RecipeImage>
+                </Recipe>
+                <Locked />
+            </Values>
+        </Asset>
+        <!-- END - Arctic Greenhouse - Red Peppers - Recipe -->
+    </ModOp>
+    <ModOp GUID="25023" Type="addNextSibling">
+        <!-- START - Arctic Greenhouse - Herbs - Recipe -->
+        <Asset>
+            <Template>Recipe</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004586</GUID>
+                    <Name>Arctic Greenhouse - Herbs</Name>
+                    <IconFilename>data/ui/2kimages/main/3dicons/production_goods/icon_herbs_with_flower.png</IconFilename>
+                </Standard>
+                <Text />
+                <Recipe>
+                    <RecipeBuilding>1742004588</RecipeBuilding>
+                    <RecipeDescriptionText>1742004587</RecipeDescriptionText>
+                    <RecipeImage>data\graphics\icons\recipe_bg_herbs.png</RecipeImage>
+                </Recipe>
+                <Locked />
+            </Values>
+        </Asset>
+        <!-- END - Arctic Greenhouse - Herbs - Recipe -->
+    </ModOp>
+
+    <!-- START - BUILDING - Arctic Greenhouse - Blank -->
+    <ModOp Type="addNextSibling" GUID='24794'>
+        <Asset>
+            <Template>RecipeFarm_Arctic</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004579</GUID>
+                    <Name>Arctic Greenhouse (Blank)</Name>
+                    <IconFilename>data\ui\2kimages\main\3dicons\icon_farmfield_module.png</IconFilename>
+                </Standard>
+                <Building>
+                    <BuildingCategoryName>100000</BuildingCategoryName>
+                </Building>
+                <Blocking/>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!-- Coins -->
+                            <Amount>40000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010196</Ingredient>                            <!-- Timber - Product -->
+                            <Amount>15</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010205</Ingredient>                            <!-- Bricks - Product -->
+                            <Amount>10</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010218</Ingredient>                            <!-- Steel Beams - Product -->
+                            <Amount>8</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>838</Ingredient>                            <!-- Aluminium - Product -->
+                            <Amount>20</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010207</Ingredient>                            <!-- Windows - Product -->
+                            <Amount>30</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010202</Ingredient>                            <!-- Reinforced Concrete - Product -->
+                            <Amount>10</Amount>
+                        </Item>
+                    </Costs>
+                </Cost>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/buildings/production/arctic_greenhouse/arctic_greenhouse_01.cfg</Filename>
+                        </Item>
+                    </Variations>
+                    <Skins>
+                        <DefaultSkinName>112676</DefaultSkinName>
+                        <DefaultSkinDescription>23853</DefaultSkinDescription>
+                        <!--ChangeBuildingSkin_toDefaultSkinDesc-->
+                        <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>
+                        <!--Classic-->
+                    </Skins>
+                </Object>
+                <Mesh/>
+                <Selection>
+                    <OnSelection>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </OnSelection>
+                    <ParticipantMessageArcheType>Arctic_Resident_tier01_atWork</ParticipantMessageArcheType>
+                </Selection>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>Arctic Greenhouse (Blank)</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>35074</LineID>
+                </Text>
+                <Constructable/>
+                <Locked/>
+                <SoundEmitter>
+                    <ActiveSounds>
+                        <Item>
+                            <Sound>247118</Sound>
+                            <!--wwe_sfx_bld_agriculture_arctic_typeCluster_tag-->
+                        </Item>
+                        <Item>
+                            <Sound>236982</Sound>
+                            <!--wwe_sfx_bld_agriculture_arctic_03_lp-->
+                        </Item>
+                    </ActiveSounds>
+                    <IncidentSounds>
+                        <InfectedFire>
+                            <Item>
+                                <Sound>214659</Sound>
+                                <!--wwe_sfx_bld_inc_burn-->
+                            </Item>
+                        </InfectedFire>
+                    </IncidentSounds>
+                </SoundEmitter>
+                <FeedbackController/>
+                <Infolayer/>
+                <UpgradeList/>
+                <Factory7/>
+                <FactoryBase/>
+                <LogisticNode/>
+                <ModuleOwner>
+                    <ModuleLimits>
+                        <Main>
+                            <Limit>6</Limit>
+                        </Main>
+                    </ModuleLimits>
+                    <ConstructionOptions>
+                        <Item>
+                            <ModuleGUID>1742004576</ModuleGUID>                            <!--agriculture_arctic_05_field (Goose Field)-->
+                        </Item>
+                    </ConstructionOptions>
+                    <ModuleBuildRadius>8</ModuleBuildRadius>
+                    <FarmType>PlantFarm</FarmType>
+                </ModuleOwner>
+                <AmbientMoodProvider>
+                    <Murmur>Arctic_Farm</Murmur>
+                    <GlacierMurmur>Arctic_Farm</GlacierMurmur>
+                </AmbientMoodProvider>
+                <Maintenance>
+                    <Maintenances>
+                        <Item>
+                            <Product>1010017</Product>
+                            <!--Money-->
+                            <Amount>100</Amount>
+                            <InactiveAmount>50</InactiveAmount>
+                        </Item>
+                        <Item>
+                            <Product>112653</Product>
+                            <!--arctic workforce 1-->
+                            <Amount>50</Amount>
+                            <ShutdownThreshold>0.2</ShutdownThreshold>
+                        </Item>
+                    </Maintenances>
+                </Maintenance>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>1500</MaximumHitPoints>
+                </Attackable>
+                <IncidentInfectable>
+                    <Infectable>
+                        <Riot>
+                            <Base>0</Base>
+                            <Escalated>0</Escalated>
+                        </Riot>
+                        <Illness>
+                            <Escalated>0</Escalated>
+                        </Illness>
+                        <Explosion>
+                            <Base>0</Base>
+                            <Escalated>0</Escalated>
+                        </Explosion>
+                    </Infectable>
+                    <IncidentInfectionChanceFactors>
+                        <Riot>
+                            <FactoryOvertimeFactor>0</FactoryOvertimeFactor>
+                            <FactoryUndertimeFactor>0</FactoryUndertimeFactor>
+                            <FactoryHappinessFactor>0</FactoryHappinessFactor>
+                            <ResidenceHappinessFactor>0</ResidenceHappinessFactor>
+                            <HappinessMin>0</HappinessMin>
+                            <HappinessMax>0</HappinessMax>
+                        </Riot>
+                        <Illness>
+                            <ResidenceSatisfactionFactor>0</ResidenceSatisfactionFactor>
+                            <HappinessMin>0</HappinessMin>
+                            <HappinessMax>0</HappinessMax>
+                            <SatisfactionThreshold>0</SatisfactionThreshold>
+                        </Illness>
+                        <Explosion>
+                            <HappinessMin>0</HappinessMin>
+                            <HappinessMax>0</HappinessMax>
+                            <SatisfactionThreshold>0</SatisfactionThreshold>
+                        </Explosion>
+                    </IncidentInfectionChanceFactors>
+                </IncidentInfectable>
+                <Pausable/>
+                <Culture/>
+                <QuestObject/>
+                <Heated/>
+                <RecipeBuilding>
+                    <RecipeList>1742004577</RecipeList>
+                </RecipeBuilding>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END - BUILDING - Arctic Greenhouse - Blank -->
+
+    <!-- START - BUILDING - Arctic Greenhouse - Potatoes -->
+    <ModOp Type="addNextSibling" GUID='24794'>
+        <Asset>
+            <Template>RecipeFarm_Arctic</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004582</GUID>
+                    <Name>Arctic Greenhouse - Potatoes</Name>
+                    <IconFilename>data/ui/2kimages/main/3dicons/icon_potatoes.png</IconFilename>
+                </Standard>
+                <Building>
+                    <BuildingCategoryName>100000</BuildingCategoryName>
+                </Building>
+                <Blocking/>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!-- Coins -->
+                            <Amount>40000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010196</Ingredient>                            <!-- Timber - Product -->
+                            <Amount>15</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010205</Ingredient>                            <!-- Bricks - Product -->
+                            <Amount>10</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010218</Ingredient>                            <!-- Steel Beams - Product -->
+                            <Amount>8</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>838</Ingredient>                            <!-- Aluminium - Product -->
+                            <Amount>20</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010207</Ingredient>                            <!-- Windows - Product -->
+                            <Amount>30</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010202</Ingredient>                            <!-- Reinforced Concrete - Product -->
+                            <Amount>10</Amount>
+                        </Item>
+                    </Costs>
+                </Cost>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/buildings/production/arctic_greenhouse/arctic_greenhouse_01.cfg</Filename>
+                        </Item>
+                    </Variations>
+                    <Skins>
+                        <DefaultSkinName>112676</DefaultSkinName>
+                        <DefaultSkinDescription>23853</DefaultSkinDescription>
+                        <!--ChangeBuildingSkin_toDefaultSkinDesc-->
+                        <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>
+                        <!--Classic-->
+                    </Skins>
+                </Object>
+                <Mesh/>
+                <Selection>
+                    <OnSelection>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </OnSelection>
+                    <ParticipantMessageArcheType>Arctic_Resident_tier01_atWork</ParticipantMessageArcheType>
+                </Selection>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>Arctic Greenhouse - Potatoes</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>35074</LineID>
+                </Text>
+                <Constructable/>
+                <Locked/>
+                <SoundEmitter>
+                    <ActiveSounds>
+                        <Item>
+                            <Sound>247118</Sound>
+                            <!--wwe_sfx_bld_agriculture_arctic_typeCluster_tag-->
+                        </Item>
+                        <Item>
+                            <Sound>236982</Sound>
+                            <!--wwe_sfx_bld_agriculture_arctic_03_lp-->
+                        </Item>
+                    </ActiveSounds>
+                    <IncidentSounds>
+                        <InfectedFire>
+                            <Item>
+                                <Sound>214659</Sound>
+                                <!--wwe_sfx_bld_inc_burn-->
+                            </Item>
+                        </InfectedFire>
+                    </IncidentSounds>
+                </SoundEmitter>
+                <FeedbackController/>
+                <Infolayer/>
+                <UpgradeList/>
+                <Factory7/>
+                <FactoryBase>
+                    <FactoryOutputs>
+                        <Item>
+                            <Product>1010195</Product>                            <!-- Potatoes -->
+                            <Amount>1</Amount>
+                            <StorageAmount>1</StorageAmount>
+                        </Item>
+                    </FactoryOutputs>
+                    <CycleTime>60</CycleTime>
+                    <IsMainFactory>0</IsMainFactory>
+                </FactoryBase>
+                <LogisticNode/>
+                <ModuleOwner>
+                    <ModuleLimits>
+                        <Main>
+                            <Limit>6</Limit>
+                        </Main>
+                    </ModuleLimits>
+                    <ConstructionOptions>
+                        <Item>
+                            <ModuleGUID>1742004576</ModuleGUID>                            <!--agriculture_arctic_05_field (Goose Field)-->
+                        </Item>
+                    </ConstructionOptions>
+                    <ModuleBuildRadius>8</ModuleBuildRadius>
+                    <FarmType>PlantFarm</FarmType>
+                </ModuleOwner>
+                <AmbientMoodProvider>
+                    <Murmur>Arctic_Farm</Murmur>
+                    <GlacierMurmur>Arctic_Farm</GlacierMurmur>
+                </AmbientMoodProvider>
+                <Maintenance>
+                    <Maintenances>
+                        <Item>
+                            <Product>1010017</Product>
+                            <!--Money-->
+                            <Amount>100</Amount>
+                            <InactiveAmount>50</InactiveAmount>
+                        </Item>
+                        <Item>
+                            <Product>112653</Product>
+                            <!--arctic workforce 1-->
+                            <Amount>50</Amount>
+                            <ShutdownThreshold>0.2</ShutdownThreshold>
+                        </Item>
+                    </Maintenances>
+                </Maintenance>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>1500</MaximumHitPoints>
+                </Attackable>
+                <IncidentInfectable>
+                    <Infectable>
+                        <Riot>
+                            <Base>0</Base>
+                            <Escalated>0</Escalated>
+                        </Riot>
+                        <Illness>
+                            <Escalated>0</Escalated>
+                        </Illness>
+                        <Explosion>
+                            <Base>0</Base>
+                            <Escalated>0</Escalated>
+                        </Explosion>
+                    </Infectable>
+                    <IncidentInfectionChanceFactors>
+                        <Riot>
+                            <FactoryOvertimeFactor>0</FactoryOvertimeFactor>
+                            <FactoryUndertimeFactor>0</FactoryUndertimeFactor>
+                            <FactoryHappinessFactor>0</FactoryHappinessFactor>
+                            <ResidenceHappinessFactor>0</ResidenceHappinessFactor>
+                            <HappinessMin>0</HappinessMin>
+                            <HappinessMax>0</HappinessMax>
+                        </Riot>
+                        <Illness>
+                            <ResidenceSatisfactionFactor>0</ResidenceSatisfactionFactor>
+                            <HappinessMin>0</HappinessMin>
+                            <HappinessMax>0</HappinessMax>
+                            <SatisfactionThreshold>0</SatisfactionThreshold>
+                        </Illness>
+                        <Explosion>
+                            <HappinessMin>0</HappinessMin>
+                            <HappinessMax>0</HappinessMax>
+                            <SatisfactionThreshold>0</SatisfactionThreshold>
+                        </Explosion>
+                    </IncidentInfectionChanceFactors>
+                </IncidentInfectable>
+                <Pausable/>
+                <Culture/>
+                <QuestObject/>
+                <Heated/>
+                <RecipeBuilding>
+                    <RecipeList>1742004577</RecipeList>
+                </RecipeBuilding>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END - BUILDING - Arctic Greenhouse - Potatoes -->
+
+    <!-- START - BUILDING - Arctic Greenhouse - Red Peppers -->
+    <ModOp Type="addNextSibling" GUID='24794'>
+        <Asset>
+            <Template>RecipeFarm_Arctic</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004585</GUID>
+                    <Name>Arctic Greenhouse - Red Peppers</Name>
+                    <IconFilename>data/ui/2kimages/main/3dicons/icon_pepper.png</IconFilename>
+                </Standard>
+                <Building>
+                    <BuildingCategoryName>100000</BuildingCategoryName>
+                </Building>
+                <Blocking/>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!-- Coins -->
+                            <Amount>40000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010196</Ingredient>                            <!-- Timber - Product -->
+                            <Amount>15</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010205</Ingredient>                            <!-- Bricks - Product -->
+                            <Amount>10</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010218</Ingredient>                            <!-- Steel Beams - Product -->
+                            <Amount>8</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>838</Ingredient>                            <!-- Aluminium - Product -->
+                            <Amount>20</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010207</Ingredient>                            <!-- Windows - Product -->
+                            <Amount>30</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010202</Ingredient>                            <!-- Reinforced Concrete - Product -->
+                            <Amount>10</Amount>
+                        </Item>
+                    </Costs>
+                </Cost>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/buildings/production/arctic_greenhouse/arctic_greenhouse_01.cfg</Filename>
+                        </Item>
+                    </Variations>
+                    <Skins>
+                        <DefaultSkinName>112676</DefaultSkinName>
+                        <DefaultSkinDescription>23853</DefaultSkinDescription>
+                        <!--ChangeBuildingSkin_toDefaultSkinDesc-->
+                        <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>
+                        <!--Classic-->
+                    </Skins>
+                </Object>
+                <Mesh/>
+                <Selection>
+                    <OnSelection>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </OnSelection>
+                    <ParticipantMessageArcheType>Arctic_Resident_tier01_atWork</ParticipantMessageArcheType>
+                </Selection>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>Arctic Greenhouse - Red Peppers</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>35074</LineID>
+                </Text>
+                <Constructable/>
+                <Locked/>
+                <SoundEmitter>
+                    <ActiveSounds>
+                        <Item>
+                            <Sound>247118</Sound>
+                            <!--wwe_sfx_bld_agriculture_arctic_typeCluster_tag-->
+                        </Item>
+                        <Item>
+                            <Sound>236982</Sound>
+                            <!--wwe_sfx_bld_agriculture_arctic_03_lp-->
+                        </Item>
+                    </ActiveSounds>
+                    <IncidentSounds>
+                        <InfectedFire>
+                            <Item>
+                                <Sound>214659</Sound>
+                                <!--wwe_sfx_bld_inc_burn-->
+                            </Item>
+                        </InfectedFire>
+                    </IncidentSounds>
+                </SoundEmitter>
+                <FeedbackController/>
+                <Infolayer/>
+                <UpgradeList/>
+                <Factory7/>
+                <FactoryBase>
+                    <FactoryOutputs>
+                        <Item>
+                            <Product>1010198</Product>                            <!-- Red Peppers -->
+                            <Amount>1</Amount>
+                            <StorageAmount>1</StorageAmount>
+                        </Item>
+                    </FactoryOutputs>
+                    <CycleTime>60</CycleTime>
+                    <IsMainFactory>0</IsMainFactory>
+                </FactoryBase>
+                <LogisticNode/>
+                <ModuleOwner>
+                    <ModuleLimits>
+                        <Main>
+                            <Limit>6</Limit>
+                        </Main>
+                    </ModuleLimits>
+                    <ConstructionOptions>
+                        <Item>
+                            <ModuleGUID>1742004576</ModuleGUID>                            <!--agriculture_arctic_05_field (Goose Field)-->
+                        </Item>
+                    </ConstructionOptions>
+                    <ModuleBuildRadius>8</ModuleBuildRadius>
+                    <FarmType>PlantFarm</FarmType>
+                </ModuleOwner>
+                <AmbientMoodProvider>
+                    <Murmur>Arctic_Farm</Murmur>
+                    <GlacierMurmur>Arctic_Farm</GlacierMurmur>
+                </AmbientMoodProvider>
+                <Maintenance>
+                    <Maintenances>
+                        <Item>
+                            <Product>1010017</Product>
+                            <!--Money-->
+                            <Amount>100</Amount>
+                            <InactiveAmount>50</InactiveAmount>
+                        </Item>
+                        <Item>
+                            <Product>112653</Product>
+                            <!--arctic workforce 1-->
+                            <Amount>50</Amount>
+                            <ShutdownThreshold>0.2</ShutdownThreshold>
+                        </Item>
+                    </Maintenances>
+                </Maintenance>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>1500</MaximumHitPoints>
+                </Attackable>
+                <IncidentInfectable>
+                    <Infectable>
+                        <Riot>
+                            <Base>0</Base>
+                            <Escalated>0</Escalated>
+                        </Riot>
+                        <Illness>
+                            <Escalated>0</Escalated>
+                        </Illness>
+                        <Explosion>
+                            <Base>0</Base>
+                            <Escalated>0</Escalated>
+                        </Explosion>
+                    </Infectable>
+                    <IncidentInfectionChanceFactors>
+                        <Riot>
+                            <FactoryOvertimeFactor>0</FactoryOvertimeFactor>
+                            <FactoryUndertimeFactor>0</FactoryUndertimeFactor>
+                            <FactoryHappinessFactor>0</FactoryHappinessFactor>
+                            <ResidenceHappinessFactor>0</ResidenceHappinessFactor>
+                            <HappinessMin>0</HappinessMin>
+                            <HappinessMax>0</HappinessMax>
+                        </Riot>
+                        <Illness>
+                            <ResidenceSatisfactionFactor>0</ResidenceSatisfactionFactor>
+                            <HappinessMin>0</HappinessMin>
+                            <HappinessMax>0</HappinessMax>
+                            <SatisfactionThreshold>0</SatisfactionThreshold>
+                        </Illness>
+                        <Explosion>
+                            <HappinessMin>0</HappinessMin>
+                            <HappinessMax>0</HappinessMax>
+                            <SatisfactionThreshold>0</SatisfactionThreshold>
+                        </Explosion>
+                    </IncidentInfectionChanceFactors>
+                </IncidentInfectable>
+                <Pausable/>
+                <Culture/>
+                <QuestObject/>
+                <Heated/>
+                <RecipeBuilding>
+                    <RecipeList>1742004577</RecipeList>
+                </RecipeBuilding>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END - BUILDING - Arctic Greenhouse - Red Peppers -->
+
+    <!-- START - BUILDING - Arctic Greenhouse - Herbs -->
+    <ModOp Type="addNextSibling" GUID='24794'>
+        <Asset>
+            <Template>RecipeFarm_Arctic</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004588</GUID>
+                    <Name>Arctic Greenhouse - Herbs</Name>
+                    <IconFilename>data/ui/2kimages/main/3dicons/production_goods/icon_herbs_with_flower.png</IconFilename>
+                </Standard>
+                <Building>
+                    <BuildingCategoryName>100000</BuildingCategoryName>
+                </Building>
+                <Blocking/>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!-- Coins -->
+                            <Amount>40000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010196</Ingredient>                            <!-- Timber - Product -->
+                            <Amount>15</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010205</Ingredient>                            <!-- Bricks - Product -->
+                            <Amount>10</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010218</Ingredient>                            <!-- Steel Beams - Product -->
+                            <Amount>8</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>838</Ingredient>                            <!-- Aluminium - Product -->
+                            <Amount>20</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010207</Ingredient>                            <!-- Windows - Product -->
+                            <Amount>30</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010202</Ingredient>                            <!-- Reinforced Concrete - Product -->
+                            <Amount>10</Amount>
+                        </Item>
+                    </Costs>
+                </Cost>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/buildings/production/arctic_greenhouse/arctic_greenhouse_01.cfg</Filename>
+                        </Item>
+                    </Variations>
+                    <Skins>
+                        <DefaultSkinName>112676</DefaultSkinName>
+                        <DefaultSkinDescription>23853</DefaultSkinDescription>
+                        <!--ChangeBuildingSkin_toDefaultSkinDesc-->
+                        <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>
+                        <!--Classic-->
+                    </Skins>
+                </Object>
+                <Mesh/>
+                <Selection>
+                    <OnSelection>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </OnSelection>
+                    <ParticipantMessageArcheType>Arctic_Resident_tier01_atWork</ParticipantMessageArcheType>
+                </Selection>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>Arctic Greenhouse - Red Peppers</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>35074</LineID>
+                </Text>
+                <Constructable/>
+                <Locked/>
+                <SoundEmitter>
+                    <ActiveSounds>
+                        <Item>
+                            <Sound>247118</Sound>
+                            <!--wwe_sfx_bld_agriculture_arctic_typeCluster_tag-->
+                        </Item>
+                        <Item>
+                            <Sound>236982</Sound>
+                            <!--wwe_sfx_bld_agriculture_arctic_03_lp-->
+                        </Item>
+                    </ActiveSounds>
+                    <IncidentSounds>
+                        <InfectedFire>
+                            <Item>
+                                <Sound>214659</Sound>
+                                <!--wwe_sfx_bld_inc_burn-->
+                            </Item>
+                        </InfectedFire>
+                    </IncidentSounds>
+                </SoundEmitter>
+                <FeedbackController/>
+                <Infolayer/>
+                <UpgradeList/>
+                <Factory7/>
+                <FactoryBase>
+                    <FactoryOutputs>
+                        <Item>
+                            <Product>5383</Product>                            <!-- Herbs -->
+                            <Amount>1</Amount>
+                            <StorageAmount>1</StorageAmount>
+                        </Item>
+                    </FactoryOutputs>
+                    <CycleTime>60</CycleTime>
+                    <IsMainFactory>0</IsMainFactory>
+                </FactoryBase>
+                <LogisticNode/>
+                <ModuleOwner>
+                    <ModuleLimits>
+                        <Main>
+                            <Limit>6</Limit>
+                        </Main>
+                    </ModuleLimits>
+                    <ConstructionOptions>
+                        <Item>
+                            <ModuleGUID>1742004576</ModuleGUID>                            <!--agriculture_arctic_05_field (Goose Field)-->
+                        </Item>
+                    </ConstructionOptions>
+                    <ModuleBuildRadius>8</ModuleBuildRadius>
+                    <FarmType>PlantFarm</FarmType>
+                </ModuleOwner>
+                <AmbientMoodProvider>
+                    <Murmur>Arctic_Farm</Murmur>
+                    <GlacierMurmur>Arctic_Farm</GlacierMurmur>
+                </AmbientMoodProvider>
+                <Maintenance>
+                    <Maintenances>
+                        <Item>
+                            <Product>1010017</Product>
+                            <!--Money-->
+                            <Amount>100</Amount>
+                            <InactiveAmount>50</InactiveAmount>
+                        </Item>
+                        <Item>
+                            <Product>112653</Product>
+                            <!--arctic workforce 1-->
+                            <Amount>50</Amount>
+                            <ShutdownThreshold>0.2</ShutdownThreshold>
+                        </Item>
+                    </Maintenances>
+                </Maintenance>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>1500</MaximumHitPoints>
+                </Attackable>
+                <IncidentInfectable>
+                    <Infectable>
+                        <Riot>
+                            <Base>0</Base>
+                            <Escalated>0</Escalated>
+                        </Riot>
+                        <Illness>
+                            <Escalated>0</Escalated>
+                        </Illness>
+                        <Explosion>
+                            <Base>0</Base>
+                            <Escalated>0</Escalated>
+                        </Explosion>
+                    </Infectable>
+                    <IncidentInfectionChanceFactors>
+                        <Riot>
+                            <FactoryOvertimeFactor>0</FactoryOvertimeFactor>
+                            <FactoryUndertimeFactor>0</FactoryUndertimeFactor>
+                            <FactoryHappinessFactor>0</FactoryHappinessFactor>
+                            <ResidenceHappinessFactor>0</ResidenceHappinessFactor>
+                            <HappinessMin>0</HappinessMin>
+                            <HappinessMax>0</HappinessMax>
+                        </Riot>
+                        <Illness>
+                            <ResidenceSatisfactionFactor>0</ResidenceSatisfactionFactor>
+                            <HappinessMin>0</HappinessMin>
+                            <HappinessMax>0</HappinessMax>
+                            <SatisfactionThreshold>0</SatisfactionThreshold>
+                        </Illness>
+                        <Explosion>
+                            <HappinessMin>0</HappinessMin>
+                            <HappinessMax>0</HappinessMax>
+                            <SatisfactionThreshold>0</SatisfactionThreshold>
+                        </Explosion>
+                    </IncidentInfectionChanceFactors>
+                </IncidentInfectable>
+                <Pausable/>
+                <Culture/>
+                <QuestObject/>
+                <Heated/>
+                <RecipeBuilding>
+                    <RecipeList>1742004577</RecipeList>
+                </RecipeBuilding>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END - BUILDING - Arctic Greenhouse - Herbs -->
+
+    <!-- START - BUILDING - Arctic Greenhouse Sidebuilding -->
+    <ModOp Type="addNextSibling" GUID='24794'>
+        <Asset>
+            <Template>Farmfield</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004576</GUID>
+                    <Name>Arctic Greenhouse Sidebuilding</Name>
+                    <IconFilename>data\ui\2kimages\main\3dicons\icon_botanic_garden_module.png</IconFilename>
+                </Standard>
+                <Building>
+                    <AssociatedRegions>Arctic</AssociatedRegions>
+                </Building>
+                <Blocking>
+                    <GroundDecalAsset>0</GroundDecalAsset>
+                    <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+                </Blocking>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!-- Coins -->
+                            <Amount>25000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010196</Ingredient>                            <!-- Timber - Product -->
+                            <Amount>10</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010205</Ingredient>                            <!-- Bricks - Product -->
+                            <Amount>8</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010218</Ingredient>                            <!-- Steel Beams - Product -->
+                            <Amount>5</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>838</Ingredient>                            <!-- Aluminium - Product -->
+                            <Amount>10</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010207</Ingredient>                            <!-- Windows - Product -->
+                            <Amount>15</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010202</Ingredient>                            <!-- Reinforced Concrete - Product -->
+                            <Amount>5</Amount>
+                        </Item>
+                    </Costs>
+                </Cost>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/buildings/production/arctic_greenhouse/arctic_greenhouse_module_01.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/production/arctic_greenhouse/arctic_greenhouse_module_02.cfg</Filename>
+                        </Item>
+                    </Variations>
+                </Object>
+                <Mesh/>
+                <Selection>
+                    <OnSelection>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </OnSelection>
+                </Selection>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>Arctic Greenhouse Sidebuilding</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>35089</LineID>
+                </Text>
+                <Constructable/>
+                <Locked/>
+                <SoundEmitter/>
+                <FeedbackController/>
+                <Infolayer/>
+                <BuildingModule/>
+                <AmbientMoodProvider/>
+                <ModuleIrrigation/>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END - BUILDING - Arctic Greenhouse Sidebuilding -->
+    <!-- END - ARCTIC GREENHOUSE -->
 </ModOps>

@@ -110,7 +110,6 @@
             </Values>
         </Asset>
     </ModOp>
-
     <!-- START - BUILDING Small Depot -->
     <ModOp Type="addNextSibling" GUID='1010519'>
         <Asset>
@@ -446,7 +445,7 @@
                         <Item>
                             <Product>120008</Product>                            <!-- Wood -->
                             <Amount>1</Amount>
-                            <StorageAmount>10</StorageAmount>
+                            <StorageAmount>6</StorageAmount>
                         </Item>
                     </FactoryInputs>
                     <CycleTime>90</CycleTime>
@@ -462,13 +461,13 @@
     <!-- START - GIVING LUMBERJACKS HUT BUFF TO CAMPFIRE -->
     <ModOp GUID='114703,1742004128' Type="merge" Path="/Values/">
         <BuffFactory>
-          <ProductionBuffs>
-            <Item>
-              <ProductivityBuff>1742004571</ProductivityBuff>              <!-- Providing Wood - Buff -->
-            </Item>
-          </ProductionBuffs>
-          <ProductionBuffScope>Radius</ProductionBuffScope>
-          <ProductionBuffDistance>3</ProductionBuffDistance>
+            <ProductionBuffs>
+                <Item>
+                    <ProductivityBuff>1742004571</ProductivityBuff>                    <!-- Providing Wood - Buff -->
+                </Item>
+            </ProductionBuffs>
+            <ProductionBuffScope>Radius</ProductionBuffScope>
+            <ProductionBuffDistance>3</ProductionBuffDistance>
         </BuffFactory>
     </ModOp>
     <!-- END - GIVING LUMBERJACKS HUT BUFF TO CAMPFIRE -->
@@ -2542,14 +2541,14 @@
                         <Item>
                             <Product>1500010825</Product>                            <!--ropes-->
                             <Amount>1</Amount>
-                            <StorageAmount>4</StorageAmount>
+                            <StorageAmount>2</StorageAmount>
                         </Item>
                     </FactoryInputs>
                     <FactoryOutputs>
                         <Item>
                             <Product>115980</Product>                            <!--Expedition Equipment/Lost Expedition scrap-->
                             <Amount>1</Amount>
-                            <StorageAmount>2</StorageAmount>S
+                            <StorageAmount>2</StorageAmount>
                         </Item>
                     </FactoryOutputs>
                     <CycleTime>90</CycleTime>
@@ -2752,6 +2751,187 @@
         </Asset>
     </ModOp>
     <!-- END BUILDING - Nate's Arctic Windmill -->
+
+    <!-- START BUILDING - Fish Stew Cookhouse (Technicians) -->
+    <ModOp GUID='100780' Type="addNextSibling">
+        <Asset>
+            <Template>FactoryBuilding7_Arctic</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004589</GUID>
+                    <Name>Fish Stew Cookhouse (Technicians)</Name>
+                    <IconFilename>data/ui/2kimages/main/3dicons/goods_africa/icon_wat_stew.png</IconFilename>
+                    <InfoDescription>1742004404</InfoDescription>
+                </Standard>
+                <Building/>
+                <Blocking/>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!-- Coins -->
+                            <Amount>15000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010196</Ingredient>                            <!--timber-->
+                            <Amount>25</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010205</Ingredient>                            <!--bricks-->
+                            <Amount>20</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010218</Ingredient>                            <!--beams-->
+                            <Amount>15</Amount>
+                        </Item>
+                    </Costs>
+                </Cost>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/buildings/production/cannery_arctic/cannery_arctic_01.cfg</Filename>
+                        </Item>
+                    </Variations>
+                    <Skins/>
+                </Object>
+                <Mesh/>
+                <Selection>
+                    <OnSelection>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </OnSelection>
+                    <ParticipantMessageArcheType>Arctic_Resident_tier01_atWork</ParticipantMessageArcheType>
+                </Selection>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>Cannery</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>35084</LineID>
+                </Text>
+                <Constructable/>
+                <Locked/>
+                <SoundEmitter>
+                    <ActiveSounds>
+                        <Item>
+                            <Sound>247110</Sound>                            <!--wwe_sfx_bld_factory_arctic_typeCluster_tag-->
+                        </Item>
+                        <Item>
+                            <Sound>240581</Sound>                            <!--wwe_sfx_bld_food_arctic_01_lp-->
+                        </Item>
+                    </ActiveSounds>
+                    <IncidentSounds>
+                        <InfectedFire>
+                            <Item>
+                                <Sound>214659</Sound>                                <!--wwe_sfx_bld_inc_burn-->
+                            </Item>
+                        </InfectedFire>
+                    </IncidentSounds>
+                </SoundEmitter>
+                <FeedbackController/>
+                <Infolayer/>
+                <UpgradeList/>
+                <Factory7/>
+                <FactoryBase>
+                    <FactoryInputs>
+                        <Item>
+                            <Product>1010200</Product>                            <!-- Fish - Product -->
+                            <Amount>1</Amount>
+                            <StorageAmount>6</StorageAmount>
+                        </Item>
+                        <Item>
+                            <Product>1010195</Product>                            <!-- Potatoes - Product -->
+                            <Amount>1</Amount>
+                            <StorageAmount>6</StorageAmount>
+                        </Item>
+                        <Item>
+                            <Product>1010198</Product>                            <!-- Red Peppers - Product -->
+                            <Amount>1</Amount>
+                            <StorageAmount>6</StorageAmount>
+                        </Item>
+                        <Item>
+                            <Product>5383</Product>                            <!-- Herbs - Product -->
+                            <Amount>1</Amount>
+                            <StorageAmount>6</StorageAmount>
+                        </Item>
+                    </FactoryInputs>
+                    <FactoryOutputs>
+                        <Item>
+                            <Product>114410</Product>                            <!-- Seafood Stew - Product -->
+                            <Amount>1</Amount>
+                            <StorageAmount>3</StorageAmount>
+                        </Item>
+                    </FactoryOutputs>
+                    <CycleTime>45</CycleTime>
+                    <IsMainFactory>0</IsMainFactory>
+                </FactoryBase>
+                <LogisticNode/>
+                <AmbientMoodProvider>
+                    <Murmur>Arctic_Farm</Murmur>
+                    <GlacierMurmur>Arctic_Farm</GlacierMurmur>
+                </AmbientMoodProvider>
+                <Maintenance>
+                    <Maintenances>
+                        <Item>
+                            <Product>1010017</Product>                            <!--Money-->
+                            <Amount>100</Amount>
+                            <InactiveAmount>50</InactiveAmount>
+                        </Item>
+                        <Item>
+                            <Product>112653</Product>                            <!--arctic workforce 1-->
+                            <Amount>50</Amount>
+                            <ShutdownThreshold>0.2</ShutdownThreshold>
+                        </Item>
+                    </Maintenances>
+                </Maintenance>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>2000</MaximumHitPoints>
+                </Attackable>
+                <Pausable/>
+                <IncidentInfectable>
+                    <Infectable>
+                        <Riot>
+                            <Base>0</Base>
+                            <Escalated>0</Escalated>
+                        </Riot>
+                        <Explosion>
+                            <Base>0</Base>
+                            <Escalated>0</Escalated>
+                        </Explosion>
+                    </Infectable>
+                    <IncidentInfectionChanceFactors>
+                        <Riot>
+                            <FactoryOvertimeFactor>0</FactoryOvertimeFactor>
+                            <FactoryUndertimeFactor>0</FactoryUndertimeFactor>
+                            <FactoryHappinessFactor>0</FactoryHappinessFactor>
+                            <ResidenceHappinessFactor>0</ResidenceHappinessFactor>
+                            <HappinessMin>0</HappinessMin>
+                            <HappinessMax>0</HappinessMax>
+                        </Riot>
+                        <Illness>
+                            <ResidenceSatisfactionFactor>0</ResidenceSatisfactionFactor>
+                            <HappinessMin>0</HappinessMin>
+                            <HappinessMax>0</HappinessMax>
+                            <SatisfactionThreshold>0</SatisfactionThreshold>
+                        </Illness>
+                        <Explosion>
+                            <HappinessMin>0</HappinessMin>
+                            <HappinessMax>0</HappinessMax>
+                            <SatisfactionThreshold>0</SatisfactionThreshold>
+                        </Explosion>
+                    </IncidentInfectionChanceFactors>
+                </IncidentInfectable>
+                <Culture/>
+                <QuestObject/>
+                <Heated/>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END BUILDING - Fish Stew Cookhouse (Technicians) -->
 
     <!-- START BUILDING - Cannery (Arctic) -->
     <ModOp GUID='100780' Type="addNextSibling">
@@ -2971,7 +3151,7 @@
                 <Object>
                     <Variations>
                         <Item>
-                            <Filename>data/dlc03/graphics/buildings/public/service_colony03_02/service_colony03_02.cfg</Filename>
+                            <Filename>data/graphics/buildings/public/entertainment_hall/entertainment_hall_01.cfg</Filename>
                         </Item>
                     </Variations>
                 </Object>
@@ -2999,17 +3179,17 @@
                         <Item>
                             <Product>5392</Product>                            <!-- Film Reel - Product -->
                             <Amount>1</Amount>
-                            <StorageAmount>8</StorageAmount>
+                            <StorageAmount>4</StorageAmount>
                         </Item>
                         <Item>
                             <Product>135232</Product>                            <!-- Billiard Tables - Product -->
                             <Amount>1</Amount>
-                            <StorageAmount>8</StorageAmount>
+                            <StorageAmount>4</StorageAmount>
                         </Item>
                         <Item>
                             <Product>1010214</Product>                            <!-- Beer - Product -->
                             <Amount>1</Amount>
-                            <StorageAmount>8</StorageAmount>
+                            <StorageAmount>4</StorageAmount>
                         </Item>
                     </FactoryInputs>
                     <CycleTime>240</CycleTime>
@@ -3121,7 +3301,7 @@
                 <Object>
                     <Variations>
                         <Item>
-                            <Filename>data/dlc03/graphics/buildings/public/service_colony03_02/service_colony03_02.cfg</Filename>
+                            <Filename>data/graphics/buildings/public/moulin_rouge/moulin_blanc_01.cfg</Filename>
                         </Item>
                     </Variations>
                 </Object>
@@ -3149,17 +3329,17 @@
                         <Item>
                             <Product>1742004333</Product>                            <!-- Corsets - Product -->
                             <Amount>1</Amount>
-                            <StorageAmount>8</StorageAmount>
+                            <StorageAmount>4</StorageAmount>
                         </Item>
                         <Item>
                             <Product>5389</Product>                            <!-- Costume - Product -->
                             <Amount>1</Amount>
-                            <StorageAmount>8</StorageAmount>
+                            <StorageAmount>4</StorageAmount>
                         </Item>
                         <Item>
                             <Product>120016</Product>                            <!-- Champagne - Product -->
                             <Amount>1</Amount>
-                            <StorageAmount>8</StorageAmount>
+                            <StorageAmount>4</StorageAmount>
                         </Item>
                     </FactoryInputs>
                     <CycleTime>300</CycleTime>
@@ -3287,7 +3467,7 @@
                 <Object>
                     <Variations>
                         <Item>
-                            <Filename>data/dlc03/graphics/buildings/public/service_colony03_02/service_colony03_02.cfg</Filename>
+                            <Filename>data/graphics/buildings/public/bathhouse/bathhouse_01.cfg</Filename>
                         </Item>
                     </Variations>
                 </Object>
@@ -3380,7 +3560,7 @@
                         <Item>
                             <Product>5383</Product>                            <!-- herbs -->
                             <Amount>1</Amount>
-                            <StorageAmount>20</StorageAmount>
+                            <StorageAmount>4</StorageAmount>
                         </Item>
                     </FactoryInputs>
                     <ClampedMaxTransporterLogisticCost>18</ClampedMaxTransporterLogisticCost>

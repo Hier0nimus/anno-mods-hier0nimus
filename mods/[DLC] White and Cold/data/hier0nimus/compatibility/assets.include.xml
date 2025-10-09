@@ -4,6 +4,14 @@
 
 <ModOps>
 
+  <!-- HUSKY SLED REVISION KURILA -->
+  <Group Condition="#arctic_husky_sled_revision_kurila">
+    <ModOp Type="merge" GUID="112703,1500300885,1500300886,1500300887,1500300888,1500300898,1500300889,1500300906,1500302820,1500302822,1500302823,1500300897,112680,112714" Path="/Values/Standard">
+      <IconFilename>data\graphics\icons\icon_husky_sled_service_01.png</IconFilename>
+    </ModOp>
+  </Group>
+
+  <!-- SMOKED FISH KURILA -->
   <Group Condition="!#smoked_fish_kurila">
     <ModOp Type="addNextSibling" GUID="112642" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='112702']">
       <Item>
@@ -27,6 +35,7 @@
     </ModOp>
   </Group>
 
+  <!-- JAKOB ALTERNATIVE NEEDS -->
   <Group Condition="!#jakob_alternative_needs">
     <ModOp Type="add" GUID="112643" Path="/Values/PopulationLevel7/PopulationInputs/">
       <Item>
@@ -44,20 +53,101 @@
     </ModOp>
   </Group>
 
+  <!-- NEW HORIZONS -->
   <Group Condition="#new_horizons_population">
     <ModOp Type="add" GUID="15100100" Path="/Values/PopulationLevel7/PopulationInputs/">
       <Item>
+        <Product>1010352</Product>        <!--variety theatre-->
+        <HappinessValue>6</HappinessValue>
+        <MoneyValue>100</MoneyValue>
+        <IsConsideredByAI>1</IsConsideredByAI>
+      </Item>
+      <Item>
         <Product>1742004384</Product>        <!-- Ice Service - Product -->
-        <HappinessValue>3</HappinessValue>
+        <SupplyWeight>24</SupplyWeight>
         <MoneyValue>200</MoneyValue>
         <IsConsideredByAI>0</IsConsideredByAI>
         <AdditionalGlobalUnlockRequirement>
           <Population>112643</Population>
           <MinPopulationAmount>2500</MinPopulationAmount>
         </AdditionalGlobalUnlockRequirement>
+        <IsBonusNeed>1</IsBonusNeed>
       </Item>
     </ModOp>
   </Group>
 
+  <!-- SPICE IT UP - GAS PUMP RADIUS -->
+  <Group Condition="#Spice_GasPumpRadius">
+    <ModOp Type="add" GUID ='1742004364' Path="/Values/ModuleOwner">
+      <ModuleBuildRadius>15</ModuleBuildRadius>
+    </ModOp>
+  </Group>
+
+  <!-- SPICE IT UP - COMMUTER PIER ARCTIC -->
+  <Group Condition="#Spice_CommuterArctic">
+    <!-- START - ADD INUIT POPULATION TO ObjectmenuCommuterHarbourScene  -->
+    <ModOp Type="add" GUID="501065" Path="/Values/ObjectmenuCommuterHarbourScene/WorkforceToRegion/Arctic/WorkforceList">
+      <Item>
+        <Workforce>1742004159</Workforce>
+      </Item>
+    </ModOp>
+    <!-- END - ADD INUIT POPULATION TO ObjectmenuCommuterHarbourScene  -->
+  </Group>
+
+  <!-- SPICE IT UP - ARCTIC VARIABLE RESOURCE -->
+  <Group Condition="#Spice_ArcticVariableResources">
+    <ModOp Type="Remove" GUID='116344,112791' Path="/Values/ConstructionCategory/BuildingList/Item[Building='1742004455']"/>
+    <ModOp Type="add" GUID='8857201' Path="/Values/ConstructionCategory/BuildingList/">
+      <Item>
+        <Building>1742004455</Building>        <!-- Silver Mine - Building -->
+      </Item>
+    </ModOp>
+  </Group>
+
+  <!-- TRAP TOWER FOR ARCTIC -->
+  <Group Condition="#Trap_Tower_For_Arctic">
+    <ModOp Type="add" GUID='2024012803' Path="/Values/ItemEffect/EffectTargets/">
+      <Item>
+        <GUID>1742004234</GUID>        <!-- All Inuit Hunting Buildings -->
+      </Item>
+      <Item>
+        <GUID>1742004233</GUID>        <!-- All Inuit Coastal Buildings -->
+      </Item>
+    </ModOp>
+  </Group>
+
+  <!-- VEGETABLE INTEGRATION -->
+  <Group Condition="#vegetable_integration_kurila">
+    <!-- RECIPE -->
+    <ModOp Type="merge" GUID='1742004583' Path="/Values/">
+      <Standard>
+        <IconFilename>data/ui/2kimages/main/kurila/icon_vegetables.png</IconFilename>
+      </Standard>
+      <Text>
+        <TextOverride>1742004593</TextOverride>
+      </Text>
+      <Recipe>
+        <RecipeDescriptionText>1742004594</RecipeDescriptionText>
+        <RecipeImage>data/ui/2kimages/main/kurila/icon_vegetables.png</RecipeImage>
+      </Recipe>
+    </ModOp>
+    <!-- BUILDING -->
+    <ModOp Type="merge" GUID='1742004585' Path="/Values/">
+      <Standard>
+        <IconFilename>data/ui/2kimages/main/kurila/icon_vegetables.png</IconFilename>
+      </Standard>
+      <Text>
+        <TextOverride>1742004595</TextOverride>
+      </Text>
+    </ModOp>
+
+  <!-- ADDING LIFESTYLE GOODS TO FOOD AND DRINK CATEGORY -->
+  <ModOp Condition="!@25000118//Item[BonusNeed='GUID']" Type="add" GUID='25000118' Path="/Values/ObjectmenuResidenceScene/BonusNeeds/BonusNeeds/Item[Category='2289']/Needs/">
+    <Item>
+      <BonusNeed>1500010836</BonusNeed>      <!-- Vegetables -->
+    </Item>
+  </ModOp>
+
+  </Group>
 </ModOps>
   

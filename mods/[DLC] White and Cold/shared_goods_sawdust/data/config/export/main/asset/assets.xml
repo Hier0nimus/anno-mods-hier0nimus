@@ -1,6 +1,6 @@
 <!-- 
   
-  [Shared] Shared Goods - Sawdust - v1.0
+  [Shared] Shared Goods - Sawdust - v1.2
   Original product from DonnyBresko - Created by Hier0nimus
   Enjoy!
 
@@ -32,12 +32,15 @@
         <Product>
           <StorageLevel>Building</StorageLevel>
           <ProductCategory>11703</ProductCategory>
-          <BasePrice>150</BasePrice>
+          <BasePrice>2</BasePrice>
           <CivLevel>2</CivLevel>
           <AssociatedRegion>Moderate</AssociatedRegion>
           <ProductionRegions>
             <Item>
               <RegionType>Moderate</RegionType>
+            </Item>
+            <Item>
+              <RegionType>Colony01</RegionType>
             </Item>
           </ProductionRegions>
         </Product>
@@ -152,6 +155,58 @@
     </UpgradeList>
   </ModOp>
   <!-- END - ADD BUFF TO CARPENTRY WORKS -->
+
+  <!-- START - ADD BUFF TO PRODUCTION WORKS PRODUCTION -->
+  <Group Condition="#advanced_sawmill_kurila">
+    <ModOp Type="merge" GUID="1404423025,1404423027" Path="/Values/">
+      <UpgradeList>
+        <DefaultBuff>1742200009</DefaultBuff>
+      </UpgradeList>
+    </ModOp>
+  </Group>
+  <Group Condition="#horai_barrels_kurila">
+    <ModOp Type="merge" GUID="1500303225" Path="/Values/">
+      <UpgradeList>
+        <DefaultBuff>1742200009</DefaultBuff>
+      </UpgradeList>
+    </ModOp>
+  </Group>
+  <Group Condition="#shared_cooperages_kurila">
+    <ModOp Type="merge" GUID="1500301341,1500301344,1500301347,1500301350,1500301352,1500301354" Path="/Values/">
+      <UpgradeList>
+        <DefaultBuff>1742200009</DefaultBuff>
+      </UpgradeList>
+    </ModOp>
+  </Group>
+  <Group Condition="#shared_cherry_sawmill_kurila">
+    <ModOp Type="merge" GUID="1500301320,1500301323,1500301325,1500301327,1500301329,1500301331" Path="/Values/">
+      <UpgradeList>
+        <DefaultBuff>1742200009</DefaultBuff>
+      </UpgradeList>
+    </ModOp>
+  </Group>
+  <Group Condition="#shared_wanza_sawmill_kurila">
+    <ModOp Type="merge" GUID="1500301290" Path="/Values/">
+      <UpgradeList>
+        <DefaultBuff>1742200009</DefaultBuff>
+      </UpgradeList>
+    </ModOp>
+  </Group>
+  <Group Condition="#woodworking_kurila">
+    <ModOp Type="merge" GUID="1500301292,1500301293,1500301296,1500301299,1500301300,1500301302" Path="/Values/">
+      <UpgradeList>
+        <DefaultBuff>1742200009</DefaultBuff>
+      </UpgradeList>
+    </ModOp>
+  </Group>
+  <Group Condition="#jewelry_works_kurila">
+    <ModOp Type="merge" GUID="1500300981,1500300984,1500300987" Path="/Values/">
+      <UpgradeList>
+        <DefaultBuff>1742200009</DefaultBuff>
+      </UpgradeList>
+    </ModOp>
+  </Group>
+  <!-- END - ADD BUFF TO PRODUCTION WORKS PRODUCTION -->
 
   <!-- START - TRIGGER UNLOCK SAWDUST -->
   <ModOp Type="addNextSibling" GUID="130248">

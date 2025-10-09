@@ -187,7 +187,7 @@
               </AdditionalGlobalUnlockRequirement>
             </Item>
             <Item>
-              <Product>112702</Product>              <!-- Oil Lamps -->
+              <Product>117701</Product>              <!-- Candles -->
               <Amount>0.00005</Amount>
               <SupplyWeight>2</SupplyWeight>
               <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
@@ -199,6 +199,28 @@
             </Item>
             <Item>
               <Product>1742110029</Product>              <!-- Qilaut - Product -->
+              <Amount>0.00004</Amount>
+              <SupplyWeight>3</SupplyWeight>
+              <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+              <IsBonusNeed>1</IsBonusNeed>
+              <AdditionalGlobalUnlockRequirement>
+                <Population>1742004100</Population>
+                <MinPopulationAmount>750</MinPopulationAmount>
+              </AdditionalGlobalUnlockRequirement>
+            </Item>
+            <Item>
+              <Product>1010195</Product>              <!-- Potatoes - Product -->
+              <Amount>0.00004</Amount>
+              <SupplyWeight>3</SupplyWeight>
+              <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+              <IsBonusNeed>1</IsBonusNeed>
+              <AdditionalGlobalUnlockRequirement>
+                <Population>1742004100</Population>
+                <MinPopulationAmount>750</MinPopulationAmount>
+              </AdditionalGlobalUnlockRequirement>
+            </Item>
+            <Item>
+              <Product>1010198</Product>              <!-- Red Peppers - Product -->
               <Amount>0.00004</Amount>
               <SupplyWeight>3</SupplyWeight>
               <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
@@ -277,6 +299,14 @@
   </ModOp>
   <!-- END - ADD WORKFORCE TIERS TO ISLANDBARSCENE -->
 
+  <!-- START ADD POPULATION PRODUCT TO WORKFORCE MENU -->
+  <ModOp Type="add" GUID="25000087" Path="/Values/WorkforceMenu/WorkforceList">
+    <Item>
+      <Asset>1742004159</Asset>      <!-- Inuit Workforce -->
+    </Item>
+  </ModOp>
+  <!-- END ADD POPULATION PRODUCT WORKFORCE MENU -->
+
   <!-- START - ADD ADDITIONAL NEEDS TO EXPLORERS AND TECHNICIANS -->
   <!-- Explorers -->
   <ModOp Type="addPrevSibling" GUID="112642" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='112708']">
@@ -305,6 +335,13 @@
         <Population>112642</Population>
         <MinPopulationAmount>1000</MinPopulationAmount>
       </AdditionalGlobalUnlockRequirement>
+      <RequiredFloorLevel>1</RequiredFloorLevel>
+    </Item>
+    <Item>
+      <Product>1742004400</Product>      <!-- Bathhouse - Product -->
+      <HeatValue>14</HeatValue>
+      <MoneyValue>40</MoneyValue>
+      <IsConsideredByAI>0</IsConsideredByAI>
       <RequiredFloorLevel>1</RequiredFloorLevel>
     </Item>
   </ModOp>
@@ -432,17 +469,10 @@
       </AdditionalGlobalUnlockRequirement>
       <RequiredFloorLevel>1</RequiredFloorLevel>
     </Item>
-    <Item>
-      <Product>1742004400</Product>      <!-- Hot Springs Bathhouse - Product -->
-      <HeatValue>14</HeatValue>
-      <MoneyValue>40</MoneyValue>
-      <IsConsideredByAI>0</IsConsideredByAI>
-      <RequiredFloorLevel>1</RequiredFloorLevel>
-    </Item>
   </ModOp>
   <ModOp Type="add" GUID="112643" Path="/Values/PopulationLevel7/PopulationInputs/">
     <Item>
-      <Product>1742004400</Product>      <!-- Hot Springs Bathhouse - Product -->
+      <Product>1742004400</Product>      <!-- Bathhouse - Product -->
       <HeatValue>14</HeatValue>
       <MoneyValue>50</MoneyValue>
       <IsConsideredByAI>0</IsConsideredByAI>
@@ -576,11 +606,31 @@
   </ModOp>
   <!-- END - ADD ADDITIONAL NEEDS TO EXPLORERS AND TECHNICIANS -->
 
+  <!-- START - ADD ADDITIONAL NEEDS TO ARTISANS -->
+  <ModOp Type="add" GUID="15000002" Path="/Values/PopulationLevel7/PopulationInputs">
+    <Item>
+      <Product>1742004384</Product>      <!-- Ice Service - Product -->
+      <SupplyWeight>5</SupplyWeight>
+      <MoneyValue>65</MoneyValue>
+      <IsConsideredByAI>0</IsConsideredByAI>
+      <AdditionalGlobalUnlockRequirement>
+        <Population>112643</Population>
+        <MinPopulationAmount>2500</MinPopulationAmount>
+      </AdditionalGlobalUnlockRequirement>
+      <IsBonusNeed>1</IsBonusNeed>
+    </Item>
+  </ModOp>
+  <!-- END - ADD ADDITIONAL NEEDS TO ARTISANS -->
+
   <!-- START - ADD ADDITIONAL NEEDS TO ENGINEERS AND INVESTORS -->
+  <!-- Increase money for Variety Theatre for Engineers from 20>50 -->
+  <ModOp Type="merge" GUID="15000003" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='1010352']">
+    <MoneyValue>50</MoneyValue>
+  </ModOp>
   <ModOp Type="add" GUID="15000003" Path="/Values/PopulationLevel7/PopulationInputs">
     <Item>
       <Product>1742004384</Product>      <!-- Ice Service - Product -->
-      <HappinessValue>3</HappinessValue>
+      <SupplyWeight>10</SupplyWeight>
       <MoneyValue>100</MoneyValue>
       <IsConsideredByAI>0</IsConsideredByAI>
       <RequiredFloorLevel>1</RequiredFloorLevel>
@@ -588,10 +638,11 @@
         <Population>112643</Population>
         <MinPopulationAmount>2500</MinPopulationAmount>
       </AdditionalGlobalUnlockRequirement>
+      <IsBonusNeed>1</IsBonusNeed>
     </Item>
     <Item>
       <Product>1742004333</Product>      <!-- Corsets - Product -->
-      <HappinessValue>3</HappinessValue>
+      <SupplyWeight>12</SupplyWeight>
       <MoneyValue>100</MoneyValue>
       <FullWeightPopulationCount>1750</FullWeightPopulationCount>
       <NoWeightPopulationCount>999</NoWeightPopulationCount>
@@ -601,12 +652,21 @@
         <Population>112643</Population>
         <MinPopulationAmount>750</MinPopulationAmount>
       </AdditionalGlobalUnlockRequirement>
+      <IsBonusNeed>1</IsBonusNeed>
+    </Item>
+  </ModOp>
+  <ModOp Type="addPrevSibling" GUID="15000004" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='1010245']">
+    <Item>
+      <Product>1010352</Product>      <!--variety theatre-->
+      <HappinessValue>6</HappinessValue>
+      <MoneyValue>75</MoneyValue>
+      <IsConsideredByAI>1</IsConsideredByAI>
     </Item>
   </ModOp>
   <ModOp Type="add" GUID="15000004" Path="/Values/PopulationLevel7/PopulationInputs">
     <Item>
       <Product>1742004384</Product>      <!-- Ice Service - Product -->
-      <HappinessValue>3</HappinessValue>
+      <SupplyWeight>15</SupplyWeight>
       <MoneyValue>150</MoneyValue>
       <IsConsideredByAI>0</IsConsideredByAI>
       <RequiredFloorLevel>1</RequiredFloorLevel>
@@ -614,11 +674,12 @@
         <Population>112643</Population>
         <MinPopulationAmount>2500</MinPopulationAmount>
       </AdditionalGlobalUnlockRequirement>
+      <IsBonusNeed>1</IsBonusNeed>
     </Item>
     <Item>
       <Product>1742004333</Product>      <!-- Corsets - Product -->
       <Amount>0.000261438</Amount>
-      <HappinessValue>3</HappinessValue>
+      <SupplyWeight>12</SupplyWeight>
       <MoneyValue>200</MoneyValue>
       <IsConsideredByAI>0</IsConsideredByAI>
       <RequiredFloorLevel>1</RequiredFloorLevel>
@@ -626,6 +687,7 @@
         <Population>112643</Population>
         <MinPopulationAmount>750</MinPopulationAmount>
       </AdditionalGlobalUnlockRequirement>
+      <IsBonusNeed>1</IsBonusNeed>
     </Item>
   </ModOp>
   <!-- END - ADD ADDITIONAL NEEDS TO ENGINEERS AND INVESTORS -->
@@ -635,13 +697,14 @@
     <Item>
       <Product>1742004333</Product>      <!-- Corsets - Product -->
       <Amount>0.000261438</Amount>
-      <HappinessValue>3</HappinessValue>
+      <SupplyWeight>12</SupplyWeight>
       <MoneyValue>200</MoneyValue>
       <IsConsideredByAI>0</IsConsideredByAI>
       <AdditionalGlobalUnlockRequirement>
         <Population>112643</Population>
         <MinPopulationAmount>750</MinPopulationAmount>
       </AdditionalGlobalUnlockRequirement>
+      <IsBonusNeed>1</IsBonusNeed>
     </Item>
   </ModOp>
   <!-- END - ADD ADDITIONAL NEEDS TO ARTISTA -->
@@ -650,13 +713,19 @@
   <ModOp Type="add" GUID="601379" Path="/Values/PopulationLevel7/PopulationInputs">
     <Item>
       <Product>1742004384</Product>      <!-- Ice Service - Product -->
-      <HappinessValue>3</HappinessValue>
+      <SupplyWeight>10</SupplyWeight>
       <MoneyValue>150</MoneyValue>
       <IsConsideredByAI>0</IsConsideredByAI>
       <AdditionalGlobalUnlockRequirement>
         <Population>112643</Population>
         <MinPopulationAmount>2500</MinPopulationAmount>
       </AdditionalGlobalUnlockRequirement>
+      <RequiredBuildings>
+        <Item>
+          <RequiredBuilding>601445</RequiredBuilding>          <!-- OW Hotel - Building -->
+        </Item>
+      </RequiredBuildings>
+      <IsBonusNeed>1</IsBonusNeed>
     </Item>
   </ModOp>
   <!-- END - ADD ADDITIONAL NEEDS TO TOURISTS -->
@@ -716,5 +785,14 @@
     </Item>
   </ModOp>
   <!-- END - ADD INUIT POPULATION TO ARCTIC POPULATION -->
+
+  <!-- START - ADD INUIT POPULATION TO GoodValueBalancing -->
+  <ModOp Type="add" GUID="142977" Path="/Values/GoodValueBalancing/WorkforceData/Arctic/Tiers/">
+    <Item>
+      <WorkforceValue>2.14</WorkforceValue>
+      <WorkforceGUID>1742004159</WorkforceGUID>      <!-- Inuit Workforce -->
+    </Item>
+  </ModOp>
+  <!-- END - ADD INUIT POPULATION TO GoodValueBalancing -->
 
 </ModOps>

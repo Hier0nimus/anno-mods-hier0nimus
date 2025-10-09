@@ -146,6 +146,9 @@
             <Item>
               <GUID>1742004134</GUID>              <!-- Root Grinder - Building -->
             </Item>
+            <Item>
+              <GUID>1742004591</GUID>              <!-- Candle Maker - Building -->
+            </Item>
           </EffectTargetGUIDs>
         </ItemEffectTargetPool>
       </Values>
@@ -304,6 +307,18 @@
             </Item>
             <Item>
               <GUID>1742004398</GUID>              <!--  Hot Springs Bathhouse - Building -->
+            </Item>
+            <Item>
+              <GUID>1742004424</GUID>              <!--  Monumental Cooking and Drinking Statue - Building -->
+            </Item>
+            <Item>
+              <GUID>1742004470</GUID>              <!--  Monumental Residences Statue - Building -->
+            </Item>
+            <Item>
+              <GUID>1742004474</GUID>              <!--  Monumental Crafting and Coastal Production Statue - Building -->
+            </Item>
+            <Item>
+              <GUID>1742004478</GUID>              <!--  Monumental Forest Statue - Building -->
             </Item>
           </EffectTargetGUIDs>
         </ItemEffectTargetPool>
@@ -556,6 +571,14 @@
   </ModOp>
   <!-- END - ADD BUILDINGS TO - ALL OPEN PITS -->
 
+  <!-- START - ADD BUILDINGS TO - ALL CHARCOAL KILNS -->
+  <ModOp GUID="8924" Type="add" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
+    <Item>
+      <GUID>1742004150</GUID>      <!-- Charcoal Burner - Building -->
+    </Item>
+  </ModOp>
+  <!-- END - ADD BUILDINGS TO - ALL CHARCOAL KILNS -->
+
   <!-- START - ADD BUILDINGS TO - ALL ARCTIC HUNTING CABINSS -->
   <ModOp GUID="1500301944" Type="add" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
     <Item>
@@ -581,6 +604,18 @@
   <!-- START - ADD BUILDINGS TO - Dog_Sled_Fake_Buff_UI -->
   <ModOp GUID="1500300885" Type="add" Path="/Values/ItemEffect/EffectTargets/">
     <Item>
+      <GUID>1742004421</GUID>      <!-- Nate's Arctic Windmill - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004561</GUID>      <!-- Bathhouse - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004563</GUID>      <!-- Entertainment Hall - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004567</GUID>      <!-- Moulin Blanc - Building -->
+    </Item>
+    <Item>
       <GUID>1742004556</GUID>      <!-- All Inuit Public Services - ItemEffectPool -->
     </Item>
   </ModOp>
@@ -588,6 +623,18 @@
 
   <!-- START - ADD BUILDINGS TO - Dog_Sled_Buff_Publics -->
   <ModOp GUID="1500300886" Type="add" Path="/Values/ItemEffect/EffectTargets/">
+    <Item>
+      <GUID>1742004421</GUID>      <!-- Nate's Arctic Windmill - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004561</GUID>      <!-- Bathhouse - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004563</GUID>      <!-- Entertainment Hall - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004567</GUID>      <!-- Moulin Blanc - Building -->
+    </Item>
     <Item>
       <GUID>1742004556</GUID>      <!-- All Inuit Public Services - ItemEffectPool -->
     </Item>
@@ -628,13 +675,29 @@
     </Item>
   </ModOp>
 
-  <!-- Processing - Animals -->
+  <!-- Processing - Animals (1) -->
   <ModOp GUID="116087,116130,116132,116089,116088" Type="add" Path="/Values/ItemEffect/EffectTargets/">
     <Item>
       <GUID>1742004146</GUID>      <!-- Weavery - Building -->
     </Item>
     <Item>
       <GUID>1742004138</GUID>      <!-- Snow Shoes Maker - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004394</GUID>      <!-- Qilaut Maker - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004543</GUID>      <!-- Rope Maker - Building -->
+    </Item>
+  </ModOp>
+
+  <!-- Processing - Animals (2) mixing -->
+  <ModOp GUID="116087,116130,116132" Type="add" Path="/Values/ItemEffect/EffectTargets/">
+    <Item>
+      <GUID>1742004538</GUID>      <!-- Soap Maker - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004591</GUID>      <!-- Candle Maker - Building -->
     </Item>
   </ModOp>
 
@@ -655,17 +718,36 @@
     <Item>
       <GUID>1742004132</GUID>      <!-- Basic Tools Maker - Building -->
     </Item>
+    <Item>
+      <GUID>1742004394</GUID>      <!-- Qilaut Maker - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004543</GUID>      <!-- Rope Maker - Building -->
+    </Item>
   </ModOp>
 
-  <!-- Agriculture -->
+  <!-- Agriculture - Open -->
   <ModOp GUID="116096,116142,116143,116144,116098,116097" Type="add" Path="/Values/ItemEffect/EffectTargets/">
     <Item>
       <GUID>1742004142</GUID>      <!-- Husky Breeder - Building -->
     </Item>
   </ModOp>
 
+  <!-- Agriculture - Closed -->
+  <ModOp GUID="116096,116098,116097" Type="add" Path="/Values/ItemEffect/EffectTargets/">
+    <Item>
+      <GUID>1742004582</GUID>      <!-- Arctic Greenhouse - Potatoes -->
+    </Item>
+    <Item>
+      <GUID>1742004585</GUID>      <!-- Arctic Greenhouse - Red Peppers -->
+    </Item>
+    <Item>
+      <GUID>1742004588</GUID>      <!-- Arctic Greenhouse - Herbs -->
+    </Item>
+  </ModOp>
+
   <!-- Cooking -->
-  <ModOp GUID="116081,116148,116151,116154,116165,116083,116082" Type="add" Path="/Values/ItemEffect/EffectTargets/">
+  <ModOp GUID="116081,116148,116083,116082" Type="add" Path="/Values/ItemEffect/EffectTargets/">
     <Item>
       <GUID>1742004148</GUID>      <!-- Labrador Tea Maker - Building -->
     </Item>
@@ -678,6 +760,19 @@
     <Item>
       <GUID>1742004403</GUID>      <!-- Fish Stew Cookhouse - Building -->
     </Item>
+    <Item>
+      <GUID>1742004589</GUID>      <!-- Fish Stew Cookhouse (Technicians) - Building -->
+    </Item>
+  </ModOp>
+
+  <!-- Special Cooking -->
+  <ModOp GUID="116165,116154" Type="add" Path="/Values/ItemEffect/EffectTargets/">
+    <Item>
+      <GUID>1742004403</GUID>      <!-- Fish Stew Cookhouse - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004589</GUID>      <!-- Fish Stew Cookhouse (Technicians) - Building -->
+    </Item>
   </ModOp>
 
   <!-- Residents -->
@@ -689,14 +784,13 @@
     </EffectTargets>
   </ModOp>
 
-  <!-- Soap -->
-  <ModOp GUID="190849,190848,190847,191319,191318,191317,191316,191315" Type="add" Path="/Values/ItemEffect/EffectTargets/">
-    <Item>
-      <GUID>1742004340</GUID>      <!-- Chemical Plant: Soap - Building -->
-    </Item>
-    <Item>
-      <GUID>1742004538</GUID>      <!-- Soap Maker - Building -->
-    </Item>
+  <!-- Incident Buildings -->
+  <ModOp GUID="116159" Type="add" Path="/Values/ItemEffect/EffectTargets/">
+    <EffectTargets>
+      <Item>
+        <GUID>1742004557</GUID>        <!-- Shaman - Building -->
+      </Item>
+    </EffectTargets>
   </ModOp>
 
   <!-- All Chemical Plants -->
@@ -747,7 +841,19 @@
       <GUID>1742004451</GUID>      <!-- Cannery - Building -->
     </Item>
     <Item>
-      <GUID>1742004525</GUID>      <!-- Oil Refinery - Building -->
+      <GUID>1742004589</GUID>      <!-- Fish Stew Cookhouse (Technicians) - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004582</GUID>      <!-- Arctic Greenhouse - Potatoes -->
+    </Item>
+    <Item>
+      <GUID>1742004585</GUID>      <!-- Arctic Greenhouse - Red Peppers -->
+    </Item>
+    <Item>
+      <GUID>1742004588</GUID>      <!-- Arctic Greenhouse - Herbs -->
+    </Item>
+    <Item>
+      <GUID>1742004515</GUID>      <!-- Oil Platform - Building -->
     </Item>
   </ModOp>
   <!-- END - ADD ITEMS TO - ALL ARCTIC PRODUCTION POOL -->
@@ -806,15 +912,6 @@
     </Item>
     <Item>
       <GUID>1742004388</GUID>      <!-- Ice Depot (NW) - Building -->
-    </Item>
-    <Item>
-      <GUID>1742004281</GUID>      <!-- Strategic Harbour (AR) - Building -->
-    </Item>
-    <Item>
-      <GUID>1742004392</GUID>      <!-- Strategic Harbour (OW) - Building -->
-    </Item>
-    <Item>
-      <GUID>1742004393</GUID>      <!-- Strategic Harbour (NW) - Building -->
     </Item>
     <Item>
       <GUID>1742004285</GUID>      <!-- Mining Institute - Building -->
@@ -877,7 +974,7 @@
       <GUID>1742004503</GUID>      <!-- Ice Coffee - Building -->
     </Item>
     <Item>
-      <GUID>1742004525</GUID>      <!-- Oil Refinery - Building -->
+      <GUID>1742004515</GUID>      <!-- Oil Platform - Building -->
     </Item>
     <Item>
       <GUID>1742004459</GUID>      <!-- Oil Depot - Building -->
@@ -894,9 +991,22 @@
     <Item>
       <GUID>1742004570</GUID>      <!-- Moulin Blanc - ProductionChain -->
     </Item>
+    <Item>
+      <GUID>1742004589</GUID>      <!-- Fish Stew Cookhouse (Technicians) - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004582</GUID>      <!-- Arctic Greenhouse - Potatoes -->
+    </Item>
+    <Item>
+      <GUID>1742004585</GUID>      <!-- Arctic Greenhouse - Red Peppers -->
+    </Item>
+    <Item>
+      <GUID>1742004588</GUID>      <!-- Arctic Greenhouse - Herbs -->
+    </Item>
+    <Item>
+      <GUID>1742004591</GUID>      <!-- Candle Maker - Building -->
+    </Item>
   </ModOp>
   <!-- START ADD TO GLOBAL MAINTENANCE POOLS -->
-
-
 </ModOps>
   

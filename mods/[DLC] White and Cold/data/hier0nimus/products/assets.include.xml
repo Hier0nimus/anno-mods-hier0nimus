@@ -13,86 +13,6 @@
   </ModOp>
   <!-- END - EXPAND PRODUCTION REGIONS EXISTING PRODUCTS -->
 
-  <!-- START - ADD PRODUCT ICE BLOCKS -->
-  <ModOp Type="addNextSibling" GUID='112708'>
-    <Asset>
-      <Template>Product</Template>
-      <Values>
-        <Standard>
-          <GUID>1742004273</GUID>
-          <Name>Ice Blocks</Name>
-          <IconFilename>data\ui\2kimages\main\3dicons\campaign\icon_iceberg.png</IconFilename>
-          <InfoDescription>1742004274</InfoDescription>
-        </Standard>
-        <Locked />
-        <Product>
-          <StorageLevel>Building</StorageLevel>
-          <ProductCategory>11702</ProductCategory>
-          <BasePrice>750</BasePrice>
-          <CivLevel>4</CivLevel>
-          <AssociatedRegion>Moderate;Colony01;Arctic;Africa</AssociatedRegion>
-          <ProductionRegions>
-            <Item>
-              <RegionType>Arctic</RegionType>
-              <RequiredDLCs>
-                <Item>
-                  <RequiredDLC>410042</RequiredDLC>
-                </Item>
-              </RequiredDLCs>
-            </Item>
-          </ProductionRegions>
-        </Product>
-        <ExpeditionAttribute>
-          <BaseMorale>5</BaseMorale>
-        </ExpeditionAttribute>
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END - ADD PRODUCT ICE BLOCKS -->
-
-  <ModOp Type="add" GUID="502051" Path="/Values/ProductList/List">
-    <Item>
-      <Product>1742004273</Product>
-    </Item>
-  </ModOp>
-
-  <!-- START ADD GOOD TO StandardOilHarborStorageList-->
-  <ModOp Type="add" GUID='120055' Path="/Values/ProductStorageList/ProductList">
-    <Item>
-      <Product>1742004273</Product>
-    </Item>
-  </ModOp>
-  <!-- END ADD GOOD TO StandardOilHarborStorageList-->
-
-  <!-- START ADD GOOD TO TECHNICIAN UNLOCK GOODS-->
-  <ModOp Type="add" GUID='502025' Path="/Values/ProductList/List">
-    <Item>
-      <Product>1742004273</Product>
-    </Item>
-  </ModOp>
-  <!-- END ADD GOOD TO TECHNICIAN GOODS-->
-
-  <!-- START - PRODUCTSTORAGELIST - ICE -->
-  <ModOp Type="addNextSibling" GUID='501995'>
-    <Asset>
-      <Template>ProductStorageList</Template>
-      <Values>
-        <Standard>
-          <GUID>1742004279</GUID>
-          <Name>Ice Storage</Name>
-        </Standard>
-        <ProductStorageList>
-          <ProductList>
-            <Item>
-              <Product>1742004273</Product>
-            </Item>
-          </ProductList>
-        </ProductStorageList>
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END - PRODUCTSTORAGELIST - ICE -->
-
   <!-- START - ADD INUIT WORKFORCE PRODUCTS -->
   <ModOp GUID='112653' Type="addNextSibling">
     <Asset>
@@ -208,48 +128,6 @@
     </Asset>
   </ModOp>
   <!-- END - ADD PRODUCT SNOW GOGGLES -->
-
-  <!-- START - ADD PRODUCT ANIMAL BONES -->
-  <ModOp Type="addNextSibling" GUID='112708'>
-    <Asset>
-      <Template>Product</Template>
-      <Values>
-        <Standard>
-          <GUID>1742004166</GUID>
-          <Name>Animal Bones</Name>
-          <IconFilename>data/graphics/icons/icon_animal_bones.png</IconFilename>
-          <InfoDescription>1742004167</InfoDescription>
-        </Standard>
-        <Locked />
-        <Product>
-          <StorageLevel>Building</StorageLevel>
-          <ProductCategory>11702</ProductCategory>
-          <BasePrice>200</BasePrice>
-          <CivLevel>1</CivLevel>
-          <AssociatedRegion>Arctic</AssociatedRegion>
-          <ProductionRegions>
-            <Item>
-              <RegionType>Arctic</RegionType>
-              <RequiredDLCs>
-                <Item>
-                  <RequiredDLC>410042</RequiredDLC>
-                </Item>
-              </RequiredDLCs>
-            </Item>
-          </ProductionRegions>
-        </Product>
-        <ExpeditionAttribute>
-          <ExpeditionAttributes>
-            <Item>
-              <Attribute>Diplomacy</Attribute>
-              <Amount>1</Amount>
-            </Item>
-          </ExpeditionAttributes>
-        </ExpeditionAttribute>
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END - ADD PRODUCT ANIMAL BONES -->
 
   <!-- START - ADD PRODUCT SNOW SHOES -->
   <ModOp Type="addNextSibling" GUID='112708'>
@@ -478,7 +356,7 @@
         <Standard>
           <GUID>1742004384</GUID>
           <Name>Ice Service</Name>
-          <IconFilename>data/graphics/icons/icon_ice.png</IconFilename>
+          <IconFilename>data/graphics/icons/icon_ice_distribution.png</IconFilename>
           <InfoDescription>1742004385</InfoDescription>
         </Standard>
         <Locked />
@@ -594,6 +472,31 @@
     </Asset>
   </ModOp>
   <!-- END - ADD PRODUCT Moulin Blanc -->
+
+  <!-- START - ADD PRODUCT Arctic Greenhouse -->
+  <ModOp Type="addNextSibling" GUID='112708'>
+    <Asset>
+      <Template>Product</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004576</GUID>
+          <Name>Arctic Greenhouse</Name>
+          <IconFilename>data\ui\2kimages\main\3dicons\icon_farmfield_module.png</IconFilename>
+          <InfoDescription>1742004578</InfoDescription>
+        </Standard>
+        <Locked />
+        <Product>
+          <ProductColor>-11415604</ProductColor>
+          <StorageLevel>Building</StorageLevel>
+          <ProductCategory>11702</ProductCategory>
+          <IsAbstract>1</IsAbstract>
+          <AssociatedRegion>Arctic</AssociatedRegion>
+        </Product>
+        <ExpeditionAttribute />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - ADD PRODUCT Arctic Greenhouse -->
 
   <!-- START - PRODUCTLIST - INUIT CONSUMER GOODS -->
   <ModOp Type="addNextSibling" GUID='501995'>
@@ -772,12 +675,6 @@
       <Product>1742004162</Product>      <!-- Snow Goggles - Product -->
     </Item>
   </ModOp>
-  <!-- Animal Bones -->
-  <ModOp Type="add" GUID="120055" Condition="!~/Values/ProductStorageList/ProductList/Item[Product='1742004166']" Path="/Values/ProductStorageList/ProductList">
-    <Item>
-      <Product>1742004166</Product>      <!-- Animal Bones - Product -->
-    </Item>
-  </ModOp>
   <!-- Snow Shoes -->
   <ModOp Type="add" GUID="120055" Condition="!~/Values/ProductStorageList/ProductList/Item[Product='1742004168']" Path="/Values/ProductStorageList/ProductList">
     <Item>
@@ -815,12 +712,6 @@
   <!-- END ADD GOOD TO ProductList - ALL CONSUMER GOODS -->
 
   <!-- START ADD GOOD TO ProductList - Agri Goods -->
-  <!-- Animal Bones -->
-  <ModOp Type="add" GUID="502039" Condition="!~/Values/ProductList/List/Item[Product='1742004166']" Path="/Values/ProductList/List">
-    <Item>
-      <Product>1742004166</Product>      <!-- Animal Bones - Product -->
-    </Item>
-  </ModOp>
   <!-- Algae -->
   <ModOp Type="add" GUID="502039" Condition="!~/Values/ProductList/List/Item[Product='1440212']" Path="/Values/ProductList/List">
     <Item>
@@ -1041,13 +932,30 @@
 
   <ModOp Condition="!@25000118//Item[BonusNeed='GUID']" Type="add" GUID='25000118' Path="/Values/ObjectmenuResidenceScene/BonusNeeds/BonusNeeds/Item[Category='2361']/Needs/">
     <Item>
-      <BonusNeed>112702</BonusNeed>      <!-- Oil Lamps -->
+      <BonusNeed>117701</BonusNeed>      <!-- Candles -->
+    </Item>
+    <Item>
+      <BonusNeed>1742004384</BonusNeed>      <!-- Ice Service -->
+    </Item>
+    <Item>
+      <BonusNeed>1742004333</BonusNeed>      <!-- Corsets -->
     </Item>
   </ModOp>
 
   <!-- ****************** END TO FOOD AND WEALTH ****************** -->
 
   <!-- ****************** END ADDING PRODUCTS TO BONUS NEEDS ****************** -->
+
+  <!-- ****************** START ADDING LIFESTYLE GOODS TO FOOD AND DRINK CATEGORY ****************** -->
+  <ModOp Condition="!@25000118//Item[BonusNeed='GUID']" Type="add" GUID='25000118' Path="/Values/ObjectmenuResidenceScene/BonusNeeds/BonusNeeds/Item[Category='2289']/Needs/">
+    <Item>
+      <BonusNeed>1010195</BonusNeed>      <!-- Potatoes -->
+    </Item>
+    <Item>
+      <BonusNeed>1010198</BonusNeed>      <!-- Red Peppers -->
+    </Item>
+  </ModOp>
+  <!-- ****************** END ADDING LIFESTYLE GOODS TO FOOD AND DRINK CATEGORY ****************** -->
 
 </ModOps>
   
