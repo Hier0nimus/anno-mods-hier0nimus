@@ -4,6 +4,28 @@
 
 <ModOps>
 
+  <!-- MILITARY ATTENTION -->
+  <Group Condition="#military_attention">
+    <ModOp Type="merge" GUID="1742004283" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>40</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>40</Amount>
+      </Item>
+    </ModOp>
+  </Group>
+  <Group Condition="#military_attention_ships">
+    <ModOp Type="merge" GUID="1742004283" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>1010017</Ingredient>        <!-- Coins -->
+        <Amount>100000</Amount>
+      </Item>
+    </ModOp>
+  </Group>
+
   <!-- HUSKY SLED REVISION KURILA -->
   <Group Condition="#arctic_husky_sled_revision_kurila">
     <ModOp Type="merge" GUID="112703,1500300885,1500300886,1500300887,1500300888,1500300898,1500300889,1500300906,1500302820,1500302822,1500302823,1500300897,112680,112714" Path="/Values/Standard">
@@ -63,6 +85,18 @@
         <IsConsideredByAI>1</IsConsideredByAI>
       </Item>
       <Item>
+        <Product>1742004333</Product>        <!-- Corsets - Product -->
+        <Amount>0.000261438</Amount>
+        <SupplyWeight>20</SupplyWeight>
+        <MoneyValue>250</MoneyValue>
+        <IsConsideredByAI>0</IsConsideredByAI>
+        <AdditionalGlobalUnlockRequirement>
+          <Population>112643</Population>
+          <MinPopulationAmount>750</MinPopulationAmount>
+        </AdditionalGlobalUnlockRequirement>
+        <IsBonusNeed>1</IsBonusNeed>
+      </Item>
+      <Item>
         <Product>1742004384</Product>        <!-- Ice Service - Product -->
         <SupplyWeight>24</SupplyWeight>
         <MoneyValue>200</MoneyValue>
@@ -116,6 +150,75 @@
     </ModOp>
   </Group>
 
+  <!-- ULTIMATE DOCKLANDS -->
+  <!-- Remove Husky Sleds -->
+  <Group Condition="#UltimateDocklandGoods">
+    <ModOp Type="remove" GUID='131764' Path="/Values/TradeContractFeature/Traders/Item[TraderName='131859']/TradeLevels/Item/Trades/Item[Good='112703']" />
+  </Group>
+
+  <!-- ARCTIC ELECTRICITY -->
+  <Group Condition="#ARC_Electricity">
+    <ModOp Type="remove" GUID='112680' Path="/Values/Electrifiable" />
+    <ModOp Type="remove" GUID='112680' Path="/Values/Industrializable" />
+    <ModOp Type="add" GUID="1742004275,1742004362,1742004368,1742004589,1742004455,1742004451,1742004582,1742004585,1742004595,1742004588,1742004515" Path="/Values">
+      <Electrifiable>
+        <ElectricityBoost>1</ElectricityBoost>
+        <ShowPowerInObjectMenu>1</ShowPowerInObjectMenu>
+      </Electrifiable>
+      <Industrializable>
+        <BoostedByIndustrialization>1</BoostedByIndustrialization>
+      </Industrializable>
+    </ModOp>
+  </Group>
+
+  <!-- NEW WORLD TOURISM -->
+  <Group Condition="#FamTaubeLexy_NewWorldHotels">
+    <!-- START - ADD ADDITIONAL NEEDS TO TOURISTS -->
+    <ModOp Type="add" GUID="601379" Path="/Values/PopulationLevel7/PopulationInputs">
+      <Item>
+        <Product>1742004384</Product>        <!-- Ice Service - Product -->
+        <SupplyWeight>10</SupplyWeight>
+        <MoneyValue>150</MoneyValue>
+        <IsConsideredByAI>0</IsConsideredByAI>
+        <AdditionalGlobalUnlockRequirement>
+          <Population>112643</Population>
+          <MinPopulationAmount>2500</MinPopulationAmount>
+        </AdditionalGlobalUnlockRequirement>
+        <RequiredBuildings>
+          <Item>
+            <RequiredBuilding>1440134300</RequiredBuilding>            <!-- NW Hotel - Building -->
+          </Item>
+        </RequiredBuildings>
+        <IsBonusNeed>1</IsBonusNeed>
+      </Item>
+    </ModOp>
+    <!-- END - ADD ADDITIONAL NEEDS TO TOURISTS -->
+  </Group>
+
+  <!-- ENBESA TOURISM -->
+  <Group Condition="#lion053_Enbesa_Tourism">
+    <!-- START - ADD ADDITIONAL NEEDS TO TOURISTS -->
+    <ModOp Type="add" GUID="601379" Path="/Values/PopulationLevel7/PopulationInputs">
+      <Item>
+        <Product>1742004384</Product>        <!-- Ice Service - Product -->
+        <SupplyWeight>10</SupplyWeight>
+        <MoneyValue>150</MoneyValue>
+        <IsConsideredByAI>0</IsConsideredByAI>
+        <AdditionalGlobalUnlockRequirement>
+          <Population>112643</Population>
+          <MinPopulationAmount>2500</MinPopulationAmount>
+        </AdditionalGlobalUnlockRequirement>
+        <RequiredBuildings>
+          <Item>
+            <RequiredBuilding>2100119466</RequiredBuilding>            <!-- EN Hotel - Building -->
+          </Item>
+        </RequiredBuildings>
+        <IsBonusNeed>1</IsBonusNeed>
+      </Item>
+    </ModOp>
+    <!-- END - ADD ADDITIONAL NEEDS TO TOURISTS -->
+  </Group>
+
   <!-- VEGETABLE INTEGRATION -->
   <Group Condition="#vegetable_integration_kurila">
     <!-- RECIPE -->
@@ -140,14 +243,13 @@
         <TextOverride>1742004595</TextOverride>
       </Text>
     </ModOp>
-
-  <!-- ADDING LIFESTYLE GOODS TO FOOD AND DRINK CATEGORY -->
-  <ModOp Condition="!@25000118//Item[BonusNeed='GUID']" Type="add" GUID='25000118' Path="/Values/ObjectmenuResidenceScene/BonusNeeds/BonusNeeds/Item[Category='2289']/Needs/">
-    <Item>
-      <BonusNeed>1500010836</BonusNeed>      <!-- Vegetables -->
-    </Item>
-  </ModOp>
-
+    <!-- ADDING LIFESTYLE GOODS TO FOOD AND DRINK CATEGORY -->
+    <ModOp Condition="!@25000118//Item[BonusNeed='GUID']" Type="add" GUID='25000118' Path="/Values/ObjectmenuResidenceScene/BonusNeeds/BonusNeeds/Item[Category='2289']/Needs/">
+      <Item>
+        <BonusNeed>1500010836</BonusNeed>        <!-- Vegetables -->
+      </Item>
+    </ModOp>
   </Group>
+
 </ModOps>
   

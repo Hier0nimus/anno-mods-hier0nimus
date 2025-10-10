@@ -508,7 +508,7 @@
               <Building>1742004376</Building>              <!-- Meat, Milk, Vegetables and Fruit Storage (OW) Storage - Building -->
             </Item>
             <Item>
-              <Building>1742004382</Building>              <!-- Ice Distribution Service - Building -->
+              <Building>1742004382</Building>              <!-- Ice Distribution Service (OW) - Building -->
             </Item>
           </BuildingList>
           <CategoryDescription>19173</CategoryDescription>
@@ -541,23 +541,48 @@
             <Item>
               <Building>1742004378</Building>              <!-- Meat, Milk, Vegetables and Fruit Storage (NW) Storage - Building -->
             </Item>
+            <Item>
+              <Building>1742004597</Building>              <!-- Ice Distribution Service (NW) - Building -->
+            </Item>
           </BuildingList>
           <CategoryDescription>19173</CategoryDescription>
         </ConstructionCategory>
-        <Text>
-          <LocaText>
-            <English>
-              <Text>Ice</Text>
-              <Status>Exported</Status>
-            </English>
-          </LocaText>
-          <LineID>35206</LineID>
-        </Text>
+        <Text/>
         <Locked/>
       </Values>
     </Asset>
   </ModOp>
   <!-- END - ICE BUILDING MENU (NW) -->
+
+  <!-- START - ICE BUILDING MENU (EN) -->
+  <ModOp Type="addNextSibling" GUID='112792'>
+    <Asset>
+      <Template>ConstructionCategory</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004599</GUID>
+          <Name>Ice Building Menu (EN)</Name>
+          <IconFilename>data\ui\2kimages\main\3dicons\campaign\icon_iceberg.png</IconFilename>
+        </Standard>
+        <ConstructionCategory>
+          <BuildingList>
+            <Item>
+              <Building>1742004596</Building>              <!-- Meat, Milk, Vegetables and Fruit Storage (EN) Storage - Building -->
+            </Item>
+            <Item>
+              <Building>1742004598</Building>              <!-- Ice Distribution Service (EN) - Building -->
+            </Item>
+          </BuildingList>
+          <CategoryDescription>19173</CategoryDescription>
+        </ConstructionCategory>
+        <Text>
+          <TextOverride>1742004391</TextOverride>
+        </Text>
+        <Locked/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - ICE BUILDING MENU (EN) -->
 
   <!-- START - PRODUCTION CHAIN - Campfire -->
   <ModOp Type="addNextSibling" GUID='15039'>
@@ -1694,7 +1719,15 @@
       <Building>1742004391</Building>      <!-- Ice Building Menu (NW) - ConstructionCategory -->
     </Item>
   </ModOp>
-  <!-- END - ADD ICE CHAIN TO ENGINEERS MENU -->
+  <!-- END - ADD ICE CHAIN TO OBRERO MENU -->
+
+  <!-- START - ADD ICE CHAIN TO ELDERS MENU -->
+  <ModOp Type="add" GUID='114554' Path="/Values/ConstructionCategory/BuildingList/">
+    <Item>
+      <Building>1742004599</Building>      <!-- Ice Building Menu (NW) - ConstructionCategory -->
+    </Item>
+  </ModOp>
+  <!-- END - ADD ICE CHAIN TO ELDERS MENU -->
 
   <!-- START - ADD BUILDINGS TO ARCTIC CONSTRUCTION MENU MATERIALS -->
   <ModOp Type="add" GUID='116342' Path="/Values/ConstructionCategory/BuildingList/">

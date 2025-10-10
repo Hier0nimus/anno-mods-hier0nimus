@@ -684,14 +684,14 @@
   <!-- END - BUILDING Chemical Plant: Lacquer -->
   <!-- END - BUILDING Chemical Plants -->
 
-  <!-- START BUILDING - Ice-distribution Service - Building -->
+  <!-- START BUILDING - Ice-distribution Service (OW) - Building -->
   <ModOp Type="addNextSibling" GUID='112680'>
     <Asset>
       <Template>BuffFactory</Template>
       <Values>
         <Standard>
           <GUID>1742004382</GUID>
-          <Name>Ice-distribution Service</Name>
+          <Name>Ice-distribution Service (OW)</Name>
           <IconFilename>data/graphics/icons/icon_ice_distribution.png</IconFilename>
           <InfoDescription>1742004383</InfoDescription>
         </Standard>
@@ -824,7 +824,293 @@
       </Values>
     </Asset>
   </ModOp>
-  <!-- END BUILDING - Ice-distribution Service - Building -->
+  <!-- END BUILDING - Ice-distribution Service (OW) - Building -->
+  <!-- START BUILDING - Ice-distribution Service (NW) - Building -->
+  <ModOp Type="addNextSibling" GUID='112680'>
+    <Asset>
+      <Template>BuffFactory</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004597</GUID>
+          <Name>Ice-distribution Service (NW)</Name>
+          <IconFilename>data/graphics/icons/icon_ice_distribution.png</IconFilename>
+          <InfoDescription>1742004383</InfoDescription>
+        </Standard>
+        <Text>
+          <TextOverride>1742004382</TextOverride>
+        </Text>
+        <Building>
+          <BuildingCategoryName>100003</BuildingCategoryName>
+          <AssociatedRegions>Colony01</AssociatedRegions>
+          <AllowChangeVariation>1</AllowChangeVariation>
+        </Building>
+        <Blocking />
+        <Mesh />
+        <BuffFactory>
+          <ProductionBuffScope>Local</ProductionBuffScope>
+          <ProvidesPublicServiceNeed>1</ProvidesPublicServiceNeed>
+          <PublicServiceData>
+            <PublicServices>
+              <Item>
+                <PublicService>1742004384</PublicService>                <!-- Ice Service - Product -->
+              </Item>
+            </PublicServices>
+            <FullSatisfactionDistance>50</FullSatisfactionDistance>
+            <NoSatisfactionDistance>60</NoSatisfactionDistance>
+          </PublicServiceData>
+        </BuffFactory>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1742004273</Product>              <!-- Ice blocks - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>3</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1500010153</Product>              <!-- Tools - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>3</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <CycleTime>120</CycleTime>
+          <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+          <ClampedMaxTransporterLogisticCost>100</ClampedMaxTransporterLogisticCost>
+        </FactoryBase>
+        <FeedbackController>
+          <NightBehavior>HideNone</NightBehavior>
+        </FeedbackController>
+        <Pausable />
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>SA_Resident_tier01_atWork</ParticipantMessageArcheType>
+        </Selection>
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+          <MaximumHitPoints>1500</MaximumHitPoints>
+          <HasRuinState>1</HasRuinState>
+          <SelfHealPerHealTick>4</SelfHealPerHealTick>
+        </Attackable>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>200</Amount>
+              <InactiveAmount>100</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1010366</Product>              <!-- Jornalero Workforce -->
+              <Amount>20</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <AmbientMoodProvider>
+          <AmbientMood>ResidenceTier1</AmbientMood>
+          <Murmur>DLC12_Cinema</Murmur>
+          <DynamicEnvironmentType>Building_Residence</DynamicEnvironmentType>
+        </AmbientMoodProvider>
+        <LogisticNode />
+        <Constructable>
+          <DestructionCategory>Production</DestructionCategory>
+        </Constructable>
+        <Locked />
+        <IncidentInfectable />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/special/ice_distribution_service/ice_distribution_service_NW_01.cfg</Filename>
+            </Item>
+          </Variations>
+          <DefaultParticipant>Resident_tier02_atWork</DefaultParticipant>
+        </Object>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>201669</Sound>
+            </Item>
+          </ActiveSounds>
+        </SoundEmitter>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>10000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>8</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>              <!-- Bricks - Product -->
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product -->
+              <Amount>15</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>              <!-- Windows - Product -->
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010202</Ingredient>              <!-- Concrete - Product -->
+              <Amount>5</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Infolayer />
+        <UpgradeList />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - Ice-distribution Service (OW) - Building -->
+  <!-- START BUILDING - Ice-distribution Service (EN) - Building -->
+  <ModOp Type="addNextSibling" GUID='112680'>
+    <Asset>
+      <Template>BuffFactory</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004598</GUID>
+          <Name>Ice-distribution Service (EN)</Name>
+          <IconFilename>data/graphics/icons/icon_ice_distribution.png</IconFilename>
+          <InfoDescription>1742004383</InfoDescription>
+        </Standard>
+        <Text>
+          <TextOverride>1742004382</TextOverride>
+        </Text>
+        <Building>
+          <BuildingCategoryName>100003</BuildingCategoryName>
+          <AssociatedRegions>Africa</AssociatedRegions>
+          <AllowChangeVariation>1</AllowChangeVariation>
+        </Building>
+        <Blocking />
+        <Mesh />
+        <BuffFactory>
+          <ProductionBuffScope>Local</ProductionBuffScope>
+          <ProvidesPublicServiceNeed>1</ProvidesPublicServiceNeed>
+          <PublicServiceData>
+            <PublicServices>
+              <Item>
+                <PublicService>1742004384</PublicService>                <!-- Ice Service - Product -->
+              </Item>
+            </PublicServices>
+            <FullSatisfactionDistance>50</FullSatisfactionDistance>
+            <NoSatisfactionDistance>60</NoSatisfactionDistance>
+          </PublicServiceData>
+        </BuffFactory>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1742004273</Product>              <!-- Ice blocks - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>3</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1500010153</Product>              <!-- Tools - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>3</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <CycleTime>120</CycleTime>
+          <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+          <ClampedMaxTransporterLogisticCost>100</ClampedMaxTransporterLogisticCost>
+        </FactoryBase>
+        <FeedbackController>
+          <NightBehavior>HideNone</NightBehavior>
+        </FeedbackController>
+        <Pausable />
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>Africa_Resident_tier01</ParticipantMessageArcheType>
+        </Selection>
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+          <MaximumHitPoints>1500</MaximumHitPoints>
+          <HasRuinState>1</HasRuinState>
+          <SelfHealPerHealTick>4</SelfHealPerHealTick>
+        </Attackable>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>200</Amount>
+              <InactiveAmount>100</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>114340</Product>              <!-- Shephard Workforce -->
+              <Amount>20</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <AmbientMoodProvider>
+          <AmbientMood>ResidenceTier1</AmbientMood>
+          <Murmur>DLC12_Cinema</Murmur>
+          <DynamicEnvironmentType>Building_Residence</DynamicEnvironmentType>
+        </AmbientMoodProvider>
+        <LogisticNode />
+        <Constructable>
+          <DestructionCategory>Production</DestructionCategory>
+        </Constructable>
+        <Locked />
+        <IncidentInfectable />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/special/ice_distribution_service/ice_distribution_service_EN_01.cfg</Filename>
+            </Item>
+          </Variations>
+          <DefaultParticipant>Africa_Resident_tier01</DefaultParticipant>
+        </Object>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>201669</Sound>
+            </Item>
+          </ActiveSounds>
+        </SoundEmitter>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>10000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>114356</Ingredient>              <!-- Wanza Wood - Product -->
+              <Amount>8</Amount>
+            </Item>
+            <Item>
+              <Ingredient>114402</Ingredient>              <!-- Mud Bricks - Product -->
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product -->
+              <Amount>15</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>              <!-- Windows - Product -->
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010202</Ingredient>              <!-- Concrete - Product -->
+              <Amount>5</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Infolayer />
+        <UpgradeList />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - Ice-distribution Service (EN) - Building -->
   <!-- START BUILDING - Trading Company -->
   <!-- START BUILDING - Trading Company - Export Dock - Animal Bones-->
   <ModOp Type="addNextSibling" GUID="24800">
