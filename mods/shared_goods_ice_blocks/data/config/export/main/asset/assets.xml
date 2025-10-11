@@ -1,6 +1,6 @@
 <!-- 
   
-  [Shared] Shared Goods - Ice Blocks - v1.0
+  [Shared] Shared Goods - Ice Blocks - v1.1
   Created by Hier0nimus
   Enjoy!
 
@@ -14,87 +14,87 @@
 
 <ModOps>
 
-<!-- START - ADD PRODUCT ICE BLOCKS -->
-<ModOp Type="addNextSibling" GUID='112708'>
-  <Asset>
-    <Template>Product</Template>
-    <Values>
-      <Standard>
-        <GUID>1742004273</GUID>
-        <Name>Ice Blocks</Name>
-        <IconFilename>data\ui\2kimages\main\3dicons\campaign\icon_iceberg.png</IconFilename>
-        <InfoDescription>1742004274</InfoDescription>
-      </Standard>
-      <Locked />
-      <Product>
-        <StorageLevel>Building</StorageLevel>
-        <ProductCategory>11702</ProductCategory>
-        <BasePrice>750</BasePrice>
-        <CivLevel>4</CivLevel>
-        <AssociatedRegion>Moderate;Colony01;Arctic;Africa</AssociatedRegion>
-        <ProductionRegions>
-          <Item>
-            <RegionType>Arctic</RegionType>
-            <RequiredDLCs>
-              <Item>
-                <RequiredDLC>410042</RequiredDLC>
-              </Item>
-            </RequiredDLCs>
-          </Item>
-        </ProductionRegions>
-      </Product>
-      <ExpeditionAttribute>
-        <BaseMorale>5</BaseMorale>
-      </ExpeditionAttribute>
-    </Values>
-  </Asset>
-</ModOp>
-<!-- END - ADD PRODUCT ICE BLOCKS -->
+  <!-- START - ADD PRODUCT ICE BLOCKS -->
+  <ModOp Type="addNextSibling" GUID='112708'>
+    <Asset>
+      <Template>Product</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004273</GUID>
+          <Name>Ice Blocks</Name>
+          <IconFilename>data\ui\2kimages\main\3dicons\campaign\icon_iceberg.png</IconFilename>
+          <InfoDescription>1742004274</InfoDescription>
+        </Standard>
+        <Locked />
+        <Product>
+          <StorageLevel>Building</StorageLevel>
+          <ProductCategory>11702</ProductCategory>
+          <BasePrice>750</BasePrice>
+          <CivLevel>4</CivLevel>
+          <AssociatedRegion>Moderate;Colony01;Arctic;Africa</AssociatedRegion>
+          <ProductionRegions>
+            <Item>
+              <RegionType>Arctic</RegionType>
+              <RequiredDLCs>
+                <Item>
+                  <RequiredDLC>410042</RequiredDLC>
+                </Item>
+              </RequiredDLCs>
+            </Item>
+          </ProductionRegions>
+        </Product>
+        <ExpeditionAttribute>
+          <BaseMorale>5</BaseMorale>
+        </ExpeditionAttribute>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - ADD PRODUCT ICE BLOCKS -->
 
-<ModOp Type="add" GUID="502051" Path="/Values/ProductList/List">
-  <Item>
-    <Product>1742004273</Product>
-  </Item>
-</ModOp>
+  <ModOp Type="add" GUID="502051" Path="/Values/ProductList/List">
+    <Item>
+      <Product>1742004273</Product>
+    </Item>
+  </ModOp>
 
-<!-- START ADD GOOD TO StandardOilHarborStorageList-->
-<ModOp Type="add" GUID='120055' Path="/Values/ProductStorageList/ProductList">
-  <Item>
-    <Product>1742004273</Product>
-  </Item>
-</ModOp>
-<!-- END ADD GOOD TO StandardOilHarborStorageList-->
+  <!-- START ADD GOOD TO StandardOilHarborStorageList-->
+  <ModOp Type="add" GUID='120055' Path="/Values/ProductStorageList/ProductList">
+    <Item>
+      <Product>1742004273</Product>
+    </Item>
+  </ModOp>
+  <!-- END ADD GOOD TO StandardOilHarborStorageList-->
 
-<!-- START ADD GOOD TO TECHNICIAN UNLOCK GOODS-->
-<ModOp Type="add" GUID='502025' Path="/Values/ProductList/List">
-  <Item>
-    <Product>1742004273</Product>
-  </Item>
-</ModOp>
-<!-- END ADD GOOD TO TECHNICIAN GOODS-->
+  <!-- START ADD GOOD TO TECHNICIAN UNLOCK GOODS-->
+  <ModOp Type="add" GUID='502025' Path="/Values/ProductList/List">
+    <Item>
+      <Product>1742004273</Product>
+    </Item>
+  </ModOp>
+  <!-- END ADD GOOD TO TECHNICIAN GOODS-->
 
-<!-- START - PRODUCTSTORAGELIST - ICE -->
-<ModOp Type="addNextSibling" GUID='501995'>
-  <Asset>
-    <Template>ProductStorageList</Template>
-    <Values>
-      <Standard>
-        <GUID>1742004279</GUID>
-        <Name>Ice Storage</Name>
-      </Standard>
-      <ProductStorageList>
-        <ProductList>
-          <Item>
-            <Product>1742004273</Product>
-          </Item>
-        </ProductList>
-      </ProductStorageList>
-    </Values>
-  </Asset>
-</ModOp>
-<!-- END - PRODUCTSTORAGELIST - ICE -->
+  <!-- START - PRODUCTSTORAGELIST - ICE -->
+  <ModOp Type="addNextSibling" GUID='501995'>
+    <Asset>
+      <Template>ProductStorageList</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004279</GUID>
+          <Name>Ice Storage</Name>
+        </Standard>
+        <ProductStorageList>
+          <ProductList>
+            <Item>
+              <Product>1742004273</Product>
+            </Item>
+          </ProductList>
+        </ProductStorageList>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - PRODUCTSTORAGELIST - ICE -->
 
- <!-- START - DOCKLANDS - ADD TO EXISTING TRADER - Qinsa Mining -->
+  <!-- START - DOCKLANDS - ADD TO EXISTING TRADER - Qinsa Mining -->
   <ModOp Type="add" GUID='131764' Path="/Values/TradeContractFeature/Traders/Item[TraderName='131815']/TradeLevels/Item[Unlock='131844']/Trades">
     <Item>
       <Level>Legendary</Level>
@@ -106,7 +106,7 @@
   <!-- START BUILDING - ICE HARVESTING SITE DUMMY - Building -->
   <ModOp Type="addNextSibling" GUID='1010284'>
     <Asset>
-      <Template>FactoryBuilding7</Template>
+      <Template>FactoryBuilding7_Arctic</Template>
       <Values>
         <Standard>
           <GUID>1742004572</GUID>
@@ -115,14 +115,14 @@
         </Standard>
         <Building>
           <BuildModeRandomRotation>180</BuildModeRandomRotation>
-          <AssociatedRegions>Moderate</AssociatedRegions>
+          <AssociatedRegions>Arctic</AssociatedRegions>
         </Building>
         <Blocking/>
         <Cost>
           <Costs>
             <Item>
               <Ingredient>1010017</Ingredient>              <!--Money-->
-              <Amount>1000</Amount>
+              <Amount>100000</Amount>
             </Item>
           </Costs>
         </Cost>
@@ -173,13 +173,12 @@
           </FactoryInputs>
           <FactoryOutputs>
             <Item>
-              <Product>1742004273</Product>    <!--Ice Blocks-->
+              <Product>1742004273</Product>              <!--Ice Blocks-->
               <Amount>1</Amount>
               <StorageAmount>10</StorageAmount>
             </Item>
           </FactoryOutputs>
           <CycleTime>60</CycleTime>
-          <MissingConnectionInfolayer>500449</MissingConnectionInfolayer>
           <IsMainFactory>1</IsMainFactory>
         </FactoryBase>
         <LogisticNode/>
@@ -190,14 +189,13 @@
         <Maintenance>
           <Maintenances>
             <Item>
-              <Product>1010017</Product>    <!--Money-->
+              <Product>1010017</Product>              <!--Money-->
               <Amount>150</Amount>
               <InactiveAmount>100</InactiveAmount>
             </Item>
             <Item>
-              <Product>112654</Product>    <!--arctic workforce 2-->
+              <Product>112654</Product>              <!--arctic workforce 2-->
               <Amount>150</Amount>
-              <ShutdownThreshold>0.2</ShutdownThreshold>
             </Item>
           </Maintenances>
         </Maintenance>
@@ -208,12 +206,10 @@
         </Attackable>
         <Pausable/>
         <IncidentInfectable />
-        <Industrializable/>
         <Culture>
           <CultureType>Culture</CultureType>
         </Culture>
         <QuestObject/>
-        <Electrifiable/>
         <EcoSystemProvider/>
       </Values>
     </Asset>

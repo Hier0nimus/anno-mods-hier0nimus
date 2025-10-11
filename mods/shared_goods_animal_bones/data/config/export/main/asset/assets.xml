@@ -1,6 +1,6 @@
 <!-- 
   
-  [Shared] Shared Goods - Animal Bones - v1.0
+  [Shared] Shared Goods - Animal Bones - v1.1
   Created by Hier0nimus
   Enjoy!
 
@@ -56,56 +56,35 @@
   </ModOp>
   <!-- END - ADD PRODUCT ANIMAL BONES -->
 
-<!-- START ADD GOOD TO ProductList - Agri Goods -->
-<!-- Animal Bones -->
-<ModOp Type="add" GUID="502039" Condition="!~/Values/ProductList/List/Item[Product='1742004166']" Path="/Values/ProductList/List">
-  <Item>
-    <Product>1742004166</Product>    <!-- Animal Bones - Product -->
-  </Item>
-</ModOp>
+  <!-- START ADD GOOD TO ProductList - Agri Goods -->
+  <!-- Animal Bones -->
+  <ModOp Type="add" GUID="502039" Condition="!~/Values/ProductList/List/Item[Product='1742004166']" Path="/Values/ProductList/List">
+    <Item>
+      <Product>1742004166</Product>      <!-- Animal Bones - Product -->
+    </Item>
+  </ModOp>
 
-<!-- START ADD GOOD TO StandardOilHarborStorageList-->
-<ModOp Type="add" GUID="120055" Condition="!~/Values/ProductStorageList/ProductList/Item[Product='1742004166']" Path="/Values/ProductStorageList/ProductList">
-  <Item>
-    <Product>1742004166</Product>    <!-- Animal Bones - Product -->
-  </Item>
-</ModOp>
-<!-- END ADD GOOD TO StandardOilHarborStorageList-->
+  <!-- START ADD GOOD TO StandardOilHarborStorageList-->
+  <ModOp Type="add" GUID="120055" Condition="!~/Values/ProductStorageList/ProductList/Item[Product='1742004166']" Path="/Values/ProductStorageList/ProductList">
+    <Item>
+      <Product>1742004166</Product>      <!-- Animal Bones - Product -->
+    </Item>
+  </ModOp>
+  <!-- END ADD GOOD TO StandardOilHarborStorageList-->
 
-<!-- START - PRODUCTSTORAGELIST - ICE -->
-<ModOp Type="addNextSibling" GUID='501995'>
-  <Asset>
-    <Template>ProductStorageList</Template>
-    <Values>
-      <Standard>
-        <GUID>1742004279</GUID>
-        <Name>Ice Storage</Name>
-      </Standard>
-      <ProductStorageList>
-        <ProductList>
-          <Item>
-            <Product>1742004273</Product>
-          </Item>
-        </ProductList>
-      </ProductStorageList>
-    </Values>
-  </Asset>
-</ModOp>
-<!-- END - PRODUCTSTORAGELIST - ICE -->
-
-<!-- START - DOCKLANDS - ADD TO EXISTING TRADER - Tattershire Farms -->
-<ModOp Type="add" GUID='131764' Path="/Values/TradeContractFeature/Traders/Item[TraderName='131819']/TradeLevels/Item[Unlock='131852']/Trades">
-  <Item>
-    <Level>Epic</Level>
-    <Good>1742004166</Good>    <!-- Animal Bones - Product -->
-  </Item>
-</ModOp>
-<!-- END - DOCKLANDS - ADD TO EXISTING TRADER - Tattershire Farms -->
+  <!-- START - DOCKLANDS - ADD TO EXISTING TRADER - Tattershire Farms -->
+  <ModOp Type="add" GUID='131764' Path="/Values/TradeContractFeature/Traders/Item[TraderName='131819']/TradeLevels/Item[Unlock='131852']/Trades">
+    <Item>
+      <Level>Epic</Level>
+      <Good>1742004166</Good>      <!-- Animal Bones - Product -->
+    </Item>
+  </ModOp>
+  <!-- END - DOCKLANDS - ADD TO EXISTING TRADER - Tattershire Farms -->
 
   <!-- START BUILDING - ANIMAL BONES PRODUCTION DUMMY - Building -->
   <ModOp Type="addNextSibling" GUID='1010284'>
     <Asset>
-      <Template>FactoryBuilding7</Template>
+      <Template>FactoryBuilding7_Arctic</Template>
       <Values>
         <Standard>
           <GUID>1742004573</GUID>
@@ -114,14 +93,14 @@
         </Standard>
         <Building>
           <BuildModeRandomRotation>180</BuildModeRandomRotation>
-          <AssociatedRegions>Moderate</AssociatedRegions>
+          <AssociatedRegions>Arctic</AssociatedRegions>
         </Building>
         <Blocking/>
         <Cost>
           <Costs>
             <Item>
               <Ingredient>1010017</Ingredient>              <!--Money-->
-              <Amount>1000</Amount>
+              <Amount>50000</Amount>
             </Item>
           </Costs>
         </Cost>
@@ -172,7 +151,7 @@
           </FactoryInputs>
           <FactoryOutputs>
             <Item>
-              <Product>1742004166</Product>    <!-- Animal Bones -->
+              <Product>1742004166</Product>              <!-- Animal Bones -->
               <Amount>1</Amount>
               <StorageAmount>10</StorageAmount>
             </Item>
@@ -189,13 +168,12 @@
         <Maintenance>
           <Maintenances>
             <Item>
-              <Product>1010017</Product>    <!--Money-->
+              <Product>1010017</Product>              <!--Money-->
               <Amount>50</Amount>
             </Item>
             <Item>
-              <Product>112654</Product>    <!--arctic workforce 2-->
+              <Product>112654</Product>              <!--arctic workforce 2-->
               <Amount>100</Amount>
-              <ShutdownThreshold>0.2</ShutdownThreshold>
             </Item>
           </Maintenances>
         </Maintenance>
@@ -206,12 +184,10 @@
         </Attackable>
         <Pausable/>
         <IncidentInfectable />
-        <Industrializable/>
         <Culture>
           <CultureType>Culture</CultureType>
         </Culture>
         <QuestObject/>
-        <Electrifiable/>
         <EcoSystemProvider/>
       </Values>
     </Asset>
