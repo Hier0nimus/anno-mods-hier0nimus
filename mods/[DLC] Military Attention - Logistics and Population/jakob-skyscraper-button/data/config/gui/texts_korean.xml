@@ -1,0 +1,39 @@
+<ModOps>
+  <!-- # Vanilla Changes -->
+  <Group>
+    <ModOp Type="replace" Path="/TextExport/Texts/Text[GUID='137489' or GUID='412']/Text">
+      <Text>층 업그레이드</Text>
+    </ModOp>
+    <ModOp Type="replace" Path="/TextExport/Texts/Text[GUID='137854']/Text">
+      <Text>주민들의 요구가 충족되었고 주민들의 수가 거주지 최대 수용량에 도달했다면 다음 빌딩 레벨로 업그레이드할 수 있습니다.</Text>
+    </ModOp>
+    <ModOp Type="replace" Path="/TextExport/Texts/Text[GUID='23914']/Text">
+      <Text>층을 추가하여 건물을 한 단계 업그레이드합니다.</Text>
+    </ModOp>
+  </Group>
+
+  <!-- # New Texts -->
+  <ModOp Type="add" Path="/TextExport/Texts">
+    <Text>
+      <GUID>1500011282</GUID>
+      <Text>주거 공간 확장</Text> <!-- [Selection Object FloorAddability UpgradeTargetGUID Text] -->
+    </Text>
+    <Text>
+      <!-- TODO translation -->
+      <GUID>1500011293</GUID>
+      <Text>Upgrade Pescatarian</Text>
+    </Text>
+    <Text>
+      <GUID>1500011289</GUID>
+      <Text>도시 인구를 늘리기 위해 추가 주거 공간을 제공하십시오.</Text>
+    </Text>
+    <Text>
+      <GUID>1500011553</GUID>
+      <Text>건물을 다음 레벨로 업그레이드합니다.</Text>
+    </Text>
+  </ModOp>
+
+  <!-- <ModOp Type="replace" Path="/TextExport/Texts/Text[GUID='163095']/Text">
+    <Text>Upgrade to [AssetData([Selection Object Upgradability UpgradeTargetGUID Text]) Text]</Text>
+  </ModOp> -->
+</ModOps>

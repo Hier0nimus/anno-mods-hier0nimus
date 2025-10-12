@@ -608,12 +608,14 @@ Adaptations to vanilla items
         <ReloadTime>7</ReloadTime>        <!-- 3 -->
         <AttackRange>60</AttackRange>        <!-- 70 -->
       </Attacker>
+      <Cost>
+        <InfluenceCostPoints>10</InfluenceCostPoints>
+      </Cost>
     </ModOp>
 
     <!-- ****************** END REBALANCING TOWERS ******************  -->
 
     <!-- ****************** START REBALANCING PROJECTILES AND DEBUFFS ******************  -->
-    <Group Condition="!#military_attention">
 
       <!-- Ship Ilness Debuff / Infected / Infecté / Infiziert -->
       <ModOp GUID='192986' Type="merge" Path="/Values">
@@ -1037,8 +1039,6 @@ Adaptations to vanilla items
           <AttackSpeedUpgrade>-30</AttackSpeedUpgrade>          <!-- -25 -->
         </AttackerUpgrade>
       </ModOp>
-
-    </Group>
 
     <!-- ****************** END REBALANCING PROJECTILES AND DEBUFFS ******************  -->
 

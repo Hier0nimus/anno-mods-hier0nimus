@@ -177,6 +177,17 @@
   </ModOp>
   <!-- END ALL ENBESA MILITARY RESIDENCES TO ItemEffectTargetPool All NW Residences -->
 
+  <!-- START ALL MILITARY RESIDENCES TO ItemEffectTargetPool All AR Residences -->
+  <ModOp GUID='1742200029' Type="add" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
+    <Item>
+      <GUID>1742100307</GUID>      <!-- Arctic Soldiers Residence - Encampment - Building -->
+    </Item>
+    <Item>
+      <GUID>1742100011</GUID>      <!-- Arctic Soldiers - Barracks - Building -->
+    </Item>
+  </ModOp>
+  <!-- END ALL ENBESA MILITARY RESIDENCES TO ItemEffectTargetPool All AR Residences -->
+
   <!-- START ALL MILITARY SERVICE BUILDINGS TO ItemEffectTargetPool -->
   <ModOp GUID='194019' Type="addNextSibling">
     <Asset>
@@ -974,6 +985,9 @@
     <Item>
       <GUID>1742100656</GUID>
     </Item>
+    <Item>
+      <GUID>1742100409</GUID>
+    </Item>
   </ModOp>
   <!-- END - ADD BUILDINGS TO ALL IRONWORKS AND FOUNDRIES -->
 
@@ -1054,6 +1068,18 @@
 
   <!-- START - ADD SOLDIERS WORKFORCE TO WORLD LEADERS BUFF -->
   <!-- OW -->
+  <ModOp GUID='191296' Type="add" Path="/Values/DistributionUpgrade/AddDeltas/">
+    <Item>
+      <Product>1742100005</Product>      <!-- Soldiers Workforce OW -->
+      <Amount>50</Amount>
+    </Item>
+  </ModOp>
+  <ModOp GUID='191301' Type="add" Path="/Values/DistributionUpgrade/AddDeltas/">
+    <Item>
+      <Product>1742100005</Product>      <!-- Soldiers Workforce OW -->
+      <Amount>100</Amount>
+    </Item>
+  </ModOp>
   <ModOp GUID='191302' Type="add" Path="/Values/DistributionUpgrade/AddDeltas/">
     <Item>
       <Product>1742100005</Product>      <!-- Soldiers Workforce OW -->
@@ -1061,6 +1087,18 @@
     </Item>
   </ModOp>
   <!-- NW -->
+  <ModOp GUID='191299' Type="add" Path="/Values/DistributionUpgrade/AddDeltas/">
+    <Item>
+      <Product>1742100317</Product>      <!-- Soldiers Workforce NW -->
+      <Amount>50</Amount>
+    </Item>
+  </ModOp>
+  <ModOp GUID='191300' Type="add" Path="/Values/DistributionUpgrade/AddDeltas/">
+    <Item>
+      <Product>1742100317</Product>      <!-- Soldiers Workforce NW -->
+      <Amount>100</Amount>
+    </Item>
+  </ModOp>
   <ModOp GUID='191303' Type="add" Path="/Values/DistributionUpgrade/AddDeltas/">
     <Item>
       <Product>1742100317</Product>      <!-- Soldiers Workforce NW -->
@@ -1084,5 +1122,82 @@
     </Item>
   </ModOp>
   <!-- START ADD TO SHARED ALL CANNERIES POOLS -->
+
+  <!-- START SKILLED LABOUR ACT -->
+  <ModOp Type="add" GUID="269397" Path="/Values/EffectContainer/Effects">
+    <Item>
+      <Effect>1742101070</Effect>      <!--Productivity - Decree 3 Buff_17-->
+    </Item>
+    <Item>
+      <Effect>1742101071</Effect>      <!--Productivity - Decree 3 Buff_18-->
+    </Item>
+    <Item>
+      <Effect>1742101072</Effect>      <!--Productivity - Decree 3 Buff_19-->
+    </Item>
+    <Item>
+      <Effect>1742101073</Effect>      <!--Productivity - Decree 3 Buff_20-->
+    </Item>
+    <Item>
+      <Effect>1742101074</Effect>      <!--Productivity - Decree 3 Buff_21-->
+    </Item>
+    <Item>
+      <Effect>1742101075</Effect>      <!--Productivity - Decree 3 Buff_22-->
+    </Item>
+  </ModOp>
+  <ModOp Type="add" GUID="25650" Path="/Values/EffectContainer/Effects">
+    <Item>
+      <Effect>1742101070</Effect>      <!--Productivity - Decree 3 Buff_17-->
+    </Item>
+    <Item>
+      <Effect>1742101071</Effect>      <!--Productivity - Decree 3 Buff_18-->
+    </Item>
+    <Item>
+      <Effect>1742101072</Effect>      <!--Productivity - Decree 3 Buff_19-->
+    </Item>
+    <Item>
+      <Effect>1742101073</Effect>      <!--Productivity - Decree 3 Buff_20-->
+    </Item>
+    <Item>
+      <Effect>1742101074</Effect>      <!--Productivity - Decree 3 Buff_21-->
+    </Item>
+    <Item>
+      <Effect>1742101075</Effect>      <!--Productivity - Decree 3 Buff_22-->
+    </Item>
+  </ModOp>
+  <!-- Infotip -->
+  <ModOp Type="add" GUID="269399" Path="/Values/FactoryUpgrade/AdditionalOutput">
+    <Item>
+      <Product>1742100293</Product>      <!-- Gunpowder-->
+      <AdditionalOutputCycle>3</AdditionalOutputCycle>
+      <Amount>1</Amount>
+    </Item>
+    <Item>
+      <Product>1742100435</Product>      <!-- Lead -->
+      <AdditionalOutputCycle>3</AdditionalOutputCycle>
+      <Amount>1</Amount>
+    </Item>
+    <Item>
+      <Product>1742100471</Product>      <!-- Basic Weapons -->
+      <AdditionalOutputCycle>3</AdditionalOutputCycle>
+      <Amount>1</Amount>
+    </Item>
+    <Item>
+      <Product>1742100203</Product>      <!-- Basic Ammunition -->
+      <AdditionalOutputCycle>3</AdditionalOutputCycle>
+      <Amount>1</Amount>
+    </Item>
+    <Item>
+      <Product>1742100248</Product>      <!-- Shell Ammunition -->
+      <AdditionalOutputCycle>3</AdditionalOutputCycle>
+      <Amount>1</Amount>
+    </Item>
+    <Item>
+      <Product>846</Product>      <!-- Bombs Ammunition -->
+      <AdditionalOutputCycle>3</AdditionalOutputCycle>
+      <Amount>1</Amount>
+    </Item>
+  </ModOp>
+  <!-- START SKILLED LABOUR ACT -->
+
 
 </ModOps>
