@@ -2735,11 +2735,11 @@
                     <CycleTime>90</CycleTime>
                 </FactoryBase>
                 <Powerplant>
-                    <IndustrializationDistance>20</IndustrializationDistance>
+                    <IndustrializationDistance>22</IndustrializationDistance>
                 </Powerplant>
                 <PublicService>
-                    <FullSatisfactionDistance>20</FullSatisfactionDistance>
-                    <NoSatisfactionDistance>20</NoSatisfactionDistance>
+                    <FullSatisfactionDistance>22</FullSatisfactionDistance>
+                    <NoSatisfactionDistance>22</NoSatisfactionDistance>
                     <PublicServiceOutputs>
                         <Item>
                             <Product>1010354</Product>
@@ -2751,6 +2751,151 @@
         </Asset>
     </ModOp>
     <!-- END BUILDING - Nate's Arctic Windmill -->
+
+    <!-- START BUILDING - Nate's Large Arctic Windmill -->
+    <ModOp GUID='100780' Type="addNextSibling">
+        <Asset>
+            <Template>ArcticPowerplantWithRadius</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004600</GUID>
+                    <Name>Nate's Large Arctic Windmill</Name>
+                    <IconFilename>data/graphics/icons/icon_nates_windmill_large.png</IconFilename>
+                    <InfoDescription>1742004422</InfoDescription>
+                </Standard>
+                <Blocking />
+                <Building>
+                    <BuildingCategoryName>11169</BuildingCategoryName>                    <!-- power plant -->
+                    <BuildModeRandomRotation>90</BuildModeRandomRotation>
+                    <AssociatedRegions>Arctic</AssociatedRegions>
+                    <SecondPartyRelevant>0</SecondPartyRelevant>
+                </Building>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>
+                            <Amount>30000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010218</Ingredient>
+                            <Amount>40</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>838</Ingredient>                            <!--Aluminium-->
+                            <Amount>30</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010202</Ingredient>                            <!--concrete-->
+                            <Amount>15</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010210</Ingredient>
+                            <Amount>25</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>6280</Ingredient>
+                            <Amount>20</Amount>
+                        </Item>
+                    </Costs>
+                    <InfluenceCostType>ZooModule</InfluenceCostType>
+                    <InfluenceCostPoints>1</InfluenceCostPoints>
+                </Cost>
+                <Maintenance>
+                    <IncomeCategory>ProductionBuildings</IncomeCategory>
+                    <Maintenances>
+                        <Item>
+                            <Product>1010017</Product>                            <!--Money-->
+                            <Amount>400</Amount>
+                        </Item>
+                        <Item>
+                            <Product>112654</Product>                            <!--Technicians Workforce-->
+                            <Amount>40</Amount>
+                        </Item>
+                    </Maintenances>
+                </Maintenance>
+                <Selection>
+                    <GUIType>Production</GUIType>
+                </Selection>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/buildings/public/nates_windmill/nates_arctic_windmill_large_01.cfg</Filename>
+                        </Item>
+                    </Variations>
+                </Object>
+                <Constructable />
+                <Mesh />
+                <SoundEmitter>
+                    <ActiveSounds>
+                        <Item>
+                            <Sound>235839</Sound>
+                        </Item>
+                    </ActiveSounds>
+                    <DestroySounds>
+                        <Item>
+                            <Sound>9818756</Sound>
+                        </Item>
+                    </DestroySounds>
+                </SoundEmitter>
+                <Locked />
+                <FeedbackController />
+                <AmbientMoodProvider />
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>4000</MaximumHitPoints>
+                    <SelfHealPerHealTick>4</SelfHealPerHealTick>
+                </Attackable>
+                <Pausable />
+                <IncidentInfectable>
+                    <Infectable>
+                        <Fire>
+                            <Base>1</Base>
+                        </Fire>
+                    </Infectable>
+                </IncidentInfectable>
+                <Infolayer />
+                <LogisticNode>
+                    <TransporterCountMax>1</TransporterCountMax>
+                    <PathLayers>Street</PathLayers>
+                </LogisticNode>
+                <ItemContainer>
+                    <SocketCount>0</SocketCount>
+                    <SocketScopeRadiusOverlapCategory>None</SocketScopeRadiusOverlapCategory>
+                    <SocketScope>Radius</SocketScope>
+                    <SocketScopeRadius>0</SocketScopeRadius>
+                </ItemContainer>
+                <FactoryBase>
+                    <FactoryInputs>
+                        <Item>
+                            <Product>5390</Product>                            <!-- Motor -->
+                            <Amount>1</Amount>
+                            <StorageAmount>4</StorageAmount>
+                        </Item>
+                        <Item>
+                            <Product>1414</Product>                            <!-- Industrial Lubricant -->
+                            <Amount>1</Amount>
+                            <StorageAmount>4</StorageAmount>
+                        </Item>
+                    </FactoryInputs>
+                    <CycleTime>120</CycleTime>
+                </FactoryBase>
+                <Powerplant>
+                    <IndustrializationDistance>44</IndustrializationDistance>
+                </Powerplant>
+                <PublicService>
+                    <FullSatisfactionDistance>44</FullSatisfactionDistance>
+                    <NoSatisfactionDistance>44</NoSatisfactionDistance>
+                    <PublicServiceOutputs>
+                        <Item>
+                            <Product>1010354</Product>
+                        </Item>
+                    </PublicServiceOutputs>
+                    <FunctionDescription>1742004423</FunctionDescription>
+                </PublicService>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END BUILDING - Nate's Large Arctic Windmill -->
 
     <!-- START BUILDING - Fish Stew Cookhouse (Technicians) -->
     <ModOp GUID='100780' Type="addNextSibling">
