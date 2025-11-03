@@ -1390,15 +1390,15 @@
   </ModOp>
 
   <!-- START ADD POPULATION TIERS TO GLOBAL POPULATION -->
-  <ModOp Type="addNextSibling" GUID="2001271" Path="/Values/GUIConfig/PopulationLevelList/Item[PopulationLevel='15000006']">
+  <ModOp Type="add" GUID="2001271" Path="/Values/GUIConfig/PopulationLevelList/">
     <Item>
       <PopulationLevel>1742100000</PopulationLevel>      <!-- Soldiers (OW) - PopulationLevel7 -->
     </Item>
     <Item>
-      <PopulationLevel>1742100306</PopulationLevel>      <!-- Arctic Soldiers - PopulationLevel7 -->
+      <PopulationLevel>1742100315</PopulationLevel>      <!-- New World Soldiers - PopulationLevel7 -->
     </Item>
     <Item>
-      <PopulationLevel>1742100315</PopulationLevel>      <!-- New World Soldiers - PopulationLevel7 -->
+      <PopulationLevel>1742100306</PopulationLevel>      <!-- Arctic Soldiers - PopulationLevel7 -->
     </Item>
     <Item>
       <PopulationLevel>1742100316</PopulationLevel>      <!-- Enbesa Soldiers - PopulationLevel7 -->
@@ -1413,12 +1413,12 @@
       <ProductList>1742100015</ProductList>      <!-- Soldiers (OW) ProductList -->
     </Item>
     <Item>
-      <Keyword>1742100306</Keyword>      <!-- Arctic Soldiers - PopulationLevel7 -->
-      <ProductList>1742100345</ProductList>      <!-- Soldiers (AR) - ProductList -->
-    </Item>
-    <Item>
       <Keyword>1742100315</Keyword>      <!-- New World Soldiers - PopulationLevel7 -->
       <ProductList>1742100346</ProductList>      <!-- Soldiers (NW) - ProductList -->
+    </Item>
+    <Item>
+      <Keyword>1742100306</Keyword>      <!-- Arctic Soldiers - PopulationLevel7 -->
+      <ProductList>1742100345</ProductList>      <!-- Soldiers (AR) - ProductList -->
     </Item>
     <Item>
       <Keyword>1742100316</Keyword>      <!-- Enbesa Soldiers - PopulationLevel7 -->
@@ -1434,11 +1434,11 @@
       <AssignedConfig>502287</AssignedConfig>
     </Item>
     <Item>
-      <PopulationLevel>1742100306</PopulationLevel>      <!-- Arctic Soldiers - PopulationLevel7 -->
+      <PopulationLevel>1742100315</PopulationLevel>      <!-- New World Soldiers - PopulationLevel7 -->
       <AssignedConfig>502287</AssignedConfig>
     </Item>
     <Item>
-      <PopulationLevel>1742100315</PopulationLevel>      <!-- New World Soldiers - PopulationLevel7 -->
+      <PopulationLevel>1742100306</PopulationLevel>      <!-- Arctic Soldiers - PopulationLevel7 -->
       <AssignedConfig>502287</AssignedConfig>
     </Item>
     <Item>
@@ -1454,10 +1454,10 @@
       <Asset>1742100005</Asset>      <!-- Soldiers Workforce - Product -->
     </Item>
     <Item>
-      <Asset>1742100309</Asset>      <!-- Arctic Soldiers Workforce - Product -->
+      <Asset>1742100317</Asset>      <!-- New World Soldiers Workforce - Product -->
     </Item>
     <Item>
-      <Asset>1742100317</Asset>      <!-- New World Soldiers Workforce - Product -->
+      <Asset>1742100309</Asset>      <!-- Arctic Soldiers Workforce - Product -->
     </Item>
     <Item>
       <Asset>1742100318</Asset>      <!-- Enbesa Soldiers Workforce - Product -->
@@ -1726,25 +1726,25 @@
 
   <!-- START ADD WORKFORCE TIERS TO ISLANDBARSCENE -->
   <!-- OW -->
-  <ModOp Type="addNextSibling" GUID="25000121" Path="/Values/IslandBarScene/WorkforceOrder/Item[WorkforceEntry='132723']">
+  <ModOp Type="add" GUID="25000121" Path="/Values/IslandBarScene/WorkforceOrder/">
     <Item>
       <WorkforceEntry>1742100005</WorkforceEntry>      <!-- Soldiers Workforce -->
     </Item>
   </ModOp>
-  <!-- AR -->
-  <ModOp Type="addNextSibling" GUID="25000121" Path="/Values/IslandBarScene/WorkforceOrder/Item[WorkforceEntry='112654']">
-    <Item>
-      <WorkforceEntry>1742100309</WorkforceEntry>      <!-- Arctic Soldiers Workforce -->
-    </Item>
-  </ModOp>
   <!-- NW -->
-  <ModOp Type="addNextSibling" GUID="25000121" Path="/Values/IslandBarScene/WorkforceOrder/Item[WorkforceEntry='5406']">
+  <ModOp Type="add" GUID="25000121" Path="/Values/IslandBarScene/WorkforceOrder/">
     <Item>
       <WorkforceEntry>1742100317</WorkforceEntry>      <!-- New World Soldiers Workforce -->
     </Item>
   </ModOp>
+  <!-- AR -->
+  <ModOp Type="add" GUID="25000121" Path="/Values/IslandBarScene/WorkforceOrder/">
+    <Item>
+      <WorkforceEntry>1742100309</WorkforceEntry>      <!-- Arctic Soldiers Workforce -->
+    </Item>
+  </ModOp>
   <!-- EN -->
-  <ModOp Type="addNextSibling" GUID="25000121" Path="/Values/IslandBarScene/WorkforceOrder/Item[WorkforceEntry='114341']">
+  <ModOp Type="add" GUID="25000121" Path="/Values/IslandBarScene/WorkforceOrder/">
     <Item>
       <WorkforceEntry>1742100318</WorkforceEntry>      <!-- Enbesa Soldiers Workforce -->
     </Item>

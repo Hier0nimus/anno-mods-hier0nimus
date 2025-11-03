@@ -136,7 +136,7 @@ Fixed norm materials and other graphic mistakes for
 
 ### v1.10
 - Update for Simplified Chinese translation
-- Added new item Sammy Moray - replacing arctic gas with ethanol for Gas Ammunition depots and Gas-Fired Power Plant. Added compatibility for mod "Additional Power Plants"
+- Added new item Sammy Moray - replacing arctic gas with ethanol for Fire Ammunition depots and Gas-Fired Power Plant. Added compatibility for mod "Additional Power Plants"
 - Fixes to All ammunition depots pools
 - Cleanup for product storage lists
 
@@ -540,7 +540,7 @@ Adds a new soldiers population tier as extra workforce in every region.
 | -------- | ------- |
 | ![Small Ammunition Depot](./data/graphics/icons/icon_basic_ammunition_depot.png) | Small Ammunition Depot (Basic) (Old World, New World, Enbesa, Arctic)  |
 | ![Small Ammunition Depot](./data/graphics/icons/icon_shell_ammunition_depot.png) | Small Ammunition Depot (Shell) (Old World, New World, Enbesa, Arctic)  |
-| ![Small Ammunition Depot](./data/graphics/icons/icon_gas_ammunition_depot.png) | Small Ammunition Depot (Gas) (Old World, New World, Enbesa, Arctic)  |
+| ![Small Ammunition Depot](./data/graphics/icons/icon_fire_ammunition_depot.png) | Small Ammunition Depot (Gas) (Old World, New World, Enbesa, Arctic)  |
 | ![Small Ammunition Depot](./data/graphics/icons/icon_bombs_ammunition_depot.png) | Small Ammunition Depot (Bombs) (Old World, New World, Enbesa, Arctic)  |
 | ![Large Ammunition Depot](./data/graphics/icons/icon_ammunition_depot_large.png) | Large Ammunition Depot (Old World, New World, Enbesa, Arctic)  |
 | ![Small Military Warehouse](./data/graphics/icons/icon_military_warehouse.png) | Small Military Warehouse  |
@@ -605,7 +605,7 @@ AI are also able to build those so they are able to build ships with the additio
 
 ![Small Ammunition Depot](./data/graphics/icons/icon_basic_ammunition_depot.png) 
 ![Small Ammunition Depot](./data/graphics/icons/icon_shell_ammunition_depot.png) 
-![Small Ammunition Depot](./data/graphics/icons/icon_gas_ammunition_depot.png) 
+![Small Ammunition Depot](./data/graphics/icons/icon_fire_ammunition_depot.png) 
 ![Small Ammunition Depot](./data/graphics/icons/icon_bombs_ammunition_depot.png) 
 ![Large Ammunition Depot](./data/graphics/icons/icon_ammunition_depot_large.png)
 
