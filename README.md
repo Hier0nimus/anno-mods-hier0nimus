@@ -1,10 +1,18 @@
 # Hier0nimus Mod Collection
 
+## White and Cold
+
+Dive more in depth into the Arctic waters with the mod White and Cold! A mod centered around a new Inuit population tier and expanding the existing Explorer and Technician population tiers with more mining options and new resources to gather. It also includes a new Inuit population tier for the Arctic. Apart from changes to the Arctic there are some additional things to explore in the other regions like ice trading.
+
+Current version 1.1 (04/11/2025)
+- Download on Mod.io: https://mod.io/g/anno-1800/m/white-and-cold
+- Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
+
 ## The perfect specialists and items pack
 
 The perfect specialists and items pack is a set of 172 specialists and items for all regions. Some buildings or items did not got the love they deserve and did not recieve a specialist or legendary treat. This mod wants to change this by giving almost every building and item a specialist or legendary variant.
 
-Current version 19.4 (10/07/2025)
+Current version 19.7 (04/11/2025)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/the-perfect-specialists-items-pack
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
@@ -17,7 +25,7 @@ You will need ALL DLC's to play this mod. There are new goods in every region fr
 
 Explore the world of musical instruments with new production chains and a lategame Music hall to boost your New world population.
 
-Current version 1.18 (23/05/2025)
+Current version 1.20 (12/10/2025)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/music-to-my-ears
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
@@ -25,7 +33,7 @@ Current version 1.18 (23/05/2025)
 
 Centered around military infrastructure and adding new military residence tiers for all regions with a focus on the Old World.
 
-Current version 1.28 (10/07/2025)
+Current version 1.31 (04/11/2025)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/military-attention
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
@@ -33,7 +41,7 @@ Current version 1.28 (10/07/2025)
 
 Additional mod for Military Attention that focuses on new ships and ship balancing. Can be used as a standalone.
 
-Current version 1.34 (10/07/2025)
+Current version 1.35 (04/11/2025)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/military-attention-ships
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
@@ -41,7 +49,7 @@ Current version 1.34 (10/07/2025)
 
 Additional mod for Military Attention that focuses on rebalancing the pirates and adding additional pirates mechanics like a new population.
 
-Current version 1.14 (10/07/2025)
+Current version 1.15 (04/11/2025)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/military-attention-pirates
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
@@ -49,7 +57,7 @@ Current version 1.14 (10/07/2025)
 
 Additional mod for Military Attention that focuses on rebalancing the AI behaviour and strength.
 
-Current version 1.8 (10/07/2025)
+Current version 1.9 (12/10/2025)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/military-attention-legendary-ai
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
@@ -91,6 +99,14 @@ Mine coal and iron resources right from the ground in the Old World and New Worl
 
 Current version 1.2 (10/05/2025)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/open-pit-mines
+- Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
+
+## Work Horse Stables
+
+Boost forestery production, farming and mining with horsepower.
+
+Current version 1.0 (04/11/2025)
+- Download on Mod.io: https://mod.io/g/anno-1800/m/work-horse-stables
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
 ## Shared mods
