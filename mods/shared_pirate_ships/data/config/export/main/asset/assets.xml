@@ -1,11 +1,13 @@
 <!-- 
   
-  [Shared] Shared Pirate Ships - v1.2
+  [Shared] Shared Pirate Ships - v1.3
   Created by Hier0nimus 
   Enjoy!
 
   SHIPS
   ***************************
+  1742102162 - Pirate Fire Boat (Pirates) - Warship
+  1742102163 - Pirate Fire Boat (Pirates) - Warship - Description
   1742102008 - Jolly Roger (Pirates) - Warship
   1742102009 - Jolly Roger (Pirates) - Warship - Description
   1742102068 - Pirate Flame Monitor (Pirates) - Warship
@@ -33,6 +35,8 @@
   1742102095 - Pirate Hawk - WarAirShip - Description
   1742102096 - Pirate Black Eagle - WarAirShip
   1742102097 - Pirate Black Eagle - WarAirShip - Description
+  1742102160 - Pirate Falcon - WarAirShip
+  1742102161 - Pirate Falcon - WarAirShip - Description
 
   MINIMAP
   ***************************
@@ -50,7 +54,7 @@
       <Values>
         <Standard>
           <GUID>1742102094</GUID>
-          <Name>Pirate Hawk</Name>
+          <Name>Pirate Hawk (Pirates)</Name>
           <IconFilename>data/graphics/icons/icon_hawk_pirate.png</IconFilename>
           <InfoDescription>1742102095</InfoDescription>
         </Standard>
@@ -144,7 +148,7 @@
       <Values>
         <Standard>
           <GUID>1742102096</GUID>
-          <Name>Pirate Black Eagle</Name>
+          <Name>Pirate Black Eagle (Pirates)</Name>
           <IconFilename>data/graphics/icons/icon_eagle_pirate.png</IconFilename>
           <InfoDescription>1742102097</InfoDescription>
         </Standard>
@@ -227,6 +231,201 @@
     </Asset>
   </ModOp>
   <!-- END PIRATE BLACK EAGLE -->
+
+  <!-- START AIRSHIP - PIRATE FALCON -->
+  <ModOp Type="addNextSibling" GUID='1742102094'>
+    <Asset>
+      <BaseAssetGUID>1742102094</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742102160</GUID>
+          <Name>Pirate Falcon (Pirates)</Name>
+          <InfoDescription>1742102161</InfoDescription>
+        </Standard>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/vehicle/pirate_airship/pirate_hawk_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Pirate Falcon</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+        </Text>
+        <Attackable>
+          <MaximumHitPoints>1000</MaximumHitPoints>
+        </Attackable>
+        <Attacker>
+          <BaseDamage>80</BaseDamage>
+          <ReloadTime>7</ReloadTime>
+          <AttackRange>40</AttackRange>
+          <LineOfSightRange>60</LineOfSightRange>
+          <Turrets>
+            <Item>
+              <TurnSpan>140</TurnSpan>
+              <TurretCfg>data/graphics/campaign/vehicle/pyro_ship_02/pyro_ship_02_turret_front.cfg</TurretCfg>
+            </Item>
+          </Turrets>
+          <ProjectileAsset>1892</ProjectileAsset>          <!--Flamethrower_Small_Shot_Monitor-->
+          <MuzzleEffectAssets>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>0</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>WarShip</TemplateName>
+                    <Index>0</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+              <MuzzleEffectAsset>102404</MuzzleEffectAsset>              <!--ShotFlamethrower01-->
+            </Item>
+          </MuzzleEffectAssets>
+          <AccuracyBase>1</AccuracyBase>
+          <AccuracyIncreaseOverDistance>60</AccuracyIncreaseOverDistance>
+          <AccuracySpeedDecay>20</AccuracySpeedDecay>
+          <AccuracyByDistance>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>0</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>WarShip</TemplateName>
+                    <Index>0</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+            </Item>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>1</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>WarShip</TemplateName>
+                    <Index>1</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+              <AccuracyByDistancePair>
+                <CorrespondingAccuracy>100</CorrespondingAccuracy>
+              </AccuracyByDistancePair>
+            </Item>
+          </AccuracyByDistance>
+          <WeaponIcon>2190</WeaponIcon>          <!--Flamethrower-->
+        </Attacker>
+        <Bombarder>
+          <Shafts>1</Shafts>
+        </Bombarder>
+        <Cost/>
+        <ShipMaintenance/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END AIRSHIP - PIRATE FALCON -->
+
+  <!-- START SHIP - PIRATE FIRE BOAT -->
+  <ModOp Type="addNextSibling" GUID='102420'>
+    <Asset>
+      <BaseAssetGUID>102420</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742102162</GUID>
+          <Name>Pirate Fire Boat (Pirates)</Name>
+          <InfoDescription>1742102163</InfoDescription>
+        </Standard>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/vehicle/pirate_fire_boat/pirate_fire_boat_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Pirate Fire boat (Pirates)</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+        </Text>
+        <Attackable>
+          <MaximumHitPoints>500</MaximumHitPoints>
+        </Attackable>
+        <Attacker>
+          <ShootingTracking>Front</ShootingTracking>
+          <BaseDamage>30</BaseDamage>
+          <ReloadTime>7</ReloadTime>
+          <AttackRange>22</AttackRange>
+          <LineOfSightRange>100</LineOfSightRange>
+          <ProjectileAsset>1892</ProjectileAsset>          <!--Flamethrower_Small_Shot_Monitor-->
+          <MuzzleEffectAssets>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>0</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>WarShip</TemplateName>
+                    <Index>0</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+              <MuzzleEffectAsset>102404</MuzzleEffectAsset>              <!--ShotFlamethrower01-->
+            </Item>
+          </MuzzleEffectAssets>
+          <AccuracyBase>1</AccuracyBase>
+          <AccuracyIncreaseOverDistance>60</AccuracyIncreaseOverDistance>
+          <AccuracySpeedDecay>20</AccuracySpeedDecay>
+          <AccuracyByDistance>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>0</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>WarShip</TemplateName>
+                    <Index>0</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+            </Item>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>1</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>WarShip</TemplateName>
+                    <Index>1</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+              <AccuracyByDistancePair>
+                <CorrespondingAccuracy>100</CorrespondingAccuracy>
+              </AccuracyByDistancePair>
+            </Item>
+          </AccuracyByDistance>
+          <WeaponIcon>2190</WeaponIcon>          <!--Flamethrower-->
+        </Attacker>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>50000</Amount>
+            </Item>
+          </Costs>
+          <InfluenceCostType>WarShip</InfluenceCostType>
+          <InfluenceCostPoints>5</InfluenceCostPoints>
+        </Cost>
+        <ShipMaintenance>
+          <Maintenance>90</Maintenance>
+        </ShipMaintenance>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END SHIP - PIRATE FIRE BOAT -->
 
   <!-- START JOLLY ROGER -->
   <ModOp Type="addNextSibling" GUID='102419'>
@@ -1045,7 +1244,7 @@
         </Object>
         <Walking>
           <ReservationLength>20</ReservationLength>          <!-- Battle Cruiser 16 -->
-          <ReservationWidth>8</ReservationWidth>          <!-- Battle Cruiser 6 -->
+          <ReservationWidth>6</ReservationWidth>          <!-- Battle Cruiser 6 -->
           <TurnAroundRadius>22</TurnAroundRadius>          <!-- Battle Cruiser 8 - 18 -->
           <Acceleration>0.4</Acceleration>          <!-- Battle Cruiser 0.75 - 0.45 -->
           <Deceleration>0.4</Deceleration>          <!-- Battle Cruiser 1 - 0.5 -->
@@ -1073,8 +1272,8 @@
           <PriorityShipList>1</PriorityShipList>          <!-- Battle Cruiser 1 -->
         </CommandQueue>
         <Drifting>
-          <Length>18</Length>          <!-- Battle Cruiser 10 -->
-          <Width>8</Width>          <!-- Battle Cruiser 1.75 -->
+          <Length>11</Length>          <!-- Battle Cruiser 10 -->
+          <Width>3.5</Width>          <!-- Battle Cruiser 1.75 -->
         </Drifting>
         <UpgradeList/>
         <Attackable>
@@ -1283,7 +1482,7 @@
         </Object>
         <Walking>
           <ReservationLength>20</ReservationLength>          <!-- Battle Cruiser 16 -->
-          <ReservationWidth>8</ReservationWidth>          <!-- Battle Cruiser 6 -->
+          <ReservationWidth>6</ReservationWidth>          <!-- Battle Cruiser 6 -->
           <TurnAroundRadius>22</TurnAroundRadius>          <!-- Battle Cruiser 8 - 18 -->
           <Acceleration>0.4</Acceleration>          <!-- Battle Cruiser 0.75 - 0.45 -->
           <Deceleration>0.4</Deceleration>          <!-- Battle Cruiser 1 - 0.5 -->
@@ -1312,7 +1511,7 @@
           <PriorityShipList>1</PriorityShipList>          <!-- Battle Cruiser 1 -->
         </CommandQueue>
         <Drifting>
-          <Length>18</Length>          <!-- Battle Cruiser 10 -->
+          <Length>11</Length>          <!-- Battle Cruiser 10 -->
           <Width>3.5</Width>          <!-- Battle Cruiser 1.75 -->
         </Drifting>
         <UpgradeList/>
@@ -1532,8 +1731,8 @@
         </Selection>
         <Walking>
           <ShortenSailsAfter>0</ShortenSailsAfter>
-          <ReservationLength>26</ReservationLength>
-          <ReservationWidth>10</ReservationWidth>
+          <ReservationLength>24</ReservationLength>
+          <ReservationWidth>8</ReservationWidth>
           <PathPlannerLayer>Water</PathPlannerLayer>
           <ExpensiveDirSmoothing>1</ExpensiveDirSmoothing>
           <TurnAroundRadius>30</TurnAroundRadius>
@@ -1570,8 +1769,8 @@
         </CommandQueue>
         <Drifting>
           <OverrideAssetWidthAndLength>0</OverrideAssetWidthAndLength>
-          <Length>24</Length>          <!-- Heavy Battle Cruiser 16 -->
-          <Width>6</Width>          <!-- Battle Cruiser 6 -->
+          <Length>22</Length>          <!-- Heavy Battle Cruiser 11 -->
+          <Width>5</Width>          <!-- Battle Cruiser 6 -->
           <FactorMovement>1</FactorMovement>
           <FactorRotation>0.65</FactorRotation>
         </Drifting>
@@ -1812,8 +2011,8 @@
           </Variations>
         </Object>
         <Walking>
-          <ReservationLength>26</ReservationLength>          <!-- SOTL 9 - DUKE 12 -->
-          <ReservationWidth>10</ReservationWidth>          <!-- SOTL 5 - DUKE 6.5 -->
+          <ReservationLength>24</ReservationLength>          <!-- SOTL 9 - DUKE 12 -->
+          <ReservationWidth>7</ReservationWidth>          <!-- SOTL 5 - DUKE 6.5 -->
           <TurnAroundRadius>32</TurnAroundRadius>          <!-- SOTL 8 - DUKE 10 -->
           <Acceleration>0.3</Acceleration>
           <Deceleration>0.3</Deceleration>
@@ -1839,8 +2038,8 @@
         </CommandQueue>
         <Drifting>
           <OverrideAssetWidthAndLength>0</OverrideAssetWidthAndLength>
-          <Length>226</Length>          <!-- SOTL 7 - DUKE 9 -->
-          <Width>6.5</Width>          <!-- SOTL 2 - DUKE 4 -->
+          <Length>22</Length>          <!-- SOTL 7 - DUKE 9 -->
+          <Width>5</Width>          <!-- SOTL 2 - DUKE 4 -->
         </Drifting>
         <UpgradeList/>
         <Attackable>
@@ -2055,6 +2254,9 @@
   <!-- START - ALL PIRATE/MLITARY SHIPS - PlayerCounterContextPool -->
   <ModOp Type="add" GUID="700138" Path="/Values/PlayerCounterContextPool/Contexts/">
     <Item>
+      <Asset>1742102162</Asset>      <!--Pirate Fire Boat (Pirates) - Warship-->
+    </Item>
+    <Item>
       <Asset>1742102008</Asset>      <!--Jolly Roger (Pirates) - Warship-->
     </Item>
     <Item>
@@ -2082,6 +2284,9 @@
       <Asset>1742102094</Asset>      <!-- Pirate Hawk - WarAirShip -->
     </Item>
     <Item>
+      <Asset>1742102160</Asset>      <!-- Pirate Falcon - WarAirShip -->
+    </Item>
+    <Item>
       <Asset>1742102096</Asset>      <!-- Pirate Black Eagle - WarAirShip -->
     </Item>
     <Item>
@@ -2095,6 +2300,9 @@
 
   <!-- START - ALL SHIPS - ItemEffectTargetPool-->
   <ModOp Type="add" GUID="191454" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
+    <Item>
+      <Asset>1742102162</Asset>      <!--Pirate Fire Boat (Pirates) - Warship-->
+    </Item>
     <Item>
       <GUID>1742102008</GUID>      <!--Jolly Roger (Pirates) - Warship-->
     </Item>
@@ -2123,6 +2331,9 @@
       <GUID>1742102094</GUID>      <!-- Pirate Hawk - WarAirShip -->
     </Item>
     <Item>
+      <Asset>1742102160</Asset>      <!-- Pirate Falcon - WarAirShip -->
+    </Item>
+    <Item>
       <GUID>1742102096</GUID>      <!-- Pirate Black Eagle - WarAirShip -->
     </Item>
     <Item>
@@ -2136,6 +2347,9 @@
 
   <!-- START - ALL SAILING SHIPS - ItemEffectTargetPool-->
   <ModOp Type="add" GUID="191455" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
+    <Item>
+      <Asset>1742102162</Asset>      <!--Pirate Fire Boat (Pirates) - Warship-->
+    </Item>
     <Item>
       <GUID>1742102008</GUID>      <!--Jolly Roger (Pirates) - Warship-->
     </Item>
@@ -2177,6 +2391,9 @@
   <!-- START - ALL WARSHIPS / ALL MILITARY UNITS - ItemEffectTargetPool -->
   <ModOp Type="add" GUID="191458,193986" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
     <Item>
+      <Asset>1742102162</Asset>      <!--Pirate Fire Boat (Pirates) - Warship-->
+    </Item>
+    <Item>
       <GUID>1742102008</GUID>      <!--Jolly Roger (Pirates) - Warship-->
     </Item>
     <Item>
@@ -2204,6 +2421,9 @@
       <GUID>1742102094</GUID>      <!-- Pirate Hawk - WarAirShip -->
     </Item>
     <Item>
+      <Asset>1742102160</Asset>      <!-- Pirate Falcon - WarAirShip -->
+    </Item>
+    <Item>
       <GUID>1742102096</GUID>      <!-- Pirate Black Eagle - WarAirShip -->
     </Item>
     <Item>
@@ -2217,6 +2437,9 @@
 
   <!-- START - ALL WOODEN HULL SHIPS (Flamable) - ItemEffectTargetPool-->
   <ModOp Type="add" GUID="1398" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
+    <Item>
+      <Asset>1742102162</Asset>      <!--Pirate Fire Boat (Pirates) - Warship-->
+    </Item>
     <Item>
       <GUID>1742102008</GUID>      <!-- Jolly Roger (Pirates) - Warship-->
     </Item>
@@ -2259,6 +2482,9 @@
   <ModOp Type="add" GUID="102492,4148" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
     <Item>
       <GUID>1742102094</GUID>      <!-- Pirate Hawk - WarAirShip -->
+    </Item>
+    <Item>
+      <Asset>1742102160</Asset>      <!-- Pirate Falcon - WarAirShip -->
     </Item>
     <Item>
       <GUID>1742102096</GUID>      <!-- Pirate Black Eagle - WarAirShip -->
