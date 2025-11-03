@@ -5,8 +5,16 @@
 <ModOps>
 
   <!-- MILITARY ATTENTION -->
+  <Group Condition="#military_attention_ships">
+    <ModOp Type="addPrevSibling" GUID="1742004283" Path="/Values/Cost/Costs/Item[Ingredient='1010218']">
+      <Item>
+        <Ingredient>1010017</Ingredient>        <!-- Coins -->
+        <Amount>100000</Amount>
+      </Item>
+    </ModOp>
+  </Group>
   <Group Condition="#military_attention">
-    <ModOp Type="merge" GUID="1742004283" Path="/Values/Cost/Costs">
+    <ModOp Type="add" GUID="1742004283" Path="/Values/Cost/Costs">
       <Item>
         <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
         <Amount>40</Amount>
@@ -14,14 +22,6 @@
       <Item>
         <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
         <Amount>40</Amount>
-      </Item>
-    </ModOp>
-  </Group>
-  <Group Condition="#military_attention_ships">
-    <ModOp Type="merge" GUID="1742004283" Path="/Values/Cost/Costs">
-      <Item>
-        <Ingredient>1010017</Ingredient>        <!-- Coins -->
-        <Amount>100000</Amount>
       </Item>
     </ModOp>
   </Group>

@@ -1,0 +1,253 @@
+<ModOps>
+  <!-- Compressed Bonus Categories -->
+    <Group>
+      <ModOp Type="merge" GUID='2288' Path="/Values">
+        <Standard>
+          <IconFilename>data/ui/2kimages/main/kurila/icon_bonus_needs.png</IconFilename>
+        </Standard>
+        <Text>
+          <TextOverride>12315</TextOverride>
+        </Text>
+      </ModOp>
+      <ModOp Type="add" GUID='25000118' Path="/Values/ObjectmenuResidenceScene/BonusNeeds/BonusNeeds/Item[Category='2288']/Needs">
+        <Item>
+          <BonusNeed>4267</BonusNeed>
+        </Item>
+        <Item>
+          <BonusNeed>4268</BonusNeed>
+        </Item>
+      </ModOp>
+      <ModOp Type="add" GUID='25000118' Path="/Values/ObjectmenuResidenceScene/BonusNeeds/BonusNeeds/Item[Category='2288']/Needs">
+        <Item>
+          <BonusNeed>135107</BonusNeed>
+        </Item>
+        <Item>
+          <BonusNeed>135108</BonusNeed>
+        </Item>
+        <Item>
+          <BonusNeed>135109</BonusNeed>
+        </Item>
+        <Item>
+          <BonusNeed>1010356</BonusNeed>
+        </Item>
+        <Item>
+          <BonusNeed>6265</BonusNeed>
+        </Item>
+        <Item>
+          <BonusNeed>5830</BonusNeed>
+        </Item>
+        <Item>
+          <BonusNeed>5831</BonusNeed>
+        </Item>
+      </ModOp>
+      <ModOp Type="add" GUID='25000118' Path="/Values/ObjectmenuResidenceScene/BonusNeeds/BonusNeeds/Item[Category='2288']/Needs" Condition="@103693031">
+        <Item>
+          <BonusNeed>103693031</BonusNeed>
+        </Item>
+      </ModOp>
+      <ModOp Type="add" GUID='25000118' Path="/Values/ObjectmenuResidenceScene/BonusNeeds/BonusNeeds/Item[Category='2288']/Needs"
+        Content="@120055/ProductStorageList/ProductList/Item/Product/text()">
+        <Item>
+          <BonusNeed>
+            <ModOpContent />
+          </BonusNeed>
+        </Item>
+      </ModOp>
+      <ModOp Type="remove" GUID='25000118' Path="/Values/ObjectmenuResidenceScene/BonusNeeds/BonusNeeds/Item[Category='4275' or Category='2289' or Category='2290' or Category='2361' or Category='4837' or Category='6364']"></ModOp>
+      <Group Condition="#jakob_alternative_needs">
+        <ModOp Type="remove" GUID='25000118' Path="/Values/ObjectmenuResidenceScene/BonusNeeds/BonusNeeds/Item[Category='2288']/Needs/Item[BonusNeed='1500010836' or BonusNeed='1500010102' or BonusNeed='114410' or BonusNeed='1500010120' or BonusNeed='1500010127' or BonusNeed='1500010847']"></ModOp>
+        <ModOp Type="remove" GUID='25000118' Path="/Values/ObjectmenuResidenceScene/BonusNeeds/BonusNeeds/Item[Category='2288']/Needs/Item[BonusNeed='1500010153']" Condition="!#tool_integration_kurila"></ModOp>
+      </Group>
+    </Group>
+  <!-- Mail Alway on top of Menu -->
+    <Group>
+      <!-- Farmer -->
+        <Group>
+          <ModOp Type="addPrevSibling" GUID='15000000' Path="/Values/PopulationLevel7/PopulationInputs/Item[IsBonusNeed='1'][1]"
+                Content="@15000000/PopulationLevel7/PopulationInputs/Item[Product='535' or Product='536' or Product='2524']">
+          </ModOp>
+          <ModOp Type="remove" GUID="15000000" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='535'][2]"></ModOp>
+          <ModOp Type="remove" GUID="15000000" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='536'][2]"></ModOp>
+          <ModOp Type="remove" GUID="15000000" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='2524'][2]"></ModOp>
+        </Group>
+      <!-- Worker -->
+        <Group>
+          <ModOp Type="addPrevSibling" GUID='15000001' Path="/Values/PopulationLevel7/PopulationInputs/Item[IsBonusNeed='1'][1]"
+                Content="@15000001/PopulationLevel7/PopulationInputs/Item[Product='535' or Product='536' or Product='2524']">
+          </ModOp>
+          <ModOp Type="remove" GUID="15000001" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='535'][2]"></ModOp>
+          <ModOp Type="remove" GUID="15000001" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='536'][2]"></ModOp>
+          <ModOp Type="remove" GUID="15000001" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='2524'][2]"></ModOp>
+        </Group>
+      <!-- Artisan -->
+        <Group>
+          <ModOp Type="addPrevSibling" GUID='15000002' Path="/Values/PopulationLevel7/PopulationInputs/Item[IsBonusNeed='1'][1]"
+                Content="@15000002/PopulationLevel7/PopulationInputs/Item[Product='535' or Product='536' or Product='2524']">
+          </ModOp>
+          <ModOp Type="remove" GUID="15000002" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='535'][2]"></ModOp>
+          <ModOp Type="remove" GUID="15000002" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='536'][2]"></ModOp>
+          <ModOp Type="remove" GUID="15000002" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='2524'][2]"></ModOp>
+        </Group>
+      <!-- Pescatarian Artisan -->
+        <Group Condition="@601382">
+          <ModOp Type="addPrevSibling" GUID='601382' Path="/Values/PopulationLevel7/PopulationInputs/Item[IsBonusNeed='1'][1]"
+                Content="@601382/PopulationLevel7/PopulationInputs/Item[Product='535' or Product='536' or Product='2524']">
+          </ModOp>
+          <ModOp Type="remove" GUID="601382" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='535'][2]"></ModOp>
+          <ModOp Type="remove" GUID="601382" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='536'][2]"></ModOp>
+          <ModOp Type="remove" GUID="601382" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='2524'][2]"></ModOp>
+        </Group>
+      <!-- Engineer -->
+        <Group>
+          <ModOp Type="addPrevSibling" GUID='15000003' Path="/Values/PopulationLevel7/PopulationInputs/Item[IsBonusNeed='1'][1]"
+                Content="@15000003/PopulationLevel7/PopulationInputs/Item[Product='535' or Product='536' or Product='2524']">
+          </ModOp>
+          <ModOp Type="remove" GUID="15000003" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='535'][2]"></ModOp>
+          <ModOp Type="remove" GUID="15000003" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='536'][2]"></ModOp>
+          <ModOp Type="remove" GUID="15000003" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='2524'][2]"></ModOp>
+        </Group>
+      <!-- Investor -->
+        <Group>
+          <ModOp Type="addPrevSibling" GUID='15000004' Path="/Values/PopulationLevel7/PopulationInputs/Item[IsBonusNeed='1'][1]"
+                Content="@15000004/PopulationLevel7/PopulationInputs/Item[Product='535' or Product='536' or Product='2524']">
+          </ModOp>
+          <ModOp Type="remove" GUID="15000004" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='535'][2]"></ModOp>
+          <ModOp Type="remove" GUID="15000004" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='536'][2]"></ModOp>
+          <ModOp Type="remove" GUID="15000004" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='2524'][2]"></ModOp>
+        </Group>
+      <!-- Jornalero -->
+        <Group>
+          <ModOp Type="addPrevSibling" GUID='15000005' Path="/Values/PopulationLevel7/PopulationInputs/Item[IsBonusNeed='1'][1]"
+                Content="@15000005/PopulationLevel7/PopulationInputs/Item[Product='535' or Product='536' or Product='2524']">
+          </ModOp>
+          <ModOp Type="remove" GUID="15000005" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='535'][2]"></ModOp>
+          <ModOp Type="remove" GUID="15000005" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='536'][2]"></ModOp>
+          <ModOp Type="remove" GUID="15000005" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='2524'][2]"></ModOp>
+        </Group>
+      <!-- Obrero -->
+        <Group>
+          <ModOp Type="addPrevSibling" GUID='15000006' Path="/Values/PopulationLevel7/PopulationInputs/Item[IsBonusNeed='1'][1]"
+                Content="@15000006/PopulationLevel7/PopulationInputs/Item[Product='535' or Product='536' or Product='2524']">
+          </ModOp>
+          <ModOp Type="remove" GUID="15000006" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='535'][2]"></ModOp>
+          <ModOp Type="remove" GUID="15000006" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='536'][2]"></ModOp>
+          <ModOp Type="remove" GUID="15000006" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='2524'][2]"></ModOp>
+        </Group>
+      <!-- Artista -->
+        <Group>
+          <ModOp Type="addPrevSibling" GUID='5403' Path="/Values/PopulationLevel7/PopulationInputs/Item[IsBonusNeed='1'][1]"
+                Content="@5403/PopulationLevel7/PopulationInputs/Item[Product='535' or Product='536' or Product='2524']">
+          </ModOp>
+          <ModOp Type="remove" GUID="5403" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='535'][2]"></ModOp>
+          <ModOp Type="remove" GUID="5403" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='536'][2]"></ModOp>
+          <ModOp Type="remove" GUID="5403" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='2524'][2]"></ModOp>
+        </Group>
+      <!-- Explorer -->
+        <Group>
+          <ModOp Type="addPrevSibling" GUID='112642' Path="/Values/PopulationLevel7/PopulationInputs/Item[IsBonusNeed='1'][1]"
+                Content="@112642/PopulationLevel7/PopulationInputs/Item[Product='535' or Product='536' or Product='2524']">
+          </ModOp>
+          <ModOp Type="remove" GUID="112642" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='535'][2]"></ModOp>
+          <ModOp Type="remove" GUID="112642" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='536'][2]"></ModOp>
+          <ModOp Type="remove" GUID="112642" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='2524'][2]"></ModOp>
+        </Group>
+      <!-- Technicians -->
+        <Group>
+          <ModOp Type="addPrevSibling" GUID='112643' Path="/Values/PopulationLevel7/PopulationInputs/Item[IsBonusNeed='1'][1]"
+                Content="@112643/PopulationLevel7/PopulationInputs/Item[Product='535' or Product='536' or Product='2524']">
+          </ModOp>
+          <ModOp Type="remove" GUID="112643" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='535'][2]"></ModOp>
+          <ModOp Type="remove" GUID="112643" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='536'][2]"></ModOp>
+          <ModOp Type="remove" GUID="112643" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='2524'][2]"></ModOp>
+        </Group>
+      <!-- Shepherds -->
+        <Group Condition="@114329/PopulationLevel7/PopulationInputs/Item[Product='535' or Product='536' or Product='2524']">
+          <ModOp Type="addPrevSibling" GUID='114329' Path="/Values/PopulationLevel7/PopulationInputs/Item[IsBonusNeed='1'][1]"
+                Content="@114329/PopulationLevel7/PopulationInputs/Item[Product='535' or Product='536' or Product='2524']">
+          </ModOp>
+          <ModOp Type="remove" GUID="114329" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='535'][2]"></ModOp>
+          <ModOp Type="remove" GUID="114329" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='536'][2]"></ModOp>
+          <ModOp Type="remove" GUID="114329" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='2524'][2]"></ModOp>
+        </Group>
+      <!-- Elder -->
+        <Group Condition="@114330/PopulationLevel7/PopulationInputs/Item[Product='535' or Product='536' or Product='2524']">
+          <ModOp Type="addPrevSibling" GUID='114330' Path="/Values/PopulationLevel7/PopulationInputs/Item[IsBonusNeed='1'][1]"
+                Content="@114330/PopulationLevel7/PopulationInputs/Item[Product='535' or Product='536' or Product='2524']">
+          </ModOp>
+          <ModOp Type="remove" GUID="114330" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='535'][2]"></ModOp>
+          <ModOp Type="remove" GUID="114330" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='536'][2]"></ModOp>
+          <ModOp Type="remove" GUID="114330" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='2524'][2]"></ModOp>
+        </Group>
+      <!-- Sholar -->
+        <Group>
+          <ModOp Type="addPrevSibling" GUID='118745' Path="/Values/PopulationLevel7/PopulationInputs/Item[IsBonusNeed='1'][1]"
+                Content="@118745/PopulationLevel7/PopulationInputs/Item[Product='535' or Product='536' or Product='2524']">
+          </ModOp>
+          <ModOp Type="remove" GUID="118745" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='535'][2]"></ModOp>
+          <ModOp Type="remove" GUID="118745" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='536'][2]"></ModOp>
+          <ModOp Type="remove" GUID="118745" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='2524'][2]"></ModOp>
+        </Group>
+      <!-- Horai Population -->
+        <Group Condition="#horai_mail_integration_kurila">
+          <!-- Nongmin -->
+            <Group Condition="@15100000/PopulationLevel7/PopulationInputs/Item[Product='535' or Product='536' or Product='2524']">
+              <ModOp Type="addPrevSibling" GUID='15100000' Path="/Values/PopulationLevel7/PopulationInputs/Item[IsBonusNeed='1'][1]"
+                    Content="@15100000/PopulationLevel7/PopulationInputs/Item[Product='535' or Product='536' or Product='2524']">
+              </ModOp>
+              <ModOp Type="remove" GUID="15100000" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='535'][2]"></ModOp>
+              <ModOp Type="remove" GUID="15100000" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='536'][2]"></ModOp>
+              <ModOp Type="remove" GUID="15100000" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='2524'][2]"></ModOp>
+            </Group>
+          <!-- Gongren -->
+            <Group Condition="@15100001/PopulationLevel7/PopulationInputs/Item[Product='535' or Product='536' or Product='2524']">
+              <ModOp Type="addPrevSibling" GUID='15100001' Path="/Values/PopulationLevel7/PopulationInputs/Item[IsBonusNeed='1'][1]"
+                    Content="@15100001/PopulationLevel7/PopulationInputs/Item[Product='535' or Product='536' or Product='2524']">
+              </ModOp>
+              <ModOp Type="remove" GUID="15100001" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='535'][2]"></ModOp>
+              <ModOp Type="remove" GUID="15100001" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='536'][2]"></ModOp>
+              <ModOp Type="remove" GUID="15100001" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='2524'][2]"></ModOp>
+            </Group>
+        </Group>
+      <!-- Soldiers -->
+        <Group Condition="#military_attention">
+          <!-- Old World -->
+            <Group Condition="#military_attention">
+              <ModOp Type="addPrevSibling" GUID='1742100000' Path="/Values/PopulationLevel7/PopulationInputs/Item[IsBonusNeed='1'][1]"
+                    Content="@1742100000/PopulationLevel7/PopulationInputs/Item[Product='535' or Product='536' or Product='2524']">
+              </ModOp>
+              <ModOp Type="remove" GUID="1742100000" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='535'][2]"></ModOp>
+              <ModOp Type="remove" GUID="1742100000" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='536'][2]"></ModOp>
+              <ModOp Type="remove" GUID="1742100000" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='2524'][2]"></ModOp>
+            </Group>
+          <!-- New World -->
+            <Group Condition="#military_attention">
+              <ModOp Type="addPrevSibling" GUID='1742100315' Path="/Values/PopulationLevel7/PopulationInputs/Item[IsBonusNeed='1'][1]"
+                    Content="@1742100315/PopulationLevel7/PopulationInputs/Item[Product='535' or Product='536' or Product='2524']">
+              </ModOp>
+              <ModOp Type="remove" GUID="1742100315" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='535'][2]"></ModOp>
+              <ModOp Type="remove" GUID="1742100315" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='536'][2]"></ModOp>
+              <ModOp Type="remove" GUID="1742100315" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='2524'][2]"></ModOp>
+            </Group>
+          <!-- Arctic -->
+            <Group Condition="#military_attention">
+              <ModOp Type="addPrevSibling" GUID='1742100306' Path="/Values/PopulationLevel7/PopulationInputs/Item[IsBonusNeed='1'][1]"
+                    Content="@1742100306/PopulationLevel7/PopulationInputs/Item[Product='535' or Product='536' or Product='2524']">
+              </ModOp>
+              <ModOp Type="remove" GUID="1742100306" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='535'][2]"></ModOp>
+              <ModOp Type="remove" GUID="1742100306" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='536'][2]"></ModOp>
+              <ModOp Type="remove" GUID="1742100306" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='2524'][2]"></ModOp>
+            </Group>
+          <!-- Enbesa -->
+            <Group Condition="#military_attention">
+              <Group Condition="@1742100316/PopulationLevel7/PopulationInputs/Item[Product='535' or Product='536' or Product='2524']">
+                <ModOp Type="addPrevSibling" GUID='1742100316' Path="/Values/PopulationLevel7/PopulationInputs/Item[IsBonusNeed='1'][1]"
+                      Content="@1742100316/PopulationLevel7/PopulationInputs/Item[Product='535' or Product='536' or Product='2524']">
+                </ModOp>
+                <ModOp Type="remove" GUID="1742100316" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='535'][2]"></ModOp>
+                <ModOp Type="remove" GUID="1742100316" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='536'][2]"></ModOp>
+                <ModOp Type="remove" GUID="1742100316" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='2524'][2]"></ModOp>
+              </Group>
+            </Group>
+        </Group>
+    </Group>
+</ModOps>

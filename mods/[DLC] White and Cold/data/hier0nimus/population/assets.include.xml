@@ -300,7 +300,7 @@
   <!-- END - ADD WORKFORCE TIERS TO ISLANDBARSCENE -->
 
   <!-- START ADD POPULATION PRODUCT TO WORKFORCE MENU -->
-  <ModOp Type="add" GUID="25000087" Path="/Values/WorkforceMenu/WorkforceList">
+  <ModOp Type="addNextSibling" GUID="25000087" Path="/Values/WorkforceMenu/WorkforceList/Item[Asset='5406']">
     <Item>
       <Asset>1742004159</Asset>      <!-- Inuit Workforce -->
     </Item>
@@ -413,6 +413,19 @@
       <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
       <IsBonusNeed>1</IsBonusNeed>
       <RequiredFloorLevel>1</RequiredFloorLevel>
+    </Item>
+    <Item>
+      <Product>5397</Product>      <!-- Medicine -->
+      <Amount>0.00003</Amount>
+      <SupplyWeight>5</SupplyWeight>
+      <MoneyValue>75</MoneyValue>
+      <RequiredFloorLevel>1</RequiredFloorLevel>
+      <AdditionalGlobalUnlockRequirement>
+        <Population>112642</Population>
+        <MinPopulationAmount>2500</MinPopulationAmount>
+      </AdditionalGlobalUnlockRequirement>
+      <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+      <IsBonusNeed>1</IsBonusNeed>
     </Item>
   </ModOp>
   <!-- Technicians -->
@@ -595,6 +608,19 @@
       <Amount>0.00005</Amount>
       <SupplyWeight>2</SupplyWeight>
       <MoneyValue>100</MoneyValue>
+      <RequiredFloorLevel>2</RequiredFloorLevel>
+      <AdditionalGlobalUnlockRequirement>
+        <Population>112643</Population>
+        <MinPopulationAmount>5000</MinPopulationAmount>
+      </AdditionalGlobalUnlockRequirement>
+      <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+      <IsBonusNeed>1</IsBonusNeed>
+    </Item>
+    <Item>
+      <Product>5397</Product>      <!-- Medicine -->
+      <Amount>0.00003</Amount>
+      <SupplyWeight>5</SupplyWeight>
+      <MoneyValue>120</MoneyValue>
       <RequiredFloorLevel>2</RequiredFloorLevel>
       <AdditionalGlobalUnlockRequirement>
         <Population>112643</Population>

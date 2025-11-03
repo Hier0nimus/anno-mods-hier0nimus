@@ -700,6 +700,9 @@
     <Item>
       <Product>1742004537</Product>      <!-- Inuit Unlock Goods - Product List -->
     </Item>
+    <Item>
+      <Product>1742004333</Product>      <!-- Corsets - Product -->
+    </Item>
   </ModOp>
   <!-- END ADD GOOD TO ProductList - ALL GOODS -->
 
@@ -707,6 +710,9 @@
   <ModOp Type="add" GUID="502031,502034,502035,502081" Path="/Values/ProductList/List">
     <Item>
       <Product>1742004158</Product>      <!-- Inuit Consumer Goods - Product List -->
+    </Item>
+    <Item>
+      <Product>1742004333</Product>      <!-- Corsets - Product -->
     </Item>
   </ModOp>
   <!-- END ADD GOOD TO ProductList - ALL CONSUMER GOODS -->
@@ -743,13 +749,13 @@
   </ModOp>
   <!-- END - CORSETS > AFTER POCKET WATCHES -->
 
-  <!-- START ADD TO WORKFORCEGOODS - EngineersConsumerGoods / ArtisanWorkForceGoods -->
-  <ModOp Type="add" GUID="501998,502020,502006" Condition="!~/Values/ProductList/List/Item[Product='1742004333']" Path="/Values/ProductList/List/">
+  <!-- START ADD TO WORKFORCEGOODS - EngineersConsumerGoods / ObreroConsumerGoods / ArtisanWorkForceGoods -->
+  <ModOp Type="add" GUID="501998,502020,502006,502001" Condition="!~/Values/ProductList/List/Item[Product='1742004333']" Path="/Values/ProductList/List/">
     <Item>
       <Product>1742004333</Product>      <!-- Corsets - Product -->
     </Item>
   </ModOp>
-  <!-- END ADD TO WORKFORCEGOODS - EngineersConsumerGoods / ArtisanWorkForceGoods -->
+  <!-- END ADD TO WORKFORCEGOODS - EngineersConsumerGoods / ObreroConsumerGoods / ArtisanWorkForceGoods -->
 
   <!-- START ADD GOODS TO OTHER ProductList - LUXURY -->
   <ModOp Type="add" GUID='501992' Condition="!~/Values/ProductList/List/Item[Product='1742004333']" Path="/Values/ProductList/List">
@@ -920,7 +926,7 @@
 
   <!-- ****************** START ADDING PRODUCTS TO BONUS NEEDS ****************** -->
 
-  <!-- 2288 - Communication -->
+  <!-- 2288 - Communication \ Reused in shared_general_lifestyle_kurila as Bomnus Supply-->
   <!-- 2289 - Food and Drink -->
   <!-- 2290 - Health -->
   <!-- 2361 - Wealth -->
@@ -928,9 +934,7 @@
   <!-- 4837 - Crafts -->
   <!-- 6364 - Delight -->
 
-  <!-- ****************** START TO FOOD AND WEALTH ****************** -->
-
-  <ModOp Condition="!@25000118//Item[BonusNeed='GUID']" Type="add" GUID='25000118' Path="/Values/ObjectmenuResidenceScene/BonusNeeds/BonusNeeds/Item[Category='2361']/Needs/">
+  <ModOp Condition="!@25000118//Item[BonusNeed='GUID']" Type="add" GUID='25000118' Path="/Values/ObjectmenuResidenceScene/BonusNeeds/BonusNeeds/Item[Category='2288']/Needs/">
     <Item>
       <BonusNeed>117701</BonusNeed>      <!-- Candles -->
     </Item>
@@ -940,14 +944,6 @@
     <Item>
       <BonusNeed>1742004333</BonusNeed>      <!-- Corsets -->
     </Item>
-  </ModOp>
-
-  <!-- ****************** END TO FOOD AND WEALTH ****************** -->
-
-  <!-- ****************** END ADDING PRODUCTS TO BONUS NEEDS ****************** -->
-
-  <!-- ****************** START ADDING LIFESTYLE GOODS TO FOOD AND DRINK CATEGORY ****************** -->
-  <ModOp Condition="!@25000118//Item[BonusNeed='GUID']" Type="add" GUID='25000118' Path="/Values/ObjectmenuResidenceScene/BonusNeeds/BonusNeeds/Item[Category='2289']/Needs/">
     <Item>
       <BonusNeed>1010195</BonusNeed>      <!-- Potatoes -->
     </Item>
@@ -955,7 +951,7 @@
       <BonusNeed>1010198</BonusNeed>      <!-- Red Peppers -->
     </Item>
   </ModOp>
-  <!-- ****************** END ADDING LIFESTYLE GOODS TO FOOD AND DRINK CATEGORY ****************** -->
+  <!-- ****************** END ADDING PRODUCTS TO BONUS NEEDS ****************** -->
 
 </ModOps>
   
