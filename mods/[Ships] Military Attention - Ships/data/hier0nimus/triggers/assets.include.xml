@@ -10,7 +10,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742100790</GUID>
+          <GUID>1742100831</GUID>
           <Name>MOD Trigger</Name>
         </Standard>
         <Trigger>
@@ -40,6 +40,9 @@
                       </Item>
                     </UnhideAssets>
                     <UnlockAssets>
+                      <Item>
+                        <Asset>1742101076</Asset>                        <!-- Fire Boat - Ship -->
+                      </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>
                 </Values>
@@ -391,6 +394,55 @@
       </Asset>
     </ModOp>
   </Group>
+
+  <!--UNLOCK - 600 OBRERO -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742100832</GUID>
+          <Name>600 Obreros</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>15000006</Context>                <!-- Obreros PopulationLevel7 -->
+                <CounterAmount>600</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
+                    </UnhideAssets>
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>1742101078</Asset>                        <!-- X1 (Helium) - AirShip -->
+                      </Item>
+                      <Item>
+                        <Asset>1742101079</Asset>                        <!-- X1 (Arctic Gas) - AirShip -->
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
 
   <!--UNLOCK - OIL POWER PLANT UNLOCK -->
   <ModOp Type="addnextSibling" GUID="130248">

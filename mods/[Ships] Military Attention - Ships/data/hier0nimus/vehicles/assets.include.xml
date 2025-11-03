@@ -4,6 +4,11 @@
 
 <ModOps>
     <!-- START ADDING SHIPS TO SAILING SHIPYARD -->
+    <ModOp Type="addNextSibling" GUID='1010520' Path="Values/Shipyard/AssemblyOptions/Item[Vehicle='100437']">
+        <Item>
+            <Vehicle>1742101076</Vehicle>            <!-- Fire Boat - Ship -->
+        </Item>
+    </ModOp>
     <ModOp Type="add" GUID='1010520' Path="Values/Shipyard/AssemblyOptions/">
         <Item>
             <Vehicle>1742100576</Vehicle>            <!-- Windjammer - Ship -->
@@ -57,6 +62,135 @@
         </Item>
     </ModOp>
     <!-- END ADDING SHIPS TO STEAM SHIPYARD -->
+
+    <!-- START ADDING AIRSHIPS TO AIRSHIP HANGAR -->
+    <ModOp Type="addNextSibling" GUID='635,636' Path="Values/Shipyard/AssemblyOptions/Item[Vehicle='1054']">
+        <Item>
+            <Vehicle>1742101078</Vehicle>            <!-- X1 (Helium) - AirShip -->
+        </Item>
+    </ModOp>
+    <ModOp Type="addNextSibling" GUID='635,636' Path="Values/Shipyard/AssemblyOptions/Item[Vehicle='1731']">
+        <Item>
+            <Vehicle>1742101079</Vehicle>            <!-- X1 (Arctic Gas) - AirShip -->
+        </Item>
+    </ModOp>
+    <!-- END ADDING AIRSHIPS TO AIRSHIP HANGAR -->
+
+    <!-- START SHIP - FIRE BOAT -->
+    <ModOp Type="addNextSibling" GUID='100437'>
+        <Asset>
+            <BaseAssetGUID>100437</BaseAssetGUID>
+            <Values>
+                <Standard>
+                    <GUID>1742101076</GUID>
+                    <Name>Fire Boat</Name>
+                    <InfoDescription>1742101077</InfoDescription>
+                </Standard>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/vehicle/fire_boat/fire_boat_01.cfg</Filename>
+                        </Item>
+                    </Variations>
+                </Object>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>Fire boat</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                </Text>
+                <Attackable>
+                    <MaximumHitPoints>450</MaximumHitPoints>
+                </Attackable>
+                <Attacker>
+                    <ShootingTracking>Front</ShootingTracking>
+                    <BaseDamage>30</BaseDamage>
+                    <ReloadTime>7</ReloadTime>
+                    <AttackRange>22</AttackRange>
+                    <LineOfSightRange>100</LineOfSightRange>
+                    <ProjectileAsset>1892</ProjectileAsset>
+                    <!--Flamethrower_Small_Shot_Monitor-->
+                    <MuzzleEffectAssets>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>0</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>WarShip</TemplateName>
+                                        <Index>0</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                            <MuzzleEffectAsset>102404</MuzzleEffectAsset>                            <!--ShotFlamethrower01-->
+                        </Item>
+                    </MuzzleEffectAssets>
+                    <AccuracyBase>1</AccuracyBase>
+                    <AccuracyIncreaseOverDistance>60</AccuracyIncreaseOverDistance>
+                    <AccuracySpeedDecay>20</AccuracySpeedDecay>
+                    <AccuracyByDistance>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>0</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>WarShip</TemplateName>
+                                        <Index>0</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                        </Item>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>1</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>WarShip</TemplateName>
+                                        <Index>1</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                            <AccuracyByDistancePair>
+                                <CorrespondingAccuracy>100</CorrespondingAccuracy>
+                            </AccuracyByDistancePair>
+                        </Item>
+                    </AccuracyByDistance>
+                    <WeaponIcon>2190</WeaponIcon>                    <!--Flamethrower-->
+                </Attacker>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!-- Coins -->
+                            <Amount>4000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010196</Ingredient>                            <!--timber-->
+                            <Amount>14</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010210</Ingredient>                            <!--sailcloth-->
+                            <Amount>25</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010221</Ingredient>                            <!--weapons-->
+                            <Amount>10</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010226</Ingredient>                            <!--coal-->
+                            <Amount>8</Amount>
+                        </Item>
+                    </Costs>
+                    <InfluenceCostType>WarShip</InfluenceCostType>
+                    <InfluenceCostPoints>5</InfluenceCostPoints>
+                </Cost>
+                <ShipMaintenance>
+                    <Maintenance>90</Maintenance>
+                </ShipMaintenance>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END SHIP - FIRE BOAT -->
 
     <!-- START SHIP - WINDJAMMER -->
     <ModOp Type="addNextSibling" GUID='100441'>
@@ -860,7 +994,7 @@
                 <Walking>
                     <ShortenSailsAfter>0</ShortenSailsAfter>
                     <ReservationLength>20</ReservationLength>                    <!-- Battle Cruiser 16 -->
-                    <ReservationWidth>8</ReservationWidth>                    <!-- Battle Cruiser 6 -->
+                    <ReservationWidth>6</ReservationWidth>                    <!-- Battle Cruiser 6 -->
                     <PathPlannerLayer>Water</PathPlannerLayer>
                     <ExpensiveDirSmoothing>1</ExpensiveDirSmoothing>
                     <TurnAroundRadius>22</TurnAroundRadius>                    <!-- Battle Cruiser 8 - 18 -->
@@ -893,8 +1027,8 @@
                     <PriorityShipList>1</PriorityShipList>
                 </CommandQueue>
                 <Drifting>
-                    <Length>18</Length>                    <!-- Battle Cruiser 10 -->
-                    <Width>8</Width>                    <!-- Battle Cruiser 1.75 -->
+                    <Length>11</Length>                    <!-- Battle Cruiser 10 -->
+                    <Width>3.5</Width>                    <!-- Battle Cruiser 1.75 -->
                     <FactorMovement>0.7</FactorMovement>                    <!-- Battle Cruiser 0.7 -->
                     <FactorRotation>0.65</FactorRotation>                    <!-- Battle Cruiser 0.65 -->
                 </Drifting>
@@ -1217,7 +1351,7 @@
                 </Selection>
                 <Walking>
                     <ReservationLength>20</ReservationLength>                    <!-- Battle Cruiser 16 -->
-                    <ReservationWidth>8</ReservationWidth>                    <!-- Battle Cruiser 6 -->
+                    <ReservationWidth>6</ReservationWidth>                    <!-- Battle Cruiser 6 -->
                     <TurnAroundRadius>22</TurnAroundRadius>                    <!-- Battle Cruiser 8 - 18 -->
                     <Acceleration>0.4</Acceleration>                    <!-- Battle Cruiser 0.75 - 0.45 -->
                     <Deceleration>0.4</Deceleration>                    <!-- Battle Cruiser 1 - 0.5 -->
@@ -1248,7 +1382,7 @@
                     <PriorityShipList>1</PriorityShipList>
                 </CommandQueue>
                 <Drifting>
-                    <Length>18</Length>                    <!-- Battle Cruiser 10 -->
+                    <Length>11</Length>                    <!-- Battle Cruiser 10 -->
                     <Width>3.5</Width>                    <!-- Battle Cruiser 1.75 -->
                     <FactorMovement>0.7</FactorMovement>                    <!-- Battle Cruiser 0.7 -->
                     <FactorRotation>0.65</FactorRotation>                    <!-- Battle Cruiser 0.65 -->
@@ -3284,6 +3418,256 @@
         </Asset>
     </ModOp>
     <!-- END SHIP - LARGE OIL TANKER -->
+
+    <!-- START AIRSHIP - X1 (Helium) -->
+    <ModOp Type="addNextSibling" GUID='1054'>
+        <Asset>
+            <BaseAssetGUID>1054</BaseAssetGUID>
+            <Values>
+                <Standard>
+                    <GUID>1742101078</GUID>
+                    <Name>X1 (Helium)</Name>
+                    <InfoDescription>1742101080</InfoDescription>
+                </Standard>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>X1</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                </Text>
+                <Attackable>
+                    <MaximumHitPoints>900</MaximumHitPoints>
+                </Attackable>
+                <Attacker>
+                    <BaseDamage>40</BaseDamage>
+                    <ReloadTime>7</ReloadTime>
+                    <AttackRange>40</AttackRange>
+                    <LineOfSightRange>60</LineOfSightRange>
+                    <Turrets>
+                        <Item>
+                            <TurnSpan>140</TurnSpan>
+                            <TurretCfg>data/graphics/campaign/vehicle/pyro_ship_02/pyro_ship_02_turret_front.cfg</TurretCfg>
+                        </Item>
+                    </Turrets>
+                    <ProjectileAsset>1892</ProjectileAsset>                    <!--Flamethrower_Small_Shot_Monitor-->
+                    <MuzzleEffectAssets>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>0</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>WarShip</TemplateName>
+                                        <Index>0</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                            <MuzzleEffectAsset>102404</MuzzleEffectAsset>                            <!--ShotFlamethrower01-->
+                        </Item>
+                    </MuzzleEffectAssets>
+                    <AccuracyBase>1</AccuracyBase>
+                    <AccuracyIncreaseOverDistance>60</AccuracyIncreaseOverDistance>
+                    <AccuracySpeedDecay>20</AccuracySpeedDecay>
+                    <AccuracyByDistance>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>0</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>WarShip</TemplateName>
+                                        <Index>0</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                        </Item>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>1</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>WarShip</TemplateName>
+                                        <Index>1</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                            <AccuracyByDistancePair>
+                                <CorrespondingAccuracy>100</CorrespondingAccuracy>
+                            </AccuracyByDistancePair>
+                        </Item>
+                    </AccuracyByDistance>
+                    <WeaponIcon>2190</WeaponIcon>                    <!--Flamethrower-->
+                </Attacker>
+                <Bombarder>
+                    <Shafts>1</Shafts>
+                </Bombarder>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!-- Coins -->
+                            <Amount>225000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>838</Ingredient>                            <!--Aluminium-->
+                            <Amount>30</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010210</Ingredient>                            <!--sailcloth-->
+                            <Amount>40</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010224</Ingredient>                            <!--steam motors-->
+                            <Amount>8</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>840</Ingredient>                            <!--SA Gas-->
+                            <Amount>30</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010221</Ingredient>                            <!--weapons-->
+                            <Amount>30</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010226</Ingredient>                            <!--coal-->
+                            <Amount>20</Amount>
+                        </Item>
+                    </Costs>
+                    <InfluenceCostType>AirshipCombat</InfluenceCostType>
+                    <InfluenceCostPoints>6</InfluenceCostPoints>
+                </Cost>
+                <ShipMaintenance>
+                    <Maintenance>1400</Maintenance>
+                </ShipMaintenance>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END AIRSHIP - X1 (Helium) -->
+
+    <!-- START AIRSHIP - X1 (Arctic Gas) -->
+    <ModOp Type="addNextSibling" GUID='1731'>
+        <Asset>
+            <BaseAssetGUID>1731</BaseAssetGUID>
+            <Values>
+                <Standard>
+                    <GUID>1742101079</GUID>
+                    <Name>X1 (Arctic Gas)</Name>
+                    <InfoDescription>1742101080</InfoDescription>
+                </Standard>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>X1</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                </Text>
+                <Attackable>
+                    <MaximumHitPoints>900</MaximumHitPoints>
+                </Attackable>
+                <Attacker>
+                    <BaseDamage>40</BaseDamage>
+                    <ReloadTime>7</ReloadTime>
+                    <AttackRange>40</AttackRange>
+                    <LineOfSightRange>60</LineOfSightRange>
+                    <Turrets>
+                        <Item>
+                            <TurnSpan>140</TurnSpan>
+                            <TurretCfg>data/graphics/campaign/vehicle/pyro_ship_02/pyro_ship_02_turret_front.cfg</TurretCfg>
+                        </Item>
+                    </Turrets>
+                    <ProjectileAsset>1892</ProjectileAsset>
+                    <!--Flamethrower_Small_Shot_Monitor-->
+                    <MuzzleEffectAssets>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>0</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>WarShip</TemplateName>
+                                        <Index>0</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                            <MuzzleEffectAsset>102404</MuzzleEffectAsset>
+                            <!--ShotFlamethrower01-->
+                        </Item>
+                    </MuzzleEffectAssets>
+                    <AccuracyBase>1</AccuracyBase>
+                    <AccuracyIncreaseOverDistance>60</AccuracyIncreaseOverDistance>
+                    <AccuracySpeedDecay>20</AccuracySpeedDecay>
+                    <AccuracyByDistance>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>0</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>WarShip</TemplateName>
+                                        <Index>0</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                        </Item>
+                        <Item>
+                            <VectorElement>
+                                <InheritedIndex>1</InheritedIndex>
+                                <InheritanceMapV2>
+                                    <Entry>
+                                        <TemplateName>WarShip</TemplateName>
+                                        <Index>1</Index>
+                                    </Entry>
+                                </InheritanceMapV2>
+                            </VectorElement>
+                            <AccuracyByDistancePair>
+                                <CorrespondingAccuracy>100</CorrespondingAccuracy>
+                            </AccuracyByDistancePair>
+                        </Item>
+                    </AccuracyByDistance>
+                    <WeaponIcon>2190</WeaponIcon>                    <!--Flamethrower-->
+                </Attacker>
+                <Bombarder>
+                    <Shafts>1</Shafts>
+                </Bombarder>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!-- Coins -->
+                            <Amount>225000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>838</Ingredient>                            <!--Aluminium-->
+                            <Amount>30</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010210</Ingredient>                            <!--sailcloth-->
+                            <Amount>40</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010224</Ingredient>                            <!--steam motors-->
+                            <Amount>8</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>112706</Ingredient>                            <!-- Arctic Gas-->
+                            <Amount>30</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010221</Ingredient>                            <!--weapons-->
+                            <Amount>30</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010226</Ingredient>                            <!--coal-->
+                            <Amount>20</Amount>
+                        </Item>
+                    </Costs>
+                    <InfluenceCostType>AirshipCombat</InfluenceCostType>
+                    <InfluenceCostPoints>6</InfluenceCostPoints>
+                </Cost>
+                <ShipMaintenance>
+                    <Maintenance>1400</Maintenance>
+                </ShipMaintenance>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END AIRSHIP - X1 (Arctic Gas) -->
 
     <!-- START SHIP - B42 -->
     <ModOp Type="addNextSibling" GUID='1060'>
