@@ -105,7 +105,7 @@ Current version 1.2 (10/05/2025)
 
 Boost forestery production, farming and mining with horsepower.
 
-Current version 1.0 (04/11/2025)
+Current version 1.1 (04/11/2025)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/work-horse-stables
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
