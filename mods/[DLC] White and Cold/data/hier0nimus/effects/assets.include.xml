@@ -2253,6 +2253,31 @@
   <!-- START Providing Wood - BUFF -->
   <ModOp GUID='25623' Type="addNextSibling">
     <Asset>
+      <Template>ForwardBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004601</GUID>
+          <Name>Providing Wood</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_wood_log.png</IconFilename>
+        </Standard>
+        <Buff />
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>1742004269</GUID>
+            </Item>
+          </EffectTargets>
+        </ItemEffect>
+        <Text>
+          <TextOverride>1742004571</TextOverride>
+        </Text>
+        <EffectForward>
+          <ForwardEffect>1742004571</ForwardEffect>
+          <ForwardEffectRange>4</ForwardEffectRange>
+        </EffectForward>
+      </Values>
+    </Asset>    
+    <Asset>
       <Template>GuildhouseBuff</Template>
       <Values>
         <Standard>

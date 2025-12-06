@@ -31,6 +31,60 @@
     <ModOp Type="merge" GUID="112703,1500300885,1500300886,1500300887,1500300888,1500300898,1500300889,1500300906,1500302820,1500302822,1500302823,1500300897,112680,112714" Path="/Values/Standard">
       <IconFilename>data\graphics\icons\icon_husky_sled_service_01.png</IconFilename>
     </ModOp>
+    <ModOp Type="merge" GUID="112680" Path="/Values/FactoryBase">
+      <CycleTime>90</CycleTime>
+    </ModOp>
+  </Group>
+
+  <!-- LUBRICANT SILO KURILA -->
+  <Group Condition="#lubricant_silo_kurila">
+    <ModOp Type="merge" GUID="1742004364,1742004368,1742004455,116029" Path="/Values">
+      <ModuleOwner>
+        <FertilizerModuleData>
+          <Module>1500302703</Module>
+        </FertilizerModuleData>
+      </ModuleOwner>
+    </ModOp>
+  </Group>
+
+  <!-- ADVANCED FARMS -->
+  <Group Condition="#advanced_cattle_farm_kurila">
+    <ModOp Type="add" GUID="1742004380" Path="/Values/ItemEffect/EffectTargets">
+      <Item>
+        <GUID>1404423065</GUID>
+      </Item>
+    </ModOp>
+  </Group>
+  <Group Condition="#advanced_cheese_dairy_kurila">
+    <ModOp Type="add" GUID="1742004380" Path="/Values/ItemEffect/EffectTargets">
+      <Item>
+        <GUID>1500302615</GUID>
+      </Item>
+      <Item>
+        <GUID>1500302340</GUID>
+      </Item>
+    </ModOp>
+  </Group>
+  <Group Condition="#advanced_chicken_farm_kurila">
+    <ModOp Type="add" GUID="1742004380" Path="/Values/ItemEffect/EffectTargets">
+      <Item>
+        <GUID>1500302602</GUID>
+      </Item>
+    </ModOp>
+  </Group>
+  <Group Condition="#advanced_pig_farm_kurila">
+    <ModOp Type="add" GUID="1742004380" Path="/Values/ItemEffect/EffectTargets">
+      <Item>
+        <GUID>1404423055</GUID>
+      </Item>
+    </ModOp>
+    </Group>
+  <Group Condition="#advanced_slaughterhouse_kurila">
+    <ModOp Type="add" GUID="1742004380" Path="/Values/ItemEffect/EffectTargets">
+      <Item>
+        <GUID>1404423035</GUID>
+      </Item>
+    </ModOp>
   </Group>
 
   <!-- SMOKED FISH KURILA -->
@@ -94,6 +148,7 @@
           <Population>112643</Population>
           <MinPopulationAmount>750</MinPopulationAmount>
         </AdditionalGlobalUnlockRequirement>
+        <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
         <IsBonusNeed>1</IsBonusNeed>
       </Item>
       <Item>
@@ -105,7 +160,8 @@
           <Population>112643</Population>
           <MinPopulationAmount>2500</MinPopulationAmount>
         </AdditionalGlobalUnlockRequirement>
-        <IsBonusNeed>1</IsBonusNeed>
+        <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+				<IsBonusNeed>1</IsBonusNeed>
       </Item>
     </ModOp>
   </Group>
@@ -189,6 +245,7 @@
             <RequiredBuilding>1440134300</RequiredBuilding>            <!-- NW Hotel - Building -->
           </Item>
         </RequiredBuildings>
+        <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
         <IsBonusNeed>1</IsBonusNeed>
       </Item>
     </ModOp>
@@ -213,7 +270,8 @@
             <RequiredBuilding>2100119466</RequiredBuilding>            <!-- EN Hotel - Building -->
           </Item>
         </RequiredBuildings>
-        <IsBonusNeed>1</IsBonusNeed>
+        <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+				<IsBonusNeed>1</IsBonusNeed>
       </Item>
     </ModOp>
     <!-- END - ADD ADDITIONAL NEEDS TO TOURISTS -->
