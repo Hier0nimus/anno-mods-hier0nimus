@@ -1,0 +1,23 @@
+<ModOps>
+
+    <ImyaTweaks Title="Overseas Stamp" Description="All Post Offices" Icon="data/ui/2kimages/main/3dicons/icon_townhall.png"/>
+
+    <!-- Overseas Stamp 1742000506-1742000507 -->
+
+    <ModOp GUID="1742000506" Type="replace" Path="/Values/FactoryUpgrade/ProductivityUpgrade/Value" ModOpID="1742000506_Productivity" Skip="1">
+        <Value>10</Value>
+    </ModOp>
+
+    <ImyaExpose Path="self::Value" ModOpID="1742000506_Productivity" Kind="Slider" ExposeID="Productivity(%)">
+        <SliderDefinition Min="0" Max="200" Stepping="1" />
+    </ImyaExpose>
+
+    <ModOp GUID="1742000506" Type="replace" Path="/Values/FactoryUpgrade/AdditionalOutput/Item[Product='2524']/AdditionalOutputCycle" ModOpID="1742000506_AdditionalOutputCycleOverseaslMail">
+        <AdditionalOutputCycle>8</AdditionalOutputCycle>
+    </ModOp>
+
+    <ImyaExpose Path="self::AdditionalOutputCycle" ModOpID="1742000506_AdditionalOutputCycleOverseaslMail" Kind="Slider" ExposeID="Overseas Mail (1/x)">
+        <SliderDefinition Min="1" Max="20" Stepping="1" />
+    </ImyaExpose>
+
+</ModOps>
