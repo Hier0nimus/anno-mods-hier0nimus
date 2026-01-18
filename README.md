@@ -4,7 +4,7 @@
 
 Dive more in depth into the Arctic waters with the mod White and Cold! A mod centered around a new Inuit population tier and expanding the existing Explorer and Technician population tiers with more mining options and new resources to gather. It also includes a new Inuit population tier for the Arctic. Apart from changes to the Arctic there are some additional things to explore in the other regions like ice trading.
 
-Current version 1.1 (04/11/2025)
+Current version 1.5 (18/01/2026)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/white-and-cold
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
@@ -12,7 +12,7 @@ Current version 1.1 (04/11/2025)
 
 The perfect specialists and items pack is a set of 172 specialists and items for all regions. Some buildings or items did not got the love they deserve and did not recieve a specialist or legendary treat. This mod wants to change this by giving almost every building and item a specialist or legendary variant.
 
-Current version 19.7 (04/11/2025)
+Current version 19.12 (18/01/2026)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/the-perfect-specialists-items-pack
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
