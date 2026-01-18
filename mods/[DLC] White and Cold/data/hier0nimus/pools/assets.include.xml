@@ -348,7 +348,7 @@
   </ModOp>
   <!-- END - ADD EXPLORER RESIDENCES TO - ALL EXPLORER RESIDENCES -->
 
-  <!-- START - ADD TECHNICIAN RESIDENCES TO - ALL TECHICIAN RESIDENCES -->
+  <!-- START - ADD TECHNICIAN RESIDENCES TO - ALL TECHNICIAN RESIDENCES -->
   <ModOp GUID="1742200028" Type="add" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
     <Item>
       <GUID>1742004272</GUID>      <!-- Technicians Upgraded Residence - ResidenceBuilding7_Arctic -->
@@ -360,7 +360,7 @@
       <GUID>1742004444</GUID>      <!-- Technicians Upgraded Residence Level 2 - ResidenceBuilding7_Arctic -->
     </Item>
   </ModOp>
-  <!-- END - ADD TECHNICIAN RESIDENCES TO - ALL TECHICIAN RESIDENCES -->
+  <!-- END - ADD TECHNICIAN RESIDENCES TO - ALL TECHNICIAN RESIDENCES -->
 
   <!-- START - ADD NEW RESIDENCES TO - ALL ARCTIC RESIDENCES -->
   <ModOp GUID="1742200029" Type="add" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
@@ -730,6 +730,9 @@
     <Item>
       <GUID>1742004543</GUID>      <!-- Rope Maker - Building -->
     </Item>
+    <Item>
+      <GUID>1742004138</GUID>      <!-- Snow Shoes Maker - Building -->
+    </Item>
   </ModOp>
 
   <!-- Agriculture - Open -->
@@ -799,6 +802,15 @@
     </EffectTargets>
   </ModOp>
 
+  <!-- Combustion Chemist + Iron Founder -->
+  <ModOp GUID="958,190701" Type="add" Path="/Values/ItemEffect/EffectTargets/">
+    <EffectTargets>
+      <Item>
+        <GUID>1742004602</GUID>  <!-- Silver Smelter - Building -->
+      </Item>
+    </EffectTargets>
+  </ModOp>
+
   <!-- All Chemical Plants -->
   <ModOp GUID="194011" Type="add" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
     <Item>
@@ -812,7 +824,42 @@
     </Item>
   </ModOp>
 
+  <!-- All Restaurants -->
+  <ModOp GUID="194022" Type="add" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
+    <Item>
+      <GUID>1742004497</GUID>
+    </Item>
+    <Item>
+      <GUID>1742004500</GUID>
+    </Item>
+    <Item>
+      <GUID>1742004503</GUID>
+    </Item>
+  </ModOp>
+
   <!-- END - CHANGING EXISTING ITEMS -->
+
+  <!-- START - ADD BUILDINGS TO - all ironworks and foundry + all heavy production -->
+  <ModOp GUID="190842,193771" Type="add" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
+    <Item>
+      <GUID>1742004602</GUID>    <!-- Silver Smelter - Building -->
+    </Item>
+  </ModOp>
+  <!-- END - ADD BUILDINGS TO - all ironworks and foundry + all heavy production -->
+
+  <!-- START ADD PRODUCTION BUILDINGS TO WORKFORCE MENU -->
+  <ModOp Type="add" GUID="25000087" Path="/Values/WorkforceMenu/BoostableFactories">
+    <Item>
+      <Factory>1742004343</Factory> <!-- Chemical Plant: Industrial Lubricant - Building -->
+    </Item>
+    <Item>
+      <Factory>1742004335</Factory> <!-- Women's Tailoring Shop - Building -->
+    </Item>
+    <Item>
+      <Factory>1742004602</Factory> <!-- Silver Smelter - Building -->
+    </Item>
+  </ModOp>
+  <!-- END ADD PRODUCTION BUILDINGS TO WORKFORCE MENU -->
 
   <!-- START - ADD ITEMS TO - ALL ARCTIC PRODUCTION POOL -->
   <ModOp GUID="193770" Type="add" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
@@ -864,8 +911,8 @@
   </ModOp>
   <!-- END - ADD ITEMS TO - ALL ARCTIC PRODUCTION POOL -->
 
-  <!-- START - ADD ITEMS TO - ALL PRODUCTION POOL -->
-  <ModOp GUID="6000018" Type="add" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
+  <!-- START - ADD ITEMS TO - ALL PRODUCTION POOL + ALL PRODUCTION EXCEPT POWER PLANT -->
+  <ModOp GUID="6000018,193856,193875" Type="add" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
     <Item>
       <GUID>1742004340</GUID>      <!-- Chemical Plant: Soap - Building -->
     </Item>
@@ -877,6 +924,9 @@
     </Item>
     <Item>
       <GUID>1742004335</GUID>      <!-- Women's Tailoring Shop - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004602</GUID>      <!-- Silver Smelter - Building -->
     </Item>
   </ModOp>
   <!-- END - ADD ITEMS TO - ALL PRODUCTION POOL -->
@@ -1020,6 +1070,9 @@
     </Item>
     <Item>
       <GUID>1742004561</GUID>      <!-- Bathhouse - Building -->
+    </Item>
+    <Item>
+      <GUID>1742004602</GUID>      <!-- Silver Smelter - Building -->
     </Item>
   </ModOp>
   <!-- START ADD TO GLOBAL MAINTENANCE POOLS -->

@@ -1332,6 +1332,14 @@
     </Asset>
   </ModOp>
   <!-- END BUILDING - Trading Company - Animal Bones Export Dock -->
+
+  <!-- Add Export Docks to the module list of the shared main building -->
+  <ModOp Type="add" GUID="1999005385" Path="/Values/ModuleOwner/ConstructionOptions">
+    <Item>
+      <ModuleGUID>1742004536</ModuleGUID>
+    </Item>
+  </ModOp>
+
   <!-- END BUILDING - Trading Company -->
 
   <!-- START - BUILDING Moulin Rouge -->
@@ -1479,6 +1487,123 @@
     </Asset>
   </ModOp>
   <!-- END - BUILDING Moulin Rouge -->
+
+  <!-- START - BUILDING Silver Smelter -->
+  <ModOp Type="addNextSibling" GUID="1010297">
+    <Asset>
+      <BaseAssetGUID>1010297</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1742004602</GUID>
+          <Name>Silver Smelter</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/scenario/goods/icon_silver_smelter.png</IconFilename>
+          <InfoDescription>1742004603</InfoDescription>
+        </Standard>
+        <Cost/>
+        <Text />
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/dlc10/graphics/buildings/production/heavy_02/heavy_02.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Building/>
+        <Blocking />
+        <Mesh/>
+        <Selection/>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Silver Smelter</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>5265</LineID>
+        </Text>
+        <Constructable/>
+        <Locked/>
+        <SoundEmitter/>
+        <FeedbackController/>
+        <Infolayer/>
+        <UpgradeList/>
+        <Factory7/>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1957006101</Product><!-- silver ore-->
+              <Amount>1</Amount>
+              <StorageAmount>8</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1010226</Product><!--coal-->
+              <Amount>1</Amount>
+              <StorageAmount>6</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <FactoryOutputs>
+            <Item>
+              <Product>1957006151</Product><!-- Silver ingot -->
+              <Amount>1</Amount>
+              <StorageAmount>4</StorageAmount>
+            </Item>
+          </FactoryOutputs>
+          <IsMainFactory>0</IsMainFactory>
+          <CycleTime>60</CycleTime>
+        </FactoryBase>
+        <LogisticNode/>
+        <AmbientMoodProvider/>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product><!--Money-->
+              <Amount>150</Amount>
+              <InactiveAmount>100</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1010116</Product><!--moderate workforce 2-->
+              <Amount>100</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Attackable/>
+        <Pausable/>
+        <IncidentInfectable/>
+        <Culture/>
+        <IncidentInfluencer/>
+        <Industrializable/>
+        <QuestObject/>
+        <Electrifiable/>
+        <EcoSystemProvider/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - BUILDING Silver Smelter -->
+
+  <!-- START - ADDING SILVER INGOT TO POCKET WATCHES INPUT -->
+  <ModOp Type="add" GUID="1010324" Path="/Values/FactoryBase/FactoryInputs">
+				<Item>
+					<Product>1957006151</Product><!-- Silver ingot -->
+					<Amount>1</Amount>
+					<StorageAmount>4</StorageAmount>
+				</Item>
+  </ModOp>
+  <!-- END - ADDING SILVER INGOT TO POCKET WATCHES INPUT -->
+
+  <!-- START - ADDING SILVER INGOT AND DIAMONDS TO JEWELLERY INPUT -->
+  <ModOp Type="add" GUID="1010328" Path="/Values/FactoryBase/FactoryInputs">
+				<Item>
+					<Product>1957006151</Product><!-- Silver ingot -->
+					<Amount>1</Amount>
+					<StorageAmount>4</StorageAmount>
+				</Item>
+				<Item>
+					<Product>1999005087</Product><!-- Diamonds -->
+					<Amount>1</Amount>
+					<StorageAmount>4</StorageAmount>
+				</Item>
+  </ModOp>
+  <!-- END - ADDING SILVER INGOT AND DIAMONDS TO JEWELLERY INPUT -->
 
 </ModOps>
   

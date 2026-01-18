@@ -1070,7 +1070,7 @@
                         <Asset>1999005407</Asset>                        <!-- Import Dock Silk Trading COmpany - Building -->
                       </Item>
                       <Item>
-                        <Asset>1742004339</Asset>                        <!-- Soap - Recipe -->
+                        <Asset>1742004339</Asset>                        <!-- Industrial Soap - Recipe -->
                       </Item>
                       <Item>
                         <Asset>1742004342</Asset>                        <!-- Industrial Lubricant - Recipe -->
@@ -1079,7 +1079,7 @@
                         <Asset>1742004345</Asset>                        <!-- Lacquer - Recipe -->
                       </Item>
                       <Item>
-                        <Asset>1742004340</Asset>                        <!-- Soap - Building -->
+                        <Asset>1742004340</Asset>                        <!-- Industrial Soap - Building -->
                       </Item>
                       <Item>
                         <Asset>1742004343</Asset>                        <!-- Industrial Lubricant - Building -->
@@ -1148,7 +1148,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742004834</GUID>
+          <GUID>1742004846</GUID>
           <Name>Technicians Unlock - 750</Name>
         </Standard>
         <Trigger>
@@ -1197,6 +1197,9 @@
                       </Item>
                       <Item>
                         <Asset>1742004457</Asset>                        <!-- Expedition Equipment Assembly - Chain -->
+                      </Item>
+                      <Item>
+                        <Asset>1999005087</Asset>                        <!-- Diamonds - Product -->
                       </Item>
                       <Item>
                         <Asset>1742004368</Asset>                        <!-- Diamond Open Pit Mine - Building -->
@@ -1258,7 +1261,7 @@
                         <Asset>1999005407</Asset>                        <!-- Import Dock Silk Trading COmpany - Building -->
                       </Item>
                       <Item>
-                        <Asset>1742004339</Asset>                        <!-- Soap - Recipe -->
+                        <Asset>1742004339</Asset>                        <!-- Industrial Soap - Recipe -->
                       </Item>
                       <Item>
                         <Asset>1742004342</Asset>                        <!-- Industrial Lubricant - Recipe -->
@@ -1267,7 +1270,7 @@
                         <Asset>1742004345</Asset>                        <!-- Lacquer - Recipe -->
                       </Item>
                       <Item>
-                        <Asset>1742004340</Asset>                        <!-- Soap - Building -->
+                        <Asset>1742004340</Asset>                        <!-- Industrial Soap - Building -->
                       </Item>
                       <Item>
                         <Asset>1742004343</Asset>                        <!-- Industrial Lubricant - Building -->
@@ -1336,7 +1339,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742004839</GUID>
+          <GUID>1742004847</GUID>
           <Name>Technicians Unlock - 1000</Name>
         </Standard>
         <Trigger>
@@ -1499,6 +1502,9 @@
                       <Item>
                         <Asset>1742004457</Asset>                        <!-- Expedition Equipment Assembly - Chain -->
                       </Item>
+                      <Item>
+                        <Asset>1999005087</Asset>                        <!-- Diamonds - Product -->
+                      </Item>                      
                       <Item>
                         <Asset>1742004368</Asset>                        <!-- Diamond Open Pit Mine - Building -->
                       </Item>
@@ -1879,13 +1885,113 @@
   </ModOp>
   <!-- END - Technicians Unlock - 10000  -->
 
+  <!-- START - Engineers Unhide - 500  -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004843</GUID>
+          <Name>Engineers Unhide - 500</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>15000003</Context>                <!-- Engineers -->
+                <CounterAmount>500</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
+                      <Item>
+                        <Asset>1957006151</Asset>  <!-- Silver - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004602</Asset>  <!-- Silver Smelter - Building -->
+                      </Item>
+                    </UnhideAssets>
+                    <UnlockAssets>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - Engineers Unhide - 500  -->
+
+  <!-- START - Engineers Unhide - 1000  -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004844</GUID>
+          <Name>Engineers Unhide - 1000</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>15000003</Context>                <!-- Engineers -->
+                <CounterAmount>1000</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
+                    </UnhideAssets>
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>1957006151</Asset>                        <!-- Silver - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004602</Asset>                        <!-- Silver Smelter - Building -->
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - Engineers Unhide - 1000  -->
+
   <!--START - Creative Mode -->
   <ModOp Type="addNextSibling" GUID="130248">
     <Asset>
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742004840</GUID>
+          <GUID>1742004845</GUID>
           <Name>Unlock Creative Mode</Name>
         </Standard>
         <Trigger>
@@ -2152,7 +2258,7 @@
                         <Asset>1742004337</Asset>                        <!-- Corsets - Chain -->
                       </Item>
                       <Item>
-                        <Asset>1742004339</Asset>                        <!-- Soap - Recipe -->
+                        <Asset>1742004339</Asset>                        <!-- Industrial Soap - Recipe -->
                       </Item>
                       <Item>
                         <Asset>1742004342</Asset>                        <!-- Industrial Lubricant - Recipe -->
@@ -2161,7 +2267,7 @@
                         <Asset>1742004345</Asset>                        <!-- Lacquer - Recipe -->
                       </Item>
                       <Item>
-                        <Asset>1742004340</Asset>                        <!-- Soap - Building -->
+                        <Asset>1742004340</Asset>                        <!-- Industrial Soap - Building -->
                       </Item>
                       <Item>
                         <Asset>1742004343</Asset>                        <!-- Industrial Lubricant - Building -->
@@ -2181,6 +2287,9 @@
                       <Item>
                         <Asset>1742004366</Asset>                        <!-- Helium Gas Pump - Building -->
                       </Item>
+                      <Item>
+                        <Asset>1999005087</Asset>  <!-- Diamonds - Product -->
+                      </Item>                      
                       <Item>
                         <Asset>1742004368</Asset>                        <!-- Diamond Open Pit Mine - Building -->
                       </Item>
@@ -2477,6 +2586,12 @@
                       </Item>
                       <Item>
                         <Asset>1742004600</Asset>                        <!-- Nate's Large Arctic Windmill -->
+                      </Item>
+                      <Item>
+                        <Asset>1957006151</Asset>                        <!-- Silver - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742004602</Asset>                        <!-- Silver Smelter - Building -->
                       </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>

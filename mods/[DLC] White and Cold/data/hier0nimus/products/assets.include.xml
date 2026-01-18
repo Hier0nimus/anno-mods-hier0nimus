@@ -701,6 +701,15 @@
       <Product>1742004537</Product>      <!-- Inuit Unlock Goods - Product List -->
     </Item>
     <Item>
+      <Product>1957006101</Product>      <!-- Silver ore - Product -->
+    </Item>
+    <Item>
+      <Product>1957006151</Product>      <!-- Silver - Product -->
+    </Item>
+    <Item>
+      <Product>1999005087</Product>      <!-- Diamonds - Product -->
+    </Item>
+    <Item>
       <Product>1742004333</Product>      <!-- Corsets - Product -->
     </Item>
   </ModOp>
@@ -787,19 +796,30 @@
   <!-- END ADD GOODS TO OTHER PRODUCTLIST - HEATING GOODS -->
 
   <!-- START ADD DIAMONDS AND SILVER ORE TO ARCTIC ProductList -->
+  <!-- Silver Bars -->
+  <ModOp Type="add" GUID="502043" Condition="!~/Values/ProductList/List/Item[Product='1957006151']" Path="/Values/ProductList/List">
+    <Item>
+      <Product>1957006151</Product>
+    </Item>
+  </ModOp>
+  <ModOp Type="add" GUID="120055" Condition="!~/Values/ProductStorageList/ProductList/Item[Product='1957006151']" Path="/Values/ProductStorageList/ProductList">
+    <Item>
+      <Product>1957006151</Product>
+    </Item>
+  </ModOp>
   <!-- Diamonds -->
   <ModOp Type="add" GUID="120055" Condition="!~/Values/ProductStorageList/ProductList/Item[Product='1999005087']" Path="/Values/ProductStorageList/ProductList">
     <Item>
       <Product>1999005087</Product>
     </Item>
   </ModOp>
-  <ModOp Type="add" GUID="502011,502051" Condition="!~/Values/ProductStorageList/ProductList/Item[Product='1999005087']" Path="/Values/ProductList/List">
+  <ModOp Type="add" GUID="502011,502051,502049" Condition="!~/Values/ProductList/List/Item[Product='1999005087']" Path="/Values/ProductList/List">
     <Item>
       <Product>1999005087</Product>
     </Item>
   </ModOp>
   <!-- Silver -->
-  <ModOp Type="add" GUID="502011,502051" Condition="!~/Values/ProductStorageList/ProductList/Item[Product='1957006101']" Path="/Values/ProductList/List">
+  <ModOp Type="add" GUID="502011,502051,502049" Condition="!~/Values/ProductList/List/Item[Product='1957006101']" Path="/Values/ProductList/List">
     <Item>
       <Product>1957006101</Product>
     </Item>

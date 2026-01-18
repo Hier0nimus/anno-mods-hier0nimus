@@ -1695,6 +1695,12 @@
   </ModOp>
   <ModOp Type="add" GUID='25000192' Path="/Values/ConstructionCategory/BuildingList/">
     <Item>
+      <Building>1742004604</Building>      <!-- Industrial Soap - ProductionChain -->
+    </Item>
+    <Item>
+      <Building>1742004605</Building>      <!-- Industrial Lubricant - ProductionChain -->
+    </Item>
+    <Item>
       <Building>1742004390</Building>      <!-- Ice Building Menu (OW) - ConstructionCategory -->
     </Item>
   </ModOp>
@@ -1936,9 +1942,15 @@
     </Item>
   </ModOp>
   <ModOp Type="add" GUID='500945' Path="/Values/ConstructionCategory/BuildingList/">
+  <Item>
+    <Building>1742004604</Building>  <!-- Industrial Soap - ProductionChain -->
+  </Item>
+  <Item>
+    <Building>1742004605</Building>  <!-- Industrial Lubricant - ProductionChain -->
+  </Item>    
     <Item>
       <Building>1742004390</Building>      <!-- Ice Building Menu (OW) - ConstructionCategory -->
-    </Item>
+    </Item>    
   </ModOp>
   <!-- END - ADD BUILDINGS TO MODERATE CONSTRUCTION MENU NEEDS -->
 
@@ -2068,4 +2080,107 @@
     </Asset>
   </ModOp>
   <!-- END - ADD ARCTIC ORNAMENT MENU -->
+
+  <!-- START - ADD SILVER TO POCKET WATCHES CHAIN -->
+  <ModOp Type="add" GUID='500015' Path="/Values/ProductionChain/Tier1">
+    <Item>
+      <Building>1742004602</Building><!-- Silver Smelter - Building -->
+      <Tier2>
+        <Item>
+          <Building>1742004455</Building><!-- Silver Mine - Building -->
+        </Item>
+        <Item>
+          <Building>1010304</Building><!-- Coal Mine - Building -->
+        </Item>
+      </Tier2>
+    </Item>
+  </ModOp>
+  <!-- END - ADD SILVER TO POCKET WATCHES CHAIN -->
+
+  <!-- START - ADD SILVER INGOTS AND DIAMONDS TO JEWELLERY CHAIN -->
+  <ModOp Type="add" GUID='500022' Path="/Values/ProductionChain/Tier1">
+    <Item>
+      <Building>1742004602</Building>  <!-- Silver Smelter - Building -->
+      <Tier2>
+        <Item>
+          <Building>1742004455</Building>      <!-- Silver Mine - Building -->
+        </Item>
+        <Item>
+          <Building>1010304</Building>      <!-- Coal Mine - Building -->
+        </Item>
+      </Tier2>
+    </Item>
+    <Item>
+      <Building>1742004368</Building>      <!-- Diamond Open Pit Mine - Building -->
+    </Item>
+  </ModOp>
+  <!-- END - ADD SILVER INGOTS AND DIAMONDS TO JEWELLERY CHAIN -->
+
+  <!-- START - PRODUCTION CHAIN - INDUSTRIAL SOAP -->
+  <ModOp Type="addNextSibling" GUID='15039'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004604</GUID>
+          <Name>Industrial Soap</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_soap_2.png</IconFilename>
+          <InfoDescription>1742004341</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742004340</Building>        <!-- Industrial Soap - Building -->
+          <Tier1>
+            <Item>
+              <Building>112666</Building>            <!-- Whaling Station - Building -->
+            </Item>
+            <Item>
+              <Building>1010310</Building>            <!-- Saltpetre Works - Building -->
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+        <Text>
+          <TextOverride>1742004339</TextOverride>
+        </Text>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - PRODUCTION CHAIN - INDUSTRIAL SOAP -->
+
+  <!-- START - PRODUCTION CHAIN - INDUSTRIAL LUBRICANT -->
+  <ModOp Type="addNextSibling" GUID='15039'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004605</GUID>
+          <Name>Industrial Lubricant</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_industrial_lubricant_a.png</IconFilename>
+          <InfoDescription>1742004344</InfoDescription>
+        </Standard>
+        <ProductionChain>
+          <Building>1742004343</Building>        <!-- Industrial Lubricant - Building -->
+          <Tier1>
+            <Item>
+              <Building>112666</Building>            <!-- Whaling Station - Building -->
+            </Item>
+            <Item>
+              <Building>1010312</Building><!-- Rendering Works - Building -->
+              <Tier2>
+                <Item>
+                  <Building>1010269</Building><!-- Pig Farm - Building -->
+                </Item>
+              </Tier2>
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+        <Text>
+          <TextOverride>1742004342</TextOverride>
+        </Text>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - PRODUCTION CHAIN - INDUSTRIAL LUBRICANT -->
+
 </ModOps>

@@ -1,0 +1,98 @@
+<ModOps>
+  <ModOp Type="addNextSibling" GUID="1010217">
+    <Asset>
+      <Template>Product</Template>
+      <Values>
+        <Standard>
+          <GUID>1957006151</GUID>
+          <Name>Imports - Silver</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/scenario/goods/icon_silver_smelter.png</IconFilename>
+          <InfoDescription>1414018049</InfoDescription>
+        </Standard>
+        <Text>
+          <LocaText />
+          <LineID>5385</LineID>
+        </Text>
+        <Locked />
+        <Product>
+          <StorageLevel>Building</StorageLevel>
+          <ProductCategory>11703</ProductCategory>
+          <BasePrice>1200</BasePrice>
+          <CivLevel>5</CivLevel>
+          <AssociatedRegion />
+          <ProductionRegions />
+        </Product>
+        <ExpeditionAttributes>
+          <ExpeditionAttributes>
+            <Item>
+              <Attribute>Diplomacy</Attribute>
+              <Amount>20</Amount>
+            </Item>
+          </ExpeditionAttributes>
+        </ExpeditionAttributes>
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <ModOp Type="addNextSibling" GUID="131764" Condition="!//FactoryBase[FactoryOutputs/Item/Product='1957006151']/IsMainFactory[text()='1']">
+    <Asset>
+      <Template>FactoryBuilding7</Template>
+      <Values>
+        <Standard>
+          <GUID>1440241</GUID>
+          <Name>IsMainFactory fake</Name>
+        </Standard>
+        <Building>
+          <BuildModeRandomRotation>90</BuildModeRandomRotation>
+          <AssociatedRegions>Moderate;Colony01</AssociatedRegions>
+        </Building>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/dlc10/graphics/buildings/production/heavy_02/heavy_02.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>24846</Product>
+              <Amount>1</Amount>
+              <StorageAmount>3</StorageAmount>
+            </Item>
+            <Item>
+              <Product>24821</Product>
+              <Amount>1</Amount>
+              <StorageAmount>3</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <FactoryOutputs>
+            <Item>
+              <Product>1957006151</Product>
+              <Amount>1</Amount>
+              <StorageAmount>2</StorageAmount>
+            </Item>
+          </FactoryOutputs>
+          <CycleTime>120</CycleTime>
+          <IsMainFactory>1</IsMainFactory>
+        </FactoryBase>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>50</Amount>
+              <InactiveAmount>25</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1010117</Product>
+              <Amount>250</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Industrializable>
+          <MandatoryIndustrialization>1</MandatoryIndustrialization>
+        </Industrializable>
+      </Values>
+    </Asset>
+  </ModOp>
+</ModOps>
