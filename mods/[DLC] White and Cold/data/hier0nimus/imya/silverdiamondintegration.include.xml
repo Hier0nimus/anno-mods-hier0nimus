@@ -1,0 +1,87 @@
+<!--
+IMYA TWEAKS - SILVER AND DIAMOND INTEGRATION
+-->
+
+<ModOps>
+
+    <!-- START - ADDING SILVER INGOT TO POCKET WATCHES INPUT -->
+    <ModOp Type="add" GUID="1010324" Path="/Values/FactoryBase/FactoryInputs">
+        <Item>
+            <Product>1957006151</Product>            <!-- Silver ingot -->
+            <Amount>1</Amount>
+            <StorageAmount>4</StorageAmount>
+        </Item>
+    </ModOp>
+    <!-- END - ADDING SILVER INGOT TO POCKET WATCHES INPUT -->
+
+    <!-- PRODUCTION WORKS (KURILA) -->
+    <Group Condition="!#jewelry_works_kurila">
+        <!-- START - ADDING SILVER INGOT AND DIAMONDS TO JEWELLERY INPUT -->
+        <ModOp Type="add" GUID="1010328" Path="/Values/FactoryBase/FactoryInputs">
+            <Item>
+                <Product>1957006151</Product>                <!-- Silver ingot -->
+                <Amount>1</Amount>
+                <StorageAmount>4</StorageAmount>
+            </Item>
+            <Item>
+                <Product>1999005087</Product>                <!-- Diamonds -->
+                <Amount>1</Amount>
+                <StorageAmount>4</StorageAmount>
+            </Item>
+        </ModOp>
+        <!-- END - ADDING SILVER INGOT AND DIAMONDS TO JEWELLERY INPUT -->
+    </Group>
+
+    <!-- START - ADD SILVER TO POCKET WATCHES CHAIN -->
+    <ModOp Type="add" GUID='500015' Path="/Values/ProductionChain/Tier1">
+        <Item>
+            <Building>1742004602</Building>            <!-- Silver Smelter - Building -->
+            <Tier2>
+                <Item>
+                    <Building>1742004455</Building>                    <!-- Silver Mine - Building -->
+                </Item>
+                <Item>
+                    <Building>1010304</Building>                    <!-- Coal Mine - Building -->
+                </Item>
+            </Tier2>
+        </Item>
+    </ModOp>
+    <!-- END - ADD SILVER TO POCKET WATCHES CHAIN -->
+
+    <!-- START - ADD SILVER INGOTS AND DIAMONDS TO JEWELLERY CHAIN -->
+    <Group Condition="!#jewelry_works_kurila">
+        <ModOp Type="add" GUID='500022' Path="/Values/ProductionChain/Tier1">
+            <Item>
+                <Building>1742004602</Building>            <!-- Silver Smelter - Building -->
+                <Tier2>
+                    <Item>
+                        <Building>1742004455</Building>                    <!-- Silver Mine - Building -->
+                    </Item>
+                    <Item>
+                        <Building>1010304</Building>                    <!-- Coal Mine - Building -->
+                    </Item>
+                </Tier2>
+            </Item>
+            <Item>
+                <Building>1742004368</Building>            <!-- Diamond Open Pit Mine - Building -->
+            </Item>
+        </ModOp>
+    </Group>
+    <!-- END - ADD SILVER INGOTS AND DIAMONDS TO JEWELLERY CHAIN -->
+
+    <!-- START - CHANGE PRODUCT Pocket Watches -->
+    <ModOp Type="merge" GUID='1010246' Path="/Values/Product">
+        <BasePrice>4420</BasePrice>
+    </ModOp>
+    <!-- END - CHANGE PRODUCT Pocket Watches -->
+
+    <!-- PRODUCTION WORKS (KURILA) -->
+    <Group Condition="!#jewelry_works_kurila">
+        <!-- START - CHANGE PRODUCT Jewellery -->
+        <ModOp Type="merge" GUID='1010250' Path="/Values/Product">
+            <BasePrice>5840</BasePrice>
+        </ModOp>
+        <!-- END - CHANGE PRODUCT Jewellery -->
+    </Group>
+
+</ModOps>
