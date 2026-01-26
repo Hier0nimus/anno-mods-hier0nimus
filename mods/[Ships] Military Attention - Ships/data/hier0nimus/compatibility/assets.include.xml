@@ -474,4 +474,98 @@ Compatibility
         <!-- END COMPATIBILITY NEW WORLD STEAM SHIPYARD -->
     </Group>
 
+    <Group Condition="#Early_Research_more_Serp">
+        <!-- START COMPATIBILITY Early Research Balanced (Serp) -->
+
+        <!--UNLOCK - INVESTORS  10000 (Serp) -->
+        <ModOp Type="addnextSibling" GUID="130248">
+            <Asset>
+                <Template>Trigger</Template>
+                <Values>
+                    <Standard>
+                        <GUID>1742100833</GUID>
+                        <Name>MOD Trigger</Name>
+                    </Standard>
+                    <Trigger>
+                        <TriggerCondition>
+                            <Template>ConditionUnlocked</Template>
+                            <Values>
+                                <Condition />
+                                <ConditionUnlocked>
+                                    <UnlockNeeded>1500000050</UnlockNeeded>                                    <!-- ResearchCenter_03_Mod -->
+                                </ConditionUnlocked>
+                                <ConditionPropsNegatable />
+                            </Values>
+                        </TriggerCondition>
+                        <SubTriggers>
+                            <Item>
+                                <SubTrigger>
+                                    <Template>AutoCreateTrigger</Template>
+                                    <Values>
+                                        <Trigger>
+                                            <TriggerCondition>
+                                                <Template>ConditionPlayerCounter</Template>
+                                                <Values>
+                                                    <Condition />
+                                                    <ConditionPlayerCounter>
+                                                        <PlayerCounter>PopulationByLevel</PlayerCounter>
+                                                        <Context>15000004</Context>                                                        <!-- Investors PopulationLevel7 -->
+                                                        <CounterAmount>10000</CounterAmount>
+                                                    </ConditionPlayerCounter>
+                                                </Values>
+                                            </TriggerCondition>
+                                        </Trigger>
+                                    </Values>
+                                </SubTrigger>
+                            </Item>
+                        </SubTriggers>
+                        <TriggerActions>
+                            <Item>
+                                <TriggerAction>
+                                    <Template>ActionUnlockAsset</Template>
+                                    <Values>
+                                        <Action />
+                                        <ActionUnlockAsset>
+                                            <UnhideAssets>
+                                            </UnhideAssets>
+                                            <UnlockAssets>
+                                                <Item>
+                                                    <Asset>1742100585</Asset>                                                    <!-- Heavy Batle Cruiser - Ship -->
+                                                </Item>
+                                                <Item>
+                                                    <Asset>1742100613</Asset>                                                    <!-- B42 (Helium) - AirShip -->
+                                                </Item>
+                                                <Item>
+                                                    <Asset>1742100629</Asset>                                                    <!-- B42 (Arctic Gas) - AirShip -->
+                                                </Item>
+                                                <Item>
+                                                    <Asset>1742100657</Asset>                                                    <!-- F42 (Helium) - Ship -->
+                                                </Item>
+                                                <Item>
+                                                    <Asset>1742100658</Asset>                                                    <!-- F42 (Arctic Gas) - Ship -->
+                                                </Item>
+                                                <Item>
+                                                    <Asset>1742100660</Asset>                                                    <!-- A42 (Helium) - Ship -->
+                                                </Item>
+                                                <Item>
+                                                    <Asset>1742100661</Asset>                                                    <!-- A42 (Arctic Gas) - Ship -->
+                                                </Item>
+                                                <Item>
+                                                    <Asset>1742100663</Asset>                                                    <!-- Large Airship Hangar - Shipyard -->
+                                                </Item>
+                                            </UnlockAssets>
+                                        </ActionUnlockAsset>
+                                    </Values>
+                                </TriggerAction>
+                            </Item>
+                        </TriggerActions>
+                    </Trigger>
+                    <TriggerSetup />
+                </Values>
+            </Asset>
+        </ModOp>
+
+        <!-- END COMPATIBILITY Early Research Balanced (Serp) -->
+    </Group>
+
 </ModOps>
