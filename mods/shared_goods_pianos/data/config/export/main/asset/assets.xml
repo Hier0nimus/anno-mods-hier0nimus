@@ -1,0 +1,242 @@
+<!-- 
+  
+  [Shared] Shared Goods - Pianos - v1.0
+  Created by Hier0nimus
+  Enjoy!
+
+  Add triggers for product, building to unlock when you want it
+  Add building to construction menu where you want it
+
+  1742110023 - Piano - Product
+  1742110024 - Piano - Product - Description
+  1742110127 - Artisan's Workshop: Piano DUMMY - Building
+
+-->
+
+<ModOps>
+
+  <!-- START Piano - Product -->
+  <ModOp GUID='1010128' Type="addNextSibling">
+    <Asset>
+      <Template>Product</Template>
+      <Values>
+        <Standard>
+          <GUID>1742110023</GUID>
+          <Name>Pianos</Name>
+          <IconFilename>data/graphics/icons/icon_piano.png</IconFilename>
+          <InfoDescription>1742110024</InfoDescription>
+        </Standard>
+        <Text />
+        <Locked />
+        <Product>
+          <StorageLevel>Building</StorageLevel>
+          <ProductCategory>11705</ProductCategory>
+          <BasePrice>18000</BasePrice>
+          <CivLevel>5</CivLevel>
+          <AssociatedRegion>Moderate;Colony01</AssociatedRegion>
+          <ProductionRegions>
+            <Item>
+              <RegionType>Moderate</RegionType>
+            </Item>
+          </ProductionRegions>
+        </Product>
+        <ExpeditionAttribute>
+          <BaseMorale>0</BaseMorale>
+          <ExpeditionAttributes>
+            <Item>
+              <Attribute>Diplomacy</Attribute>
+              <Amount>15</Amount>
+            </Item>
+          </ExpeditionAttributes>
+          <FluffText />
+        </ExpeditionAttribute>
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- START ADD GOODS TO StandardProductStorageList + StandardMarketplaceREGIONStorageList   -->
+
+  <!-- ************ MODERATE REGION ************ -->
+
+  <!-- START - ADD PRODUCT TO PRODUCTSTORAGELISTS -->
+  <ModOp Type="add" GUID="120055,120057" Path="/Values/ProductStorageList/ProductList/">
+    <Item>
+      <Product>1742110023</Product>
+    </Item>
+  </ModOp>
+
+  <!-- START ADD GOODS TO OTHER ProductList ModerateSessionGoods,AllConsumerGoods_EuropeSort -->
+  <ModOp Type="add" GUID='502012,502031' Path="/Values/ProductList/List">
+    <Item>
+      <Product>1742110023</Product>
+    </Item>
+  </ModOp>
+  <!-- END ADD GOODS TO OTHER ProductList ModerateSessionGoods,AllConsumerGoods_EuropeSort -->
+
+  <!-- START ADD GOODS TO ProductList AllConsumerGoods_SouthAmericaSort -->
+  <ModOp Type="add" GUID='502034' Path="/Values/ProductList/List">
+    <Item>
+      <Product>1742110023</Product>
+    </Item>
+  </ModOp>
+  <!-- END  -->
+
+  <!-- START ADD GOODS TO ProductList AllGoodsUnlock_SouthAmericaSort,AllGoodsUnlock_SouthAmericaSort_WithoutOil,AllGoodsUnlock_ArcticSort,AllGoodsUnlock_ArcticSort_WithoutOil,AllGoodsUnlock_AfricaSort,AllGoodsUnlock_AfricaSort_WithoutOil,AllGoodsUnlock_EuropeSort,AllGoodsUnlock_EuropeSort_WithoutOil,AllGoodsUnlock_EuropeSort_WithoutOil_WithoutScrap -->
+  <ModOp Type="add" GUID='502027,502067,502028,502068,502078,502080,502016,502065,502220,502013' Path="/Values/ProductList/List">
+    <Item>
+      <Product>1742110023</Product>
+    </Item>
+  </ModOp>
+  <!-- END  -->
+
+  <!-- START BUILDING - Artisan's Workshop: Pianos DUMMY -->
+  <ModOp Type="addNextSibling" GUID='1010284'>
+    <Asset>
+      <Template>FactoryBuilding7</Template>
+      <Values>
+        <Standard>
+          <GUID>1742110127</GUID>
+          <Name>Pianos production DUMMY</Name>
+          <IconFilename>data/graphics/icons/icon_piano.png</IconFilename>
+        </Standard>
+        <Building>
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <AssociatedRegions>Moderate</AssociatedRegions>
+        </Building>
+        <Blocking/>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <Amount>35000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>
+              <Amount>30</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>
+              <Amount>40</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>
+              <Amount>30</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>
+              <Amount>25</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010202</Ingredient>
+              <Amount>10</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data\graphics\buildings\production\manufactory\manufactory_07.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Mesh/>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>Resident_tier03_atWork</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Text />
+        <Constructable/>
+        <Locked/>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>270382</Sound>
+            </Item>
+            <Item>
+              <Sound>270364</Sound>
+            </Item>
+          </ActiveSounds>
+        </SoundEmitter>
+        <FeedbackController/>
+        <Infolayer/>
+        <UpgradeList/>
+        <Factory7/>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>135087</Product>
+              <Amount>1</Amount>
+              <StorageAmount>8</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1010219</Product>
+              <Amount>1</Amount>
+              <StorageAmount>8</StorageAmount>
+            </Item>
+            <Item>
+              <Product>135150</Product>
+              <Amount>1</Amount>
+              <StorageAmount>8</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1440231</Product>
+              <Amount>1</Amount>
+              <StorageAmount>8</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <FactoryOutputs>
+            <Item>
+              <Product>1742110023</Product>      <!--Piano-->
+              <Amount>1</Amount>
+              <StorageAmount>10</StorageAmount>
+            </Item>
+          </FactoryOutputs>
+          <CycleTime>60</CycleTime>
+          <IsMainFactory>1</IsMainFactory>
+        </FactoryBase>
+        <LogisticNode/>
+        <AmbientMoodProvider>
+          <Murmur>Factory</Murmur>
+          <DynamicEnvironmentType>None</DynamicEnvironmentType>
+        </AmbientMoodProvider>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>600</Amount>
+              <InactiveAmount>300</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1010116</Product>
+              <Amount>200</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+          <MaximumHitPoints>1500</MaximumHitPoints>
+          <SelfHealPerHealTick>4</SelfHealPerHealTick>
+        </Attackable>
+        <Pausable/>
+        <IncidentInfectable />
+        <Industrializable/>
+        <Culture>
+          <CultureType>Culture</CultureType>
+        </Culture>
+        <QuestObject/>
+        <Electrifiable/>
+        <EcoSystemProvider/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - Artisan's Workshop: Flute DUMMY -->
+
+</ModOps>
