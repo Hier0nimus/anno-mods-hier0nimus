@@ -34,6 +34,17 @@
     <ModOp Type="merge" GUID="112680" Path="/Values/FactoryBase">
       <CycleTime>90</CycleTime>
     </ModOp>
+    <ModOp Type="merge" GUID="112680" Path="/Values/">
+      <PublicService>
+        <FullSatisfactionDistance>44</FullSatisfactionDistance>
+        <NoSatisfactionDistance>50</NoSatisfactionDistance>
+        <PublicServiceOutputs>
+          <Item>
+            <Product>112703</Product>
+          </Item>
+        </PublicServiceOutputs>
+      </PublicService>
+    </ModOp>
   </Group>
 
   <!-- LUBRICANT SILO KURILA -->
@@ -327,5 +338,66 @@
       </Item>
     </ModOp>
   </Group>
+
+  <!-- TRUE JAM EXPERIENCE -->
+  <Group Condition="#TaludasKurilaLordys_TrueJamExperience">
+    <Group Condition="!#OrchardRework">
+      <ModOp Type="add" GUID='1742004380' Path="/Values/ItemEffect/EffectTargets/">
+        <Item>
+          <GUID>133496</GUID> <!-- Orchard - Cherries -->
+        </Item>
+      </ModOp>
+    </Group>
+  </Group>
+
+  <!-- ORCHARD REWORK -->
+  <!-- APPLES -->
+  <Group Condition="#shared_apple_orchard_kurila">
+    <ModOp Type="add" GUID='1742004380' Path="/Values/ItemEffect/EffectTargets/">
+      <Item>
+        <GUID>1404420046</GUID> <!-- Orchard - Apples -->
+      </Item>
+    </ModOp>
+  </Group>
+  <!-- CHERRIES -->
+  <Group Condition="#OrchardRework">
+    <ModOp Type="add" GUID='1742004380' Path="/Values/ItemEffect/EffectTargets/">
+      <Item>
+        <GUID>133496</GUID>  <!-- Orchard - Cherries -->
+      </Item>
+    </ModOp>
+  </Group>
+
+  <!-- NOBLESSE OBLIGE -->
+
+  <Group Condition="#RickyTaludas_OWHacienda">
+    <ModOp Type="add" GUID='1742004380' Path="/Values/ItemEffect/EffectTargets/">
+      <Item>
+        <GUID>1999005269</GUID> <!-- Orchard - Apples -->
+      </Item>
+      <Item>
+        <GUID>1999005222</GUID> <!-- NO Hacienda - Potato -->
+      </Item>
+      <Item>
+        <GUID>1999005223</GUID> <!-- NO Hacienda - Vegetables -->
+      </Item>
+      <Item>
+        <GUID>1999005229</GUID> <!-- NO Hacienda - Grapes -->
+      </Item>
+      <Item>
+        <GUID>1999005200</GUID> <!-- Orangery -->
+      </Item>
+    </ModOp>
+  </Group>
+
+  <!-- INDUSTRIAL CITIES -->
+
+  <Group Condition="#ow-cheese-jakob">
+    <ModOp Type="add" GUID='1742004380' Path="/Values/ItemEffect/EffectTargets/">
+      <Item>
+        <GUID>1500010104</GUID> <!-- Cattle Farm - Milk -->
+      </Item>
+    </ModOp>
+  </Group>
+
 </ModOps>
-  

@@ -1,6 +1,6 @@
 <ModOps>
   <!-- New Display entry for "Improved by Husky Sleds" only for Arctic Buildings -->
-  <ModOp Type="addNextSibling" Path="//InfoTipData[Guid='25000020']//InfoElement[InfoElement/Text[TextGUID='13659']]">
+  <ModOp Type="addNextSibling" Path="//InfoTipData[Guid='25000020']//InfoElement[InfoElement/Text[TextGUID='13659']][1]">
       <InfoElement>
         <ElementType>8</ElementType>
         <ChildCount>1</ChildCount>
@@ -86,7 +86,7 @@
   </ModOp>
 
   <!-- New Condition for Vanilla "Impoved by Electricity" only for NOT Arctic Buildings -->
-  <ModOp Type="addPrevSibling" Path="//InfoTipData[Guid='25000020']//InfoElement[InfoElement/Text[TextGUID='13659']]/VisibilityElement/VisibilityElement/OperatorType">
+  <ModOp Type="addPrevSibling" Path="//InfoTipData[Guid='25000020']//InfoElement[InfoElement/Text[TextGUID='13659']][1]/VisibilityElement/VisibilityElement/OperatorType">
     <VisibilityElement>
       <ElementType>
         <ElementType>1</ElementType>
