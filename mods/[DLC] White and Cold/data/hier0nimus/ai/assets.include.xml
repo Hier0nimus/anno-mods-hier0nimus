@@ -1,0 +1,202 @@
+<!-- 
+  AI
+-->
+
+<ModOps>
+  <!-- ADD ADDITIONAL POPULATION AND HEAT FOR AI SO THEY DO NOT GET STUCK -->
+  <ModOp GUID="1010316" Type="addNextSibling">
+      <Asset>
+        <Template>TownhallBuff</Template>
+        <Values>
+          <Standard>
+            <GUID>1742004606</GUID>
+            <Name>More inhabitants buff AI Arctic </Name>
+            <IconFilename>data/ui/2kimages/main/3dicons/achievement/icon_achievement_population_gold.png</IconFilename>
+          </Standard>
+          <ItemEffect>
+            <EffectTargets>
+              <Item>
+                <GUID>1742200029</GUID> <!-- All Arctic Residences -->
+              </Item>
+            </EffectTargets>
+            <AllowStacking>0</AllowStacking>
+          </ItemEffect>
+          <Buff />
+          <CultureUpgrade>
+            <HideBuff>0</HideBuff>
+          </CultureUpgrade>
+          <PopulationUpgrade>
+            <InputBenefitModifier>
+              <Item>
+                <Product>112708</Product>
+                <AdditionalHeat>20</AdditionalHeat>
+              </Item>
+            </InputBenefitModifier>
+          </PopulationUpgrade>
+        </Values>
+      </Asset>
+      <Asset>
+        <Template>Trigger</Template>
+        <Values>
+          <Standard>
+            <GUID>1742004607</GUID>
+            <Name>AI_Trigger_Settled</Name>
+          </Standard>
+          <Trigger>
+            <TriggerCondition>
+              <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+              <Values>
+                <Condition>
+                  <SubConditionCompletionOrder>MutuallyExclusive</SubConditionCompletionOrder>
+                </Condition>
+                <ConditionAlwaysTrue />
+              </Values>
+            </TriggerCondition>
+            <SubTriggers>
+              <Item>
+                <SubTrigger>
+                  <Template>AutoCreateTrigger</Template>
+                  <Values>
+                    <Trigger>
+                      <TriggerCondition>
+                        <Template>ConditionUnlocked</Template>
+                        <Values>
+                          <Condition />
+                          <ConditionUnlocked>
+                            <UnlockNeeded>1500001601</UnlockNeeded>
+                          </ConditionUnlocked>
+                          <ConditionPropsNegatable />
+                        </Values>
+                      </TriggerCondition>
+                      <SubTriggers>
+                        <Item>
+                          <SubTrigger>
+                            <Template>AutoCreateTrigger</Template>
+                            <Values>
+                              <Trigger>
+                                <TriggerCondition>
+                                  <Template>ConditionEvent</Template>
+                                  <Values>
+                                    <Condition />
+                                    <ConditionEvent>
+                                      <ConditionEvent>IslandSettled</ConditionEvent>
+                                    </ConditionEvent>
+                                    <ConditionPropsNegatable />
+                                  </Values>
+                                </TriggerCondition>
+                                <TriggerActions>
+                                  <Item>
+                                    <TriggerAction>
+                                      <Template>ActionBuff</Template>
+                                      <Values>
+                                        <Action />
+                                        <ActionBuff>
+                                          <BuffAsset>1742004606</BuffAsset>
+                                          <AddBuff>0</AddBuff>
+                                          <BuffProcessingParticipant>1</BuffProcessingParticipant>
+                                        </ActionBuff>
+                                      </Values>
+                                    </TriggerAction>
+                                  </Item>
+                                  <Item>
+                                    <TriggerAction>
+                                      <Template>ActionBuff</Template>
+                                      <Values>
+                                        <Action />
+                                        <ActionBuff>
+                                          <BuffAsset>1742004606</BuffAsset>
+                                          <AddBuff>1</AddBuff>
+                                          <BuffProcessingParticipant>1</BuffProcessingParticipant>
+                                        </ActionBuff>
+                                      </Values>
+                                    </TriggerAction>
+                                  </Item>
+                                </TriggerActions>
+                              </Trigger>
+                            </Values>
+                          </SubTrigger>
+                        </Item>
+                      </SubTriggers>
+                    </Trigger>
+                  </Values>
+                </SubTrigger>
+              </Item>
+            </SubTriggers>
+            <ResetTrigger>
+              <Template>AutoCreateTrigger</Template>
+              <Values>
+                <Trigger>
+                  <TriggerCondition>
+                    <Template>ConditionTimer</Template>
+                    <Values>
+                      <Condition />
+                      <ConditionTimer>
+                        <TimeLimit>30000</TimeLimit>
+                      </ConditionTimer>
+                    </Values>
+                  </TriggerCondition>
+                </Trigger>
+              </Values>
+            </ResetTrigger>
+          </Trigger>
+          <TriggerSetup>
+            <AutoRegisterTrigger>1</AutoRegisterTrigger>
+            <UsedBySecondParties>1</UsedBySecondParties>
+          </TriggerSetup>
+        </Values>
+      </Asset>
+      <Asset>
+        <Template>Trigger</Template>
+        <Values>
+          <Standard>
+            <GUID>1742004608</GUID>
+            <Name>AI_Trigger_Initial</Name>
+          </Standard>
+          <Trigger>
+            <TriggerCondition>
+              <Template>ConditionUnlocked</Template>
+              <Values>
+                <Condition />
+                <ConditionUnlocked>
+                  <UnlockNeeded>1500001601</UnlockNeeded>
+                </ConditionUnlocked>
+                <ConditionPropsNegatable />
+              </Values>
+            </TriggerCondition>
+            <TriggerActions>
+              <Item>
+                <TriggerAction>
+                  <Template>ActionBuff</Template>
+                  <Values>
+                    <Action />
+                    <ActionBuff>
+                      <BuffAsset>1742004606</BuffAsset>
+                      <AddBuff>0</AddBuff>
+                      <BuffProcessingParticipant>1</BuffProcessingParticipant>
+                    </ActionBuff>
+                  </Values>
+                </TriggerAction>
+              </Item>
+              <Item>
+                <TriggerAction>
+                  <Template>ActionBuff</Template>
+                  <Values>
+                    <Action />
+                    <ActionBuff>
+                      <BuffAsset>1742004606</BuffAsset>
+                      <AddBuff>1</AddBuff>
+                      <BuffProcessingParticipant>1</BuffProcessingParticipant>
+                    </ActionBuff>
+                  </Values>
+                </TriggerAction>
+              </Item>
+            </TriggerActions>
+          </Trigger>
+          <TriggerSetup>
+            <AutoRegisterTrigger>1</AutoRegisterTrigger>
+            <UsedBySecondParties>1</UsedBySecondParties>
+          </TriggerSetup>
+        </Values>
+      </Asset>
+  </ModOp>
+</ModOps>
