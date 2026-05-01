@@ -265,6 +265,28 @@
   </ModOp>
   <!-- END - INUIT PopulationLevel7 -->
 
+<!-- START PIRATES - PopulationGroup7 -->
+<ModOp GUID='112641' Type="addNextSibling">
+  <Asset>
+    <Template>PopulationGroup7</Template>
+    <Values>
+      <Standard>
+        <GUID>1742004609</GUID>        <!-- Inuit - PopulationGroup7 -->
+        <Name>Inuit</Name>
+      </Standard>
+      <PopulationGroup7>
+        <PopulationLevels>
+          <Item>
+            <Level>1742004100</Level>            <!-- Inuit PopulationLevel7 -->
+          </Item>
+        </PopulationLevels>
+        <Regional>Arctic</Regional>
+      </PopulationGroup7>
+    </Values>
+  </Asset>
+</ModOp>
+<!-- END PIRATES - PopulationGroup7 -->
+
   <!-- START - ADD POPULATION TIERS TO GLOBAL POPULATION -->
   <ModOp Type="addNextSibling" GUID="2001271" Path="/Values/GUIConfig/PopulationLevelList/Item[PopulationLevel='112643']">
     <Item>
@@ -859,14 +881,6 @@
     <PopulationParticipant>Arctic_Resident_tier02_atWork</PopulationParticipant>
   </ModOp>
   <!-- ****************** START Explorer & Technicians more needs by ParticipantMessageArcheType ******************  -->
-
-  <!-- START - ADD INUIT POPULATION TO ARCTIC POPULATION -->
-  <ModOp Type="add" GUID="112641" Path="/Values/PopulationGroup7/PopulationLevels">
-    <Item>
-      <Level>1742004100</Level>
-    </Item>
-  </ModOp>
-  <!-- END - ADD INUIT POPULATION TO ARCTIC POPULATION -->
 
   <!-- START - ADD INUIT POPULATION TO GoodValueBalancing -->
   <ModOp Type="add" GUID="142977" Path="/Values/GoodValueBalancing/WorkforceData/Arctic/Tiers/">
