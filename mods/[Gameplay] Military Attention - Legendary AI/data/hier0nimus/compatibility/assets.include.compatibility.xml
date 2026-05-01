@@ -361,138 +361,229 @@ Compatibility
 
   </Group>
 
-  <Group Condition="#military_attention_pirates">
+  <Group Condition="!#military_attention">
 
-    <!-- Let pirates build more ships -->
-    <!-- START - SHIPS PIRATES - LATEMIDGAME -->
-    <ModOp Type="merge" GUID='73,76' Path="Values/Trader/Progression/LateMidGame/WarFleet">
-      <WarFleet>
-        <Item>
-          <ShipAsset>102432</ShipAsset>          <!--Pirate Monitor-->
-          <Amount>3</Amount>          <!-- / - 1 -->
-        </Item>
-        <Item>
-          <ShipAsset>1742102068</ShipAsset>          <!--Pirate Flame Monitor-->
-          <Amount>3</Amount>          <!-- / - 1 -->
-        </Item>
-        <Item>
-          <ShipAsset>1742102012</ShipAsset>          <!--Ironclad Cruiser-->
-          <Amount>3</Amount>          <!-- / - 2 -->
-        </Item>
-        <Item>
-          <ShipAsset>1742102074</ShipAsset>          <!--Pirate Flak Monitor-->
-          <Amount>2</Amount>          <!-- / - 1 -->
-        </Item>
-        <Item>
-          <ShipAsset>102431</ShipAsset>          <!--Pirate SOTL-->
-          <Amount>4</Amount>          <!-- 2 - 3 -->
-        </Item>
-        <Item>
-          <ShipAsset>1742102008</ShipAsset>          <!--Jolly Roger-->
-          <Amount>4</Amount>          <!-- / - 2 -->
-        </Item>
-        <Item>
-          <ShipAsset>102430</ShipAsset>          <!--Pirate Frigate-->
-          <Amount>5</Amount>          <!-- 4 - 4 -->
-        </Item>
-        <Item>
-          <ShipAsset>102429</ShipAsset>          <!--Pirate Gunboat-->
-          <Amount>6</Amount>          <!-- 8 - 6 -->
-        </Item>
-      </WarFleet>
+    <!-- START - ADD ADDITIONAL POPULATION FOR AI SO THEY DO NOT GET STUCK AND PROGRESS FASTER -->
+    <ModOp GUID="1010316" Type="addNextSibling">
+      <Asset>
+        <Template>TownhallBuff</Template>
+        <Values>
+          <Standard>
+            <GUID>1742101083</GUID>
+            <Name>More inhabitants buff AI </Name>
+            <IconFilename>data/ui/2kimages/main/3dicons/achievement/icon_achievement_population_gold.png</IconFilename>
+          </Standard>
+          <ItemEffect>
+            <EffectTargets>
+              <Item>
+                <GUID>190762</GUID>            <!-- All Residences -->
+              </Item>
+            </EffectTargets>
+            <AllowStacking>0</AllowStacking>
+          </ItemEffect>
+          <Buff />
+          <CultureUpgrade>
+            <HideBuff>0</HideBuff>
+          </CultureUpgrade>
+          <PopulationUpgrade>
+            <InputBenefitModifier>
+              <Item>
+                <Product>120020</Product>
+                <AdditionalSupply>10</AdditionalSupply>
+              </Item>
+              <Item>
+                <Product>1010213</Product>
+                <AdditionalSupply>10</AdditionalSupply>
+              </Item>
+              <Item>
+                <Product>1010217</Product>
+                <AdditionalSupply>10</AdditionalSupply>
+              </Item>
+              <Item>
+                <Product>120032</Product>
+                <AdditionalSupply>10</AdditionalSupply>
+              </Item>
+              <Item>
+                <Product>120016</Product>
+                <AdditionalSupply>10</AdditionalSupply>
+              </Item>
+              <Item>
+                <Product>114890</Product>
+                <AdditionalSupply>10</AdditionalSupply>
+              </Item>
+            </InputBenefitModifier>
+          </PopulationUpgrade>
+        </Values>
+      </Asset>
+      <Asset>
+        <Template>Trigger</Template>
+        <Values>
+          <Standard>
+            <GUID>1742101084</GUID>
+            <Name>AI_Trigger_Settled</Name>
+          </Standard>
+          <Trigger>
+            <TriggerCondition>
+              <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+              <Values>
+                <Condition>
+                  <SubConditionCompletionOrder>MutuallyExclusive</SubConditionCompletionOrder>
+                </Condition>
+                <ConditionAlwaysTrue />
+              </Values>
+            </TriggerCondition>
+            <SubTriggers>
+              <Item>
+                <SubTrigger>
+                  <Template>AutoCreateTrigger</Template>
+                  <Values>
+                    <Trigger>
+                      <TriggerCondition>
+                        <Template>ConditionUnlocked</Template>
+                        <Values>
+                          <Condition />
+                          <ConditionUnlocked>
+                            <UnlockNeeded>1500001601</UnlockNeeded>
+                          </ConditionUnlocked>
+                          <ConditionPropsNegatable />
+                        </Values>
+                      </TriggerCondition>
+                      <SubTriggers>
+                        <Item>
+                          <SubTrigger>
+                            <Template>AutoCreateTrigger</Template>
+                            <Values>
+                              <Trigger>
+                                <TriggerCondition>
+                                  <Template>ConditionEvent</Template>
+                                  <Values>
+                                    <Condition />
+                                    <ConditionEvent>
+                                      <ConditionEvent>IslandSettled</ConditionEvent>
+                                    </ConditionEvent>
+                                    <ConditionPropsNegatable />
+                                  </Values>
+                                </TriggerCondition>
+                                <TriggerActions>
+                                  <Item>
+                                    <TriggerAction>
+                                      <Template>ActionBuff</Template>
+                                      <Values>
+                                        <Action />
+                                        <ActionBuff>
+                                          <BuffAsset>1742101083</BuffAsset>
+                                          <AddBuff>0</AddBuff>
+                                          <BuffProcessingParticipant>1</BuffProcessingParticipant>
+                                        </ActionBuff>
+                                      </Values>
+                                    </TriggerAction>
+                                  </Item>
+                                  <Item>
+                                    <TriggerAction>
+                                      <Template>ActionBuff</Template>
+                                      <Values>
+                                        <Action />
+                                        <ActionBuff>
+                                          <BuffAsset>1742101083</BuffAsset>
+                                          <AddBuff>1</AddBuff>
+                                          <BuffProcessingParticipant>1</BuffProcessingParticipant>
+                                        </ActionBuff>
+                                      </Values>
+                                    </TriggerAction>
+                                  </Item>
+                                </TriggerActions>
+                              </Trigger>
+                            </Values>
+                          </SubTrigger>
+                        </Item>
+                      </SubTriggers>
+                    </Trigger>
+                  </Values>
+                </SubTrigger>
+              </Item>
+            </SubTriggers>
+            <ResetTrigger>
+              <Template>AutoCreateTrigger</Template>
+              <Values>
+                <Trigger>
+                  <TriggerCondition>
+                    <Template>ConditionTimer</Template>
+                    <Values>
+                      <Condition />
+                      <ConditionTimer>
+                        <TimeLimit>30000</TimeLimit>
+                      </ConditionTimer>
+                    </Values>
+                  </TriggerCondition>
+                </Trigger>
+              </Values>
+            </ResetTrigger>
+          </Trigger>
+          <TriggerSetup>
+            <AutoRegisterTrigger>1</AutoRegisterTrigger>
+            <UsedBySecondParties>1</UsedBySecondParties>
+          </TriggerSetup>
+        </Values>
+      </Asset>
+      <Asset>
+        <Template>Trigger</Template>
+        <Values>
+          <Standard>
+            <GUID>1742101085</GUID>
+            <Name>AI_Trigger_Initial</Name>
+          </Standard>
+          <Trigger>
+            <TriggerCondition>
+              <Template>ConditionUnlocked</Template>
+              <Values>
+                <Condition />
+                <ConditionUnlocked>
+                  <UnlockNeeded>1500001601</UnlockNeeded>
+                </ConditionUnlocked>
+                <ConditionPropsNegatable />
+              </Values>
+            </TriggerCondition>
+            <TriggerActions>
+              <Item>
+                <TriggerAction>
+                  <Template>ActionBuff</Template>
+                  <Values>
+                    <Action />
+                    <ActionBuff>
+                      <BuffAsset>1742101083</BuffAsset>
+                      <AddBuff>0</AddBuff>
+                      <BuffProcessingParticipant>1</BuffProcessingParticipant>
+                    </ActionBuff>
+                  </Values>
+                </TriggerAction>
+              </Item>
+              <Item>
+                <TriggerAction>
+                  <Template>ActionBuff</Template>
+                  <Values>
+                    <Action />
+                    <ActionBuff>
+                      <BuffAsset>1742101083</BuffAsset>
+                      <AddBuff>1</AddBuff>
+                      <BuffProcessingParticipant>1</BuffProcessingParticipant>
+                    </ActionBuff>
+                  </Values>
+                </TriggerAction>
+              </Item>
+            </TriggerActions>
+          </Trigger>
+          <TriggerSetup>
+            <AutoRegisterTrigger>1</AutoRegisterTrigger>
+            <UsedBySecondParties>1</UsedBySecondParties>
+          </TriggerSetup>
+        </Values>
+      </Asset>
     </ModOp>
-    <!-- END - SHIPS PIRATES - LATEMIDGAME -->
-    <!-- START - SHIPS PIRATES - LATEGAME -->
-    <ModOp Type="merge" GUID='73,76' Path="Values/Trader/Progression/LateGame/WarFleet">
-      <WarFleet>
-        <Item>
-          <ShipAsset>1742102010</ShipAsset>          <!--Pirate Battle Cruiser-->
-          <Amount>4</Amount>          <!-- / - 3 -->
-        </Item>
-        <Item>
-          <ShipAsset>1742102070</ShipAsset>          <!--Pirate Warship-->
-          <Amount>4</Amount>          <!-- / - 3 -->
-        </Item>
-        <Item>
-          <ShipAsset>1742102094</ShipAsset>          <!--Pirate Hawk-->
-          <Amount>3</Amount>          <!-- / - 2 -->
-        </Item>
-        <Item>
-          <ShipAsset>1742102096</ShipAsset>          <!--Pirate Black Eagle-->
-          <Amount>2</Amount>          <!-- / - 1 -->
-        </Item>
-        <Item>
-          <ShipAsset>1742102074</ShipAsset>          <!--Pirate Flak Monitor-->
-          <Amount>3</Amount>          <!-- / - 2 -->
-        </Item>
-        <Item>
-          <ShipAsset>1742102012</ShipAsset>          <!--Ironclad Cruiser-->
-          <Amount>4</Amount>          <!-- / - 3 -->
-        </Item>
-        <Item>
-          <ShipAsset>102432</ShipAsset>          <!--Pirate Monitor-->
-          <Amount>4</Amount>          <!-- 2 - 2 -->
-        </Item>
-        <Item>
-          <ShipAsset>1742102068</ShipAsset>          <!--Pirate Flame Monitor-->
-          <Amount>4</Amount>          <!-- / - 2 -->
-        </Item>
-        <Item>
-          <ShipAsset>1742102008</ShipAsset>          <!--Jolly Roger-->
-          <Amount>2</Amount>          <!-- / - 2 -->
-        </Item>
-      </WarFleet>
-    </ModOp>
-    <!-- END - SHIPS PIRATES - LATEGAME -->
-    <!-- START - SHIPS PIRATES - ENDGAME -->
-    <ModOp Type="merge" GUID='73,76' Path="Values/Trader/Progression/EndGame/WarFleet">
-      <WarFleet>
-        <Item>
-          <ShipAsset>1742102010</ShipAsset>          <!--Pirate Battle Cruiser-->
-          <Amount>5</Amount>          <!-- / - 3 -->
-        </Item>
-        <Item>
-          <ShipAsset>1742102070</ShipAsset>          <!--Pirate Warship-->
-          <Amount>5</Amount>          <!-- / - 3 -->
-        </Item>
-        <Item>
-          <ShipAsset>1742102014</ShipAsset>          <!--Pirate Heavy Battle Cruiser-->
-          <Amount>1</Amount>          <!-- / - 1 -->
-        </Item>
-        <Item>
-          <ShipAsset>1742102072</ShipAsset>          <!--Pirate Heavy Warship Cruiser-->
-          <Amount>1</Amount>          <!-- / - 1 -->
-        </Item>
-        <Item>
-          <ShipAsset>1742102012</ShipAsset>          <!--Pirate Ironclad Cruiser-->
-          <Amount>5</Amount>          <!-- / - 3 -->
-        </Item>
-        <Item>
-          <ShipAsset>1742102096</ShipAsset>          <!--Pirate Black Eagle-->
-          <Amount>4</Amount>          <!-- / - 2 -->
-        </Item>
-        <Item>
-          <ShipAsset>1742102068</ShipAsset>          <!--Pirate Flame Monitor-->
-          <Amount>5</Amount>          <!-- / - 4 -->
-        </Item>
-        <Item>
-          <ShipAsset>1742102074</ShipAsset>          <!--Pirate Flak Monitor-->
-          <Amount>3</Amount>          <!-- / - 3 -->
-        </Item>
-        <Item>
-          <ShipAsset>1742102094</ShipAsset>          <!--Pirate Hawk-->
-          <Amount>5</Amount>          <!-- / - 3 -->
-        </Item>
-        <Item>
-          <ShipAsset>102432</ShipAsset>          <!--Pirate Monitor-->
-          <Amount>5</Amount>          <!-- 3 - 4 -->
-        </Item>
-        <Item>
-          <ShipAsset>1742102008</ShipAsset>          <!--Jolly Roger-->
-          <Amount>3</Amount>          <!-- / - 3 -->
-        </Item>
-      </WarFleet>
-    </ModOp>
+<!-- END - ADD ADDITIONAL POPULATION FOR AI SO THEY DO NOT GET STUCK AND PROGRESS FASTER -->
+
+  </Group>
+
+  <Group Condition="#military_attention_pirates">
 
     <!-- START BALANCING PIRATE SHIPS -->
 

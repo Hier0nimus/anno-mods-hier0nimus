@@ -226,6 +226,44 @@ Balancing - Strengths
     </ModOp>
 
     <!-- ******* ISLAND TAKEOVER/SHARES REBALANCE ******* -->
+
+    <!-- FORCE AI TO EXPAND MORE IN REGIONS  -->
+    <!-- MODERATE -->
+    <ModOp Type="merge" GUID="180023" Path="/Values/Session">
+        <SecondPartyMotivation>
+            <TargetPopulation>15000004</TargetPopulation>
+            <TargetAmount>10000</TargetAmount>
+        </SecondPartyMotivation>
+    </ModOp>
+    <!-- CAPE -->
+    <ModOp Type="merge" GUID="110934" Path="/Values/Session">
+        <SecondPartyMotivation>
+            <TargetPopulation>15000004</TargetPopulation>
+            <TargetAmount>5000</TargetAmount>
+        </SecondPartyMotivation>
+    </ModOp>
+    <!-- ARCTIC -->
+    <ModOp Type="merge" GUID="180045" Path="/Values/Session">
+        <SecondPartyMotivation>
+            <TargetPopulation>112643</TargetPopulation>
+            <TargetAmount>10000</TargetAmount>
+        </SecondPartyMotivation>
+    </ModOp>
+    <!-- NEW WORLD -->
+    <ModOp Type="merge" GUID="180025" Path="/Values/Session">
+        <SecondPartyMotivation>
+            <TargetPopulation>5403</TargetPopulation>
+            <TargetAmount>5000</TargetAmount>
+        </SecondPartyMotivation>
+    </ModOp>
+    <!-- ENBESA -->
+    <ModOp Type="merge" GUID="112132" Path="/Values/Session">
+        <SecondPartyMotivation>
+            <TargetPopulation>114330</TargetPopulation>
+            <TargetAmount>6000</TargetAmount>
+        </SecondPartyMotivation>
+    </ModOp>
+
     <!-- See IMYA tweaking files -->
 
     <Group Condition="!#military_attention">
@@ -268,5 +306,36 @@ Balancing - Strengths
         </ModOp>
 
     </Group>
+
+    <!-- START UNIVERSITY, FUR COATS, PENNY PH, COFFEE, POCKET WATCHES, ELECTRICITY, LIGHT BULBS NEED EARLIER -->
+    <ModOp Type="merge" GUID="15000002" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='1010353']">
+        <FullWeightPopulationCount>1000</FullWeightPopulationCount>
+        <NoWeightPopulationCount>999</NoWeightPopulationCount>
+    </ModOp>
+    <ModOp Type="merge" GUID="15000002" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='1010247']">
+        <FullWeightPopulationCount>900</FullWeightPopulationCount>
+        <NoWeightPopulationCount>899</NoWeightPopulationCount>
+    </ModOp>
+    <ModOp Type="merge" GUID="15000003" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='1010245']">
+        <FullWeightPopulationCount>500</FullWeightPopulationCount>
+        <NoWeightPopulationCount>499</NoWeightPopulationCount>
+    </ModOp>
+    <ModOp Type="merge" GUID="15000003" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='120032']">
+        <FullWeightPopulationCount>1000</FullWeightPopulationCount>
+        <NoWeightPopulationCount>999</NoWeightPopulationCount>
+    </ModOp>
+    <ModOp Type="merge" GUID="15000003" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='1010246']">
+        <FullWeightPopulationCount>1000</FullWeightPopulationCount>
+        <NoWeightPopulationCount>999</NoWeightPopulationCount>
+    </ModOp>
+    <ModOp Type="merge" GUID="15000003" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='1010354']">
+        <FullWeightPopulationCount>1000</FullWeightPopulationCount>
+        <NoWeightPopulationCount>999</NoWeightPopulationCount>
+    </ModOp>
+    <ModOp Type="merge" GUID="15000003" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='1010208']">
+        <FullWeightPopulationCount>1750</FullWeightPopulationCount>
+        <NoWeightPopulationCount>1749</NoWeightPopulationCount>
+    </ModOp>
+    <!-- END UNIVERSITY, FUR COATS, PENNY PH, COFFEE, POCKET WATCHES, ELECTRICITY, LIGHT BULBS NEED EARLIER -->
 
 </ModOps>
