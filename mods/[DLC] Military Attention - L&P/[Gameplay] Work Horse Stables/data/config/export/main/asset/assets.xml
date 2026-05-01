@@ -1,0 +1,390 @@
+<!-- 
+  
+  v1.0
+
+  [Gameplay] Work Horse Stables
+  Enjoy!
+
+  1742006000 - Work Horse Stables - Building
+  1742006001 - Work Horse Stables - Building - Description
+  1742006002 - Work Horse Productivity - GuildhouseBuff
+  1742006003 - Work Horse Productivity - GuildhouseBuff - Description
+  1742006006 - Work Horse Stables - ProductionChain
+  1742006004 - Work Horse Unhide - Trigger
+  1742006005 - Work Horse Unlock - Trigger
+
+-->
+
+<ModOps>
+
+  <!-- START BUILDING - WORK HORSE STABLES -->
+  <ModOp Type="addNextSibling" GUID="1010284">
+    <Asset>
+      <Template>BuffFactoryCulture</Template>
+      <Values>
+        <Standard>
+          <GUID>1742006000</GUID>
+          <Name>Work Horse Stables</Name>
+          <IconFilename>data\graphics\icons\icon_work_horse_stables.png</IconFilename>
+          <InfoDescription>1742006001</InfoDescription>
+        </Standard>
+        <Text/>
+        <Building>
+          <BuildingCategoryName>100000</BuildingCategoryName>
+          <SkipUnlockMessage>1</SkipUnlockMessage>
+          <BuildModeRandomRotation>90</BuildModeRandomRotation>
+          <AssociatedRegions>Moderate</AssociatedRegions>
+        </Building>
+        <Blocking/>
+        <Mesh/>
+        <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742006002</ProductivityBuff>
+            </Item>
+          </ProductionBuffs>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <ProductionBuffDistance>18</ProductionBuffDistance>
+        </BuffFactory>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1742100211</Product>              <!-- Horses - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>3</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1010192</Product>              <!-- Grain - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>3</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <CycleTime>240</CycleTime>
+          <IsMainFactory>1</IsMainFactory>
+        </FactoryBase>
+        <FeedbackController/>
+        <Pausable/>
+        <Selection>
+          <ParticipantMessageArcheType>Resident_tier02_atWork</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Attackable/>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>100</Amount>
+              <InactiveAmount>50</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1010115</Product>              <!-- Workers Workforce -->
+              <Amount>25</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <AmbientMoodProvider/>
+        <LogisticNode/>
+        <Constructable/>
+        <Locked/>
+        <IncidentInfectable>
+          <Infectable>
+            <Fire>
+              <Base>1</Base>
+            </Fire>
+            <Riot>
+              <Base>1</Base>
+            </Riot>
+            <Illness>
+              <Base>1</Base>
+              <Communication>FireDefault</Communication>
+            </Illness>
+            <Explosion>
+              <Base>1</Base>
+            </Explosion>
+          </Infectable>
+          <IncidentInfectionChanceFactors>
+            <Fire>
+              <DensityFactor>0.0025</DensityFactor>
+              <DensityDistance>20</DensityDistance>
+              <FactoryProductivityFactor>0.1</FactoryProductivityFactor>
+              <FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
+            </Fire>
+          </IncidentInfectionChanceFactors>
+        </IncidentInfectable>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/production/work_horse_stables/work_horse_stables_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <SoundEmitter/>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>5000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>25</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Infolayer/>
+        <UpgradeList/>
+        <Culture/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - WORK HORSE STABLES -->
+
+  <!-- START BUFF - WORK HORSE PRODUCTIVTY -->
+  <ModOp GUID="269978" Type="addNextSibling">
+    <Asset>
+      <Template>GuildhouseBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742006002</GUID>
+          <Name>Work Horse Productivity</Name>
+          <IconFilename>data\graphics\icons\icon_work_horse_stables.png</IconFilename>
+          <InfoDescription>1742006003</InfoDescription>
+        </Standard>
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>190778</GUID>              <!-- All Lumberjack's Huts -->
+            </Item>
+            <Item>
+              <GUID>190786</GUID>              <!-- All Mines and Cement -->
+            </Item>
+            <Item>
+              <GUID>190011</GUID>              <!-- All Farms -->
+            </Item>
+            <Item>
+              <GUID>194008</GUID>              <!-- All Orchards -->
+            </Item>
+          </EffectTargets>
+          <AllowStacking>0</AllowStacking>
+        </ItemEffect>
+        <Text />
+        <FactoryUpgrade>
+          <AdditionalOutput>
+            <Item>
+              <ForceProductSameAsFactoryOutput>1</ForceProductSameAsFactoryOutput>
+              <AdditionalOutputCycle>2</AdditionalOutputCycle>
+              <Amount>1</Amount>
+            </Item>
+          </AdditionalOutput>
+        </FactoryUpgrade>
+        <BuildingUpgrade>
+          <MaintenanceUpgrade>
+            <Value>25</Value>
+            <Percental>1</Percental>
+          </MaintenanceUpgrade>
+          <WorkforceAmountUpgrade>
+            <Percental>1</Percental>
+            <Value>-25</Value>
+          </WorkforceAmountUpgrade>
+        </BuildingUpgrade>
+        <Buff />
+        <CultureUpgrade />
+        <ModuleOwnerUpgrade />
+        <IncidentInfectableUpgrade />
+        <PowerplantUpgrade />
+        <IndustrializableUpgrade />
+        <ItemContainerUpgrade />
+        <IncidentInfluencerUpgrade />
+        <IrrigationUpgrade />
+        <EcoSystemProviderUpgrade />
+        <ResourceUpgrade />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUFF - WORK HORSE FOREST PRODUCTIVTY -->
+
+  <!-- START ADD PRODUCTION BUILDINGS TO WORKFORCE MENU -->
+  <ModOp Type="add" GUID="25000087" Path="/Values/WorkforceMenu/BoostableFactories">
+    <Item>
+      <Factory>1742006000</Factory>      <!-- Work Horse Stables - Building -->
+    </Item>
+  </ModOp>
+  <!-- END ADD PRODUCTION BUILDINGS TO WORKFORCE MENU -->
+
+  <!-- START ADD TO GLOBAL MAINTENANCE POOLS -->
+  <ModOp Type="add" GUID="368" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
+    <Item>
+      <GUID>1742006000</GUID>      <!-- Work Horse Stables - Building -->
+    </Item>
+  </ModOp>
+  <!-- START ADD TO GLOBAL MAINTENANCE POOLS -->
+
+  <!-- START ADD TO GLOBAL PRODUCTION POOLS -->
+  <ModOp Type="add" GUID="6000018,193856" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
+    <Item>
+      <GUID>1742006000</GUID>      <!-- Work Horse Stables - Building -->
+    </Item>
+  </ModOp>
+  <!-- START ADD TO GLOBAL PRODUCTION POOLS -->
+
+  <!-- START PRODUCTION CHAIN - WORK HORSE STABLES -->
+  <ModOp Type="addNextSibling" GUID='500091'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742006006</GUID>
+          <Name>Work Horse Stables</Name>
+          <IconFilename>data\graphics\icons\icon_work_horse_stables.png</IconFilename>
+          <InfoDescription>1742006001</InfoDescription>
+        </Standard>
+        <Text>
+          <TextOverride>1742006000</TextOverride>
+        </Text>
+        <ProductionChain>
+          <Building>1742006000</Building>          <!-- Work Horse Stables - Building -->
+          <Tier1>
+            <Item>
+              <Building>1742100209</Building>              <!-- Stables - Building -->
+            </Item>
+            <Item>
+              <Building>1010262</Building>              <!-- Grain Farm - Building -->
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PRODUCTION CHAIN - WORK HORSE STABLES -->
+
+  <!-- START ADD TO CONSTRUCTION MENU -->
+  <ModOp Type="addNextSibling" GUID='25000190' Path="/Values/ConstructionCategory/BuildingList/Item[Building='500004']">
+    <Item>
+      <Building>1742006006</Building>      <!-- Work Horse Stables - Building -->
+    </Item>
+  </ModOp>
+  <ModOp Type="addNextSibling" GUID='500094' Path="/Values/ConstructionCategory/BuildingList/Item[Building='1010358']">
+    <Item>
+      <Building>1742006006</Building>      <!-- Work Horse Stables - Building -->
+    </Item>
+  </ModOp>
+  <!-- END ADD TO CONSTRUCTION MENU -->
+
+  <!--TRIGGERS -->
+  <!-- UNHIDE - WORKERS 1 -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742006004</GUID>
+          <Name>MOD Trigger</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>15000001</Context>                <!-- Workers PopulationLevel7 -->
+                <CounterAmount>1</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
+                      <Item>
+                        <Asset>1742006000</Asset>                        <!-- Work Horse Stables - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742006006</Asset>                        <!-- Work Horse Stables - ProductionChain -->
+                      </Item>
+                    </UnhideAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!--UNLOCK - WORKERS 150 -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742006005</GUID>
+          <Name>MOD Trigger</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>15000001</Context>                <!-- Workers PopulationLevel7 -->
+                <CounterAmount>150</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
+                    </UnhideAssets>
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>1742006000</Asset>                        <!-- Work Horse Stables - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742006006</Asset>                        <!-- Work Horse Stables - ProductionChain -->
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- START VEGETABLES JAKOB -->
+  <Group Condition="#ow-vegetables-jakob">
+    <ModOp Type="replace" GUID='1742006000' Path="/Values/FactoryBase/FactoryInputs/Item[Product='1010192']">
+      <Item>
+        <Product>1500010836</Product>        <!-- Vegetables - Product -->
+        <Amount>1</Amount>
+        <StorageAmount>3</StorageAmount>
+      </Item>
+    </ModOp>
+    <ModOp Type="replace" GUID='1742006006' Path="/Values/ProductionChain/Tier1/Item[Building='1010262']">
+      <Item>
+        <Building>1500010830</Building>        <!-- Vegetables Farm - Building -->
+      </Item>
+    </ModOp>
+  </Group>
+  <!-- END VEGETABLES JAKOB -->
+
+</ModOps>

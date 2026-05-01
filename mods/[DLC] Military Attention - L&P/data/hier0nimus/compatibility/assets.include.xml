@@ -1,0 +1,1557 @@
+<!-- 
+  Compatibility
+-->
+
+
+<ModOps>
+
+  <!-- START MUSIC TO MY EARS -->
+  <Group Condition="#music_to_my_ears">
+    <ModOp Type="add" GUID='1742100000' Path="/Values/PopulationLevel7/PopulationInputs/">
+      <Item>
+        <Product>1742110098</Product>        <!-- Flute - Product -->
+        <Amount>0.0000066667</Amount>
+        <MoneyValue>10</MoneyValue>
+        <FullWeightPopulationCount>100</FullWeightPopulationCount>
+        <NoWeightPopulationCount>0</NoWeightPopulationCount>
+        <AdditionalGlobalUnlockRequirement>
+          <Population>15000002</Population>          <!-- Artisans -->
+          <MinPopulationAmount>1</MinPopulationAmount>
+        </AdditionalGlobalUnlockRequirement>
+        <IsBonusNeed>1</IsBonusNeed>
+      </Item>
+    </ModOp>
+    <ModOp Type="add" GUID='1742100315' Path="/Values/PopulationLevel7/PopulationInputs/">
+      <Item>
+        <Product>1742110027</Product>        <!-- Banjo - Product -->
+        <Amount>0.0000066667</Amount>
+        <MoneyValue>80</MoneyValue>
+        <FullWeightPopulationCount>100</FullWeightPopulationCount>
+        <NoWeightPopulationCount>0</NoWeightPopulationCount>
+        <AdditionalGlobalUnlockRequirement>
+          <Population>15000006</Population>          <!-- Obreros -->
+          <MinPopulationAmount>1000</MinPopulationAmount>
+        </AdditionalGlobalUnlockRequirement>
+        <IsBonusNeed>1</IsBonusNeed>
+      </Item>
+    </ModOp>
+    <ModOp Type="add" GUID='1742100306' Path="/Values/PopulationLevel7/PopulationInputs/">
+      <Item>
+        <Product>1742110025</Product>        <!-- Guitar - Product -->
+        <Amount>0.0000066667</Amount>
+        <MoneyValue>80</MoneyValue>
+        <FullWeightPopulationCount>100</FullWeightPopulationCount>
+        <NoWeightPopulationCount>0</NoWeightPopulationCount>
+        <AdditionalGlobalUnlockRequirement>
+          <Population>15000006</Population>          <!-- Obreros -->
+          <MinPopulationAmount>1000</MinPopulationAmount>
+        </AdditionalGlobalUnlockRequirement>
+        <IsBonusNeed>1</IsBonusNeed>
+      </Item>
+    </ModOp>
+    <ModOp Type="add" GUID='1742100316' Path="/Values/PopulationLevel7/PopulationInputs/">
+      <Item>
+        <Product>1742110017</Product>        <!-- Djembe - Product -->
+        <Amount>0.0000066667</Amount>
+        <MoneyValue>30</MoneyValue>
+        <FullWeightPopulationCount>100</FullWeightPopulationCount>
+        <NoWeightPopulationCount>0</NoWeightPopulationCount>
+        <AdditionalGlobalUnlockRequirement>
+          <Population>15000003</Population>          <!-- Obreros -->
+          <MinPopulationAmount>1</MinPopulationAmount>
+        </AdditionalGlobalUnlockRequirement>
+        <IsBonusNeed>1</IsBonusNeed>
+      </Item>
+    </ModOp>
+    <!-- ****************** START TO DELIGHT ****************** -->
+    <ModOp Type="add" GUID='25000118' Path="/Values/ObjectmenuResidenceScene/BonusNeeds/BonusNeeds/Item[Category='6364']/Needs/">
+      <Item>
+        <BonusNeed>1742110098</BonusNeed>        <!-- Flute -->
+      </Item>
+      <Item>
+        <BonusNeed>1742110025</BonusNeed>        <!-- Guitar -->
+      </Item>
+      <Item>
+        <BonusNeed>1742110027</BonusNeed>        <!-- Banjo -->
+      </Item>
+      <Item>
+        <BonusNeed>1742110017</BonusNeed>        <!-- Djembe -->
+      </Item>
+    </ModOp>
+    <!-- ****************** END TO DELIGHT ****************** -->
+  </Group>
+  <!-- END MUSIC TO MY EARS -->
+
+  <!-- START PERFECT SPECIALISTS AND ITEMS PACK -->
+  <Group Condition="#the_perfect_specialists_and_items_pack">
+    <ModOp Type="add" GUID='1742000072' Path="/Values/ItemEffect/EffectTargets/">
+      <Item>
+        <GUID>1742200032</GUID>        <!-- All Gunpowder Factories -->
+      </Item>
+    </ModOp>
+    <ModOp Type="add" GUID='1742000439' Path="/Values/ItemEffect/EffectTargets">
+      <Item>
+        <GUID>1742100655</GUID>        <!-- All Basic Weapons Factories -->
+      </Item>
+    </ModOp>
+  </Group>
+  <!-- END PERFECT SPECIALISTS AND ITEMS PACK -->
+
+  <!-- START HUSKY PET NEEDS FOR RESIDENTS -->
+  <Group Condition="!#Pet_Needs_For_Residents">
+    <ModOp Type="add" GUID='25000118' Path="/Values/ObjectmenuResidenceScene/BonusNeeds/BonusNeeds/Item[Category='6364']/Needs/">
+      <Item>
+        <BonusNeed>112698</BonusNeed>        <!-- Huskies -->
+      </Item>
+    </ModOp>
+  </Group>
+  <!-- END HUSKY PET NEEDS FOR RESIDENTS -->
+
+  <!-- START EXTENDED TRACTORS -->
+  <Group Condition="#extended_tractors_kurila">
+    <ModOp Type="remove" GUID='1742100289' Path="/Values/ModuleOwner/FarmType" />
+  </Group>
+  <!-- END EXTENDED TRACTORS -->
+
+  <!-- START ENBESA SOLDIERS MAIL ADDITION -->
+  <Group Condition="#Hackner_EnbesaMailIntegration">
+    <ModOp GUID='1742100316' Type="add" Path="Values/PopulationLevel7/PopulationInputs">
+      <Item>
+        <Product>535</Product>
+        <Amount>0.0001</Amount>
+        <SupplyWeight>1</SupplyWeight>
+        <AdditionalGlobalUnlockRequirement>
+          <Population>15000002</Population>
+          <MinPopulationAmount>500</MinPopulationAmount>
+        </AdditionalGlobalUnlockRequirement>
+        <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+        <IsBonusNeed>1</IsBonusNeed>
+      </Item>
+      <Item>
+        <Product>536</Product>
+        <Amount>0.00008</Amount>
+        <SupplyWeight>3</SupplyWeight>
+        <AdditionalGlobalUnlockRequirement>
+          <Population>15000006</Population>
+          <MinPopulationAmount>1</MinPopulationAmount>
+        </AdditionalGlobalUnlockRequirement>
+        <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+        <IsBonusNeed>1</IsBonusNeed>
+      </Item>
+      <Item>
+        <Product>2524</Product>
+        <Amount>0.00004</Amount>
+        <SupplyWeight>9</SupplyWeight>
+        <AdditionalGlobalUnlockRequirement>
+          <Population>15000006</Population>
+          <MinPopulationAmount>1000</MinPopulationAmount>
+        </AdditionalGlobalUnlockRequirement>
+        <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+        <IsBonusNeed>1</IsBonusNeed>
+      </Item>
+    </ModOp>
+  </Group>
+  <!-- END ENBESA SOLDIERS MAIL ADDITION -->
+
+  <Group Condition="#Spice_Airship">
+    <!-- START COMPATIBILITY NATES AIRSHIP SIU -->
+    <ModOp GUID="901999" Type="add" Path="/Values/Cost/Costs">
+      <!-- 901999 - Nate's Airship -->
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>5</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>5</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- END COMPATIBILITY NATES AIRSHIP SIU -->
+  </Group>
+
+  <Group Condition="#almost_100_hot_air_balloons">
+    <!-- START COMPATIBILITY ALMOST 100 HOT AIR BALLOONS -->
+    <!-- 
+    ******* SHIPS ******* 
+    1742000269 - Uwe Hot Air Balloon
+    1742000271 - Carlo Hot Air Balloon
+    1742000273 - Nena Hot Air Balloon
+    -->
+
+    <!-- 1742000269 - Uwe Hot Air Balloon -->
+    <ModOp GUID="1742000269" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>1742100242</Ingredient>        <!-- Clean Water - Product -->
+        <Amount>2</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>1</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- 1742000297 - Manfred Hot Air Balloon -->
+    <ModOp GUID="1742000297" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>2</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>2</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- 1742000271 - Carlo Hot Air Balloon -->
+    <ModOp GUID="1742000271" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>3</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>3</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- 1742000273 - Nena Hot Air Balloon -->
+    <ModOp GUID="1742000273" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>8</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>8</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- END COMPATIBILITY ALMOST 100 HOT AIR BALLOONS -->
+  </Group>
+
+  <Group Condition="#[Gameplay] 1805 - Ships of the Line">
+    <!-- START COMPATIBILITY SHIPS OF THE LINE -->
+    <!-- 
+    ******* SHIPS ******* 
+    1450150205 - Linienschiff
+    1450150206 - Königliches Linienschiff
+    1450150300 - Expeditionsschiff
+    -->
+
+    <!-- 1450150205 - Linienschiff -->
+    <ModOp Type="add" GUID="1450150205" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>50</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>50</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100203</Ingredient>        <!-- Basic Ammunition - Product -->
+        <Amount>60</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100471</Ingredient>        <!-- Basic Weapons - Product -->
+        <Amount>30</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100248</Ingredient>        <!-- Shell Ammunition - Product -->
+        <Amount>30</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- 1450150206 - Königliches Linienschiff -->
+    <ModOp Type="add" GUID="1450150206" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>40</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>40</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100203</Ingredient>        <!-- Basic Ammunition - Product -->
+        <Amount>50</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100471</Ingredient>        <!-- Basic Weapons - Product -->
+        <Amount>25</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100248</Ingredient>        <!-- Shell Ammunition - Product -->
+        <Amount>25</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- 1450150300 - Expeditionsschiff -->
+    <ModOp Type="add" GUID="1450150300" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>20</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>20</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100203</Ingredient>        <!-- Basic Ammunition - Product -->
+        <Amount>18</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100471</Ingredient>        <!-- Basic Weapons - Product -->
+        <Amount>12</Amount>
+      </Item>
+    </ModOp>
+
+  </Group>
+
+  <Group Condition="#Trans-Ocean_Liner">
+    <!-- START COMPATIBILITY 1905 - Trans-Ocean Liner -->
+    <!-- 
+    ******* SHIPS ******* 
+    1450152000 - Ocean Liner
+    -->
+
+    <!-- 1450152000 - Ocean Liner -->
+    <ModOp Type="add" GUID="1450152000" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>80</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>80</Amount>
+      </Item>
+    </ModOp>
+  </Group>
+
+  <Group Condition="#Imperio Schiffswerft">
+    <!-- START COMPATIBILITY IMPERIO SHIPYARD -->
+    <!-- 
+    ******* SHIPS ******* 
+    1947537 - Viermastbark
+    1947560 - Linienschiff
+    2130020011 - Royaler Clipper
+    2130020003 - kleines Piratenschiff
+    2130020009 - Vasco 2
+    2130020013 - Abate's Ship
+    2130020063 - Jailor's Ship
+    2130020017 - Paloma's Flagship
+    2130020018 - Queen
+    2130020021 - Siege Cruiser Belagerungsschiff
+    2130020023 - Dampfkühlschiff Catania
+    2130020069 - Raddampfer
+    2130020071 - Altes Fischerboot
+    2130020027 - RMS Leviathan
+    2130020077 - White Star Class
+    2130020079 - Kleines Motorboot
+    2130020081 - Eisbrecher
+    2130020083 - Whale Ship
+    2130020085 - Mateo's Boot
+    2130020057 - Expeditionsschiff
+    2130020099 - Wellermann
+    2130020089 - Frachter Imperio Liner
+    2130020119 - Viktoria Luise
+    2130020115 - Kleiner Schlepper mit Lastkahn
+    -->
+
+    <!-- 1947537 - Viermastbark -->
+    <ModOp GUID="1947537" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>20</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>20</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- 1947560 - Linienschiff + 2130020009 - Vasco 2 -->
+    <ModOp GUID="1947560,2130020009" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>40</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>40</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100203</Ingredient>        <!-- Basic Ammunition - Product -->
+        <Amount>50</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100471</Ingredient>        <!-- Basic Weapons - Product -->
+        <Amount>25</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100248</Ingredient>        <!-- Shell Ammunition - Product -->
+        <Amount>25</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- 2130020011 - Royaler Clipper -->
+    <ModOp GUID="2130020011" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>25</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>25</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- 2130020003 - kleines Piratenschiff + 2130020085 - Mateo's Boot -->
+    <ModOp GUID="2130020003,2130020085" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>8</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>8</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100203</Ingredient>        <!-- Basic Ammunition - Product -->
+        <Amount>6</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100471</Ingredient>        <!-- Basic Weapons - Product -->
+        <Amount>4</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- 2130020013 - Abate's Ship + 2130020063 - Jailor's Ship + 2130020017 - Paloma's Flagship + 2130020081 - Eisbrecher + 2130020099 - Wellermann -->
+    <ModOp GUID="2130020013,2130020063,2130020017,2130020081,2130020099" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>20</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>20</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100203</Ingredient>        <!-- Basic Ammunition - Product -->
+        <Amount>18</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100471</Ingredient>        <!-- Basic Weapons - Product -->
+        <Amount>12</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- 2130020018 - Queen -->
+    <ModOp GUID="2130020018" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>30</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>30</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- 2130020021 - Siege Cruiser Belagerungsschiff -->
+    <ModOp GUID="2130020021" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>80</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>80</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100203</Ingredient>        <!-- Basic Ammunition - Product -->
+        <Amount>60</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100471</Ingredient>        <!-- Basic Weapons - Product -->
+        <Amount>50</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100248</Ingredient>        <!-- Shell Ammunition - Product -->
+        <Amount>30</Amount>
+      </Item>
+      <Item>
+        <Ingredient>846</Ingredient>        <!-- Bombs - Product -->
+        <Amount>60</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- 2130020023 - Dampfkühlschiff Catania + 2130020069 - Raddampfer + 2130020027 - RMS Leviathan + 2130020083 - Whale Ship -->
+    <ModOp GUID="2130020023,2130020069,2130020027,2130020083" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>8</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>8</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- 2130020071 - Altes Fischerboot -->
+    <ModOp GUID="2130020071" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>4</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>4</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- 2130020077 - White Star Class -->
+    <ModOp GUID="2130020077" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>5</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>5</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- 2130020079 - Kleines Motorboot -->
+    <ModOp GUID="2130020079" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>2</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>2</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- 2130020057 - Expeditionsschiff -->
+    <ModOp GUID="2130020057" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>50</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>50</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100203</Ingredient>        <!-- Basic Ammunition - Product -->
+        <Amount>50</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100471</Ingredient>        <!-- Basic Weapons - Product -->
+        <Amount>30</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100248</Ingredient>        <!-- Shell Ammunition - Product -->
+        <Amount>30</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- 2130020089 - Frachter Imperio Liner -->
+    <ModOp GUID="2130020089" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>100</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>100</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- 2130020119 - Viktoria Luise -->
+    <ModOp GUID="2130020119" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>30</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>30</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100203</Ingredient>        <!-- Basic Ammunition - Product -->
+        <Amount>20</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100471</Ingredient>        <!-- Basic Weapons - Product -->
+        <Amount>20</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- 2130020115 - Kleiner Schlepper mit Lastkahn -->
+    <ModOp GUID="2130020115" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>8</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>8</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- END COMPATIBILITY IMPERIO SHIPYARD -->
+  </Group>
+
+  <Group Condition="#World_War_Ship">
+    <!-- START COMPATIBILITY WORLD WAR SHIPS -->
+
+    <!-- 
+    ******* SHIPS ******* 
+    1510000039 - Utility Ship
+    1510000102 - SMS Schleswig Holstein
+    1510000025 - Destroyer Ship
+    1510000081 - Corvette
+    1510000032 - Submarine
+    1510000043 - Cruiser Ship
+    1510000016 - Yamato Ship
+    1510000048 - Aircraft Carrier
+
+    -->
+
+    <!-- 1510000039 - Utility Ship -->
+    <ModOp GUID="1510000039" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>30</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>30</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- 1510000102 - SMS Schleswig Holstein -->
+    <ModOp GUID="1510000102" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>230</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>230</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100203</Ingredient>        <!-- Basic Ammunition - Product -->
+        <Amount>200</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100471</Ingredient>        <!-- Basic Weapons - Product -->
+        <Amount>150</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100248</Ingredient>        <!-- Shell Ammunition - Product -->
+        <Amount>175</Amount>
+      </Item>
+      <Item>
+        <Ingredient>846</Ingredient>        <!-- Bombs - Product -->
+        <Amount>250</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- 1510000025 - Destroyer Ship -->
+    <ModOp GUID="1510000025" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>150</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>150</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100203</Ingredient>        <!-- Basic Ammunition - Product -->
+        <Amount>150</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100471</Ingredient>        <!-- Basic Weapons - Product -->
+        <Amount>100</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100248</Ingredient>        <!-- Shell Ammunition - Product -->
+        <Amount>80</Amount>
+      </Item>
+      <Item>
+        <Ingredient>846</Ingredient>        <!-- Bombs - Product -->
+        <Amount>140</Amount>
+      </Item>
+      <Item>
+        <Ingredient>847</Ingredient>        <!-- Sea Mines - Product -->
+        <Amount>80</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- 1510000081 - Corvette -->
+    <ModOp GUID="1510000081" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>60</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>60</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100203</Ingredient>        <!-- Basic Ammunition - Product -->
+        <Amount>40</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100471</Ingredient>        <!-- Basic Weapons - Product -->
+        <Amount>40</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100248</Ingredient>        <!-- Shell Ammunition - Product -->
+        <Amount>20</Amount>
+      </Item>
+      <Item>
+        <Ingredient>846</Ingredient>        <!-- Bombs - Product -->
+        <Amount>40</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- 1510000032 - Submarine -->
+    <ModOp GUID="1510000032" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>50</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>50</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100203</Ingredient>        <!-- Basic Ammunition - Product -->
+        <Amount>10</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100471</Ingredient>        <!-- Basic Weapons - Product -->
+        <Amount>10</Amount>
+      </Item>
+      <Item>
+        <Ingredient>846</Ingredient>        <!-- Bombs - Product -->
+        <Amount>50</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- 1510000043 - Cruiser Ship -->
+    <ModOp GUID="1510000043" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>120</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>120</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100203</Ingredient>        <!-- Basic Ammunition - Product -->
+        <Amount>100</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100471</Ingredient>        <!-- Basic Weapons - Product -->
+        <Amount>70</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100248</Ingredient>        <!-- Shell Ammunition - Product -->
+        <Amount>50</Amount>
+      </Item>
+      <Item>
+        <Ingredient>846</Ingredient>        <!-- Bombs - Product -->
+        <Amount>100</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- 1510000016 - Yamato Ship -->
+    <ModOp GUID="1510000016" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>325</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>325</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100203</Ingredient>        <!-- Basic Ammunition - Product -->
+        <Amount>250</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100471</Ingredient>        <!-- Basic Weapons - Product -->
+        <Amount>200</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100248</Ingredient>        <!-- Shell Ammunition - Product -->
+        <Amount>250</Amount>
+      </Item>
+      <Item>
+        <Ingredient>846</Ingredient>        <!-- Bombs - Product -->
+        <Amount>300</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- 1510000048 - Aircraft Carrier -->
+    <ModOp GUID="1510000048" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>400</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>400</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100203</Ingredient>        <!-- Basic Ammunition - Product -->
+        <Amount>400</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100471</Ingredient>        <!-- Basic Weapons - Product -->
+        <Amount>100</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100248</Ingredient>        <!-- Shell Ammunition - Product -->
+        <Amount>400</Amount>
+      </Item>
+      <Item>
+        <Ingredient>846</Ingredient>        <!-- Bombs - Product -->
+        <Amount>400</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- END COMPATIBILITY WORLD WAR SHIPS -->
+  </Group>
+
+  <Group Condition="#lion053_Safari_to_Old_Enbesa">
+    <!-- START COMPATIBILITY SAFARI TO OLD ENBESA -->
+
+    <!-- 
+    ******* SHIPS ******* 
+    2100119334 - Enbesa Motor Fisherboat
+    2100119337 - Enbesa Sailing Fisherboat
+    2100119235 - Enbesan Schooner (Trade)
+    2100119237 - Enbesan Clipper (Trade)
+    2100119240 - Enbesan Merchant Ship (Military)
+    2100119242 - Enbesan Gunboat (Military)
+    2100119244 - Enbesan Liner (Military)
+    2100119246 - Enbesan Frigate (Military)
+    -->
+
+    <!-- 2100119334 - Enbesa Motor Fisherboat -->
+    <ModOp GUID="2100119334" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>4</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>4</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- 2100119337 - Enbesa Sailing Fisherboat -->
+    <ModOp GUID="2100119337" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>1</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>1</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- 2100119235 - Enbesan Schooner (Trade) -->
+    <ModOp GUID="2100119235" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>5</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>5</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- 2100119237 - Enbesan Clipper (Trade) -->
+    <ModOp GUID="2100119237" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>15</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>15</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- 2100119240 - Enbesan Merchant Ship (Military) -->
+    <ModOp GUID="2100119240" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>8</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>8</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- 2100119242 - Enbesan Gunboat (Military) -->
+    <ModOp GUID="2100119242" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>8</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>8</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100203</Ingredient>        <!-- Basic Ammunition - Product -->
+        <Amount>10</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100471</Ingredient>        <!-- Basic Weapons - Product -->
+        <Amount>5</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- 2100119244 - Enbesan Liner (Military) -->
+    <ModOp GUID="2100119244" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>40</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>40</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100203</Ingredient>        <!-- Basic Ammunition - Product -->
+        <Amount>50</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100471</Ingredient>        <!-- Basic Weapons - Product -->
+        <Amount>25</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100248</Ingredient>        <!-- Shell Ammunition - Product -->
+        <Amount>25</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- 2100119246 - Enbesan Frigate (Military) -->
+    <ModOp GUID="2100119246" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>20</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>20</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100203</Ingredient>        <!-- Basic Ammunition - Product -->
+        <Amount>18</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100471</Ingredient>        <!-- Basic Weapons - Product -->
+        <Amount>12</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- END COMPATIBILITY SAFARI TO OLD ENBESA -->
+  </Group>
+
+  <Group Condition="#Fishboss_Oldtown">
+    <!-- START COMPATIBILITY OLD TOWN -->
+    <!-- 
+    ******* SHIPS ******* 
+    850156 - Flag Ship
+    850157 - Flag Ship
+    850158 - Flag Ship
+    850171 - Flag Ship
+    -->
+
+    <!-- 850156 + 850158 - Flag Ship -->
+    <ModOp GUID="850156,850158" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>20</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>20</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100203</Ingredient>        <!-- Basic Ammunition - Product -->
+        <Amount>18</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100471</Ingredient>        <!-- Basic Weapons - Product -->
+        <Amount>12</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- 850157 - Flag Ship -->
+    <ModOp GUID="850157" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>15</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>15</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100203</Ingredient>        <!-- Basic Ammunition - Product -->
+        <Amount>12</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100471</Ingredient>        <!-- Basic Weapons - Product -->
+        <Amount>8</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- 850171 - Flag Ship -->
+    <ModOp GUID="850171" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>24</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>24</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100203</Ingredient>        <!-- Basic Ammunition - Product -->
+        <Amount>20</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100471</Ingredient>        <!-- Basic Weapons - Product -->
+        <Amount>15</Amount>
+      </Item>
+    </ModOp>
+    <!-- END COMPATIBILITY OLD TOWN -->
+  </Group>
+
+  <Group Condition="#0skater0_AdditionalOilTankers">
+    <!-- START COMPATIBILITY ADDITIONAL OIL TANKERS -->
+    <!-- 
+    ******* SHIPS ******* 
+    2000510000 - Leviathan
+    2000510004 - Triton
+    -->
+
+    <!-- 2000510000 Leviathan -->
+    <ModOp GUID="2000510000" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>75</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>75</Amount>
+      </Item>
+    </ModOp>
+
+    <!-- 2000510004 - Triton -->
+    <ModOp GUID="2000510004" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>110</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>110</Amount>
+      </Item>
+    </ModOp>
+    <!-- END COMPATIBILITY ADDITIONAL OIL TANKERS -->
+  </Group>
+
+  <Group Condition="#Ghostbuster_Battleship">
+    <!-- START COMPATIBILITY BATTLESHIP MOD supersixzer0 Original Ghostbuster -->
+    <!-- 
+    ******* SHIPS ******* 
+    8899003 - Battle Ship
+    -->
+
+    <!-- 8899003 Battle Ship -->
+    <ModOp GUID="8899003" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>150</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>150</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100203</Ingredient>        <!-- Basic Ammunition - Product -->
+        <Amount>100</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100471</Ingredient>        <!-- Basic Weapons - Product -->
+        <Amount>80</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100248</Ingredient>        <!-- Shell Ammunition - Product -->
+        <Amount>50</Amount>
+      </Item>
+      <Item>
+        <Ingredient>846</Ingredient>        <!-- Bombs - Product -->
+        <Amount>100</Amount>
+      </Item>
+    </ModOp>
+    <!-- END COMPATIBILITY BATTLESHIP MOD supersixzer0 Original Ghostbuster -->
+  </Group>
+
+  <Group Condition="#Spice_TourismShip">
+    <!-- START COMPATIBILITY Large Tourism Ship [Spice It Up] -->
+    <!-- 
+    ******* SHIPS ******* 
+    1440137001 - Large Tourism Ship
+    -->
+
+    <ModOp GUID="1440137001" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>70</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>70</Amount>
+      </Item>
+    </ModOp>
+    <!-- END COMPATIBILITY Large Tourism Ship [Spice It Up] -->
+  </Group>
+
+  <Group Condition="#FlagshipGreatEastern_Serp">
+    <!-- START COMPATIBILITY Flagship Armed Great Eastern (Serp) -->
+
+    <ModOp GUID="1500003500" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>75</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>75</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100203</Ingredient>        <!-- Basic Ammunition - Product -->
+        <Amount>50</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100471</Ingredient>        <!-- Basic Weapons - Product -->
+        <Amount>40</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100248</Ingredient>        <!-- Shell Ammunition - Product -->
+        <Amount>25</Amount>
+      </Item>
+      <Item>
+        <Ingredient>846</Ingredient>        <!-- Bombs - Product -->
+        <Amount>50</Amount>
+      </Item>
+    </ModOp>
+    <!-- END COMPATIBILITY Flagship Armed Great Eastern (Serp) -->
+  </Group>
+
+  <Group Condition="#Eva_Icebreaker">
+    <!-- START COMPATIBILITY Ice Breaker -->
+
+    <ModOp GUID="2142000001" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>20</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>20</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100203</Ingredient>        <!-- Basic Ammunition - Product -->
+        <Amount>18</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100471</Ingredient>        <!-- Basic Weapons - Product -->
+        <Amount>12</Amount>
+      </Item>
+    </ModOp>
+    <!-- END COMPATIBILITY Ice Breaker -->
+  </Group>
+
+  <Group Condition="#shared_ship_bulk_freighter">
+    <!-- START COMPATIBILITY Bulk Freighter -->
+
+    <ModOp GUID="14740009" Type="add" Path="/Values/Cost/Costs">
+      <Item>
+        <Ingredient>849</Ingredient>        <!-- Care Packages - Product -->
+        <Amount>50</Amount>
+      </Item>
+      <Item>
+        <Ingredient>1742100533</Ingredient>        <!-- Sailors - Product -->
+        <Amount>50</Amount>
+      </Item>
+    </ModOp>
+    <!-- END COMPATIBILITY Bulk Freighter -->
+  </Group>
+
+  <Group Condition="#Spice_Harborlife">
+    <!-- START COMPATIBILITY HARBORLIFE -->
+
+    <!-- ****************** START BUILDING - MOURNING AT SEA - Building ******************  -->
+    <ModOp Type="addNextSibling" GUID='1010358'>
+      <Asset>
+        <Template>PublicServiceBuilding</Template>
+        <Values>
+          <Standard>
+            <GUID>1742100630</GUID>            <!-- Mourning at sea - Building -->
+            <Name>Mourning at sea</Name>
+            <IconFilename>data/graphics/icons/icon_cemetery.png</IconFilename>
+            <InfoDescription>1742100631</InfoDescription>
+          </Standard>
+          <Building>
+            <BuildingType>Logistic</BuildingType>
+            <AssociatedRegions>Moderate</AssociatedRegions>
+            <TerrainType>Water_Including_Coast</TerrainType>
+          </Building>
+          <Blocking>
+            <GroundDecalAsset>601492</GroundDecalAsset>
+            <GroundDecalInvisible>601493</GroundDecalInvisible>
+            <BlockWater>1</BlockWater>
+            <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+          </Blocking>
+          <Cost>
+            <Costs>
+              <Item>
+                <Ingredient>1010017</Ingredient>                <!-- Coins -->
+                <Amount>100</Amount>
+              </Item>
+            </Costs>
+          </Cost>
+          <Object>
+            <Variations>
+              <Item>
+                <Filename>data/graphics/buildings/public/cemetery/cemetery_03_01.cfg</Filename>
+              </Item>
+            </Variations>
+          </Object>
+          <Selection>
+            <GUIType>PublicService</GUIType>
+            <OnSelection>
+              <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+              <Values>
+                <ActionList />
+              </Values>
+            </OnSelection>
+          </Selection>
+          <SoundEmitter>
+            <ActiveSounds>
+              <Item>
+                <Sound>242785</Sound>
+              </Item>
+            </ActiveSounds>
+            <IncidentSounds>
+              <InfectedFire>
+                <Item>
+                  <Sound>214659</Sound>
+                </Item>
+              </InfectedFire>
+            </IncidentSounds>
+          </SoundEmitter>
+          <PublicService>
+            <FullSatisfactionDistance>40</FullSatisfactionDistance>
+            <NoSatisfactionDistance>50</NoSatisfactionDistance>
+            <PublicServiceOutputs>
+              <Item>
+                <Product>1742100556</Product>                <!-- Cemetery - Product -->
+              </Item>
+            </PublicServiceOutputs>
+          </PublicService>
+          <Maintenance>
+            <Maintenances>
+              <Item>
+                <Product>1010017</Product>                <!-- Coins -->
+                <Amount>20</Amount>
+              </Item>
+            </Maintenances>
+          </Maintenance>
+          <Culture>
+            <Attractiveness>10</Attractiveness>
+          </Culture>
+        </Values>
+      </Asset>
+    </ModOp>
+    <!-- ****************** END BUILDING - MOURNING AT SEA - Building ******************  -->
+
+    <!-- ****************** START ADD BUILDING - MOURNING AT SEA TO HARBORLIFE CONSTRUCTION MENU ******************  -->
+    <ModOp Type="addNextSibling" GUID='8855888' Path="Values/ConstructionCategory/BuildingList/Item[Building='8856009']">
+      <Item>
+        <Building>1742100630</Building>        <!-- Mourning at sea -->
+      </Item>
+    </ModOp>
+    <!-- ****************** END ADD BUILDING - MOURNING AT SEA TO HARBORLIFE CONSTRUCTION MENU ******************  -->
+
+    <!-- END COMPATIBILITY HARBORLIFE -->
+  </Group>
+
+  <Group Condition="#Diverse Kraftwerke">
+    <!-- START COMPATIBILITY DIVERSE KRAFTWERKE -->
+    <!-- ****************** START ADDING OTHER GAS-FIRED POWER PLANTS ******************  -->
+    <ModOp Type="add" GUID='1742100778' Path="Values/ItemEffectTargetPool/EffectTargetGUIDs">
+      <Item>
+        <GUID>2141010137</GUID>
+      </Item>
+      <Item>
+        <GUID>2141010129</GUID>
+      </Item>
+      <Item>
+        <GUID>2141010126</GUID>
+      </Item>
+    </ModOp>
+    <!-- ****************** END ADDING OTHER GAS-FIRED POWER PLANTS ******************  -->
+    <!-- END COMPATIBILITY DIVERSE KRAFTWERKE -->
+  </Group>
+
+  <Group Condition="#lion053_ow_chapels">
+    <!-- START COMPATIBILITY CHAPELS LION -->
+    <ModOp Type="add" GUID='1742100632' Path="Values/ItemEffect/EffectTargets">
+      <Item>
+        <GUID>2100115121</GUID>
+      </Item>
+      <Item>
+        <GUID>2100115127</GUID>
+      </Item>
+    </ModOp>
+    <ModOp Type="add" GUID='1742100633' Path="Values/ItemEffect/EffectTargets">
+      <Item>
+        <GUID>2100115121</GUID>
+      </Item>
+      <Item>
+        <GUID>2100115127</GUID>
+      </Item>
+    </ModOp>
+    <!-- END COMPATIBILITY CHAPELS LION -->
+  </Group>
+
+  <Group Condition="#jakob_pescatarians">
+    <!-- START COMPATIBILITY INDUSTRIAL CITIES - PESCATARIANS -->
+    <!-- ****************** START ADDING ADDITIONAL GOODS FOR PESCATARIANS ******************  -->
+    <ModOp Type="addNextSibling" GUID="601382" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='1500010836']">
+      <Item>
+        <Product>1742100556</Product>        <!-- Cemetery - Product -->
+        <SupplyWeight>2</SupplyWeight>
+        <FullWeightPopulationCount>100</FullWeightPopulationCount>
+        <NoWeightPopulationCount>0</NoWeightPopulationCount>
+        <AdditionalGlobalUnlockRequirement>
+          <Population>15000000</Population>          <!-- Farmers -->
+          <MinPopulationAmount>100</MinPopulationAmount>
+        </AdditionalGlobalUnlockRequirement>
+        <IsConsideredByAI>0</IsConsideredByAI>
+      </Item>
+      <Item>
+        <Product>1742100242</Product>        <!-- Clean Water - Product -->
+        <Amount>0.0003</Amount>        <!-- 0.0004166667 Amount Fish -->
+        <SupplyWeight>2</SupplyWeight>
+        <MoneyValue>10</MoneyValue>
+        <FullWeightPopulationCount>100</FullWeightPopulationCount>
+        <NoWeightPopulationCount>0</NoWeightPopulationCount>
+        <AdditionalGlobalUnlockRequirement>
+          <Population>15000000</Population>          <!-- Farmers -->
+          <MinPopulationAmount>100</MinPopulationAmount>
+        </AdditionalGlobalUnlockRequirement>
+        <IsConsideredByAI>0</IsConsideredByAI>
+      </Item>
+      <Item>
+        <Product>1742100211</Product>        <!-- Horses - Product -->
+        <Amount>0.0002</Amount>        <!-- 0.0004166667 Amount Fish -->
+        <SupplyWeight>4</SupplyWeight>
+        <MoneyValue>30</MoneyValue>
+        <FullWeightPopulationCount>100</FullWeightPopulationCount>
+        <NoWeightPopulationCount>0</NoWeightPopulationCount>
+        <AdditionalGlobalUnlockRequirement>
+          <Population>15000000</Population>          <!-- Farmers -->
+          <MinPopulationAmount>100</MinPopulationAmount>
+        </AdditionalGlobalUnlockRequirement>
+        <IsConsideredByAI>0</IsConsideredByAI>
+      </Item>
+    </ModOp>
+    <!-- ****************** END ADDING ADDITIONAL GOODS FOR PESCATARIANS ******************  -->
+    <!-- END COMPATIBILITY INDUSTRIAL CITIES - PESCATARIANS -->
+  </Group>
+
+  <Group Condition="#shared_herb_garden_kurila">
+    <!-- START COMPATIBILITY SHARED HERB GARDEN KURILA -->
+    <!-- ****************** HERB GARDEN ******************  -->
+    <ModOp Type="merge" GUID="1500302201" Path="/Values/ModuleOwner">
+      <ModuleLimits>
+        <Main>
+          <Limit>100</Limit>          <!-- 128 -->
+        </Main>
+      </ModuleLimits>
+    </ModOp>
+    <!-- END COMPATIBILITY SHARED HERB GARDEN KURILA -->
+  </Group>
+
+  <Group Condition="#ow-tomatoes-Drakkam">
+    <!-- START COMPATIBILITY SHARED TOMOATOES DRAKKAM -->
+    <!-- ****************** TOMATOES GARDEN ******************  -->
+    <ModOp Type="merge" GUID="1555000115" Path="/Values/ModuleOwner/ModuleLimits/Main">
+      <Limit>90</Limit>      <!-- 112 -->
+    </ModOp>
+    <!-- END COMPATIBILITY SHARED TOMOATOES DRAKKAM -->
+  </Group>
+
+  <Group Condition="#Taludas_sharedproduction_avocados">
+    <!-- START COMPATIBILITY SHARED AVOCADOS TALUDAS -->
+    <!-- ****************** AVOCADO FARM ******************  -->
+    <ModOp Type="merge" GUID="1999002218" Path="/Values/ModuleOwner/ModuleLimits/Main">
+      <Limit>100</Limit>      <!-- 128 -->
+    </ModOp>
+    <!-- END COMPATIBILITY SHARED AVOCADOS TALUDAS -->
+  </Group>
+
+  <Group Condition="#ow-olive-oil-jakob">
+    <!-- START COMPATIBILITY SHARED OLIVE OIL JAKOB -->
+    <!-- ****************** OLIVE FARM ******************  -->
+    <ModOp Type="merge" GUID="1500010107" Path="/Values/ModuleOwner/ModuleLimits/Main">
+      <Limit>62</Limit>      <!-- 75 -->
+    </ModOp>
+    <!-- END COMPATIBILITYSHARED OLIVE OIL JAKOB -->
+  </Group>
+
+  <Group Condition="#ow-hemp-jakob">
+    <!-- START COMPATIBILITY SHARED HEMP JAKOB -->
+    <!-- ****************** HEMP FARM ******************  -->
+    <ModOp Type="merge" GUID="1500010124" Path="/Values/ModuleOwner/ModuleLimits/Main">
+      <Limit>100</Limit>      <!-- 128 -->
+    </ModOp>
+    <!-- END COMPATIBILITYSHARED HEMP JAKOB -->
+  </Group>
+
+  <Group Condition="#ow-flax-jakob">
+    <!-- START COMPATIBILITY SHARED FLAX JAKOB -->
+    <!-- ****************** FLAX FARM ******************  -->
+    <ModOp Type="merge" GUID="1500011458" Path="/Values/ModuleOwner/ModuleLimits/Main">
+      <Limit>60</Limit>      <!-- 72 -->
+    </ModOp>
+    <!-- END COMPATIBILITYSHARED FLAX JAKOB -->
+  </Group>
+
+  <Group Condition="#ow-vegetables-jakob">
+    <!-- START COMPATIBILITY SHARED VEGETABLES JAKOB -->
+    <!-- ****************** VEGETABLES FARM ******************  -->
+    <ModOp Type="merge" GUID="1500010830" Path="/Values/ModuleOwner/ModuleLimits/Main">
+      <Limit>60</Limit>      <!-- 72 -->
+    </ModOp>
+    <!-- END COMPATIBILITYSHARED VEGETABLES JAKOB -->
+  </Group>
+
+  <Group Condition="#jakob_biogas">
+    <!-- START COMPATIBILITY JAKOB BIOGAS -->
+    <!--UNLOCK - Engineers 500 -->
+    <ModOp Type="addnextSibling" GUID="130248">
+      <Asset>
+        <Template>Trigger</Template>
+        <Values>
+          <Standard>
+            <GUID>1742100804</GUID>
+            <Name>MOD Trigger</Name>
+          </Standard>
+          <Trigger>
+            <TriggerCondition>
+              <Template>ConditionPlayerCounter</Template>
+              <Values>
+                <Condition />
+                <ConditionPlayerCounter>
+                  <PlayerCounter>PopulationByLevel</PlayerCounter>
+                  <Context>15000003</Context>                  <!-- Engineers PopulationLevel7 -->
+                  <CounterAmount>500</CounterAmount>
+                </ConditionPlayerCounter>
+              </Values>
+            </TriggerCondition>
+            <TriggerActions>
+              <Item>
+                <TriggerAction>
+                  <Template>ActionUnlockAsset</Template>
+                  <Values>
+                    <Action />
+                    <ActionUnlockAsset>
+                      <UnhideAssets>
+                      </UnhideAssets>
+                      <UnlockAssets>
+                        <Item>
+                          <Asset>1742100218</Asset>                          <!-- Fire Tower (OW) - Building -->
+                        </Item>
+                        <Item>
+                          <Asset>1742100359</Asset>                          <!-- Fire Tower (AR) - Building -->
+                        </Item>
+                        <Item>
+                          <Asset>1742100365</Asset>                          <!-- Fire Tower (NW) - Building -->
+                        </Item>
+                        <Item>
+                          <Asset>1742100371</Asset>                          <!-- Fire Tower (EN) - Building -->
+                        </Item>
+                        <Item>
+                          <Asset>1742100446</Asset>                          <!-- Small Fire Ammunition Depot (EN) - Building -->
+                        </Item>
+                        <Item>
+                          <Asset>1742100445</Asset>                          <!-- Small Fire Ammunition Depot (EN) - Recipe -->
+                        </Item>
+                        <Item>
+                          <Asset>1742100442</Asset>                          <!-- Small Fire Ammunition Depot (AR) - Building -->
+                        </Item>
+                        <Item>
+                          <Asset>1742100441</Asset>                          <!-- Small Fire Ammunition Depot (AR) - Recipe -->
+                        </Item>
+                        <Item>
+                          <Asset>1742100444</Asset>                          <!-- Small Fire Ammunition Depot (NW) - Building -->
+                        </Item>
+                        <Item>
+                          <Asset>1742100443</Asset>                          <!-- Small Fire Ammunition Depot (NW) - Recipe -->
+                        </Item>
+                        <Item>
+                          <Asset>1742100226</Asset>                          <!-- Large Ammunition Depot - All ammunition (OW) - Building -->
+                        </Item>
+                        <Item>
+                          <Asset>1742100274</Asset>                          <!-- Large Ammunition Depot - All ammunition (AR) - Building -->
+                        </Item>
+                        <Item>
+                          <Asset>1742100276</Asset>                          <!-- Large Ammunition Depot - All ammunition (NW) - Recipe -->
+                        </Item>
+                        <Item>
+                          <Asset>1742100282</Asset>                          <!-- Large Ammunition Depot - All ammunition (EN) - Recipe -->
+                        </Item>
+                      </UnlockAssets>
+                    </ActionUnlockAsset>
+                  </Values>
+                </TriggerAction>
+              </Item>
+            </TriggerActions>
+          </Trigger>
+          <TriggerSetup />
+        </Values>
+      </Asset>
+    </ModOp>
+  </Group>
+
+  <Group Condition="#new_horizons_session">
+    <Include File="./assets.include.nh.xml" />
+  </Group>
+
+</ModOps>
+  

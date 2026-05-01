@@ -1,0 +1,986 @@
+<!-- 
+
+[Gameplay] Military Attention - v1.33
+  
+Created by Hier0nimus
+And help of A LOT of people. Big thank you all!
+Paper Factory thanks to Lion053
+Shared Scroll hint thanks to Kurila
+German translation thanks to f0kx
+Chinese translation thanks to hanthe2th
+Enjoy!
+
+NORMAL GUIDS:
+1742100000 > 1742100697
+1742101000 > 1742101999
+HIGHEST - 1742100697
+HIGHEST - 1742101085
+1742100540 - BROKEN?
+
+TRIGGERS GUIDS:
+1742100700 > 1742100999
+HIGHEST: 1742100833
+
+SOLDIERS POPULATION TIER
+*************************
+1742100000 - Soldiers - PopulationLevel7
+1742100306 - Arctic Soldiers - PopulationLevel7
+1742100315 - New World Soldiers - PopulationLevel7
+1742100316 - Enbesa Soldiers - PopulationLevel7
+
+1742100014 - Military (OW) - PopulationGroup7
+1742100312 - Military (AR) - PopulationGroup7
+1742100313 - Military (NW) - PopulationGroup7
+1742100314 - Military (EN) - PopulationGroup7
+
+1742100018 - Military Category Menu
+
+1742100231 - Soldiers Angry - Moodtext
+1742100232 - Soldiers Unhappy - Moodtext
+1742100233 - Soldiers Neutral - Moodtext
+1742100234 - Soldiers Happy - Moodtext
+1742100235 - Soldiers Euphoric - Moodtext
+
+1742100385 - Freezing Soldiers - Moodtext
+1742100386 - Freezing Soldiers - Moodtext
+1742100387 - Cold Soldiers - Moodtext
+1742100388 - Chilly Soldiers - Moodtext
+1742100389 - Comfortable Soldiers - Moodtext
+
+BUILDINGS
+********************
+1742100001 - Soldiers Residence - Encampment - Building
+1742100002 - Soldiers Residence - Encampment - Building - Description
+1742100003 - Soldiers Residence - Barracks - Building
+1742100004 - Soldiers Residence - Barracks - Building Description
+1742100307 - Arctic Soldiers Residence - Encampment - Building
+1742100308 - Arctic Soldiers Residence - Encampment - Building - Description
+1742100011 - Arctic Soldiers Barracks - Encampment - Building
+1742100012 - Arctic Soldiers Barracks - Encampment - Building - Description
+1742100333 - New World Soldiers Residence - Encampment - Building
+1742100334 - New World Soldiers Residence - Encampment - Building - Description
+1742100335 - Enbesa Soldiers Residence - Encampment - Building
+1742100336 - Enbesa Soldiers Residence - Encampment - Building - Description
+1742100020 - Canteen (OW) - Building
+1742100021 - Canteen (OW) - Description
+1742100337 - Canteen (NW) - Building
+1742100338 - Canteen (NW) - Description
+1742100341 - Canteen (EN) - Building
+1742100342 - Canteen (EN) - Description
+1742100238 - Small Military Warehouse (OW) - Building
+1742100524 - Small Military Warehouse (NW) - Building
+1742100525 - Small Military Warehouse (EN) - Building
+1742100017 - Small Military Warehouse (AR) - Building
+1742100239 - Small Military Warehouse - Description
+1742100024 - Military Warehouse - Building
+1742100025 - Military Warehouse - Description
+1742100028 - Military Headquarters - Building
+1742100029 - Military Headquarters - Description
+1742100032 - Military Headquarters - Popup Header
+1742100033 - Military Headquarters - Info Tip
+1742100040 - Military Headquarters - Icon Radius
+1742100054 - Paper Factory - Building
+1742100055 - Paper Factory - Description
+1742100056 - Cigarettes Factory - Building
+1742100057 - Cigarettes Factory - Description
+[SHARED] 1742101082 - Military Uniform Factory DUMMY - Building
+1742100062 - Military Uniform Factory - Building
+1742100608 - Military Uniform Factory (NW) - Building
+1742100063 - Military Uniform Factory - Description
+1742100068 - Sleeping Bag Factory OW - Building
+1742100069 - Sleeping Bag Factory OW - Description
+1742100078 - Recreation Centre - Building
+1742100079 - Recreation Centre - Description
+1742100082 - Military Academy - Building
+1742100083 - Military Academy - Description
+1742100090 - Military Academy - Building - Module / Campus (Deprecated)
+1742101065 - Military Academy - Building - Module / Campus
+1742101066 - Military Academy - Building - Module / Housing
+1742100091 - Military Academy - Building - Module - Description
+1742101067 - Military Academy - Building - Module / Housing - Description
+1742100092 - Military Academy - Building - Module - Button
+1742100093 - Military Academy - Building - Header
+1742100094 - Military Academy - Building - Undiscovered head
+[SHARED] 1742100163 - Open Pit Iron Mine - Building
+[SHARED] 1742100602 - Open Pit Iron Mine (NW) - Building
+[SHARED] 1742100164 - Open Pit Iron Mine - Building - Description
+[SHARED] 1742100165 - Open Pit Coal Mine - Building
+[SHARED] 1742100603 - Open Pit Coal Mine (NW) - Building
+[SHARED] 1742100166 - Open Pit Coal Mine - Building - Description
+1742100604 - Furnace (NW) - Building
+1742100183 - Cardgames Factory - Building
+1742100184 - Cardgames Factory - Building - Description
+1742100189 - Military Training Complex - Building
+1742100190 - Military Training Complex - Building - Description
+1742100195 - Ammunition Factory Empty (OW) - Building
+1742100196 - Ammunition Factory Empty - Building - Description
+1742100199 - Ammunition Factory Basic Ammunition (OW) - Building
+1742100200 - Ammunition Factory Basic Ammunition - Building - Description
+1742100246 - Ammunition Factory Shells (OW) - Building
+1742100247 - Ammunition Factory Shells - Building - Description
+1742100201 - Ammunition Factory Bombs (OW) - Building
+1742100202 - Ammunition Factory Bombs - Building - Description
+[SHARED] 1742100209 - Stable - Building
+[SHARED] 1742100210 - Stable - Building - Description
+[SHARED] 1742100213 - Stable - Farmfield
+[SHARED] 1742100214 - Stable - Farmfield - Description
+[SHARED] 1742100384 - Stable DUMMY - Building
+1742100287 - Dung Collector - Building
+1742100288 - Dung Collector - Building - Description
+1742100289 - Nitrary - Building
+1742100290 - Nitrary - Building - Description
+1742100374 - Saltpetre Bed - Farmfield
+1742100375 - Saltpetre Bed - Farmfield - Description
+[SHARED] 1742100291 - Gunpowder Factory - Building
+[SHARED] 1742101064 - Gunpowder Factory (NW) - Building
+[SHARED] 1742100292 - Gunpowder Factory - Building - Description
+[SHARED] 1742100412 - Gunpowder Factory DUMMY - Building
+1742100310 - Arctic Outpost - Building
+1742100311 - Arctic Outpost - Building - Description
+1742100321 - New World Outpost - Building
+1742100322 - New World - Building - Description
+1742100323 - Enbesa Outpost - Building
+1742100324 - Enbesa Outpost - Building - Description
+1742100331 - Heated Military Uniform Factory - Building
+1742100332 - Heated Military Uniform Factory - Description
+1742100376 - Nitrary Shed - Module
+1742100377 - Nitrary Shed - Module - Description
+[SHARED] 1742100380 - Horse Training Ground - Module
+[SHARED] 1742100381 - Horse Training Ground - Module - Description
+[SHARED] 1742100407 - Galena Module - Building
+[SHARED] 1742100408 - Galena Module - Building - Description
+[SHARED] 1742100016 - Galena production DUMMY - Building
+[SHARED] 1742100409 - Lead Smelter - Building
+[SHARED] 1742100410 - Lead Smelter - Building - Description
+[SHARED] 1742100475 - Lead Smelter DUMMY - Building
+1742100415 - Mint - Building
+1742100416 - Mint - Building - Description
+1742100457 - Military Prison - Building
+1742100458 - Military Prison - Building - Description
+1742100459 - Propaganda Facility - Building
+1742100460 - Propaganda Facility - Building - Description
+[SHARED] 1742101081 - Basic Weapons Factory DUMMY - Building
+1742100469 - Basic Weapons Factory - Building
+1742100605 - Basic Weapons Factory (NW) - Building
+1742100470 - Basic Weapons Factory - Building - Description
+1742100496 - Care Package Factory - Empty (OW) - Building
+1742100497 - Care Package Factory - Empty (OW) - Building - Description
+1742100502 - Care Package Factory: Basics (OW) - Building
+1742100503 - Care Package Factory: Basics (OW) - Building - Description
+1742100506 - Care Package Factory: Medium (OW) - Building
+1742100507 - Care Package Factory: Medium (OW) - Building - Description
+1742100516 - Care Package Factory: Big (OW) - Building
+1742100517 - Care Package Factory: Big (OW) - Building - Description
+1742100619 - Care Package Factory (NW) - Building
+1742100007 - Military Post Box - Building
+1742100008 - Military Post Box - Building - Description
+1742100076 - Sanitation Facility - Building
+1742100077 - Sanitation Facility - Building - Description
+1742100558 - Local cemetery - Building
+1742100559 - Local cemetery - Building - Description
+1742100560 - Cemetery - Building
+1742100561 - Cemetery - Building - Description
+1742100630 - Mourning at sea - Building
+1742100631 - Mourning at sea - Building - Description
+1742100562 - Field Hospital - Building
+1742100563 - Field Hospital - Building - Description
+[SHARED] 1742100240 - Clean Water Pump (OW) - Building
+[SHARED] 1742100241 - Clean Water Pump - Building - Description
+[SHARED] 1742100244 - Clean Water Pump (NW) - Building
+[SHARED] 1742100411 - Clean Water Pump DUMMY - Building
+1742100618 - Cannery (NW) - Building
+
+DEFENSES  
+***********
+1742100215 - Mounted Guns (OW) - Building
+1742100216 - Cannon Tower (OW) - Building
+1742100217 - Flak Emplacement (OW) - Building
+1742100218 - Fire Tower (OW) - Building
+1742100219 - Armor Pierce Tower (OW) - Building
+1742100220 - Monster Gun (OW) - Building
+1742100221 - Flak Emplacement (OW Land) - Building
+1742100356 - Mounted Guns (AR) - Building
+1742100357 - Cannon Tower (AR) - Building
+1742100358 - Flak Emplacement (AR) - Building
+1742100359 - Fire Tower (AR) - Building
+1742100360 - Armor Pierce Tower (AR) - Building
+1742100361 - Flak Emplacement (AR Land) - Building
+1742100448 - Monster Gun (AR) - Building
+1742100362 - Mounted Guns (NW) - Building
+1742100363 - Cannon Tower (NW) - Building
+1742100364 - Flak Emplacement (NW) - Building
+1742100365 - Fire Tower (NW) - Building
+1742100366 - Armor Pierce Tower (NW) - Building
+1742100367 - Flak Emplacement (NW Land) - Building
+1742100449 - Monster Gun (NW) - Building
+1742100368 - Mounted Guns (EN) - Building
+1742100369 - Cannon Tower (EN) - Building
+1742100370 - Flak Emplacement (EN) - Building
+1742100371 - Fire Tower (EN) - Building
+1742100372 - Armor Pierce Tower (EN) - Building
+1742100373 - Flak Emplacement (EN Land) - Building
+1742100450 - Monster Gun (EN) - Building
+1742100692 - Coastal Torpedo Launcher (OW)
+1742100695 - Coastal Torpedo Launcher (NW)
+1742100696 - Coastal Torpedo Launcher (AR)
+1742100697 - Coastal Torpedo Launcher (EN)
+1742100693 - Coastal Torpedo Launcher - Description
+1742100694 - Torpedo Projectile
+
+CONSTRUCTION MENU CHAINS 
+****************************************
+1742100026 - Military Construction Category (OW)
+1742100350 - Military Construction Category (AR)
+1742100351 - Military Construction Category (NW)
+1742100352 - Military Construction Category (EN)
+1742100027 - Defenses Construction Menu (OW)
+1742100353 - Defenses Construction Menu (AR)
+1742100354 - Defenses Construction Menu (NW)
+1742100355 - Defenses Construction Menu (EN)
+1742100060 - Cigarettes - Menu Production Chain
+1742100061 - Cigarettes - Menu Production Chain - Description
+1742100066 - Military Uniforms - Menu Production Chain
+1742100607 - Military Uniforms (NW) - Menu Production Chain
+1742100067 - Military Uniforms - Menu Production Chain - Description
+1742100070 - Sleeping Bags OW - Menu Production Chain
+1742100071 - Sleeping Bags OW - Menu Production Chain - Description
+1742100187 - Cardgames - Menu Production Chain
+1742100188 - Cardgames - Menu Production Chain - Description
+1742100193 - Military Training Complex - Menu Production Chain
+1742100194 - Military Training Complex - Menu Production Chain - Description
+1742100299 - Basic Ammunition (OW) - Menu Production Chain
+1742100300 - Basic Ammunition - Menu Production Chain - Description
+1742100301 - Shell Ammunition (OW) - Menu Production Chain
+1742100302 - Shell Ammunition - Menu Production Chain - Description
+1742100303 - Bombs Ammunition (OW) - Menu Production Chain
+1742100304 - Bombs Ammunition - Menu Production Chain - Description
+1742100348 - Heated Military Uniforms - Menu Production Chain
+1742100349 - Heated Military Uniforms - Menu Production Chain - Description
+1742100447 - Coins - Menu Production Chain
+1742100473 - Basic Weapons - Menu Production Chain
+1742100606 - Basic Weapons (NW) - Menu Production Chain
+1742100474 - Basic Weapons - Menu Production Chain - Description
+1742100478 - Military - ConstructionCategory
+1742100617 - Canned Food (NW) - Menu Production Chain
+1742100620 - Care Packages (NW) - Menu Production Chain
+
+MILITARY PRODUCTS
+********************
+1742100005 - Soldiers Workforce - Product
+1742100309 - Arctic Soldiers Workforce - Product
+1742100317 - New World Soldiers Workforce - Product
+1742100318 - Enbesa Soldiers Workforce - Product
+1742100015 - SoldiersConsumerGoods (OW) - ProductList
+1742100345 - SoldiersConsumerGoods (AR) ProductList
+1742100346 - SoldiersConsumerGoods (NW) ProductList
+1742100347 - SoldiersConsumerGoods (EN) ProductList
+1742100022 - Canteen (OW) - Product
+1742100023 - Canteen (OW) - Product - Description
+1742100339 - Canteen (NW) - Product
+1742100340 - Canteen (NW) - Product - Description
+1742100343 - Canteen (EN) - Product
+1742100344 - Canteen (EN) - Product - Description
+1742100030 - Military Headquarters - Product
+1742100031 - Military Headquarters - Product - Description
+1742100058 - Cigarettes - Product
+1742100059 - Cigarettes - Product - Description
+[SHARED] 1742100064 - Military Uniforms - Product
+[SHARED] 1742100065 - Military Uniforms - Product - Description
+1742100080 - Recreation Center - Product
+1742100081 - Recreation Center - Product - Description
+1742100236 - Sanitation Facility - Product
+1742100237 - Sanitation Facility - Product - Description
+1742100084 - Military Academy - Product
+1742100085 - Military Academy - Product - Description
+1742100185 - Cardgames - Product
+1742100186 - Cardgames - Product - Description
+1742100191 - Military Training Complex - Product
+1742100192 - Military Training Complex - Product - Description
+1742100203 - Basic Ammunition - Product
+1742100204 - Basic Ammunition - Product - Description
+1742100248 - Shell Ammunition - Product
+1742100249 - Shell Ammunition - Product - Description
+[SHARED] 1742100211 - Horses - Product
+[SHARED] 1742100212 - Horses - Product - Description
+1742100286 - Ammunition (Global fake) - Product
+1742100072 - Basic Ammunition (Global fake) - Product
+1742100073 - Shell Ammunition (Global fake) - Product
+1742100074 - Fire Ammunition (Global fake) - Product
+1742100075 - Bombs Ammunition (Global fake) - Product
+[SHARED] 1742100293 - Gunpowder - Product
+[SHARED] 1742100294 - Gunpowder - Product - Description
+1742100319 - Arctic Outpost - Product
+1742100320 - Arctic Outpost - Product - Description
+1742100325 - New World Outpost - Product
+1742100326 - New World Outpost - Product - Description
+1742100327 - Enbesa Outpost - Product
+1742100328 - Enbesa Outpost - Product - Description
+1742100329 - Heated Military Uniforms - Product
+1742100330 - Heated Military Uniforms - Product - Description
+[SHARED] 1742100433 - Galena - Product
+[SHARED] 1742100434 - Galena - Product - Description
+[SHARED] 1742100435 - Lead - Product
+[SHARED] 1742100436 - Lead - Product - Description
+1742100439 - Coins - Product
+1742100440 - Coins - Product - Description
+1742100465 - Propaganda Facility - Product
+1742100466 - Military Prison - Product
+[SHARED] 1742100471 - Basic Weapons - Product
+[SHARED] 1742100472 - Basic Weapons - Product - Description
+1742100009 - Military Warehouse - Product
+1742100013 - Military Warehouse - Product - Description
+1742100556 - Cemetery - Product
+1742100557 - Cemetery - Product - Description
+1742100564 - Field Hospital - Product
+1742100565 - Field Hospital - Product - Description
+[SHARED] 1742100242 - Clean Water - Product
+[SHARED] 1742100243 - Clean Water - Product - Description
+
+ITEMS
+********************
+1742100167 - Pirate Naval Architect Blueprints - Item
+1742100168 - Pirate Naval Architect Blueprints - Item - Description
+1742100169 - Jean's Best Whisky - Item
+1742100170 - Jean's Best Whisky - Item - Description
+1742100171 - Anne's Eagle - Item
+1742100172 - Anne's Eagle - Item - Description
+1742100173 - Pirate Repair Tools - Item
+1742100174 - Pirate Repair Tools - Item - Description
+1742100175 - Pirate Taxman - Item
+1742100176 - Pirate Taxman - Item - Description
+1742100177 - Pirate Wanted Poster - Item
+1742100178 - Pirate Wanted Poster - Item - Description
+1742100179 - Pirate Treasure Chest - Item
+1742100180 - Pirate Treasure Chest - Item - Description
+1742100181 - Jean's Private Messenger - Item
+1742100182 - Jean's Private Messenger - Item - Description
+1742100229 - James Fondrick - Item
+1742100230 - James Fondrick - Item - Description
+1742100455 - Theodore Von Woudenburg - Item
+1742100456 - Theodore Von Woudenburg - Item - Description
+1742100512 - Charlène Dupont - Item
+1742100513 - Charlène Dupont - Item - Description
+1742100514 - Eckbert Schafkopf - Item
+1742100515 - Eckbert Schafkopf - Item - Description
+1742100526 - Joseph Weligman - Item
+1742100527 - Joseph Weligman - Item - Description
+1742100528 - Thomas Haltmus - Item
+1742100529 - Thomas Haltmus - Item - Description
+1742100775 - Sammy Moray - Item
+1742100776 - Sammy Moray - Item - Description
+
+POLICIES
+********************
+1742100034 - Military Headquarters - Rations - Policy
+1742100035 - Military Headquarters - Rations - Policy - Description
+1742100036 - Military Headquarters - Weapon efficiency - Policy
+1742100037 - Military Headquarters - Weapon efficiency - Policy - Description
+1742100038 - Military Headquarters - Equipment efficiency - Policy
+1742100039 - Military Headquarters - Equipment efficiency - Policy - Description
+
+BUFFS & EFFECTS
+********************
+1742100041 - Military Headquarters - Rations - Buff
+1742100042 - Military Headquarters - Rations - Buff - Description
+1742100043 - Military Headquarters - Rations - Infotip
+1742100044 - Military Headquarters - Rations - Infotip - Description
+1742100046 - Military Headquarters - Weapon efficiency - Buff
+1742100047 - Military Headquarters - Weapon efficiency - Buff - Description
+1742100048 - Military Headquarters - Weapon efficiency - Infotip
+1742100049 - Military Headquarters - Weapon efficiency - Infotip - Description
+1742100050 - Military Headquarters - Equipment efficiency - Buff
+1742100051 - Military Headquarters - Equipment efficiency - Buff - Description
+1742100052 - Military Headquarters - Equipment efficiency - Infotip
+1742100053 - Military Headquarters - Equipment efficiency - Infotip - Description
+1742100088 - Ship Production - SetBuff
+1742100089 - Ship Production - SetBuff - Description
+1742100097 - Military Consumption Goods Production - SetBuff
+1742100098 - Military Consumption Goods Production - SetBuff - Description
+1742100101 - Military Equipment Goods Production - SetBuff
+1742100102 - Military Equipment Goods Production - SetBuff - Description
+1742100105 - Military Weapon Goods Production - SetBuff
+1742100106 - Military Weapon Goods Production - SetBuff - Description
+1742100109 - Advanced Ship Blueprints - SetBuff
+1742100110 - Advanced Ship Blueprints - SetBuff - Description
+1742100113 - Pyrphorian Ship Blueprints - SetBuff
+1742100114 - Pyrphorian Ship Blueprints - SetBuff - Description
+1742100117 - Speed Improvements Ships - SetBuff
+1742100118 - Speed Improvements Ships - SetBuff - Description
+1742100121 - War Improvement Ships - SetBuff
+1742100122 - War Improvement Ships - SetBuff - Description
+1742100125 - Defense Improvement Ships - SetBuff
+1742100126 - Defense Improvement Ships - SetBuff - Description
+1742100129 - Speed Improvements Airships - SetBuff
+1742100130 - Speed Improvements Airships - SetBuff - Description
+1742100133 - War Improvement Airships - SetBuff
+1742100134 - War Improvement Airships - SetBuff - Description
+1742100137 - Defense Improvement Airships - SetBuff
+1742100138 - Defense Improvement Airships - SetBuff - Description
+1742100141 - Improved Defenses - SetBuff
+1742100142 - Improved Defenses - SetBuff - Description
+1742100145 - Improved Reparations - SetBuff
+1742100146 - Improved Reparations - SetBuff - Description
+1742100149 - Improved Logistics - SetBuff
+1742100150 - Improved Logistics - SetBuff - Description
+1742100153 - Compulsory Military Service - SetBuff
+1742100154 - Compulsory Military Service - SetBuff - Description
+1742100157 - Efficient Military Maintenance - SetBuff
+1742100158 - Efficient Military Maintenance - SetBuff - Description
+1742100161 - Letters from home - SetBuff
+1742100162 - Letters from home - SetBuff - Description
+1742100378 - Nitrary Debuff - GuildhouseBuff
+1742100379 - Nitrary Shed Buff - GuildhouseBuff
+1742100461 - Military Prison Buff - TownhallBuff
+1742100462 - Military Prison Buff - TownhallBuff - Description
+1742100463 - Propagande Facility Buff - TownhallBuff
+1742100464 - Propagande Facility Buff - TownhallBuff - Description
+1742100467 - Military Logistics (OW) - GuildhouseBuff
+1742100530 - Military Logistics (EN) - GuildhouseBuff
+1742100531 - Military Logistics (AR) - GuildhouseBuff
+1742100510 - Military Logistics (NW) - GuildhouseBuff
+1742100468 - Military Logistics - GuildhouseBuff - Description
+[SHARED] 1742100494 - Digging deeper for Galena - Buff
+[SHARED] 1742100495 - Digging deeper for Galena - Buff - Description
+1742100567 - Fort Effect Container - EffectContainer
+1742100480 - Fort Defense - HarbourOfficeBuff
+1742100481 - Fort Defense - HarbourOfficeBuff - Description
+1742100568 - Fort Defense - HarbourOfficeBuff
+1742100569 - Fort Defense - HarbourOfficeBuff - Description
+1742100570 - Fort Reparations - HarbourOfficeBuff
+1742100571 - Fort Reparations - HarbourOfficeBuff - Description
+1742100245 - Military Campus - EffectContainer
+1742100520 - Campus Production Research - GuildhouseBuff
+1742100521 - Campus Production Research - GuildhouseBuff - Description
+1742100522 - Campus Citizen Research - TownHallBuff
+1742100523 - Campus Citizen Research - TownHallBuff - Description
+1742101070 - Productivity - Decree 3 Buff_17 (Gunpowder) - GuildhouseBuff
+1742101071 - Productivity - Decree 3 Buff_18 (Lead) - GuildhouseBuff
+1742101072 - Productivity - Decree 3 Buff_19 (Basic Weapons) - GuildhouseBuff
+1742101073 - Productivity - Decree 3 Buff_20 (Basic Ammunition) - GuildhouseBuff
+1742101074 - Productivity - Decree 3 Buff_21 (Shell Ammunition) - GuildhouseBuff
+1742101075 - Productivity - Decree 3 Buff_22 (Bombs Ammunition) - GuildhouseBuff
+
+POOLS
+********
+1742100019 - All Military Residences - ItemEffectPool
+1742100045 - All Military Production - ItemEffectPool
+1742100228 - All Defense Buildings - ItemEffectTargetPool
+1742100252 - All Basic Ammunition Defense Buildings - ItemEffectTargetPool
+1742100253 - All Shell Ammunition Defense Buildings - ItemEffectTargetPool
+1742100413 - All Fire Ammunition Defense Buildings - ItemEffectTargetPool
+1742100414 - All Bombs Ammunition Defense Buildings - ItemEffectTargetPool
+1742100305 - All Airship Shipyards - ItemEffectTargetPool
+1742100390 - All New Military Character Items - RewardPool
+1742100427 - All Military Service Buildings - ItemEffectTargetPool
+1742100428 - All Ammunition Factories - ItemEffectTargetPool
+1742100278 - All Ammunition Depots - ItemEffectTargetPool
+1742100777 - All Fire Ammunition Depots - ItemEffectTargetPool
+1742100280 - All Sleeping Bag Factories - ItemEffectTargetPool
+[SHARED] 1742100511 - All Clean Water Pumps - ItemEffectTargetPool
+1742100778 - All Gas-Fired Power Plants - ItemEffectTargetPool
+1742100655 - All Basic Weapons Factories - ItemEffectTargetPool
+1742100656 - All Military Uniform Factories - ItemEffectTargetPool
+1742100665 - All Cemeteries - ItemEffectTargetPool
+
+ITEMSETS
+***********
+1742100086 - Ship Production - Itemset
+1742100087 - Ship Production - Itemset - Description
+1742100095 - Military Consumption Goods Production - Itemset
+1742100096 - Military Consumption Goods Production - Itemset - Description
+1742100099 - Military Equipment Goods Production - Itemset
+1742100100 - Military Equipment Goods Production - Itemset - Description
+1742100103 - Military Weapon Goods Production - Itemset
+1742100104 - Military Weapon Goods Production - Itemset - Description
+1742100107 - Advanced Ship Blueprints - Itemset
+1742100108 - Advanced Ship Blueprints - Itemset - Description
+1742100111 - Pyrphorian Ship Blueprints - Itemset
+1742100112 - Pyrphorian Ship Blueprints - Itemset - Description
+1742100115 - Speed Improvements Ships - Itemset
+1742100116 - Speed Improvements Ships - Itemset - Description
+1742100119 - War Improvement Ships - Itemset
+1742100120 - War Improvement Ships - Itemset - Description
+1742100123 - Defense Improvement Ships - Itemset
+1742100124 - Defense Improvement Ships - Itemset - Description
+1742100127 - Speed Improvements Airships - Itemset
+1742100128 - Speed Improvements Airships - Itemset - Description
+1742100131 - War Improvement Airships - Itemset
+1742100132 - War Improvement Airships - Itemset - Description
+1742100135 - Defense Improvement Airships - Itemset
+1742100136 - Defense Improvement Airships - Itemset - Description
+1742100139 - Improved Defenses - Itemset
+1742100140 - Improved Defenses - Itemset - Description
+1742100143 - Improved Reparations - Itemset
+1742100144 - Improved Reparations - Itemset - Description
+1742100147 - Improved Logistics - Itemset
+1742100148 - Improved Logistics - Itemset - Description
+1742100151 - Compulsory Military Service - Itemset
+1742100152 - Compulsory Military Service - Itemset - Description
+1742100155 - Efficient Military Maintenance - Itemset
+1742100156 - Efficient Military Maintenance - Itemset - Description
+1742100159 - Letters from home - Itemset
+1742100160 - Letters from home - Itemset - Description
+
+RECIPES + LISTS
+********************
+1742100197 - Ammunition (OW) - Recipe - List
+1742100198 - Ammunition - Recipe - List - Description
+1742100205 - Basic Ammunition (OW) - Recipe
+1742100206 - Basic Ammunition - Recipe - Description
+1742100207 - Bombs Ammunition (OW) - Recipe
+1742100208 - Bombs Ammunition - Recipe - Description
+1742100250 - Shell Ammunition (OW) - Recipe
+1742100251 - Shell Ammunition - Recipe - Description
+1742100498 - Care Packages - RecipeList (OW)
+1742100499 - Care Packages - RecipeList (OW) - Description
+1742100500 - Care Package: Basics (OW) - Recipe
+1742100501 - Care Package: Basics (OW) - Recipe - Description
+1742100504 - Care Package: Medium (OW) - Recipe
+1742100505 - Care Package: Medium (OW) - Recipe - Description
+1742100508 - Care Package: Big (OW) - Recipe
+1742100509 - Care Package: Big (OW) - Recipe - Description
+
+Ammunition Depot
+********************
+1742100273 - Ammunition Depot - Building - Description
+1742100275 - Ammunition Depot - Recipe - List - Description
+1742100277 - Basic Ammunition Depot - Recipe - Description
+1742100279 - Shell Ammunition Depot - Recipe - Description
+1742100281 - Fire Ammunition Depot - Recipe - Description
+1742100283 - Bombs Ammunition Depot - Recipe - Description
+1742100227 - Basic Ammunition Depot - Building - Description
+1742100267 - Shell Ammunition Depot - Building - Description
+1742100269 - Fire Ammunition Depot - Building - Description
+1742100271 - Bombs Ammunition Depot - Building - Description
+1742100401 - Small Ammunition Depot (Empty) (OW) - Building
+1742100423 - Small Ammunition Depot (Empty) (AR) - Building
+1742100424 - Small Ammunition Depot (Empty) (NW) - Building
+1742100425 - Small Ammunition Depot (Empty) (EN) - Building
+1742100402 - Small Ammunition Depot (OW) - Recipe - List
+1742100426 - Small Ammunition Depot (AR) - Recipe - List
+1742100429 - Small Ammunition Depot (NW) - Recipe - List
+1742100430 - Small Ammunition Depot (EN) - Recipe - List
+1742100403 - Small Basic Ammunition Depot (OW) - Recipe
+1742100397 - Small Basic Ammunition Depot (OW) - Building
+1742100417 - Small Basic Ammunition Depot (AR) - Recipe
+1742100418 - Small Basic Ammunition Depot (AR) - Building
+1742100419 - Small Basic Ammunition Depot (NW) - Recipe
+1742100420 - Small Basic Ammunition Depot (NW) - Building
+1742100421 - Small Basic Ammunition Depot (EN) - Recipe
+1742100422 - Small Basic Ammunition Depot (EN) - Building
+1742100404 - Small Shell Ammunition Depot (OW) - Recipe
+1742100398 - Small Shell Ammunition Depot (OW) - Building
+1742100451 - Small Shell Ammunition Depot (AR) - Recipe
+1742100452 - Small Shell Ammunition Depot (AR) - Building
+1742100453 - Small Shell Ammunition Depot (NW) - Recipe
+1742100454 - Small Shell Ammunition Depot (NW) - Building
+1742100431 - Small Shell Ammunition Depot (EN) - Recipe
+1742100432 - Small Shell Ammunition Depot (EN) - Building
+1742100405 - Small Fire Ammunition Depot (OW) - Recipe
+1742100399 - Small Fire Ammunition Depot (OW) - Building
+1742100441 - Small Fire Ammunition Depot (AR) - Recipe
+1742100442 - Small Fire Ammunition Depot (AR) - Building
+1742100443 - Small Fire Ammunition Depot (NW) - Recipe
+1742100444 - Small Fire Ammunition Depot (NW) - Building
+1742100445 - Small Fire Ammunition Depot (EN) - Recipe
+1742100446 - Small Fire Ammunition Depot (EN) - Building
+1742100406 - Small Bombs Ammunition Depot (OW) - Recipe
+1742100400 - Small Bombs Ammunition Depot (OW) - Building
+1742100284 - Small Bombs Ammunition Depot (AR) - Recipe
+1742100285 - Small Bombs Ammunition Depot (AR) - Building
+1742100297 - Small Bombs Ammunition Depot (NW) - Recipe
+1742100298 - Small Bombs Ammunition Depot (NW) - Building
+1742100437 - Small Bombs Ammunition Depot (EN) - Recipe
+1742100438 - Small Bombs Ammunition Depot (EN) - Building
+1742100226 - Large Ammunition Depot - All ammunition (OW) - Building
+1742100274 - Large Ammunition Depot - All ammunition (AR) - Building
+1742100276 - Large Ammunition Depot - All ammunition (NW) - Building
+1742100282 - Large Ammunition Depot - All ammunition (EN) - Building
+1742100222 - Basic Ammunition Debuff - Buff
+1742100223 - Basic Ammunition Debuff - Buff - Description
+1742100224 - Basic Ammunition Buff - Buff
+1742100225 - Basic Ammunition Buff - Buff - Description
+1742100254 - Shell Ammunition Debuff - Buff
+1742100255 - Shell Ammunition Debuff - Buff - Description
+1742100256 - Shell Ammunition Buff - Buff
+1742100257 - Shell Ammunition Buff - Buff - Description
+1742100258 - Fire Ammunition Debuff - Buff
+1742100259 - Fire Ammunition Debuff - Buff - Description
+1742100260 - Fire Ammunition Buff - Buff
+1742100261 - Fire Ammunition Buff - Buff - Description
+1742100262 - Bombs Ammunition Debuff - Buff
+1742100263 - Bombs Ammunition Debuff - Buff - Description
+1742100264 - Bombs Ammunition Buff - Buff
+1742100265 - Bombs Ammunition Buff - Buff - Description
+1742100492 - All Ammunition Buff - Buff
+1742100493 - All Ammunition Buff - Buff - Description
+1742101056 - Medium Ammunition Depot - Explosive ammunition (OW) - Building
+1742101057 - Medium Ammunition Depot - Explosive ammunition (AR) - Building
+1742101058 - Medium Ammunition Depot - Explosive ammunition (NW) - Building
+1742101059 - Medium Ammunition Depot - Explosive ammunition (EN) - Building
+1742101061 - Medium Ammunition Depot - Explosive ammunition - Building - Description
+1742101062 - Explosive Ammunition Buff - Buff
+1742101063 - Explosive Ammunition Buff - Buff - Description
+
+
+SAILORS
+********************
+1742100532 - Sailors - ProductStorageList
+1742100533 - Sailors - Product
+1742100689 - Navy Recruitment Kiosk - Building
+1742100534 - Navy Recruitment Office (OW) - Building
+1742100535 - Navy Recruitment Office (OW) - Building - Description
+1742100536 - Navy Recruitment - EconomyFeature
+1742100549 - Navy Recruitment Office (NW) - Building
+1742100550 - Navy Recruitment Office (EN) - Building
+1742100551 - Navy Recruitment Office (AR) - Building
+
+NEWSPAPERS
+********************
+1742100393 - Newspaper - War is upon us
+1742100394 - Newspaper - War is upon us - SpecialEditionHeadline
+1742100395 - Newspaper - War is upon us - SpecialEditionSubline
+1742100396 - Newspaper - War is upon us - SpecialEditionImage
+
+MONUMENT
+********************
+1742100482 - Fort
+1742100483 - Fort - Description
+1742100484 - Fort: Preparations - Building
+1742100485 - Fort: Preparations - Description
+1742100486 - Fort: Foundations - Building
+1742100487 - Fort: Foundations - Description
+1742100488 - Fort: Lower part - Building
+1742100489 - Fort: Lower part - Description
+1742100490 - Fort - Building
+1742100580 - Fort - Mod11 - Building
+1742100491 - Fort - Description
+
+DOCKLANDS
+********************
+1742100547 - Sinchester - Docklands Trader
+1742100548 - Sinchester - Docklands Trader - Description
+
+AI
+********************
+1742100537 - Fake AI Care Packages Factory - Building
+1742100538 - Fake AI Navy Recruitment Office (OW) - Building
+1742100691 - Fake AI Navy Recruitment Office (NW) - Building
+1742100539 - Fake AI Basic Ammunition Factory - Building
+1742100623 - Fake AI Shell Ammunition Factory - Building
+1742100541 - Fake AI Bombs Ammunition Factory - Building
+1742100542 - Fake AI Basic Weapons Factory - Building
+1742100621 - Fake AI Nitrary - Building
+1742100622 - Fake AI Gunpowder Factory - Building
+1742100654 - Fake AI Weapon/Cannon Factory - Building
+1742100688 - Fake AI Clean Water Pump - Building
+1742100543 - Fake Menu Chain (OW)
+1742100544 - Fake Menu Chain (NW)
+1742100545 - Fake Menu Chain (EN)
+1742100546 - Fake Menu Chain (AR)
+1742101083 - More inhabitants buff AI - TownhallBuff
+1742101084 - AI_Trigger_Settled - Trigger
+1742101085 - AI_Trigger_Initial - Trigger
+
+ORNAMENETS
+********************
+1742100552 - Memorial 01 - OrnamentalBuilding
+1742100553 - Memorial 01 - OrnamentalBuilding - Description
+1742100554 - Memorial 02 - OrnamentalBuilding
+1742100555 - Memorial 02 - OrnamentalBuilding - Description
+1742100572 - Pallisade wall - OrnamentalBuilding
+1742100573 - Pallisade wall - OrnamentalBuilding - Description
+1742100574 - Pallisade wall gate - OrnamentalBuilding
+1742100575 - Pallisade wall gate - OrnamentalBuilding - Description
+1742100382 - Military street - AdditionalModule
+1742100383 - Military street - AdditionalModule - Description
+
+TRIGGERS
+********************
+
+1742100744 - 1 Farmer - Trigger
+1742100789 - Farmers 50 - Trigger
+1742100774 - Farmers 100 - Trigger
+1742100796 - Workers 150 - Trigger
+1742100788 - Workers 300 - Trigger
+1742100703 - Workers 500 - Trigger
+1742100823 - Artisans 1 - Trigger
+1742100824 - Artisans 300 - Trigger
+1742100815 - Artisans 750 - Trigger
+1742100770 - Artisans 900 - Trigger
+1742100825 - Engineers 1 - Trigger
+1742100822 - Engineers 500 - Trigger
+1742100826 - Engineers 2000 - Trigger
+1742100751 - Investors 1 - Trigger
+1742100735 - Investors 5000 - Trigger
+
+1742100830 - Shephards 1 - Trigger
+1742100805 - Shephards 100 - Trigger
+
+1742100793 - Jornaleros 1 - Trigger
+1742100734 - Jornaleros 100 - Trigger
+1742100829 - Obreros 1 - Trigger
+1742100713 - Obreros 600 - Trigger
+1742100714 - Obreros 1000 - Trigger
+
+1742100828 - Explorers 1 - Trigger
+1742100804 - Engineers 500 - Trigger (Biogas mod instead of 750 technicians)
+
+1742100780 - Soldiers 100 - Trigger
+1742100725 - Soldiers 200 - Trigger
+1742100720 - Soldiers 400 - Trigger
+
+1742100827 - Creative mode - Trigger
+1742100752 - Retrigger Fort Mod11 - Trigger
+
+1742100789 - Swap depots - Trigger
+
+***************************************************************************
+
+SHIPS
+********************
+1742100576 - Windjammer - Ship
+1742100577 - Windjammer - Ship - Description
+1742100578 - The Duke - Ship
+1742100579 - The Duke - Ship - Description
+1742100581 - Small Cargo Ship - Ship
+1742100582 - Small Cargo Ship - Ship - Description
+1742100583 - Small Battle Cruiser - Ship
+1742100584 - Small Battle Cruiser - Ship - Description
+1742100585 - Heavy Battle Cruiser - Ship (Permit)
+1742100586 - Heavy Battle Cruiser - Ship (Permit) - Description
+1742100690 - Heavy Battle Cruiser (AI) - Ship
+1742100587 - Torpedo Boat - Ship
+1742100588 - Torpedo Boat - Ship - Description
+1742100589 - Corvette - Ship
+1742100590 - Corvette - Ship - Description
+1742100591 - Auxiliary Ship - Ship
+1742100592 - Auxiliary Ship - Ship - Description
+1742100609 - Flak Ironclad - Ship
+1742100610 - Flak Ironclad - Ship - Description
+1742100611 - Small Reefer - Ship
+1742100612 - Small Reefer - Ship - Description
+1742100613 - B42 (Helium) - AirShip
+1742100629 - B42 (Arctic Gas) - AirShip
+1742100614 - B42 - AirShip - Description
+1742100615 - Ironclad Cruiser - Ship
+1742100616 - Ironclad Cruiser - Ship - Description
+1742100624 - Small Oil Tanker - Ship
+1742100625 - Large Oil Tanker - Ship
+1742100657 - F42 (Helium) - Airship
+1742100658 - F42 (Arctic Gas) - Airship
+1742100659 - F42 - Airship - Description
+1742100660 - A42 (Helium) - Airship
+1742100661 - A42 (Arctic Gas) - Airship
+1742100662 - A42 - Airship - Description
+SHARED NEW HORIZONS - 14740009 - Bulk Freighter - Ship
+SHARED NEW HORIZONS - 14740010 - Bulk Freighter - Ship - Description
+1742101076 - Fire Boat - Ship 
+1742101077 - Fire Boat - Ship - Description
+1742101078 - X1 (Helium) - AirShip
+1742101079 - X1 (Arctic Gas) - AirShip
+1742101080 - X1 - AirShip - Description
+
+1742100593 - Battle Cruiser - New Descriptiom
+1742100594 - Monitor - New Descriptiom
+1742100595 - Torpedo Launcher - AllocationText
+1742100596 - E.T.A. Arms Dealer - Item
+1742100597 - E.T.A. Arms Dealer - Item - Description
+1742100598 - Special Delivery - Rewardpool
+1742100599 - Special Delivery - Rewardpool - Description
+1742100600 - Monitor Projectile - Projectile
+1742100601 - Light Cruiser Projectile - Projectile
+
+SHIPS SKINS
+***************************
+1742100626 - Windjammer Skin 01 - Skin
+1742100627 - Windjammer Skin 03 - Skin
+1742100628 - Windjammer Skin 02 - Skin
+1742100666 - The Duke Skin 01 - Skin
+1742100667 - The Duke Skin 02 - Skin
+1742100668 - Small Cargo Ship Skin 01 - Skin
+1742100669 - Small Cargo Ship Skin 02 - Skin
+1742100670 - Small Cargo Ship Skin 03 - Skin
+1742100671 - Small Cargo Ship Skin 04 - Skin
+1742100672 - Small Battle Cruiser Skin 01 - Skin
+1742100673 - Small Battle Cruiser Skin 02 - Skin
+1742100674 - Small Battle Cruiser Skin 03 - Skin
+1742100675 - Small Battle Cruiser Skin 04 - Skin
+1742100676 - Small Battle Cruiser Skin 05 - Skin
+1742100677 - Heavy Battle Cruiser Skin 01 - Skin
+1742100678 - Heavy Battle Cruiser Skin 02 - Skin
+1742100679 - Heavy Battle Cruiser Skin 03 - Skin
+1742100680 - Heavy Battle Cruiser Skin 04 - Skin
+1742100681 - Heavy Battle Cruiser Skin 05 - Skin
+1742100682 - Small Oil Tanker Skin 01 - Skin
+1742100683 - Small Oil Tanker Skin 02 - Skin
+1742100684 - Oil Tanker Skin 01 - Skin
+1742100685 - Oil Tanker Skin 02 - Skin
+1742100686 - Large Oil Tanker Skin 01 - Skin
+1742100687 - Large Oil Tanker Skin 02 - Skin
+
+BUILDINGS
+***************************
+1742100663 - Large Airship Hangar - Shipyard
+1742100664 - Large Airship Hangar - Shipyard - Description
+
+SHIPS TRIGGERS
+***************************
+1742100831 - Sailing Shipyard Unlock - Trigger
+1742100755 - 1 Engineer - Trigger
+1742100765 - 500 Engineer - Trigger
+1742100807 - 1 Investors - Trigger
+1742100808 - 10000 Investors - Trigger
+1742100833 - 10000 Investors (Serp) - Trigger
+1742100810 - 10000 Investors (Bulk Freighter) - Trigger
+1742100768 - Power Plant Unlock - Trigger
+1742100832 - 600 Obrero - Trigger
+1742100809 - Creative mode - Trigger
+1742100798 - AI Unlock - Trigger
+
+
+***************************************************************************
+
+NEW HORIZONS
+
+SOLDIERS POPULATION TIER
+*************************
+1742100006 - Horai Soldiers - PopulationLevel7
+1742100010 - Military (NH) - PopulationLevel7
+
+CONSTRUCTION MENU CHAINS 
+****************************************
+1742100646 - Military Construction Category (NH)
+
+BUILDINGS
+********************
+1742100634 - Horai Soldiers Residence - Encampment - Building
+1742100635 - Horai Soldiers Residence - Encampment - Building - Description
+1742100636 - Canteen (NH) - Building
+1742100637 - Canteen (NH) - Building - Description
+1742100640 - Horai Outpost - Building
+1742100641 - Horai Outpost - Building - Description
+1742100651 - Navy Recruitment Office (NH) - Building
+1742100652 - Small Military Warehouse (NH) - Building
+1742100647 - Mint (NH) - Building
+[SHARED] 1742100650 - Gunpowder Factory (NH) - Building
+1742100699 - Care Package Factory (NH) - Building
+1742101001 - Basic Weapons Factory (NH) - Building
+1742101003 - Cannons Factory (NH) - Building
+1742101009 - Ammunition Factory Empty (NH) - Building
+1742101010 - Ammunition Factory Basic Ammunition (NH) - Building
+1742101011 - Ammunition Factory Shells (NH) - Building
+1742101012 - Ammunition Factory Bombs (NH) - Building
+1742101035 - Lead Smelter (NH) - Building
+1742101036 - Cigarettes Factory (NH) - Building
+1742101037 - Military Uniforms Factory (NH) - Building
+1742101038 - Heated Military Uniforms Factory (NH) - Building
+1742101039 - Games Factory (NH) - Building
+1742101040 - Sleeping Bags Factory (NH) - Building
+1742101041 - Advanced Weapons Factory (NH) - Building
+1742101050 - Paper Factory (NH) - Building
+1742101054 - Cannery (NH) - Building
+[SHARED] 1742101051 - Open Pit Iron Mine (NH) - Building
+[SHARED] 1742101052 - Open Pit Coal Mine (NH) - Building
+[SHARED] 1742101053 - Clean Water Pump (NH) - Building
+
+MILITARY PRODUCTS
+********************
+1742100638 - Canteen (NH) - Product
+1742100639 - Canteen (NH) - Product - Description
+1742100642 - Horai Outpost - Product
+1742100643 - Horai Outpost - Product - Description
+1742100644 - Horai Soldiers Workforce - Product
+1742100645 - SoldiersConsumerGoods (NH) - ProductList
+
+BUFFS & EFFECTS
+********************
+1742100653 - Military Logistics (NH) - GuildhouseBuff
+
+CONSTRUCTION MENU CHAINS 
+****************************************
+1742100648 - Coins (NH) - ProductionChain
+1742100698 - Gunpowder (NH) - ProductionChain
+1742101000 - Care Packages (NH) - ProductionChain
+1742101002 - Basic Weapons (NH) - ProductionChain
+1742101004 - Cannons (NH) - ProductionChain
+1742101013 - Basic Ammunition (NH) - Menu Production Chain
+1742101014 - Shell Ammunition (NH) - Menu Production Chain
+1742101015 - Bombs Ammunition (NH) - Menu Production Chain
+1742100649 - Defenses Construction Menu (NH)
+1742101042 - Advanced Weapons (NH) - ProductionChain
+1742101043 - Lead (NH) - ProductionChain
+1742101044 - Cigarettes (NH) - ProductionChain
+1742101045 - Military Uniforms (NH) - ProductionChain
+1742101046 - Heated Military Uniforms (NH) - ProductionChain
+1742101047 - Games (NH) - ProductionChain
+1742101048 - Sleeping Bags (NH) - ProductionChain
+1742101049 - Paper (NH) - ProductionChain
+1742101055 - Canned Food (NH) - ProductionChain
+
+RECIPES 
+****************************************
+1742101005 - Ammunition (NH) - Recipe - List
+1742101006 - Basic Ammunition (NH) - Recipe
+1742101007 - Shell Ammunition (NH) - Recipe
+1742101008 - Bombs Ammunition (NH) - Recipe
+1742101018 - Small Basic Ammunition Depot (NH) - Recipe
+1742101020 - Small Shell Ammunition Depot (NH) - Recipe
+1742101022 - Small Fire Ammunition Depot (NH) - Recipe
+1742101024 - Small Bombs Ammunition Depot (NH) - Recipe
+1742101016 - Small Ammunition Depot (Empty) (NH) - Building
+1742101017 - Small Ammunition Depot (NH) - Recipe - List
+1742101019 - Small Basic Ammunition Depot (NH) - Building
+1742101021 - Small Shell Ammunition Depot (NH) - Building
+1742101023 - Small Fire Ammunition Depot (NH) - Building
+1742101025 - Small Bombs Ammunition Depot (NH) - Building
+1742101060 - Medium Ammunition Depot - Explosive ammunition (NH) - Building
+1742101026 - Large Ammunition Depot - All ammunition (NH) - Building
+
+DEFENSES 
+****************************************
+1742101027 - Mounted Guns (NH) - Building
+1742101028 - Cannon Tower (NH) - Building
+1742101029 - Flak Emplacement (NH) - Building
+1742101030 - Fire Tower (NH) - Building
+1742101031 - Armor Pierce Tower (NH) - Building
+1742101032 - Monster Gun (NH) - Building
+1742101033 - Flak Emplacement (NH Land) - Building
+1742101034 - Coastal Torpedo Launcher (NH) - Building
+
+TRIGGERS
+***************************
+1742100781 - Creative mode - Trigger
+[SHARED] 1742100817 - Creative mode - Trigger
+1742100818 - Horai Tier 1 - 250 - Trigger
+1742100812 - Horai Tier 2 - 500 - Trigger
+[SHARED] 1742100816 - Horai Tier 2 - 1 - Trigger
+1742100813 - Horai Tier 2 - 1000 - Trigger
+1742100814 - Horai Tier 2 - 1500 - Trigger
+1742100783 - Horai Soldiers - 100 - Trigger
+
+-->
+<ModOps>
+  <!-- ************* INCLUDES ************* -->
+  <Include File="../../../../hier0nimus/military-tiers/assets.include.xml"/>
+  <Include File="../../../../hier0nimus/military-buffs-effects/assets.include.xml"/>
+  <Include File="../../../../hier0nimus/military-buildings/assets.include.xml"/>
+  <Include File="../../../../hier0nimus/ammunition-depot/assets.include.xml"/>
+  <Include File="../../../../hier0nimus/military-defenses/assets.include.xml"/>
+  <Include File="../../../../hier0nimus/military-products/assets.include.xml"/>
+  <Include File="../../../../hier0nimus/military-recipes/assets.include.xml"/>
+  <Include File="../../../../hier0nimus/military-items/assets.include.xml"/>
+  <Include File="../../../../hier0nimus/military-pools/assets.include.xml"/>
+  <Include File="../../../../hier0nimus/military-policies-itemsets/assets.include.xml"/>
+  <Include File="../../../../hier0nimus/sailors/assets.include.xml"/>
+  <Include File="../../../../hier0nimus/newspapers/assets.include.xml"/>
+  <Include File="../../../../hier0nimus/ornaments/assets.include.xml"/>
+  <Include File="../../../../hier0nimus/monument/assets.include.xml"/>
+  <Include File="../../../../hier0nimus/docklands/assets.include.xml"/>
+  <Include File="../../../../hier0nimus/vehicles/assets.include.xml"/>
+  <Include File="../../../../hier0nimus/military-construction-menu/assets.include.xml"/>
+  <Include File="../../../../hier0nimus/ai/assets.include.xml"/>
+  <Include File="../../../../hier0nimus/tweaks/assets.include.xml"/>
+  <Include File="../../../../hier0nimus/compatibility/assets.include.xml"/>
+  <Include File="../../../../hier0nimus/triggers/assets.include.xml"/>
+</ModOps>
