@@ -436,45 +436,9 @@
   </ModOp>
   <!-- END PRODUCT - MILITARY ACADEMY -->
 
-  <!-- START PRODUCT - CARDGAMES -->
-  <ModOp Type="addNextSibling" GUID='5392'>
-    <Asset>
-      <Template>Product</Template>
-      <Values>
-        <Standard>
-          <GUID>1742100185</GUID>
-          <Name>Games</Name>
-          <IconFilename>data/graphics/icons/icon_cardgames.png</IconFilename>
-          <InfoDescription>1742100186</InfoDescription>
-        </Standard>
-        <Text />
-        <Locked />
-        <Product>
-          <StorageLevel>Building</StorageLevel>
-          <ProductCategory>11704</ProductCategory>
-          <BasePrice>180</BasePrice>
-          <CivLevel>2</CivLevel>
-          <AssociatedRegion>Moderate</AssociatedRegion>
-          <ProductionRegions>
-            <Item>
-              <RegionType>Moderate</RegionType>
-            </Item>
-          </ProductionRegions>
-        </Product>
-        <ExpeditionAttribute>
-          <BaseMorale>15</BaseMorale>
-          <ExpeditionAttributes>
-            <Item>
-              <Attribute>Diplomacy</Attribute>
-              <Amount>25</Amount>
-            </Item>
-          </ExpeditionAttributes>
-          <FluffText />
-        </ExpeditionAttribute>
-      </Values>
-    </Asset>
-  </ModOp>
-  <!-- END PRODUCT - CARDGAMES -->
+  <!-- START PRODUCT - GAMES -->
+  <!-- SHARED -->
+  <!-- END PRODUCT - GAMES -->
 
   <!-- START PRODUCT - MILITARY TRAINING COMPLEX -->
   <ModOp Type="addNextSibling" GUID='5392'>
@@ -950,13 +914,6 @@
     </Item>
   </ModOp>
 
-  <!-- Cardgames > After Canned food -->
-  <ModOp Type="addNextSibling" GUID="120055" Path="/Values/ProductStorageList/ProductList/Item[Product='1010217']">
-    <Item>
-      <Product>1742100185</Product>      <!-- Games - Product -->
-    </Item>
-  </ModOp>
-
   <!-- Coins > After Canned food -->
   <ModOp Type="addNextSibling" GUID="120055" Path="/Values/ProductStorageList/ProductList/Item[Product='1010217']">
     <Item>
@@ -1273,9 +1230,6 @@
     </Item>
     <Item>
       <Product>1742100058</Product>      <!-- Cigarettes - Product -->
-    </Item>
-    <Item>
-      <Product>1742100185</Product>      <!-- Games - Product -->
     </Item>
     <Item>
       <Product>1742100439</Product>      <!-- Coins - Product -->
