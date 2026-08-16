@@ -1,30 +1,42 @@
 <!-- 
   
-  v1.1
+  v1.2
 
-  [Gameplay] Work Horse Stables
+  [Gameplay] Working Animals Stables
   Enjoy!
 
-  1742006000 - Work Horse Stables - Building
+  1742006000 - Work Horse Stables (OW) - Building
+  1742006009 - Work Horse Stables (NW) - Building
+  1742006010 - Work Sanga Cow Stables (EN) - Building
   1742006001 - Work Horse Stables - Building - Description
-  1742006002 - Work Horse Productivity - GuildhouseBuff
-  1742006003 - Work Horse Productivity - GuildhouseBuff - Description
-  1742006006 - Work Horse Stables - ProductionChain
-  1742006007 - Work Horse Unhide - Trigger
-  1742006008 - Work Horse Unlock - Trigger
+  1742006002 - Working Animals Productivity - GuildhouseBuff
+  1742006003 - Working Animals Productivity - GuildhouseBuff - Description
+  1742006019 - Working Animals Productivity - FestivalBuff
+  1742006006 - Work Horse Stables (OW) - ProductionChain
+  1742006017 - Work Horse Stables (NW) - ProductionChain
+  1742006018 - Work Sanga Cow Stables (EN) - ProductionChain
+  1742006007 - Work Horse Unhide (OW) - Trigger
+  1742006008 - Work Horse Unlock (OW) - Trigger
+  1742006011 - Work Horse Unhide (NW) - Trigger
+  1742006012 - Work Horse Unlock (NW) - Trigger
+  1742006013 - Work Sanga Cow Unhide (EN) - Trigger
+  1742006014 - Work Sanga Cow Unlock (EN) - Trigger
+  1742006015 - Work Husky Unhide (AR) - Trigger
+  1742006016 - Work Husky Unlock (AR) - Trigger
+  1742006020 - Creative Nodee - Trigger
 
 -->
 
 <ModOps>
 
-  <!-- START BUILDING - WORK HORSE STABLES -->
+  <!-- START BUILDING - WORK HORSE STABLES (OW) -->
   <ModOp Type="addNextSibling" GUID="1010284">
     <Asset>
       <Template>BuffFactoryCulture</Template>
       <Values>
         <Standard>
           <GUID>1742006000</GUID>
-          <Name>Work Horse Stables</Name>
+          <Name>Work Horse Stables (OW)</Name>
           <IconFilename>data\graphics\icons\icon_work_horse_stables.png</IconFilename>
           <InfoDescription>1742006001</InfoDescription>
         </Standard>
@@ -139,7 +151,257 @@
       </Values>
     </Asset>
   </ModOp>
-  <!-- END BUILDING - WORK HORSE STABLES -->
+  <!-- END BUILDING - WORK HORSE STABLES (OW) -->
+
+  <!-- START BUILDING - WORK HORSE STABLES (NW) -->
+  <ModOp Type="addNextSibling" GUID="1010284">
+    <Asset>
+      <Template>BuffFactoryCulture</Template>
+      <Values>
+        <Standard>
+          <GUID>1742006009</GUID>
+          <Name>Work Horse Stables (NW)</Name>
+          <IconFilename>data\graphics\icons\icon_work_horse_stables.png</IconFilename>
+          <InfoDescription>1742006001</InfoDescription>
+        </Standard>
+        <Text>
+          <TextOverride>1742006000</TextOverride>
+        </Text>
+        <Building>
+          <BuildingCategoryName>100000</BuildingCategoryName>
+          <SkipUnlockMessage>1</SkipUnlockMessage>
+          <BuildModeRandomRotation>90</BuildModeRandomRotation>
+          <AssociatedRegions>Colony01</AssociatedRegions>
+        </Building>
+        <Blocking/>
+        <Mesh/>
+        <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742006002</ProductivityBuff>
+            </Item>
+          </ProductionBuffs>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <ProductionBuffDistance>18</ProductionBuffDistance>
+        </BuffFactory>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1742100211</Product>              <!-- Horses - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>3</StorageAmount>
+            </Item>
+            <Item>
+              <Product>120034</Product>              <!-- Corn - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>3</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <CycleTime>240</CycleTime>
+          <IsMainFactory>0</IsMainFactory>
+        </FactoryBase>
+        <FeedbackController/>
+        <Pausable/>
+        <Selection>
+          <ParticipantMessageArcheType>SA_Resident_tier01_atWork</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Attackable/>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>100</Amount>
+              <InactiveAmount>50</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1010366</Product>              <!-- Jornaleros Workforce -->
+              <Amount>25</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <AmbientMoodProvider/>
+        <LogisticNode/>
+        <Constructable/>
+        <Locked/>
+        <IncidentInfectable>
+          <Infectable>
+            <Fire>
+              <Base>1</Base>
+            </Fire>
+            <Riot>
+              <Base>1</Base>
+            </Riot>
+            <Illness>
+              <Base>1</Base>
+              <Communication>FireDefault</Communication>
+            </Illness>
+            <Explosion>
+              <Base>1</Base>
+            </Explosion>
+          </Infectable>
+          <IncidentInfectionChanceFactors>
+            <Fire>
+              <DensityFactor>0.0025</DensityFactor>
+              <DensityDistance>20</DensityDistance>
+              <FactoryProductivityFactor>0.1</FactoryProductivityFactor>
+              <FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
+            </Fire>
+          </IncidentInfectionChanceFactors>
+        </IncidentInfectable>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/production/work_horse_stables/work_horse_stables_nw_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <SoundEmitter/>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>5000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>              <!-- Timber - Product -->
+              <Amount>25</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Infolayer/>
+        <UpgradeList/>
+        <Culture/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - WORK HORSE STABLES (NW) -->
+
+  <!-- START BUILDING - WORK SANGA COW STABLES (EN) -->
+  <ModOp Type="addNextSibling" GUID="1010284">
+    <Asset>
+      <Template>BuffFactoryCulture</Template>
+      <Values>
+        <Standard>
+          <GUID>1742006010</GUID>
+          <Name>Work Sanga Cow Stables (EN)</Name>
+          <IconFilename>data\graphics\icons\icon_work_horse_stables.png</IconFilename>
+          <InfoDescription>1742006001</InfoDescription>
+        </Standard>
+        <Text/>
+        <Building>
+          <BuildingCategoryName>100000</BuildingCategoryName>
+          <SkipUnlockMessage>1</SkipUnlockMessage>
+          <BuildModeRandomRotation>90</BuildModeRandomRotation>
+          <AssociatedRegions>Africa</AssociatedRegions>
+        </Building>
+        <Blocking/>
+        <Mesh/>
+        <BuffFactory>
+          <ProductionBuffs>
+            <Item>
+              <ProductivityBuff>1742006002</ProductivityBuff>
+            </Item>
+          </ProductionBuffs>
+          <ProductionBuffScope>Radius</ProductionBuffScope>
+          <ProductionBuffDistance>18</ProductionBuffDistance>
+        </BuffFactory>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>114357</Product>              <!-- Sanga Cows - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>3</StorageAmount>
+            </Item>
+            <Item>
+              <Product>114367</Product>              <!-- Teff - Product -->
+              <Amount>1</Amount>
+              <StorageAmount>3</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <CycleTime>240</CycleTime>
+          <IsMainFactory>0</IsMainFactory>
+        </FactoryBase>
+        <FeedbackController/>
+        <Pausable/>
+        <Selection>
+          <ParticipantMessageArcheType>Africa_Resident_tier01</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Attackable/>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>100</Amount>
+              <InactiveAmount>50</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>114340</Product>              <!-- Shephard Workforce -->
+              <Amount>25</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <AmbientMoodProvider/>
+        <LogisticNode/>
+        <Constructable/>
+        <Locked/>
+        <IncidentInfectable>
+          <Infectable>
+            <Fire>
+              <Base>1</Base>
+            </Fire>
+            <Riot>
+              <Base>1</Base>
+            </Riot>
+            <Illness>
+              <Base>1</Base>
+              <Communication>FireDefault</Communication>
+            </Illness>
+            <Explosion>
+              <Base>1</Base>
+            </Explosion>
+          </Infectable>
+          <IncidentInfectionChanceFactors>
+            <Fire>
+              <DensityFactor>0.0025</DensityFactor>
+              <DensityDistance>20</DensityDistance>
+              <FactoryProductivityFactor>0.1</FactoryProductivityFactor>
+              <FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
+            </Fire>
+          </IncidentInfectionChanceFactors>
+        </IncidentInfectable>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/production/work_sanga_cow_stables/work_sanga_cow_stables_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <SoundEmitter/>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>5000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>114356</Ingredient>              <!-- Wanza Timber - Product -->
+              <Amount>25</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Infolayer/>
+        <UpgradeList/>
+        <Culture/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - WORK SANGA COW STABLES (EN) -->
 
   <!-- START BUFF - WORK HORSE PRODUCTIVTY -->
   <ModOp GUID="269978" Type="addNextSibling">
@@ -148,7 +410,7 @@
       <Values>
         <Standard>
           <GUID>1742006002</GUID>
-          <Name>Work Horse Productivity</Name>
+          <Name>Working Animals Productivity</Name>
           <IconFilename>data\graphics\icons\icon_work_horse_stables.png</IconFilename>
           <InfoDescription>1742006003</InfoDescription>
         </Standard>
@@ -205,6 +467,68 @@
   </ModOp>
   <!-- END BUFF - WORK HORSE FOREST PRODUCTIVTY -->
 
+  <!-- START BUFF - WORK HORSE PRODUCTIVTY -->
+  <ModOp GUID="269978" Type="addNextSibling">
+    <Asset>
+      <Template>FestivalBuff</Template>
+      <Values>
+        <Standard>
+          <GUID>1742006019</GUID>
+          <Name>Husky Sleds Productivity</Name>
+          <IconFilename>data\graphics\icons\icon_work_horse_stables.png</IconFilename>
+          <InfoDescription>1742006003</InfoDescription>
+        </Standard>
+        <Text>
+          <TextOverride>1742006002</TextOverride>
+        </Text>
+        <PopulationUpgrade />
+        <ResidenceUpgrade />
+        <ItemEffect>
+          <EffectTargets>
+            <Item>
+              <GUID>193770</GUID>
+            </Item>
+          </EffectTargets>
+          <AllowStacking>0</AllowStacking>
+        </ItemEffect>
+        <Buff />
+        <CultureUpgrade>
+          <HideBuff>0</HideBuff>
+          <!-- hidden to hide the "provides electricity" line; instead a fake buff is shown (see below) -->
+        </CultureUpgrade>
+        <KontorUpgrade />
+        <AttackableUpgrade />
+        <AttackerUpgrade />
+        <FactoryUpgrade>
+          <AdditionalOutput>
+            <Item>
+              <ForceProductSameAsFactoryOutput>1</ForceProductSameAsFactoryOutput>
+              <AdditionalOutputCycle>2</AdditionalOutputCycle>
+              <Amount>1</Amount>
+            </Item>
+          </AdditionalOutput>
+        </FactoryUpgrade>
+        <BuildingUpgrade>
+          <MaintenanceUpgrade>
+            <Value>25</Value>
+            <Percental>1</Percental>
+          </MaintenanceUpgrade>
+          <WorkforceAmountUpgrade>
+            <Percental>1</Percental>
+            <Value>-25</Value>
+          </WorkforceAmountUpgrade>
+        </BuildingUpgrade>
+        <PassiveTradeGoodGenUpgrade />
+        <ShipyardUpgrade />
+        <VisitorHarborUpgrade />
+        <VisitorUpgrade />
+        <HeaterUpgrade />
+        <IndustrializableUpgrade/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUFF - WORK HORSE FOREST PRODUCTIVTY -->
+
   <!-- START ADD PRODUCTION BUILDINGS TO WORKFORCE MENU -->
   <ModOp Type="add" GUID="25000087" Path="/Values/WorkforceMenu/BoostableFactories">
     <Item>
@@ -216,7 +540,13 @@
   <!-- START ADD TO GLOBAL MAINTENANCE POOLS -->
   <ModOp Type="add" GUID="368" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
     <Item>
-      <GUID>1742006000</GUID>      <!-- Work Horse Stables - Building -->
+      <GUID>1742006000</GUID>      <!-- Work Horse Stables (OW) - Building -->
+    </Item>
+    <Item>
+      <GUID>1742006009</GUID>      <!-- Work Horse Stables (NW) - Building -->
+    </Item>
+    <Item>
+      <GUID>1742006010</GUID>      <!-- Work Sanga Cow Stables (NW) - Building -->
     </Item>
   </ModOp>
   <!-- START ADD TO GLOBAL MAINTENANCE POOLS -->
@@ -226,17 +556,23 @@
     <Item>
       <GUID>1742006000</GUID>      <!-- Work Horse Stables - Building -->
     </Item>
+    <Item>
+      <GUID>1742006009</GUID>      <!-- Work Horse Stables (NW) - Building -->
+    </Item>
+    <Item>
+      <GUID>1742006010</GUID>      <!-- Work Sanga Cow Stables (NW) - Building -->
+    </Item>
   </ModOp>
   <!-- START ADD TO GLOBAL PRODUCTION POOLS -->
 
-  <!-- START PRODUCTION CHAIN - WORK HORSE STABLES -->
+  <!-- START PRODUCTION CHAIN - WORK HORSE STABLES (OW) -->
   <ModOp Type="addNextSibling" GUID='500091'>
     <Asset>
       <Template>ProductionChain</Template>
       <Values>
         <Standard>
           <GUID>1742006006</GUID>
-          <Name>Work Horse Stables</Name>
+          <Name>Work Horse Stables (OW)</Name>
           <IconFilename>data\graphics\icons\icon_work_horse_stables.png</IconFilename>
           <InfoDescription>1742006001</InfoDescription>
         </Standard>
@@ -258,9 +594,71 @@
       </Values>
     </Asset>
   </ModOp>
-  <!-- END PRODUCTION CHAIN - WORK HORSE STABLES -->
+  <!-- END PRODUCTION CHAIN - WORK HORSE STABLES (OW) -->
 
-  <!-- START ADD TO CONSTRUCTION MENU -->
+  <!-- START PRODUCTION CHAIN - WORK HORSE STABLES (NW) -->
+  <ModOp Type="addNextSibling" GUID='500091'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742006017</GUID>
+          <Name>Work Horse Stables (NW)</Name>
+          <IconFilename>data\graphics\icons\icon_work_horse_stables.png</IconFilename>
+          <InfoDescription>1742006001</InfoDescription>
+        </Standard>
+        <Text>
+          <TextOverride>1742006000</TextOverride>
+        </Text>
+        <ProductionChain>
+          <Building>1742006009</Building>          <!-- Work Horse Stables - Building -->
+          <Tier1>
+            <Item>
+              <Building>1742100209</Building>              <!-- Stables - Building -->
+            </Item>
+            <Item>
+              <Building>101270</Building>              <!-- Corn Farm - Building -->
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PRODUCTION CHAIN - WORK HORSE STABLES (NW) -->
+
+  <!-- START PRODUCTION CHAIN - WORK SANGA COW STABLES (EN) -->
+  <ModOp Type="addNextSibling" GUID='500091'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742006018</GUID>
+          <Name>Work Sanga Cow Stables (EN)</Name>
+          <IconFilename>data\graphics\icons\icon_work_horse_stables.png</IconFilename>
+          <InfoDescription>1742006001</InfoDescription>
+        </Standard>
+        <Text>
+          <TextOverride>1742006000</TextOverride>
+        </Text>
+        <ProductionChain>
+          <Building>1742006010</Building>          <!-- Work Horse Stables - Building -->
+          <Tier1>
+            <Item>
+              <Building>114439</Building>              <!-- Sanga Farm - Building -->
+            </Item>
+            <Item>
+              <Building>114450</Building>              <!-- Teff Farm - Building -->
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PRODUCTION CHAIN - WORK SANGA COW STABLES (EN) -->
+
+  <!-- START ADD TO CONSTRUCTION MENU - OW -->
   <ModOp Type="addNextSibling" GUID='25000190' Path="/Values/ConstructionCategory/BuildingList/Item[Building='500004']">
     <Item>
       <Building>1742006006</Building>      <!-- Work Horse Stables - Building -->
@@ -271,17 +669,43 @@
       <Building>1742006006</Building>      <!-- Work Horse Stables - Building -->
     </Item>
   </ModOp>
-  <!-- END ADD TO CONSTRUCTION MENU -->
+  <!-- END ADD TO CONSTRUCTION MENU - OW -->
+
+  <!-- START ADD TO CONSTRUCTION MENU - NW -->
+  <ModOp Type="addNextSibling" GUID='25000194' Path="/Values/ConstructionCategory/BuildingList/Item[Building='101285']">
+    <Item>
+      <Building>1742006017</Building>      <!-- Work Horse Stables - Building -->
+    </Item>
+  </ModOp>
+  <ModOp Type="add" GUID='500138' Path="/Values/ConstructionCategory/BuildingList/">
+    <Item>
+      <Building>1742006017</Building>      <!-- Work Horse Stables - Building -->
+    </Item>
+  </ModOp>
+  <!-- END ADD TO CONSTRUCTION MENU - NW -->
+
+  <!-- START ADD TO CONSTRUCTION MENU - EN -->
+  <ModOp Type="addNextSibling" GUID='114554' Path="/Values/ConstructionCategory/BuildingList/Item[Building='114570']">
+    <Item>
+      <Building>1742006018</Building>      <!-- Work Sanga Cow Stables - Building -->
+    </Item>
+  </ModOp>
+  <ModOp Type="add" GUID='119012' Path="/Values/ConstructionCategory/BuildingList/">
+    <Item>
+      <Building>1742006018</Building>      <!-- Work Sanga Cow Stables - Building -->
+    </Item>
+  </ModOp>
+  <!-- END ADD TO CONSTRUCTION MENU - EN -->
 
   <!--TRIGGERS -->
-  <!-- UNHIDE - WORKERS 1 -->
+  <!-- UNHIDE - Work Horse Unhide (OW) - WORKERS 1 -->
   <ModOp Type="addnextSibling" GUID="130248">
     <Asset>
       <Template>Trigger</Template>
       <Values>
         <Standard>
           <GUID>1742006007</GUID>
-          <Name>MOD Trigger</Name>
+          <Name>Work Horse Unhide (OW)</Name>
         </Standard>
         <Trigger>
           <TriggerCondition>
@@ -333,14 +757,14 @@
     </Asset>
   </ModOp>
 
-  <!--UNLOCK - WORKERS 150 -->
+  <!--UNLOCK - Work Horse Unlock (OW) - WORKERS 150 -->
   <ModOp Type="addnextSibling" GUID="130248">
     <Asset>
       <Template>Trigger</Template>
       <Values>
         <Standard>
           <GUID>1742006008</GUID>
-          <Name>MOD Trigger</Name>
+          <Name>Work Horse Unlock (OW)</Name>
         </Standard>
         <Trigger>
           <TriggerCondition>
@@ -393,6 +817,307 @@
       </Values>
     </Asset>
   </ModOp>
+
+  <!-- UNHIDE - Work Horse Unhide (NW) - Obrero 1 -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742006011</GUID>
+          <Name>Work Horse Unhide (NW)</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>15000006</Context>                <!-- Obrero PopulationLevel7 -->
+                <CounterAmount>1</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
+                      <Item>
+                        <Asset>1742006009</Asset>                        <!-- Work Horse Stables - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742006017</Asset>                        <!-- Work Horse Stables - ProductionChain -->
+                      </Item>
+                    </UnhideAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!--UNLOCK - Work Horse Unlock (NW) - Obrero 150 -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742006012</GUID>
+          <Name>Work Horse Unlock (NW)</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>15000006</Context>                <!-- Obrero PopulationLevel7 -->
+                <CounterAmount>150</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
+                    </UnhideAssets>
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>1742006009</Asset>                        <!-- Work Horse Stables - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742006017</Asset>                        <!-- Work Horse Stables - ProductionChain -->
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!-- UNHIDE - Work Sanga Cow Unhide (EN) - Elders 1 -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742006013</GUID>
+          <Name>Work Sanga Cow Unhide (EN)</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>114330</Context>                <!-- Elders PopulationLevel7 -->
+                <CounterAmount>1</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
+                      <Item>
+                        <Asset>1742006010</Asset>                        <!-- Work Horse Stables - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742006018</Asset>                        <!-- Work Horse Stables - ProductionChain -->
+                      </Item>
+                    </UnhideAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!--UNLOCK - Work Sanga Cow Unlock (EN) - Elders 300 -->
+  <ModOp Type="addnextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742006014</GUID>
+          <Name>Work Work Sanga Cow Unlock (EN)</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>114330</Context>                <!-- Elders PopulationLevel7 -->
+                <CounterAmount>300</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
+                    </UnhideAssets>
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>1742006010</Asset>                        <!-- Work Work Sanga Cow Stables (EN) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742006018</Asset>                        <!-- Work Work Sanga Cow Stables (EN) - ProductionChain -->
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+
+  <!--START - Creative Mode -->
+  <ModOp Type="addNextSibling" GUID="130248">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1742006020</GUID>
+          <Name>Unlock Creative Mode</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionIsCreativeMode</Template>
+            <Values>
+              <Condition />
+              <ConditionIsCreativeMode />
+              <ConditionPropsNegatable />
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>1742006000</Asset>                        <!-- Work Horse Stables - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742006006</Asset>                        <!-- Work Horse Stables - ProductionChain -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100211</Asset>                        <!-- Horses - Product -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100209</Asset>                        <!-- Stable - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100213</Asset>                        <!-- Stable - Field - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742100380</Asset>                        <!-- Stable - Horse Training Ground - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742006009</Asset>                        <!-- Work Horse Stables - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742006017</Asset>                        <!-- Work Horse Stables - ProductionChain -->
+                      </Item>
+                      <Item>
+                        <Asset>1742006010</Asset>                        <!-- Work Work Sanga Cow Stables (EN) - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742006018</Asset>                        <!-- Work Work Sanga Cow Stables (EN) - ProductionChain -->
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+          <ResetTrigger>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <EmptyAutoCreateValue />
+            </Values>
+          </ResetTrigger>
+        </Trigger>
+        <TriggerSetup />
+      </Values>
+    </Asset>
+  </ModOp>
+  <!--END - Creative Mode -->
+
+
+  <!-- HUSKY SLED REVISION KURILA -->
+  <Group Condition="#arctic_husky_sled_revision_kurila">
+    <ModOp Type="merge" GUID="112703,1500300885,1500300886,1500300887,1500300888,1500300898,1500300889,1500300906,1500302820,1500302822,1500302823,1500300897,112680,112714" Path="/Values/Standard">
+      <IconFilename>data\graphics\icons\icon_husky_sled_service_01.png</IconFilename>
+    </ModOp>
+    <ModOp Type="merge" GUID="112680" Path="/Values/FactoryBase">
+      <CycleTime>240</CycleTime>
+    </ModOp>
+    <ModOp Type="merge" GUID="112680" Path="/Values/">
+      <PublicService>
+        <FullSatisfactionDistance>44</FullSatisfactionDistance>
+        <NoSatisfactionDistance>50</NoSatisfactionDistance>
+        <PublicServiceOutputs>
+          <Item>
+            <Product>112703</Product>
+          </Item>
+        </PublicServiceOutputs>
+      </PublicService>
+    </ModOp>
+  </Group>
+
+  <!-- START  REMOVE HUSKY SLED STATION FROM ALL ARCTIC PRODUCTION EFFECT POOL -->
+  <ModOp Type="remove" GUID="193770" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/Item[GUID='112680']" />
+  <!-- END  REMOVE HUSKY SLED STATION FROM PRODUCTION EFFECT POOL -->
+
+  <!-- START  ADDING BUFF TO HUSKY REVISION BUFFS -->
+  <ModOp Type="add" GUID='1500300889' Path="/Values/EffectContainer/Effects">
+    <Item>
+      <Effect>1742006019</Effect>
+    </Item>
+  </ModOp>
+  <!-- END  ADDING BUFF TO HUSKY REVISION BUFFS -->
 
   <!-- START VEGETABLES JAKOB -->
   <Group Condition="#ow-vegetables-jakob">
