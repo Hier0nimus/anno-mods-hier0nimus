@@ -1,6 +1,6 @@
 <!-- 
   
-  v1.2
+  v1.4
 
   [Gameplay] Working Animals Stables
   Enjoy!
@@ -8,6 +8,8 @@
   1742006000 - Work Horse Stables (OW) - Building
   1742006009 - Work Horse Stables (NW) - Building
   1742006010 - Work Sanga Cow Stables (EN) - Building
+  1742006024 - Work Horse Stables (NH) - Building
+  1742006025 - Work Camel Stables (OR) - Building
   1742006001 - Work Horse Stables - Building - Description
   1742006002 - Working Animals Productivity - GuildhouseBuff
   1742006003 - Working Animals Productivity - GuildhouseBuff - Description
@@ -15,6 +17,8 @@
   1742006006 - Work Horse Stables (OW) - ProductionChain
   1742006017 - Work Horse Stables (NW) - ProductionChain
   1742006018 - Work Sanga Cow Stables (EN) - ProductionChain
+  1742006026 - Work Horse Stables (NH) - ProductionChain
+  1742006027 - Work Camels Stables (OR) - ProductionChain
   1742006007 - Work Horse Unhide (OW) - Trigger
   1742006008 - Work Horse Unlock (OW) - Trigger
   1742006011 - Work Horse Unhide (NW) - Trigger
@@ -23,7 +27,11 @@
   1742006014 - Work Sanga Cow Unlock (EN) - Trigger
   1742006015 - Work Husky Unhide (AR) - Trigger
   1742006016 - Work Husky Unlock (AR) - Trigger
-  1742006020 - Creative Nodee - Trigger
+  1742006022 - Work Horse Unhide (NH) - Trigger
+  1742006023 - Work Horse Unlock (NH) - Trigger
+  1742006028 - Work Camel Unhide (OR) - Trigger
+  1742006029 - Work Camel Unlock (OR) - Trigger
+  1742006021 - Creative Nodee - Trigger
 
 -->
 
@@ -534,6 +542,18 @@
     <Item>
       <Factory>1742006000</Factory>      <!-- Work Horse Stables - Building -->
     </Item>
+    <Item>
+      <Factory>1742006009</Factory>      <!-- Work Horse Stables (NW) - Building -->
+    </Item>
+    <Item>
+      <Factory>1742006010</Factory>      <!-- Work Sanga Cow Stables (NW) - Building -->
+    </Item>
+    <Item>
+      <Factory>1742006024</Factory>      <!-- Work Horse Stables - Building -->
+    </Item>
+    <Item>
+      <Factory>1742006025</Factory>      <!-- Work Camels Stables - Building -->
+    </Item>
   </ModOp>
   <!-- END ADD PRODUCTION BUILDINGS TO WORKFORCE MENU -->
 
@@ -548,6 +568,12 @@
     <Item>
       <GUID>1742006010</GUID>      <!-- Work Sanga Cow Stables (NW) - Building -->
     </Item>
+    <Item>
+      <GUID>1742006024</GUID>      <!-- Work Horse Stables - Building -->
+    </Item>
+    <Item>
+      <GUID>1742006025</GUID>      <!-- Work Camels Stables - Building -->
+    </Item>
   </ModOp>
   <!-- START ADD TO GLOBAL MAINTENANCE POOLS -->
 
@@ -561,6 +587,12 @@
     </Item>
     <Item>
       <GUID>1742006010</GUID>      <!-- Work Sanga Cow Stables (NW) - Building -->
+    </Item>
+    <Item>
+      <GUID>1742006024</GUID>      <!-- Work Horse Stables - Building -->
+    </Item>
+    <Item>
+      <GUID>1742006025</GUID>      <!-- Work Camels Stables - Building -->
     </Item>
   </ModOp>
   <!-- START ADD TO GLOBAL PRODUCTION POOLS -->
@@ -968,7 +1000,7 @@
       <Values>
         <Standard>
           <GUID>1742006014</GUID>
-          <Name>Work Work Sanga Cow Unlock (EN)</Name>
+          <Name>Work Sanga Cow Unlock (EN)</Name>
         </Standard>
         <Trigger>
           <TriggerCondition>
@@ -1016,7 +1048,7 @@
       <Template>Trigger</Template>
       <Values>
         <Standard>
-          <GUID>1742006020</GUID>
+          <GUID>1742006021</GUID>
           <Name>Unlock Creative Mode</Name>
         </Standard>
         <Trigger>
@@ -1065,6 +1097,12 @@
                       </Item>
                       <Item>
                         <Asset>1742006018</Asset>                        <!-- Work Work Sanga Cow Stables (EN) - ProductionChain -->
+                      </Item>
+                      <Item>
+                        <Asset>1742006025</Asset>                        <!-- Work Camels Stables - Building -->
+                      </Item>
+                      <Item>
+                        <Asset>1742006027</Asset>                        <!-- Work Camels Stables - ProductionChain -->
                       </Item>
                     </UnlockAssets>
                   </ActionUnlockAsset>
@@ -1135,5 +1173,545 @@
     </ModOp>
   </Group>
   <!-- END VEGETABLES JAKOB -->
+
+  <!-- START RETURN TO THE ORIENT -->
+  <Group Condition="#natoncy_return_to_the_orient">
+    <!-- START BUILDING - WORK CAMELS STABLES (OR) -->
+    <ModOp Type="addNextSibling" GUID="1010284">
+      <Asset>
+        <Template>BuffFactoryCulture</Template>
+        <Values>
+          <Standard>
+            <GUID>1742006025</GUID>
+            <Name>Work Camels Stables (OR)</Name>
+            <IconFilename>data\graphics\icons\icon_work_horse_stables.png</IconFilename>
+            <InfoDescription>1742006001</InfoDescription>
+          </Standard>
+          <Text/>
+          <Building>
+            <BuildingCategoryName>100000</BuildingCategoryName>
+            <SkipUnlockMessage>1</SkipUnlockMessage>
+            <BuildModeRandomRotation>90</BuildModeRandomRotation>
+            <AssociatedRegions>Mod3</AssociatedRegions>
+          </Building>
+          <Blocking/>
+          <Mesh/>
+          <BuffFactory>
+            <ProductionBuffs>
+              <Item>
+                <ProductivityBuff>1742006002</ProductivityBuff>
+              </Item>
+            </ProductionBuffs>
+            <ProductionBuffScope>Radius</ProductionBuffScope>
+            <ProductionBuffDistance>18</ProductionBuffDistance>
+          </BuffFactory>
+          <FactoryBase>
+            <FactoryInputs>
+              <Item>
+                <Product>1404000235</Product>                <!-- Camels - Product -->
+                <Amount>1</Amount>
+                <StorageAmount>3</StorageAmount>
+              </Item>
+              <Item>
+                <Product>1888999749</Product>                <!-- Dates - Product -->
+                <Amount>1</Amount>
+                <StorageAmount>3</StorageAmount>
+              </Item>
+            </FactoryInputs>
+            <CycleTime>240</CycleTime>
+            <IsMainFactory>0</IsMainFactory>
+          </FactoryBase>
+          <FeedbackController/>
+          <Pausable/>
+          <Selection>
+            <ParticipantMessageArcheType>Mod8</ParticipantMessageArcheType>
+            <Colors>
+              <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+            </Colors>
+          </Selection>
+          <Attackable/>
+          <Maintenance>
+            <Maintenances>
+              <Item>
+                <Product>1010017</Product>
+                <Amount>100</Amount>
+                <InactiveAmount>50</InactiveAmount>
+              </Item>
+              <Item>
+                <Product>1404000012</Product>                <!-- Nomad Workforce -->
+                <Amount>25</Amount>
+              </Item>
+            </Maintenances>
+          </Maintenance>
+          <AmbientMoodProvider/>
+          <LogisticNode/>
+          <Constructable/>
+          <Locked/>
+          <IncidentInfectable>
+            <Infectable>
+              <Fire>
+                <Base>1</Base>
+              </Fire>
+              <Riot>
+                <Base>1</Base>
+              </Riot>
+              <Illness>
+                <Base>1</Base>
+                <Communication>FireDefault</Communication>
+              </Illness>
+              <Explosion>
+                <Base>1</Base>
+              </Explosion>
+            </Infectable>
+            <IncidentInfectionChanceFactors>
+              <Fire>
+                <DensityFactor>0.0025</DensityFactor>
+                <DensityDistance>20</DensityDistance>
+                <FactoryProductivityFactor>0.1</FactoryProductivityFactor>
+                <FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
+              </Fire>
+            </IncidentInfectionChanceFactors>
+          </IncidentInfectable>
+          <Object>
+            <Variations>
+              <Item>
+                <Filename>data/graphics/buildings/production/work_camel_stables/work_camel_stables_or_01.cfg</Filename>
+              </Item>
+            </Variations>
+          </Object>
+          <SoundEmitter/>
+          <Cost>
+            <Costs>
+              <Item>
+                <Ingredient>1010017</Ingredient>                <!-- Coins -->
+                <Amount>5000</Amount>
+              </Item>
+              <Item>
+                <Ingredient>114356</Ingredient>                <!-- Wanza Timber - Product -->
+                <Amount>25</Amount>
+              </Item>
+            </Costs>
+          </Cost>
+          <Infolayer/>
+          <UpgradeList/>
+          <Culture/>
+        </Values>
+      </Asset>
+    </ModOp>
+    <!-- END BUILDING - WORK CAMELS STABLES (OR) -->
+
+    <!-- UNHIDE - Work Camels Unhide (OR) - Elders 1 -->
+    <ModOp Type="addnextSibling" GUID="130248">
+      <Asset>
+        <Template>Trigger</Template>
+        <Values>
+          <Standard>
+            <GUID>1742006028</GUID>
+            <Name>Work Camels Unhide (OR)</Name>
+          </Standard>
+          <Trigger>
+            <TriggerCondition>
+              <Template>ConditionPlayerCounter</Template>
+              <Values>
+                <Condition />
+                <ConditionPlayerCounter>
+                  <PlayerCounter>PopulationByLevel</PlayerCounter>
+                  <Context>1404000010</Context>                  <!-- Nomads PopulationLevel7 -->
+                  <CounterAmount>1</CounterAmount>
+                </ConditionPlayerCounter>
+              </Values>
+            </TriggerCondition>
+            <TriggerActions>
+              <Item>
+                <TriggerAction>
+                  <Template>ActionUnlockAsset</Template>
+                  <Values>
+                    <Action />
+                    <ActionUnlockAsset>
+                      <UnhideAssets>
+                        <Item>
+                          <Asset>1742006025</Asset>                          <!-- Work Camels Stables - Building -->
+                        </Item>
+                        <Item>
+                          <Asset>1742006027</Asset>                          <!-- Work Camels Stables - ProductionChain -->
+                        </Item>
+                      </UnhideAssets>
+                    </ActionUnlockAsset>
+                  </Values>
+                </TriggerAction>
+              </Item>
+            </TriggerActions>
+          </Trigger>
+          <TriggerSetup />
+        </Values>
+      </Asset>
+    </ModOp>
+
+    <!--UNLOCK - Work Camels Unlock (OR) - Elders 300 -->
+    <ModOp Type="addnextSibling" GUID="130248">
+      <Asset>
+        <Template>Trigger</Template>
+        <Values>
+          <Standard>
+            <GUID>1742006029</GUID>
+            <Name>Work Camels Unlock (OR)</Name>
+          </Standard>
+          <Trigger>
+            <TriggerCondition>
+              <Template>ConditionPlayerCounter</Template>
+              <Values>
+                <Condition />
+                <ConditionPlayerCounter>
+                  <PlayerCounter>PopulationByLevel</PlayerCounter>
+                  <Context>1404000010</Context>                  <!-- Nomads PopulationLevel7 -->
+                  <CounterAmount>300</CounterAmount>
+                </ConditionPlayerCounter>
+              </Values>
+            </TriggerCondition>
+            <TriggerActions>
+              <Item>
+                <TriggerAction>
+                  <Template>ActionUnlockAsset</Template>
+                  <Values>
+                    <Action />
+                    <ActionUnlockAsset>
+                      <UnhideAssets>
+                      </UnhideAssets>
+                      <UnlockAssets>
+                        <Item>
+                          <Asset>1742006025</Asset>                          <!-- Work Camels Stables - Building -->
+                        </Item>
+                        <Item>
+                          <Asset>1742006027</Asset>                          <!-- Work Camels Stables - ProductionChain -->
+                        </Item>
+                      </UnlockAssets>
+                    </ActionUnlockAsset>
+                  </Values>
+                </TriggerAction>
+              </Item>
+            </TriggerActions>
+          </Trigger>
+          <TriggerSetup />
+        </Values>
+      </Asset>
+    </ModOp>
+
+    <!-- START PRODUCTION CHAIN - WORK CAMELS STABLES (OR) -->
+    <ModOp Type="addNextSibling" GUID='500091'>
+      <Asset>
+        <Template>ProductionChain</Template>
+        <Values>
+          <Standard>
+            <GUID>1742006027</GUID>
+            <Name>Work Camel Stables (OR)</Name>
+            <IconFilename>data\graphics\icons\icon_work_horse_stables.png</IconFilename>
+            <InfoDescription>1742006001</InfoDescription>
+          </Standard>
+          <Text>
+            <TextOverride>1742006025</TextOverride>
+          </Text>
+          <ProductionChain>
+            <Building>1742006025</Building>            <!-- Work Camel Stables - Building -->
+            <Tier1>
+              <Item>
+                <Building>1404000303</Building>                <!-- Camel Farm - Building -->
+              </Item>
+              <Item>
+                <Building>1404000159</Building>                <!-- Date Plantation - Building -->
+              </Item>
+            </Tier1>
+          </ProductionChain>
+          <Locked />
+        </Values>
+      </Asset>
+    </ModOp>
+    <!-- END PRODUCTION CHAIN - WORK SANGA COW STABLES (EN) -->
+
+    <!-- START ADD TO CONSTRUCTION MENU - OR -->
+    <ModOp Type="addNextSibling" GUID='1404000014' Path="/Values/ConstructionCategory/BuildingList/Item[Building='1404000303']">
+      <Item>
+        <Building>1742006027</Building>        <!-- Work Camel Stables - Production Chain -->
+      </Item>
+    </ModOp>
+    <ModOp Type="add" GUID='1404000616' Path="/Values/ConstructionCategory/BuildingList/">
+      <Item>
+        <Building>1742006027</Building>        <!-- Work Camel Stables - Production Chain -->
+      </Item>
+    </ModOp>
+    <!-- END ADD TO CONSTRUCTION MENU - OR -->
+
+  </Group>
+  <!-- END RETURN TO THE ORIENT -->
+
+  <!-- START NEW HORIZONS -->
+  <Group Condition="#NewHorizons">
+    <!-- START BUILDING - WORK HORSE STABLES (NH) -->
+    <ModOp Type="addNextSibling" GUID="1010284">
+      <Asset>
+        <Template>BuffFactoryCulture</Template>
+        <Values>
+          <Standard>
+            <GUID>1742006024</GUID>
+            <Name>Work Horse Stables (NH)</Name>
+            <IconFilename>data\graphics\icons\icon_work_horse_stables.png</IconFilename>
+            <InfoDescription>1742006001</InfoDescription>
+          </Standard>
+          <Text>
+            <TextOverride>1742006000</TextOverride>
+          </Text>
+          <Building>
+            <BuildingCategoryName>100000</BuildingCategoryName>
+            <SkipUnlockMessage>1</SkipUnlockMessage>
+            <BuildModeRandomRotation>90</BuildModeRandomRotation>
+            <AssociatedRegions>Mod2</AssociatedRegions>
+          </Building>
+          <Blocking/>
+          <Mesh/>
+          <BuffFactory>
+            <ProductionBuffs>
+              <Item>
+                <ProductivityBuff>1742006002</ProductivityBuff>
+              </Item>
+            </ProductionBuffs>
+            <ProductionBuffScope>Radius</ProductionBuffScope>
+            <ProductionBuffDistance>18</ProductionBuffDistance>
+          </BuffFactory>
+          <FactoryBase>
+            <FactoryInputs>
+              <Item>
+                <Product>1742100211</Product>                <!-- Horses - Product -->
+                <Amount>1</Amount>
+                <StorageAmount>3</StorageAmount>
+              </Item>
+              <Item>
+                <Product>1440223</Product>                <!-- Soy - Product -->
+                <Amount>1</Amount>
+                <StorageAmount>3</StorageAmount>
+              </Item>
+            </FactoryInputs>
+            <CycleTime>240</CycleTime>
+            <IsMainFactory>0</IsMainFactory>
+          </FactoryBase>
+          <FeedbackController/>
+          <Pausable/>
+          <Selection>
+            <ParticipantMessageArcheType>Resident_tier05_atWork</ParticipantMessageArcheType>
+            <Colors>
+              <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+            </Colors>
+          </Selection>
+          <Attackable/>
+          <Maintenance>
+            <Maintenances>
+              <Item>
+                <Product>1010017</Product>
+                <Amount>100</Amount>
+                <InactiveAmount>50</InactiveAmount>
+              </Item>
+              <Item>
+                <Product>15100002</Product>                <!--  Workforce -->
+                <Amount>25</Amount>
+              </Item>
+            </Maintenances>
+          </Maintenance>
+          <AmbientMoodProvider/>
+          <LogisticNode/>
+          <Constructable/>
+          <Locked/>
+          <IncidentInfectable>
+            <Infectable>
+              <Fire>
+                <Base>1</Base>
+              </Fire>
+              <Riot>
+                <Base>1</Base>
+              </Riot>
+              <Illness>
+                <Base>1</Base>
+                <Communication>FireDefault</Communication>
+              </Illness>
+              <Explosion>
+                <Base>1</Base>
+              </Explosion>
+            </Infectable>
+            <IncidentInfectionChanceFactors>
+              <Fire>
+                <DensityFactor>0.0025</DensityFactor>
+                <DensityDistance>20</DensityDistance>
+                <FactoryProductivityFactor>0.1</FactoryProductivityFactor>
+                <FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
+              </Fire>
+            </IncidentInfectionChanceFactors>
+          </IncidentInfectable>
+          <Object>
+            <Variations>
+              <Item>
+                <Filename>data/graphics/buildings/production/work_horse_stables/work_horse_stables_nh_01.cfg</Filename>
+              </Item>
+            </Variations>
+          </Object>
+          <SoundEmitter/>
+          <Cost>
+            <Costs>
+              <Item>
+                <Ingredient>1010017</Ingredient>                <!-- Coins -->
+                <Amount>5000</Amount>
+              </Item>
+              <Item>
+                <Ingredient>114356</Ingredient>                <!-- Wanza Timber - Product -->
+                <Amount>25</Amount>
+              </Item>
+            </Costs>
+          </Cost>
+          <Infolayer/>
+          <UpgradeList/>
+          <Culture/>
+        </Values>
+      </Asset>
+    </ModOp>
+    <!-- END BUILDING - WORK CAMELS STABLES (OR) -->
+
+    <!-- UNHIDE - Work Horse Unhide (OR) - Elders 1 -->
+    <ModOp Type="addnextSibling" GUID="130248">
+      <Asset>
+        <Template>Trigger</Template>
+        <Values>
+          <Standard>
+            <GUID>1742006022</GUID>
+            <Name>Work Horse Unhide (NH)</Name>
+          </Standard>
+          <Trigger>
+            <TriggerCondition>
+              <Template>ConditionPlayerCounter</Template>
+              <Values>
+                <Condition />
+                <ConditionPlayerCounter>
+                  <PlayerCounter>PopulationByLevel</PlayerCounter>
+                  <Context>15100001</Context>                  <!-- PopulationLevel7 -->
+                  <CounterAmount>1</CounterAmount>
+                </ConditionPlayerCounter>
+              </Values>
+            </TriggerCondition>
+            <TriggerActions>
+              <Item>
+                <TriggerAction>
+                  <Template>ActionUnlockAsset</Template>
+                  <Values>
+                    <Action />
+                    <ActionUnlockAsset>
+                      <UnhideAssets>
+                        <Item>
+                          <Asset>1742006024</Asset>                          <!-- Work Camels Stables - Building -->
+                        </Item>
+                        <Item>
+                          <Asset>1742006026</Asset>                          <!-- Work Horse Stables - ProductionChain -->
+                        </Item>
+                      </UnhideAssets>
+                    </ActionUnlockAsset>
+                  </Values>
+                </TriggerAction>
+              </Item>
+            </TriggerActions>
+          </Trigger>
+          <TriggerSetup />
+        </Values>
+      </Asset>
+    </ModOp>
+
+    <!--UNLOCK - Work Horse Unlock (NH) - Elders 300 -->
+    <ModOp Type="addnextSibling" GUID="130248">
+      <Asset>
+        <Template>Trigger</Template>
+        <Values>
+          <Standard>
+            <GUID>1742006023</GUID>
+            <Name>Work Horse Unlock (NH)</Name>
+          </Standard>
+          <Trigger>
+            <TriggerCondition>
+              <Template>ConditionPlayerCounter</Template>
+              <Values>
+                <Condition />
+                <ConditionPlayerCounter>
+                  <PlayerCounter>PopulationByLevel</PlayerCounter>
+                  <Context>15100001</Context>                  <!-- PopulationLevel7 -->
+                  <CounterAmount>300</CounterAmount>
+                </ConditionPlayerCounter>
+              </Values>
+            </TriggerCondition>
+            <TriggerActions>
+              <Item>
+                <TriggerAction>
+                  <Template>ActionUnlockAsset</Template>
+                  <Values>
+                    <Action />
+                    <ActionUnlockAsset>
+                      <UnhideAssets>
+                      </UnhideAssets>
+                      <UnlockAssets>
+                        <Item>
+                          <Asset>1742006024</Asset>                          <!-- Work Horse Stables - Building -->
+                        </Item>
+                        <Item>
+                          <Asset>1742006026</Asset>                          <!-- Work Horse Stables - ProductionChain -->
+                        </Item>
+                      </UnlockAssets>
+                    </ActionUnlockAsset>
+                  </Values>
+                </TriggerAction>
+              </Item>
+            </TriggerActions>
+          </Trigger>
+          <TriggerSetup />
+        </Values>
+      </Asset>
+    </ModOp>
+
+    <!-- START PRODUCTION CHAIN - WORK HORSE STABLES (NH) -->
+    <ModOp Type="addNextSibling" GUID='500091'>
+      <Asset>
+        <Template>ProductionChain</Template>
+        <Values>
+          <Standard>
+            <GUID>1742006026</GUID>
+            <Name>Work Horse Stables (NH)</Name>
+            <IconFilename>data\graphics\icons\icon_work_horse_stables.png</IconFilename>
+            <InfoDescription>1742006001</InfoDescription>
+          </Standard>
+          <Text>
+            <TextOverride>1742006000</TextOverride>
+          </Text>
+          <ProductionChain>
+            <Building>1742006024</Building>            <!-- Work Horse Stables - Building -->
+            <Tier1>
+              <Item>
+                <Building>1742100209</Building>                <!-- Stables - Building -->
+              </Item>
+              <Item>
+                <Building>1441251</Building>                <!-- Soy Farm - Building -->
+              </Item>
+            </Tier1>
+          </ProductionChain>
+          <Locked />
+        </Values>
+      </Asset>
+    </ModOp>
+    <!-- END PRODUCTION CHAIN - WORK HORSE STABLES (NH) -->
+
+    <!-- START ADD TO CONSTRUCTION MENU - NH -->
+    <ModOp Type="add" GUID='1445603' Path="/Values/ConstructionCategory/BuildingList/">
+      <Item>
+        <Building>1742006026</Building>        <!-- Work Horse Stables - Production Chain -->
+      </Item>
+    </ModOp>
+    <ModOp Type="add" GUID='1445608' Path="/Values/ConstructionCategory/BuildingList/">
+      <Item>
+        <Building>1742006026</Building>        <!-- Work Horse Stables - Production Chain -->
+      </Item>
+    </ModOp>
+    <!-- END ADD TO CONSTRUCTION MENU - NH -->
+
+  </Group>
+  <!-- END NEW HORIZONS -->
 
 </ModOps>
