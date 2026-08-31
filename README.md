@@ -4,7 +4,7 @@
 
 Dive more in depth into the Arctic waters with the mod White and Cold! A mod centered around a new Inuit population tier and expanding the existing Explorer and Technician population tiers with more mining options and new resources to gather. It also includes a new Inuit population tier for the Arctic. Apart from changes to the Arctic there are some additional things to explore in the other regions like ice trading.
 
-Current version 1.14 (06/06/2026)
+Current version 1.15 (31/09/2026)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/white-and-cold
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
@@ -12,7 +12,7 @@ Current version 1.14 (06/06/2026)
 
 The perfect specialists and items pack is a set of 172 specialists and items for all regions. Some buildings or items did not got the love they deserve and did not recieve a specialist or legendary treat. This mod wants to change this by giving almost every building and item a specialist or legendary variant.
 
-Current version 19.15 (01/05/2026)
+Current version 19.16 (16/08/2026)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/the-perfect-specialists-items-pack
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
@@ -33,7 +33,7 @@ Current version 1.24 (19/06/2026)
 
 Centered around military infrastructure and adding new military residence tiers for all regions with a focus on the Old World.
 
-Current version 1.34 (30/05/2026)
+Current version 1.37 (22/08/2026)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/military-attention
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
@@ -41,7 +41,7 @@ Current version 1.34 (30/05/2026)
 
 Additional mod for Military Attention that focuses on new ships and ship balancing. Can be used as a standalone.
 
-Current version 1.35 (04/11/2025)
+Current version 1.37 (26/01/2026)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/military-attention-ships
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
@@ -49,7 +49,7 @@ Current version 1.35 (04/11/2025)
 
 Additional mod for Military Attention that focuses on rebalancing the pirates and adding additional pirates mechanics like a new population.
 
-Current version 1.16 (22/05/2026)
+Current version 1.18 (16/08/2026)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/military-attention-pirates
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
@@ -73,7 +73,7 @@ Current version 1.0 (14/07/2024)
 
 A mod that adds 4 new airships in the form of hot air balloons that are build in the normal sailing shipyard.
 
-Current version 1.15 (05/07/2025)
+Current version 1.16 (01/05/2026)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/almost-100-hot-air-balloons
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
@@ -105,7 +105,7 @@ Current version 1.2 (10/05/2025)
 
 Boost forestery production, farming and mining with horsepower.
 
-Current version 1.1 (04/11/2025)
+Current version 1.5 (22/08/2026)
 - Download on Mod.io: https://mod.io/g/anno-1800/m/work-horse-stables
 - Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
@@ -127,10 +127,14 @@ A list of shared goods that can be used by everybody
 - Pianos
 - Military Uniforms
 - Basic Weapons
+- Animal Bones
+- Ice Blocks
+- Games
 
 ### Shared Production
 
 - Pianos
+- Silver Bars
 
 ### Shared Recipes
 
@@ -141,6 +145,7 @@ A list of shared goods that can be used by everybody
 - Ship Flags
 - Support Ships
 - Pirate Ships
+- Bulk Freighter
 
 Download on Github: https://github.com/Hier0nimus/anno-mods-hier0nimus/releases
 
