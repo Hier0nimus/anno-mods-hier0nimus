@@ -745,8 +745,95 @@
       <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
 			<IsBonusNeed>1</IsBonusNeed>
     </Item>
+    <Item>
+      <Product>1742004639</Product>      <!-- Jewellery Store - Product -->
+      <SupplyWeight>15</SupplyWeight>
+      <MoneyValue>100</MoneyValue>
+      <IsConsideredByAI>0</IsConsideredByAI>
+      <AdditionalGlobalUnlockRequirement>
+        <Population>15000004</Population>
+        <MinPopulationAmount>1000</MinPopulationAmount>
+      </AdditionalGlobalUnlockRequirement>
+      <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+      <IsBonusNeed>1</IsBonusNeed>
+    </Item>
   </ModOp>
   <!-- END - ADD ADDITIONAL NEEDS TO ENGINEERS AND INVESTORS -->
+
+  <!-- START - ADD ADDITIONAL NEEDS TO INVESTORS  -->
+  <ModOp Type="addNextSibling" GUID="15000004" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='135879']">
+    <Item>
+      <Product>1742004614</Product>    <!-- Luxury Silverware Need -->
+      <SupplyWeight>100</SupplyWeight>
+      <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+      <RequiredBuildings>
+        <Item>
+          <RequiredBuilding>406</RequiredBuilding><!--HighLife_monument_03(residence)-->
+        </Item>
+      </RequiredBuildings>
+    </Item>
+  </ModOp>
+  <ModOp Type="addNextSibling" GUID="15000004" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='135889']">
+    <Item>
+      <Product>1742004619</Product>    <!-- Wound Dressings Need -->
+      <SupplyWeight>100</SupplyWeight>
+      <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+      <RequiredBuildings>
+        <Item>
+          <RequiredBuilding>406</RequiredBuilding><!--HighLife_monument_03(residence)-->
+        </Item>
+      </RequiredBuildings>
+    </Item>
+  </ModOp>
+  <ModOp Type="add" GUID="15000004" Path="/Values/PopulationLevel7/PopulationInputs/">
+    <Item>
+      <Product>1742004640</Product>    <!-- Wound Dressings Need -->
+      <SupplyWeight>100</SupplyWeight>
+      <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+      <RequiredBuildings>
+        <Item>
+          <RequiredBuilding>406</RequiredBuilding><!--HighLife_monument_03(residence)-->
+        </Item>
+      </RequiredBuildings>
+    </Item>
+  </ModOp>
+  <ModOp Type="add" GUID="15000004" Path="/Values/PopulationLevel7/PopulationInputs/">
+    <Item>
+      <Product>1742004641</Product>    <!-- Wound Dressings Need -->
+      <SupplyWeight>100</SupplyWeight>
+      <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+      <RequiredBuildings>
+        <Item>
+          <RequiredBuilding>406</RequiredBuilding><!--HighLife_monument_03(residence)-->
+        </Item>
+      </RequiredBuildings>
+    </Item>
+  </ModOp>
+  <ModOp Type="add" GUID="15000004" Path="/Values/PopulationLevel7/PopulationInputs/">
+    <Item>
+      <Product>1742004642</Product>    <!-- Wound Dressings Need -->
+      <SupplyWeight>100</SupplyWeight>
+      <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+      <RequiredBuildings>
+        <Item>
+          <RequiredBuilding>406</RequiredBuilding><!--HighLife_monument_03(residence)-->
+        </Item>
+      </RequiredBuildings>
+    </Item>
+  </ModOp>
+  <ModOp Type="add" GUID="15000004" Path="/Values/PopulationLevel7/PopulationInputs/">
+    <Item>
+      <Product>1742004643</Product>    <!-- Wound Dressings Need -->
+      <SupplyWeight>100</SupplyWeight>
+      <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+      <RequiredBuildings>
+        <Item>
+          <RequiredBuilding>406</RequiredBuilding><!--HighLife_monument_03(residence)-->
+        </Item>
+      </RequiredBuildings>
+    </Item>
+  </ModOp>
+
 
   <!-- START - ADD ADDITIONAL NEEDS TO SHEPHARD / ELDERS -->
   <ModOp Type="add" GUID="114329,114330" Path="/Values/PopulationLevel7/PopulationInputs">
@@ -872,6 +959,46 @@
     </Item>
   </ModOp>
   <!-- ****************** END TO WEALTH ****************** -->
+
+  <!-- ****************** START TO MALL ****************** -->
+  <!-- Department Store -->
+  <ModOp Type="add" GUID='25000118' Path="/Values/ObjectmenuResidenceScene/MallPopup/MallPopupNeeds/Item[NeedProvider='135100']/Needs/">
+    <Item>
+      <MallNeed>1742004614</MallNeed><!-- Luxury Silverware Need - Product -->
+    </Item>
+  </ModOp>
+  <!-- Drug Store -->
+  <ModOp Type="add" GUID='25000118' Path="/Values/ObjectmenuResidenceScene/MallPopup/MallPopupNeeds/Item[NeedProvider='134629']/Needs/">
+    <Item>
+      <MallNeed>1742004619</MallNeed><!-- Wound Dressings - Product -->
+    </Item>
+  </ModOp>
+  <!-- Jewellery Store -->
+  <ModOp Type="add" GUID='25000118' Path="/Values/ObjectmenuResidenceScene/MallPopup/MallPopupNeeds/">
+    <Item>
+      <NeedProvider>1742004622</NeedProvider>
+      <!-- Jewellery Store Blank -->
+      <Needs>
+        <Item>
+          <MallNeed>1742004640</MallNeed>
+          <!-- Brooches -->
+        </Item>
+        <Item>
+          <MallNeed>1742004641</MallNeed>
+          <!-- Earrings -->
+        </Item>
+        <Item>
+          <MallNeed>1742004642</MallNeed>
+          <!-- Necklaces -->
+        </Item>
+        <Item>
+          <MallNeed>1742004643</MallNeed>
+          <!-- Engagement Rings -->
+        </Item>
+      </Needs>
+    </Item>
+  </ModOp>
+  <!-- ****************** END TO MALL ****************** -->
 
   <!-- ****************** START Explorer & Technicians more needs by ParticipantMessageArcheType ******************  -->
   <ModOp Type="replace" GUID="112642" Path="/Values/PopulationLevel7/PopulationParticipant">

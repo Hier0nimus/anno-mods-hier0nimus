@@ -567,7 +567,7 @@
                 <Object>
                     <Variations>
                         <Item>
-                            <Filename>data/dlc08/graphics/buildings/public/restaurant/restaurant_01.cfg</Filename>
+                            <Filename>data/dlc08/graphics/buildings/public/restaurant/restaurant_02.cfg</Filename>
                         </Item>
                     </Variations>
                     <Skins>
@@ -746,7 +746,7 @@
     </ModOp>
 
     <!-- START - BUILDING Chemical Plants -->
-    <!-- START - ADD RECIPES TO CHECICAL PLANT RECIPE LIST -->
+    <!-- START - ADD RECIPES TO CHEMICAL PLANT RECIPE LIST -->
     <ModOp Type="addPrevSibling" GUID="132774" Path="/Values/RecipeList/Recipes/Item[Recipe='132788']">
         <Item>
             <Recipe>1742004339</Recipe>            <!--Recipe_Soap-->
@@ -760,9 +760,9 @@
             <Recipe>1742004342</Recipe>            <!--Recipe_Industrial Lubricant-->
         </Item>
     </ModOp>
-    <!-- END - ADD RECIPES TO CHECICAL PLANT RECIPE LIST -->
+    <!-- END - ADD RECIPES TO CHEMICAL PLANT RECIPE LIST -->
 
-    <!-- START - ADD NEW CHECICAL PLANT RECIPES -->
+    <!-- START - ADD NEW CHEMICAL PLANT RECIPES -->
     <ModOp Type="addNextSibling" GUID="132788">
         <Asset>
             <Template>Recipe</Template>
@@ -879,7 +879,7 @@
             </Values>
         </Asset>
     </ModOp>
-    <!-- END - ADD NEW CHECICAL PLANT RECIPES -->
+    <!-- END - ADD NEW CHEMICAL PLANT RECIPES -->
 
     <!-- START - ARCTIC GREENHOUSE -->
     <!-- START - Arctic Greenhouse - Recipelist -->
@@ -1873,4 +1873,2114 @@
     </ModOp>
     <!-- END - BUILDING - Arctic Greenhouse Sidebuilding -->
     <!-- END - ARCTIC GREENHOUSE -->
+
+    <!-- MALL RECIPES -->
+    <!-- START - DEPARTMENT STORE -->
+    <!-- START - DEPARTMENT STORE - Luxury Silverware -->
+    <ModOp Type="add" GUID='135102' Path="/Values/RecipeList/Recipes">
+        <Item>
+            <Recipe>1742004610</Recipe>            <!-- Luxury Silverware - Recipe -->
+        </Item>
+    </ModOp>
+
+    <ModOp Type="addNextSibling" GUID='135104'>
+        <Asset>
+            <Template>Recipe</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004610</GUID>
+                    <Name>Luxury Silverware</Name>
+                    <IconFilename>data/graphics/icons/icon_recipe_luxury_silverware.png</IconFilename>
+                </Standard>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>Luxury Silverware</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>52403</LineID>
+                </Text>
+                <Recipe>
+                    <RecipeBuilding>1742004612</RecipeBuilding>
+                    <!-- Department Store - Luxury Silverware - Building -->
+                    <RecipeDescriptionText>1742004611</RecipeDescriptionText>
+                    <!-- Department Store - Luxury Silverware - Recipe - Description -->
+                    <RecipeImage>data/graphics/icons/recipe_bg_luxury_silverware.png</RecipeImage>
+                    <RecipeIngredientUIData>
+                        <Item>
+                            <PosX>405</PosX>
+                            <PosY>20</PosY>
+                            <UICirclePointer>SouthWest</UICirclePointer>
+                        </Item>
+                        <Item>
+                            <PosX>35</PosX>
+                            <PosY>40</PosY>
+                            <UICirclePointer>SouthEast</UICirclePointer>
+                        </Item>
+                        <Item>
+                            <PosX>350</PosX>
+                            <PosY>300</PosY>
+                            <UICirclePointer>NorthWest</UICirclePointer>
+                        </Item>
+                    </RecipeIngredientUIData>
+                </Recipe>
+                <Locked>
+                    <DLCDependency>410085</DLCDependency>
+                    <!--Anno 1800 DLC - HighLife-->
+                </Locked>
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <ModOp Type="addNextSibling" GUID='135104'>
+        <Asset>
+            <Template>Mall</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004612</GUID>
+                    <Name>Department Store - Luxury Silverware</Name>
+                    <IconFilename>data/graphics/icons/icon_recipe_luxury_silverware.png</IconFilename>
+                    <InfoDescription>137243</InfoDescription>                    <!--Malls Infocorner-->
+                </Standard>
+                <Building/>
+                <Blocking/>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/dlc09/graphics/buildings/public/mall/mall_04.cfg</Filename>
+                        </Item>
+                    </Variations>
+                    <Skins>
+                        <DefaultSkinName>135100</DefaultSkinName>
+                        <!--DepartmentStore_Blank-->
+                        <DefaultSkinDescription>23853</DefaultSkinDescription>
+                        <!--ChangeBuildingSkin_toDefaultSkinDesc-->
+                        <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>
+                        <!--Classic-->
+                    </Skins>
+                </Object>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!-- Coins -->
+                            <Amount>30000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010196</Ingredient>                            <!-- Timber - Product -->
+                            <Amount>60</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010205</Ingredient>                            <!-- Bricks - Product -->
+                            <Amount>120</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010218</Ingredient>                            <!-- Steel Beams - Product -->
+                            <Amount>60</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010207</Ingredient>                            <!-- Windows - Product -->
+                            <Amount>80</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010202</Ingredient>                            <!-- Reinforced Concrete - Product -->
+                            <Amount>35</Amount>
+                        </Item>
+                    </Costs>
+                </Cost>
+                <Mesh/>
+                <Selection>
+                    <OnSelection>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </OnSelection>
+                    <ParticipantMessageArcheType>Resident_tier03_atWork</ParticipantMessageArcheType>
+                </Selection>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>Department Store: Luxury Silverware</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>52167</LineID>
+                </Text>
+                <Constructable/>
+                <Locked>
+                    <DLCDependency>410085</DLCDependency>
+                    <!--Anno 1800 DLC - HighLife-->
+                </Locked>
+                <SoundEmitter>
+                    <ActiveSounds>
+                        <Item>
+                            <Sound>280018</Sound>
+                            <!--wwe_sfx_bld_highlife_department_store_lp-->
+                        </Item>
+                    </ActiveSounds>
+                </SoundEmitter>
+                <FactoryBase>
+                    <FactoryInputs>
+                        <Item>
+                            <Product>1010219</Product>                            <!-- Steel -->
+                            <Amount>1</Amount>
+                            <StorageAmount>7</StorageAmount>
+                        </Item>
+                        <Item>
+                            <Product>1957006151</Product>                            <!-- Silver Bars -->
+                            <Amount>1</Amount>
+                            <StorageAmount>7</StorageAmount>
+                        </Item>
+                        <Item>
+                            <Product>1010242</Product>                            <!-- Veneers -->
+                            <Amount>1</Amount>
+                            <StorageAmount>7</StorageAmount>
+                        </Item>
+                    </FactoryInputs>
+                    <CycleTime>120</CycleTime>
+                    <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+                    <ClampedMaxTransporterLogisticCost>85</ClampedMaxTransporterLogisticCost>
+                </FactoryBase>
+                <LogisticNode/>
+                <Maintenance>
+                    <Maintenances>
+                        <Item>
+                            <Product>1010017</Product>
+                            <!--Money-->
+                            <Amount>400</Amount>
+                            <InactiveAmount>200</InactiveAmount>
+                        </Item>
+                        <Item>
+                            <Product>1010116</Product>
+                            <!--moderate workforce 3-->
+                            <Amount>240</Amount>
+                        </Item>
+                    </Maintenances>
+                </Maintenance>
+                <Industrializable>
+                    <MandatoryIndustrialization>1</MandatoryIndustrialization>
+                </Industrializable>
+                <IncidentInfectable/>
+                <Electrifiable/>
+                <AmbientMoodProvider>
+                    <Murmur>HighLife_Mall_Homeware</Murmur>
+                </AmbientMoodProvider>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                </Attackable>
+                <UpgradeList/>
+                <Pausable/>
+                <FeedbackController/>
+                <Infolayer/>
+                <BuffFactory>
+                    <ProductionBuffs>
+                        <Item>
+                            <ProductivityBuff>1742004613</ProductivityBuff>
+                            <ProductivityThresholdUp>0.50</ProductivityThresholdUp>
+                            <ProductivityThresholdDown>0.01</ProductivityThresholdDown>
+                        </Item>
+                    </ProductionBuffs>
+                    <ProductionBuffScope>Radius</ProductionBuffScope>
+                    <ProductionBuffDistance>45</ProductionBuffDistance>
+                    <PublicServiceData>
+                        <PublicServices>
+                            <Item>
+                                <PublicService>135108</PublicService>                                <!--DepartmentStoreNeed-->
+                            </Item>
+                            <Item>
+                                <PublicService>1742004614</PublicService>                                <!-- Luxury Silverware Need -->
+                                <IsAreaWidePublicService>1</IsAreaWidePublicService>
+                            </Item>
+                        </PublicServices>
+                        <FullSatisfactionDistance>44</FullSatisfactionDistance>
+                        <NoSatisfactionDistance>45</NoSatisfactionDistance>
+                    </PublicServiceData>
+                </BuffFactory>
+                <RecipeBuilding>
+                    <RecipeList>135102</RecipeList>                    <!--RecpieList_DepartmentStore-->
+                </RecipeBuilding>
+                <Culture/>
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <ModOp Type="addNextSibling" GUID='135111'>
+        <Asset>
+            <Template>TownhallBuff</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004613</GUID>
+                    <Name>Luxury Silverware - Townhallbuff</Name>
+                    <IconFilename>data/graphics/icons/icon_recipe_luxury_silverware.png</IconFilename>
+                </Standard>
+                <ItemEffect>
+                    <EffectTargets>
+                        <Item>
+                            <GUID>190041</GUID>
+                        </Item>
+                    </EffectTargets>
+                    <AllowStacking>0</AllowStacking>
+                </ItemEffect>
+                <Text>
+                    <TextOverride>1742004610</TextOverride>
+                </Text>
+                <BuildingUpgrade/>
+                <Buff/>
+                <PopulationUpgrade>
+                    <ResidentsUpgrade>
+                        <Value>15</Value>
+                    </ResidentsUpgrade>
+                    <InputBenefitModifier>
+                        <Item>
+                            <Product>120032</Product><!-- Coffee -->
+                            <AdditionalSupply>15</AdditionalSupply>
+                        </Item>
+                        <Item>
+                            <Product>120016</Product><!-- Champagne -->
+                            <AdditionalSupply>15</AdditionalSupply>
+                        </Item>
+                    </InputBenefitModifier>
+                </PopulationUpgrade>
+                <ResidenceUpgrade>
+                    <AdditionalHappiness>3</AdditionalHappiness>
+                    <GoodConsumptionUpgrade>
+                        <Item>
+                            <ProvidedNeed>535</ProvidedNeed>        <!-- Local Mail -->
+                            <AmountInPercent>-25</AmountInPercent>
+                        </Item>
+                        <Item>
+                            <ProvidedNeed>536</ProvidedNeed>        <!-- Regional Mail -->
+                            <AmountInPercent>-15</AmountInPercent>
+                        </Item>
+                        <Item>
+                            <ProvidedNeed>2524</ProvidedNeed>        <!-- Overseas Mail -->
+                            <AmountInPercent>-5</AmountInPercent>
+                        </Item>
+                    </GoodConsumptionUpgrade>
+                </ResidenceUpgrade>
+                <IncidentInfectableUpgrade/>
+                <CultureUpgrade/>
+                <InfluenceSourceUpgrade/>
+                <WarehouseUpgrade/>
+                <DistributionUpgrade/>
+                <ItemContainerUpgrade/>
+                <FactoryUpgrade/>
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <ModOp Type="addNextSibling" GUID='135111'>
+        <Asset>
+            <Template>Product</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004614</GUID>
+                    <Name>Luxury Silverware Need</Name>
+                    <IconFilename>data/graphics/icons/icon_recipe_luxury_silverware.png</IconFilename>
+                </Standard>
+                <Text>
+                    <TextOverride>1742004610</TextOverride>
+                </Text>
+                <Locked/>
+                <Product>
+                    <ProductColor>-11415604</ProductColor>
+                    <StorageLevel>Building</StorageLevel>
+                    <ProductCategory>135875</ProductCategory>
+                    <!--Product Category Commercial Supply-->
+                    <IsAbstract>1</IsAbstract>
+                    <AssociatedRegion>Moderate</AssociatedRegion>
+                </Product>
+                <ExpeditionAttribute/>
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- END - DEPARTMENT STORE - Luxury Silverware -->
+    <!-- END - DEPARTMENT STORE -->
+
+    <!-- START - DRUG STORE -->
+    <!-- START - DRUG STORE - Wound Dressings -->
+    <ModOp Type="add" GUID='134632' Path="/Values/RecipeList/Recipes">
+        <Item>
+            <Recipe>1742004615</Recipe>            <!-- Wound Dressings - Recipe -->
+        </Item>
+    </ModOp>
+
+    <ModOp Type="addNextSibling" GUID='135104'>
+        <Asset>
+            <Template>Recipe</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004615</GUID>
+                    <Name>Wound Dressings</Name>
+                    <IconFilename>data/graphics/icons/icon_recipe_wound_dressings.png</IconFilename>
+                </Standard>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>Wound Dressings</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>52403</LineID>
+                </Text>
+                <Recipe>
+                    <RecipeBuilding>1742004617</RecipeBuilding>
+                    <!-- Drug Store - Wound Dressings - Building -->
+                    <RecipeDescriptionText>1742004616</RecipeDescriptionText>
+                    <!-- Drug Store - Wound Dressings - Recipe - Description -->
+                    <RecipeImage>data/graphics/icons/recipe_bg_wound_dressings.png</RecipeImage>
+                    <RecipeIngredientUIData>
+                        <Item>
+                            <PosX>410</PosX>
+                            <PosY>-30</PosY>
+                            <UICirclePointer>SouthWest</UICirclePointer>
+                        </Item>
+                        <Item>
+                            <PosX>-10</PosX>
+                            <PosY>260</PosY>
+                            <UICirclePointer>NorthEast</UICirclePointer>
+                        </Item>
+                    </RecipeIngredientUIData>
+                </Recipe>
+                <Locked>
+                    <DLCDependency>410085</DLCDependency>
+                    <!--Anno 1800 DLC - HighLife-->
+                </Locked>
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <ModOp Type="addNextSibling" GUID='135104'>
+        <Asset>
+            <Template>Mall</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004617</GUID>
+                    <Name>Drug Store - Wound Dressings</Name>
+                    <IconFilename>data/graphics/icons/icon_recipe_wound_dressings.png</IconFilename>
+                    <InfoDescription>137243</InfoDescription>                    <!--Malls Infocorner-->
+                </Standard>
+                <Building/>
+                <Blocking/>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/dlc09/graphics/buildings/public/mall/mall_02.cfg</Filename>
+                        </Item>
+                    </Variations>
+                    <Skins>
+                        <DefaultSkinName>135100</DefaultSkinName>
+                        <!--DepartmentStore_Blank-->
+                        <DefaultSkinDescription>23853</DefaultSkinDescription>
+                        <!--ChangeBuildingSkin_toDefaultSkinDesc-->
+                        <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>
+                        <!--Classic-->
+                    </Skins>
+                </Object>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!-- Coins -->
+                            <Amount>30000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010196</Ingredient>                            <!-- Timber - Product -->
+                            <Amount>60</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010205</Ingredient>                            <!-- Bricks - Product -->
+                            <Amount>120</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010218</Ingredient>                            <!-- Steel Beams - Product -->
+                            <Amount>60</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010207</Ingredient>                            <!-- Windows - Product -->
+                            <Amount>80</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010202</Ingredient>                            <!-- Reinforced Concrete - Product -->
+                            <Amount>35</Amount>
+                        </Item>
+                    </Costs>
+                </Cost>
+                <Mesh/>
+                <Selection>
+                    <OnSelection>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </OnSelection>
+                    <ParticipantMessageArcheType>Resident_tier03_atWork</ParticipantMessageArcheType>
+                </Selection>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>Drug Store: Wound Dressings</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>52167</LineID>
+                </Text>
+                <Constructable/>
+                <Locked>
+                    <DLCDependency>410085</DLCDependency>
+                    <!--Anno 1800 DLC - HighLife-->
+                </Locked>
+                <SoundEmitter>
+                    <ActiveSounds>
+                        <Item>
+                            <Sound>280018</Sound>
+                            <!--wwe_sfx_bld_highlife_department_store_lp-->
+                        </Item>
+                    </ActiveSounds>
+                </SoundEmitter>
+                <FactoryBase>
+                    <FactoryInputs>
+                        <Item>
+                            <Product>1010240</Product>                            <!-- Cotton Fabric -->
+                            <Amount>1</Amount>
+                            <StorageAmount>7</StorageAmount>
+                        </Item>
+                        <Item>
+                            <Product>1957006151</Product>                            <!-- Silver Bars -->
+                            <Amount>1</Amount>
+                            <StorageAmount>7</StorageAmount>
+                        </Item>
+                    </FactoryInputs>
+                    <CycleTime>120</CycleTime>
+                    <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+                    <ClampedMaxTransporterLogisticCost>85</ClampedMaxTransporterLogisticCost>
+                </FactoryBase>
+                <LogisticNode/>
+                <Maintenance>
+                    <Maintenances>
+                        <Item>
+                            <Product>1010017</Product>
+                            <!--Money-->
+                            <Amount>400</Amount>
+                            <InactiveAmount>200</InactiveAmount>
+                        </Item>
+                        <Item>
+                            <Product>1010116</Product>
+                            <!--moderate workforce 3-->
+                            <Amount>240</Amount>
+                        </Item>
+                    </Maintenances>
+                </Maintenance>
+                <Industrializable>
+                    <MandatoryIndustrialization>1</MandatoryIndustrialization>
+                </Industrializable>
+                <IncidentInfectable/>
+                <Electrifiable/>
+                <AmbientMoodProvider>
+                    <Murmur>HighLife_Mall_Homeware</Murmur>
+                </AmbientMoodProvider>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                </Attackable>
+                <UpgradeList/>
+                <Pausable/>
+                <FeedbackController/>
+                <Infolayer/>
+                <BuffFactory>
+                    <ProductionBuffs>
+                        <Item>
+                            <ProductivityBuff>1742004618</ProductivityBuff>
+                            <ProductivityThresholdUp>0.50</ProductivityThresholdUp>
+                            <ProductivityThresholdDown>0.01</ProductivityThresholdDown>
+                        </Item>
+                    </ProductionBuffs>
+                    <ProductionBuffScope>Radius</ProductionBuffScope>
+                    <ProductionBuffDistance>45</ProductionBuffDistance>
+                    <PublicServiceData>
+                        <PublicServices>
+                            <Item>
+                                <PublicService>135109</PublicService>                                <!--DepartmentStoreNeed-->
+                            </Item>
+                            <Item>
+                                <PublicService>1742004619</PublicService>                                <!-- Luxury Silverware Need -->
+                                <IsAreaWidePublicService>1</IsAreaWidePublicService>
+                            </Item>
+                        </PublicServices>
+                        <FullSatisfactionDistance>44</FullSatisfactionDistance>
+                        <NoSatisfactionDistance>45</NoSatisfactionDistance>
+                    </PublicServiceData>
+                </BuffFactory>
+                <RecipeBuilding>
+                    <RecipeList>134632</RecipeList>                    <!--RecpieList_DepartmentStore-->
+                </RecipeBuilding>
+                <Culture/>
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <ModOp Type="addNextSibling" GUID='135111'>
+        <Asset>
+            <Template>TownhallBuff</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004618</GUID>
+                    <Name>Wound Dressings - Townhallbuff</Name>
+                    <IconFilename>data/graphics/icons/icon_recipe_wound_dressings.png</IconFilename>
+                </Standard>
+                <ItemEffect>
+                    <EffectTargets>
+                        <Item>
+                            <GUID>190041</GUID>
+                        </Item>
+                    </EffectTargets>
+                    <AllowStacking>0</AllowStacking>
+                </ItemEffect>
+                <Text>
+                    <TextOverride>1742004615</TextOverride>
+                </Text>
+                <BuildingUpgrade/>
+                <Buff/>
+                <PopulationUpgrade>
+                    <ResidentsUpgrade>
+                        <Value>15</Value>
+                    </ResidentsUpgrade>
+                    <InputBenefitModifier>
+                        <Item>
+                            <Product>1010245</Product>            <!-- Penny Fathings -->
+                            <AdditionalSupply>15</AdditionalSupply>
+                        </Item>
+                        <Item>
+                            <Product>1010225</Product>            <!-- Steam Carriages -->
+                            <AdditionalSupply>15</AdditionalSupply>
+                        </Item>
+                    </InputBenefitModifier>
+                </PopulationUpgrade>
+                <ResidenceUpgrade>
+                    <AdditionalHappiness>3</AdditionalHappiness>
+                    <GoodConsumptionUpgrade>
+                        <Item>
+                            <ProvidedNeed>1010259</ProvidedNeed>                            <!-- cigars -->
+                            <AmountInPercent>-30</AmountInPercent>
+                        </Item>
+                    </GoodConsumptionUpgrade>
+                </ResidenceUpgrade>
+                <IncidentInfectableUpgrade>
+                    <IncidentIllnessIncreaseUpgrade>
+                        <Value>-8</Value>
+                    </IncidentIllnessIncreaseUpgrade>
+                </IncidentInfectableUpgrade>
+                <CultureUpgrade/>
+                <InfluenceSourceUpgrade/>
+                <WarehouseUpgrade/>
+                <DistributionUpgrade/>
+                <ItemContainerUpgrade/>
+                <FactoryUpgrade/>
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <ModOp Type="addNextSibling" GUID='135111'>
+        <Asset>
+            <Template>Product</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004619</GUID>
+                    <Name>Wound Dressings Need</Name>
+                    <IconFilename>data/graphics/icons/icon_recipe_wound_dressings.png</IconFilename>
+                </Standard>
+                <Text>
+                    <TextOverride>1742004615</TextOverride>
+                </Text>
+                <Locked/>
+                <Product>
+                    <ProductColor>-11415604</ProductColor>
+                    <StorageLevel>Building</StorageLevel>
+                    <ProductCategory>135875</ProductCategory>
+                    <!--Product Category Commercial Supply-->
+                    <IsAbstract>1</IsAbstract>
+                    <AssociatedRegion>Moderate</AssociatedRegion>
+                </Product>
+                <ExpeditionAttribute/>
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- END - DRUG STORE - Wound Dressings -->
+    <!-- END - DRUG STORE -->
+
+    <!-- START - JEWELRY STORE -->
+    <!-- START RECIPELIST -->
+    <ModOp Type="addNextSibling" GUID='134632'>
+        <Asset>
+            <Template>RecipeList</Template>
+            <Values>
+                <RecipeList>
+                    <Recipes>
+                        <Item>
+                            <Recipe>1742004623</Recipe>                            <!-- Brooches -->
+                        </Item>
+                        <Item>
+                            <Recipe>1742004627</Recipe>                            <!-- Earrings -->
+                        </Item>
+                        <Item>
+                            <Recipe>1742004631</Recipe>                            <!-- Necklaces -->
+                        </Item>
+                        <Item>
+                            <Recipe>1742004635</Recipe>                            <!-- Engagement Rings -->
+                        </Item>
+                    </Recipes>
+                    <RecipeListType>Manufacture</RecipeListType>
+                    <RecipeListMoodImage>data/ui/2kimages/main/assets/recipebook/mood_images/recipebook_moodimages_artisans_workshop.png</RecipeListMoodImage>
+                    <RecipeListDescription>1742004621</RecipeListDescription>
+                    <!--Pharmacy Description-->
+                </RecipeList>
+                <Standard>
+                    <GUID>1742004620</GUID>
+                    <Name>RecipeList Jewelry Store</Name>
+                </Standard>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>Luxurious Jewelry</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>52562</LineID>
+                </Text>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END RECIPELIST -->
+
+    <!-- START BUILDING - BLANK -->
+    <ModOp Type="addNextSibling" GUID='134629'>
+        <Asset>
+            <Template>Mall</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004622</GUID>
+                    <Name>Jewelry Store - Blank</Name>
+                    <IconFilename>data\graphics\icons\icon_jewelrystore.png</IconFilename>
+                    <InfoDescription>137243</InfoDescription>
+                    <!--Malls Infocorner-->
+                </Standard>
+                <Building/>
+                <Blocking/>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/buildings/public/mall/mall_jewellery_01.cfg</Filename>
+                        </Item>
+                    </Variations>
+                    <Skins>
+                        <DefaultSkinName>1742004622</DefaultSkinName>
+                        <DefaultSkinDescription>23853</DefaultSkinDescription>
+                        <!--ChangeBuildingSkin_toDefaultSkinDesc-->
+                        <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>
+                        <!--Classic-->
+                    </Skins>
+                </Object>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!-- Coins -->
+                            <Amount>30000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010196</Ingredient>                            <!-- Timber - Product -->
+                            <Amount>60</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010205</Ingredient>                            <!-- Bricks - Product -->
+                            <Amount>120</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010218</Ingredient>                            <!-- Steel Beams - Product -->
+                            <Amount>60</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010207</Ingredient>                            <!-- Windows - Product -->
+                            <Amount>80</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010202</Ingredient>                            <!-- Reinforced Concrete - Product -->
+                            <Amount>35</Amount>
+                        </Item>
+                    </Costs>
+                </Cost>
+                <Mesh/>
+                <Selection>
+                    <OnSelection>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </OnSelection>
+                    <ParticipantMessageArcheType>Resident_tier03_atWork</ParticipantMessageArcheType>
+                </Selection>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>Jewelry Store</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>52178</LineID>
+                </Text>
+                <Constructable/>
+                <Locked>
+                    <DLCDependency>410085</DLCDependency>
+                    <!--Anno 1800 DLC - HighLife-->
+                </Locked>
+                <SoundEmitter/>
+                <FactoryBase>
+                    <CycleTime>120</CycleTime>
+                    <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+                    <ClampedMaxTransporterLogisticCost>85</ClampedMaxTransporterLogisticCost>
+                </FactoryBase>
+                <LogisticNode>
+                    <TransporterCountMax>0</TransporterCountMax>
+                </LogisticNode>
+                <Maintenance>
+                    <Maintenances>
+                        <Item>
+                            <Product>1010017</Product>
+                            <!--Money-->
+                            <Amount>400</Amount>
+                            <InactiveAmount>200</InactiveAmount>
+                        </Item>
+                        <Item>
+                            <Product>1010116</Product>
+                            <!--moderate workforce 3-->
+                            <Amount>240</Amount>
+                        </Item>
+                    </Maintenances>
+                </Maintenance>
+                <Industrializable>
+                    <MandatoryIndustrialization>1</MandatoryIndustrialization>
+                </Industrializable>
+                <IncidentInfectable/>
+                <Electrifiable/>
+                <AmbientMoodProvider>
+                    <Murmur>HighLife_Mall_Homeware</Murmur>
+                </AmbientMoodProvider>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                </Attackable>
+                <UpgradeList/>
+                <Pausable>
+                    <CanPauseManually>0</CanPauseManually>
+                </Pausable>
+                <FeedbackController/>
+                <Infolayer/>
+                <BuffFactory>
+                    <ProductionBuffScope>Radius</ProductionBuffScope>
+                    <ProvidesPublicServiceNeed>0</ProvidesPublicServiceNeed>
+                </BuffFactory>
+                <RecipeBuilding>
+                    <RecipeList>1742004620</RecipeList>                    <!-- Jewelry Store - Recipelist -->
+                    <IsBlank>1</IsBlank>
+                </RecipeBuilding>
+                <Culture/>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END BUILDING - BLANK -->
+
+    <!-- START RECIPE - Brooches -->
+    <ModOp Type="addNextSibling" GUID='135104'>
+        <Asset>
+            <Template>Recipe</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004623</GUID>
+                    <Name>Jewelry Store - Brooches</Name>
+                    <IconFilename>data/graphics/icons/icon_recipe_brooches.png</IconFilename>
+                </Standard>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>Jewelry Store - Brooches</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>52403</LineID>
+                </Text>
+                <Recipe>
+                    <RecipeBuilding>1742004625</RecipeBuilding>
+                    <!-- Jewelry Store - Brooches - Building -->
+                    <RecipeDescriptionText>1742004624</RecipeDescriptionText>
+                    <!-- Jewelry Store - Brooches - Recipe - Description -->
+                    <RecipeImage>data/graphics/icons/recipe_bg_brooches.png</RecipeImage>
+                    <RecipeIngredientUIData>
+                        <Item>
+                            <PosX>385</PosX>
+                            <PosY>-20</PosY>
+                            <UICirclePointer>SouthWest</UICirclePointer>
+                        </Item>
+                        <Item>
+                            <PosX>-20</PosX>
+                            <PosY>225</PosY>
+                            <UICirclePointer>NorthEast</UICirclePointer>
+                        </Item>
+                    </RecipeIngredientUIData>
+                </Recipe>
+                <Locked>
+                    <DLCDependency>410085</DLCDependency>
+                    <!--Anno 1800 DLC - HighLife-->
+                </Locked>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END RECIPE - Brooches -->
+
+    <!-- START BUILDING - Brooches -->
+    <ModOp Type="addNextSibling" GUID='135104'>
+        <Asset>
+            <Template>Mall</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004625</GUID>
+                    <Name>Jewelry Store - Brooches</Name>
+                    <IconFilename>data/graphics/icons/icon_recipe_brooches.png</IconFilename>
+                    <InfoDescription>137243</InfoDescription>
+                    <!--Malls Infocorner-->
+                </Standard>
+                <Building/>
+                <Blocking/>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/buildings/public/mall/mall_jewellery_01.cfg</Filename>
+                        </Item>
+                    </Variations>
+                    <Skins>
+                        <DefaultSkinName>1742004622</DefaultSkinName>
+                        <!-- Jewelry Store - Blank -->
+                        <DefaultSkinDescription>23853</DefaultSkinDescription>
+                        <!--ChangeBuildingSkin_toDefaultSkinDesc-->
+                        <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>
+                        <!--Classic-->
+                    </Skins>
+                </Object>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!-- Coins -->
+                            <Amount>30000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010196</Ingredient>                            <!-- Timber - Product -->
+                            <Amount>60</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010205</Ingredient>                            <!-- Bricks - Product -->
+                            <Amount>120</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010218</Ingredient>                            <!-- Steel Beams - Product -->
+                            <Amount>60</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010207</Ingredient>                            <!-- Windows - Product -->
+                            <Amount>80</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010202</Ingredient>                            <!-- Reinforced Concrete - Product -->
+                            <Amount>35</Amount>
+                        </Item>
+                    </Costs>
+                </Cost>
+                <Mesh/>
+                <Selection>
+                    <OnSelection>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </OnSelection>
+                    <ParticipantMessageArcheType>Resident_tier03_atWork</ParticipantMessageArcheType>
+                </Selection>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>Jewelry Store - Brooches</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>52167</LineID>
+                </Text>
+                <Constructable/>
+                <Locked>
+                    <DLCDependency>410085</DLCDependency>
+                    <!--Anno 1800 DLC - HighLife-->
+                </Locked>
+                <SoundEmitter>
+                    <ActiveSounds>
+                        <Item>
+                            <Sound>280018</Sound>
+                            <!--wwe_sfx_bld_highlife_department_store_lp-->
+                        </Item>
+                    </ActiveSounds>
+                </SoundEmitter>
+                <FactoryBase>
+                    <FactoryInputs>
+                        <Item>
+                            <Product>1010256</Product>                            <!-- Pearls-->
+                            <Amount>1</Amount>
+                            <StorageAmount>7</StorageAmount>
+                        </Item>
+                        <Item>
+                            <Product>1957006151</Product>                            <!-- Silver Bars -->
+                            <Amount>1</Amount>
+                            <StorageAmount>7</StorageAmount>
+                        </Item>
+                    </FactoryInputs>
+                    <CycleTime>120</CycleTime>
+                    <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+                    <ClampedMaxTransporterLogisticCost>85</ClampedMaxTransporterLogisticCost>
+                </FactoryBase>
+                <LogisticNode/>
+                <Maintenance>
+                    <Maintenances>
+                        <Item>
+                            <Product>1010017</Product>
+                            <!--Money-->
+                            <Amount>400</Amount>
+                            <InactiveAmount>200</InactiveAmount>
+                        </Item>
+                        <Item>
+                            <Product>1010116</Product>
+                            <!--moderate workforce 3-->
+                            <Amount>240</Amount>
+                        </Item>
+                    </Maintenances>
+                </Maintenance>
+                <Industrializable>
+                    <MandatoryIndustrialization>1</MandatoryIndustrialization>
+                </Industrializable>
+                <IncidentInfectable/>
+                <Electrifiable/>
+                <AmbientMoodProvider>
+                    <Murmur>HighLife_Mall_Homeware</Murmur>
+                </AmbientMoodProvider>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                </Attackable>
+                <UpgradeList/>
+                <Pausable/>
+                <FeedbackController/>
+                <Infolayer/>
+                <BuffFactory>
+                    <ProductionBuffs>
+                        <Item>
+                            <ProductivityBuff>1742004626</ProductivityBuff>
+                            <ProductivityThresholdUp>0.50</ProductivityThresholdUp>
+                            <ProductivityThresholdDown>0.01</ProductivityThresholdDown>
+                        </Item>
+                    </ProductionBuffs>
+                    <ProductionBuffScope>Radius</ProductionBuffScope>
+                    <ProductionBuffDistance>45</ProductionBuffDistance>
+                    <PublicServiceData>
+                        <PublicServices>
+                            <Item>
+                                <PublicService>1742004639</PublicService>                                <!-- Jewelry Store - Product -->
+                            </Item>
+                        </PublicServices>
+                        <FullSatisfactionDistance>44</FullSatisfactionDistance>
+                        <NoSatisfactionDistance>45</NoSatisfactionDistance>
+                    </PublicServiceData>
+                </BuffFactory>
+                <RecipeBuilding>
+                    <RecipeList>1742004620</RecipeList>
+                    <!--RecpieList Jewelry Store-->
+                </RecipeBuilding>
+                <Culture/>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END BUILDING - Brooches -->
+
+    <!-- START TOWNHALLBUFF - Brooches -->
+    <ModOp Type="addNextSibling" GUID='135111'>
+        <Asset>
+            <Template>TownhallBuff</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004626</GUID>
+                    <Name>Jewelry Store - Brooches</Name>
+                    <IconFilename>data/graphics/icons/icon_recipe_brooches.png</IconFilename>
+                </Standard>
+                <ItemEffect>
+                    <EffectTargets>
+                        <Item>
+                            <GUID>190041</GUID>
+                        </Item>
+                    </EffectTargets>
+                    <AllowStacking>0</AllowStacking>
+                </ItemEffect>
+                <Text>
+                    <TextOverride>1742004626</TextOverride>
+                </Text>
+                <BuildingUpgrade/>
+                <Buff/>
+                <PopulationUpgrade>
+                    <ResidentsUpgrade>
+                        <Value>15</Value>
+                    </ResidentsUpgrade>
+                    <InputBenefitModifier>
+                        <Item>
+                            <Product>120030</Product><!-- Spectacles -->
+                            <AdditionalSupply>15</AdditionalSupply>
+                        </Item>
+                    </InputBenefitModifier>
+                </PopulationUpgrade>
+                <ResidenceUpgrade>
+                    <AdditionalHappiness>3</AdditionalHappiness>
+                    <GoodConsumptionUpgrade>
+                        <Item>
+                            <ProvidedNeed>1010250</ProvidedNeed>                            <!-- Jewelry -->
+                            <AmountInPercent>-20</AmountInPercent>
+                        </Item>
+                        <Item>
+                            <ProvidedNeed>120030</ProvidedNeed>                            <!-- Spectacles -->
+                            <AmountInPercent>-25</AmountInPercent>
+                        </Item>
+                        <Item>
+                            <ProvidedNeed>535</ProvidedNeed>        <!-- Local Mail -->
+                            <AmountInPercent>-15</AmountInPercent>
+                        </Item>
+                    </GoodConsumptionUpgrade>
+                </ResidenceUpgrade>
+                <IncidentInfectableUpgrade>
+                    <IncidentRiotIncreaseUpgrade>
+                        <Value>-30</Value>
+                        <Percental>1</Percental>
+                    </IncidentRiotIncreaseUpgrade>
+                </IncidentInfectableUpgrade>
+                <CultureUpgrade/>
+                <InfluenceSourceUpgrade/>
+                <WarehouseUpgrade/>
+                <DistributionUpgrade/>
+                <ItemContainerUpgrade/>
+                <FactoryUpgrade/>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END TOWNHALLBUFF - Brooches -->
+
+    <!-- START PRODUCT - Brooches -->
+        <ModOp Type="addNextSibling" GUID='135111'>
+        <Asset>
+            <Template>Product</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004640</GUID>
+                    <Name>Brooches Need</Name>
+                    <IconFilename>data/graphics/icons/icon_recipe_brooches.png</IconFilename>
+                </Standard>
+                <Text>
+                    <TextOverride>1742004623</TextOverride>
+                </Text>
+                <Locked/>
+                <Product>
+                    <ProductColor>-11415604</ProductColor>
+                    <StorageLevel>Building</StorageLevel>
+                    <ProductCategory>135875</ProductCategory>
+                    <!--Product Category Commercial Supply-->
+                    <IsAbstract>1</IsAbstract>
+                    <AssociatedRegion>Moderate</AssociatedRegion>
+                </Product>
+                <ExpeditionAttribute/>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END PRODUCT - Brooches -->
+
+    <!-- START RECIPE - Earrings -->
+    <ModOp Type="addNextSibling" GUID='135104'>
+        <Asset>
+            <Template>Recipe</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004627</GUID>
+                    <Name>Jewelry Store - Earrings</Name>
+                    <IconFilename>data/graphics/icons/icon_recipe_earrings.png</IconFilename>
+                </Standard>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>Jewelry Store - Earrings</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>52403</LineID>
+                </Text>
+                <Recipe>
+                    <RecipeBuilding>1742004629</RecipeBuilding>
+                    <!-- Jewelry Store - Earrings - Building -->
+                    <RecipeDescriptionText>1742004628</RecipeDescriptionText>
+                    <!-- Jewelry Store - Earrings - Recipe - Description -->
+                    <RecipeImage>data/graphics/icons/recipe_bg_earrings.png</RecipeImage>
+                    <RecipeIngredientUIData>
+                        <Item>
+                            <PosX>380</PosX>
+                            <PosY>70</PosY>
+                            <UICirclePointer>SouthWest</UICirclePointer>
+                        </Item>
+                        <Item>
+                            <PosX>35</PosX>
+                            <PosY>85</PosY>
+                            <UICirclePointer>SouthEast</UICirclePointer>
+                        </Item>
+                    </RecipeIngredientUIData>
+                </Recipe>
+                <Locked>
+                    <DLCDependency>410085</DLCDependency>
+                    <!--Anno 1800 DLC - HighLife-->
+                </Locked>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END RECIPE - Earrings -->
+
+    <!-- START BUILDING - Earrings -->
+    <ModOp Type="addNextSibling" GUID='135104'>
+        <Asset>
+            <Template>Mall</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004629</GUID>
+                    <Name>Jewelry Store - Earrings</Name>
+                    <IconFilename>data/graphics/icons/icon_recipe_earrings.png</IconFilename>
+                    <InfoDescription>137243</InfoDescription>
+                    <!--Malls Infocorner-->
+                </Standard>
+                <Building/>
+                <Blocking/>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/buildings/public/mall/mall_jewellery_01.cfg</Filename>
+                        </Item>
+                    </Variations>
+                    <Skins>
+                        <DefaultSkinName>1742004622</DefaultSkinName>
+                        <!-- Jewelry Store - Blank -->
+                        <DefaultSkinDescription>23853</DefaultSkinDescription>
+                        <!--ChangeBuildingSkin_toDefaultSkinDesc-->
+                        <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>
+                        <!--Classic-->
+                    </Skins>
+                </Object>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!-- Coins -->
+                            <Amount>30000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010196</Ingredient>                            <!-- Timber - Product -->
+                            <Amount>60</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010205</Ingredient>                            <!-- Bricks - Product -->
+                            <Amount>120</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010218</Ingredient>                            <!-- Steel Beams - Product -->
+                            <Amount>60</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010207</Ingredient>                            <!-- Windows - Product -->
+                            <Amount>80</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010202</Ingredient>                            <!-- Reinforced Concrete - Product -->
+                            <Amount>35</Amount>
+                        </Item>
+                    </Costs>
+                </Cost>
+                <Mesh/>
+                <Selection>
+                    <OnSelection>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </OnSelection>
+                    <ParticipantMessageArcheType>Resident_tier03_atWork</ParticipantMessageArcheType>
+                </Selection>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>Jewelry Store - Earrings</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>52167</LineID>
+                </Text>
+                <Constructable/>
+                <Locked>
+                    <DLCDependency>410085</DLCDependency>
+                    <!--Anno 1800 DLC - HighLife-->
+                </Locked>
+                <SoundEmitter>
+                    <ActiveSounds>
+                        <Item>
+                            <Sound>280018</Sound>
+                            <!--wwe_sfx_bld_highlife_department_store_lp-->
+                        </Item>
+                    </ActiveSounds>
+                </SoundEmitter>
+                <FactoryBase>
+                    <FactoryInputs>
+                        <Item>
+                            <Product>1999005087</Product>                            <!-- Diamonds -->
+                            <Amount>1</Amount>
+                            <StorageAmount>7</StorageAmount>
+                        </Item>
+                        <Item>
+                            <Product>1010249</Product>                            <!-- Gold -->
+                            <Amount>1</Amount>
+                            <StorageAmount>7</StorageAmount>
+                        </Item>
+                    </FactoryInputs>
+                    <CycleTime>120</CycleTime>
+                    <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+                    <ClampedMaxTransporterLogisticCost>85</ClampedMaxTransporterLogisticCost>
+                </FactoryBase>
+                <LogisticNode/>
+                <Maintenance>
+                    <Maintenances>
+                        <Item>
+                            <Product>1010017</Product>
+                            <!--Money-->
+                            <Amount>400</Amount>
+                            <InactiveAmount>200</InactiveAmount>
+                        </Item>
+                        <Item>
+                            <Product>1010116</Product>
+                            <!--moderate workforce 3-->
+                            <Amount>240</Amount>
+                        </Item>
+                    </Maintenances>
+                </Maintenance>
+                <Industrializable>
+                    <MandatoryIndustrialization>1</MandatoryIndustrialization>
+                </Industrializable>
+                <IncidentInfectable/>
+                <Electrifiable/>
+                <AmbientMoodProvider>
+                    <Murmur>HighLife_Mall_Homeware</Murmur>
+                </AmbientMoodProvider>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                </Attackable>
+                <UpgradeList/>
+                <Pausable/>
+                <FeedbackController/>
+                <Infolayer/>
+                <BuffFactory>
+                    <ProductionBuffs>
+                        <Item>
+                            <ProductivityBuff>1742004630</ProductivityBuff>
+                            <ProductivityThresholdUp>0.50</ProductivityThresholdUp>
+                            <ProductivityThresholdDown>0.01</ProductivityThresholdDown>
+                        </Item>
+                    </ProductionBuffs>
+                    <ProductionBuffScope>Radius</ProductionBuffScope>
+                    <ProductionBuffDistance>45</ProductionBuffDistance>
+                    <PublicServiceData>
+                        <PublicServices>
+                            <Item>
+                                <PublicService>1742004639</PublicService>                                <!-- Jewelry Store - Product -->
+                            </Item>
+                        </PublicServices>
+                        <FullSatisfactionDistance>44</FullSatisfactionDistance>
+                        <NoSatisfactionDistance>45</NoSatisfactionDistance>
+                    </PublicServiceData>
+                </BuffFactory>
+                <RecipeBuilding>
+                    <RecipeList>1742004620</RecipeList>
+                    <!-- RecpieList Jewelry Store -->
+                </RecipeBuilding>
+                <Culture/>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END BUILDING - Earrings -->
+
+    <!-- START TOWNHALLBUFF - Earrings -->
+    <ModOp Type="addNextSibling" GUID='135111'>
+        <Asset>
+            <Template>TownhallBuff</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004630</GUID>
+                    <Name>Jewelry Store - Earrings</Name>
+                    <IconFilename>data/graphics/icons/icon_recipe_earrings.png</IconFilename>
+                </Standard>
+                <ItemEffect>
+                    <EffectTargets>
+                        <Item>
+                            <GUID>190041</GUID>
+                        </Item>
+                    </EffectTargets>
+                    <AllowStacking>0</AllowStacking>
+                </ItemEffect>
+                <Text>
+                    <TextOverride>1742004627</TextOverride>
+                </Text>
+                <BuildingUpgrade/>
+                <Buff/>
+                <PopulationUpgrade>
+                    <ResidentsUpgrade>
+                        <Value>20</Value>
+                    </ResidentsUpgrade>
+                    <InputBenefitModifier>
+                        <Item>
+                            <Product>1010247</Product><!-- Fur Coats -->
+                            <AdditionalSupply>20</AdditionalSupply>
+                        </Item>
+                    </InputBenefitModifier>
+                </PopulationUpgrade>
+                <ResidenceUpgrade>
+                    <AdditionalHappiness>2</AdditionalHappiness>
+                    <GoodConsumptionUpgrade>
+                        <Item>
+                            <ProvidedNeed>1010250</ProvidedNeed>                            <!-- Jewelry -->
+                            <AmountInPercent>-20</AmountInPercent>
+                        </Item>
+                        <Item>
+                            <ProvidedNeed>1010247</ProvidedNeed>                            <!-- Fur Coats -->
+                            <AmountInPercent>-25</AmountInPercent>
+                        </Item>
+                        <Item>
+                            <ProvidedNeed>536</ProvidedNeed>        <!-- Regional Mail -->
+                            <AmountInPercent>-20</AmountInPercent>
+                        </Item>
+                    </GoodConsumptionUpgrade>
+                </ResidenceUpgrade>
+                <IncidentInfectableUpgrade>
+                    <IncidentRiotIncreaseUpgrade>
+                        <Value>-40</Value>
+                        <Percental>1</Percental>
+                    </IncidentRiotIncreaseUpgrade>
+                </IncidentInfectableUpgrade>
+                <CultureUpgrade/>
+                <InfluenceSourceUpgrade/>
+                <WarehouseUpgrade/>
+                <DistributionUpgrade/>
+                <ItemContainerUpgrade/>
+                <FactoryUpgrade/>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END TOWNHALLBUFF - Earrings -->
+
+    <!-- START PRODUCT - Earrings -->
+    <ModOp Type="addNextSibling" GUID='135111'>
+        <Asset>
+            <Template>Product</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004641</GUID>
+                    <Name>Earrings Need</Name>
+                    <IconFilename>data/graphics/icons/icon_recipe_earrings.png</IconFilename>
+                </Standard>
+                <Text>
+                    <TextOverride>1742004627</TextOverride>
+                </Text>
+                <Locked/>
+                <Product>
+                    <ProductColor>-11415604</ProductColor>
+                    <StorageLevel>Building</StorageLevel>
+                    <ProductCategory>135875</ProductCategory>
+                    <!--Product Category Commercial Supply-->
+                    <IsAbstract>1</IsAbstract>
+                    <AssociatedRegion>Moderate</AssociatedRegion>
+                </Product>
+                <ExpeditionAttribute/>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END PRODUCT - Earrings -->
+
+    <!-- START RECIPE - Necklaces -->
+    <ModOp Type="addNextSibling" GUID='135104'>
+        <Asset>
+            <Template>Recipe</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004631</GUID>
+                    <Name>Jewelry Store - Necklaces</Name>
+                    <IconFilename>data/graphics/icons/icon_recipe_necklaces.png</IconFilename>
+                </Standard>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>Jewelry Store - Necklaces</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>52403</LineID>
+                </Text>
+                <Recipe>
+                    <RecipeBuilding>1742004633</RecipeBuilding>
+                    <!-- Jewelry Store - Necklaces - Building -->
+                    <RecipeDescriptionText>1742004632</RecipeDescriptionText>
+                    <!-- Jewelry Store - Necklaces - Recipe - Description -->
+                    <RecipeImage>data/graphics/icons/recipe_bg_necklaces.png</RecipeImage>
+                    <RecipeIngredientUIData>
+                        <Item>
+                            <PosX>325</PosX>
+                            <PosY>140</PosY>
+                            <UICirclePointer>SouthWest</UICirclePointer>
+                        </Item>
+                        <Item>
+                            <PosX>40</PosX>
+                            <PosY>135</PosY>
+                            <UICirclePointer>NorthEast</UICirclePointer>
+                        </Item>
+                    </RecipeIngredientUIData>
+                </Recipe>
+                <Locked>
+                    <DLCDependency>410085</DLCDependency>
+                    <!--Anno 1800 DLC - HighLife-->
+                </Locked>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END RECIPE - Necklaces -->
+
+    <!-- START BUILDING - Necklaces -->
+    <ModOp Type="addNextSibling" GUID='135104'>
+        <Asset>
+            <Template>Mall</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004633</GUID>
+                    <Name>Jewelry Store - Necklaces</Name>
+                    <IconFilename>data/graphics/icons/icon_recipe_necklaces.png</IconFilename>
+                    <InfoDescription>137243</InfoDescription>
+                    <!--Malls Infocorner-->
+                </Standard>
+                <Building/>
+                <Blocking/>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/buildings/public/mall/mall_jewellery_01.cfg</Filename>
+                        </Item>
+                    </Variations>
+                    <Skins>
+                        <DefaultSkinName>1742004622</DefaultSkinName>
+                        <!-- Jewelry Store - Blank -->
+                        <DefaultSkinDescription>23853</DefaultSkinDescription>
+                        <!--ChangeBuildingSkin_toDefaultSkinDesc-->
+                        <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>
+                        <!--Classic-->
+                    </Skins>
+                </Object>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!-- Coins -->
+                            <Amount>30000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010196</Ingredient>                            <!-- Timber - Product -->
+                            <Amount>60</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010205</Ingredient>                            <!-- Bricks - Product -->
+                            <Amount>120</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010218</Ingredient>                            <!-- Steel Beams - Product -->
+                            <Amount>60</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010207</Ingredient>                            <!-- Windows - Product -->
+                            <Amount>80</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010202</Ingredient>                            <!-- Reinforced Concrete - Product -->
+                            <Amount>35</Amount>
+                        </Item>
+                    </Costs>
+                </Cost>
+                <Mesh/>
+                <Selection>
+                    <OnSelection>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </OnSelection>
+                    <ParticipantMessageArcheType>Resident_tier03_atWork</ParticipantMessageArcheType>
+                </Selection>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>Jewelry Store - Necklaces</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>52167</LineID>
+                </Text>
+                <Constructable/>
+                <Locked>
+                    <DLCDependency>410085</DLCDependency>
+                    <!--Anno 1800 DLC - HighLife-->
+                </Locked>
+                <SoundEmitter>
+                    <ActiveSounds>
+                        <Item>
+                            <Sound>280018</Sound>
+                            <!--wwe_sfx_bld_highlife_department_store_lp-->
+                        </Item>
+                    </ActiveSounds>
+                </SoundEmitter>
+                <FactoryBase>
+                    <FactoryInputs>
+                        <Item>
+                            <Product>1999005087</Product>                            <!-- Diamonds -->
+                            <Amount>1</Amount>
+                            <StorageAmount>7</StorageAmount>
+                        </Item>
+                        <Item>
+                            <Product>1957006151</Product>                            <!-- Silver Bars -->
+                            <Amount>1</Amount>
+                            <StorageAmount>7</StorageAmount>
+                        </Item>
+                    </FactoryInputs>
+                    <CycleTime>120</CycleTime>
+                    <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+                    <ClampedMaxTransporterLogisticCost>85</ClampedMaxTransporterLogisticCost>
+                </FactoryBase>
+                <LogisticNode/>
+                <Maintenance>
+                    <Maintenances>
+                        <Item>
+                            <Product>1010017</Product>
+                            <!--Money-->
+                            <Amount>400</Amount>
+                            <InactiveAmount>200</InactiveAmount>
+                        </Item>
+                        <Item>
+                            <Product>1010116</Product>
+                            <!--moderate workforce 3-->
+                            <Amount>240</Amount>
+                        </Item>
+                    </Maintenances>
+                </Maintenance>
+                <Industrializable>
+                    <MandatoryIndustrialization>1</MandatoryIndustrialization>
+                </Industrializable>
+                <IncidentInfectable/>
+                <Electrifiable/>
+                <AmbientMoodProvider>
+                    <Murmur>HighLife_Mall_Homeware</Murmur>
+                </AmbientMoodProvider>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                </Attackable>
+                <UpgradeList/>
+                <Pausable/>
+                <FeedbackController/>
+                <Infolayer/>
+                <BuffFactory>
+                    <ProductionBuffs>
+                        <Item>
+                            <ProductivityBuff>1742004634</ProductivityBuff>
+                            <ProductivityThresholdUp>0.50</ProductivityThresholdUp>
+                            <ProductivityThresholdDown>0.01</ProductivityThresholdDown>
+                        </Item>
+                    </ProductionBuffs>
+                    <ProductionBuffScope>Radius</ProductionBuffScope>
+                    <ProductionBuffDistance>45</ProductionBuffDistance>
+                    <PublicServiceData>
+                        <PublicServices>
+                            <Item>
+                                <PublicService>1742004639</PublicService>                                <!-- Jewelry Store - Product -->
+                            </Item>
+                        </PublicServices>
+                        <FullSatisfactionDistance>44</FullSatisfactionDistance>
+                        <NoSatisfactionDistance>45</NoSatisfactionDistance>
+                    </PublicServiceData>
+                </BuffFactory>
+                <RecipeBuilding>
+                    <RecipeList>1742004620</RecipeList>
+                    <!-- RecpieList Jewelry Store -->
+                </RecipeBuilding>
+                <Culture/>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END BUILDING - Necklaces -->
+
+    <!-- START TOWNHALLBUFF - Necklaces -->
+    <ModOp Type="addNextSibling" GUID='135111'>
+        <Asset>
+            <Template>TownhallBuff</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004634</GUID>
+                    <Name>Jewelry Store - Necklaces</Name>
+                    <IconFilename>data/graphics/icons/icon_recipe_necklaces.png</IconFilename>
+                </Standard>
+                <ItemEffect>
+                    <EffectTargets>
+                        <Item>
+                            <GUID>190041</GUID>
+                        </Item>
+                    </EffectTargets>
+                    <AllowStacking>0</AllowStacking>
+                </ItemEffect>
+                <Text>
+                    <TextOverride>1742004631</TextOverride>
+                </Text>
+                <BuildingUpgrade/>
+                <Buff/>
+                <PopulationUpgrade>
+                    <ResidentsUpgrade>
+                        <Value>15</Value>
+                    </ResidentsUpgrade>
+                    <InputBenefitModifier>
+                        <Item>
+                            <Product>1010246</Product>            <!-- Pocket Watches -->
+                            <AdditionalSupply>15</AdditionalSupply>
+                        </Item>
+                        <Item>
+                            <Product>1010355</Product>            <!-- Members Club -->
+                            <AdditionalSupply>15</AdditionalSupply>
+                        </Item>
+                    </InputBenefitModifier>
+                </PopulationUpgrade>
+                <ResidenceUpgrade>
+                    <AdditionalHappiness>8</AdditionalHappiness>
+                    <GoodConsumptionUpgrade>
+                        <Item>
+                            <ProvidedNeed>1010250</ProvidedNeed>                            <!-- Jewelry -->
+                            <AmountInPercent>-30</AmountInPercent>
+                        </Item>
+                        <Item>
+                            <ProvidedNeed>1010246</ProvidedNeed>                            <!-- Pocket watches -->
+                            <AmountInPercent>-30</AmountInPercent>
+                        </Item>
+                        <Item>
+                            <ProvidedNeed>2524</ProvidedNeed>        <!-- Overseas Mail -->
+                            <AmountInPercent>-20</AmountInPercent>
+                        </Item>
+                    </GoodConsumptionUpgrade>
+                </ResidenceUpgrade>
+                <IncidentInfectableUpgrade>
+                    <IncidentRiotIncreaseUpgrade>
+                        <Value>-50</Value>
+                        <Percental>1</Percental>
+                    </IncidentRiotIncreaseUpgrade>
+                </IncidentInfectableUpgrade>
+                <CultureUpgrade/>
+                <InfluenceSourceUpgrade/>
+                <WarehouseUpgrade/>
+                <DistributionUpgrade/>
+                <ItemContainerUpgrade/>
+                <FactoryUpgrade/>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END TOWNHALLBUFF - Necklaces -->
+
+    <!-- START PRODUCT - Necklaces -->
+    <ModOp Type="addNextSibling" GUID='135111'>
+        <Asset>
+            <Template>Product</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004642</GUID>
+                    <Name>Necklaces Need</Name>
+                    <IconFilename>data/graphics/icons/icon_recipe_necklaces.png</IconFilename>
+                </Standard>
+                <Text>
+                    <TextOverride>1742004631</TextOverride>
+                </Text>
+                <Locked/>
+                <Product>
+                    <ProductColor>-11415604</ProductColor>
+                    <StorageLevel>Building</StorageLevel>
+                    <ProductCategory>135875</ProductCategory>
+                    <!--Product Category Commercial Supply-->
+                    <IsAbstract>1</IsAbstract>
+                    <AssociatedRegion>Moderate</AssociatedRegion>
+                </Product>
+                <ExpeditionAttribute/>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END PRODUCT - Necklaces -->
+
+    <!-- START RECIPE - Engagement Rings -->
+    <ModOp Type="addNextSibling" GUID='135104'>
+        <Asset>
+            <Template>Recipe</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004635</GUID>
+                    <Name>Jewelry Store - Engagement Rings</Name>
+                    <IconFilename>data/graphics/icons/icon_recipe_engagement_rings.png</IconFilename>
+                </Standard>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>Jewelry Store - Engagement Rings</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>52403</LineID>
+                </Text>
+                <Recipe>
+                    <RecipeBuilding>1742004637</RecipeBuilding>
+                    <!-- Jewelry Store - Engagement Rings - Building -->
+                    <RecipeDescriptionText>1742004636</RecipeDescriptionText>
+                    <!-- Jewelry Store - Engagement Rings - Recipe - Description -->
+                    <RecipeImage>data/graphics/icons/recipe_bg_engagement_rings.png</RecipeImage>
+                    <RecipeIngredientUIData>
+                        <Item>
+                            <PosX>65</PosX>
+                            <PosY>35</PosY>
+                            <UICirclePointer>SouthEast</UICirclePointer>
+                        </Item>
+                        <Item>
+                            <PosX>395</PosX>
+                            <PosY>110</PosY>
+                            <UICirclePointer>SouthWest</UICirclePointer>
+                        </Item>
+                        <Item>
+                            <PosX>-30</PosX>
+                            <PosY>220</PosY>
+                            <UICirclePointer>NorthEast</UICirclePointer>
+                        </Item>
+                    </RecipeIngredientUIData>
+                </Recipe>
+                <Locked>
+                    <DLCDependency>410085</DLCDependency>
+                    <!--Anno 1800 DLC - HighLife-->
+                </Locked>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END RECIPE - Engagement Rings -->
+
+    <!-- START BUILDING - Engagement Rings -->
+    <ModOp Type="addNextSibling" GUID='135104'>
+        <Asset>
+            <Template>Mall</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004637</GUID>
+                    <Name>Jewelry Store - Engagement Rings</Name>
+                    <IconFilename>data/graphics/icons/icon_recipe_engagement_rings.png</IconFilename>
+                    <InfoDescription>137243</InfoDescription>
+                    <!--Malls Infocorner-->
+                </Standard>
+                <Building/>
+                <Blocking/>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/buildings/public/mall/mall_jewellery_01.cfg</Filename>
+                        </Item>
+                    </Variations>
+                    <Skins>
+                        <DefaultSkinName>1742004622</DefaultSkinName>
+                        <!-- Jewelry Store - Blank -->
+                        <DefaultSkinDescription>23853</DefaultSkinDescription>
+                        <!--ChangeBuildingSkin_toDefaultSkinDesc-->
+                        <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>
+                        <!--Classic-->
+                    </Skins>
+                </Object>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>                            <!-- Coins -->
+                            <Amount>30000</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010196</Ingredient>                            <!-- Timber - Product -->
+                            <Amount>60</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010205</Ingredient>                            <!-- Bricks - Product -->
+                            <Amount>120</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010218</Ingredient>                            <!-- Steel Beams - Product -->
+                            <Amount>60</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010207</Ingredient>                            <!-- Windows - Product -->
+                            <Amount>80</Amount>
+                        </Item>
+                        <Item>
+                            <Ingredient>1010202</Ingredient>                            <!-- Reinforced Concrete - Product -->
+                            <Amount>35</Amount>
+                        </Item>
+                    </Costs>
+                </Cost>
+                <Mesh/>
+                <Selection>
+                    <OnSelection>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <ActionList/>
+                        </Values>
+                    </OnSelection>
+                    <ParticipantMessageArcheType>Resident_tier03_atWork</ParticipantMessageArcheType>
+                </Selection>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>Jewelry Store - Engagement Rings</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>52167</LineID>
+                </Text>
+                <Constructable/>
+                <Locked>
+                    <DLCDependency>410085</DLCDependency>
+                    <!--Anno 1800 DLC - HighLife-->
+                </Locked>
+                <SoundEmitter>
+                    <ActiveSounds>
+                        <Item>
+                            <Sound>280018</Sound>
+                            <!--wwe_sfx_bld_highlife_department_store_lp-->
+                        </Item>
+                    </ActiveSounds>
+                </SoundEmitter>
+                <FactoryBase>
+                    <FactoryInputs>
+                        <Item>
+                            <Product>1999005087</Product>                            <!-- Diamonds -->
+                            <Amount>1</Amount>
+                            <StorageAmount>7</StorageAmount>
+                        </Item>
+                        <Item>
+                            <Product>1010249</Product>                            <!-- Gold -->
+                            <Amount>1</Amount>
+                            <StorageAmount>7</StorageAmount>
+                        </Item>
+                        <Item>
+                            <Product>1010242</Product>                            <!-- Veneers -->
+                            <Amount>1</Amount>
+                            <StorageAmount>7</StorageAmount>
+                        </Item>
+                    </FactoryInputs>
+                    <CycleTime>120</CycleTime>
+                    <ClampMaxTransporterLogisticCost>1</ClampMaxTransporterLogisticCost>
+                    <ClampedMaxTransporterLogisticCost>85</ClampedMaxTransporterLogisticCost>
+                </FactoryBase>
+                <LogisticNode/>
+                <Maintenance>
+                    <Maintenances>
+                        <Item>
+                            <Product>1010017</Product>
+                            <!--Money-->
+                            <Amount>400</Amount>
+                            <InactiveAmount>200</InactiveAmount>
+                        </Item>
+                        <Item>
+                            <Product>1010116</Product>
+                            <!--moderate workforce 3-->
+                            <Amount>240</Amount>
+                        </Item>
+                    </Maintenances>
+                </Maintenance>
+                <Industrializable>
+                    <MandatoryIndustrialization>1</MandatoryIndustrialization>
+                </Industrializable>
+                <IncidentInfectable/>
+                <Electrifiable/>
+                <AmbientMoodProvider>
+                    <Murmur>HighLife_Mall_Homeware</Murmur>
+                </AmbientMoodProvider>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                </Attackable>
+                <UpgradeList/>
+                <Pausable/>
+                <FeedbackController/>
+                <Infolayer/>
+                <BuffFactory>
+                    <ProductionBuffs>
+                        <Item>
+                            <ProductivityBuff>1742004638</ProductivityBuff>
+                            <ProductivityThresholdUp>0.50</ProductivityThresholdUp>
+                            <ProductivityThresholdDown>0.01</ProductivityThresholdDown>
+                        </Item>
+                    </ProductionBuffs>
+                    <ProductionBuffScope>Radius</ProductionBuffScope>
+                    <ProductionBuffDistance>45</ProductionBuffDistance>
+                    <PublicServiceData>
+                        <PublicServices>
+                            <Item>
+                                <PublicService>1742004639</PublicService>                                <!-- Jewelry Store - Product -->
+                            </Item>
+                        </PublicServices>
+                        <FullSatisfactionDistance>44</FullSatisfactionDistance>
+                        <NoSatisfactionDistance>45</NoSatisfactionDistance>
+                    </PublicServiceData>
+                </BuffFactory>
+                <RecipeBuilding>
+                    <RecipeList>1742004620</RecipeList>
+                    <!-- RecpieList Jewelry Store -->
+                </RecipeBuilding>
+                <Culture/>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END BUILDING - Engagement Rings -->
+
+    <!-- START TOWNHALLBUFF - Engagement Rings -->
+    <ModOp Type="addNextSibling" GUID='135111'>
+        <Asset>
+            <Template>TownhallBuff</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004638</GUID>
+                    <Name>Jewelry Store - Engagement Rings</Name>
+                    <IconFilename>data/graphics/icons/icon_recipe_engagement_rings.png</IconFilename>
+                </Standard>
+                <ItemEffect>
+                    <EffectTargets>
+                        <Item>
+                            <GUID>190041</GUID>
+                        </Item>
+                    </EffectTargets>
+                    <AllowStacking>0</AllowStacking>
+                </ItemEffect>
+                <Text>
+                    <TextOverride>1742004635</TextOverride>
+                </Text>
+                <BuildingUpgrade/>
+                <Buff/>
+                <PopulationUpgrade>
+                    <ResidentsUpgrade>
+                        <Value>25</Value>
+                    </ResidentsUpgrade>
+                    <InputBenefitModifier>
+                        <Item>
+                            <Product>1010248</Product>            <!-- Gramophones -->
+                            <AdditionalSupply>25</AdditionalSupply>
+                        </Item>
+                        <Item>
+                            <Product>1010352</Product>            <!-- Variety Theatre -->
+                            <AdditionalSupply>25</AdditionalSupply>
+                        </Item>
+                        <Item>
+                            <Product>120016</Product>            <!-- Champagne -->
+                            <AdditionalSupply>25</AdditionalSupply>
+                        </Item>
+                    </InputBenefitModifier>
+                </PopulationUpgrade>
+                <ResidenceUpgrade>
+                    <AdditionalHappiness>10</AdditionalHappiness>
+                    <GoodConsumptionUpgrade>
+                        <Item>
+                            <ProvidedNeed>1010250</ProvidedNeed>                            <!-- Jewelry -->
+                            <AmountInPercent>-50</AmountInPercent>
+                        </Item>
+                        <Item>
+                            <ProvidedNeed>1010352</ProvidedNeed>                            <!-- Variety Theatre -->
+                            <AmountInPercent>-100</AmountInPercent>
+                        </Item>
+                        <Item>
+                            <ProvidedNeed>120016</ProvidedNeed>                            <!-- Champagne -->
+                            <AmountInPercent>50</AmountInPercent>
+                        </Item>
+                    </GoodConsumptionUpgrade>
+                </ResidenceUpgrade>
+                <IncidentInfectableUpgrade>
+                    <IncidentRiotIncreaseUpgrade>
+                        <Value>-80</Value>
+                        <Percental>1</Percental>
+                    </IncidentRiotIncreaseUpgrade>
+                </IncidentInfectableUpgrade>
+                <CultureUpgrade/>
+                <InfluenceSourceUpgrade/>
+                <WarehouseUpgrade/>
+                <DistributionUpgrade/>
+                <ItemContainerUpgrade/>
+                <FactoryUpgrade/>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END TOWNHALLBUFF - Engagement Rings -->
+
+    <!-- START PRODUCT - Engagement Rings -->
+    <ModOp Type="addNextSibling" GUID='135111'>
+        <Asset>
+            <Template>Product</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004643</GUID>
+                    <Name>Engagement Rings Need</Name>
+                    <IconFilename>data/graphics/icons/icon_recipe_engagement_rings.png</IconFilename>
+                </Standard>
+                <Text>
+                    <TextOverride>1742004635</TextOverride>
+                </Text>
+                <Locked/>
+                <Product>
+                    <ProductColor>-11415604</ProductColor>
+                    <StorageLevel>Building</StorageLevel>
+                    <ProductCategory>135875</ProductCategory>
+                    <!--Product Category Commercial Supply-->
+                    <IsAbstract>1</IsAbstract>
+                    <AssociatedRegion>Moderate</AssociatedRegion>
+                </Product>
+                <ExpeditionAttribute/>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END PRODUCT - Engagement Rings -->
+
+    <!-- START PRODUCT - Jewelry Store -->
+    <ModOp Type="addNextSibling" GUID='135104'>
+        <Asset>
+            <Template>Product</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742004639</GUID>
+                    <Name>Jewelry Store Need</Name>
+                    <IconFilename>data\graphics\icons\icon_jewelrystore.png</IconFilename>
+                </Standard>
+                <Text>
+                    <TextOverride>1742004622</TextOverride>
+                </Text>
+                <Locked>
+                    <DLCDependency>410085</DLCDependency>
+                    <!--Anno 1800 DLC - HighLife-->
+                </Locked>
+                <Product>
+                    <ProductColor>-11415604</ProductColor>
+                    <StorageLevel>Building</StorageLevel>
+                    <ProductCategory>11708</ProductCategory>
+                    <!--Product Category Public Supply-->
+                    <IsAbstract>1</IsAbstract>
+                    <AssociatedRegion>Moderate</AssociatedRegion>
+                </Product>
+                <ExpeditionAttribute/>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END PRODUCT - Jewelry Store -->
+
+    <!-- END - JEWELRY STORE -->
+
 </ModOps>

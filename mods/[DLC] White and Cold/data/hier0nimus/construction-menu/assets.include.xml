@@ -1685,6 +1685,18 @@
   <!-- END - ADD SMALL DEPOT TO ARCTIC COASTAL MENU -->
 
   <!-- START - ADD OW CHAINS CHAINS TO ENGINEERS MENU -->
+  <ModOp Type="add" GUID='500094' Path="/Values/ConstructionCategory/BuildingList/">
+    <Item>
+      <Building>1742004622</Building>      <!-- Jewelry Store - Blank -->
+      <CompactMall />
+    </Item>
+  </ModOp>
+  <ModOp Type="add" GUID='25000192' Path="/Values/ConstructionCategory/BuildingList/">
+    <Item>
+      <Building>1742004622</Building>      <!-- Jewelry Store - Blank -->
+      <CompactMall />
+    </Item>
+  </ModOp>
   <ModOp Type="addNextSibling" GUID='25000192' Path="/Values/ConstructionCategory/BuildingList/Item[Building='500015']">
     <Item>
       <Building>1742004337</Building>      <!-- Corsets - Chain -->
@@ -1712,6 +1724,11 @@
       <Building>1999005648</Building>      <!-- OW Trading Company construction menu - Chain -->
     </Item>
   </ModOp>
+  <ModOp Type="addNextSibling" GUID='500111' Path="/Values/ConstructionCategory/BuildingList/Item[Building='7291']">
+    <Item>
+      <Building>1999005648</Building>      <!-- OW Trading Company construction menu - Chain -->
+    </Item>
+  </ModOp>
   <ModOp Type="add" GUID='1999005648' Path="/Values/ConstructionCategory/BuildingList/">
     <Item>
       <Building>1742004536</Building>      <!-- Export Dock - Animal Bones - Building -->
@@ -1729,6 +1746,14 @@
     </Item>
   </ModOp>
   <!-- END - ADD ICE CHAIN TO OBRERO MENU -->
+
+  <!-- START - ADD SILVER BARS CHAIN TO OBRERO MENU -->
+  <ModOp Type="addNextSibling" GUID='25000194' Condition="!~/Values/ConstructionCategory/BuildingList/Item[Building='1742200041']" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1351']">
+    <Item>
+      <Building>1742200041</Building>      <!-- Silver Bars (NW) - Production Chain -->
+    </Item>
+  </ModOp>
+  <!-- END - ADD SILVER BARS CHAIN TO OBRERO MENU -->
 
   <!-- START - ADD ICE CHAIN TO ELDERS MENU -->
   <ModOp Type="add" GUID='114554' Path="/Values/ConstructionCategory/BuildingList/">
@@ -1750,7 +1775,7 @@
       <Building>1742004331</Building>      <!-- Timber Chain - Building -->
     </Item>
   </ModOp>
-  <!-- END - ADD BUILDINGS TOARCTIC CONSTRUCTION MENU MATERIALS -->
+  <!-- END - ADD BUILDINGS TO ARCTIC CONSTRUCTION MENU MATERIALS -->
 
   <!-- START - ADD BUILDINGS TO ARCTIC CONSTRUCTION MENU NEEDS -->
   <ModOp Type="add" GUID='116344' Path="/Values/ConstructionCategory/BuildingList/">
@@ -1827,7 +1852,7 @@
       <Building>1742004211</Building>      <!-- Sculptures - Chain -->
     </Item>
   </ModOp>
-  <!-- END - ADD BUILDINGS TOARCTIC CONSTRUCTION MENU NEEDS -->
+  <!-- END - ADD BUILDINGS TO ARCTIC CONSTRUCTION MENU NEEDS -->
 
   <!-- START - HIDE NORMAL CANNED FOOD CHAIN IN CONSUMABLES MENU AND ADD NEW -->
   <ModOp Type="add" GUID='116344' Path="/Values/ConstructionCategory/BuildingList/Item[Building='117268']">
