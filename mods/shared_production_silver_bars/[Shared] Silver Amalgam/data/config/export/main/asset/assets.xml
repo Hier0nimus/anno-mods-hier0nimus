@@ -1,0 +1,169 @@
+<!-- This mod was created by Tisogno -->
+<!-- It is declared as "shared" so that other modders are allowed and invited to make free use of it -->
+<!-- But, any changes to the code require permission of the creator -->
+
+<!-- GUIDs:
+	1957006131	Silver Amalgam (asset)
+	1957006231	Silver Amalgam (description)
+	1957006137	Silver Amalgam fake factory (for docklands)
+-->
+
+<ModOps>
+	<!-- Product "Silver Amalgam" -->
+  	<ModOp GUID='11703' Type="addNextSibling">
+    		<Asset>
+      			<Template>Product</Template>
+			<Values>
+  				<Standard>
+    					<GUID>1957006131</GUID>
+    					<Name>Silver Amalgam</Name>
+                    	<IconFilename>data/ui/2kimages/main/3dicons/scenario/goods/icon_cyanide_leacher.png</IconFilename>
+    					<InfoDescription>1957006231</InfoDescription>
+  				</Standard>
+        			<Text>
+          				<LocaText />
+          				<LineID>5385</LineID>
+        			</Text>
+  				<Locked/>
+  				<Product>
+    					<StorageLevel>Building</StorageLevel>
+    					<ProductCategory>11703</ProductCategory>
+    					<BasePrice>800</BasePrice>
+    					<CivLevel>4</CivLevel>
+    					<AssociatedRegion>Moderate;Colony01</AssociatedRegion>
+    					<ProductionRegions>
+      						<Item>
+        						<RegionType>Colony01</RegionType>
+      						</Item>
+    					</ProductionRegions>
+  				</Product>
+  				<ExpeditionAttribute>
+    					<BaseMorale>1</BaseMorale>
+  				</ExpeditionAttribute>
+			</Values>    		
+		</Asset>
+  	</ModOp>
+
+	<!-- Note: -->
+	<!-- 	Here, Silver Amalgam is only assigned to the standard product list (after gold ore) -->
+	<!-- 	It is up to the individual mods to administer other lists for their purposes -->
+	<!-- 	To avoid double entries, they should always check existing contents -->
+    	<ModOp Type="addNextSibling" GUID="120055" Path="/Values/ProductStorageList/ProductList/Item[Product='1010233']" 
+	  	Condition="!~/Values/ProductStorageList/ProductList/Item[Product='1957006131']">	
+      		<Item>
+        		<Product>1957006131</Product>        
+      		</Item>
+    	</ModOp>
+
+	<!-- Adding to docklands trader "Qinsa Mining" -->
+	<ModOp Type="addNextSibling" GUID='131764' Path="/Values/TradeContractFeature/Traders/Item[TraderName='131815']/TradeLevels/Item[Unlock='131844']/Trades/Item[Good='1010256']"
+		Condition="!@131764/.//TradeLevels/Item/Trades[Item/Good='1957006131']"> 
+		<Item>
+			<Level>Rare</Level>		
+			<Good>1957006131</Good>
+		</Item>
+	</ModOp>
+
+	<!-- Fake factory (only for price calculation in docklands) -->
+	<!-- Note: -->
+	<!-- 	The properties of the asset fulfill two purposes: -->
+	<!--	1) determinating a trade price which is as close as possible to the origin of this mod (within "Mayan Treasures") -->
+	<!--	2) guarantueeing full independence from DLCs and any other mods (by using only Vanilla base assets) -->
+   	<ModOp Type="addNextSibling" GUID="1010310" Condition="!//FactoryBase[FactoryOutputs/Item/Product='1957006131']/IsMainFactory[text()='1']">
+    		<Asset>
+      			<Template>FactoryBuilding7</Template>
+     			<Values>
+  				<Standard>
+    					<GUID>1957006137</GUID>
+    					<Name>Fake Factory Silver Amalgam</Name>
+                    			<IconFilename>data/ui/2kimages/main/3dicons/scenario/goods/icon_cyanide_leacher.png</IconFilename>
+  				</Standard>
+   				<Building>
+    					<TerrainType>Coast</TerrainType>
+    					<BuildModeRandomRotation>180</BuildModeRandomRotation>
+    					<AssociatedRegions>Colony01</AssociatedRegions>
+    					<SecondPartyRelevant>0</SecondPartyRelevant>
+  				</Building>
+  				<Blocking>
+    					<GroundDecalAsset>102460</GroundDecalAsset>
+    					<GroundDecalInvisible>102459</GroundDecalInvisible>
+    					<HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+  				</Blocking>
+  				<Cost>
+    					<Costs>
+      						<Item>
+        						<Ingredient>1010017</Ingredient>
+        						<Amount>1200</Amount>
+      						</Item>
+      						<Item>
+        						<Ingredient>1010196</Ingredient>
+        						<Amount>35</Amount>
+      						</Item>
+      						<Item>
+        						<Ingredient>1010205</Ingredient>
+        						<Amount>15</Amount>
+      						</Item>
+      						<Item>
+        						<Ingredient>1010218</Ingredient>
+      						</Item>
+      						<Item>
+        						<Ingredient>1010207</Ingredient>
+      						</Item>
+      						<Item>
+        						<Ingredient>1010202</Ingredient>
+      						</Item>
+    					</Costs>
+  				</Cost>
+  				<Object>
+    					<Variations>
+      						<Item>
+       							<Filename>data/graphics/buildings/production/coastal_02/coastal_02.cfg</Filename>
+      						</Item>
+	    				</Variations>
+  				</Object>
+  				<UpgradeList />
+  				<Factory7 />
+  				<FactoryBase>
+    					<FactoryInputs>
+      						<Item>
+        						<Product>1010233</Product>		<!-- gold ore -->
+        						<Amount>1</Amount>
+        						<StorageAmount>4</StorageAmount>
+      						</Item>
+      						<Item>
+        						<Product>1010226</Product>		<!-- coal -->
+        						<Amount>1</Amount>
+        						<StorageAmount>4</StorageAmount>
+      						</Item>
+    					</FactoryInputs>
+    					<FactoryOutputs>
+      						<Item>
+        						<Product>1957006131</Product>		<!-- Silver Amalgam -->
+        						<Amount>1</Amount>
+        						<StorageAmount>3</StorageAmount>
+      						</Item>
+    					</FactoryOutputs>
+    					<CycleTime>180</CycleTime>
+    					<IsMainFactory>1</IsMainFactory>
+  				</FactoryBase>
+  				<LogisticNode />
+  				<Maintenance>
+    					<Maintenances>
+      						<Item>
+        						<Product>1010017</Product>
+        						<Amount>170</Amount>
+      						</Item>
+      						<Item>
+        						<Product>1010367</Product>
+        						<Amount>30</Amount>
+      						</Item>
+    					</Maintenances>
+  				</Maintenance>
+  				<Pausable />
+  				<Industrializable />
+  				<Electrifiable />
+      			</Values>
+    		</Asset>
+  	</ModOp>
+</ModOps>
+
