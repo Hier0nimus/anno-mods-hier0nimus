@@ -1,0 +1,1108 @@
+<!-- 
+  
+  [Shared] Shared Production - Silver Bars - v1.3
+  Created by Hier0nimus
+  Enjoy!
+
+  Production building and production chain for Silver bars
+
+  [SHARED] 1742200048 - Silver Bars - Asset pool
+  [SHARED] 1742200041 - Silver Bars - Production Chain
+  [SHARED] 1742200042 - Silver Smelter - Building
+  [SHARED] 1742200043 - Ammonia Plant - Building
+  [SHARED] 1957006132 - Cyanide Leacher - Building
+  [SHARED] 1957006134 - Oxidation Pool - Building
+  [SHARED] 1957006102 - Silver Ore Mine - Building
+  [SHARED] 1957006103 - Silver Ore Mine Workarea - Building
+
+  SHARED GOODS USED FROM SHARED MODS:
+  1957006101	Silver ore (asset)
+  1957006121	Cyanide (asset) > 
+  1957006131	Silver Amalgam (asset)
+  1957006151  Silver Bars (asset)
+
+-->
+
+<ModOps>
+
+  <!-- START ADD GOOD TO ProductStorageList -->
+  <!-- Silver Bars -->
+  <ModOp Type="add" GUID="120055" Condition="!~/Values/ProductStorageList/ProductList/Item[Product='1957006151']" Path="/Values/ProductStorageList/ProductList">
+    <Item>
+      <Product>1957006151</Product>
+    </Item>
+  </ModOp>
+  <!-- END ADD GOOD TO ProductStorageList -->
+
+  <!-- START ADD GOOD TO ProductList - Obrero Unlock / Obrero Workforce -->
+  <!-- Silver Ore -->
+  <ModOp Type="add" GUID="502023,502009" Condition="!~/Values/ProductList/List/Item[Product='1957006101']" Path="/Values/ProductList/List">
+    <Item>
+      <Product>1957006101</Product>      <!-- Silver ore - Product -->
+    </Item>
+  </ModOp>
+  <!-- Cyanide -->
+  <ModOp Type="add" GUID="502023,502009" Condition="!~/Values/ProductList/List/Item[Product='1957006121']" Path="/Values/ProductList/List">
+    <Item>
+      <Product>1957006121</Product>      <!-- Cyanide - Product -->
+    </Item>
+  </ModOp>
+  <!-- Silver Amalgam -->
+  <ModOp Type="add" GUID="502023,502009" Condition="!~/Values/ProductList/List/Item[Product='1957006131']" Path="/Values/ProductList/List">
+    <Item>
+      <Product>1957006131</Product>      <!-- Silver Amalgam - Product -->
+    </Item>
+  </ModOp>
+  <!-- Silver Bars -->
+  <ModOp Type="add" GUID="502023,502009" Condition="!~/Values/ProductList/List/Item[Product='1957006151']" Path="/Values/ProductList/List">
+    <Item>
+      <Product>1957006151</Product>      <!-- Silver Bars - Product -->
+    </Item>
+  </ModOp>
+  <!-- END ADD GOOD TO ProductList - Obrero Unlock / Obrero Workforce -->
+
+  <!-- START ADD GOOD TO ProductList - Category -->
+  <!-- Silver Ore -->
+  <ModOp Type="add" GUID="502050" Condition="!~/Values/ProductList/List/Item[Product='1957006101']" Path="/Values/ProductList/List">
+    <Item>
+      <Product>1957006101</Product>
+    </Item>
+  </ModOp>
+  <!-- Cyanide -->
+  <ModOp Type="add" GUID="502044" Condition="!~/Values/ProductList/List/Item[Product='1957006121']" Path="/Values/ProductList/List">
+    <Item>
+      <Product>1957006121</Product>
+    </Item>
+  </ModOp>
+  <!-- Silver Amalgam -->
+  <ModOp Type="add" GUID="502044" Condition="!~/Values/ProductList/List/Item[Product='1957006131']" Path="/Values/ProductList/List">
+    <Item>
+      <Product>1957006131</Product>
+    </Item>
+  </ModOp>
+  <!-- Silver Bars -->
+  <ModOp Type="add" GUID="502044" Condition="!~/Values/ProductList/List/Item[Product='1957006151']" Path="/Values/ProductList/List">
+    <Item>
+      <Product>1957006151</Product>
+    </Item>
+  </ModOp>
+  <!-- END ADD GOOD TO ProductList - Category -->
+
+  <!-- START ASSET POOL - Silver Bars -->
+  <ModOp Type="addNextSibling" GUID='500091'>
+    <Asset>
+      <Template>AssetPool</Template>
+      <Values>
+        <Standard>
+          <GUID>1742200048</GUID>
+          <Name>AssetPool Silver Bars</Name>
+        </Standard>
+        <AssetPool>
+          <AssetList>
+            <Item>
+              <Asset>1957006101</Asset>
+            </Item>
+            <Item>
+              <Asset>1957006121</Asset>
+            </Item>
+            <Item>
+              <Asset>1957006131</Asset>
+            </Item>
+            <Item>
+              <Asset>1957006151</Asset>
+            </Item>
+            <Item>
+              <Asset>1742200041</Asset>
+            </Item>
+            <Item>
+              <Asset>1742200042</Asset>
+            </Item>
+            <Item>
+              <Asset>1742200043</Asset>
+            </Item>
+            <Item>
+              <Asset>1957006132</Asset>
+            </Item>
+            <Item>
+              <Asset>1957006134</Asset>
+            </Item>
+            <Item>
+              <Asset>1957006102</Asset>
+            </Item>
+            <Item>
+              <Asset>1957006103</Asset>
+            </Item>
+          </AssetList>
+        </AssetPool>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END ASSET POOL - Silver Bars -->
+
+  <!-- START BUILDING - Silver Smelter -->
+  <ModOp Type="addNextSibling" GUID='1010284'>
+    <Asset>
+      <Template>FactoryBuilding7</Template>
+      <Values>
+        <Standard>
+          <GUID>1742200042</GUID>
+          <Name>Silver Smelter</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/scenario/goods/icon_silver_smelter.png</IconFilename>
+          <InfoDescription>11143</InfoDescription>
+        </Standard>
+        <Building>
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <AssociatedRegions>Colony01</AssociatedRegions>
+          <SecondPartyRelevant>0</SecondPartyRelevant>
+        </Building>
+        <Blocking/>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <!--Money-->
+              <Amount>900</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>
+              <!--timber-->
+              <Amount>30</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>
+              <!--bricks-->
+              <Amount>25</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>
+              <!--beams-->
+              <Amount>12</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>
+              <!--window-->
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010202</Ingredient>
+              <!--concrete-->
+              <Amount>10</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/dlc10/graphics/buildings/production/heavy_02/heavy_02.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Mesh/>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>SA_Resident_tier02_atWork</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Silver Smelter</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>54579</LineID>
+        </Text>
+        <Constructable/>
+        <Locked/>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>200802</Sound>
+              <!--wwe_sfx_bld_factory_col01_typeCluster_tag-->
+            </Item>
+            <Item>
+              <Sound>202247</Sound>
+              <!--wwe_sfx_bld_heavy_02_lp-->
+            </Item>
+          </ActiveSounds>
+          <IncidentSounds>
+            <InfectedFire>
+              <Item>
+                <Sound>214659</Sound>
+                <!--wwe_sfx_bld_inc_burn-->
+              </Item>
+            </InfectedFire>
+          </IncidentSounds>
+        </SoundEmitter>
+        <FeedbackController/>
+        <Infolayer/>
+        <UpgradeList/>
+        <Factory7/>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1957006131</Product>              <!-- Silver Amalgam -->
+              <Amount>1</Amount>
+              <StorageAmount>3</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1010226</Product>              <!-- Coal -->
+              <Amount>1</Amount>
+              <StorageAmount>3</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <FactoryOutputs>
+            <Item>
+              <Product>1957006151</Product>
+              <!--Silver Bars-->
+              <Amount>1</Amount>
+              <StorageAmount>2</StorageAmount>
+            </Item>
+          </FactoryOutputs>
+          <CycleTime>60</CycleTime>
+          <IsMainFactory>0</IsMainFactory>
+        </FactoryBase>
+        <LogisticNode/>
+        <AmbientMoodProvider>
+          <DynamicEnvironmentType>None</DynamicEnvironmentType>
+        </AmbientMoodProvider>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <!--Money-->
+              <Amount>50</Amount>
+              <InactiveAmount>25</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1010367</Product>
+              <!--colony workforce 2-->
+              <Amount>80</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+          <MaximumHitPoints>4000</MaximumHitPoints>
+          <SelfHealPerHealTick>4</SelfHealPerHealTick>
+        </Attackable>
+        <Pausable/>
+        <IncidentInfectable>
+          <Explosion>
+            <ExplosionCoreDamage>1000</ExplosionCoreDamage>
+          </Explosion>
+          <IncidentInfectionChanceFactors>
+            <Fire>
+              <DensityDistance>20</DensityDistance>
+              <FactoryProductivityFactor>0.1</FactoryProductivityFactor>
+              <FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
+            </Fire>
+          </IncidentInfectionChanceFactors>
+        </IncidentInfectable>
+        <Industrializable>
+          <BoostedByIndustrialization>0</BoostedByIndustrialization>
+        </Industrializable>
+        <Culture>
+          <CultureType>Culture</CultureType>
+        </Culture>
+        <QuestObject/>
+        <Electrifiable/>
+        <EcoSystemProvider/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - Silver Smelter -->
+
+  <!-- START BUILDING - Ammonia Plant -->
+  <ModOp Type="addNextSibling" GUID='1010284'>
+    <Asset>
+      <Template>BuffFactoryModule</Template>
+      <Values>
+        <Standard>
+          <GUID>1742200043</GUID>
+          <Name>Ammonia Plant</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/scenario/goods/icon_ammonia.png</IconFilename>
+          <InfoDescription>11143</InfoDescription>
+        </Standard>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Ammonia Plant</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>54581</LineID>
+        </Text>
+        <Building>
+          <BuildingCategoryName>100000</BuildingCategoryName>
+          <!--Production-->
+          <AssociatedRegions>Colony01</AssociatedRegions>
+          <SecondPartyRelevant>0</SecondPartyRelevant>
+        </Building>
+        <Blocking/>
+        <Mesh/>
+        <BuffFactory>
+          <ProductionBuffDistance>20</ProductionBuffDistance>
+          <BaseBuff>24806</BaseBuff>          <!--Dung_Buff-->
+          <BaseBuffScope>Radius</BaseBuffScope>
+          <BaseBuffDistance>20</BaseBuffDistance>
+        </BuffFactory>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>24807</Product>
+              <!--Dung-->
+              <Amount>1</Amount>
+              <StorageAmount>6</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1010232</Product>
+              <!--salpeter-->
+              <Amount>1</Amount>
+              <StorageAmount>6</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <FactoryOutputs>
+            <Item>
+              <Product>1957006121</Product>
+              <!--Cyanide-->
+              <Amount>1</Amount>
+              <StorageAmount>6</StorageAmount>
+            </Item>
+          </FactoryOutputs>
+          <CycleTime>30</CycleTime>
+          <IsMainFactory>0</IsMainFactory>
+        </FactoryBase>
+        <FeedbackController/>
+        <Pausable/>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>SA_Resident_tier02_atWork</ParticipantMessageArcheType>
+        </Selection>
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+        </Attackable>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <!--Money-->
+              <Amount>10</Amount>
+              <InactiveAmount>5</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1010367</Product>
+              <!--colony workforce 2-->
+              <Amount>60</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <AmbientMoodProvider/>
+        <LogisticNode/>
+        <Constructable/>
+        <Locked/>
+        <IncidentInfectable/>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/dlc10/graphics/buildings/special/hacienda/fertilizer_module/fertilizer_module_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>200802</Sound>
+              <!--wwe_sfx_bld_factory_col01_typeCluster_tag-->
+            </Item>
+            <Item>
+              <Sound>282231</Sound>
+              <!--wwe_sfx_bld_dlc10_hacienda_fertilizer_lp-->
+            </Item>
+          </ActiveSounds>
+        </SoundEmitter>
+        <Cost>
+          <Costs>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>0</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>BuffFactory</TemplateName>
+                    <Index>0</Index>
+                  </Entry>
+                  <Entry>
+                    <TemplateName>BuffFactoryModule</TemplateName>
+                    <Index>0</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+              <Amount>550</Amount>
+            </Item>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>1</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>BuffFactory</TemplateName>
+                    <Index>1</Index>
+                  </Entry>
+                  <Entry>
+                    <TemplateName>BuffFactoryModule</TemplateName>
+                    <Index>1</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+              <Amount>20</Amount>
+            </Item>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>2</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>BuffFactory</TemplateName>
+                    <Index>2</Index>
+                  </Entry>
+                  <Entry>
+                    <TemplateName>BuffFactoryModule</TemplateName>
+                    <Index>2</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>3</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>BuffFactory</TemplateName>
+                    <Index>3</Index>
+                  </Entry>
+                  <Entry>
+                    <TemplateName>BuffFactoryModule</TemplateName>
+                    <Index>3</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+            </Item>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>4</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>BuffFactory</TemplateName>
+                    <Index>4</Index>
+                  </Entry>
+                  <Entry>
+                    <TemplateName>BuffFactoryModule</TemplateName>
+                    <Index>4</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+            </Item>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>5</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>BuffFactory</TemplateName>
+                    <Index>5</Index>
+                  </Entry>
+                  <Entry>
+                    <TemplateName>BuffFactoryModule</TemplateName>
+                    <Index>5</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+            </Item>
+          </Costs>
+        </Cost>
+        <BuildingModule/>
+        <Infolayer/>
+        <UpgradeList/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - Ammonia Plant -->
+
+  <!-- START BUILDING - Cyanide Leacher -->
+  <ModOp Type="addNextSibling" GUID='1010284'>
+    <Asset>
+      <Template>FarmBuilding</Template>
+      <Values>
+        <Standard>
+          <GUID>1957006132</GUID>
+          <Name>Cyanide Leacher</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/scenario/goods/icon_cyanide_leacher.png</IconFilename>
+          <InfoDescription>11143</InfoDescription>
+        </Standard>
+        <Building>
+          <TerrainType>Coast</TerrainType>
+          <BuildModeRandomRotation>90</BuildModeRandomRotation>
+          <AssociatedRegions>Colony01</AssociatedRegions>
+          <SecondPartyRelevant>0</SecondPartyRelevant>
+        </Building>
+        <Blocking>
+          <GroundDecalAsset>102460</GroundDecalAsset>
+          <!--Quay System Colony01 Base-->
+          <GroundDecalInvisible>102459</GroundDecalInvisible>
+          <!--Quay System Colony01 Base Invisible-->
+          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+        </Blocking>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <!--Money-->
+              <Amount>1200</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>
+              <!--timber-->
+              <Amount>35</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>
+              <!--bricks-->
+              <Amount>15</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>
+              <!--beams-->
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>
+              <!--window-->
+              <Amount>5</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010202</Ingredient>
+              <!--concrete-->
+              <Amount>5</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/production/coastal_colony01_cyanide_leacher/coastal_colony01_cyanide_leacher.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Mesh/>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>SA_Resident_tier02_atWork</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Cyanide Leacher</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>54578</LineID>
+        </Text>
+        <Constructable/>
+        <Locked/>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>200802</Sound>
+              <!--wwe_sfx_bld_factory_col01_typeCluster_tag-->
+            </Item>
+            <Item>
+              <Sound>281590</Sound>
+              <!--wwe_sfx_bld_ggj_water_purifier_lp-->
+            </Item>
+          </ActiveSounds>
+          <IncidentSounds>
+            <InfectedFire>
+              <Item>
+                <Sound>214659</Sound>
+                <!--wwe_sfx_bld_inc_burn-->
+              </Item>
+            </InfectedFire>
+          </IncidentSounds>
+        </SoundEmitter>
+        <FeedbackController/>
+        <Infolayer/>
+        <UpgradeList/>
+        <Factory7/>
+        <FactoryBase>
+          <FactoryOutputs>
+            <Item>
+              <Product>25073</Product>
+              <!--FakeProductWaste-->
+              <StorageAmount>1</StorageAmount>
+            </Item>
+          </FactoryOutputs>
+          <CycleTime>180</CycleTime>
+          <MissingConnectionInfolayer>0</MissingConnectionInfolayer>
+          <ProductionOutputInfotip>0</ProductionOutputInfotip>
+          <IsMainFactory>0</IsMainFactory>
+        </FactoryBase>
+        <LogisticNode/>
+        <ModuleOwner>
+          <ModuleLimits>
+            <Main>
+              <Limit>6</Limit>
+            </Main>
+          </ModuleLimits>
+          <ModulesRequiredForFullProductivity>6</ModulesRequiredForFullProductivity>
+          <ConstructionOptions>
+            <Item>
+              <ModuleGUID>1957006134</ModuleGUID>
+              <!--Cyanide Pool Module-->
+            </Item>
+          </ConstructionOptions>
+          <ModuleBuildRadius>12</ModuleBuildRadius>
+        </ModuleOwner>
+        <AmbientMoodProvider>
+          <AmbientMood>AgricultureBuildingsSouthAmerica</AmbientMood>
+        </AmbientMoodProvider>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <!--Money-->
+              <Amount>170</Amount>
+              <InactiveAmount>85</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1010367</Product>
+              <!--colony workforce 2-->
+              <Amount>50</Amount>
+              <InactiveAmount>25</InactiveAmount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+          <MaximumHitPoints>1750</MaximumHitPoints>
+          <SelfHealPerHealTick>4</SelfHealPerHealTick>
+        </Attackable>
+        <IncidentInfectable>
+          <Infectable>
+            <Illness>
+              <Escalated>0</Escalated>
+            </Illness>
+          </Infectable>
+          <Explosion>
+            <ExplosionCoreDamage>1000</ExplosionCoreDamage>
+          </Explosion>
+          <IncidentInfectionChanceFactors>
+            <Fire>
+              <DensityDistance>20</DensityDistance>
+              <FactoryProductivityFactor>0.1</FactoryProductivityFactor>
+              <FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
+            </Fire>
+          </IncidentInfectionChanceFactors>
+        </IncidentInfectable>
+        <Pausable/>
+        <Culture/>
+        <QuestObject/>
+        <Industrializable>
+          <BoostedByIndustrialization>0</BoostedByIndustrialization>
+        </Industrializable>
+        <Motorizable/>
+        <EcoSystemProvider/>
+        <MonoCulture/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - Cyanide Leacher -->
+
+  <!-- START BUILDING - Oxidation Pool -->
+  <ModOp Type="addNextSibling" GUID='1010284'>
+    <Asset>
+      <Template>BuffFactoryModule</Template>
+      <Values>
+        <Standard>
+          <GUID>1957006134</GUID>
+          <Name>Oxidation Pool</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/scenario/goods/icon_fish_pond_module_2.png</IconFilename>
+        </Standard>
+        <Text>
+          <LocaText>
+            <English>
+              <Text>Oxidation Pool</Text>
+              <Status>Exported</Status>
+            </English>
+          </LocaText>
+          <LineID>55287</LineID>
+        </Text>
+        <Building>
+          <AssociatedRegions>Colony01</AssociatedRegions>
+          <SecondPartyRelevant>0</SecondPartyRelevant>
+        </Building>
+        <Blocking/>
+        <Mesh/>
+        <BuffFactory/>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1957006101</Product>
+              <!-- Silver ore-->
+              <Amount>1</Amount>
+              <StorageAmount>3</StorageAmount>
+            </Item>
+            <Item>
+              <Product>1957006121</Product>
+              <!--Cyanide-->
+              <Amount>1</Amount>
+              <StorageAmount>3</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <FactoryOutputs>
+            <Item>
+              <Product>1957006131</Product>
+              <!--SilverDust-->
+              <Amount>1</Amount>
+              <StorageAmount>3</StorageAmount>
+            </Item>
+          </FactoryOutputs>
+          <CycleTime>180</CycleTime>
+          <IsMainFactory>0</IsMainFactory>
+        </FactoryBase>
+        <FeedbackController/>
+        <Pausable/>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>SA_Resident_tier01_atWork</ParticipantMessageArcheType>
+        </Selection>
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+        </Attackable>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <!--Money-->
+              <Amount>200</Amount>
+              <InactiveAmount>100</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1010366</Product>
+              <!--colony workforce 1-->
+              <Amount>10</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <AmbientMoodProvider/>
+        <LogisticNode/>
+        <Constructable/>
+        <Locked/>
+        <IncidentInfectable/>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/dlc10/graphics/buildings/production/aqua_farm_module/aqua_farm_module_colony01_01.cfg</Filename>
+            </Item>
+            <Item>
+              <Filename>data/dlc10/graphics/buildings/production/aqua_farm_module/aqua_farm_module_colony01_02.cfg</Filename>
+            </Item>
+            <Item>
+              <Filename>data/dlc10/graphics/buildings/production/aqua_farm_module/aqua_farm_module_colony01_03.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>282241</Sound>
+              <!--wwe_sfx_bld_dlc10_cyanide_pool_lp-->
+            </Item>
+          </ActiveSounds>
+        </SoundEmitter>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <Amount>200</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>
+              <Amount>10</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <BuildingModule/>
+        <Infolayer/>
+        <UpgradeList/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - Oxidation Pool -->
+
+  <!-- START BUILDING - Silver Ore Mine -->
+  <ModOp Type="addNextSibling" GUID='1010311'>
+    <Asset>
+      <BaseAssetGUID>1010311</BaseAssetGUID>      <!--mining_08 (Gold Ore Mine)-->
+      <Values>
+        <Standard>
+          <GUID>1957006102</GUID>
+          <Name>Silver Ore Mine</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_iron_ore.png</IconFilename>
+          <InfoDescription>11143</InfoDescription>
+        </Standard>
+        <Building>
+          <AssociatedRegions>Colony01</AssociatedRegions>
+          <SecondPartyRelevant>0</SecondPartyRelevant>
+        </Building>
+        <Blocking/>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <Amount>2500</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>
+              <Amount>20</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>
+              <Amount>25</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data\dlc10\graphics\buildings\production\mining_colony01_05\mining_colony01_05.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Mesh/>
+        <Selection>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+          <ParticipantMessageArcheType>SA_Resident_tier02_atWork</ParticipantMessageArcheType>
+        </Selection>
+        <Text>
+          <LineID>11033</LineID>
+        </Text>
+        <Constructable/>
+        <Locked/>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>202274</Sound>
+              <!--wwe_sfx_bld_mining_cart_lp-->
+            </Item>
+          </ActiveSounds>
+        </SoundEmitter>
+        <FeedbackController/>
+        <Infolayer/>
+        <UpgradeList/>
+        <Factory7/>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1591</Product>
+              <!--FakeInputMineralResource-->
+              <StorageAmount>6</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <FactoryOutputs>
+            <Item>
+              <Product>1957006101</Product>              <!-- Silver Ore -->
+              <Amount>1</Amount>
+              <StorageAmount>6</StorageAmount>
+            </Item>
+          </FactoryOutputs>
+          <CycleTime>90</CycleTime>
+          <IsMainFactory>0</IsMainFactory>
+        </FactoryBase>
+        <LogisticNode/>
+        <Slot>
+          <SlotType>GoldOre</SlotType>
+          <WorkArea>1957006103</WorkArea>
+        </Slot>
+        <AmbientMoodProvider/>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>250</Amount>
+              <InactiveAmount>125</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>1010367</Product>
+              <Amount>100</Amount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <Attackable/>
+        <Pausable/>
+        <IncidentInfectable/>
+        <Culture/>
+        <Industrializable/>
+        <Electrifiable>
+          <ElectrifiedEffect>0</ElectrifiedEffect>
+        </Electrifiable>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - Silver Ore Mine -->
+
+  <!-- START BUILDING - Silver Mine Workarea -->
+  <ModOp Type="addNextSibling" GUID='1010549'>
+    <Asset>
+      <BaseAssetGUID>1010549</BaseAssetGUID>
+      <Values>
+        <Standard>
+          <GUID>1957006103</GUID>
+          <Name>Silver Ore Mine Workarea</Name>
+        </Standard>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/production/mining_colony01_silver_slot_01/mining_colony01_silver_slot_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END BUILDING - Silver Mine Workarea -->
+
+  <!-- START - Adding carts to workarea Silver Ore Mine -->
+  <ModOp Type="add" GUID="141486" Path="/Values/FeedbackSessionDescription/MineLorryConfig/LorryVariants">
+    <Item>
+      <MineToSpawnAt>1957006103</MineToSpawnAt>
+      <LorryEmpty>141431</LorryEmpty>
+      <LorryFull>141433</LorryFull>
+    </Item>
+  </ModOp>
+  <!-- END - Adding carts to workarea Silver Ore Mine -->
+
+  <!-- START PRODUCTION CHAIN - Silver Bars -->
+  <ModOp Type="addNextSibling" GUID='500091'>
+    <Asset>
+      <Template>ProductionChain</Template>
+      <Values>
+        <Standard>
+          <GUID>1742200041</GUID>
+          <Name>Silver Bars Production Chain</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/scenario/goods/icon_silver_smelter.png</IconFilename>
+        </Standard>
+        <ProductionChain>
+          <Building>1742200042</Building>          <!--Silver Smelter-->
+          <Tier1>
+            <Item>
+              <Building>1345</Building>              <!-- Charcoal Kiln Colony01 -->
+            </Item>
+            <Item>
+              <Building>1957006132</Building>              <!-- Cyanide Leacher -->
+              <Tier2>
+                <Item>
+                  <Building>1742200043</Building>                  <!-- Ammonia Plant -->
+                  <Tier3>
+                    <Item>
+                      <Building>1010310</Building>                      <!--coastal_02 (Niter Coast Building)-->
+                    </Item>
+                  </Tier3>
+                </Item>
+                <Item>
+                  <Building>1957006102</Building>                  <!-- Silver Ore Mine -->
+                </Item>
+              </Tier2>
+            </Item>
+          </Tier1>
+        </ProductionChain>
+        <Locked/>
+        <Text>
+          <TextOverride>1957006151</TextOverride>
+        </Text>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PRODUCTION CHAIN - Silver Bars -->
+
+  <!-- START ADD BUILDINGS TO POOLS -->
+  <!-- Silver Ore Mine -->
+  <ModOp Type="add" GUID="368,6000018,193856,193875,190786,190882" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
+    <Item>
+      <GUID>1957006102</GUID>
+    </Item>
+  </ModOp>
+  <!-- Cyanide Leacher -->
+  <ModOp Type="add" GUID='368,6000018,193856,193400,193771' Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
+    <Item>
+      <GUID>1957006132</GUID>
+    </Item>
+  </ModOp>
+  <!-- Oxidation Pool -->
+  <ModOp Type="add" GUID='368,6000018,193856' Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
+    <Item>
+      <GUID>1957006134</GUID>
+    </Item>
+  </ModOp>
+  <!-- Silver Smelter -->
+  <ModOp Type="add" GUID='368,6000018,193856,193875,193771' Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
+    <Item>
+      <GUID>1742200042</GUID>
+    </Item>
+  </ModOp>
+  <!-- END ADD BUILDINGS TO POOLS -->
+
+  <!-- START ADD BUILDINGS TO BOOSTABLE FACTORIES -->
+  <ModOp Type="add" GUID='25000087' Path="/Values/WorkforceMenu/BoostableFactories">
+    <Item>
+      <Factory>1957006102</Factory>
+    </Item>
+    <Item>
+      <Factory>1957006132</Factory>
+    </Item>
+    <Item>
+      <Factory>1957006134</Factory>
+    </Item>
+    <Item>
+      <Factory>1742200042</Factory>
+    </Item>
+  </ModOp>
+  <!-- END ADD BUILDINGS TO BOOSTABLE FACTORIES -->
+
+  <!-- CHANGE ICON DEPOSITS FOR GOLD AND TO MAKE THEM MORE GENERAL -->
+  <ModOp Type="merge" GUID="1010507" Path="/Values/Standard">
+    <IconFilename>data/ui/2kimages/main/3dicons/icon_mineral_desposits.png</IconFilename>
+  </ModOp>
+
+</ModOps>

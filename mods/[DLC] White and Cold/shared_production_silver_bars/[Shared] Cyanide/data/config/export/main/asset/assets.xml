@@ -1,0 +1,167 @@
+<!-- This mod was created by Tisogno -->
+<!-- It is declared as "shared" so that other modders are allowed and invited to make free use of it -->
+<!-- But, any changes to the code require permission of the creator -->
+
+<!-- GUIDs:
+	1957006121	Cyanide (asset)
+	1957006221	Cyanide (description)
+	1957006122	Cyanide fake factory (for docklands)
+-->
+
+
+<ModOps>
+	<!-- Product "Ammonia" -->
+  	<ModOp GUID='11703' Type="addNextSibling">
+    		<Asset>
+      			<Template>Product</Template>
+			<Values>
+  				<Standard>
+    					<GUID>1957006121</GUID>
+    					<Name>Cyanide</Name>
+                    	<IconFilename>data/ui/2kimages/main/3dicons/scenario/goods/icon_ammonia.png</IconFilename>
+    					<InfoDescription>1957006221</InfoDescription>
+  				</Standard>
+        			<Text>
+          				<LocaText />
+          				<LineID>5385</LineID>
+        			</Text>
+  				<Locked/>
+  				<Product>
+    					<StorageLevel>Building</StorageLevel>
+    					<ProductCategory>11703</ProductCategory>
+    					<BasePrice>200</BasePrice>
+    					<CivLevel>4</CivLevel>
+    					<AssociatedRegion>Moderate;Colony01;Africa</AssociatedRegion>
+    					<ProductionRegions>
+      						<Item>
+        						<RegionType>Moderate</RegionType>
+      						</Item>
+      						<Item>
+        						<RegionType>Colony01</RegionType>
+      						</Item>
+    					</ProductionRegions>
+  				</Product>
+  				<ExpeditionAttribute>
+    					<BaseMorale>5</BaseMorale>
+  				</ExpeditionAttribute>
+			</Values>    		
+		</Asset>
+  	</ModOp>
+
+	<!-- Note: -->
+	<!-- 	Here, ammonia is only assigned to the standard product list (after gold ore) -->
+	<!-- 	It is up to the individual mods to administer other lists for their purposes -->
+	<!-- 	To avoid double entries, they should always check existing contents -->
+    	<ModOp Type="addNextSibling" GUID="120055" Path="/Values/ProductStorageList/ProductList/Item[Product='1010233']" 
+	  	Condition="!~/Values/ProductStorageList/ProductList/Item[Product='1957006121']">	
+      		<Item>
+        		<Product>1957006121</Product>        
+      		</Item>
+    	</ModOp>
+
+	<!-- Adding to docklands trader "Promise Trust" -->
+	<ModOp Type="add" GUID='131764' Path="/Values/TradeContractFeature/Traders/Item[TraderName='131817']/TradeLevels/Item[Unlock='131846']/Trades" 
+		Condition="!@131764/.//TradeLevels/Item/Trades[Item/Good='1957006121']"> 
+		<Item>
+			<Level>Rare</Level>			
+			<Good>1957006121</Good>
+		</Item>
+	</ModOp>
+
+	<!-- Fake factory (only for price calculation in docklands) -->
+	<!-- Note: -->
+	<!-- 	The properties of the asset fulfill two purposes: -->
+	<!--	1) determinating a trade price which is as close as possible to the origin of this mod (within "Mayan Treasures") -->
+	<!--	2) guarantueeing full independence from DLCs and any other mods (by using only Vanilla base assets) -->
+   	<ModOp Type="addNextSibling" GUID="1010281" Condition="!//FactoryBase[FactoryOutputs/Item/Product='1957006121']/IsMainFactory[text()='1']">
+    		<Asset>
+      			<Template>FactoryBuilding7</Template>
+     			<Values>
+  				<Standard>
+    					<GUID>1957006122</GUID>
+    					<Name>Fake Factory Cyanide</Name>
+                    			<IconFilename>data/ui/2kimages/main/3dicons/scenario/goods/icon_ammonia.png</IconFilename>
+    					<InfoDescription>1957006222</InfoDescription>
+  				</Standard>
+  				<Building>
+    					<BuildModeRandomRotation>180</BuildModeRandomRotation>
+    					<AssociatedRegions>Colony01</AssociatedRegions>
+    					<SecondPartyRelevant>0</SecondPartyRelevant>
+  				</Building>
+  				<Blocking/>
+  				<Cost>
+    					<Costs>
+      						<Item>
+        						<Ingredient>1010017</Ingredient>
+        						<Amount>1000</Amount>
+      						</Item>
+      						<Item>
+        						<Ingredient>1010196</Ingredient>
+        						<Amount>20</Amount>
+      						</Item>
+      						<Item>
+        						<Ingredient>1010205</Ingredient>
+        						<Amount>15</Amount>
+      						</Item>
+      						<Item>
+        						<Ingredient>1010218</Ingredient>
+        						<Amount>10</Amount>
+      						</Item>
+      						<Item>
+        						<Ingredient>1010202</Ingredient>
+        						<Amount>5</Amount>
+      						</Item>
+    					</Costs>
+  				</Cost>
+  				<Object>
+    					<Variations>
+      						<Item>
+        						<Filename>data/graphics/buildings/production/heavy_03/heavy_03.cfg</Filename>
+      						</Item>
+	    				</Variations>
+  				</Object>
+  				<UpgradeList />
+  				<Factory7 />
+  				<FactoryBase>
+    					<FactoryInputs>
+      						<Item>
+        						<Product>120036</Product>
+        						<Amount>1</Amount>
+        						<StorageAmount>4</StorageAmount>
+      						</Item>
+      						<Item>
+        						<Product>1010232</Product>
+        						<Amount>1</Amount>
+        						<StorageAmount>4</StorageAmount>
+      						</Item>
+    					</FactoryInputs>
+    					<FactoryOutputs>
+      						<Item>
+        						<Product>1957006121</Product>
+        						<Amount>1</Amount>
+        						<StorageAmount>6</StorageAmount>
+      						</Item>
+    					</FactoryOutputs>
+    					<CycleTime>90</CycleTime>
+    					<IsMainFactory>1</IsMainFactory>
+  				</FactoryBase>
+  				<LogisticNode/>
+  				<Maintenance>
+    					<Maintenances>
+      						<Item>
+        						<Product>1010017</Product>
+        						<Amount>150</Amount>
+      						</Item>
+      						<Item>
+        						<Product>1010367</Product>
+        						<Amount>60</Amount>
+      						</Item>
+    					</Maintenances>
+  				</Maintenance>
+  				<Industrializable/>
+  				<Electrifiable/>
+      			</Values>
+    		</Asset>
+  	</ModOp>
+</ModOps>
+
