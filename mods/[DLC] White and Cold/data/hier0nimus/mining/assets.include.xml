@@ -2280,6 +2280,146 @@
   </ModOp>
   <!-- END - BUILDING - Ice Depot (NW) -->
 
+  <!-- START - BUILDING - Ice Depot (EN) -->
+  <ModOp Type="addNextSibling" GUID='112658'>
+    <Asset>
+      <Template>Warehouse</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004379</GUID>
+          <Name>Ice Depot (EN)</Name>
+          <IconFilename>data/graphics/icons/icon_warehouse_ice.png</IconFilename>
+          <InfoDescription>1742004278</InfoDescription>
+        </Standard>
+        <Text/>
+        <Blocking>
+          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+        </Blocking>
+        <Building>
+          <BuildingType>Logistic</BuildingType>
+          <BuildingCategoryName>11151</BuildingCategoryName>          <!--Infrastructure Building-->
+          <SkipUnlockMessage>1</SkipUnlockMessage>
+          <BuildModeRandomRotation>90</BuildModeRandomRotation>
+          <AssociatedRegions>Africa</AssociatedRegions>
+          <SecondPartyRelevant>0</SecondPartyRelevant>
+        </Building>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>              <!-- Coins -->
+              <Amount>30000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>114356</Ingredient>              <!-- Wanza Wood - Product -->
+              <Amount>50</Amount>
+            </Item>
+            <Item>
+              <Ingredient>114402</Ingredient>              <!-- Mud Bricks - Product -->
+              <Amount>40</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>              <!-- Steel Beams - Product -->
+              <Amount>30</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>              <!-- Windows - Product -->
+              <Amount>20</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010202</Ingredient>              <!-- Reinforced Concrete - Product -->
+              <Amount>20</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Selection>
+          <GUIType>RouteServiceModule</GUIType>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+          <ParticipantMessageTrigger>ClickKontor</ParticipantMessageTrigger>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data\graphics\buildings\special\ice_warehouse\ice_warehouse_01.cfg</Filename>
+            </Item>
+          </Variations>
+          <Skins>
+            <DefaultSkinName>1742004388</DefaultSkinName>
+            <DefaultSkinDescription>1742004278</DefaultSkinDescription>            <!--ChangeBuildingSkin_toDefaultSkinDesc-->
+            <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>            <!--Classic-->
+          </Skins>
+        </Object>
+        <Constructable/>
+        <Mesh>
+          <LogoMode>CorporationLogoFromPlayer</LogoMode>
+          <SetCompanyLogo>1</SetCompanyLogo>
+        </Mesh>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>242769</Sound>              <!--wwe_sfx_bld_logistic_arctic_01_lp-->
+            </Item>
+          </ActiveSounds>
+          <IncidentSounds>
+            <ExplosionOneShots>
+              <Item>
+                <Sound>203849</Sound>                <!--wwe_sfx_aui_destroy_small-->
+              </Item>
+            </ExplosionOneShots>
+          </IncidentSounds>
+        </SoundEmitter>
+        <Locked/>
+        <Infolayer/>
+        <FeedbackController/>
+        <Warehouse>
+          <WarehouseStorage>
+            <StorageMax>100</StorageMax>
+          </WarehouseStorage>
+        </Warehouse>
+        <LogisticNode>
+          <QueueConfiguration>
+            <ProcessingQueueParallelCount>20</ProcessingQueueParallelCount>
+          </QueueConfiguration>
+        </LogisticNode>
+        <UpgradeList/>
+        <AmbientMoodProvider>
+          <Murmur>Warehouse</Murmur>
+        </AmbientMoodProvider>
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>              <!--Money-->
+              <Amount>500</Amount>
+              <InactiveAmount>250</InactiveAmount>
+            </Item>
+            <Item>
+              <Product>114340</Product>              <!-- Shephard Workforce -->
+              <Amount>100</Amount>
+              <ShutdownThreshold>0.2</ShutdownThreshold>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+        <StorageBase>
+          <ProductStorageList>1742004279</ProductStorageList>          <!--Ice ||||| 120056 - Strategic Goods / Oil-->
+        </StorageBase>
+        <Attackable>
+          <AttackableType>IslandBuilding</AttackableType>
+          <MaximumHitPoints>2500</MaximumHitPoints>
+          <SelfHealPerHealTick>4</SelfHealPerHealTick>
+        </Attackable>
+        <Pausable/>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END - BUILDING - Ice Depot (NW) -->
+
   <!-- START BUILDING - Coastal Ice Storage (OW) -->
   <ModOp Type="addNextSibling" GUID='112680'>
     <Asset>
@@ -2994,14 +3134,14 @@
   </ModOp>
   <!-- END BUILDING - Ice Storage (EN) -->
 
-  <!-- START BUILDING - Silver Mine -->
+  <!-- START BUILDING - Deep Silver Mine -->
   <ModOp Type="addNextSibling" GUID='116029'>
     <Asset>
       <BaseAssetGUID>116029</BaseAssetGUID>
       <Values>
         <Standard>
           <GUID>1742004455</GUID>
-          <Name>Silver Mine</Name>
+          <Name>Deep Silver Mine</Name>
           <IconFilename>data\modgraphics\icons\silver\icon_silver_ore.png</IconFilename>
           <InfoDescription>1742004456</InfoDescription>
         </Standard>
@@ -3036,14 +3176,14 @@
   </ModOp>
   <!-- END BUILDING - Silver Mine -->
 
-  <!-- START BUILDING - Silver Mine Workarea -->
+  <!-- START BUILDING - Deep Silver Mine Workarea -->
   <ModOp Type="addNextSibling" GUID='116031'>
     <Asset>
       <BaseAssetGUID>116031</BaseAssetGUID>
       <Values>
         <Standard>
           <GUID>1742004529</GUID>
-          <Name>Silver Mine Workarea</Name>
+          <Name>Deep Silver Mine Workarea</Name>
         </Standard>
         <Object>
           <Variations>
@@ -3055,7 +3195,7 @@
       </Values>
     </Asset>
   </ModOp>
-  <!-- END BUILDING - Silver Mine Workarea -->
+  <!-- END BUILDING - Deep Silver Mine Workarea -->
 
   <!-- START - BUILDING - Oil Harbour (AR) -->
   <ModOp Type="addNextSibling" GUID='112670'>

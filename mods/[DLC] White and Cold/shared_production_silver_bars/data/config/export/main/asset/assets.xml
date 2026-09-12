@@ -1,29 +1,39 @@
 <!-- 
   
-  [Shared] Shared Production - Silver Bars - v1.3
+  [Shared] Shared Production - Silver Bars - v1.4
   Created by Hier0nimus
   Enjoy!
 
-  Production building and production chain for Silver bars
+  Production building and production chain for Silver bars:
+  - 1742200048 - Silver Bars - Asset pool
+  - 1742200041 - Silver Bars - Production Chain
+  - 1742200042 - Silver Smelter - Building
+  - 1742200043 - Ammonia Plant - Building
+  - 1957006132 - Cyanide Leacher - Building
+  - 1957006134 - Oxidation Pool - Building
+  - 1957006102 - Silver Ore Mine - Building
+  - 1957006103 - Silver Ore Mine Workarea - Building
 
-  [SHARED] 1742200048 - Silver Bars - Asset pool
-  [SHARED] 1742200041 - Silver Bars - Production Chain
-  [SHARED] 1742200042 - Silver Smelter - Building
-  [SHARED] 1742200043 - Ammonia Plant - Building
-  [SHARED] 1957006132 - Cyanide Leacher - Building
-  [SHARED] 1957006134 - Oxidation Pool - Building
-  [SHARED] 1957006102 - Silver Ore Mine - Building
-  [SHARED] 1957006103 - Silver Ore Mine Workarea - Building
-
-  SHARED GOODS USED FROM SHARED MODS:
-  1957006101	Silver ore (asset)
-  1957006121	Cyanide (asset) > 
-  1957006131	Silver Amalgam (asset)
-  1957006151  Silver Bars (asset)
+  Other assets from submods:
+  - 1957006101 - Silver ore - Product
+  - 1957006121 - Cyanide - Product
+  - 1957006131 - Silver Amalgam - Product
+  - 1957006151 - Silver Bars - Product
 
 -->
 
 <ModOps>
+
+  <!-- START ASSIGN NEW WORLD REGION TO SILVER BARS -->
+  <ModOp Type="merge" GUID="1957006151" Path="/Values/Product">
+    <AssociatedRegion>Colony01</AssociatedRegion>
+    <ProductionRegions>
+      <Item>
+        <RegionType>Colony01</RegionType>
+      </Item>
+    </ProductionRegions>
+  </ModOp>
+  <!-- END ASSIGN NEW WORLD REGION TO SILVER BARS -->
 
   <!-- START ADD GOOD TO ProductStorageList -->
   <!-- Silver Bars -->
@@ -320,6 +330,14 @@
   </ModOp>
   <!-- END BUILDING - Silver Smelter -->
 
+  <!-- START - Adding Feedback Silver Smelter -->
+  <ModOp Type="add" GUID='142413' Path="/Values/FeedbackBuildingGroup/Buildings">
+    <Item>
+      <Building>1742200042</Building>
+    </Item>
+  </ModOp>
+  <!-- END - Adding Feedback Silver Smelter -->
+
   <!-- START BUILDING - Ammonia Plant -->
   <ModOp Type="addNextSibling" GUID='1010284'>
     <Asset>
@@ -537,6 +555,14 @@
     </Asset>
   </ModOp>
   <!-- END BUILDING - Ammonia Plant -->
+
+  <!-- START - Adding Feedback Ammonia Plant -->
+  <ModOp Type="add" GUID='142413' Path="/Values/FeedbackBuildingGroup/Buildings">
+    <Item>
+      <Building>1742200043</Building>
+    </Item>
+  </ModOp>
+  <!-- END - Adding Feedback Ammonia Plant -->
 
   <!-- START BUILDING - Cyanide Leacher -->
   <ModOp Type="addNextSibling" GUID='1010284'>
@@ -866,6 +892,17 @@
   </ModOp>
   <!-- END BUILDING - Oxidation Pool -->
 
+  <!-- START - Adding Feedback Oxidation Pool / Cyanide Leacher -->
+  <ModOp Type="add" GUID='142413' Path="/Values/FeedbackBuildingGroup/Buildings">
+    <Item>
+      <Building>1957006132</Building>
+    </Item>
+    <Item>
+      <Building>1957006134</Building>
+    </Item>
+  </ModOp>
+  <!-- END - Adding Feedback Oxidation Pool / Cyanide Leacher -->
+
   <!-- START BUILDING - Silver Ore Mine -->
   <ModOp Type="addNextSibling" GUID='1010311'>
     <Asset>
@@ -1013,6 +1050,14 @@
   </ModOp>
   <!-- END - Adding carts to workarea Silver Ore Mine -->
 
+  <!-- START - Adding Feedback Silver Ore Mine -->
+  <ModOp Type="add" GUID='142413' Path="/Values/FeedbackBuildingGroup/Buildings">
+    <Item>
+      <Building>1957006102</Building>
+    </Item>
+  </ModOp>
+  <!-- END - Adding Feedback Silver Ore Mine -->
+
   <!-- START PRODUCTION CHAIN - Silver Bars -->
   <ModOp Type="addNextSibling" GUID='500091'>
     <Asset>
@@ -1070,15 +1115,21 @@
     </Item>
   </ModOp>
   <!-- Oxidation Pool -->
-  <ModOp Type="add" GUID='368,6000018,193856' Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
+  <ModOp Type="add" GUID='368,6000018,193856,193875' Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
     <Item>
       <GUID>1957006134</GUID>
     </Item>
   </ModOp>
   <!-- Silver Smelter -->
-  <ModOp Type="add" GUID='368,6000018,193856,193875,193771' Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
+  <ModOp Type="add" GUID='368,6000018,193856,193875,193771,1500301940' Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
     <Item>
       <GUID>1742200042</GUID>
+    </Item>
+  </ModOp>
+  <!-- Ammonia Plant -->
+  <ModOp Type="add" GUID='368,6000018,193856,193875,1500301937' Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
+    <Item>
+      <GUID>1742200043</GUID>
     </Item>
   </ModOp>
   <!-- END ADD BUILDINGS TO POOLS -->

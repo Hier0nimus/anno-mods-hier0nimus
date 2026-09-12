@@ -265,27 +265,27 @@
   </ModOp>
   <!-- END - INUIT PopulationLevel7 -->
 
-<!-- START PIRATES - PopulationGroup7 -->
-<ModOp GUID='112641' Type="addNextSibling">
-  <Asset>
-    <Template>PopulationGroup7</Template>
-    <Values>
-      <Standard>
-        <GUID>1742004609</GUID>        <!-- Inuit - PopulationGroup7 -->
-        <Name>Inuit</Name>
-      </Standard>
-      <PopulationGroup7>
-        <PopulationLevels>
-          <Item>
-            <Level>1742004100</Level>            <!-- Inuit PopulationLevel7 -->
-          </Item>
-        </PopulationLevels>
-        <Regional>Arctic</Regional>
-      </PopulationGroup7>
-    </Values>
-  </Asset>
-</ModOp>
-<!-- END PIRATES - PopulationGroup7 -->
+  <!-- START PIRATES - PopulationGroup7 -->
+  <ModOp GUID='112641' Type="addNextSibling">
+    <Asset>
+      <Template>PopulationGroup7</Template>
+      <Values>
+        <Standard>
+          <GUID>1742004609</GUID>          <!-- Inuit - PopulationGroup7 -->
+          <Name>Inuit</Name>
+        </Standard>
+        <PopulationGroup7>
+          <PopulationLevels>
+            <Item>
+              <Level>1742004100</Level>              <!-- Inuit PopulationLevel7 -->
+            </Item>
+          </PopulationLevels>
+          <Regional>Arctic</Regional>
+        </PopulationGroup7>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- END PIRATES - PopulationGroup7 -->
 
   <!-- START - ADD POPULATION TIERS TO GLOBAL POPULATION -->
   <ModOp Type="addNextSibling" GUID="2001271" Path="/Values/GUIConfig/PopulationLevelList/Item[PopulationLevel='112643']">
@@ -312,6 +312,15 @@
     </Item>
   </ModOp>
   <!-- END - ADD POPULATION TIERS TO RESIDENCE SCENE -->
+
+  <!-- START ADD POPULATION TIERS TO HIGHSCORE FEATURE -->
+  <ModOp Type="add" GUID="142996" Path="Values/HighscoreFeature/PopulationBalancing">
+    <Item>
+      <PopulationGuid>1742004100</PopulationGuid>
+      <PopulationFactor>1.5</PopulationFactor>
+    </Item>
+  </ModOp>
+  <!-- END ADD POPULATION TIERS TO HIGHSCORE FEATURE -->
 
   <!-- START - ADD WORKFORCE TIERS TO ISLANDBARSCENE -->
   <ModOp Type="addNextSibling" GUID="25000121" Path="/Values/IslandBarScene/WorkforceOrder/Item[WorkforceEntry='112654']">
@@ -708,7 +717,7 @@
         <MinPopulationAmount>750</MinPopulationAmount>
       </AdditionalGlobalUnlockRequirement>
       <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
-			<IsBonusNeed>1</IsBonusNeed>
+      <IsBonusNeed>1</IsBonusNeed>
     </Item>
   </ModOp>
   <ModOp Type="addPrevSibling" GUID="15000004" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='1010245']">
@@ -743,7 +752,7 @@
         <MinPopulationAmount>750</MinPopulationAmount>
       </AdditionalGlobalUnlockRequirement>
       <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
-			<IsBonusNeed>1</IsBonusNeed>
+      <IsBonusNeed>1</IsBonusNeed>
     </Item>
     <Item>
       <Product>1742004639</Product>      <!-- Jewellery Store - Product -->
@@ -763,72 +772,72 @@
   <!-- START - ADD ADDITIONAL NEEDS TO INVESTORS  -->
   <ModOp Type="addNextSibling" GUID="15000004" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='135879']">
     <Item>
-      <Product>1742004614</Product>    <!-- Luxury Silverware Need -->
+      <Product>1742004614</Product>      <!-- Luxury Silverware Need -->
       <SupplyWeight>100</SupplyWeight>
       <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
       <RequiredBuildings>
         <Item>
-          <RequiredBuilding>406</RequiredBuilding><!--HighLife_monument_03(residence)-->
+          <RequiredBuilding>406</RequiredBuilding>          <!--HighLife_monument_03(residence)-->
         </Item>
       </RequiredBuildings>
     </Item>
   </ModOp>
   <ModOp Type="addNextSibling" GUID="15000004" Path="/Values/PopulationLevel7/PopulationInputs/Item[Product='135889']">
     <Item>
-      <Product>1742004619</Product>    <!-- Wound Dressings Need -->
+      <Product>1742004619</Product>      <!-- Wound Dressings Need -->
       <SupplyWeight>100</SupplyWeight>
       <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
       <RequiredBuildings>
         <Item>
-          <RequiredBuilding>406</RequiredBuilding><!--HighLife_monument_03(residence)-->
+          <RequiredBuilding>406</RequiredBuilding>          <!--HighLife_monument_03(residence)-->
         </Item>
       </RequiredBuildings>
     </Item>
   </ModOp>
   <ModOp Type="add" GUID="15000004" Path="/Values/PopulationLevel7/PopulationInputs/">
     <Item>
-      <Product>1742004640</Product>    <!-- Wound Dressings Need -->
+      <Product>1742004640</Product>      <!-- Wound Dressings Need -->
       <SupplyWeight>100</SupplyWeight>
       <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
       <RequiredBuildings>
         <Item>
-          <RequiredBuilding>406</RequiredBuilding><!--HighLife_monument_03(residence)-->
+          <RequiredBuilding>406</RequiredBuilding>          <!--HighLife_monument_03(residence)-->
         </Item>
       </RequiredBuildings>
     </Item>
   </ModOp>
   <ModOp Type="add" GUID="15000004" Path="/Values/PopulationLevel7/PopulationInputs/">
     <Item>
-      <Product>1742004641</Product>    <!-- Wound Dressings Need -->
+      <Product>1742004641</Product>      <!-- Wound Dressings Need -->
       <SupplyWeight>100</SupplyWeight>
       <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
       <RequiredBuildings>
         <Item>
-          <RequiredBuilding>406</RequiredBuilding><!--HighLife_monument_03(residence)-->
+          <RequiredBuilding>406</RequiredBuilding>          <!--HighLife_monument_03(residence)-->
         </Item>
       </RequiredBuildings>
     </Item>
   </ModOp>
   <ModOp Type="add" GUID="15000004" Path="/Values/PopulationLevel7/PopulationInputs/">
     <Item>
-      <Product>1742004642</Product>    <!-- Wound Dressings Need -->
+      <Product>1742004642</Product>      <!-- Wound Dressings Need -->
       <SupplyWeight>100</SupplyWeight>
       <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
       <RequiredBuildings>
         <Item>
-          <RequiredBuilding>406</RequiredBuilding><!--HighLife_monument_03(residence)-->
+          <RequiredBuilding>406</RequiredBuilding>          <!--HighLife_monument_03(residence)-->
         </Item>
       </RequiredBuildings>
     </Item>
   </ModOp>
   <ModOp Type="add" GUID="15000004" Path="/Values/PopulationLevel7/PopulationInputs/">
     <Item>
-      <Product>1742004643</Product>    <!-- Wound Dressings Need -->
+      <Product>1742004643</Product>      <!-- Wound Dressings Need -->
       <SupplyWeight>100</SupplyWeight>
       <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
       <RequiredBuildings>
         <Item>
-          <RequiredBuilding>406</RequiredBuilding><!--HighLife_monument_03(residence)-->
+          <RequiredBuilding>406</RequiredBuilding>          <!--HighLife_monument_03(residence)-->
         </Item>
       </RequiredBuildings>
     </Item>
@@ -847,7 +856,7 @@
         <MinPopulationAmount>2500</MinPopulationAmount>
       </AdditionalGlobalUnlockRequirement>
       <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
-			<IsBonusNeed>1</IsBonusNeed>
+      <IsBonusNeed>1</IsBonusNeed>
     </Item>
   </ModOp>
   <!-- END - ADD ADDITIONAL NEEDS TO ARTISTA -->
@@ -864,7 +873,7 @@
         <MinPopulationAmount>2500</MinPopulationAmount>
       </AdditionalGlobalUnlockRequirement>
       <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
-			<IsBonusNeed>1</IsBonusNeed>
+      <IsBonusNeed>1</IsBonusNeed>
     </Item>
   </ModOp>
   <!-- END - ADD ADDITIONAL NEEDS TO JORNALERO / OBRERO -->
@@ -881,7 +890,7 @@
         <MinPopulationAmount>2500</MinPopulationAmount>
       </AdditionalGlobalUnlockRequirement>
       <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
-			<IsBonusNeed>1</IsBonusNeed>
+      <IsBonusNeed>1</IsBonusNeed>
     </Item>
     <Item>
       <Product>1742004333</Product>      <!-- Corsets - Product -->
@@ -916,7 +925,7 @@
         </Item>
       </RequiredBuildings>
       <ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
-			<IsBonusNeed>1</IsBonusNeed>
+      <IsBonusNeed>1</IsBonusNeed>
     </Item>
   </ModOp>
   <!-- END - ADD ADDITIONAL NEEDS TO TOURISTS -->
@@ -964,13 +973,13 @@
   <!-- Department Store -->
   <ModOp Type="add" GUID='25000118' Path="/Values/ObjectmenuResidenceScene/MallPopup/MallPopupNeeds/Item[NeedProvider='135100']/Needs/">
     <Item>
-      <MallNeed>1742004614</MallNeed><!-- Luxury Silverware Need - Product -->
+      <MallNeed>1742004614</MallNeed>      <!-- Luxury Silverware Need - Product -->
     </Item>
   </ModOp>
   <!-- Drug Store -->
   <ModOp Type="add" GUID='25000118' Path="/Values/ObjectmenuResidenceScene/MallPopup/MallPopupNeeds/Item[NeedProvider='134629']/Needs/">
     <Item>
-      <MallNeed>1742004619</MallNeed><!-- Wound Dressings - Product -->
+      <MallNeed>1742004619</MallNeed>      <!-- Wound Dressings - Product -->
     </Item>
   </ModOp>
   <!-- Jewellery Store -->

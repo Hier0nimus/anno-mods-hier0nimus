@@ -566,6 +566,9 @@
         </Standard>
         <ConstructionCategory>
           <BuildingList>
+          <Item>
+            <Building>1742004379</Building>            <!-- Ice Depot (EN) - Building -->
+          </Item>
             <Item>
               <Building>1742004596</Building>              <!-- Meat, Milk, Vegetables and Fruit Storage (EN) Storage - Building -->
             </Item>
@@ -1665,7 +1668,7 @@
       <Building>1742004364</Building>      <!--Helium Gas Mine-->
     </Item>
     <Item>
-      <Building>1742004455</Building>      <!-- Silver Mine - Building -->
+      <Building>1742004455</Building>      <!--Deep Silver Mine - Building -->
     </Item>
     <Item>
       <Building>1742004368</Building>      <!-- Diamond Open Pit Mine - Building -->
@@ -1685,13 +1688,14 @@
   <!-- END - ADD SMALL DEPOT TO ARCTIC COASTAL MENU -->
 
   <!-- START - ADD OW CHAINS CHAINS TO ENGINEERS MENU -->
-  <ModOp Type="add" GUID='500094' Path="/Values/ConstructionCategory/BuildingList/">
+  <ModOp Type="addNextSibling" GUID='500094' Path="/Values/ConstructionCategory/BuildingList/Item[Building='134629']">
     <Item>
       <Building>1742004622</Building>      <!-- Jewelry Store - Blank -->
       <CompactMall />
     </Item>
   </ModOp>
-  <ModOp Type="add" GUID='25000192' Path="/Values/ConstructionCategory/BuildingList/">
+  
+  <ModOp Type="addNextSibling" GUID='25000192' Path="/Values/ConstructionCategory/BuildingList/Item[Building='134629']">
     <Item>
       <Building>1742004622</Building>      <!-- Jewelry Store - Blank -->
       <CompactMall />
@@ -1755,6 +1759,14 @@
   </ModOp>
   <!-- END - ADD SILVER BARS CHAIN TO OBRERO MENU -->
 
+<!-- START - ADD SILVER BARS TO SA CONSTRUCTION MENU NEEDS -->
+<ModOp Type="add" GUID='500950' Condition="!~/Values/ConstructionCategory/BuildingList/Item[Building='1742200041']" Path="/Values/ConstructionCategory/BuildingList/">
+    <Item>
+      <Building>1742200041</Building>      <!-- Silver Bars (NW) - Production Chain -->
+    </Item>
+</ModOp>
+<!-- END - ADD SILVER BARS TO SA CONSTRUCTION MENU NEEDS -->
+
   <!-- START - ADD ICE CHAIN TO ELDERS MENU -->
   <ModOp Type="add" GUID='114554' Path="/Values/ConstructionCategory/BuildingList/">
     <Item>
@@ -1801,7 +1813,7 @@
       <Building>1742004364</Building>      <!--Helium Gas Mine-->
     </Item>
     <Item>
-      <Building>1742004455</Building>      <!-- Silver Mine - Building -->
+      <Building>1742004455</Building>      <!--Deep Silver Mine - Building -->
     </Item>
     <Item>
       <Building>1742004368</Building>      <!-- Diamond Open Pit Mine - Building -->
