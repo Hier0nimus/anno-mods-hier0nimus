@@ -1,6 +1,6 @@
 <!-- 
   
-  [Shared] Shared Production - Silver Bars - v1.4
+  [Shared] Shared Production - Silver Bars - v1.5
   Created by Hier0nimus
   Enjoy!
 
@@ -807,7 +807,7 @@
               <Product>1957006131</Product>
               <!--SilverDust-->
               <Amount>1</Amount>
-              <StorageAmount>3</StorageAmount>
+              <StorageAmount>1</StorageAmount>
             </Item>
           </FactoryOutputs>
           <CycleTime>180</CycleTime>
@@ -981,7 +981,7 @@
             <Item>
               <Product>1957006101</Product>              <!-- Silver Ore -->
               <Amount>1</Amount>
-              <StorageAmount>6</StorageAmount>
+              <StorageAmount>2</StorageAmount>
             </Item>
           </FactoryOutputs>
           <CycleTime>90</CycleTime>
@@ -1121,9 +1121,15 @@
     </Item>
   </ModOp>
   <!-- Silver Smelter -->
-  <ModOp Type="add" GUID='368,6000018,193856,193875,193771,1500301940' Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
+  <ModOp Type="add" GUID='368,6000018,193856,193875,193771,190842,1500301940' Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
     <Item>
       <GUID>1742200042</GUID>
+    </Item>
+  </ModOp>
+  <!-- Combustion Chemist + Iron Founder -->
+  <ModOp GUID="958,190701" Type="add" Path="/Values/ItemEffect/EffectTargets/">
+    <Item>
+      <GUID>1742200042</GUID>      <!-- Silver Smelter - Building -->
     </Item>
   </ModOp>
   <!-- Ammonia Plant -->
