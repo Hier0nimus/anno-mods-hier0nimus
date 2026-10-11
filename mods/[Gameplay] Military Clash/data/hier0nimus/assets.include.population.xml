@@ -1,0 +1,253 @@
+<!-- 
+
+POPULATION
+
+-->
+
+<ModOps>
+
+    <ModOp GUID='15000004' Type="addNextSibling">
+        <!-- START SOLDIERS PopulationLevel7 -->
+        <Asset>
+            <Template>PopulationLevel7</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742100000</GUID>                    <!-- Soldiers PopulationLevel7 -->
+                    <Name>Soldiers</Name>
+                    <IconFilename>data/graphics/icons/icon_soldiers.png</IconFilename>
+                </Standard>
+                <Text />
+                <PopulationLevel7>
+                    <PopulationInputs>
+                        <Item>
+                            <Product>1742100022</Product>                            <!-- Canteen - Product -->
+                            <SupplyWeight>5</SupplyWeight>
+                        </Item>
+                        <Item>
+                            <Product>1742100191</Product>                            <!-- Military Training Complex - Product -->
+                            <SupplyWeight>5</SupplyWeight>
+                        </Item>
+                        <Item>
+                            <Product>1742103555</Product>                            <!-- Letters From Home - Product -->
+                            <Amount>0.0001</Amount>
+                            <SupplyWeight>5</SupplyWeight>
+                        </Item>
+                        <Item>
+                            <Product>1010354</Product>                            <!--electric works-->
+                            <SupplyWeight>15</SupplyWeight>
+                            <FullWeightPopulationCount>1500</FullWeightPopulationCount>
+                            <NoWeightPopulationCount>1499</NoWeightPopulationCount>
+                            <RequiredBuildings>
+                                <Item>
+                                    <RequiredBuilding>1742100003</RequiredBuilding>
+                                </Item>
+                            </RequiredBuildings>
+                        </Item>
+                        <Item>
+                            <Product>1742100084</Product>                            <!-- Military Academy - Product -->
+                            <SupplyWeight>20</SupplyWeight>
+                            <FullWeightPopulationCount>3000</FullWeightPopulationCount>
+                            <NoWeightPopulationCount>2999</NoWeightPopulationCount>
+                            <RequiredBuildings>
+                                <Item>
+                                    <RequiredBuilding>1742100003</RequiredBuilding>
+                                </Item>
+                            </RequiredBuildings>
+                        </Item>
+                        <!-- HAPPINESS NEEDS-->
+                        <Item>
+                            <Product>1010200</Product>                            <!-- Fish - Product -->
+                            <Amount>0.00015</Amount>
+                            <HappinessValue>1</HappinessValue>
+                            <MoneyValue>25</MoneyValue>
+                        </Item>
+                        <Item>
+                            <Product>1010195</Product>                            <!-- Potatoes - Product -->
+                            <Amount>0.00015</Amount>
+                            <HappinessValue>1</HappinessValue>
+                            <MoneyValue>25</MoneyValue>
+                        </Item>
+                        <Item>
+                            <Product>1010238</Product>                            <!-- Sausages - Product -->
+                            <Amount>0.00025</Amount>
+                            <HappinessValue>3</HappinessValue>
+                            <MoneyValue>50</MoneyValue>
+                        </Item>
+                        <Item>
+                            <Product>135229</Product>                            <!-- Biscuits - Product -->
+                            <Amount>0.00015</Amount>
+                            <HappinessValue>5</HappinessValue>
+                            <MoneyValue>100</MoneyValue>
+                            <RequiredBuildings>
+                                <Item>
+                                    <RequiredBuilding>1742100003</RequiredBuilding>
+                                </Item>
+                            </RequiredBuildings>
+                        </Item>
+                        <Item>
+                            <Product>1010214</Product>                            <!-- Beer - Product -->
+                            <Amount>0.00030</Amount>
+                            <HappinessValue>6</HappinessValue>
+                            <MoneyValue>150</MoneyValue>
+                            <RequiredBuildings>
+                                <Item>
+                                    <RequiredBuilding>1742100003</RequiredBuilding>
+                                </Item>
+                            </RequiredBuildings>
+                        </Item>
+                    </PopulationInputs>
+                    <DefaultResidence>1742100001</DefaultResidence>                    <!-- Soldiers Residence - Encampment - Building -->
+                    <PopulationOutputs>
+                        <Item>
+                            <Product>1742100005</Product>                            <!-- Soldiers Workforce - Product -->
+                            <Amount>100</Amount>
+                        </Item>
+                    </PopulationOutputs>
+                    <CategoryIcon>data/ui/2kimages/main/icons/icon_arrow.png</CategoryIcon>
+                    <PopulationParticipant>Mercier_DeserterWorker</PopulationParticipant>
+                    <PopulationAtWorkParticipant>Mercier_DeserterWorker</PopulationAtWorkParticipant>
+                    <MoodText>
+                        <Angry>
+                            <Text>1742100231</Text>
+                        </Angry>
+                        <Unhappy>
+                            <Text>1742100232</Text>
+                        </Unhappy>
+                        <Neutral>
+                            <Text>1742100233</Text>
+                        </Neutral>
+                        <Happy>
+                            <Text>1742100234</Text>
+                        </Happy>
+                        <Euphoric>
+                            <Text>1742100235</Text>
+                        </Euphoric>
+                    </MoodText>
+                </PopulationLevel7>
+                <Locked />
+            </Values>
+        </Asset>
+        <!-- END SOLDIERS PopulationLevel7 -->
+    </ModOp>
+
+    <ModOp GUID='15000082' Type="addNextSibling">
+
+        <!-- START MILITARY (OW) PopulationGroup7 -->
+        <Asset>
+            <Template>PopulationGroup7</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742100014</GUID>                    <!-- Military PopulationGroup7 -->
+                    <Name>Military Personnel</Name>
+                </Standard>
+                <PopulationGroup7>
+                    <PopulationLevels>
+                        <Item>
+                            <Level>1742100000</Level>                            <!-- Soldiers - PopulationLevel7 -->
+                        </Item>
+                    </PopulationLevels>
+                    <Regional>Moderate</Regional>
+                </PopulationGroup7>
+            </Values>
+        </Asset>
+        <!-- END MILITARY (OW) PopulationGroup7 -->
+
+    </ModOp>
+
+    <!-- START ADD POPULATION TIERS TO GLOBAL POPULATION -->
+    <ModOp Type="add" GUID="2001271" Path="/Values/GUIConfig/PopulationLevelList/">
+        <Item>
+            <PopulationLevel>1742100000</PopulationLevel>            <!-- Soldiers (OW) - PopulationLevel7 -->
+        </Item>
+    </ModOp>
+    <!-- END ADD POPULATION TIERS TO GLOBAL POPULATION -->
+
+    <!-- START ADD POPULATION TIERS TO KEYWORDFILTER -->
+    <ModOp Type="add" GUID="501962" Path="/Values/KeywordFilter/Keywords">
+        <Item>
+            <Keyword>1742100000</Keyword>            <!-- Soldiers - PopulationLevel7 -->
+            <ProductList>1742100015</ProductList>            <!-- Soldiers (OW) ProductList -->
+        </Item>
+    </ModOp>
+    <!-- END ADD POPULATION TIERS TO KEYWORDFILTER -->
+
+    <!-- START ADD POPULATION TIERS TO RESIDENCE SCENE -->
+    <ModOp Type="add" GUID="25000118" Path="/Values/ObjectmenuResidenceScene/HappinessConfigs">
+        <Item>
+            <PopulationLevel>1742100000</PopulationLevel>            <!-- Soldiers PopulationLevel7 -->
+            <AssignedConfig>502287</AssignedConfig>
+        </Item>
+    </ModOp>
+    <!-- END ADD POPULATION TIERS TO RESIDENCE SCENE -->
+
+    <!-- START ADD POPULATION TIERS TO HIGHSCORE FEATURE -->
+    <ModOp Type="add" GUID="142996" Path="Values/HighscoreFeature/PopulationBalancing">
+        <Item>
+            <PopulationGuid>1742100000</PopulationGuid>
+            <PopulationFactor>1.8</PopulationFactor>
+        </Item>
+    </ModOp>
+    <!-- END ADD POPULATION TIERS TO HIGHSCORE FEATURE -->
+
+    <!-- START ADD POPULATION PRODUCT TO WORKFORCE MENU -->
+    <ModOp Type="add" GUID="25000087" Path="/Values/WorkforceMenu/WorkforceList">
+        <Item>
+            <Asset>1742100005</Asset>            <!-- Soldiers Workforce - Product -->
+        </Item>
+    </ModOp>
+    <!-- END ADD POPULATION PRODUCT WORKFORCE MENU -->
+
+    <!-- START ADD WORKFORCE TIERS TO ISLANDBARSCENE -->
+    <!-- OW -->
+    <ModOp Type="add" GUID="25000121" Path="/Values/IslandBarScene/WorkforceOrder/">
+        <Item>
+            <WorkforceEntry>1742100005</WorkforceEntry>            <!-- Soldiers Workforce -->
+        </Item>
+    </ModOp>
+    <!-- END ADD POPULATION TIERS TO GLOBAL POPULATION -->
+
+    <!-- START ADD GOOD VALUE BALANCING  -->
+    <ModOp GUID='142977' Type="addNextSibling" Path="/Values/GoodValueBalancing/WorkforceData/Moderate/Tiers/Item[WorkforceGUID='1010116']">
+        <Item>
+            <WorkforceValue>3.333079</WorkforceValue>
+            <WorkforceGUID>1742100005</WorkforceGUID>
+        </Item>
+    </ModOp>
+    <!-- END ADD GOOD VALUE BALANCING  -->
+
+<ModOp GUID='142358' Type="replace" Path="/Values/BannerConfig/CityLevelBanners">
+    <CityLevelBanners>
+        <Item>
+            <RequiredValue>1</RequiredValue>
+            <PopulationGUID>1742100000</PopulationGUID>
+            <Notification>501400</Notification>
+            <!--NewCityState_Village_Notification-->
+        </Item>
+        <Item>
+            <RequiredValue>500</RequiredValue>
+            <PopulationGUID>1742100000</PopulationGUID>
+            <Notification>501401</Notification>
+            <!--NewCityState_Town_Notification-->
+        </Item>
+        <Item>
+            <RequiredValue>1000</RequiredValue>
+            <PopulationGUID>1742100000</PopulationGUID>
+            <Notification>501402</Notification>
+            <!--NewCityState_City_Notification-->
+        </Item>
+        <Item>
+            <RequiredValue>2500</RequiredValue>
+            <PopulationGUID>1742100000</PopulationGUID>
+            <Notification>501403</Notification>
+            <!--NewCityState_CapitalCity_Notification-->
+        </Item>
+        <Item>
+            <RequiredValue>5000</RequiredValue>
+            <PopulationGUID>1742100000</PopulationGUID>
+            <Notification>501404</Notification>
+            <!--NewCityState_Metropolis_Notification-->
+        </Item>
+    </CityLevelBanners>
+</ModOp>
+
+</ModOps>

@@ -1,0 +1,893 @@
+<!-- 
+
+TRIGGERS
+
+-->
+
+<ModOps>
+
+    <!-- START - Gamestart Unlock  -->
+    <ModOp Type="addNextSibling" GUID="130236">
+        <Asset>
+            <Template>Trigger</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742103500</GUID>
+                    <Name>Gamestart Unlock</Name>
+                </Standard>
+                <Trigger>
+                    <TriggerCondition>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                            <Condition/>
+                            <ConditionAlwaysTrue/>
+                        </Values>
+                    </TriggerCondition>
+                    <TriggerActions>
+                        <Item>
+                            <TriggerAction>
+                                <Template>ActionUnlockAsset</Template>
+                                <Values>
+                                    <Action />
+                                    <ActionUnlockAsset>
+                                        <UnhideAssets>
+                                            <Item>
+                                                <Asset>1010463</Asset>                                                <!--institution_02 (Fire Department)-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1010462</Asset>                                                <!--institution_01 (Police)-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1010464</Asset>                                                <!--institution_03 (Hospital)-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>130040</Asset>                                                <!--asset pool warehouse-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>130056</Asset>                                                <!--asset pool fish-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1010265</Asset>                                                <!--potato farm-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1010195</Asset>                                                <!--potatoes-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>140027</Asset>                                                <!--asset pool sausages-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742100022</Asset>
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742100020</Asset>
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742100191</Asset>
+                                            </Item>
+                                            <Item>
+                                                <Asset>4320</Asset>
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742100189</Asset>
+                                            </Item>
+                                        </UnhideAssets>
+                                        <UnlockAssets>
+                                            <Item>
+                                                <Asset>1000178</Asset>                                                <!--Dirt Street-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742100001</Asset>
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742100000</Asset>
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742100014</Asset>
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742100005</Asset>
+                                            </Item>
+                                        </UnlockAssets>
+                                    </ActionUnlockAsset>
+                                </Values>
+                            </TriggerAction>
+                        </Item>
+                    </TriggerActions>
+                </Trigger>
+                <TriggerSetup />
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- START - Soldiers Unlock - 1  -->
+    <ModOp Type="addNextSibling" GUID="130236">
+        <Asset>
+            <Template>Trigger</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742103501</GUID>
+                    <Name>Soldiers Unlock - 1</Name>
+                </Standard>
+                <Trigger>
+                    <TriggerCondition>
+                        <Template>ConditionPlayerCounter</Template>
+                        <Values>
+                            <Condition />
+                            <ConditionPlayerCounter>
+                                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                                <Context>1742100000</Context>                                <!-- Soldiers-->
+                                <CounterAmount>1</CounterAmount>
+                            </ConditionPlayerCounter>
+                        </Values>
+                    </TriggerCondition>
+                    <TriggerActions>
+                        <Item>
+                            <TriggerAction>
+                                <Template>ActionUnlockAsset</Template>
+                                <Values>
+                                    <Action />
+                                    <ActionUnlockAsset>
+                                        <UnhideAssets>
+                                            <Item>
+                                                <Asset>140029</Asset>                                                <!--asset pool timber-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1010035</Asset>                                                <!--Stone Street-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>130053</Asset>                                                <!--asset pool warehouse & kontor II-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>100586</Asset>                                                <!--harbor_office-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>130050</Asset>                                                <!--asset pool sail shipyard-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1010267</Asset>                                                <!--asset pool sailcloth-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>140050</Asset>                                                <!--asset pool sailcloth-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1010522</Asset>                                                <!--harbor_04 (Tower 01, Puckle Gun)-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>130121</Asset>                                                <!--asset pool harbor01-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1010304</Asset>                                                <!--coal mine-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>140051</Asset>                                                <!--asset pool weapon-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1010523</Asset>                                                <!--harbor_05 (Tower 02, Cannon Tower)-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1010525</Asset>                                                <!--harbor_07 (Repair Crane)-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>625</Asset>                                                <!--harbor_17 (Tower 04, Fire Tower)-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>736</Asset>                                                <!--harbor_18 (Tower 05, FlaK)-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742100221</Asset>
+                                            </Item>
+                                            <Item>
+                                                <Asset>130053</Asset>                                                <!--asset pool warehouse & kontor II-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>130052</Asset>                                                <!--asset pool Tourism Pier-->
+                                            </Item>
+                                        </UnhideAssets>
+                                        <UnlockAssets>
+                                            <Item>
+                                                <Asset>130056</Asset>                                                <!--asset pool fish-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1010265</Asset>                                                <!--potato farm-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1010195</Asset>                                                <!--potatoes-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>140027</Asset>                                                <!--asset pool sausages-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>130040</Asset>                                                <!--asset pool warehouse-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1010463</Asset>                                                <!--institution_02 (Fire Department)-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1010462</Asset>                                                <!--institution_01 (Police)-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1010464</Asset>                                                <!--institution_03 (Hospital)-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742100022</Asset>
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742100020</Asset>
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742100191</Asset>
+                                            </Item>
+                                            <Item>
+                                                <Asset>4320</Asset>
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742100189</Asset>
+                                            </Item>
+                                        </UnlockAssets>
+                                    </ActionUnlockAsset>
+                                </Values>
+                            </TriggerAction>
+                        </Item>
+                    </TriggerActions>
+                </Trigger>
+                <TriggerSetup />
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- START - Soldiers Unlock - 200  -->
+    <ModOp Type="addNextSibling" GUID="130236">
+        <Asset>
+            <Template>Trigger</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742103502</GUID>
+                    <Name>Soldiers Unlock - 200</Name>
+                </Standard>
+                <Trigger>
+                    <TriggerCondition>
+                        <Template>ConditionPlayerCounter</Template>
+                        <Values>
+                            <Condition />
+                            <ConditionPlayerCounter>
+                                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                                <Context>1742100000</Context>                                <!-- Soldiers-->
+                                <CounterAmount>200</CounterAmount>
+                            </ConditionPlayerCounter>
+                        </Values>
+                    </TriggerCondition>
+                    <TriggerActions>
+                        <Item>
+                            <TriggerAction>
+                                <Template>ActionUnlockAsset</Template>
+                                <Values>
+                                    <Action />
+                                    <ActionUnlockAsset>
+                                        <UnhideAssets>
+                                        </UnhideAssets>
+                                        <UnlockAssets>
+                                            <Item>
+                                                <Asset>140029</Asset>                                                <!--asset pool timber-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1010035</Asset>                                                <!--Stone Street-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>130053</Asset>                                                <!--asset pool warehouse & kontor II-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>100586</Asset>                                                <!--harbor_office-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1010520</Asset>                                                <!--sail shipyard-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742000269</Asset>
+                                            </Item>
+                                            <Item>
+                                                <Asset>100437</Asset>                                                <!--Gunboat (Military)-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742101076</Asset>
+                                            </Item>
+                                            <Item>
+                                                <Asset>1010267</Asset>                                                <!--asset pool sailcloth-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>140050</Asset>                                                <!--asset pool sailcloth-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1010522</Asset>                                                <!--harbor_04 (Tower 01, Puckle Gun)-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>130121</Asset>                                                <!--asset pool harbor01-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>140051</Asset>                                                <!--asset pool weapon-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1010523</Asset>                                                <!--harbor_05 (Tower 02, Cannon Tower)-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1010525</Asset>                                                <!--harbor_07 (Repair Crane)-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>625</Asset>                                                <!--harbor_17 (Tower 04, Fire Tower)-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>736</Asset>                                                <!--harbor_18 (Tower 05, FlaK)-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742100221</Asset>
+                                            </Item>
+                                            <Item>
+                                                <Asset>130052</Asset>                                                <!--asset pool Tourism Pier-->
+                                            </Item>
+                                        </UnlockAssets>
+                                    </ActionUnlockAsset>
+                                </Values>
+                            </TriggerAction>
+                        </Item>
+                    </TriggerActions>
+                </Trigger>
+                <TriggerSetup />
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- START - Soldiers Unlock - 500  -->
+    <ModOp Type="addNextSibling" GUID="130236">
+        <Asset>
+            <Template>Trigger</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742103503</GUID>
+                    <Name>Soldiers Unlock - 500</Name>
+                </Standard>
+                <Trigger>
+                    <TriggerCondition>
+                        <Template>ConditionPlayerCounter</Template>
+                        <Values>
+                            <Condition />
+                            <ConditionPlayerCounter>
+                                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                                <Context>1742100000</Context>                                <!-- Soldiers-->
+                                <CounterAmount>500</CounterAmount>
+                            </ConditionPlayerCounter>
+                        </Values>
+                    </TriggerCondition>
+                    <TriggerActions>
+                        <Item>
+                            <TriggerAction>
+                                <Template>ActionUnlockAsset</Template>
+                                <Values>
+                                    <Action />
+                                    <ActionUnlockAsset>
+                                        <UnhideAssets>
+
+                                        </UnhideAssets>
+                                        <UnlockAssets>
+                                            <Item>
+                                                <Asset>130053</Asset>                                                <!--asset pool warehouse & kontor II-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>100439</Asset>                                                <!--Frigate (Military)-->
+                                            </Item>
+                                        </UnlockAssets>
+                                    </ActionUnlockAsset>
+                                </Values>
+                            </TriggerAction>
+                        </Item>
+                    </TriggerActions>
+                </Trigger>
+                <TriggerSetup />
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- START - Soldiers Unlock - 1000  -->
+    <ModOp Type="addNextSibling" GUID="130236">
+        <Asset>
+            <Template>Trigger</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742103504</GUID>
+                    <Name>Soldiers Unlock - 1000</Name>
+                </Standard>
+                <Trigger>
+                    <TriggerCondition>
+                        <Template>ConditionPlayerCounter</Template>
+                        <Values>
+                            <Condition />
+                            <ConditionPlayerCounter>
+                                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                                <Context>1742100000</Context>                                <!-- Soldiers-->
+                                <CounterAmount>1000</CounterAmount>
+                            </ConditionPlayerCounter>
+                        </Values>
+                    </TriggerCondition>
+                    <TriggerActions>
+                        <Item>
+                            <TriggerAction>
+                                <Template>ActionUnlockAsset</Template>
+                                <Values>
+                                    <Action />
+                                    <ActionUnlockAsset>
+                                        <UnhideAssets>
+                                            <Item>
+                                                <Asset>1742100578</Asset>
+                                            </Item>
+                                        </UnhideAssets>
+                                        <UnlockAssets>
+                                        <Item>
+                                            <Asset>1742000297</Asset>
+                                        </Item>
+                                            <Item>
+                                                <Asset>100440</Asset>                                                <!--Liner (Military)-->
+                                            </Item>
+                                        </UnlockAssets>
+                                    </ActionUnlockAsset>
+                                </Values>
+                            </TriggerAction>
+                        </Item>
+                    </TriggerActions>
+                </Trigger>
+                <TriggerSetup />
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- START - Soldiers Unlock - 2500  -->
+    <ModOp Type="addNextSibling" GUID="130236">
+        <Asset>
+            <Template>Trigger</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742103505</GUID>
+                    <Name>Soldiers Unlock - 2500</Name>
+                </Standard>
+                <Trigger>
+                    <TriggerCondition>
+                        <Template>ConditionPlayerCounter</Template>
+                        <Values>
+                            <Condition />
+                            <ConditionPlayerCounter>
+                                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                                <Context>1742100000</Context>                                <!-- Soldiers-->
+                                <CounterAmount>2500</CounterAmount>
+                            </ConditionPlayerCounter>
+                        </Values>
+                    </TriggerCondition>
+                    <TriggerActions>
+                        <Item>
+                            <TriggerAction>
+                                <Template>ActionUnlockAsset</Template>
+                                <Values>
+                                    <Action />
+                                    <ActionUnlockAsset>
+                                        <UnhideAssets>
+
+                                        </UnhideAssets>
+                                        <UnlockAssets>
+                                            <Item>
+                                                <Asset>1742100578</Asset>
+                                            </Item>
+                                        </UnlockAssets>
+                                    </ActionUnlockAsset>
+                                </Values>
+                            </TriggerAction>
+                        </Item>
+                    </TriggerActions>
+                </Trigger>
+                <TriggerSetup />
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- START - Soldiers Unlock - 5000  -->
+    <ModOp Type="addNextSibling" GUID="130236">
+        <Asset>
+            <Template>Trigger</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742103506</GUID>
+                    <Name>Soldiers Unlock - 5000</Name>
+                </Standard>
+                <Trigger>
+                    <TriggerCondition>
+                        <Template>ConditionPlayerCounter</Template>
+                        <Values>
+                            <Condition />
+                            <ConditionPlayerCounter>
+                                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                                <Context>1742100000</Context>                                <!-- Soldiers-->
+                                <CounterAmount>5000</CounterAmount>
+                            </ConditionPlayerCounter>
+                        </Values>
+                    </TriggerCondition>
+                    <TriggerActions>
+                        <Item>
+                            <TriggerAction>
+                                <Template>ActionUnlockAsset</Template>
+                                <Values>
+                                    <Action />
+                                    <ActionUnlockAsset>
+                                        <UnhideAssets>
+                                            <Item>
+                                                <Asset>1742100003</Asset>                                                <!--Barracks-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>130047</Asset>                                                <!--asset pool electricity oil-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>130051</Asset>                                                <!--asset pool steam shipyard-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>676</Asset>
+                                            </Item>
+                                            <Item>
+                                                <Asset>968</Asset>                                                <!--Monitor Crocodile (Military)-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742100583</Asset>
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742100585</Asset>
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742100587</Asset>
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742100589</Asset>
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742100591</Asset>
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742100615</Asset>
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742100609</Asset>
+                                            </Item>
+                                            <Item>
+                                                <Asset>100443</Asset>                                                <!--Monitor (Military)-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>100442</Asset>                                                <!--Battle Cruiser (Military)-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>720</Asset>                                                <!--Monitor FLaK (Military)-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>140052</Asset>                                                <!--asset pool steam motor-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>140053</Asset>                                                <!--asset pool advanced weapon-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>140033</Asset>                                                <!--asset pool bread-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>140035</Asset>                                                <!--asset pool beer -->
+                                            </Item>
+                                            <Item>
+                                                <Asset>2040</Asset>                                                <!--Depot_DropGoods_Moderate-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742100692</Asset>
+                                            </Item>
+                                            <Item>
+                                                <Asset>1010524</Asset>                                                <!--harbor_06 (Tower 03, Monster Gun)-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>140034</Asset>                                                <!--asset pool beam-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742100082</Asset>                                                <!--Military Headquarters-->
+                                            </Item>
+                                        </UnhideAssets>
+                                        <UnlockAssets>
+                                            <Item>
+                                                <Asset>130054</Asset>                                                <!--asset pool warehouse & kontor III-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>3700</Asset>                                                <!--harbor_18 (Tower 06, Armor Pierce Tower)-->
+                                            </Item>
+                                        </UnlockAssets>
+                                    </ActionUnlockAsset>
+                                </Values>
+                            </TriggerAction>
+                        </Item>
+                    </TriggerActions>
+                </Trigger>
+                <TriggerSetup />
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- START - Soldiers Unlock - 7500  -->
+    <ModOp Type="addNextSibling" GUID="130236">
+        <Asset>
+            <Template>Trigger</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742103507</GUID>
+                    <Name>Soldiers Unlock - 7500</Name>
+                </Standard>
+                <Trigger>
+                    <TriggerCondition>
+                        <Template>ConditionPlayerCounter</Template>
+                        <Values>
+                            <Condition />
+                            <ConditionPlayerCounter>
+                                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                                <Context>1742100000</Context>                                <!-- Soldiers-->
+                                <CounterAmount>7500</CounterAmount>
+                            </ConditionPlayerCounter>
+                        </Values>
+                    </TriggerCondition>
+                    <TriggerActions>
+                        <Item>
+                            <TriggerAction>
+                                <Template>ActionUnlockAsset</Template>
+                                <Values>
+                                    <Action />
+                                    <ActionUnlockAsset>
+                                        <UnhideAssets>
+                                            <Item>
+                                                <Asset>269867</Asset>                                                <!--kontor_main_04-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>269879</Asset>                                                <!--kontor_imperial_04-->
+                                            </Item>
+                                        </UnhideAssets>
+                                        <UnlockAssets>
+                                            <Item>
+                                                <Asset>1742100003</Asset>                                                <!--Barracks-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>130047</Asset>                                                <!--asset pool electricity oil-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>130051</Asset>                                                <!--asset pool steam shipyard-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>676</Asset>
+                                            </Item>
+                                            <Item>
+                                                <Asset>968</Asset>                                                <!--Monitor Crocodile (Military)-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742100583</Asset>
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742100587</Asset>
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742100589</Asset>
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742100591</Asset>
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742100615</Asset>
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742100609</Asset>
+                                            </Item>
+                                            <Item>
+                                                <Asset>100443</Asset>                                                <!--Monitor (Military)-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>100442</Asset>                                                <!--Battle Cruiser (Military)-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>720</Asset>                                                <!--Monitor FLaK (Military)-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>140052</Asset>                                                <!--asset pool steam motor-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>140053</Asset>                                                <!--asset pool advanced weapon-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>2040</Asset>                                                <!--Depot_DropGoods_Moderate-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742100692</Asset>
+                                            </Item>
+                                            <Item>
+                                                <Asset>1010524</Asset>                                                <!--harbor_06 (Tower 03, Monster Gun)-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>140034</Asset>                                                <!--asset pool beam-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>140033</Asset>                                                <!--asset pool bread-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>140035</Asset>                                                <!--asset pool beer -->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742100082</Asset>                                                <!--Military Headquarters-->
+                                            </Item>
+                                        </UnlockAssets>
+                                    </ActionUnlockAsset>
+                                </Values>
+                            </TriggerAction>
+                        </Item>
+                    </TriggerActions>
+                </Trigger>
+                <TriggerSetup />
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- START - Soldiers Unlock - 10000  -->
+    <ModOp Type="addNextSibling" GUID="130236">
+        <Asset>
+            <Template>Trigger</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742103508</GUID>
+                    <Name>Soldiers Unlock - 10000</Name>
+                </Standard>
+                <Trigger>
+                    <TriggerCondition>
+                        <Template>ConditionPlayerCounter</Template>
+                        <Values>
+                            <Condition />
+                            <ConditionPlayerCounter>
+                                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                                <Context>1742100000</Context>                                <!-- Soldiers-->
+                                <CounterAmount>10000</CounterAmount>
+                            </ConditionPlayerCounter>
+                        </Values>
+                    </TriggerCondition>
+                    <TriggerActions>
+                        <Item>
+                            <TriggerAction>
+                                <Template>ActionUnlockAsset</Template>
+                                <Values>
+                                    <Action />
+                                    <ActionUnlockAsset>
+                                        <UnhideAssets>
+
+                                        </UnhideAssets>
+                                        <UnlockAssets>
+                                            <Item>
+                                                <Asset>269867</Asset>                                                <!--kontor_main_04-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>269879</Asset>                                                <!--kontor_imperial_04-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742100585</Asset>
+                                            </Item>
+                                        </UnlockAssets>
+                                    </ActionUnlockAsset>
+                                </Values>
+                            </TriggerAction>
+                        </Item>
+                    </TriggerActions>
+                </Trigger>
+                <TriggerSetup />
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- START PROGRESSION CHANGING  -->
+    <!-- EarlyMidGame -->
+    <ModOp GUID='140500' Type="replace" Path="/Values/Trigger/">
+        <Trigger>
+            <TriggerCondition>
+                <Template>ConditionPlayerCounter</Template>
+                <Values>
+                    <Condition/>
+                    <ConditionPlayerCounter>
+                        <PlayerCounter>PopulationByLevel</PlayerCounter>
+                        <Context>1742100000</Context>
+                        <CounterAmount>200</CounterAmount>
+                    </ConditionPlayerCounter>
+                </Values>
+            </TriggerCondition>
+            <ResetTrigger>
+                <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                <Values>
+                    <EmptyAutoCreateValue/>
+                </Values>
+            </ResetTrigger>
+        </Trigger>
+    </ModOp>
+    <!-- MidGame -->
+    <ModOp GUID='140503' Type="replace" Path="/Values/Trigger/">
+        <Trigger>
+            <TriggerCondition>
+                <Template>ConditionPlayerCounter</Template>
+                <Values>
+                    <Condition/>
+                    <ConditionPlayerCounter>
+                        <PlayerCounter>PopulationByLevel</PlayerCounter>
+                        <Context>1742100000</Context>
+                        <CounterAmount>500</CounterAmount>
+                    </ConditionPlayerCounter>
+                </Values>
+            </TriggerCondition>
+            <ResetTrigger>
+                <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                <Values>
+                    <EmptyAutoCreateValue/>
+                </Values>
+            </ResetTrigger>
+        </Trigger>
+    </ModOp>
+    <!-- LateMidGame -->
+    <ModOp GUID='140504' Type="replace" Path="/Values/Trigger/">
+        <Trigger>
+            <TriggerCondition>
+                <Template>ConditionPlayerCounter</Template>
+                <Values>
+                    <Condition/>
+                    <ConditionPlayerCounter>
+                        <PlayerCounter>PopulationByLevel</PlayerCounter>
+                        <Context>1742100000</Context>
+                        <CounterAmount>1000</CounterAmount>
+                    </ConditionPlayerCounter>
+                </Values>
+            </TriggerCondition>
+            <ResetTrigger>
+                <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                <Values>
+                    <EmptyAutoCreateValue/>
+                </Values>
+            </ResetTrigger>
+        </Trigger>
+    </ModOp>
+    <!-- LateGame -->
+    <ModOp GUID='140505' Type="replace" Path="/Values/Trigger/">
+        <Trigger>
+            <TriggerCondition>
+                <Template>ConditionPlayerCounter</Template>
+                <Values>
+                    <Condition/>
+                    <ConditionPlayerCounter>
+                        <PlayerCounter>PopulationByLevel</PlayerCounter>
+                        <Context>1742100000</Context>
+                        <CounterAmount>2500</CounterAmount>
+                    </ConditionPlayerCounter>
+                </Values>
+            </TriggerCondition>
+            <ResetTrigger>
+                <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                <Values>
+                    <EmptyAutoCreateValue/>
+                </Values>
+            </ResetTrigger>
+        </Trigger>
+    </ModOp>
+    <!-- EndGame -->
+    <ModOp GUID='140506,142932' Type="replace" Path="/Values/Trigger/">
+        <Trigger>
+            <TriggerCondition>
+                <Template>ConditionPlayerCounter</Template>
+                <Values>
+                    <Condition/>
+                    <ConditionPlayerCounter>
+                        <PlayerCounter>PopulationByLevel</PlayerCounter>
+                        <Context>1742100000</Context>
+                        <CounterAmount>5000</CounterAmount>
+                    </ConditionPlayerCounter>
+                </Values>
+            </TriggerCondition>
+            <ResetTrigger>
+                <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                <Values>
+                    <EmptyAutoCreateValue/>
+                </Values>
+            </ResetTrigger>
+        </Trigger>
+    </ModOp>
+
+    <!-- END PROGRESSION CHANGING  -->
+
+</ModOps>

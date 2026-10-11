@@ -1,0 +1,417 @@
+<!-- 
+
+CONSTRUCTION MENU
+
+-->
+
+<ModOps>
+
+    <!-- RIGHT CLICK MENU -->
+    <ModOp Type="replace" GUID="500107" Path="/Values/RightClickMenu/RightClickMenuRegions/Moderate/RightClickBuildings">
+        <RightClickBuildings>
+            <Item>
+                <Config>
+                    <Template>CustomizableButtonConfig</Template>
+                    <Values>
+                        <CustomizableButtonConfig>
+                            <CustomizableBuilding>1010371</CustomizableBuilding>
+                            <!--logistic_02 (Warehouse I)-->
+                            <BuildingInfotip>500132</BuildingInfotip>
+                            <!--BuildingRightclickMenu-->
+                        </CustomizableButtonConfig>
+                    </Values>
+                </Config>
+            </Item>
+            <Item>
+                <Config>
+                    <Template>CustomizableButtonConfig</Template>
+                    <Values>
+                        <CustomizableButtonConfig>
+                            <CustomizableBuilding>100451</CustomizableBuilding>
+                            <!--factory_03 (Timber Factory)-->
+                            <BuildingInfotip>500132</BuildingInfotip>
+                            <!--BuildingRightclickMenu-->
+                        </CustomizableButtonConfig>
+                    </Values>
+                </Config>
+            </Item>
+            <Item>
+                <Config>
+                    <Template>CustomizableButtonConfig</Template>
+                    <Values>
+                        <CustomizableButtonConfig>
+                            <CustomizableBuilding>2001775</CustomizableBuilding>
+                            <!--Upgrade-->
+                            <BuildingInfotip>500132</BuildingInfotip>
+                            <!--BuildingRightclickMenu-->
+                        </CustomizableButtonConfig>
+                    </Values>
+                </Config>
+            </Item>
+            <Item>
+                <Config>
+                    <Template>CustomizableButtonConfig</Template>
+                    <Values>
+                        <CustomizableButtonConfig>
+                            <CustomizableBuilding>2001044</CustomizableBuilding>
+                            <!--Delete-->
+                            <BuildingInfotip>500132</BuildingInfotip>
+                            <!--BuildingRightclickMenu-->
+                        </CustomizableButtonConfig>
+                    </Values>
+                </Config>
+            </Item>
+            <Item>
+                <Config>
+                    <Template>CustomizableButtonConfig</Template>
+                    <Values>
+                        <CustomizableButtonConfig>
+                            <CustomizableBuilding>2001043</CustomizableBuilding>
+                            <!--Pipette-->
+                            <BuildingInfotip>500132</BuildingInfotip>
+                            <!--BuildingRightclickMenu-->
+                        </CustomizableButtonConfig>
+                    </Values>
+                </Config>
+            </Item>
+            <Item>
+                <Config>
+                    <Template>CustomizableButtonConfig</Template>
+                    <Values>
+                        <CustomizableButtonConfig>
+                            <CustomizableBuilding>2001042</CustomizableBuilding>
+                            <!--MoveBuilding-->
+                            <BuildingInfotip>500132</BuildingInfotip>
+                            <!--BuildingRightclickMenu-->
+                        </CustomizableButtonConfig>
+                    </Values>
+                </Config>
+            </Item>
+            <Item>
+                <Config>
+                    <Template>CustomizableButtonConfig</Template>
+                    <Values>
+                        <CustomizableButtonConfig>
+                            <CustomizableBuilding>1000178</CustomizableBuilding>
+                            <!--Dirt Street-->
+                            <BuildingInfotip>500132</BuildingInfotip>
+                            <!--BuildingRightclickMenu-->
+                        </CustomizableButtonConfig>
+                    </Values>
+                </Config>
+            </Item>
+            <Item>
+                <Config>
+                    <Template>CustomizableButtonConfig</Template>
+                    <Values>
+                        <CustomizableButtonConfig>
+                            <CustomizableBuilding>1742100020</CustomizableBuilding>
+                            <!--canteen-->
+                            <BuildingInfotip>500132</BuildingInfotip>
+                            <!--BuildingRightclickMenu-->
+                        </CustomizableButtonConfig>
+                    </Values>
+                </Config>
+            </Item>
+            <Item>
+                <Config>
+                    <Template>CustomizableButtonConfig</Template>
+                    <Values>
+                        <CustomizableButtonConfig>
+                            <CustomizableBuilding>1742100001</CustomizableBuilding>
+                            <!--soldier residence-->
+                            <BuildingInfotip>500132</BuildingInfotip>
+                            <!--BuildingRightclickMenu-->
+                        </CustomizableButtonConfig>
+                    </Values>
+                </Config>
+            </Item>
+        </RightClickBuildings>
+    </ModOp>
+
+    <!-- RECREATE CONSTRUCTION MENUS -->
+
+    <ModOp Type="add" GUID="25000035" Path="/Values/ConstructionMenu/RegionMenu/Moderate/CategoryMode/Tier/">
+        <Categories>
+            <Item>
+                <Category>500092</Category>                <!--moderate construction menu city (category)-->
+            </Item>
+            <Item>
+                <Category>500943</Category>                <!--moderate construction menu materials (category)-->
+            </Item>
+            <Item>
+                <Category>500111</Category>                <!--moderate construction menu harbor (category)-->
+            </Item>
+        </Categories>
+    </ModOp>
+
+    <ModOp Type="add" GUID="25000035" Path="/Values/ConstructionMenu/RegionMenu/Moderate/CategoryMode/BuildingCategory/">
+        <Categories>
+            <Item>
+                <Category>500092</Category>                <!--moderate construction menu city (category)-->
+            </Item>
+            <Item>
+                <Category>500943</Category>                <!--moderate construction menu materials (category)-->
+            </Item>
+            <Item>
+                <Category>500111</Category>                <!--moderate construction menu harbor (category)-->
+            </Item>
+        </Categories>
+    </ModOp>
+
+    <ModOp Type="replace" GUID="25000035" Path="/Values/ConstructionMenu/RegionMenu/Moderate/OrnamentsMode/OrnamentsSource/Categories">
+        <Categories>
+            <Item>
+                <Category>500069</Category><!--Moderate Ornament Menu Vanilla & Free Updates-->
+            </Item>
+        </Categories>
+    </ModOp>
+
+    <ModOp Type="replace" GUID="25000035" Path="/Values/ConstructionMenu/RegionMenu/Moderate/OrnamentsMode/OrnamentsCategory/Categories">
+        <Categories>
+            <Item>
+                <Category>500069</Category><!--Moderate Ornament Menu Vanilla & Free Updates-->
+            </Item>
+        </Categories>
+    </ModOp>
+
+    <!-- ADD BUILDINGS TO CONSTRUCTION MENU -->
+
+    <!-- ORNAMENTS -->
+    <ModOp Type="replace" GUID="500069" Path="/Values/ConstructionCategory/BuildingList">
+        <BuildingList>
+            <Item>
+                <Building>502338</Building><!--moderate natural trees-->
+            </Item>
+            <Item>
+                <Building>1742100552</Building>
+            </Item>
+            <Item>
+                <Building>1742100554</Building>
+            </Item>
+            <Item>
+                <Building>1742100572</Building>
+            </Item>
+            <Item>
+                <Building>1742100574</Building>
+            </Item>
+        </BuildingList>
+    </ModOp>
+
+    <!-- MATERIALS -->
+    <ModOp Type="add" GUID="500943" Path="/Values/ConstructionCategory/">
+        <BuildingList>
+            <Item>
+                <Building>1010278</Building>                <!--Fishery-->
+            </Item>
+            <Item>
+                <Building>1010265</Building>                <!--Potato Farm-->
+            </Item>
+            <Item>
+                <Building>25000244</Building>                <!--Sausage chain-->
+            </Item>
+            <Item>
+                <Building>500091</Building>                <!--timber chain-->
+            </Item>
+            <Item>
+                <Building>500009</Building>                <!--sails chain-->
+            </Item>
+            <Item>
+                <Building>500145</Building>                <!--weapon chain-->
+            </Item>
+            <Item>
+                <Building>500006</Building>                <!--Beer chain-->
+            </Item>
+            <Item>
+                <Building>500004</Building>                <!--Bread chain > Biscuits-->
+            </Item>
+            <Item>
+                <Building>500005</Building>                <!--beams chain-->
+            </Item>
+            <Item>
+                <Building>500506</Building>                <!--electricity oil chain-->
+            </Item>
+            <Item>
+                <Building>500023</Building>                <!--steam motor chain-->
+            </Item>
+            <Item>
+                <Building>500029</Building>                <!--advanced weapons chain-->
+            </Item>
+            <Item>
+                <Building>924</Building>                <!--Multifactory_Magazin(DropGoods)_Moderate_Bombs-->
+            </Item>
+            <Item>
+                <Building>934</Building>                <!--Multifactory_Magazin(DropGoods)_Moderate_SeaMines-->
+            </Item>
+            <Item>
+                <Building>935</Building>                <!--Multifactory_Magazin(DropGoods)_Moderate_Flyers-->
+            </Item>
+        </BuildingList>
+    </ModOp>
+
+    <!-- CITY -->
+    <ModOp Type="add" GUID="500092" Path="/Values/ConstructionCategory/">
+        <BuildingList>
+            <Item>
+                <Building>1000178</Building>                <!--Dirt Street-->
+            </Item>
+            <Item>
+                <Building>1010035</Building>                <!--Stone Street-->
+            </Item>
+            <Item>
+                <Building>1742100001</Building>                <!-- Soldiers Residence -->
+            </Item>
+            <Item>
+                <Building>1010371</Building>                <!--logistic_02 (Warehouse I)-->
+            </Item>
+            <Item>
+                <Building>1742100020</Building>                <!--canteen-->
+            </Item>
+            <Item>
+                <Building>1742100189</Building>                <!--military training complex-->
+            </Item>
+            <Item>
+                <Building>3741</Building>                <!--Post Office-->
+            </Item>
+            <Item>
+                <Building>1742100082</Building>                <!-- Military Headquarters -->
+            </Item>
+            <Item>
+                <Building>1010463</Building>                <!--institution_02 (Fire Department)-->
+            </Item>
+            <Item>
+                <Building>1010462</Building>                <!--institution_01 (Police)-->
+            </Item>
+            <Item>
+                <Building>1010464</Building>                <!--institution_03 (Hospital)-->
+            </Item>
+        </BuildingList>
+    </ModOp>
+
+    <!-- HARBOUR -->
+    <ModOp Type="add" GUID="500111" Path="/Values/ConstructionCategory/">
+        <BuildingList>
+            <Item>
+                <Building>1010567</Building>                <!--Quay System-->
+            </Item>
+            <Item>
+                <Building>1010519</Building>                <!--harbor_01 (Depot)-->
+            </Item>
+            <Item>
+                <Building>1010525</Building>                <!--harbor_07 (Repair Crane)-->
+            </Item>
+            <Item>
+                <Building>100586</Building>                <!--harbor_office-->
+            </Item>
+            <Item>
+                <Building>1010520</Building>                <!--harbor_02 (Sailing Shipyard)-->
+            </Item>
+            <Item>
+                <Building>1010521</Building>                <!--harbor_03 (Steam Shipyard)-->
+            </Item>
+            <Item>
+                <Building>636</Building>                <!-- Rigid Airship Hangar -->
+            </Item>
+            <Item>
+                <Building>100429</Building>                <!--Public Mooring-->
+            </Item>
+            <Item>
+                <Building>1010522</Building>                <!--harbor_04 (Tower 01, Puckle Gun)-->
+            </Item>
+            <Item>
+                <Building>1010523</Building>                <!--harbor_05 (Tower 02, Cannon Tower)-->
+            </Item>
+            <Item>
+                <Building>736</Building>                <!--harbor_18 (Tower 05, FlaK)-->
+            </Item>
+            <Item>
+                <Building>1742100221</Building>                <!--harbor_18 (Tower 05, FlaK)-->
+            </Item>
+            <Item>
+                <Building>625</Building>                <!--harbor_17 (Tower 04, Fire Tower)-->
+            </Item>
+            <Item>
+                <Building>3700</Building>                <!--harbor_18 (Tower 06, Armor Pierce Tower)-->
+            </Item>
+            <Item>
+                <Building>1742100692</Building>                <!--Coastal Torpedo Launcher-->
+            </Item>
+            <Item>
+                <Building>1010524</Building>                <!--harbor_06 (Tower 03, Monster Gun)-->
+            </Item>
+        </BuildingList>
+    </ModOp>
+
+    <!-- CHANGES TO EXISTING MENUS -->
+
+    <!-- COAL MINE AND CHARCOAL KILN -->
+
+    <!-- STEELWORKS -->
+    <ModOp Type="add" GUID="500005" Path="/Values/ProductionChain/Tier1/Item/Tier2/">
+        <Item>
+            <Building>1010304</Building>            <!--coal mine-->
+        </Item>
+    </ModOp>
+
+    <!-- WEAPONS FACTORY -->
+    <ModOp Type="add" GUID="500145" Path="/Values/ProductionChain/Tier1/Item/Tier2/">
+        <Item>
+            <Building>1010304</Building>            <!--coal mine-->
+        </Item>
+    </ModOp>
+
+    <!-- ADDITIONAL TIMBER FOR CANNONS -->
+    <ModOp Type="add" GUID="500145" Path="/Values/ProductionChain/Tier1/">
+        <Item>
+            <Building>100451</Building>            <!--factory_03 (Timber Factory)-->
+            <Tier2>
+                <Item>
+                    <Building>1010266</Building>                    <!--agriculture_05 (Timber Yard)-->
+                </Item>
+            </Tier2>
+        </Item>
+    </ModOp>
+
+    <!-- SIMPLIFIED ADVANCED WEAPONS CHAIN -->
+    <ModOp Type="replace" GUID="500029" Path="/Values/ProductionChain/Tier1/Item[Building='1010300']">
+        <Item>
+            <Building>1742103552</Building>            <!-- Import Dock - Dynamite -->
+        </Item>
+    </ModOp>
+
+    <!-- SIMPLIFIED STEAM MOTORS CHAIN -->
+    <ModOp Type="replace" GUID="500023" Path="/Values/ProductionChain/Tier1/Item[Building='1010282']">
+        <Item>
+            <Building>1742103550</Building>            <!-- Import Dock - Brass -->
+        </Item>
+    </ModOp>
+
+    <!-- ADAPTED BREAD/BAKERY/BISCUITS CHAIN -->
+    <ModOp Type="add" GUID="500004" Path="/Values/ProductionChain/Tier1">
+        <Item>
+            <Building>1742103556</Building>            <!--orchard - jam-->
+        </Item>
+    </ModOp>
+    <ModOp Type="merge" GUID="500004" Path="/Values/">
+        <Standard>
+            <IconFilename>data/ui/2kimages/main/3dicons/goods_highlife/icon_cookie.png</IconFilename>
+        </Standard>
+        <Text>
+            <TextOverride>137601</TextOverride>
+        </Text>
+    </ModOp>
+
+    <!-- SIMPLIFIED ELECTRICITY CHAIN -->
+    <ModOp Type="replace" GUID="500506" Path="/Values/ProductionChain/">
+        <ProductionChain>
+            <Building>100780</Building>            <!--electricity_02 (Oil Power Plant)-->
+            <Tier1>
+                <Item>
+                    <Building>101331</Building>                    <!--heavy_10 (Oil Heavy Industry)-->
+                </Item>
+            </Tier1>
+            <InfoTipHeight>600</InfoTipHeight>
+        </ProductionChain>
+    </ModOp>
+
+</ModOps>

@@ -1,0 +1,288 @@
+<!-- 
+
+FERTILITIES AND DEPOSITS
+
+-->
+
+<ModOps>
+
+    <ModOp Type="merge" GUID="5000000" Path="/Values/Region/">
+        <Residence>1742100001</Residence>
+    </ModOp>
+
+    <!-- //////////////////////////// FERTILITIES //////////////////////////// -->
+
+    <ModOp Type="replace" GUID="5000000" Path="/Values/Region/AllowedFertilities">
+        <AllowedFertilities>
+            <Item>
+                <Fertility>1010569</Fertility>
+                <!--Potato Fertility-->
+            </Item>
+            <Item>
+                <Fertility>1010571</Fertility>
+                <!--Grain Fertility-->
+            </Item>
+            <Item>
+                <Fertility>1010572</Fertility>
+                <!--Hops Fertility-->
+            </Item>
+        </AllowedFertilities>
+    </ModOp>
+
+    <!-- STARTER -->
+    <!-- LOW -->
+    <ModOp Type="replace" GUID="141508,141509,141510,141511" Path="/Values/FertilitySet">
+        <FertilitySet>
+            <Fertilities>
+                <Item>
+                    <Fertility>1010569</Fertility>
+                    <!--Potato Fertility-->
+                </Item>
+                <Item>
+                    <Fertility>1010571</Fertility>
+                    <!--Grain Fertility-->
+                </Item>
+            </Fertilities>
+        </FertilitySet>
+    </ModOp>
+    <!-- MEDIUM -->
+    <ModOp Type="replace" GUID="141514,141516,141518,141520" Path="/Values/FertilitySet">
+        <FertilitySet>
+            <Fertilities>
+                <Item>
+                    <Fertility>1010569</Fertility>
+                    <!--Potato Fertility-->
+                </Item>
+                <Item>
+                    <Fertility>1010571</Fertility>
+                    <!--Grain Fertility-->
+                </Item>
+            </Fertilities>
+        </FertilitySet>
+    </ModOp>
+    <!-- HIGH -->
+    <ModOp Type="replace" GUID="141515,141517,141519,141521" Path="/Values/FertilitySet">
+        <FertilitySet>
+            <Fertilities>
+                <Item>
+                    <Fertility>1010569</Fertility>
+                    <!--Potato Fertility-->
+                </Item>
+                <Item>
+                    <Fertility>1010571</Fertility>
+                    <!--Grain Fertility-->
+                </Item>
+            </Fertilities>
+        </FertilitySet>
+    </ModOp>
+    <!-- NORMAL -->
+    <!-- LOW -->
+    <ModOp Type="replace" GUID="141512,141513,142434" Path="/Values/FertilitySet">
+        <FertilitySet>
+            <Fertilities>
+                <Item>
+                    <Fertility>1010569</Fertility>
+                    <!--Potato Fertility-->
+                </Item>
+                <Item>
+                    <Fertility>1010572</Fertility>
+                    <!--Hops Fertility-->
+                </Item>
+            </Fertilities>
+        </FertilitySet>
+    </ModOp>
+    <ModOp Type="replace" GUID="142435,142436" Path="/Values/FertilitySet">
+        <FertilitySet>
+            <Fertilities>
+                <Item>
+                    <Fertility>1010571</Fertility>
+                    <!--Grain Fertility-->
+                </Item>
+                <Item>
+                    <Fertility>1010572</Fertility>
+                    <!--Hops Fertility-->
+                </Item>
+            </Fertilities>
+        </FertilitySet>
+    </ModOp>
+    <ModOp Type="replace" GUID="142437,142438" Path="/Values/FertilitySet">
+        <FertilitySet>
+            <Fertilities>
+                <Item>
+                    <Fertility>1010572</Fertility>
+                    <!--Hops Fertility-->
+                </Item>
+            </Fertilities>
+        </FertilitySet>
+    </ModOp>
+    <!-- MEDIUM -->
+    <ModOp Type="replace" GUID="142441,142442,142443" Path="/Values/FertilitySet">
+        <FertilitySet>
+            <Fertilities>
+                <Item>
+                    <Fertility>1010571</Fertility>
+                    <!--Grain Fertility-->
+                </Item>
+                <Item>
+                    <Fertility>1010572</Fertility>
+                    <!--Hops Fertility-->
+                </Item>
+            </Fertilities>
+        </FertilitySet>
+    </ModOp>
+    <ModOp Type="replace" GUID="141522,141524,142439,142440" Path="/Values/FertilitySet">
+        <FertilitySet>
+            <Fertilities>
+                <Item>
+                    <Fertility>1010569</Fertility>
+                    <!--Potato Fertility-->
+                </Item>
+                <Item>
+                    <Fertility>1010572</Fertility>
+                    <!--Hops Fertility-->
+                </Item>
+            </Fertilities>
+        </FertilitySet>
+    </ModOp>
+    <!-- HIGH -->
+    <ModOp Type="replace" GUID="142445,142446,142447" Path="/Values/FertilitySet">
+        <FertilitySet>
+            <Fertilities>
+                <Item>
+                    <Fertility>1010571</Fertility>
+                    <!--Grain Fertility-->
+                </Item>
+                <Item>
+                    <Fertility>1010572</Fertility>
+                    <!--Hops Fertility-->
+                </Item>
+            </Fertilities>
+        </FertilitySet>
+    </ModOp>
+    <ModOp Type="replace" GUID="141523,141525,142448,142444" Path="/Values/FertilitySet">
+        <FertilitySet>
+            <Fertilities>
+                <Item>
+                    <Fertility>1010569</Fertility>
+                    <!--Potato Fertility-->
+                </Item>
+                <Item>
+                    <Fertility>1010572</Fertility>
+                    <!--Hops Fertility-->
+                </Item>
+            </Fertilities>
+        </FertilitySet>
+    </ModOp>
+
+    <!-- //////////////////////////// DEPOSITS //////////////////////////// -->
+
+    <ModOp Type="replace" GUID="5000000" Path="/Values/Region/AllowedMineSlots">
+        <AllowedMineSlots>
+            <Item>
+                <MineSlot>1010500</MineSlot>
+                <!--mining_01_slot (Coal Mine Slot)-->
+            </Item>
+            <Item>
+                <MineSlot>1010501</MineSlot>
+                <!--mining_02_slot (Iron Mine Slot)-->
+            </Item>
+        </AllowedMineSlots>
+    </ModOp>
+
+    <!-- STARTER -->
+    <!-- LOW/MEDIUM/HIGH -->
+    <ModOp Type="replace" GUID="142535,142335,142536,142336,142537,142538,142338" Path="/Values/MineSlotResourceSet/">
+        <MineSlotResourceSet>
+            <MineSlots>
+                <Item>
+                    <MineSlot>1010501</MineSlot>                    <!--mining_02_slot (Iron Mine Slot)-->
+                </Item>
+                <Item>
+                    <MineSlot>1010500</MineSlot>                    <!--mining_01_slot (Coal Mine Slot)-->
+                </Item>
+                <Item>
+                    <MineSlot>1010501</MineSlot>                    <!--mining_02_slot (Iron Mine Slot)-->
+                </Item>
+                <Item>
+                    <MineSlot>1010500</MineSlot>                    <!--mining_01_slot (Coal Mine Slot)-->
+                </Item>
+                <Item>
+                    <MineSlot>1010501</MineSlot>                    <!--mining_02_slot (Iron Mine Slot)-->
+                </Item>
+                <Item>
+                    <MineSlot>1010500</MineSlot>                    <!--mining_01_slot (Coal Mine Slot)-->
+                </Item>
+                <Item>
+                    <MineSlot>1010501</MineSlot>                    <!--mining_02_slot (Iron Mine Slot)-->
+                </Item>
+                <Item>
+                    <MineSlot>1010500</MineSlot>                    <!--mining_01_slot (Coal Mine Slot)-->
+                </Item>
+                <Item>
+                    <MineSlot>1010500</MineSlot>                    <!--mining_01_slot (Coal Mine Slot)-->
+                </Item>
+                <Item>
+                    <MineSlot>102498</MineSlot><!--heavy_01_01_slot (Oil Pump Slot)-->
+                </Item>
+            </MineSlots>
+        </MineSlotResourceSet>
+    </ModOp>
+    <!-- NORMAL -->
+    <!-- LOW -->
+    <ModOp Type="replace" GUID="142545,142546,142547,142548,142549,142550" Path="/Values/MineSlotResourceSet/">
+        <MineSlotResourceSet>
+            <MineSlots>
+                <Item>
+                    <MineSlot>1010501</MineSlot>                    <!--mining_02_slot (Iron Mine Slot)-->
+                </Item>
+                <Item>
+                    <MineSlot>1010500</MineSlot>                    <!--mining_01_slot (Coal Mine Slot)-->
+                </Item>
+                <Item>
+                    <MineSlot>1010501</MineSlot>                    <!--mining_02_slot (Iron Mine Slot)-->
+                </Item>
+                <Item>
+                    <MineSlot>1010500</MineSlot>                    <!--mining_01_slot (Coal Mine Slot)-->
+                </Item>
+                <Item>
+                    <MineSlot>1010500</MineSlot>                    <!--mining_01_slot (Coal Mine Slot)-->
+                </Item>
+            </MineSlots>
+        </MineSlotResourceSet>
+    </ModOp>
+    <!-- MEDIUM/HIGH -->
+    <ModOp Type="replace" GUID="142539,141562,141563,142540,142541,141564,141565,142542,142543,141566,142544,141567" Path="/Values/MineSlotResourceSet/">
+        <MineSlotResourceSet>
+            <MineSlots>
+                <Item>
+                    <MineSlot>1010501</MineSlot>                    <!--mining_02_slot (Iron Mine Slot)-->
+                </Item>
+                <Item>
+                    <MineSlot>1010500</MineSlot>                    <!--mining_01_slot (Coal Mine Slot)-->
+                </Item>
+                <Item>
+                    <MineSlot>1010501</MineSlot>                    <!--mining_02_slot (Iron Mine Slot)-->
+                </Item>
+                <Item>
+                    <MineSlot>1010500</MineSlot>                    <!--mining_01_slot (Coal Mine Slot)-->
+                </Item>
+                <Item>
+                    <MineSlot>1010501</MineSlot>                    <!--mining_02_slot (Iron Mine Slot)-->
+                </Item>
+                <Item>
+                    <MineSlot>1010500</MineSlot>                    <!--mining_01_slot (Coal Mine Slot)-->
+                </Item>
+                <Item>
+                    <MineSlot>1010501</MineSlot>                    <!--mining_02_slot (Iron Mine Slot)-->
+                </Item>
+                <Item>
+                    <MineSlot>1010500</MineSlot>                    <!--mining_01_slot (Coal Mine Slot)-->
+                </Item>
+                <Item>
+                    <MineSlot>1010500</MineSlot>                    <!--mining_01_slot (Coal Mine Slot)-->
+                </Item>
+            </MineSlots>
+        </MineSlotResourceSet>
+    </ModOp>
+
+</ModOps>

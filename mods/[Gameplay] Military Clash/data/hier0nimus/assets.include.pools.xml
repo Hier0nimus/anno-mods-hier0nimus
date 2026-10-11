@@ -1,0 +1,1561 @@
+<!-- 
+
+CHANGES TO SHIPS / NEW SHIPS
+
+-->
+
+<ModOps>
+
+    <!-- //////////////////////////// ADDING NEW PRODUCTS TO POOLS AND LISTS //////////////////////////// -->
+
+    <ModOp Type="add" GUID="120055" Path="/Values/ProductStorageList/ProductList/">
+        <Item>
+            <Product>1742103554</Product>
+        </Item>
+        <Item>
+            <Product>1742103555</Product>
+        </Item>
+    </ModOp>
+
+    <ModOp Type="add" GUID="502018,502005,501957" Path="/Values/ProductList/List">
+        <Item>
+            <Product>1742103554</Product>            <!--oil-->
+        </Item>
+    </ModOp>
+
+    <ModOp Type="add" GUID="130047" Path="/Values/AssetPool/AssetList">
+        <Item>
+            <Asset>1742103554</Asset>            <!--oil-->
+        </Item>
+    </ModOp>
+
+    <!-- //////////////////////////// ADDING TO EXISTING POOLS //////////////////////////// -->
+
+    <!-- DROPGOODS POOL -->
+    <ModOp Type="remove" GUID="2040" Path="/Values/AssetPool/AssetList/Item[Asset='936']" />
+    <ModOp Type="remove" GUID="2040" Path="/Values/AssetPool/AssetList/Item[Asset='937']" />
+    <ModOp Type="remove" GUID="2040" Path="/Values/AssetPool/AssetList/Item[Asset='955']" />
+    <ModOp Type="remove" GUID="2040" Path="/Values/AssetPool/AssetList/Item[Asset='956']" />
+    <ModOp Type="remove" GUID="2040" Path="/Values/AssetPool/AssetList/Item[Asset='849']" />
+    <ModOp Type="remove" GUID="2040" Path="/Values/AssetPool/AssetList/Item[Asset='850']" />
+    <ModOp Type="remove" GUID="2040" Path="/Values/AssetPool/AssetList/Item[Asset='917']" />
+
+    <!-- ADVANCED WEAPONS POOL -->
+    <ModOp Type="remove" GUID="140053" Path="/Values/AssetPool/AssetList/Item[Asset='1010232']" />
+    <ModOp Type="remove" GUID="140053" Path="/Values/AssetPool/AssetList/Item[Asset='1010300']" />
+    <ModOp Type="remove" GUID="140053" Path="/Values/AssetPool/AssetList/Item[Asset='1010310']" />
+    <ModOp Type="add" GUID="140053" Path="/Values/AssetPool/AssetList">
+        <Item>
+            <Asset>1742103552</Asset>            <!--Import Dock - Dynamite-->
+        </Item>
+    </ModOp>
+
+    <!-- POST/MAIL POOL -->
+    <ModOp Type="remove" GUID="4320" Path="/Values/AssetPool/AssetList/Item[Asset='535']" />
+    <ModOp Type="remove" GUID="4320" Path="/Values/AssetPool/AssetList/Item[Asset='538']" />
+    <ModOp Type="add" GUID="4320" Path="/Values/AssetPool/AssetList">
+        <Item>
+            <Asset>1742103555</Asset>            <!--Letters From Home-->
+        </Item>
+    </ModOp>
+
+    <!-- STEAM MOTORS POOL -->
+    <ModOp Type="add" GUID="140052" Path="/Values/AssetPool/AssetList">
+        <Item>
+            <Asset>1742103550</Asset>            <!--Import Dock - Brass-->
+        </Item>
+        <Item>
+            <Asset>1010204</Asset>            <!--Brass-->
+        </Item>
+    </ModOp>
+
+    <!-- BREAD/BAKERY POOL -->
+    <ModOp Type="add" GUID="140033" Path="/Values/AssetPool/AssetList">
+        <Item>
+            <Asset>135229</Asset>            <!--Biscuits-->
+        </Item>
+        <Item>
+            <Asset>1742103556</Asset>            <!--Orchard: Jam-->
+        </Item>
+        <Item>
+            <Asset>133183</Asset>            <!--Jam-->
+        </Item>
+    </ModOp>
+    <ModOp Type="remove" GUID="140033" Path="/Values/AssetPool/AssetList/Item[Asset='1010213']" />
+
+    <!-- CANNONS POOL -->
+    <ModOp Type="add" GUID="140051" Path="/Values/AssetPool/AssetList">
+        <Item>
+            <Asset>1010304</Asset>            <!--coal mine-->
+        </Item>
+        <Item>
+            <Asset>1010298</Asset>            <!--charcoal kiln-->
+        </Item>
+        <Item>
+            <Asset>1010227</Asset>            <!--iron-->
+        </Item>
+        <Item>
+            <Asset>1010219</Asset>            <!--steel-->
+        </Item>
+        <Item>
+            <Asset>1010305</Asset>            <!--mining_02 (Iron Mine)-->
+        </Item>
+        <Item>
+            <Asset>1010297</Asset>            <!--heavy_02 (Steel Heavy Industry)-->
+        </Item>
+    </ModOp>
+
+    <!-- BEAMS POOL -->
+    <ModOp Type="add" GUID="140034" Path="/Values/AssetPool/AssetList">
+        <Item>
+            <Asset>1010304</Asset>            <!--coal mine-->
+        </Item>
+        <Item>
+            <Asset>1010298</Asset>            <!--charcoal kiln-->
+        </Item>
+    </ModOp>
+
+    <!-- SAILING SHIPYARD POOL -->
+    <ModOp Type="replace" GUID="130050" Path="/Values/AssetPool/AssetList">
+        <AssetList>
+            <Item>
+                <Asset>1742000269</Asset>
+            </Item>
+            <Item>
+                <Asset>1742000297</Asset>
+            </Item>
+            <Item>
+                <Asset>100437</Asset>
+            </Item>
+            <Item>
+                <Asset>1742101076</Asset>
+            </Item>
+            <Item>
+                <Asset>100439</Asset>
+            </Item>
+            <Item>
+                <Asset>100440</Asset>
+            </Item>
+            <Item>
+                <Asset>1742100578</Asset>
+            </Item>
+        </AssetList>
+    </ModOp>
+
+    <!-- AIRSHIP POOL -->
+    <ModOp Type="replace" GUID="676" Path="/Values/AssetPool/AssetList">
+        <AssetList>
+            <Item>
+                <Asset>1731</Asset>
+            </Item>
+            <Item>
+                <Asset>1732</Asset>
+            </Item>
+            <Item>
+                <Asset>636</Asset>                <!--AirshipHangar_Moderate_01_03-->
+            </Item>
+            <Item>
+                <Asset>102158</Asset>                <!--Illigal Rocket Battery-->
+            </Item>
+            <Item>
+                <Asset>1742101079</Asset>                <!-- X1 (Arctic Gas) - AirShip -->
+            </Item>
+            <Item>
+                <Asset>1742100629</Asset>                <!-- B42 (Arctic Gas) - AirShip -->
+            </Item>
+            <Item>
+                <Asset>1742100658</Asset>                <!-- F42 (Arctic Gas) - AirShip -->
+            </Item>
+            <Item>
+                <Asset>1742100661</Asset>                <!-- A42 (Arctic Gas) - AirShip -->
+            </Item>
+        </AssetList>
+    </ModOp>
+
+<!-- START - ALL PLAYER SHIPS / ALL PLAYER SHIPS CAMPAIGN - AssetPool -->
+<ModOp Type="add" GUID="700151,270174" Path="/Values/AssetPool/AssetList/">
+    <Item>
+        <Asset>1742101076</Asset>        <!-- Fire Boat - Ship -->
+    </Item>
+    <Item>
+        <Asset>1742100576</Asset>        <!-- Windjammer - Ship -->
+    </Item>
+    <Item>
+        <Asset>1742100578</Asset>        <!-- The Duke - Ship -->
+    </Item>
+    <Item>
+        <Asset>1742100581</Asset>        <!-- Small Cargo Ship -->
+    </Item>
+    <Item>
+        <Asset>1742100583</Asset>        <!-- Small Battle Cruiser -->
+    </Item>
+    <Item>
+        <Asset>1742100585</Asset>        <!-- Heavy Battle Cruiser -->
+    </Item>
+    <Item>
+        <Asset>1742100587</Asset>        <!-- Torpedo Boat - Ship -->
+    </Item>
+    <Item>
+        <Asset>1742100589</Asset>        <!-- Corvette - Ship -->
+    </Item>
+    <Item>
+        <Asset>1742100591</Asset>        <!-- Auxiliary Ship - Ship -->
+    </Item>
+    <Item>
+        <Asset>1742100611</Asset>        <!-- Small Reefer - Ship -->
+    </Item>
+    <Item>
+        <Asset>1742100615</Asset>        <!-- Ironclad Cruiser - Ship -->
+    </Item>
+    <Item>
+        <Asset>1742100609</Asset>        <!-- Flak Ironclad - Ship -->
+    </Item>
+    <Item>
+        <Asset>1742100624</Asset>        <!-- Small Oil Tanker - Ship -->
+    </Item>
+    <Item>
+        <Asset>1742100625</Asset>        <!-- Large Oil Tanker - Ship -->
+    </Item>
+</ModOp>
+<!-- END - ALL PLAYER SHIPS / ALL PLAYER SHIPS CAMPAIGN - AssetPool -->
+
+<!-- START - ALL AIRSHIPS - AssetPool -->
+<ModOp Type="add" GUID="102180" Path="/Values/AssetPool/AssetList/">
+    <Item>
+        <Asset>1742101079</Asset>        <!-- X1 (Arctic Gas) - AirShip -->
+    </Item>
+    <Item>
+        <Asset>1742100629</Asset>        <!-- B42 (Arctic Gas) - AirShip -->
+    </Item>
+    <Item>
+        <Asset>1742100658</Asset>        <!-- F42 (Arctic Gas) - AirShip -->
+    </Item>
+    <Item>
+        <Asset>1742100661</Asset>        <!-- A42 (Arctic Gas) - AirShip -->
+    </Item>
+</ModOp>
+<!-- END - ALL AIRSHIPS - AssetPool -->
+
+<!-- *************************************** PlayerCounterContextPool *************************************** -->
+
+<!-- START - ALL PLAYER SHIPS - PlayerCounterContextPool -->
+<ModOp Type="add" GUID="700155,700065" Path="/Values/PlayerCounterContextPool/Contexts/">
+    <Item>
+        <Asset>1742101076</Asset>        <!-- Fire Boat - Ship -->
+    </Item>
+    <Item>
+        <Asset>1742100576</Asset>        <!-- Windjammer - Ship -->
+    </Item>
+    <Item>
+        <Asset>1742100578</Asset>        <!-- The Duke - Ship -->
+    </Item>
+    <Item>
+        <Asset>1742100581</Asset>        <!-- Small Cargo Ship -->
+    </Item>
+    <Item>
+        <Asset>1742100583</Asset>        <!-- Small Battle Cruiser -->
+    </Item>
+    <Item>
+        <Asset>1742100585</Asset>        <!-- Heavy Battle Cruiser -->
+    </Item>
+    <Item>
+        <Asset>1742100587</Asset>        <!-- Torpedo Boat - Ship -->
+    </Item>
+    <Item>
+        <Asset>1742100589</Asset>        <!-- Corvette - Ship -->
+    </Item>
+    <Item>
+        <Asset>1742100591</Asset>        <!-- Auxiliary Ship - Ship -->
+    </Item>
+    <Item>
+        <Asset>1742100611</Asset>        <!-- Small Reefer - Ship -->
+    </Item>
+    <Item>
+        <Asset>1742100615</Asset>        <!-- Ironclad Cruiser - Ship -->
+    </Item>
+    <Item>
+        <Asset>1742100609</Asset>        <!-- Flak Ironclad - Ship -->
+    </Item>
+    <Item>
+        <Asset>1742100624</Asset>        <!-- Small Oil Tanker - Ship -->
+    </Item>
+    <Item>
+        <Asset>1742100625</Asset>        <!-- Large Oil Tanker - Ship -->
+    </Item>
+</ModOp>
+<!-- END - ALL PLAYER SHIPS - PlayerCounterContextPool -->
+
+<!-- START - ALL MLITARY SHIPS - PlayerCounterContextPool -->
+<ModOp Type="add" GUID="119965" Path="/Values/PlayerCounterContextPool/Contexts/">
+    <Item>
+        <Asset>1742101076</Asset>        <!-- Fire Boat - Ship -->
+    </Item>
+    <Item>
+        <Asset>1742100578</Asset>        <!-- The Duke - Ship -->
+    </Item>
+    <Item>
+        <Asset>1742100583</Asset>        <!-- Small Battle Cruiser -->
+    </Item>
+    <Item>
+        <Asset>1742100585</Asset>        <!-- Heavy Battle Cruiser -->
+    </Item>
+    <Item>
+        <Asset>1742100587</Asset>        <!-- Torpedo Boat - Ship -->
+    </Item>
+    <Item>
+        <Asset>1742100589</Asset>        <!-- Corvette - Ship -->
+    </Item>
+    <Item>
+        <Asset>1742100615</Asset>        <!-- Ironclad Cruiser - Ship -->
+    </Item>
+    <Item>
+        <Asset>1742100609</Asset>        <!-- Flak Ironclad - Ship -->
+    </Item>
+</ModOp>
+<!-- END - ALL MLITARY SHIPS - PlayerCounterContextPool -->
+
+<!-- START - ALL AIRSHIPS - PlayerCounterContextPool -->
+<ModOp Type="add" GUID="104661,103085,104750" Path="/Values/PlayerCounterContextPool/Contexts/">
+    <Item>
+        <Asset>1742101079</Asset>        <!-- X1 (Arctic Gas) - AirShip -->
+    </Item>
+    <Item>
+        <Asset>1742100629</Asset>        <!-- B42 (Arctic Gas) - AirShip -->
+    </Item>
+    <Item>
+        <Asset>1742100658</Asset>        <!-- F42 (Arctic Gas) - AirShip -->
+    </Item>
+    <Item>
+        <Asset>1742100661</Asset>        <!-- A42 (Arctic Gas) - AirShip -->
+    </Item>
+</ModOp>
+<!-- END - ALL MLITARY SHIPS - PlayerCounterContextPool -->
+
+<!-- *************************************** ItemEffectTargetPool *************************************** -->
+
+<!-- START - ALL SHIPS - ItemEffectTargetPool-->
+<ModOp Type="add" GUID="191454" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
+    <Item>
+        <GUID>1742101076</GUID>        <!-- Fire Boat - Ship -->
+    </Item>
+    <Item>
+        <GUID>1742100578</GUID>        <!-- The Duke - Ship -->
+    </Item>
+    <Item>
+        <GUID>1742100583</GUID>        <!-- Small Battle Cruiser -->
+    </Item>
+    <Item>
+        <GUID>1742100585</GUID>        <!-- Heavy Battle Cruiser -->
+    </Item>
+    <Item>
+        <GUID>1742100587</GUID>        <!-- Torpedo Boat - Ship -->
+    </Item>
+    <Item>
+        <GUID>1742100589</GUID>        <!-- Corvette - Ship -->
+    </Item>
+    <Item>
+        <GUID>1742100591</GUID>        <!-- Auxiliary Ship - Ship -->
+    </Item>
+    <Item>
+        <GUID>1742100615</GUID>        <!-- Ironclad Cruiser - Ship -->
+    </Item>
+    <Item>
+        <GUID>1742100609</GUID>        <!-- Flak Ironclad - Ship -->
+    </Item>
+    <Item>
+        <GUID>1742101079</GUID>        <!-- X1 (Arctic Gas) - AirShip -->
+    </Item>
+    <Item>
+        <GUID>1742100629</GUID>        <!-- B42 (Arctic Gas) - AirShip -->
+    </Item>
+    <Item>
+        <GUID>1742100658</GUID>        <!-- F42 (Arctic Gas) - AirShip -->
+    </Item>
+</ModOp>
+<!-- END - ALL SHIPS - ItemEffectTargetPool -->
+
+<!-- START - ALL SAILING SHIPS - ItemEffectTargetPool-->
+<ModOp Type="add" GUID="191455" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
+    <Item>
+        <GUID>1742101076</GUID>        <!-- Fire Boat - Ship -->
+    </Item>
+    <Item>
+        <GUID>1742100578</GUID>        <!-- The Duke - Ship -->
+    </Item>
+</ModOp>
+<!-- END - ALL SAILING SHIPS - ItemEffectTargetPool -->
+
+<!-- START - ALL STEAMSHIPS - ItemEffectTargetPool -->
+<ModOp Type="add" GUID="191456" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
+    <Item>
+        <GUID>1742100583</GUID>        <!-- Small Battle Cruiser -->
+    </Item>
+    <Item>
+        <GUID>1742100585</GUID>        <!-- Heavy Battle Cruiser -->
+    </Item>
+    <Item>
+        <GUID>1742100587</GUID>        <!-- Torpedo Boat - Ship -->
+    </Item>
+    <Item>
+        <GUID>1742100589</GUID>        <!-- Corvette - Ship -->
+    </Item>
+    <Item>
+        <GUID>1742100591</GUID>        <!-- Auxiliary Ship - Ship -->
+    </Item>
+    <Item>
+        <GUID>1742100615</GUID>        <!-- Ironclad Cruiser - Ship -->
+    </Item>
+    <Item>
+        <GUID>1742100609</GUID>        <!-- Flak Ironclad - Ship -->
+    </Item>
+</ModOp>
+<!-- END - ALL STEAMSHIPS - ItemEffectTargetPool -->
+
+<!-- START - ALL WARSHIPS / ALL MILITARY UNITS - ItemEffectTargetPool -->
+<ModOp Type="add" GUID="191458,193986" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
+    <Item>
+        <GUID>1742101076</GUID>        <!-- Fire Boat - Ship -->
+    </Item>
+    <Item>
+        <GUID>1742100578</GUID>        <!-- The Duke - Ship -->
+    </Item>
+    <Item>
+        <GUID>1742100583</GUID>        <!-- Small Battle Cruiser -->
+    </Item>
+    <Item>
+        <GUID>1742100585</GUID>        <!-- Heavy Battle Cruiser -->
+    </Item>
+    <Item>
+        <GUID>1742100587</GUID>        <!-- Torpedo Boat - Ship -->
+    </Item>
+    <Item>
+        <GUID>1742100589</GUID>        <!-- Corvette - Ship -->
+    </Item>
+    <Item>
+        <GUID>1742100615</GUID>        <!-- Ironclad Cruiser - Ship -->
+    </Item>
+    <Item>
+        <GUID>1742100609</GUID>        <!-- Flak Ironclad - Ship -->
+    </Item>
+    <Item>
+        <GUID>1742101079</GUID>        <!-- X1 (Arctic Gas) - AirShip -->
+    </Item>
+    <Item>
+        <GUID>1742100629</GUID>        <!-- B42 (Arctic Gas) - AirShip -->
+    </Item>
+    <Item>
+        <GUID>1742100658</GUID>        <!-- F42 (Arctic Gas) - AirShip -->
+    </Item>
+</ModOp>
+<!-- END - ALL WARSHIPS / ALL MILITARY UNITS - ItemEffectTargetPool -->
+
+<!-- START - ALL WOODEN HULL SHIPS (Flamable) - ItemEffectTargetPool-->
+<ModOp Type="add" GUID="1398" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
+    <Item>
+        <GUID>1742101076</GUID>        <!-- Fire Boat - Ship -->
+    </Item>
+    <Item>
+        <GUID>1742100578</GUID>        <!-- The Duke - Ship -->
+    </Item>
+</ModOp>
+<!-- END - ALL WOODEN HULL SHIPS (Flamable) - ItemEffectTargetPool-->
+
+<!-- START - ALL STEAL HULL SHIPS - ItemEffectTargetPool -->
+<ModOp Type="add" GUID="1404" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
+    <Item>
+        <GUID>1742100583</GUID>        <!-- Small Battle Cruiser -->
+    </Item>
+    <Item>
+        <GUID>1742100585</GUID>        <!-- Heavy Battle Cruiser -->
+    </Item>
+    <Item>
+        <GUID>1742100587</GUID>        <!-- Torpedo Boat - Ship -->
+    </Item>
+    <Item>
+        <GUID>1742100589</GUID>        <!-- Corvette - Ship -->
+    </Item>
+    <Item>
+        <GUID>1742100591</GUID>        <!-- Auxiliary Ship - Ship -->
+    </Item>
+    <Item>
+        <GUID>1742100615</GUID>        <!-- Ironclad Cruiser - Ship -->
+    </Item>
+    <Item>
+        <GUID>1742100609</GUID>        <!-- Flak Ironclad - Ship -->
+    </Item>
+</ModOp>
+<!-- END - ALL STEAL HULL SHIPS - ItemEffectTargetPool -->
+
+<!-- START - ALL AIRSHIPS - ItemEffectTargetPool -->
+<ModOp Type="add" GUID="102492" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
+    <Item>
+        <GUID>1742101079</GUID>        <!-- X1 (Arctic Gas) - AirShip -->
+    </Item>
+    <Item>
+        <GUID>1742100629</GUID>        <!-- B42 (Arctic Gas) - AirShip -->
+    </Item>
+    <Item>
+        <GUID>1742100658</GUID>        <!-- F42 (Arctic Gas) - AirShip -->
+    </Item>
+</ModOp>
+<!-- END - ALL AIRSHIPS - ItemEffectTargetPool -->
+
+    <!-- EXISTING ITEMS TO EXISTING POOLS -->
+
+    <!-- NEW STRUCTURED ITEMS POOL -->
+    <!-- COMMON ITEMS -->
+    <ModOp Type="addNextSibling" GUID="193653">
+        <Asset>
+            <Template>RewardPool</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742103558</GUID>
+                    <Name>Common Items</Name>
+                </Standard>
+                <RewardPool>
+                    <ItemsPool>
+                        <Item>
+                            <ItemLink>191964</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191979</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191955</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191962</ItemLink>
+                        </Item>
+                    </ItemsPool>
+                </RewardPool>
+                <Locked>
+                    <DefaultLockedState>0</DefaultLockedState>
+                </Locked>
+                <Text/>
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- UNCOMMON ITEMS -->
+    <ModOp Type="addNextSibling" GUID="193653">
+        <Asset>
+            <Template>RewardPool</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742103559</GUID>
+                    <Name>Uncommon Items</Name>
+                </Standard>
+                <RewardPool>
+                    <ItemsPool>
+                        <Item>
+                            <ItemLink>192151</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191879</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191883</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191852</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191856</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191838</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191824</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191829</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191848</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>110965</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>112574</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191958</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191980</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191965</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191963</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>192001</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>192005</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>192184</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191999</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191879</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191888</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191894</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191883</ItemLink>
+                        </Item>
+                    </ItemsPool>
+                </RewardPool>
+                <Locked>
+                    <DefaultLockedState>0</DefaultLockedState>
+                </Locked>
+                <Text/>
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- RARE ITEMS -->
+    <ModOp Type="addNextSibling" GUID="193653">
+        <Asset>
+            <Template>RewardPool</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742103560</GUID>
+                    <Name>Rare Items</Name>
+                </Standard>
+                <RewardPool>
+                    <ItemsPool>
+                        <Item>
+                            <ItemLink>192153</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191881</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191885</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191853</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>112377</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191857</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191839</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>112368</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191013</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191830</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191849</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191867</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>110966</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>192165</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>112576</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>192002</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>192430</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>192185</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191889</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191880</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191895</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191884</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>112386</ItemLink>
+                        </Item>
+                    </ItemsPool>
+                </RewardPool>
+                <Locked>
+                    <DefaultLockedState>0</DefaultLockedState>
+                </Locked>
+                <Text/>
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- EPIC ITEMS -->
+    <ModOp Type="addNextSibling" GUID="193653">
+        <Asset>
+            <Template>RewardPool</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742103561</GUID>
+                    <Name>Epic Items</Name>
+                </Standard>
+                <RewardPool>
+                    <ItemsPool>
+                        <Item>
+                            <ItemLink>192153</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191881</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191885</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191850</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191831</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>112369</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191840</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191825</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>116173</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>117302</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>117303</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191854</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191858</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>112378</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>192433</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>192166</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191868</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>112387</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191890</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191896</ItemLink>
+                        </Item>
+                    </ItemsPool>
+                </RewardPool>
+                <Locked>
+                    <DefaultLockedState>0</DefaultLockedState>
+                </Locked>
+                <Text/>
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- LEGENDARY ITEMS -->
+    <ModOp Type="addNextSibling" GUID="193653">
+        <Asset>
+            <Template>RewardPool</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742103562</GUID>
+                    <Name>Legendary Items</Name>
+                </Standard>
+                <RewardPool>
+                    <ItemsPool>
+                        <Item>
+                            <ItemLink>192155</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191882</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191886</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>110955</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>121023</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>112370</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>112388</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>112379</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191869</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191855</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>116174</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191851</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>192168</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>192434</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>192036</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>192177</ItemLink>
+                        </Item>
+                    </ItemsPool>
+                </RewardPool>
+                <Locked>
+                    <DefaultLockedState>0</DefaultLockedState>
+                </Locked>
+                <Text/>
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- COMMON SPECIALISTS -->
+    <ModOp Type="addNextSibling" GUID="193653">
+        <Asset>
+            <Template>RewardPool</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742103563</GUID>
+                    <Name>Common Specialists</Name>
+                </Standard>
+                <RewardPool>
+                    <ItemsPool>
+                        <Item>
+                            <ItemLink>191445</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191597</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191616</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191596</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>111126</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191444</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>190694</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191432</ItemLink>
+                        </Item>
+                    </ItemsPool>
+                </RewardPool>
+                <Locked>
+                    <DefaultLockedState>0</DefaultLockedState>
+                </Locked>
+                <Text/>
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- UNCOMMON SPECIALISTS -->
+    <ModOp Type="addNextSibling" GUID="193653">
+        <Asset>
+            <Template>RewardPool</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742103564</GUID>
+                    <Name>Uncommon Specialists</Name>
+                </Standard>
+                <RewardPool>
+                    <ItemsPool>
+                        <Item>
+                            <ItemLink>111127</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191598</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191446</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191447</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191599</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>1516</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>192164</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191433</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>190695</ItemLink>
+                        </Item>
+                    </ItemsPool>
+                </RewardPool>
+                <Locked>
+                    <DefaultLockedState>0</DefaultLockedState>
+                </Locked>
+                <Text/>
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- RARE SPECIALISTS -->
+    <ModOp Type="addNextSibling" GUID="193653">
+        <Asset>
+            <Template>RewardPool</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742103565</GUID>
+                    <Name>Rare Specialists</Name>
+                </Standard>
+                <RewardPool>
+                    <ItemsPool>
+                        <Item>
+                            <ItemLink>191600</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191449</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191448</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>4133</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>4132</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191602</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>111128</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191601</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191448</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>13648</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>110982</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>192006</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>192000</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191434</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>190696</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>13645</ItemLink>
+                        </Item>
+                    </ItemsPool>
+                </RewardPool>
+                <Locked>
+                    <DefaultLockedState>0</DefaultLockedState>
+                </Locked>
+                <Text/>
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- EPIC SPECIALISTS -->
+    <ModOp Type="addNextSibling" GUID="193653">
+        <Asset>
+            <Template>RewardPool</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742103566</GUID>
+                    <Name>Epic Specialists</Name>
+                </Standard>
+                <RewardPool>
+                    <ItemsPool>
+                        <Item>
+                            <ItemLink>192449</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191604</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>2232</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>4134</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>4117</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191605</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>193188</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191603</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>111131</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>111129</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>192449</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191606</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>190766</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191450</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>1517</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>110983</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>112578</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>192186</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191435</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>190697</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>121022</ItemLink>
+                        </Item>
+                    </ItemsPool>
+                </RewardPool>
+                <Locked>
+                    <DefaultLockedState>0</DefaultLockedState>
+                </Locked>
+                <Text/>
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- LEGENDARY SPECIALISTS -->
+    <ModOp Type="addNextSibling" GUID="193653">
+        <Asset>
+            <Template>RewardPool</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742103567</GUID>
+                    <Name>Legendary Specialists</Name>
+                </Standard>
+                <RewardPool>
+                    <ItemsPool>
+                        <Item>
+                            <ItemLink>191608</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>190698</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>2226</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>4135</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191453</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>111130</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191609</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191608</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191610</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191451</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191452</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191611</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191607</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>102158</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191436</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>191442</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>190698</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742000293</ItemLink>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742000277</ItemLink>
+                        </Item>
+                    </ItemsPool>
+                </RewardPool>
+                <Locked>
+                    <DefaultLockedState>0</DefaultLockedState>
+                </Locked>
+                <Text/>
+            </Values>
+        </Asset>
+    </ModOp>
+
+
+    <!-- RESHUFFLE VISITORS ITEM POOL -->
+    <!-- Speecialist Visitor Stage 1 -->
+    <ModOp Type="addNextSibling" GUID="193653">
+        <Asset>
+            <Template>RewardPool</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742103568</GUID>
+                    <Name>Specialists Stage 1</Name>
+                    <IconFilename>data/ui/2kimages/main/3dicons/specialists/systemic/icon_worker_417.png</IconFilename>
+                </Standard>
+                <RewardPool>
+                    <ItemsPool>
+                        <Item>
+                            <ItemLink>1742103558</ItemLink>
+                            <Weight>20</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742103559</ItemLink>
+                            <Weight>10</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742103560</ItemLink>
+                            <Weight>3</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742103561</ItemLink>
+                            <Weight>0</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742103562</ItemLink>
+                            <Weight>0</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742103563</ItemLink>
+                            <Weight>40</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742103564</ItemLink>
+                            <Weight>20</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742103565</ItemLink>
+                            <Weight>7</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742103566</ItemLink>
+                            <Weight>0</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742103567</ItemLink>
+                            <Weight>0</Weight>
+                        </Item>
+                    </ItemsPool>
+                </RewardPool>
+                <Locked>
+                    <DefaultLockedState>0</DefaultLockedState>
+                </Locked>
+                <Text/>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- Speecialist Visitor Stage 2 -->
+    <ModOp Type="addNextSibling" GUID="193653">
+        <Asset>
+            <Template>RewardPool</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742103569</GUID>
+                    <Name>Specialists Stage 2</Name>
+                    <IconFilename>data/ui/2kimages/main/3dicons/specialists/systemic/icon_sommelier_201.png</IconFilename>
+                </Standard>
+                <RewardPool>
+                    <ItemsPool>
+                        <Item>
+                            <ItemLink>1742103558</ItemLink>
+                            <Weight>10</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742103559</ItemLink>
+                            <Weight>10</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742103560</ItemLink>
+                            <Weight>5</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742103561</ItemLink>
+                            <Weight>0</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742103562</ItemLink>
+                            <Weight>0</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742103563</ItemLink>
+                            <Weight>30</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742103564</ItemLink>
+                            <Weight>25</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742103565</ItemLink>
+                            <Weight>15</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742103566</ItemLink>
+                            <Weight>5</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742103567</ItemLink>
+                            <Weight>0</Weight>
+                        </Item>
+                    </ItemsPool>
+                </RewardPool>
+                <Locked>
+                    <DefaultLockedState>0</DefaultLockedState>
+                </Locked>
+                <Text/>
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- Speecialist Visitor Stage 3 -->
+    <ModOp Type="addNextSibling" GUID="193653">
+        <Asset>
+            <Template>RewardPool</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742103570</GUID>
+                    <Name>Specialists Stage 3</Name>
+                    <IconFilename>data/ui/2kimages/main/3dicons/specialists/systemic/icon_welldress_806.png</IconFilename>
+                </Standard>
+                <RewardPool>
+                    <ItemsPool>
+                        <Item>
+                            <ItemLink>1742103558</ItemLink>
+                            <Weight>5</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742103559</ItemLink>
+                            <Weight>10</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742103560</ItemLink>
+                            <Weight>10</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742103561</ItemLink>
+                            <Weight>5</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742103562</ItemLink>
+                            <Weight>2</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742103563</ItemLink>
+                            <Weight>15</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742103564</ItemLink>
+                            <Weight>15</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742103565</ItemLink>
+                            <Weight>25</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742103566</ItemLink>
+                            <Weight>10</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742103567</ItemLink>
+                            <Weight>3</Weight>
+                        </Item>
+                    </ItemsPool>
+                </RewardPool>
+                <Locked>
+                    <DefaultLockedState>0</DefaultLockedState>
+                </Locked>
+                <Text/>
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- Speecialist Visitor Stage 4 -->
+    <ModOp Type="addNextSibling" GUID="193653">
+        <Asset>
+            <Template>RewardPool</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742103571</GUID>
+                    <Name>Specialists Stage 4</Name>
+                    <IconFilename>data/ui/2kimages/main/3dicons/specialists/systemic/icon_normaldress_810.png</IconFilename>
+                </Standard>
+                <RewardPool>
+                    <ItemsPool>
+                        <Item>
+                            <ItemLink>1742103558</ItemLink>
+                            <Weight>5</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742103559</ItemLink>
+                            <Weight>5</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742103560</ItemLink>
+                            <Weight>10</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742103561</ItemLink>
+                            <Weight>10</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742103562</ItemLink>
+                            <Weight>3</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742103563</ItemLink>
+                            <Weight>10</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742103564</ItemLink>
+                            <Weight>15</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742103565</ItemLink>
+                            <Weight>20</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742103566</ItemLink>
+                            <Weight>15</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742103567</ItemLink>
+                            <Weight>7</Weight>
+                        </Item>
+                    </ItemsPool>
+                </RewardPool>
+                <Locked>
+                    <DefaultLockedState>0</DefaultLockedState>
+                </Locked>
+                <Text/>
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- Speecialist Visitor Stage 5 -->
+    <ModOp Type="addNextSibling" GUID="193653">
+        <Asset>
+            <Template>RewardPool</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742103572</GUID>
+                    <Name>Specialists Stage 5</Name>
+                    <IconFilename>data/ui/2kimages/main/3dicons/specialists/systemic/icon_well_dressed_109.png</IconFilename>
+                </Standard>
+                <RewardPool>
+                    <ItemsPool>
+                        <Item>
+                            <ItemLink>1742103558</ItemLink>
+                            <Weight>2</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742103559</ItemLink>
+                            <Weight>3</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742103560</ItemLink>
+                            <Weight>10</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742103561</ItemLink>
+                            <Weight>10</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742103562</ItemLink>
+                            <Weight>10</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742103563</ItemLink>
+                            <Weight>3</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742103564</ItemLink>
+                            <Weight>7</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742103565</ItemLink>
+                            <Weight>15</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742103566</ItemLink>
+                            <Weight>25</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1742103567</ItemLink>
+                            <Weight>15</Weight>
+                        </Item>
+                    </ItemsPool>
+                </RewardPool>
+                <Locked>
+                    <DefaultLockedState>0</DefaultLockedState>
+                </Locked>
+                <Text/>
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- START ADD TO GLOBAL MAINTENANCE POOLS -->
+    <ModOp Type="add" GUID="368" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
+        <Item>
+            <GUID>1742100692</GUID>
+        </Item>
+    </ModOp>
+    <!-- START ADD TO GLOBAL MAINTENANCE POOLS -->
+
+    <!-- START Add All Defense Buildings to All military buildings - ItemEffectTargetPool -->
+    <ModOp GUID="191443" Type="add" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
+        <Item>
+            <GUID>1742100692</GUID>
+        </Item>
+    </ModOp>
+    <!-- END Add All Defense Buildings to All military buildings - ItemEffectTargetPool -->
+
+    <!-- START Add All Defense Buildings to All military buildings - ItemEffectTargetPool -->
+    <ModOp GUID="193986" Type="add" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
+        <Item>
+            <GUID>1742100692</GUID>
+        </Item>
+    </ModOp>
+    <!-- END Add All Defense Buildings to All military buildings - ItemEffectTargetPool -->
+
+    <!-- START - Add airships to ItemEffectTargetPool - AllTradeAirships, all airships -->
+    <ModOp Type="Add" GUID='102492' Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs/">
+        <Item>
+            <GUID>1742000269</GUID>
+        </Item>
+        <Item>
+            <GUID>1742000297</GUID>
+        </Item>
+    </ModOp>
+    <!-- END-Add airships to ItemEffectTargetPool - AllTradeAirships -->
+
+    <!-- START - Add airships to AllAirshipPool -->
+    <ModOp Type="Add" GUID='102180' Path="/Values/AssetPool/AssetList/">
+        <Item>
+            <Asset>1742000269</Asset>
+        </Item>
+        <Item>
+            <Asset>1742000297</Asset>
+        </Item>
+    </ModOp>
+    <!-- END- Add airships to AllAirshipPool -->
+
+    <!-- START - Add airships to PlayerCounterContextPool - AP - Airships -->
+    <ModOp Type="Add" GUID='103085,104750' Path="/Values/PlayerCounterContextPool/Contexts/">
+        <Item>
+            <Asset>1742000269</Asset>
+        </Item>
+        <Item>
+            <Asset>1742000297</Asset>
+        </Item>
+    </ModOp>
+    <!-- END- Add airships to PlayerCounterContextPool - AP - Airships -->
+
+</ModOps>

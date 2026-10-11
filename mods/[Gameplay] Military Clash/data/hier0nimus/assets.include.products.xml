@@ -1,0 +1,333 @@
+<!-- 
+
+CHANGES TO SHIPS / NEW SHIPS
+
+-->
+
+<ModOps>
+
+    <!-- //////////////////////////// NEW PRODUCTS //////////////////////////// -->
+
+    <!-- OIL (Normal product) -->
+
+    <ModOp Type="addNextSibling" GUID="1010196">
+        <Asset>
+            <Template>Product</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742103554</GUID>
+                    <Name>Oil</Name>
+                    <IconFilename>data/ui/2kimages/main/3dicons/icon_oil.png</IconFilename>
+                    <InfoDescription>11793</InfoDescription>
+                </Standard>
+                <Text>
+                    <TextOverride>1010566</TextOverride>
+                </Text>
+                <Locked/>
+                <Product>
+                    <StorageLevel>Building</StorageLevel>
+                    <ProductCategory>11707</ProductCategory>                    <!--Product Category Construction Material-->
+                    <BasePrice>250</BasePrice>
+                    <CivLevel>4</CivLevel>
+                    <AssociatedRegion>Moderate</AssociatedRegion>
+                    <ProductionRegions>
+                        <Item>
+                            <RegionType>Moderate</RegionType>
+                        </Item>
+                    </ProductionRegions>
+                </Product>
+                <ExpeditionAttribute>
+                    <BaseMorale>0</BaseMorale>
+                    <ExpeditionAttributes>
+                        <Item>
+                            <Attribute>Crafting</Attribute>
+                            <Amount>20</Amount>
+                        </Item>
+                    </ExpeditionAttributes>
+                </ExpeditionAttribute>
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- LETTERS FROM HOME -->
+
+    <ModOp Type="addNextSibling" GUID="1010196">
+        <Asset>
+            <Template>Product</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742103555</GUID>
+                    <Name>Letters From Home</Name>
+                    <IconFilename>data\graphics\icons\icon_letters_from_home.png</IconFilename>
+                </Standard>
+                <Text/>
+                <Locked/>
+                <Product>
+                    <StorageLevel>Building</StorageLevel>
+                    <ProductCategory>11704</ProductCategory>                    <!--Product Category Supply Good-->
+                    <BasePrice>50</BasePrice>
+                    <CivLevel>1</CivLevel>
+                    <AssociatedRegion>Moderate</AssociatedRegion>
+                    <ProductionRegions>
+                        <Item>
+                            <RegionType>Moderate</RegionType>
+                        </Item>
+                    </ProductionRegions>
+                </Product>
+                <ExpeditionAttribute>
+                    <BaseMorale>50</BaseMorale>
+                </ExpeditionAttribute>
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- SOLDIERS WORKFORCE -->
+    <ModOp GUID='1010128' Type="addNextSibling">
+        <Asset>
+            <Template>Product</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742100005</GUID>
+                    <Name>Soldiers Workforce</Name>
+                    <IconFilename>data/graphics/icons/icon_menu_military_soldiers_0.png</IconFilename>
+                </Standard>
+                <Text />
+                <Locked>
+                    <DefaultLockedState>0</DefaultLockedState>
+                </Locked>
+                <Product>
+                    <StorageLevel>Area</StorageLevel>
+                    <DeltaOnly>1</DeltaOnly>
+                    <IsWorkforce>1</IsWorkforce>
+                </Product>
+                <ExpeditionAttribute />
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- CANTEEN (OW) -->
+    <ModOp Type="addNextSibling" GUID='5392'>
+        <Asset>
+            <Template>Product</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742100022</GUID>                    <!-- Canteen (OW) - Product -->
+                    <Name>Canteen</Name>
+                    <IconFilename>data/graphics/icons/icon_canteen.png</IconFilename>
+                </Standard>
+                <Text>
+                    <TextOverride>1742100020</TextOverride>
+                </Text>
+                <Locked />
+                <Product>
+                    <StorageLevel>Building</StorageLevel>
+                    <ProductCategory>11708</ProductCategory>
+                    <IsAbstract>1</IsAbstract>
+                    <AssociatedRegion>Moderate</AssociatedRegion>
+                </Product>
+                <ExpeditionAttribute />
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- START PRODUCT - Military Headquarters -->
+    <ModOp Type="addNextSibling" GUID='5392'>
+        <Asset>
+            <Template>Product</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742100084</GUID>                    <!-- Military Headquarters - Product -->
+                    <Name>Military Headquarters</Name>
+                    <IconFilename>data/graphics/icons/icon_military_academy.png</IconFilename>
+                </Standard>
+                <Text>
+                    <TextOverride>1742100082</TextOverride>
+                </Text>
+                <Locked />
+                <Product>
+                    <StorageLevel>Building</StorageLevel>
+                    <ProductCategory>11708</ProductCategory>
+                    <IsAbstract>1</IsAbstract>
+                    <AssociatedRegion>Moderate</AssociatedRegion>
+                </Product>
+                <ExpeditionAttribute />
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- START PRODUCT - MILITARY TRAINING COMPLEX -->
+    <ModOp Type="addNextSibling" GUID='5392'>
+        <Asset>
+            <Template>Product</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742100191</GUID>                    <!-- Military Training Complex - Product -->
+                    <Name>Military Training Complex</Name>
+                    <IconFilename>data/graphics/icons/icon_military_training_complex.png</IconFilename>
+                </Standard>
+                <Text>
+                    <TextOverride>1742100189</TextOverride>
+                </Text>
+                <Locked />
+                <Product>
+                    <ProductColor>-11415604</ProductColor>
+                    <StorageLevel>Building</StorageLevel>
+                    <ProductCategory>11709</ProductCategory>
+                    <IsAbstract>1</IsAbstract>
+                    <AssociatedRegion>Moderate</AssociatedRegion>
+                </Product>
+                <ExpeditionAttribute />
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- START CREATE PRODUCTLIST - SOLDIERS -->
+    <ModOp Type="addNextSibling" GUID='501995'>
+        <Asset>
+            <Template>ProductList</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742100015</GUID>                    <!-- Soldiers ProductList -->
+                    <Name>Soldiers Productlist</Name>
+                    <IconFilename>data/graphics/icons/icon_soldiers_0.png</IconFilename>
+                </Standard>
+                <ProductList>
+                    <List>
+                        <Item>
+                            <Product>120008</Product>                            <!--wood-->
+                        </Item>
+                        <Item>
+                            <Product>1010196</Product>                            <!--timber-->
+                        </Item>
+                        <Item>
+                            <Product>1010197</Product>                            <!--wool-->
+                        </Item>
+                        <Item>
+                            <Product>1742103554</Product>                            <!-- Oil - Product -->
+                        </Item>
+                        <Item>
+                            <Product>1742103555</Product>                            <!-- Oil - Product -->
+                        </Item>
+                        <Item>
+                            <Product>1010200</Product>                            <!--fish-->
+                        </Item>
+                        <Item>
+                            <Product>1010195</Product>                            <!--potatoes-->
+                        </Item>
+                        <Item>
+                            <Product>1010199</Product>                            <!--pigs-->
+                        </Item>
+                        <Item>
+                            <Product>1010238</Product>                            <!--sausage-->
+                        </Item>
+                        <Item>
+                            <Product>1010192</Product>                            <!--grain-->
+                        </Item>
+                        <Item>
+                            <Product>1010235</Product>                            <!--flour-->
+                        </Item>
+                        <Item>
+                            <Product>1010210</Product>                            <!--sailcloth-->
+                        </Item>
+                        <Item>
+                            <Product>1010226</Product>                            <!--coal-->
+                        </Item>
+                        <Item>
+                            <Product>1010227</Product>                            <!--iron-->
+                        </Item>
+                        <Item>
+                            <Product>1010219</Product>                            <!--steel-->
+                        </Item>
+                        <Item>
+                            <Product>1010218</Product>                            <!--beams-->
+                        </Item>
+                        <Item>
+                            <Product>1010221</Product>                            <!--weapons-->
+                        </Item>
+                        <Item>
+                            <Product>1010194</Product>                            <!--hops-->
+                        </Item>
+                        <Item>
+                            <Product>1010214</Product>                            <!--beer-->
+                        </Item>
+                        <Item>
+                            <Product>1010204</Product>                            <!--brass-->
+                        </Item>
+                        <Item>
+                            <Product>1010222</Product>                            <!--dynamite-->
+                        </Item>
+                        <Item>
+                            <Product>1010223</Product>                            <!--advanced weapons-->
+                        </Item>
+                        <Item>
+                            <Product>133183</Product>                            <!--Jam-->
+                        </Item>
+                        <Item>
+                            <Product>135229</Product>                            <!--Biscuits-->
+                        </Item>
+                        <Item>
+                            <Product>846</Product>                            <!--Bombs-->
+                        </Item>
+                        <Item>
+                            <Product>847</Product>                            <!--Sea Mines-->
+                        </Item>
+                        <Item>
+                            <Product>848</Product>                            <!--Flyers-->
+                        </Item>
+                    </List>
+                </ProductList>
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- START ADD SOLDIERS PRODUCTLIST TO EUROPE UNLOCK -->
+    <ModOp Type="add" GUID="502016" Path="/Values/ProductList/List">
+        <Item>
+            <Product>1742100015</Product>            <!--Soldiers Productlist-->
+        </Item>
+    </ModOp>
+
+    <!-- START CREATE CONSUMER GOODS - SOLDIERS -->
+    <ModOp Type="addNextSibling" GUID='501995'>
+        <Asset>
+            <Template>ProductList</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742103557</GUID>                    
+                    <Name>Soldiers Consumer Goods</Name>
+                    <IconFilename>data/graphics/icons/icon_soldiers_0.png</IconFilename>
+                </Standard>
+                <ProductList>
+                    <List>
+                        <Item>
+                            <Product>1742103555</Product>                            <!-- Oil - Product -->
+                        </Item>
+                        <Item>
+                            <Product>1010200</Product>                            <!--fish-->
+                        </Item>
+                        <Item>
+                            <Product>1010195</Product>                            <!--potatoes-->
+                        </Item>
+                        <Item>
+                            <Product>1010238</Product>                            <!--sausage-->
+                        </Item>
+                        <Item>
+                            <Product>1010214</Product>                            <!--beer-->
+                        </Item>
+                        <Item>
+                            <Product>135229</Product>                            <!--Biscuits-->
+                        </Item>
+                    </List>
+                </ProductList>
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- START ADD SOLDIERS PRODUCTLIST TO EUROPE UNLOCK -->
+    <ModOp Type="add" GUID="502031" Path="/Values/ProductList/List">
+        <Item>
+            <Product>1742103557</Product>            <!--Soldiers Consumer Goods-->
+        </Item>
+    </ModOp>
+
+</ModOps>

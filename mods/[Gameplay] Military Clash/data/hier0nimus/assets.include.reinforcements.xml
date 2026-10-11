@@ -1,0 +1,205 @@
+<!-- 
+
+REINFORCEMENTS - TOURISM
+
+-->
+
+<ModOps>
+
+    <!-- TOURISM/VISOTOR SWAPS -->
+    <ModOp Type="merge" GUID='90' Path="/Values/">
+		<Standard>
+			<Name>Reinforcements</Name>
+			<IconFilename>data/ui/2kimages/main/profiles/campaign_portrait_09.png</IconFilename>
+		</Standard>
+        <Text>
+            <LocaText>
+                <English>
+                    <Text>Reinforcements</Text>
+                </English>
+            </LocaText>
+        </Text>
+        <Profile>
+            <ProfilePicture>data/ui/2kimages/main/profiles/campaign_portrait_09.png</ProfilePicture>
+            <Portrait>101307</Portrait>
+            <ParticipantID>Mercier_DeserterWorker</ParticipantID>
+            <NotificationBackground>data/ui/2kimages/main/assets/character_bg/bgr_character_02.png</NotificationBackground>
+        </Profile>
+        <Object>
+			<DefaultParticipant>Mercier_DeserterWorker</DefaultParticipant>
+		</Object>
+    </ModOp>
+    <ModOp Type="merge" GUID='121' Path="/Values/">
+
+    </ModOp>
+
+    <!-- //////////////////////////// TOURISM BALANCING - REINFORCEMENTS //////////////////////////// -->
+
+    <ModOp Type="merge" GUID='2001173' Path="/Values/TourismFeature">
+        <!-- CITY SIZE -->
+        <CitySize>
+            <Village>
+                <NeededAmount>1</NeededAmount>
+                <PopulationLevel>1742100000</PopulationLevel>
+            </Village>
+            <PortTown>
+                <NeededAmount>500</NeededAmount>
+                <PopulationLevel>1742100000</PopulationLevel>
+            </PortTown>
+            <City>
+                <NeededAmount>1000</NeededAmount>
+                <PopulationLevel>1742100000</PopulationLevel>
+            </City>
+            <Capital>
+                <NeededAmount>2500</NeededAmount>
+                <PopulationLevel>1742100000</PopulationLevel>
+            </Capital>
+            <Metropolis>
+                <NeededAmount>5000</NeededAmount>
+                <PopulationLevel>1742100000</PopulationLevel>
+            </Metropolis>
+        </CitySize>
+        <!-- REINFORCEMENTS INTERVAL  -->
+        <IntervalDuration>300000</IntervalDuration>        <!-- 1800000 -->
+        <MinUnloadingTime>60000</MinUnloadingTime>        <!-- 120000 -->
+        <!-- REINFORCEMENTS PROBABILITY  -->
+        <SpecialistSpawnProbability>
+            <Item>
+                <Probability>50</Probability>
+                <VisitorAmount>100</VisitorAmount>
+            </Item>
+            <Item>
+                <Probability>60</Probability>
+                <VisitorAmount>500</VisitorAmount>
+            </Item>
+            <Item>
+                <Probability>65</Probability>
+                <VisitorAmount>750</VisitorAmount>
+            </Item>
+            <Item>
+                <Probability>70</Probability>
+                <VisitorAmount>1000</VisitorAmount>
+            </Item>
+            <Item>
+                <Probability>75</Probability>
+                <VisitorAmount>1500</VisitorAmount>
+            </Item>
+            <Item>
+                <Probability>80</Probability>
+                <VisitorAmount>2500</VisitorAmount>
+            </Item>
+            <Item>
+                <Probability>85</Probability>
+                <VisitorAmount>3000</VisitorAmount>
+            </Item>
+            <Item>
+                <Probability>90</Probability>
+                <VisitorAmount>4000</VisitorAmount>
+            </Item>
+            <Item>
+                <Probability>95</Probability>
+                <VisitorAmount>5000</VisitorAmount>
+            </Item>
+            <Item>
+                <Probability>100</Probability>
+                <VisitorAmount>10000</VisitorAmount>
+            </Item>
+        </SpecialistSpawnProbability>
+        <RegionSpecialistPools>
+            <Moderate>
+                <SpecialistPools>
+                    <Item>
+                        <CityLevel>Fair</CityLevel>
+                        <Pool>1742103568</Pool>
+                    </Item>
+                    <Item>
+                        <CityLevel>Quaint</CityLevel>
+                        <Pool>1742103568</Pool>
+                    </Item>
+                    <Item>
+                        <CityLevel>Curious</CityLevel>
+                        <Pool>1742103568</Pool>
+                    </Item>
+                    <Item>
+                        <CityLevel>Pleasant</CityLevel>
+                        <Pool>1742103569</Pool>
+                    </Item>
+                    <Item>
+                        <CityLevel>Appealing</CityLevel>
+                        <Pool>1742103569</Pool>
+                    </Item>
+                    <Item>
+                        <CityLevel>Picturesque</CityLevel>
+                        <Pool>1742103570</Pool>
+                    </Item>
+                    <Item>
+                        <CityLevel>Attractive</CityLevel>
+                        <Pool>1742103570</Pool>
+                    </Item>
+                    <Item>
+                        <CityLevel>Beguiling</CityLevel>
+                        <Pool>1742103571</Pool>
+                    </Item>
+                    <Item>
+                        <CityLevel>Enticing</CityLevel>
+                        <Pool>1742103571</Pool>
+                    </Item>
+                    <Item>
+                        <CityLevel>Delightful</CityLevel>
+                        <Pool>1742103571</Pool>
+                    </Item>
+                    <Item>
+                        <CityLevel>Beautiful</CityLevel>
+                        <Pool>1742103571</Pool>
+                    </Item>
+                    <Item>
+                        <CityLevel>Glamorous</CityLevel>
+                        <Pool>1742103572</Pool>
+                    </Item>
+                    <Item>
+                        <CityLevel>Impeccable</CityLevel>
+                        <Pool>1742103572</Pool>
+                    </Item>
+                    <Item>
+                        <CityLevel>Grand</CityLevel>
+                        <Pool>1742103572</Pool>
+                    </Item>
+                    <Item>
+                        <CityLevel>Superior</CityLevel>
+                        <Pool>1742103572</Pool>
+                    </Item>
+                    <Item>
+                        <CityLevel>Exquisite</CityLevel>
+                        <Pool>1742103572</Pool>
+                    </Item>
+                </SpecialistPools>
+            </Moderate>
+        </RegionSpecialistPools>
+    </ModOp>
+
+    <!-- CHANGE VISITORS PORTRAIT TO REINFORCEMENTS PORTRAIT -->
+    <ModOp Type="merge" GUID='500100' Path="/Values/ObjectmenuVisitorHarborScene">
+        <VisitorParticipant>Mercier_DeserterWorker</VisitorParticipant>
+    </ModOp>
+
+    <!-- CHANGE VISITORS ICONS TO REINFORCEMENTS ICON -->
+    <ModOp Type="merge" GUID='12797,500133,500126,501569,500254' Path="/Values/Standard">
+        <IconFilename>data/ui/2kimages/main/icons/dlc_11/icon_airship_drop_light.png</IconFilename>
+    </ModOp>
+    <ModOp Type="merge" GUID='501838' Path="/Values/StatisticMenu/ItemSourceData/Visitors/">
+        <Icon>data/ui/2kimages/main/icons/dlc_11/icon_airship_drop_light.png</Icon>
+    </ModOp>
+
+    <!-- PORTRAITS NOTIFICATIONS -->
+    <ModOp Type="merge" GUID='25000015,502145' Path="/Values/Notification/NotificationType/Values/">
+        <CharacterNotification>
+            <Profile>225</Profile>
+        </CharacterNotification>
+    </ModOp>
+
+    <!-- VISITORS NOTIFICATIONS-->
+    <ModOp Type="replace" GUID='260269,260270,260271,260116,260117,260118,260119,260120,260121,260122,260128,260129,260130' Path="/Values/AudioText">
+        <AudioText/>
+    </ModOp> 
+
+</ModOps>

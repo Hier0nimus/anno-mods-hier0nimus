@@ -1,0 +1,649 @@
+<!-- 
+
+ITEMS
+
+-->
+
+<ModOps>
+
+    <!-- //////////////////////////// UNLOCK ALL ITEMS AT START //////////////////////////// -->
+
+    <ModOp Type="merge" Path="//Asset[Template='ShipSpecialist']/Values/">
+        <Locked>
+            <DefaultLockedState>0</DefaultLockedState>
+        </Locked>
+    </ModOp>
+
+    <ModOp Type="merge" Path="//Asset[Template='HarborOfficeItem']/Values/">
+        <Locked>
+            <DefaultLockedState>0</DefaultLockedState>
+        </Locked>
+    </ModOp>
+
+    <ModOp Type="merge" GUID="102158" Path="/Values/">
+        <Locked>
+            <DefaultLockedState>0</DefaultLockedState>
+            <DLCDependency>24962</DLCDependency>            <!--Anno 1800 DLC - Empire of the Skies-->
+        </Locked>
+    </ModOp>
+
+    <!-- //////////////////////////// EXISTING ITEMS CHANGES //////////////////////////// -->
+
+    <ModOp Type="replace" GUID="102158" Path="/Values/Item">
+        <Item>
+            <Allocation>AirShip</Allocation>
+            <MaxStackSize>1</MaxStackSize>
+            <Rarity>Legendary</Rarity>
+            <HasAction>1</HasAction>
+            <TradePrice>100000</TradePrice>
+        </Item>
+    </ModOp>
+
+    <ModOp Type="replace" GUID="191830,191013" Path="/Values/VehicleUpgrade">
+        <VehicleUpgrade>
+            <ForwardSpeedUpgrade>
+                <Value>10</Value>
+                <Percental>1</Percental>
+            </ForwardSpeedUpgrade>
+            <IgnoreDamageFactorUpgrade>
+                <Value>25</Value>
+                <Percental>1</Percental>
+            </IgnoreDamageFactorUpgrade>
+        </VehicleUpgrade>
+    </ModOp>
+
+    <ModOp Type="replace" GUID="116173" Path="/Values/VehicleUpgrade">
+        <VehicleUpgrade>
+            <ForwardSpeedUpgrade>
+                <Value>15</Value>
+                <Percental>1</Percental>
+            </ForwardSpeedUpgrade>
+            <IgnoreDamageFactorUpgrade>
+                <Value>100</Value>
+                <Percental>1</Percental>
+            </IgnoreDamageFactorUpgrade>
+        </VehicleUpgrade>
+    </ModOp>
+
+    <!-- Bosun -->
+    <ModOp GUID='191447' Path="/Values/VehicleUpgrade/IgnoreDamageFactorUpgrade" Type="merge">
+        <Value>20</Value>
+    </ModOp>
+
+    <!-- Pilot -->
+    <ModOp GUID='191449' Path="/Values/VehicleUpgrade" Type="merge">
+        <IgnoreDamageFactorUpgrade>
+            <Value>15</Value>
+            <Percental>1</Percental>
+        </IgnoreDamageFactorUpgrade>
+    </ModOp>
+
+    <!-- Vindicated Veteran -->
+    <ModOp GUID='13648' Path="/Values/VehicleUpgrade" Type="merge">
+        <ForwardSpeedUpgrade>
+            <Value>10</Value>
+            <Percental>1</Percental>
+        </ForwardSpeedUpgrade>
+        <IgnoreDamageFactorUpgrade>
+            <Value>30</Value>
+            <Percental>1</Percental>
+        </IgnoreDamageFactorUpgrade>
+    </ModOp>
+
+    <!-- Admiral Haynes -->
+    <ModOp GUID='191610' Path="/Values/AttackerUpgrade" Type="merge">
+        <AttackerUpgrade>
+            <AttackRangeUpgrade>
+                <Value>10</Value>
+                <Percental>1</Percental>
+            </AttackRangeUpgrade>
+            <LineOfSightRangeUpgrade>
+                <Value>10</Value>
+                <Percental>1</Percental>
+            </LineOfSightRangeUpgrade>
+            <DamageFactor>
+                <Building>
+                    <Factor>1.20</Factor>
+                </Building>
+            </DamageFactor>
+        </AttackerUpgrade>
+    </ModOp>
+
+    <!-- Captain Richard Moses -->
+    <ModOp GUID='191452' Type="merge" Path="/Values/AttackableUpgrade">
+        <SelfHealUpgrade>
+            <Value>250</Value>
+            <Percental>1</Percental>
+        </SelfHealUpgrade>
+        <DamageReceiveFactor>
+            <Torpedo>
+                <Factor>0.80</Factor>
+            </Torpedo>
+        </DamageReceiveFactor>
+    </ModOp>
+    <ModOp GUID='191452' Type="merge" Path="/Values/VehicleUpgrade/ForwardSpeedUpgrade">
+        <Value>15</Value>
+    </ModOp>
+
+    <!-- ShieldBuff (Used By Captain Ibrahim) - Change % HP to flat HP amount -->
+    <ModOp GUID='191595' Type="replace" Path="/Values/AttackableUpgrade/MaxHitpointsUpgrade">
+        <MaxHitpointsUpgrade>
+            <Value>1000</Value>
+        </MaxHitpointsUpgrade>
+    </ModOp>
+
+    <!-- Stephen Drake -->
+    <ModOp GUID='191611' Type="merge" Path="/Values/AttackableUpgrade">
+        <AttackableUpgrade>
+            <DamageReceiveFactor>
+                <Torpedo>
+                    <Factor>0.65</Factor>
+                </Torpedo>
+                <Cannon>
+                    <Factor>0.65</Factor>
+                </Cannon>
+                <BigBertha>
+                    <Factor>0.65</Factor>
+                </BigBertha>
+            </DamageReceiveFactor>
+        </AttackableUpgrade>
+    </ModOp>
+
+    <!-- Vice Admiral Adams -->
+    <ModOp GUID='191603' Type="merge" Path="/Values/AttackableUpgrade">
+        <AttackableUpgrade>
+            <DamageReceiveFactor>
+                <Cannon>
+                    <Factor>0.90</Factor>
+                </Cannon>
+                <BigBertha>
+                    <Factor>0.90</Factor>
+                </BigBertha>
+            </DamageReceiveFactor>
+        </AttackableUpgrade>
+    </ModOp>
+
+    <!-- Georgina Duffy -->
+    <ModOp GUID='191609' Type="merge" Path="/Values/VehicleUpgrade">
+        <ForwardSpeedUpgrade>
+            <Value>10</Value>
+            <Percental>1</Percental>
+        </ForwardSpeedUpgrade>
+    </ModOp>
+    <ModOp GUID='191609' Type="merge" Path="/Values/AttackerUpgrade">
+        <DamageFactor>
+            <SailShip>
+                <Factor>1.25</Factor>
+            </SailShip>
+        </DamageFactor>
+    </ModOp>
+
+    <!-- Captain Kadijah -->
+    <ModOp GUID='191450' Type="merge" Path="/Values/VehicleUpgrade">
+        <ForwardSpeedUpgrade>
+            <Value>15</Value>
+            <Percental>1</Percental>
+        </ForwardSpeedUpgrade>
+    </ModOp>
+    <ModOp GUID='191450' Type="merge" Path="/Values/AttackableUpgrade">
+        <SelfHealUpgrade>
+            <Value>200</Value>
+            <Percental>1</Percental>
+        </SelfHealUpgrade>
+    </ModOp>
+
+    <!-- High Admiral Nadasky -->
+    <ModOp GUID='191608' Type="merge" Path="/Values/AttackerUpgrade">
+        <DamageFactor>
+            <SailShip>
+                <Factor>1.25</Factor>
+            </SailShip>
+            <SteamShip>
+                <Factor>1.25</Factor>
+            </SteamShip>
+        </DamageFactor>
+    </ModOp>
+
+    <!-- Indiscrimin8r -->
+    <ModOp GUID='112368' Type="replace" Path="/Values/AttackerUpgrade/BaseDamageUpgrade/Value">
+        <Value>5</Value>
+    </ModOp>
+    <!-- Extermin8r -->
+    <ModOp GUID='112369' Type="replace" Path="/Values/AttackerUpgrade/BaseDamageUpgrade/Value">
+        <Value>7</Value>
+    </ModOp>
+    <!-- Domin8r -->
+    <ModOp GUID='112370' Type="replace" Path="/Values/AttackerUpgrade/BaseDamageUpgrade/Value">
+        <Value>10</Value>
+    </ModOp>
+
+    <!-- Reduce % HP for items to flat HP so ships can not explode by going over 32 767  HP -->
+    <!-- Singh's Steel Double-Hull - 50% -->
+    <ModOp GUID='191851' Type="replace" Path="/Values/AttackableUpgrade/MaxHitpointsUpgrade">
+        <MaxHitpointsUpgrade>
+            <Value>3500</Value>
+        </MaxHitpointsUpgrade>
+        <DamageReceiveFactor>
+            <Normal>
+                <Factor>0.75</Factor>
+            </Normal>
+            <Torpedo>
+                <Factor>0.75</Factor>
+            </Torpedo>
+            <Cannon>
+                <Factor>0.75</Factor>
+            </Cannon>
+            <BigBertha>
+                <Factor>0.75</Factor>
+            </BigBertha>
+        </DamageReceiveFactor>
+    </ModOp>
+    <!-- Reinforced Bulkhead - 40% -->
+    <ModOp GUID='191850' Type="replace" Path="/Values/AttackableUpgrade/MaxHitpointsUpgrade">
+        <MaxHitpointsUpgrade>
+            <Value>2000</Value>
+        </MaxHitpointsUpgrade>
+        <DamageReceiveFactor>
+            <Normal>
+                <Factor>0.85</Factor>
+            </Normal>
+            <Torpedo>
+                <Factor>0.85</Factor>
+            </Torpedo>
+            <Cannon>
+                <Factor>0.85</Factor>
+            </Cannon>
+            <BigBertha>
+                <Factor>0.85</Factor>
+            </BigBertha>
+        </DamageReceiveFactor>
+    </ModOp>
+    <!-- Fine Steel Hull - 30% -->
+    <ModOp GUID='191849' Type="replace" Path="/Values/AttackableUpgrade/MaxHitpointsUpgrade">
+        <MaxHitpointsUpgrade>
+            <Value>1000</Value>
+        </MaxHitpointsUpgrade>
+        <DamageReceiveFactor>
+            <Normal>
+                <Factor>0.95</Factor>
+            </Normal>
+            <Torpedo>
+                <Factor>0.95</Factor>
+            </Torpedo>
+            <Cannon>
+                <Factor>0.95</Factor>
+            </Cannon>
+            <BigBertha>
+                <Factor>0.95</Factor>
+            </BigBertha>
+        </DamageReceiveFactor>
+    </ModOp>
+    <!-- Fine Wood Hull - 20% -->
+    <ModOp GUID='191848' Type="replace" Path="/Values/AttackableUpgrade/MaxHitpointsUpgrade">
+        <MaxHitpointsUpgrade>
+            <Value>750</Value>
+        </MaxHitpointsUpgrade>
+    </ModOp>
+    <!-- Plate Heat Exchanger - 30% -->
+    <ModOp GUID='191858' Type="replace" Path="/Values/AttackableUpgrade/MaxHitpointsUpgrade">
+        <MaxHitpointsUpgrade>
+            <Value>1500</Value>
+        </MaxHitpointsUpgrade>
+    </ModOp>
+    <!-- Heat Exchanger - 15% -->
+    <ModOp GUID='191857' Type="replace" Path="/Values/AttackableUpgrade/MaxHitpointsUpgrade">
+        <MaxHitpointsUpgrade>
+            <Value>750</Value>
+        </MaxHitpointsUpgrade>
+    </ModOp>
+
+    <!-- Add new allocation types to Crafting menu and Kontor menu -->
+
+    <ModOp Type="add" GUID="113879" Path="/Values/ItemFilter/ItemCategories/Item[CategoryAsset='18021']/ItemTypes">;Mod9;Mod10</ModOp>
+    <ModOp Type="add" GUID="113879" Path="/Values/ItemFilter/ItemCategories/Item[CategoryAsset='18022']/ItemTypes">;Mod9;Mod10</ModOp>
+
+    <ModOp Type="add" GUID='501516' Path="/Values/ItemFilter/ItemCategories/Item[CategoryAsset='18021']/ItemTypes">;Mod10</ModOp>
+    <ModOp Type="add" GUID='501516' Path="/Values/ItemFilter/ItemCategories/Item[CategoryAsset='18022']/ItemTypes">;Mod10</ModOp>
+
+    <!-- Rocket Salvo/Barrage: Rework -->
+
+    <!-- Existing Rockets need support ship type now-->
+    <ModOp Type="merge" GUID='1516,1517' Path="/Values/Item/">
+        <Allocation>Mod9</Allocation>
+    </ModOp>
+
+    <!-- Existing Rockets no longer deal much damage to buildings - only usable for disabling mines -->
+
+    <!-- Existing Rocket Barrages Balancing-->
+    <ModOp Type="merge" GUID='1516' Path="/Values/">
+        <SpecialAction>
+            <BarrageCount>5</BarrageCount>            <!-- 10 -->
+            <ActionRadius>4</ActionRadius>            <!-- 8 -->
+            <BarrageDuration>5000</BarrageDuration>            <!-- 8000 -->
+        </SpecialAction>
+        <ItemAction>
+            <ActionDistance>100</ActionDistance>            <!-- 165 -->
+            <ActionCooldown>15000</ActionCooldown>            <!-- 25000 -->
+            <Charges>10</Charges>
+        </ItemAction>
+        <Item>
+            <Rarity>Common</Rarity>            <!-- Uncommon -->
+            <TradePrice>20000</TradePrice>            <!-- 3528900 -->
+        </Item>
+        <CraftableItem>
+            <CraftingCosts>
+                <Item>
+                    <Product>112518</Product>                    <!--scrap I-->
+                    <Amount>5</Amount>
+                </Item>
+                <Item>
+                    <Product>846</Product>                    <!--Bombs-->
+                    <Amount>3</Amount>
+                </Item>
+            </CraftingCosts>
+        </CraftableItem>
+    </ModOp>
+    <ModOp Type="merge" GUID='1517' Path="/Values/">
+        <SpecialAction>
+            <BarrageCount>10</BarrageCount>            <!-- 18 -->
+            <ActionRadius>4</ActionRadius>            <!-- 8 -->
+            <BarrageDuration>10000</BarrageDuration>            <!-- 12000 -->
+        </SpecialAction>
+        <ItemAction>
+            <ActionDistance>100</ActionDistance>            <!-- 165 -->
+            <ActionCooldown>10000</ActionCooldown>            <!-- 45000 -->
+            <IsDestroyedAfterCooldown>0</IsDestroyedAfterCooldown>
+        </ItemAction>
+        <Item>
+            <Rarity>Legendary</Rarity>            <!-- Epic -->
+            <TradePrice>350000</TradePrice>            <!-- 12450000 -->
+        </Item>
+        <CraftableItem>
+            <CraftingCosts>
+                <Item>
+                    <Product>112523</Product>                    <!--scrap III-->
+                    <Amount>10</Amount>
+                </Item>
+                <Item>
+                    <Product>846</Product>                    <!--Bombs-->
+                    <Amount>10</Amount>
+                </Item>
+            </CraftingCosts>
+        </CraftableItem>
+    </ModOp>
+    <ModOp Type="remove" GUID='1517' Path="/Values/ItemAction/Charges" />
+
+    <!-- Nerf Rocket multiplier buildings-->
+    <ModOp Type="remove" GUID='1518' Path="/Values/Projectile/Effectivities" />
+
+    <ModOp Type="merge" GUID='1518' Path="/Values/">
+        <Exploder>
+            <InnerDamage>35</InnerDamage>            <!-- 38 -->
+            <OuterDamageRadius>12</OuterDamageRadius>            <!-- 8 -->
+            <MinimumDamage>30</MinimumDamage>            <!-- 18 -->
+        </Exploder>
+    </ModOp>
+
+    <!-- Existing Special Action Sea mines rebalancing -->
+
+    <ModOp Type="merge" GUID='112574,110983,112578' Path="/Values/">
+        <ItemAction>
+            <Charges>10</Charges>            <!-- 5 -->
+        </ItemAction>
+    </ModOp>
+
+    <!-- Torpedo Launcher: New Socket Allocation -->
+    <ModOp Type="addNextSibling" GUID='115184'>
+        <Asset>
+            <Template>Text</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742100595</GUID>
+                    <Name>Ships with Torpedo Launcher</Name>
+                    <IconFilename>data/ui/2kimages/main/icons/icon_stance_attack.png</IconFilename>
+                </Standard>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>Ships with Torpedo Launcher</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>35020</LineID>
+                </Text>
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <ModOp Type="merge" GUID='6000017' Path="/Values/ItemConfig/">
+        <AllocationText>
+            <Mod10>
+                <Text>1742100595</Text>
+            </Mod10>
+        </AllocationText>
+    </ModOp>
+
+    <ModOp Type="add" GUID='6000017' Path="/Values/ItemConfig/AllocationIcons">
+        <Item>
+            <Allocation>Mod10</Allocation>
+            <AllocationIcon>data/ui/2kimages/main/icons/icon_stance_attack.png</AllocationIcon>
+        </Item>
+    </ModOp>
+
+    <!-- Existing Torpedos need launchers now-->
+    <ModOp Type="merge" GUID='192186,192185,192184,191474' Path = "/Values/Item/">
+        <Allocation>Mod10</Allocation>
+    </ModOp>
+
+    <!-- Existing Torpedos Balancing-->
+    <ModOp Type="merge" GUID='191474' Path = "/Values/">
+        <ItemAction>
+            <ActionCooldown>9000</ActionCooldown>            <!-- 25000 -->
+            <Charges>10</Charges>            <!-- 3 -->
+        </ItemAction>
+        <Item>
+            <Rarity>Common</Rarity>            <!-- Uncommon -->
+        </Item>
+    </ModOp>
+    <ModOp Type="merge" GUID='192184' Path = "/Values/">
+        <ItemAction>
+            <ActionCooldown>10000</ActionCooldown>
+        </ItemAction>
+    </ModOp>
+    <ModOp Type="merge" GUID='192187' Path = "/Values/Projectile/">
+        <ProjectileSpeed>1.2</ProjectileSpeed>
+    </ModOp>
+    <ModOp Type="merge" GUID='192187' Path = "/Values/Exploder/">
+        <InnerDamage>750</InnerDamage>
+    </ModOp>
+    <ModOp Type="merge" GUID='192187' Path = "/Values/Exploder/">
+        <MinimumDamage>400</MinimumDamage>
+    </ModOp>
+
+    <ModOp Type="merge" GUID='192185' Path = "/Values/">
+        <ItemAction>
+            <ActionCooldown>20000</ActionCooldown>
+        </ItemAction>
+    </ModOp>
+    <ModOp Type="merge" GUID='192188' Path = "/Values/Projectile/">
+        <ProjectileSpeed>1.8</ProjectileSpeed>
+    </ModOp>
+    <ModOp Type="merge" GUID='192188' Path = "/Values/Exploder/">
+        <InnerDamage>1000</InnerDamage>
+    </ModOp>
+    <ModOp Type="merge" GUID='192188' Path = "/Values/Exploder/">
+        <MinimumDamage>600</MinimumDamage>
+    </ModOp>
+
+    <ModOp Type="merge" GUID='192186' Path = "/Values/">
+        <ItemAction>
+            <ActionCooldown>30000</ActionCooldown>
+        </ItemAction>
+    </ModOp>
+    <ModOp Type="merge" GUID='192189' Path = "/Values/Projectile/">
+        <ProjectileSpeed>2.5</ProjectileSpeed>
+    </ModOp>
+    <ModOp Type="merge" GUID='192189' Path = "/Values/Exploder/">
+        <InnerDamage>2000</InnerDamage>
+    </ModOp>
+    <ModOp Type="merge" GUID='192189' Path = "/Values/Exploder/">
+        <MinimumDamage>1000</MinimumDamage>
+    </ModOp>
+
+    <ModOp Type="merge" GUID='192187,192188,192189' Path = "/Values/Projectile/">
+        <StatusEffects>
+            <Item>
+                <StatusEffectChain>
+                    <Item>
+                        <StatusEffect>1511</StatusEffect>                        <!--TorpedoEffect_Phase01-->
+                        <StatusDuration>6000</StatusDuration>
+                    </Item>
+                    <Item>
+                        <StatusEffect>1513</StatusEffect>                        <!--TorpedoEffect_Phase02-->
+                        <StatusDuration>10000</StatusDuration>
+                    </Item>
+                    <Item>
+                        <StatusEffect>1514</StatusEffect>                        <!--TorpedoEffect_Phase03-->
+                        <StatusDuration>25000</StatusDuration>
+                    </Item>
+                </StatusEffectChain>
+            </Item>
+        </StatusEffects>
+    </ModOp>
+
+    <!-- //////////////////////////// NEW ITEMS //////////////////////////// -->
+
+    <ModOp Type="AddNextSibling" GUID='116173'>
+
+        <!-- START - Jacques-Michel Gontmolfier -->
+        <Asset>
+            <Template>VehicleItem</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742000277</GUID>
+                    <Name>Jacques-Michel Gontmolfier</Name>
+                    <IconFilename>data/graphics/icons/icon_jacques_michel_gontmolfier.png</IconFilename>
+                    <InfoDescription>1742000278</InfoDescription>
+                </Standard>
+                <Item>
+                    <Allocation>AirShip</Allocation>
+                    <MaxStackSize>1</MaxStackSize>
+                    <Rarity>Legendary</Rarity>
+                    <ItemType>Specialist</ItemType>
+                    <TradePrice>1125000</TradePrice>
+                </Item>
+                <VehicleUpgrade>
+                    <IgnoreDamageFactorUpgrade>
+                        <Value>50</Value>
+                        <Percental>1</Percental>
+                    </IgnoreDamageFactorUpgrade>
+                </VehicleUpgrade>
+                <ExpeditionAttribute>
+                    <BaseMorale>0</BaseMorale>
+                    <ExpeditionAttributes>
+                        <Item>
+                            <Attribute>PerkMale</Attribute>
+                            <Amount>1</Amount>
+                        </Item>
+                        <Item>
+                            <Attribute>Navigation</Attribute>
+                            <Amount>20</Amount>
+                        </Item>
+                        <Item>
+                            <Attribute>Might</Attribute>
+                            <Amount>20</Amount>
+                        </Item>
+                        <Item>
+                            <Attribute>Melee</Attribute>
+                            <Amount>20</Amount>
+                        </Item>
+                    </ExpeditionAttributes>
+                    <ItemDifficulties>Hard</ItemDifficulties>
+                    <FluffText>1742000279</FluffText>
+                </ExpeditionAttribute>
+                <AttackableUpgrade>
+                    <MaxHitpointsUpgrade>
+                        <Value>3000</Value>
+                    </MaxHitpointsUpgrade>
+                    <SelfHealUpgrade>
+                        <Value>100</Value>
+                        <Percental>1</Percental>
+                    </SelfHealUpgrade>
+                </AttackableUpgrade>
+            </Values>
+
+            <Amount>20</Amount>
+        </Asset>
+        <!-- END - Jacques-Michel Gontmolfier -->
+
+        <!-- START - Jean-Pierre Gontmolfier -->
+        <Asset>
+            <Template>HarborOfficeItem</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742000293</GUID>
+                    <Name>Jean-Pierre Gontmolfier</Name>
+                    <IconFilename>data/graphics/icons/icon_jean_pierre_gontmolfier.png</IconFilename>
+                    <InfoDescription>1742000294</InfoDescription>
+                </Standard>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>Jean-Pierre Gontmolfier</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>29127</LineID>
+                </Text>
+                <Item>
+                    <Allocation>AirShip</Allocation>
+                    <MaxStackSize>1</MaxStackSize>
+                    <Rarity>Legendary</Rarity>
+                    <ItemType>Specialist</ItemType>
+                    <TradePrice>1600000</TradePrice>
+                </Item>
+                <Cost/>
+                <VehicleUpgrade>
+                    <MaintainanceUpgrade>
+                        <Value>100</Value>
+                        <Percental>1</Percental>
+                    </MaintainanceUpgrade>
+                </VehicleUpgrade>
+                <ExpeditionAttribute>
+                    <BaseMorale>0</BaseMorale>
+                    <ExpeditionAttributes>
+                        <Item>
+                            <Attribute>PerkMale</Attribute>
+                            <Amount>1</Amount>
+                        </Item>
+                        <Item>
+                            <Attribute>Navigation</Attribute>
+                            <Amount>20</Amount>
+                        </Item>
+                        <Item>
+                            <Attribute>Hunting</Attribute>
+                            <Amount>25</Amount>
+                        </Item>
+                    </ExpeditionAttributes>
+                </ExpeditionAttribute>
+                <AttackerUpgrade>
+                    <AttackRangeUpgrade>
+                        <Value>15</Value>
+                        <Percental>1</Percental>
+                    </AttackRangeUpgrade>
+                    <BaseDamageUpgrade>
+                        <Value>15</Value>
+                        <Percental>1</Percental>
+                    </BaseDamageUpgrade>
+                    <AttackSpeedUpgrade>15</AttackSpeedUpgrade>
+                </AttackerUpgrade>
+                <AttackableUpgrade/>
+                <Locked/>
+                <TradeShipUpgrade/>
+                <CraftableItem/>
+                <DivingBellUpgrade/>
+            </Values>
+        </Asset>
+        <!-- END - Jean-Pierre Gontmolfier -->
+    </ModOp>
+</ModOps>
