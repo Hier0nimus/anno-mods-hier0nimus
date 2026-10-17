@@ -90,7 +90,7 @@
   </ModOp>
 
   <!-- START - TEMPLATE Repair Airship -->
-  <ModOp Template="TradeShip" Type = "addNextSibling">
+  <ModOp Template="TradeShip" Type="addNextSibling">
     <Template>
       <Name>RepairAirShip</Name>
       <Properties>
@@ -302,7 +302,7 @@
   </Group>
   <!-- END - COMPATIBILITY Airships Use Ship Items (Serp) -->
 
-  <ModOp Template="TradeShip" Type = "addNextSibling">
+  <ModOp Template="TradeShip" Type="addNextSibling">
     <Template>
       <Name>RepairShip</Name>
       <Properties>
@@ -446,4 +446,227 @@
   </ModOp>
   <!-- END - TEMPLATE Auxiliary Ship -->
 
+  <!-- START - TEMPLATE Military Academy -->
+  <ModOp Type="addNextSibling" Path="//Template[Name='CultureBuilding']">
+    <Template>
+      <Name>MilitaryAcademy</Name>
+      <Properties>
+        <Standard/>
+        <Building>
+          <BuildingCategoryName>100005</BuildingCategoryName>          <!--Cultural Building-->
+        </Building>
+        <Blocking/>
+        <Cost/>
+        <Object>
+          <IgnoreForMinimapGeneration>1</IgnoreForMinimapGeneration>
+        </Object>
+        <Mesh/>
+        <Selection>
+          <GUIType>Culture</GUIType>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList/>
+            </Values>
+          </OnSelection>
+          <AllowedDragType>ItemSocket;CargoItemStack;StorageItemStack;SharedTransferItem</AllowedDragType>
+        </Selection>
+        <Text/>
+        <Constructable>
+          <DestructionCategory>Production</DestructionCategory>
+        </Constructable>
+        <Locked/>
+        <SoundEmitter>
+          <DestroySounds>
+            <Item>
+              <Sound>9818756</Sound>
+              <!--wwe_sfx_aui_delete-->
+            </Item>
+          </DestroySounds>
+          <ConstructionSounds>
+            <BuildSuccessful>
+              <Item>
+                <VectorElement>
+                  <InheritedIndex>0</InheritedIndex>
+                </VectorElement>
+                <Sound>214786</Sound>
+                <!--wwe_sfx_aui_bld_place_public-->
+              </Item>
+            </BuildSuccessful>
+            <BuildFailed>
+              <Item>
+                <Sound>9818387</Sound>
+                <!--wwe_sfx_aui_deny-->
+              </Item>
+            </BuildFailed>
+            <BuildMoveStart>
+              <Item>
+                <Sound>9818755</Sound>
+                <!--wwe_sfx_aui_move-->
+              </Item>
+            </BuildMoveStart>
+            <BuildMoveSuccess>
+              <Item>
+                <Sound>203995</Sound>
+                <!--wwe_sfx_aui_move_replace_stone-->
+              </Item>
+            </BuildMoveSuccess>
+            <BuildMoveEnd>
+              <Item>
+                <Sound>200141</Sound>
+                <!--wwe_sfx_aui_move_end-->
+              </Item>
+            </BuildMoveEnd>
+          </ConstructionSounds>
+        </SoundEmitter>
+        <FeedbackController>
+          <NightBehavior>HideAll</NightBehavior>
+        </FeedbackController>
+        <Infolayer/>
+        <UpgradeList/>
+        <Culture/>
+        <ModuleOwner>
+          <ModuleLimits>
+            <Main>
+              <Limit>100</Limit>
+            </Main>
+            <Pavilion>
+              <Limit>1</Limit>
+            </Pavilion>
+            <Connector>
+              <Limit>100</Limit>
+            </Connector>
+          </ModuleLimits>
+          <UseSingleModuleUpgrading>1</UseSingleModuleUpgrading>
+          <BlueprintModuleOption>
+            <ModuleButtonInfotip>501845</ModuleButtonInfotip>
+            <!--Cultural Connectors InfoTip-->
+          </BlueprintModuleOption>
+        </ModuleOwner>
+        <AmbientMoodProvider/>
+        <LogisticNode>
+          <TransporterCountMax>0</TransporterCountMax>
+        </LogisticNode>
+        <Factory7/>
+        <FactoryBase/>
+        <Maintenance>
+          <IncomeCategory>CultureBuildings</IncomeCategory>
+        </Maintenance>
+        <Attackable>
+          <HasRuinState>1</HasRuinState>
+        </Attackable>
+        <IncidentInfectable>
+          <Infectable>
+            <Fire>
+              <Base>0</Base>
+            </Fire>
+            <Riot>
+              <Base>0</Base>
+            </Riot>
+            <Illness>
+              <Base>0</Base>
+            </Illness>
+          </Infectable>
+        </IncidentInfectable>
+        <Pausable/>
+        <StreetActivation/>
+        <InfluenceSource>
+          <InfluenceSource>Culture</InfluenceSource>
+        </InfluenceSource>
+      </Properties>
+    </Template>
+    <Template>
+      <Name>AcademyModule</Name>
+      <Properties>
+        <Standard />
+        <Building>
+          <BuildingType>BuildingModule</BuildingType>
+          <BuildingCategoryName>100005</BuildingCategoryName>
+        </Building>
+        <Blocking />
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <!-- Coins -->
+              <Amount>100000</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Object>
+          <IgnoreForMinimapGeneration>1</IgnoreForMinimapGeneration>
+        </Object>
+        <Mesh />
+        <Selection>
+          <GUIType>Guildhouse</GUIType>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <AllowedDragType>ItemSocket;CargoItemStack;StorageItemStack</AllowedDragType>
+        </Selection>
+        <Text />
+        <Constructable>
+          <DestructionCategory>Production</DestructionCategory>
+        </Constructable>
+        <Locked />
+        <SoundEmitter>
+          <DestroySounds>
+            <Item>
+              <Sound>9818756</Sound>
+            </Item>
+          </DestroySounds>
+          <ConstructionSounds>
+            <BuildFailed>
+              <Item>
+                <Sound>9818387</Sound>
+              </Item>
+            </BuildFailed>
+            <BuildMoveStart>
+              <Item>
+                <Sound>9818755</Sound>
+              </Item>
+            </BuildMoveStart>
+            <BuildMoveSuccess>
+              <Item>
+                <Sound>203995</Sound>
+              </Item>
+            </BuildMoveSuccess>
+            <BuildMoveEnd>
+              <Item>
+                <Sound>200141</Sound>
+              </Item>
+            </BuildMoveEnd>
+          </ConstructionSounds>
+        </SoundEmitter>
+        <FeedbackController>
+          <NightBehavior>HideAll</NightBehavior>
+        </FeedbackController>
+        <Infolayer />
+        <BuildingModule>
+          <IsCulturalModule>1</IsCulturalModule>
+        </BuildingModule>
+        <ItemContainer>
+          <SocketCount>1</SocketCount>
+          <SocketAllocation>RadiusBuilding;GuildHouse;TownHall;HarborOffice;Dockland;Lodge;Ship;SailShip;SteamShip;Warship;Tradeship;AirShip;Culture;Museum;Zoo;BotanicGarden;DivingVessel;Mod1</SocketAllocation>
+          <SocketScope>ModuleOwner</SocketScope>
+        </ItemContainer>
+        <Attackable />
+        <AmbientMoodProvider>
+          <DynamicEnvironmentType>Fog</DynamicEnvironmentType>
+        </AmbientMoodProvider>
+        <PublicService/>
+        <UpgradeList/>
+        <FactoryBase/>
+        <Factory7/>
+        <LogisticNode/>
+        <Pausable />
+        <BuffFactory />
+        <Maintenance />
+      </Properties>
+    </Template>
+    <!-- END - TEMPLATE Military Academy -->
+  </ModOp>
 </ModOps>

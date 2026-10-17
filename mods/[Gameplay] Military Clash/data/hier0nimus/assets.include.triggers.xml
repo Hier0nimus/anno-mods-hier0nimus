@@ -6,6 +6,69 @@ TRIGGERS
 
 <ModOps>
 
+    <!-- START - Newspaper Start Unlock  -->
+
+<ModOp Type="addnextSibling" GUID="130236">
+    <Asset>
+        <Template>Trigger</Template>
+        <Values>
+            <Standard>
+                <GUID>1742103509</GUID>
+                <Name>MOD Trigger</Name>
+            </Standard>
+            <Trigger>
+                <TriggerCondition>
+                    <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                    <Values>
+                        <Condition/>
+                        <ConditionAlwaysTrue/>
+                    </Values>
+                </TriggerCondition>
+                <TriggerActions>
+                    <Item>
+                        <TriggerAction>
+                            <Template>ActionDelayedActions</Template>
+                            <Values>
+                                <Action/>
+                                <ActionDelayedActions>
+                                    <ExecutionDelay>1000</ExecutionDelay>
+                                    <DelayedActions>
+                                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                                        <Values>
+                                            <ActionList>
+                                                <Actions>
+                                                    <Item>
+                                                        <Action>
+                                                            <Template>ActionForceNewspaper</Template>
+                                                            <Values>
+                                                                <Action/>
+                                                                <ActionForceNewspaper>
+                                                                    <Articles>
+                                                                        <Item>
+                                                                            <Article>1742100393</Article>
+                                                                        </Item>
+                                                                    </Articles>
+                                                                    <OpenNewspaperUI>1</OpenNewspaperUI>
+                                                                    <OpenNewspaperType>SpecialEdition</OpenNewspaperType>
+                                                                </ActionForceNewspaper>
+                                                            </Values>
+                                                        </Action>
+                                                    </Item>
+                                                </Actions>
+                                            </ActionList>
+                                        </Values>
+                                    </DelayedActions>
+                                </ActionDelayedActions>
+                            </Values>
+                        </TriggerAction>
+                    </Item>
+                </TriggerActions>
+            </Trigger>
+            <TriggerSetup/>
+        </Values>
+    </Asset>
+</ModOp>
+
     <!-- START - Gamestart Unlock  -->
     <ModOp Type="addNextSibling" GUID="130236">
         <Asset>
@@ -182,6 +245,12 @@ TRIGGERS
                                             <Item>
                                                 <Asset>130052</Asset>                                                <!--asset pool Tourism Pier-->
                                             </Item>
+                                            <Item>
+                                                <Asset>1742103576</Asset>
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742103577</Asset>
+                                            </Item>
                                         </UnhideAssets>
                                         <UnlockAssets>
                                             <Item>
@@ -323,6 +392,12 @@ TRIGGERS
                                             <Item>
                                                 <Asset>130052</Asset>                                                <!--asset pool Tourism Pier-->
                                             </Item>
+                                            <Item>
+                                                <Asset>1742103576</Asset>
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742103577</Asset>
+                                            </Item>
                                         </UnlockAssets>
                                     </ActionUnlockAsset>
                                 </Values>
@@ -372,6 +447,12 @@ TRIGGERS
                                             </Item>
                                             <Item>
                                                 <Asset>100439</Asset>                                                <!--Frigate (Military)-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742103576</Asset>
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742103577</Asset>
                                             </Item>
                                         </UnlockAssets>
                                     </ActionUnlockAsset>
@@ -437,14 +518,14 @@ TRIGGERS
         </Asset>
     </ModOp>
 
-    <!-- START - Soldiers Unlock - 2500  -->
+    <!-- START - Soldiers Unlock - 2000  -->
     <ModOp Type="addNextSibling" GUID="130236">
         <Asset>
             <Template>Trigger</Template>
             <Values>
                 <Standard>
                     <GUID>1742103505</GUID>
-                    <Name>Soldiers Unlock - 2500</Name>
+                    <Name>Soldiers Unlock - 2000</Name>
                 </Standard>
                 <Trigger>
                     <TriggerCondition>
@@ -454,7 +535,7 @@ TRIGGERS
                             <ConditionPlayerCounter>
                                 <PlayerCounter>PopulationByLevel</PlayerCounter>
                                 <Context>1742100000</Context>                                <!-- Soldiers-->
-                                <CounterAmount>2500</CounterAmount>
+                                <CounterAmount>2000</CounterAmount>
                             </ConditionPlayerCounter>
                         </Values>
                     </TriggerCondition>
@@ -484,14 +565,14 @@ TRIGGERS
         </Asset>
     </ModOp>
 
-    <!-- START - Soldiers Unlock - 5000  -->
+    <!-- START - Soldiers Unlock - 3500  -->
     <ModOp Type="addNextSibling" GUID="130236">
         <Asset>
             <Template>Trigger</Template>
             <Values>
                 <Standard>
                     <GUID>1742103506</GUID>
-                    <Name>Soldiers Unlock - 5000</Name>
+                    <Name>Soldiers Unlock - 3500</Name>
                 </Standard>
                 <Trigger>
                     <TriggerCondition>
@@ -501,7 +582,7 @@ TRIGGERS
                             <ConditionPlayerCounter>
                                 <PlayerCounter>PopulationByLevel</PlayerCounter>
                                 <Context>1742100000</Context>                                <!-- Soldiers-->
-                                <CounterAmount>5000</CounterAmount>
+                                <CounterAmount>3500</CounterAmount>
                             </ConditionPlayerCounter>
                         </Values>
                     </TriggerCondition>
@@ -585,6 +666,24 @@ TRIGGERS
                                             <Item>
                                                 <Asset>1742100082</Asset>                                                <!--Military Headquarters-->
                                             </Item>
+                                            <Item>
+                                                <Asset>1742101066</Asset>                                                <!--Military Headquarters-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>114435</Asset>                                                
+                                            </Item>
+                                            <Item>
+                                                <Asset>101510</Asset>                                                
+                                            </Item>
+                                            <Item>
+                                                <Asset>101498</Asset>                                                
+                                            </Item>
+                                            <Item>
+                                                <Asset>103119</Asset>                                                
+                                            </Item>
+                                            <Item>
+                                                <Asset>101513</Asset>                                                
+                                            </Item>
                                         </UnhideAssets>
                                         <UnlockAssets>
                                             <Item>
@@ -605,14 +704,14 @@ TRIGGERS
         </Asset>
     </ModOp>
 
-    <!-- START - Soldiers Unlock - 7500  -->
+    <!-- START - Soldiers Unlock - 5000  -->
     <ModOp Type="addNextSibling" GUID="130236">
         <Asset>
             <Template>Trigger</Template>
             <Values>
                 <Standard>
                     <GUID>1742103507</GUID>
-                    <Name>Soldiers Unlock - 7500</Name>
+                    <Name>Soldiers Unlock - 5000</Name>
                 </Standard>
                 <Trigger>
                     <TriggerCondition>
@@ -622,7 +721,7 @@ TRIGGERS
                             <ConditionPlayerCounter>
                                 <PlayerCounter>PopulationByLevel</PlayerCounter>
                                 <Context>1742100000</Context>                                <!-- Soldiers-->
-                                <CounterAmount>7500</CounterAmount>
+                                <CounterAmount>5000</CounterAmount>
                             </ConditionPlayerCounter>
                         </Values>
                     </TriggerCondition>
@@ -694,12 +793,6 @@ TRIGGERS
                                                 <Asset>2040</Asset>                                                <!--Depot_DropGoods_Moderate-->
                                             </Item>
                                             <Item>
-                                                <Asset>1742100692</Asset>
-                                            </Item>
-                                            <Item>
-                                                <Asset>1010524</Asset>                                                <!--harbor_06 (Tower 03, Monster Gun)-->
-                                            </Item>
-                                            <Item>
                                                 <Asset>140034</Asset>                                                <!--asset pool beam-->
                                             </Item>
                                             <Item>
@@ -707,9 +800,6 @@ TRIGGERS
                                             </Item>
                                             <Item>
                                                 <Asset>140035</Asset>                                                <!--asset pool beer -->
-                                            </Item>
-                                            <Item>
-                                                <Asset>1742100082</Asset>                                                <!--Military Headquarters-->
                                             </Item>
                                         </UnlockAssets>
                                     </ActionUnlockAsset>
@@ -764,6 +854,33 @@ TRIGGERS
                                             <Item>
                                                 <Asset>1742100585</Asset>
                                             </Item>
+                                            <Item>
+                                                <Asset>1742100082</Asset>                                                <!--Military Headquarters-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742101066</Asset>                                                <!--Military Headquarters-->
+                                            </Item>
+                                            <Item>
+                                                <Asset>114435</Asset>                                                
+                                            </Item>
+                                            <Item>
+                                                <Asset>101510</Asset>                                                
+                                            </Item>
+                                            <Item>
+                                                <Asset>101498</Asset>                                                
+                                            </Item>
+                                            <Item>
+                                                <Asset>103119</Asset>                                                
+                                            </Item>
+                                            <Item>
+                                                <Asset>101513</Asset>                                                
+                                            </Item>
+                                            <Item>
+                                                <Asset>1742100692</Asset>
+                                            </Item>
+                                            <Item>
+                                                <Asset>1010524</Asset>                                                <!--harbor_06 (Tower 03, Monster Gun)-->
+                                            </Item>
                                         </UnlockAssets>
                                     </ActionUnlockAsset>
                                 </Values>
@@ -787,7 +904,7 @@ TRIGGERS
                     <ConditionPlayerCounter>
                         <PlayerCounter>PopulationByLevel</PlayerCounter>
                         <Context>1742100000</Context>
-                        <CounterAmount>200</CounterAmount>
+                        <CounterAmount>500</CounterAmount>
                     </ConditionPlayerCounter>
                 </Values>
             </TriggerCondition>
@@ -809,7 +926,7 @@ TRIGGERS
                     <ConditionPlayerCounter>
                         <PlayerCounter>PopulationByLevel</PlayerCounter>
                         <Context>1742100000</Context>
-                        <CounterAmount>500</CounterAmount>
+                        <CounterAmount>1000</CounterAmount>
                     </ConditionPlayerCounter>
                 </Values>
             </TriggerCondition>
@@ -831,7 +948,7 @@ TRIGGERS
                     <ConditionPlayerCounter>
                         <PlayerCounter>PopulationByLevel</PlayerCounter>
                         <Context>1742100000</Context>
-                        <CounterAmount>1000</CounterAmount>
+                        <CounterAmount>2000</CounterAmount>
                     </ConditionPlayerCounter>
                 </Values>
             </TriggerCondition>
@@ -853,7 +970,7 @@ TRIGGERS
                     <ConditionPlayerCounter>
                         <PlayerCounter>PopulationByLevel</PlayerCounter>
                         <Context>1742100000</Context>
-                        <CounterAmount>2500</CounterAmount>
+                        <CounterAmount>5000</CounterAmount>
                     </ConditionPlayerCounter>
                 </Values>
             </TriggerCondition>
@@ -875,7 +992,7 @@ TRIGGERS
                     <ConditionPlayerCounter>
                         <PlayerCounter>PopulationByLevel</PlayerCounter>
                         <Context>1742100000</Context>
-                        <CounterAmount>5000</CounterAmount>
+                        <CounterAmount>10000</CounterAmount>
                     </ConditionPlayerCounter>
                 </Values>
             </TriggerCondition>

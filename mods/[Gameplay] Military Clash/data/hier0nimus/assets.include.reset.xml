@@ -10,7 +10,7 @@ RESET
     <ModOp Type="remove" GUID="25000035" Path="/Values/ConstructionMenu/RegionMenu/Moderate/CategoryMode/Tier/Categories" />
     <ModOp Type="remove" GUID="25000035" Path="/Values/ConstructionMenu/RegionMenu/Moderate/CategoryMode/BuildingCategory/Categories" />
 
-    <!-- REMOVE ALL ENTRIES CONTSTRUCTION MENUS -->
+    <!-- REMOVE ALL ENTRIES CONSTRUCTION MENUS -->
     <!-- WORKERS -->
     <ModOp Type="remove" GUID="25000190" Path="/Values/ConstructionCategory/BuildingList" />
     <!-- ENGINEERS -->
@@ -226,6 +226,13 @@ RESET
     <ModOp Type="remove" GUID="191920" Path="/Values/" />
     <ModOp Type="remove" GUID="191921" Path="/Values/" />
 
+    <ModOp Type="merge" Path="//Asset[Template='ItemSpecialAction']/Values/">
+        <Locked>
+            <DefaultLockedState>0</DefaultLockedState>
+        </Locked>
+    </ModOp>
+
+
     <!-- VehicleIem - Different items -->
     <ModOp Type="remove" GUID="4277" Path="/Values/" />
     <ModOp Type="remove" GUID="102177" Path="/Values/" />
@@ -279,6 +286,12 @@ RESET
     <ModOp Type="remove" GUID="190664" Path="/Values/" />
     <ModOp Type="remove" GUID="190666" Path="/Values/" />
     <ModOp Type="remove" GUID="190665" Path="/Values/" />
+    
+    <ModOp Type="merge" Path="//Asset[Template='VehicleItem']/Values/">
+        <Locked>
+            <DefaultLockedState>0</DefaultLockedState>
+        </Locked>
+    </ModOp>
 
     <!-- REMOVE REWARD POOLS -->
     <ModOp Type="remove" Path="//Asset[Template='RewardPool']" />

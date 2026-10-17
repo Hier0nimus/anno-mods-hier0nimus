@@ -195,6 +195,21 @@ CONSTRUCTION MENU
             <Item>
                 <Building>1742100574</Building>
             </Item>
+            <Item>
+                <Building>114435</Building>
+            </Item>
+            <Item>
+                <Building>101510</Building>
+            </Item>
+            <Item>
+                <Building>101498</Building>
+            </Item>
+            <Item>
+                <Building>103119</Building>
+            </Item>
+            <Item>
+                <Building>101513</Building>
+            </Item>
         </BuildingList>
     </ModOp>
 
@@ -238,13 +253,13 @@ CONSTRUCTION MENU
                 <Building>500029</Building>                <!--advanced weapons chain-->
             </Item>
             <Item>
-                <Building>924</Building>                <!--Multifactory_Magazin(DropGoods)_Moderate_Bombs-->
+                <Building>1742103573</Building>                
             </Item>
             <Item>
-                <Building>934</Building>                <!--Multifactory_Magazin(DropGoods)_Moderate_SeaMines-->
+                <Building>1742103574</Building>                
             </Item>
             <Item>
-                <Building>935</Building>                <!--Multifactory_Magazin(DropGoods)_Moderate_Flyers-->
+                <Building>1742103575</Building>                
             </Item>
         </BuildingList>
     </ModOp>
@@ -274,9 +289,6 @@ CONSTRUCTION MENU
                 <Building>3741</Building>                <!--Post Office-->
             </Item>
             <Item>
-                <Building>1742100082</Building>                <!-- Military Headquarters -->
-            </Item>
-            <Item>
                 <Building>1010463</Building>                <!--institution_02 (Fire Department)-->
             </Item>
             <Item>
@@ -284,6 +296,12 @@ CONSTRUCTION MENU
             </Item>
             <Item>
                 <Building>1010464</Building>                <!--institution_03 (Hospital)-->
+            </Item>
+            <Item>
+                <Building>1742103576</Building>                <!-- Officers’ Quarters -->
+            </Item>
+            <Item>
+                <Building>1742100082</Building>                <!-- Military Headquarters -->
             </Item>
         </BuildingList>
     </ModOp>
@@ -313,7 +331,7 @@ CONSTRUCTION MENU
                 <Building>636</Building>                <!-- Rigid Airship Hangar -->
             </Item>
             <Item>
-                <Building>100429</Building>                <!--Public Mooring-->
+                <Building>100429</Building>                
             </Item>
             <Item>
                 <Building>1010522</Building>                <!--harbor_04 (Tower 01, Puckle Gun)-->
@@ -412,6 +430,115 @@ CONSTRUCTION MENU
             </Tier1>
             <InfoTipHeight>600</InfoTipHeight>
         </ProductionChain>
+    </ModOp>
+
+    <!-- BOMBS CHAIN -->
+    <ModOp Type="addNextSibling" GUID='500091'>
+        <Asset>
+            <Template>ProductionChain</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742103573</GUID>
+                    <Name>Bombs</Name>
+                    <IconFilename>data/ui/2kimages/main/3dicons/drop_goods/icon_dropgood_bomb_b.png</IconFilename>
+                    <InfoDescription>852</InfoDescription>
+                </Standard>
+                <ProductionChain>
+                    <Building>924</Building>
+                    <Tier1>                  
+                        <Item>
+                            <Building>1010297</Building><!--heavy_02 (Steel Heavy Industry)-->
+                            <Tier2>
+                                <Item>
+                                    <Building>1010305</Building><!--mining_02 (Iron Mine)-->
+                                </Item>
+                                <Item>
+                                    <Building>1010304</Building><!--mining_01 (Coal Mine)-->
+                                </Item>
+                            </Tier2>
+                        </Item>
+                        <Item>
+                            <Building>1742103552</Building>                            
+                        </Item>
+                        <Item>
+                            <Building>101331</Building>
+                        </Item>
+                    </Tier1>
+                </ProductionChain>
+                <Locked />
+                <Text>
+                    <TextOverride>846</TextOverride>
+                </Text>
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- SEA MINE CHAIN -->
+    <ModOp Type="addNextSibling" GUID='500091'>
+        <Asset>
+            <Template>ProductionChain</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742103574</GUID>
+                    <Name>Sea Mine</Name>
+                    <IconFilename>data/ui/2kimages/main/3dicons/drop_goods/icon_dropgood_seamines.png</IconFilename>
+                    <InfoDescription>852</InfoDescription>
+                </Standard>
+                <ProductionChain>
+                    <Building>934</Building>
+                    <Tier1>                  
+                        <Item>
+                            <Building>1010297</Building><!--heavy_02 (Steel Heavy Industry)-->
+                            <Tier2>
+                                <Item>
+                                    <Building>1010305</Building><!--mining_02 (Iron Mine)-->
+                                </Item>
+                                <Item>
+                                    <Building>1010304</Building><!--mining_01 (Coal Mine)-->
+                                </Item>
+                            </Tier2>
+                        </Item>
+                        <Item>
+                            <Building>1742103552</Building>                            
+                        </Item>
+                        <Item>
+                            <Building>1742103550</Building>
+                        </Item>
+                    </Tier1>
+                </ProductionChain>
+                <Locked />
+                <Text>
+                    <TextOverride>847</TextOverride>
+                </Text>
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- PAMPHLETS CHAIN -->
+    <ModOp Type="addNextSibling" GUID='500091'>
+        <Asset>
+            <Template>ProductionChain</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742103575</GUID>
+                    <Name>Pamphlets</Name>
+                    <IconFilename>data/ui/2kimages/main/3dicons/drop_goods/icon_dropgood_pamphlets.png</IconFilename>
+                    <InfoDescription>852</InfoDescription>
+                </Standard>
+                <ProductionChain>
+                    <Building>935</Building>
+                    <Tier1>                  
+                        <Item>
+                            <Building>1010266</Building>
+                        </Item>
+                    </Tier1>
+                </ProductionChain>
+                <Locked />
+                <Text>
+                    <TextOverride>848</TextOverride>
+                </Text>
+            </Values>
+        </Asset>
     </ModOp>
 
 </ModOps>

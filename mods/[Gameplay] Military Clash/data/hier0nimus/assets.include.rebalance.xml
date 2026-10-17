@@ -6,7 +6,176 @@ REBALANCE
 
 <ModOps>
 
-<!-- ****************** START REBALANCING PROJECTILES AND DEBUFFS ******************  -->
+    <!-- ****************** START REBALANCING HARBOUR AREA SIZE ******************  -->
+
+    <ModOp Type="merge" GUID='2001241' Path="/Values/BuildingBaseTiles">
+        <HarbourConstructionAreaRadius>48</HarbourConstructionAreaRadius>        <!-- 28 -->
+    </ModOp>
+
+    <!-- ****************** START REBALANCING STARTING CONDITIONS ******************  -->
+
+    <!-- Start Credits -->
+    <ModOp GUID='2002450' Type="merge" Path="/Values/DifficultySettings/">
+        <StartCredits>
+            <Plenty>
+                <StartProducts>
+                    <Item>
+                        <MetaProduct>1010017</MetaProduct>
+                        <amount>125000</amount>                        <!-- 75000 -->
+                    </Item>
+                </StartProducts>
+            </Plenty>
+            <Medium>
+                <StartProducts>
+                    <Item>
+                        <MetaProduct>1010017</MetaProduct>
+                        <amount>100000</amount>                        <!-- 50000 -->
+                    </Item>
+                </StartProducts>
+            </Medium>
+            <Spare>
+                <StartProducts>
+                    <Item>
+                        <MetaProduct>1010017</MetaProduct>
+                        <amount>75000</amount>                        <!-- 25000 -->
+                    </Item>
+                </StartProducts>
+            </Spare>
+        </StartCredits>
+    </ModOp>
+
+    <!-- Start Konor/Ships -->
+    <ModOp GUID='2002450' Type="merge" Path="/Values/DifficultySettings/">
+        <StartShips>
+            <OneShip>
+                <Ships>
+                    <Item>
+                        <Ship>101121</Ship>                        <!--Flag Ship-->
+                        <ShipLoad>
+                            <Item>
+                                <Product>1010196</Product>                                <!--timber-->
+                                <Amount>50</Amount>
+                            </Item>
+                            <Item>
+                                <Product>1010221</Product>                                <!--weapons-->
+                                <Amount>50</Amount>
+                            </Item>
+                            <Item>
+                                <Product>1010200</Product>                                <!--fish-->
+                                <Amount>50</Amount>
+                            </Item>
+                        </ShipLoad>
+                    </Item>
+                </Ships>
+            </OneShip>
+            <TradeFleet>
+                <Ships>
+                    <Item>
+                        <Ship>101121</Ship>
+                        <!--Flag Ship-->
+                        <ShipLoad>
+                            <Item>
+                                <Product>1010196</Product>                                <!--timber-->
+                                <Amount>50</Amount>
+                            </Item>
+                            <Item>
+                                <Product>1010221</Product>                                <!--weapons-->
+                                <Amount>50</Amount>
+                            </Item>
+                            <Item>
+                                <Product>1010200</Product>                                <!--fish-->
+                                <Amount>50</Amount>
+                            </Item>
+                        </ShipLoad>
+                    </Item>
+                    <Item>
+                        <Ship>100439</Ship>
+                        <!--frigate-->
+                    </Item>
+                    <Item>
+                        <Ship>100439</Ship>
+                        <!--frigate-->
+                    </Item>
+                </Ships>
+            </TradeFleet>
+            <WarFleet>
+                <Ships>
+                    <Item>
+                        <Ship>101121</Ship>                        <!--Flag Ship-->
+                        <ShipLoad>
+                            <Item>
+                                <Product>1010196</Product>                                <!--timber-->
+                                <Amount>50</Amount>
+                            </Item>
+                            <Item>
+                                <Product>1010221</Product>                                <!--weapons-->
+                                <Amount>50</Amount>
+                            </Item>
+                            <Item>
+                                <Product>1010200</Product>                                <!--fish-->
+                                <Amount>50</Amount>
+                            </Item>
+                        </ShipLoad>
+                    </Item>
+                    <Item>
+                        <Ship>100437</Ship>                        <!--gunboat-->
+                    </Item>
+                    <Item>
+                        <Ship>100439</Ship>                        <!--frigate-->
+                    </Item>
+                    <Item>
+                        <Ship>100440</Ship>                        <!--sotl-->
+                    </Item>
+                </Ships>
+            </WarFleet>
+        </StartShips>
+        <StartWithKontor>
+            <Standard>
+                <ValueName>11078</ValueName>
+                <StartGoods>
+                    <Item>
+                        <Product>1010196</Product>                        <!--timber-->
+                        <Amount>50</Amount>
+                    </Item>
+                    <Item>
+                        <Product>1010200</Product>                        <!--fish-->
+                        <Amount>50</Amount>
+                    </Item>
+                    <Item>
+                        <Product>1010210</Product>                        <!--sails-->
+                        <Amount>50</Amount>
+                    </Item>
+                    <Item>
+                        <Product>1010221</Product>                        <!--weapons-->
+                        <Amount>50</Amount>
+                    </Item>
+                </StartGoods>
+            </Standard>
+            <Full>
+                <ValueName>11079</ValueName>
+                <StartGoods>
+                    <Item>
+                        <Product>1010196</Product>                        <!--timber-->
+                        <Amount>75</Amount>
+                    </Item>
+                    <Item>
+                        <Product>1010200</Product>                        <!--fish-->
+                        <Amount>75</Amount>
+                    </Item>
+                    <Item>
+                        <Product>1010210</Product>                        <!--sails-->
+                        <Amount>75</Amount>
+                    </Item>
+                    <Item>
+                        <Product>1010221</Product>                        <!--weapons-->
+                        <Amount>75</Amount>
+                    </Item>
+                </StartGoods>
+            </Full>
+        </StartWithKontor>
+    </ModOp>
+
+    <!-- ****************** START REBALANCING PROJECTILES AND DEBUFFS ******************  -->
 
     <!-- Ship Ilness Debuff / Infected / Infecté / Infiziert -->
     <ModOp GUID='192986' Type="merge" Path="/Values">
@@ -432,6 +601,6 @@ REBALANCE
     </ModOp>
 
 
-<!-- ****************** END REBALANCING PROJECTILES AND DEBUFFS ******************  -->
+    <!-- ****************** END REBALANCING PROJECTILES AND DEBUFFS ******************  -->
 
 </ModOps>

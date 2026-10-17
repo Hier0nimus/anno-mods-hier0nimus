@@ -1,0 +1,632 @@
+<!-- 
+
+ITEMSETS
+
+-->
+
+<ModOps>
+
+    <!-- START MA ITEMSET 1 - Ship Production - CHECKED - OK! -->
+    <ModOp GUID='124907' Type="addNextSibling">
+        <Asset>
+            <Template>ItemSet</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742100086</GUID>
+                    <Name>War Effort Production Ships</Name>
+                    <IconFilename>data/graphics/icons/icon_academy_ship_production.png</IconFilename>
+                    <InfoDescription>1742100087</InfoDescription>
+                </Standard>
+                <ItemSocketSet>
+                    <SetBuff>1742100088</SetBuff>                    <!-- Ship Production - SetBuff -->
+                    <BuffScope>Session</BuffScope>
+                </ItemSocketSet>
+                <Text />
+                <Locked />
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- START MA ITEMSET 1 - Ship Production - SetBuff -->
+    <ModOp GUID='142519' Type="addNextSibling">
+        <Asset>
+            <Template>FestivalBuff</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742100088</GUID>
+                    <Name>Ship Production</Name>
+                    <IconFilename>data/graphics/icons/icon_academy_ship_production.png</IconFilename>
+                    <InfoDescription>1742100089</InfoDescription>
+                </Standard>
+                <Text />
+                <PopulationUpgrade />
+                <ResidenceUpgrade />
+                <ItemEffect>
+                    <EffectTargets>
+                        <Item>
+                            <GUID>190783</GUID>                            <!-- All Shipyards - ItemEffectTargetPool -->
+                        </Item>
+                        <Item>
+                            <GUID>636</GUID>                            <!-- Airship Hangar - ItemEffectTargetPool -->
+                        </Item>
+                    </EffectTargets>
+                </ItemEffect>
+                <Buff />
+                <CultureUpgrade />
+                <KontorUpgrade />
+                <AttackableUpgrade />
+                <AttackerUpgrade />
+                <BuildingUpgrade />
+                <FactoryUpgrade />
+                <PassiveTradeGoodGenUpgrade />
+                <ShipyardUpgrade>
+                    <ConstructionCostInPercent>-25</ConstructionCostInPercent>
+                    <ConstructionTimeInPercent>-25</ConstructionTimeInPercent>
+                </ShipyardUpgrade>
+                <VisitorHarborUpgrade />
+                <VisitorUpgrade />
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- START MA ITEMSET 1 - Ship Production - Adding Items to set -->
+
+    <!-- 191895 - Gantry Crane -->
+    <ModOp GUID="191895" Path="Values/Item" Type="add">
+        <ItemSet>1742100086</ItemSet>
+    </ModOp>
+
+    <!-- 191896 - Railroad Crane -->
+    <ModOp GUID="191896" Path="Values/Item" Type="add">
+        <ItemSet>1742100086</ItemSet>
+    </ModOp>
+
+    <!-- 192036 - Hydraulic Crane -->
+    <ModOp GUID="192036" Path="Values/Item" Type="add">
+        <ItemSet>1742100086</ItemSet>
+    </ModOp>
+
+    <!-- START MA ITEMSET 7 - Speed Improvements Ships - CHECKED - OK! -->
+    <ModOp GUID='124907' Type="addNextSibling">
+        <Asset>
+            <Template>ItemSet</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742100115</GUID>
+                    <Name>Speed Improvements Ships</Name>
+                    <IconFilename>data/graphics/icons/icon_academy_speed_improvement_ship.png</IconFilename>
+                    <InfoDescription>1742100116</InfoDescription>
+                </Standard>
+                <ItemSocketSet>
+                    <SetBuff>1742100117</SetBuff>                    <!-- Speed Improvements Ships - SetBuff -->
+                    <BuffScope>Session</BuffScope>
+                </ItemSocketSet>
+                <Text />
+                <Locked />
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- START MA ITEMSET 7 - Speed Improvements Ships - SetBuff -->
+    <ModOp GUID='142519' Type="addNextSibling">
+        <Asset>
+            <Template>VehicleBuff</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742100117</GUID>
+                    <Name>Speed Improvements Ships</Name>
+                    <IconFilename>data/graphics/icons/icon_academy_speed_improvement_ship.png</IconFilename>
+                    <InfoDescription>1742100118</InfoDescription>
+                </Standard>
+                <Text />
+                <VehicleUpgrade>
+                    <ForwardSpeedUpgrade>
+                        <Value>10</Value>
+                        <Percental>1</Percental>
+                    </ForwardSpeedUpgrade>
+                    <IgnoreWeightFactorUpgrade>
+                        <Value>35</Value>
+                        <Percental>1</Percental>
+                    </IgnoreWeightFactorUpgrade>
+                </VehicleUpgrade>
+                <Buff />
+                <AttackerUpgrade />
+                <AttackableUpgrade />
+                <ProjectileUpgrade />
+                <TradeShipUpgrade />
+                <UpgradeList />
+                <ItemEffect>
+                    <EffectTargets>
+                        <Item>
+                            <GUID>191454</GUID>                            <!-- All Ships - ItemEffectTargetPool -->
+                        </Item>
+                        <Item>
+                            <GUID>102492</GUID>                            <!-- All Airships - ItemEffectTargetPool -->
+                        </Item>
+                    </EffectTargets>
+                </ItemEffect>
+                <DivingBellUpgrade />
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- START MA ITEMSET 7 - Adding Items to set -->
+
+    <!-- 191825 - Fore-and-Aft Rig Sails -->
+    <ModOp GUID="191825" Path="Values/Item" Type="add">
+        <ItemSet>1742100115</ItemSet>
+    </ModOp>
+
+    <!-- 116174 - Particularly Pull-y Pulley -->
+    <ModOp GUID="116174" Path="Values/Item" Type="add">
+        <ItemSet>1742100115</ItemSet>
+    </ModOp>
+
+    <!-- 112379 - Jet Propeller — "Hurricane" -->
+    <ModOp GUID="112379" Path="Values/Item" Type="add">
+        <ItemSet>1742100115</ItemSet>
+    </ModOp>
+
+    <!-- START MA ITEMSET 8 - War Improvement Ships -->
+    <ModOp GUID='124907' Type="addNextSibling">
+        <Asset>
+            <Template>ItemSet</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742100119</GUID>
+                    <Name>War Improvement Ships</Name>
+                    <IconFilename>data/graphics/icons/icon_academy_war_improvement_ship.png</IconFilename>
+                    <InfoDescription>1742100120</InfoDescription>
+                </Standard>
+                <ItemSocketSet>
+                    <SetBuff>1742100121</SetBuff>                    <!-- War Improvement Ships - SetBuff -->
+                    <BuffScope>Session</BuffScope>
+                </ItemSocketSet>
+                <Text />
+                <Locked />
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- START MA ITEMSET 8 - War Improvement Ships - SetBuff -->
+    <ModOp GUID='142519' Type="addNextSibling">
+        <Asset>
+            <Template>VehicleBuff</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742100121</GUID>
+                    <Name>War Improvement Ships</Name>
+                    <IconFilename>data/graphics/icons/icon_academy_war_improvement_ship.png</IconFilename>
+                    <InfoDescription>1742100122</InfoDescription>
+                </Standard>
+                <Text />
+                <VehicleUpgrade />
+                <Buff />
+                <AttackerUpgrade>
+                    <BaseDamageUpgrade>
+                        <Value>10</Value>
+                        <Percental>1</Percental>
+                    </BaseDamageUpgrade>
+                    <AttackRangeUpgrade>
+                        <Value>10</Value>
+                        <Percental>1</Percental>
+                    </AttackRangeUpgrade>
+                    <AttackSpeedUpgrade>15</AttackSpeedUpgrade>
+                </AttackerUpgrade>
+                <AttackableUpgrade />
+                <ProjectileUpgrade />
+                <TradeShipUpgrade />
+                <UpgradeList />
+                <ItemEffect>
+                    <EffectTargets>
+                        <Item>
+                            <GUID>191458</GUID>                            <!-- All Warships - ItemEffectTargetPool -->
+                        </Item>
+                        <Item>
+                            <GUID>102492</GUID>                            <!-- All Airships - ItemEffectTargetPool -->
+                        </Item>
+                    </EffectTargets>
+                </ItemEffect>
+                <DivingBellUpgrade />
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- START MA ITEMSET 8 - Adding Items to set -->
+
+    <!-- 192168 - Mullivann's Multishot Mortar -->
+    <ModOp GUID="192168" Path="Values/Item" Type="add">
+        <ItemSet>1742100119</ItemSet>
+    </ModOp>
+
+    <!-- 192434 - Pyrophorian Flame Thrower -->
+    <ModOp GUID="192434" Path="Values/Item" Type="add">
+        <ItemSet>1742100119</ItemSet>
+    </ModOp>
+
+    <!-- 112370 - DomiN8r -->
+    <ModOp GUID="112370" Path="Values/Item" Type="add">
+        <ItemSet>1742100119</ItemSet>
+    </ModOp>
+
+    <!-- START MA ITEMSET 9 - Defense Improvement Ships - CHECKED - OK! -->
+    <ModOp GUID='124907' Type="addNextSibling">
+        <Asset>
+            <Template>ItemSet</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742100123</GUID>
+                    <Name>Defense Improvement Ships</Name>
+                    <IconFilename>data/graphics/icons/icon_academy_defense_improvement_ship.png</IconFilename>
+                    <InfoDescription>1742100124</InfoDescription>
+                </Standard>
+                <ItemSocketSet>
+                    <RegionSetBuff>
+                        <Moderate>
+                            <SetBuff>1742100125</SetBuff>                            <!-- Defense Improvement Ships - SetBuff -->
+                        </Moderate>
+                        <Colony01>
+                            <SetBuff>1742100125</SetBuff>                            <!-- Defense Improvement Ships - SetBuff -->
+                        </Colony01>
+                        <Arctic>
+                            <SetBuff>1742100125</SetBuff>                            <!-- Defense Improvement Ships - SetBuff -->
+                        </Arctic>
+                        <Africa>
+                            <SetBuff>1742100125</SetBuff>                            <!-- Defense Improvement Ships - SetBuff -->
+                        </Africa>
+                    </RegionSetBuff>
+                    <BuffScope>Session</BuffScope>
+                </ItemSocketSet>
+                <Text />
+                <Locked />
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- START MA ITEMSET 9 - Defense Improvement Ships - SetBuff -->
+    <ModOp GUID='142519' Type="addNextSibling">
+        <Asset>
+            <Template>VehicleBuff</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742100125</GUID>
+                    <Name>Defense Improvement Ships</Name>
+                    <IconFilename>data/graphics/icons/icon_academy_defense_improvement_ship.png</IconFilename>
+                    <InfoDescription>1742100126</InfoDescription>
+                </Standard>
+                <Text />
+                <VehicleUpgrade>
+                    <IgnoreDamageFactorUpgrade>
+                        <Value>35</Value>
+                        <Percental>1</Percental>
+                    </IgnoreDamageFactorUpgrade>
+                </VehicleUpgrade>
+                <Buff />
+                <AttackerUpgrade />
+                <AttackableUpgrade>
+                    <MaxHitpointsUpgrade>
+                        <Value>750</Value>
+                    </MaxHitpointsUpgrade>
+                    <DamageReceiveFactor>
+                        <Normal>
+                            <Factor>0.85</Factor>
+                        </Normal>
+                        <Torpedo>
+                            <Factor>0.85</Factor>
+                        </Torpedo>
+                        <Cannon>
+                            <Factor>0.85</Factor>
+                        </Cannon>
+                        <BigBertha>
+                            <Factor>0.85</Factor>
+                        </BigBertha>
+                    </DamageReceiveFactor>
+                </AttackableUpgrade>
+                <ProjectileUpgrade />
+                <TradeShipUpgrade />
+                <UpgradeList />
+                <ItemEffect>
+                    <EffectTargets>
+                        <Item>
+                            <GUID>191454</GUID>                            <!-- All Ships - ItemEffectTargetPool -->
+                        </Item>
+                        <Item>
+                            <GUID>102492</GUID>                            <!-- All Airships - ItemEffectTargetPool -->
+                        </Item>
+                    </EffectTargets>
+                </ItemEffect>
+                <DivingBellUpgrade />
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- START MA ITEMSET 9 - Adding Items to set -->
+
+    <!-- 191851 - Singh's Steel Double-Hull -->
+    <ModOp GUID="191851" Path="Values/Item" Type="add">
+        <ItemSet>1742100123</ItemSet>
+    </ModOp>
+
+    <!-- 191850 - Reinforced Bulkhead -->
+    <ModOp GUID="191850" Path="Values/Item" Type="add">
+        <ItemSet>1742100123</ItemSet>
+    </ModOp>
+
+    <!-- 191849 - Fine Steel Hull -->
+    <ModOp GUID="191849" Path="Values/Item" Type="add">
+        <ItemSet>1742100123</ItemSet>
+    </ModOp>
+
+    <!-- START MA ITEMSET 13 - Improved Defenses - CHECKED - OK! -->
+    <ModOp GUID='124907' Type="addNextSibling">
+        <Asset>
+            <Template>ItemSet</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742100139</GUID>
+                    <Name>Improved Defenses</Name>
+                    <IconFilename>data/graphics/icons/icon_academy_improved_defenses.png</IconFilename>
+                    <InfoDescription>1742100140</InfoDescription>
+                </Standard>
+                <ItemSocketSet>
+                    <SetBuff>1742100141</SetBuff>                    <!-- Improved Defenses - SetBuff -->
+                    <BuffScope>Session</BuffScope>
+                </ItemSocketSet>
+                <Text />
+                <Locked />
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- START MA ITEMSET 13 - Improved Defenses - SetBuff -->
+    <ModOp GUID='142519' Type="addNextSibling">
+        <Asset>
+            <Template>HarbourOfficeBuff</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742100141</GUID>
+                    <Name>Improved Defenses</Name>
+                    <IconFilename>data/graphics/icons/icon_academy_improved_defenses.png</IconFilename>
+                    <InfoDescription>1742100142</InfoDescription>
+                </Standard>
+                <ItemEffect>
+                    <EffectTargets>
+                        <Item>
+                            <GUID>191443</GUID>                            <!-- All Defense Buildings - ItemEffectTargetPool -->
+                        </Item>
+                    </EffectTargets>
+                </ItemEffect>
+                <Text />
+                <FactoryUpgrade />
+                <BuildingUpgrade />
+                <Buff />
+                <AttackerUpgrade>
+                    <AttackRangeUpgrade>
+                        <Value>10</Value>
+                        <Percental>1</Percental>
+                    </AttackRangeUpgrade>
+                    <LineOfSightRangeUpgrade>
+                        <Value>10</Value>
+                        <Percental>1</Percental>
+                    </LineOfSightRangeUpgrade>
+                    <BaseDamageUpgrade>
+                        <Value>10</Value>
+                        <Percental>1</Percental>
+                    </BaseDamageUpgrade>
+                    <ReloadTimeUpgrade>
+                        <Value>-10</Value>
+                        <Percental>1</Percental>
+                    </ReloadTimeUpgrade>
+                    <AttackSpeedUpgrade>20</AttackSpeedUpgrade>
+                </AttackerUpgrade>
+                <VisitorHarborUpgrade />
+                <VisitorUpgrade />
+                <PassiveTradeGoodGenUpgrade />
+                <KontorUpgrade />
+                <AttackableUpgrade>
+                    <MaxHitpointsUpgrade>
+                        <Value>500</Value>
+                    </MaxHitpointsUpgrade>
+                </AttackableUpgrade>
+                <PierUpgrade />
+                <CultureUpgrade />
+                <WarehouseUpgrade />
+                <ItemContainerUpgrade />
+                <ResourceUpgrade />
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- START MA ITEMSET 13 - Adding Items to set -->
+
+    <!-- 191855 - Strongarm's Disappearing Gun -->
+    <ModOp GUID="191855" Path="Values/Item" Type="add">
+        <ItemSet>1742100139</ItemSet>
+    </ModOp>
+
+    <!-- 192177 - Thundering Loudspeaker Network -->
+    <ModOp GUID="192177" Path="Values/Item" Type="add">
+        <ItemSet>1742100139</ItemSet>
+    </ModOp>
+
+    <!-- 112388 - Evil ExsanguiN8r -->
+    <ModOp GUID="112388" Path="Values/Item" Type="add">
+        <ItemSet>1742100139</ItemSet>
+    </ModOp>
+
+    <!-- START MA ITEMSET 14 - Improved Reparations - CHECKED - OK! -->
+    <ModOp GUID='124907' Type="addNextSibling">
+        <Asset>
+            <Template>ItemSet</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742100143</GUID>
+                    <Name>Improved Reparations</Name>
+                    <IconFilename>data/graphics/icons/icon_academy_improved_reparations.png</IconFilename>
+                    <InfoDescription>1742100144</InfoDescription>
+                </Standard>
+                <ItemSocketSet>
+                    <SetBuff>1742100145</SetBuff>                    <!-- Improved Reparations - SetBuff -->
+                    <BuffScope>Session</BuffScope>
+                </ItemSocketSet>
+                <Text />
+                <Locked />
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- START MA ITEMSET 14 - Improved Reparations - SetBuff -->
+    <ModOp GUID='142519' Type="addNextSibling">
+        <Asset>
+            <Template>HarbourOfficeBuff</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742100145</GUID>
+                    <Name>Improved Reparations</Name>
+                    <IconFilename>data/graphics/icons/icon_academy_improved_reparations.png</IconFilename>
+                    <InfoDescription>1742100146</InfoDescription>
+                </Standard>
+                <ItemEffect>
+                    <EffectTargets>
+                        <Item>
+                            <GUID>191508</GUID>                            <!-- All Harbour Buildings - ItemEffectPool -->
+                        </Item>
+                    </EffectTargets>
+                </ItemEffect>
+                <Text />
+                <FactoryUpgrade />
+                <BuildingUpgrade />
+                <Buff />
+                <AttackerUpgrade />
+                <VisitorHarborUpgrade />
+                <VisitorUpgrade />
+                <PassiveTradeGoodGenUpgrade />
+                <KontorUpgrade />
+                <AttackableUpgrade>
+                    <SelfHealUpgrade>
+                        <Value>100</Value>
+                        <Percental>1</Percental>
+                    </SelfHealUpgrade>
+                    <SelfHealPausedTimeIfAttackedUpgrade>
+                        <Value>-100</Value>
+                        <Percental>1</Percental>
+                    </SelfHealPausedTimeIfAttackedUpgrade>
+                </AttackableUpgrade>
+                <PierUpgrade />
+                <CultureUpgrade />
+                <WarehouseUpgrade />
+                <ItemContainerUpgrade />
+                <ResourceUpgrade />
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- START MA ITEMSET 14 - Adding Items to set -->
+
+    <!-- 192155 - Poppinjay's Pulleyed Patcher-upper -->
+    <ModOp GUID="192155" Path="Values/Item" Type="add">
+        <ItemSet>1742100143</ItemSet>
+    </ModOp>
+
+    <!-- 191886 - Hydraulic Repair Crane -->
+    <ModOp GUID="191886" Path="Values/Item" Type="add">
+        <ItemSet>1742100143</ItemSet>
+    </ModOp>
+
+    <!-- 191882 - Deke's Indispensible Dockyard Crate -->
+    <ModOp GUID="191882" Path="Values/Item" Type="add">
+        <ItemSet>1742100143</ItemSet>
+    </ModOp>
+
+<!-- START MA ITEMSET 4 - Military Goods Production - CHECKED - OK! -->
+<ModOp GUID='124907' Type="addNextSibling">
+    <Asset>
+        <Template>ItemSet</Template>
+        <Values>
+            <Standard>
+                <GUID>1742100103</GUID>
+                <Name>Military Goods Production</Name>
+                <IconFilename>data/graphics/icons/icon_academy_military_goods_consumption.png</IconFilename>
+                <InfoDescription>1742100104</InfoDescription>
+            </Standard>
+            <ItemSocketSet>
+                <SetBuff>1742100105</SetBuff>                <!-- Military Weapon Goods Production - SetBuff -->
+                <BuffScope>Session</BuffScope>
+            </ItemSocketSet>
+            <Text />
+            <Locked />
+        </Values>
+    </Asset>
+</ModOp>
+
+<!-- START MA ITEMSET 4 - Adding Items to set -->
+
+<!-- START MA ITEMSET 4 - Military Goods Production - SetBuff -->
+<ModOp GUID='142519' Type="addNextSibling">
+    <Asset>
+        <Template>FestivalBuff</Template>
+        <Values>
+            <Standard>
+                <GUID>1742100105</GUID>
+                <Name>Military Goods Production</Name>
+                <IconFilename>data/graphics/icons/icon_academy_military_goods_consumption.png</IconFilename>
+                <InfoDescription>1742100106</InfoDescription>
+            </Standard>
+            <Text />
+            <PopulationUpgrade />
+            <ResidenceUpgrade />
+            <ItemEffect>
+                <EffectTargets>
+                    <Item>
+                        <GUID>6000018</GUID>                        <!-- All production buildings -->
+                    </Item>
+                </EffectTargets>
+            </ItemEffect>
+            <Buff />
+            <CultureUpgrade />
+            <KontorUpgrade />
+            <AttackableUpgrade />
+            <AttackerUpgrade />
+            <FactoryUpgrade>
+                <AdditionalOutput>
+                    <Item>
+                        <ForceProductSameAsFactoryOutput>1</ForceProductSameAsFactoryOutput>
+                        <AdditionalOutputCycle>1</AdditionalOutputCycle>
+                        <Amount>1</Amount>
+                    </Item>
+                </AdditionalOutput>
+            </FactoryUpgrade>
+            <BuildingUpgrade>
+                <MaintenanceUpgrade>
+                    <Value>25</Value>
+                    <Percental>1</Percental>
+                </MaintenanceUpgrade>
+                <WorkforceAmountUpgrade>
+                    <Value>25</Value>
+                    <Percental>1</Percental>
+                </WorkforceAmountUpgrade>
+            </BuildingUpgrade>
+            <PassiveTradeGoodGenUpgrade />
+            <ShipyardUpgrade />
+            <VisitorHarborUpgrade />
+            <VisitorUpgrade />
+        </Values>
+    </Asset>
+</ModOp>
+
+<!-- 191834 - Multiple Expansion Steam Engine -->
+<ModOp GUID="191834" Path="Values/Item" Type="add">
+    <ItemSet>1742100103</ItemSet>
+</ModOp>
+
+<!-- 191858 - Plate Heat Exchanger -->
+<ModOp GUID="191858" Path="Values/Item" Type="add">
+    <ItemSet>1742100103</ItemSet>
+</ModOp>
+
+<!-- 191840 - Telemobiloscope -->
+<ModOp GUID="191840" Path="Values/Item" Type="add">
+    <ItemSet>1742100103</ItemSet>
+</ModOp>
+
+</ModOps>

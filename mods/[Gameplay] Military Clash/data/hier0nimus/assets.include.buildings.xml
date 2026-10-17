@@ -720,172 +720,51 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
 
     <!-- PUBLIC MOORING -->
 
-    <ModOp Type="replace" GUID="100429">
-        <Asset>
-            <Template>ReinforcementPier</Template>
-            <Values>
-                <Standard>
-                    <GUID>100429</GUID>
-                    <Name>Reinforcement Pier</Name>
-                    <IconFilename>data/graphics/icons/icon_reinforcements_harbour.png</IconFilename>
-                    <ID>TourismPier</ID>
-                    <InfoDescription>2463</InfoDescription>
-                    <!--Visitors Harbor-->
-                </Standard>
-                <Building>
-                    <BuildingCategoryName>11150</BuildingCategoryName>
-                    <!--Harbor Building-->
-                    <SnapRadius>4</SnapRadius>
-                    <TerrainType>Water_Including_Coast</TerrainType>
-                    <AssociatedRegions>Moderate</AssociatedRegions>
-                </Building>
-                <Blocking>
-                    <GroundDecalAsset>100446</GroundDecalAsset>
-                    <!--Quay System Base-->
-                    <GroundDecalInvisible>101008</GroundDecalInvisible>
-                    <!--Quay System Base Invisible-->
-                    <GroundDecalAssetExtra>100691</GroundDecalAssetExtra>
-                    <!--invisible quay (dummyblocker)-->
-                    <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
-                    <HarbourAreaExpand>1</HarbourAreaExpand>
-                </Blocking>
-                <Mesh>
-                    <DefaultSequence>default</DefaultSequence>
-                </Mesh>
-                <Object>
-                    <Variations>
-                        <Item>
-                            <Filename>data/dlc07/graphics/buildings/special/harbor_main_01/harbor_main_01.cfg</Filename>
-                        </Item>
-                    </Variations>
-                    <Skins>
-                        <DefaultSkinName>100429</DefaultSkinName>
-                        <DefaultSkinDescription>23853</DefaultSkinDescription>
-                        <!--ChangeBuildingSkin_toDefaultSkinDesc-->
-                        <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>
-                        <!--Classic-->
-                    </Skins>
-                </Object>
-                <AmbientMoodProvider>
-                    <IslandAttractivityDependentMurmur>
-                        <Item>
-                            <Attractivity>-99999</Attractivity>
-                            <Murmur>TouristsLowAttractiveness</Murmur>
-                        </Item>
-                        <Item>
-                            <Attractivity>4000</Attractivity>
-                            <!--ShiplistItemSlotsInfotip-->
-                            <Murmur>TouristsMedAttractiveness</Murmur>
-                        </Item>
-                        <Item>
-                            <Attractivity>8000</Attractivity>
-                            <!--BuildModeInfotip_CosmeticModuleLimit-->
-                            <Murmur>TouristsHighAttractiveness</Murmur>
-                        </Item>
-                    </IslandAttractivityDependentMurmur>
-                </AmbientMoodProvider>
-                <Constructable/>
-                <Selection>
-                    <GUIType>VisitorHarbor</GUIType>
-                    <OnSelection>
-                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
-                        <Values>
-                            <ActionList/>
-                        </Values>
-                    </OnSelection>
-                    <ParticipantMessageArcheType>Mercier_DeserterWorker</ParticipantMessageArcheType>
-                </Selection>
-                <Text/>
-                <Cost>
-                    <Costs>
-                        <Item>
-                            <Ingredient>1010017</Ingredient>                            <!--Money-->
-                            <Amount>15000</Amount>
-                        </Item>
-                    </Costs>
-                </Cost>
-                <VisitorHarbor/>
-                <Infolayer/>
-                <BuildingUnique>
-                    <Uniques>
-                        <Item>
-                            <UniqueType>VisitorHarbor</UniqueType>
-                            <UniqueScope>Area</UniqueScope>
-                        </Item>
-                    </Uniques>
-                </BuildingUnique>
-                <Locked/>
-                <Attackable>
-                    <AttackableType>HarbourBuilding</AttackableType>
-                    <MaximumHitPoints>5000</MaximumHitPoints>
-                    <PausedTimeIfAttacked>0</PausedTimeIfAttacked>
-                    <HPBarOffset>5</HPBarOffset>
-                    <MoralePower>25</MoralePower>
-                    <IslandWarFlag>102303</IslandWarFlag>                    <!--island_war_flag1-->
-                    <ExplosionEffectsMin>2</ExplosionEffectsMin>
-                    <ExplosionEffectsMax>2</ExplosionEffectsMax>
-                    <SelfHealPerHealTick>5</SelfHealPerHealTick>
-                </Attackable>
-                <Maintenance>
-                    <Maintenances>
-                        <Item>
-                            <Product>1010017</Product>                            <!--Money-->
-                            <Amount>250</Amount>
-                            <InactiveAmount>250</InactiveAmount>
-                        </Item>
-                        <Item>
-                            <Product>1742100005</Product>
-                            <Amount>50</Amount>                            <!-- / -->
-                        </Item>
-                    </Maintenances>
-                </Maintenance>
-                <SoundEmitter>
-                    <ActiveSounds>
-                        <Item>
-                            <Sound>200896</Sound>
-                            <!--wwe_sfx_bld_harbor_typeCluster_tag-->
-                        </Item>
-                        <Item>
-                            <Sound>200260</Sound>
-                            <!--wwe_sfx_bld_harbor_09_lp-->
-                        </Item>
-                    </ActiveSounds>
-                    <ConstructionSounds>
-                        <BuildSuccessful>
-                            <Item>
-                                <Sound>206544</Sound>
-                                <!--wwe_sfx_aui_bld_place_waterbuilding-->
-                            </Item>
-                        </BuildSuccessful>
-                    </ConstructionSounds>
-                    <IncidentSounds>
-                        <InfectedFire>
-                            <Item>
-                                <Sound>214659</Sound>
-                                <!--wwe_sfx_bld_inc_burn-->
-                            </Item>
-                        </InfectedFire>
-                    </IncidentSounds>
-                    <BuildingRuined>
-                        <Item>
-                            <Sound>203848</Sound>
-                            <!--wwe_sfx_aui_destroy_big-->
-                        </Item>
-                    </BuildingRuined>
-                    <BuildingRepaired>
-                        <Item>
-                            <Sound>203866</Sound>
-                            <!--wwe_sfx_aui_bld_3d_renovate-->
-                        </Item>
-                    </BuildingRepaired>
-                </SoundEmitter>
-                <Pausable/>
-                <UpgradeList/>
-                <Culture/>
-                <StreetActivation/>
-                <FeedbackController/>
-            </Values>
-        </Asset>
+    <ModOp Type="merge" GUID="100429" Path="/Values/">
+        <Standard>
+            <Name>Reinforcement Pier</Name>
+            <IconFilename>data/graphics/icons/icon_reinforcements_harbour.png</IconFilename>
+        </Standard>
+        <Building>
+            <TerrainType>Water_Including_Coast</TerrainType>
+        </Building>
+        <Selection>
+            <ParticipantMessageArcheType>Mercier_DeserterWorker</ParticipantMessageArcheType>
+        </Selection>
+        <Cost>
+            <Costs>
+                <Item>
+                    <Ingredient>1010017</Ingredient>                <!--Money-->
+                    <Amount>15000</Amount>
+                </Item>
+            </Costs>
+        </Cost>
+        <Maintenance>
+            <Maintenances>
+                <Item>
+                    <Product>1010017</Product>                <!--Money-->
+                    <Amount>250</Amount>
+                    <InactiveAmount>250</InactiveAmount>
+                </Item>
+                <Item>
+                    <Product>1742100005</Product>
+                    <Amount>50</Amount>                <!-- / -->
+                </Item>
+            </Maintenances>
+        </Maintenance>
+    </ModOp>
+
+    <ModOp Type="replace" GUID="100429" Path="/Values/Upgradable">
+        <Upgradable/>
+    </ModOp>
+
+    <ModOp Type="replace" GUID="100429" Path="/Values/Cost/Costs">
+        <Costs>
+            <Item>
+                <Ingredient>1010017</Ingredient>            <!--Money-->
+                <Amount>15000</Amount>
+            </Item>
+        </Costs>
     </ModOp>
 
     <!-- KONTOR -->
@@ -1071,6 +950,16 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
                 </Item>
             </Maintenances>
         </Maintenance>
+        <LogisticNode>
+            <QueueConfiguration>
+                <ProcessingQueueParallelCount>8</ProcessingQueueParallelCount>
+            </QueueConfiguration>
+        </LogisticNode>
+        <Warehouse>
+            <WarehouseStorage>
+                <StorageMax>25</StorageMax>
+            </WarehouseStorage>
+        </Warehouse>
     </ModOp>
 
     <!-- SAILING SHIPYARD -->
@@ -1272,7 +1161,7 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
                     <Costs>
                         <Item>
                             <Ingredient>1010017</Ingredient>                            <!-- Coins - Product -->
-                            <Amount>250</Amount>
+                            <Amount>50</Amount>
                         </Item>
                     </Costs>
                 </Cost>
@@ -1359,7 +1248,7 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
                     <UpgradeCost>
                         <Item>
                             <Ingredient>1010017</Ingredient>                            <!-- Coins - Product -->
-                            <Amount>1000</Amount>
+                            <Amount>500</Amount>
                         </Item>
                     </UpgradeCost>
                 </Upgradable>
@@ -1470,10 +1359,7 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
                     </IncidentInfectionChanceFactors>
                 </IncidentInfectable>
                 <Pausable/>
-                <Culture>
-                    <Attractiveness>2</Attractiveness>
-                    <CultureType>Military</CultureType>
-                </Culture>
+                <Culture/>
                 <StreetActivation/>
                 <InfluenceSource/>
                 <Maintenance>
@@ -1770,7 +1656,7 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
                         <Item>
                             <Ingredient>1010017</Ingredient>
                             <!-- Coins -->
-                            <Amount>1000</Amount>
+                            <Amount>250</Amount>
                         </Item>
                     </Costs>
                 </Cost>
@@ -1826,7 +1712,7 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
                     <Maintenances>
                         <Item>
                             <Product>1010017</Product>                            <!-- Coins -->
-                            <Amount>50</Amount>
+                            <Amount>25</Amount>
                         </Item>
                     </Maintenances>
                 </Maintenance>
@@ -1860,7 +1746,7 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
                     </IncidentInfectionChanceFactors>
                 </IncidentInfectable>
                 <Culture>
-                    <Attractiveness>25</Attractiveness>
+                    <Attractiveness>5</Attractiveness>
                     <CultureType>Military</CultureType>
                 </Culture>
             </Values>
@@ -1881,6 +1767,7 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
                 <Building>
                     <BuildingType>Logistic</BuildingType>
                     <AssociatedRegions>Moderate</AssociatedRegions>
+                    <AllowChangeVariation>1</AllowChangeVariation>
                 </Building>
                 <Blocking/>
                 <Cost>
@@ -1888,17 +1775,17 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
                         <Item>
                             <Ingredient>1010017</Ingredient>
                             <!-- Coins -->
-                            <Amount>1000</Amount>
+                            <Amount>400</Amount>
                         </Item>
                     </Costs>
                 </Cost>
                 <Object>
                     <Variations>
                         <Item>
-                            <Filename>data\graphics\buildings\military\military_training_complex\military_training_complex_01.cfg</Filename>
+                            <Filename>data\graphics\buildings\military\military_training_complex\military_training_complex_01_00.cfg</Filename>
                         </Item>
                         <Item>
-                            <Filename>data\graphics\buildings\military\military_training_complex\military_training_complex_02.cfg</Filename>
+                            <Filename>data\graphics\buildings\military\military_training_complex\military_training_complex_02_00.cfg</Filename>
                         </Item>
                     </Variations>
                 </Object>
@@ -1947,7 +1834,7 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
                     <Maintenances>
                         <Item>
                             <Product>1010017</Product>                            <!-- Coins -->
-                            <Amount>100</Amount>
+                            <Amount>50</Amount>
                         </Item>
                     </Maintenances>
                 </Maintenance>
@@ -1981,7 +1868,7 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
                     </IncidentInfectionChanceFactors>
                 </IncidentInfectable>
                 <Culture>
-                    <Attractiveness>50</Attractiveness>
+                    <Attractiveness>10</Attractiveness>
                     <CultureType>Military</CultureType>
                 </Culture>
             </Values>
@@ -1989,15 +1876,16 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
     </ModOp>
     <!-- END BUILDING - MILITARY TRAINING COMPLEX -->
 
-    <!-- START BUILDING - Military Headquarters -->
+    <!-- START BUILDING - OFFICERS' QUARTERS -->
     <ModOp Type="addNextSibling" GUID="1010358">
         <Asset>
             <Template>PublicServiceBuilding</Template>
             <Values>
                 <Standard>
-                    <GUID>1742100082</GUID>
-                    <Name>Military Headquarters</Name>
-                    <IconFilename>data/graphics/icons/icon_military_academy.png</IconFilename>
+                    <GUID>1742103576</GUID>
+                    <!-- Officers' Quarters - Building -->
+                    <Name>Officers' Quarters</Name>
+                    <IconFilename>data/graphics/icons/icon_fort.png</IconFilename>
                 </Standard>
                 <Building>
                     <BuildingType>Logistic</BuildingType>
@@ -2009,14 +1897,14 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
                         <Item>
                             <Ingredient>1010017</Ingredient>
                             <!-- Coins -->
-                            <Amount>50000</Amount>
+                            <Amount>2500</Amount>
                         </Item>
                     </Costs>
                 </Cost>
                 <Object>
                     <Variations>
                         <Item>
-                            <Filename>data/graphics/buildings/military/military_academy/military_academy_01_02.cfg</Filename>
+                            <Filename>data/graphics/buildings/military/military_academy/military_academy_module_01.cfg</Filename>
                         </Item>
                     </Variations>
                 </Object>
@@ -2052,11 +1940,11 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
                 <UpgradeList/>
                 <LogisticNode/>
                 <PublicService>
-                    <FullSatisfactionDistance>150</FullSatisfactionDistance>
-                    <NoSatisfactionDistance>160</NoSatisfactionDistance>
+                    <FullSatisfactionDistance>36</FullSatisfactionDistance>
+                    <NoSatisfactionDistance>40</NoSatisfactionDistance>
                     <PublicServiceOutputs>
                         <Item>
-                            <Product>1742100084</Product>                            <!-- Military Trainign Complex - Product -->
+                            <Product>1742103577</Product>                            <!-- Officers’ Quarters - Product -->
                         </Item>
                     </PublicServiceOutputs>
                 </PublicService>
@@ -2065,18 +1953,14 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
                     <Maintenances>
                         <Item>
                             <Product>1010017</Product>                            <!-- Coins -->
-                            <Amount>1000</Amount>
-                        </Item>
-                        <Item>
-                            <Product>1742100005</Product>                            <!--Soldiers workforce-->
-                            <Amount>500</Amount>
+                            <Amount>100</Amount>
                         </Item>
                     </Maintenances>
                 </Maintenance>
                 <Attackable>
                     <AttackableType>IslandBuilding</AttackableType>
-                    <MaximumHitPoints>5000</MaximumHitPoints>
-                    <SelfHealPerHealTick>25</SelfHealPerHealTick>
+                    <MaximumHitPoints>1500</MaximumHitPoints>
+                    <SelfHealPerHealTick>4</SelfHealPerHealTick>
                 </Attackable>
                 <Pausable/>
                 <IncidentInfectable>
@@ -2103,13 +1987,13 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
                     </IncidentInfectionChanceFactors>
                 </IncidentInfectable>
                 <Culture>
-                    <Attractiveness>1000</Attractiveness>
-                    <CultureType>Monument</CultureType>
+                    <Attractiveness>30</Attractiveness>
+                    <CultureType>Military</CultureType>
                 </Culture>
             </Values>
         </Asset>
     </ModOp>
-    <!-- END BUILDING - Military Headquarters -->
+    <!-- END BUILDING - OFFICERS' QUARTERS -->
 
     <!-- POST OFFICE -->
     <ModOp Type="replace" GUID="3741" Path="/Values/Cost">
@@ -2117,13 +2001,20 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
             <Costs>
                 <Item>
                     <Ingredient>1010017</Ingredient>                    <!--Money-->
-                    <Amount>3500</Amount>                    <!-- 10000 -->
+                    <Amount>500</Amount>                    <!-- 10000 -->
                 </Item>
             </Costs>
         </Cost>
     </ModOp>
 
     <ModOp Type="merge" GUID="3741" Path="/Values/">
+        <Object>
+            <Variations>
+                <Item>
+                    <Filename>data\graphics\buildings\military\small_post_office\small_post_office_01.cfg</Filename>
+                </Item>
+            </Variations>
+        </Object>
         <Selection>
             <ParticipantMessageArcheType>Mercier_DeserterWorker</ParticipantMessageArcheType>
         </Selection>
@@ -2135,7 +2026,7 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
                     <StorageAmount>8</StorageAmount>
                 </Item>
             </FactoryOutputs>
-            <CycleTime>30</CycleTime>
+            <CycleTime>15</CycleTime>
             <WarehouseTransporterAsset>829</WarehouseTransporterAsset>            <!--MailTransporter-->
             <MissingConnectionInfolayer>0</MissingConnectionInfolayer>
             <IsMainFactory>1</IsMainFactory>
@@ -2147,12 +2038,12 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
             <Maintenances>
                 <Item>
                     <Product>1010017</Product>                    <!--Money-->
-                    <Amount>150</Amount>                    <!-- 400 -->
-                    <InactiveAmount>75</InactiveAmount>                    <!-- 200 -->
+                    <Amount>50</Amount>                    <!-- 400 -->
+                    <InactiveAmount>25</InactiveAmount>                    <!-- 200 -->
                 </Item>
                 <Item>
                     <Product>1742100005</Product>
-                    <Amount>40</Amount>                    <!-- 50 -->
+                    <Amount>25</Amount>                    <!-- 50 -->
                 </Item>
             </Maintenances>
         </Maintenance>
@@ -2177,8 +2068,8 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
             <Maintenances>
                 <Item>
                     <Product>1010017</Product>                    <!--Money-->
-                    <Amount>50</Amount>                    <!-- 25 -->
-                    <InactiveAmount>50</InactiveAmount>                    <!-- 25 -->
+                    <Amount>25</Amount>                    <!-- 25 -->
+                    <InactiveAmount>25</InactiveAmount>                    <!-- 25 -->
                 </Item>
             </Maintenances>
         </Maintenance>
@@ -2205,8 +2096,8 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
             <Maintenances>
                 <Item>
                     <Product>1010017</Product>                    <!--Money-->
-                    <Amount>50</Amount>                    <!-- 50 -->
-                    <InactiveAmount>50</InactiveAmount>                    <!-- 50 -->
+                    <Amount>25</Amount>                    <!-- 50 -->
+                    <InactiveAmount>25</InactiveAmount>                    <!-- 50 -->
                 </Item>
             </Maintenances>
         </Maintenance>
@@ -2233,8 +2124,8 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
             <Maintenances>
                 <Item>
                     <Product>1010017</Product>                    <!--Money-->
-                    <Amount>50</Amount>
-                    <InactiveAmount>50</InactiveAmount>
+                    <Amount>25</Amount>
+                    <InactiveAmount>25</InactiveAmount>
                 </Item>
             </Maintenances>
         </Maintenance>
@@ -2274,7 +2165,7 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
             <Maintenances>
                 <Item>
                     <Product>1010017</Product>                    <!--Money-->
-                    <Amount>25</Amount>                    <!-- 40 -->
+                    <Amount>15</Amount>                    <!-- 40 -->
                     <InactiveAmount>10</InactiveAmount>                    <!-- 20 -->
                 </Item>
                 <Item>
@@ -2320,8 +2211,8 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
             <Maintenances>
                 <Item>
                     <Product>1010017</Product>                    <!--Money-->
-                    <Amount>20</Amount>                    <!-- 20 -->
-                    <InactiveAmount>10</InactiveAmount>                    <!-- 10 -->
+                    <Amount>10</Amount>                    <!-- 20 -->
+                    <InactiveAmount>5</InactiveAmount>                    <!-- 10 -->
                 </Item>
                 <Item>
                     <Product>1742100005</Product>                    <!--Soldiers workforce-->
@@ -2351,8 +2242,8 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
             <Maintenances>
                 <Item>
                     <Product>1010017</Product>                    <!--Money-->
-                    <Amount>50</Amount>
-                    <InactiveAmount>25</InactiveAmount>
+                    <Amount>40</Amount>
+                    <InactiveAmount>20</InactiveAmount>
                 </Item>
                 <Item>
                     <Product>1742100005</Product>
@@ -2386,8 +2277,8 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
             <Maintenances>
                 <Item>
                     <Product>1010017</Product>                    <!--Money-->
-                    <Amount>50</Amount>
-                    <InactiveAmount>25</InactiveAmount>
+                    <Amount>40</Amount>
+                    <InactiveAmount>20</InactiveAmount>
                 </Item>
                 <Item>
                     <Product>1742100005</Product>
@@ -2642,6 +2533,14 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
         <Selection>
             <ParticipantMessageArcheType>Mercier_DeserterWorker</ParticipantMessageArcheType>
         </Selection>
+        <FactoryBase>
+            <FactoryOutputs>
+                <Item>
+                    <StorageAmount>6</StorageAmount>
+                </Item>
+            </FactoryOutputs>
+            <CycleTime>30</CycleTime>
+        </FactoryBase>
         <Maintenance>
             <Maintenances>
                 <Item>
@@ -2721,7 +2620,7 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
                 <StorageAmount>4</StorageAmount>
             </Item>
         </FactoryOutputs>
-        <CycleTime>60</CycleTime>
+        <CycleTime>30</CycleTime>
     </ModOp>
 
     <ModOp Type="merge" GUID="1010301" Path="/Values/">
@@ -2761,7 +2660,7 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
                 <StorageAmount>3</StorageAmount>
             </Item>
         </FactoryOutputs>
-        <CycleTime>45</CycleTime>
+        <CycleTime>30</CycleTime>
     </ModOp>
 
     <ModOp Type="merge" GUID="923" Path="/Values/">
@@ -2795,21 +2694,17 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
         </Cost>
     </ModOp>
 
-    <ModOp Type="merge" GUID="924,934,935" Path="/Values/FactoryBase/">
-        <FactoryOutputs>
-            <Item>
-                <StorageAmount>3</StorageAmount>
-            </Item>
-        </FactoryOutputs>
-        <CycleTime>45</CycleTime>
-    </ModOp>
-
     <ModOp Type="merge" GUID="924,934,935" Path="/Values/">
         <Selection>
             <ParticipantMessageArcheType>Mercier_DeserterWorker</ParticipantMessageArcheType>
         </Selection>
         <FactoryBase>
-            <CycleTime>45</CycleTime>
+            <FactoryOutputs>
+                <Item>
+                    <StorageAmount>6</StorageAmount>
+                </Item>
+            </FactoryOutputs>
+            <CycleTime>30</CycleTime>
         </FactoryBase>
         <Maintenance>
             <Maintenances>
@@ -2864,7 +2759,7 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
             <Costs>
                 <Item>
                     <Ingredient>1010017</Ingredient>                    <!--Money-->
-                    <Amount>500</Amount>                    <!-- 500 -->
+                    <Amount>100</Amount>                    <!-- 500 -->
                 </Item>
             </Costs>
         </Cost>
@@ -2893,8 +2788,8 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
             <Maintenances>
                 <Item>
                     <Product>1010017</Product>                    <!--Money-->
-                    <Amount>50</Amount>                    <!-- 40 -->
-                    <InactiveAmount>25</InactiveAmount>
+                    <Amount>40</Amount>                    <!-- 40 -->
+                    <InactiveAmount>20</InactiveAmount>
                 </Item>
                 <Item>
                     <Product>1742100005</Product>
@@ -2902,6 +2797,9 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
                 </Item>
             </Maintenances>
         </Maintenance>
+        <Culture>
+            <CultureType>Factory</CultureType>
+        </Culture>
     </ModOp>
 
     <!-- OIL FIELD -->
@@ -2964,7 +2862,7 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
             </Colors>
         </Selection>
         <ModuleOwner>
-            <ModuleBuildRadius>9</ModuleBuildRadius>            <!-- 12 -->
+            <ModuleBuildRadius>18</ModuleBuildRadius>            <!-- 12 -->
         </ModuleOwner>
         <Maintenance>
             <Maintenances>
@@ -2998,7 +2896,7 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
             <ParticipantMessageArcheType>Mercier_DeserterWorker</ParticipantMessageArcheType>
         </Selection>
         <Powerplant>
-            <IndustrializationDistance>50</IndustrializationDistance>            <!-- 35 -->
+            <IndustrializationDistance>70</IndustrializationDistance>            <!-- 35 -->
         </Powerplant>
         <FactoryBase>
             <FactoryInputs>
@@ -3018,8 +2916,8 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
             <PathLayers>Street</PathLayers>
         </LogisticNode>
         <PublicService>
-            <FullSatisfactionDistance>50</FullSatisfactionDistance>            <!-- 35 -->
-            <NoSatisfactionDistance>50</NoSatisfactionDistance>            <!-- 35 -->
+            <FullSatisfactionDistance>70</FullSatisfactionDistance>            <!-- 35 -->
+            <NoSatisfactionDistance>70</NoSatisfactionDistance>            <!-- 35 -->
             <PublicServiceOutputs>
                 <Item>
                     <Product>1010354</Product>                    <!--electric works-->
@@ -3047,7 +2945,7 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
             <Costs>
                 <Item>
                     <Ingredient>1010017</Ingredient>                    <!--Money-->
-                    <Amount>500</Amount>                    <!-- 500 -->
+                    <Amount>200</Amount>                    <!-- 500 -->
                 </Item>
             </Costs>
         </Cost>
@@ -3069,8 +2967,8 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
             <Maintenances>
                 <Item>
                     <Product>1010017</Product>                    <!--Money-->
-                    <Amount>60</Amount>                    <!-- 80 -->
-                    <InactiveAmount>30</InactiveAmount>
+                    <Amount>40</Amount>                    <!-- 80 -->
+                    <InactiveAmount>20</InactiveAmount>
                 </Item>
                 <Item>
                     <Product>1742100005</Product>
@@ -3078,6 +2976,9 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
                 </Item>
             </Maintenances>
         </Maintenance>
+        <Culture>
+            <CultureType>Factory</CultureType>
+        </Culture>
     </ModOp>
 
     <!-- MOTOR ASSEMBLY LINE -->
@@ -3098,7 +2999,7 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
                 <StorageAmount>4</StorageAmount>
             </Item>
         </FactoryOutputs>
-        <CycleTime>60</CycleTime>
+        <CycleTime>30</CycleTime>
     </ModOp>
 
     <ModOp Type="merge" GUID="1010302" Path="/Values/">
@@ -3384,8 +3285,8 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
                 </Maintenance>
                 <Attackable/>
                 <FreeAreaProductivity>
-                    <InfluenceRadius>9</InfluenceRadius>
-                    <NeededAreaPercent>50</NeededAreaPercent>
+                    <InfluenceRadius>7</InfluenceRadius>
+                    <NeededAreaPercent>40</NeededAreaPercent>
                     <FreeAreaType>Citrus</FreeAreaType>
                     <MaxWorkerAmount>3</MaxWorkerAmount>
                     <AdditionalWorkerForForestation>9</AdditionalWorkerForForestation>
@@ -3472,7 +3373,7 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
         </Cost>
     </ModOp>
 
-    <ModOp Type="merge" GUID="1010314" Path="/Values/FactoryBase">
+    <ModOp Type="merge" GUID="1010314" Path="/Values/">
         <Selection>
             <ParticipantMessageArcheType>Mercier_DeserterWorker</ParticipantMessageArcheType>
         </Selection>
@@ -3514,7 +3415,7 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
         </Cost>
     </ModOp>
 
-    <ModOp Type="merge" GUID="1010292" Path="/Values/FactoryBase">
+    <ModOp Type="merge" GUID="1010292" Path="/Values/">
         <Selection>
             <ParticipantMessageArcheType>Mercier_DeserterWorker</ParticipantMessageArcheType>
         </Selection>
@@ -3679,10 +3580,10 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
                         <Item>
                             <Product>1010204</Product>                            <!--brass-->
                             <Amount>1</Amount>
-                            <StorageAmount>3</StorageAmount>
+                            <StorageAmount>8</StorageAmount>
                         </Item>
                     </FactoryOutputs>
-                    <CycleTime>30</CycleTime>
+                    <CycleTime>15</CycleTime>
                     <IsMainFactory>0</IsMainFactory>
                 </FactoryBase>
                 <LogisticNode/>
@@ -3900,10 +3801,10 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
                         <Item>
                             <Product>1010222</Product>                            <!--dynamite-->
                             <Amount>1</Amount>
-                            <StorageAmount>3</StorageAmount>
+                            <StorageAmount>8</StorageAmount>
                         </Item>
                     </FactoryOutputs>
-                    <CycleTime>30</CycleTime>
+                    <CycleTime>15</CycleTime>
                     <IsMainFactory>0</IsMainFactory>
                 </FactoryBase>
                 <LogisticNode/>
@@ -3985,5 +3886,322 @@ CHANGES TO BUILDINGS / NEW BUILDINGS
             </Values>
         </Asset>
     </ModOp>
+
+    <!-- //////////////////////////// SPECIAL BUILDINGS //////////////////////////// -->
+
+    <!-- START BUILDING - MILITARY HEADQUARTERS -->
+    <ModOp GUID="1010358" Type="addNextSibling">
+        <Asset>
+            <Template>MilitaryAcademy</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742100082</GUID>
+                    <Name>Military Headquarters</Name>
+                    <IconFilename>data/graphics/icons/icon_military_headquarters.png</IconFilename>
+                    <InfoDescription>1742100083</InfoDescription>
+                </Standard>
+                <Building>
+                    <BuildModeRandomRotation>180</BuildModeRandomRotation>
+                    <AssociatedRegions>Moderate</AssociatedRegions>
+                    <AllowChangeVariation>1</AllowChangeVariation>
+                </Building>
+                <Blocking/>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>
+                            <!-- Coins -->
+                            <Amount>250000</Amount>
+                        </Item>
+                    </Costs>
+                </Cost>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/buildings/military/military_academy/military_academy_01_02.cfg</Filename>
+                        </Item>
+                    </Variations>
+                </Object>
+                <Mesh/>
+                <Selection/>
+                <Text/>
+                <Constructable/>
+                <Locked/>
+                <SoundEmitter>
+                    <ActiveSounds>
+                        <Item>
+                            <Sound>200531</Sound>
+                        </Item>
+                    </ActiveSounds>
+                    <BuildingRepaired>
+                        <Item>
+                            <Sound>203866</Sound>
+                        </Item>
+                    </BuildingRepaired>
+                </SoundEmitter>
+                <FeedbackController/>
+                <Infolayer/>
+                <UpgradeList/>
+                <Culture>
+                    <CultureSpawnGroup>1</CultureSpawnGroup>
+                    <Sets>
+                        <Item/>
+                        <Item>
+                            <Set>1742100086</Set>
+                            <!-- Ship Production - Itemset -->
+                        </Item>
+                        <Item>
+                            <Set>1742100115</Set>
+                            <!-- Speed Improvements Ships - Itemset -->
+                        </Item>
+                        <Item>
+                            <Set>1742100123</Set>
+                            <!-- Defense Improvement Ships - Itemset -->
+                        </Item>
+                        <Item/>
+                        <Item>
+                            <Set>1742100119</Set>
+                            <!-- War Improvement Ships - Itemset -->
+                        </Item>
+                        <Item>
+                            <Set>1742100139</Set>
+                            <!-- Improved Defenses - Itemset -->
+                        </Item>
+                        <Item>
+                            <Set>1742100143</Set>
+                            <!-- Improved Reparations - Itemset -->
+                        </Item>
+                        <Item/>
+                        <Item>
+                            <Set>1742100103</Set>
+                            <!-- Military Goods Production - Itemset -->
+                        </Item>
+                    </Sets>
+                    <UndiscoveredSet>1742100094</UndiscoveredSet>
+                    <!-- Military Academy - Building - Undiscovered head -->
+                    <ModuleListHeader>1742100093</ModuleListHeader>
+                    <!-- Military Academy - Building - Header -->
+                    <OpenSetPages>1742100092</OpenSetPages>
+                    <!-- Military Academy - Building - Module - Button -->
+                    <CultureMoodImage>data/ui/2kimages/main/assets/cultural_building_mood_bg/bg_main_museum.png</CultureMoodImage>
+                    <Attractiveness>1000</Attractiveness>
+                </Culture>
+                <ModuleOwner>
+                    <ModuleLimits>
+                        <Connector>
+                            <Limit>500</Limit>
+                        </Connector>
+                    </ModuleLimits>
+                    <ConstructionOptions>
+                        <Item>
+                            <ModuleGUID>1742101066</ModuleGUID>
+                        </Item>
+                        <Item>
+                            <ModuleGUID>113452</ModuleGUID>
+                        </Item>
+                        <Item>
+                            <ModuleGUID>1742101066</ModuleGUID>
+                        </Item>
+                        <Item>
+                            <ModuleGUID>114435</ModuleGUID>
+                        </Item>
+                        <Item>
+                            <ModuleGUID>101510</ModuleGUID>
+                        </Item>
+                        <Item>
+                            <ModuleGUID>101498</ModuleGUID>
+                        </Item>
+                        <Item>
+                            <ModuleGUID>103119</ModuleGUID>
+                        </Item>
+                        <Item>
+                            <ModuleGUID>101513</ModuleGUID>
+                        </Item>
+                        <Item>
+                            <ModuleGUID>1742100552</ModuleGUID>
+                        </Item>
+                        <Item>
+                            <ModuleGUID>1742100554</ModuleGUID>
+                        </Item>
+                    </ConstructionOptions>
+                    <ModuleBuildRadius>300</ModuleBuildRadius>
+                </ModuleOwner>
+                <AmbientMoodProvider>
+                    <AttractivityDependentMurmur>
+                        <Item>
+                            <Attractivity>-1000</Attractivity>
+                            <Murmur>MuseumLowAttractiveness</Murmur>
+                        </Item>
+                        <Item>
+                            <Attractivity>-20</Attractivity>
+                            <Murmur>MuseumMedAttractiveness</Murmur>
+                        </Item>
+                        <Item>
+                            <Attractivity>20</Attractivity>
+                            <Murmur>MuseumHighAttractiveness</Murmur>
+                        </Item>
+                    </AttractivityDependentMurmur>
+                    <DynamicEnvironmentType>Fog</DynamicEnvironmentType>
+                </AmbientMoodProvider>
+                <LogisticNode/>
+                <PublicService>
+                    <FullSatisfactionDistance>150</FullSatisfactionDistance>
+                    <NoSatisfactionDistance>160</NoSatisfactionDistance>
+                    <PublicServiceOutputs>
+                        <Item>
+                            <Product>1742100084</Product>                            <!-- Military Headquarters - Product -->
+                        </Item>
+                    </PublicServiceOutputs>
+                </PublicService>
+                <Factory7/>
+                <FactoryBase/>
+                <Maintenance>
+                    <Maintenances>
+                        <Item>
+                            <Product>1010017</Product>
+                            <Amount>5000</Amount>
+                        </Item>
+                        <Item>
+                            <Product>1742100005</Product>
+                            <!-- Soldiers Workforce - Product -->
+                            <Amount>1000</Amount>
+                        </Item>
+                    </Maintenances>
+                    <ConsumerPriorityAlarmed>2</ConsumerPriorityAlarmed>
+                </Maintenance>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <MaximumHitPoints>17500</MaximumHitPoints>
+                    <SelfHealPerHealTick>4</SelfHealPerHealTick>
+                </Attackable>
+                <IncidentInfectable>
+                    <Explosion>
+                        <DamageExplosionChance>0</DamageExplosionChance>
+                    </Explosion>
+                </IncidentInfectable>
+                <Pausable/>
+                <StreetActivation/>
+                <InfluenceSource/>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END BUILDING - MILITARY HEADQUARTERS -->
+
+    <!-- START BUILDING - MILITARY HEADQUARTERS MODULE HOUSING -->
+    <ModOp GUID="100454" Type="addNextSibling">
+        <Asset>
+            <Template>AcademyModule</Template>
+            <Values>
+                <Standard>
+                    <GUID>1742101066</GUID>
+                    <Name>Military Campus Housing</Name>
+                    <IconFilename>data/graphics/icons/icon_military_academy_module.png</IconFilename>
+                    <InfoDescription>1742101067</InfoDescription>
+                </Standard>
+                <Building>
+                    <BuildingCategoryName>2498</BuildingCategoryName>
+                    <PickingAsset>1742101066</PickingAsset>
+                    <BuildModeRandomRotation>180</BuildModeRandomRotation>
+                    <AssociatedRegions>Moderate</AssociatedRegions>
+                    <AllowChangeVariation>1</AllowChangeVariation>
+                </Building>
+                <Blocking/>
+                <Cost>
+                    <Costs>
+                        <Item>
+                            <Ingredient>1010017</Ingredient>
+                            <!-- Coins -->
+                            <Amount>50000</Amount>
+                        </Item>
+                    </Costs>
+                    <InfluenceCostType/>
+                    <InfluenceCostPoints>2</InfluenceCostPoints>
+                </Cost>
+                <Object>
+                    <Variations>
+                        <Item>
+                            <Filename>data/graphics/buildings/military/military_academy/military_academy_module_small_01.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/military/military_academy/military_academy_module_small_02.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/military/military_academy/military_academy_module_small_02_side_01.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/military/military_academy/military_academy_module_small_02_side_02.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/military/military_academy/military_academy_module_small_03.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/military/military_academy/military_academy_module_small_04.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/military/military_academy/military_academy_module_small_05.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/military/military_academy/military_academy_module_small_05_side_01.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/military/military_academy/military_academy_module_small_05_side_02.cfg</Filename>
+                        </Item>
+                        <Item>
+                            <Filename>data/graphics/buildings/military/military_academy/military_academy_module_small_06.cfg</Filename>
+                        </Item>
+                    </Variations>
+                </Object>
+                <Mesh/>
+                <Selection>
+                    <GUIType>Guildhouse</GUIType>
+                </Selection>
+                <Constructable/>
+                <Locked/>
+                <SoundEmitter/>
+                <FeedbackController/>
+                <Infolayer/>
+                <BuildingModule>
+                    <PlazaSize>20</PlazaSize>
+                    <ModuleMoodImage>data/ui/2kimages/main/assets/cultural_building_mood_bg/bg_empty_museum.png</ModuleMoodImage>
+                </BuildingModule>
+                <ItemContainer>
+                    <SocketCount>1</SocketCount>
+                    <SocketAllocation>RadiusBuilding;GuildHouse;TownHall;HarborOffice;Dockland;Lodge;Ship;SailShip;SteamShip;Warship;Tradeship;AirShip;Culture;Museum;Zoo;BotanicGarden;DivingVessel;Mod1</SocketAllocation>
+                    <SocketScope>Radius</SocketScope>
+                    <SocketScopeRadius>0</SocketScopeRadius>
+                </ItemContainer>
+                <Attackable>
+                    <AttackableType>IslandBuilding</AttackableType>
+                    <HasRuinState>1</HasRuinState>
+                    <SelfHealPerHealTick>4</SelfHealPerHealTick>
+                </Attackable>
+                <AmbientMoodProvider/>
+                <PublicService/>
+                <UpgradeList/>
+                <Factory7/>
+                <LogisticNode/>
+                <Pausable/>
+                <FactoryBase/>
+                <BuffFactory/>
+                <Maintenance>
+                    <Maintenances>
+                        <Item>
+                            <Product>1010017</Product>
+                            <Amount>500</Amount>
+                        </Item>
+                        <Item>
+                            <Product>1742100005</Product>
+                            <!-- Soldiers Workforce - Product -->
+                            <Amount>150</Amount>
+                        </Item>
+                    </Maintenances>
+                </Maintenance>
+            <Culture>
+                <Attractiveness>100</Attractiveness>
+            </Culture>
+            </Values>
+        </Asset>
+    </ModOp>
+    <!-- END BUILDING - MILITARY HEADQUARTERS MODULE HOUSING -->
 
 </ModOps>

@@ -6,43 +6,334 @@ NPCs
 
 <ModOps>
 
-    <!-- //////////////////////////// ARCHIBALD //////////////////////////// -->
+    <!-- 1000 Tons for every AI Harbour -->
+    <ModOp Path="/Values/Warehouse/WarehouseStorage/StorageMax" Type="replace" GUID='100685,101117,100681'>
+        <StorageMax>300</StorageMax>
+    </ModOp>
 
-    <!-- EARLY GAME -->
-    <ModOp Type="replace" GUID="45" Path="/Values/Trader/Progression/EarlyGame/GoodsProduction">
+    <!-- //////////////////////////// ELI //////////////////////////// -->
+
+    <ModOp Type="replace" GUID="46" Path="/Values/Profile/QuestPoolList">
+        <QuestPoolList/>
+    </ModOp>
+
+    <ModOp Type="replace" GUID="46" Path="/Values/Trader/Progression/*/GoodsProduction">
         <GoodsProduction>
             <Item>
-                <Good>1010196</Good>                <!--timber-->
-                <ProductionPerMinute>2</ProductionPerMinute>
+                <Good>1010227</Good>                <!--iron-->
+                <ProductionPerMinute>100</ProductionPerMinute>
+            </Item>
+            <Item>
+                <Good>1010226</Good>                <!--coal-->
+                <ProductionPerMinute>100</ProductionPerMinute>
+            </Item>
+            <Item>
+                <Good>1742103554</Good>                <!--oil-->
+                <ProductionPerMinute>100</ProductionPerMinute>
+            </Item>
+            <Item>
+                <Good>1010204</Good>                <!--brass-->
+                <ProductionPerMinute>100</ProductionPerMinute>
             </Item>
         </GoodsProduction>
     </ModOp>
 
-    <ModOp Type="replace" GUID="45" Path="/Values/Trader/Progression/EarlyGame/OfferingGoods">
+    <ModOp Type="replace" GUID="46" Path="/Values/Trader/Progression/*/OfferingGoods">
         <OfferingGoods>
             <Item>
                 <GoodSets>
                     <Item>
-                        <Good>1010196</Good>
-                        <!--timber-->
+                        <Good>1010227</Good>                        <!--iron-->
+                    </Item>
+                    <Item>
+                        <Good>1010226</Good>                        <!--coal-->
+                    </Item>
+                    <Item>
+                        <Good>1742103554</Good>                        <!--oil-->
+                    </Item>
+                    <Item>
+                        <Good>1010204</Good>                        <!--brass-->
                     </Item>
                 </GoodSets>
             </Item>
         </OfferingGoods>
     </ModOp>
 
-    <ModOp Type="replace" GUID="45" Path="/Values/Trader/Progression/EarlyGame/OfferingItems">
-        <OfferingItems>190162</OfferingItems>
+    <ModOp Type="replace" GUID="46" Path="/Values/Trader/Progression/*/PreferedGoods">
+        <PreferedGoods>
+
+            <Item>
+                <Product>1010195</Product>                <!--potatoes-->
+                <PriceMultiplier>5</PriceMultiplier>
+                <ReputationMultiplier>2</ReputationMultiplier>
+            </Item>
+            <Item>
+                <Product>1010238</Product>                <!--sausages-->
+                <PriceMultiplier>5</PriceMultiplier>
+                <ReputationMultiplier>2</ReputationMultiplier>
+            </Item>
+            <Item>
+                <Product>133183</Product>                <!--jam-->
+                <PriceMultiplier>12</PriceMultiplier>
+                <ReputationMultiplier>2</ReputationMultiplier>
+            </Item>
+        </PreferedGoods>
     </ModOp>
 
-    <ModOp Type="replace" GUID="45" Path="/Values/Trader/Progression/EarlyGame/ShipsForSale">
-        <ShipsForSale>
+    <ModOp Type="merge" GUID="46" Path="/Values/Trader/Progression/EarlyGame/">
+        <OfferingItems>1742103568</OfferingItems>
+        <MaxItemsToOffer>4</MaxItemsToOffer>
+    </ModOp>
+
+    <ModOp Type="merge" GUID="46" Path="/Values/Trader/Progression/MidGame/">
+        <OfferingItems>1742103568</OfferingItems>
+        <MaxItemsToOffer>4</MaxItemsToOffer>
+    </ModOp>
+
+    <ModOp Type="merge" GUID="46" Path="/Values/Trader/Progression/EarlyMidGame/">
+        <OfferingItems>1742103569</OfferingItems>
+        <MaxItemsToOffer>4</MaxItemsToOffer>
+    </ModOp>
+
+    <ModOp Type="merge" GUID="46" Path="/Values/Trader/Progression/LateMidGame/">
+        <OfferingItems>1742103570</OfferingItems>
+        <MaxItemsToOffer>8</MaxItemsToOffer>
+    </ModOp>
+
+    <ModOp Type="merge" GUID="46" Path="/Values/Trader/Progression/LateGame/">
+        <OfferingItems>1742103571</OfferingItems>
+        <MaxItemsToOffer>8</MaxItemsToOffer>
+    </ModOp>
+
+    <ModOp Type="merge" GUID="46" Path="/Values/Trader/Progression/EndGame/">
+        <OfferingItems>1742103572</OfferingItems>
+        <MaxItemsToOffer>12</MaxItemsToOffer>
+    </ModOp>
+
+    <!-- //////////////////////////// OLD NATE //////////////////////////// -->
+
+    <ModOp Type="replace" GUID="77" Path="/Values/Profile/QuestPoolList">
+        <QuestPoolList/>
+    </ModOp>
+
+    <ModOp Type="replace" GUID="77" Path="/Values/ItemCrafter">
+        <ItemCrafter>
+            <CraftableItemsInRegion>
+                <Moderate>
+                    <CraftableItems>
+                        <Item>
+                            <Item>112386</Item>
+                            <!--TrepaNATE-Or-->
+                        </Item>
+                        <Item>
+                            <Item>112387</Item>
+                            <!--AssassiNATE-ing Rifle-->
+                        </Item>
+                        <Item>
+                            <Item>112388</Item>
+                            <!--A NATE-omic Bomb-->
+                        </Item>
+                        <Item>
+                            <Item>112368</Item>
+                            <!--LamiNATE-Or-->
+                        </Item>
+                        <Item>
+                            <Item>112369</Item>
+                            <!--ExtermiNATE-ing Device-->
+                        </Item>
+                        <Item>
+                            <Item>112370</Item>
+                            <!--DomiNATE-ing Engine-->
+                        </Item>
+                        <Item>
+                            <Item>112377</Item>
+                            <!--Enemies MargiNATE-ing Machine-->
+                        </Item>
+                        <Item>
+                            <Item>112378</Item>
+                            <!--TurbiN'ATtire-->
+                        </Item>
+                        <Item>
+                            <Item>112379</Item>
+                            <!--Final DestiNATE-Tion-->
+                        </Item>
+                        <Item>
+                            <Item>112574</Item>
+                            <!--Bomb NATE-shell-->
+                        </Item>
+                        <Item>
+                            <Item>112576</Item>
+                            <!--DeciNATE-ing mine-->
+                        </Item>
+                        <Item>
+                            <Item>112578</Item>
+                            <!--UltiNATE Bomb-->
+                        </Item>
+                        <Item>
+                            <Item>191867</Item>
+                            <!--Abus Gun-->
+                        </Item>
+                        <Item>
+                            <Item>191868</Item>
+                            <!--Blown-Apart" 12-Pounder-->
+                        </Item>
+                        <Item>
+                            <Item>191869</Item>
+                            <!--Mulcher M1897-->
+                        </Item>
+                        <Item>
+                            <Item>192165</Item>
+                            <!--Cast Mortar-->
+                        </Item>
+                        <Item>
+                            <Item>192166</Item>
+                            <!--Grapeshot Cast Mortar-->
+                        </Item>
+                        <Item>
+                            <Item>192168</Item>
+                            <!--Mullivann's Multishot Mortar-->
+                        </Item>
+                        <Item>
+                            <Item>191853</Item>
+                            <!--18-pounder Long Gun-->
+                        </Item>
+                        <Item>
+                            <Item>191854</Item>
+                            <!--Hans Gun-->
+                        </Item>
+                        <Item>
+                            <Item>191855</Item>
+                            <!--Strongarm's Disappearing Gun-->
+                        </Item>
+                        <Item>
+                            <Item>1516</Item>
+                        </Item>
+                        <Item>
+                            <Item>1517</Item>
+                        </Item>
+                        <Item>
+                            <Item>102158</Item>
+                        </Item>
+                        <Item>
+                            <Item>192184</Item>
+                        </Item>
+                        <Item>
+                            <Item>192185</Item>
+                        </Item>
+                        <Item>
+                            <Item>192186</Item>
+                        </Item>
+                        <Item>
+                            <Item>191849</Item>
+                        </Item>
+                        <Item>
+                            <Item>191850</Item>
+                        </Item>
+                        <Item>
+                            <Item>191851</Item>
+                        </Item>
+                        <Item>
+                            <Item>191838</Item>
+                        </Item>
+                        <Item>
+                            <Item>191839</Item>
+                        </Item>
+                        <Item>
+                            <Item>191840</Item>
+                        </Item>
+                        <Item>
+                            <Item>191889</Item>
+                        </Item>
+                        <Item>
+                            <Item>191890</Item>
+                        </Item>
+                        <Item>
+                            <Item>192177</Item>
+                        </Item>
+                    </CraftableItems>
+                </Moderate>
+            </CraftableItemsInRegion>
+        </ItemCrafter>
+    </ModOp>
+
+    <ModOp Type="replace" GUID="77" Path="/Values/Trader/Progression/*/GoodsProduction">
+        <GoodsProduction>
             <Item>
-                <ShipAsset>100438</ShipAsset>
-                <!--Schooner (Trade)-->
-                <Weight>1</Weight>
+                <Good>1010196</Good>                <!--timber-->
+                <ProductionPerMinute>100</ProductionPerMinute>
             </Item>
-        </ShipsForSale>
+            <Item>
+                <Good>1010210</Good>                <!--sails-->
+                <ProductionPerMinute>100</ProductionPerMinute>
+            </Item>
+            <Item>
+                <Good>1010218</Good>                <!--beams-->
+                <ProductionPerMinute>100</ProductionPerMinute>
+            </Item>
+        </GoodsProduction>
+    </ModOp>
+
+    <ModOp Type="replace" GUID="77" Path="/Values/Trader/Progression/*/OfferingGoods">
+        <OfferingGoods>
+            <Item>
+                <GoodSets>
+                    <Item>
+                        <Good>1010196</Good>                        <!--timber-->
+                    </Item>
+                    <Item>
+                        <Good>1010210</Good>                        <!--sails-->
+                    </Item>
+                    <Item>
+                        <Good>1010218</Good>                        <!--beams-->
+                    </Item>
+                </GoodSets>
+            </Item>
+        </OfferingGoods>
+    </ModOp>
+
+    <ModOp Type="replace" GUID="77" Path="/Values/Trader/Progression/*/PreferedGoods">
+        <PreferedGoods>
+            <Item>
+                <Product>1010224</Product>                <!--steam motors-->
+                <PriceMultiplier>6</PriceMultiplier>
+                <ReputationMultiplier>2</ReputationMultiplier>
+            </Item>
+            <Item>
+                <Product>1010222</Product>                <!--dynamite-->
+                <PriceMultiplier>10</PriceMultiplier>
+                <ReputationMultiplier>2</ReputationMultiplier>
+            </Item>
+        </PreferedGoods>
+    </ModOp>
+
+    <ModOp Type="merge" GUID="77" Path="/Values/Trader/Progression/EarlyGame/">
+        <OfferingItems>1742103578</OfferingItems>
+        <MaxItemsToOffer>4</MaxItemsToOffer>
+    </ModOp>
+
+    <ModOp Type="merge" GUID="77" Path="/Values/Trader/Progression/MidGame/">
+        <OfferingItems>1742103578</OfferingItems>
+        <MaxItemsToOffer>4</MaxItemsToOffer>
+    </ModOp>
+
+    <ModOp Type="merge" GUID="77" Path="/Values/Trader/Progression/EarlyMidGame/">
+        <OfferingItems>1742103579</OfferingItems>
+        <MaxItemsToOffer>4</MaxItemsToOffer>
+    </ModOp>
+
+    <ModOp Type="merge" GUID="77" Path="/Values/Trader/Progression/LateMidGame/">
+        <OfferingItems>1742103580</OfferingItems>
+        <MaxItemsToOffer>8</MaxItemsToOffer>
+    </ModOp>
+
+    <ModOp Type="merge" GUID="77" Path="/Values/Trader/Progression/LateGame/">
+        <OfferingItems>1742103581</OfferingItems>
+        <MaxItemsToOffer>8</MaxItemsToOffer>
+    </ModOp>
+
+    <ModOp Type="merge" GUID="77" Path="/Values/Trader/Progression/EndGame/">
+        <OfferingItems>1742103582</OfferingItems>
+        <MaxItemsToOffer>12</MaxItemsToOffer>
     </ModOp>
 
 </ModOps>

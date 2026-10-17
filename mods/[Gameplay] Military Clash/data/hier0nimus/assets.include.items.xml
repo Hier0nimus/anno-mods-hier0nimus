@@ -238,6 +238,22 @@ ITEMS
             </BigBertha>
         </DamageReceiveFactor>
     </ModOp>
+    <ModOp GUID='191851' Type="merge" Path="/Values/CraftableItem">
+        <CraftingCosts>
+            <Item>
+                <Product>1010196</Product><!--timber-->
+                <Amount>30</Amount>
+            </Item>
+            <Item>
+                <Product>1010204</Product><!--brass-->
+                <Amount>30</Amount>
+            </Item>
+            <Item>
+                <Product>1010218</Product><!--steal beams-->
+                <Amount>30</Amount>
+            </Item>
+        </CraftingCosts>
+    </ModOp>
     <!-- Reinforced Bulkhead - 40% -->
     <ModOp GUID='191850' Type="replace" Path="/Values/AttackableUpgrade/MaxHitpointsUpgrade">
         <MaxHitpointsUpgrade>
@@ -257,6 +273,22 @@ ITEMS
                 <Factor>0.85</Factor>
             </BigBertha>
         </DamageReceiveFactor>
+    </ModOp>
+    <ModOp GUID='191850' Type="merge" Path="/Values/CraftableItem">
+        <CraftingCosts>
+            <Item>
+                <Product>1010196</Product>                <!--timber-->
+                <Amount>15</Amount>
+            </Item>
+            <Item>
+                <Product>1010204</Product>                <!--brass-->
+                <Amount>15</Amount>
+            </Item>
+            <Item>
+                <Product>1010218</Product>                <!--steal beams-->
+                <Amount>15</Amount>
+            </Item>
+        </CraftingCosts>
     </ModOp>
     <!-- Fine Steel Hull - 30% -->
     <ModOp GUID='191849' Type="replace" Path="/Values/AttackableUpgrade/MaxHitpointsUpgrade">
@@ -278,6 +310,22 @@ ITEMS
             </BigBertha>
         </DamageReceiveFactor>
     </ModOp>
+        <ModOp GUID='191849' Type="merge" Path="/Values/CraftableItem">
+        <CraftingCosts>
+            <Item>
+                <Product>1010196</Product>                <!--timber-->
+                <Amount>5</Amount>
+            </Item>
+            <Item>
+                <Product>1010204</Product>                <!--brass-->
+                <Amount>5</Amount>
+            </Item>
+            <Item>
+                <Product>1010218</Product>                <!--steal beams-->
+                <Amount>5</Amount>
+            </Item>
+        </CraftingCosts>
+    </ModOp>
     <!-- Fine Wood Hull - 20% -->
     <ModOp GUID='191848' Type="replace" Path="/Values/AttackableUpgrade/MaxHitpointsUpgrade">
         <MaxHitpointsUpgrade>
@@ -295,6 +343,78 @@ ITEMS
         <MaxHitpointsUpgrade>
             <Value>750</Value>
         </MaxHitpointsUpgrade>
+    </ModOp>
+
+    <!-- Hydraulic Crane -->
+    <ModOp GUID='192036' Type="merge" Path="/Values/">
+        <BuildingUpgrade>
+            <WorkforceAmountUpgrade>
+                <Value>-35</Value>
+                <Percental>1</Percental>
+            </WorkforceAmountUpgrade>
+        </BuildingUpgrade>
+        <ShipyardUpgrade>
+            <ConstructionCostInPercent>-20</ConstructionCostInPercent>
+        </ShipyardUpgrade>
+    </ModOp>
+
+    <!-- Rohit Bhargava, the Naval Architect -->
+    <ModOp GUID='190698' Type="merge" Path="/Values/">
+        <BuildingUpgrade>
+            <MaintenanceUpgrade>
+                <Value>-60</Value>
+                <Percental>1</Percental>
+            </MaintenanceUpgrade>
+            <WorkforceAmountUpgrade>
+                <Value>-30</Value>
+                <Percental>1</Percental>
+            </WorkforceAmountUpgrade>
+        </BuildingUpgrade>
+        <ShipyardUpgrade>
+            <ConstructionCostInPercent>-25</ConstructionCostInPercent>
+        </ShipyardUpgrade>
+    </ModOp>
+
+    <!-- Mr. Swell the Hydrodynamist -->
+    <ModOp GUID='190697' Type="merge" Path="/Values/">
+        <BuildingUpgrade>
+            <WorkforceAmountUpgrade>
+                <Value>-30</Value>
+                <Percental>1</Percental>
+            </WorkforceAmountUpgrade>
+        </BuildingUpgrade>
+        <ShipyardUpgrade>
+            <ConstructionCostInPercent>-15</ConstructionCostInPercent>
+        </ShipyardUpgrade>
+    </ModOp>
+
+    <!-- Railroad Crane -->
+    <ModOp GUID='191896' Type="merge" Path="/Values/">
+		<ShipyardUpgrade>
+			<ConstructionCostInPercent>-20</ConstructionCostInPercent>
+		</ShipyardUpgrade>
+    </ModOp>
+
+    <!-- Gantry Crane -->
+    <ModOp GUID='191895' Type="merge" Path="/Values/">
+        <ShipyardUpgrade>
+            <ConstructionCostInPercent>-15</ConstructionCostInPercent>
+        </ShipyardUpgrade>
+        <IncidentInfectableUpgrade>
+            <IncidentFireIncreaseUpgrade>
+                <Value>1</Value>
+            </IncidentFireIncreaseUpgrade>
+        </IncidentInfectableUpgrade>
+    </ModOp>
+
+    <!-- Naval Architect -->
+    <ModOp GUID='190696' Type="merge" Path="/Values/">
+        <BuildingUpgrade>
+            <MaintenanceUpgrade>
+                <Value>-30</Value>
+                <Percental>1</Percental>
+            </MaintenanceUpgrade>
+        </BuildingUpgrade>
     </ModOp>
 
     <!-- Add new allocation types to Crafting menu and Kontor menu -->
@@ -317,14 +437,14 @@ ITEMS
     <!-- Existing Rocket Barrages Balancing-->
     <ModOp Type="merge" GUID='1516' Path="/Values/">
         <SpecialAction>
-            <BarrageCount>5</BarrageCount>            <!-- 10 -->
-            <ActionRadius>4</ActionRadius>            <!-- 8 -->
+            <BarrageCount>6</BarrageCount>            <!-- 10 -->
+            <ActionRadius>5</ActionRadius>            <!-- 8 -->
             <BarrageDuration>5000</BarrageDuration>            <!-- 8000 -->
         </SpecialAction>
         <ItemAction>
-            <ActionDistance>100</ActionDistance>            <!-- 165 -->
+            <ActionDistance>120</ActionDistance>            <!-- 165 -->
             <ActionCooldown>15000</ActionCooldown>            <!-- 25000 -->
-            <Charges>10</Charges>
+            <Charges>20</Charges>
         </ItemAction>
         <Item>
             <Rarity>Common</Rarity>            <!-- Uncommon -->
@@ -333,24 +453,24 @@ ITEMS
         <CraftableItem>
             <CraftingCosts>
                 <Item>
-                    <Product>112518</Product>                    <!--scrap I-->
+                    <Product>1010219</Product>                    <!--steel-->
                     <Amount>5</Amount>
                 </Item>
                 <Item>
                     <Product>846</Product>                    <!--Bombs-->
-                    <Amount>3</Amount>
+                    <Amount>5</Amount>
                 </Item>
             </CraftingCosts>
         </CraftableItem>
     </ModOp>
-    <ModOp Type="merge" GUID='1517' Path="/Values/">
+    <ModOp Type="merge" GUID='1517,102158' Path="/Values/">
         <SpecialAction>
-            <BarrageCount>10</BarrageCount>            <!-- 18 -->
-            <ActionRadius>4</ActionRadius>            <!-- 8 -->
+            <BarrageCount>12</BarrageCount>            <!-- 18 -->
+            <ActionRadius>5</ActionRadius>            <!-- 8 -->
             <BarrageDuration>10000</BarrageDuration>            <!-- 12000 -->
         </SpecialAction>
         <ItemAction>
-            <ActionDistance>100</ActionDistance>            <!-- 165 -->
+            <ActionDistance>120</ActionDistance>            <!-- 165 -->
             <ActionCooldown>10000</ActionCooldown>            <!-- 45000 -->
             <IsDestroyedAfterCooldown>0</IsDestroyedAfterCooldown>
         </ItemAction>
@@ -361,15 +481,31 @@ ITEMS
         <CraftableItem>
             <CraftingCosts>
                 <Item>
-                    <Product>112523</Product>                    <!--scrap III-->
-                    <Amount>10</Amount>
+                    <Product>1010219</Product>                    <!--steel-->
+                    <Amount>15</Amount>
                 </Item>
                 <Item>
                     <Product>846</Product>                    <!--Bombs-->
-                    <Amount>10</Amount>
+                    <Amount>15</Amount>
                 </Item>
             </CraftingCosts>
         </CraftableItem>
+        <ExpeditionAttribute>
+            <BaseMorale>0</BaseMorale>
+            <ExpeditionAttributes>
+                <Item>
+                    <Attribute>Might</Attribute>
+                    <Amount>45</Amount>
+                </Item>
+                <Item>
+                    <Attribute>Melee</Attribute>
+                    <Amount>25</Amount>
+                </Item>
+            </ExpeditionAttributes>
+            <ItemDifficulties>Average;Hard</ItemDifficulties>
+            <FluffText>1519</FluffText>
+            <!--Rocket Fluff-->
+        </ExpeditionAttribute>
     </ModOp>
     <ModOp Type="remove" GUID='1517' Path="/Values/ItemAction/Charges" />
 
@@ -431,24 +567,64 @@ ITEMS
     </ModOp>
 
     <!-- Existing Torpedos need launchers now-->
-    <ModOp Type="merge" GUID='192186,192185,192184,191474' Path = "/Values/Item/">
+    <ModOp Type="merge" GUID='192186,192185,192184' Path = "/Values/Item/">
         <Allocation>Mod10</Allocation>
     </ModOp>
 
     <!-- Existing Torpedos Balancing-->
-    <ModOp Type="merge" GUID='191474' Path = "/Values/">
-        <ItemAction>
-            <ActionCooldown>9000</ActionCooldown>            <!-- 25000 -->
-            <Charges>10</Charges>            <!-- 3 -->
-        </ItemAction>
-        <Item>
-            <Rarity>Common</Rarity>            <!-- Uncommon -->
-        </Item>
+    <ModOp Type="merge" GUID='192186' Path = "/Values/CraftableItem">
+        <CraftingCosts>
+            <Item>
+                <Product>1010219</Product>
+                <!--steel-->
+                <Amount>30</Amount>
+            </Item>
+            <Item>
+                <Product>1010222</Product>
+                <!--dynamite-->
+                <Amount>30</Amount>
+            </Item>
+        </CraftingCosts>
+    </ModOp>
+    <ModOp Type="merge" GUID='192185' Path = "/Values/CraftableItem">
+        <CraftingCosts>
+            <Item>
+                <Product>1010219</Product>
+                <!--steel-->
+                <Amount>15</Amount>
+            </Item>
+            <Item>
+                <Product>1010222</Product>
+                <!--dynamite-->
+                <Amount>15</Amount>
+            </Item>
+        </CraftingCosts>
+    </ModOp>
+    <ModOp Type="merge" GUID='192184' Path = "/Values/CraftableItem">
+        <CraftingCosts>
+            <Item>
+                <Product>1010219</Product>
+                <!--steel-->
+                <Amount>5</Amount>
+            </Item>
+            <Item>
+                <Product>1010222</Product>
+                <!--dynamite-->
+                <Amount>5</Amount>
+            </Item>
+        </CraftingCosts>
     </ModOp>
     <ModOp Type="merge" GUID='192184' Path = "/Values/">
         <ItemAction>
             <ActionCooldown>10000</ActionCooldown>
+            <Charges>20</Charges>
         </ItemAction>
+        <Text>
+            <TextOverride>191474</TextOverride>
+        </Text>
+        <Item>
+            <Rarity>Common</Rarity>
+        </Item>
     </ModOp>
     <ModOp Type="merge" GUID='192187' Path = "/Values/Projectile/">
         <ProjectileSpeed>1.2</ProjectileSpeed>
@@ -509,6 +685,428 @@ ITEMS
                 </StatusEffectChain>
             </Item>
         </StatusEffects>
+    </ModOp>
+
+    <!-- CHANGES TO CRAFTING ITEMS -->
+
+    <!-- Auxetophone -->
+    <ModOp GUID='191889' Path="/Values/CraftableItem/" Type="merge">
+        <CraftingCosts>
+            <Item>
+                <Product>1010204</Product>
+                <Amount>5</Amount>
+            </Item>
+            <Item>
+                <Product>848</Product>
+                <Amount>5</Amount>
+            </Item>
+        </CraftingCosts>
+    </ModOp>
+
+    <!-- Dynamic Loudspeaker -->
+    <ModOp GUID='191890' Path="/Values/CraftableItem/" Type="merge">
+        <CraftingCosts>
+            <Item>
+                <Product>1010204</Product>
+                <Amount>15</Amount>
+            </Item>
+            <Item>
+                <Product>848</Product>
+                <Amount>15</Amount>
+            </Item>
+        </CraftingCosts>
+    </ModOp>
+
+    <!-- Thundering Loudspeaker Network -->
+    <ModOp GUID='192177' Path="/Values/CraftableItem/" Type="merge">
+        <CraftingCosts>
+            <Item>
+                <Product>1010204</Product>
+                <Amount>30</Amount>
+            </Item>
+            <Item>
+                <Product>848</Product>
+                <Amount>30</Amount>
+            </Item>
+        </CraftingCosts>
+    </ModOp>
+
+    <!-- High-Powered Scope -->
+    <ModOp GUID='191838' Path="/Values/CraftableItem/" Type="merge">
+        <CraftingCosts>
+            <Item>
+                <Product>1010204</Product>
+                <Amount>5</Amount>
+            </Item>
+            <Item>
+                <Product>1010219</Product>
+                <Amount>5</Amount>
+            </Item>
+        </CraftingCosts>
+    </ModOp>
+
+    <!-- High-Powered Scope -->
+    <ModOp GUID='191839' Path="/Values/CraftableItem/" Type="merge">
+        <CraftingCosts>
+            <Item>
+                <Product>1010204</Product>
+                <Amount>15</Amount>
+            </Item>
+            <Item>
+                <Product>1010219</Product>
+                <Amount>15</Amount>
+            </Item>
+        </CraftingCosts>
+    </ModOp>
+
+    <!-- Telemobiloscope -->
+    <ModOp GUID='191840' Path="/Values/CraftableItem/" Type="merge">
+        <CraftingCosts>
+            <Item>
+                <Product>1010204</Product>
+                <Amount>30</Amount>
+            </Item>
+            <Item>
+                <Product>1010219</Product>
+                <Amount>30</Amount>
+            </Item>
+        </CraftingCosts>
+    </ModOp>
+
+    <!-- TrepanN8r -->
+    <ModOp GUID='112386' Path="/Values/CraftableItem/CraftingCosts" Type="replace">
+        <CraftingCosts>
+            <Item>
+                <Product>1010196</Product>
+                <!--timber-->
+                <Amount>5</Amount>
+            </Item>
+            <Item>
+                <Product>1010221</Product>
+                <!--weapons-->
+                <Amount>5</Amount>
+            </Item>
+        </CraftingCosts>
+    </ModOp>
+
+    <!-- AssassiN8r -->
+    <ModOp GUID='112387' Path="/Values/CraftableItem/CraftingCosts" Type="replace">
+        <CraftingCosts>
+            <Item>
+                <Product>1010219</Product>
+                <!--steel-->
+                <Amount>15</Amount>
+            </Item>
+            <Item>
+                <Product>1010221</Product>
+                <!--weapons-->
+                <Amount>15</Amount>
+            </Item>
+        </CraftingCosts>
+    </ModOp>
+
+    <!-- Evil ExsanguiN8r -->
+    <ModOp GUID='112388' Path="/Values/CraftableItem/CraftingCosts" Type="replace">
+        <CraftingCosts>
+            <Item>
+                <Product>1010218</Product>
+                <!--steal beams-->
+                <Amount>30</Amount>
+            </Item>
+            <Item>
+                <Product>1010223</Product>
+                <!--advanced weapons-->
+                <Amount>30</Amount>
+            </Item>
+        </CraftingCosts>
+    </ModOp>
+
+    <!-- IndiscrimiN8r -->
+    <ModOp GUID='112368' Path="/Values/CraftableItem/CraftingCosts" Type="replace">
+        <CraftingCosts>
+            <Item>
+                <Product>1010196</Product>
+                <!--timber-->
+                <Amount>5</Amount>
+            </Item>
+            <Item>
+                <Product>1010221</Product>
+                <!--weapons-->
+                <Amount>5</Amount>
+            </Item>
+        </CraftingCosts>
+    </ModOp>
+
+    <!-- ExtermiN8r -->
+    <ModOp GUID='112369' Path="/Values/CraftableItem/CraftingCosts" Type="replace">
+        <CraftingCosts>
+            <Item>
+                <Product>1010219</Product>
+                <!--steel-->
+                <Amount>15</Amount>
+            </Item>
+            <Item>
+                <Product>1010221</Product>
+                <!--weapons-->
+                <Amount>15</Amount>
+            </Item>
+        </CraftingCosts>
+    </ModOp>
+
+    <!-- DomiN8r -->
+    <ModOp GUID='112370' Path="/Values/CraftableItem/CraftingCosts" Type="replace">
+        <CraftingCosts>
+            <Item>
+                <Product>1010218</Product>
+                <!--steal beams-->
+                <Amount>30</Amount>
+            </Item>
+            <Item>
+                <Product>1010223</Product>
+                <!--advanced weapons-->
+                <Amount>30</Amount>
+            </Item>
+        </CraftingCosts>
+    </ModOp>
+
+    <!-- Jet Propeller— "Squall" -->
+    <ModOp GUID='112377' Path="/Values/CraftableItem/CraftingCosts" Type="replace">
+        <CraftingCosts>
+            <Item>
+                <Product>1010219</Product>
+                <!--steel-->
+                <Amount>5</Amount>
+            </Item>
+            <Item>
+                <Product>1010224</Product>
+                <!--steam motors-->
+                <Amount>5</Amount>
+            </Item>
+        </CraftingCosts>
+    </ModOp>
+
+    <!-- Jet Propeller— "Cyclone" -->
+    <ModOp GUID='112378' Path="/Values/CraftableItem/CraftingCosts" Type="replace">
+        <CraftingCosts>
+            <Item>
+                <Product>1010219</Product>
+                <!--steel-->
+                <Amount>15</Amount>
+            </Item>
+            <Item>
+                <Product>1010224</Product>
+                <!--steam motors-->
+                <Amount>15</Amount>
+            </Item>
+        </CraftingCosts>
+    </ModOp>
+
+    <!-- Jet Propeller— "Hurricane" -->
+    <ModOp GUID='112379' Path="/Values/CraftableItem/CraftingCosts" Type="replace">
+        <CraftingCosts>
+            <Item>
+                <Product>1010218</Product>
+                <!--steal beams-->
+                <Amount>30</Amount>
+            </Item>
+            <Item>
+                <Product>1010224</Product>
+                <!--steam motors-->
+                <Amount>30</Amount>
+            </Item>
+        </CraftingCosts>
+    </ModOp>
+
+    <!-- DeciN8r -->
+    <ModOp GUID='112574' Path="/Values/CraftableItem/CraftingCosts" Type="replace">
+        <CraftingCosts>
+            <Item>
+                <Product>1010219</Product>
+                <!--steel-->
+                <Amount>5</Amount>
+            </Item>
+            <Item>
+                <Product>1010222</Product>
+                <!--dynamite-->
+                <Amount>5</Amount>
+            </Item>
+        </CraftingCosts>
+    </ModOp>
+
+    <!--CarboN8r -->
+    <ModOp GUID='112576' Path="/Values/CraftableItem/CraftingCosts" Type="replace">
+        <CraftingCosts>
+            <Item>
+                <Product>1010219</Product>
+                <!--steel-->
+                <Amount>15</Amount>
+            </Item>
+            <Item>
+                <Product>1010222</Product>
+                <!--dynamite-->
+                <Amount>15</Amount>
+            </Item>
+        </CraftingCosts>
+    </ModOp>
+
+    <!-- The Mine-o-taur -->
+    <ModOp GUID='112578' Path="/Values/CraftableItem/CraftingCosts" Type="replace">
+        <CraftingCosts>
+            <Item>
+                <Product>1010219</Product>
+                <!--steel-->
+                <Amount>30</Amount>
+            </Item>
+            <Item>
+                <Product>1010222</Product>
+                <!--dynamite-->
+                <Amount>30</Amount>
+            </Item>
+        </CraftingCosts>
+    </ModOp>
+
+    <!-- Abus Gun -->
+    <ModOp GUID='191867' Path="/Values/CraftableItem/" Type="merge">
+        <CraftingCosts>
+            <Item>
+                <Product>1010196</Product>
+                <!--timber-->
+                <Amount>5</Amount>
+            </Item>
+            <Item>
+                <Product>1010221</Product>
+                <!--weapons-->
+                <Amount>5</Amount>
+            </Item>
+        </CraftingCosts>
+    </ModOp>
+
+    <!-- Blown-Apart" 12-Pounder -->
+    <ModOp GUID='191868' Path="/Values/CraftableItem/" Type="merge">
+        <CraftingCosts>
+            <Item>
+                <Product>1010219</Product>
+                <!--steel-->
+                <Amount>15</Amount>
+            </Item>
+            <Item>
+                <Product>1010221</Product>
+                <!--weapons-->
+                <Amount>15</Amount>
+            </Item>
+        </CraftingCosts>
+    </ModOp>
+
+    <!-- Mulcher M1897 -->
+    <ModOp GUID='191869' Path="/Values/CraftableItem/" Type="merge">
+        <CraftingCosts>
+            <Item>
+                <Product>1010218</Product>
+                <!--steal beams-->
+                <Amount>30</Amount>
+            </Item>
+            <Item>
+                <Product>1010223</Product>
+                <!--advanced weapons-->
+                <Amount>30</Amount>
+            </Item>
+        </CraftingCosts>
+    </ModOp>
+
+    <!-- Cast Mortar -->
+    <ModOp GUID='192165' Path="/Values/CraftableItem/" Type="merge">
+        <CraftingCosts>
+            <Item>
+                <Product>1010196</Product>
+                <!--timber-->
+                <Amount>5</Amount>
+            </Item>
+            <Item>
+                <Product>1010221</Product>
+                <!--weapons-->
+                <Amount>5</Amount>
+            </Item>
+        </CraftingCosts>
+    </ModOp>
+
+    <!-- Grapeshot Cast Mortar -->
+    <ModOp GUID='192166' Path="/Values/CraftableItem/" Type="merge">
+        <CraftingCosts>
+            <Item>
+                <Product>1010219</Product>
+                <!--steel-->
+                <Amount>15</Amount>
+            </Item>
+            <Item>
+                <Product>1010221</Product>
+                <!--weapons-->
+                <Amount>15</Amount>
+            </Item>
+        </CraftingCosts>
+    </ModOp>
+
+    <!-- Mullivann's Multishot Mortar -->
+    <ModOp GUID='192168' Path="/Values/CraftableItem/" Type="merge">
+        <CraftingCosts>
+            <Item>
+                <Product>1010218</Product>
+                <!--steal beams-->
+                <Amount>30</Amount>
+            </Item>
+            <Item>
+                <Product>1010223</Product>
+                <!--advanced weapons-->
+                <Amount>30</Amount>
+            </Item>
+        </CraftingCosts>
+    </ModOp>
+
+    <!-- 18-pounder Long Gun -->
+    <ModOp GUID='191853' Path="/Values/CraftableItem/" Type="merge">
+        <CraftingCosts>
+            <Item>
+                <Product>1010196</Product>
+                <!--timber-->
+                <Amount>5</Amount>
+            </Item>
+            <Item>
+                <Product>1010221</Product>
+                <!--weapons-->
+                <Amount>5</Amount>
+            </Item>
+        </CraftingCosts>
+    </ModOp>
+
+    <!-- Grapeshot Hans Gun -->
+    <ModOp GUID='191854' Path="/Values/CraftableItem/" Type="merge">
+        <CraftingCosts>
+            <Item>
+                <Product>1010219</Product>
+                <!--steel-->
+                <Amount>15</Amount>
+            </Item>
+            <Item>
+                <Product>1010221</Product>
+                <!--weapons-->
+                <Amount>15</Amount>
+            </Item>
+        </CraftingCosts>
+    </ModOp>
+
+    <!-- Strongarm's Disappearing Gun -->
+    <ModOp GUID='191855' Path="/Values/CraftableItem/" Type="merge">
+        <CraftingCosts>
+            <Item>
+                <Product>1010218</Product>
+                <!--steal beams-->
+                <Amount>30</Amount>
+            </Item>
+            <Item>
+                <Product>1010223</Product>
+                <!--advanced weapons-->
+                <Amount>30</Amount>
+            </Item>
+        </CraftingCosts>
     </ModOp>
 
     <!-- //////////////////////////// NEW ITEMS //////////////////////////// -->

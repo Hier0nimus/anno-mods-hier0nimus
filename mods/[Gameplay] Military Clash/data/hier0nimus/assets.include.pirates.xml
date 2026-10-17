@@ -1,0 +1,1231 @@
+<!-- 
+
+PIRATES
+
+-->
+
+<ModOps>
+
+    <!-- START - ANNE HARLOW KONTOR -->
+    <ModOp Type="merge" GUID='100681' Path="Values/">
+        <Object>
+            <Variations>
+                <Item>
+                    <Filename>data/graphics/buildings/3rd_party/3rd_party_03_kontor/3rd_party_03_kontor_custom.cfg</Filename>
+                </Item>
+            </Variations>
+        </Object>
+        <Attackable>
+            <MaximumHitPoints>27500</MaximumHitPoints>            <!-- 8000 -->
+            <MoralePower>400</MoralePower>            <!-- 200 -->
+            <MilitaryDefensePoints>20</MilitaryDefensePoints>            <!-- 8 -->
+            <SelfHealPerHealTick>100</SelfHealPerHealTick>            <!-- 300 -->
+        </Attackable>
+        <Attacker>
+            <BasicAttackType>Flak</BasicAttackType>
+            <BaseDamage>66</BaseDamage>            <!-- 22 -->
+            <ReloadTime>2</ReloadTime>            <!-- 3 -->
+            <AttackRange>60</AttackRange>            <!-- 52 -->
+            <LineOfSightRange>120</LineOfSightRange>            <!-- 100 -->
+            <Turrets>
+                <Item>
+                    <TurnSpan>360</TurnSpan>
+                    <TurretCfg>data/dlc11/graphics/buildings/special/flak_cannon_tower/flak_cannon_tower.cfg</TurretCfg>
+                </Item>
+                <Item>
+                    <TurnSpan>360</TurnSpan>
+                    <TurretCfg>data/dlc11/graphics/buildings/special/flak_cannon_tower/flak_cannon_tower.cfg</TurretCfg>
+                </Item>
+            </Turrets>
+            <ProjectileAsset>2037</ProjectileAsset>
+            <TurretExplosionEffectAsset>101975</TurretExplosionEffectAsset>
+            <MuzzleEffectAssets>
+                <Item>
+                    <MuzzleEffectAsset>2581</MuzzleEffectAsset>
+                </Item>
+            </MuzzleEffectAssets>
+            <AccuracyBase>27</AccuracyBase>
+            <AccuracyIncreaseOverDistance>0</AccuracyIncreaseOverDistance>
+            <AccuracySpeedDecay>0</AccuracySpeedDecay>
+            <AccuracyByDistance>
+                <Item>
+                    <AccuracyByDistancePair>
+                        <EnemyDistanceRelToAttackRange>16</EnemyDistanceRelToAttackRange>
+                        <CorrespondingAccuracy>40</CorrespondingAccuracy>
+                    </AccuracyByDistancePair>
+                </Item>
+                <Item>
+                    <AccuracyByDistancePair>
+                        <EnemyDistanceRelToAttackRange>100</EnemyDistanceRelToAttackRange>
+                        <CorrespondingAccuracy>10</CorrespondingAccuracy>
+                    </AccuracyByDistancePair>
+                </Item>
+            </AccuracyByDistance>
+        </Attacker>
+    </ModOp>
+    <!-- END - ANNE HARLOW KONTOR -->
+
+    <!-- START - REBALANCE PIRATE DEFENSES (Make them stronger) -->
+
+    <!-- harbor_04 (Puckle Gun) - Pirates -->
+    <ModOp Type="merge" GUID="102448" Path="Values/">
+        <Attackable>
+            <MaximumHitPoints>7000</MaximumHitPoints>            <!-- 3200 -->
+            <SelfHealPerHealTick>25</SelfHealPerHealTick>            <!-- 5 -->
+            <MilitaryDefensePoints>5</MilitaryDefensePoints>            <!-- 2 -->
+        </Attackable>
+        <Attacker>
+            <BaseDamage>70</BaseDamage>            <!-- 23 -->
+            <AttackRange>75</AttackRange>            <!-- 72 -->
+            <LineOfSightRange>75</LineOfSightRange>            <!-- 72 -->
+        </Attacker>
+    </ModOp>
+
+    <!-- harbor_05 (Cannon Tower) - Pirates -->
+    <ModOp Type="merge" GUID="102449" Path="Values/">
+        <Attackable>
+            <MaximumHitPoints>10000</MaximumHitPoints>            <!-- 4800 -->
+            <SelfHealPerHealTick>25</SelfHealPerHealTick>            <!-- 5 -->
+            <MilitaryDefensePoints>7</MilitaryDefensePoints>            <!-- 3.5 -->
+        </Attackable>
+        <Attacker>
+            <BaseDamage>450</BaseDamage>            <!-- 150 -->
+            <ReloadTime>35</ReloadTime>            <!-- 50 -->
+            <AttackRange>100</AttackRange>            <!-- 92 -->
+            <LineOfSightRange>100</LineOfSightRange>            <!-- 92 -->
+        </Attacker>
+    </ModOp>
+
+    <!-- harbor_06 (Monster Gun) - Pirates -->
+    <ModOp Type="merge" GUID="102450" Path="Values/">
+        <Attackable>
+            <MaximumHitPoints>17500</MaximumHitPoints>            <!-- 7000 -->
+            <SelfHealPerHealTick>40</SelfHealPerHealTick>            <!-- 5 -->
+            <MilitaryDefensePoints>20</MilitaryDefensePoints>            <!-- 10 -->
+        </Attackable>
+        <Attacker>
+            <BaseDamage>2800</BaseDamage>            <!-- 850 -->
+            <ReloadTime>90</ReloadTime>            <!-- 150 -->
+            <AttackRange>120</AttackRange>            <!-- 108 -->
+            <LineOfSightRange>120</LineOfSightRange>            <!-- 108 -->
+        </Attacker>
+    </ModOp>
+
+    <!-- END - REBALANCE PIRATE DEFENSES (Make them stronger) -->
+
+    <!-- START - DIPLOMACY -->
+    <ModOp Type="merge" GUID='73,76' Path="Values/Diplomacy/GiftBalancing">
+        <receiveSmall>
+            <BaseValue>50000</BaseValue>            <!-- 7500 -->
+        </receiveSmall>
+        <receiveOrdinary>
+            <BaseValue>100000</BaseValue>            <!-- 15000 -->
+        </receiveOrdinary>
+        <receiveGenerous>
+            <BaseValue>200000</BaseValue>            <!-- 22000 -->
+        </receiveGenerous>
+        <giveSmall>
+            <BaseValue>50000</BaseValue>            <!-- 2000 -->
+        </giveSmall>
+        <giveOrdinary>
+            <BaseValue>100000</BaseValue>            <!-- 3650 -->
+        </giveOrdinary>
+        <giveGenerous>
+            <BaseValue>200000</BaseValue>            <!-- 5250 -->
+        </giveGenerous>
+        <receivePayment>
+            <BaseValue>1750</BaseValue>            <!-- 250 -->
+        </receivePayment>
+        <givePayment>
+            <BaseValue>2000</BaseValue>            <!-- 300 -->
+        </givePayment>
+        <counterProposal>
+            <BaseValue>2000</BaseValue>            <!-- 300 -->
+        </counterProposal>
+    </ModOp>
+
+    <ModOp Type="merge" GUID='73,76' Path="Values/Diplomacy/Memory">
+        <LongTimeCheck>3600000</LongTimeCheck>        <!-- 7800000 -->
+        <ReputationUpdateTimer>3600000</ReputationUpdateTimer>        <!-- 7860000 -->
+    </ModOp>
+
+    <ModOp Type="merge" GUID='73,76' Path="Values/Diplomacy/DiplomacyAI">
+        <MaxMoneyRequest>70</MaxMoneyRequest>        <!-- 40 -->
+        <GenericTimerStartDelay>1800000</GenericTimerStartDelay>        <!-- 3600000 -->
+        <GenericTimerRepeat>3600000</GenericTimerRepeat>        <!-- 7200000 -->
+        <ActionCooldown>
+            <RequestCeaseFire>
+                <Cooldown>4200000</Cooldown>                <!-- 3600000 -->
+            </RequestCeaseFire>
+        </ActionCooldown>
+    </ModOp>
+
+    <ModOp Type="merge" GUID="140054" Path="/Values/DiplomacyConfig/CeaseFire/TimeLength/Default">
+        <Length>3600000</Length>        <!-- 7200000 -->
+    </ModOp>
+    <ModOp Type="merge" GUID="140054" Path="/Values/DiplomacyConfig/NonAttack/TimeLength/Default">
+        <Length>4800000</Length>        <!-- 18000000 -->
+    </ModOp>
+
+    <!-- END - DIPLOMACY -->
+
+    <!-- START - COOLDOWN SHIP PRODUCTION PIRATES -->
+    <!-- Counter after completing a ship before starting with building a new ship. -->
+    <!-- EARLYGAME -->
+    <ModOp Type="merge" GUID='73,76' Path="Values/Trader/Progression/EarlyGame/">
+        <ShipProductionCooldown>600000</ShipProductionCooldown>        <!-- 300000 -->
+    </ModOp>
+
+    <!-- EARLMIDGAME -->
+    <ModOp Type="merge" GUID='73,76' Path="Values/Trader/Progression/EarlyMidGame/">
+        <ShipProductionCooldown>480000</ShipProductionCooldown>        <!-- 240000 -->
+    </ModOp>
+
+    <!-- MIDGAME -->
+    <ModOp Type="merge" GUID='73,76' Path="Values/Trader/Progression/MidGame/">
+        <ShipProductionCooldown>360000</ShipProductionCooldown>        <!-- 180000 -->
+    </ModOp>
+
+    <!-- LATEMIDGAME -->
+    <ModOp Type="merge" GUID='73,76' Path="Values/Trader/Progression/LateMidGame/">
+        <ShipProductionCooldown>240000</ShipProductionCooldown>        <!-- 120000 -->
+    </ModOp>
+
+    <!-- LATEGAME -->
+    <ModOp Type="merge" GUID='73,76' Path="Values/Trader/Progression/LateGame/">
+        <ShipProductionCooldown>120000</ShipProductionCooldown>        <!-- 60000 -->
+    </ModOp>
+
+    <!-- ENDGAME -->
+    <ModOp Type="merge" GUID='73,76' Path="Values/Trader/Progression/EndGame/">
+        <ShipProductionCooldown>120000</ShipProductionCooldown>        <!-- / -->
+    </ModOp>
+
+    <!-- END - COOLDOWN SHIP PRODUCTION PIRATES -->
+
+    <!-- START - SHIPS PIRATES - EARLYMIDGAME -->
+    <ModOp Type="replace" GUID='73' Path="Values/Trader/Progression/EarlyMidGame/WarFleet">
+        <WarFleet>
+            <Item>
+                <ShipAsset>102429</ShipAsset>                <!--Pirate Gunboat-->
+                <Amount>2</Amount>                <!-- 4 -->
+            </Item>
+            <Item>
+                <ShipAsset>1742102162</ShipAsset>                <!--Pirate Fire Boat-->
+                <Amount>1</Amount>                <!-- / -->
+            </Item>
+        </WarFleet>
+    </ModOp>
+    <!-- END - SHIPS PIRATES - EARLYMIDGAME -->
+    <!-- START - SHIPS PIRATES - MIDGAME -->
+    <ModOp Type="replace" GUID='73,76' Path="Values/Trader/Progression/MidGame/WarFleet">
+        <WarFleet>
+            <Item>
+                <ShipAsset>102430</ShipAsset>                <!--Pirate Frigate-->
+                <Amount>1</Amount>                <!-- 2 -->
+            </Item>
+            <Item>
+                <ShipAsset>102431</ShipAsset>                <!--Pirate SOTL-->
+                <Amount>1</Amount>                <!-- / -->
+            </Item>
+            <Item>
+                <ShipAsset>102429</ShipAsset>                <!--Pirate Gunboat-->
+                <Amount>2</Amount>                <!-- 6 -->
+            </Item>
+            <Item>
+                <ShipAsset>1742102162</ShipAsset>                <!--Pirate Fire Boat-->
+                <Amount>1</Amount>                <!-- / -->
+            </Item>
+        </WarFleet>
+    </ModOp>
+    <ModOp Type="replace" GUID='73,76' Path="Values/Trader/Progression/MidGame/ShipsForSale">
+        <ShipsForSale>
+            <Item>
+                <ShipAsset>102420</ShipAsset>
+                <Weight>4</Weight>
+            </Item>
+        </ShipsForSale>
+    </ModOp>
+    <!-- END - SHIPS PIRATES - MIDGAME -->
+    <!-- START - SHIPS PIRATES - LATEMIDGAME -->
+    <ModOp Type="replace" GUID='73,76' Path="Values/Trader/Progression/LateMidGame/WarFleet">
+        <WarFleet>
+            <Item>
+                <ShipAsset>102432</ShipAsset>                <!--Pirate Monitor-->
+                <Amount>1</Amount>                <!-- / -->
+            </Item>
+            <Item>
+                <ShipAsset>1742102068</ShipAsset>                <!--Pirate Flame Monitor-->
+                <Amount>1</Amount>                <!-- / -->
+            </Item>
+            <Item>
+                <ShipAsset>1742102012</ShipAsset>                <!--Ironclad Cruiser-->
+                <Amount>1</Amount>                <!-- / -->
+            </Item>
+            <Item>
+                <ShipAsset>1742102074</ShipAsset>                <!--Pirate Flak Monitor-->
+                <Amount>1</Amount>                <!-- / -->
+            </Item>
+            <Item>
+                <ShipAsset>102431</ShipAsset>                <!--Pirate SOTL-->
+                <Amount>2</Amount>                <!-- 2 -->
+            </Item>
+            <Item>
+                <ShipAsset>1742102008</ShipAsset>                <!--Jolly Roger-->
+                <Amount>1</Amount>                <!-- / -->
+            </Item>
+            <Item>
+                <ShipAsset>102430</ShipAsset>                <!--Pirate Frigate-->
+                <Amount>2</Amount>                <!-- 4 -->
+            </Item>
+            <Item>
+                <ShipAsset>102429</ShipAsset>                <!--Pirate Gunboat-->
+                <Amount>2</Amount>                <!-- 8 -->
+            </Item>
+            <Item>
+                <ShipAsset>1742102162</ShipAsset>                <!--Pirate Fire Boat-->
+                <Amount>2</Amount>                <!-- / -->
+            </Item>
+        </WarFleet>
+    </ModOp>
+    <ModOp Type="replace" GUID='73,76' Path="Values/Trader/Progression/LateMidGame/ShipsForSale">
+        <ShipsForSale>
+            <Item>
+                <ShipAsset>102420</ShipAsset>
+                <Weight>4</Weight>
+            </Item>
+        </ShipsForSale>
+    </ModOp>
+    <!-- END - SHIPS PIRATES - LATEMIDGAME -->
+    <!-- START - SHIPS PIRATES - LATEGAME -->
+    <ModOp Type="replace" GUID='73,76' Path="Values/Trader/Progression/LateGame/WarFleet">
+        <WarFleet>
+            <Item>
+                <ShipAsset>1742102010</ShipAsset>                <!--Pirate Battle Cruiser-->
+                <Amount>1</Amount>                <!-- / -->
+            </Item>
+            <Item>
+                <ShipAsset>1742102070</ShipAsset>                <!--Pirate Warship-->
+                <Amount>1</Amount>                <!-- / -->
+            </Item>
+            <Item>
+                <ShipAsset>1742102074</ShipAsset>                <!--Pirate Flak Monitor-->
+                <Amount>2</Amount>                <!-- / -->
+            </Item>
+            <Item>
+                <ShipAsset>1742102094</ShipAsset>                <!--Pirate Hawk-->
+                <Amount>1</Amount>                <!-- / -->
+            </Item>
+            <Item>
+                <ShipAsset>1742102160</ShipAsset>                <!--Pirate Falcon -->
+                <Amount>1</Amount>                <!-- / -->
+            </Item>
+            <Item>
+                <ShipAsset>1742102096</ShipAsset>                <!--Pirate Black Eagle-->
+                <Amount>1</Amount>                <!-- / -->
+            </Item>
+            <Item>
+                <ShipAsset>1742102012</ShipAsset>                <!--Ironclad Cruiser-->
+                <Amount>1</Amount>                <!-- / -->
+            </Item>
+            <Item>
+                <ShipAsset>102432</ShipAsset>                <!--Pirate Monitor-->
+                <Amount>1</Amount>                <!-- 2 -->
+            </Item>
+            <Item>
+                <ShipAsset>1742102068</ShipAsset>                <!--Pirate Flame Monitor-->
+                <Amount>1</Amount>                <!-- / -->
+            </Item>
+            <Item>
+                <ShipAsset>1742102008</ShipAsset>                <!--Jolly Roger-->
+                <Amount>1</Amount>                <!-- / -->
+            </Item>
+        </WarFleet>
+    </ModOp>
+    <ModOp Type="replace" GUID='73,76' Path="Values/Trader/Progression/LateGame/ShipsForSale">
+        <ShipsForSale>
+            <Item>
+                <ShipAsset>102420</ShipAsset>
+                <Weight>4</Weight>
+            </Item>
+        </ShipsForSale>
+    </ModOp>
+    <!-- END - SHIPS PIRATES - LATEGAME -->
+    <!-- START - SHIPS PIRATES - ENDGAME -->
+    <ModOp Type="replace" GUID='73,76' Path="Values/Trader/Progression/EndGame/WarFleet">
+        <WarFleet>
+            <Item>
+                <ShipAsset>1742102010</ShipAsset>                <!--Pirate Battle Cruiser-->
+                <Amount>1</Amount>                <!-- / -->
+            </Item>
+            <Item>
+                <ShipAsset>1742102070</ShipAsset>                <!--Pirate Warship-->
+                <Amount>1</Amount>                <!-- / -->
+            </Item>
+            <Item>
+                <ShipAsset>1742102012</ShipAsset>                <!--Pirate Ironclad Cruiser-->
+                <Amount>1</Amount>                <!-- / -->
+            </Item>
+            <Item>
+                <ShipAsset>1742102096</ShipAsset>                <!--Pirate Black Eagle-->
+                <Amount>1</Amount>                <!-- / -->
+            </Item>
+            <Item>
+                <ShipAsset>1742102068</ShipAsset>                <!--Pirate Flame Monitor-->
+                <Amount>1</Amount>                <!-- / -->
+            </Item>
+            <Item>
+                <ShipAsset>1742102074</ShipAsset>                <!--Pirate Flak Monitor-->
+                <Amount>2</Amount>                <!-- / -->
+            </Item>
+            <Item>
+                <ShipAsset>1742102160</ShipAsset>                <!--Pirate Falcon -->
+                <Amount>1</Amount>                <!-- / -->
+            </Item>
+            <Item>
+                <ShipAsset>1742102094</ShipAsset>                <!--Pirate Hawk-->
+                <Amount>1</Amount>                <!-- / -->
+            </Item>
+            <Item>
+                <ShipAsset>102432</ShipAsset>                <!--Pirate Monitor-->
+                <Amount>1</Amount>                <!-- 3 -->
+            </Item>
+            <Item>
+                <ShipAsset>1742102008</ShipAsset>                <!--Jolly Roger-->
+                <Amount>1</Amount>                <!-- / -->
+            </Item>
+        </WarFleet>
+    </ModOp>
+    <ModOp Type="replace" GUID='73,76' Path="Values/Trader/Progression/EndGame/ShipsForSale">
+        <ShipsForSale>
+            <Item>
+                <ShipAsset>102420</ShipAsset>
+                <Weight>4</Weight>
+            </Item>
+        </ShipsForSale>
+    </ModOp>
+    <!-- END - SHIPS PIRATES - ENDGAME -->
+
+    <!-- START - MILITARY AI -->
+    <ModOp Type="merge" GUID='73,76' Path="Values/MilitaryAI">
+        <StrengthLevels>
+            <Levels>
+                <Inferior>
+                    <Flee>1</Flee>                    <!-- 1 -->
+                    <MaxAttackRatio>100</MaxAttackRatio>
+                    <MaxEscortRatio>0</MaxEscortRatio>
+                    <MaxDefendRatio>100</MaxDefendRatio>                    <!-- / -->
+                    <MaxPatrolRatio>0</MaxPatrolRatio>
+                    <MaxDefendAllyRatio>10</MaxDefendAllyRatio>
+                </Inferior>
+                <Equal>
+                    <Flee>0</Flee>                    <!-- / -->
+                    <MaxAttackRatio>100</MaxAttackRatio>
+                    <MaxEscortRatio>0</MaxEscortRatio>
+                    <MaxDefendRatio>100</MaxDefendRatio>                    <!-- / -->
+                    <MaxPatrolRatio>0</MaxPatrolRatio>
+                    <MaxDefendAllyRatio>25</MaxDefendAllyRatio>
+                </Equal>
+                <Superior>
+                    <Flee>0</Flee>                    <!-- 1 -->
+                    <MaxAttackRatio>100</MaxAttackRatio>                    <!-- / -->
+                    <MaxEscortRatio>0</MaxEscortRatio>
+                    <MaxDefendRatio>100</MaxDefendRatio>                    <!-- / -->
+                    <MaxPatrolRatio>0</MaxPatrolRatio>
+                    <MaxDefendAllyRatio>50</MaxDefendAllyRatio>
+                </Superior>
+            </Levels>
+        </StrengthLevels>
+        <Attack>
+            <MilitaryStrengthRatio>120</MilitaryStrengthRatio>            <!-- 90 -->
+            <AttackInterval>500000</AttackInterval>            <!-- 1500000 -->
+            <AirAttackInterval>500000</AirAttackInterval>            <!-- 1500000 -->
+            <AttackTargetPrio>
+                <Item>
+                    <Targets>TradeShip</Targets>
+                    <Conditions>
+                        <Item>
+                            <Condition>IsWeaker</Condition>
+                        </Item>
+                    </Conditions>
+                    <SkipTargetWhenInHarbourArea>1</SkipTargetWhenInHarbourArea>                    <!-- 1 -->
+                </Item>
+                <Item>
+                    <Targets>TradeShip</Targets>
+                    <Conditions>
+                        <Item>
+                            <Condition>IsNearer</Condition>
+                        </Item>
+                    </Conditions>
+                    <SkipTargetWhenInHarbourArea>1</SkipTargetWhenInHarbourArea>                    <!-- 1 -->
+                </Item>
+                <Item>
+                    <Targets>TradeShip</Targets>
+                    <Conditions>
+                        <Item>
+                            <Condition>IsFarther</Condition>
+                        </Item>
+                    </Conditions>
+                    <SkipTargetWhenInHarbourArea>1</SkipTargetWhenInHarbourArea>                    <!-- 1 -->
+                </Item>
+                <Item>
+                    <Targets>WarShip</Targets>
+                    <Conditions>
+                        <Item>
+                            <Condition>IsWeaker</Condition>
+                        </Item>
+                    </Conditions>
+                    <SkipProbability>40</SkipProbability>                    <!-- 50 -->
+                    <SkipTargetWhenInHarbourArea>1</SkipTargetWhenInHarbourArea>                    <!-- 1 -->
+                </Item>
+                <Item>
+                    <Targets>WarShip</Targets>
+                    <Conditions>
+                        <Item>
+                            <Condition>IsNearer</Condition>
+                        </Item>
+                    </Conditions>
+                    <SkipProbability>40</SkipProbability>                    <!-- 50 -->
+                    <SkipTargetWhenInHarbourArea>1</SkipTargetWhenInHarbourArea>                    <!-- 1 -->
+                </Item>
+                <!-- No additions of DefenseBuilding / Kontor / MilitaryTakeoverTarget. Pirates do not attack those sadly -->
+            </AttackTargetPrio>
+            <RallyBeforeAttack>1</RallyBeforeAttack>            <!-- / -->
+            <IsBlinded>IgnoreBuildings</IsBlinded>
+            <OverkillAttackThreshold>100</OverkillAttackThreshold>
+        </Attack>
+        <!-- <Defense> is ok as is -->
+        <SquadLogic>
+            <FleeStrengthRatio>70</FleeStrengthRatio>            <!-- 60 -->
+            <TargetPriorities>
+                <Item>
+                    <Targets>TradeShip</Targets>
+                    <Range>120</Range>
+                    <MinStrengthRatio>71</MinStrengthRatio>                    <!-- 90 -->
+                    <Conditions>
+                        <Item>
+                            <Condition>LowHitpoints</Condition>
+                        </Item>
+                    </Conditions>
+                    <SkipTargetWhenInHarbourArea>1</SkipTargetWhenInHarbourArea>                    <!-- 1 -->
+                </Item>
+                <Item>
+                    <Targets>WarShip</Targets>
+                    <Range>120</Range>
+                    <MinStrengthRatio>71</MinStrengthRatio>
+                    <Conditions>
+                        <Item>
+                            <Condition>IsWeaker</Condition>
+                        </Item>
+                    </Conditions>
+                    <SkipTargetWhenInHarbourArea>1</SkipTargetWhenInHarbourArea>
+                </Item>
+                <Item>
+                    <Targets>WarShip</Targets>
+                    <Range>120</Range>
+                    <MinStrengthRatio>71</MinStrengthRatio>
+                    <Conditions>
+                        <Item>
+                            <Condition>LowHitpoints</Condition>
+                        </Item>
+                    </Conditions>
+                    <SkipTargetWhenInHarbourArea>1</SkipTargetWhenInHarbourArea>
+                </Item>
+            </TargetPriorities>
+            <ObservationRange>175</ObservationRange>            <!-- 110 -->
+        </SquadLogic>
+    </ModOp>
+    <!-- END - MILITARY AI -->
+
+    <!-- START - PIRATE -->
+    <!-- Keep pirates in their own zone at the beginning to let them grow and not bother other -->
+    <ModOp Type="merge" GUID='73,76' Path="Values/Pirate">
+        <AreaOfActivity>
+            <Normal>
+                <StartAreaRadius>275</StartAreaRadius>                <!-- 300 -->
+                <ChaseRange>75</ChaseRange>                <!-- 50 -->
+                <GrowPerProgress>
+                    <EarlyMidGame>
+                        <GrowAreaPerMinute>0</GrowAreaPerMinute>                        <!-- 1 -->
+                    </EarlyMidGame>
+                    <MidGame>
+                        <GrowAreaPerMinute>0</GrowAreaPerMinute>                        <!-- / -->
+                    </MidGame>
+                    <LateMidGame>
+                        <GrowAreaPerMinute>2</GrowAreaPerMinute>                        <!-- 3 -->
+                    </LateMidGame>
+                    <LateGame>
+                        <GrowAreaPerMinute>4</GrowAreaPerMinute>                        <!-- 8 -->
+                    </LateGame>
+                    <EndGame>
+                        <GrowAreaPerMinute>8</GrowAreaPerMinute>                        <!-- 25 -->
+                    </EndGame>
+                </GrowPerProgress>
+            </Normal>
+            <Hard>
+                <StartAreaRadius>275</StartAreaRadius>                <!-- 500 -->
+                <ChaseRange>175</ChaseRange>                <!-- 100 -->
+                <GrowPerProgress>
+                    <EarlyMidGame>
+                        <GrowAreaPerMinute>0</GrowAreaPerMinute>                        <!-- 1.5 -->
+                    </EarlyMidGame>
+                    <MidGame>
+                        <GrowAreaPerMinute>0</GrowAreaPerMinute>                        <!-- 4 -->
+                    </MidGame>
+                    <LateMidGame>
+                        <GrowAreaPerMinute>4</GrowAreaPerMinute>                        <!-- 8 -->
+                    </LateMidGame>
+                    <LateGame>
+                        <GrowAreaPerMinute>8</GrowAreaPerMinute>                        <!-- 25 -->
+                    </LateGame>
+                    <EndGame>
+                        <GrowAreaPerMinute>16</GrowAreaPerMinute>                        <!-- 50 -->
+                    </EndGame>
+                </GrowPerProgress>
+            </Hard>
+        </AreaOfActivity>
+    </ModOp>
+    <!-- END - PIRATE -->
+
+    <!-- START - REBUILD REWARDPOOL -->
+
+<!-- COMMON PIRATE ITEMS -->
+<ModOp Type="addNextSibling" GUID="193653">
+    <Asset>
+        <Template>RewardPool</Template>
+        <Values>
+            <Standard>
+                <GUID>192541</GUID>
+                <Name>Common Items</Name>
+            </Standard>
+            <RewardPool>
+                <ItemsPool>
+                    <Item>
+                        <ItemLink>191964</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191979</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191955</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191962</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191445</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191444</ItemLink>
+                    </Item>
+                </ItemsPool>
+            </RewardPool>
+            <Locked>
+                <DefaultLockedState>0</DefaultLockedState>
+            </Locked>
+            <Text/>
+        </Values>
+    </Asset>
+</ModOp>
+
+<!-- UNCOMMON PIRATE ITEMS -->
+<ModOp Type="addNextSibling" GUID="193653">
+    <Asset>
+        <Template>RewardPool</Template>
+        <Values>
+            <Standard>
+                <GUID>192542</GUID>
+                <Name>Uncommon Items</Name>
+            </Standard>
+            <RewardPool>
+                <ItemsPool>
+                    <Item>
+                        <ItemLink>192151</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191879</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191883</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191852</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191856</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191838</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191824</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191829</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191848</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>110965</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>112574</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191958</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191980</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191965</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191963</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>192001</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>192005</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>192184</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191999</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191879</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191888</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191894</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191883</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>1516</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>192164</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>111127</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191598</ItemLink>
+                    </Item>
+                </ItemsPool>
+            </RewardPool>
+            <Locked>
+                <DefaultLockedState>0</DefaultLockedState>
+            </Locked>
+            <Text/>
+        </Values>
+    </Asset>
+</ModOp>
+
+<!-- RARE PIRATE ITEMS -->
+<ModOp Type="addNextSibling" GUID="193653">
+    <Asset>
+        <Template>RewardPool</Template>
+        <Values>
+            <Standard>
+                <GUID>192543</GUID>
+                <Name>Rare Items</Name>
+            </Standard>
+            <RewardPool>
+                <ItemsPool>
+                    <Item>
+                        <ItemLink>192153</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191881</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191885</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191853</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191857</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191839</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>112368</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191013</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191830</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191849</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191867</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>110966</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>192165</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>112576</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>192002</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>192430</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>192185</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191889</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191880</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191895</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191884</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>112386</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>110982</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>192006</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>192000</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191601</ItemLink>
+                    </Item>
+                </ItemsPool>
+            </RewardPool>
+            <Locked>
+                <DefaultLockedState>0</DefaultLockedState>
+            </Locked>
+            <Text/>
+        </Values>
+    </Asset>
+</ModOp>
+
+<!-- EPIC PIRATE ITEMS -->
+<ModOp Type="addNextSibling" GUID="193653">
+    <Asset>
+        <Template>RewardPool</Template>
+        <Values>
+            <Standard>
+                <GUID>192544</GUID>
+                <Name>Epic Items</Name>
+            </Standard>
+            <RewardPool>
+                <ItemsPool>
+                    <Item>
+                        <ItemLink>192153</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191881</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191885</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191850</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191831</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>112369</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191840</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191854</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191858</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>192433</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>192166</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191868</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>112387</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191890</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191896</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>110983</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>112578</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>192186</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>192449</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>111131</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>111129</ItemLink>
+                    </Item>
+                </ItemsPool>
+            </RewardPool>
+            <Locked>
+                <DefaultLockedState>0</DefaultLockedState>
+            </Locked>
+            <Text/>
+        </Values>
+    </Asset>
+</ModOp>
+
+<!-- LEGENDARY PIRATE ITEMS -->
+<ModOp Type="addNextSibling" GUID="193653">
+    <Asset>
+        <Template>RewardPool</Template>
+        <Values>
+            <Standard>
+                <GUID>192545</GUID>
+                <Name>Legendary Items</Name>
+            </Standard>
+            <RewardPool>
+                <ItemsPool>
+                    <Item>
+                        <ItemLink>192155</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191882</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191886</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>110955</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>112370</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>112388</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191869</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191855</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>116174</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191851</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>192168</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>192434</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>192036</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>192177</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>102158</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>1517</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191609</ItemLink>
+                    </Item>
+                    <Item>
+                        <ItemLink>191607</ItemLink>
+                    </Item>
+                </ItemsPool>
+            </RewardPool>
+            <Locked>
+                <DefaultLockedState>0</DefaultLockedState>
+            </Locked>
+            <Text/>
+        </Values>
+    </Asset>
+</ModOp>
+
+    <ModOp Type="addNextSibling" GUID='73' >
+        <Asset>
+            <Template>RewardItemPool</Template>
+            <Values>
+                <Standard>
+                    <GUID>190961</GUID>
+                    <Name>EmptyRewardPool</Name>
+                    <IconFilename>data/ui/2kimages/main/3dicons/crown_attacker.png</IconFilename>
+                    <ID>EmptyRewardPool</ID>
+                </Standard>
+                <RewardPool>
+                    <ItemsPool>
+                        <Item/>
+                    </ItemsPool>
+                </RewardPool>
+                <Locked/>
+            </Values>
+        </Asset>
+        <Asset>
+            <Template>RewardItemPool</Template>
+            <Values>
+                <Standard>
+                    <GUID>193217</GUID>
+                    <Name>Third_party_03 (Anne Harlow) Item Drop Pool</Name>
+                    <IconFilename>data/ui/2kimages/main/3dicons/icon_jewelry.png</IconFilename>
+                </Standard>
+                <RewardPool>
+                    <ItemsPool>
+                        <Item>
+                            <ItemLink>192541</ItemLink>
+                            <Weight>15</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>192542</ItemLink>
+                            <Weight>25</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>192543</ItemLink>
+                            <Weight>30</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>192544</ItemLink>
+                            <Weight>20</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>192545</ItemLink>
+                            <Weight>10</Weight>
+                        </Item>
+                    </ItemsPool>
+                </RewardPool>
+                <Locked/>
+            </Values>
+        </Asset>
+        <Asset>
+            <Template>RewardPool</Template>
+            <Values>
+                <Standard>
+                    <GUID>193205</GUID>
+                    <Name>Anne Drop Pool</Name>
+                </Standard>
+                <RewardPool>
+                    <ItemsPool>
+                        <Item>
+                            <ItemLink>190961</ItemLink>
+                            <!--EmptyRewardPool-->
+                            <Weight>50</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>193217</ItemLink>
+                            <Weight>15</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>192083</ItemLink>
+                            <!--Pirates Goods Drop Pool-->
+                            <MinAmount>5</MinAmount>
+                            <MaxAmount>40</MaxAmount>
+                            <Weight>35</Weight>
+                        </Item>
+                    </ItemsPool>
+                    <GenerateUniqueRewards>0</GenerateUniqueRewards>
+                </RewardPool>
+                <Locked/>
+                <Text/>
+            </Values>
+        </Asset>
+        <Asset>
+            <Template>RewardPool</Template>
+            <Values>
+                <Standard>
+                    <GUID>192083</GUID>
+                    <Name>Pirates Goods Drop Pool</Name>
+                </Standard>
+                <RewardPool>
+                    <ItemsPool>
+                        <Item>
+                            <ItemLink>1010210</ItemLink>
+                            <!--sailcloth-->
+                            <MinAmount>10</MinAmount>
+                            <MaxAmount>20</MaxAmount>
+                            <Weight>5</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1010222</ItemLink>
+                            <!--dynamite-->
+                            <MinAmount>10</MinAmount>
+                            <MaxAmount>20</MaxAmount>
+                            <Weight>15</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1010221</ItemLink>
+                            <!--weapons-->
+                            <MinAmount>10</MinAmount>
+                            <MaxAmount>20</MaxAmount>
+                            <Weight>20</Weight>
+                        </Item>
+                        <Item>
+                            <ItemLink>1010223</ItemLink>
+                            <!--advanced weapons-->
+                            <MinAmount>5</MinAmount>
+                            <MaxAmount>10</MaxAmount>
+                        </Item>
+                    </ItemsPool>
+                    <GenerateUniqueRewards>0</GenerateUniqueRewards>
+                </RewardPool>
+                <Locked/>
+                <Text/>
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- START BALANCING PIRATE SHIPS -->
+
+    <!-- PIRATE GUNBOAT -->
+    <ModOp Type="merge" GUID='102420,102429' Path="/Values/">
+        <Walking>
+            <ForwardSpeed>6</ForwardSpeed>
+            <WindMaxSpeedupFactor>2.2</WindMaxSpeedupFactor>
+        </Walking>
+        <Attackable>
+            <MaximumHitPoints>750</MaximumHitPoints>
+            <SelfHealPerHealTick>3</SelfHealPerHealTick>            <!-- 1.389 -->
+            <SelfHealPausedTimeIfAttacked>30000</SelfHealPausedTimeIfAttacked>            <!-- 60000 -->
+        </Attackable>
+        <Attacker>
+            <ReloadTime>40</ReloadTime>
+            <AttackRange>25</AttackRange>
+        </Attacker>
+        <ShipMaintenance>
+            <Maintenance>50</Maintenance>            <!-- 25 -->
+        </ShipMaintenance>
+        <Craftable>
+            <CraftingTime>90000</CraftingTime>            <!-- 180000 -->
+        </Craftable>
+    </ModOp>
+
+    <!-- PIRATE FRIGATE -->
+    <ModOp Type="merge" GUID='102421,102430' Path="/Values/">
+        <Walking>
+            <ForwardSpeed>6.24</ForwardSpeed>
+            <WindMaxSpeedupFactor>2.2</WindMaxSpeedupFactor>
+        </Walking>
+        <Attacker>
+            <ReloadTime>40</ReloadTime>            <!-- 50 - 40 -->
+            <AttackRange>45</AttackRange>            <!-- 55 -->
+        </Attacker>
+        <Attackable>
+            <MaximumHitPoints>2500</MaximumHitPoints>            <!-- 2000 -->
+            <SelfHealPerHealTick>3</SelfHealPerHealTick>            <!-- 1.389 -->
+            <SelfHealPausedTimeIfAttacked>30000</SelfHealPausedTimeIfAttacked>            <!-- 60000 -->
+        </Attackable>
+        <Craftable>
+            <CraftingTime>180000</CraftingTime>            <!-- 360000 -->
+        </Craftable>
+    </ModOp>
+
+    <!-- PIRATE SOTL -->
+    <ModOp Type="merge" GUID='102419,102431' Path="/Values/">
+        <Walking>
+            <ForwardSpeed>4.8</ForwardSpeed>
+        </Walking>
+        <Attackable>
+            <MaximumHitPoints>3500</MaximumHitPoints>            <!-- 4000 -->
+            <SelfHealPerHealTick>3.5</SelfHealPerHealTick>            <!-- 1.667 -->
+            <SelfHealPausedTimeIfAttacked>30000</SelfHealPausedTimeIfAttacked>            <!-- 60000 -->
+        </Attackable>
+        <Attacker>
+            <BaseDamage>365</BaseDamage>
+            <ReloadTime>80</ReloadTime>
+            <AttackRange>54</AttackRange>
+        </Attacker>
+        <Craftable>
+            <CraftingTime>360000</CraftingTime>            <!-- 720000 -->
+        </Craftable>
+    </ModOp>
+
+    <!-- PIRATE MONITOR -->
+    <ModOp Type="merge" GUID='102422,102432' Path="/Values/">
+        <Walking>
+            <ForwardSpeed>4.8</ForwardSpeed>            <!-- 5.3 -->
+        </Walking>
+        <Attackable>
+            <MaximumHitPoints>4250</MaximumHitPoints>            <!-- 2500 -->
+            <SelfHealPerHealTick>3</SelfHealPerHealTick>            <!-- 1.389 -->
+            <SelfHealPausedTimeIfAttacked>30000</SelfHealPausedTimeIfAttacked>            <!-- 60000 -->
+        </Attackable>
+        <Attacker>
+            <BaseDamage>105</BaseDamage>            <!-- 93 -->
+            <AttackRange>45</AttackRange>            <!-- 48 -->
+        </Attacker>
+        <Craftable>
+            <CraftingTime>360000</CraftingTime>            <!-- 720000 -->
+        </Craftable>
+    </ModOp>
+
+    <!-- PHYRPHORIAN MONITOR -->
+    <ModOp Type="merge" GUID='102423' Path="/Values/">
+        <Walking>
+            <ForwardSpeed>4.8</ForwardSpeed>            <!-- 5.3 -->
+        </Walking>
+        <Attackable>
+            <MaximumHitPoints>4250</MaximumHitPoints>            <!-- 2500 -->
+            <SelfHealPerHealTick>3</SelfHealPerHealTick>            <!-- 1.389 -->
+            <SelfHealPausedTimeIfAttacked>30000</SelfHealPausedTimeIfAttacked>            <!-- 60000 -->
+        </Attackable>
+        <Attacker>
+            <BaseDamage>30</BaseDamage>
+            <ReloadTime>7</ReloadTime>
+            <AttackRange>28</AttackRange>
+            <Turrets>
+                <Item>
+                    <TurnSpan>320</TurnSpan>
+                    <TurretCfg>data/graphics/campaign/vehicle/pyro_ship_02/pyro_ship_02_turret_front.cfg</TurretCfg>
+                </Item>
+            </Turrets>
+        </Attacker>
+        <Craftable>
+            <CraftingTime>360000</CraftingTime>            <!-- 720000 -->
+        </Craftable>
+    </ModOp>
+
+</ModOps>
